@@ -1,0 +1,1125 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The current cyber landscape is marked by a brutal transition to 'machine-speed' offensives, driven by the massive integration of generative AI into criminal arsenals. The emergence of platforms like ATHR for automated vishing and the use of LLMs for vulnerability discovery (RedSun, Project Mythos) saturate traditional human defense capabilities. Concurrently, the Sino-Israeli-Iranian hybrid conflict is intensifying with sabotage capabilities targeting vital infrastructure, particularly water and energy, as illustrated by the ZionSiphon threat. State actors, notably North Korean and Russian, are refining their intrusion techniques on macOS and Linux while exploiting trust vectors such as Hugging Face or n8n. The software supply chain remains a critical vulnerability, with attackers now using 'signature-as-a-service' to legitimize their malware. Decision-makers must pivot toward 'agentic' and automated Security Operations Centers (SOC) to counter this technological surge. Resilience will require radical collaboration and the hardening of industrial control systems (ICS/OT) against increasingly kinetic cyber-attacks.",
+      "fr": "Le paysage cyber actuel est marqué par une transition brutale vers des offensives à 'vitesse machine', portées par l'intégration massive de l'intelligence artificielle générative dans les arsenaux criminels. L'émergence de plateformes comme ATHR pour le vishing automatisé et l'utilisation de LLM pour la découverte de vulnérabilités (RedSun, projet Mythos) saturent les capacités de défense humaines traditionnelles. Parallèlement, le conflit hybride sino-israélo-iranien s'intensifie avec des capacités de sabotage ciblant les infrastructures vitales, notamment l'eau et l'énergie, comme l'illustre la menace ZionSiphon. Les acteurs étatiques, particulièrement nord-coréens et russes, affinent leurs techniques d'intrusion sur macOS et Linux tout en exploitant des vecteurs de confiance tels que Hugging Face ou n8n. La chaîne d'approvisionnement logicielle demeure une vulnérabilité critique, les attaquants utilisant désormais des services de 'signature-as-a-service' pour légitimer leurs malwares. Les décideurs doivent impérativement pivoter vers des centres d'opérations de sécurité (SOC) 'agentiques' et automatisés pour contrer cette montée en puissance technologique. La résilience passera par une collaboration radicale et le durcissement des systèmes industriels (OT) face à des cyber-attaques de plus en plus cinétiques."
+    },
+    "date": "2026-04-17"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": [
+          "Critical_Infrastructure"
+        ],
+        "fr": [
+          "Infrastructure_Critique"
+        ]
+      },
+      "theme": {
+        "en": "Energy Sabotage in Sweden",
+        "fr": "Sabotage énergétique en Suède"
+      },
+      "description": {
+        "en": "Sweden attributes an attack attempt on a heating plant to a pro-Russian group linked to intelligence services.",
+        "fr": "La Suède attribue une tentative d'attaque contre une centrale thermique à un groupe pro-russe lié au renseignement."
+      },
+      "recommandations": [
+        {
+          "en": "Increase monitoring of industrial control systems connected to the internet in the energy sector.",
+          "fr": "Augmenter la surveillance des systèmes de contrôle industriels connectés à Internet dans le secteur de l'énergie."
+        },
+        {
+          "en": "Strengthen collaboration with national intelligence services to share indicators of compromise.",
+          "fr": "Renforcer la collaboration avec les services de renseignement nationaux pour partager les indicateurs de compromission."
+        }
+      ],
+      "tags": [
+        "sabotage",
+        "russia",
+        "energy"
+      ],
+      "sources": [
+        "https://securityaffairs.com/190869/intelligence/sweden-reports-cyberattack-attempt-on-heating-plant-amid-rising-energy-threats.html"
+      ],
+      "date": "2026-04-16"
+    },
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense",
+          "Healthcare_and_Life_Sciences"
+        ],
+        "fr": [
+          "Gouvernement_et_Défense",
+          "Santé_et_Sciences_du_Vivant"
+        ]
+      },
+      "theme": {
+        "en": "UAC-0247 Campaign in Ukraine",
+        "fr": "Campagne UAC-0247 en Ukraine"
+      },
+      "description": {
+        "en": "Espionage campaign targeting municipal and healthcare institutions in Ukraine using humanitarian themes for phishing.",
+        "fr": "Campagne d'espionnage ciblant les institutions municipales et de santé en Ukraine via des thèmes humanitaires pour le phishing."
+      },
+      "recommandations": [
+        {
+          "en": "Implement advanced email filtering to detect malicious LNK and HTA files.",
+          "fr": "Mettre en place un filtrage d'e-mails avancé pour détecter les fichiers LNK et HTA malveillants."
+        },
+        {
+          "en": "Train municipal staff on the risks of humanitarian-themed phishing lures.",
+          "fr": "Former le personnel municipal aux risques liés aux leurres de phishing sur le thème de l'aide humanitaire."
+        }
+      ],
+      "tags": [
+        "espionage",
+        "ukraine",
+        "phishing"
+      ],
+      "sources": [
+        "https://socprime.com/blog/uac-0247-attack-detection-agingfly-malware-targets-hospitals-local-governments-and-fpv-operators-in-ukraine/"
+      ],
+      "date": "2026-04-16"
+    },
+    {
+      "sector": {
+        "en": [
+          "Critical_Infrastructure"
+        ],
+        "fr": [
+          "Infrastructure_Critique"
+        ]
+      },
+      "theme": {
+        "en": "US-Israel-Iran Cyber Conflict",
+        "fr": "Conflit cyber USA-Israël-Iran"
+      },
+      "description": {
+        "en": "Cross-border cyber-attacks including water system sabotage and the use of satellites in the context of military conflict.",
+        "fr": "Cyber-attaques croisées incluant le sabotage de systèmes d'eau et l'usage de satellites dans un contexte de conflit militaire."
+      },
+      "recommandations": [
+        {
+          "en": "Isolate critical water treatment control systems from public networks.",
+          "fr": "Isoler les systèmes de contrôle critiques du traitement de l'eau des réseaux publics."
+        },
+        {
+          "en": "Conduct regular audits of satellite communication security protocols.",
+          "fr": "Réaliser des audits réguliers des protocoles de sécurité des communications par satellite."
+        }
+      ],
+      "tags": [
+        "sabotage",
+        "conflict",
+        "water"
+      ],
+      "sources": [
+        "https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict"
+      ],
+      "date": "2026-04-16"
+    },
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense",
+          "Agriculture_and_Environment"
+        ],
+        "fr": [
+          "Gouvernement_et_Défense",
+          "Agriculture_et_Environnement"
+        ]
+      },
+      "theme": {
+        "en": "Water Scarcity and Risk in Nile/Levant",
+        "fr": "Stress hydrique et risques dans le Nil/Levant"
+      },
+      "description": {
+        "en": "Analysis of water tensions as a risk multiplier between Egypt, Ethiopia, and Israel.",
+        "fr": "Analyse des tensions hydriques comme multiplicateur de risques entre l'Égypte, l'Éthiopie et Israël."
+      },
+      "recommandations": [
+        {
+          "en": "Incorporate hydropolitical risk into national security strategy planning.",
+          "fr": "Intégrer le risque hydropolitique dans la planification des stratégies de sécurité nationale."
+        },
+        {
+          "en": "Enhance cyber defense of environmental monitoring stations.",
+          "fr": "Renforcer la cyberdéfense des stations de surveillance environnementale."
+        }
+      ],
+      "tags": [
+        "geopolitics",
+        "water_scarcity",
+        "levante"
+      ],
+      "sources": [
+        "https://www.portail-ie.fr/univers/2026/le-nil-et-le-levant-deux-modeles-face-a-la-contrainte-hydrique/"
+      ],
+      "date": "2026-04-16"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "McGraw Hill",
+      "threat_actor": "Unknown",
+      "threat_actor_origin": "",
+      "threat_actor_type": "",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Education_and_Research"
+        ],
+        "fr": [
+          "Éducation_et_Recherche"
+        ]
+      },
+      "description": {
+        "en": "Exposure of 13.5 million accounts due to a Salesforce misconfiguration.",
+        "fr": "Exposition de 13,5 millions de comptes suite à une mauvaise configuration de Salesforce."
+      },
+      "mitre_ttps": [
+        "T1530: Data from Cloud Storage Object"
+      ],
+      "recommandations": [
+        {
+          "en": "Audit all Salesforce permissions and guest user profiles regularly.",
+          "fr": "Auditer régulièrement toutes les permissions Salesforce et les profils d'utilisateurs invités."
+        },
+        {
+          "en": "Implement strict data access controls for cloud-hosted databases.",
+          "fr": "Mettre en œuvre des contrôles d'accès aux données stricts pour les bases de données hébergées dans le cloud."
+        }
+      ],
+      "tags": [
+        "data_breach",
+        "misconfiguration",
+        "salesforce"
+      ],
+      "sources": [
+        "https://haveibeenpwned.com/Breach/McGrawHill"
+      ],
+      "date": "2026-04-16"
+    },
+    {
+      "victim": "Mexican Agencies",
+      "threat_actor": "Unknown",
+      "threat_actor_origin": "",
+      "threat_actor_type": "Cybercriminalité",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement_et_Défense"
+        ]
+      },
+      "description": {
+        "en": "Compromise of nine agencies using Claude Code and ChatGPT for citizen record exfiltration.",
+        "fr": "Compromission de neuf agences utilisant Claude Code et ChatGPT pour l'exfiltration de registres de citoyens."
+      },
+      "mitre_ttps": [
+        "T1020: Automated Exfiltration",
+        "T1588.007: Artificial Intelligence"
+      ],
+      "recommandations": [
+        {
+          "en": "Monitor and restrict the usage of AI-based coding tools on sensitive government systems.",
+          "fr": "Surveiller et restreindre l'usage des outils de codage basés sur l'IA sur les systèmes gouvernementaux sensibles."
+        },
+        {
+          "en": "Enable DLP (Data Loss Prevention) rules to detect large transfers of structured data.",
+          "fr": "Activer des règles DLP (Data Loss Prevention) pour détecter les transferts massifs de données structurées."
+        }
+      ],
+      "tags": [
+        "ai_misuse",
+        "mexico",
+        "data_exfiltration"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/04/16/double-trouble-hackers-used-both-claude-code-and-chatgpt-in-a-cybersecurity-hack-that-lasted-two-and-a-half-months/"
+      ],
+      "date": "2026-04-16"
+    },
+    {
+      "victim": "Cookeville Regional Medical Center",
+      "threat_actor": "Rhysida",
+      "threat_actor_origin": "",
+      "threat_actor_type": "Cybercriminalité",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Healthcare_and_Life_Sciences"
+        ],
+        "fr": [
+          "Santé_et_Sciences_du_Vivant"
+        ]
+      },
+      "description": {
+        "en": "Ransomware attack affecting 337,917 people with 500 GB of data stolen.",
+        "fr": "Attaque par ransomware affectant 337 917 personnes avec 500 Go de données volées."
+      },
+      "mitre_ttps": [
+        "T1486: Data Encrypted for Impact",
+        "T1041: Exfiltration Over C2 Channel"
+      ],
+      "recommandations": [
+        {
+          "en": "Maintain offline backups of critical medical records and patient data.",
+          "fr": "Maintenir des sauvegardes hors ligne des dossiers médicaux critiques et des données patients."
+        },
+        {
+          "en": "Perform network segmentation to isolate patient care systems from administrative networks.",
+          "fr": "Effectuer une segmentation réseau pour isoler les systèmes de soins des réseaux administratifs."
+        }
+      ],
+      "tags": [
+        "ransomware",
+        "healthcare",
+        "rhysida"
+      ],
+      "sources": [
+        "https://securityaffairs.com/190898/cyber-crime/cookeville-regional-medical-center-hospital-data-breach-impacts-337917-people.html"
+      ],
+      "date": "2026-04-16"
+    },
+    {
+      "victim": "Booking.com",
+      "threat_actor": "Unknown",
+      "threat_actor_origin": "",
+      "threat_actor_type": "",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Hospitality_and_Entertainment"
+        ],
+        "fr": [
+          "Hôtellerie_et_Divertissement"
+        ]
+      },
+      "description": {
+        "en": "Unauthorized access to booking details and personal information of customers.",
+        "fr": "Accès non autorisé à des détails de réservations et informations personnelles des clients."
+      },
+      "mitre_ttps": [
+        "T1530: Data from Cloud Storage Object"
+      ],
+      "recommandations": [
+        {
+          "en": "Enforce multi-factor authentication for all portal access by partner hotels.",
+          "fr": "Imposer l'authentification multi-facteurs pour tous les accès au portail par les hôtels partenaires."
+        },
+        {
+          "en": "Notify affected customers and provide guidance on monitoring for potential phishing.",
+          "fr": "Notifier les clients concernés et fournir des conseils sur la surveillance des tentatives de phishing."
+        }
+      ],
+      "tags": [
+        "data_breach",
+        "hospitality",
+        "booking"
+      ],
+      "sources": [
+        "https://mastodon.social/@netsecio/116416313793802783"
+      ],
+      "date": "2026-04-16"
+    },
+    {
+      "victim": "Amtrak",
+      "threat_actor": "ShinyHunters",
+      "threat_actor_origin": "",
+      "threat_actor_type": "Cybercriminalité",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Critical_Infrastructure"
+        ],
+        "fr": [
+          "Infrastructure_Critique"
+        ]
+      },
+      "description": {
+        "en": "Theft of 9.4 million records via Salesforce, claimed by ShinyHunters.",
+        "fr": "Vol de 9,4 millions d'enregistrements via Salesforce, revendiqué par ShinyHunters."
+      },
+      "mitre_ttps": [
+        "T1530: Data from Cloud Storage Object"
+      ],
+      "recommandations": [
+        {
+          "en": "Review and harden Salesforce Community and API configurations.",
+          "fr": "Revoir et durcir les configurations de Salesforce Community et des APIs."
+        },
+        {
+          "en": "Implement continuous security monitoring for cloud infrastructure changes.",
+          "fr": "Mettre en œuvre une surveillance de sécurité continue pour les changements d'infrastructure cloud."
+        }
+      ],
+      "tags": [
+        "data_breach",
+        "transport",
+        "shinyhunters"
+      ],
+      "sources": [
+        "https://mastodon.social/@netsecio/116416313473735499"
+      ],
+      "date": "2026-04-16"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-20147",
+      "euvd_id": null,
+      "cisa_kev": "FALSE",
+      "cvss": "9.9",
+      "epss": "0.0",
+      "cpe": "cpe:2.3:a:cisco:identity_services_engine:*:*:*:*:*:*:*:*",
+      "product": "Cisco ISE",
+      "vendor": "Cisco",
+      "description": {
+        "en": "Input validation failure allowing remote code execution (RCE).",
+        "fr": "Validation d'entrée défaillante permettant une exécution de code à distance (RCE)."
+      },
+      "mitre_ttps": [
+        "T1190: Exploit Public-Facing Application"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply security patches provided by Cisco immediately.",
+          "fr": "Appliquer immédiatement les correctifs de sécurité fournis par Cisco."
+        },
+        {
+          "en": "Restrict administrative access to Cisco ISE to authorized networks only.",
+          "fr": "Restreindre l'accès administratif à Cisco ISE aux seuls réseaux autorisés."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "rce",
+        "cisco"
+      ],
+      "sources": [
+        "https://securityaffairs.com/190909/security/cisco-fixed-four-critical-flaws-in-identity-services-and-webex.html"
+      ],
+      "date": "2026-04-16"
+    },
+    {
+      "cve_id": "CVE-2026-39808",
+      "euvd_id": null,
+      "cisa_kev": "FALSE",
+      "cvss": "9.8",
+      "epss": "0.0",
+      "cpe": "cpe:2.3:a:fortinet:fortisandbox:*:*:*:*:*:*:*:*",
+      "product": "Fortinet FortiSandbox",
+      "vendor": "Fortinet",
+      "description": {
+        "en": "OS command injection via the API allowing total compromise of the sandbox.",
+        "fr": "Injection de commandes OS via l'API permettant un compromis total du bac à sable."
+      },
+      "mitre_ttps": [
+        "T1203: Exploitation for Client Execution"
+      ],
+      "recommandations": [
+        {
+          "en": "Update FortiSandbox to the latest version to mitigate API injection risks.",
+          "fr": "Mettre à jour FortiSandbox vers la dernière version pour atténuer les risques d'injection API."
+        },
+        {
+          "en": "Disable unnecessary API endpoints if not required for operations.",
+          "fr": "Désactiver les points de terminaison API inutiles s'ils ne sont pas requis pour les opérations."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "rce",
+        "fortinet"
+      ],
+      "sources": [
+        "https://www.helpnetsecurity.com/2026/04/16/fortinet-fortisandbox-vulnerabilities-cve-2026-39813-cve-2026-39808/"
+      ],
+      "date": "2026-04-16"
+    },
+    {
+      "cve_id": "CVE-2026-20184",
+      "euvd_id": null,
+      "cisa_kev": "FALSE",
+      "cvss": "9.8",
+      "epss": "0.0",
+      "cpe": "cpe:2.3:a:cisco:webex:*:*:*:*:*:*:*:*",
+      "product": "Cisco Webex SSO",
+      "vendor": "Cisco",
+      "description": {
+        "en": "Improper certificate validation allowing impersonation of any user.",
+        "fr": "Mauvaise validation de certificat permettant l'usurpation de n'importe quel utilisateur."
+      },
+      "mitre_ttps": [
+        "T1550: Use Alternate Authentication Material"
+      ],
+      "recommandations": [
+        {
+          "en": "Ensure all SSO certificates are correctly validated and up to date.",
+          "fr": "S'assurer que tous les certificats SSO sont correctement validés et à jour."
+        },
+        {
+          "en": "Monitor SSO logs for unusual login activity from unknown sources.",
+          "fr": "Surveiller les logs SSO pour toute activité de connexion inhabituelle provenant de sources inconnues."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "auth_bypass",
+        "cisco"
+      ],
+      "sources": [
+        "https://securityaffairs.com/190909/security/cisco-fixed-four-critical-flaws-in-identity-services-and-webex.html"
+      ],
+      "date": "2026-04-16"
+    },
+    {
+      "cve_id": "CVE-2026-39987",
+      "euvd_id": null,
+      "cisa_kev": "TRUE",
+      "cvss": "9.8",
+      "epss": "0.0",
+      "cpe": "cpe:2.3:a:marimo:marimo:*:*:*:*:*:*:*:*",
+      "product": "Marimo Python Notebook",
+      "vendor": "Marimo",
+      "description": {
+        "en": "Actively exploited flaw used to deploy malware via Hugging Face.",
+        "fr": "Faille exploitée activement pour déployer des malwares via Hugging Face."
+      },
+      "mitre_ttps": [
+        "T1190: Exploit Public-Facing Application"
+      ],
+      "recommandations": [
+        {
+          "en": "Update Marimo to version 0.23.0 or higher immediately.",
+          "fr": "Mettre à jour Marimo vers la version 0.23.0 ou supérieure immédiatement."
+        },
+        {
+          "en": "Restrict external access to the '/terminal/ws' endpoint.",
+          "fr": "Restreindre l'accès externe au point de terminaison '/terminal/ws'."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "rce",
+        "ai"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/hackers-exploit-marimo-flaw-to-deploy-nkabuse-malware-from-hugging-face/"
+      ],
+      "date": "2026-04-16"
+    },
+    {
+      "cve_id": "CVE-2026-5189",
+      "euvd_id": null,
+      "cisa_kev": "FALSE",
+      "cvss": "9.2",
+      "epss": "0.0",
+      "cpe": "cpe:2.3:a:sonatype:nexus_repository:*:*:*:*:*:*:*:*",
+      "product": "Nexus Repository 3",
+      "vendor": "Sonatype",
+      "description": {
+        "en": "Hardcoded credentials in OrientDB component allowing system control.",
+        "fr": "Identifiants codés en dur dans le composant OrientDB permettant le contrôle du système."
+      },
+      "mitre_ttps": [
+        "T1552: Unsecured Credentials"
+      ],
+      "recommandations": [
+        {
+          "en": "Update Nexus Repository to a version where hardcoded credentials are removed.",
+          "fr": "Mettre à jour Nexus Repository vers une version où les identifiants codés en dur sont supprimés."
+        },
+        {
+          "en": "Change all default credentials for database components in dev environments.",
+          "fr": "Changer tous les identifiants par défaut pour les composants de base de données dans les environnements de dev."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "hardcoded_creds",
+        "nexus"
+      ],
+      "sources": [
+        "https://securityonline.info/nexus-repository-hardcoded-credential-vulnerability-cve-2026-5189/"
+      ],
+      "date": "2026-04-16"
+    },
+    {
+      "cve_id": "CVE-2026-34457",
+      "euvd_id": null,
+      "cisa_kev": "FALSE",
+      "cvss": "9.1",
+      "epss": "0.0",
+      "cpe": "cpe:2.3:a:oauth2_proxy:oauth2_proxy:*:*:*:*:*:*:*:*",
+      "product": "OAuth2 Proxy",
+      "vendor": "OAuth2 Proxy",
+      "description": {
+        "en": "Loophole in health checks allowing authentication bypass via User-Agent.",
+        "fr": "Loophole dans les health checks permettant de contourner l'authentification via User-Agent."
+      },
+      "mitre_ttps": [
+        "T1550: Use Alternate Authentication Material"
+      ],
+      "recommandations": [
+        {
+          "en": "Disable health checks that do not require authentication if they expose internal routes.",
+          "fr": "Désactiver les health checks qui ne requièrent pas d'authentification s'ils exposent des routes internes."
+        },
+        {
+          "en": "Validate the User-Agent header strictly in reverse proxy configurations.",
+          "fr": "Valider strictement l'en-tête User-Agent dans les configurations de reverse proxy."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "auth_bypass",
+        "proxy"
+      ],
+      "sources": [
+        "https://securityonline.info/oauth2-proxy-authentication-bypass-cve-2026-34457/"
+      ],
+      "date": "2026-04-16"
+    },
+    {
+      "cve_id": "CVE-2026-40322",
+      "euvd_id": null,
+      "cisa_kev": "FALSE",
+      "cvss": "9.0",
+      "epss": "0.0",
+      "cpe": "cpe:2.3:a:siyuan:siyuan:*:*:*:*:*:*:*:*",
+      "product": "SiYuan",
+      "vendor": "SiYuan",
+      "description": {
+        "en": "Mermaid JS link injection leading to arbitrary code execution on Electron.",
+        "fr": "Injection de lien Mermaid JS menant à une exécution de code arbitraire sur Electron."
+      },
+      "mitre_ttps": [
+        "T1189: Drive-by Compromise"
+      ],
+      "recommandations": [
+        {
+          "en": "Update SiYuan to the latest version to patch Mermaid JS rendering.",
+          "fr": "Mettre à jour SiYuan vers la dernière version pour corriger le rendu Mermaid JS."
+        },
+        {
+          "en": "Be cautious when importing third-party Mermaid diagrams into Electron applications.",
+          "fr": "Soyez prudent lors de l'importation de diagrammes Mermaid tiers dans des applications Electron."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "xss",
+        "rce"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-40322"
+      ],
+      "date": "2026-04-16"
+    },
+    {
+      "cve_id": "CVE-2009-0238",
+      "euvd_id": null,
+      "cisa_kev": "TRUE",
+      "cvss": "8.8",
+      "epss": "0.95",
+      "product": "Microsoft Excel",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "17-year-old flaw reactivated for code execution via malformed Excel files.",
+        "fr": "Faille de 17 ans réactivée pour exécution de code via fichiers Excel malformés."
+      },
+      "mitre_ttps": [
+        "T1203: Exploitation for Client Execution"
+      ],
+      "recommandations": [
+        {
+          "en": "Block the opening of Excel files from untrusted sources, especially legacy formats.",
+          "fr": "Bloquer l'ouverture de fichiers Excel provenant de sources non fiables, en particulier les formats anciens."
+        },
+        {
+          "en": "Ensure Microsoft Office is updated to the latest security channel version.",
+          "fr": "S'assurer que Microsoft Office est mis à jour sur le canal de sécurité le plus récent."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "legacy",
+        "excel"
+      ],
+      "sources": [
+        "https://thehackernews.com/2026/04/threatsday-bulletin-17-year-old-excel.html"
+      ],
+      "date": "2026-04-16"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "Lumma Stealer and Sectop RAT Infection via Cracked Software",
+        "fr": "Infection Lumma Stealer et Sectop RAT par logiciel cracké"
+      },
+      "description": {
+        "en": "Analysis of a multi-stage infection chain starting with cracked Adobe software, using bloated executables to bypass AV.",
+        "fr": "Analyse d'une chaîne d'infection en plusieurs étapes commençant par un logiciel Adobe cracké, utilisant des exécutables gonflés pour contourner les antivirus."
+      },
+      "threat_actor": "Unknown",
+      "threat_actor_origin": "",
+      "threat_actor_type": "Cybercriminalité",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Retail_and_Consumer"
+        ],
+        "fr": [
+          "Commerce_de_Détail_et_Consommation"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [
+          "91.92.241[.]102:9000"
+        ],
+        "IPv6": [],
+        "DOMAIN": [
+          "cankgmr[.]cyou",
+          "genugsq[.]best"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [
+          "4849f76dafbef516df91fecfc23a72afffaf77ade51f805eae5ad552bed88923",
+          "d9b576eb6827f38e33eda037d2cda4261307511303254a8509eeb28048433b2f"
+        ],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Lumma Stealer",
+          "Sectop RAT"
+        ]
+      },
+      "mitre_ttps": [
+        "T1204.002: User Execution (Malicious File)",
+        "T1027.001: Binary Padding",
+        "T1547.001: Registry Run Keys / Startup Folder"
+      ],
+      "analyse": {
+        "en": "Attackers use 800MB+ executables to evade static analysis. Lumma Stealer exfiltrates credentials before deploying Sectop RAT for persistent control.",
+        "fr": "Les attaquants utilisent des exécutables de plus de 800 Mo pour échapper à l'analyse statique. Lumma Stealer exfiltre les identifiants avant de déployer Sectop RAT pour un contrôle persistant."
+      },
+      "recommandations": [
+        {
+          "en": "Configure EDR to alert on executables larger than 500 MB.",
+          "fr": "Configurer l'EDR pour alerter sur les exécutables de plus de 500 Mo."
+        },
+        {
+          "en": "Block outgoing traffic to .cyou and .best top-level domains from workstations.",
+          "fr": "Bloquer le trafic sortant vers les domaines de premier niveau .cyou et .best depuis les postes de travail."
+        }
+      ],
+      "tags": [
+        "stealer",
+        "rat",
+        "cracked_software"
+      ],
+      "sources": [
+        "https://isc.sans.edu/diary/rss/32904"
+      ],
+      "date": "2026-04-16"
+    },
+    {
+      "title": {
+        "en": "ZionSiphon Sabotage of Water Systems",
+        "fr": "Sabotage ZionSiphon des infrastructures hydrauliques"
+      },
+      "description": {
+        "en": "OT malware designed to physically damage water treatment plants by altering chlorine levels and hydraulic pressure.",
+        "fr": "Malware OT conçu pour endommager physiquement les usines de traitement d'eau en modifiant les niveaux de chlore et la pression hydraulique."
+      },
+      "threat_actor": "Unknown",
+      "threat_actor_origin": "Iran",
+      "threat_actor_type": "État",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Critical_Infrastructure"
+        ],
+        "fr": [
+          "Infrastructure_Critique"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "ZionSiphon",
+          "svchost.exe"
+        ]
+      },
+      "mitre_ttps": [
+        "T0801: Monitor Process State",
+        "T0831: Data Destruction",
+        "T0847: Replication Through Removable Media"
+      ],
+      "analyse": {
+        "en": "Targets Modbus, DNP3, and S7comm protocols. Contains a specific function IncreaseChlorineLevel() to create physical harm.",
+        "fr": "Cible les protocoles Modbus, DNP3 et S7comm. Contient une fonction spécifique IncreaseChlorineLevel() pour causer des dommages physiques."
+      },
+      "recommandations": [
+        {
+          "en": "Disable USB auto-run and restrict port usage on all industrial control systems.",
+          "fr": "Désactiver l'exécution automatique USB et restreindre l'usage des ports sur tous les systèmes de contrôle industriels."
+        },
+        {
+          "en": "Implement behavioral monitoring for Modbus/S7comm commands like Chlorine_Flow=MAX.",
+          "fr": "Mettre en œuvre une surveillance comportementale pour les commandes Modbus/S7comm telles que Chlorine_Flow=MAX."
+        }
+      ],
+      "tags": [
+        "ot",
+        "sabotage",
+        "ics"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/zionsiphon-malware-designed-to-sabotage-water-treatment-systems/"
+      ],
+      "date": "2026-04-16"
+    },
+    {
+      "title": {
+        "en": "RedSun Microsoft Defender Zero-Day Exploit",
+        "fr": "Exploit Zero-Day RedSun dans Microsoft Defender"
+      },
+      "description": {
+        "en": "Privilege escalation vulnerability abusing Cloud Files API to hijack system services.",
+        "fr": "Vulnérabilité d'élévation de privilèges abusant de l'API Cloud Files pour détourner des services système."
+      },
+      "threat_actor": "Chaotic Eclipse",
+      "threat_actor_origin": "",
+      "threat_actor_type": "Hacktiviste",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie_et_Télecom"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "RedSun.exe"
+        ]
+      },
+      "mitre_ttps": [
+        "T1068: Exploitation for Privilege Escalation",
+        "T1543.003: Windows Service",
+        "T1497: Virtualization/Sandbox Evasion"
+      ],
+      "analyse": {
+        "en": "Abuses reparse points to force Defender to overwrite critical system binaries like TieringEngineService.exe.",
+        "fr": "Abuse des points de jonction pour forcer Defender à écraser des binaires système critiques comme TieringEngineService.exe."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor for unexpected junction point creations in C:\\Windows\\system32.",
+          "fr": "Surveiller les créations inattendues de points de jonction dans C:\\Windows\\system32."
+        },
+        {
+          "en": "Verify the digital signature of TieringEngineService.exe regularly.",
+          "fr": "Vérifier régulièrement la signature numérique de TieringEngineService.exe."
+        }
+      ],
+      "tags": [
+        "zero-day",
+        "lpe",
+        "defender"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/microsoft/new-microsoft-defender-redsun-zero-day-poc-grants-system-privileges/"
+      ],
+      "date": "2026-04-16"
+    },
+    {
+      "title": {
+        "en": "Cargo Theft via Malware Signing-as-a-Service",
+        "fr": "Vol de fret via le Malware Signing-as-a-Service"
+      },
+      "description": {
+        "en": "Sophisticated logistics industry attacks using signed malware to bypass Windows alerts and steal financial data.",
+        "fr": "Attaques sophistiquées contre l'industrie logistique utilisant des malwares signés pour contourner les alertes Windows et voler des données financières."
+      },
+      "threat_actor": "Unknown",
+      "threat_actor_origin": "",
+      "threat_actor_type": "Cybercriminalité",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Industry_and_Manufacturing"
+        ],
+        "fr": [
+          "Industrie_et_Fabrication"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "ScreenConnect"
+        ]
+      },
+      "mitre_ttps": [
+        "T1553.002: Code Signing",
+        "T1219: Remote Access Software",
+        "T1059.001: PowerShell"
+      ],
+      "analyse": {
+        "en": "Attackers query an external service to sign malware on-the-fly, allowing them to remain undetected during logistics platform compromises.",
+        "fr": "Les attaquants interrogent un service externe pour signer des malwares à la volée, ce qui leur permet de rester indétectables lors des compromissions de plateformes logistiques."
+      },
+      "recommandations": [
+        {
+          "en": "Audit the use of ScreenConnect and restrict its installation to authorized admins.",
+          "fr": "Auditer l'usage de ScreenConnect et restreindre son installation aux administrateurs autorisés."
+        },
+        {
+          "en": "Block the execution of unsigned PowerShell scripts and monitor for credential-scanning activity.",
+          "fr": "Bloquer l'exécution de scripts PowerShell non signés et surveiller les activités de scan d'identifiants."
+        }
+      ],
+      "tags": [
+        "logistics",
+        "cargo_theft",
+        "code_signing"
+      ],
+      "sources": [
+        "https://www.proofpoint.com/us/newsroom/news/cargo-thieving-hackers-running-sophisticated-remote-access-campaigns-researchers-find"
+      ],
+      "date": "2026-04-16"
+    },
+    {
+      "title": {
+        "en": "UAC-0247 Espionage Campaign with AgingFly",
+        "fr": "Campagne d'espionnage UAC-0247 avec AgingFly"
+      },
+      "description": {
+        "en": "Persistent espionage against Ukrainian critical infrastructure using AgingFly RAT and Ligolo-ng tunnels.",
+        "fr": "Espionnage persistant contre les infrastructures critiques ukrainiennes utilisant le RAT AgingFly et des tunnels Ligolo-ng."
+      },
+      "threat_actor": "UAC-0247",
+      "threat_actor_origin": "",
+      "threat_actor_type": "État",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Government_and_Defense",
+          "Healthcare_and_Life_Sciences"
+        ],
+        "fr": [
+          "Gouvernement_et_Défense",
+          "Santé_et_Sciences_du_Vivant"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "AgingFly",
+          "ChromeElevator",
+          "ZapixDesk",
+          "Ligolo-ng",
+          "Chisel"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566.002: Spearphishing Link",
+        "T1055: Process Injection",
+        "T1572: Protocol Tunneling"
+      ],
+      "analyse": {
+        "en": "Uses shellcode injection into RuntimeBroker.exe and specialized tools to exfiltrate WhatsApp and Chromium browser data.",
+        "fr": "Utilise l'injection de shellcode dans RuntimeBroker.exe et des outils spécialisés pour exfiltrer les données WhatsApp et des navigateurs Chromium."
+      },
+      "recommandations": [
+        {
+          "en": "Restrict the execution of LNK, HTA, and JS files by default on end-user machines.",
+          "fr": "Restreindre l'exécution des fichiers LNK, HTA et JS par défaut sur les machines des utilisateurs finaux."
+        },
+        {
+          "en": "Monitor for unauthorized network tunneling utilities like Chisel and Ligolo.",
+          "fr": "Surveiller les utilitaires de tunnel réseau non autorisés comme Chisel et Ligolo."
+        }
+      ],
+      "tags": [
+        "apt",
+        "ukraine",
+        "espionage"
+      ],
+      "sources": [
+        "https://socprime.com/blog/uac-0247-attack-detection-agingfly-malware-targets-hospitals-local-governments-and-fpv-operators-in-ukraine/"
+      ],
+      "date": "2026-04-16"
+    },
+    {
+      "title": {
+        "en": "Sapphire Sleet macOS Intrusion",
+        "fr": "Intrusion macOS par Sapphire Sleet"
+      },
+      "description": {
+        "en": "North Korean campaign targeting tech and crypto sectors via npm package poisoning (Axios).",
+        "fr": "Campagne nord-coréenne ciblant les secteurs tech et crypto via l'empoisonnement de packages npm (Axios)."
+      },
+      "threat_actor": "Sapphire Sleet",
+      "threat_actor_origin": "North Korea",
+      "threat_actor_type": "État",
+      "threat_actor_aliases": [
+        "Lazarus Group"
+      ],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom",
+          "Finance"
+        ],
+        "fr": [
+          "Technologie_et_Télecom",
+          "Finance"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "npm"
+        ]
+      },
+      "mitre_ttps": [
+        "T1195.001: Compromise Software Dependencies",
+        "T1566: Phishing"
+      ],
+      "analyse": {
+        "en": "Focuses on social engineering developers to install trojanized dependencies.",
+        "fr": "Se concentre sur l'ingénierie sociale des développeurs pour installer des dépendances trojanisées."
+      },
+      "recommandations": [
+        {
+          "en": "Use private npm registries with vetted packages for development teams.",
+          "fr": "Utiliser des registres npm privés avec des packages vérifiés pour les équipes de développement."
+        },
+        {
+          "en": "Implement macOS endpoint protection that monitors unusual binary execution in dev environments.",
+          "fr": "Mettre en œuvre une protection endpoint macOS qui surveille l'exécution de binaires inhabituels dans les environnements de dev."
+        }
+      ],
+      "tags": [
+        "macos",
+        "supply_chain",
+        "north_korea"
+      ],
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/04/16/dissecting-sapphire-sleets-macos-intrusion-from-lure-to-compromise/"
+      ],
+      "date": "2026-04-16"
+    },
+    {
+      "title": {
+        "en": "APT41 Undetectable ELF Backdoor",
+        "fr": "Backdoor ELF indétectable d'APT41"
+      },
+      "description": {
+        "en": "Advanced campaign targeting cloud environments (AWS, Azure, GCP) using SMTP for C2 communication.",
+        "fr": "Campagne avancée ciblant les environnements cloud (AWS, Azure, GCP) utilisant SMTP pour la communication C2."
+      },
+      "threat_actor": "APT41",
+      "threat_actor_origin": "China",
+      "threat_actor_type": "État",
+      "threat_actor_aliases": [
+        "Winnti Group",
+        "Barium"
+      ],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie_et_Télecom"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "ELF Backdoor"
+        ]
+      },
+      "mitre_ttps": [
+        "T1071.003: Mail Protocols",
+        "T1583.007: Serverless Infrastructure"
+      ],
+      "analyse": {
+        "en": "The use of SMTP protocols for C2 in cloud environments helps the malware blend into legitimate traffic.",
+        "fr": "L'utilisation de protocoles SMTP pour le C2 dans les environnements cloud aide le malware à se fondre dans le trafic légitime."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor outbound SMTP traffic from cloud instances to unauthorized mail servers.",
+          "fr": "Surveiller le trafic SMTP sortant des instances cloud vers des serveurs de messagerie non autorisés."
+        },
+        {
+          "en": "Implement runtime security monitoring for ELF binaries on Linux-based cloud instances.",
+          "fr": "Mettre en œuvre une surveillance de sécurité au runtime pour les binaires ELF sur les instances cloud Linux."
+        }
+      ],
+      "tags": [
+        "apt41",
+        "cloud",
+        "linux"
+      ],
+      "sources": [
+        "https://thehackernews.com/2026/04/threatsday-bulletin-17-year-old-excel.html"
+      ],
+      "date": "2026-04-16"
+    }
+  ]
+}
