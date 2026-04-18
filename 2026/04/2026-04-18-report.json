@@ -1,0 +1,775 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The cyber landscape of April 2026 is dominated by the emergence of 'Mythos', a generative AI model capable of automated vulnerability discovery, sparking national security concerns in the US. Simultaneously, geopolitical tensions in the Middle East drive destructive cyber operations against critical infrastructure (OT/ICS), particularly in water systems. We observe high professionalization in ransomware groups like Payouts King using virtualization (QEMU) for EDR evasion, while major security tools like Microsoft Defender face active zero-day exploitation. International law enforcement successes like Operation PowerOFF contrast with increasing European concerns over strategic dependence on American cloud services.",
+      "fr": "Le paysage cyber d'avril 2026 est marqué par l'émergence de 'Mythos', un modèle d'IA générative capable d'automatiser la découverte de vulnérabilités, provoquant des inquiétudes de sécurité nationale aux États-Unis. Parallèlement, les tensions géopolitiques au Moyen-Orient alimentent des opérations cyber destructrices contre les infrastructures critiques (OT/ICS), notamment l'eau. On observe une professionnalisation accrue des groupes de ransomware comme Payouts King utilisant la virtualisation (QEMU) pour l'évasion EDR, tandis que Microsoft Defender fait face à l'exploitation active de vulnérabilités zero-day. Les succès policiers internationaux comme l'Opération PowerOFF contrastent avec les préoccupations européennes croissantes concernant la dépendance stratégique vis-à-vis du cloud américain."
+    },
+    "date": "2026-04-18"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement_et_D\u00e9fense"
+        ]
+      },
+      "theme": {
+        "en": "Election Interference and Disinformation",
+        "fr": "Ing\u00e9rence \u00e9lectorale et d\u00e9sinformation"
+      },
+      "description": {
+        "en": "Pro-Kremlin disinformation campaigns targeting legislative elections in Bulgaria and Hungary to discredit opposition movements.",
+        "fr": "Campagnes de d\u00e9sinformation pro-Kremlin visant les \u00e9lections l\u00e9gislatives en Bulgarie et en Hongrie pour discr\u00e9diter l'opposition."
+      },
+      "recommandations": [
+        {
+          "en": "Establish rapid response units to debunk election-related disinformation.",
+          "fr": "Mettre en place des unit\u00e9s de r\u00e9ponse rapide pour d\u00e9mentir la d\u00e9sinformation \u00e9lectorale."
+        },
+        {
+          "en": "Increase public awareness regarding foreign influence operations.",
+          "fr": "Sensibiliser le public aux op\u00e9rations d'influence \u00e9trang\u00e8res."
+        }
+      ],
+      "tags": [
+        "disinformation",
+        "elections",
+        "russia"
+      ],
+      "sources": [
+        "https://euvsdisinfo.eu/russia-targets-elections-in-hungary-and-bulgaria/"
+      ],
+      "date": "2026-04-17"
+    },
+    {
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie_et_T\u00e9l\u00e9com"
+        ]
+      },
+      "theme": {
+        "en": "Internet Blackout in Iran",
+        "fr": "Blackout Internet en Iran"
+      },
+      "description": {
+        "en": "Iran is experiencing a near-total internet blackout, with connectivity dropping to 1% for over 49 days amidst conflict.",
+        "fr": "L'Iran subit une coupure quasi totale d'Internet, avec une connectivit\u00e9 chutant \u00e0 1% depuis plus de 49 jours en plein conflit."
+      },
+      "recommandations": [
+        {
+          "en": "Ensure alternative satellite communication channels for critical services.",
+          "fr": "Assurer des canaux de communication satellites alternatifs pour les services critiques."
+        },
+        {
+          "en": "Prepare business continuity plans for regions with high geopolitical instability.",
+          "fr": "Pr\u00e9parer des plans de continuit\u00e9 d'activit\u00e9 pour les r\u00e9gions \u00e0 forte instabilit\u00e9 g\u00e9opolitique."
+        }
+      ],
+      "tags": [
+        "blackout",
+        "iran",
+        "connectivity"
+      ],
+      "sources": [
+        "https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict"
+      ],
+      "date": "2026-04-17"
+    },
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement_et_D\u00e9fense"
+        ]
+      },
+      "theme": {
+        "en": "European Strategic Sovereignty",
+        "fr": "Souverainet\u00e9 strat\u00e9gique europ\u00e9enne"
+      },
+      "description": {
+        "en": "A report warns that over 75% of European countries depend on US cloud services for essential national security functions.",
+        "fr": "Un rapport avertit que plus de 75% des pays europ\u00e9ens d\u00e9pendent des services cloud am\u00e9ricains pour des fonctions essentielles de s\u00e9curit\u00e9 nationale."
+      },
+      "recommandations": [
+        {
+          "en": "Accelerate the development of sovereign European cloud alternatives.",
+          "fr": "Acc\u00e9l\u00e9rer le d\u00e9veloppement d'alternatives cloud europ\u00e9ennes souveraines."
+        },
+        {
+          "en": "Implement multi-cloud strategies to mitigate dependency on a single foreign provider.",
+          "fr": "Mettre en \u0153uvre des strat\u00e9gies multi-cloud pour att\u00e9nuer la d\u00e9pendance vis-\u00e0-vis d'un seul fournisseur \u00e9tranger."
+        }
+      ],
+      "tags": [
+        "sovereignty",
+        "cloud",
+        "europe"
+      ],
+      "sources": [
+        "https://www.lemonde.fr/pixels/article/2026/04/17/plus-des-trois-quarts-des-pays-europeens-sont-dependants-du-cloud-americain-pour-des-fonctions-essentielles-a-leur-securite-nationale-met-en-garde-un-rapport_6680848_4408996.html"
+      ],
+      "date": "2026-04-17"
+    },
+    {
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie_et_T\u00e9l\u00e9com"
+        ]
+      },
+      "theme": {
+        "en": "AI Regulatory Advisory",
+        "fr": "Avis r\u00e9glementaire sur l'IA"
+      },
+      "description": {
+        "en": "Connecticut Attorney General clarifies that existing civil rights and privacy laws apply to AI businesses.",
+        "fr": "Le procureur g\u00e9n\u00e9ral du Connecticut clarifie que les lois existantes sur les droits civils et la vie priv\u00e9e s'appliquent aux entreprises utilisant l'IA."
+      },
+      "recommandations": [
+        {
+          "en": "Conduct impact assessments for AI models regarding privacy and ethics.",
+          "fr": "R\u00e9aliser des \u00e9valuations d'impact pour les mod\u00e8les d'IA concernant la vie priv\u00e9e et l'\u00e9thique."
+        },
+        {
+          "en": "Audit AI training data for compliance with consumer protection laws.",
+          "fr": "Auditer les donn\u00e9es d'entra\u00eenement de l'IA pour s'assurer de la conformit\u00e9 avec les lois de protection des consommateurs."
+        }
+      ],
+      "tags": [
+        "regulation",
+        "artificial_intelligence",
+        "privacy"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/04/17/connecticut-ag-puts-businesses-on-notice-old-laws-still-apply-to-ai/"
+      ],
+      "date": "2026-04-17"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Grinex (Kyrgyzstan)",
+      "threat_actor": "Unknown",
+      "threat_actor_origin": "Unknown",
+      "threat_actor_type": "State-sponsored (Alleged)",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Finance"
+        ],
+        "fr": [
+          "Finance"
+        ]
+      },
+      "description": {
+        "en": "The crypto exchange Grinex shut down after a $13.7 million theft. The platform blames Western intelligence services.",
+        "fr": "La plateforme d'\u00e9change crypto Grinex a ferm\u00e9 apr\u00e8s le vol de 13,7 millions de dollars. La plateforme accuse les services de renseignement occidentaux."
+      },
+      "mitre_ttps": [
+        "T1567: Exfiltration Over Web Service"
+      ],
+      "recommandations": [
+        {
+          "en": "Implement hardware security modules (HSM) for private key management.",
+          "fr": "Mettre en \u0153uvre des modules de s\u00e9curit\u00e9 mat\u00e9rielle (HSM) pour la gestion des cl\u00e9s priv\u00e9es."
+        },
+        {
+          "en": "Enforce multi-signature requirements for large asset transfers.",
+          "fr": "Imposer des exigences multi-signatures pour les transferts d'actifs importants."
+        }
+      ],
+      "tags": [
+        "cryptocurrency",
+        "theft"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/grinex-exchange-blames-western-intelligence-for-137m-crypto-hack/"
+      ],
+      "date": "2026-04-17"
+    },
+    {
+      "victim": "Amtrak",
+      "threat_actor": "ShinyHunters",
+      "threat_actor_origin": "Unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Retail_and_Consumer"
+        ],
+        "fr": [
+          "Commerce_de_D\u00e9tail_et_Consommation"
+        ]
+      },
+      "description": {
+        "en": "Over 2.1 million Amtrak accounts were exposed, including emails and tickets, through a compromise of Salesforce instances.",
+        "fr": "Plus de 2,1 millions de comptes Amtrak ont \u00e9t\u00e9 expos\u00e9s, y compris les emails et les billets, via une compromission d'instances Salesforce."
+      },
+      "mitre_ttps": [
+        "T1530: Data from Cloud Storage Object",
+        "T1078.004: Valid Accounts: Cloud Accounts"
+      ],
+      "recommandations": [
+        {
+          "en": "Audit SaaS and CRM permissions to ensure principle of least privilege.",
+          "fr": "Auditer les permissions SaaS et CRM pour garantir le principe du moindre privil\u00e8ge."
+        },
+        {
+          "en": "Enable advanced monitoring for unusual data export activities in Salesforce.",
+          "fr": "Activer une surveillance avanc\u00e9e pour les activit\u00e9s d'exportation de donn\u00e9es inhabituelles dans Salesforce."
+        }
+      ],
+      "tags": [
+        "data_leak",
+        "salesforce",
+        "transportation"
+      ],
+      "sources": [
+        "https://haveibeenpwned.com/Breach/Amtrak"
+      ],
+      "date": "2026-04-17"
+    },
+    {
+      "victim": "Basic-Fit",
+      "threat_actor": "Unknown",
+      "threat_actor_origin": "Unknown",
+      "threat_actor_type": "Unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Healthcare_and_Life_Sciences"
+        ],
+        "fr": [
+          "Sant\u00e9_et_Sciences_du_Vivant"
+        ]
+      },
+      "description": {
+        "en": "Compromise of personal data belonging to one million members of the fitness chain.",
+        "fr": "Compromission des donn\u00e9es personnelles d'un million de membres de la cha\u00eene de fitness."
+      },
+      "mitre_ttps": [
+        "T1213: Data from Information Repositories"
+      ],
+      "recommandations": [
+        {
+          "en": "Encrypt sensitive customer data at rest.",
+          "fr": "Chiffrer les donn\u00e9es sensibles des clients au repos."
+        },
+        {
+          "en": "Implement robust MFA for all customer database access.",
+          "fr": "Mettre en \u0153uvre un MFA robuste pour tout acc\u00e8s aux bases de donn\u00e9es clients."
+        }
+      ],
+      "tags": [
+        "PII",
+        "fitness"
+      ],
+      "sources": [
+        "https://securityaffairs.com/190950/security/kyrgyzstan-based-crypto-exchange-grinex-shuts-down-after-13-7m-cyber-heist-blames-western-intelligence.html"
+      ],
+      "date": "2026-04-17"
+    },
+    {
+      "victim": "Dubai Judicial Services",
+      "threat_actor": "Handala",
+      "threat_actor_origin": "Unknown",
+      "threat_actor_type": "Hacktiviste",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement_et_D\u00e9fense"
+        ]
+      },
+      "description": {
+        "en": "Destructive attacks by the Handala group against judicial services in Dubai, leading to exfiltration and potential data erasure.",
+        "fr": "Attaques destructrices du groupe Handala contre les services judiciaires de Duba\u00ef, entra\u00eenant une exfiltration et un effacement potentiel de donn\u00e9es."
+      },
+      "mitre_ttps": [
+        "T1567: Exfiltration Over Web Service",
+        "T1485: Data Destruction"
+      ],
+      "recommandations": [
+        {
+          "en": "Deploy immutable backups for critical judicial records.",
+          "fr": "D\u00e9ployer des sauvegardes immuables pour les dossiers judiciaires critiques."
+        },
+        {
+          "en": "Monitor for pro-Iranian hacktivist activities targeting Middle Eastern government services.",
+          "fr": "Surveiller les activit\u00e9s des hacktivistes pro-iraniens ciblant les services gouvernementaux du Moyen-Orient."
+        }
+      ],
+      "tags": [
+        "wiper",
+        "extortion",
+        "uae"
+      ],
+      "sources": [
+        "https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict"
+      ],
+      "date": "2026-04-17"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-39808",
+      "euvd_id": null,
+      "cisa_kev": "FALSE",
+      "cvss": "9.1",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:fortinet:fortisandbox:*:*:*:*:*:*:*:*",
+      "product": "FortiSandbox",
+      "vendor": "Fortinet",
+      "description": {
+        "en": "An OS command injection vulnerability in the FortiSandbox API (versions 4.4.0 to 4.4.8).",
+        "fr": "Une vuln\u00e9rabilit\u00e9 d'injection de commandes OS dans l'API FortiSandbox (versions 4.4.0 \u00e0 4.4.8)."
+      },
+      "mitre_ttps": [
+        "T1210: Exploitation of Remote Services"
+      ],
+      "recommandations": [
+        {
+          "en": "Update FortiSandbox to version 4.4.9 or later.",
+          "fr": "Mettre \u00e0 jour FortiSandbox vers la version 4.4.9 ou ult\u00e9rieure."
+        },
+        {
+          "en": "Restrict API access to authorized internal IP addresses only.",
+          "fr": "Restreindre l'acc\u00e8s \u00e0 l'API aux seules adresses IP internes autoris\u00e9es."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "command_injection"
+      ],
+      "sources": [
+        "https://fieldeffect.com/blog/critical-fortisandbox-vulnerabilities"
+      ],
+      "date": "2026-04-17"
+    },
+    {
+      "cve_id": "CVE-2026-34197",
+      "euvd_id": null,
+      "cisa_kev": "TRUE",
+      "cvss": "8.8",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:apache:activemq:*:*:*:*:*:*:*:*",
+      "product": "ActiveMQ",
+      "vendor": "Apache",
+      "description": {
+        "en": "Remote Code Execution (RCE) vulnerability in Apache ActiveMQ via the Jolokia management API.",
+        "fr": "Vuln\u00e9rabilit\u00e9 d'ex\u00e9cution de code \u00e0 distance (RCE) dans Apache ActiveMQ via l'API de gestion Jolokia."
+      },
+      "mitre_ttps": [
+        "T1190: Exploit Public-Facing Application"
+      ],
+      "recommandations": [
+        {
+          "en": "Disable or restrict access to the Jolokia interface on public-facing ActiveMQ servers.",
+          "fr": "D\u00e9sactiver ou restreindre l'acc\u00e8s \u00e0 l'interface Jolokia sur les serveurs ActiveMQ expos\u00e9s."
+        },
+        {
+          "en": "Apply official patches provided by Apache immediately.",
+          "fr": "Appliquer imm\u00e9diatement les correctifs officiels fournis par Apache."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "RCE"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/cisa-flags-apache-activemq-flaw-as-actively-exploited-in-attacks/"
+      ],
+      "date": "2026-04-17"
+    },
+    {
+      "cve_id": "CVE-2026-33825",
+      "euvd_id": null,
+      "cisa_kev": "TRUE",
+      "cvss": "8.0",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:microsoft:defender:*:*:*:*:*:*:*:*",
+      "product": "Microsoft Defender",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "Privilege Escalation vulnerability (BlueHammer) in Microsoft Defender allowing local attackers to gain SYSTEM level access.",
+        "fr": "Vuln\u00e9rabilit\u00e9 d'escalade de privil\u00e8ges (BlueHammer) dans Microsoft Defender permettant \u00e0 des attaquants locaux d'obtenir un acc\u00e8s niveau SYSTEM."
+      },
+      "mitre_ttps": [
+        "T1068: Exploitation for Privilege Escalation"
+      ],
+      "recommandations": [
+        {
+          "en": "Deploy April 2026 Windows security updates across all endpoints.",
+          "fr": "D\u00e9ployer les mises \u00e0 jour de s\u00e9curit\u00e9 Windows d'avril 2026 sur tous les postes."
+        },
+        {
+          "en": "Monitor for suspicious local privilege escalation attempts targeting MsMpEng.exe.",
+          "fr": "Surveiller les tentatives suspectes d'escalade de privil\u00e8ges locaux ciblant MsMpEng.exe."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "privilege_escalation"
+      ],
+      "sources": [
+        "https://fieldeffect.com/blog/three-microsoft-defender-zero-days-reported-exploited"
+      ],
+      "date": "2026-04-17"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "Anthropic's Mythos AI: A Strategic Threat",
+        "fr": "L'IA Mythos d'Anthropic : Une menace strat\u00e9gique"
+      },
+      "description": {
+        "en": "Anthropic has developed 'Mythos', an AI model capable of automated zero-day discovery, raising fears of automated cyber-weaponry.",
+        "fr": "Anthropic a d\u00e9velopp\u00e9 'Mythos', un mod\u00e8le d'IA capable de d\u00e9couvrir des zero-days de mani\u00e8re automatis\u00e9e, faisant craindre la cr\u00e9ation de cyber-armes automatis\u00e9es."
+      },
+      "threat_actor": "Anthropic (Dual-use Technology)",
+      "threat_actor_origin": "US",
+      "threat_actor_type": "Other",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie_et_T\u00e9l\u00e9com"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Mythos AI"
+        ]
+      },
+      "mitre_ttps": [
+        "T1588.006: Obtain Capabilities: Vulnerabilities",
+        "T1595: Active Scanning"
+      ],
+      "analyse": {
+        "en": "The potential for AI to automate vulnerability research risks making manual patch cycles obsolete and granting asymmetric advantages to attackers with similar models.",
+        "fr": "Le potentiel de l'IA pour automatiser la recherche de vuln\u00e9rabilit\u00e9s risque de rendre les cycles de correctifs manuels obsol\u00e8tes et d'accorder des avantages asym\u00e9triques aux attaquants disposant de mod\u00e8les similaires."
+      },
+      "recommandations": [
+        {
+          "en": "Adopt Secure-by-Design principles to minimize AI-discoverable flaws.",
+          "fr": "Adopter des principes Secure-by-Design pour minimiser les failles d\u00e9couvrables par IA."
+        },
+        {
+          "en": "Monitor for high-speed automated exploitation attempts that indicate AI usage.",
+          "fr": "Surveiller les tentatives d'exploitation automatis\u00e9es \u00e0 haute vitesse indiquant l'usage de l'IA."
+        }
+      ],
+      "tags": [
+        "AI",
+        "zero-day",
+        "automation"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/04/17/anthropics-dario-amodei-heads-to-white-house-amid-hacking-fears-over-mythos/"
+      ],
+      "date": "2026-04-18"
+    },
+    {
+      "title": {
+        "en": "EDR Evasion via QEMU Virtualization by Payouts King",
+        "fr": "\u00c9vasion EDR via la virtualisation QEMU par Payouts King"
+      },
+      "description": {
+        "en": "Payouts King uses QEMU to run Alpine Linux VMs on compromised hosts, hiding malicious activity from EDR sensors.",
+        "fr": "Payouts King utilise QEMU pour lancer des VM Alpine Linux sur les h\u00f4tes compromis, cachant l'activit\u00e9 malveillante aux capteurs EDR."
+      },
+      "threat_actor": "Gold Encounter",
+      "threat_actor_origin": "Unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [
+        "Payouts King",
+        "Black Basta Affiliates"
+      ],
+      "sector": {
+        "en": [
+          "Business_Services"
+        ],
+        "fr": [
+          "Services_aux_Entreprises"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "QEMU",
+          "AdaptixC2",
+          "Chisel",
+          "Rclone",
+          "TPMProfiler"
+        ]
+      },
+      "mitre_ttps": [
+        "T1564.006: Hide Artifacts: System Virtualization",
+        "T1572: Protocol Tunneling",
+        "T1053.005: Scheduled Task"
+      ],
+      "analyse": {
+        "en": "By encapsulating post-exploitation tools within a lightweight VM, attackers bypass behavioral detection that only monitors the host OS processes.",
+        "fr": "En encapsulant les outils de post-exploitation dans une VM l\u00e9g\u00e8re, les attaquants contournent la d\u00e9tection comportementale qui ne surveille que les processus du syst\u00e8me d'exploitation h\u00f4te."
+      },
+      "recommandations": [
+        {
+          "en": "Inventory and block unauthorized virtualization binaries (qemu-system-x86_64).",
+          "fr": "Inventorier et bloquer les binaires de virtualisation non autoris\u00e9s (qemu-system-x86_64)."
+        },
+        {
+          "en": "Alert on scheduled tasks with SYSTEM privileges and suspicious names like 'TPMProfiler'.",
+          "fr": "Alerter sur les t\u00e2ches planifi\u00e9es avec les privil\u00e8ges SYSTEM et des noms suspects comme 'TPMProfiler'."
+        }
+      ],
+      "tags": [
+        "ransomware",
+        "evasion",
+        "virtualization"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/payouts-king-ransomware-uses-qemu-vms-to-bypass-endpoint-security/"
+      ],
+      "date": "2026-04-18"
+    },
+    {
+      "title": {
+        "en": "ZionSiphon Malware Targeting Israeli Water Critical Infrastructure",
+        "fr": "Malware ZionSiphon ciblant les infrastructures critiques hydrauliques isra\u00e9liennes"
+      },
+      "description": {
+        "en": "ZionSiphon is a new malware designed to sabotage water treatment systems by manipulating hydraulic pressure and chlorine levels.",
+        "fr": "ZionSiphon est un nouveau malware con\u00e7u pour saboter les syst\u00e8mes de traitement de l'eau en manipulant la pression hydraulique et les niveaux de chlore."
+      },
+      "threat_actor": "Unknown",
+      "threat_actor_origin": "Unknown",
+      "threat_actor_type": "Hacktiviste",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Critical_Infrastructure"
+        ],
+        "fr": [
+          "Infrastructure_Critique"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [
+          "2.52.0.0-2.55.255.255",
+          "79.176.0.0-79.191.255.255",
+          "212.150.0.0-212.150.255.255"
+        ],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Modbus",
+          "DNP3",
+          "S7"
+        ]
+      },
+      "mitre_ttps": [
+        "T0831: Data Destruction",
+        "T0855: Unauthorized Command Message",
+        "T1091: Replication Through Removable Media"
+      ],
+      "analyse": {
+        "en": "The malware uses geographic IP fencing to target Israel and spreads via USB, indicating an offline intrusion vector aimed at air-gapped ICS networks.",
+        "fr": "Le malware utilise un filtrage IP g\u00e9ographique pour cibler Isra\u00ebl et se propage par USB, indiquant un vecteur d'intrusion hors ligne visant les r\u00e9seaux ICS isol\u00e9s (air-gapped)."
+      },
+      "recommandations": [
+        {
+          "en": "Physically disable or restrict USB ports on all workstations connected to PLC networks.",
+          "fr": "D\u00e9sactiver physiquement ou restreindre les ports USB sur tous les postes connect\u00e9s aux r\u00e9seaux d'automates."
+        },
+        {
+          "en": "Implement anomaly detection for Modbus/S7 traffic within OT environments.",
+          "fr": "Mettre en \u0153uvre la d\u00e9tection d'anomalies pour le trafic Modbus/S7 au sein des environnements OT."
+        }
+      ],
+      "tags": [
+        "OT",
+        "ICS",
+        "sabotage",
+        "water_security"
+      ],
+      "sources": [
+        "https://securityaffairs.com/190922/malware/inside-zionsiphon-politically-driven-malware-aims-at-israeli-water-systems.html"
+      ],
+      "date": "2026-04-18"
+    },
+    {
+      "title": {
+        "en": "Lumma Stealer and Sectop RAT Campaign via Cracked Software",
+        "fr": "Campagne Lumma Stealer et Sectop RAT via des logiciels crack\u00e9s"
+      },
+      "description": {
+        "en": "Distribution of Lumma Stealer and Sectop RAT through fake Adobe Premiere Pro cracks using file padding to evade antivirus.",
+        "fr": "Distribution de Lumma Stealer et Sectop RAT via de faux cracks Adobe Premiere Pro utilisant le 'padding' de fichiers pour \u00e9viter les antivirus."
+      },
+      "threat_actor": "Unknown",
+      "threat_actor_origin": "Unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie_et_T\u00e9l\u00e9com"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [
+          "91.92.241.102"
+        ],
+        "IPv6": [],
+        "DOMAIN": [
+          "cankgmr.cyou",
+          "carytui.vu",
+          "genugsq.best",
+          "mushxhb.best"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [
+          "d9b576eb6827f38e33eda037d2cda4261307511303254a8509eeb28048433b2f"
+        ],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Lumma Stealer",
+          "Sectop RAT",
+          "ArechClient2"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566.002: Phishing: Spearphishing Link",
+        "T1005: Data from Local System",
+        "T1573: Encrypted Channel"
+      ],
+      "analyse": {
+        "en": "The use of files over 800MB (padding) successfully bypasses many perimeter security scanners that limit file size analysis for performance.",
+        "fr": "L'utilisation de fichiers de plus de 800 Mo (padding) permet de contourner avec succ\u00e8s de nombreux scanners de s\u00e9curit\u00e9 p\u00e9rim\u00e9triques qui limitent la taille des fichiers analys\u00e9s."
+      },
+      "recommandations": [
+        {
+          "en": "Implement policy-based blocks on unauthorized software download sites.",
+          "fr": "Mettre en \u0153uvre des blocages bas\u00e9s sur les politiques pour les sites de t\u00e9l\u00e9chargement de logiciels non autoris\u00e9s."
+        },
+        {
+          "en": "Increase the maximum file size limit for antivirus scanning on endpoint and mail gateways.",
+          "fr": "Augmenter la limite de taille maximale des fichiers pour le scan antivirus sur les postes et les passerelles mail."
+        }
+      ],
+      "tags": [
+        "stealer",
+        "infostealer",
+        "cracked_software"
+      ],
+      "sources": [
+        "https://isc.sans.edu/diary/rss/32904"
+      ],
+      "date": "2026-04-18"
+    },
+    {
+      "title": {
+        "en": "Operation PowerOFF: Takedown of DDoS Booter Infrastructure",
+        "fr": "Op\u00e9ration PowerOFF : D\u00e9mant\u00e8lement de l'infrastructure de Booters DDoS"
+      },
+      "description": {
+        "en": "International law enforcement seized 53 domains and identified 3 million accounts linked to DDoS-for-hire services.",
+        "fr": "Les forces de l'ordre internationales ont saisi 53 domaines et identifi\u00e9 3 millions de comptes li\u00e9s \u00e0 des services de DDoS \u00e0 la location."
+      },
+      "threat_actor": "Unknown",
+      "threat_actor_origin": "Unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Security"
+        ],
+        "fr": [
+          "S\u00e9curit\u00e9"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "zdstresser.net",
+          "orbitalstress.net",
+          "starkstresser.net"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "RapperBot"
+        ]
+      },
+      "mitre_ttps": [
+        "T1498: Network Denial of Service"
+      ],
+      "analyse": {
+        "en": "While this takedown disrupts the low-cost DDoS economy, the vast number of identified users suggests a widespread cultural normalization of cybercrime among technical youth.",
+        "fr": "Bien que ce d\u00e9mant\u00e8lement perturbe l'\u00e9conomie du DDoS \u00e0 bas co\u00fbt, le nombre immense d'utilisateurs identifi\u00e9s sugg\u00e8re une normalisation culturelle du cybercrime chez les jeunes profils techniques."
+      },
+      "recommandations": [
+        {
+          "en": "Review anti-DDoS service thresholds and ensure cloud-based scrubbers are active.",
+          "fr": "Revoir les seuils des services anti-DDoS et s'assurer que les centres de nettoyage (scrubbers) cloud sont actifs."
+        },
+        {
+          "en": "Launch cybersecurity awareness programs targeting students to deter the use of booter services.",
+          "fr": "Lancer des programmes de sensibilisation \u00e0 la cybers\u00e9curit\u00e9 ciblant les \u00e9tudiants pour les dissuader d'utiliser des services de booter."
+        }
+      ],
+      "tags": [
+        "DDoS",
+        "takedown",
+        "law_enforcement"
+      ],
+      "sources": [
+        "https://securityaffairs.com/190932/cyber-crime/operation-poweroff-53-ddos-domains-seized-and-3-million-criminal-accounts-uncovered.html"
+      ],
+      "date": "2026-04-18"
+    }
+  ]
+}
