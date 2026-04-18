@@ -9,19 +9,19 @@
   * [Articles sélectionnés](#articles-selectionnes)
   * [Articles non sélectionnés](#articles-non-selectionnes)
 * [Articles](#articles)
-  * [lumma stealer et sectop rat analyse dune infection par logiciel cracke](#lumma-stealer-et-sectop-rat-analyse-dune-infection-par-logiciel-cracke)
-  * [zionsiphon le nouveau malware de sabotage ciblant les infrastructures hydrauliques](#zionsiphon-le-nouveau-malware-de-sabotage-ciblant-les-infrastructures-hydrauliques)
-  * [redsun une nouvelle zero-day dans microsoft defender permet une elevation de privileges](#redsun-une-nouvelle-zero-day-dans-microsoft-defender-permet-une-elevation-de-privileges)
-  * [exploitation de la faille marimo pour deployer le malware nkabuse via hugging face](#exploitation-de-la-faille-marimo-pour-deployer-le-malware-nkabuse-via-hugging-face)
-  * [cyber-vol de fret les hackers ciblent lindustrie de la logistique avec des outils de signature as a service](#cyber-vol-de-fret-les-hackers-ciblent-lindustrie-de-la-logistique-avec-des-outils-de-signature-as-a-service)
-  * [uac-0247 une campagne despoinnage persistante contre les infrastructures critiques ukrainiennes](#uac-0247-une-campagne-despoinnage-persistante-contre-les-infrastructures-critiques-ukrainiennes)
+  * [L'IA Mythos d'Anthropic : Une menace stratégique pour la cybersécurité mondiale](#mythos-intelligence-artificielle-anthropic-menace)
+  * [Evasion des solutions EDR via la virtualisation QEMU par Payouts King](#payouts-king-ransomware-qemu-evasion)
+  * [Exploitation active de trois vulnérabilités zero-day contre Microsoft Defender](#microsoft-defender-zero-days-exploitation)
+  * [ZionSiphon : Logiciel malveillant ciblant les infrastructures critiques hydrauliques israéliennes](#zionsiphon-malware-infrastructures-critiques-israel)
+  * [Infection Lumma Stealer et Sectop RAT via des logiciels crackés](#lumma-stealer-sectop-rat-logiciels-crackes)
+  * [Opération PowerOFF : Démantèlement massif de l'économie des services DDoS](#operation-poweroff-demantelement-ddos)
 
 <br/>
 <br/>
 <div id="analyse-strategique"></div>
 
 # Analyse Stratégique
-Le paysage cyber actuel est marqué par une transition brutale vers des offensives à "vitesse machine", portées par l'intégration massive de l'intelligence artificielle générative dans les arsenaux criminels. L'émergence de plateformes comme ATHR pour le vishing automatisé et l'utilisation de LLM pour la découverte de vulnérabilités (RedSun, projet Mythos) saturent les capacités de défense humaines traditionnelles. Parallèlement, le conflit hybride sino-israélo-iranien s'intensifie avec des capacités de sabotage ciblant les infrastructures vitales, notamment l'eau et l'énergie, comme l'illustre la menace ZionSiphon. Les acteurs étatiques, particulièrement nord-coréens et russes, affinent leurs techniques d'intrusion sur macOS et Linux tout en exploitant des vecteurs de confiance tels que Hugging Face ou n8n. La chaîne d'approvisionnement logicielle demeure une vulnérabilité critique, les attaquants utilisant désormais des services de "signature-as-a-service" pour légitimer leurs malwares. Les décideurs doivent impérativement pivoter vers des centres d'opérations de sécurité (SOC) "agentiques" et automatisés pour contrer cette montée en puissance technologique. La résilience passera par une collaboration radicale et le durcissement des systèmes industriels (OT) face à des cyber-attaques de plus en plus cinétiques.
+Le paysage cyber de ce mois d'avril 2026 est marqué par l'émergence de "Mythos", un modèle d'IA d'Anthropic capable d'automatiser la découverte de failles critiques, provoquant une panique au sein de l'administration américaine et redéfinissant la course aux armements numériques. Parallèlement, le conflit entre les États-Unis, Israël et l'Iran s'intensifie dans le cyberespace avec des attaques ciblées contre les infrastructures critiques (OT/ICS) et un blackout Internet prolongé en Iran. On observe une professionnalisation accrue des acteurs de ransomware, à l'image de Payouts King qui utilise la virtualisation (QEMU) pour contourner les solutions EDR, rendant la détection traditionnelle inopérante. L'économie du phishing s'industrialise également, avec des kits capables de contourner systématiquement le MFA et d'automatiser le ciblage des cadres dirigeants. Les vulnérabilités "zero-day" sur Microsoft Defender démontrent que même les outils de protection de base sont désormais des cibles directes pour l'escalade de privilèges. La dépendance européenne vis-à-vis du cloud américain est soulignée comme un risque stratégique majeur de "kill switch" en cas de tensions géopolitiques. Enfin, les opérations de police internationale comme PowerOFF montrent une volonté de désorganiser l'infrastructure des services DDoS à la location. Cette période confirme la convergence totale entre IA générative, tensions cinétiques et techniques d'évasion avancées.
 
 <br>
 <br>
@@ -35,13 +35,15 @@ Le paysage cyber actuel est marqué par une transition brutale vers des offensiv
 Voici un tableau récapitulatif des acteurs malveillants identifiés :
 | Nom de l'acteur | Secteur d'activité ciblé | Mode opératoire privilégié | Source(s)/Url(s) |
 |:---|:---|:---|:---|
-| APT37 (ScarCruft) | Recherche militaire | Pretexting sur réseaux sociaux et logiciels trojanisés | [Sploited.blog](https://sploited.blog/2026/04/16/weekly-threat-landscape-thursday-roundup-4/) |
-| APT41 | Cloud (AWS, Azure, GCP) | Backdoor ELF indétectable via protocole SMTP | [The Hacker News](https://thehackernews.com/2026/04/threatsday-bulletin-17-year-old-excel.html) |
-| Handala Hack | Gouvernement (EAU), Santé (US), Industrie (ISR) | Wiper, exfiltration de données, abus de Microsoft Intune | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
-| Rhysida | Santé (Hôpitaux) | Ransomware et exfiltration massive de données | [Security Affairs](https://securityaffairs.com/190898/cyber-crime/cookeville-regional-medical-center-hospital-data-breach-impacts-337917-people.html) |
-| Sapphire Sleet | Tech, Crypto, macOS | Ingénierie sociale, empoisonnement de packages npm (Axios) | [Microsoft](https://www.microsoft.com/en-us/security/blog/2026/04/16/dissecting-sapphire-sleets-macos-intrusion-from-lure-to-compromise/) |
-| UAC-0247 | Gouvernement et Santé (Ukraine) | Phishing humanitaire, malwares AgingFly et SilentLoop | [Security Affairs](https://securityaffairs.com/190875/apt/from-clinics-to-government-uac-0247-expands-cyber-campaign-across-ukraine.html) |
-| Water Hydra | Finance, Trading | Phishing ciblé et exploitation de vulnérabilités | [The Hacker News](https://thehackernews.com/2026/04/threatsday-bulletin-17-year-old-excel.html) |
+| APT37 (ScarCruft) | Recherche militaire | Ingénierie sociale via réseaux sociaux et logiciels trojanisés | [Sploited Blog](https://sploited.blog/2026/04/16/weekly-threat-landscape-thursday-roundup-4/) |
+| Black Basta (affiliés) | Cadres dirigeants (Executive targeting) | Email bombing suivi d'usurpation de support technique via Microsoft Teams | [DataBreaches.net](https://databreaches.net/2026/04/17/are-former-black-basta-affiliates-automating-executive-targeting/) |
+| CyberAv3ngers (CL-STA-1128) | Infrastructures critiques (Eau, Énergie) | Exploitation de PLC Rockwell Automation/Allen-Bradley connectés à Internet | [Unit 42](https://unit42.paloaltonetworks.com/iranian-cyberattacks-2026/) |
+| GOLD ENCOUNTER | Hyperviseurs, Environnements VMware | Utilisation de QEMU pour exécuter des VM cachées et contourner la sécurité | [BleepingComputer](https://www.bleepingcomputer.com/news/security/payouts-king-ransomware-uses-qemu-vms-to-bypass-endpoint-security/) |
+| GreenGolf (MuddyWater) | Aviation, Énergie, Gouvernement (Moyen-Orient) | Exfiltration de données à grande échelle via vulnérabilités CVE et force brute OWA | [Recorded Future](https://www.recordedfuture.com/blog/the-iran-war-what-you-need-to-know) |
+| Handala Hack | Gouvernement, Défense (Israël, Émirats) | Wiper (effacement de données), exfiltration massive et cyber-extorsion | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
+| Payouts King | Divers | Ransomware via VM Alpine Linux lancées sous QEMU pour évasion EDR | [BleepingComputer](https://www.bleepingcomputer.com/news/security/payouts-king-ransomware-uses-qemu-vms-to-bypass-endpoint-security/) |
+| Scattered Spider | Tech, Télécoms, Cloud | Intrusions cyber et vol de monnaie virtuelle, usurpation d'identité | [DataBreaches.net](https://databreaches.net/2026/04/17/tyler-robert-buchanan-pleads-guilty-to-one-count-of-conspiracy-to-commit-wire-fraud-and-one-count-of-aggravated-identity-theft/) |
+| ShinyHunters | Services, Transport | Compromission d'instances Salesforce et exfiltration de données | [Have I Been Pwned](https://haveibeenpwned.com/Breach/Amtrak) |
 
 <br/>
 <br/>
@@ -51,10 +53,13 @@ Voici un tableau récapitulatif des acteurs malveillants identifiés :
 Voici un tableau récapitulatif de l'actualité géopolitique de ce jour :
 | Secteur d'activité | Thème | Description | Source(s)/Url(s) |
 |:---|:---|:---|:---|
-| Énergie | Sabotage | La Suède attribue une tentative d'attaque contre une centrale thermique à un groupe pro-russe lié au renseignement. | [Security Affairs](https://securityaffairs.com/190869/intelligence/sweden-reports-cyberattack-attempt-on-heating-plant-amid-rising-energy-threats.html) |
-| Gouvernement | Espionnage | Campagne UAC-0247 contre les institutions municipales et de santé ukrainiennes via des thèmes humanitaires. | [SOC Prime](https://socprime.com/blog/uac-0247-attack-detection-agingfly-malware-targets-hospitals-local-governments-and-fpv-operators-in-ukraine/) |
-| Infrastructures critiques | Conflit militaire | Cyber-attaques croisées entre les USA, Israël et l'Iran incluant le sabotage de systèmes d'eau et l'usage de satellites. | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
-| Militaire | Guerre de l'eau | Analyse des tensions hydriques comme multiplicateur de risques entre l'Égypte, l'Éthiopie et Israël. | [Portail de l'IE](https://www.portail-ie.fr/univers/2026/le-nil-et-le-levant-deux-modeles-face-a-la-contrainte-hydrique/) |
+| Bulgarie | Élections | Campagne de désinformation pro-Kremlin visant à discréditer les élections législatives. | [EUvsDisinfo](https://euvsdisinfo.eu/russia-targets-elections-in-hungary-and-bulgaria/) |
+| Émirats Arabes Unis | Cyber-conflit | Allégations d'attaques destructrices par le groupe Handala contre les services judiciaires de Dubaï. | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
+| Hongrie | Élections | Tentatives de discrédit de l'opposition TISZA par des narratifs pro-Kremlin. | [EUvsDisinfo](https://euvsdisinfo.eu/russia-targets-elections-in-hungary-and-bulgaria/) |
+| Iran | Blackout | Le pays entre dans son 49ème jour de coupure quasi-totale d'Internet (connectivité à 1%). | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
+| Israël | Conflit cinétique/cyber | Cessez-le-feu de 10 jours avec le Liban (Hezbollah) amorcé sous l'égide de Donald Trump. | [IRIS](https://www.iris-france.org/liban-nouvel-affront-israelien-a-la-france/) |
+| Suède | Énergie | Révélation d'une tentative d'intrusion russe contre une centrale thermique en 2025. | [Sploited Blog](https://sploited.blog/2026/04/16/weekly-threat-landscape-thursday-roundup-4/) |
+| Union Européenne | Souveraineté | Rapport sur la dépendance critique des systèmes de sécurité nationale européens envers le cloud américain. | [Le Monde](https://www.lemonde.fr/pixels/article/2026/04/17/plus-des-trois-quarts-des-pays-europeens-sont-dependants-du-cloud-americain-pour-des-fonctions-essentielles-a-leur-securite-nationale-met-en-garde-un-rapport_6680848_4408996.html) |
 
 <br/>
 <br/>
@@ -63,11 +68,11 @@ Voici un tableau récapitulatif de l'actualité géopolitique de ce jour :
 
 ## Synthèse réglementaire et juridiques
 Voici un tableau récapitulatif complet de tous les articles juridiques relatifs à la réglementation « CYBER » :
-| Titre de l'article | Auteur | Date | Juridiction | Référence | Description | Source |
+| Titre de l'article | Auteur | Date de publication | Juridiction | Référence législative / normative | Description du texte réglementaire | Source(s)/Url(s) |
 |:---|:---|:---|:---|:---|:---|:---|
-| E.U. Plans Bloc-Wide Age Verification App | Ravie Lakshmanan | 16/04/2026 | Union Européenne | Protection des mineurs | Application open-source d'authentification de l'âge respectant la vie privée pour les plateformes. | [The Hacker News](https://thehackernews.com/2026/04/threatsday-bulletin-17-year-old-excel.html) |
-| Raspberry Pi Disables Passwordless sudo | Raspberry Pi | 16/04/2026 | Monde (OS) | Raspberry Pi OS 6.2 | Désactivation du sudo sans mot de passe par défaut pour renforcer la sécurité post-installation. | [The Hacker News](https://thehackernews.com/2026/04/threatsday-bulletin-17-year-old-excel.html) |
-| Defendant Sentenced To Prison For Hacking Betting Website | Jay Clayton | 16/04/2026 | USA | Southern District of NY | Condamnation de Kamerin Stokes à 30 mois de prison pour credential stuffing sur un site de paris. | [DataBreaches.net](https://databreaches.net/2026/04/16/defendant-sentenced-to-prison-for-hacking-betting-website/) |
+| Advisory on AI Laws | AG William Tong | 17/04/2026 | Connecticut (USA) | Civil Rights, Privacy, Consumer Protection laws | Clarification que les lois existantes (protection des données, droits civils) s'appliquent pleinement à l'IA. | [DataBreaches.net](https://databreaches.net/2026/04/17/connecticut-ag-puts-businesses-on-notice-old-laws-still-apply-to-ai/) |
+| House Bill 96 - Cybersecurity Audits | Ohio Legislature | 17/04/2026 | Ohio (USA) | House Bill 96 | Obligation pour les districts scolaires de mettre en œuvre des programmes de cybersécurité audités par l'État. | [DataBreaches.net](https://databreaches.net/2026/04/17/state-to-audit-ohio-school-districts-cybersecurity-plans/) |
+| Sentencing of Kamerin Stokes | US Department of Justice | 17/04/2026 | USA | Conspiracy, Identity Theft | Condamnation à 30 mois de prison pour vente de comptes DraftKings piratés. | [SecurityAffairs](https://securityaffairs.com/190943/cyber-crime/draftkings-hacker-sentenced-to-prison-ordered-to-pay-1-4-million.html) |
 
 <br/>
 <br/>
@@ -77,11 +82,10 @@ Voici un tableau récapitulatif complet de tous les articles juridiques relatifs
 Voici un tableau récapitulatif des violations de données constatées :
 | Secteur d'activité | Victime | Description de la menace/incident | Source(s)/Url(s) |
 |:---|:---|:---|:---|
-| Éducation | McGraw Hill | 13,5 millions de comptes exposés suite à une mauvaise configuration de Salesforce. | [HIBP](https://haveibeenpwned.com/Breach/McGrawHill) |
-| Gouvernement | Agences Mexicaines | Neuf agences compromises via l'usage combiné de Claude Code et ChatGPT pour l'exfiltration de registres de citoyens. | [DataBreaches.net](https://databreaches.net/2026/04/16/double-trouble-hackers-used-both-claude-code-and-chatgpt-in-a-cybersecurity-hack-that-lasted-two-and-a-half-months/) |
-| Santé | Cookeville Regional Medical Center | 337 917 personnes affectées par un ransomware Rhysida ; 500 Go de données volées. | [Security Affairs](https://securityaffairs.com/190898/cyber-crime/cookeville-regional-medical-center-hospital-data-breach-impacts-337917-people.html) |
-| Tourisme | Booking.com | Accès non autorisé à des détails de réservations et informations personnelles des clients. | [NetSecIO](https://mastodon.social/@netsecio/116416313793802783) |
-| Transport | Amtrak | Revendication par ShinyHunters du vol de 9,4 millions d'enregistrements via Salesforce. | [NetSecIO](https://mastodon.social/@netsecio/116416313473735499) |
+| Finance / Crypto | Grinex (Kirghizistan) | Vol de 13,7 millions de dollars d'utilisateurs russes. Attribution alléguée aux services de renseignement occidentaux. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/grinex-exchange-blames-western-intelligence-for-137m-crypto-hack/) |
+| Santé | Basic-Fit | Compromission des données personnelles d'un million de membres. | [SecurityAffairs](https://securityaffairs.com/190950/security/kyrgyzstan-based-crypto-exchange-grinex-shuts-down-after-13-7m-cyber-heist-blames-western-intelligence.html) |
+| Santé | Cookeville Regional Medical Center | Violation de données impactant 337 917 personnes. | [SecurityAffairs](https://securityaffairs.com/190950/security/kyrgyzstan-based-crypto-exchange-grinex-shuts-down-after-13-7m-cyber-heist-blames-western-intelligence.html) |
+| Transport | Amtrak | 2,1 millions de comptes exposés (emails, adresses, tickets support). ShinyHunters revendique l'attaque via Salesforce. | [Have I Been Pwned](https://haveibeenpwned.com/Breach/Amtrak) |
 
 <br/>
 <br/>
@@ -89,16 +93,14 @@ Voici un tableau récapitulatif des violations de données constatées :
 
 ## Synthèse des vulnérabilités
 Voici un tableau récapitulatif des vulnérabilités identifiées, classées par ordre de criticité (score CVSS).
-| CVE-ID | CVSS | EPSS | CISA Kev | Produit affecté | Type | MITRE ATT&CK | Description | Source |
+| CVE-ID | Score CVSS | EPSS | CISA Kev | Produit affecté | Type de vulnérabilité | Tactiques Techniques et Procédures MITRE ATT&CK | Description | Source(s)/Url(s) |
 |:---|:---|:---|:---|:---|:---|:---|:---|:---|
-| CVE-2026-20147 | 9.9 | N/A | FALSE | Cisco ISE | Injection | T1190 | Validation d'entrée défaillante permettant une exécution de code à distance (RCE). | [Security Affairs](https://securityaffairs.com/190909/security/cisco-fixed-four-critical-flaws-in-identity-services-and-webex.html) |
-| CVE-2026-39808 | 9.8 | N/A | FALSE | Fortinet FortiSandbox | RCE | T1203 | Injection de commandes OS via l'API permettant un compromis total du bac à sable. | [HelpNetSecurity](https://www.helpnetsecurity.com/2026/04/16/fortinet-fortisandbox-vulnerabilities-cve-2026-39813-cve-2026-39808/) |
-| CVE-2026-20184 | 9.8 | N/A | FALSE | Cisco Webex SSO | Auth Bypass | T1550 | Mauvaise validation de certificat permettant l'usurpation de n'importe quel utilisateur. | [Security Affairs](https://securityaffairs.com/190909/security/cisco-fixed-four-critical-flaws-in-identity-services-and-webex.html) |
-| CVE-2026-39987 | 9.8 | N/A | TRUE | Marimo Python Notebook | RCE | T1190 | Faille exploitée activement pour déployer des malwares via Hugging Face. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/hackers-exploit-marimo-flaw-to-deploy-nkabuse-malware-from-hugging-face/) |
-| CVE-2026-5189 | 9.2 | N/A | FALSE | Nexus Repository 3 | Hardcoded Creds | T1552 | Identifiants codés en dur dans le composant OrientDB permettant le contrôle du système. | [SecurityOnline](https://securityonline.info/nexus-repository-hardcoded-credential-vulnerability-cve-2026-5189/) |
-| CVE-2026-34457 | 9.1 | N/A | FALSE | OAuth2 Proxy | Auth Bypass | T1550 | Loophole dans les health checks permettant de contourner l'authentification via User-Agent. | [SecurityOnline](https://securityonline.info/oauth2-proxy-authentication-bypass-cve-2026-34457/) |
-| CVE-2026-40322 | 9.0 | N/A | FALSE | SiYuan | XSS to RCE | T1189 | Injection de lien Mermaid JS menant à une exécution de code arbitraire sur Electron. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-40322) |
-| CVE-2009-0238 | 8.8 | High | TRUE | Microsoft Excel | RCE | T1203 | Faille de 17 ans réactivée pour exécution de code via fichiers Excel malformés. | [The Hacker News](https://thehackernews.com/2026/04/threatsday-bulletin-17-year-old-excel.html) |
+| CVE-2026-39808 | 9.1 | N/A | FALSE | Fortinet FortiSandbox | OS Command Injection | T1210: Exploitation of Remote Services | Injection de commandes via l'API FortiSandbox (versions 4.4.0 à 4.4.8). | [Field Effect](https://fieldeffect.com/blog/critical-fortisandbox-vulnerabilities) |
+| CVE-2026-39813 | 9.1 | N/A | FALSE | Fortinet FortiSandbox | Path Traversal / Auth Bypass | T1068: Exploitation for Privilege Escalation | Contournement d'authentification via l'interface Java RPC (versions 4.4 et 5.0). | [Field Effect](https://fieldeffect.com/blog/critical-fortisandbox-vulnerabilities) |
+| CVE-2026-34197 | 8.8 | N/A | TRUE | Apache ActiveMQ | RCE (Remote Code Execution) | T1190: Exploit Public-Facing Application | Exécution de code à distance via l'API de gestion Jolokia (présente depuis 13 ans). | [BleepingComputer](https://www.bleepingcomputer.com/news/security/cisa-flags-apache-activemq-flaw-as-actively-exploited-in-attacks/) |
+| CVE-2026-6437 | Importante | N/A | FALSE | Amazon EFS CSI Driver | Mount Option Injection | T1548: Abuse Elevation Control Mechanism | Injection d'options de montage via des champs non sanitisés dans Kubernetes. | [AWS Security](https://aws.amazon.com/security/security-bulletins/rss/2026-016-aws/) |
+| CVE-2026-33825 | Elevé | N/A | TRUE | Microsoft Defender | Privilege Escalation (BlueHammer) | T1068: Exploitation for Privilege Escalation | Faille locale permettant l'escalade de privilèges vers le niveau SYSTEM. | [Field Effect](https://fieldeffect.com/blog/three-microsoft-defender-zero-days-reported-exploited) |
+| CVE-2023-33538 | Elevé | N/A | TRUE | TP-Link Routers (EOL) | RCE via SSID parameter | T1203: Exploitation for Client Execution | Injection de commandes dans les routeurs TP-Link en fin de vie pour installer Mirai. | [CyberSecurityNews](https://cybersecuritynews.com/hackers-target-tp-link-routers/) |
 
 <br/>
 <br/>
@@ -107,12 +109,12 @@ Voici un tableau récapitulatif des vulnérabilités identifiées, classées par
 ## Articles sélectionnés
 | Titre de l'article | Raison | Url |
 |:---|:---|:---|
-| Lumma Stealer infection with Sectop RAT | Analyse technique détaillée d'une chaîne d'infection multi-malwares courante. | [ISC SANS](https://isc.sans.edu/diary/rss/32904) |
-| ZionSiphon malware designed to sabotage water systems | Menace critique ciblant l'OT et les infrastructures vitales. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/zionsiphon-malware-designed-to-sabotage-water-treatment-systems/) |
-| New Microsoft Defender “RedSun” zero-day | Découverte d'une zero-day majeure affectant la défense native Windows. | [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/new-microsoft-defender-redsun-zero-day-poc-grants-system-privileges/) |
-| Hackers exploit Marimo flaw via Hugging Face | Nouvelle tendance d'abus de plateformes d'IA et de frameworks Python. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/hackers-exploit-marimo-flaw-to-deploy-nkabuse-malware-from-hugging-face/) |
-| Cargo thieving hackers running sophisticated campaigns | Focus sur une menace sectorielle (logistique) utilisant des techniques avancées. | [Proofpoint](https://www.proofpoint.com/us/newsroom/news/cargo-thieving-hackers-running-sophisticated-remote-access-campaigns-researchers-find) |
-| From clinics to government: UAC-0247 expands campaign | Documentation d'une menace étatique persistante en zone de conflit. | [Security Affairs](https://securityaffairs.com/190875/apt/from-clinics-to-government-uac-0247-expands-cyber-campaign-across-ukraine.html) |
+| Anthropic’s Dario Amodei heads to White House amid hacking fears over Mythos | Importance stratégique majeure de l'IA dans la découverte automatisée de vulnérabilités. | [DataBreaches.net](https://databreaches.net/2026/04/17/anthropics-dario-amodei-heads-to-white-house-amid-hacking-fears-over-mythos/) |
+| Inside ZionSiphon: politically driven malware aims at Israeli water systems | Menace concrète contre les infrastructures critiques (OT/ICS) hydrauliques. | [SecurityAffairs](https://securityaffairs.com/190922/malware/inside-zionsiphon-politically-driven-malware-aims-at-israeli-water-systems.html) |
+| Lumma Stealer infection with Sectop RAT (ArechClient2) | Analyse technique détaillée d'une chaîne d'infection multi-malware via logiciels crackés. | [SANS ISC](https://isc.sans.edu/diary/rss/32904) |
+| Operation PowerOFF: 53 DDoS domains seized and 3 Million criminal accounts uncovered | Succès opérationnel majeur des forces de l'ordre contre l'infrastructure DDoS mondiale. | [SecurityAffairs](https://securityaffairs.com/190932/cyber-crime/operation-poweroff-53-ddos-domains-seized-and-3-million-criminal-accounts-uncovered.html) |
+| Payouts King ransomware uses QEMU VMs to bypass endpoint security | Technique d'évasion EDR innovante via la virtualisation légère (QEMU). | [BleepingComputer](https://www.bleepingcomputer.com/news/security/payouts-king-ransomware-uses-qemu-vms-to-bypass-endpoint-security/) |
+| Three Microsoft Defender Zero-days Reported Exploited | Menace directe sur l'outil de sécurité standard de Windows avec exploitation active. | [Field Effect](https://fieldeffect.com/blog/three-microsoft-defender-zero-days-reported-exploited) |
 
 <br/>
 <br/>
@@ -121,160 +123,166 @@ Voici un tableau récapitulatif des vulnérabilités identifiées, classées par
 ## Articles non sélectionnés
 | Titre de l'article | Raison | Source/Url |
 |:---|:---|:---|
-| Brian Cute on the Techsequences Podcast | Contenu audio, résumé stratégique peu opérationnel. | [GCA](https://globalcyberalliance.org/brian-cute-on-the-techsequences-podcast/) |
-| Most "AI SOCs" Are Just Faster Triage | Contenu sponsorisé/promotionnel (Tines). | [BleepingComputer](https://www.bleepingcomputer.com/news/security/most-ai-socs-are-just-faster-triage-thats-not-enough/) |
-| McGraw Hill data breach | Violation de données pure sans nouvelle analyse technique de menace. | [HIBP](https://haveibeenpwned.com/Breach/McGrawHill) |
-| More than pretty pictures: Wendy Bishop | Article de type "Portrait" sans lien direct avec la menace. | [Cisco Talos](https://blog.talosintelligence.com/more-than-pretty-pictures-wendy-bishop-on-visual-storytelling-in-tech/) |
+| 4 Essential Integration Workflows for Operationalizing Threat Intelligence | Contenu marketing axé sur un produit spécifique. | [Recorded Future](https://www.recordedfuture.com/blog/4-essential-integration-workflows-for-operationalizing-threat-intelligence) |
+| ISC Stormcast For Friday, April 17th, 2026 | Format podcast, informations traitées plus en détail dans d'autres articles sélectionnés. | [SANS ISC](https://isc.sans.edu/podcastdetail/9896) |
+| Webinar: From phishing to fallout — Why MSPs must rethink both security and recovery | Promotion d'un webinaire futur. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/webinar-from-phishing-to-fallout-why-msps-must-rethink-both-security-and-recovery/) |
 
 <br>
-<br/>
+<br>
 <div id="articles"></div>
 
 # ARTICLES
 
-<div id="lumma-stealer-et-sectop-rat-analyse-dune-infection-par-logiciel-cracke"></div>
+<div id="mythos-intelligence-artificielle-anthropic-menace"></div>
 
-## Lumma Stealer et Sectop RAT : analyse d'une infection par logiciel cracké
-Cette analyse documente une infection par Lumma Stealer suivie du déploiement de Sectop RAT (ArechClient2). Le vecteur initial est le téléchargement de versions crackées de logiciels (Adobe Premiere Pro), une technique de distribution très courante. Le malware est livré dans une archive 7-zip protégée par mot de passe contenant un exécutable Windows "gonflé" à 806 Mo pour échapper aux analyses antivirus automatiques. Une fois extrait, Lumma Stealer établit une communication avec plusieurs domaines de commande et contrôle (C2) en .cyou, .vu, .club, etc. Par la suite, une DLL de 64 bits est récupérée pour installer Sectop RAT, assurant une persistance sur l'hôte. Le trafic C2 de Sectop RAT est encodé mais n'utilise pas le protocole HTTPS/TLS standard, facilitant sa détection réseau.
+## L'IA Mythos d'Anthropic : Une menace stratégique pour la cybersécurité mondiale
+Anthropic a développé un modèle d'intelligence artificielle nommé "Mythos" doté de capacités sans précédent pour identifier des vulnérabilités dans le code informatique. Bien que conçu pour aider les développeurs à sécuriser leurs logiciels, le modèle inquiète l'administration américaine car il pourrait être détourné par des hackers pour automatiser la création d'exploits. Face à ce risque, Anthropic a choisi de mettre le modèle sous embargo, ne le partageant qu'avec un groupe restreint de partenaires américains nommés "Glasswing" (Apple, Microsoft, Google, etc.). Le PDG Dario Amodei a été convoqué à la Maison Blanche pour discuter des implications pour la sécurité nationale. Cette situation souligne le dilemme entre l'innovation en IA et la prolifération potentielle de cyberarmes automatisées. L'absence d'acteurs européens et chinois dans le groupe de travail Glasswing suggère que la cybersécurité de pointe devient une chasse gardée privée américaine.
 
-**Analyse de l'impact** : Risque élevé de vol d'identifiants, d'exfiltration de données sensibles et de prise de contrôle à distance totale de la machine infectée. L'usage de fichiers "gonflés" (null-byte padding) neutralise de nombreux outils d'analyse statique.
+**Analyse de l'impact** : Impact global majeur. L'automatisation de la découverte de vulnérabilités "zero-day" pourrait rendre les cycles de patch actuels obsolètes et donner un avantage disproportionné aux attaquants disposant de tels modèles.
 
-**Recommandations** :
-* Bloquer les domaines C2 identifiés (genugsq.best, cankgmr.cyou, etc.).
-* Surveiller les processus exécutant rundll32 avec des arguments inhabituels (ex: LoadForm).
-* Implémenter une politique stricte d'interdiction de logiciels non officiels et crackés.
-* Configurer l'EDR pour détecter les fichiers de taille inhabituelle (exécutables > 500 Mo).
+**Recommandations** : 
+*   Anticiper l'augmentation des vulnérabilités découvertes par IA en accélérant les processus de remédiation.
+*   Renforcer la sécurité au niveau de la conception (Secure by Design).
+*   Surveiller l'émergence de nouveaux outils de détection basés sur l'IA pour contrer les exploits automatisés.
 
+Voici quelques indicateurs clés :
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | Non spécifié (Cybercriminalité opportuniste) |
-| Tactiques, Techniques et Procédures (TTP) | * T1204.002: User Execution (Malicious File)<br/>* T1027.001: Binary Padding<br/>* T1547.001: Registry Run Keys / Startup Folder |
-| Observables & IoCs | ```* 4849f76dafbef516df91fecfc23a72afffaf77ade51f805eae5ad552bed88923 (Lumma EXE)<br/>* d9b576eb6827f38e33eda037d2cda4261307511303254a8509eeb28048433b2f (Sectop DLL)<br/>* cankgmr[.]cyou<br/>* 91.92.241[.]102:9000``` |
+| Groupe ou acteur malveillant | Non applicable (Technologie duale) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1588.006: Obtain Capabilities: Vulnerabilities<br>* T1595: Active Scanning (Automatisé par IA) |
+| Observables & Indicateurs de compromission | Aucun IoC spécifique n'est fourni |
 
 ### Source (url) du ou des articles
-* https://isc.sans.edu/diary/rss/32904
+* [DataBreaches.net](https://databreaches.net/2026/04/17/anthropics-dario-amodei-heads-to-white-house-amid-hacking-fears-over-mythos/)
+* [France 24](https://www.france24.com/fr/%C3%A9missions/tech-24/20260417-mythos-l-intelligence-artificielle-qui-a-terrifi%C3%A9-ses-propres-cr%C3%A9ateurs)
+* [Le Monde](https://www.lemonde.fr/economie/article/2026/04/17/avec-son-ia-mythos-anthropic-suscite-l-effroi-et-fait-de-la-cybersecurite-la-chasse-gardee-du-secteur-prive-americain_6680799_3234.html)
 
-<br>
-<br>
+<br/>
+<br/>
 
-<div id="zionsiphon-le-nouveau-malware-de-sabotage-ciblant-les-infrastructures-hydrauliques"></div>
+<div id="payouts-king-ransomware-qemu-evasion"></div>
 
-## ZionSiphon : le nouveau malware de sabotage ciblant les infrastructures hydrauliques
-ZionSiphon est un malware spécialisé dans les technologies opérationnelles (OT), conçu pour saboter les usines de traitement d'eau et de dessalement. Il a la capacité d'ajuster les pressions hydrauliques et d'augmenter les niveaux de chlore à des seuils dangereux via une fonction spécifique "IncreaseChlorineLevel()". Le malware cible prioritairement des infrastructures basées en Israël, vérifiant les plages d'adresses IP locales et la présence de logiciels SCADA/ICS. Bien qu'une erreur de logique de chiffrement XOR empêche actuellement l'activation de sa charge utile, sa conception montre une intention claire de destruction physique. Le malware tente d'interagir avec les automates via les protocoles Modbus, DNP3 et S7comm. Il dispose également d'un mécanisme de propagation par USB via un processus caché 'svchost.exe'.
+## Evasion des solutions EDR via la virtualisation QEMU par Payouts King
+Le groupe de ransomware Payouts King (lié à d'anciens affiliés de Black Basta) utilise l'émulateur open-source QEMU pour contourner les protections des points de terminaison (EDR). Les attaquants déploient une machine virtuelle (VM) légère sous Alpine Linux sur l'hôte compromis pour y exécuter leurs outils de post-exploitation et établir des tunnels SSH inversés. Comme les solutions de sécurité de l'hôte ne peuvent pas scanner l'intérieur de la VM, les activités malveillantes restent invisibles. L'accès initial est souvent obtenu via des vulnérabilités sur des VPN (SonicWall, Cisco) ou par ingénierie sociale (QuickAssist, Microsoft Teams). Une fois installée, la VM contient des outils comme AdaptixC2, Chisel et Rclone pour l'exfiltration. Le chiffrement final combine AES-256 et RSA-4096.
 
-**Analyse de l'impact** : Risque de dommages physiques majeurs aux infrastructures, empoisonnement potentiel de l'approvisionnement en eau et destruction de matériel industriel. C'est une menace "cinétique" de premier plan.
+**Analyse de l'impact** : Risque élevé d'évasion. L'utilisation de la virtualisation pour masquer des activités malveillantes rend les méthodes de détection comportementale classiques inefficaces.
 
-**Recommandations** :
-* Segmenter strictement les réseaux IT et OT.
-* Désactiver l'exécution automatique et l'usage des ports USB sur les systèmes critiques.
-* Surveiller les modifications anormales des fichiers de configuration ICS/SCADA mentionnés (Chlorine_Dose, RO_Pressure).
-* Auditer les communications Modbus/S7comm vers des hôtes non autorisés.
+**Recommandations** : 
+*   Surveiller l'installation non autorisée de binaires QEMU ou de pilotes de virtualisation.
+*   Détecter les tâches planifiées suspectes s'exécutant avec les privilèges SYSTEM (ex: "TPMProfiler").
+*   Bloquer les flux SSH sortants sur des ports non standard ou vers des IP inconnues.
+*   Auditer les processus parents lançant des instances QEMU.
 
+Voici quelques indicateurs clés :
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | Non applicable (Origine probable : Iran) |
-| Tactiques, Techniques et Procédures (TTP) | * T0801: Monitor Process State<br/>* T0831: Data Destruction<br/>* T0847: Replication Through Removable Media |
-| Observables & IoCs | ```* svchost.exe (USB version)<br/>* Protocoles: Modbus, DNP3, S7comm<br/>* Chaines: Chlorine_Flow=MAX, RO_Pressure=80``` |
+| Groupe ou acteur malveillant | Payouts King (GOLD ENCOUNTER) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1564.006: Hide Artifacts: System Virtualization<br>* T1572: Protocol Tunneling (Reverse SSH)<br>* T1053.005: Scheduled Task |
+| Observables & Indicateurs de compromission | ```* Process: ADNotificationManager.exe, vssuirun.exe * Task Name: TPMProfiler * Tools: AdaptixC2, Chisel, Rclone * OS: Alpine Linux 3.22.0``` |
 
 ### Source (url) du ou des articles
-* https://www.bleepingcomputer.com/news/security/zionsiphon-malware-designed-to-sabotage-water-treatment-systems/
+* [BleepingComputer](https://www.bleepingcomputer.com/news/security/payouts-king-ransomware-uses-qemu-vms-to-bypass-endpoint-security/)
 
-<br>
-<br>
+<br/>
+<br/>
 
-<div id="redsun-une-nouvelle-zero-day-dans-microsoft-defender-permet-une-elevation-de-privileges"></div>
+<div id="microsoft-defender-zero-days-exploitation"></div>
 
-## RedSun : une nouvelle zero-day dans Microsoft Defender permet une élévation de privilèges
-Un chercheur nommé "Chaotic Eclipse" a publié un exploit PoC pour une seconde faille zero-day dans Microsoft Defender, nommée "RedSun". Cette vulnérabilité d'élévation de privilèges locaux (LPE) permet d'obtenir les privilèges SYSTEM sur Windows 10, 11 et Windows Server. L'exploit abuse de l'API "Cloud Files" et de la manière dont Defender gère les fichiers avec des tags cloud : il force l'antivirus à réécrire un fichier malveillant (EICAR) à son emplacement d'origine, détourné via un point de jonction/reparse. Ce processus permet d'écraser des binaires système comme TieringEngineService.exe par l'exécutable de l'attaquant. Cette publication est un acte de protestation contre les méthodes de communication de Microsoft avec les chercheurs en sécurité.
+## Exploitation active de trois vulnérabilités zero-day contre Microsoft Defender
+Trois vulnérabilités critiques affectant Microsoft Defender Antivirus (BlueHammer, RedSun, et UnDefend) sont activement exploitées. BlueHammer (CVE-2026-33825) a été patché, mais RedSun et UnDefend restent sans correctif officiel. RedSun permet à un attaquant local d'écraser des fichiers système protégés pour exécuter du code avec les privilèges SYSTEM en détournant les mécanismes de cloud-tagging de Defender. UnDefend cible le mécanisme de mise à jour de Defender pour bloquer les nouvelles définitions de virus, dégradant silencieusement la protection. L'exploitation nécessite un accès local, souvent obtenu via des identifiants VPN compromis, mais le code de preuve de concept (PoC) est désormais public, abaissant la barrière à l'entrée.
 
-**Analyse de l'impact** : Impact critique car elle permet à un attaquant ayant un accès utilisateur simple de prendre le contrôle total du système de manière indétectable par la défense native Windows.
+**Analyse de l'impact** : Impact critique sur l'intégrité du système de protection. La dégradation silencieuse de l'antivirus (UnDefend) permet à d'autres menaces de s'installer durablement sans être détectées.
 
-**Recommandations** :
-* Surveiller la création inhabituelle de points de jonction de répertoires vers C:\Windows\system32.
-* Détecter l'exécution suspecte de TieringEngineService.exe s'il n'est pas signé par Microsoft.
-* Limiter les privilèges d'accès aux APIs de fichiers Cloud pour les utilisateurs non administrateurs.
+**Recommandations** : 
+*   Appliquer immédiatement les mises à jour de sécurité Windows d'avril 2026 pour BlueHammer.
+*   Surveiller les tentatives de modification des fichiers système par le processus `MsMpEng.exe`.
+*   Alerter en cas d'échecs répétés ou de blocage des mises à jour des signatures Defender.
+*   Restreindre les privilèges locaux pour empêcher l'exécution des PoC RedSun/UnDefend.
 
+Voici quelques indicateurs clés :
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | Chercheur "Chaotic Eclipse" (Hacktivisme technique) |
-| Tactiques, Techniques et Procédures (TTP) | * T1068: Exploitation for Privilege Escalation<br/>* T1543.003: Windows Service<br/>* T1497: Virtualization/Sandbox Evasion |
-| Observables & IoCs | ```* RedSun.exe<br/>* TieringEngineService.exe (modifié)<br/>* Usage abusif de l'API Cloud Files``` |
+| Groupe ou acteur malveillant | Chaotic Eclipse / Nightmare-Eclipse (Chercheur/Divulgation PoC) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1068: Exploitation for Privilege Escalation<br>* T1562.001: Impair Defenses: Disable or Modify Tools |
+| Observables & Indicateurs de compromission | ```* CVE-2026-33825 (BlueHammer) * Vulnérabilités RedSun et UnDefend (non assignées) * MsMpEng.exe effectuant des modifications de fichiers inhabituelles``` |
 
 ### Source (url) du ou des articles
-* https://www.bleepingcomputer.com/news/microsoft/new-microsoft-defender-redsun-zero-day-poc-grants-system-privileges/
+* [Field Effect](https://fieldeffect.com/blog/three-microsoft-defender-zero-days-reported-exploited)
+* [The Hacker News](https://thehackernews.com/2026/04/three-microsoft-defender-zero-days.html)
 
-<br>
-<br>
+<br/>
+<br/>
 
-<div id="exploitation-de-la-faille-marimo-pour-deployer-le-malware-nkabuse-via-hugging-face"></div>
+<div id="zionsiphon-malware-infrastructures-critiques-israel"></div>
 
-## Exploitation de la faille Marimo pour déployer le malware NKAbuse via Hugging Face
-Des attaquants exploitent la vulnérabilité critique CVE-2026-39987 (RCE) dans les notebooks Python Marimo pour diffuser une variante de NKAbuse. L'attaque utilise la plateforme Hugging Face Spaces comme hôte de confiance pour stocker un script dropper (install-linux.sh) et un binaire nommé 'kagent'. Le dropper installe le malware et établit une persistance via systemd ou cron. NKAbuse est un cheval de Troie d'accès à distance (RAT) et un botnet DDoS qui utilise le protocole décentralisé NKN (New Kind of Network) pour ses communications C2, ce qui le rend difficile à bloquer. Des pivots vers PostgreSQL et Redis ont été observés après le compromis initial pour l'exfiltration de jetons de session.
+## ZionSiphon : Logiciel malveillant ciblant les infrastructures critiques hydrauliques israéliennes
+ZionSiphon est un nouveau malware conçu spécifiquement pour saboter les systèmes de traitement d'eau et de dessalement en Israël. Il vise à modifier la pression hydraulique et à augmenter les niveaux de chlore à des seuils dangereux. Le malware utilise des vérifications d'adresses IP codées en dur pour ne s'activer que sur des plages d'adresses géographiquement situées en Israël. Il se propage via des médias amovibles (clés USB) et tente d'interagir avec les automates industriels (PLC) via les protocoles Modbus, DNP3 et S7. Bien que le malware contienne des erreurs logiques qui empêchent l'activation de sa charge utile finale dans la version analysée, il représente une intention claire de sabotage d'infrastructures vitales.
 
-**Analyse de l'impact** : Compromis de serveurs de développement IA et machine learning, vol de données de bases de données et intégration dans un botnet DDoS mondial.
+**Analyse de l'impact** : Risque physique potentiel. Une exploitation réussie pourrait compromettre la sécurité de l'approvisionnement en eau potable et causer des dommages matériels aux installations.
 
-**Recommandations** :
-* Mettre à jour Marimo vers la version 0.23.0 ou supérieure immédiatement.
-* Bloquer ou restreindre l'accès externe à l'endpoint '/terminal/ws'.
-* Surveiller l'usage inhabituel du protocole NKN sur le réseau.
-* Auditer les variables d'environnement pour prévenir le vol de jetons d'accès.
+**Recommandations** : 
+*   Isoler physiquement (Air-gap) les réseaux OT/ICS des réseaux IT.
+*   Désactiver l'utilisation de ports USB sur les stations de travail connectées aux automates.
+*   Surveiller le trafic réseau pour des communications Modbus/S7 inhabituelles.
+*   Vérifier l'intégrité des configurations de chlore et de pression dans les systèmes SCADA.
 
+Voici quelques indicateurs clés :
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | Non spécifié (Hacking opportuniste ciblant l'IA) |
-| Tactiques, Techniques et Procédures (TTP) | * T1190: Exploit Public-Facing Application<br/>* T1105: Ingress Tool Transfer<br/>* T1584.005: Botnet |
-| Observables & IoCs | ```* install-linux.sh<br/>* kagent (binaire)<br/>* Hugging Face Space: vsccode-modetx<br/>* Protocole C2: NKN (New Kind of Network)``` |
+| Groupe ou acteur malveillant | Inconnu (Motivations politiques/idéologiques) |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T0831: Data Destruction (Sabotage ICS)<br>* T0855: Unauthorized Command Message<br>* T1091: Replication Through Removable Media |
+| Observables & Indicateurs de compromission | ```* File: svchost.exe (attributs Hidden/System sur USB) * IP Ranges: 2.52.0.0-2.55.255.255, 79.176.0.0-79.191.255.255, 212.150.0.0-212.150.255.255 * Protocols: Modbus, DNP3, S7``` |
 
 ### Source (url) du ou des articles
-* https://www.bleepingcomputer.com/news/security/hackers-exploit-marimo-flaw-to-deploy-nkabuse-malware-from-hugging-face/
+* [SecurityAffairs](https://securityaffairs.com/190922/malware/inside-zionsiphon-politically-driven-malware-aims-at-israeli-water-systems.html)
 
-<br>
-<br>
+<br/>
+<br/>
 
-<div id="cyber-vol-de-fret-les-hackers-ciblent-lindustrie-de-la-logistique-avec-des-outils-de-signature-as-a-service"></div>
+<div id="lumma-stealer-sectop-rat-logiciels-crackes"></div>
 
-## Cyber-vol de fret : les hackers ciblent l'industrie de la logistique avec des outils de signature "as-a-service"
-L'industrie du transport routier subit une vague d'attaques sophistiquées visant le vol de fret, ayant causé 6,6 milliards de dollars de pertes en 2025. Les cybercriminels compromettent les plateformes de gestion de chargement pour injecter des payloads malveillants. Une innovation majeure a été détectée : l'usage d'un script de "signing-as-a-service" qui interroge un service externe pour signer numériquement les composants du malware (notamment ScreenConnect). Cela permet aux outils de passer outre les alertes de sécurité Windows. Une fois en place, les attaquants utilisent des scripts PowerShell pour scanner les comptes bancaires, les portefeuilles crypto et les informations d'identification PayPal.
+## Infection Lumma Stealer et Sectop RAT via des logiciels crackés
+Une campagne active distribue Lumma Stealer suivi de Sectop RAT (ArechClient2) en usurpant des versions crackées de logiciels populaires comme Adobe Premiere Pro. Le malware est livré sous forme d'archive 7-zip protégée par mot de passe. L'exécutable final est "gonflé" à plus de 800 Mo avec des octets nuls (padding) pour contourner les scans antivirus basés sur la taille des fichiers. Une fois exécuté, Lumma vole les identifiants de navigateurs et de portefeuilles crypto, puis télécharge Sectop RAT pour maintenir un accès à distance persistant. La campagne utilise des domaines C2 avec des extensions peu communes (.best, .vu, .shop) et usurpe l'image de sites de téléchargement légitimes comme MEGA.
 
-**Analyse de l'impact** : Pertes financières massives directes (vols de marchandises) et indirectes (compromis de comptes bancaires). La capacité de signer des malwares à la volée réduit l'efficacité des solutions de protection traditionnelles.
+**Analyse de l'impact** : Risque élevé de vol de données sensibles et de persistance sur les postes de travail. Le "padding" de fichiers est une technique simple mais efficace contre de nombreuses passerelles de sécurité.
 
-**Recommandations** :
-* Auditer l'installation et l'usage de ScreenConnect et autres outils RMM.
-* Bloquer les scripts PowerShell non signés ou émanant de sources inconnues.
-* Sensibiliser les employés de la logistique au phishing ciblant les plateformes de chargement.
-* Surveiller les connexions vers les services de signature de certificats non approuvés.
+**Recommandations** : 
+*   Interdire strictement le téléchargement de logiciels "crackés" ou non approuvés.
+*   Configurer l'antivirus pour scanner les fichiers volumineux, même s'ils dépassent les seuils par défaut.
+*   Bloquer les domaines C2 identifiés au niveau du DNS/Proxy.
+*   Surveiller l'exécution de processus `rundll32.exe` chargeant des DLL depuis des dossiers temporaires.
 
+Voici quelques indicateurs clés :
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | Groupes cybercriminels organisés (Logistique) |
-| Tactiques, Techniques et Procédures (TTP) | * T1553.002: Code Signing<br/>* T1219: Remote Access Software<br/>* T1059.001: PowerShell |
-| Observables & IoCs | ```* Instances ScreenConnect non autorisées<br/>* Scripts de recherche de portefeuilles crypto<br/>* MSI installateurs auto-signés``` |
+| Groupe ou acteur malveillant | Opérateurs de Lumma Stealer / Sectop RAT |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1566.002: Phishing: Spearphishing Link<br>* T1005: Data from Local System<br>* T1573: Encrypted Channel |
+| Observables & Indicateurs de compromission | ```* Hash SHA256 (ArechClient2): d9b576eb6827f38e33eda037d2cda4261307511303254a8509eeb28048433b2f * C2 Domains: cankgmr.cyou, carytui.vu, genugsq.best, mushxhb.best * IP: 91.92.241.102``` |
 
 ### Source (url) du ou des articles
-* https://www.proofpoint.com/us/newsroom/news/cargo-thieving-hackers-running-sophisticated-remote-access-campaigns-researchers-find
+* [SANS ISC](https://isc.sans.edu/diary/rss/32904)
 
-<br>
-<br>
+<br/>
+<br/>
 
-<div id="uac-0247-une-campagne-despoinnage-persistante-contre-les-infrastructures-critiques-ukrainiennes"></div>
+<div id="operation-poweroff-demantelement-ddos"></div>
 
-## UAC-0247 : une campagne d'espionnage persistante contre les infrastructures critiques ukrainiennes
-Le CERT-UA a identifié l'acteur UAC-0247 ciblant les agences gouvernementales et les hôpitaux ukrainiens. L'attaque débute par un phishing via des offres d'aide humanitaire menant au téléchargement d'une archive contenant un fichier LNK malveillant. Celui-ci utilise mshta.exe pour exécuter une charge utile qui injecte du shellcode dans 'RuntimeBroker.exe'. Le malware principal, AgingFly (développé en C#), permet de contrôler à distance la machine, d'exfiltrer les mots de passe des navigateurs Chromium (via ChromeElevator) et les données WhatsApp (via ZapixDesk). Le groupe utilise également des tunnels Ligolo-ng et Chisel pour le mouvement latéral, ainsi que Signal pour cibler les opérateurs de drones FPV.
+## Opération PowerOFF : Démantèlement massif de l'économie des services DDoS
+L'opération internationale PowerOFF a permis de saisir 53 domaines liés à des services de "DDoS-for-hire" (booters) utilisés par plus de 75 000 cybercriminels. Quatre suspects ont été arrêtés et 25 mandats de perquisition ont été exécutés dans 21 pays. Les autorités ont obtenu l'accès à des bases de données contenant plus de 3 millions de comptes d'utilisateurs criminels. En plus de l'action répressive, une phase de prévention a été lancée avec l'envoi de 75 000 emails d'avertissement aux utilisateurs identifiés. Cette opération vise à casser la chaîne logistique des attaques DDoS qui harcèlent les entreprises et les services publics.
 
-**Analyse de l'impact** : Risque d'espionnage d'État, perturbation des services de santé d'urgence et collecte de données tactiques militaires (drones).
+**Analyse de l'impact** : Réduction temporaire mais significative de la capacité mondiale d'attaques DDoS à bas coût. La récupération des bases de données utilisateurs fournit une source précieuse de renseignements pour les futures investigations.
 
-**Recommandations** :
-* Restreindre le lancement des fichiers LNK, HTA et JS.
-* Surveiller ou bloquer les utilitaires mshta.exe, powershell.exe et wscript.exe s'ils ne sont pas nécessaires.
-* Rechercher les tunnels réseau non autorisés (Ligolo, Chisel).
-* Mettre en place des alertes sur l'injection de code dans RuntimeBroker.exe.
+**Recommandations** : 
+*   Maintenir des protections anti-DDoS robustes, car de nouveaux services remplaceront rapidement ceux démantelés.
+*   Informer les jeunes profils techniques sur la nature illégale de l'utilisation de ces services.
+*   Surveiller les résurgences de botnets connus comme RapperBot.
 
+Voici quelques indicateurs clés :
 | Indicateurs | Descriptions |
 |:---|:---|
-| Groupe ou acteur malveillant | UAC-0247 |
-| Tactiques, Techniques et Procédures (TTP) | * T1566.002: Spearphishing Link<br/>* T1055: Process Injection<br/>* T1572: Protocol Tunneling |
-| Observables & IoCs | ```* AgingFly (RAT)<br/>* ChromeElevator<br/>* ZapixDesk<br/>* Key XOR: 01 01 02 03 74 15 04 FF EE``` |
+| Groupe ou acteur malveillant | Opérateurs de services "Booter" |
+| Tactiques, Techniques et Procédures (TTP) MITRE ATT&CK | * T1498: Network Denial of Service |
+| Observables & Indicateurs de compromission | ```* Domains: zdstresser.net, orbitalstress.net, starkstresser.net * Botnet: RapperBot``` |
 
 ### Source (url) du ou des articles
-* https://socprime.com/blog/uac-0247-attack-detection-agingfly-malware-targets-hospitals-local-governments-and-fpv-operators-in-ukraine/
-* https://securityaffairs.com/190875/apt/from-clinics-to-government-uac-0247-expands-cyber-campaign-across-ukraine.html
+* [SecurityAffairs](https://securityaffairs.com/190932/cyber-crime/operation-poweroff-53-ddos-domains-seized-and-3-million-criminal-accounts-uncovered.html)
