@@ -1,0 +1,678 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The current threat landscape is marked by a dangerous convergence between AI automation and the exploitation of fundamental web components. The successful use of models like Claude Opus to generate complex exploit chains against Chrome drastically lowers the entry barrier for sophisticated cyberattacks. Simultaneously, critical vulnerabilities in ubiquitous libraries like Protobuf or SAIL expose a massive attack surface across cloud infrastructures and desktop applications. State-sponsored and cybercriminal actors, such as UAC-0247 or GOLD ENCOUNTER, are intensifying operations using advanced concealment techniques via virtual machines (QEMU). The persistence of geopolitical conflicts in Ukraine and the Middle East continues to saturate the digital space with espionage and sabotage operations targeting critical infrastructure. A weakening of native defense tools is also observed, as illustrated by recent exploitations of Microsoft Defender. Decision-makers must anticipate an acceleration of the 'vulnerability-to-exploitation' cycle driven by AI capabilities. Securing the software supply chain and auditing third-party dependencies have become absolute priorities.",
+      "fr": "Le paysage actuel de la menace est marqué par une convergence dangereuse entre l'automatisation par l'IA et l'exploitation de composants fondamentaux du web. L'utilisation réussie de modèles comme Claude Opus pour générer des chaînes d'exploitation complexes contre Chrome réduit drastiquement la barrière à l'entrée pour des cyberattaques sophistiquées. Parallèlement, la découverte de vulnérabilités critiques dans des bibliothèques omniprésentes comme Protobuf ou SAIL expose une surface d'attaque massive sur les infrastructures cloud et les applications de bureau. Les acteurs étatiques et cybercriminels, tels que UAC-0247 ou GOLD ENCOUNTER, intensifient leurs opérations en utilisant des techniques de dissimulation avancées via des machines virtuelles (QEMU). La persistance des conflits géopolitiques en Ukraine et au Moyen-Orient continue de saturer l'espace numérique d'opérations d'espionnage et de sabotage ciblant les infrastructures critiques. On observe également une fragilisation des outils de défense natifs, comme illustré par les récentes exploitations de Microsoft Defender. Les décideurs doivent anticiper une accélération du cycle 'vulnérabilité-exploitation' dictée par les capacités de l'IA. La sécurisation de la chaîne d'approvisionnement logicielle et l'audit des dépendances tierces deviennent des priorités absolues."
+    },
+    "date": "2026-04-19"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense",
+          "Media_and_Communication"
+        ],
+        "fr": [
+          "Gouvernement_et_Défense",
+          "Médias_et_Communication"
+        ]
+      },
+      "theme": {
+        "en": "Israel-Lebanon Conflict",
+        "fr": "Conflit Israël-Liban"
+      },
+      "description": {
+        "en": "Entry into force of a 10-day ceasefire; maintenance of Israeli troops in the south.",
+        "fr": "Entrée en vigueur d'un cessez-le-feu de 10 jours ; maintien des troupes israéliennes au sud."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor for cyberattacks targeting diplomatic communication channels during the ceasefire period.",
+          "fr": "Surveiller les cyberattaques ciblant les canaux de communication diplomatiques pendant la période de cessez-le-feu."
+        },
+        {
+          "en": "Maintain high vigilance on critical infrastructure near the borders despite the temporary truce.",
+          "fr": "Maintenir une vigilance accrue sur les infrastructures critiques proches des frontières malgré la trêve temporaire."
+        }
+      ],
+      "tags": [
+        "Geopolitics",
+        "Israel",
+        "Lebanon",
+        "Ceasefire"
+      ],
+      "sources": [
+        "https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict"
+      ],
+      "date": "2026-04-18"
+    },
+    {
+      "sector": {
+        "en": [
+          "Critical_Infrastructure",
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Infrastructure_Critique",
+          "Gouvernement_et_Défense"
+        ]
+      },
+      "theme": {
+        "en": "US-Iran Naval Tension",
+        "fr": "Tensions navales US-Iran"
+      },
+      "description": {
+        "en": "The United States maintains a naval blockade despite Iran opening the Strait of Hormuz.",
+        "fr": "Les États-Unis maintiennent le blocus naval malgré l'ouverture du détroit d'Ormuz par l'Iran."
+      },
+      "recommandations": [
+        {
+          "en": "Enhance cybersecurity for maritime transport and logistics companies in the Gulf region.",
+          "fr": "Renforcer la cybersécurité des entreprises de transport maritime et de logistique dans la région du Golfe."
+        },
+        {
+          "en": "Implement strict monitoring of ICS/SCADA systems on naval assets and port infrastructures.",
+          "fr": "Mettre en œuvre une surveillance stricte des systèmes ICS/SCADA sur les navires et les infrastructures portuaires."
+        }
+      ],
+      "tags": [
+        "Iran",
+        "USA",
+        "Maritime",
+        "Blockade"
+      ],
+      "sources": [
+        "https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict"
+      ],
+      "date": "2026-04-18"
+    },
+    {
+      "sector": {
+        "en": [
+          "Technology_and_Telecom",
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Technologie_et_Télécom",
+          "Gouvernement_et_Défense"
+        ]
+      },
+      "theme": {
+        "en": "Iran Internet Blackout",
+        "fr": "Blackout Internet en Iran"
+      },
+      "description": {
+        "en": "The internet blockade enters its 50th day, justified as a 'war necessity'.",
+        "fr": "Le blocage d'Internet entre dans son 50ème jour, justifié comme une 'nécessité de guerre'."
+      },
+      "recommandations": [
+        {
+          "en": "Prepare business continuity plans for employees or branches operating in or near Iran.",
+          "fr": "Préparer des plans de continuité d'activité pour les employés ou filiales opérant en Iran ou à proximité."
+        },
+        {
+          "en": "Monitor for secondary effects such as an increase in hacktivist activity or VPN-related malware.",
+          "fr": "Surveiller les effets secondaires tels que l'augmentation de l'activité hacktiviste ou des malwares liés aux VPN."
+        }
+      ],
+      "tags": [
+        "Iran",
+        "Internet Blackout",
+        "Censorship"
+      ],
+      "sources": [
+        "https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict"
+      ],
+      "date": "2026-04-18"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Éducation Nationale (France)",
+      "threat_actor": "Unknown",
+      "threat_actor_origin": "Unknown",
+      "threat_actor_type": "Unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Education_and_Research"
+        ],
+        "fr": [
+          "Éducation_et_Recherche"
+        ]
+      },
+      "description": {
+        "en": "Massive data leaks affecting students via EduConnect and 243,000 teachers through account takeover.",
+        "fr": "Fuites de données massives touchant des élèves (EduConnect) et 243 000 enseignants via usurpation de comptes."
+      },
+      "mitre_ttps": [
+        "T1078: Valid Accounts"
+      ],
+      "recommandations": [
+        {
+          "en": "Enforce Multi-Factor Authentication (MFA) for all teacher and administrative accounts.",
+          "fr": "Imposer l'authentification multi-facteurs (MFA) pour tous les comptes enseignants et administratifs."
+        },
+        {
+          "en": "Conduct a comprehensive audit of the EduConnect platform's authentication logs.",
+          "fr": "Réaliser un audit complet des journaux d'authentification de la plateforme EduConnect."
+        }
+      ],
+      "tags": [
+        "Data Leak",
+        "EduConnect",
+        "Account Takeover"
+      ],
+      "sources": [
+        "https://www.lemonde.fr/pixels/article/2026/04/18/fuites-de-donnees-l-education-nationale-une-cible-vulnerable-face-aux-cyberattaques_6681062_4408996.html"
+      ],
+      "date": "2026-04-18"
+    },
+    {
+      "victim": "Los Angeles County Office of Education",
+      "threat_actor": "Unknown",
+      "threat_actor_origin": "Unknown",
+      "threat_actor_type": "Unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Education_and_Research"
+        ],
+        "fr": [
+          "Éducation_et_Recherche"
+        ]
+      },
+      "description": {
+        "en": "Potential theft of tax documents (W-2) of teachers; fraudulent use for tax filings.",
+        "fr": "Vol potentiel de documents fiscaux (W-2) de professeurs ; utilisation frauduleuse pour des déclarations d'impôts."
+      },
+      "mitre_ttps": [
+        "T1567: Exfiltration Over Web Service"
+      ],
+      "recommandations": [
+        {
+          "en": "Alert all employees to the risk of identity theft and provide guidance on tax fraud protection.",
+          "fr": "Alerter tous les employés du risque d'usurpation d'identité et fournir des conseils sur la protection contre la fraude fiscale."
+        },
+        {
+          "en": "Strengthen access controls to HR and financial databases holding sensitive employee information.",
+          "fr": "Renforcer les contrôles d'accès aux bases de données RH et financières contenant des informations sensibles sur les employés."
+        }
+      ],
+      "tags": [
+        "Data Breach",
+        "Tax Fraud",
+        "W-2"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/04/18/tax-documents-for-school-employees-potentially-stolen-across-los-angeles-county/"
+      ],
+      "date": "2026-04-18"
+    },
+    {
+      "victim": "Blue Cross Blue Shield of Montana",
+      "threat_actor": "Unknown",
+      "threat_actor_origin": "Unknown",
+      "threat_actor_type": "Unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Healthcare_and_Life_Sciences"
+        ],
+        "fr": [
+          "Santé_et_Sciences_du_Vivant"
+        ]
+      },
+      "description": {
+        "en": "Data breach via subcontractor Conduent affecting 462,000 members. A judge is allowing an investigation into the notification speed.",
+        "fr": "Violation de données via le sous-traitant Conduent affectant 462 000 membres. Un juge autorise une enquête sur la rapidité de notification."
+      },
+      "mitre_ttps": [
+        "T1190: Exploit Public-Facing Application"
+      ],
+      "recommandations": [
+        {
+          "en": "Review third-party vendor security standards and breach notification clauses in contracts.",
+          "fr": "Revoir les normes de sécurité des fournisseurs tiers et les clauses de notification de violation dans les contrats."
+        },
+        {
+          "en": "Ensure an Incident Response Plan is in place that specifically addresses third-party compromises.",
+          "fr": "S'assurer qu'un plan de réponse aux incidents est en place pour traiter spécifiquement les compromissions de tiers."
+        }
+      ],
+      "tags": [
+        "Healthcare",
+        "Third-Party",
+        "Data Breach",
+        "Legal"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/04/18/judge-lets-state-auditors-investigation-into-data-breach-affecting-blue-cross-blue-shield-members-move-forward/"
+      ],
+      "date": "2026-04-18"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-40494",
+      "euvd_id": null,
+      "cisa_kev": "FALSE",
+      "cvss": "9.8",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:sail:sail:*:*:*:*:*:*:*:*",
+      "product": "SAIL Library",
+      "vendor": "SAIL",
+      "description": {
+        "en": "Heap Buffer Overflow in the TGA RLE decoder due to lack of boundary checks.",
+        "fr": "Débordement de tampon dans le décodeur TGA RLE par manque de vérification des limites dans la bibliothèque SAIL."
+      },
+      "mitre_ttps": [
+        "T1190: Exploit Public-Facing Application"
+      ],
+      "recommandations": [
+        {
+          "en": "Update the SAIL library to the latest patched version immediately.",
+          "fr": "Mettre à jour immédiatement la bibliothèque SAIL vers la dernière version corrigée."
+        },
+        {
+          "en": "Implement input validation for all image files processed by the library.",
+          "fr": "Mettre en œuvre une validation des entrées pour tous les fichiers image traités par la bibliothèque."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "Critical",
+        "Buffer Overflow"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-40494"
+      ],
+      "date": "2026-04-18"
+    },
+    {
+      "cve_id": "CVE-2026-41242",
+      "euvd_id": "GHSA-xq3m-2v4x-88gg",
+      "cisa_kev": "FALSE",
+      "cvss": "9.4",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:protobufjs_project:protobufjs:*:*:*:*:*:node.js:*:*",
+      "product": "protobuf.js",
+      "vendor": "protobufjs_project",
+      "description": {
+        "en": "Remote Code Execution (RCE) via arbitrary code injection through malicious schemas during object decoding using the Function() constructor.",
+        "fr": "Exécution de code à distance (RCE) via l'injection de code arbitraire par des schémas malveillants lors du décodage d'objets utilisant le constructeur Function()."
+      },
+      "mitre_ttps": [
+        "T1059: Command and Scripting Interpreter"
+      ],
+      "recommandations": [
+        {
+          "en": "Update protobuf.js to version 8.0.1 or 7.5.5 or higher.",
+          "fr": "Mettre à jour protobuf.js vers la version 8.0.1 ou 7.5.5 ou supérieure."
+        },
+        {
+          "en": "Use static pre-compiled schemas in production environments instead of dynamic generation.",
+          "fr": "Utiliser des schémas statiques pré-compilés dans les environnements de production au lieu de la génération dynamique."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "JavaScript",
+        "Supply Chain"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/critical-flaw-in-protobuf-library-enables-javascript-code-execution/"
+      ],
+      "date": "2026-04-18"
+    },
+    {
+      "cve_id": "CVE-2026-33825",
+      "euvd_id": null,
+      "cisa_kev": "TRUE",
+      "cvss": "N/A",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:microsoft:defender:*:*:*:*:*:*:*:*",
+      "product": "Microsoft Defender",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "Abuse of Windows Update Agent's COM interface (BlueHammer) to obtain SYSTEM privileges.",
+        "fr": "Abus de l'interface COM de Windows Update Agent (BlueHammer) pour obtenir les privilèges SYSTEM sur Microsoft Defender."
+      },
+      "mitre_ttps": [
+        "T1068: Exploitation for Privilege Escalation"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply the April 14, 2026 cumulative update to patch the BlueHammer vulnerability.",
+          "fr": "Appliquer la mise à jour cumulative du 14 avril 2026 pour corriger la vulnérabilité BlueHammer."
+        },
+        {
+          "en": "Monitor for unusual modifications of C:\\Windows\\System32\\TieringEngineService.exe.",
+          "fr": "Surveiller toute modification inhabituelle du fichier C:\\Windows\\System32\\TieringEngineService.exe."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "LPE",
+        "Zero-Day",
+        "Microsoft"
+      ],
+      "sources": [
+        "https://thecyberthrone.in/2026/04/18/microsoft-defender-under-siege/"
+      ],
+      "date": "2026-04-18"
+    },
+    {
+      "cve_id": "CVE-2026-39808",
+      "euvd_id": null,
+      "cisa_kev": "FALSE",
+      "cvss": "N/A",
+      "epss": "N/A",
+      "cpe": "cpe:2.3:a:fortinet:fortisandbox:*:*:*:*:*:*:*:*",
+      "product": "FortiSandbox",
+      "vendor": "Fortinet",
+      "description": {
+        "en": "OS Command Injection via the 'jid' parameter allowing root execution without authentication.",
+        "fr": "Injection de commande OS via le paramètre 'jid' permettant une exécution root sans authentification dans FortiSandbox."
+      },
+      "mitre_ttps": [
+        "T1210: Exploitation of Remote Services"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply the security patch released by Fortinet for FortiSandbox immediately.",
+          "fr": "Appliquer immédiatement le correctif de sécurité publié par Fortinet pour FortiSandbox."
+        },
+        {
+          "en": "Restrict access to the management interface of FortiSandbox to trusted IP ranges.",
+          "fr": "Restreindre l'accès à l'interface d'administration de FortiSandbox à des plages d'adresses IP de confiance."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "Command Injection",
+        "Fortinet"
+      ],
+      "sources": [
+        "https://cybersecuritynews.com/poc-exploit-fortisandbox-vulnerability/"
+      ],
+      "date": "2026-04-18"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "Microsoft Defender Zero-Day Campaign by Chaotic Eclipse",
+        "fr": "Campagne Zero-Day contre Microsoft Defender par Chaotic Eclipse"
+      },
+      "description": {
+        "en": "Three exploits (BlueHammer, RedSun, UnDefend) are targeting Microsoft Defender to escalate privileges and disable security tools. Attacks use compromised SSLVPN accounts and disguised binaries in Pictures/Downloads folders.",
+        "fr": "Trois exploits (BlueHammer, RedSun, UnDefend) ciblent Microsoft Defender pour l'escalade de privilèges et la désactivation des outils de sécurité. Les attaques utilisent des comptes SSLVPN compromis."
+      },
+      "threat_actor": "Chaotic Eclipse",
+      "threat_actor_origin": "Unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [
+        "Nightmare Eclipse"
+      ],
+      "sector": {
+        "en": [
+          "Security",
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Sécurité",
+          "Technologie_et_Télécom"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [
+          "bdd3b2c3954988e3456d7788080bc42d595ed73f598edeca5568e95fbf7fdaef"
+        ],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "BlueHammer",
+          "RedSun",
+          "UnDefend",
+          "FunnyApp.exe"
+        ]
+      },
+      "mitre_ttps": [
+        "T1068: Exploitation for Privilege Escalation",
+        "T1562.001: Impair Defenses: Disable or Modify Tools"
+      ],
+      "analyse": {
+        "en": "This campaign is critical because it neutralizes the OS's trusted protection tool, making the attacker omnipotent on the host.",
+        "fr": "Cette campagne est critique car elle neutralise l'outil de protection de confiance de l'OS, rendant l'attaquant omnipotent sur l'hôte."
+      },
+      "recommandations": [
+        {
+          "en": "Audit SSLVPN access and enable MFA on all entry points.",
+          "fr": "Auditer les accès SSLVPN et activer le MFA sur tous les points d'entrée."
+        },
+        {
+          "en": "Search for and block processes named UnDefend.exe or RedSun.exe.",
+          "fr": "Rechercher et bloquer les processus nommés UnDefend.exe ou RedSun.exe."
+        }
+      ],
+      "tags": [
+        "Zero-Day",
+        "Microsoft Defender",
+        "Privilege Escalation"
+      ],
+      "sources": [
+        "https://securityaffairs.com/190961/hacking/microsoft-defender-under-attack-as-three-zero-days-two-of-them-still-unpatched-enable-elevated-access.html"
+      ],
+      "date": "2026-04-18"
+    },
+    {
+      "title": {
+        "en": "Hidden VMs using QEMU for Evasion (STAC4713)",
+        "fr": "Utilisation de VMs QEMU pour l'évasion (STAC4713)"
+      },
+      "description": {
+        "en": "Attackers leverage the QEMU emulator to run malware inside hidden Alpine Linux VMs, bypassing host EDR and stealing data from Active Directory.",
+        "fr": "Les attaquants exploitent l'émulateur QEMU pour exécuter des malwares dans des VMs Alpine Linux cachées, contournant l'EDR de l'hôte et volant des données AD."
+      },
+      "threat_actor": "GOLD ENCOUNTER",
+      "threat_actor_origin": "Unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [
+        "PayoutsKing Ransomware Group"
+      ],
+      "sector": {
+        "en": [
+          "Business_Services",
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Services_aux_Entreprises",
+          "Technologie_et_Télécom"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "qemu-system-x86_64.exe",
+          "TPMProfiler (Scheduled Task)"
+        ]
+      },
+      "mitre_ttps": [
+        "T1564.006: Hide Artifacts: System Virtualization",
+        "T1053.005: Scheduled Task"
+      ],
+      "analyse": {
+        "en": "Security tools often cannot see inside the QEMU process, significantly increasing attacker dwell time.",
+        "fr": "Les outils de sécurité ne voient souvent pas ce qui se passe à l'intérieur du processus QEMU, augmentant considérablement le temps de résidence de l'attaquant."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor for unusual execution of qemu-system-x86_64.exe on non-virtualization servers.",
+          "fr": "Surveiller l'exécution inhabituelle de qemu-system-x86_64.exe sur les serveurs de non-virtualisation."
+        },
+        {
+          "en": "Check integrity of Active Directory databases (NTDS.dit) regularly.",
+          "fr": "Vérifier régulièrement l'intégrité des bases de données Active Directory (NTDS.dit)."
+        }
+      ],
+      "tags": [
+        "QEMU",
+        "Evasion",
+        "Ransomware",
+        "Virtualization"
+      ],
+      "sources": [
+        "https://securityaffairs.com/190982/security/hidden-vms-how-hackers-leverage-qemu-to-stealthily-steal-data-and-spread-malware.html"
+      ],
+      "date": "2026-04-18"
+    },
+    {
+      "title": {
+        "en": "Nexcorium Mirai Variant Targeting IoT",
+        "fr": "Variante Mirai Nexcorium ciblant l'IoT"
+      },
+      "description": {
+        "en": "A new Mirai variant targeting TBK DVRs and Huawei routers for DDoS attacks using command injection exploits.",
+        "fr": "Une nouvelle variante de Mirai ciblant les DVR TBK et les routeurs Huawei pour des attaques DDoS via des failles d'injection de commande."
+      },
+      "threat_actor": "Nexus Team",
+      "threat_actor_origin": "Unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [
+        "Exploited By Erratic"
+      ],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom",
+          "Retail_and_Consumer"
+        ],
+        "fr": [
+          "Technologie_et_Télécom",
+          "Commerce_de_Détail_et_Consommation"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "persist.service",
+          "X-Hacked-By: Nexus Team"
+        ]
+      },
+      "mitre_ttps": [
+        "T1190: Exploit Public-Facing Application",
+        "T1110.001: Brute Force: Password Guessing"
+      ],
+      "analyse": {
+        "en": "High risk of bandwidth saturation for DDoS targets and persistent threat to video stream confidentiality.",
+        "fr": "Risque élevé de saturation de bande passante pour les cibles de DDoS et menace persistante sur la confidentialité des flux vidéo."
+      },
+      "recommandations": [
+        {
+          "en": "Isolate IoT devices in segmented VLANs without direct internet access.",
+          "fr": "Isoler les objets connectés (IoT) dans des VLANs segmentés sans accès internet direct."
+        },
+        {
+          "en": "Change default Telnet/SSH credentials on all DVR and router devices.",
+          "fr": "Changer impérativement les identifiants Telnet/SSH par défaut sur tous les appareils DVR et routeurs."
+        }
+      ],
+      "tags": [
+        "Mirai",
+        "Nexcorium",
+        "IoT",
+        "DDoS"
+      ],
+      "sources": [
+        "https://securityaffairs.com/190974/malware/nexcorium-mirai-variant-exploits-tbk-dvr-flaw-to-launch-ddos-attacks.html"
+      ],
+      "date": "2026-04-18"
+    },
+    {
+      "title": {
+        "en": "AgingFly Espionage Campaign in Ukraine",
+        "fr": "Campagne d'espionnage AgingFly en Ukraine"
+      },
+      "description": {
+        "en": "Campaign by UAC-0247 targeting Ukrainian clinical hospitals and emergency services for espionage and crypto-mining.",
+        "fr": "Campagne menée par UAC-0247 ciblant les hôpitaux cliniques et les services d'urgence ukrainiens pour l'espionnage et le minage de crypto."
+      },
+      "threat_actor": "UAC-0247",
+      "threat_actor_origin": "Unknown",
+      "threat_actor_type": "Etat",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Healthcare_and_Life_Sciences",
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Santé_et_Sciences_du_Vivant",
+          "Gouvernement_et_Défense"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "AgingFly"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566: Phishing",
+        "T1041: Exfiltration Over C2 Channel"
+      ],
+      "analyse": {
+        "en": "The malware is specifically designed for persistence and data extraction in administrative healthcare environments in a conflict zone.",
+        "fr": "Le malware est spécifiquement conçu pour la persistance et l'extraction de données dans des environnements de santé administratifs en zone de conflit."
+      },
+      "recommandations": [
+        {
+          "en": "Enhance phishing awareness training for hospital and emergency services staff.",
+          "fr": "Renforcer la sensibilisation au phishing pour le personnel hospitalier et des services d'urgence."
+        },
+        {
+          "en": "Monitor servers for indicators of unauthorized cryptocurrency mining activity.",
+          "fr": "Surveiller les serveurs pour détecter les indicateurs d'activité de cryptomining non autorisée."
+        }
+      ],
+      "tags": [
+        "Ukraine",
+        "AgingFly",
+        "Espionage",
+        "Healthcare"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/04/18/ukrainian-emergency-services-and-hospitals-hit-by-espionage-campaign-using-new-agingfly-malware/"
+      ],
+      "date": "2026-04-18"
+    }
+  ]
+}
