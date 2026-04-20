@@ -1,0 +1,757 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The cyber threat landscape is currently dominated by 'Living-off-the-Trust' attacks, where legitimate infrastructures like OAuth and official notification systems (Apple) are exploited to bypass traditional security perimeters. Simultaneously, the physical manifestation of cyber threats is increasing in the logistics sector through RMM tools, while global vulnerability management faces a pivot point with NIST reducing its NVD enrichment efforts due to volume saturation.",
+      "fr": "Le paysage des cybermenaces est actuellement dominé par des attaques de type 'Living-off-the-Trust', où des infrastructures légitimes comme l'OAuth et les systèmes de notification officiels (Apple) sont exploités pour contourner les périmètres de sécurité traditionnels. Parallèlement, la manifestation physique des cybermenaces s'intensifie dans le secteur de la logistique via des outils RMM, tandis que la gestion mondiale des vulnérabilités atteint un point d'inflexion avec la réduction des efforts d'enrichissement de la NVD par le NIST face à la saturation des volumes."
+    },
+    "date": "2026-04-20"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": [
+          "Education_and_Research"
+        ],
+        "fr": [
+          "Education_et_Recherche"
+        ]
+      },
+      "theme": {
+        "en": "State-sponsored Attribution",
+        "fr": "Attribution étatique"
+      },
+      "description": {
+        "en": "The cyberattack against the National Museum of Natural History in France is attributed to a major non-democratic country, hinting at Russian involvement, following significant operational delays.",
+        "fr": "L'attaque contre le Muséum national d'histoire naturelle en France est attribuée à un grand pays peu démocratique, suggérant une implication russe, suite à d'importants retards opérationnels."
+      },
+      "recommandations": [
+        {
+          "en": "Strengthen monitoring of state-sponsored TTPs and improve backup restoration speed.",
+          "fr": "Renforcer la surveillance des TTP étatiques et améliorer la vitesse de restauration des sauvegardes."
+        }
+      ],
+      "tags": [
+        "geopolitics",
+        "attribution",
+        "france",
+        "russia"
+      ],
+      "sources": [
+        "https://www.lemonde.fr/planete/article/2026/04/19/au-museum-national-d-histoire-naturelle-7-000-factures-en-retard-neuf-mois-apres-une-cyberattaque_6681479_3244.html"
+      ],
+      "date": "2026-04-19"
+    },
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement_et_Défense"
+        ]
+      },
+      "theme": {
+        "en": "Vulnerability Governance",
+        "fr": "Gouvernance des vulnérabilités"
+      },
+      "description": {
+        "en": "NIST has announced it will stop rating non-priority vulnerabilities due to an overwhelming increase in volume, shifting more responsibility to private entities and CISA.",
+        "fr": "Le NIST a annoncé qu'il cesserait de classer les vulnérabilités non prioritaires en raison d'une augmentation écrasante du volume, déplaçant davantage de responsabilités vers les entités privées et la CISA."
+      },
+      "recommandations": [
+        {
+          "en": "Increase reliance on secondary vulnerability databases and internal risk assessment capabilities.",
+          "fr": "Accroître la dépendance aux bases de données de vulnérabilités secondaires et aux capacités internes d'évaluation des risques."
+        }
+      ],
+      "tags": [
+        "NIST",
+        "NVD",
+        "vulnerability_management"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/nist-to-stop-rating-non-priority-flaws-due-to-volume-increase/"
+      ],
+      "date": "2026-04-19"
+    },
+    {
+      "sector": {
+        "en": [
+          "Media_and_Communication"
+        ],
+        "fr": [
+          "Médias_et_Communication"
+        ]
+      },
+      "theme": {
+        "en": "Regulatory and Judicial Action",
+        "fr": "Action réglementaire et judiciaire"
+      },
+      "description": {
+        "en": "Elon Musk summoned by French justice regarding suspicions of algorithm manipulation and data abuse on the X platform.",
+        "fr": "Elon Musk convoqué par la justice française concernant des soupçons de manipulation d'algorithme et d'abus de données sur la plateforme X."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor regulatory developments regarding social media data transparency.",
+          "fr": "Surveiller les évolutions réglementaires concernant la transparence des données des réseaux sociaux."
+        }
+      ],
+      "tags": [
+        "X",
+        "Elon Musk",
+        "Regulation",
+        "France"
+      ],
+      "sources": [
+        "https://www.lemonde.fr/pixels/article/2026/04/19/elon-musk-convoque-lundi-par-la-justice-francaise-apres-quinze-mois-d-une-enquete-tendue_6681466_4408996.html"
+      ],
+      "date": "2026-04-19"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Vercel",
+      "threat_actor": "ShinyHunters",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [
+        "unknown"
+      ],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologies_et_Télécommunications"
+        ]
+      },
+      "description": {
+        "en": "Vercel confirmed a breach via a third-party OAuth application (Context.ai) used by an employee. Attackers accessed non-sensitive environment variables and internal environments. ShinyHunters claims to have stolen source code and employee records.",
+        "fr": "Vercel a confirmé une intrusion via une application OAuth tierce (Context.ai) utilisée par un employé. Les attaquants ont accédé à des variables d'environnement non sensibles et à des environnements internes. ShinyHunters prétend avoir volé du code source et des dossiers d'employés."
+      },
+      "mitre_ttps": [
+        "T1078",
+        "T1550.001"
+      ],
+      "recommandations": [
+        {
+          "en": "Revoke OAuth client ID 110671459871-30f1spbu0hptbs60cb4vsmv79i7bbvqj.apps.googleusercontent.com and rotate all secrets.",
+          "fr": "Révoquer l'ID client OAuth 110671459871-30f1spbu0hptbs60cb4vsmv79i7bbvqj.apps.googleusercontent.com et renouveler tous les secrets."
+        },
+        {
+          "en": "Incident Response: [Preparation] Identify OAuth tools; [Detection] Query SIEM for Context.ai OAuth activity; [Containment] Revoke OAuth access; [Post-Incident] Update policy for environment variable encryption.",
+          "fr": "Réponse sur incident : [Préparation] Identifier les outils OAuth ; [Détection] Rechercher l'activité OAuth de Context.ai dans le SIEM ; [Confinement] Révoquer l'accès OAuth ; [Post-incident] Mettre à jour la politique de chiffrement des variables d'environnement."
+        }
+      ],
+      "tags": [
+        "OAuth",
+        "Vercel",
+        "Cloud_Security",
+        "ShinyHunters"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/vercel-confirms-breach-as-hackers-claim-to-be-selling-stolen-data/",
+        "https://vercel.com/kb/bulletin/vercel-april-2026-security-incident"
+      ],
+      "date": "2026-04-19"
+    },
+    {
+      "victim": "NHS Trust South London",
+      "threat_actor": "Qilin",
+      "threat_actor_origin": "Russia",
+      "threat_actor_type": "Criminal",
+      "threat_actor_aliases": [
+        "Agenda"
+      ],
+      "sector": {
+        "en": [
+          "Healthcare_and_Life_Sciences"
+        ],
+        "fr": [
+          "Santé_et_Sciences_de_la_vie"
+        ]
+      },
+      "description": {
+        "en": "Persistent impact from a 2024 ransomware attack. Pathology systems remain partially manual with 161,560 delayed reports, impacting patient care over 18 months later.",
+        "fr": "Impact persistant d'une attaque par ransomware de 2024. Les systèmes de pathologie restent partiellement manuels avec 161 560 rapports retardés, affectant les soins aux patients plus de 18 mois plus tard."
+      },
+      "mitre_ttps": [
+        "T1486",
+        "T1567"
+      ],
+      "recommandations": [
+        {
+          "en": "Test long-term business continuity plans for critical third-party dependencies.",
+          "fr": "Tester les plans de continuité d'activité à long terme pour les dépendances tierces critiques."
+        },
+        {
+          "en": "Incident Response: [Post-Incident] Validate integrity of manually restored data and notify affected patients.",
+          "fr": "Réponse sur incident : [Post-incident] Valider l'intégrité des données restaurées manuellement et notifier les patients concernés."
+        }
+      ],
+      "tags": [
+        "ransomware",
+        "NHS",
+        "healthcare",
+        "Qilin"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/04/19/qilins-2024-attack-on-nhs-vendor-continues-to-impact-patient-care-for-one-nhs-trust/"
+      ],
+      "date": "2026-04-19"
+    },
+    {
+      "victim": "Matsuyama City Housing",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Real_Estate_and_Construction"
+        ],
+        "fr": [
+          "Immobilier_et_Construction"
+        ]
+      },
+      "description": {
+        "en": "Data leak of 7,237 records containing personal information of tenants due to a cyberattack.",
+        "fr": "Fuite de données de 7 237 enregistrements contenant des informations personnelles de locataires suite à une cyberattaque."
+      },
+      "mitre_ttps": [
+        "unknown"
+      ],
+      "recommandations": [
+        {
+          "en": "Notify affected individuals and audit access controls on tenant databases.",
+          "fr": "Notifier les personnes concernées et auditer les contrôles d'accès aux bases de données des locataires."
+        }
+      ],
+      "tags": [
+        "data_leak",
+        "Japan",
+        "personal_data"
+      ],
+      "sources": [
+        "https://rocket-boys.co.jp/security-measures-lab/matsuyama-city-7k-data-leak-anabuki-cyberattack/"
+      ],
+      "date": "2026-04-19"
+    },
+    {
+      "victim": "Basic-Fit",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Hospitality_and_Entertainment"
+        ],
+        "fr": [
+          "Hôtellerie_et_Divertissement"
+        ]
+      },
+      "description": {
+        "en": "Personal data of approximately 1 million members compromised across multiple countries.",
+        "fr": "Données personnelles d'environ 1 million de membres compromises dans plusieurs pays."
+      },
+      "mitre_ttps": [
+        "unknown"
+      ],
+      "recommandations": [
+        {
+          "en": "Implement stronger member authentication and monitor for credential stuffing.",
+          "fr": "Mettre en œuvre une authentification des membres plus forte et surveiller le bourrage d'identifiants."
+        }
+      ],
+      "tags": [
+        "data_breach",
+        "fitness",
+        "personal_data"
+      ],
+      "sources": [
+        "https://www.helpnetsecurity.com/2026/04/19/week-in-review-acrobat-reader-flaw-exploited-claude-mythos-offensive-capabilities-and-limits/"
+      ],
+      "date": "2026-04-19"
+    },
+    {
+      "victim": "AGS Inc.",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologies_et_Télécommunications"
+        ]
+      },
+      "description": {
+        "en": "Potential data leak risk following a ransomware attack on one of AGS Inc.'s subcontractors.",
+        "fr": "Risque potentiel de fuite de données suite à une attaque par ransomware sur l'un des sous-traitants d'AGS Inc."
+      },
+      "mitre_ttps": [
+        "unknown"
+      ],
+      "recommandations": [
+        {
+          "en": "Enhance supply chain security requirements and conduct regular third-party audits.",
+          "fr": "Renforcer les exigences de sécurité de la chaîne d'approvisionnement et mener des audits réguliers des tiers."
+        }
+      ],
+      "tags": [
+        "supply_chain",
+        "ransomware",
+        "Japan"
+      ],
+      "sources": [
+        "https://rocket-boys.co.jp/security-measures-lab/ags-subcontractor-ransomware-attack-data-leak-risk/"
+      ],
+      "date": "2026-04-19"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-34621",
+      "euvd_id": "unknown",
+      "cisa_kev": "TRUE",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:adobe:acrobat_reader:*:*:*:*:*:*:*:*",
+      "product": "Acrobat Reader",
+      "vendor": "Adobe",
+      "description": {
+        "en": "Prototype Pollution vulnerability in Adobe Acrobat Reader allowing for Remote Code Execution (RCE). Actively exploited.",
+        "fr": "Vulnérabilité de pollution de prototype dans Adobe Acrobat Reader permettant l'exécution de code à distance (RCE). Activement exploitée."
+      },
+      "mitre_ttps": [
+        "T1203"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply emergency Adobe security updates immediately.",
+          "fr": "Appliquer immédiatement les mises à jour de sécurité d'urgence d'Adobe."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "Adobe"
+      ],
+      "sources": [
+        "https://www.helpnetsecurity.com/2026/04/19/week-in-review-acrobat-reader-flaw-exploited-claude-mythos-offensive-capabilities-and-limits/"
+      ],
+      "date": "2026-04-19"
+    },
+    {
+      "cve_id": "CVE-2026-6581",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "9.0",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:h:h3c:magic_b1:*:*:*:*:*:*:*:*",
+      "product": "Magic B1",
+      "vendor": "H3C",
+      "description": {
+        "en": "Buffer Overflow vulnerability in H3C Magic B1 leading to RCE. Public PoC exists.",
+        "fr": "Vulnérabilité de dépassement de tampon dans H3C Magic B1 menant à une RCE. Un PoC public existe."
+      },
+      "mitre_ttps": [
+        "T1210"
+      ],
+      "recommandations": [
+        {
+          "en": "Restrict access to management interface and apply firmware updates.",
+          "fr": "Restreindre l'accès à l'interface de gestion et appliquer les mises à jour du firmware."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "IoT"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-6581"
+      ],
+      "date": "2026-04-19"
+    },
+    {
+      "cve_id": "CVE-2026-6563",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "9.0",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:h:h3c:magic_b1:*:*:*:*:*:*:*:*",
+      "product": "Magic B1",
+      "vendor": "H3C",
+      "description": {
+        "en": "Buffer Overflow vulnerability in H3C Magic B1 allowing for RCE.",
+        "fr": "Vulnérabilité de dépassement de tampon dans H3C Magic B1 permettant l'exécution de code à distance (RCE)."
+      },
+      "mitre_ttps": [
+        "T1210"
+      ],
+      "recommandations": [
+        {
+          "en": "Update firmware to the latest version.",
+          "fr": "Mettre à jour le firmware vers la dernière version."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "IoT"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-6563"
+      ],
+      "date": "2026-04-19"
+    },
+    {
+      "cve_id": "CVE-2026-6560",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "9.0",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:h:h3c:magic_b0:*:*:*:*:*:*:*:*",
+      "product": "Magic B0",
+      "vendor": "H3C",
+      "description": {
+        "en": "Buffer Overflow vulnerability in H3C Magic B0 routers.",
+        "fr": "Vulnérabilité de dépassement de tampon dans les routeurs H3C Magic B0."
+      },
+      "mitre_ttps": [
+        "T1210"
+      ],
+      "recommandations": [
+        {
+          "en": "Disable affected management functions until patched.",
+          "fr": "Désactiver les fonctions de gestion affectées jusqu'à l'application d'un correctif."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "IoT"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-6560"
+      ],
+      "date": "2026-04-19"
+    },
+    {
+      "cve_id": "CVE-2026-33825",
+      "euvd_id": "unknown",
+      "cisa_kev": "TRUE",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:microsoft:defender:*:*:*:*:*:*:*:*",
+      "product": "Microsoft Defender",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "Logic error vulnerability in MS Defender (BlueHammer/RedSun) allowing for Local Privilege Escalation (LPE).",
+        "fr": "Vulnérabilité d'erreur logique dans MS Defender (BlueHammer/RedSun) permettant une élévation de privilèges locale (LPE)."
+      },
+      "mitre_ttps": [
+        "T1068"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply Microsoft Defender updates immediately.",
+          "fr": "Appliquer immédiatement les mises à jour de Microsoft Defender."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "LPE",
+        "BlueHammer"
+      ],
+      "sources": [
+        "https://rocket-boys.co.jp/security-measures-lab/bluehammer-redsun-undefend-cve-2026-33825/"
+      ],
+      "date": "2026-04-19"
+    },
+    {
+      "cve_id": "CVE-2026-40173",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "9.4",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:dgraph:alpha:*:*:*:*:*:*:*:*",
+      "product": "Dgraph Alpha",
+      "vendor": "Dgraph",
+      "description": {
+        "en": "Plaintext Exposure and Authentication Bypass vulnerability via debug pprof leak in Dgraph Alpha.",
+        "fr": "Vulnérabilité d'exposition en clair et de contournement d'authentification via une fuite debug pprof dans Dgraph Alpha."
+      },
+      "mitre_ttps": [
+        "T1592"
+      ],
+      "recommandations": [
+        {
+          "en": "Update to Dgraph Alpha version v25.3.2.",
+          "fr": "Mettre à jour vers Dgraph Alpha version v25.3.2."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "Auth_Bypass",
+        "Dgraph"
+      ],
+      "sources": [
+        "https://securityonline.info/dgraph-admin-token-leak-debug-pprof-cve-2026-40173/"
+      ],
+      "date": "2026-04-19"
+    },
+    {
+      "cve_id": "CVE-2026-33557",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "9.0",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:apache:kafka:*:*:*:*:*:*:*:*",
+      "product": "Kafka",
+      "vendor": "Apache",
+      "description": {
+        "en": "Authentication bypass in Apache Kafka due to flawed JWT validation.",
+        "fr": "Contournement d'authentification dans Apache Kafka dû à une validation JWT défectueuse."
+      },
+      "mitre_ttps": [
+        "T1550"
+      ],
+      "recommandations": [
+        {
+          "en": "Properly configure BrokerJwtValidator and update Kafka.",
+          "fr": "Configurer correctement BrokerJwtValidator et mettre à jour Kafka."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "JWT",
+        "Apache_Kafka"
+      ],
+      "sources": [
+        "https://securityonline.info/apache-kafka-jwt-authentication-bypass-logging-vulnerabilities-2026/"
+      ],
+      "date": "2026-04-19"
+    },
+    {
+      "cve_id": "CVE-2026-33558",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:apache:kafka_clients:*:*:*:*:*:*:*:*",
+      "product": "Kafka Clients",
+      "vendor": "Apache",
+      "description": {
+        "en": "Information disclosure in Apache Kafka Clients through verbose logging.",
+        "fr": "Divulgation d'informations dans les clients Apache Kafka via des journaux trop verbeux."
+      },
+      "mitre_ttps": [
+        "T1592"
+      ],
+      "recommandations": [
+        {
+          "en": "Set log level to INFO and audit log contents.",
+          "fr": "Régler le niveau de journalisation sur INFO et auditer le contenu des journaux."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "Information_Disclosure",
+        "Apache_Kafka"
+      ],
+      "sources": [
+        "https://securityonline.info/apache-kafka-jwt-authentication-bypass-logging-vulnerabilities-2026/"
+      ],
+      "date": "2026-04-19"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "Logistics Cargo Theft via RMM Tools",
+        "fr": "Vol de fret logistique via des outils RMM"
+      },
+      "description": {
+        "en": "Campaign targeting logistics firms using malicious VBS files to install ScreenConnect, Pulseway, and SimpleHelp. Attackers manipulate load boards to steal physical cargo.",
+        "fr": "Campagne ciblant les entreprises de logistique utilisant des fichiers VBS malveillants pour installer ScreenConnect, Pulseway et SimpleHelp. Les attaquants manipulent les bourses de fret pour voler des cargaisons physiques."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Industry_and_Manufacturing"
+        ],
+        "fr": [
+          "Industrie_et_Manufacture"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [
+          "pierluigi.paganini@securityaffairs.co"
+        ],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "ScreenConnect",
+          "Pulseway",
+          "SimpleHelp"
+        ]
+      },
+      "mitre_ttps": [
+        "T1218.011",
+        "T1219",
+        "T1059.001"
+      ],
+      "analyse": {
+        "en": "Financial motivations are driving cyber-physical theft where digital RMM tools are used to orchestrate real-world cargo interception.",
+        "fr": "Les motivations financières stimulent le vol cyber-physique où des outils RMM numériques sont utilisés pour orchestrer l'interception de fret dans le monde réel."
+      },
+      "recommandations": [
+        {
+          "en": "Incident Response: [Detection] Monitor ScreenConnect.Client.exe in Temp directories; [Containment] Isolate endpoints and block RMM ports 8040/8041.",
+          "fr": "Réponse sur incident : [Détection] Surveiller ScreenConnect.Client.exe dans les répertoires Temp ; [Confinement] Isoler les endpoints et bloquer les ports RMM 8040/8041."
+        }
+      ],
+      "tags": [
+        "logistics",
+        "RMM",
+        "cargo_theft"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191008/security/cyber-attacks-fuel-surge-in-cargo-theft-across-logistics-industry.html"
+      ],
+      "date": "2026-04-19"
+    },
+    {
+      "title": {
+        "en": "Apple Account Notification Abuse Phishing",
+        "fr": "Phishing par abus de notifications de compte Apple"
+      },
+      "description": {
+        "en": "Attackers abuse legitimate Apple ID notification infrastructure by placing phishing lures in the 'Name' fields of account profiles, passing SPF/DKIM checks.",
+        "fr": "Les attaquants abusent de l'infrastructure légitime de notification Apple ID en plaçant des leurres de phishing dans les champs 'Nom' des profils de compte, passant les contrôles SPF/DKIM."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologies_et_Télécommunications"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [
+          "17.111.110.47"
+        ],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [
+          "appleid@id.apple.com"
+        ],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1566.002",
+        "T1204.001"
+      ],
+      "analyse": {
+        "en": "A highly effective 'Living-off-the-Trust' technique using Apple's own servers to deliver malicious content.",
+        "fr": "Une technique 'Living-off-the-Trust' très efficace utilisant les propres serveurs d'Apple pour délivrer du contenu malveillant."
+      },
+      "recommandations": [
+        {
+          "en": "Incident Response: [Containment] Block phone number 1-802-353-0761; [Eradication] Remove phishing emails from user mailboxes.",
+          "fr": "Réponse sur incident : [Confinement] Bloquer le numéro de téléphone 1-802-353-0761 ; [Éradication] Supprimer les emails de phishing des boîtes aux lettres."
+        }
+      ],
+      "tags": [
+        "phishing",
+        "Apple",
+        "callback_phishing"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/apple-account-change-alerts-abused-to-send-phishing-emails/"
+      ],
+      "date": "2026-04-19"
+    },
+    {
+      "title": {
+        "en": "Japanese CEO Impersonation BEC",
+        "fr": "Arnaque BEC par usurpation de PDG au Japon"
+      },
+      "description": {
+        "en": "A Business Email Compromise (BEC) attack using internal business chat tools to steal 30 million yen by impersonating a CEO.",
+        "fr": "Une attaque de type BEC utilisant des outils de chat professionnel interne pour voler 30 millions de yens en usurpant l'identité d'un PDG."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Business_Services"
+        ],
+        "fr": [
+          "Services_aux_Entreprises"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Slack",
+          "Teams"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566"
+      ],
+      "analyse": {
+        "en": "Collaboration tools are becoming primary vectors for internal fraud as users trust them more than email.",
+        "fr": "Les outils de collaboration deviennent des vecteurs primaires de fraude interne car les utilisateurs leur font plus confiance qu'à l'email."
+      },
+      "recommandations": [
+        {
+          "en": "Incident Response: [Detection] Analyze login logs for PDG account for foreign IPs; [Prevention] Implement out-of-band validation for large transfers.",
+          "fr": "Réponse sur incident : [Détection] Analyser les journaux de connexion du compte PDG pour les IP étrangères ; [Prévention] Mettre en œuvre une validation hors canal pour les transferts importants."
+        }
+      ],
+      "tags": [
+        "BEC",
+        "Japan",
+        "Fraud"
+      ],
+      "sources": [
+        "https://rocket-boys.co.jp/security-measures-lab/ceo-impersonation-business-chat-30m-yen-bec-scam/"
+      ],
+      "date": "2026-04-19"
+    }
+  ]
+}
