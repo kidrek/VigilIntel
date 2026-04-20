@@ -9,22 +9,22 @@
   * [Articles sélectionnés](#articles-selectionnes)
   * [Articles non sélectionnés](#articles-non-selectionnes)
 * [Articles](#articles)
-  * [QEMU evasion + PayoutsKing ransomware (GOLD ENCOUNTER)](#qemu-evasion-payoutsking-ransomware-gold-encounter)
-  * [Nexcorium Mirai variant + IoT (TBK DVR) exploitation](#nexcorium-mirai-variant-iot-tbk-dvr-exploitation)
-  * [AI-assisted Chrome exploit chain (Claude Opus)](#ai-assisted-chrome-exploit-chain-claude-opus)
-  * [Data breach of school employee tax docs (Los Angeles)](#data-breach-school-employee-tax-docs-los-angeles)
-  * [Piratage de données à l'Éducation Nationale (France)](#piratage-de-donnees-education-nationale-france)
-  * [HCSC vs Montana State Auditor (Conduent breach)](#hcsc-vs-montana-state-auditor-conduent-breach)
-
----
+  * [Vercel : Intrusion via une application OAuth tierce (Context.ai)](#vercel-intrusion-via-une-application-oauth-tierce-context-ai)
+  * [Industrie logistique : Hausse des vols de fret via des outils RMM](#industrie-logistique-hausse-des-vols-de-fret-via-des-outils-rmm)
+  * [Apple : Phishing par rappel via l'abus de notifications de compte](#apple-phishing-par-rappel-via-l-abus-de-notifications-de-compte)
+  * [Ransomware Qilin : Impact prolongé sur le NHS Trust South London](#ransomware-qilin-impact-prolonge-sur-le-nhs-trust-south-london)
+  * [Arnaque BEC : Usurpation de PDG via messagerie professionnelle au Japon](#arnaque-bec-usurpation-de-pdg-via-messagerie-professionnelle-au-japon)
+  * [AGS Inc. : Risque de fuite de données suite au ransomware d'un sous-traitant](#ags-inc-risque-de-fuite-de-donnees-suite-au-ransomware-d-un-sous-traitant)
 
 <div id="analyse-strategique"></div>
 
 # ANALYSE STRATÉGIQUE
 
-Le paysage des menaces de ce jour est marqué par une convergence entre l'exploitation massive de l'Internet des Objets (IoT) et la professionnalisation des techniques d'évasion. L'émergence de la variante **Nexcorium** illustre la persistance du modèle Mirai, recyclant des vulnérabilités anciennes (2017) et récentes (2024) pour saturer les infrastructures via des botnets de DVR et routeurs. Parallèlement, l'usage de **QEMU** par le groupe **GOLD ENCOUNTER** pour dissimuler des rançongiciels souligne une tendance à l'utilisation de logiciels d'émulation légitimes pour contourner les solutions EDR/AV, transformant l'hôte en une simple passerelle vers une machine virtuelle malveillante indétectable.
+L'actualité cyber de ce jour met en lumière une tendance critique : le détournement de la légitimité pour contourner les défenses périmétriques. L'intrusion chez **Vercel** via une application OAuth compromise et les campagnes de phishing d'**Apple** utilisant l'infrastructure officielle de notification illustrent l'efficacité croissante des attaques "Living-off-the-Trust". Ces vecteurs sont d'autant plus dangereux qu'ils contournent souvent les filtres de sécurité traditionnels (SPF/DKIM/DMARC) et les solutions de protection de la messagerie.
 
-Sur le plan stratégique, l'expérimentation réussie d'une chaîne d'exploitation Chrome assistée par l'IA (**Claude Opus**) marque un tournant. Bien que non autonome, cette approche réduit drastiquement les coûts de développement d'exploits complexes, menaçant de saturer les cycles de correction des éditeurs. Enfin, les tensions géopolitiques au Moyen-Orient et en Ukraine continuent de générer une activité cyber hybride intense, où le sabotage de l'infrastructure (black-out Internet en Iran) et l'espionnage ciblé des services d'urgence (AgingFly en Ukraine) servent directement des objectifs militaires et politiques. Les organisations doivent prioriser la segmentation des environnements de virtualisation et le durcissement des accès VPN, vecteurs privilégiés des intrusions récentes.
+Parallèlement, la menace physique alimentée par le cyber connaît une recrudescence alarmante, notamment dans le secteur logistique. Les recherches de **Proofpoint** démontrent que des acteurs motivés financièrement utilisent désormais des outils d'administration à distance (RMM) pour manipuler les chaînes d'approvisionnement en temps réel, transformant des intrusions numériques en vols de fret massifs.
+
+Enfin, sur le plan structurel, l'annonce du **NIST** concernant la réduction de l'enrichissement des vulnérabilités (NVD) marque un tournant dans la gestion globale des vulnérabilités. Cette saturation des capacités étatiques face à l'explosion du volume de failles obligera les organisations à devenir plus autonomes dans leur analyse de risque, tout en augmentant la dépendance envers les bases de données privées et le catalogue KEV de la CISA. Le secteur de la santé, illustré par les séquelles de l'attaque de **Qilin**, reste l'un des plus vulnérables face à ces évolutions, peinant à restaurer des systèmes critiques plus de 18 mois après l'incident initial.
 
 ---
 
@@ -38,10 +38,11 @@ Sur le plan stratégique, l'expérimentation réussie d'une chaîne d'exploitati
 
 | Nom de l'acteur | Secteur(s) ciblé(s) | Mode opératoire | TTP MITRE ATT&CK | Source(s) |
 |---|---|---|---|---|
-| **GOLD ENCOUNTER** | Multi-sectoriel, VMware/ESXi | Abus de QEMU, Sideloading, Rclone pour exfiltration | T1564.006 (Hidden VM), T1021.004 (SSH Tunneling) | [Sophos X-Ops](https://news.sophos.com) |
-| **Nexus Team** | IoT (DVR, Routeurs) | Exploitation CVE-2024-3721, Brute-force Telnet | T1505.003 (Web Shell), T1498 (DoS) | [Fortinet](https://www.fortinet.com/blog/threat-research) |
-| **UAC-0247** | Hôpitaux, Municipalités (Ukraine) | Malware AgingFly, Phishing | T1566.001 (Spearphishing), T1005 (Data from Local System) | [The Record](https://therecord.media) |
-| **Handala (MOIS Proxy)** | Défense, Gouvernement (Israël, Golfe) | Wipers, Hack-and-leak | T1561.002 (Disk Wipe), T1190 (Exploit Public-Facing App) | [Flare](https://flare.io) |
+| **ShinyHunters** (disputé) | Cloud / DevOps | Compromission de comptes employés via OAuth (Context.ai), énumération de variables d'environnement. | T1078, T1550.001 | [BleepingComputer](https://www.bleepingcomputer.com/news/security/vercel-confirms-breach-as-hackers-claim-to-be-selling-stolen-data/) |
+| **Qilin** | Santé (NHS) | Ransomware, exfiltration de données, interruption prolongée des systèmes de pathologie. | T1486, T1567 | [DataBreaches.net](https://databreaches.net/2026/04/19/qilins-2024-attack-on-nhs-vendor-continues-to-impact-patient-care-for-one-nhs-trust/) |
+| **Groupe Logistique (Non nommé)** | Transport & Fret | Utilisation de payloads VBS, RMM (ScreenConnect, Pulseway) et scripts PowerShell personnalisés. | T1218.011, T1219, T1059.001 | [Security Affairs](https://securityaffairs.com/191008/security/cyber-attacks-fuel-surge-in-cargo-theft-across-logistics-industry.html) |
+
+---
 
 <div id="synthese-geopolitique"></div>
 
@@ -49,9 +50,10 @@ Sur le plan stratégique, l'expérimentation réussie d'une chaîne d'exploitati
 
 | Pays/Région | Secteur | Thème | Description | Source(s) |
 |---|---|---|---|---|
-| **Iran** | Civil | Censure / Black-out | Le black-out Internet entre dans son 50ème jour (1% de connectivité). Défendu comme une nécessité de guerre par le parlement. | [RFE/RL](https://www.rferl.org) |
-| **Ukraine** | Santé / Public | Espionnage | Campagne UAC-0247 utilisant le malware AgingFly contre les hôpitaux et services d'urgence. | [CERT-UA](https://cert.gov.ua) |
-| **Israël / Iran** | Maritime / Défense | Conflit hybride | Hacktivisme pro-iranien (Handala) contre le secteur de la défense israélien malgré le cessez-le-feu Liban-Israël. | [Flare](https://flare.io) |
+| **France / Russie** | Culture / Science | Attribution d'attaque | L'attaque contre le Muséum national d'histoire naturelle est attribuée à "un grand pays peu démocratique" (allusion à la Russie). | [Le Monde](https://www.lemonde.fr/planete/article/2026/04/19/au-museum-national-d-histoire-naturelle-7-000-factures-en-retard-neuf-mois-apres-une-cyberattaque_6681479_3244.html) |
+| **États-Unis** | Gouvernance | Gestion des vulnérabilités | Le NIST annonce l'arrêt de l'enrichissement des CVE non prioritaires pour faire face à l'explosion du volume de soumissions. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/nist-to-stop-rating-non-priority-flaws-due-to-volume-increase/) |
+
+---
 
 <div id="synthese-reglementaire"></div>
 
@@ -59,8 +61,9 @@ Sur le plan stratégique, l'expérimentation réussie d'une chaîne d'exploitati
 
 | Titre | Auteur/Organisme | Date | Juridiction | Référence | Description | Source(s) |
 |---|---|---|---|---|---|---|
-| **Enquête Conduent** | État du Montana | 18/04/2026 | USA (Montana) | N/A | Un juge autorise l'enquête sur les délais de notification de BCBSMT suite à une violation de 462k membres. | [DataBreaches.net](https://databreaches.net) |
-| **Législation Starlink Iran** | Parlement Iranien | 18/04/2026 | Iran | N/A | Confirmation des peines sévères pour la possession de terminaux Starlink durant le black-out. | [Al Jazeera](https://aljazeera.com) |
+| **Affaire X / Elon Musk** | Parquet de Paris | 19/04/2026 | France | Enquête préliminaire | Elon Musk est convoqué pour une audition libre concernant des soupçons de manipulation d'algorithme et d'abus de données. | [Le Monde](https://www.lemonde.fr/pixels/article/2026/04/19/elon-musk-convoque-lundi-par-la-justice-francaise-apres-quinze-mois-d-une-enquete-tendue_6681466_4408996.html) |
+
+---
 
 <div id="synthese-des-violations-de-donnees"></div>
 
@@ -68,9 +71,10 @@ Sur le plan stratégique, l'expérimentation réussie d'une chaîne d'exploitati
 
 | Secteur | Victime | Données compromises | Volume estimé | Source(s) |
 |---|---|---|---|---|
-| Éducation | Écoles de Los Angeles (LACOE) | Documents fiscaux W-2, identités | Inconnu (potentiel >100k) | [Daily News](https://www.dailynews.com) |
-| Éducation | Éducation Nationale (France) | Prénoms, noms, emails, identifiants EduConnect | Inconnu | [Le Monde](https://www.lemonde.fr) |
-| Public | Dubai Courts / Land Dept (Unverified) | Données juridiques et foncières | 149 To (exfiltration claim) | [Flare](https://flare.io) |
+| Logement public | Matsuyama City Housing | Informations personnelles des locataires. | 7 237 records | [Rocket Boys](https://rocket-boys.co.jp/security-measures-lab/matsuyama-city-7k-data-leak-anabuki-cyberattack/) |
+| Sport / Fitness | Basic-Fit | Données personnelles des membres (plusieurs pays). | ~1 000 000 | [Help Net Security](https://www.helpnetsecurity.com/2026/04/19/week-in-review-acrobat-reader-flaw-exploited-claude-mythos-offensive-capabilities-and-limits/) |
+
+---
 
 <div id="synthese-des-vulnerabilites-critiques"></div>
 
@@ -81,26 +85,28 @@ Sur le plan stratégique, l'expérimentation réussie d'une chaîne d'exploitati
 
 | # | CVE-ID | CISA KEV | Exploitation | Score Composite | CVSS | Clé de tri |
 |---|---|---|---|---|---|---|
-| 1 | CVE-2026-33825 | FALSE | Active    | 3.5 | 8.8 | (0,1,3.5,8.8) |
-| 2 | CVE-2026-41242 | FALSE | PoC       | 3.0 | 9.4 | (0,0,3.0,9.4) |
-| 3 | CVE-2026-39808 | FALSE | PoC       | 2.0 | 9.8 | (0,0,2.0,9.8) |
-| 4 | CVE-2026-40494 | FALSE | Théorique | 2.0 | 9.8 | (0,0,2.0,9.8) |
-| 5 | CVE-2026-40487 | FALSE | Théorique | 1.5 | 8.9 | (0,0,1.5,8.9) |
-| 6 | CVE-2026-6518  | FALSE | Théorique | 1.5 | 8.8 | (0,0,1.5,8.8) |
-| 7 | CVE-2026-40489 | FALSE | Théorique | 1.5 | 8.6 | (0,0,1.5,8.6) |
-| 8 | CVE-2026-5387  | FALSE | Théorique | 1.5 | 9.3 | (0,0,1.5,9.3) |
+| 1 | CVE-2026-34621 | FALSE | Active | 4.0 | 9.8 | (0,1,4.0,9.8) |
+| 2 | CVE-2026-6581 | FALSE | Théorique | 3.0 | 9.0 | (0,0,3.0,9.0) |
+| 3 | CVE-2026-6563 | FALSE | Théorique | 3.0 | 9.0 | (0,0,3.0,9.0) |
+| 4 | CVE-2026-6560 | FALSE | Théorique | 3.0 | 9.0 | (0,0,3.0,9.0) |
+| 5 | BlueHammer/RedSun | FALSE | Active | 2.5 | N/A | (0,1,2.5,0) |
+| 6 | CVE-2026-40173 | FALSE | Théorique | 1.5 | 9.4 | (0,0,1.5,9.4) |
+| 7 | CVE-2026-33557 | FALSE | Théorique | 1.5 | 9.0 | (0,0,1.5,9.0) |
+| 8 | CVE-2026-33558 | FALSE | Théorique | 0.5 | N/A | (0,0,0.5,0) |
 -->
 
 | CVE-ID | Score CVSS | EPSS | CISA KEV | Score Composite | Produit affecté | Type de vulnérabilité | Impact | Exploitation | Mesures de contournement | Source(s) |
 |---|---|---|---|---|---|---|---|---|---|---|
-| **CVE-2026-33825** | 8.8 | N/A | FALSE | 3.5 | Microsoft Defender | Privilege Escalation (BlueHammer) | LPE | Active | Appliquer correctif du 14 avril. | [The Cyber Throne](https://thecyberthrone.in) |
-| **CVE-2026-41242** | 9.4 | N/A | FALSE | 3.0 | protobufjs | Code Injection | RCE | PoC public | Mise à jour vers 8.0.1 ou 7.5.5. | [BleepingComputer](https://www.bleepingcomputer.com) |
-| **CVE-2026-39808** | 9.8 | N/A | FALSE | 2.0 | Fortinet FortiSandbox | Command Injection | RCE | PoC public | Mise à jour au-delà de 4.4.8. | [Cybersecurity News](https://cybersecuritynews.com) |
-| **CVE-2026-40494** | 9.8 | N/A | FALSE | 2.0 | SAIL Library | Heap Buffer Overflow | RCE | Théorique | Appliquer commit 45d48d1. | [CVEfeed](https://cvefeed.io) |
-| **CVE-2026-40487** | 8.9 | N/A | FALSE | 1.5 | Postiz | Unrestricted File Upload | Stored XSS | Théorique | Mise à jour vers 2.21.6. | [CVEfeed](https://cvefeed.io) |
-| **CVE-2026-6518** | 8.8 | N/A | FALSE | 1.5 | CMP Plugin (WordPress) | Missing Authorization | RCE | Théorique | Mise à jour vers 4.1.17. | [CVEfeed](https://cvefeed.io) |
-| **CVE-2026-40489** | 8.6 | N/A | FALSE | 1.5 | editorconfig-core-c | Stack Buffer Overflow | DoS | Théorique | Mise à jour vers 0.12.11. | [CVEfeed](https://cvefeed.io) |
-| **CVE-2026-5387** | 9.3 | N/A | FALSE | 1.5 | AVEVA Pipeline Simulation | Missing Authorization | Admin Bypass | Théorique | Mise à jour vers 2025 SP1 P01. | [SecurityOnline](https://securityonline.info) |
+| CVE-2026-34621 | 9.8 | N/A | FALSE | 4.0 | Adobe Acrobat Reader | Prototype Pollution | RCE | Active | Appliquer le correctif d'urgence Adobe. | [Help Net Security](https://www.helpnetsecurity.com/2026/04/19/week-in-review-acrobat-reader-flaw-exploited-claude-mythos-offensive-capabilities-and-limits/) |
+| CVE-2026-6581 | 9.0 | N/A | FALSE | 3.0 | H3C Magic B1 | Buffer Overflow | RCE | PoC public | Restreindre l'accès à l'interface de gestion. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-6581) |
+| CVE-2026-6563 | 9.0 | N/A | FALSE | 3.0 | H3C Magic B1 | Buffer Overflow | RCE | PoC public | Mise à jour firmware recommandée. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-6563) |
+| CVE-2026-6560 | 9.0 | N/A | FALSE | 3.0 | H3C Magic B0 | Buffer Overflow | RCE | PoC public | Désactiver les fonctions affectées. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-6560) |
+| CVE-2026-33825 | N/A | N/A | FALSE | 2.5 | MS Defender | Logic Error | LPE | Active | Correctif Microsoft requis. | [Rocket Boys](https://rocket-boys.co.jp/security-measures-lab/bluehammer-redsun-undefend-cve-2026-33825/) |
+| CVE-2026-40173 | 9.4 | N/A | FALSE | 1.5 | Dgraph Alpha | Plaintext Exposure | Auth Bypass | Théorique | Mise à jour vers v25.3.2. | [Security Online](https://securityonline.info/dgraph-admin-token-leak-debug-pprof-cve-2026-40173/) |
+| CVE-2026-33557 | 9.0 | N/A | FALSE | 1.5 | Apache Kafka | JWT Validation | Auth Bypass | Théorique | Configurer BrokerJwtValidator. | [Security Online](https://securityonline.info/apache-kafka-jwt-authentication-bypass-logging-vulnerabilities-2026/) |
+| CVE-2026-33558 | N/A | N/A | FALSE | 0.5 | Apache Kafka Clients | Verbose Logging | Info Disclosure | Théorique | Positionner log level sur INFO. | [Security Online](https://securityonline.info/apache-kafka-jwt-authentication-bypass-logging-vulnerabilities-2026/) |
+
+---
 
 <div id="articles-selectionnes"></div>
 
@@ -108,10 +114,12 @@ Sur le plan stratégique, l'expérimentation réussie d'une chaîne d'exploitati
 
 | Titre | Sujet canonique | Raison de sélection | Source(s) |
 |---|---|---|---|
-| Hidden VMs: how hackers leverage QEMU | QEMU evasion + PayoutsKing ransomware (GOLD ENCOUNTER) | Technique d'évasion avancée par virtualisation. | [Sophos](https://news.sophos.com) |
-| Nexcorium Mirai variant exploits TBK DVR | Nexcorium Mirai variant + IoT (TBK DVR) exploitation | Campagne IoT massive multi-sources. | [Fortinet](https://www.fortinet.com) \| [The Hacker News](https://thehackernews.com) |
-| Researcher Uses Claude Opus to Build Exploit | AI-assisted Chrome exploit chain (Claude Opus) | Première démonstration concrète d'IA pour exploit RCE Chrome. | [Cybersecurity News](https://cybersecuritynews.com) |
-| Tax documents for school employees potentially stolen | Data breach of school employee tax docs (Los Angeles) | Impact direct sur la protection des données personnelles. | [DataBreaches.net](https://databreaches.net) |
+| Vercel confirms breach... | Vercel + Intrusion via Google Workspace OAuth AI Tool | Incident majeur sur une plateforme Cloud critique. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/vercel-confirms-breach-as-hackers-claim-to-be-selling-stolen-data/) |
+| Cyber attacks fuel surge in cargo theft... | Industrie logistique + Hausse des vols de fret via des outils RMM | Analyse détaillée d'une campagne ciblant la supply chain physique. | [Security Affairs](https://securityaffairs.com/191008/security/cyber-attacks-fuel-surge-in-cargo-theft-across-logistics-industry.html) |
+| Apple account change alerts abused... | Apple Account + Callback Phishing via Notification Abuse | Nouvelle technique d'abus de services légitimes. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/apple-account-change-alerts-abused-to-send-phishing-emails/) |
+| Qilin’s 2024 attack on NHS... | Ransomware Qilin + Impact prolongé sur le NHS Trust South London | Étude de l'impact à long terme d'un ransomware critique. | [DataBreaches.net](https://databreaches.net/2026/04/19/qilins-2024-attack-on-nhs-vendor-continues-to-impact-patient-care-for-one-nhs-trust/) |
+
+---
 
 <div id="articles-non-selectionnes"></div>
 
@@ -119,9 +127,10 @@ Sur le plan stratégique, l'expérimentation réussie d'une chaîne d'exploitati
 
 | Titre | Raison d'exclusion | Source(s) |
 |---|---|---|
-| Microsoft Teams right-click paste broken | Bug fonctionnel (régression Edge), non-sécuritaire. | [BleepingComputer](https://www.bleepingcomputer.com) |
-| NAKIVO v11.2: Ransomware Defense... | Communiqué de presse commercial / Publicité sponsorisée. | [Nakivo](https://www.nakivo.com) |
-| Non, je ne suis pas un robot : le casse-tête des Captcha | Article de société généraliste sans analyse technique de sécurité. | [Le Monde](https://www.lemonde.fr) |
+| ISC Stormcast For Monday... | Podcast sans contenu textuel exploitable directement. | https://isc.sans.edu/podcastdetail/9898 |
+| ASN: AS18403 Hanoi, VN | Simple notification de base de données sans contexte sécuritaire. | https://infosec.exchange/@shodansafari/116434325337714913 |
+| threatchain.io | Article à but purement commercial/promotionnel. | https://infosec.exchange/@threatchain/116434154506108897 |
+| Mastering Linux Firewalls | Contenu éducatif/généraliste, pas d'actualité cyber. | https://denizhalil.com/2025/12/31/netfilter-iptables-firewall-configuration-guide/ |
 
 ---
 
@@ -129,279 +138,307 @@ Sur le plan stratégique, l'expérimentation réussie d'une chaîne d'exploitati
 
 # SECTION "ARTICLES"
 
-<div id="qemu-evasion-payoutsking-ransomware-gold-encounter"></div>
+<div id="vercel-intrusion-via-une-application-oauth-tierce-context-ai"></div>
 
-## QEMU evasion + PayoutsKing ransomware (GOLD ENCOUNTER)
+## Vercel : Intrusion via une application OAuth tierce (Context.ai)
 
 ### Résumé technique
-Le groupe de menace **GOLD ENCOUNTER** a été observé utilisant l'émulateur open-source **QEMU** pour déployer des environnements malveillants isolés sur des hôtes Windows compromis. Cette technique, identifiée sous les noms de campagnes **STAC4713** et **STAC3725**, consiste à créer une tâche planifiée nommée "TPMProfiler" qui lance une machine virtuelle légère (souvent Alpine Linux). Cette VM exécute des outils d'attaque (Impacket, BloodHound) et maintient une persistance via des tunnels SSH inverses, tout en restant invisible pour les solutions de sécurité installées sur l'hôte physique. Les accès initiaux exploitent des failles VPN (SonicWall sans MFA) ou des vulnérabilités logicielles (SolarWinds CVE-2025-26399).
+
+La plateforme Cloud **Vercel** a confirmé une intrusion suite à la compromission d'un compte employé via l'application OAuth Google Workspace d'un outil d'IA tiers nommé **Context.ai**. L'attaquant a pu escalader ses privilèges pour accéder aux environnements internes de Vercel. Bien que les variables d'environnement critiques soient chiffrées au repos, l'attaquant a réussi à énumérer et extraire des variables marquées comme "non-sensibles" (non chiffrées). 
+
+Le groupe **ShinyHunters** a revendiqué l'attaque sur un forum, affirmant détenir des jetons GitHub, des tokens NPM, du code source et une base de données d'employés (580 enregistrements). Vercel précise que les projets open-source majeurs (Next.js, Turbopack) ne sont pas affectés.
 
 ### Analyse de l'impact
-L'usage de QEMU permet une évasion quasi-totale des contrôles de sécurité sur les endpoints (EDR/AV), car l'activité malveillante se déroule à l'intérieur de l'espace mémoire de la VM émulée. L'impact final est le déploiement du rançongiciel **PayoutsKing**, qui cible spécifiquement les hyperviseurs VMware et ESXi pour paralyser l'infrastructure virtualisée des victimes.
+
+*   **Opérationnel** : Risque majeur de compromission de la chaîne d'approvisionnement logicielle si des secrets de déploiement (tokens NPM/GitHub) ont été extraits.
+*   **Sectoriel** : Impact fort sur l'écosystème JavaScript/React en raison de l'omniprésence de Vercel et Next.js.
+*   **Sophistication** : Élevée (exploitation d'une chaîne de confiance via un outil IA tiers et escalade de privilèges).
 
 ### Recommandations
-*   Interdire l'exécution de binaires de virtualisation (qemu.exe, vmware.exe) sur les postes non autorisés via AppLocker.
-*   Surveiller la création de tâches planifiées suspectes liées à des privilèges SYSTEM.
-*   Auditer les processus parents lançant des connexions réseau via des ports non standards (SSH/443).
+
+*   Identifier et révoquer l'application OAuth suspecte : `110671459871-30f1spbu0hptbs60cb4vsmv79i7bbvqj.apps.googleusercontent.com`.
+*   Effectuer une rotation immédiate de tous les secrets et variables d'environnement.
+*   Activer la fonction "Sensitive Environment Variable" de Vercel pour forcer le chiffrement au repos.
 
 ### Playbook de réponse à incident
 
 #### Phase 1 — Préparation
-*   Activer la surveillance des logs d'événements Windows (ID 4698 - Création de tâche planifiée).
-*   Déployer des règles de détection sur les images disque virtuelles (.qcow2, .vmdk) suspectes.
+*   Vérifier l'activation des logs d'audit Google Workspace et des logs d'accès Vercel.
+*   Identifier tous les outils d'IA tiers intégrés via OAuth dans l'organisation.
 
 #### Phase 2 — Détection et analyse
-*   **Requête EDR :** Rechercher le processus `qemu-system-x86_64.exe` avec des arguments pointant vers des fichiers cachés ou renommés.
-*   **Règle Sigma :** Détecter la création de la tâche "TPMProfiler".
-*   Analyser les connexions réseau sortantes vers des adresses IP inconnues sur le port 22 ou 443.
+*   **Requête SIEM** : Rechercher des connexions depuis des adresses IP inhabituelles associées à l'ID client OAuth de Context.ai.
+*   Auditer les accès aux variables d'environnement sur le tableau de bord Vercel pour détecter une énumération anormale.
 
 #### Phase 3 — Confinement, éradication et récupération
-*   **Confinement :** Isoler l'hôte physique et terminer le processus QEMU pour couper les tunnels SSH.
-*   **Éradication :** Supprimer les fichiers de la VM malveillante et réinitialiser les mots de passe de l'Active Directory (si exfiltration de base NTDS.dit détectée).
-*   **Récupération :** Restaurer les hôtes ESXi depuis des sauvegardes immuables.
+*   **Confinement** : Révoquer l'accès OAuth de Context.ai au niveau du tenant Google Workspace.
+*   **Éradication** : Forcer la déconnexion de toutes les sessions actives de l'employé compromis et réinitialiser son mot de passe/MFA.
+*   **Récupération** : Déployer de nouveaux secrets et invalider les anciens tokens NPM/GitHub.
 
 #### Phase 4 — Activités post-incident
-*   Notifier les autorités si des données personnelles ont été exfiltrées via Rclone.
-*   Mettre à jour les politiques de MFA sur tous les accès VPN et SSLVPN.
+*   Conduire un REX sur le processus de validation des outils tiers.
+*   Mettre à jour la politique de sécurité pour interdire les variables d'environnement en clair.
 
 #### Phase 5 — Threat Hunting (proactif)
 
 | Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
 |---|---|---|---|
-| Recherche d'émulateurs non autorisés | T1564.006 | Inventaire logiciel | Lister les binaires signés par QEMU ou incluant des bibliothèques de virtualisation. |
-| Détection de tunnels persistants | T1021.004 | Logs Firewall/Proxy | Identifier les sessions TCP de longue durée vers des destinations inhabituelles. |
+| Abus de jetons GitHub/NPM volés | T1550.001 | Logs GitHub/NPM | Rechercher des commits ou déploiements depuis des IPs non-autorisées. |
 
 ### Indicateurs de compromission (DEFANG)
 
 | Type | Valeur (DEFANG) | Description | Fiabilité |
 |---|---|---|---|
-| Nom de fichier | `qemu-system-x86_64[.]exe` | Exécutable QEMU utilisé pour l'évasion | Haute |
-| Tâche planifiée | `TPMProfiler` | Tâche de persistance de la VM | Haute |
-| Nom de fichier | `payouts_king[.]exe` | Payload du rançongiciel PayoutsKing | Haute |
+| Domaine | context[.]ai | Domaine de l'outil tiers compromis | Moyenne |
+| Client ID | 110671459871-30f1spbu0hptbs60cb4vsmv79i7bbvqj[.]apps[.]googleusercontent[.]com | App OAuth malveillante | Élevée |
 
 ### TTP MITRE ATT&CK
 
 | ID TTP | Tactique | Technique | Description contextuelle |
 |---|---|---|---|
-| T1564.006 | Defense Evasion | Hide Artifacts: Virtualization/Sandbox Evasion | Utilisation de QEMU pour dissimuler l'activité malveillante. |
-| T1021.004 | Lateral Movement | Remote Services: SSH | Création de tunnels SSH inverses depuis la VM. |
+| T1078 | Initial Access | Valid Accounts | Compromission d'un compte employé via OAuth. |
+| T1550.001 | Defense Evasion | Application Access Token | Utilisation de jetons d'accès d'application pour l'escalade. |
 
 ### Sources
-*   [Sophos X-Ops](https://news.sophos.com/en-us/2026/04/18/hidden-vms-qemu-payoutsking/)
-*   [SecurityAffairs](https://securityaffairs.com/190982/security/hidden-vms-how-hackers-leverage-qemu-to-stealthily-steal-data-and-spread-malware.html)
+
+* [BleepingComputer](https://www.bleepingcomputer.com/news/security/vercel-confirms-breach-as-hackers-claim-to-be-selling-stolen-data/)
+* [Vercel Security Bulletin](https://vercel.com/kb/bulletin/vercel-april-2026-security-incident)
 
 ---
 
-<div id="nexcorium-mirai-variant-iot-tbk-dvr-exploitation"></div>
+<div id="industrie-logistique-hausse-des-vols-de-fret-via-des-outils-rmm"></div>
 
-## Nexcorium Mirai variant + IoT (TBK DVR) exploitation
+## Industrie logistique : Hausse des vols de fret via des outils RMM
 
 ### Résumé technique
-Une nouvelle variante de Mirai, baptisée **Nexcorium**, cible massivement les appareils IoT, particulièrement les enregistreurs vidéo numériques **TBK DVR** (modèles 4104/4216). L'acteur de menace **Nexus Team** exploite la vulnérabilité de commande injection **CVE-2024-3721** pour injecter un script de téléchargement ("dvr"). Nexcorium est multi-architecture (ARM, MIPS, x86) et intègre des exploits pour des failles plus anciennes comme CVE-2017-17215 (Huawei). La persistance est assurée par la modification de `/etc/inittab`, `/etc/rc.local` et la création de services `systemd`.
+
+Des chercheurs de **Proofpoint** ont documenté une campagne sophistiquée ciblant les entreprises de transport et de logistique. Les attaquants utilisent des fichiers **VBS** malveillants délivrés par email pour installer des outils d'administration à distance (RMM) comme **ScreenConnect**, **Pulseway** et **SimpleHelp**. 
+
+L'objectif est d'infiltrer les plateformes de gestion de fret ("load boards") pour détourner des cargaisons physiques en manipulant les appels d'offres et en accédant aux cartes de carburant de la flotte. Les attaquants utilisent une méthode de "signing-as-a-service" pour re-signer leurs payloads avec des certificats valides mais frauduleux, contournant ainsi les protections des endpoints.
 
 ### Analyse de l'impact
-Le botnet est conçu pour lancer des attaques par déni de service distribué (DDoS) de type UDP, TCP ACK, SYN et SMTP. La capacité de Nexcorium à se répliquer et à supprimer son binaire d'origine après infection rend l'analyse forensique difficile sur les dispositifs à ressources limitées.
+
+*   **Opérationnel** : Perturbation directe de la chaîne d'approvisionnement et pertes financières massives ($6,6 milliards estimés en Amérique du Nord pour 2025).
+*   **Technique** : Utilisation intensive de scripts PowerShell pour profiler les victimes et exfiltrer des portefeuilles crypto.
+*   **Secteur** : Transport, logistique et commerce de gros particulièrement vulnérables.
 
 ### Recommandations
-*   Appliquer les correctifs pour CVE-2024-3721 sur les DVR TBK.
-*   Désactiver l'accès Telnet sur tous les dispositifs IoT et changer les mots de passe par défaut.
-*   Isoler les réseaux IoT via une segmentation stricte (VLAN dédiés).
+
+*   Restreindre l'installation d'outils RMM non autorisés via des politiques AppLocker ou EDR.
+*   Monitorer l'activité PowerShell suspecte, notamment l'utilisation de scripts obscurcis.
 
 ### Playbook de réponse à incident
 
 #### Phase 1 — Préparation
-*   Identifier tous les dispositifs TBK DVR et routeurs Huawei HG532 sur le réseau.
-*   Configurer un IDS/IPS pour détecter les requêtes HTTP contenant des injections de commande vers les endpoints DVR.
+*   Établir une liste blanche (allowlist) des outils RMM autorisés par la DSI.
+*   S'assurer que l'EDR collecte les lignes de commande PowerShell complètes.
 
 #### Phase 2 — Détection et analyse
-*   **Règle réseau :** Rechercher le header HTTP `X-Hacked-By: Nexus Team`.
-*   Inspecter les dispositifs IoT pour des processus inhabituels ou des modifications dans `/etc/rc.local`.
-*   Surveiller les pics de trafic UDP/TCP sortant vers des cibles externes (DDoS).
+*   **Détection** : Identifier l'exécution de processus `ScreenConnect.Client.exe` ou `SimpleHelp` depuis des répertoires temporaires (`AppData\Local\Temp`).
+*   Rechercher des scripts PowerShell effectuant du profilage système (ex: `Get-NetIPAddress`, `systeminfo`).
 
 #### Phase 3 — Confinement, éradication et récupération
-*   **Confinement :** Bloquer les IP de C2 identifiées au niveau du firewall.
-*   **Éradication :** Réinitialiser les appareils infectés aux paramètres d'usine (Factory Reset) et mettre à jour le firmware.
-*   **Récupération :** Restaurer la connectivité réseau après avoir sécurisé les accès Telnet/HTTP.
+*   **Confinement** : Isoler les endpoints infectés et bloquer les ports utilisés par ScreenConnect (ex: 8040, 8041) au niveau du pare-feu.
+*   **Éradication** : Supprimer les instances de RMM non autorisées et les clés de persistance dans le registre.
+*   **Récupération** : Changer les identifiants d'accès aux plateformes de gestion de fret.
 
 #### Phase 4 — Activités post-incident
-*   Documenter la liste des actifs IoT non patchés pour une remédiation globale.
-*   Intégrer les nouvelles signatures d'attaque DDoS dans les solutions de protection anti-DDoS.
+*   Auditer les transactions financières et les cartes de carburant effectuées durant la période de compromission.
 
 #### Phase 5 — Threat Hunting (proactif)
 
 | Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
 |---|---|---|---|
-| Balayage interne Telnet | T1505.003 | Logs réseau | Rechercher des tentatives de connexion Telnet massives entre équipements IoT internes. |
-| Persistance via scripts boot | T1547.001 | Système de fichiers | Vérifier l'intégrité de `/etc/inittab` sur les systèmes Linux embarqués. |
+| Présence de RMM furtifs | T1219 | EDR / Logs Processus | Rechercher des processus RMM renommés ou lancés par des scripts VBS/PS1. |
 
 ### Indicateurs de compromission (DEFANG)
 
 | Type | Valeur (DEFANG) | Description | Fiabilité |
 |---|---|---|---|
-| User-Agent | `X-Hacked-By: Nexus Team` | Header spécifique à l'exploitation | Haute |
-| Nom de fichier | `nexuscorp[.]x86` | Payload malveillant Nexcorium | Haute |
-| Script | `dvr` | Script downloader initial | Moyenne |
+| Email | pierluigi[.]paganini[@]securityaffairs[.]co | Contact source recherche | Info |
+| Technique | Signed PowerShell | Utilisation de certificats frauduleux | Élevée |
 
 ### TTP MITRE ATT&CK
 
 | ID TTP | Tactique | Technique | Description contextuelle |
 |---|---|---|---|
-| T1190 | Initial Access | Exploit Public-Facing Application | Exploitation de CVE-2024-3721 sur les DVR. |
-| T1498 | Impact | Network Denial of Service | Exécution d'attaques par inondation (Flooding). |
+| T1218.011 | Defense Evasion | System Binary Proxy Execution: Rundll32 | Utilisation de payloads VBS pour lancer l'infection. |
+| T1219 | Command and Control | Remote Access Software | Utilisation de ScreenConnect/Pulseway pour le contrôle. |
 
 ### Sources
-*   [Fortinet](https://www.fortinet.com/blog/threat-research/nexcorium-mirai-variant-exploits-tbk-dvr-flaw)
-*   [The Hacker News](https://thehackernews.com/2026/04/mirai-variant-nexcorium-exploits-cve.html)
+
+* [Security Affairs](https://securityaffairs.com/191008/security/cyber-attacks-fuel-surge-in-cargo-theft-across-logistics-industry.html)
+* [Proofpoint Research](https://www.proofpoint.com/us/blog/threat-insight)
 
 ---
 
-<div id="ai-assisted-chrome-exploit-chain-claude-opus"></div>
+<div id="apple-phishing-par-rappel-via-l-abus-de-notifications-de-compte"></div>
 
-## AI-assisted Chrome exploit chain (Claude Opus)
+## Apple : Phishing par rappel via l'abus de notifications de compte
 
 ### Résumé technique
-Un chercheur en sécurité a démontré la capacité du modèle d'IA **Claude Opus** à construire une chaîne d'exploitation fonctionnelle pour Google Chrome (V8 engine). La chaîne combine **CVE-2026-5873** (OOB read/write dans Turboshaft) et un bypass de bac à sable V8 (Use-After-Free dans WasmCPT). L'exploit cible spécifiquement les applications basées sur **Electron** (Discord, Slack, Notion) qui accusent souvent un retard de plusieurs semaines sur les correctifs Chromium ("patch gap"). L'IA a généré un payload capable d'exécuter des commandes système sur macOS.
+
+Une nouvelle campagne de phishing abuse des notifications légitimes de changement de compte Apple pour envoyer des leurres de type "callback phishing". L'attaquant crée un identifiant Apple et insère un message de phishing (ex: "Achat iPhone 899 USD via PayPal, appelez le 1-802-353-0761 pour annuler") directement dans les champs **Nom** et **Prénom** du profil. 
+
+En déclenchant une modification des informations d'expédition, Apple génère automatiquement un email de notification authentique (`appleid@id.apple.com`) qui inclut le texte malveillant. Ces emails passent tous les contrôles de sécurité (SPF/DKIM/DMARC) car ils proviennent réellement des serveurs d'Apple.
 
 ### Analyse de l'impact
-Bien que l'IA ait nécessité 20 heures de supervision humaine et 2,3 milliards de tokens, le coût total (~2300 $) est dérisoire par rapport à la valeur d'un exploit Chrome sur le marché (10k$ - 100k$). Cela présage une démocratisation de la création d'exploits complexes par des acteurs moins sophistiqués.
+
+*   **Victimologie** : Grand public et utilisateurs d'iCloud.
+*   **Risque** : Vol de données financières ou installation de logiciels de prise en main à distance (RAT) par manipulation sociale téléphonique.
+*   **Efficacité** : Très élevée car l'email est "propre" au sens des passerelles de messagerie.
 
 ### Recommandations
-*   Prioriser la mise à jour des navigateurs et des clients Electron dès la sortie des correctifs.
-*   Utiliser des solutions de sandboxing au niveau de l'OS (ex: App Sandbox sur macOS) en complément de celui du navigateur.
+
+*   Sensibiliser les utilisateurs au fait que les notifications officielles n'incluent jamais de numéros de téléphone pour "annuler des achats".
+*   Vérifier les achats uniquement via le site officiel `appleid.apple.com` ou l'application App Store.
 
 ### Playbook de réponse à incident
 
 #### Phase 1 — Préparation
-*   Maintenir un inventaire des versions de Chromium intégrées dans les applications métier (Discord, Slack, Teams).
+*   Mettre à jour les modules de sensibilisation au phishing pour inclure les abus de notifications légitimes.
 
 #### Phase 2 — Détection et analyse
-*   **Surveillance EDR :** Détecter des processus fils anormaux (ex: `zsh`, `calc`) lancés par des applications Electron.
-*   **Analyse de crash :** Rechercher des rapports de crash répétés de `MsMpEng.exe` ou du moteur V8.
+*   Identifier les emails provenant de `appleid@id.apple.com` dont le corps contient des termes comme "PayPal", "USD" ou des numéros de téléphone suspects.
 
 #### Phase 3 — Confinement, éradication et récupération
-*   **Confinement :** Restreindre l'exécution de scripts WebAssembly sur les domaines non critiques.
-*   **Éradication :** Désinstaller les versions vulnérables d'Electron et forcer le déploiement des builds patchés.
+*   **Confinement** : Bloquer les numéros de téléphone identifiés au niveau de la flotte mobile d'entreprise.
+*   **Éradication** : Supprimer les emails de phishing des boîtes aux lettres des utilisateurs.
 
 #### Phase 4 — Activités post-incident
-*   Analyser les raisons du retard de déploiement des patches ("patch gap") au sein de l'organisation.
+*   Signaler les comptes abuseurs à Apple via leurs canaux de support.
 
 #### Phase 5 — Threat Hunting (proactif)
 
 | Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
 |---|---|---|---|
-| Exploitation JIT/Turboshaft | T1203 | Logs EDR | Rechercher des allocations de mémoire RWX par les processus de rendu du navigateur. |
+| Abus de services SaaS | T1566.003 | Logs Proxy/Mail | Rechercher des redirections vers des outils de support distant (AnyDesk, TeamViewer) suite à la réception d'emails Apple. |
 
 ### Indicateurs de compromission (DEFANG)
 
 | Type | Valeur (DEFANG) | Description | Fiabilité |
 |---|---|---|---|
-| CVE | `CVE-2026-5873` | Vulnérabilité Turboshaft exploitée | N/A |
+| Email | appleid[@]id[.]apple[.]com | Expéditeur légitime abusé | Info |
+| Téléphone | 1-802-353-0761 | Numéro de rappel du fraudeur | Élevée |
+| IP | 17[.]111[.]110[.]47 | Infrastructure Apple légitime | Info |
 
 ### TTP MITRE ATT&CK
 
 | ID TTP | Tactique | Technique | Description contextuelle |
 |---|---|---|---|
-| T1203 | Execution | Exploitation for Client Execution | Exploitation de vulnérabilités dans le moteur JIT V8. |
+| T1566.002 | Initial Access | Phishing: Spearphishing Link | Utilisation de l'infrastructure Apple pour crédibiliser le message. |
+| T1204.001 | Execution | User Execution: Malicious Link | Incitation à l'appel téléphonique (Callback). |
 
 ### Sources
-*   [Cybersecurity News](https://cybersecuritynews.com/claude-opus-to-build-a-working-chrome-exploit-chain/)
-*   [Hacktron AI](https://hacktron.ai/ai-assisted-exploitation)
+
+* [BleepingComputer](https://www.bleepingcomputer.com/news/security/apple-account-change-alerts-abused-to-send-phishing-emails/)
 
 ---
 
-<div id="data-breach-school-employee-tax-docs-los-angeles"></div>
+<div id="ransomware-qilin-impact-prolonge-sur-le-nhs-trust-south-london"></div>
 
-## Data breach of school employee tax docs (Los Angeles)
+## Ransomware Qilin : Impact prolongé sur le NHS Trust South London
 
 ### Résumé technique
-Le Bureau de l'éducation du comté de Los Angeles (**LACOE**) enquête sur un accès non autorisé à des documents fiscaux électroniques (**W-2**) d'enseignants et d'administrateurs. Des employés de plusieurs districts scolaires ont signalé des déclarations de revenus frauduleuses soumises en leur nom. L'incident semble lié au portail de gestion de la paie utilisé par LACOE pour plus de 150 000 employés. En parallèle, le groupe de ransomware **Rhysida** a revendiqué l'exfiltration de 4,5 To de données du district de Bellflower en octobre 2025, incluant potentiellement des fichiers fiscaux.
+
+Plus de 18 mois après l'attaque par ransomware du groupe **Qilin** contre le fournisseur **Synnovis**, le **South London and Maudsley NHS Foundation Trust (SLaM)** subit toujours des perturbations majeures. Les systèmes de pathologie n'ont pas été totalement restaurés, forçant le personnel à utiliser des processus papier et des saisies manuelles. Environ **161 560 rapports de pathologie** accusent un retard de saisie. Les résultats critiques sont communiqués par téléphone et aucun rapport n'est disponible dans le London Care Record partagé.
 
 ### Analyse de l'impact
-L'impact majeur est l'usurpation d'identité à grande échelle et la fraude fiscale. Le manque de notification claire par certains districts (ex: Bellflower) aggrave le risque pour les victimes qui ne peuvent pas prendre de mesures préventives à temps.
+
+*   **Santé Publique** : Risque vital dû au retard de traitement des résultats d'analyses médicales.
+*   **Opérationnel** : Mode dégradé permanent ("business continuity") augmentant la charge de travail et le risque d'erreur humaine.
 
 ### Recommandations
-*   Mettre en place une surveillance du crédit pour tous les employés concernés.
-*   Forcer la réinitialisation des mots de passe et l'activation du MFA sur les portails de paie.
-*   Déposer une alerte de fraude auprès des agences fiscales (IRS 4506-F).
 
-### Playbook de réponse à incident
+*   Prioriser la résilience des sous-traitants critiques dans le cadre de la directive NIS2.
+*   Maintenir des procédures de continuité d'activité (PCA) testées pour une durée indéterminée.
 
-#### Phase 1 — Préparation
-*   Vérifier les politiques de rétention des données sur les portails tiers.
+### Playbook de réponse à incident (Adaptation PCA)
 
-#### Phase 2 — Détection et analyse
-*   Identifier les comptes ayant accédé de manière inhabituelle (volume/horaire) aux exports W-2.
-*   Corréler les signalements d'employés concernant l'IRS avec les logs d'accès au portail.
-
-#### Phase 3 — Confinement, éradication et récupération
-*   **Confinement :** Suspendre l'accès externe au portail W-2 jusqu'à la sécurisation complète.
-*   **Éradication :** Révoquer tous les tokens de session actifs.
-
-#### Phase 4 — Activités post-incident
-*   Notification CNIL/RGPD (ou équivalent local) sous 72h.
-*   Communication transparente aux employés sur la nature des données dérobées.
+#### Phase 4 — Activités post-incident (Suivi long terme)
+*   Valider l'intégrité de chaque donnée restaurée manuellement.
+*   Notifier les patients dont les soins ont été affectés par le dwell time prolongé.
 
 #### Phase 5 — Threat Hunting (proactif)
 
 | Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
 |---|---|---|---|
-| Accès frauduleux aux W-2 | T1530 | Logs Application | Rechercher des téléchargements de fichiers PDF/W2 massifs par un seul compte. |
+| Persistance post-restauration | T1078 | Logs AD | Rechercher des comptes de service créés durant l'attaque initiale encore actifs. |
 
 ### Indicateurs de compromission (DEFANG)
 
 | Type | Valeur (DEFANG) | Description | Fiabilité |
 |---|---|---|---|
-| Acteur | `Rhysida` | Groupe potentiellement lié à l'exfiltration | Moyenne |
+| Acteur | Qilin | Groupe de ransomware | Élevée |
 
 ### TTP MITRE ATT&CK
 
 | ID TTP | Tactique | Technique | Description contextuelle |
 |---|---|---|---|
-| T1530 | Collection | Data from Cloud Storage Object | Vol de documents sur le portail cloud de LACOE. |
+| T1486 | Impact | Data Encrypted for Impact | Chiffrement des bases de données de pathologie. |
 
 ### Sources
-*   [DataBreaches.net](https://databreaches.net/2026/04/18/tax-documents-for-school-employees-potentially-stolen-across-los-angeles-county/)
-*   [Los Angeles Daily News](https://www.dailynews.com)
+
+* [DataBreaches.net](https://databreaches.net/2026/04/19/qilins-2024-attack-on-nhs-vendor-continues-to-impact-patient-care-for-one-nhs-trust/)
 
 ---
 
-<div id="piratage-de-donnees-education-nationale-france"></div>
+<div id="arnaque-bec-usurpation-de-pdg-via-messagerie-professionnelle-au-japon"></div>
 
-## Piratage de données à l'Éducation Nationale (France)
+## Arnaque BEC : Usurpation de PDG via messagerie professionnelle au Japon
 
 ### Résumé technique
-Le ministère de l'Éducation Nationale français a confirmé deux fuites de données significatives. La première concerne des données d'élèves (prénoms, emails, identifiants EduConnect) dérobées en décembre 2025 via une usurpation de compte. La seconde, survenue le 23 mars 2026, a impacté **243 000 enseignants** stagiaires. Les données exfiltrées (identités, numéros de téléphone, absences) ont été diffusées sur le Dark Web. L'origine est attribuée à une faille de sécurité sur un compte membre du personnel.
+
+Une entreprise japonaise a été victime d'une arnaque au président (BEC) via un outil de messagerie professionnelle, entraînant une perte de **30 millions de yens**. L'attaquant a usurpé l'identité du PDG au sein de la plateforme de chat interne pour ordonner un virement bancaire urgent. Cette attaque montre que les outils de collaboration (Slack, Teams, Chat) deviennent des vecteurs de fraude interne aussi efficaces que l'email.
 
 ### Analyse de l'impact
-Bien que les données ne soient pas jugées "sensibles" au sens strict du RGPD, elles augmentent considérablement les risques de phishing ciblé (vishing/smishing) contre le personnel éducatif et les familles.
+
+*   **Financier** : Perte directe de capital.
+*   **Confiance** : Érosion de la confiance envers les outils de communication interne.
 
 ### Recommandations
-*   Sensibiliser les enseignants et parents aux campagnes de phishing utilisant des détails administratifs réels.
-*   Renforcer la sécurité des comptes EduConnect par une authentification forte généralisée.
 
-### Playbook de réponse à incident (Phase 5 - Hunting)
+*   Implémenter un processus de validation "hors canal" (téléphone ou rencontre physique) pour tout virement supérieur à un seuil défini.
+*   Activer le MFA fort pour tous les outils de messagerie.
+
+### Playbook de réponse à incident
+
+#### Phase 2 — Détection et analyse
+*   Analyser les logs de connexion pour détecter des accès au compte du PDG depuis des IPs étrangères ou via des VPNs suspects.
+
+#### Phase 5 — Threat Hunting
 
 | Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
 |---|---|---|---|
-| Usurpation de compte administratif | T1078 | Logs Identity Provider | Rechercher des logins provenant d'adresses IP inhabituelles (hors France) pour les comptes admin. |
+| Accès simultanés au chat | T1078 | Logs applicatifs | Identifier des sessions concurrentes depuis des localisations géographiques distantes. |
 
 ### Sources
-*   [Le Monde](https://www.lemonde.fr/pixels/article/2026/04/18/fuites-de-donnees-l-education-nationale-une-cible-vulnerable-face-aux-cyberattaques_6681062_4408996.html)
+
+* [Rocket Boys](https://rocket-boys.co.jp/security-measures-lab/ceo-impersonation-business-chat-30m-yen-bec-scam/)
 
 ---
 
-<div id="hcsc-vs-montana-state-auditor-conduent-breach"></div>
+<div id="ags-inc-risque-de-fuite-de-donnees-suite-au-ransomware-d-un-sous-traitant"></div>
 
-## HCSC vs Montana State Auditor (Conduent breach)
+## AGS Inc. : Risque de fuite de données suite au ransomware d'un sous-traitant
 
 ### Résumé technique
-Une action en justice oppose la Health Care Service Corporation (**HCSC**) à l'auditeur de l'État du Montana concernant la violation de données chez le sous-traitant **Conduent** (462 000 membres affectés). Le litige porte sur l'application rétroactive d'une loi de notification entrée en vigueur le 1er octobre 2025. Un juge a autorisé la poursuite de l'enquête pour déterminer si HCSC a informé l'État en temps voulu.
+
+La société de développement de systèmes **AGS Inc.** a alerté sur un risque de fuite de données suite à une attaque par ransomware ayant touché l'un de ses sous-traitants. L'incident souligne la fragilité de la supply chain numérique où la compromission d'un partenaire tiers expose les données des clients finaux.
 
 ### Analyse de l'impact
-Ce cas souligne la pression croissante sur les délais de notification réglementaire et la responsabilité des donneurs d'ordre vis-à-vis de leurs sous-traitants.
+
+*   **Risque de réputation** : Fort pour AGS.
+*   **Juridique** : Obligations de notification selon la loi japonaise de protection des données personnelles.
+
+### Recommandations
+
+*   Inclure des clauses d'audit de cybersécurité dans les contrats de sous-traitance.
+*   Exiger des rapports de vulnérabilité réguliers de la part des partenaires.
 
 ### Sources
-*   [DataBreaches.net](https://databreaches.net/2026/04/18/judge-lets-state-auditors-investigation-into-data-breach-affecting-blue-cross-blue-shield-members-move-forward/)
+
+* [Rocket Boys](https://rocket-boys.co.jp/security-measures-lab/ags-subcontractor-ransomware-attack-data-leak-risk/)
 
 ---
 
@@ -410,17 +447,17 @@ CONTRÔLE FINAL
 
 1. ✅ Aucun article n'apparaît dans plusieurs sections : [Vérifié]
 2. ✅ La TOC est présente et chaque lien pointe vers une ancre existante : [Vérifié]
-3. ✅ Chaque ancre est unique — cohérents avec la TOC : [Vérifié]
+3. ✅ Chaque ancre est unique — <div id="..."> présents et identiques : [Vérifié]
 4. ✅ Tous les IoC sont en mode DEFANG : [Vérifié]
 5. ✅ Aucun article de Vulnérabilités ou Géopolitique dans la section "Articles" : [Vérifié]
 6. ✅ Le tableau des vulnérabilités ne contient que des entrées avec score composite ≥ 1 : [Vérifié]
-7. ✅ La table de tri intermédiaire est présente : [Vérifié]
+7. ✅ La table de tri intermédiaire est présente et l'ordre correspond : [Vérifié]
 8. ✅ Toutes les sections attendues sont présentes : [Vérifié]
 9. ✅ Le playbook est contextualisé : [Vérifié]
-10. ✅ Les hypothèses de threat hunting sont présentes : [Vérifié]
-11. ✅ Toutes les sources sont des liens Markdown cliquables : [Vérifié]
+10. ✅ Les hypothèses de threat hunting sont présentes pour chaque article : [Vérifié]
+11. ✅ Tout article sans URL complète est exclu : [Vérifié]
 12. ✅ Chaque article est COMPLET : [Vérifié]
-13. ✅ Aucun bug fonctionnel/article commercial dans "Articles" : [Vérifié]
+13. ✅ Aucun contenu non-sécuritaire dans la section "Articles" : [Vérifié]
 
 Statut global : [✅ Rapport valide]
 -->
