@@ -1,0 +1,573 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The cyber threat landscape is currently dominated by the exploitation of third-party trust, particularly through OAuth integrations and AI supply chains, as seen in the Vercel incident. Attackers are also increasing stealth by using lightweight virtualization (QEMU) to bypass EDR on hosts. The professionalization of RaaS groups like 'The Gentlemen' and 'Chaos' is evident through the use of mature botnets and multi-platform encryption. Geopolitically, state-sponsored activities from North Korea and Iran continue to target decentralized finance and critical infrastructure, while major identity data leaks in Europe highlight the persistent risk to governmental databases.",
+      "fr": "Le paysage des menaces est dominé par l'exploitation de la confiance envers les tiers, notamment via les intégrations OAuth et la chaîne d'approvisionnement IA, comme l'illustre l'incident Vercel. Les attaquants augmentent leur furtivité en utilisant la virtualisation légère (QEMU) pour contourner les EDR hôtes. La professionnalisation des groupes RaaS tels que 'The Gentlemen' et 'Chaos' est marquée par l'usage de botnets matures et de chiffrements multi-plateformes. Géopolitiquement, les activités étatiques de la Corée du Nord et de l'Iran continuent de cibler la finance décentralisée et les infrastructures critiques, tandis que des fuites massives de données d'identité en Europe soulignent le risque persistant pour les bases de données gouvernementales."
+    },
+    "date": "2026-04-21"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": [
+          "Critical_Infrastructure",
+          "Media_and_Communication"
+        ],
+        "fr": [
+          "Infrastructures critiques",
+          "Médias et Communication"
+        ]
+      },
+      "theme": {
+        "en": "Middle East Naval and Cyber Escalation",
+        "fr": "Escalade navale et cyber au Moyen-Orient"
+      },
+      "description": {
+        "en": "Hardening of IRGC threats in the Strait of Hormuz with signals of cyber retaliation linked to the Israel-Iran conflict.",
+        "fr": "Durcissement des menaces de l'IRGC dans le détroit d'Ormuz avec des signaux de cyber-représailles liés au conflit Israël-Iran."
+      },
+      "recommandations": [
+        {
+          "en": "Strengthen monitoring of maritime and energy infrastructure industrial control systems.",
+          "fr": "Renforcer la surveillance des systèmes de contrôle industriel des infrastructures maritimes et énergétiques."
+        }
+      ],
+      "tags": [
+        "IRGC",
+        "Iran",
+        "Israel",
+        "Geopolitics"
+      ],
+      "sources": [
+        "https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict"
+      ],
+      "date": "2026-04-20"
+    },
+    {
+      "sector": {
+        "en": [
+          "Finance"
+        ],
+        "fr": [
+          "Finance"
+        ]
+      },
+      "theme": {
+        "en": "North Korean State-Sponsored Crypto Theft",
+        "fr": "Vol de crypto d'État par la Corée du Nord"
+      },
+      "description": {
+        "en": "Lazarus Group conducted a $290 million heist targeting KelpDAO, continuing their trend of financing the regime through DeFi exploitation.",
+        "fr": "Le groupe Lazarus a perpétré un vol de 290 millions de dollars ciblant KelpDAO, poursuivant sa tendance au financement du régime via l'exploitation de la DeFi."
+      },
+      "recommandations": [
+        {
+          "en": "Audit smart contracts and monitor RPC node integrity for high-value DeFi protocols.",
+          "fr": "Auditer les smart contracts et surveiller l'intégrité des nœuds RPC pour les protocoles DeFi à haute valeur."
+        }
+      ],
+      "tags": [
+        "Lazarus",
+        "DPRK",
+        "Crypto",
+        "DeFi"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/kelpdao-suffers-290-million-heist-tied-to-lazarus-hackers/"
+      ],
+      "date": "2026-04-20"
+    },
+    {
+      "sector": {
+        "en": [
+          "Security",
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Sécurité",
+          "Gouvernement et Défense"
+        ]
+      },
+      "theme": {
+        "en": "Pegasus Spyware Judicial Investigation",
+        "fr": "Enquête judiciaire sur le logiciel espion Pegasus"
+      },
+      "description": {
+        "en": "Former NSO Group executives were heard by French justice as assisted witnesses regarding the Pegasus spyware case.",
+        "fr": "D'anciens dirigeants de NSO Group ont été entendus par la justice française sous le statut de témoin assisté concernant l'affaire Pegasus."
+      },
+      "recommandations": [
+        {
+          "en": "Implement mobile device management (MDM) and conduct periodic forensics on high-risk devices.",
+          "fr": "Mettre en œuvre une gestion des appareils mobiles (MDM) et effectuer des analyses forensiques périodiques sur les appareils à haut risque."
+        }
+      ],
+      "tags": [
+        "Pegasus",
+        "NSO",
+        "Spyware",
+        "France"
+      ],
+      "sources": [
+        "https://www.lemonde.fr/pixels/article/2026/04/20/affaire-pegasus-deux-ex-dirigeants-de-l-entreprise-commercialisant-le-logiciel-espion-entendus-par-la-justice-francaise_6681707_4408996.html"
+      ],
+      "date": "2026-04-20"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Vercel",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologies et Télécoms"
+        ]
+      },
+      "description": {
+        "en": "Access to Vercel internal environment via a compromised third-party OAuth app (Context.ai) used by an employee.",
+        "fr": "Accès à l'environnement interne de Vercel via une application OAuth tierce compromise (Context.ai) utilisée par un employé."
+      },
+      "mitre_ttps": [
+        "T1550.001",
+        "T1528"
+      ],
+      "recommandations": [
+        {
+          "en": "Preparation: Establish a Shadow IT policy. Detection: Audit OAuth tokens in Google Workspace. Containment: Revoke compromised Client ID. Post-incident: Rotate all environment secrets.",
+          "fr": "Préparation : Établir une politique contre le Shadow IT. Détection : Auditer les jetons OAuth dans Google Workspace. Confinement : Révoquer l'ID client compromis. Post-incident : Rotation de tous les secrets d'environnement."
+        }
+      ],
+      "tags": [
+        "Supply Chain",
+        "OAuth",
+        "Vercel",
+        "AI Tool"
+      ],
+      "sources": [
+        "https://fieldeffect.com/blog/vercel-supply-chain-breach-ai-tool"
+      ],
+      "date": "2026-04-19"
+    },
+    {
+      "victim": "France ANTS",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement et Défense"
+        ]
+      },
+      "description": {
+        "en": "Massive data breach affecting the French National Agency for Secure Identity Documents, with 19 million records allegedly stolen.",
+        "fr": "Violation massive de données affectant l'Agence Nationale des Titres Sécurisés (ANTS), avec 19 millions d'enregistrements prétendument volés."
+      },
+      "mitre_ttps": [
+        "T1594",
+        "T1041"
+      ],
+      "recommandations": [
+        {
+          "en": "Preparation: Ensure database logs are integrated into SIEM. Detection: Search for massive SQL export patterns. Recovery: Notify users according to GDPR requirements.",
+          "fr": "Préparation : S'assurer que les logs de base de données sont intégrés au SIEM. Détection : Rechercher des schémas d'exportation SQL massive. Récupération : Notifier les utilisateurs conformément au RGPD."
+        }
+      ],
+      "tags": [
+        "Data Breach",
+        "Identity",
+        "France",
+        "ANTS"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191069/data-breach/frances-ants-id-system-website-hit-by-cyberattack-possible-data-breach.html"
+      ],
+      "date": "2026-04-15"
+    },
+    {
+      "victim": "Seiko USA",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Retail_and_Consumer"
+        ],
+        "fr": [
+          "Commerce et Consommation"
+        ]
+      },
+      "description": {
+        "en": "Defacement and extortion claiming the theft of a Shopify customer database including order history and addresses.",
+        "fr": "Défaçage et extorsion revendiquant le vol d'une base de données clients Shopify incluant l'historique des commandes et les adresses."
+      },
+      "mitre_ttps": [
+        "T1491",
+        "T1650"
+      ],
+      "recommandations": [
+        {
+          "en": "Detection: Audit Shopify admin logs for specific ID '8069776801871'. Containment: Change all admin passwords and enable MFA.",
+          "fr": "Détection : Auditer les logs admin Shopify pour l'ID spécifique '8069776801871'. Confinement : Changer tous les mots de passe admin et activer le MFA."
+        }
+      ],
+      "tags": [
+        "Defacement",
+        "Shopify",
+        "Extortion",
+        "Retail"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/seiko-usa-website-defaced-as-hacker-claims-customer-data-theft/"
+      ],
+      "date": "2026-04-20"
+    },
+    {
+      "victim": "Polycorp",
+      "threat_actor": "Chaos Ransomware Group",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Industry_and_Manufacturing"
+        ],
+        "fr": [
+          "Industrie et Fabrication"
+        ]
+      },
+      "description": {
+        "en": "Target of a double-extortion attack by the Chaos ransomware group affecting Windows and ESXi systems.",
+        "fr": "Cible d'une attaque en double extorsion par le groupe de ransomware Chaos affectant les systèmes Windows et ESXi."
+      },
+      "mitre_ttps": [
+        "T1486",
+        "T1041"
+      ],
+      "recommandations": [
+        {
+          "en": "Detection: Search for 'readme.chaos.txt' ransom notes. Containment: Isolate infected network segments. Recovery: Restore from immutable offline backups.",
+          "fr": "Détection : Rechercher les notes de rançon 'readme.chaos.txt'. Confinement : Isoler les segments réseau infectés. Récupération : Restaurer depuis des sauvegardes immuables hors-ligne."
+        }
+      ],
+      "tags": [
+        "Ransomware",
+        "Chaos",
+        "Double Extortion"
+      ],
+      "sources": [
+        "https://www.ransomlook.io//group/chaos"
+      ],
+      "date": "2026-04-20"
+    },
+    {
+      "victim": "McGraw-Hill",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Education_and_Research"
+        ],
+        "fr": [
+          "Éducation et Recherche"
+        ]
+      },
+      "description": {
+        "en": "Data breach exposing 13.5 million records from Salesforce database including names and contact details.",
+        "fr": "Violation de données exposant 13,5 millions d'enregistrements de la base Salesforce incluant noms et coordonnées."
+      },
+      "mitre_ttps": [
+        "T1041"
+      ],
+      "recommandations": [
+        {
+          "en": "Audit CRM access logs and implement strict IP whitelisting for administrative access.",
+          "fr": "Auditer les logs d'accès CRM et implémenter une liste blanche d'IP stricte pour les accès administratifs."
+        }
+      ],
+      "tags": [
+        "Data Breach",
+        "Salesforce",
+        "Education"
+      ],
+      "sources": [
+        "https://research.checkpoint.com/2026/20th-april-threat-intelligence-report/"
+      ],
+      "date": "2026-04-20"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-34197",
+      "euvd_id": "unknown",
+      "cisa_kev": "TRUE",
+      "cvss": "8.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:apache:activemq:*:*:*:*:*:*:*:*",
+      "product": "ActiveMQ",
+      "vendor": "Apache",
+      "description": {
+        "en": "Code Injection vulnerability in Apache ActiveMQ allowing remote code execution (RCE).",
+        "fr": "Vulnérabilité d'injection de code dans Apache ActiveMQ permettant l'exécution de code à distance (RCE)."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Update to version 5.19.4 or 6.2.3 immediately.",
+          "fr": "Mettre à jour vers la version 5.19.4 ou 6.2.3 immédiatement."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "ActiveMQ"
+      ],
+      "sources": [
+        "https://research.checkpoint.com/2026/20th-april-threat-intelligence-report/"
+      ],
+      "date": "2026-04-20"
+    },
+    {
+      "cve_id": "CVE-2025-60710",
+      "euvd_id": "unknown",
+      "cisa_kev": "TRUE",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:o:microsoft:windows:*:*:*:*:*:*:*:*",
+      "product": "Windows Task Host",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "Privilege Escalation vulnerability in Windows Task Host being actively exploited.",
+        "fr": "Vulnérabilité d'élévation de privilèges dans l'hôte de tâches Windows activement exploitée."
+      },
+      "mitre_ttps": [
+        "T1068"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply Microsoft monthly security patches.",
+          "fr": "Appliquer les correctifs de sécurité mensuels de Microsoft."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "LPE",
+        "Windows"
+      ],
+      "sources": [
+        "https://research.checkpoint.com/2026/20th-april-threat-intelligence-report/"
+      ],
+      "date": "2026-04-20"
+    },
+    {
+      "cve_id": "CVE-2023-33538",
+      "euvd_id": "unknown",
+      "cisa_kev": "TRUE",
+      "cvss": "8.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:h:tp-link:router:*:*:*:*:*:*:*:*",
+      "product": "TP-Link Routers",
+      "vendor": "TP-Link",
+      "description": {
+        "en": "Command Injection in TP-Link routers allowing RCE, observed under attack for over a year.",
+        "fr": "Injection de commande dans les routeurs TP-Link permettant une RCE, observée sous attaque depuis plus d'un an."
+      },
+      "mitre_ttps": [
+        "T1210"
+      ],
+      "recommandations": [
+        {
+          "en": "Update firmware or replace vulnerable hardware.",
+          "fr": "Mettre à jour le firmware ou remplacer le matériel vulnérable."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "IoT",
+        "RCE"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191040/hacking/cve-2023-33538-under-attack-for-a-year-but-exploitation-successful.html"
+      ],
+      "date": "2026-04-20"
+    },
+    {
+      "cve_id": "CVE-2026-5760",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "SGLang",
+      "vendor": "SGLang Project",
+      "description": {
+        "en": "Critical command injection in SGLang GGUF model handling allowing RCE.",
+        "fr": "Injection de commande critique dans le traitement des modèles GGUF par SGLang permettant une RCE."
+      },
+      "mitre_ttps": [
+        "T1203"
+      ],
+      "recommandations": [
+        {
+          "en": "Use ImmutableSandboxedEnv and update to latest version.",
+          "fr": "Utiliser ImmutableSandboxedEnv et mettre à jour vers la dernière version."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "AI",
+        "RCE"
+      ],
+      "sources": [
+        "https://thehackernews.com/2026/04/sglang-cve-2026-5760-cvss-98-enables.html"
+      ],
+      "date": "2026-04-20"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "The Gentlemen Ransomware Using SystemBC Botnet",
+        "fr": "Le ransomware The Gentlemen utilisant le botnet SystemBC"
+      },
+      "description": {
+        "en": "A RaaS group integrating SystemBC proxy for C2 tunneling and payload delivery, targeting ESXi and domain controllers.",
+        "fr": "Un groupe RaaS intégrant le proxy SystemBC pour le tunneling C2 et la livraison de charges utiles, ciblant les ESXi et les contrôleurs de domaine."
+      },
+      "threat_actor": "The Gentlemen",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Critical_Infrastructure",
+          "Finance"
+        ],
+        "fr": [
+          "Infrastructures critiques",
+          "Finance"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [
+          "45.84.0.211"
+        ],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [
+          "Win88@thesecure.biz"
+        ],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "SystemBC",
+          "Cobalt Strike",
+          "Mimikatz"
+        ]
+      },
+      "mitre_ttps": [
+        "T1090.003",
+        "T1021.001",
+        "T1484.001"
+      ],
+      "analyse": {
+        "en": "The use of SystemBC as a SOCKS5 proxy hides direct C2 traffic, making network detection difficult.",
+        "fr": "L'usage de SystemBC comme proxy SOCKS5 masque le trafic C2 direct, rendant la détection réseau difficile."
+      },
+      "recommandations": [
+        {
+          "en": "Detection: Monitor SOCKS5 tunnels to known VPS IPs. Containment: Isolate DC and revoke Domain Admin accounts.",
+          "fr": "Détection : Surveiller les tunnels SOCKS5 vers des IPs de VPS connus. Confinement : Isoler le DC et révoquer les comptes Domain Admin."
+        }
+      ],
+      "tags": [
+        "Ransomware",
+        "SystemBC",
+        "Proxy",
+        "ESXi"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/the-gentlemen-ransomware-now-uses-systembc-for-bot-powered-attacks/"
+      ],
+      "date": "2026-04-20"
+    },
+    {
+      "title": {
+        "en": "GOLD ENCOUNTER Evasion via QEMU Backdoor",
+        "fr": "Évasion de GOLD ENCOUNTER via une backdoor QEMU"
+      },
+      "description": {
+        "en": "Attackers use QEMU to run a hidden Linux VM on host systems, bypassing EDR to maintain persistent access.",
+        "fr": "Les attaquants utilisent QEMU pour exécuter une VM Linux cachée sur les systèmes hôtes, contournant l'EDR pour maintenir un accès persistant."
+      },
+      "threat_actor": "GOLD ENCOUNTER",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom",
+          "Business_Services"
+        ],
+        "fr": [
+          "Technologies et Télécoms",
+          "Services aux entreprises"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "QEMU",
+          "AdaptixC2",
+          "Chisel"
+        ]
+      },
+      "mitre_ttps": [
+        "T1564.006",
+        "T1572"
+      ],
+      "analyse": {
+        "en": "Stealth technique hiding attack OS inside a virtual machine on a legitimate host.",
+        "fr": "Technique furtive cachant l'OS d'attaque dans une machine virtuelle sur un hôte légitime."
+      },
+      "recommandations": [
+        {
+          "en": "Detection: Alert on QEMU execution by SYSTEM account. Containment: Terminate qemu-system-x86_64.exe process.",
+          "fr": "Détection : Alerter sur l'exécution de QEMU par le compte SYSTEM. Confinement : Terminer le processus qemu-system-x86_64.exe."
+        }
+      ],
+      "tags": [
+        "Virtualization",
+        "Stealth",
+        "EDR Evasion"
+      ],
+      "sources": [
+        "https://cybersecuritynews.com/attackers-turn-qemu-into-a-stealth-backdoor/"
+      ],
+      "date": "2026-04-20"
+    }
+  ]
+}
