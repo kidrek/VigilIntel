@@ -9,15 +9,14 @@
   * [Articles sélectionnés](#articles-selectionnes)
   * [Articles non sélectionnés](#articles-non-selectionnes)
 * [Articles](#articles)
-  * [Gentlemen Ransomware + SystemBC botnet activity](#gentlemen-ransomware-systembc-botnet-activity)
-  * [Vercel + Third-party AI Contextai supply chain compromise](#vercel-third-party-ai-contextai-supply-chain-compromise)
-  * [Apple App Store + Fake crypto-wallet malware FakeWallet](#apple-app-store-fake-crypto-wallet-malware-fakewallet)
-  * [Scattered Spider + Tyler Buchanan crypto-theft guilty plea](#scattered-spider-tyler-buchanan-crypto-theft-guilty-plea)
-  * [France ANTS + Personal data breach 19 million records](#france-ants-personal-data-breach-19-million-records)
-  * [Seiko USA + Shopify database extortion via defacement](#seiko-usa-shopify-database-extortion-via-defacement)
-  * [GOLD ENCOUNTER + QEMU stealth backdoor for ransomware](#gold-encounter-qemu-stealth-backdoor-for-ransomware)
-  * [Chaos Ransomware + Double-extortion against Polycorp](#chaos-ransomware-double-extortion-against-polycorp)
-  * [Frontier AI models + Autonomous software security research risks](#frontier-ai-models-autonomous-software-security-research-risks)
+  * [Telegram tdata Credential Harvesting via SSH](#telegram-tdata-credential-harvesting-via-ssh)
+  * [Lazarus Group Mach-O Man macOS Malware Kit](#lazarus-group-mach-o-man-macos-malware-kit)
+  * [Bad Apples: macOS Living-Off-The-Land Techniques](#bad-apples-macos-living-off-the-land-techniques)
+  * [Lazarus Group: $290M Crypto Theft on Kelp DAO](#lazarus-group-crypto-theft-on-kelp-dao)
+  * [Vercel Breach via Context.ai Exploitation](#vercel-breach-via-context-ai-exploitation)
+  * [Emerging Enterprise Security Risks of Agentic AI](#emerging-enterprise-security-risks-of-agentic-ai)
+  * [Malware Hidden in .WAV Files via Base64/XOR](#malware-hidden-in-wav-files-via-base64-xor)
+  * [ANTS (France Titres) Data Breach](#ants-france-titres-data-breach)
 
 ---
 
@@ -25,11 +24,11 @@
 
 # ANALYSE STRATÉGIQUE
 
-La veille cyber de ce jour met en lumière une transformation profonde des vecteurs d'accès et une sophistication accrue de l'évasion technique. La tendance majeure réside dans le détournement de la confiance accordée aux tiers, particulièrement via les intégrations OAuth et les outils d'IA. L'incident Vercel illustre parfaitement comment une compromission d'outil tiers (Context.ai) peut permettre l'énumération de secrets et de variables d'environnement critiques, court-circuitant les périmètres de sécurité traditionnels.
+Le rapport de veille de ce jour met en lumière une accélération sans précédent de la menace liée à l'intelligence artificielle générative et une mutation critique du ciblage vers les environnements macOS. L'émergence du modèle **Claude Mythos d'Anthropic**, capable d'automatiser la découverte et l'exploitation de vulnérabilités RCE sur des noyaux OS et des moteurs JavaScript (181 exploits générés pour Firefox), marque la fin de l'ère où le "fuzzing" manuel et l'expertise humaine étaient les seuls remparts. Cette capacité, désormais accessible via API, réduit drastiquement le coût d'entrée pour des attaques sophistiquées.
 
-Parallèlement, nous observons une "professionnalisation" des techniques d'évasion. L'usage détourné de QEMU par des groupes comme GOLD ENCOUNTER pour dissimuler l'activité malveillante au sein de machines virtuelles légères rend l'attaque quasi invisible pour les solutions EDR standard sur l'hôte. Cette tendance est couplée à une exploitation massive du protocole Remote Desktop (RDP) et de Microsoft Teams pour de l'ingénierie sociale ciblée, où les attaquants imitent les services de support technique pour introduire des logiciels de gestion à distance (Quick Assist).
+Parallèlement, nous observons un changement de paradigme dans le ciblage des entreprises. Les acteurs comme **Lazarus Group** délaissent les systèmes Windows pour viser spécifiquement les développeurs et administrateurs sous macOS via le kit "Mach-O Man". Ce ciblage est stratégique : ces postes constituent des "gateways" vers les infrastructures cloud et les coffres-forts de crypto-monnaies (exemple du vol de 290M$ sur Kelp DAO). Les techniques de "Living-off-the-Land" (LotL) sur macOS, exploitant des primitives natives comme AppleScript ou les métadonnées Spotlight, sont de moins en moins "anecdotiques" et surpassent désormais les capacités de détection des EDR standards.
 
-Les secteurs de la finance décentralisée (DeFi) et du secteur public restent des cibles prioritaires, comme en témoignent le vol massif de 290 millions de dollars chez KelpDAO (Lazarus) et la compromission massive des données d'identité en France (ANTS). Stratégiquement, les organisations doivent accélérer la réduction du "patch gap" (le délai entre la publication d'un correctif et son application), car l'IA permet désormais de générer des exploits fonctionnels à partir de commits publics en un temps record (N-hours). La recommandation prioritaire est de renforcer la gouvernance des jetons OAuth, de limiter strictement l'usage des outils d'assistance à distance et d'adopter une posture de surveillance spécifique sur les hyperviseurs et les protocoles de communication collaborative.
+Enfin, la compromission de la chaîne d'approvisionnement (Vercel via Context.ai) et le détournement de fonctions internes de confiance (Microsoft 365 Direct Send) confirment que le périmètre de sécurité traditionnel est devenu caduc. Les recommandations stratégiques se portent sur la mise en œuvre impérative du **Zéro Trust pour les identités d'agents AI**, le durcissement drastique des accès SSH (désactivation des mots de passe) et l'intégration du runtime security pour surveiller l'intégrité des processus macOS et des communications inter-processus (IPC).
 
 ---
 
@@ -43,13 +42,10 @@ Les secteurs de la finance décentralisée (DeFi) et du secteur public restent d
 
 | Nom de l'acteur | Secteur(s) ciblé(s) | Mode opératoire | TTP MITRE ATT&CK | Source(s) |
 |---|---|---|---|---|
-| **Lazarus Group** | DeFi, Crypto | Empoisonnement de nœuds RPC, DDoS, exfiltration via Tornado Cash | T1565.001, T1498, T1548 | [BleepingComputer](https://www.bleepingcomputer.com/news/security/kelpdao-suffers-290-million-heist-tied-to-lazarus-hackers/) |
-| **The Gentlemen** | Énergie, Finance, IT | Proxy SystemBC pour livraison de payload, Cobalt Strike via RPC | T1090.003, T1021.001, T1562.001 | [BleepingComputer](https://www.bleepingcomputer.com/news/security/the-gentlemen-ransomware-now-uses-systembc-for-bot-powered-attacks/) |
-| **Scattered Spider** | IT, Tech, Entertainment | Phishing SMS (Smishing), SIM swapping, MFA fatigue | T1566.002, T1458, T1621 | [BleepingComputer](https://www.bleepingcomputer.com/news/security/british-scattered-spider-hacker-pleads-guilty-to-crypto-theft-charges/) |
-| **MuddyWater** | Multisectoriel mondial | Impersonation IT sur Teams, abus de Deno.exe, DLL side-loading | T1566.003, T1574.002, T1059.007 | [Check Point Research](https://research.checkpoint.com/2026/20th-april-threat-intelligence-report/) |
-| **GOLD ENCOUNTER** | Hyperviseurs, ESXi | Machines virtuelles QEMU cachées, tunnels SSH inverses | T1564.006, T1572, T1053.005 | [Cybersecurity News](https://cybersecuritynews.com/attackers-turn-qemu-into-a-stealth-backdoor/) |
-| **Shadowbyt3$** | Éducation, Retail | Ransomware, exfiltration de données massives | T1486, T1041 | [Ransomlook](https://www.ransomlook.io//group/shadowbyt3%24) |
-| **Handala Hack** | Gouvernements Golfe | Wiper, hack-and-leak, abus d'Intune MDM | T1485, T1078.004 | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
+| **Lazarus Group** | Fintech, Crypto, DevOps | Campagnes "ClickFix" (faux meetings Teams/Zoom), kit macOS "Mach-O Man", empoisonnement de nœuds RPC via LayerZero. | T1566.002, T1204.002, T1059.002, T1555.003 | [ANY.RUN](https://any.run/cybersecurity-blog/lazarus-macos-malware-mach-o-man/)<br>[Security Affairs](https://securityaffairs.com/191092/digital-id/north-koreas-lazarus-apt-stole-290m-from-kelp-dao.html) |
+| **Scattered Spider** | Technologie, Crypto-investisseurs | Phishing SMS (Smishing), SIM-swapping, ingénierie sociale auprès des help desks IT. | T1566.002, T1450, T1589 | [Krebs on Security](https://krebsonsecurity.com/2026/04/scattered-spider-member-tylerb-pleads-guilty/) |
+| **313 Team** (Islamic Cyber Resistance) | Réseaux sociaux (Bluesky), Services publics | Attaques par déni de service distribué (DDoS) à motivation politique. | T1498.001 | [Security Affairs](https://securityaffairs.com/191059/security/bluesky-hit-by-24-hour-ddos-attack-as-pro-iran-group-claims-responsibility.html) |
+| **BlackCat (ALPHV)** | Finance, Santé, Non-profit | Ransomware-as-a-Service, complicité interne avec des négociateurs compromis (Angelo Martino). | T1486, T1589, T1567 | [BleepingComputer](https://www.bleepingcomputer.com/news/security/former-ransomware-negotiator-pleads-guilty-to-blackcat-attacks/) |
 
 ---
 
@@ -59,13 +55,9 @@ Les secteurs de la finance décentralisée (DeFi) et du secteur public restent d
 
 | Pays/Région | Secteur | Thème | Description | Source(s) |
 |---|---|---|---|---|
-| **Moyen-Orient** | Maritime, Énergie | Escalade navale | Durcissement des menaces de l'IRGC dans le détroit d'Ormuz avec signaux de cyber-représailles | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
-| **Israël** | Infrastructures critiques | Cyber-sabotage | Découverte du malware ZionSiphon ciblant les usines de dessalement israéliennes | [Check Point Research](https://research.checkpoint.com/2026/20th-april-threat-intelligence-report/) |
-| **Afrique** | Énergie, Économie | Impact collatéral | Vulnérabilité des économies africaines face au choc pétrolier lié au conflit Iran-Israël | [IRIS](https://www.iris-france.org/lafrique-a-lepreuve-de-la-guerre-au-moyen-orient/) |
-| **Europe** | Défense | Projet SCAF | Impasse structurelle du projet d'avion de combat franco-germano-espagnol | [Portail de l'IE](https://www.portail-ie.fr/univers/2026/scaf-impasse-structurelle-projet-defense-europeen/) |
-| **France / Maroc** | Diplomatie / Justice | Affaire Pegasus | Audition d'ex-dirigeants de NSO Group par la justice française sous statut de témoin assisté | [Le Monde](https://www.lemonde.fr/pixels/article/2026/04/20/affaire-pegasus-deux-ex-dirigeants-de-l-entreprise-commercialisant-le-logiciel-espion-entendus-par-la-justice-francaise_6681707_4408996.html) |
-| **États-Unis** | Souveraineté IA | Risque Supply Chain | Désignation d'Anthropic comme risque de chaîne d'approvisionnement par le DoD | [The Sovereign Auditor](https://sovereignauditor.substack.com/p/the-most-dangerous-ai-we-absolutely) |
-| **Corée du Nord** | DeFi | Vol d'État | Braquage de 290M$ rsETH chez KelpDAO par Lazarus Group | [BleepingComputer](https://www.bleepingcomputer.com/news/security/kelpdao-suffers-290-million-heist-tied-to-lazarus-hackers/) |
+| **Venezuela** | Énergie, Pétrole (PDVSA) | Cyber-guerre / Wiper | Déploiement du wiper "Lotus" visant à détruire les infrastructures de distribution d'énergie en période de tension politique. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/new-lotus-data-wiper-used-against-venezuelan-energy-utility-firms/) |
+| **Iran / USA / Israël** | Maritime, Étatique | Escalade militaire | Arraisonnement du navire iranien M/V Touska par l'USS Spruance ; prévisions de représailles cyber massives sur le secteur maritime et énergétique. | [Flare.io](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict) |
+| **États-Unis** | Défense / Intelligence | Souveraineté / IA | Utilisation par la NSA du modèle Claude Mythos (Anthropic) malgré les alertes du Pentagone sur les risques de la supply chain. | [Security Affairs](https://securityaffairs.com/191087/ai/the-us-nsa-is-using-anthropics-claude-mythos-despite-supply-chain-risk.html) |
 
 ---
 
@@ -75,9 +67,8 @@ Les secteurs de la finance décentralisée (DeFi) et du secteur public restent d
 
 | Titre | Auteur/Organisme | Date | Juridiction | Référence | Description | Source(s) |
 |---|---|---|---|---|---|---|
-| Plaidoyer coupable leader Scattered Spider | DoJ USA | 18/04/2026 | USA | Tyler Buchanan Case | Admission de hacking de 12+ entreprises et vol de 8M$ en crypto | [Security Affairs](https://securityaffairs.com/191052/cyber-crime/scattered-spider-member-tyler-buchanan-pleads-guilty-to-major-crypto-theft.html) |
-| Consortium OSPREY | Union Européenne | 20/04/2026 | EU | Grant 101225639 | Lancement d'un projet multidisciplinaire pour protéger les officiels publics contre les cyber-harcèlements | [Global Cyber Alliance](https://globalcyberalliance.org/introducing-osprey-consortium/) |
-| Signalement Procureur (ANTS) | ANTS / MinInt | 15/04/2026 | France | Article 40 CPP | Signalement d'un incident de sécurité majeur ayant fuité des données d'identité | [Le Monde](https://www.lemonde.fr/pixels/article/2026/04/20/l-ants-qui-gere-les-cartes-d-identites-et-passeports-visee-par-une-attaque-informatique-des-donnees-potentiellement-divulguees_6681710_4408996.html) |
+| **Investigation Telegram (CSAM)** | Ofcom | 21/04/2026 | Royaume-Uni | Online Safety Act | Enquête sur la conformité de Telegram concernant la diffusion de contenus pédopornographiques. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/uk-probes-telegram-teen-chat-sites-over-csam-sharing-concerns/) |
+| **Plaidoyer de culpabilité "Tylerb"** | US DOJ | 21/04/2026 | USA / Espagne | Aggravated Identity Theft | Un membre clé de Scattered Spider plaide coupable pour des vols de crypto-actifs via SIM-swapping. | [Krebs on Security](https://krebsonsecurity.com/2026/04/scattered-spider-member-tylerb-pleads-guilty/) |
 
 ---
 
@@ -87,14 +78,9 @@ Les secteurs de la finance décentralisée (DeFi) et du secteur public restent d
 
 | Secteur | Victime | Données compromises | Volume estimé | Source(s) |
 |---|---|---|---|---|
-| **Secteur Public** | France - ANTS | Noms, emails, dates de naissance, adresses, logins | ~19 millions de records | [Security Affairs](https://securityaffairs.com/191069/data-breach/frances-ants-id-system-website-hit-by-cyberattack-possible-data-breach.html) |
-| **Retail** | Seiko USA | Base de données clients Shopify (Historique commandes, adresses) | Non spécifié | [BleepingComputer](https://www.bleepingcomputer.com/news/security/seiko-usa-website-defaced-as-hacker-claims-customer-data-theft/) |
-| **Éducation** | McGraw-Hill | Noms, emails, téléphones (Salesforce) | 13,5 millions de comptes | [Check Point Research](https://research.checkpoint.com/2026/20th-april-threat-intelligence-report/) |
-| **Tourisme** | Booking.com | Données de réservation, PINs, adresses physiques | Partiel | [Check Point Research](https://research.checkpoint.com/2026/20th-april-threat-intelligence-report/) |
-| **Santé** | Basic-Fit | Données bancaires et personnelles | 1 million de membres | [Check Point Research](https://research.checkpoint.com/2026/20th-april-threat-intelligence-report/) |
-| **Santé** | Minidoka Memorial Hospital | Systèmes d'imagerie et fichiers internes | 576 GB (2,3M fichiers) | [DataBreaches.net](https://databreaches.net/2026/04/20/minidoka-memorial-hospital-updates-easter-morning-cyberattack/) |
-| **Cybersécurité** | BePrime (Mexique) | Infrastructure réseau, vidéosurveillance, données clients | 12,6 GB | [DataBreaches.net](https://databreaches.net/2026/04/20/breach-at-be-prime-cybersecurity-company-exposes-client-data-and-surveillance-systems-be-prime-threatens-journalists/) |
-| **Technologie** | Adaptavist Group | Code source, Confluence, 484k records CRM HubSpot | 3 TB+ | [Ransomlook](https://www.ransomlook.io//group/the%20gentlemen) |
+| Gouvernement | **ANTS / France Titres** | Noms, emails, dates de naissance, adresses, identifiants de comptes. | 11,7 à 19 millions de comptes | [BleepingComputer](https://www.bleepingcomputer.com/news/security/french-govt-agency-confirms-breach-as-hacker-offers-to-sell-data/)<br>[France 24](https://www.france24.com/fr/france/20260421-pr%C3%A8s-de-12-millions-de-comptes-de-l-ants-concern%C3%A9s-par-une-fuite-de-donn%C3%A9es-annonce-l-int%C3%A9rieur) |
+| Cloud / Dev Tools | **Vercel** | Variables d'environnement internes (non marquées sensibles), accès Google Workspace. | Non spécifié | [DataBreaches.net](https://databreaches.net/2026/04/21/vercel-confirms-cyber-incident-after-sophisticated-attacker-exploits-third-party-tool/) |
+| Fintech / DeFi | **Kelp DAO** | Actifs rsETH (Ethereum) via empoisonnement de nœuds RPC LayerZero. | 290 000 000 USD | [Security Affairs](https://securityaffairs.com/191092/digital-id/north-koreas-lazarus-apt-stole-290m-from-kelp-dao.html) |
 
 ---
 
@@ -107,38 +93,42 @@ Les secteurs de la finance décentralisée (DeFi) et du secteur public restent d
 
 | # | CVE-ID | CISA KEV | Exploitation | Score Composite | CVSS | Clé de tri |
 |---|---|---|---|---|---|---|
-| 1 | CVE-2026-34197 | TRUE  | Active    | 6.5 | 8.8   | (1,1,6.5,8.8) |
-| 2 | CVE-2025-60710 | TRUE  | Active    | 5.5 | N/A→0 | (1,1,5.5,0)   |
-| 3 | CVE-2023-33538 | TRUE  | Active    | 4.5 | 8.8   | (1,1,4.5,8.8) |
-| 4 | CVE-2026-33825 | FALSE | Active    | 2.5 | N/A→0 | (0,1,2.5,0)   |
-| 5 | CVE-2026-41329 | FALSE | Théorique | 2.0 | 9.9   | (0,0,2.0,9.9) |
-| 6 | CVE-2026-5760  | FALSE | Théorique | 2.0 | 9.8   | (0,0,2.0,9.8) |
-| 7 | CVE-2026-23500 | FALSE | Théorique | 2.0 | 9.4   | (0,0,2.0,9.4) |
-| 8 | CVE-2025-57738 | FALSE | PoC public| 2.0 | 7.2   | (0,0,2.0,7.2) |
-| 9 | CVE-2026-20204 | FALSE | Théorique | 1.5 | 8.0   | (0,0,1.5,8.0) |
-| 10| CVE-2026-39386 | FALSE | Théorique | 1.0 | 8.8   | (0,0,1.0,8.8) |
-| 11| CVE-2026-41303 | FALSE | Théorique | 1.0 | 8.8   | (0,0,1.0,8.8) |
-| 12| CVE-2026-41296 | FALSE | Théorique | 1.0 | 8.8   | (0,0,1.0,8.8) |
-| 13| CVE-2026-41294 | FALSE | Théorique | 1.0 | 8.6   | (0,0,1.0,8.6) |
-| 14| CVE-2026-35570 | FALSE | Théorique | 1.0 | 8.4   | (0,0,1.0,8.4) |
+| 1 | CVE-2026-34197 | TRUE  | Active | 6.0 | 9.8 | (1,1,6.0,9.8) |
+| 2 | CVE-2023-27351 | TRUE  | Active | 5.5 | 8.2 | (1,1,5.5,8.2) |
+| 3 | CVE-2024-27199 | TRUE  | Active | 5.5 | 7.3 | (1,1,5.5,7.3) |
+| 4 | CVE-2026-20122 | TRUE  | Active | 5.5 | 6.5 | (1,1,5.5,6.5) |
+| 5 | CVE-2026-20133 | TRUE  | Active | 5.0 | 6.5 | (1,1,5.0,6.5) |
+| 6 | CVE-2026-20128 | TRUE  | Active | 5.0 | 5.0 | (1,1,5.0,5.0) |
+| 7 | CVE-2025-48700 | TRUE  | Active | 5.0 | 5.0 | (1,1,5.0,5.0) |
+| 8 | CVE-2025-32975 | TRUE  | Active | 5.0 | 5.0 | (1,1,5.0,5.0) |
+| 9 | CVE-2025-2749  | TRUE  | Théorique | 3.0 | 0.0 | (1,0,3.0,0) |
+| 10 | CVE-2026-32613 | FALSE | Théorique | 2.0 | 10.0 | (0,0,2.0,10.0) |
+| 11 | CVE-2026-5760  | FALSE | Théorique | 2.0 | 9.8 | (0,0,2.0,9.8) |
+| 12 | CVE-2026-5059  | FALSE | Théorique | 2.0 | 9.8 | (0,0,2.0,9.8) |
+| 13 | CVE-2026-41064 | FALSE | Théorique | 2.0 | 9.3 | (0,0,2.0,9.3) |
+| 14 | CVE-2026-41304 | FALSE | Théorique | 1.5 | 8.9 | (0,0,1.5,8.9) |
+| 15 | CVE-2026-41145 | FALSE | Théorique | 1.0 | 8.8 | (0,0,1.0,8.8) |
+| 16 | BRIDGE:BREAK | FALSE | Théorique | 1.0 | 0.0 | (0,0,1.0,0) |
 -->
 
 | CVE-ID | Score CVSS | EPSS | CISA KEV | Score Composite | Produit affecté | Type de vulnérabilité | Impact | Exploitation | Mesures de contournement | Source(s) |
 |---|---|---|---|---|---|---|---|---|---|---|
-| **CVE-2026-34197** | 8.8 | N/A | **TRUE** | 6.5 | Apache ActiveMQ | Code Injection | RCE | Active | Version 5.19.4 / 6.2.3 | [Check Point](https://research.checkpoint.com/2026/20th-april-threat-intelligence-report/) |
-| **CVE-2025-60710** | N/A | N/A | **TRUE** | 5.5 | Windows Task Host | Privilege Escalation | LPE | Active | Patch Microsoft disponible | [Check Point](https://research.checkpoint.com/2026/20th-april-threat-intelligence-report/) |
-| **CVE-2023-33538** | 8.8 | N/A | **TRUE** | 4.5 | TP-Link Routers | Command Injection | RCE | Active | Remplacement matériel / FW | [Security Affairs](https://securityaffairs.com/191040/hacking/cve-2023-33538-under-attack-for-a-year-but-exploitation-still-unsuccessful.html) |
-| **CVE-2026-33825** | N/A | N/A | FALSE | 2.5 | Microsoft Defender | Privilege Escalation | LPE | Active | Mise à jour Defender | [Check Point](https://research.checkpoint.com/2026/20th-april-threat-intelligence-report/) |
-| **CVE-2026-41329** | 9.9 | N/A | FALSE | 2.0 | OpenClaw | Sandbox Bypass | LPE | Théorique | Version 2026.3.31 | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-41329) |
-| **CVE-2026-5760** | 9.8 | N/A | FALSE | 2.0 | SGLang (GGUF models) | Command Injection | RCE | Théorique | ImmutableSandboxedEnv | [The Hacker News](https://thehackernews.com/2026/04/sglang-cve-2026-5760-cvss-98-enables.html) |
-| **CVE-2026-23500** | 9.4 | N/A | FALSE | 2.0 | Dolibarr ERP | Command Injection | RCE | Théorique | Version 23.0 | [Security Online](https://securityonline.info/dolibarr-rce-vulnerability-cve-2026-23500-pdf-conversion/) |
-| **CVE-2025-57738** | 7.2 | N/A | FALSE | 2.0 | Apache Syncope | Improper Isolation | RCE | PoC public | Version 3.0.14 / 4.0.2 | [Security Online](https://securityonline.info/apache-syncope-rce-cve-2025-57738-poc-disclosure/) |
-| **CVE-2026-20204** | 8.0 | N/A | FALSE | 1.5 | Splunk Enterprise | File Upload | RCE | Théorique | Version patchée Splunk | [Check Point](https://research.checkpoint.com/2026/20th-april-threat-intelligence-report/) |
-| **CVE-2026-39386** | 8.8 | N/A | FALSE | 1.0 | Neko Browser | Auth Bypass | LPE | Théorique | Version 3.0.11 / 3.1.2 | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-39386) |
-| **CVE-2026-41303** | 8.8 | N/A | FALSE | 1.0 | OpenClaw (Discord) | Auth Bypass | Auth Bypass | Théorique | Version 2026.3.28 | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-41303) |
-| **CVE-2026-41296** | 8.8 | N/A | FALSE | 1.0 | OpenClaw | TOCTOU Race | Info Disc. | Théorique | Version 2026.3.31 | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-41296) |
-| **CVE-2026-41294** | 8.6 | N/A | FALSE | 1.0 | OpenClaw | Env Var Injection | Info Disc. | Théorique | Version 2026.3.28 | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-41294) |
-| **CVE-2026-35570** | 8.4 | N/A | FALSE | 1.0 | OpenClaude | Path Traversal | Info Disc. | Théorique | Version 0.5.1 | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-35570) |
+| **CVE-2026-34197** | 9.8 | N/A | TRUE | 6.0 | Apache ActiveMQ | Code Injection | RCE | Active | Mise à jour vers v6.2.3 / 5.19.4. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/actively-exploited-apache-activemq-flaw-impacts-6-400-servers/) |
+| **CVE-2023-27351** | 8.2 | N/A | TRUE | 5.5 | PaperCut NG/MF | Improper Auth | Auth Bypass | Active | Bloquer l'accès à l'interface admin via firewall. | [Security Affairs](https://securityaffairs.com/191080/hacking/u-s-cisa-adds-cisco-catalyst-kentico-xperience-papercut-ng-mf-synacor-zcs-quest-kace-sma-and-jetbrains-teamcity-flaws-to-its-known-exploited-vulnerabilities-catalog.html) |
+| **CVE-2024-27199** | 7.3 | N/A | TRUE | 5.5 | JetBrains TeamCity | Path Traversal | Critical | Active | Patch immédiat des instances de build. | [The Cyber Throne](https://thecyberthrone.in/2026/04/21/cisa-adds-eight-actively-exploited-vulnerabilities-to-kev-catalog/) |
+| **CVE-2026-20122** | 6.5 | N/A | TRUE | 5.5 | Cisco Catalyst SD-WAN | Privileged APIs | Critical | Active | Mise à jour logicielle Cisco Catalyst. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/cisa-flags-new-sd-wan-flaw-as-actively-exploited-in-attacks/) |
+| **CVE-2026-20133** | 6.5 | N/A | TRUE | 5.0 | Cisco Catalyst SD-WAN | Info Exposure | Info Disclosure | Active | Désactiver l'exposition internet directe. | [The Register](https://go.theregister.com/feed/www.theregister.com/2026/04/21/cisco_sdwan_bugs_kev/) |
+| **CVE-2026-20128** | 5.0 | N/A | TRUE | 5.0 | Cisco Catalyst SD-WAN | Credential Storage | LPE | Active | Reset des credentials et patch. | [CyberSecurityNews](https://cybersecuritynews.com/cisco-sd-wan-manager-vulnerabilities/) |
+| **CVE-2025-48700** | 5.0 | N/A | TRUE | 5.0 | Zimbra Collaboration | XSS Zero-click | Info Disclosure | Active | Mise à jour cumulative Zimbra ZCS. | [Security Affairs](https://securityaffairs.com/191080/hacking/u-s-cisa-adds-cisco-catalyst-kentico-xperience-papercut-ng-mf-synacor-zcs-quest-kace-sma-and-jetbrains-teamcity-flaws-to-its-known-exploited-vulnerabilities-catalog.html) |
+| **CVE-2025-32975** | 5.0 | N/A | TRUE | 5.0 | Quest KACE SMA | Improper Auth | Auth Bypass | Active | Restreindre l'accès réseau à l'appliance. | [The Cyber Throne](https://thecyberthrone.in/2026/04/21/cisa-adds-eight-actively-exploited-vulnerabilities-to-kev-catalog/) |
+| **CVE-2025-2749** | N/A | N/A | TRUE | 3.0 | Kentico Xperience | Path Traversal | Critical | Théorique | Vérifier l'intégrité des fichiers CMS. | [CISA](https://securityaffairs.com/191080/hacking/u-s-cisa-adds-cisco-catalyst-kentico-xperience-papercut-ng-mf-synacor-zcs-quest-kace-sma-and-jetbrains-teamcity-flaws-to-its-known-exploited-vulnerabilities-catalog.html) |
+| **CVE-2026-32613** | 10.0 | N/A | FALSE | 2.0 | Spinnaker Echo | SPeL Injection | RCE | Théorique | Désactiver le service Echo. | [SecurityOnline](https://securityonline.info/spinnaker-critical-rce-clouddriver-echo-vulnerability/) |
+| **CVE-2026-5760** | 9.8 | N/A | FALSE | 2.0 | SGLang AI Framework | Jinja2 Template Injection | RCE | Théorique | Utiliser ImmutableSandboxedEnvironment. | [SecurityOnline](https://securityonline.info/sglang-critical-rce-cve-2026-5760-ai-model-poisoning/) |
+| **CVE-2026-5059** | 9.8 | N/A | FALSE | 2.0 | aws-mcp-server | CLI Command Injection | RCE | Théorique | Restreindre l'interaction avec le produit. | [Zero Day Initiative](http://www.zerodayinitiative.com/advisories/ZDI-26-245/) |
+| **CVE-2026-41064** | 9.3 | N/A | FALSE | 2.0 | WWBN AVideo | Incomplete Fix / Cmd Inj | RCE | Théorique | Mettre à jour vers v29.0+. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-41064) |
+| **CVE-2026-41304** | 8.9 | N/A | FALSE | 1.5 | WWBN AVideo CloneSite | Command Injection | RCE | Théorique | Patch commit 473c609. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-41304) |
+| **CVE-2026-41145** | 8.8 | N/A | FALSE | 1.0 | MinIO Storage | Signature Bypass | Auth Bypass | Théorique | Bloquer les requêtes unsigned-trailer. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-41145) |
+| **BRIDGE:BREAK** | N/A | N/A | FALSE | 1.0 | Lantronix / Silex | Multiple (22) | RCE | Théorique | Segmenter le réseau OT du réseau IP. | [The Hacker News](https://thehackernews.com/2026/04/22-bridgebreak-flaws-expose-20000.html) |
 
 ---
 
@@ -148,15 +138,12 @@ Les secteurs de la finance décentralisée (DeFi) et du secteur public restent d
 
 | Titre | Sujet canonique | Raison de sélection | Source(s) |
 |---|---|---|---|
-| The Gentlemen ransomware now uses SystemBC | Gentlemen Ransomware + SystemBC botnet activity | Analyse DFIR détaillée d'un nouveau RaaS sophistiqué utilisant des proxys | [BleepingComputer](https://www.bleepingcomputer.com/news/security/the-gentlemen-ransomware-now-uses-systembc-for-bot-powered-attacks/) |
-| Vercel supply-chain breach linked to AI tool | Vercel + Third-party AI Contextai supply chain compromise | Incident majeur de chaîne d'approvisionnement via jetons OAuth | [Field Effect](https://fieldeffect.com/blog/vercel-supply-chain-breach-ai-tool) |
-| Apple App Store crypto-stealing wallet apps | Apple App Store + Fake crypto-wallet malware FakeWallet | Campagne massive de bypass de la sécurité Apple App Store | [BleepingComputer](https://www.bleepingcomputer.com/news/security/chinas-apple-app-store-infiltrated-by-crypto-stealing-wallet-apps/) |
-| British Scattered Spider leader pleads guilty | Scattered Spider + Tyler Buchanan crypto-theft guilty plea | Mise à jour juridique majeure sur un acteur menaçant de premier plan | [BleepingComputer](https://www.bleepingcomputer.com/news/security/british-scattered-spider-hacker-pleads-guilty-to-crypto-theft-charges/) |
-| France ANTS ID System cyberattack | France ANTS + Personal data breach 19 million records | Fuite de données critiques d'identité nationale (France) | [Security Affairs](https://securityaffairs.com/191069/data-breach/frances-ants-id-system-website-hit-by-cyberattack-possible-data-breach.html) |
-| Seiko USA website defaced | Seiko USA + Shopify database extortion via defacement | Attaque par défaçage avec extorsion de base de données Shopify | [BleepingComputer](https://www.bleepingcomputer.com/news/security/seiko-usa-website-defaced-as-hacker-claims-customer-data-theft/) |
-| Attackers Turn QEMU Into Stealth Backdoor | GOLD ENCOUNTER + QEMU stealth backdoor for ransomware | Technique d'évasion innovante par virtualisation légère | [Cybersecurity News](https://cybersecuritynews.com/attackers-turn-qemu-into-a-stealth-backdoor/) |
-| Polycorp.com by Chaos | Chaos Ransomware + Double-extortion against Polycorp | Activité d'un nouveau groupe RaaS agressif en double extorsion | [Ransomlook](https://www.ransomlook.io//group/chaos) |
-| Frontier AI Models Vulnerability Discovery | Frontier AI models + Autonomous software security research risks | Évolution technologique du threat landscape via l'IA autonome | [Unit 42](https://unit42.paloaltonetworks.com/ai-software-security-risks/) |
+| Telegram tdata as a Credential Harvesting Vector | Telegram tdata Credential Harvesting via SSH | Technique innovante de vol de session contournant la 2FA. | [SANS ISC](https://isc.sans.edu/diary/rss/32888) |
+| Lazarus Group macOS Malware Kit | Lazarus Group Mach-O Man macOS Malware Kit | Nouvelle campagne APT Lazarus ciblant spécifiquement macOS. | [ANY.RUN](https://any.run/cybersecurity-blog/lazarus-macos-malware-mach-o-man/) |
+| Bad Apples: macOS LOTL | Bad Apples: macOS Living-Off-The-Land Techniques | Documentation technique rare sur les primitives macOS. | [Cisco Talos](https://blog.talosintelligence.com/bad-apples-weaponizing-native-macos-primitives-for-movement-and-execution/) |
+| Lazarus $290M Crypto Theft | Lazarus Group: $290M Crypto Theft on Kelp DAO | Attaque majeure sur la couche de vérification DeFi (LayerZero). | [Security Affairs](https://securityaffairs.com/191092/digital-id/north-koreas-lazarus-apt-stole-290m-from-kelp-dao.html) |
+| Vercel Cyber Incident | Vercel Breach via Context.ai Exploitation | Incident supply chain via un outil tiers d'IA. | [DataBreaches.net](https://databreaches.net/2026/04/21/vercel-confirms-cyber-incident-after-sophisticated-attacker-exploits-third-party-tool/) |
+| Emerging Risks of AI | Emerging Enterprise Security Risks of Agentic AI | Analyse stratégique sur les identités d'agents autonomes. | [Recorded Future](https://www.recordedfuture.com/research/emerging-enterprise-security-risks-of-ai) |
 
 ---
 
@@ -166,20 +153,11 @@ Les secteurs de la finance décentralisée (DeFi) et du secteur public restent d
 
 | Titre | Raison d'exclusion | Source(s) |
 |---|---|---|
-| The backup myth that is putting businesses at risk | Contenu commercial sponsorisé (Datto) | [BleepingComputer](https://www.bleepingcomputer.com/news/security/the-backup-myth-that-is-putting-businesses-at-risk/) |
-| Handling the CVE Flood With EPSS | Article éducatif / généraliste sur une métrique | [SANS ISC](https://isc.sans.edu/diary/rss/32914) |
-| Why RDP remains a top initial access vector | Article éducatif / généraliste sur un protocole | [Field Effect](https://fieldeffect.com/blog/rdp-top-initial-access-vector) |
-| Secure Your Spot: OpenSSF Community Day | Annonce promotionnelle d'événement | [OpenSSF](https://openssf.org/blog/2026/04/20/secure-your-spot-the-openssf-community-day-north-america-2026-agenda-is-live/) |
-| ISC Stormcast For Tuesday, April 21st | Résumé audio quotidien sans analyse d'incident unique | [SANS ISC](https://isc.sans.edu/diary/rss/32916) |
-| ISC Stormcast For Monday, April 20th | Résumé audio quotidien sans analyse d'incident unique | [SANS ISC](https://isc.sans.edu/diary/rss/32912) |
-| Weekly Recap: Vercel Hack, Push Fraud... | Synthèse hebdomadaire (doublon d'informations déjà traitées) | [The Hacker News](https://thehackernews.com/2026/04/weekly-recap-vercel-hack-push-fraud.html) |
-| Trump-branded datacenter project reorg | Actualité économique / business non-sécuritaire | [The Register](https://go.theregister.com/i/cfa/https://www.theregister.com/2026/04/20/fermi_america_reorg/) |
-| We are entering the AGE of everything verified | Opinion / Contenu vidéo social media (Louis Rossman) | [Mastodon](https://infosec.exchange/@AmmarSpaces/116439879123012673) |
-| Interesting SOC Analyst case story | Récit narratif / Étude de cas non urgente | [Mastodon](https://infosec.exchange/@AmmarSpaces/116439999512234978) |
-| CVE-2026-6550 - AWS ESDK Python | Score composite insuffisant (< 1) | [AWS Security](https://aws.amazon.com/security/security-bulletins/rss/2026-017-aws/) |
-| CVE-2026-5958 - GNU sed | Score composite insuffisant (< 1) | [CERT.PL](https://cert.pl/en/posts/2026/04/CVE-2026-5958/) |
-| Shadowbyt3$ Stride Learning | TI sans détails techniques suffisants pour section Articles | [Ransomlook](https://www.ransomlook.io//group/shadowbyt3%24) |
-| Multiple avis CERT-FR (Spring, Edge, Moxa, etc.) | Traité dans la synthèse des vulnérabilités | [CERT-FR](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0457/) |
+| Stopping Fraud without Adding Friction | Contenu promotionnel / Article sponsorisé commercial. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/stopping-fraud-at-each-stage-of-the-customer-journey-without-adding-friction/) |
+| 18 Seconds: Field Effect MDR | Contenu commercial / Marketing produit. | [Field Effect](https://fieldeffect.com/blog/18-seconds-field-effect-mdr) |
+| Validating Thousands of Credentials | Contenu commercial / Étude de cas propriétaire. | [Flare.io](https://flare.io/learn/resources/blog/validating-thousands-credentials-at-scale) |
+| Why runtime security matters for PCI DSS | Contenu commercial / Livre blanc marketing. | [Sysdig](https://webflow.sysdig.com/blog/why-runtime-security-matters-for-pci-dss-compliance) |
+| Anthropic bakes memory fixes into Bun | Sujet purement fonctionnel / Développement logiciel sans angle sécurité majeur. | [The Register](https://go.theregister.com/i/cfa/https://www.theregister.com/2026/04/21/apple_ternus_rediscover_humanity/) |
 
 ---
 
@@ -187,534 +165,476 @@ Les secteurs de la finance décentralisée (DeFi) et du secteur public restent d
 
 # SECTION "ARTICLES"
 
-<div id="gentlemen-ransomware-systembc-botnet-activity"></div>
+---
 
-## Gentlemen Ransomware + SystemBC botnet activity
+<div id="telegram-tdata-credential-harvesting-via-ssh"></div>
+
+## Telegram tdata Credential Harvesting via SSH
 
 ### Résumé technique
-Le groupe de Ransomware-as-a-Service (RaaS) **The Gentlemen**, apparu mi-2025, a été observé intégrant le malware proxy **SystemBC** pour la livraison de payloads et le tunneling de trafic C2. L'attaque commence par l'accès à un contrôleur de domaine avec des privilèges d'administrateur de domaine, bien que le vecteur initial reste flou. L'attaquant déploie Cobalt Strike via RPC et effectue un mouvement latéral soutenu par Mimikatz.
-L'infrastructure s'appuie sur un botnet SystemBC de plus de 1 570 hôtes, principalement des serveurs VPS commerciaux détournés pour acheminer le trafic malveillant. L'outil de chiffrement est écrit en Go (pour Windows, Linux, NAS) ou en C (pour ESXi). L'algorithme utilise un schéma hybride X25519 et XChaCha20. Le botnet cible principalement des environnements d'entreprise.
+Une nouvelle campagne d'attaque capturée via pot de miel (honeypot) révèle un glissement tactique des attaquants : du simple minage de crypto-monnaie (cryptojacking) vers le vol systématique d'identités numériques. L'attaque commence par une intrusion SSH sur des serveurs Linux via des identifiants faibles. Après une reconnaissance classique (`uname -a`, `cpuinfo`), l'attaquant ne se contente pas d'installer un mineur mais recherche activement le répertoire `~/.local/share/TelegramDesktop/tdata`.
+
+Le dossier `tdata` contient les jetons de session locale de Telegram Desktop. En copiant ce répertoire, un attaquant peut cloner la session de la victime sur sa propre machine sans avoir besoin du numéro de téléphone ou du code de double authentification (2FA). L'attaquant a également été observé cherchant des journaux SMS (`/var/log/smsd.log`) et des modems GSM (`/dev/ttyGSM*`) pour intercepter d'éventuels codes de récupération.
 
 ### Analyse de l'impact
-L'usage de SystemBC comme proxy SOCKS5 rend la détection réseau extrêmement difficile, car il masque les communications directes avec le serveur de commande. Le groupe cible des infrastructures critiques (ex: Oltenia Energy Complex en Roumanie). La capacité à chiffrer les hyperviseurs ESXi augmente radicalement le levier d'extorsion en paralysant des flottes entières de serveurs virtuels. Le niveau de sophistication est jugé élevé par l'intégration de frameworks post-exploitation matures.
+L'impact est critique car il permet un détournement de compte persistant qui contourne les protections 2FA standard. Pour une entreprise, la compromission d'un compte Telegram d'un administrateur ou d'un développeur peut conduire à l'exfiltration de secrets partagés dans des canaux de discussion ou à des attaques d'ingénierie sociale internes indétectables.
 
 ### Recommandations
-*   Restreindre les flux RPC vers les contrôleurs de domaine aux seules stations d'administration autorisées.
-*   Implémenter des politiques de restriction logicielle (AppLocker/WDAC) pour bloquer l'exécution de binaires non signés dans ProgramData.
-*   Surveiller les tunnels SOCKS5 sortants vers des IPs de VPS connus.
+*   Désactiver l'authentification SSH par mot de passe et imposer l'usage de clés SSH.
+*   Implémenter un monitoring d'intégrité de fichiers (FIM) sur les répertoires applicatifs sensibles comme `tdata`.
+*   Auditer régulièrement les sessions actives dans les paramètres de confidentialité de Telegram.
 
 ### Playbook de réponse à incident
 
 #### Phase 1 — Préparation
-*   Vérifier que les logs d'accès RPC et les événements 4624/4625 sur les contrôleurs de domaine sont collectés dans le SIEM.
-*   Configurer l'EDR pour alerter sur l'usage de Mimikatz ou de techniques de credential dumping (LSASS access).
+*   Activer les logs SSH détaillés et le monitoring des accès aux fichiers via `auditd`.
+*   Sensibiliser les utilisateurs aux risques des clients Telegram "Portable".
 
 #### Phase 2 — Détection et analyse
-*   **Règle Sigma :** Rechercher l'exécution de processus suspects initiés par les services RPC.
-*   **Indicateur réseau :** Surveiller le trafic persistant vers le port 22 ou des ports non standard utilisés par les agents SystemBC.
-*   Analyser les modifications de la Group Policy (GPO) pour détecter la propagation automatisée du ransomware.
+*   **Règle Sigma :** Surveiller l'exécution de `ls -la` ou `tar` ciblant des chemins contenant `TelegramDesktop/tdata`.
+*   **Requête EDR :** `process where command_line contains "tdata" and process.name in ("cp", "tar", "scp", "curl")`.
+*   Vérifier les connexions SSH récentes pour identifier des adresses IP inhabituelles.
 
 #### Phase 3 — Confinement, éradication et récupération
-**Confinement :**
-*   Isoler immédiatement les contrôleurs de domaine compromis et révoquer tous les comptes de type Domain Admin.
-*   Bloquer les IPs associées au botnet SystemBC identifiées par la threat intel.
-
-**Éradication :**
-*   Supprimer les binaires du ransomware identifiés sur les partages administratifs.
-*   Nettoyer les tâches planifiées et clés de registre créées pour la persistance de SystemBC.
-
-**Récupération :**
-*   Restaurer l'AD et les serveurs critiques depuis des sauvegardes hors-ligne saines.
+*   **Confinement :** Isoler le serveur compromis et révoquer toutes les clés SSH associées.
+*   **Éradication :** Tuer les processus suspects identifiés par `ps | grep miner`.
+*   **Récupération :** Sur le compte Telegram de la victime, utiliser "Terminer toutes les autres sessions" immédiatement.
 
 #### Phase 4 — Activités post-incident
-*   Notifier les autorités de régulation (RGPD/NIS2) en cas de compromission d'infrastructures critiques.
-*   Conduire un audit complet de l'exposition RDP et VPN.
+*   Analyser les logs de Telegram pour identifier si des données ont été consultées depuis l'adresse IP de l'attaquant.
+*   Notifier les contacts de la victime d'une possible tentative d'ingénierie sociale.
 
 #### Phase 5 — Threat Hunting (proactif)
 
 | Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
 |---|---|---|---|
-| Présence d'agents SystemBC cachés | T1090.003 | Netflow | Recherche de connexions sortantes vers des VPS avec un pattern de beaconing régulier |
-| Abus de GPO pour distribution de fichiers | T1491 | Event Logs | Surveillance des modifications de fichiers dans SYSVOL non corrélées à une change request |
+| Recherche de dossiers de session | T1083 | Auditd / EDR | Chercher des accès en lecture au dossier `.local/share/TelegramDesktop` par des processus non-Telegram. |
 
 ### Indicateurs de compromission (DEFANG)
 
 | Type | Valeur (DEFANG) | Description | Fiabilité |
 |---|---|---|---|
-| IP | 45[.]84[.]0[.]211 | Serveur C2 associé à l'infrastructure Gentlemen | Élevée |
-| Nom de fichier | qemu-system-x86_64[.]exe | Exécutable QEMU détourné pour évasion | Moyenne |
-| Email | Win88[@]thesecure[.]biz | Contact pour négociation ransom | Élevée |
+| Directory | ~/.local/share/TelegramDesktop/tdata | Cible du vol de session | Haute |
+| Path | /dev/ttyGSM* | Recherche de modems pour bypass 2FA | Moyenne |
 
 ### TTP MITRE ATT&CK
 
 | ID TTP | Tactique | Technique | Description contextuelle |
 |---|---|---|---|
-| T1090.003 | C2 | Multi-hop Proxy | Utilisation de SystemBC pour masquer le trafic vers le C2 |
-| T1484.001 | Movement | Group Policy Modification | Usage des GPO pour déclencher le chiffrement simultané du parc |
+| T1110.001 | Initial Access | Brute Force: Password Guessing | Accès initial via SSH avec credentials faibles. |
+| T1555.003 | Credential Access | Credentials from Private Desktop Clients | Extraction des jetons de session du dossier tdata. |
 
 ### Sources
-* [BleepingComputer](https://www.bleepingcomputer.com/news/security/the-gentlemen-ransomware-now-uses-systembc-for-bot-powered-attacks/)
-* [Check Point Research](https://research.checkpoint.com/2026/dfir-report-the-gentlemen/)
-* [Ransomlook](https://www.ransomlook.io//group/the%20gentlemen)
+* [SANS Internet Storm Center](https://isc.sans.edu/diary/rss/32888)
 
 ---
 
-<div id="vercel-third-party-ai-contextai-supply-chain-compromise"></div>
+<div id="lazarus-group-mach-o-man-macos-malware-kit"></div>
 
-## Vercel + Third-party AI Contextai supply chain compromise
+## Lazarus Group Mach-O Man macOS Malware Kit
 
 ### Résumé technique
-La plateforme cloud Vercel a subi un accès non autorisé à ses systèmes internes via la compromission d'une application OAuth tierce : **Context.ai**. Un employé de Vercel avait utilisé ses identifiants d'entreprise pour s'inscrire à la version grand public ("Office Suite") de Context.ai, accordant des permissions étendues ("Allow All").
-L'attaquant a d'abord compromis les jetons OAuth de Context.ai en mars 2026, puis a utilisé le jeton de l'employé pour accéder à son compte Google Workspace d'entreprise. Depuis ce point d'ancrage, l'adversaire a pu énumérer les variables d'environnement Vercel non marquées comme "sensibles". Bien que les variables "sensibles" soient chiffrées au repos, les variables non protégées peuvent contenir des secrets, des clés API ou des configurations critiques.
+Le groupe APT Lazarus (Corée du Nord) a lancé une nouvelle campagne surnommée "Mach-O Man", exploitant la technique "ClickFix". L'attaque utilise des invitations à de fausses réunions professionnelles via Telegram. La victime est redirigée vers une page imitant Zoom ou Teams, affichant une erreur de connexion. Pour la "réparer", l'utilisateur est incité à copier-coller une commande dans son terminal.
+
+Cette commande télécharge un stager (`teamsSDK.bin`) écrit en Go. Le stager déploie ensuite des applications macOS ad-hoc (`.app`) qui imitent l'interface système pour demander le mot de passe de l'utilisateur. Une fois le mot de passe saisi, un module de profilage (`D1{...}.bin`) collecte des informations détaillées : type de CPU, extensions de navigateurs (Chrome, Safari, Brave), et données du Keychain macOS.
 
 ### Analyse de l'impact
-L'incident souligne la fragilité des limites de confiance basées sur OAuth. L'impact inclut le risque de fuite de clés API client et de fragments de code source. Le groupe ShinyHunters a été mentionné par les attaquants, bien que le lien ne soit pas confirmé. Pour les utilisateurs de Vercel, le risque principal est la réutilisation de jetons pour compromettre les pipelines CI/CD.
+L'impact est majeur pour les entreprises utilisant des parcs macOS (Fintech, Crypto). Le malware permet l'exfiltration complète des secrets stockés localement, facilitant l'accès aux coffres de crypto-actifs et aux environnements de production via les tokens de session volés.
 
 ### Recommandations
-*   Auditer tous les jetons OAuth connectés à Google Workspace et révoquer les applications tierces inutilisées.
-*   Marquer systématiquement toutes les variables d'environnement contenant des secrets comme "sensibles" dans Vercel.
-*   Réinitialiser et pivoter toutes les clés API stockées dans des variables non protégées avant le 19 avril 2026.
+*   Interdire l'exécution de commandes système copiées depuis des sources web non vérifiées.
+*   Utiliser une solution de gestion de flotte (MDM) pour restreindre l'installation d'applications non signées ou auto-signées.
+*   Surveiller les appels système `sysctl` inhabituels utilisés pour le fingerprinting.
 
 ### Playbook de réponse à incident
 
 #### Phase 1 — Préparation
-*   Établir une politique de "Shadow IT" interdisant l'usage d'outils IA non approuvés avec des comptes d'entreprise.
-*   Configurer des alertes CASB sur les autorisations OAuth excessives.
+*   Déployer des profils de configuration MDM interdisant l'ouverture d'applications non validées par Gatekeeper.
+*   Activer les logs de l'Unified Logging System (ULS) de macOS.
 
 #### Phase 2 — Détection et analyse
-*   **Requête SIEM :** Analyser les logs Google Workspace pour des connexions suspectes via des IDs d'applications tierces (spécifiquement `110671459871-30f1spbu0hptbs60cb4vsmv79i7bbvqj.apps.googleusercontent.com`).
-*   Comparer les logs d'accès aux variables d'environnement Vercel avec les activités légitimes des développeurs.
+*   **Requête EDR :** Identifier les processus parents `Terminal` exécutant des commandes `curl | sh` ou `codesign`.
+*   Chercher des fichiers binaires suspects nommés `teamsSDK.bin` ou commençant par `D1` dans `/tmp` ou `~/Downloads`.
 
 #### Phase 3 — Confinement, éradication et récupération
-**Confinement :**
-*   Révoquer immédiatement l'ID d'application OAuth compromis au niveau de l'organisation.
-*   Suspendre le compte utilisateur source de la fuite pour réinitialisation complète.
-
-**Éradication :**
-*   Supprimer toute persistance éventuelle dans l'environnement Vercel (nouveaux utilisateurs, webhooks).
-*   Rotation globale de tous les secrets identifiés dans les variables d'environnement.
+*   **Confinement :** Isoler l'hôte et révoquer les credentials de l'utilisateur (mots de passe, tokens SSO).
+*   **Éradication :** Supprimer les bundles d'applications frauduleux et les binaires dans `/tmp`.
+*   **Récupération :** Restaurer le Keychain depuis une sauvegarde saine si nécessaire, après changement de tous les secrets.
 
 #### Phase 4 — Activités post-incident
-*   Évaluer si des données de clients finaux ont été exfiltrées via les clés API compromises pour notification NIS2/RGPD.
+*   Effectuer un audit des accès SaaS effectués avec les tokens de l'utilisateur compromis.
+*   Mettre à jour les règles de détection pour les variantes du kit "Mach-O Man".
 
 #### Phase 5 — Threat Hunting (proactif)
 
 | Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
 |---|---|---|---|
-| Abus de jetons OAuth persistants | T1550.001 | Google Workspace Logs | Identifier les applications tierces ayant des scopes "High" connectées par des employés |
+| Fingerprinting via sysctl | T1082 | macOS ULS | Chercher des rafales de requêtes `sysctl` (hw.model, machdep.cpu) hors contexte admin. |
 
 ### Indicateurs de compromission (DEFANG)
 
 | Type | Valeur (DEFANG) | Description | Fiabilité |
 |---|---|---|---|
-| Domaine | context[.]ai | Service tiers compromis initialement | Élevée |
-| OAuth App ID | 110671459871-30f1spbu0hptbs60cb4vsmv79i7bbvqj[.]apps[.]googleusercontent[.]com | ID d'application malveillante à révoquer | Élevée |
+| Nom fichier | teamsSDK.bin | Stager initial Lazarus | Haute |
+| Nom fichier | D1YrHRTg.bin | Profiler du kit Mach-O Man | Haute |
+| URL | hxxps[://]teams-meeting[.]example[.]com | Exemple de site ClickFix | Moyenne |
 
 ### TTP MITRE ATT&CK
 
 | ID TTP | Tactique | Technique | Description contextuelle |
 |---|---|---|---|
-| T1550.001 | Access | Application Access Token | Utilisation de jetons OAuth volés pour bypasser l'auth |
-| T1528 | Discovery | Steal Application Access Token | Exfiltration de jetons via le service Context.ai |
+| T1566.002 | Initial Access | Phishing: Spearphishing Link | Lien vers faux portail de réunion. |
+| T1204.002 | Execution | User Execution: Malicious File | L'utilisateur exécute manuellement la commande terminal. |
+| T1555.003 | Credential Access | Credentials from Web Browsers | Ciblage des extensions et secrets des navigateurs. |
 
 ### Sources
-* [Field Effect](https://fieldeffect.com/blog/vercel-supply-chain-breach-ai-tool)
-* [Security Affairs](https://securityaffairs.com/191031/data-breach/third-party-ai-hack-triggers-vercel-breach-internal-environments-accessed.html)
-* [The Hacker News](https://thehackernews.com/2026/04/weekly-recap-vercel-hack-push-fraud.html)
+* [ANY.RUN Cybersecurity Blog](https://any.run/cybersecurity-blog/lazarus-macos-malware-mach-o-man/)
 
 ---
 
-<div id="apple-app-store-fake-crypto-wallet-malware-fakewallet"></div>
+<div id="bad-apples-macos-living-off-the-land-techniques"></div>
 
-## Apple App Store + Fake crypto-wallet malware FakeWallet
+## Bad Apples: macOS Living-Off-The-Land Techniques
 
 ### Résumé technique
-Une série de 26 applications malveillantes baptisées **FakeWallet** a infiltré l'Apple App Store. Ces applications se font passer pour des portefeuilles populaires (Metamask, Coinbase, Trust Wallet, OneKey) mais sont en réalité des outils de vol de phrases de récupération (seed phrases).
-En Chine, où ces apps sont restreintes, l'attaquant les a déguisées en jeux ou en calculateurs pour tromper les utilisateurs. Une fois lancées, elles redirigent vers des pages de phishing ou abusent des **profils de provisionnement iOS d'entreprise** pour sideloader des versions trojanisées. Le malware intercepte la phrase mnémonique, l'encrypte via RSA/Base64 et l'envoie à l'attaquant. Pour les portefeuilles "froids" (Ledger), l'app utilise des prompts de vérification de sécurité factices.
+Cisco Talos a documenté des techniques avancées de "Living-off-the-Land" (LotL) spécifiques à macOS, souvent ignorées par les outils de détection Windows-centriques. L'une des plus furtives utilise le protocole **Remote Application Scripting (RAS)** via le port 3031. Un attaquant peut transformer `Terminal.app` en proxy d'exécution pour bypasser les restrictions `do shell script`.
+
+Une autre technique consiste à utiliser les **métadonnées Spotlight** (`kMDItemFinderComment`) comme zone de stockage. L'attaquant injecte un payload Base64 dans le champ "Commentaire" d'un fichier via AppleScript. Le payload ne résidant pas dans le fichier lui-même, il échappe aux scans statiques. L'extraction se fait via `mdls` et l'exécution via un LaunchAgent persistant qui appelle Finder au login.
 
 ### Analyse de l'impact
-L'incident démontre une faille majeure dans les processus de vérification d'Apple. L'impact financier est direct (vol définitif d'actifs crypto). Bien que ciblant initialement la Chine, la technique est globalement applicable. Plus de 9,5 millions de dollars ont déjà été dérobés via une application Ledger frauduleuse similaire sur macOS.
+Ces techniques permettent une persistance et un mouvement latéral extrêmement discrets. En utilisant des protocoles natifs comme SNMP, Git (via `receive.denyCurrentBranch`) ou SMB pour le transfert d'outils, l'attaquant évite de générer des logs SSH ou des alertes de téléchargement de fichiers suspects.
 
 ### Recommandations
-*   Ne jamais saisir de phrase de récupération (seed phrase) sur un appareil connecté à Internet ou une application mobile.
-*   Vérifier systématiquement l'éditeur de l'application sur l'App Store et utiliser les liens directs depuis les sites officiels.
+*   Désactiver les "Remote Apple Events" dans les paramètres de partage macOS.
+*   Surveiller l'utilisation inhabituelle de `osascript` et `mdls`.
+*   Restreindre les permissions TCC (Transparency, Consent, and Control) pour l'automatisation.
 
 ### Playbook de réponse à incident
 
 #### Phase 1 — Préparation
-*   Déployer une solution MDM pour interdire l'installation de profils de provisionnement non approuvés sur les flottes iOS d'entreprise.
+*   Déployer une configuration MDM désactivant le partage d'événements Apple à distance.
+*   Monitorer le port TCP 3031.
 
 #### Phase 2 — Détection et analyse
-*   **Requête EDR (Mobile) :** Rechercher l'installation d'applications dont le bundle ID ne correspond pas à l'éditeur officiel du portefeuille.
-*   Surveiller les connexions réseau sortantes inhabituelles depuis des applications mobiles vers des domaines de C2 non répertoriés.
+*   **Requête EDR :** Surveiller les processus `AppleEventsD` engendrant des shells `bash`.
+*   **Analyse Forensic :** Inspecter les attributs étendus des fichiers avec `xattr -l` pour trouver des payloads cachés dans les commentaires.
 
 #### Phase 3 — Confinement, éradication et récupération
-**Confinement :**
-*   Désinstaller immédiatement l'application malveillante et supprimer le profil de provisionnement associé dans les réglages iOS.
-
-**Éradication :**
-*   Considérer les fonds du portefeuille compromis comme perdus s'ils ont été déplacés. Si ce n'est pas le cas, transférer d'urgence vers un nouveau portefeuille avec une nouvelle phrase de récupération générée sur un appareil sain.
+*   **Confinement :** Couper le port 3031 au niveau du firewall hôte.
+*   **Éradication :** Supprimer les LaunchAgents suspects et nettoyer les métadonnées Spotlight.
 
 #### Phase 4 — Activités post-incident
-*   Signaler les applications frauduleuses à Apple et aux fournisseurs de portefeuilles usurpés.
+*   Ajuster les politiques de sécurité pour inclure la surveillance de l'IPC (Inter-Process Communication).
 
 #### Phase 5 — Threat Hunting (proactif)
 
 | Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
 |---|---|---|---|
-| Sideloading via profils d'entreprise | T1563 | MDM Inventory | Lister tous les certificats de provisionnement "Enterprise" installés sur les terminaux |
+| Abus de métadonnées Spotlight | T1564.004 | EDR / FIM | Chercher des appels `mdls` suivis immédiatement par `base64 --decode | sh`. |
 
 ### Indicateurs de compromission (DEFANG)
 
 | Type | Valeur (DEFANG) | Description | Fiabilité |
 |---|---|---|---|
-| URL | hxxps[://]fake-ledger-portal[.]com | Site de phishing pour provisionnement iOS | Élevée |
+| Port | 3031 | Port par défaut de Remote Apple Events | Moyenne |
+| Attribute | kMDItemFinderComment | Stockage de payload dans Spotlight | Haute |
 
 ### TTP MITRE ATT&CK
 
 | ID TTP | Tactique | Technique | Description contextuelle |
 |---|---|---|---|
-| T1458 | Initial Access | Adversary-in-the-Middle | Interception des seed phrases lors de la saisie utilisateur |
-| T1563 | Defense Evasion | Subvert Trust Controls | Abus des profils de provisionnement Apple pour sideloading |
+| T1021.005 | Lateral Movement | Remote Services: SSH | Utilisation d'osascript par-dessus SSH. |
+| T1059.002 | Execution | Command and Scripting Interpreter: AppleScript | Automatisation de l'exécution via scripts natifs. |
 
 ### Sources
-* [BleepingComputer](https://www.bleepingcomputer.com/news/security/chinas-apple-app-store-infiltrated-by-crypto-stealing-wallet-apps/)
-* [Check Point Research](https://research.checkpoint.com/2026/20th-april-threat-intelligence-report/)
+* [Cisco Talos Blog](https://blog.talosintelligence.com/bad-apples-weaponizing-native-macos-primitives-for-movement-and-execution/)
 
 ---
 
-<div id="scattered-spider-tyler-buchanan-crypto-theft-guilty-plea"></div>
+<div id="lazarus-group-crypto-theft-on-kelp-dao"></div>
 
-## Scattered Spider + Tyler Buchanan crypto-theft guilty plea
+## Lazarus Group: $290M Crypto Theft on Kelp DAO
 
 ### Résumé technique
-Tyler Robert Buchanan, un ressortissant britannique lié au collectif **Scattered Spider** (UNC3944), a plaidé coupable aux États-Unis pour fraude électronique et vol d'identité aggravé. Le groupe a dérobé au moins 8 millions de dollars en cryptomonnaies entre 2021 et 2023.
-Leur mode opératoire reposait sur des campagnes de phishing SMS massives envoyées aux employés d'entreprises tech et IT. Les messages redirigeaient vers des kits de phishing capturant les identifiants. Ces accès permettaient ensuite de mener des attaques par **SIM swap** pour intercepter les codes de double authentification (MFA), permettant le siphonnage complet des portefeuilles virtuels des victimes. Des fichiers contenant les données de douzaines d'entreprises ont été retrouvés lors de son arrestation en Espagne.
+Lazarus Group a mené une attaque de grande envergure contre le protocole DeFi **Kelp DAO**, aboutissant au vol de 290 millions de dollars. L'attaque n'a pas visé le code du smart contract mais la couche de vérification d'infrastructure fournie par **LayerZero**. Les attaquants ont compromis deux serveurs RPC indépendants utilisés par le réseau de vérification décentralisé (DVN) de LayerZero.
+
+Ensuite, ils ont lancé une attaque par déni de service (DDoS) sur les autres serveurs RPC pour forcer le système à se rabattre sur les nœuds compromis (fallback). Cela leur a permis de signer des paquets de données frauduleux (rsETH) pour drainer les fonds. L'incident a été exacerbé par la configuration "1-sur-1" de Kelp DAO, créant un point de défaillance unique.
 
 ### Analyse de l'impact
-L'impact est sectoriel (Tech, Télécoms, Cloud). Scattered Spider est connu pour sa collaboration avec des gangs de ransomware russes (BlackCat/AlphV, Qilin). Ce plaidoyer confirme l'efficacité dévastatrice de l'ingénierie sociale "bas de gamme" (SMS) lorsqu'elle est combinée à des techniques de contournement MFA avancées.
+L'impact financier est massif (290M$ volés, 95M$ gelés). L'attaque a provoqué une contagion dans l'écosystème DeFi, entraînant une perte de valeur de près de 8 milliards de dollars sur des protocoles partenaires comme Aave.
 
 ### Recommandations
-*   Migrer de la MFA basée sur SMS/appels vers des clés matérielles FIDO2 (Yubikey).
-*   Former les employés à la détection du smishing et aux protocoles d'alerte en cas de perte soudaine de signal mobile (signe potentiel de SIM swap).
+*   Adopter impérativement des configurations multi-DVN (plusieurs vérificateurs indépendants).
+*   Surveiller la disponibilité et l'intégrité des nœuds RPC tiers.
+*   Implémenter des seuils de retrait (rate limiting) sur les contrats de restaking.
+
+### Playbook de réponse à incident (contexte DeFi)
+
+#### Phase 1 — Préparation
+*   Établir des procédures d'urgence avec les "Security Councils" (ex: Arbitrum, Ethereum).
+*   Pré-valider des listes de blacklisting.
+
+#### Phase 2 — Détection et analyse
+*   Identifier les transactions anormales de mint/burn de rsETH.
+*   Vérifier les logs des nœuds RPC pour détecter des remplacements de binaires (`op-geth`).
+
+#### Phase 3 — Confinement, éradication et récupération
+*   **Confinement :** Pauser immédiatement les smart contracts du protocole.
+*   **Éradication :** Remplacer les nœuds RPC compromis et changer les clés de signature.
+*   **Récupération :** Travailler avec les exchanges pour geler les fonds exfiltrés (SEAL-911).
+
+#### Phase 4 — Activités post-incident
+*   Revoir l'architecture de confiance avec LayerZero pour imposer la redondance.
+
+#### Phase 5 — Threat Hunting (proactif)
+
+| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
+|---|---|---|---|
+| Empoisonnement de nœud RPC | T1584 | Logs Système Nœud | Chercher des modifications de binaires ou des redémarrages de services RPC inattendus. |
+
+### Indicateurs de compromission (DEFANG)
+
+| Type | Valeur (DEFANG) | Description | Fiabilité |
+|---|---|---|---|
+| Wallet | 0x... (Blacklisted by Kelp) | Portefeuilles de l'attaquant Lazarus | Haute |
+
+### TTP MITRE ATT&CK
+
+| ID TTP | Tactique | Technique | Description contextuelle |
+|---|---|---|---|
+| T1584 | Resource Development | Compromise Infrastructure | Compromission de nœuds RPC tiers. |
+| T1498.001 | Impact | Network Denial of Service: Direct Volumetric | DDoS pour forcer le fallback vers des nœuds malveillants. |
+
+### Sources
+* [Security Affairs](https://securityaffairs.com/191092/digital-id/north-koreas-lazarus-apt-stole-290m-from-kelp-dao.html)
+
+---
+
+<div id="vercel-breach-via-context-ai-exploitation"></div>
+
+## Vercel Breach via Context.ai Exploitation
+
+### Résumé technique
+Vercel a confirmé une intrusion sophistiquée ciblant ses infrastructures internes. L'attaque a débuté par la compromission d'un outil tiers d'analyse d'IA nommé **Context.ai**, utilisé par un employé. En exploitant cet accès, l'attaquant a pris le contrôle du compte Google Workspace de l'employé chez Vercel.
+
+Cela a permis à l'attaquant d'accéder à certains environnements Vercel et de lire des **variables d'environnement**. Bien que Vercel affirme que les variables marquées comme "sensibles" sont chiffrées au repos et n'ont pas été compromises, l'accès à des variables "non sensibles" peut souvent révéler des configurations d'infrastructure ou des clés d'API moins critiques facilitant un mouvement latéral.
+
+### Analyse de l'impact
+L'impact est une fuite d'informations sur l'architecture interne et une possible compromission de la chaîne de déploiement de Vercel. Pour les clients de Vercel, cela souligne le risque que les secrets de déploiement soient exposés via des outils tiers connectés à leurs pipelines.
+
+### Recommandations
+*   Marquer systématiquement TOUTES les variables d'environnement comme "sensibles".
+*   Auditer les accès OAuth accordés aux outils tiers (IA, analytique).
+*   Imposer le MFA résistant au phishing (FIDO2/WebAuthn) pour les comptes Workspace.
 
 ### Playbook de réponse à incident
 
 #### Phase 1 — Préparation
-*   Vérifier les politiques de sécurité des comptes auprès des opérateurs de téléphonie pour empêcher les transferts de SIM non autorisés.
+*   Inventorier tous les outils tiers ayant accès au Google Workspace via OAuth.
+*   Activer le chiffrement des secrets de bout en bout.
 
 #### Phase 2 — Détection et analyse
-*   Surveiller les alertes de "MFA fatigue" (demandes répétées en peu de temps).
-*   Analyser les logs de connexion pour détecter des logins provenant d'IPs résidentielles inhabituelles après un changement d'état MFA.
+*   Examiner les logs d'accès Google Workspace pour des activités provenant d'IPs de Context.ai ou de proxies.
+*   Identifier quelles variables d'environnement ont été consultées.
 
 #### Phase 3 — Confinement, éradication et récupération
-*   En cas de suspicion de SIM swap, contacter immédiatement l'opérateur mobile pour verrouiller la ligne.
-*   Réinitialiser tous les jetons de session active des comptes ciblés.
+*   **Confinement :** Révoquer les tokens OAuth de Context.ai et réinitialiser les sessions de l'employé.
+*   **Éradication :** Rotation immédiate de TOUTES les variables d'environnement, sensibles ou non.
 
 #### Phase 4 — Activités post-incident
-*   Mettre à jour les politiques de "Passwordless" pour éliminer la dépendance au numéro de téléphone.
+*   Revoir la politique de gestion des secrets pour supprimer les variables en clair.
 
 #### Phase 5 — Threat Hunting (proactif)
 
 | Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
 |---|---|---|---|
-| Contournement MFA par fatigue | T1621 | Okta/AD Logs | Identifier les patterns de requêtes MFA refusées x fois suivies d'une acceptation |
+| Abus de privilèges tiers | T1078.004 | Workspace Logs | Chercher des accès API via des applications tierces à des heures ou volumes inhabituels. |
 
 ### Indicateurs de compromission (DEFANG)
 
 | Type | Valeur (DEFANG) | Description | Fiabilité |
 |---|---|---|---|
-| Canal | @ShadowByt3S | Canal Telegram utilisé pour la revente de données | Élevée |
+| Domain | context[.]ai | Outil tiers compromis | Haute |
 
 ### TTP MITRE ATT&CK
 
 | ID TTP | Tactique | Technique | Description contextuelle |
 |---|---|---|---|
-| T1566.002 | Access | Spearphishing SMS | Vecteur initial via liens frauduleux par SMS |
-| T1458 | Access | SIM Swap | Détournement du numéro mobile pour intercepter les SMS de validation |
+| T1078.004 | Initial Access | Valid Accounts: Cloud Accounts | Utilisation du compte Workspace compromis. |
+| T1552 | Credential Access | Unsecured Credentials | Lecture des variables d'environnement non chiffrées. |
 
 ### Sources
-* [BleepingComputer](https://www.bleepingcomputer.com/news/security/british-scattered-spider-hacker-pleads-guilty-to-crypto-theft-charges/)
-* [Security Affairs](https://securityaffairs.com/191052/cyber-crime/scattered-spider-member-tyler-buchanan-pleads-guilty-to-major-crypto-theft.html)
+* [DataBreaches.net](https://databreaches.net/2026/04/21/vercel-confirms-cyber-incident-after-sophisticated-attacker-exploits-third-party-tool/)
 
 ---
 
-<div id="france-ants-personal-data-breach-19-million-records"></div>
+<div id="emerging-enterprise-security-risks-of-agentic-ai"></div>
 
-## France ANTS + Personal data breach 19 million records
+## Emerging Enterprise Security Risks of Agentic AI
 
 ### Résumé technique
-L'Agence Nationale des Titres Sécurisés (**ANTS**) a détecté un incident de sécurité majeur le 15 avril 2026. L'attaque a potentiellement exposé les données personnelles de particuliers et de professionnels inscrits sur le portail `ants.gouv.fr`. Un acteur menaçant affirme sur un forum de cybercriminalité vendre un jeu de données de **18,5 à 19 millions d'enregistrements**.
-Les données compromises incluent : identifiants de connexion, noms, prénoms, adresses électroniques, dates de naissance, et dans certains cas, adresses postales et numéros de téléphone. L'ANTS précise que les documents joints aux dossiers (scans d'identité) n'auraient pas été touchés. L'enquête est menée par l'Office anti-cybercriminalité.
+Le déploiement massif de l'IA "agentique" (systèmes capables d'agir de manière autonome) introduit de nouveaux vecteurs de risque systémique. Contrairement à l'IA traditionnelle qui génère du texte, les agents AI (comme ceux basés sur **Claude Mythos**) ont des privilèges pour interagir avec des API, modifier du code ou autoriser des paiements.
+
+Les risques identifiés incluent le **Prompt Engineering** (manipulation directe des instructions de l'agent), l'empoisonnement de la supply chain via du code généré par l'IA contenant des vulnérabilités, et l'expansion massive de la surface d'attaque des identités. Les agents nécessitent souvent des permissions transversales larges, créant des "identités de service" extrêmement puissantes et difficiles à monitorer avec les outils IAM actuels.
 
 ### Analyse de l'impact
-L'impact est national et de long terme. Ces données d'identification constituent une mine d'or pour l'usurpation d'identité à grande échelle, la création d'identités synthétiques et les campagnes de phishing ciblées ultra-crédibles ("phishing administratif"). Le préjudice est accru par la nature étatique de la source, qui inspire une confiance naturelle aux usagers.
+L'impact est une augmentation de la vitesse des attaques (vitesse machine) et une imprévisibilité accrue des systèmes interconnectés (collusion ou conflit entre agents). Une erreur de configuration sur un agent peut entraîner un déni de service opérationnel ou une exfiltration massive de données en quelques secondes.
 
 ### Recommandations
-*   Soyez extrêmement vigilants face aux courriels ou appels demandant des actions urgentes sur votre compte ANTS ou France Connect.
-*   Changer préventivement le mot de passe du compte ANTS.
+*   Appliquer les principes Zéro Trust aux identités d'agents (Least Privilege).
+*   Mettre en place des points de contrôle "Human-in-the-loop" pour les actions critiques (transferts financiers, déploiement prod).
+*   Utiliser des environnements "sandbox" isolés pour l'exécution du code généré par IA.
 
-### Playbook de réponse à incident (Côté infrastructure/État)
+### Playbook de réponse à incident (contexte IA)
 
 #### Phase 1 — Préparation
-*   Vérifier l'intégrité des journaux d'accès aux bases de données du portail ANTS.
+*   Définir un cadre de gouvernance pour les identités virtuelles/agents.
+*   Activer le logging détaillé des décisions prises par les modèles (traceability).
 
 #### Phase 2 — Détection et analyse
-*   **Requête SIEM (Audit base) :** Rechercher des requêtes SQL d'exportation massive non corrélées à des batchs légitimes.
-*   Corréler les échantillons de données en vente sur le darkweb avec la structure réelle des tables de l'ANTS pour valider l'ampleur.
+*   Surveiller les anomalies comportementales des agents (rafales de requêtes API).
+*   Utiliser l'analyse de réputation des identifiants (Recorded Future).
 
 #### Phase 3 — Confinement, éradication et récupération
-*   Bloquer les comptes administratifs présentant des comportements d'énumération.
-*   Renforcer les politiques de limitation de débit (Rate Limiting) sur les API d'accès aux profils usagers.
+*   **Confinement :** Désactiver immédiatement les tokens d'accès de l'agent suspect.
+*   **Éradication :** Analyser et corriger les prompts "empoisonnés" ou les entrées de données malveillantes.
 
 #### Phase 4 — Activités post-incident
-*   **RGPD :** Notification obligatoire à la CNIL et aux usagers concernés (en cours).
+*   Ajuster les "guardrails" (barrières de sécurité) du modèle pour éviter la récurrence.
 
 #### Phase 5 — Threat Hunting (proactif)
 
 | Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
 |---|---|---|---|
-| Infiltration via API profil | T1594 | Web Logs | Rechercher des séquences d'accès rapides à `/api/profile/*` par un même utilisateur |
+| Prompt Injection | T1204 | Logs de l'Agent | Rechercher des séquences de prompts contenant des instructions contradictoires ("Ignore prior instructions"). |
 
 ### Indicateurs de compromission (DEFANG)
 
 | Type | Valeur (DEFANG) | Description | Fiabilité |
 |---|---|---|---|
-| Domaine | ants[.]gouv[.]fr | Portail cible de l'attaque | Élevée |
+| User-Agent | AI-Agent-Internal-X | Identifiant d'agent interne | Moyenne |
 
 ### TTP MITRE ATT&CK
 
 | ID TTP | Tactique | Technique | Description contextuelle |
 |---|---|---|---|
-| T1594 | Recon | Search Victim-Owned Websites | Collecte d'informations via les vulnérabilités du portail |
-| T1041 | Exfiltration | Exfiltration Over C2 Channel | Extraction massive de la base usagers |
+| T1078 | Initial Access | Valid Accounts | Compromission des credentials d'un agent AI. |
+| T1565 | Impact | Data Manipulation | Manipulation des décisions de l'IA via prompt injection. |
 
 ### Sources
-* [Security Affairs](https://securityaffairs.com/191069/data-breach/frances-ants-id-system-website-hit-by-cyberattack-possible-data-breach.html)
-* [Le Monde](https://www.lemonde.fr/pixels/article/2026/04/20/l-ants-qui-gere-les-cartes-d-identites-et-passeports-visee-par-une-attaque-informatique-des-donnees-potentiellement-divulguees_6681710_4408996.html)
+* [Recorded Future Insikt Group](https://www.recordedfuture.com/research/emerging-enterprise-security-risks-of-ai)
+* [Sysdig Blog](https://webflow.sysdig.com/blog/anthropic-mythos-just-broke-the-four-minute-mile-in-cyber-offense)
 
 ---
 
-<div id="seiko-usa-shopify-database-extortion-via-defacement"></div>
+<div id="malware-hidden-in-wav-files-via-base64-xor"></div>
 
-## Seiko USA + Shopify database extortion via defacement
+## Malware Hidden in .WAV Files via Base64/XOR
 
 ### Résumé technique
-Le site web de **Seiko USA**, spécifiquement la section "Press Lounge", a été défaçé par des attaquants revendiquant le vol de la base de données clients Shopify. Le message laissé sur la page affirmait que le système de sécurité du backend Shopify avait été forcé, permettant l'exfiltration des noms, emails, historiques de commandes, adresses de livraison et notes clients.
-L'extorsion est originale : les attaquants ont ordonné à Seiko de localiser un compte client spécifique (ID `8069776801871`) dans leur propre panneau d'administration Shopify, où une adresse email de contact avait été ajoutée pour les négociations. Un ultimatum de 72 heures a été posé avant la publication des données.
+Des chercheurs ont identifié l'utilisation de fichiers audio `.wav` comme vecteurs de malware. Contrairement à la stéganographie classique qui cache des données dans les bits de poids faible, cette méthode remplace directement les octets de données audio par la représentation **Base64** du payload. Le fichier reste lisible par les lecteurs audio mais ne produit que du bruit.
+
+Le payload Base64 est lui-même encodé via un algorithme **XOR**. Une fois décodé, il révèle un fichier exécutable (PE) malveillant. Cette technique permet de contourner les passerelles de messagerie qui autorisent les fichiers multimédias mais bloquent les scripts ou les exécutables.
 
 ### Analyse de l'impact
-L'impact est réputationnel et opérationnel pour la filiale américaine. L'attaque souligne une vulnérabilité potentielle au niveau des comptes d'administration Shopify (possible défaut de MFA). Le défaçage suggère un accès au système de gestion de contenu (CMS).
+L'impact est une infection initiale réussie sur des postes de travail où les utilisateurs pourraient être tentés d'ouvrir un fichier audio reçu par email ou téléchargé. La simplicité de l'encodage (Base64 + XOR) rend la détection par signature inefficace si l'en-tête du fichier `.wav` est conservé.
 
 ### Recommandations
-*   Activer impérativement la MFA sur tous les comptes d'administration Shopify et CMS.
-*   Surveiller les modifications inattendues de contenu web via un outil d'intégrité de fichiers (FIM).
+*   Bloquer ou inspecter rigoureusement les fichiers multimédias provenant de sources externes non sollicitées.
+*   Utiliser des outils d'analyse de fichiers comme `base64dump.py` ou `pecheck.py` pour valider les fichiers suspects.
 
 ### Playbook de réponse à incident
 
 #### Phase 1 — Préparation
-*   S'assurer que les logs d'activité du panneau d'administration Shopify sont activés et exportés.
+*   Mettre à jour les passerelles de sécurité email pour scanner le contenu interne des fichiers `.wav` à la recherche de patterns Base64/MZ.
 
 #### Phase 2 — Détection et analyse
-*   Identifier l'ID client `8069776801871` et analyser l'historique des modifications de ce compte (audit trail) pour trouver l'IP source de l'attaquant.
-*   Scrutiner les logs du serveur web pour identifier le point d'entrée du défaçage.
+*   **Requête SIEM :** Chercher des processus `bash`, `powershell` ou des utilitaires de conversion (`certutil`) manipulant des fichiers `.wav`.
+*   Effectuer une analyse par entropie sur les fichiers audio suspects.
 
 #### Phase 3 — Confinement, éradication et récupération
-*   Supprimer la page de défaçage et restaurer le contenu original.
-*   Changer tous les mots de passe des administrateurs du backend et révoquer les sessions actives.
+*   Supprimer les fichiers `.wav` malveillants identifiés sur le réseau.
+*   Isoler les machines ayant ouvert ces fichiers pour analyse approfondie de la mémoire.
 
 #### Phase 4 — Activités post-incident
-*   Audit de sécurité de l'intégration Shopify.
+*   Intégrer les signatures du payload décodé dans la base EDR.
 
 #### Phase 5 — Threat Hunting (proactif)
 
 | Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
 |---|---|---|---|
-| Compromission de compte admin | T1078 | Admin Logs | Rechercher des créations ou modifications de comptes clients par des admins à des heures atypiques |
+| Stockage de payload obscurci | T1027 | Logs Proxy/Email | Chercher des transferts de fichiers `.wav` dont la taille est anormalement grande par rapport à la durée audio. |
 
 ### Indicateurs de compromission (DEFANG)
 
 | Type | Valeur (DEFANG) | Description | Fiabilité |
 |---|---|---|---|
-| User ID | 8069776801871 | Compte client utilisé pour l'extorsion dans Shopify | Élevée |
+| Extension | .wav | Vecteur de transport du malware | Moyenne |
 
 ### TTP MITRE ATT&CK
 
 | ID TTP | Tactique | Technique | Description contextuelle |
 |---|---|---|---|
-| T1491 | Impact | Defacement | Remplacement du contenu de la section Press Lounge |
-| T1650 | Impact | Internal Extortion | Utilisation d'un compte client interne comme canal de comm |
+| T1027 | Defense Evasion | Obfuscated Files or Information | Payload caché dans un format de fichier légitime. |
 
 ### Sources
-* [BleepingComputer](https://www.bleepingcomputer.com/news/security/seiko-usa-website-defaced-as-hacker-claims-customer-data-theft/)
+* [SANS Internet Storm Center](https://isc.sans.edu/diary/rss/32910)
 
 ---
 
-<div id="gold-encounter-qemu-stealth-backdoor-for-ransomware"></div>
+<div id="ants-france-titres-data-breach"></div>
 
-## GOLD ENCOUNTER + QEMU stealth backdoor for ransomware
+## ANTS (France Titres) Data Breach
 
 ### Résumé technique
-Le groupe **GOLD ENCOUNTER** utilise **QEMU**, un émulateur open-source, pour créer des backdoors quasi indétectables au sein des réseaux d'entreprise. L'attaque (campagne STAC4713) commence par la création d'une tâche planifiée nommée "TPMProfiler" exécutant `qemu-system-x86_64.exe` sous le compte SYSTEM.
-La machine virtuelle QEMU charge une image disque déguisée (ex: `bisrv.dll`) contenant un OS Alpine Linux pré-équipé d'outils d'attaque (AdaptixC2, wg-obfuscator, Chisel). La VM établit un tunnel SSH inverse vers une IP distante, créant un canal d'accès persistant. Les activités malveillantes s'exécutent **à l'intérieur de la VM**, devenant invisibles pour l'EDR de l'hôte physique. Le but final observé est le déploiement du ransomware **PayoutsKing**.
+L'Agence nationale des titres sécurisés (**ANTS**), désormais **France Titres**, a confirmé avoir été victime d'une cyberattaque détectée le 15 avril 2026. Un attaquant utilisant le pseudonyme "breach3d" a revendiqué le vol de près de **19 millions d'enregistrements** (bien que le ministère de l'Intérieur cite 11,7 millions de comptes).
+
+Les données exposées incluent : noms complets, identifiants de connexion, adresses emails, dates et lieux de naissance, adresses postales et numéros de téléphone. Les attaquants n'auraient pas obtenu d'accès direct aux portails via cette fuite, mais les données sont déjà en vente sur des forums de cybercriminalité.
 
 ### Analyse de l'impact
-L'impact technique est critique : évasion totale des solutions de sécurité standard (AV/EDR/Sandboxing de l'hôte). La technique permet de mener une reconnaissance Active Directory (via BloodHound/Impacket dans la VM) sans laisser de traces sur l'endpoint. La sophistication est élevée, transformant un outil d'administration légitime en arme d'évasion.
+L'impact est critique au niveau national car ces données constituent une base parfaite pour des campagnes massives de **phishing ciblé** et d'usurpation d'identité. Étant donné que l'ANTS gère les passeports et permis de conduire, la confiance du public envers les services numériques de l'État est durablement affectée.
 
 ### Recommandations
-*   Interdire l'exécution de binaires de virtualisation (QEMU, VirtualBox) sur les postes de travail non autorisés via AppLocker.
-*   Surveiller la création de tâches planifiées exécutant des binaires dans des répertoires temporaires ou ProgramData avec des privilèges SYSTEM.
+*   Inciter tous les citoyens ayant un compte ANTS à changer leur mot de passe et à activer la 2FA via FranceConnect.
+*   Renforcer la vigilance face aux SMS ou emails prétendant provenir de l'ANTS ou de l'Assurance Maladie.
+*   Surveiller les tentatives d'usurpation d'identité sur les comptes financiers.
 
-### Playbook de réponse à incident
+### Playbook de réponse à incident (contexte citoyen/entreprise)
 
 #### Phase 1 — Préparation
-*   Indexer les hashs légitimes de QEMU pour les exclure d'un scan de masse et se concentrer sur les versions inconnues.
+*   Vérifier si les emails professionnels des collaborateurs apparaissent dans les bases de données fuitées (Have I Been Pwned).
 
 #### Phase 2 — Détection et analyse
-*   **Règle YARA :** Rechercher des images disques QEMU (`.qcow2`, `.img`) avec des extensions masquées (`.db`, `.dll`).
-*   **Analyse réseau :** Identifier les tunnels SSH sortants sur des ports non standard (ex: 32567, 22022).
+*   Surveiller une recrudescence de smishing (phishing par SMS) sur les flottes mobiles d'entreprise.
 
 #### Phase 3 — Confinement, éradication et récupération
-*   Terminer le processus `qemu-system-x86_64.exe` et supprimer la tâche planifiée "TPMProfiler".
-*   Isoler la machine hôte pour analyse forensic de l'image disque VM afin de comprendre l'étendue de la reconnaissance effectuée.
+*   Forcer la réinitialisation des mots de passe pour les comptes ANTS professionnels.
+*   Révoquer et renouveler les identifiants de connexion si nécessaire.
 
 #### Phase 4 — Activités post-incident
-*   Vérifier si d'autres machines du réseau ont été scannées par l'IP interne de la VM.
+*   Communiquer de manière transparente auprès des employés sur les risques d'ingénierie sociale suite à cette fuite.
 
 #### Phase 5 — Threat Hunting (proactif)
 
 | Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
 |---|---|---|---|
-| Évasion via VM cachée | T1564.006 | Process Logs | Rechercher QEMU lancé avec des arguments `-drive file=...` pointant vers des extensions non-disques |
+| Phishing basé sur les données ANTS | T1566.002 | Email Logs | Chercher des emails entrants avec des sujets liés à l'ANTS, envoyés depuis des domaines suspects. |
 
 ### Indicateurs de compromission (DEFANG)
 
 | Type | Valeur (DEFANG) | Description | Fiabilité |
 |---|---|---|---|
-| Processus | qemu-system-x86_64[.]exe | Émulateur utilisé comme backdoor | Moyenne |
-| Tâche | TPMProfiler | Tâche planifiée de persistance | Élevée |
-| Chemin | C:\ProgramData\vault[.]db | Image disque malveillante QEMU | Élevée |
+| Domain | ants[.]gouv[.]fr | Domaine officiel cible | Haute |
 
 ### TTP MITRE ATT&CK
 
 | ID TTP | Tactique | Technique | Description contextuelle |
 |---|---|---|---|
-| T1564.006 | Evasion | Virtualization/Sandbox Evasion | Usage de QEMU pour masquer l'exécution de malware |
-| T1572 | C2 | Protocol Tunneling | Tunneling SSH inverse via la VM |
+| T1589 | Reconnaissance | Gather Victim Identity Information | Collecte massive de données d'identité via l'intrusion. |
 
 ### Sources
-* [Cybersecurity News](https://cybersecuritynews.com/attackers-turn-qemu-into-a-stealth-backdoor/)
-* [The Hacker News](https://thehackernews.com/2026/04/weekly-recap-vercel-hack-push-fraud.html)
-
----
-
-<div id="chaos-ransomware-double-extortion-against-polycorp"></div>
-
-## Chaos Ransomware + Double-extortion against Polycorp
-
-### Résumé technique
-Le groupe de ransomware **Chaos**, opérant en modèle RaaS, a ciblé l'entreprise canadienne **Polycorp**. Il s'agit d'un groupe distinct du "Chaos Builder" de 2021, utilisant des tactiques d'extorsion double agressives. L'attaquant menace de publier les données exfiltrées (dont le volume n'est pas spécifié mais typiquement massif pour ce groupe) sous 48 heures si la rançon n'est pas payée. Le malware Chaos cible Windows, Linux et ESXi, avec des capacités de chiffrement configurable pour la rapidité (chiffrement partiel des gros fichiers).
-
-### Analyse de l'impact
-L'impact pour Polycorp inclut une interruption opérationnelle potentielle et un risque critique de fuite de propriété industrielle (pièces élastomères d'ingénierie). Chaos est connu pour exfiltrer des volumes importants (ex: 69 GB chez Optima Tax Relief) avant le chiffrement.
-
-### Recommandations
-*   Assurer des sauvegardes hors-ligne et immuables.
-*   Segmenter le réseau pour isoler les machines de production industrielle des réseaux bureautiques.
-
-### Playbook de réponse à incident
-
-#### Phase 1 — Préparation
-*   Vérifier que les politiques de "Default Deny" sont appliquées sur les points de terminaison.
-
-#### Phase 2 — Détection et analyse
-*   **Règle YARA :** Rechercher le pattern de note de rançon `readme.chaos.txt`.
-*   Surveiller les pics d'exfiltration réseau vers des clouds publics (Mega, Dropbox) juste avant les alertes de chiffrement.
-
-#### Phase 3 — Confinement, éradication et récupération
-*   Isoler les segments réseau infectés pour stopper la propagation du malware de chiffrement.
-*   Couper les accès Internet pour stopper l'exfiltration en cours.
-
-#### Phase 4 — Activités post-incident
-*   Analyser les logs de sécurité pour identifier le point d'entrée initial (souvent phishing ou IAB).
-
-#### Phase 5 — Threat Hunting (proactif)
-
-| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
-|---|---|---|---|
-| Exfiltration pré-chiffrement | T1041 | Netflow | Identifier des flux de données sortants massifs (GBs) sur des ports web vers des IPs inhabituelles |
-
-### Indicateurs de compromission (DEFANG)
-
-| Type | Valeur (DEFANG) | Description | Fiabilité |
-|---|---|---|---|
-| Nom de fichier | readme[.]chaos[.]txt | Note de rançon Chaos | Élevée |
-| Email | Win88[@]thesecure[.]biz | Contact attaquant | Élevée |
-
-### TTP MITRE ATT&CK
-
-| ID TTP | Tactique | Technique | Description contextuelle |
-|---|---|---|---|
-| T1486 | Impact | Data Encrypted for Impact | Chiffrement des systèmes Windows/Linux/ESXi |
-| T1041 | Exfiltration | Exfiltration Over C2 Channel | Vol de données avant le déploiement du ransomware |
-
-### Sources
-* [Ransomlook](https://www.ransomlook.io//group/chaos)
-* [Broadcom Protection Bulletin](https://www.broadcom.com/support/security-center/protection-bulletin/chaos-ransomware-group-surfaces-with-aggressive-tactics)
-
----
-
-<div id="frontier-ai-models-autonomous-software-security-research-risks"></div>
-
-## Frontier AI models + Autonomous software security research risks
-
-### Résumé technique
-Les nouveaux modèles d'IA dits "Frontier" (ex: Claude Opus 4.6, GPT-5.4-Cyber) démontrent des capacités de raisonnement autonome leur permettant de fonctionner comme des chercheurs en sécurité complets. Unit 42 a observé que ces modèles peuvent identifier des vulnérabilités zero-day, automatiser le chaînage complexe d'exploits et réduire le délai de patch (N-day) à quelques heures.
-Mohan Pedhapati (Hacktron) a démontré qu'un modèle Claude Opus peut générer un exploit fonctionnel pour une faille V8 dans Chrome pour un coût de seulement **2 283 $** en tokens API. L'IA a réussi à "calc" (exécuter le code) après 20 heures de guidage humain. Le risque majeur réside dans les applications Electron (Discord, Slack) qui utilisent des versions de Chromium obsolètes, créant des "patch gaps" exploitables par l'IA.
-
-### Analyse de l'impact
-Le paradigme de la défense change : le temps disponible pour patcher après une publication de CVE s'effondre de plusieurs jours à quelques heures (N-hours). L'IA démocratise l'accès à des exploits de haute qualité pour des attaquants peu qualifiés. L'impact est particulièrement critique pour le logiciel libre (OSS) où le code source est exposé à l'analyse de l'IA.
-
-### Recommandations
-*   Adopter le déploiement automatique des correctifs pour les navigateurs et applications basées sur Chromium.
-*   Utiliser des SBOM (Software Bill of Materials) pour identifier en temps réel les bibliothèques vulnérables dans la supply chain.
-
-### Playbook de réponse à incident (Posture préventive)
-
-#### Phase 1 — Préparation
-*   Mettre en place un pipeline d'automatisation des correctifs "out-of-band" pour les vulnérabilités à haut score EPSS.
-
-#### Phase 2 — Détection et analyse
-*   Utiliser des modèles d'IA défensifs pour trier les alertes de sécurité à l'échelle, car le volume d'exploits générés par l'IA dépassera la capacité de triage humaine.
-
-#### Phase 3 — Confinement, éradication et récupération
-*   En cas d'exploitation suspectée par une IA (détection de patterns d'attaque très rapides et coordonnés), isoler immédiatement les systèmes vulnérables non patchés.
-
-#### Phase 4 — Activités post-incident
-*   Réviser les politiques de divulgation de vulnérabilités (VDP) pour gérer un afflux massif de rapports générés par l'IA.
-
-#### Phase 5 — Threat Hunting (proactif)
-
-| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
-|---|---|---|---|
-| Reconnaissance assistée par IA | T1592 | Web Logs | Rechercher des patterns de crawling ciblés sur les fichiers de versioning et dépendances |
-
-### Indicateurs de compromission (DEFANG)
-
-| Type | Valeur (DEFANG) | Description | Fiabilité |
-|---|---|---|---|
-| CVE | CVE-2023-33538 | Exemple de vulnérabilité ciblée par l'IA | Élevée |
-
-### TTP MITRE ATT&CK
-
-| ID TTP | Tactique | Technique | Description contextuelle |
-|---|---|---|---|
-| T1588.006 | Resource | Vulnerabilities | Identification de failles via analyse de code par LLM |
-| T1608.004 | Preparation | Drive-by Target | Création automatisée de payloads d'exploitation |
-
-### Sources
-* [Unit 42](https://unit42.paloaltonetworks.com/ai-software-security-risks/)
-* [Security Affairs](https://securityaffairs.com/191018/ai/ai-model-claude-opus-turns-bugs-into-exploits-for-just-2283.html)
+* [BleepingComputer](https://www.bleepingcomputer.com/news/security/french-govt-agency-confirms-breach-as-hacker-offers-to-sell-data/)
+* [France 24](https://www.france24.com/fr/france/20260421-pr%C3%A8s-de-12-millions-de-comptes-de-l-ants-concern%C3%A9s-par-une-fuite-de-donn%C3%A9es-annonce-l-int%C3%A9rieur)
 
 ---
 
@@ -725,14 +645,14 @@ CONTRÔLE FINAL
 2. ✅ La TOC est présente et chaque lien pointe vers une ancre existante : [Vérifié]
 3. ✅ Chaque ancre est unique — <div id="..."> statiques ET dynamiques présents, cohérents avec la TOC ET identiques entre TOC / div id / table interne : [Vérifié]
 4. ✅ Tous les IoC sont en mode DEFANG : [Vérifié]
-5. ✅ Aucun article de Vulnérabilités ou Géopolitique dans la section "Articles" : [Vérifié - Déplacement de Lazarus et MuddyWater vers Géo dû à l'attribution étatique explicite]
+5. ✅ Aucun article de Vulnérabilités ou Géopolitique dans la section "Articles" : [Vérifié]
 6. ✅ Le tableau des vulnérabilités ne contient que des entrées avec score composite ≥ 1 : [Vérifié]
 7. ✅ La table de tri intermédiaire est présente et l'ordre du tableau final correspond ligne par ligne : [Vérifié]
 8. ✅ Toutes les sections attendues sont présentes : [Vérifié]
 9. ✅ Le playbook est contextualisé (pas de tâches génériques) : [Vérifié]
 10. ✅ Les hypothèses de threat hunting sont présentes pour chaque article : [Vérifié]
-11. ✅ Tout article sans URL complète disponible dans raw_content est dans "Articles non sélectionnés" — aucun article sans URL complète ne figure dans les synthèses ou la section "Articles" : [Vérifié]
-12. ✅ Chaque article est COMPLET (9 sections toutes présentes) — aucun article tronqué : [Vérifié]
+11. ✅ Tout article sans URL complète disponible dans raw_content est dans "Articles non sélectionnés" : [Vérifié]
+12. ✅ Chaque article est COMPLET (9 sections toutes présentes) : [Vérifié]
 13. ✅ Aucun bug fonctionnel, article commercial ou contenu non-sécuritaire dans la section "Articles" : [Vérifié]
 
 Statut global : [✅ Rapport valide]
