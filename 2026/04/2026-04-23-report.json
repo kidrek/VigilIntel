@@ -1,13 +1,593 @@
 {
   "strategic_analysis": {
     "analyse": {
-      "en": "unknown",
-      "fr": "unknown"
+      "en": "The threat landscape is characterized by an unprecedented industrialization of attack vectors, driven by the massive integration of AI and structured service models. Platforms like Bissa Scanner, using Claude Code for automated mass exploitation, signal a force-multiplier shift. Critical infrastructure faces targeted assaults (Lotus Wiper, D-Link EoL exploits), while software supply chains remain vulnerable to autonomous worms (npm). Rapid exploitation cycles (under 12 hours) necessitate reduced MTTR for organizations.",
+      "fr": "Le paysage des menaces est marqué par une industrialisation sans précédent des vecteurs d'attaque, portée par l'intégration massive de l'IA et de modèles de services structurés. Des plateformes comme Bissa Scanner, utilisant Claude Code pour l'exploitation de masse automatisée, signalent un changement opérationnel majeur. Les infrastructures critiques subissent des assauts ciblés (Lotus Wiper, exploits D-Link EoL), tandis que la supply chain logicielle reste vulnérable à des vers autonomes (npm). Les cycles d'exploitation rapides (moins de 12 heures) imposent aux organisations une réduction drastique du MTTR."
     },
-    "date": "2024-05-22"
+    "date": "2026-04-22"
   },
-  "geopolitical_analyse": [],
-  "breach_analyse": [],
-  "vulnerabilities_analyse": [],
-  "threats_analyse": []
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": [
+          "Critical_Infrastructure"
+        ],
+        "fr": [
+          "Infrastructure_Critique"
+        ]
+      },
+      "theme": {
+        "en": "Middle East Conflict and Maritime Security",
+        "fr": "Conflit au Moyen-Orient et sécurité maritime"
+      },
+      "description": {
+        "en": "Hybrid conflict involving Iran, Israel, and the USA, manifested through ship seizures (MSC Francesca) and coordinated cyber-maritime operations.",
+        "fr": "Conflit hybride impliquant l'Iran, Israël et les États-Unis, se manifestant par des saisies de navires (MSC Francesca) et des opérations cyber-maritimes coordonnées."
+      },
+      "recommandations": [
+        {
+          "en": "Enhance monitoring of maritime OT systems and implement strict access controls for shipping communication networks.",
+          "fr": "Renforcer la surveillance des systèmes OT maritimes et mettre en œuvre des contrôles d'accès stricts pour les réseaux de communication de transport."
+        }
+      ],
+      "tags": [
+        "Iran",
+        "Israel",
+        "Maritime",
+        "Geopolitics"
+      ],
+      "sources": [
+        "https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict"
+      ],
+      "date": "2026-04-22"
+    },
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement_et_Défense"
+        ]
+      },
+      "theme": {
+        "en": "European Sovereignty and Defense Collaboration",
+        "fr": "Souveraineté européenne et collaboration en matière de défense"
+      },
+      "description": {
+        "en": "Structural deadlock in the FCAS (SCAF) project between France, Germany, and Spain due to strategic divergences and industrial leadership disputes.",
+        "fr": "Impasse structurelle du projet SCAF entre la France, l'Allemagne et l'Espagne en raison de divergences stratégiques et de conflits sur le leadership industriel."
+      },
+      "recommandations": [
+        {
+          "en": "Diversify defense partnerships and secure sensitive technological IP within multi-national projects.",
+          "fr": "Diversifier les partenariats de défense et sécuriser la propriété intellectuelle technologique sensible au sein des projets multinationaux."
+        }
+      ],
+      "tags": [
+        "SCAF",
+        "EU",
+        "Defense",
+        "Sovereignty"
+      ],
+      "sources": [
+        "https://www.portail-ie.fr/univers/defense-industrie-de-larmement-et-renseignement/2026/scaf-impasse-structurelle-projet-defense-europeen-2/"
+      ],
+      "date": "2026-04-22"
+    },
+    {
+      "sector": {
+        "en": [
+          "Healthcare_and_Life_Sciences"
+        ],
+        "fr": [
+          "Santé_et_sciences_de_la_vie"
+        ]
+      },
+      "theme": {
+        "en": "Regulatory Compliance for Wellness Products",
+        "fr": "Conformité réglementaire pour les produits de bien-être"
+      },
+      "description": {
+        "en": "FDA guidance clarifies that while some wellness products escape strict FDA medical device regulation, they remain subject to HIPAA/FTC cybersecurity and data privacy standards.",
+        "fr": "Les orientations de la FDA précisent que si certains produits de bien-être échappent à la réglementation stricte des dispositifs médicaux, ils restent soumis aux normes de cybersécurité et de confidentialité des données de la HIPAA/FTC."
+      },
+      "recommandations": [
+        {
+          "en": "Audit data handling practices for IoT wellness devices to ensure HIPAA compliance regardless of FDA classification.",
+          "fr": "Auditer les pratiques de gestion des données pour les appareils de bien-être IoT afin de garantir la conformité HIPAA, quelle que soit la classification de la FDA."
+        }
+      ],
+      "tags": [
+        "FDA",
+        "Regulation",
+        "Wellness",
+        "IoT"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/04/22/outside-fda-inside-the-crosshairs-cybersecurity-risks-for-general-wellness-and-fitness-products/"
+      ],
+      "date": "2026-04-22"
+    },
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement_et_Défense"
+        ]
+      },
+      "theme": {
+        "en": "Digital Identity Risks in EU",
+        "fr": "Risques liés à l'identité numérique dans l'UE"
+      },
+      "description": {
+        "en": "The implementation of the EUDI (European Digital Identity Wallet) introduces new risks of identity fraud and exploitation of centralized digital identity frameworks.",
+        "fr": "La mise en œuvre du portefeuille européen d'identité numérique (EUDI) introduit de nouveaux risques de fraude à l'identité et d'exploitation des cadres d'identité numérique centralisés."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor for shadow marketplaces trading EUDI credentials and implement robust verification for wallet provisioning.",
+          "fr": "Surveiller les places de marché parallèles échangeant des identifiants EUDI et mettre en œuvre une vérification robuste pour l'approvisionnement des portefeuilles."
+        }
+      ],
+      "tags": [
+        "EUDI",
+        "eIDAS",
+        "Identity_Theft",
+        "EU"
+      ],
+      "sources": [
+        "https://flare.io/learn/resources/blog/phantom-carbon-credits-identity-wallet-exploitation"
+      ],
+      "date": "2026-04-22"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "ANTS (France Titres)",
+      "threat_actor": "HexDex",
+      "threat_actor_origin": "France",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [
+        "unknown"
+      ],
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement_et_Défense"
+        ]
+      },
+      "description": {
+        "en": "Data breach affecting 11.7 million accounts at the National Agency for Secured Titles (ANTS), involving identity info, emails, and birth dates. The hacker 'HexDex' was arrested in Vendée.",
+        "fr": "Violation de données touchant 11,7 millions de comptes à l'Agence Nationale des Titres Sécurisés (ANTS), impliquant des informations d'identité, des courriels et des dates de naissance. Le pirate 'HexDex' a été arrêté en Vendée."
+      },
+      "mitre_ttps": [
+        "T1190",
+        "T1213",
+        "T1560"
+      ],
+      "recommandations": [
+        {
+          "en": "Preparation: Establish incident response procedures for public-facing database compromise. Detection: Monitor for abnormal API queries on identity portals. Containment: Isolate affected database segments and reset administrative tokens. Post-Incident: Conduct a full forensic audit of State-operated IT services.",
+          "fr": "Préparation : Établir des procédures de réponse aux incidents pour la compromission de bases de données publiques. Détection : Surveiller les requêtes API anormales sur les portails d'identité. Confinement : Isoler les segments de base de données affectés et réinitialiser les jetons administratifs. Post-incident : Mener un audit forensique complet des services informatiques de l'État."
+        }
+      ],
+      "tags": [
+        "ANTS",
+        "France",
+        "Data_Leak",
+        "Arrest"
+      ],
+      "sources": [
+        "https://www.lemonde.fr/societe/article/2026/04/22/la-fuite-de-donnees-a-l-agence-nationale-des-titres-securises-nouvelle-illustration-des-failles-de-securite-des-services-informatiques-de-l-etat_6682449_3224.html",
+        "https://www.lemonde.fr/societe/article/2026/04/22/un-hacker-interpelle-en-vendee-apres-plusieurs-cyberattaques-visant-notamment-des-federations-sportives_6682379_3224.html"
+      ],
+      "date": "2026-04-22"
+    },
+    {
+      "victim": "P3 Global Intel (Navigate360)",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Education_and_Research",
+          "Security"
+        ],
+        "fr": [
+          "Éducation_et_recherche",
+          "Sécurité"
+        ]
+      },
+      "description": {
+        "en": "Breach involving 8.3 million anonymous tips across 7,300 schools, exposing sensitive data regarding drug use, suicidal ideation, and suspect identities.",
+        "fr": "Violation impliquant 8,3 millions de signalements anonymes dans 7 300 écoles, exposant des données sensibles concernant l'usage de drogues, les pensées suicidaires et l'identité des suspects."
+      },
+      "mitre_ttps": [
+        "T1530"
+      ],
+      "recommandations": [
+        {
+          "en": "Ensure tip reporting databases are encrypted at rest and access logs are strictly audited.",
+          "fr": "S'assurer que les bases de données de signalement sont chiffrées au repos et que les journaux d'accès sont strictement audités."
+        }
+      ],
+      "tags": [
+        "Education",
+        "Privacy",
+        "Data_Breach"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/04/22/blueleaks-2-0-7300-schools-referral-systems-reported-and-a-breach-navigate360-still-hasnt-publicly-confirmed/"
+      ],
+      "date": "2026-04-22"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2025-29635",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:h:dlink:dir-823x:*:*:*:*:*:*:*:*",
+      "product": "DIR-823X Routers",
+      "vendor": "D-Link",
+      "description": {
+        "en": "Command Injection vulnerability in End-of-Life D-Link routers being exploited by Mirai botnet.",
+        "fr": "Vulnérabilité d'injection de commande dans les routeurs D-Link en fin de vie, exploitée par le botnet Mirai."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Replace End-of-Life equipment immediately; no patches available.",
+          "fr": "Remplacer immédiatement les équipements en fin de vie ; aucun correctif disponible."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "EoL",
+        "D-Link",
+        "Mirai"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/new-mirai-campaign-exploits-rce-flaw-in-eol-d-link-routers/"
+      ],
+      "date": "2026-04-22"
+    },
+    {
+      "cve_id": "CVE-2026-33626",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:open-mmlab:lmdeploy:*:*:*:*:*:*:*:*",
+      "product": "LMDeploy",
+      "vendor": "OpenMMLab",
+      "description": {
+        "en": "SSRF vulnerability in LMDeploy AI inference engine allowing cloud metadata access, exploited within 12 hours of discovery.",
+        "fr": "Vulnérabilité SSRF dans le moteur d'inférence d'IA LMDeploy permettant l'accès aux métadonnées cloud, exploitée dans les 12 heures suivant sa découverte."
+      },
+      "mitre_ttps": [
+        "T1566",
+        "T1087"
+      ],
+      "recommandations": [
+        {
+          "en": "Disable public image loader functionality and restrict IMDS access.",
+          "fr": "Désactiver la fonctionnalité de chargement d'images public et restreindre l'accès à l'IMDS."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "AI",
+        "SSRF",
+        "Cloud"
+      ],
+      "sources": [
+        "https://webflow.sysdig.com/blog/cve-2026-33626-how-attackers-exploited-lmdeploy-llm-inference-engines-in-12-hours"
+      ],
+      "date": "2026-04-22"
+    },
+    {
+      "cve_id": "CVE-2026-40372",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "9.1",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:microsoft:asp.net_core:*:*:*:*:*:*:*:*",
+      "product": "ASP.NET Core",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "Cryptographic bug in ASP.NET Core allowing Remote Code Execution or Privilege Escalation.",
+        "fr": "Bogue cryptographique dans ASP.NET Core permettant l'exécution de code à distance ou l'élévation de privilèges."
+      },
+      "mitre_ttps": [
+        "T1211"
+      ],
+      "recommandations": [
+        {
+          "en": "Update to version 10.0.7 and rotate the key ring.",
+          "fr": "Mettre à jour vers la version 10.0.7 et effectuer une rotation du trousseau de clés."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "Microsoft",
+        "RCE"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191130/security/microsoft-out-of-band-updates-fixed-critical-asp-net-core-privilege-escalation-flaw.html"
+      ],
+      "date": "2026-04-22"
+    },
+    {
+      "cve_id": "CVE-2025-55182",
+      "euvd_id": "unknown",
+      "cisa_kev": "TRUE",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:zeit:next.js:*:*:*:*:*:*:*:*",
+      "product": "React / Next.js Frameworks",
+      "vendor": "Multiple",
+      "description": {
+        "en": "React2Shell vulnerability exploited by Bissa Scanner for mass exfiltration.",
+        "fr": "Vulnérabilité React2Shell exploitée par Bissa Scanner pour l'exfiltration massive."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply security patches for React/Next.js and migrate .env secrets to Vaults.",
+          "fr": "Appliquer les correctifs de sécurité pour React/Next.js et migrer les secrets .env vers des Vaults."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "React",
+        "Bissa"
+      ],
+      "sources": [
+        "https://thedfirreport.com/2026/04/22/bissa-scanner-exposed-ai-assisted-mass-exploitation-and-credential-harvesting/"
+      ],
+      "date": "2026-04-22"
+    },
+    {
+      "cve_id": "CVE-2026-21571",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "9.4",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:atlassian:bamboo:*:*:*:*:*:*:*:*",
+      "product": "Bamboo Data Center",
+      "vendor": "Atlassian",
+      "description": {
+        "en": "OS Command Injection vulnerability in Atlassian Bamboo Server and Data Center.",
+        "fr": "Vulnérabilité d'injection de commande OS dans Atlassian Bamboo Server et Data Center."
+      },
+      "mitre_ttps": [
+        "T1059"
+      ],
+      "recommandations": [
+        {
+          "en": "Update to version 12.1.6 or higher.",
+          "fr": "Mettre à jour vers la version 12.1.6 ou supérieure."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "Atlassian",
+        "RCE"
+      ],
+      "sources": [
+        "https://cybersecuritynews.com/bamboo-data-center-and-server-vulnerability-2/"
+      ],
+      "date": "2026-04-22"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "Bissa Scanner: AI-Assisted Mass Exploitation",
+        "fr": "Bissa Scanner : exploitation de masse assistée par IA"
+      },
+      "description": {
+        "en": "The Bissa Scanner uses AI models like Claude Code to automate scanning and exploitation of React2Shell vulnerabilities, exfiltrating credentials to S3 Filebase buckets.",
+        "fr": "Le Bissa Scanner utilise des modèles d'IA tels que Claude Code pour automatiser l'analyse et l'exploitation des vulnérabilités React2Shell, exfiltrant les identifiants vers des buckets S3 Filebase."
+      },
+      "threat_actor": "Bissa Operator",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [
+        "Dr. Tube",
+        "@BonJoviGoesHard"
+      ],
+      "sector": {
+        "en": [
+          "Finance",
+          "Retail_and_Consumer",
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Finance",
+          "Commerce_et_consommation",
+          "Technologie_et_télécoms"
+        ]
+      },
+      "indicators": {
+        "URL": [
+          "hxxps[://]s3[.]filebase[.]com/bissapromax"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "denemekulubum[.]com[.]tr"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Claude Code",
+          "OpenClaw",
+          "@bissapwned_bot"
+        ]
+      },
+      "mitre_ttps": [
+        "T1190",
+        "T1059",
+        "T1048"
+      ],
+      "analyse": {
+        "en": "AI-orchestrated pipeline significantly reduces time to value for attackers by automating secret triage.",
+        "fr": "Le pipeline orchestré par l'IA réduit considérablement le temps de valorisation pour les attaquants en automatisant le tri des secrets."
+      },
+      "recommandations": [
+        {
+          "en": "Preparation: Inventory all .env files on production servers. Detection: Monitor for POST requests to /goform/ endpoints. Containment: Rotate all leaked API keys from exfiltrated .env files. Post-Incident: Audit third-party API access for lateral SaaS movement.",
+          "fr": "Préparation : Inventorier tous les fichiers .env sur les serveurs de production. Détection : Surveiller les requêtes POST vers les points de terminaison /goform/. Confinement : Faire pivoter toutes les clés API divulguées à partir des fichiers .env exfiltrés. Post-incident : Auditer les accès API tiers pour détecter les mouvements SaaS latéraux."
+        }
+      ],
+      "tags": [
+        "AI",
+        "Automation",
+        "Scanner"
+      ],
+      "sources": [
+        "https://thedfirreport.com/2026/04/22/bissa-scanner-exposed-ai-assisted-mass-exploitation-and-credential-harvesting/"
+      ],
+      "date": "2026-04-22"
+    },
+    {
+      "title": {
+        "en": "npm Supply Chain Worm",
+        "fr": "Ver npm dans la supply chain"
+      },
+      "description": {
+        "en": "A malicious npm worm spreads by compromising developer tokens and republishing infected packages, stealing SSH/API keys.",
+        "fr": "Un ver npm malveillant se propage en compromettant les jetons des développeurs et en republiant des paquets infectés, volant des clés SSH/API."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie_et_télécoms"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "@automagik/genie",
+          "pgserve"
+        ]
+      },
+      "mitre_ttps": [
+        "T1195.002",
+        "T1539",
+        "T1555"
+      ],
+      "analyse": {
+        "en": "High propagation risk for CI/CD environments through developer account takeovers.",
+        "fr": "Risque de propagation élevé pour les environnements CI/CD via la prise de contrôle de comptes de développeurs."
+      },
+      "recommandations": [
+        {
+          "en": "Enforce 2FA for npm publishing and use SCA tools to monitor for version jumps.",
+          "fr": "Imposer le 2FA pour la publication npm et utiliser des outils SCA pour surveiller les changements de version."
+        }
+      ],
+      "tags": [
+        "npm",
+        "Supply_Chain",
+        "Worm"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/new-npm-supply-chain-attack-self-spreads-to-steal-auth-tokens/"
+      ],
+      "date": "2026-04-22"
+    },
+    {
+      "title": {
+        "en": "Kyber Ransomware: Post-Quantum Strategy",
+        "fr": "Ransomware Kyber : stratégie post-quantique"
+      },
+      "description": {
+        "en": "A Rust-based ransomware using Kyber1024 encryption targeting Windows and ESXi environments.",
+        "fr": "Un ransomware basé sur Rust utilisant le chiffrement Kyber1024 ciblant les environnements Windows et ESXi."
+      },
+      "threat_actor": "Kyber Gang",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Government_and_Defense",
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Gouvernement_et_Défense",
+          "Technologie_et_télécoms"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Kyber1024",
+          "AES-CTR"
+        ]
+      },
+      "mitre_ttps": [
+        "T1486",
+        "T1489",
+        "T1070.004"
+      ],
+      "analyse": {
+        "en": "The use of PQC (Post-Quantum Cryptography) indicates a trend towards advanced encryption future-proofing.",
+        "fr": "L'utilisation de la PQC (cryptographie post-quantique) indique une tendance vers une sophistication du chiffrement pour l'avenir."
+      },
+      "recommandations": [
+        {
+          "en": "Implement Air-Gapped backups and harden ESXi SSH access.",
+          "fr": "Mettre en œuvre des sauvegardes déconnectées (Air-Gapped) et durcir l'accès SSH ESXi."
+        }
+      ],
+      "tags": [
+        "Ransomware",
+        "PQC",
+        "Rust",
+        "ESXi"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/kyber-ransomware-gang-toys-with-post-quantum-encryption-on-windows/"
+      ],
+      "date": "2026-04-22"
+    }
+  ]
 }
