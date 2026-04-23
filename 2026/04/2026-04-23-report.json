@@ -4,7 +4,7 @@
       "en": "The threat landscape is characterized by an unprecedented industrialization of attack vectors, driven by the massive integration of AI and structured service models. Platforms like Bissa Scanner, using Claude Code for automated mass exploitation, signal a force-multiplier shift. Critical infrastructure faces targeted assaults (Lotus Wiper, D-Link EoL exploits), while software supply chains remain vulnerable to autonomous worms (npm). Rapid exploitation cycles (under 12 hours) necessitate reduced MTTR for organizations.",
       "fr": "Le paysage des menaces est marqué par une industrialisation sans précédent des vecteurs d'attaque, portée par l'intégration massive de l'IA et de modèles de services structurés. Des plateformes comme Bissa Scanner, utilisant Claude Code pour l'exploitation de masse automatisée, signalent un changement opérationnel majeur. Les infrastructures critiques subissent des assauts ciblés (Lotus Wiper, exploits D-Link EoL), tandis que la supply chain logicielle reste vulnérable à des vers autonomes (npm). Les cycles d'exploitation rapides (moins de 12 heures) imposent aux organisations une réduction drastique du MTTR."
     },
-    "date": "2026-04-22"
+    "date": "2026-04-23"
   },
   "geopolitical_analyse": [
     {
