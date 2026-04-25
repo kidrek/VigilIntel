@@ -4,7 +4,7 @@
       "en": "The threat landscape is characterized by increased sophistication in attacks on critical infrastructure and software supply chains. The discovery of Firestarter malware on Cisco ASA devices demonstrates a shift toward persistent edge implants that survive updates. Simultaneously, supply chain attacks targeting developers, such as the Bitwarden CLI compromise and AI agent-based delivery of AMOS stealer, highlight the automation of initial access through trusted tools. Geopolitical tensions continue to drive hybrid operations in the Middle East and state-sponsored espionage in Europe.",
       "fr": "Le paysage des menaces est marqué par une sophistication accrue des attaques contre les infrastructures critiques et la chaîne d'approvisionnement logicielle. La découverte du malware Firestarter sur les équipements Cisco ASA démontre une évolution vers des implants persistants capables de survivre aux mises à jour. Parallèlement, les attaques de type supply chain ciblant les développeurs, comme la compromission de Bitwarden CLI et la livraison du stealer AMOS via des agents IA, soulignent l'automatisation de l'accès initial via des outils de confiance. Les tensions géopolitiques continuent de motiver des opérations hybrides au Moyen-Orient et l'espionnage étatique en Europe."
     },
-    "date": "2026-04-24"
+    "date": "2026-04-25"
   },
   "geopolitical_analyse": [
     {
