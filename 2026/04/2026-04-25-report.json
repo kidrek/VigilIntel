@@ -1,0 +1,726 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The threat landscape is characterized by increased sophistication in attacks on critical infrastructure and software supply chains. The discovery of Firestarter malware on Cisco ASA devices demonstrates a shift toward persistent edge implants that survive updates. Simultaneously, supply chain attacks targeting developers, such as the Bitwarden CLI compromise and AI agent-based delivery of AMOS stealer, highlight the automation of initial access through trusted tools. Geopolitical tensions continue to drive hybrid operations in the Middle East and state-sponsored espionage in Europe.",
+      "fr": "Le paysage des menaces est marqué par une sophistication accrue des attaques contre les infrastructures critiques et la chaîne d'approvisionnement logicielle. La découverte du malware Firestarter sur les équipements Cisco ASA démontre une évolution vers des implants persistants capables de survivre aux mises à jour. Parallèlement, les attaques de type supply chain ciblant les développeurs, comme la compromission de Bitwarden CLI et la livraison du stealer AMOS via des agents IA, soulignent l'automatisation de l'accès initial via des outils de confiance. Les tensions géopolitiques continuent de motiver des opérations hybrides au Moyen-Orient et l'espionnage étatique en Europe."
+    },
+    "date": "2026-04-24"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement et Défense"
+        ]
+      },
+      "theme": {
+        "en": "Espionage",
+        "fr": "Espionnage"
+      },
+      "description": {
+        "en": "A massive phishing campaign on Signal targeted German Bundestag officials, including Julia Klöckner, using fake support bots. The operation is attributed to Russian state actors.",
+        "fr": "Une campagne massive de phishing sur Signal a ciblé des responsables du Bundestag allemand, dont Julia Klöckner, via de faux bots de support. L'opération est attribuée à des acteurs étatiques russes."
+      },
+      "recommandations": [
+        {
+          "en": "Preparation: Educate officials on the risks of messaging app bots and social engineering.",
+          "fr": "Préparation : Sensibiliser les officiels aux risques des bots sur les messageries et à l'ingénierie sociale."
+        },
+        {
+          "en": "Detection: Monitor for unauthorized Signal support bot interactions on institutional devices.",
+          "fr": "Détection : Surveiller les interactions non autorisées avec des bots de support Signal sur les appareils institutionnels."
+        }
+      ],
+      "tags": [
+        "Signal",
+        "Bundestag",
+        "Russia"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191224/intelligence/signal-phishing-campaign-targets-germanys-bundestag-president-julia-klockner.html"
+      ],
+      "date": "2026-04-24"
+    },
+    {
+      "sector": {
+        "en": [
+          "Critical_Infrastructure"
+        ],
+        "fr": [
+          "Infrastructures critiques"
+        ]
+      },
+      "theme": {
+        "en": "Hybrid Conflict",
+        "fr": "Conflit hybride"
+      },
+      "description": {
+        "en": "Monitoring of cyber operations linked to the US-Israel-Iran conflict. Iran is reportedly using VSAT to bypass a 56-day national internet blackout.",
+        "fr": "Surveillance des opérations cyber liées au conflit US-Israël-Iran. L'Iran utiliserait le VSAT pour contourner un blackout internet national de 56 jours."
+      },
+      "recommandations": [
+        {
+          "en": "Containment: Implement redundant communication channels and monitor VSAT traffic for anomalies.",
+          "fr": "Confinement : Mettre en œuvre des canaux de communication redondants et surveiller le trafic VSAT."
+        },
+        {
+          "en": "Post-incident: Evaluate the impact of regional blackouts on operational continuity.",
+          "fr": "Post-incident : Évaluer l'impact des blackouts régionaux sur la continuité opérationnelle."
+        }
+      ],
+      "tags": [
+        "Iran",
+        "VSAT",
+        "Geopolitics"
+      ],
+      "sources": [
+        "https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict"
+      ],
+      "date": "2026-04-24"
+    },
+    {
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et Télécom"
+        ]
+      },
+      "theme": {
+        "en": "Covert Networks",
+        "fr": "Réseaux couverts"
+      },
+      "description": {
+        "en": "China-linked actors are utilizing massive botnets of consumer routers and cameras (Raptor Train) to mask espionage traffic and evade IP blocking.",
+        "fr": "Des acteurs liés à la Chine utilisent des botnets massifs de routeurs et caméras (Raptor Train) pour masquer le trafic d'espionnage et contourner les blocages IP."
+      },
+      "recommandations": [
+        {
+          "en": "Preparation: Update SOHO device firmware and disable remote management features.",
+          "fr": "Préparation : Mettre à jour le firmware des équipements SOHO et désactiver la gestion à distance."
+        }
+      ],
+      "tags": [
+        "Botnet",
+        "China",
+        "IoT"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191202/security-china-linked-threat-actors-use-consumer-device-botnets-to-evade-detection-warn-uk-and-partners.html"
+      ],
+      "date": "2026-04-24"
+    },
+    {
+      "sector": {
+        "en": [
+          "Media_and_Communication"
+        ],
+        "fr": [
+          "Médias et Communication"
+        ]
+      },
+      "theme": {
+        "en": "Information Warfare",
+        "fr": "Guerre de l'information"
+      },
+      "description": {
+        "en": "EU sanctions against Euromore and Pravfond entities for information manipulation and support for the war in Ukraine.",
+        "fr": "Sanctions de l'UE contre les entités Euromore et Pravfond pour manipulation de l'information et soutien à la guerre en Ukraine."
+      },
+      "recommandations": [
+        {
+          "en": "Preparation: Fact-check sources and monitor for recycling of Kremlin-linked narratives.",
+          "fr": "Préparation : Vérifier les sources et surveiller le recyclage des récits liés au Kremlin."
+        }
+      ],
+      "tags": [
+        "Sanctions",
+        "Disinformation",
+        "Russia"
+      ],
+      "sources": [
+        "https://euvsdisinfo.eu/disinformation-review-eu-sanctions-and-the-kremlins-recycled-narratives/"
+      ],
+      "date": "2026-04-24"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "ADT",
+      "threat_actor": "ShinyHunters",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminel",
+      "threat_actor_aliases": [
+        "unknown"
+      ],
+      "sector": {
+        "en": [
+          "Security"
+        ],
+        "fr": [
+          "Sécurité"
+        ]
+      },
+      "description": {
+        "en": "ADT confirmed a data breach affecting 10 million records (PII) after a ShinyHunters threat. The initial access was gained through a vishing campaign targeting an employee's Okta SSO account, leading to Salesforce exfiltration.",
+        "fr": "ADT a confirmé une violation de données touchant 10 millions de dossiers après une menace de ShinyHunters. L'accès initial a été obtenu par vishing ciblant un compte Okta SSO, suivi d'une exfiltration via Salesforce."
+      },
+      "mitre_ttps": [
+        "T1566.004",
+        "T1539",
+        "T1567"
+      ],
+      "recommandations": [
+        {
+          "en": "Containment: Revoke all active SSO sessions for the compromised account and implement IP restrictions for SaaS consoles.",
+          "fr": "Confinement : Révoquer les sessions SSO du compte compromis et restreindre les IP pour les consoles SaaS."
+        },
+        {
+          "en": "Detection: Monitor Salesforce for large file downloads or unusual API activity.",
+          "fr": "Détection : Surveiller Salesforce pour des téléchargements massifs ou une activité API inhabituelle."
+        }
+      ],
+      "tags": [
+        "Data Breach",
+        "Okta",
+        "Vishing"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/adt-confirms-data-breach-after-shinyhunters-leak-threat/"
+      ],
+      "date": "2026-04-24"
+    },
+    {
+      "victim": "Carnival Corporation",
+      "threat_actor": "ShinyHunters",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminel",
+      "threat_actor_aliases": [
+        "unknown"
+      ],
+      "sector": {
+        "en": [
+          "Hospitality_and_Entertainment"
+        ],
+        "fr": [
+          "Hôtellerie et Divertissement"
+        ]
+      },
+      "description": {
+        "en": "Carnival's Mariner Society loyalty program data (7.5 million accounts) was leaked by ShinyHunters. Data includes names, DOBs, and emails.",
+        "fr": "Les données du programme de fidélité Mariner Society de Carnival (7,5 millions de comptes) ont été divulguées par ShinyHunters. Les données incluent noms, dates de naissance et emails."
+      },
+      "mitre_ttps": [
+        "T1566.001",
+        "T1048"
+      ],
+      "recommandations": [
+        {
+          "en": "Post-incident: Notify affected users and monitor for secondary phishing attacks using the stolen loyalty data.",
+          "fr": "Post-incident : Notifier les utilisateurs et surveiller le phishing secondaire utilisant les données de fidélité volées."
+        }
+      ],
+      "tags": [
+        "Data Leak",
+        "Cruise",
+        "Mariner Society"
+      ],
+      "sources": [
+        "https://haveibeenpwned.com/Breach/Carnival"
+      ],
+      "date": "2026-04-24"
+    },
+    {
+      "victim": "Retail and Hospitality Orgs",
+      "threat_actor": "BlackFile",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminel",
+      "threat_actor_aliases": [
+        "Cordial Spider",
+        "CL-CRI-1116"
+      ],
+      "sector": {
+        "en": [
+          "Retail_and_Consumer",
+          "Hospitality_and_Entertainment"
+        ],
+        "fr": [
+          "Commerce et Consommation",
+          "Hôtellerie et Divertissement"
+        ]
+      },
+      "description": {
+        "en": "BlackFile extortion gang targets retail and hospitality via vishing calls impersonating IT support to steal SSO credentials and bypass MFA.",
+        "fr": "Le groupe d'extorsion BlackFile cible le commerce et l'hôtellerie via du vishing usurpant le support IT pour voler des identifiants SSO et contourner le MFA."
+      },
+      "mitre_ttps": [
+        "T1566.004",
+        "T1539",
+        "T1567"
+      ],
+      "recommandations": [
+        {
+          "en": "Preparation: Implement strict identity verification protocols for internal IT support calls.",
+          "fr": "Préparation : Mettre en place des protocoles stricts de vérification d'identité pour les appels du support IT."
+        }
+      ],
+      "tags": [
+        "Extortion",
+        "Vishing",
+        "The Com"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/new-blackfile-extortion-gang-targets-retail-and-hospitality-orgs/"
+      ],
+      "date": "2026-04-24"
+    },
+    {
+      "victim": "Four Healthcare Entities",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminel",
+      "threat_actor_aliases": [
+        "unknown"
+      ],
+      "sector": {
+        "en": [
+          "Healthcare_and_Life_Sciences"
+        ],
+        "fr": [
+          "Santé et Sciences de la vie"
+        ]
+      },
+      "description": {
+        "en": "US HHS OCR announced settlements totaling $1.16M with four healthcare entities following ransomware investigations that exposed data of 427,000 individuals.",
+        "fr": "L'OCR du HHS américain a annoncé des règlements de 1,16 M$ avec quatre entités de santé après des enquêtes sur des ransomwares ayant exposé les données de 427 000 personnes."
+      },
+      "mitre_ttps": [
+        "unknown"
+      ],
+      "recommandations": [
+        {
+          "en": "Preparation: Ensure HIPAA compliance and conduct regular risk assessments for ransomware resilience.",
+          "fr": "Préparation : Assurer la conformité HIPAA et mener des évaluations régulières des risques de ransomware."
+        }
+      ],
+      "tags": [
+        "HIPAA",
+        "Ransomware",
+        "Settlement"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/04/24/ocr-announces-settlements-of-four-ransomware-investigations-that-affected-over-427000-individuals/"
+      ],
+      "date": "2026-04-24"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2025-20333",
+      "euvd_id": "unknown",
+      "cisa_kev": "TRUE",
+      "cvss": "9.9",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:cisco:adaptive_security_appliance_software:-:*:*:*:*:*:*:*",
+      "product": "ASA / FTD",
+      "vendor": "Cisco",
+      "description": {
+        "en": "An input validation vulnerability in Cisco ASA/FTD allows for remote code execution. Exploited by UAT-4356 to deploy Firestarter backdoor.",
+        "fr": "Une vulnérabilité de validation d'entrée dans Cisco ASA/FTD permet l'exécution de code à distance. Exploitée par UAT-4356 pour déployer la backdoor Firestarter."
+      },
+      "mitre_ttps": [
+        "T1133",
+        "T1542.001"
+      ],
+      "recommandations": [
+        {
+          "en": "Eradication: Perform a full re-imaging of the device and apply security patches. Cold restart is required.",
+          "fr": "Éradication : Effectuer une réimagerie complète de l'appareil et appliquer les correctifs. Un redémarrage physique est nécessaire."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "KEV",
+        "Cisco"
+      ],
+      "sources": [
+        "https://thehackernews.com/2026/04/firestarter-backdoor-hit-federal-cisco.html"
+      ],
+      "date": "2026-04-24"
+    },
+    {
+      "cve_id": "CVE-2025-20362",
+      "euvd_id": "unknown",
+      "cisa_kev": "TRUE",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:cisco:adaptive_security_appliance_software:-:*:*:*:*:*:*:*",
+      "product": "ASA / FTD",
+      "vendor": "Cisco",
+      "description": {
+        "en": "Vulnerability in Cisco Firewalls used in conjunction with CVE-2025-20333 for persistent access.",
+        "fr": "Vulnérabilité dans les pare-feux Cisco utilisée conjointement avec CVE-2025-20333 pour un accès persistant."
+      },
+      "mitre_ttps": [
+        "T1542.001"
+      ],
+      "recommandations": [
+        {
+          "en": "Eradication: Follow CISA Emergency Directive 25-03 instructions for inspection and reimaging.",
+          "fr": "Éradication : Suivre les instructions de la directive d'urgence CISA 25-03 pour l'inspection et la réimagerie."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "Cisco"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/firestarter-malware-survives-cisco-firewall-updates-security-patches/"
+      ],
+      "date": "2026-04-24"
+    },
+    {
+      "cve_id": "CVE-2026-41478",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "9.9",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:saltcorn:saltcorn:-:*:*:*:*:*:*:*",
+      "product": "Saltcorn",
+      "vendor": "Saltcorn",
+      "description": {
+        "en": "SQL Injection vulnerability allowing data exfiltration.",
+        "fr": "Vunérabilité d'injection SQL permettant l'exfiltration de données."
+      },
+      "mitre_ttps": [
+        "T1505"
+      ],
+      "recommandations": [
+        {
+          "en": "Update to version 1.4.6 or 1.5.6.",
+          "fr": "Mettre à jour vers la version 1.4.6 ou 1.5.6."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "SQLi"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-41478"
+      ],
+      "date": "2026-04-24"
+    },
+    {
+      "cve_id": "CVE-2026-40976",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "9.1",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:vmware:spring_boot:-:*:*:*:*:*:*:*",
+      "product": "Spring Boot",
+      "vendor": "VMware",
+      "description": {
+        "en": "Security bypass vulnerability in Spring Boot applications.",
+        "fr": "Vulnérabilité de contournement de sécurité dans les applications Spring Boot."
+      },
+      "mitre_ttps": [
+        "T1548"
+      ],
+      "recommandations": [
+        {
+          "en": "Update to version 4.0.6 or 3.5.14.",
+          "fr": "Mettre à jour vers la version 4.0.6 ou 3.5.14."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "Bypass"
+      ],
+      "sources": [
+        "https://securityonline.info/spring-boot-vulnerability-cve-2026-40976-security-bypass/"
+      ],
+      "date": "2026-04-24"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "AgenteV2 Banking Trojan Campaign",
+        "fr": "Campagne du cheval de Troie bancaire AgenteV2"
+      },
+      "description": {
+        "en": "AgenteV2 is a Brazilian banking malware using Python Nuitka to evade detection. It uses WebSockets for real-time screen streaming and screen interaction to commit financial fraud.",
+        "fr": "AgenteV2 est un malware bancaire brésilien utilisant Python Nuitka pour l'évasion. Il utilise des WebSockets pour le streaming d'écran en temps réel et l'interaction pour commettre des fraudes financières."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminel",
+      "threat_actor_aliases": [
+        "unknown"
+      ],
+      "sector": {
+        "en": [
+          "Finance"
+        ],
+        "fr": [
+          "Finance"
+        ]
+      },
+      "indicators": {
+        "URL": [
+          "https://pastebin.com/raw/0RmxqY57"
+        ],
+        "IPv4": [
+          "38.242.246.176",
+          "69.49.241.120"
+        ],
+        "IPv6": [],
+        "DOMAIN": [
+          "odaracani.online",
+          "nuevaprodeciencia.club"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [
+          "5fd682cdfdf2de867be2a4bd378a2c206370c18a598975a11c99dba121e36b1b"
+        ],
+        "HASH_SHA1": [],
+        "HASH_MD5": [
+          "826d6350724f203b911aa6c8c4626391"
+        ],
+        "TOOLS": [
+          "Nuitka",
+          "VBScript"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566.001",
+        "T1027",
+        "T1071.001",
+        "T1113"
+      ],
+      "analyse": {
+        "en": "The malware targets Brazilian financial institutions through highly interactive fraud where attackers can see and control the screen once a bank site is accessed.",
+        "fr": "Le malware cible les institutions financières brésiliennes via une fraude interactive où les attaquants voient et contrôlent l'écran lors de l'accès à un site bancaire."
+      },
+      "recommandations": [
+        {
+          "en": "Detection: Look for network connections to port 8443 from non-browser processes.",
+          "fr": "Détection : Rechercher des connexions réseau vers le port 8443 provenant de processus non-navigateurs."
+        },
+        {
+          "en": "Containment: Isolate endpoints running wifi_driver.exe from C:\\Program Files (x86)\\Wi-fi\\.",
+          "fr": "Confinement : Isoler les postes exécutant wifi_driver.exe depuis C:\\Program Files (x86)\\Wi-fi\\."
+        }
+      ],
+      "tags": [
+        "AgenteV2",
+        "Banking Trojan",
+        "Brazil"
+      ],
+      "sources": [
+        "https://any.run/cybersecurity-blog/brazilian-banking-phishing-campaign/"
+      ],
+      "date": "2026-04-24"
+    },
+    {
+      "title": {
+        "en": "Bitwarden CLI Supply Chain Worm",
+        "fr": "Ver de chaîne d'approvisionnement Bitwarden CLI"
+      },
+      "description": {
+        "en": "Compromised @bitwarden/cli v2026.4.0 npm package executes a worm that steals developer secrets and spreads by injecting code into other packages.",
+        "fr": "La version compromise v2026.4.0 du package npm @bitwarden/cli exécute un ver qui vole les secrets des développeurs et se propage par injection de code."
+      },
+      "threat_actor": "TeamPCP",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminel",
+      "threat_actor_aliases": [
+        "unknown"
+      ],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et Télécom"
+        ]
+      },
+      "indicators": {
+        "URL": [
+          "https://github.com/helloworm00/hello-world"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "audit.checkmarx.cx"
+        ],
+        "EMAIL": [
+          "helloworm00@proton.me"
+        ],
+        "HASH_SHA256": [
+          "18f784b3bc9a0bcdcb1a8d7f51bc5f54323fc40cbd874119354ab609bef6e4cb"
+        ],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Bun",
+          "npm"
+        ]
+      },
+      "mitre_ttps": [
+        "T1195.002",
+        "T1552.001",
+        "T1539"
+      ],
+      "analyse": {
+        "en": "A highly dangerous supply chain attack that automates the compromise of CI/CD pipelines and cloud environments.",
+        "fr": "Une attaque de supply chain très dangereuse qui automatise la compromission des pipelines CI/CD et des environnements cloud."
+      },
+      "recommandations": [
+        {
+          "en": "Eradication: Force downgrade to a safe version and revoke all GitHub/npm tokens.",
+          "fr": "Éradication : Forcer le downgrade vers une version saine et révoquer tous les tokens GitHub/npm."
+        }
+      ],
+      "tags": [
+        "Supply Chain",
+        "npm",
+        "Worm"
+      ],
+      "sources": [
+        "https://fieldeffect.com/blog/bitwarden-cli-compromised-supply-chain-campaign"
+      ],
+      "date": "2026-04-24"
+    },
+    {
+      "title": {
+        "en": "AMOS Stealer via Cursor AI Agent",
+        "fr": "AMOS Stealer via l'agent IA Cursor"
+      },
+      "description": {
+        "en": "Developers using Cursor/Claude Code are targeted by social engineering leading AI agents to download and execute AMOS stealer via AppleScript.",
+        "fr": "Les développeurs utilisant Cursor/Claude Code sont ciblés par de l'ingénierie sociale menant les agents IA à télécharger et exécuter AMOS via AppleScript."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminel",
+      "threat_actor_aliases": [
+        "unknown"
+      ],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et Télécom"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [
+          "92.246.136.14"
+        ],
+        "IPv6": [],
+        "DOMAIN": [
+          "arkypc.com"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [
+          "312147C0AE0D555A4D50FA627FF7D4F3"
+        ],
+        "TOOLS": [
+          "AppleScript",
+          "Cursor"
+        ]
+      },
+      "mitre_ttps": [
+        "T1059.002",
+        "T1036.005",
+        "T1560.001"
+      ],
+      "analyse": {
+        "en": "This demonstrates a new attack surface where AI productivity tools are weaponized to bypass developer suspicion.",
+        "fr": "Cela démontre une nouvelle surface d'attaque où les outils de productivité IA sont détournés pour tromper la méfiance des développeurs."
+      },
+      "recommandations": [
+        {
+          "en": "Preparation: Educate developers on validating scripts suggested or executed by AI agents.",
+          "fr": "Préparation : Sensibiliser les développeurs à la validation des scripts suggérés ou exécutés par les agents IA."
+        }
+      ],
+      "tags": [
+        "AI Agent",
+        "macOS",
+        "AMOS"
+      ],
+      "sources": [
+        "https://fieldeffect.com/blog/field-effect-detects-amos-stealer-delivered-via-cursor-ai-agent-session"
+      ],
+      "date": "2026-04-24"
+    },
+    {
+      "title": {
+        "en": "TGR-STA-1030 Activity in LATAM",
+        "fr": "Activité de TGR-STA-1030 en Amérique Latine"
+      },
+      "description": {
+        "en": "Increased activity of threat group TGR-STA-1030 in Central and South America involving espionage operations.",
+        "fr": "Augmentation de l'activité du groupe TGR-STA-1030 en Amérique Centrale et du Sud pour des opérations d'espionnage."
+      },
+      "threat_actor": "TGR-STA-1030",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "État",
+      "threat_actor_aliases": [
+        "unknown"
+      ],
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement et Défense"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1133",
+        "T1071"
+      ],
+      "analyse": {
+        "en": "Long-term espionage campaigns targeting Latin American infrastructure and governments.",
+        "fr": "Campagnes d'espionnage à long terme ciblant les infrastructures et gouvernements d'Amérique Latine."
+      },
+      "recommandations": [
+        {
+          "en": "Detection: Enhance monitoring of remote access gateways in LATAM regions.",
+          "fr": "Détection : Renforcer la surveillance des passerelles d'accès distant dans les régions LATAM."
+        }
+      ],
+      "tags": [
+        "LATAM",
+        "Espionage",
+        "TGR-STA-1030"
+      ],
+      "sources": [
+        "https://unit42.paloaltonetworks.com/new-activity-central-south-america/"
+      ],
+      "date": "2026-04-24"
+    }
+  ]
+}
