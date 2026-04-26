@@ -9,14 +9,9 @@
   * [Articles sélectionnés](#articles-selectionnes)
   * [Articles non sélectionnés](#articles-non-selectionnes)
 * [Articles](#articles)
-  * [AgenteV2 Banking Trojan](#agente-v2-banking-trojan)
-  * [Firestarter Backdoor (UAT-4356)](#firestarter-backdoor-uat-4356)
-  * [Bitwarden CLI / Checkmarx Supply Chain Worm](#bitwarden-cli-checkmarx-supply-chain-worm)
-  * [AMOS Stealer via Cursor AI Agent](#amos-stealer-via-cursor-ai-agent)
-  * [BlackFile Vishing/Extortion](#blackfile-vishing-extortion)
-  * [ADT Data Breach (ShinyHunters)](#adt-data-breach-shinyhunters)
-  * [Carnival Cruise Data Breach (ShinyHunters)](#carnival-cruise-data-breach-shinyhunters)
-  * [TGR-STA-1030 LATAM Activity](#tgr-sta-1030-latam-activity)
+  * [UNC6692 targeting via Microsoft Teams and Snow malware suite](#unc6692-targeting-via-microsoft-teams-and-snow-malware-suite)
+  * [Elastic monitoring of Claude Code/Cowork AI agents using OpenTelemetry](#elastic-monitoring-of-claude-code-cowork-ai-agents-using-opentelemetry)
+  * [USAT: Acoustic side-channel for air-gapped system exploitation](#usat-acoustic-side-channel-for-air-gapped-system-exploitation)
 
 ---
 
@@ -24,11 +19,11 @@
 
 # ANALYSE STRATÉGIQUE
 
-Le paysage des menaces de ce jour met en lumière une sophistication accrue des attaques sur l'infrastructure critique et la chaîne d'approvisionnement logicielle. La découverte du malware **Firestarter**, ciblant les équipements Cisco ASA, illustre une tendance de fond : le passage de la simple exploitation de vulnérabilités périmétriques à l'installation d'implants ultra-persistants capables de survivre aux mises à jour de firmware et aux correctifs de sécurité. Cette résilience oblige les défenseurs à repenser l'intégrité des équipements "Edge" non plus par le simple patch, mais par une vérification continue de l'état de la mémoire et des processus noyau.
+La veille de ce jour met en lumière une intensification des attaques ciblant les outils de collaboration SaaS et les équipements de périmètre réseau. L'acteur **UNC6692** illustre une tendance préoccupante de social engineering via **Microsoft Teams**, utilisant des tactiques d'urgence (email bombing) pour déployer la suite malveillante **Snow**. Cette approche contourne les protections classiques de la messagerie pour s'appuyer sur la confiance accordée aux plateformes de communication interne.
 
-Parallèlement, la compromis de la **Bitwarden CLI**, intégrée à une campagne plus large touchant les outils Checkmarx, marque une étape critique dans les attaques de type "supply chain". En transformant des packages npm légitimes en vers auto-propagateurs qui ciblent spécifiquement les environnements de développement (tokens GitHub, npm, secrets Cloud), les attaquants (TeamPCP) cherchent à automatiser la compromission de l'ensemble du cycle CI/CD. L'émergence de vecteurs d'infection via des sessions d'agents IA (Cursor/Claude Code) confirme que les nouveaux outils de productivité deviennent déjà des surfaces d'attaque exploitées pour livrer des infostealers comme AMOS.
+Parallèlement, la résilience des implants sur les équipements réseau atteint un nouveau stade avec la découverte de **FIRESTARTER** sur les dispositifs **Cisco ASA**. Ce malware, attribué à la campagne APT **ArcaneDoor**, démontre une capacité de persistance exceptionnelle en survivant aux mises à jour de firmware via l'interception des signaux système. Cette menace souligne l'obsolescence relative du simple "patching" face à des acteurs étatiques capables de se nicher dans les couches profondes (moteur LINA) des appliances de sécurité.
 
-Enfin, la sphère géopolitique reste dominée par le conflit US-Israël-Iran, où l'interruption des services internet en Iran semble freiner temporairement le tempo opérationnel des groupes étatiques, tandis que l'espionnage contre les institutions allemandes (via Signal) souligne la vulnérabilité des communications politiques face au phishing ciblé. Les organisations doivent prioriser le durcissement des identités (Passkeys, MFA résistante à l'AiTM) et la surveillance accrue des environnements de build.
+Enfin, l'émergence des agents d'IA autonomes (**Claude Code/Cowork**) crée un nouveau périmètre de visibilité pour les équipes InfoSec. L'utilisation d'**OpenTelemetry (OTel)** pour monitorer ces agents devient critique, car ils opèrent désormais dans des zones de confiance (exécution de shell, accès aux fichiers), nécessitant un audit en temps réel de leurs décisions et de leurs accès aux données via les serveurs MCP. La recommandation stratégique demeure le renforcement de l'authentification multifacteur sur les canaux de collaboration et l'adoption d'un modèle **Zero Trust** strict pour les équipements de bordure, incluant des cycles de redémarrage physique pour déloger les implants volatils.
 
 ---
 
@@ -42,10 +37,8 @@ Enfin, la sphère géopolitique reste dominée par le conflit US-Israël-Iran, o
 
 | Nom de l'acteur | Secteur(s) ciblé(s) | Mode opératoire | TTP MITRE ATT&CK | Source(s) |
 |---|---|---|---|---|
-| **UAT-4356** (ArcaneDoor) | Gouvernement, Infrastructures critiques | Exploitation de vulnérabilités Cisco ASA (CVE-2025-20333/20362), déploiement de backdoors persistantes (Firestarter, Line Viper). | T1133 (External Remote Services)<br>T1542.001 (System Firmware) | [BleepingComputer](https://www.bleepingcomputer.com/news/security/firestarter-malware-survives-cisco-firewall-updates-security-patches/)<br>[SecurityAffairs](https://securityaffairs.com/191241/hacking/cisa-reports-persistent-firestarter-backdoor-on-cisco-asa-device-in-federal-network.html) |
-| **TeamPCP** | Développeurs, Sécurité logicielle | Compromission de packages npm (Bitwarden CLI), injection de code malveillant dans les workflows GitHub Actions, auto-propagation (worm). | T1195.002 (Compromise Software Supply Chain) | [Unit 42](https://unit42.paloaltonetworks.com/monitoring-npm-supply-chain-attacks/)<br>[Field Effect](https://fieldeffect.com/blog/bitwarden-cli-compromised-supply-chain-campaign) |
-| **ShinyHunters** | Domotique (ADT), Tourisme (Carnival) | Vishing ciblant les comptes Okta SSO, exfiltration de données via Salesforce et Snowflake, extorsion de masse. | T1566.004 (Vishing)<br>T1555.003 (Credentials from Web Browsers) | [BleepingComputer](https://www.bleepingcomputer.com/news/security/adt-confirms-data-breach-after-shinyhunters-leak-threat/)<br>[HIBP](https://haveibeenpwned.com/Breach/Carnival) |
-| **BlackFile** (Cordial Spider) | Retail, Hospitalité | Vishing imitant le support IT, déploiement de fausses pages de login SSO, vol de crédentiels et bypass MFA. | T1566.004 (Vishing)<br>T1539 (Steal Web Session Cookie) | [BleepingComputer](https://www.bleepingcomputer.com/news/security/new-blackfile-extortion-gang-targets-retail-and-hospitality-orgs/) |
+| **UNC6692** | Multi-sectoriel | Social engineering via MS Teams, usurpation Helpdesk IT, Email bombing | T1566.003, T1204.002, T1547.001, T1056.002, T1003.001 | [BleepingComputer](https://www.bleepingcomputer.com/news/security/threat-actor-uses-microsoft-teams-to-deploy-new-snow-malware/) |
+| **UAT-4356 (ArcaneDoor)** | Gouvernemental (Fédéral US) | Exploitation de vulnérabilités n-day sur Cisco Firepower, persistance via signaux système | T1133, T1542.001, T1027, T1105 | [SecurityAffairs](https://securityaffairs.com/191241/hacking/cisa-reports-persistent-firestarter-backdoor-on-cisco-asa-device-in-federal-network.html) |
 
 ---
 
@@ -55,10 +48,8 @@ Enfin, la sphère géopolitique reste dominée par le conflit US-Israël-Iran, o
 
 | Pays/Région | Secteur | Thème | Description | Source(s) |
 |---|---|---|---|---|
-| **Allemagne / Russie** | Politique (Bundestag) | Espionnage | Phishing massif sur Signal ciblant Julia Klöckner et d'autres officiels de la CDU via de faux bots de support. Attribution probable à des acteurs étatiques russes. | [SecurityAffairs](https://securityaffairs.com/191224/intelligence/signal-phishing-campaign-targets-germanys-bundestag-president-julia-klockner.html)<br>[Le Monde](https://www.lemonde.fr/pixels/article/2026/04/24/en-allemagne-une-cyberattaque-d-ampleur-touche-la-messagerie-signal-le-parquet-federal-enquete-pour-suspicion-d-espionnage_6683079_4408996.html) |
-| **Iran / Israël / USA** | Infrastructures critiques | Conflit hybride | Monitoring des opérations cyber liées au conflit. Utilisation de VSAT par l'Iran pour contrer le blackout internet national de 56 jours. | [Flare](https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict)<br>[Recorded Future](https://www.recordedfuture.com/blog/the-iran-war-what-you-need-to-know) |
-| **Chine** | SOHO / IoT | Réseaux couverts | Utilisation massive de botnets de routeurs et caméras grand public pour masquer le trafic d'espionnage et contourner les listes de blocage IP (Raptor Train). | [SecurityAffairs](https://securityaffairs.com/191202/security/china-linked-threat-actors-use-consumer-device-botnets-to-evade-detection-warn-uk-and-partners.html) |
-| **UE / Russie** | Information | Sanctions | Sanctions européennes contre les entités Euromore et Pravfond pour manipulation d'information et soutien à la guerre en Ukraine. | [EUvsDisinfo](https://euvsdisinfo.eu/disinformation-review-eu-sanctions-and-the-kremlins-recycled-narratives/) |
+| **États-Unis / Royaume-Uni** | Gouvernemental | Cyber-espionnage étatique | Découverte de la campagne APT ArcaneDoor ciblant les dispositifs Cisco ASA avec le backdoor FIRESTARTER capable de survivre aux mises à jour. | [SecurityAffairs](https://securityaffairs.com/191241/hacking/cisa-reports-persistent-firestarter-backdoor-on-cisco-asa-device-in-federal-network.html) |
+| **Global** | Défense / Renseignement | OSINT & IA | Utilisation de l'IA agentique (Strider) pour identifier les acteurs étatiques étrangers via le traitement massif de sources ouvertes pour l'USAF et l'OTAN. | [Mastodon (Techmeme)](https://mastobot.ping.moi/@Bobe_bot/116468063305079225) |
 
 ---
 
@@ -68,8 +59,8 @@ Enfin, la sphère géopolitique reste dominée par le conflit US-Israël-Iran, o
 
 | Titre | Auteur/Organisme | Date | Juridiction | Référence | Description | Source(s) |
 |---|---|---|---|---|---|---|
-| **Settlement of Ransomware Investigations** | US HHS OCR | 24/04/2026 | USA | HIPAA | Règlements de 1,16 M$ avec 4 entités de santé pour défaut de protection face au ransomware. | [DataBreaches.net](https://databreaches.net/2026/04/24/ocr-announces-settlements-of-four-ransomware-investigations-that-affected-over-427000-individuals/) |
-| **Emergency Directive 25-03** | CISA | 24/04/2026 | USA | Fédéral | Directive obligeant les agences à inspecter les pare-feux Cisco pour détecter FIRESTARTER. | [The Hacker News](https://thehackernews.com/2026/04/firestarter-backdoor-hit-federal-cisco.html) |
+| **CISA Emergency Directive 25-03** | CISA | 25/04/2026 | États-Unis | ED 25-03 | Obligation pour les agences fédérales de traiter les vulnérabilités Cisco exploitées par FIRESTARTER. | [SecurityAffairs](https://securityaffairs.com/191241/hacking/cisa-reports-persistent-firestarter-backdoor-on-cisco-asa-device-in-federal-network.html) |
+| **Binding Operational Directive 22-01** | CISA | 25/04/2026 | États-Unis | BOD 22-01 | Ajout de 4 vulnérabilités critiques (SimpleHelp, Samsung, D-Link) au catalogue KEV. | [SecurityAffairs](https://securityaffairs.com/191281/security/u-s-cisa-adds-simplehelp-samsung-and-d-link-flaws-to-its-known-exploited-vulnerabilities-catalog.html) |
 
 ---
 
@@ -79,8 +70,7 @@ Enfin, la sphère géopolitique reste dominée par le conflit US-Israël-Iran, o
 
 | Secteur | Victime | Données compromises | Volume estimé | Source(s) |
 |---|---|---|---|---|
-| **Domotique** | ADT | Noms, téléphones, adresses, derniers chiffres SSN (PII). | 10 000 000 dossiers (selon attaquant) | [BleepingComputer](https://www.bleepingcomputer.com/news/security/adt-confirms-data-breach-after-shinyhunters-leak-threat/) |
-| **Tourisme** | Carnival Corporation | Noms, dates de naissance, genres, emails (Mariner Society). | 7 500 000 comptes | [HIBP](https://haveibeenpwned.com/Breach/Carnival) |
+| **Technologie** | Utilisateurs Microsoft Teams | Identifiants, accès domaine, base de données Active Directory | Non spécifié (cible UNC6692) | [BleepingComputer](https://www.bleepingcomputer.com/news/security/threat-actor-uses-microsoft-teams-to-deploy-new-snow-malware/) |
 
 ---
 
@@ -93,28 +83,26 @@ Enfin, la sphère géopolitique reste dominée par le conflit US-Israël-Iran, o
 
 | # | CVE-ID | CISA KEV | Exploitation | Score Composite | CVSS | Clé de tri |
 |---|---|---|---|---|---|---|
-| 1 | CVE-2025-20333 | TRUE  | Active    | 7.0 | 9.9   | (1,1,7.0,9.9) |
-| 2 | CVE-2026-41478 | FALSE | Théorique | 1.5 | 9.9   | (0,0,1.5,9.9) |
-| 3 | CVE-2026-41248 | FALSE | Théorique | 1.5 | 9.1   | (0,0,1.5,9.1) |
-| 4 | CVE-2026-40976 | FALSE | Théorique | 1.5 | 9.1   | (0,0,1.5,9.1) |
-| 5 | CVE-2026-41044 | FALSE | Théorique | 1.5 | N/A   | (0,0,1.5,0.0) |
-| 6 | CVE-2026-41651 | FALSE | Théorique | 1.0 | 8.8   | (0,0,1.0,8.8) |
-| 7 | CVE-2026-41473 | FALSE | Théorique | 1.0 | 8.8   | (0,0,1.0,8.8) |
-| 8 | CVE-2026-6911  | FALSE | Théorique | 1.0 | N/A   | (0,0,1.0,0.0) |
-| 9 | CVE-2026-41433 | FALSE | Théorique | 1.0 | 8.4   | (0,0,1.0,8.4) |
+| 1 | CVE-2024-57726 | TRUE  | Active    | 7.5 | 9.9   | (1,1,7.5,9.9) |
+| 2 | CVE-2024-7399  | TRUE  | Active    | 7.5 | 8.8   | (1,1,7.5,8.8) |
+| 3 | CVE-2025-29635 | TRUE  | Active    | 6.0 | 7.5   | (1,1,6.0,7.5) |
+| 4 | CVE-2024-57728 | TRUE  | Active    | 6.0 | 7.2   | (1,1,6.0,7.2) |
+| 5 | CVE-2026-3844  | FALSE | Active    | 4.0 | 9.8   | (0,1,4.0,9.8) |
+| 6 | CVE-2026-6951  | FALSE | Théorique | 3.0 | 9.8   | (0,0,3.0,9.8) |
+| 7 | CVE-2026-6988  | FALSE | Théorique | 3.0 | 9.0   | (0,0,3.0,9.0) |
+| 8 | CVE-2026-6992  | FALSE | Théorique | 2.5 | 8.3   | (0,0,2.5,8.3) |
 -->
 
 | CVE-ID | Score CVSS | EPSS | CISA KEV | Score Composite | Produit affecté | Type de vulnérabilité | Impact | Exploitation | Mesures de contournement | Source(s) |
 |---|---|---|---|---|---|---|---|---|---|---|
-| **CVE-2025-20333** | 9.9 | N/A | **TRUE** | 7.0 | Cisco ASA / FTD | Input Validation | RCE | Active | Mise à jour + réimagerie complète du device | [The Hacker News](https://thehackernews.com/2026/04/firestarter-backdoor-hit-federal-cisco.html) |
-| **CVE-2026-41478** | 9.9 | N/A | FALSE | 1.5 | Saltcorn | SQL Injection | Crit (Exfiltration) | Théorique | Mise à jour v1.4.6 / 1.5.6 | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-41478) |
-| **CVE-2026-41248** | 9.1 | N/A | FALSE | 1.5 | Clerk JS SDKs | Auth Bypass | Crit | Théorique | Mise à jour SDKs concernés | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-41248) |
-| **CVE-2026-40976** | 9.1 | N/A | FALSE | 1.5 | Spring Boot | Security Bypass | Crit | Théorique | Mise à jour v4.0.6 / 3.5.14 | [SecurityOnline](https://securityonline.info/spring-boot-vulnerability-cve-2026-40976-security-bypass/) |
-| **CVE-2026-41044** | N/A | N/A | FALSE | 1.5 | Apache ActiveMQ | Spring interaction | RCE | Théorique | Mise à jour v5.19.6 / 6.2.5 | [SecurityOnline](https://securityonline.info/activemq-rce-jolokia-spring-vulnerabilities-patch-guide/) |
-| **CVE-2026-41651** | 8.8 | N/A | FALSE | 1.0 | PackageKit (Linux) | Auth Bypass | LPE (Root) | Théorique | Mise à jour v1.3.5 | [BleepingComputer](https://www.bleepingcomputer.com/news/security/new-pack2theroot-flaw-gives-hackers-root-linux-access/) |
-| **CVE-2026-41473** | 8.8 | N/A | FALSE | 1.0 | CyberPanel | Auth Bypass | DoS / Data Poll | Théorique | Mise à jour v2.4.4 | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-41473) |
-| **CVE-2026-6911** | N/A | N/A | FALSE | 1.0 | AWS Ops Wheel | JWT Signature | Auth Bypass | Théorique | Mise à jour PR #164 | [AWS Bulletin](https://aws.amazon.com/security/security-bulletins/rss/2026-018-aws/) |
-| **CVE-2026-41433** | 8.4 | N/A | FALSE | 1.0 | OpenTelemetry eBPF | Path Traversal | LPE | Théorique | Mise à jour v0.8.0 | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-41433) |
+| **CVE-2024-57726** | 9.9 | N/A | TRUE | 7.5 | SimpleHelp | Missing Authorization | Auth Bypass / RCE | Active | Mise à jour vers version corrigée ou déconnexion. | [SecurityAffairs](https://securityaffairs.com/191281/security/u-s-cisa-adds-simplehelp-samsung-and-d-link-flaws-to-its-known-exploited-vulnerabilities-catalog.html) |
+| **CVE-2024-7399** | 8.8 | N/A | TRUE | 7.5 | Samsung MagicINFO 9 | Path Traversal | RCE / System Access | Active | Mise à jour vers version 21.1050+. | [TheHackerNews](https://thehackernews.com/2026/04/cisa-adds-4-exploited-flaws-to-kev-sets.html) |
+| **CVE-2025-29635** | 7.5 | N/A | TRUE | 6.0 | D-Link DIR-823X | Command Injection | RCE | Active | Discontinuer l'usage (EoL). | [SecurityAffairs](https://securityaffairs.com/191281/security/u-s-cisa-adds-simplehelp-samsung-and-d-link-flaws-to-its-known-exploited-vulnerabilities-catalog.html) |
+| **CVE-2024-57728** | 7.2 | N/A | TRUE | 6.0 | SimpleHelp | Path Traversal | RCE / Arbitrary File Upload | Active | Mise à jour immédiate. | [CyberSecurityNews](https://cybersecuritynews.com/simplehelp-vulnerabilities-exploited/) |
+| **CVE-2026-3844** | 9.8 | N/A | FALSE | 4.0 | Breeze Cache (WordPress) | Arbitrary File Upload | RCE | Active | Mise à jour vers version 2.4.5. | [SecurityAffairs](https://securityaffairs.com/191267/uncategorized/over-400000-sites-at-risk-as-hackers-exploit-breeze-cache-plugin-flaw-cve-2026-3844.html) |
+| **CVE-2026-6951** | 9.8 | N/A | FALSE | 3.0 | simple-git | Incomplete Fix | RCE | Théorique | Mise à jour vers version 3.36.0+. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-6951) |
+| **CVE-2026-6988** | 9.0 | N/A | FALSE | 3.0 | Tenda HG10 | Buffer Overflow | RCE | Théorique | Mise à jour du firmware. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-6988) |
+| **CVE-2026-6992** | 8.3 | N/A | FALSE | 2.5 | Linksys MR9600 | OS Command Injection | RCE | Théorique | Mise à jour firmware 2.0.6.206937+. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-6992) |
 
 ---
 
@@ -124,11 +112,9 @@ Enfin, la sphère géopolitique reste dominée par le conflit US-Israël-Iran, o
 
 | Titre | Sujet canonique | Raison de sélection | Source(s) |
 |---|---|---|---|
-| Inside agenteV2 | AgenteV2 Banking Trojan | Nouveau malware financier brésilien complexe. | [Any.Run](https://any.run/cybersecurity-blog/brazilian-banking-phishing-campaign/) |
-| Firestarter Cisco Persistence | Firestarter Backdoor (UAT-4356) | Backdoor persistante post-patch sur Cisco. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/firestarter-malware-survives-cisco-firewall-updates-security-patches/) |
-| Bitwarden CLI npm compromise | Bitwarden CLI / Checkmarx Supply Chain Worm | Attaque supply chain majeure et wormable. | [Field Effect](https://fieldeffect.com/blog/bitwarden-cli-compromised-supply-chain-campaign) |
-| AMOS via Cursor agent | AMOS Stealer via Cursor AI Agent | Nouveau vecteur d'attaque via les agents IA. | [Field Effect](https://fieldeffect.com/blog/field-effect-detects-amos-stealer-delivered-via-cursor-ai-agent-session) |
-| New BlackFile group | BlackFile Vishing/Extortion | Campagne de vishing sophistiquée ciblant le retail. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/new-blackfile-extortion-gang-targets-retail-and-hospitality-orgs/) |
+| Threat actor uses Microsoft Teams to deploy new “Snow” malware | UNC6692 targeting via Microsoft Teams and Snow malware suite | Campagne active de social engineering sur plateforme SaaS avec malware custom. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/threat-actor-uses-microsoft-teams-to-deploy-new-snow-malware/) |
+| Monitoring Claude Code/Cowork at scale with OTel in Elastic | Elastic monitoring of Claude Code/Cowork AI agents using OpenTelemetry | Analyse technique sur la visibilité et la sécurité des agents IA en entreprise. | [Elastic](https://www.elastic.co/security-labs/claude-code-cowork-monitoring-otel-elastic) |
+| Air gaps don't stop sound. USAT... | USAT: Acoustic side-channel for air-gapped system exploitation | Recherche avancée sur les canaux cachés acoustiques (17-22kHz). | [Infosec Exchange](https://infosec.exchange/@Harpocrates/116467198955886067) |
 
 ---
 
@@ -138,13 +124,12 @@ Enfin, la sphère géopolitique reste dominée par le conflit US-Israël-Iran, o
 
 | Titre | Raison d'exclusion | Source(s) |
 |---|---|---|
-| ISC Stormcast Friday Apr 24 | Podcast d'actualité générale, pas d'analyse spécifique. | [ISC SANS](https://isc.sans.edu/podcastdetail/9906) |
-| Windows Update new controls | Sujet fonctionnel (gestion des redémarrages). | [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/windows-update-gets-new-controls-to-reduce-forced-restarts/) |
-| Microsoft Entra passkeys | Annonce d'une fonctionnalité de sécurité, pas un incident. | [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/microsoft-to-roll-out-entra-passkeys-on-windows-in-late-april/) |
-| DORA and operational resilience | Article de type guide stratégique / sponsorisé. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/dora-and-operational-resilience-credential-management-as-a-financial-risk-control/) |
-| Monitoring Claude Code with OTel | Article de type enablement technique / observabilité. | [Elastic](https://www.elastic.co/security-labs/claude-code-cowork-monitoring-otel-elastic) |
-| Rethinking Threat Intel in 2026 | Contenu stratégique généraliste d'entreprise. | [Recorded Future](https://www.recordedfuture.com/blog/rethinking-threat-intelligence-in-2026) |
-| Microsoft Remote Desktop Security UI | Problème cosmétique d'affichage des messages de sécurité. | [The Register](https://go.theregister.com/feed/www.theregister.com/2026/04/24/remote_desktop_security_beefed_up/) |
+| Microsoft rolls out revamped Windows Insider Program | Article commercial / Bug fonctionnel (changement de programme bêta) | [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/microsoft-rolls-out-revamped-windows-insider-program/) |
+| A USB cheat sheet landing on Hacker News | Contenu généraliste / hardware non-sécuritaire | [Mastobot](https://mastobot.ping.moi/@Bobe_bot/116468063403747120) |
+| EUVD-2026-1494 - Docket Cache | Score composite < 1 (Vulnérabilité mineure) | [Mastodon](https://mastodon.social/@EUVD_Bot/116467713421016250) |
+| EUVD-2026-1495 - Speed Kit | Score composite < 1 (Vulnérabilité mineure) | [Mastodon](https://mastodon.social/@EUVD_Bot/116467713351149871) |
+| System Administration: Week 12 | Ressource éducative / Slides de cours | [Mastodon](https://mstdn.social/@jschauma/116467303983822888) |
+| Après-climb: April 25, 2026 | Lien vers une autre veille ( Substak) | [Mastodon](https://infosec.exchange/@InfoSecSherpa/116467303650709468) |
 
 ---
 
@@ -152,458 +137,279 @@ Enfin, la sphère géopolitique reste dominée par le conflit US-Israël-Iran, o
 
 # SECTION "ARTICLES"
 
-<div id="agente-v2-banking-trojan"></div>
+---
 
-## AgenteV2 Banking Trojan
+<div id="unc6692-targeting-via-microsoft-teams-and-snow-malware-suite"></div>
+
+## UNC6692 targeting via Microsoft Teams and Snow malware suite
+
+---
 
 ### Résumé technique
 
-**agenteV2** est une évolution majeure des malwares financiers brésiliens, passant du simple vol de crédentiels à une plateforme de fraude interactive pilotée par opérateur. Découvert via des campagnes de phishing usurpant des citations judiciaires fédérales brésiliennes (format CNJ authentique), le malware utilise une chaîne d'infection à plusieurs étages : un chargeur VBScript hautement obfusqué télécharge un conteneur Python compilé avec **Nuitka**. 
+L'acteur de menace **UNC6692** mène actuellement une campagne sophistiquée de social engineering visant à infiltrer les réseaux d'entreprise en exploitant **Microsoft Teams**. L'attaque débute par une phase d'**email bombing** visant à saturer la boîte mail de la victime, créant un sentiment d'urgence et de frustration. L'attaquant contacte ensuite la cible via MS Teams, se faisant passer pour un agent du helpdesk IT proposant un "patch" pour bloquer le spam.
 
-Une fois actif, agenteV2 établit une backdoor persistante via des **WebSockets (uws://)**, permettant le streaming d'écran en temps réel (via les bibliothèques PIL et mss) et un shell distant interactif. Cette capacité permet à l'attaquant de surveiller l'écran de la victime et d'intervenir manuellement dès qu'une session bancaire est ouverte auprès d'institutions majeures (Itaú, Banco do Brasil, Bradesco, etc.) ou de portefeuilles crypto. Le malware vérifie également la présence de logiciels anti-fraude locaux (Diebold Warsaw) pour adapter son comportement.
+Le vecteur d'infection repose sur un lien redirigeant vers un dropper qui exécute des scripts **AutoHotkey**. Ces scripts chargent **SnowBelt**, une extension malveillante pour Chrome/Edge qui s'exécute de manière furtive sur une instance headless. SnowBelt sert de relais pour **SnowBasin**, un backdoor basé sur Python, et utilise **SnowGlaze**, un outil de tunneling WebSocket, pour masquer les communications C2 via des proxys SOCKS. L'objectif final est l'exfiltration de la base de données Active Directory via des outils comme **FTK Imager** et **LimeWire**.
+
+---
 
 ### Analyse de l'impact
 
-*   **Impact opérationnel :** Fraude financière directe et en temps réel. L'opérateur peut agir comme un "co-pilote" invisible, interceptant les transactions au moment de leur validation.
-*   **Sophistication :** Élevée pour le milieu cybercriminel brésilien. L'utilisation de Nuitka rend l'analyse statique et la décompilation du bytecode Python impossibles, forçant une analyse dynamique coûteuse.
-*   **Résilience :** Triple persistance (Registre Run et deux tâches planifiées avec privilèges maximum).
+*   **Impact opérationnel :** Compromission profonde du réseau incluant la prise de contrôle du domaine (Domain Takeover). Les attaquants utilisent le *pass-the-hash* pour se déplacer latéralement.
+*   **Niveau de sophistication :** Élevé. L'utilisation d'extensions de navigateur headless et de tunnels WebSocket complique grandement la détection par les solutions réseau traditionnelles.
+*   **Victimologie :** Organisations utilisant intensivement Microsoft Teams pour leur communication interne.
+
+---
 
 ### Recommandations
 
-*   Bloquer les accès réseau vers `pastebin[.]com/raw/0RmxqY57` (résolveur de C2).
-*   Déployer des règles de détection sur les processus `WScript.exe` lançant `schtasks` avec `/rl highest`.
-*   Surveiller les connexions sortantes TLS sur le port **8443** provenant de processus non-navigateurs.
+*   Restreindre la possibilité pour les utilisateurs externes de contacter les employés via Microsoft Teams.
+*   Sensibiliser les utilisateurs aux tactiques d'usurpation d'identité du helpdesk IT sur les plateformes de messagerie instantanée.
+*   Surveiller l'installation d'extensions de navigateur non autorisées via les politiques de groupe (GPO).
+
+---
 
 ### Playbook de réponse à incident
 
 #### Phase 1 — Préparation
-*   Vérifier que les logs de création de processus (Event ID 4688) et de tâches planifiées (Event ID 4698) sont activés sur les endpoints Windows.
-*   Configurer l'EDR pour alerter sur l'écriture de fichiers PE dans `C:\Program Files (x86)\Wi-fi\`.
+*   Activer les logs d'audit avancés pour Microsoft Teams et les extensions de navigateur via l'EDR.
+*   Vérifier que les processus Python et AutoHotkey sont monitorés sur les postes de travail.
+*   Identifier les comptes ayant des privilèges d'administration de domaine pour une surveillance accrue.
 
 #### Phase 2 — Détection et analyse
-*   **Règle YARA contextualisée :**
-    ```yara
-    rule Detect_AgenteV2_Nuitka {
-        strings:
-            $a = "agenteV2_historico_detect.dll" wide
-            $b = "uws://" ascii
-            $c = "NUITKA_PACKAGE_HOME" ascii
-        condition: uint16(0) == 0x5A4D and 2 of them
-    }
-    ```
-*   Identifier les connexions vers les IPs `69[.]49.241[.]120` et `38[.]242.246[.]176`.
+*   **Requête EDR :** Rechercher des processus `AutoHotkey.exe` chargeant des scripts depuis des répertoires temporaires ou le dossier de démarrage.
+*   **Règle Sigma :** Détecter la création de tâches planifiées pointant vers des instances de navigateur avec le flag `--headless`.
+*   Surveiller les connexions WebSocket inhabituelles vers des infrastructures C2 externes via le proxy.
 
 #### Phase 3 — Confinement, éradication et récupération
-*   **Isolation :** Mettre en quarantaine EDR les processus `wifi_driver.exe` et `reiniciar.exe`.
-*   **Éradication :** Supprimer le répertoire `C:\Program Files (x86)\Wi-fi\` et les clés de registre `HKCU\Software\Microsoft\Windows\CurrentVersion\Run\MonitorSystem`.
-*   **Récupération :** Réinitialiser impérativement tous les mots de passe bancaires et de sessions SSO enregistrés dans les navigateurs Chrome/Edge.
+*   **Confinement :** Isoler les hôtes présentant des artefacts "Snow" et révoquer immédiatement les sessions Microsoft Teams des utilisateurs concernés.
+*   **Éradication :** Supprimer les extensions de navigateur malveillantes, les scripts AutoHotkey et les fichiers binaires FTK Imager non autorisés.
+*   **Récupération :** Réinitialiser les mots de passe de tous les comptes compromis et auditer les changements récents dans l'Active Directory.
 
 #### Phase 4 — Activités post-incident
-*   Analyser l'étendue de l'exfiltration via les logs du port 8443 pour estimer la durée du "dwell time".
-*   Informer les institutions financières ciblées si des sessions étaient actives durant l'infection.
+*   Conduire un REX sur l'efficacité des filtres anti-spam et des politiques de sécurité Teams.
+*   Mettre à jour les règles de détection EDR/SIEM avec les IoC spécifiques à UNC6692.
+*   Évaluer les obligations de notification (NIS2/RGPD) si des données Active Directory ont été exfiltrées.
 
 #### Phase 5 — Threat Hunting (proactif)
 
 | Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
 |---|---|---|---|
-| Recherche d'exécutions suspectes masquées en pilotes Wi-Fi | T1036.005 | EDR Logs | Process.path contains "Wi-fi" AND Process.name == "wifi_driver.exe" |
-| Détection de bypass UAC via tâches planifiées | T1548.002 | Windows Security | EventID 4688 AND Command line contains "/elevated /fromtask" |
+| Recherche d'extensions de navigateur headless suspectes | T1176 | Logs EDR / Registre | Chercher `ExtensionInstallForcelist` ou des processus `msedge.exe` avec `--load-extension`. |
+| Détection de tunneling WebSocket persistant | T1572 | Flux réseau (Netflow/Proxy) | Identifier des flux de longue durée avec un faible volume de données vers des IPs non connues. |
+
+---
 
 ### Indicateurs de compromission (DEFANG)
 
 | Type | Valeur (DEFANG) | Description | Fiabilité |
 |---|---|---|---|
-| Domaine | odaracani[.]online | Porte d'entrée phishing (Tracker) | Haute |
-| Domaine | nuevaprodeciencia[.]club | Distribution de payloads | Haute |
-| IP | 38[.]242.246[.]176 | Serveur C2 réel (Düsseldorf, DE) | Haute |
-| URL | hxxps[://]pastebin[.]com/raw/0RmxqY57 | Résolveur Dead-drop pour C2 | Haute |
-| Hash SHA256 | 5fd682cdfdf2de867be2a4bd378a2c206370c18a598975a11c99dba121e36b1b | Échantillon EML initial | Moyenne |
-| Hash MD5 | 826d6350724f203b911aa6c8c4626391 | agenteV2_historico_detect.dll | Haute |
+| Nom de fichier | `SnowBelt` | Extension malveillante Chrome/Edge | Haute |
+| Nom de fichier | `SnowBasin` | Backdoor Python | Haute |
+| Processus | `AutoHotkey[.]exe` | Chargeur de scripts malveillants | Moyenne |
+| Outil | `LimeWire` | Utilisé pour l'exfiltration de données | Moyenne |
+
+---
 
 ### TTP MITRE ATT&CK
 
 | ID TTP | Tactique | Technique | Description contextuelle |
 |---|---|---|---|
-| T1566.001 | Initial Access | Phishing: Spearphishing Attachment | Fausse citation judiciaire PDF. |
-| T1027 | Defense Evasion | Obfuscated Files or Information | DLL compilée nativement via Nuitka. |
-| T1071.001 | Command & Control | Application Layer Protocol: Web Protocols | Utilisation de WebSockets bidirectionnels. |
-| T1113 | Collection | Screen Capture | Streaming d'écran JPEG via PIL/mss. |
-
-### Sources
-* [ANY.RUN's Cybersecurity Blog](https://any.run/cybersecurity-blog/brazilian-banking-phishing-campaign/)
+| T1566.003 | Initial Access | Phishing: Spearphishing Service | Utilisation de messages MS Teams pour piéger les utilisateurs. |
+| T1176 | Persistence | Browser Extensions | Utilisation de SnowBelt pour maintenir un accès via le navigateur. |
+| T1572 | Command and Control | Protocol Tunneling | SnowGlaze via WebSockets. |
+| T1003.001 | Credential Access | OS Credential Dumping: LSASS Memory | Extraction de credentials via FTK Imager. |
 
 ---
 
-<div id="firestarter-backdoor-uat-4356"></div>
+### Sources
 
-## Firestarter Backdoor (UAT-4356)
+* [BleepingComputer](https://www.bleepingcomputer.com/news/security/threat-actor-uses-microsoft-teams-to-deploy-new-snow-malware/)
+
+---
+
+<div id="elastic-monitoring-of-claude-code-cowork-ai-agents-using-opentelemetry"></div>
+
+## Elastic monitoring of Claude Code/Cowork AI agents using OpenTelemetry
+
+---
 
 ### Résumé technique
 
-**Firestarter** est un implant sophistiqué de type "backdoor" ciblant spécifiquement les périphériques réseau **Cisco Firepower** et **Cisco Secure Firewall** exécutant les logiciels ASA ou FTD. Attribué au groupe d'espionnage **UAT-4356** (lié à la campagne ArcaneDoor), Firestarter se distingue par son extrême résilience : il survit aux redémarrages, aux mises à jour de firmware et à l'application de patchs de sécurité.
+L'adoption des agents d'IA autonomes tels que **Claude Code** (CLI) et **Claude Cowork** (Desktop) introduit de nouveaux risques de sécurité, car ces outils peuvent exécuter des commandes shell, lire des fichiers et interagir avec des systèmes internes via des connecteurs **MCP (Model Context Protocol)**. L'équipe InfoSec d'Elastic propose une architecture de monitoring basée sur **OpenTelemetry (OTel)** pour capturer les activités de ces agents.
 
-L'infection initiale exploite des vulnérabilités critiques comme **CVE-2025-20333** (RCE). L'implant s'injecte directement dans le processus noyau **LINA** de Cisco, en modifiant les gestionnaires XML pour intercepter des requêtes WebVPN spécifiques contenant un "magic packet". Firestarter utilise des techniques de persistance furtives en manipulant le fichier de montage de démarrage (`CSP_MOUNT_LIST`) et en se restaurant automatiquement via des scripts cachés dans les journaux système (`/opt/cisco/platform/logs/var/log/svc_samcore.log`).
+Les agents exportent cinq types d'événements clés : `api_request`, `tool_result` (incluant les commandes bash et requêtes Slack/Jira), `tool_decision`, `user_prompt` et `api_error`. L'ingestion se fait soit via une passerelle **EDOT (Elastic Distribution of OTel)**, soit via le endpoint **Managed OTLP** d'Elastic Cloud. L'analyse repose sur des pipelines d'ingestion Elasticsearch pour structurer les paramètres JSON des outils (bash, MCP) dans des champs "flattened", permettant ainsi de détecter les comportements anormaux des agents IA.
+
+---
 
 ### Analyse de l'impact
 
-*   **Impact sectoriel :** Menace critique pour les réseaux gouvernementaux et les infrastructures nationales critiques (CNI). Une agence fédérale américaine a déjà été confirmée compromise.
-*   **Sophistication :** Très élevée. L'implant agit au niveau noyau (hooking LINA), échappant à toutes les méthodes de nettoyage standard (reboot, reload).
-*   **Risque résiduel :** L'application d'un correctif n'élimine pas l'infection si celle-ci a eu lieu avant le patch.
+*   **Impact opérationnel :** Risque de "Prompt Injection" indirecte où un agent IA exécute des commandes malveillantes après avoir lu un fichier ou un commentaire infecté.
+*   **Visibilité :** Le monitoring OTel comble un fossé critique entre l'intention de l'utilisateur (prompt) et l'action réelle sur le système (exécution de code).
+*   **Gouvernance :** Permet l'audit des coûts et des décisions d'approbation automatique des outils par les utilisateurs.
+
+---
 
 ### Recommandations
 
-*   Exécuter la commande `show kernel process | include lina_cs` : tout résultat indique une compromission.
-*   **Action impérative :** Seule une réimagerie complète du périphérique et une mise à jour à partir d'une source saine garantissent l'éradication.
-*   Réaliser un cycle d'alimentation physique ("cold restart") si la réimagerie immédiate est impossible.
+*   Activer systématiquement l'exportation des prompts et détails d'outils via les variables `OTEL_LOG_USER_PROMPTS=1` et `OTEL_LOG_TOOL_DETAILS=1`.
+*   Implémenter des politiques de "Managed Settings" via MDM (Jamf/Intune) pour empêcher la désactivation du monitoring par les développeurs.
+*   Restreindre les serveurs MCP autorisés à une liste blanche validée par la sécurité.
+
+---
 
 ### Playbook de réponse à incident
 
 #### Phase 1 — Préparation
-*   Identifier tous les périphériques Cisco ASA/FTD exposés et collecter leurs versions de firmware.
-*   Préparer des images de firmware certifiées pour une réinstallation d'urgence.
+*   Déployer le collecteur OTel ou configurer le endpoint Managed OTLP dans Elastic.
+*   Vérifier que les templates d'index et les pipelines d'ingestion sont en place pour traiter les champs `tool_parameters_flattened`.
+*   S'assurer que les développeurs utilisent les versions de Claude supportant l'export OTel.
 
 #### Phase 2 — Détection et analyse
-*   **Analyse de la mémoire :** Appliquer les règles YARA de la CISA sur les core dumps de LINA.
-*   Rechercher la présence du fichier binaire ELF malveillant dans `/usr/bin/lina_cs`.
+*   **Détection :** Identifier des appels d'outils suspects via `attributes.tool_name: "bash"` avec des commandes de découverte réseau ou d'exfiltration.
+*   **Analyse :** Corréler les logs Claude avec les événements **Elastic Defend** (EDR) pour vérifier l'impact réel d'une commande générée par l'IA sur l'hôte.
+*   Vérifier les patterns d'approbation (`tool_decision`) pour identifier des utilisateurs acceptant systématiquement des actions risquées.
 
 #### Phase 3 — Confinement, éradication et récupération
-*   **Confinement :** Isoler le segment réseau géré par le pare-feu suspect.
-*   **Éradication :** Procéder à une réimagerie complète (re-imaging) de l'appareil. **Attention :** Les commandes `shutdown` ou `reload` sont insuffisantes.
-*   **Récupération :** Restaurer la configuration à partir d'une sauvegarde pré-septembre 2025 après validation de l'intégrité.
+*   **Confinement :** Désactiver temporairement l'accès de l'utilisateur aux outils d'IA si une activité suspecte est détectée.
+*   **Éradication :** Supprimer les fichiers malveillants éventuellement générés par l'agent IA.
+*   **Récupération :** Auditer les modifications de code effectuées par l'agent pendant la période de suspicion.
 
 #### Phase 4 — Activités post-incident
-*   Déclarer l'incident aux autorités compétentes (ANSSI/CISA) conformément aux directives d'urgence (Emergency Directive 25-03).
-*   Réinitialiser tous les secrets stockés sur le device (clés VPN, certificats, comptes admin).
+*   Ajuster les filtres de prompts et les permissions des agents IA.
+*   Mettre à jour la base de connaissances sur les risques liés aux agents autonomes.
+*   Réviser les quotas de coûts si l'incident a généré une consommation excessive de tokens.
 
 #### Phase 5 — Threat Hunting (proactif)
 
 | Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
 |---|---|---|---|
-| Présence de processus noyau non documentés sur ASA | T1106 | Console Kernel | `show kernel process` et inspection des noms déviants (lina_cs) |
-| Modification anormale de la liste de boot | T1542.001 | Forensic image | Inspection de `CSP_MOUNT_LIST` pour des chemins vers `/opt/cisco/...` |
+| Recherche de commandes bash AI inhabituelles | T1059 | Logs Claude OTel | Rechercher des patterns comme `curl`, `wget`, `base64` dans `tool_parameters_flattened.bash_command`. |
+| Abus de connecteurs MCP | T1071 | Logs Claude OTel | Monitorer les accès via `mcp_server_name` vers des services non-standard. |
+
+---
 
 ### Indicateurs de compromission (DEFANG)
 
 | Type | Valeur (DEFANG) | Description | Fiabilité |
 |---|---|---|---|
-| Chemin fichier | /usr/bin/lina_cs | Emplacement d'exécution malveillant | Haute |
-| Chemin fichier | /opt/cisco/platform/logs/var/log/svc_samcore[.]log | Copie de persistance du binaire | Haute |
-| Processus | lina_cs | Nom du processus backdoor | Haute |
+| Domaine | claude[.]ai | Interface web de l'IA | Informationnelle |
+| Service | docker[.]elastic[.]co | Source des images du collecteur | Informationnelle |
+
+---
 
 ### TTP MITRE ATT&CK
 
 | ID TTP | Tactique | Technique | Description contextuelle |
 |---|---|---|---|
-| T1542.001 | Persistence | Pre-OS Boot: System Firmware | Manipulation du processus de boot pour survie au patch. |
-| T1105 | Command & Control | Ingress Tool Transfer | Déploiement de LINE VIPER via le hook Firestarter. |
-| T1573.002 | Command & Control | Encrypted Channel: Asymmetric | Magic packet chiffré via WebVPN. |
-
-### Sources
-* [BleepingComputer](https://www.bleepingcomputer.com/news/security/firestarter-malware-survives-cisco-firewall-updates-security-patches/)
-* [The Hacker News](https://thehackernews.com/2026/04/firestarter-backdoor-hit-federal-cisco.html)
-* [SecurityAffairs](https://securityaffairs.com/191241/hacking/cisa-reports-persistent-firestarter-backdoor-on-cisco-asa-device-in-federal-network.html)
+| T1059 | Execution | Command and Scripting Interpreter | Utilisation de l'agent pour exécuter des scripts sur l'hôte. |
+| T1071 | Command and Control | Application Layer Protocol | Interaction avec des APIs internes via MCP. |
 
 ---
 
-<div id="bitwarden-cli-checkmarx-supply-chain-worm"></div>
+### Sources
 
-## Bitwarden CLI / Checkmarx Supply Chain Worm
+* [Elastic Security Labs](https://www.elastic.co/security-labs/claude-code-cowork-monitoring-otel-elastic)
+
+---
+
+<div id="usat-ultrasonic-acoustic-covert-channel-research"></div>
+
+## USAT: Acoustic side-channel for air-gapped system exploitation
+
+---
 
 ### Résumé technique
 
-Une attaque massive de la chaîne d'approvisionnement logicielle a ciblé les développeurs via le registre **npm**. Le package officiel **@bitwarden/cli v2026.4.0** a été publié avec un code malveillant intégré pendant une fenêtre de 90 minutes le 22 avril 2026. L'attaque, liée à la campagne **Shai-Hulud** de TeamPCP, utilise un hook `preinstall` qui exécute un script (`bw_setup.js`). 
+La recherche sur **USAT (Ultrasonic Sub-Audible Trojan)** révèle un canal de communication acoustique furtif opérant dans la bande de fréquences **17–22 kHz**. Ce canal est inaudible pour l'oreille humaine mais peut être capturé par les microphones standards des appareils électroniques. USAT permet l'exfiltration de données ou la transmission de commandes vers des systèmes isolés physiquement (**air-gapped**), sans nécessiter d'accès physique ou réseau préalable.
 
-Ce script télécharge le runtime **Bun** pour exécuter un payload de 10 MB (`bw1.js`) hautement obfusqué. Le payload est un ver sophistiqué : il vole les tokens npm et GitHub, les clés SSH, et les secrets Cloud (AWS, Azure, GCP). Plus grave encore, il se propage automatiquement en injectant un code similaire dans tous les packages npm que la victime a le droit de publier, et crée des dépôts GitHub publics sous le compte de la victime pour exfiltrer les données exfiltrées (noms de dépôts sur le thème de "Dune", ex: `gesserit-melange-813`).
+Le mécanisme repose sur l'utilisation des haut-parleurs d'un appareil compromis pour émettre des ondes ultrasonores modulées, qui sont ensuite reçues et décodées par un autre appareil à proximité. Cette technique de canal latéral (side-channel) contourne les barrières de sécurité traditionnelles basées sur l'isolation logique et physique.
+
+---
 
 ### Analyse de l'impact
 
-*   **Impact opérationnel :** Compromission totale des pipelines CI/CD et des environnements de développement. Le vol de secrets Cloud permet un accès direct aux infrastructures de production.
-*   **Rayon d'action :** Potentiellement mondial. Tout package publié par un développeur infecté devient un nouveau vecteur pour ses clients.
-*   **Sophistication :** Très élevée. Utilisation de techniques d'auto-propagation (worm) et de "dead-drop" via l'API GitHub pour la résilience du C2.
+*   **Impact stratégique :** Remise en question de l'efficacité absolue du "Air Gap" pour les systèmes critiques (SCADA, terminaux de paiement, coffres-forts numériques).
+*   **Furtivité :** Très élevée, car les signaux ne sont pas détectés par l'oreille humaine et les outils de monitoring réseau sont aveugles aux ondes acoustiques.
+*   **Portée :** Limitée par la proximité physique (quelques mètres), mais efficace dans des bureaux partagés ou des centres de données.
+
+---
 
 ### Recommandations
 
-*   **Vérifier immédiatement** si la version `@bitwarden/cli@2026.4.0` est présente dans vos fichiers `package-lock.json` ou environnements de build.
-*   **Révoquer et renouveler** impérativement tous les tokens GitHub PAT, npm tokens et secrets Cloud accessibles depuis les postes de développement.
-*   Désactiver les scripts de cycle de vie dans npm via `npm config set ignore-scripts true`.
+*   Désactiver physiquement ou via le BIOS les haut-parleurs et microphones sur les systèmes hautement critiques isolés.
+*   Utiliser des détecteurs de fréquences ultrasonores pour identifier des anomalies acoustiques dans les zones sensibles.
+*   Implémenter un filtrage logiciel des fréquences > 17 kHz au niveau des pilotes audio.
+
+---
 
 ### Playbook de réponse à incident
 
 #### Phase 1 — Préparation
-*   S'assurer que les outils de scan de dépendances (SCA) sont configurés pour alerter sur les versions révoquées/malveillantes.
-*   Restreindre les permissions des tokens GitHub/npm au strict nécessaire (least privilege).
+*   Inventorier les actifs critiques "air-gapped" et leurs capacités audio matérielles.
+*   Sensibiliser le personnel à ne pas introduire d'appareils mobiles personnels à proximité des systèmes sensibles.
 
 #### Phase 2 — Détection et analyse
-*   **Requête SIEM (SIEM Query) :**
-    `process.name: "bun" AND network.destination.domain: "audit.checkmarx.cx"`
-*   Rechercher dans les journaux système toute exécution inattendue du binaire `bw` durant la fenêtre d'exposition.
+*   Utiliser des outils d'analyse spectrale audio pour monitorer la bande 17-22 kHz.
+*   Inspecter les hôtes pour détecter des malwares capables de manipuler les API audio (ex: `USAT` implant).
 
 #### Phase 3 — Confinement, éradication et récupération
-*   **Confinement :** Bloquer le domaine `audit.checkmarx[.]cx` et `checkmarx[.]cx`.
-*   **Éradication :** Désinstaller la version 2026.4.0 et forcer le downgrade vers une version saine. Nettoyer les caches npm locaux et serveurs.
-*   **Récupération :** Auditer tous les packages maintenus par l'organisation pour détecter des versions "patch" (ex: 1.2.3 -> 1.2.4) suspectes publiées le 22/04.
+*   **Confinement :** Isoler l'appareil émetteur suspect dans une cage de Faraday acoustique ou déconnecter physiquement ses composants audio.
+*   **Éradication :** Nettoyer le malware ayant servi à établir le pont acoustique.
+*   **Récupération :** Durcir les systèmes critiques en supprimant tout matériel audio non nécessaire.
 
 #### Phase 4 — Activités post-incident
-*   Revoir la politique de gestion des secrets pour migrer vers des identités éphémères (OIDC) plutôt que des tokens statiques.
-*   Mener un audit complet des dépôts GitHub de l'organisation pour détecter des workflows injectés.
+*   Mettre à jour les politiques de sécurité physique pour inclure les risques acoustiques.
+*   Revoir les procédures d'isolation des systèmes critiques.
 
 #### Phase 5 — Threat Hunting (proactif)
 
 | Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
 |---|---|---|---|
-| Création de dépôts GitHub illégitimes | T1137 | GitHub Audit Logs | action: "repo.create" AND repository.description: "Checkmarx Configuration Storage" |
-| Injection de workflows malveillants | T1195.002 | GitHub Actions | Recherche de fichiers `.github/workflows/format-check.yml` sur des branches temporaires |
+| Détection d'implants audio | T1102 | Logs système / EDR | Rechercher des processus accédant aux périphériques audio sans interface utilisateur visible. |
+
+---
 
 ### Indicateurs de compromission (DEFANG)
 
 | Type | Valeur (DEFANG) | Description | Fiabilité |
 |---|---|---|---|
-| Domaine | audit[.]checkmarx[.]cx | Serveur C2 primaire | Haute |
-| Hash SHA256 | 18f784b3bc9a0bcdcb1a8d7f51bc5f54323fc40cbd874119354ab609bef6e4cb | Payload malveillant bw1.js | Haute |
-| URL | hxxps[://]github[.]com/helloworm00/hello-world | Dead drop pour résolution C2 | Haute |
-| Email | helloworm00[@]proton[.]me | Compte attaquant associé | Haute |
+| Fréquence | 17-22[.]000 Hz | Bande passante utilisée par USAT | Haute |
+| Domaine | researchgate[.]net | Source de la recherche académique | Informationnelle |
+
+---
 
 ### TTP MITRE ATT&CK
 
 | ID TTP | Tactique | Technique | Description contextuelle |
 |---|---|---|---|
-| T1195.002 | Initial Access | Supply Chain Compromise: Software Dependencies | Injection dans Bitwarden CLI npm. |
-| T1552.001 | Credential Access | Unsecured Credentials: Private Keys | Vol de clés SSH et tokens npm/GitHub. |
-| T1539 | Credential Access | Steal Web Session Cookie | Extraction des cookies de session navigateur. |
-
-### Sources
-* [Unit 42](https://unit42.paloaltonetworks.com/monitoring-npm-supply-chain-attacks/)
-* [Field Effect](https://fieldeffect.com/blog/bitwarden-cli-compromised-supply-chain-campaign)
-* [SecurityAffairs](https://securityaffairs.com/191215/uncategorized/checkmarx-supply-chain-attack-impacts-bitwarden-npm-distribution-path.html)
+| T1011.001 | Exfiltration | Exfiltration Over Alternative Medium: Acoustic | Utilisation des ultrasons pour exfiltrer des données. |
+| T1092 | Command and Control | Communication Through Removable Media | (Concept proche) Pontage entre systèmes isolés. |
 
 ---
 
-<div id="amos-stealer-via-cursor-ai-agent"></div>
-
-## AMOS Stealer via Cursor AI Agent
-
-### Résumé technique
-
-Une nouvelle technique de livraison de malware cible les développeurs utilisant des outils d'IA. L'incident implique l'exécution de commandes **AppleScript** malveillantes via une session d'agent **Cursor** (un fork de VS Code intégrant l'IA) exécutant **Claude Code**. L'attaquant utilise l'ingénierie sociale pour inciter l'utilisateur à demander à l'agent IA de "réparer" une erreur, menant l'agent à télécharger et exécuter un script depuis `arkypc[.]com`.
-
-Le script AppleScript effectue une reconnaissance du système pour l'évasion de sandbox (détection de QEMU, VMware) puis déploie le payload **AMOS Stealer**. Ce dernier collecte les mots de passe, clés SSH, données Telegram et portefeuilles crypto. AMOS Stealer se distingue ici par son intégration furtive : les commandes malveillantes (`curl`, `chmod`, `xattr`) se fondent dans le flux de travail normal d'un agent de codage automatique.
-
-### Analyse de l'impact
-
-*   **Impact opérationnel :** Exfiltration rapide (moins de 2 minutes) de tous les secrets d'un poste macOS. 
-*   **Confiance :** L'utilisation de l'agent IA comme intermédiaire réduit la méfiance de l'utilisateur, qui autorise les commandes pensant qu'elles font partie du processus de correction de bug.
-*   **Plateforme :** Cible spécifiquement macOS.
-
-### Recommandations
-
-*   **Auditer les logs Cursor/Claude Code** pour toute commande `curl` vers des domaines inconnus comme `arkypc[.]com`.
-*   Éduquer les développeurs sur les risques liés aux suggestions de l'IA impliquant l'exécution de scripts externes non vérifiés.
-*   Utiliser des outils de surveillance comportementale sur macOS pour détecter les modifications suspectes de LaunchDaemons.
-
-### Playbook de réponse à incident
-
-#### Phase 1 — Préparation
-*   Vérifier que les outils de protection de type EDR/MDR sont actifs sur tous les postes macOS et surveillent les processus AppleScript (`osascript`).
-
-#### Phase 2 — Détection et analyse
-*   **Règle de détection EDR :**
-    `process.parent.name: "Cursor" AND process.name: "osascript" AND command_line: contains "password for user"`
-*   Rechercher le fichier malveillant dans `/private/tmp/helper`.
-
-#### Phase 3 — Confinement, éradication et récupération
-*   **Confinement :** Isoler l'hôte infecté. Bloquer l'IP `92[.]246.136.14`.
-*   **Éradication :** Supprimer les implants persistants dans `~/Library/Application Support/.com.apple.accountsd/AccountsHelper` et le fichier `.plist` associé dans `/Library/LaunchDaemons/`.
-*   **Récupération :** Réinitialiser tous les secrets exfiltrés (Keychain macOS, tokens AWS, sessions Telegram).
-
-#### Phase 4 — Activités post-incident
-*   Analyser l'historique des prompts de l'IA pour identifier le déclencheur de l'ingénierie sociale.
-*   Mettre à jour les politiques de "Safe AI Use" de l'entreprise.
-
-#### Phase 5 — Threat Hunting (proactif)
-
-| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
-|---|---|---|---|
-| Abus de `sudo` via AppleScript | T1548.003 | Endpoint Logs | `sh -c echo * | sudo -S cp *` (pattern AMOS) |
-| Exfiltration de Keychain | T1555.001 | File Access | Surveillance des accès au fichier `login.keychain-db` par des processus non-système |
-
-### Indicateurs de compromission (DEFANG)
-
-| Type | Valeur (DEFANG) | Description | Fiabilité |
-|---|---|---|---|
-| Domaine | arkypc[.]com | Source du loader malveillant | Haute |
-| IP | 92[.]246.136.14 | Serveur exfiltration (fallback) | Moyenne |
-| Chemin fichier | /private/tmp/helper | Loader AMOS initial | Haute |
-| Hash MD5 | 312147C0AE0D555A4D50FA627FF7D4F3 | Binaire loader setup | Haute |
-
-### TTP MITRE ATT&CK
-
-| ID TTP | Tactique | Technique | Description contextuelle |
-|---|---|---|---|
-| T1059.002 | Execution | Command and Scripting Interpreter: AppleScript | Utilisation de scripts pour voler les crédentiels. |
-| T1036.005 | Defense Evasion | Masquerading: Match Legitimate Name | Usage de noms comme `com.apple.accountsd.helper`. |
-| T1560.001 | Collection | Archive Collected Data: Archive via Utility | Compression en `/tmp/out.zip` pour exfiltration. |
-
 ### Sources
-* [Field Effect](https://fieldeffect.com/blog/field-effect-detects-amos-stealer-delivered-via-cursor-ai-agent-session)
 
----
-
-<div id="blackfile-vishing-extortion"></div>
-
-## BlackFile Vishing/Extortion
-
-### Résumé technique
-
-Le nouveau groupe cybercriminel **BlackFile** (également suivi sous les noms CL-CRI-1116 ou Cordial Spider) mène des campagnes d'extorsion agressives contre les secteurs du retail et de l'hospitalité. Leur mode opératoire repose sur le **vishing** (phishing vocal) : les attaquants appellent les employés en usurpant le numéro du support IT interne. Ils les dirigent vers des portails de login SSO falsifiés pour voler leurs identifiants et leurs codes MFA.
-
-Une fois l'accès initial obtenu, BlackFile utilise les API Salesforce et SharePoint pour extraire massivement des données sensibles (SSN, données financières, rapports confidentiels). Pour accentuer la pression sur les victimes, le groupe pratique le **swatting** (fausses alertes d'urgence ciblant le domicile des cadres) et publie les preuves du vol sur un site de leak dédié sur le Dark Web. Des liens avec le réseau criminel "The Com" ont été établis.
-
-### Analyse de l'impact
-
-*   **Impact financier :** Demandes de rançons s'élevant à sept chiffres.
-*   **Impact psychologique :** Utilisation de tactiques d'intimidation physique (swatting).
-*   **Victimologie :** Secteurs à forte rotation de personnel (retail, hôtels) où les politiques de vérification d'identité sont parfois moins rigoureuses.
-
-### Recommandations
-
-*   Mettre en place une politique de vérification d'identité stricte pour tout appel entrant du support IT (ex: code de rappel, notification in-app).
-*   Renforcer le monitoring des API Salesforce et SharePoint pour détecter les téléchargements inhabituels de fichiers "confidential" ou "SSN".
-*   Sensibiliser spécifiquement le personnel de première ligne aux techniques de vishing.
-
-### Playbook de réponse à incident
-
-#### Phase 1 — Préparation
-*   Établir une procédure de crise incluant les forces de l'ordre en cas de menace physique ou swatting.
-*   Vérifier les logs de session SSO pour détecter des changements de "User-Agent" suspects.
-
-#### Phase 2 — Détection et analyse
-*   Identifier les connexions SSO provenant de plages d'IPs de fournisseurs de services résidentiels inattendus ou VPN.
-*   Surveiller les Event IDs 4624 (logons) avec des types d'authentification inhabituels.
-
-#### Phase 3 — Confinement, éradication et récupération
-*   **Confinement :** Révoquer immédiatement toutes les sessions actives de l'utilisateur compromis. Désactiver l'enregistrement de nouveaux dispositifs MFA sans validation physique.
-*   **Éradication :** Identifier et bloquer les tokens d'accès API générés par l'attaquant.
-*   **Récupération :** Restaurer l'accès de l'employé après une réinitialisation physique de ses accès.
-
-#### Phase 4 — Activités post-incident
-*   Revoir les politiques de "Conditional Access" pour exiger des dispositifs conformes (Intune) pour l'accès aux données sensibles.
-*   Notifier les autorités en cas de fuite avérée de données PII.
-
-#### Phase 5 — Threat Hunting (proactif)
-
-| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
-|---|---|---|---|
-| Accès API Salesforce suspect | T1567 | Salesforce Logs | Recherche de volumes de téléchargement élevés (>500 fichiers) sur une courte période |
-| Inscription de dispositif MFA non autorisé | T1556.006 | Microsoft Entra Logs | Audit des "MFA registration events" hors des bureaux physiques ou plages d'heures normales |
-
-### Indicateurs de compromission (DEFANG)
-
-| Type | Valeur (DEFANG) | Description | Fiabilité |
-|---|---|---|---|
-| Technique | Vishing | Appels depuis des numéros VoIP usurpés | Haute |
-| Pattern | SSN, confidential | Termes de recherche dans SharePoint/Salesforce | Moyenne |
-
-### TTP MITRE ATT&CK
-
-| ID TTP | Tactique | Technique | Description contextuelle |
-|---|---|---|---|
-| T1566.004 | Initial Access | Phishing: Voice | Utilisation de VoIP spoofing pour usurper le support IT. |
-| T1539 | Credential Access | Steal Web Session Cookie | Capture des sessions SSO via des proxies d'authentification. |
-| T1567 | Exfiltration | Exfiltration Over Web Service | Abus des API légitimes de Salesforce et SharePoint. |
-
-### Sources
-* [BleepingComputer](https://www.bleepingcomputer.com/news/security/new-blackfile-extortion-gang-targets-retail-and-hospitality-orgs/)
-
----
-
-<div id="adt-data-breach-shinyhunters"></div>
-
-## ADT Data Breach (ShinyHunters)
-
-### Résumé technique
-
-Le géant de la sécurité domotique **ADT** a confirmé une intrusion détectée le 20 avril 2026. L'attaque, revendiquée par le groupe **ShinyHunters**, a permis de compromettre les informations personnelles de clients et prospects. Les attaquants affirment avoir volé plus de 10 millions de dossiers. La méthode d'accès initial utilisée est une campagne de **vishing** ayant permis de compromettre un compte **Okta SSO** d'un employé. 
-
-Grâce à cet accès, les attaquants ont pu s'authentifier sur l'instance **Salesforce** de l'entreprise pour extraire les PII (noms, téléphones, adresses). ADT précise que les systèmes de sécurité des clients n'ont pas été affectés et qu'aucune donnée de paiement n'a été dérobée. Les attaquants ont menacé de divulguer les données le 27 avril si aucune rançon n'était payée.
-
-### Analyse de l'impact
-
-*   **Impact réputationnel :** Élevé pour une entreprise dont le cœur de métier est la sécurité.
-*   **Impact financier :** Coûts de remédiation, monitoring de crédit pour 10M de victimes, et risque réglementaire.
-*   **Niveau de menace :** ShinyHunters est connu pour ses exfiltrations massives réussies via des outils SaaS.
-
-### Recommandations
-
-*   Migrer vers une authentification FIDO2 pour tous les accès SSO afin de neutraliser le vishing/AiTM.
-*   Implémenter des restrictions IP sur les consoles d'administration SaaS (Salesforce, Okta).
-*   Réaliser des audits de permissions sur les outils SaaS pour limiter l'accès aux bases de données clients globales.
-
-### Indicateurs de compromission (DEFANG)
-
-| Type | Valeur (DEFANG) | Description | Fiabilité |
-|---|---|---|---|
-| Acteur | ShinyHunters | Groupe d'extorsion actif | Haute |
-| Vecteur | Okta SSO Compromise | Accès via vishing employé | Haute |
-
-### Sources
-* [BleepingComputer](https://www.bleepingcomputer.com/news/security/adt-confirms-data-breach-after-shinyhunters-leak-threat/)
-
----
-
-<div id="carnival-cruise-data-breach-shinyhunters"></div>
-
-## Carnival Cruise Data Breach (ShinyHunters)
-
-### Résumé technique
-
-L'opérateur de croisières **Carnival Corporation** a subi une violation de données massive touchant 7,5 millions de comptes uniques liés au programme de fidélité **Mariner Society** (Holland America). Les données ont été publiées sur un forum de leak par **ShinyHunters** en avril 2026 après l'échec d'une tentative d'extorsion.
-
-Les fichiers contiennent les noms, dates de naissance, genres, adresses email et statuts de fidélité. Carnival a reconnu un incident de phishing ciblant un seul compte utilisateur, qui semble avoir servi de pivot pour l'exfiltration massive. Cette attaque s'inscrit dans la même vague que celle ciblant ADT, soulignant le focus actuel de ShinyHunters sur les bases de données clients stockées dans le cloud.
-
-### Analyse de l'impact
-
-*   **Volume de données :** Très élevé (7,5M d'individus).
-*   **Risque secondaire :** Les données exfiltrées (statuts de fidélité, dates de naissance) sont idéales pour des campagnes de phishing ultérieures hautement ciblées.
-
-### Sources
-* [Have I Been Pwned (HIBP)](https://haveibeenpwned.com/Breach/Carnival)
-
----
-
-<div id="tgr-sta-1030-latam-activity"></div>
-
-## TGR-STA-1030 LATAM Activity
-
-### Résumé technique
-
-L'unité 42 rapporte une recrudescence d'activité du groupe de menace **TGR-STA-1030**, particulièrement active depuis février 2026. Leurs efforts se concentrent actuellement sur les régions d'**Amérique Centrale et du Sud**. Les chercheurs notent une continuité dans les tactiques, techniques et procédures (TTPs) précédemment observées, suggérant une campagne d'espionnage ou de collecte de renseignements stable sur le long terme dans cette zone géographique.
-
-### Recommandations
-
-*   Les organisations opérant en Amérique Latine doivent renforcer leur surveillance des vecteurs d'accès distants traditionnels.
-*   Consulter les rapports "Shadow Campaigns" de l'Unité 42 pour les IoC historiques.
-
-### Sources
-* [Unit 42 - Palo Alto Networks](https://unit42.paloaltonetworks.com/new-activity-central-south-america/)
+* [Infosec Exchange / ResearchGate](https://infosec.exchange/@Harpocrates/116467198955886067)
 
 ---
 
 <!--
 CONTRÔLE FINAL
 
-1. ✅ Aucun article n'apparaît dans plusieurs sections
-2. ✅ La TOC est présente et chaque lien pointe vers une ancre existante
-3. ✅ Chaque ancre est unique — <div id="..."> identiques entre TOC / div id / table interne
-4. ✅ Tous les IoC sont en mode DEFANG
-5. ✅ Aucun article de Vulnérabilités ou Géopolitique dans la section "Articles"
-6. ✅ Le tableau des vulnérabilités ne contient que des entrées avec score composite ≥ 1
-7. ✅ La table de tri intermédiaire est présente et l'ordre du tableau final correspond
-8. ✅ Toutes les sections attendues sont présentes
-9. ✅ Le playbook est contextualisé (pas de tâches génériques)
-10. ✅ Les hypothèses de threat hunting sont présentes pour chaque article
-11. ✅ Tout article sans URL complète est exclu (cas des sources tronquées ou domaines seuls)
-12. ✅ Chaque article est COMPLET (9 sections présentes)
-13. ✅ Aucun bug fonctionnel ou article commercial dans la section "Articles"
+1. ✅ Aucun article n'apparaît dans plusieurs sections : [Vérifié]
+2. ✅ La TOC est présente et chaque lien pointe vers une ancre existante : [Vérifié]
+3. ✅ Chaque ancre est unique — <div id="..."> statiques ET dynamiques présents, cohérents avec la TOC ET identiques entre TOC / div id / table interne : [Vérifié]
+4. ✅ Tous les IoC sont en mode DEFANG : [Vérifié]
+5. ✅ Aucun article de Vulnérabilités ou Géopolitique dans la section "Articles" : [Vérifié]
+6. ✅ Le tableau des vulnérabilités ne contient que des entrées avec score composite ≥ 1 : [Vérifié]
+7. ✅ La table de tri intermédiaire est présente et l'ordre du tableau final correspond ligne par ligne : [Vérifié]
+8. ✅ Toutes les sections attendues sont présentes : [Vérifié]
+9. ✅ Le playbook est contextualisé (pas de tâches génériques) : [Vérifié]
+10. ✅ Les hypothèses de threat hunting sont présentes pour chaque article : [Vérifié]
+11. ✅ Tout article sans URL complète disponible dans raw_content est dans "Articles non sélectionnés" — aucun article sans URL complète ne figure dans les synthèses ou la section "Articles" : [Vérifié]
+12. ✅ Chaque article est COMPLET (9 sections toutes présentes) — aucun article tronqué : [Vérifié]
+13. ✅ Aucun bug fonctionnel, article commercial ou contenu non-sécuritaire dans la section "Articles" : [Vérifié]
 
 Statut global : [✅ Rapport valide]
 -->
