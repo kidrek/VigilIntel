@@ -1,0 +1,710 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The cyber landscape is currently marked by a critical convergence between essential infrastructure vulnerabilities and emerging risks from AI adoption in software development. The breach of Itron highlights persistent threats to critical technology providers, while CISA's latest KEV additions confirm active exploitation of peripheral but strategic entry points. Additionally, the rise of 'vibe-coding' via AI agents introduces systemic vulnerabilities like BOLA and secret exposure, creating a new class of industrializable risks. Professionalization of ransomware actors like Trigona with custom exfiltration tools further complicates the detection of data theft.",
+      "fr": "L'actualité cyber est marquée par une convergence critique entre les vulnérabilités des infrastructures essentielles et les risques émergents liés à l'adoption de l'IA dans le développement logiciel. La compromission d'Itron souligne les menaces persistantes pesant sur les fournisseurs de technologies critiques, tandis que les ajouts au KEV de la CISA confirment l'exploitation active de points d'entrée périphériques mais stratégiques. Par ailleurs, l'essor du « vibe-coding » via des agents IA introduit des vulnérabilités systémiques comme BOLA et l'exposition de secrets, créant une nouvelle classe de risques industrialisables. La professionnalisation d'acteurs de ransomware comme Trigona avec des outils d'exfiltration sur mesure complique davantage la détection des vols de données."
+    },
+    "date": "2026-04-26"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement_et_Défense"
+        ]
+      },
+      "theme": {
+        "en": "China-linked Espionage in Mongolia",
+        "fr": "Espionnage lié à la Chine en Mongolie"
+      },
+      "description": {
+        "en": "A new APT campaign named GopherWhisper, attributed to China-linked actors, targets Mongolian government institutions using Go-based malware and cloud APIs (Discord, Slack) for C2 communication.",
+        "fr": "Une nouvelle campagne APT nommée GopherWhisper, attribuée à des acteurs liés à la Chine, cible les institutions gouvernementales mongoles à l'aide de malwares basés sur Go et d'API cloud (Discord, Slack) pour les communications C2."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor outbound traffic to Discord and Slack APIs from sensitive government workstations.",
+          "fr": "Surveiller le trafic sortant vers les API Discord et Slack depuis les postes gouvernementaux sensibles."
+        },
+        {
+          "en": "Implement network segmentation to isolate critical administrative systems.",
+          "fr": "Mettre en œuvre une segmentation réseau pour isoler les systèmes administratifs critiques."
+        }
+      ],
+      "tags": [
+        "APT",
+        "GopherWhisper",
+        "China",
+        "Mongolia"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191318/apt/gopherwhisper-new-china-linked-apt-targets-mongolia-with-go-based-malware.html"
+      ],
+      "date": "2026-04-26"
+    },
+    {
+      "sector": {
+        "en": [
+          "Critical_Infrastructure",
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Infrastructures_Critiques",
+          "Gouvernement_et_Défense"
+        ]
+      },
+      "theme": {
+        "en": "US-Israel-Iran Cyber Conflict",
+        "fr": "Conflit Cyber US-Israël-Iran"
+      },
+      "description": {
+        "en": "Relative calm in major attributed cyber operations, but persistent offensive posturing against OT infrastructure. Groups like CyberAv3ngers (IRGC) continue to target exposed PLCs.",
+        "fr": "Calme relatif dans les opérations cyber majeures attribuées, mais maintien d'une posture offensive contre les infrastructures OT. Des groupes comme CyberAv3ngers (IRGC) continuent de cibler les automates programmables exposés."
+      },
+      "recommandations": [
+        {
+          "en": "Ensure all industrial control systems (PLCs) are not directly exposed to the internet.",
+          "fr": "S'assurer que tous les systèmes de contrôle industriel (PLC) ne sont pas directement exposés sur Internet."
+        },
+        {
+          "en": "Review access logs for remote management interfaces of critical utility systems.",
+          "fr": "Réviser les logs d'accès pour les interfaces de gestion à distance des systèmes de services publics critiques."
+        }
+      ],
+      "tags": [
+        "Iran",
+        "Israel",
+        "OT",
+        "Geopolitics"
+      ],
+      "sources": [
+        "https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict"
+      ],
+      "date": "2026-04-26"
+    },
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement_et_Défense"
+        ]
+      },
+      "theme": {
+        "en": "Palantir Data Ethics and Defense Contracts",
+        "fr": "Éthique des données Palantir et contrats de défense"
+      },
+      "description": {
+        "en": "Internal leaks at Palantir regarding contracts with ICE and the DOD reveal tensions over data usage and surveillance ethics within the defense sector.",
+        "fr": "Des fuites internes chez Palantir concernant les contrats avec l'ICE et le DOD révèlent des tensions sur l'usage des données et l'éthique de la surveillance dans le secteur de la défense."
+      },
+      "recommandations": [
+        {
+          "en": "Strengthen internal data governance policies.",
+          "fr": "Renforcer les politiques de gouvernance interne des données."
+        },
+        {
+          "en": "Conduct ethics audits on large-scale data analysis contracts.",
+          "fr": "Réaliser des audits éthiques sur les contrats d'analyse de données à grande échelle."
+        }
+      ],
+      "tags": [
+        "Palantir",
+        "Ethics",
+        "Surveillance"
+      ],
+      "sources": [
+        "http://www.techmeme.com/260426/p8#a260426p8"
+      ],
+      "date": "2026-04-26"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Itron",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Critical_Infrastructure",
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Infrastructures_Critiques",
+          "Technologie_et_Télécommunications"
+        ]
+      },
+      "description": {
+        "en": "Unauthorized access to internal IT systems detected on April 13, 2026. Investigation is ongoing to determine if data exfiltration occurred. Itron manages 112 million endpoints globally.",
+        "fr": "Accès non autorisé aux systèmes informatiques internes détecté le 13 avril 2026. L'enquête est en cours pour déterminer si une exfiltration de données a eu lieu. Itron gère 112 millions de points de terminaison dans le monde."
+      },
+      "mitre_ttps": [
+        "T1078"
+      ],
+      "recommandations": [
+        {
+          "en": "Preparation: Activate incident response plan for critical infrastructure. Verify AD and VPN logs.",
+          "fr": "Préparation : Activer le plan de réponse à incident pour les infrastructures critiques. Vérifier les logs AD et VPN."
+        },
+        {
+          "en": "Containment: Isolate compromised IT segments from OT networks.",
+          "fr": "Confinement : Isoler les segments IT compromis des réseaux OT."
+        },
+        {
+          "en": "Eradication: Remove unauthorized third-party accounts and reset administrative credentials.",
+          "fr": "Éradication : Supprimer les comptes tiers non autorisés et réinitialiser les identifiants d'administration."
+        }
+      ],
+      "tags": [
+        "Itron",
+        "Utility",
+        "Breach"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/american-utility-firm-itron-discloses-breach-of-internal-it-network/"
+      ],
+      "date": "2026-04-26"
+    },
+    {
+      "victim": "Udemy",
+      "threat_actor": "ShinyHunters",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Hacktiviste / Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Education_and_Research"
+        ],
+        "fr": [
+          "Éducation_et_Recherche"
+        ]
+      },
+      "description": {
+        "en": "Data leak of 1.4 million accounts including emails, names, phone numbers, and payment method details after a failed extortion attempt by ShinyHunters.",
+        "fr": "Fuite de données de 1,4 million de comptes comprenant des e-mails, des noms, des numéros de téléphone et des détails sur les méthodes de paiement suite à une tentative d'extorsion ratée de ShinyHunters."
+      },
+      "mitre_ttps": [
+        "T1560",
+        "T1048"
+      ],
+      "recommandations": [
+        {
+          "en": "Detection: Compare corporate email lists with the dump. Monitor for credential stuffing attempts.",
+          "fr": "Détection : Comparer les listes d'e-mails d'entreprise avec le dump. Surveiller les tentatives de credential stuffing."
+        },
+        {
+          "en": "Recovery: Force password changes for all identified impacted accounts and enable MFA.",
+          "fr": "Récupération : Forcer le changement de mot de passe pour tous les comptes impactés identifiés et activer le MFA."
+        }
+      ],
+      "tags": [
+        "Udemy",
+        "DataLeak",
+        "ShinyHunters"
+      ],
+      "sources": [
+        "https://haveibeenpwned.com/Breach/Udemy"
+      ],
+      "date": "2026-04-26"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2024-57726",
+      "euvd_id": "unknown",
+      "cisa_kev": "TRUE",
+      "cvss": "9.9",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:simplehelp:simplehelp:*:*:*:*:*:*:*:*",
+      "product": "SimpleHelp",
+      "vendor": "SimpleHelp",
+      "description": {
+        "en": "Missing authorization in SimpleHelp leads to authentication bypass and potential Remote Code Execution (RCE).",
+        "fr": "Un défaut d'autorisation dans SimpleHelp permet un contournement d'authentification et une potentielle exécution de code à distance (RCE)."
+      },
+      "mitre_ttps": [
+        "T1068"
+      ],
+      "recommandations": [
+        {
+          "en": "Update SimpleHelp to version 5.5.8 or higher.",
+          "fr": "Mettre à jour SimpleHelp vers la version 5.5.8 ou supérieure."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "AuthBypass"
+      ],
+      "sources": [
+        "https://thecyberthrone.in/2026/04/26/cisa-adds-four-actively-exploited-vulnerabilities-to-kev-catalog/"
+      ],
+      "date": "2026-04-26"
+    },
+    {
+      "cve_id": "CVE-2025-29635",
+      "euvd_id": "unknown",
+      "cisa_kev": "TRUE",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:h:dlink:dir-823x:*:*:*:*:*:*:*:*",
+      "product": "DIR-823X",
+      "vendor": "D-Link",
+      "description": {
+        "en": "Command injection vulnerability in D-Link DIR-823X routers allows remote code execution.",
+        "fr": "Une vulnérabilité d'injection de commande dans les routeurs D-Link DIR-823X permet l'exécution de code à distance."
+      },
+      "mitre_ttps": [
+        "T1203"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply the latest firmware updates or isolate the device from the internet.",
+          "fr": "Appliquer les dernières mises à jour du firmware ou isoler l'appareil d'Internet."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "Router",
+        "RCE"
+      ],
+      "sources": [
+        "https://thecyberthrone.in/2026/04/26/cisa-adds-four-actively-exploited-vulnerabilities-to-kev-catalog/"
+      ],
+      "date": "2026-04-26"
+    },
+    {
+      "cve_id": "CVE-2024-7399",
+      "euvd_id": "unknown",
+      "cisa_kev": "TRUE",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:samsung:magicinfo:9:*:*:*:*:*:*:*",
+      "product": "MagicINFO 9",
+      "vendor": "Samsung",
+      "description": {
+        "en": "Path traversal vulnerability in Samsung MagicINFO 9 allows information disclosure.",
+        "fr": "Une vulnérabilité de traversée de chemin dans Samsung MagicINFO 9 permet la divulgation d'informations."
+      },
+      "mitre_ttps": [
+        "T1083"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply the official patch provided by Samsung.",
+          "fr": "Appliquer le correctif officiel fourni par Samsung."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "Samsung",
+        "PathTraversal"
+      ],
+      "sources": [
+        "https://thecyberthrone.in/2026/04/26/cisa-adds-four-actively-exploited-vulnerabilities-to-kev-catalog/"
+      ],
+      "date": "2026-04-26"
+    },
+    {
+      "cve_id": "CVE-2024-57728",
+      "euvd_id": "unknown",
+      "cisa_kev": "TRUE",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:simplehelp:simplehelp:*:*:*:*:*:*:*:*",
+      "product": "SimpleHelp",
+      "vendor": "SimpleHelp",
+      "description": {
+        "en": "Path traversal vulnerability in SimpleHelp leading to unauthorized file access.",
+        "fr": "Vulnérabilité de traversée de chemin dans SimpleHelp entraînant un accès non autorisé aux fichiers."
+      },
+      "mitre_ttps": [
+        "T1083"
+      ],
+      "recommandations": [
+        {
+          "en": "Update SimpleHelp to version 5.5.8 or higher.",
+          "fr": "Mettre à jour SimpleHelp vers la version 5.5.8 ou supérieure."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "SimpleHelp",
+        "PathTraversal"
+      ],
+      "sources": [
+        "https://thecyberthrone.in/2026/04/26/cisa-adds-four-actively-exploited-vulnerabilities-to-kev-catalog/"
+      ],
+      "date": "2026-04-26"
+    },
+    {
+      "cve_id": "CVE-2026-42363",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "9.3",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:h:geovision:gv-ip_device:*:*:*:*:*:*:*:*",
+      "product": "GV-IP Device",
+      "vendor": "GeoVision",
+      "description": {
+        "en": "Insufficient encryption in GeoVision GV-IP devices can lead to credential leakage.",
+        "fr": "Un chiffrement insuffisant dans les appareils GeoVision GV-IP peut entraîner une fuite d'identifiants."
+      },
+      "mitre_ttps": [
+        "T1552"
+      ],
+      "recommandations": [
+        {
+          "en": "Disable UDP broadcast and secure device communication.",
+          "fr": "Désactiver le broadcast UDP et sécuriser la communication de l'appareil."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "GeoVision",
+        "Encryption"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-42363"
+      ],
+      "date": "2026-04-26"
+    },
+    {
+      "cve_id": "CVE-2026-33277",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "8.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:logontracer:logontracer:*:*:*:*:*:*:*:*",
+      "product": "LogonTracer",
+      "vendor": "LogonTracer",
+      "description": {
+        "en": "Command injection vulnerability in LogonTracer allows RCE.",
+        "fr": "Vulnérabilité d'injection de commande dans LogonTracer permettant une RCE."
+      },
+      "mitre_ttps": [
+        "T1203"
+      ],
+      "recommandations": [
+        {
+          "en": "Update LogonTracer to version 2.0.0.",
+          "fr": "Mettre à jour LogonTracer vers la version 2.0.0."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "LogonTracer",
+        "RCE"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-33277"
+      ],
+      "date": "2026-04-26"
+    },
+    {
+      "cve_id": "CVE-2026-7057",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "9.0",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:h:tenda:f456:*:*:*:*:*:*:*:*",
+      "product": "F456",
+      "vendor": "Tenda",
+      "description": {
+        "en": "Buffer overflow in Tenda F456 routers leads to RCE.",
+        "fr": "Dépassement de tampon dans les routeurs Tenda F456 entraînant une RCE."
+      },
+      "mitre_ttps": [
+        "T1203"
+      ],
+      "recommandations": [
+        {
+          "en": "Isolate the httpd interface and update firmware.",
+          "fr": "Isoler l'interface httpd et mettre à jour le firmware."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "Tenda",
+        "BufferOverflow"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-7057"
+      ],
+      "date": "2026-04-26"
+    },
+    {
+      "cve_id": "CVE-2026-40050",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:crowdstrike:logscale:*:*:*:*:*:*:*:*",
+      "product": "LogScale",
+      "vendor": "CrowdStrike",
+      "description": {
+        "en": "Critical path traversal bug in CrowdStrike LogScale allows unauthorized file access.",
+        "fr": "Bogue critique de traversée de chemin dans CrowdStrike LogScale permettant un accès non autorisé aux fichiers."
+      },
+      "mitre_ttps": [
+        "T1083"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply the patch for self-hosted instances or verify the SaaS update.",
+          "fr": "Appliquer le correctif pour les instances auto-hébergées ou vérifier la mise à jour SaaS."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "CrowdStrike",
+        "PathTraversal"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191343/hacking/critical-bug-in-crowdstrike-logscale-let-attackers-access-files.html"
+      ],
+      "date": "2026-04-26"
+    },
+    {
+      "cve_id": "CVE-2026-7037",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:h:totolink:a8000ru:*:*:*:*:*:*:*:*",
+      "product": "A8000RU",
+      "vendor": "Totolink",
+      "description": {
+        "en": "Command injection vulnerability in Totolink A8000RU routers.",
+        "fr": "Vulnérabilité d'injection de commande dans les routeurs Totolink A8000RU."
+      },
+      "mitre_ttps": [
+        "T1203"
+      ],
+      "recommandations": [
+        {
+          "en": "Restrict LAN access and update device firmware.",
+          "fr": "Restreindre l'accès au réseau local et mettre à jour le firmware de l'appareil."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "Totolink",
+        "RCE"
+      ],
+      "sources": [
+        "https://infosec.exchange/@offseq/116473727338657572"
+      ],
+      "date": "2026-04-26"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "Trigona Ransomware Custom Exfiltration Tool",
+        "fr": "Outil d'exfiltration sur mesure du Ransomware Trigona"
+      },
+      "description": {
+        "en": "Trigona ransomware affiliates are using a custom tool called 'uploader_client.exe' to exfiltrate data while evading detection by EDR and network monitoring systems via TCP connection rotation.",
+        "fr": "Les affiliés du ransomware Trigona utilisent un outil personnalisé nommé 'uploader_client.exe' pour exfiltrer des données tout en échappant à la détection par les EDR et les systèmes de surveillance réseau via la rotation des connexions TCP."
+      },
+      "threat_actor": "Trigona",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [
+        "Rhantus group"
+      ],
+      "sector": {
+        "en": [
+          "Business_Services",
+          "Finance",
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Services_aux_Entreprises",
+          "Finance",
+          "Technologie_et_Télécommunications"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "uploader_client.exe",
+          "HRSword.exe",
+          "PCHunter64.exe"
+        ]
+      },
+      "mitre_ttps": [
+        "T1041",
+        "T1562.001",
+        "T1003"
+      ],
+      "analyse": {
+        "en": "The usage of proprietary exfiltration tools indicates a shift away from public utilities like Rclone, aimed at bypassing behavioral detections focused on common tools.",
+        "fr": "L'utilisation d'outils d'exfiltration propriétaires indique un abandon des utilitaires publics comme Rclone, visant à contourner les détections comportementales axées sur les outils courants."
+      },
+      "recommandations": [
+        {
+          "en": "Block execution of unsigned binaries in %TEMP% and %APPDATA%.",
+          "fr": "Bloquer l'exécution de binaires non signés dans %TEMP% et %APPDATA%."
+        },
+        {
+          "en": "Monitor for outbound flows exceeding 2GB per session or showing frequent TCP rotation patterns.",
+          "fr": "Surveiller les flux sortants dépassant 2 Go par session ou présentant des motifs de rotation TCP fréquents."
+        }
+      ],
+      "tags": [
+        "Ransomware",
+        "Trigona",
+        "Exfiltration"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191294/cyber-crime/trigona-ransomware-adopts-custom-tool-to-steal-data-and-evade-detection.html"
+      ],
+      "date": "2026-04-26"
+    },
+    {
+      "title": {
+        "en": "AI Full-Stack Development Anti-Patterns",
+        "fr": "Anti-patterns de développement Full-Stack IA"
+      },
+      "description": {
+        "en": "AI-driven coding agents like Lovable or Vercel v0 inject insecure configurations such as exposed service_role keys and permissive RLS policies, leading to BOLA vulnerabilities.",
+        "fr": "Les agents de codage pilotés par l'IA comme Lovable ou Vercel v0 injectent des configurations non sécurisées telles que des clés service_role exposées et des politiques RLS permissives, menant à des vulnérabilités BOLA."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom",
+          "Business_Services"
+        ],
+        "fr": [
+          "Technologie_et_Télécommunications",
+          "Services_aux_Entreprises"
+        ]
+      },
+      "indicators": {
+        "URL": [
+          "hxxps://lovable.dev/projects/"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "context.ai"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Lovable",
+          "v0",
+          "Bolt.new"
+        ]
+      },
+      "mitre_ttps": [
+        "T1552.001"
+      ],
+      "analyse": {
+        "en": "This trend represents a shift where the risk is structural rather than software-based, caused by the prioritization of speed over security by AI agents.",
+        "fr": "Cette tendance représente un changement où le risque est structurel plutôt que logiciel, causé par la priorité donnée à la vitesse sur la sécurité par les agents IA."
+      },
+      "recommandations": [
+        {
+          "en": "Prohibit service_role keys in client-side code and audit RLS policies after AI generation.",
+          "fr": "Interdire les clés service_role dans le code côté client et auditer les politiques RLS après génération par l'IA."
+        },
+        {
+          "en": "Use secret scanning tools like TruffleHog on all AI-generated repositories.",
+          "fr": "Utiliser des outils de scan de secrets comme TruffleHog sur tous les dépôts générés par IA."
+        }
+      ],
+      "tags": [
+        "AI",
+        "SaaS",
+        "BOLA",
+        "Vibe-Coding"
+      ],
+      "sources": [
+        "https://opensourcemalware.com/blog/rise-ai-anti-patterns"
+      ],
+      "date": "2026-04-26"
+    },
+    {
+      "title": {
+        "en": "fast16 Pre-Stuxnet Sabotage Tool",
+        "fr": "fast16, outil de sabotage pré-Stuxnet"
+      },
+      "description": {
+        "en": "Identification of 'fast16', a historical sabotage tool targeting high-precision software, predating the Stuxnet campaign.",
+        "fr": "Identification de 'fast16', un outil de sabotage historique ciblant des logiciels de haute précision, antérieur à la campagne Stuxnet."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Critical_Infrastructure",
+          "Industry_and_Manufacturing"
+        ],
+        "fr": [
+          "Infrastructures_Critiques",
+          "Industrie_et_Manufacture"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "fast16"
+        ]
+      },
+      "mitre_ttps": [
+        "T1485"
+      ],
+      "analyse": {
+        "en": "Analysis of legacy sabotage tools provides insight into the evolution of offensive capabilities targeting industrial precision systems.",
+        "fr": "L'analyse des anciens outils de sabotage permet de comprendre l'évolution des capacités offensives ciblant les systèmes de précision industrielle."
+      },
+      "recommandations": [
+        {
+          "en": "Review historical forensic data for potential unrecognized sabotage patterns in industrial environments.",
+          "fr": "Réviser les données forensiques historiques pour détecter d'éventuels motifs de sabotage non reconnus dans les environnements industriels."
+        }
+      ],
+      "tags": [
+        "Sabotage",
+        "OT",
+        "Stuxnet",
+        "History"
+      ],
+      "sources": [
+        "https://otx.alienvault.com/pulse/69ee9f5954b78e46433524c7"
+      ],
+      "date": "2026-04-26"
+    }
+  ]
+}
