@@ -1,0 +1,1400 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The landscape of late April 2026 is characterized by aggressive software supply chain attacks, notably by TeamPCP (UNC6780), which demonstrated a 'cascade' effect infecting CI/CD pipelines through automated dependency tools like Dependabot. Social engineering has reached new heights with UNC6692's use of Microsoft Teams for technical support impersonation. Additionally, the emergence of 'Plexfiltration' techniques like browser fingerprinting via LinkedIn and the exploitation of routable 'deleted user' domains highlight sophisticated data harvesting methods. Critical infrastructure remains a primary target, though currently experiencing a phase of silent positioning in the US-Israel-Iran context.",
+      "fr": "Le paysage de cette fin d'avril 2026 est marqué par des attaques agressives sur la chaîne d'approvisionnement logicielle, notamment par TeamPCP (UNC6780), qui a démontré un effet de 'cascade' infectant les pipelines CI/CD via des outils de dépendances automatisés comme Dependabot. L'ingénierie sociale atteint de nouveaux sommets avec l'utilisation par UNC6692 de Microsoft Teams pour l'usurpation d'identité du support technique. De plus, l'émergence des techniques de 'Plexfiltration' comme le fingerprinting via LinkedIn et l'exploitation de domaines routables d'utilisateurs supprimés souligne des méthodes sophistiquées de collecte de données. Les infrastructures critiques restent une cible prioritaire, bien qu'actuellement dans une phase de positionnement silencieux dans le contexte US-Israël-Iran."
+    },
+    "date": "2026-04-28"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense",
+          "Education_and_Research"
+        ],
+        "fr": [
+          "Gouvernement et Défense",
+          "Éducation et Recherche"
+        ]
+      },
+      "theme": {
+        "en": "Chinese Espionage and Extradition",
+        "fr": "Espionnage chinois et extradition"
+      },
+      "description": {
+        "en": "Extradition of Xu Zewei and Song Wu for stealing missile software and COVID-19 research from NASA and US universities.",
+        "fr": "Extradition de Xu Zewei et Song Wu pour le vol de logiciels de missiles et de recherches sur le COVID-19 auprès de la NASA et d'universités américaines."
+      },
+      "recommandations": [
+        {
+          "en": "Strengthen screening for researchers with foreign military ties.",
+          "fr": "Renforcer le filtrage des chercheurs ayant des liens militaires étrangers."
+        }
+      ],
+      "tags": [
+        "espionage",
+        "China",
+        "USA"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191347/intelligence/chinese-spy-posed-as-researcher-in-spear-phishing-campaign-targeting-nasa-to-steal-defense-software.html"
+      ],
+      "date": "2026-04-27"
+    },
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement et Défense"
+        ]
+      },
+      "theme": {
+        "en": "Russian Election Interference in Armenia",
+        "fr": "Ingérence électorale russe en Arménie"
+      },
+      "description": {
+        "en": "FIMI campaign (Foreign Information Manipulation and Interference) targeting the Armenian legislative elections on June 7.",
+        "fr": "Campagne FIMI (Manipulation de l'information et ingérence étrangère) ciblant les élections législatives arméniennes du 7 juin."
+      },
+      "recommandations": [
+        {
+          "en": "Increase monitoring of social media disinformation networks.",
+          "fr": "Accroître la surveillance des réseaux de désinformation sur les médias sociaux."
+        }
+      ],
+      "tags": [
+        "FIMI",
+        "disinformation",
+        "Russia",
+        "Armenia"
+      ],
+      "sources": [
+        "https://euvsdisinfo.eu/russias-election-interference-playbook-targets-armenia/"
+      ],
+      "date": "2026-04-27"
+    },
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement et Défense"
+        ]
+      },
+      "theme": {
+        "en": "Signal Messaging Hack in Germany",
+        "fr": "Piratage de la messagerie Signal en Allemagne"
+      },
+      "description": {
+        "en": "Germany accuses Russia of hacking over 300 Signal accounts belonging to political and military figures.",
+        "fr": "L'Allemagne accuse la Russie d'avoir piraté plus de 300 comptes Signal appartenant à des personnalités politiques et militaires."
+      },
+      "recommandations": [
+        {
+          "en": "Use hardware security keys for MFA and rotate sensitive accounts.",
+          "fr": "Utiliser des clés de sécurité matérielles pour le MFA et renouveler les comptes sensibles."
+        }
+      ],
+      "tags": [
+        "cyberespionage",
+        "Signal",
+        "Russia",
+        "Germany"
+      ],
+      "sources": [
+        "https://www.lemonde.fr/international/article/2026/04/27/l-allemagne-accuse-la-russie-d-avoir-pirate-la-messagerie-signal-de-plus-de-300-personnalites-politiques-et-militaires_6683638_3210.html"
+      ],
+      "date": "2026-04-27"
+    },
+    {
+      "sector": {
+        "en": [
+          "Critical_Infrastructure"
+        ],
+        "fr": [
+          "Infrastructures Critiques"
+        ]
+      },
+      "theme": {
+        "en": "Middle East Hybrid Conflict",
+        "fr": "Conflit hybride au Moyen-Orient"
+      },
+      "description": {
+        "en": "Operational silence in cyberattacks between US, Israel, and Iran targeting PLCs and internet connectivity.",
+        "fr": "Silence opérationnel dans les cyberattaques entre les États-Unis, Israël et l'Iran ciblant les automates industriels et la connectivité internet."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor industrial control systems (ICS) for unusual traffic.",
+          "fr": "Surveiller les systèmes de contrôle industriel (ICS) pour tout trafic inhabituel."
+        }
+      ],
+      "tags": [
+        "ICS",
+        "Iran",
+        "Israel"
+      ],
+      "sources": [
+        "https://flare.io/learn/resources/blog/cyberattacks-us-israel-iran-military-conflict"
+      ],
+      "date": "2026-04-27"
+    },
+    {
+      "sector": {
+        "en": [
+          "Critical_Infrastructure"
+        ],
+        "fr": [
+          "Infrastructures Critiques"
+        ]
+      },
+      "theme": {
+        "en": "Energy Sector Sabotage in Venezuela",
+        "fr": "Sabotage du secteur de l'énergie au Venezuela"
+      },
+      "description": {
+        "en": "Lotus Wiper malware specifically targeting Venezuelan public utility services.",
+        "fr": "Malware Lotus Wiper ciblant spécifiquement les services publics vénézuéliens."
+      },
+      "recommandations": [
+        {
+          "en": "Implement strict air-gapping for critical utility control networks.",
+          "fr": "Mettre en œuvre un cloisonnement strict (air-gap) pour les réseaux de contrôle critiques."
+        }
+      ],
+      "tags": [
+        "wiper",
+        "Venezuela",
+        "LotusWiper"
+      ],
+      "sources": [
+        "https://thehackernews.com/2026/04/weekly-recap-fast16-malware-xchat.html"
+      ],
+      "date": "2026-04-27"
+    },
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement et Défense"
+        ]
+      },
+      "theme": {
+        "en": "Somaliland Sovereignty and Israel",
+        "fr": "Souveraineté du Somaliland et Israël"
+      },
+      "description": {
+        "en": "Analysis of Somaliland's recognition by Israel and its impact on the Horn of Africa.",
+        "fr": "Analyse de la reconnaissance du Somaliland par Israël et son impact sur la Corne de l'Afrique."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor regional shifts in diplomatic alignment for cyber implications.",
+          "fr": "Surveiller les changements d'alignement diplomatique régionaux pour les implications cyber."
+        }
+      ],
+      "tags": [
+        "geopolitics",
+        "Israel",
+        "Somaliland"
+      ],
+      "sources": [
+        "https://www.iris-france.org/somaliland-longue-route-vers-la-reconnaissance/"
+      ],
+      "date": "2026-04-27"
+    },
+    {
+      "sector": {
+        "en": [
+          "Industry_and_Manufacturing"
+        ],
+        "fr": [
+          "Industrie et Manufacturier"
+        ]
+      },
+      "theme": {
+        "en": "Historical Sabotage Discovery: Fast16",
+        "fr": "Découverte d'un sabotage historique : Fast16"
+      },
+      "description": {
+        "en": "Discovery of Fast16, an NSA malware from 2005 designed to sabotage precision engineering software.",
+        "fr": "Découverte de Fast16, un malware de la NSA datant de 2005 conçu pour saboter les logiciels d'ingénierie de précision."
+      },
+      "recommandations": [
+        {
+          "en": "Ensure integrity of legacy industrial software via periodic hashing.",
+          "fr": "Assurer l'intégrité des anciens logiciels industriels via un hachage périodique."
+        }
+      ],
+      "tags": [
+        "malware",
+        "NSA",
+        "history"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191325/malware-fast16-pre-stuxnet-malware-that-targeted-precision-engineering-software.html"
+      ],
+      "date": "2026-04-27"
+    },
+    {
+      "sector": {
+        "en": [
+          "Retail_and_Consumer"
+        ],
+        "fr": [
+          "Commerce de détail et Consommation"
+        ]
+      },
+      "theme": {
+        "en": "Social Media Scams Rise",
+        "fr": "Augmentation des fraudes sur les réseaux sociaux"
+      },
+      "description": {
+        "en": "Americans lost over $2.1 billion to scams on Facebook and WhatsApp in 2025 according to the FTC.",
+        "fr": "Les Américains ont perdu plus de 2,1 milliards de dollars à cause de fraudes sur Facebook et WhatsApp en 2025 selon la FTC."
+      },
+      "recommandations": [
+        {
+          "en": "Educate consumers on verifying contacts on social messaging platforms.",
+          "fr": "Éduquer les consommateurs sur la vérification des contacts sur les plateformes de messagerie sociale."
+        }
+      ],
+      "tags": [
+        "fraud",
+        "scam",
+        "FTC"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/ftc-americans-lost-over-21-billion-to-social-media-scams-in-2025/"
+      ],
+      "date": "2026-04-27"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "ADT",
+      "threat_actor": "ShinyHunters",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminalité",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Security"
+        ],
+        "fr": [
+          "Sécurité"
+        ]
+      },
+      "description": {
+        "en": "Exfiltration of PII for 5.5 million people, including names, emails, and partial SSNs.",
+        "fr": "Exfiltration de données PII pour 5,5 millions de personnes, incluant noms, emails et numéros de sécurité sociale partiels."
+      },
+      "mitre_ttps": [
+        "T1566.004",
+        "T1537"
+      ],
+      "recommandations": [
+        {
+          "en": "Implement FIDO2/WebAuthn for SSO.",
+          "fr": "Mettre en œuvre FIDO2/WebAuthn pour le SSO."
+        },
+        {
+          "en": "Phase 1: Audit admin access; Phase 2: Detect proxy connections; Phase 3: Revoke Okta sessions; Phase 4: Notify authorities.",
+          "fr": "Phase 1: Auditer les accès admin; Phase 2: Détecter les connexions par proxy; Phase 3: Révoquer les sessions Okta; Phase 4: Notifier les autorités."
+        }
+      ],
+      "tags": [
+        "data breach",
+        "vishing",
+        "PII"
+      ],
+      "sources": [
+        "https://haveibeenpwned.com/Breach/ADT",
+        "https://www.bleepingcomputer.com/news/security/home-security-giant-adt-data-breach-affects-55-million-people/"
+      ],
+      "date": "2026-04-27"
+    },
+    {
+      "victim": "Pitney Bowes",
+      "threat_actor": "ShinyHunters",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminalité",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Business_Services"
+        ],
+        "fr": [
+          "Services aux Entreprises"
+        ]
+      },
+      "description": {
+        "en": "Breach affecting 8.2 million records including emails and job titles.",
+        "fr": "Violation touchant 8,2 millions de dossiers, incluant des emails et des titres de poste."
+      },
+      "mitre_ttps": [
+        "T1078.004",
+        "T1537"
+      ],
+      "recommandations": [
+        {
+          "en": "Monitor SaaS instances for massive export activities.",
+          "fr": "Surveiller les instances SaaS pour les activités d'exportation massives."
+        }
+      ],
+      "tags": [
+        "data breach",
+        "SaaS"
+      ],
+      "sources": [
+        "https://haveibeenpwned.com/Breach/PitneyBowes"
+      ],
+      "date": "2026-04-27"
+    },
+    {
+      "victim": "Medtronic",
+      "threat_actor": "ShinyHunters",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminalité",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Healthcare_and_Life_Sciences"
+        ],
+        "fr": [
+          "Santé et Sciences de la Vie"
+        ]
+      },
+      "description": {
+        "en": "9 million records stolen, including internal Salesforce data.",
+        "fr": "9 millions de dossiers volés, incluant des données internes Salesforce."
+      },
+      "mitre_ttps": [
+        "T1566.004",
+        "T1537"
+      ],
+      "recommandations": [
+        {
+          "en": "Secure CRM instances with identity-based access controls.",
+          "fr": "Sécuriser les instances CRM avec des contrôles d'accès basés sur l'identité."
+        }
+      ],
+      "tags": [
+        "data breach",
+        "Salesforce"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191391/cyber-crime/medtronic-discloses-security-incident-after-shinyhunters-claimed-theft-of-9m-records.html"
+      ],
+      "date": "2026-04-27"
+    },
+    {
+      "victim": "Itron",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Critical_Infrastructure"
+        ],
+        "fr": [
+          "Infrastructures Critiques"
+        ]
+      },
+      "description": {
+        "en": "Unauthorized access to corporate IT systems.",
+        "fr": "Accès non autorisé aux systèmes informatiques de l'entreprise."
+      },
+      "mitre_ttps": [
+        "T1078"
+      ],
+      "recommandations": [
+        {
+          "en": "Perform a full system audit to identify the point of entry.",
+          "fr": "Effectuer un audit complet du système pour identifier le point d'entrée."
+        }
+      ],
+      "tags": [
+        "data breach",
+        "utility"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191360/data-breach-u-s-utility-giant-itron-discloses-a-security-breach.html"
+      ],
+      "date": "2026-04-27"
+    },
+    {
+      "victim": "Udemy",
+      "threat_actor": "ShinyHunters",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminalité",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Education_and_Research"
+        ],
+        "fr": [
+          "Éducation et Recherche"
+        ]
+      },
+      "description": {
+        "en": "1.4 million PII and corporate records compromised.",
+        "fr": "1,4 million de données PII et de dossiers d'entreprise compromis."
+      },
+      "mitre_ttps": [
+        "T1566"
+      ],
+      "recommandations": [
+        {
+          "en": "Monitor for leaked credentials on underground forums.",
+          "fr": "Surveiller les fuites d'identifiants sur les forums clandestins."
+        }
+      ],
+      "tags": [
+        "data breach",
+        "PII"
+      ],
+      "sources": [
+        "https://www.ransomlook.io/group/shinyhunters"
+      ],
+      "date": "2026-04-27"
+    },
+    {
+      "victim": "Vercel",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et Télécommunications"
+        ]
+      },
+      "description": {
+        "en": "Compromise of OAuth tokens and environment variables.",
+        "fr": "Compromission de jetons OAuth et de variables d'environnement."
+      },
+      "mitre_ttps": [
+        "T1552.001"
+      ],
+      "recommandations": [
+        {
+          "en": "Rotate all OAuth tokens and secret keys.",
+          "fr": "Renouveler tous les jetons OAuth et les clés secrètes."
+        }
+      ],
+      "tags": [
+        "data breach",
+        "OAuth",
+        "secrets"
+      ],
+      "sources": [
+        "https://research.checkpoint.com/2026/27th-april-threat-intelligence-report/"
+      ],
+      "date": "2026-04-27"
+    },
+    {
+      "victim": "Vimeo",
+      "threat_actor": "ShinyHunters",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminalité",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Media_and_Communication"
+        ],
+        "fr": [
+          "Médias et Communication"
+        ]
+      },
+      "description": {
+        "en": "Access to Snowflake and BigQuery instances via a third party (Anodot).",
+        "fr": "Accès aux instances Snowflake et BigQuery via un tiers (Anodot)."
+      },
+      "mitre_ttps": [
+        "T1537",
+        "T1195"
+      ],
+      "recommandations": [
+        {
+          "en": "Review third-party access permissions for cloud databases.",
+          "fr": "Réviser les permissions d'accès des tiers pour les bases de données cloud."
+        }
+      ],
+      "tags": [
+        "data breach",
+        "Snowflake",
+        "third-party"
+      ],
+      "sources": [
+        "https://www.ransomlook.io/group/shinyhunters"
+      ],
+      "date": "2026-04-27"
+    },
+    {
+      "victim": "Fidelity",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Finance"
+        ],
+        "fr": [
+          "Finance"
+        ]
+      },
+      "description": {
+        "en": "$1.25M fine for cyber control failures and delayed breach notification.",
+        "fr": "Amende de 1,25 million de dollars pour défaillance des contrôles cyber et retard de notification de violation."
+      },
+      "mitre_ttps": [
+        "unknown"
+      ],
+      "recommandations": [
+        {
+          "en": "Improve breach notification procedures to meet regulatory timelines.",
+          "fr": "Améliorer les procédures de notification de violation pour respecter les délais réglementaires."
+        }
+      ],
+      "tags": [
+        "fine",
+        "compliance",
+        "notification"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/04/27/regulator-fines-fidelity-brokerage-services-1-25m-over-data-breach/"
+      ],
+      "date": "2026-04-27"
+    },
+    {
+      "victim": "Various Organizations (Deleteduser.com)",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom",
+          "Business_Services"
+        ],
+        "fr": [
+          "Technologie et Télécommunications",
+          "Services aux Entreprises"
+        ]
+      },
+      "description": {
+        "en": "Use of routable domains like 'deleteduser.com' as email placeholders allowed a researcher to collect PII and reset links.",
+        "fr": "L'utilisation de domaines routables comme 'deleteduser.com' comme substituts d'email a permis à un chercheur de collecter des PII et des liens de réinitialisation."
+      },
+      "mitre_ttps": [
+        "T1566"
+      ],
+      "recommandations": [
+        {
+          "en": "Use non-routable domains (e.g., @deleted.internal) for user suppression placeholders.",
+          "fr": "Utiliser des domaines non routables (ex: @deleted.internal) pour les substituts de suppression d'utilisateurs."
+        }
+      ],
+      "tags": [
+        "logic flaw",
+        "PII",
+        "privacy"
+      ],
+      "sources": [
+        "https://infosec.exchange/@SecureOwl/116479436083198399"
+      ],
+      "date": "2026-04-27"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2024-57726",
+      "euvd_id": "unknown",
+      "cisa_kev": "TRUE",
+      "cvss": "9.9",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:simplehelp:simplehelp:*:*:*:*:*:*:*:*",
+      "product": "SimpleHelp",
+      "vendor": "SimpleHelp",
+      "description": {
+        "en": "API Key Minting vulnerability in SimpleHelp.",
+        "fr": "Vulnérabilité de création de clé API dans SimpleHelp."
+      },
+      "mitre_ttps": [
+        "T1078"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply security patches immediately as it is exploited in the wild.",
+          "fr": "Appliquer immédiatement les correctifs de sécurité car elle est exploitée dans la nature."
+        }
+      ],
+      "tags": [
+        "vulnerability"
+      ],
+      "sources": [
+        "https://securityonline.info/weekly-vulnerability-digest-april-2026-ai-infrastructure-security/"
+      ],
+      "date": "2026-04-27"
+    },
+    {
+      "cve_id": "CVE-2024-57728",
+      "euvd_id": "unknown",
+      "cisa_kev": "TRUE",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:simplehelp:simplehelp:*:*:*:*:*:*:*:*",
+      "product": "SimpleHelp",
+      "vendor": "SimpleHelp",
+      "description": {
+        "en": "File Upload leading to RCE in SimpleHelp.",
+        "fr": "Chargement de fichier menant à une RCE dans SimpleHelp."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply security patches immediately.",
+          "fr": "Appliquer immédiatement les correctifs de sécurité."
+        }
+      ],
+      "tags": [
+        "vulnerability"
+      ],
+      "sources": [
+        "https://securityonline.info/weekly-vulnerability-digest-april-2026-ai-infrastructure-security/"
+      ],
+      "date": "2026-04-27"
+    },
+    {
+      "cve_id": "CVE-2024-27199",
+      "euvd_id": "unknown",
+      "cisa_kev": "TRUE",
+      "cvss": "7.3",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:jetbrains:teamcity:*:*:*:*:*:*:*:*",
+      "product": "TeamCity",
+      "vendor": "JetBrains",
+      "description": {
+        "en": "Path Traversal in TeamCity allowing Admin Access.",
+        "fr": "Traversée de chemin dans TeamCity permettant un accès administrateur."
+      },
+      "mitre_ttps": [
+        "T1078"
+      ],
+      "recommandations": [
+        {
+          "en": "Update TeamCity to the latest version.",
+          "fr": "Mettre à jour TeamCity vers la dernière version."
+        }
+      ],
+      "tags": [
+        "vulnerability"
+      ],
+      "sources": [
+        "https://securityonline.info/weekly-vulnerability-digest-april-2026-ai-infrastructure-security/"
+      ],
+      "date": "2026-04-27"
+    },
+    {
+      "cve_id": "CVE-2023-27351",
+      "euvd_id": "unknown",
+      "cisa_kev": "TRUE",
+      "cvss": "7.5",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:papercut:papercut_ng:*:*:*:*:*:*:*:*",
+      "product": "PaperCut NG",
+      "vendor": "PaperCut",
+      "description": {
+        "en": "Auth Bypass in PaperCut NG leading to SYSTEM compromise.",
+        "fr": "Contournement d'authentification dans PaperCut NG menant à une compromission SYSTEM."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Update PaperCut NG to remediated versions.",
+          "fr": "Mettre à jour PaperCut NG vers les versions corrigées."
+        }
+      ],
+      "tags": [
+        "vulnerability"
+      ],
+      "sources": [
+        "https://securityonline.info/weekly-vulnerability-digest-april-2026-ai-infrastructure-security/"
+      ],
+      "date": "2026-04-27"
+    },
+    {
+      "cve_id": "CVE-2024-7399",
+      "euvd_id": "unknown",
+      "cisa_kev": "TRUE",
+      "cvss": "8.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:samsung:magicinfo:*:*:*:*:*:*:*:*",
+      "product": "Samsung MagicINFO",
+      "vendor": "Samsung",
+      "description": {
+        "en": "Directory Traversal leading to arbitrary File Write in MagicINFO.",
+        "fr": "Traversée de répertoire menant à une écriture de fichier arbitraire dans MagicINFO."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply patches for Samsung MagicINFO.",
+          "fr": "Appliquer les correctifs pour Samsung MagicINFO."
+        }
+      ],
+      "tags": [
+        "vulnerability"
+      ],
+      "sources": [
+        "https://securityonline.info/weekly-vulnerability-digest-april-2026-ai-infrastructure-security/"
+      ],
+      "date": "2026-04-27"
+    },
+    {
+      "cve_id": "CVE-2026-3844",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:breeze_cache_project:breeze_cache:*:*:*:*:*:*:wordpress:*",
+      "product": "Breeze Cache (WordPress)",
+      "vendor": "Cloudways",
+      "description": {
+        "en": "Unauthenticated file upload leading to RCE.",
+        "fr": "Chargement de fichier non authentifié menant à une RCE."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Update the WordPress Breeze Cache plugin.",
+          "fr": "Mettre à jour le plugin WordPress Breeze Cache."
+        }
+      ],
+      "tags": [
+        "vulnerability"
+      ],
+      "sources": [
+        "https://securityonline.info/weekly-vulnerability-digest-april-2026-ai-infrastructure-security/"
+      ],
+      "date": "2026-04-27"
+    },
+    {
+      "cve_id": "CVE-2025-29635",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "8.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:h:dlink:router:*:*:*:*:*:*:*:*",
+      "product": "D-Link Routers",
+      "vendor": "D-Link",
+      "description": {
+        "en": "Command Injection leading to RCE in multiple D-Link routers.",
+        "fr": "Injection de commande menant à une RCE dans plusieurs routeurs D-Link."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Update router firmware or replace EOL devices.",
+          "fr": "Mettre à jour le firmware du routeur ou remplacer les appareils en fin de vie."
+        }
+      ],
+      "tags": [
+        "vulnerability"
+      ],
+      "sources": [
+        "https://research.checkpoint.com/2026/27th-april-threat-intelligence-report/"
+      ],
+      "date": "2026-04-27"
+    },
+    {
+      "cve_id": "CVE-2026-33626",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "7.5",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:lmdeploy:lmdeploy:*:*:*:*:*:*:*:*",
+      "product": "LMDeploy AI",
+      "vendor": "LMDeploy",
+      "description": {
+        "en": "SSRF vulnerability allowing lateral movement in AI infrastructure.",
+        "fr": "Vulnérabilité SSRF permettant un mouvement latéral dans l'infrastructure IA."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Restrict server-side requests to internal networks.",
+          "fr": "Restreindre les requêtes côté serveur vers les réseaux internes."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "AI"
+      ],
+      "sources": [
+        "https://research.checkpoint.com/2026/27th-april-threat-intelligence-report/"
+      ],
+      "date": "2026-04-27"
+    },
+    {
+      "cve_id": "CVE-2026-32202",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:o:microsoft:windows:*:*:*:*:*:*:*:*",
+      "product": "Windows",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "Zero-click LNK coercion vulnerability used for credential theft (Fancy Bear).",
+        "fr": "Vulnérabilité de coercition LNK sans clic utilisée pour le vol d'identifiants (Fancy Bear)."
+      },
+      "mitre_ttps": [
+        "T1204.001"
+      ],
+      "recommandations": [
+        {
+          "en": "Monitor for unusual SMB outbound traffic.",
+          "fr": "Surveiller le trafic SMB sortant inhabituel."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "LNK"
+      ],
+      "sources": [
+        "https://securityonline.info/cve-2026-32202-zero-click-lnk-vulnerability-fancy-bear/"
+      ],
+      "date": "2026-04-27"
+    },
+    {
+      "cve_id": "CVE-2026-40372",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "9.1",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:microsoft:asp.net_core:*:*:*:*:*:*:*:*",
+      "product": "ASP.NET Core",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "Privilege Escalation to SYSTEM in ASP.NET Core.",
+        "fr": "Élévation de privilèges vers SYSTEM dans ASP.NET Core."
+      },
+      "mitre_ttps": [
+        "T1068"
+      ],
+      "recommandations": [
+        {
+          "en": "Update ASP.NET Core runtimes.",
+          "fr": "Mettre à jour les runtimes ASP.NET Core."
+        }
+      ],
+      "tags": [
+        "vulnerability"
+      ],
+      "sources": [
+        "https://research.checkpoint.com/2026/27th-april-threat-intelligence-report/"
+      ],
+      "date": "2026-04-27"
+    },
+    {
+      "cve_id": "CVE-2026-7191",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "8.6",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:amazon:qnabot:*:*:*:*:*:*:*:*",
+      "product": "AWS QnABot",
+      "vendor": "Amazon",
+      "description": {
+        "en": "Sandbox Bypass leading to RCE in AWS QnABot.",
+        "fr": "Contournement de bac à sable menant à une RCE dans AWS QnABot."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Update QnABot on AWS CloudFormation.",
+          "fr": "Mettre à jour QnABot sur AWS CloudFormation."
+        }
+      ],
+      "tags": [
+        "vulnerability"
+      ],
+      "sources": [
+        "https://aws.amazon.com/security/security-bulletins/rss/2026-020-aws/"
+      ],
+      "date": "2026-04-27"
+    },
+    {
+      "cve_id": "CVE-2026-7160",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "9.0",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:h:tenda:hg3:*:*:*:*:*:*:*:*",
+      "product": "Tenda HG3",
+      "vendor": "Tenda",
+      "description": {
+        "en": "Command Injection in Tenda HG3 routers.",
+        "fr": "Injection de commande dans les routeurs Tenda HG3."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Update Tenda firmware.",
+          "fr": "Mettre à jour le firmware Tenda."
+        }
+      ],
+      "tags": [
+        "vulnerability"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-7160"
+      ],
+      "date": "2026-04-27"
+    },
+    {
+      "cve_id": "CVE-2026-7156",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:h:totolink:a8000ru:*:*:*:*:*:*:*:*",
+      "product": "Totolink A8000RU",
+      "vendor": "Totolink",
+      "description": {
+        "en": "Command Injection in Totolink A8000RU routers.",
+        "fr": "Injection de commande dans les routeurs Totolink A8000RU."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply firmware updates.",
+          "fr": "Appliquer les mises à jour du firmware."
+        }
+      ],
+      "tags": [
+        "vulnerability"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-7156"
+      ],
+      "date": "2026-04-27"
+    },
+    {
+      "cve_id": "CVE-2026-41679",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "10.0",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:paperclip_ai:paperclip:*:*:*:*:*:*:*:*",
+      "product": "Paperclip AI",
+      "vendor": "Paperclip",
+      "description": {
+        "en": "Orchestrator flaw leading to total system compromise in Paperclip AI.",
+        "fr": "Faille de l'orchestrateur menant à une compromission totale du système dans Paperclip AI."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply patches for AI orchestrator tools.",
+          "fr": "Appliquer les correctifs pour les outils d'orchestration IA."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "AI"
+      ],
+      "sources": [
+        "https://securityonline.info/weekly-vulnerability-digest-april-2026-ai-infrastructure-security/"
+      ],
+      "date": "2026-04-27"
+    },
+    {
+      "cve_id": "CVE-2025-62373",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:pipecat:pipecat:*:*:*:*:*:*:*:*",
+      "product": "Pipecat AI",
+      "vendor": "Pipecat",
+      "description": {
+        "en": "Pickle deserialization vulnerability in Pipecat AI leading to RCE.",
+        "fr": "Vulnérabilité de désérialisation Pickle dans Pipecat IA menant à une RCE."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Update Pipecat AI to a secure version.",
+          "fr": "Mettre à jour Pipecat IA vers une version sécurisée."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "AI"
+      ],
+      "sources": [
+        "https://securityonline.info/pipecat-rce-vulnerability-cve-2025-62373-pickle-deserialization/"
+      ],
+      "date": "2026-04-27"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "TeamPCP Supply Chain Operations",
+        "fr": "Opérations de chaîne d'approvisionnement de TeamPCP"
+      },
+      "description": {
+        "en": "Simultaneous attacks on npm, PyPI, and Docker Hub. Poisoning of Checkmarx KICS Docker image caused a cascade infection of Bitwarden's CI/CD via Dependabot.",
+        "fr": "Attaques simultanées sur npm, PyPI et Docker Hub. L'empoisonnement de l'image Docker de Checkmarx KICS a provoqué une infection en cascade du CI/CD de Bitwarden via Dependabot."
+      },
+      "threat_actor": "TeamPCP",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminalité",
+      "threat_actor_aliases": [
+        "UNC6780"
+      ],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et Télécommunications"
+        ]
+      },
+      "indicators": {
+        "URL": [
+          "https://audit.checkmarx.cx/v1/telemetry",
+          "https://whereisitat.lucyatemysuperbox.space/"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "lucyatemysuperbox.space",
+          "audit.checkmarx.cx"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Bun",
+          "Dependabot",
+          "Checkmarx KICS"
+        ]
+      },
+      "mitre_ttps": [
+        "T1195.002",
+        "T1552.001",
+        "T1059.007"
+      ],
+      "analyse": {
+        "en": "Sophisticated use of CI/CD automation to propagate malware. The actor targets credentials and cloud secrets.",
+        "fr": "Utilisation sophistiquée de l'automatisation CI/CD pour propager des malwares. L'acteur cible les identifiants et les secrets cloud."
+      },
+      "recommandations": [
+        {
+          "en": "Rotate all GitHub tokens and cloud secrets accessed via KICS/Bitwarden CLI. Use immutable Docker digests.",
+          "fr": "Renouveler tous les jetons GitHub et secrets cloud accédés via KICS/Bitwarden CLI. Utiliser des digests Docker immuables."
+        },
+        {
+          "en": "Phase 1: Log build activity; Phase 2: Search for Bun runtime with mcpAddon.js; Phase 3: Revoke GITHUB_TOKEN; Phase 4: Conduct REX.",
+          "fr": "Phase 1: Journaliser l'activité de build; Phase 2: Chercher le runtime Bun avec mcpAddon.js; Phase 3: Révoquer le GITHUB_TOKEN; Phase 4: Conduire un REX."
+        }
+      ],
+      "tags": [
+        "supply chain",
+        "npm",
+        "Docker",
+        "TeamPCP"
+      ],
+      "sources": [
+        "https://isc.sans.edu/diary/rss/32928",
+        "https://research.jfrog.com/post/bitwarden-cli-hijack/"
+      ],
+      "date": "2026-04-27"
+    },
+    {
+      "title": {
+        "en": "UNC6692 Teams Helpdesk Impersonation",
+        "fr": "Usurpation d'identité du helpdesk Teams par UNC6692"
+      },
+      "description": {
+        "en": "Impersonation of IT support on Microsoft Teams following email-bombing to trick users into running AutoHotkey scripts (SNOW suite).",
+        "fr": "Usurpation d'identité du support IT sur Microsoft Teams suite à un email-bombing pour inciter les utilisateurs à exécuter des scripts AutoHotkey (suite SNOW)."
+      },
+      "threat_actor": "Jasper Sleet",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminalité",
+      "threat_actor_aliases": [
+        "UNC6692"
+      ],
+      "sector": {
+        "en": [
+          "Business_Services",
+          "Finance"
+        ],
+        "fr": [
+          "Services aux Entreprises",
+          "Finance"
+        ]
+      },
+      "indicators": {
+        "URL": [
+          "https://s3.amazonaws.com/patch.ahk"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "AutoHotkey",
+          "SNOWBELT",
+          "SnowGlaze"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566.002",
+        "T1176",
+        "T1059.005"
+      ],
+      "analyse": {
+        "en": "The group uses legitimate collaborative tools and headless browser extensions for persistence and credential harvesting.",
+        "fr": "Le groupe utilise des outils collaboratifs légitimes et des extensions de navigateur en mode headless pour la persistance et la collecte d'identifiants."
+      },
+      "recommandations": [
+        {
+          "en": "Restrict external access in Microsoft Teams. Block .ahk script execution.",
+          "fr": "Restreindre l'accès externe dans Microsoft Teams. Bloquer l'exécution des scripts .ahk."
+        }
+      ],
+      "tags": [
+        "phishing",
+        "Teams",
+        "AutoHotkey"
+      ],
+      "sources": [
+        "https://fieldeffect.com/blog/it-helpdesk-impersonation-microsoft-teams"
+      ],
+      "date": "2026-04-27"
+    },
+    {
+      "title": {
+        "en": "GlassWorm Sleeper Extensions",
+        "fr": "Extensions dormantes GlassWorm"
+      },
+      "description": {
+        "en": "73 sleeper extensions on OpenVSX that become malicious after update to deliver infostealers.",
+        "fr": "73 extensions dormantes sur OpenVSX qui deviennent malveillantes après mise à jour pour livrer des infostealers."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et Télécommunications"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "OpenVSX",
+          "VS Code"
+        ]
+      },
+      "mitre_ttps": [
+        "T1195.002",
+        "T1055"
+      ],
+      "analyse": {
+        "en": "The use of sleeper extensions bypasses initial automated security scans on marketplaces.",
+        "fr": "L'utilisation d'extensions dormantes contourne les scans de sécurité automatisés initiaux sur les places de marché."
+      },
+      "recommandations": [
+        {
+          "en": "Audit VS Code extensions using tools like Socket. Disable unauthorized extension installations.",
+          "fr": "Auditer les extensions VS Code avec des outils comme Socket. Désactiver les installations d'extensions non autorisées."
+        }
+      ],
+      "tags": [
+        "supply chain",
+        "VSCode",
+        "GlassWorm"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/glassworm-malware-attacks-return-via-73-openvsx-sleeper-extensions/"
+      ],
+      "date": "2026-04-27"
+    },
+    {
+      "title": {
+        "en": "LinkedIn BrowserGate Fingerprinting",
+        "fr": "Fingerprinting BrowserGate de LinkedIn"
+      },
+      "description": {
+        "en": "LinkedIn scans installed browser extensions via JS fetch requests to identify user tools and interests.",
+        "fr": "LinkedIn scanne les extensions de navigateur installées via des requêtes JS fetch pour identifier les outils et intérêts des utilisateurs."
+      },
+      "threat_actor": "LinkedIn (Corporate)",
+      "threat_actor_origin": "US",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et Télécommunications"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "linkedin.com"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "unknown"
+      ],
+      "analyse": {
+        "en": "This practice allows for massive data collection without explicit consent via browser primitives.",
+        "fr": "Cette pratique permet une collecte massive de données sans consentement explicite via les primitives du navigateur."
+      },
+      "recommandations": [
+        {
+          "en": "Enable anti-fingerprinting settings in browsers like Firefox or Brave.",
+          "fr": "Activer les paramètres anti-fingerprinting dans les navigateurs comme Firefox ou Brave."
+        }
+      ],
+      "tags": [
+        "privacy",
+        "fingerprinting",
+        "LinkedIn"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191383/security/linkedin-browsergate.html"
+      ],
+      "date": "2026-04-27"
+    },
+    {
+      "title": {
+        "en": "The Gentlemen RaaS and Post-Quantum Encryption",
+        "fr": "RaaS The Gentlemen et chiffrement post-quantique"
+      },
+      "description": {
+        "en": "Emergence of The Gentlemen ransomware using SystemBC proxy and Kyber1024 post-quantum encryption.",
+        "fr": "Émergence du ransomware The Gentlemen utilisant le proxy SystemBC et le chiffrement post-quantique Kyber1024."
+      },
+      "threat_actor": "The Gentlemen",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminalité",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Critical_Infrastructure",
+          "Finance",
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Infrastructures Critiques",
+          "Finance",
+          "Gouvernement et Défense"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "SystemBC",
+          "Kyber1024"
+        ]
+      },
+      "mitre_ttps": [
+        "T1486",
+        "T1090.003"
+      ],
+      "analyse": {
+        "en": "Introduction of post-quantum algorithms into RaaS complicates future decryption efforts.",
+        "fr": "L'introduction d'algorithmes post-quantiques dans les RaaS complique les futurs efforts de déchiffrement."
+      },
+      "recommandations": [
+        {
+          "en": "Implement micro-segmentation to limit lateral movement.",
+          "fr": "Mettre en œuvre la micro-segmentation pour limiter le mouvement latéral."
+        }
+      ],
+      "tags": [
+        "RaaS",
+        "ransomware",
+        "post-quantum"
+      ],
+      "sources": [
+        "https://thehackernews.com/2026/04/weekly-recap-fast16-malware-xchat.html"
+      ],
+      "date": "2026-04-27"
+    }
+  ]
+}
