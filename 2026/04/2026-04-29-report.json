@@ -4,7 +4,7 @@
       "en": "The cyber threat landscape is currently dominated by rapid vulnerability exploitation cycles, particularly targeting perimeter devices like Cisco firewalls with persistent implants like FIRESTARTER. There is a notable shift towards the abuse of legitimate tools, such as RMM software and CI/CD pipelines, to evade traditional detection. Additionally, high-impact ransomware is evolving into destructive wipers due to cryptographic flaws, and state-sponsored actors are increasingly leveraging AI to enhance financial theft operations.",
       "fr": "Le paysage des cybermenaces est marqué par une accélération des cycles d'exploitation des vulnérabilités, ciblant particulièrement les équipements de périmètre comme les pare-feux Cisco avec des implants persistants tels que FIRESTARTER. On observe un pivot vers l'abus d'outils légitimes, tels que les logiciels RMM et les pipelines CI/CD, pour contourner les détections traditionnelles. De plus, les ransomwares à fort impact évoluent en wipers destructeurs en raison de failles cryptographiques, et les acteurs étatiques utilisent de plus en plus l'IA pour accroître leurs opérations de vol financier."
     },
-    "date": "2026-04-28"
+    "date": "2026-04-29"
   },
   "geopolitical_analyse": [
     {
