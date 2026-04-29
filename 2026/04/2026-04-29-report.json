@@ -1,0 +1,983 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The cyber threat landscape is currently dominated by rapid vulnerability exploitation cycles, particularly targeting perimeter devices like Cisco firewalls with persistent implants like FIRESTARTER. There is a notable shift towards the abuse of legitimate tools, such as RMM software and CI/CD pipelines, to evade traditional detection. Additionally, high-impact ransomware is evolving into destructive wipers due to cryptographic flaws, and state-sponsored actors are increasingly leveraging AI to enhance financial theft operations.",
+      "fr": "Le paysage des cybermenaces est marqué par une accélération des cycles d'exploitation des vulnérabilités, ciblant particulièrement les équipements de périmètre comme les pare-feux Cisco avec des implants persistants tels que FIRESTARTER. On observe un pivot vers l'abus d'outils légitimes, tels que les logiciels RMM et les pipelines CI/CD, pour contourner les détections traditionnelles. De plus, les ransomwares à fort impact évoluent en wipers destructeurs en raison de failles cryptographiques, et les acteurs étatiques utilisent de plus en plus l'IA pour accroître leurs opérations de vol financier."
+    },
+    "date": "2026-04-28"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement et Défense"
+        ]
+      },
+      "theme": {
+        "en": "Espionage",
+        "fr": "Espionnage"
+      },
+      "description": {
+        "en": "A phishing campaign via Signal has targeted German ministers and diplomats, suspected to be a Russian intelligence operation.",
+        "fr": "Une campagne de phishing via Signal a ciblé des ministres et diplomates allemands, suspectée d'être une opération de renseignement russe."
+      },
+      "recommandations": [
+        {
+          "en": "Implement strict verification protocols for communications on instant messaging platforms.",
+          "fr": "Mettre en œuvre des protocoles de vérification stricts pour les communications sur les plateformes de messagerie instantanée."
+        },
+        {
+          "en": "Incident Response: Preparation (Staff training), Detection (Monitoring Signal metadata), Containment (Isolating compromised devices), Post-incident (Communication audit).",
+          "fr": "Réponse sur incident : Préparation (formation), Détection (surveillance des métadonnées Signal), Confinement (isolation des appareils), Post-incident (audit des communications)."
+        }
+      ],
+      "tags": [
+        "Russia",
+        "Germany",
+        "Signal",
+        "Phishing"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191425/intelligence/signal-phishing-campaign-targets-german-officials-in-suspected-russian-operation.html"
+      ],
+      "date": "2026-04-28"
+    },
+    {
+      "sector": {
+        "en": [
+          "Finance"
+        ],
+        "fr": [
+          "Finance"
+        ]
+      },
+      "theme": {
+        "en": "Sanctions and Cyber Theft",
+        "fr": "Sanctions et Cyber-vol"
+      },
+      "description": {
+        "en": "North Korea is utilizing AI to increase the productivity of cryptocurrency thefts, with an estimated $3 billion stolen to bypass international sanctions.",
+        "fr": "La Corée du Nord utilise l'IA pour augmenter la productivité des vols de crypto-monnaies, avec un montant estimé à 3 milliards de dollars dérobés pour contourner les sanctions internationales."
+      },
+      "recommandations": [
+        {
+          "en": "Enhance monitoring of AI-driven social engineering and automated transaction patterns.",
+          "fr": "Renforcer la surveillance de l'ingénierie sociale assistée par l'IA et des modèles de transactions automatisées."
+        },
+        {
+          "en": "Incident Response: Preparation (AI-threat modeling), Detection (Anomaly detection in crypto flows), Containment (Freezing suspicious wallets), Post-incident (Law enforcement cooperation).",
+          "fr": "Réponse sur incident : Préparation (modélisation des menaces IA), Détection (détection d'anomalies de flux), Confinement (gel des portefeuilles), Post-incident (coopération policière)."
+        }
+      ],
+      "tags": [
+        "North Korea",
+        "AI",
+        "Cryptocurrency",
+        "Lazarus"
+      ],
+      "sources": [
+        "https://www.recordedfuture.com/blog/lazarus-does-not-need-agi"
+      ],
+      "date": "2026-04-28"
+    },
+    {
+      "sector": {
+        "en": [
+          "Industry_and_Manufacturing"
+        ],
+        "fr": [
+          "Industrie et Manufacture"
+        ]
+      },
+      "theme": {
+        "en": "Sovereignty",
+        "fr": "Souveraineté"
+      },
+      "description": {
+        "en": "Analysis of the vulnerabilities of the US shipbuilding industry in the face of Chinese industrial dominance and potential supply chain risks.",
+        "fr": "Analyse des vulnérabilités de l'industrie de la construction navale américaine face à la domination industrielle chinoise et aux risques potentiels sur la chaîne d'approvisionnement."
+      },
+      "recommandations": [
+        {
+          "en": "Diversify the supply chain and audit critical industrial components.",
+          "fr": "Diversifier la chaîne d'approvisionnement et auditer les composants industriels critiques."
+        },
+        {
+          "en": "Incident Response: Preparation (Supply chain mapping), Detection (Audit of vendor integrity), Containment (Redundancy planning), Post-incident (Strategic policy review).",
+          "fr": "Réponse sur incident : Préparation (cartographie de la chaîne logistique), Détection (audit de l'intégrité des fournisseurs), Confinement (planification de redondance), Post-incident (revue des politiques stratégiques)."
+        }
+      ],
+      "tags": [
+        "USA",
+        "China",
+        "Shipbuilding",
+        "Supply Chain"
+      ],
+      "sources": [
+        "https://www.portail-ie.fr/univers/2026/la-construction-navale-des-etats-unis-a-laube-dune-nouvelle-era-2-2/"
+      ],
+      "date": "2026-04-28"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Vimeo",
+      "threat_actor": "ShinyHunters",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Criminal",
+      "threat_actor_aliases": [
+        "unknown"
+      ],
+      "sector": {
+        "en": [
+          "Media_and_Communication"
+        ],
+        "fr": [
+          "Médias et Communication"
+        ]
+      },
+      "description": {
+        "en": "Vimeo confirmed a data breach involving client emails, video titles, and technical metadata via a compromise of Anodot tokens.",
+        "fr": "Vimeo a confirmé une violation de données impliquant les emails des clients, les titres de vidéos et des métadonnées techniques via une compromission des jetons Anodot."
+      },
+      "mitre_ttps": [
+        "T1528",
+        "T1537"
+      ],
+      "recommandations": [
+        {
+          "en": "Rotate all API tokens and implement strict scoping for cloud data access.",
+          "fr": "Renouveler tous les jetons API et mettre en œuvre une limitation stricte de la portée de l'accès aux données cloud."
+        },
+        {
+          "en": "Incident Response: Preparation (Token management), Detection (API logs analysis), Containment (Revoking compromised tokens), Post-incident (User notification).",
+          "fr": "Réponse sur incident : Préparation (gestion des jetons), Détection (analyse des logs API), Confinement (révocation des jetons), Post-incident (notification des utilisateurs)."
+        }
+      ],
+      "tags": [
+        "Token Theft",
+        "Anodot",
+        "Vimeo"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/video-service-vimeo-confirms-anodot-breach-exposed-user-data/"
+      ],
+      "date": "2026-04-28"
+    },
+    {
+      "victim": "Checkmarx",
+      "threat_actor": "Lapsus$",
+      "threat_actor_origin": "Brazil",
+      "threat_actor_type": "Cyber-criminal",
+      "threat_actor_aliases": [
+        "Lapsus Group"
+      ],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et Télécom"
+        ]
+      },
+      "description": {
+        "en": "96 GB of stolen source code, secrets, and configurations from Checkmarx were leaked on GitHub by hackers linked to Lapsus$.",
+        "fr": "96 Go de code source, secrets et configurations volés à Checkmarx ont été divulgués sur GitHub par des pirates liés à Lapsus$."
+      },
+      "mitre_ttps": [
+        "T1552",
+        "T1195"
+      ],
+      "recommandations": [
+        {
+          "en": "Perform a deep audit of all source code for embedded secrets and rotate all compromised credentials.",
+          "fr": "Effectuer un audit approfondi de tout le code source pour les secrets intégrés et renouveler tous les identifiants compromis."
+        },
+        {
+          "en": "Incident Response: Preparation (Secrets scanning), Detection (Source control audit logs), Containment (Blocking unauthorized GitHub access), Post-incident (Code integrity verification).",
+          "fr": "Réponse sur incident : Préparation (analyse des secrets), Détection (logs d'audit du contrôle de code), Confinement (blocage des accès GitHub), Post-incident (vérification d'intégrité du code)."
+        }
+      ],
+      "tags": [
+        "Source Code Leak",
+        "GitHub",
+        "Secrets"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/checkmarx-confirms-lapsus-hackers-leaked-its-stolen-github-data/"
+      ],
+      "date": "2026-04-28"
+    },
+    {
+      "victim": "National Medical Database (Moldova)",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [
+        "unknown"
+      ],
+      "sector": {
+        "en": [
+          "Healthcare_and_Life_Sciences"
+        ],
+        "fr": [
+          "Santé et Sciences de la vie"
+        ]
+      },
+      "description": {
+        "en": "Hackers attacked the national medical database of Moldova, damaging approximately 30% of the information stored.",
+        "fr": "Des pirates ont attaqué la base de données médicale nationale de Moldavie, endommageant environ 30 % des informations stockées."
+      },
+      "mitre_ttps": [
+        "T1485"
+      ],
+      "recommandations": [
+        {
+          "en": "Ensure immutable backups and verify data restoration capabilities.",
+          "fr": "Garantir des sauvegardes immuables et vérifier les capacités de restauration des données."
+        },
+        {
+          "en": "Incident Response: Preparation (Backup testing), Detection (Database integrity monitoring), Containment (Disconnecting affected servers), Post-incident (Data recovery from clean backups).",
+          "fr": "Réponse sur incident : Préparation (tests de sauvegarde), Détection (surveillance d'intégrité DB), Confinement (déconnexion des serveurs), Post-incident (récupération de données)."
+        }
+      ],
+      "tags": [
+        "Database Corruption",
+        "Moldova",
+        "Healthcare"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/04/28/in-moldova-hackers-attacked-a-medical-database-damaging-30-of-the-information/"
+      ],
+      "date": "2026-04-28"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-42208",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:litellm:litellm:-:*:*:*:*:*:*:*",
+      "product": "LiteLLM",
+      "vendor": "LiteLLM",
+      "description": {
+        "en": "Critical pre-authentication SQL injection flaw in LiteLLM exploited in the wild for RCE or data theft.",
+        "fr": "Faille critique d'injection SQL pré-authentification dans LiteLLM exploitée activement pour du RCE ou du vol de données."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Upgrade to LiteLLM version 1.83.7 or disable error logs (disable_error_logs: true).",
+          "fr": "Mettre à jour LiteLLM vers la version 1.83.7 ou désactiver les journaux d'erreurs (disable_error_logs: true)."
+        },
+        {
+          "en": "Incident Response: Preparation (Patching), Detection (WAF rules for SQLi), Containment (Network isolation), Post-incident (System audit).",
+          "fr": "Réponse sur incident : Préparation (correctif), Détection (règles WAF SQLi), Confinement (isolation réseau), Post-incident (audit système)."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "SQLi",
+        "AI Security"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/hackers-are-exploiting-a-critical-litellm-pre-auth-sqli-flaw/"
+      ],
+      "date": "2026-04-28"
+    },
+    {
+      "cve_id": "CVE-2026-3854",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "9.0",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:github:enterprise_server:-:*:*:*:*:*:*:*",
+      "product": "GitHub Enterprise",
+      "vendor": "GitHub",
+      "description": {
+        "en": "Command injection flaw in GitHub Enterprise enabling remote code execution.",
+        "fr": "Faille d'injection de commande dans GitHub Enterprise permettant l'exécution de code à distance."
+      },
+      "mitre_ttps": [
+        "T1190",
+        "T1059"
+      ],
+      "recommandations": [
+        {
+          "en": "Upgrade to GitHub Enterprise version 3.14.24 or higher.",
+          "fr": "Mettre à jour GitHub Enterprise vers la version 3.14.24 ou supérieure."
+        },
+        {
+          "en": "Incident Response: Preparation (Update policy), Detection (Log analysis for command injection patterns), Containment (Limiting internal GitHub network access).",
+          "fr": "Réponse sur incident : Préparation (politique de mise à jour), Détection (analyse des logs), Confinement (limitation des accès réseau)."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "Command Injection"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191434/security/cve-2026-3854-github-flaw-enables-remote-code-execution.html"
+      ],
+      "date": "2026-04-28"
+    },
+    {
+      "cve_id": "CVE-2025-20333",
+      "euvd_id": "unknown",
+      "cisa_kev": "TRUE",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:cisco:adaptive_security_appliance_software:-:*:*:*:*:*:*:*",
+      "product": "ASA / FTD",
+      "vendor": "Cisco",
+      "description": {
+        "en": "Vulnerability exploited by UAT-4356 to deploy the FIRESTARTER backdoor on Cisco firewalls.",
+        "fr": "Vulnérabilité exploitée par UAT-4356 pour déployer le backdoor FIRESTARTER sur les pare-feux Cisco."
+      },
+      "mitre_ttps": [
+        "T1190",
+        "T1542"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply security patches and perform a full re-imaging of suspected infected devices.",
+          "fr": "Appliquer les correctifs de sécurité et effectuer une réinstallation complète (re-imaging) des équipements suspectés d'infection."
+        },
+        {
+          "en": "Incident Response: Preparation (Asset inventory), Detection (Checking for lina_cs processes), Containment (Device isolation), Post-incident (Firmware integrity check).",
+          "fr": "Réponse sur incident : Préparation (inventaire), Détection (recherche de processus lina_cs), Confinement (isolation de l'appareil), Post-incident (vérification d'intégrité)."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "Cisco",
+        "Firestarter"
+      ],
+      "sources": [
+        "https://fieldeffect.com/blog/firestarter-backdoor-cisco-firewalls"
+      ],
+      "date": "2026-04-28"
+    },
+    {
+      "cve_id": "CVE-2026-42167",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "8.1",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:proftpd:proftpd:-:*:*:*:*:*:*:*",
+      "product": "ProFTPD (mod_sql)",
+      "vendor": "ProFTPD",
+      "description": {
+        "en": "SQL Injection in mod_sql module of ProFTPD potentially leading to RCE.",
+        "fr": "Injection SQL dans le module mod_sql de ProFTPD pouvant mener à du RCE."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Upgrade to ProFTPD version 1.3.10rc1 or higher.",
+          "fr": "Mettre à jour ProFTPD vers la version 1.3.10rc1 ou supérieure."
+        },
+        {
+          "en": "Incident Response: Preparation (Patch management), Detection (Monitoring SQL error logs in FTP service), Containment (Disabling mod_sql).",
+          "fr": "Réponse sur incident : Préparation (gestion correctifs), Détection (surveillance logs SQL), Confinement (désactivation de mod_sql)."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "SQLi",
+        "ProFTPD"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-42167"
+      ],
+      "date": "2026-04-28"
+    },
+    {
+      "cve_id": "CVE-2026-41446",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "9.2",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:h:snapone:wattbox:-:*:*:*:*:*:*:*",
+      "product": "WattBox",
+      "vendor": "Snap One",
+      "description": {
+        "en": "Hidden Authentication Bypass in Snap One WattBox devices allowing RCE.",
+        "fr": "Contournement d'authentification caché dans les appareils Snap One WattBox permettant du RCE."
+      },
+      "mitre_ttps": [
+        "T1210"
+      ],
+      "recommandations": [
+        {
+          "en": "Upgrade firmware to version 2.10.0.0.",
+          "fr": "Mettre à jour le micrologiciel vers la version 2.10.0.0."
+        },
+        {
+          "en": "Incident Response: Preparation (IoT segmentation), Detection (Unusual administrative login attempts), Containment (Network firewall restrictions).",
+          "fr": "Réponse sur incident : Préparation (segmentation IoT), Détection (tentatives de login inhabituelles), Confinement (restrictions pare-feu)."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "IoT",
+        "Auth Bypass"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-41446"
+      ],
+      "date": "2026-04-28"
+    },
+    {
+      "cve_id": "CVE-2026-35414",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:openssh:openssh:-:*:*:*:*:*:*:*",
+      "product": "OpenSSH",
+      "vendor": "OpenSSH",
+      "description": {
+        "en": "Logic error in OpenSSH allowing for authentication bypass and root access.",
+        "fr": "Erreur logique dans OpenSSH permettant un contournement d'authentification et un accès root."
+      },
+      "mitre_ttps": [
+        "T1078"
+      ],
+      "recommandations": [
+        {
+          "en": "Upgrade to OpenSSH version 10.3.",
+          "fr": "Mettre à jour OpenSSH vers la version 10.3."
+        },
+        {
+          "en": "Incident Response: Preparation (Hardening SSH configs), Detection (Monitoring SSH auth logs), Containment (Whitelisting IPs for SSH).",
+          "fr": "Réponse sur incident : Préparation (durcissement SSH), Détection (surveillance logs auth), Confinement (liste blanche IP)."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "OpenSSH",
+        "Auth Bypass"
+      ],
+      "sources": [
+        "https://www.cisecurity.org/advisory/a-vulnerability-in-openssh-could-allow-for-authentication-bypass_2026-040"
+      ],
+      "date": "2026-04-28"
+    },
+    {
+      "cve_id": "CVE-2026-7322",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:mozilla:firefox:-:*:*:*:*:*:*:*",
+      "product": "Firefox / Thunderbird",
+      "vendor": "Mozilla",
+      "description": {
+        "en": "Memory safety vulnerabilities in Mozilla products could allow for arbitrary code execution.",
+        "fr": "Des vulnérabilités de sécurité mémoire dans les produits Mozilla pourraient permettre l'exécution de code arbitraire."
+      },
+      "mitre_ttps": [
+        "T1203"
+      ],
+      "recommandations": [
+        {
+          "en": "Upgrade to Firefox 150.0.1 or Thunderbird 140.0.1.",
+          "fr": "Mettre à jour Firefox vers 150.0.1 ou Thunderbird vers 140.0.1."
+        },
+        {
+          "en": "Incident Response: Preparation (Auto-updates), Detection (EDR process monitoring), Containment (Isolating workstation).",
+          "fr": "Réponse sur incident : Préparation (mises à jour auto), Détection (surveillance processus EDR), Confinement (isolation du poste)."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "Mozilla",
+        "RCE"
+      ],
+      "sources": [
+        "https://www.cisecurity.org/advisory/multiple-vulnerabilities-in-mozilla-products-could-allow-for-arbitrary-code-execution_2026-039"
+      ],
+      "date": "2026-04-28"
+    },
+    {
+      "cve_id": "unknown",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:microsoft:entra_id:-:*:*:*:*:*:*:*",
+      "product": "Entra ID",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "Privilege escalation flaw in Microsoft Entra ID enabling account takeover.",
+        "fr": "Faille d'escalade de privilèges dans Microsoft Entra ID permettant la prise de contrôle de compte."
+      },
+      "mitre_ttps": [
+        "T1098"
+      ],
+      "recommandations": [
+        {
+          "en": "Verify that Microsoft's server-side fix is active in your tenant.",
+          "fr": "Vérifier que le correctif côté serveur de Microsoft est actif dans votre tenant."
+        },
+        {
+          "en": "Incident Response: Preparation (IAM audit), Detection (Monitoring privileged role assignments), Containment (Revoking suspicious sessions).",
+          "fr": "Réponse sur incident : Préparation (audit IAM), Détection (surveillance des rôles privilégiés), Confinement (révocation de sessions)."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "Azure",
+        "Entra ID"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191414/security/microsoft-fixes-entra-id-flaw-enabling-privilege-escalation.html"
+      ],
+      "date": "2026-04-28"
+    },
+    {
+      "cve_id": "CVE-2025-20362",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:cisco:adaptive_security_appliance_software:-:*:*:*:*:*:*:*",
+      "product": "ASA / FTD",
+      "vendor": "Cisco",
+      "description": {
+        "en": "Security flaw used in conjunction with FIRESTARTER backdoor on Cisco appliances.",
+        "fr": "Faille de sécurité utilisée en conjonction avec le backdoor FIRESTARTER sur les équipements Cisco."
+      },
+      "mitre_ttps": [
+        "T1542"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply Cisco updates and perform physical reboot to clear resident memory implants.",
+          "fr": "Appliquer les mises à jour Cisco et effectuer un redémarrage physique pour effacer les implants en mémoire."
+        },
+        {
+          "en": "Incident Response: Preparation (Hardening), Detection (File integrity checks on /usr/bin/lina_cs), Containment (Isolating affected segment).",
+          "fr": "Réponse sur incident : Préparation (durcissement), Détection (vérification d'intégrité de /usr/bin/lina_cs), Confinement (isolation du segment)."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "Cisco",
+        "Firewall"
+      ],
+      "sources": [
+        "https://fieldeffect.com/blog/firestarter-backdoor-cisco-firewalls"
+      ],
+      "date": "2026-04-28"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "VECT 2.0: Cryptographic Bug Converts Ransomware to Wiper",
+        "fr": "VECT 2.0 : Un bug cryptographique transforme le ransomware en wiper"
+      },
+      "description": {
+        "en": "A logic error in VECT 2.0 ransomware's ChaCha20 encryption engine causes unrecoverable data loss for files larger than 128 KB by losing nonces.",
+        "fr": "Une erreur logique dans le moteur de chiffrement ChaCha20 de VECT 2.0 cause une perte de données irrécupérable pour les fichiers de plus de 128 Ko."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cyber-criminal",
+      "threat_actor_aliases": [
+        "unknown"
+      ],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et Télécom"
+        ]
+      },
+      "indicators": {
+        "URL": [
+          "hxxp://vectordntlcrlmfkcm4alni734tbcrnd5lk44v6sp4lqal6noqrgnbyd.onion"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [
+          "8ee4ec425bc0d8db050d13bbff98f483fff020050d49f40c5055ca2b9f6b1c4d",
+          "e1fc59c7ece6e9a7fb262fc8529e3c4905503a1ca44630f9724b2ccc518d0c06"
+        ],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "libsodium"
+        ]
+      },
+      "mitre_ttps": [
+        "T1486",
+        "T1562.001"
+      ],
+      "analyse": {
+        "en": "VECT 2.0 is functionally a wiper for large files due to poor implementation of the libsodium library, making recovery impossible even if the ransom is paid.",
+        "fr": "VECT 2.0 est fonctionnellement un wiper pour les fichiers volumineux en raison d'une mauvaise implémentation de la bibliothèque libsodium, rendant la récupération impossible même après paiement."
+      },
+      "recommandations": [
+        {
+          "en": "Rely only on air-gapped backups for recovery and monitor for .vect file extensions.",
+          "fr": "S'appuyer uniquement sur des sauvegardes déconnectées pour la récupération et surveiller les extensions .vect."
+        },
+        {
+          "en": "Incident Response: Preparation (Offline backups), Detection (SIEM query for .vect files), Containment (Isolating infected hosts), Post-incident (Full restoration from clean backups).",
+          "fr": "Réponse sur incident : Préparation (sauvegardes hors ligne), Détection (requête SIEM pour fichiers .vect), Confinement (isolation des hôtes), Post-incident (restauration complète)."
+        }
+      ],
+      "tags": [
+        "Ransomware",
+        "Wiper",
+        "VECT"
+      ],
+      "sources": [
+        "https://research.checkpoint.com/2026/vect-ransomware-by-design-wiper-by-accident/"
+      ],
+      "date": "2026-04-28"
+    },
+    {
+      "title": {
+        "en": "Phishing-to-RMM Campaigns: Abuse of Legitimate Remote Tools",
+        "fr": "Campagnes Phishing-to-RMM : Abus d'outils de gestion à distance légitimes"
+      },
+      "description": {
+        "en": "Massive phishing campaigns are deploying legitimate RMM tools like ScreenConnect and LogMeIn to bypass detections and gain persistent access.",
+        "fr": "Des campagnes de phishing massives déploient des outils RMM légitimes comme ScreenConnect et LogMeIn pour contourner les détections et obtenir un accès persistant."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cyber-criminal",
+      "threat_actor_aliases": [
+        "unknown"
+      ],
+      "sector": {
+        "en": [
+          "Business_Services"
+        ],
+        "fr": [
+          "Services aux Entreprises"
+        ]
+      },
+      "indicators": {
+        "URL": [
+          "vmail.app.n8n.cloud"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "ScreenConnect",
+          "LogMeIn",
+          "AnyDesk"
+        ]
+      },
+      "mitre_ttps": [
+        "T1219",
+        "T1566.002"
+      ],
+      "analyse": {
+        "en": "Attackers leverage signed installers and cloud infrastructure to masquerade as IT support, making it difficult to distinguish from authorized admin sessions.",
+        "fr": "Les attaquants exploitent des installeurs signés et des infrastructures cloud pour se faire passer pour le support IT, rendant la distinction difficile avec des sessions d'administration autorisées."
+      },
+      "recommandations": [
+        {
+          "en": "Implement RMM whitelisting and monitor parent processes for RMM installers.",
+          "fr": "Mettre en œuvre une liste blanche RMM et surveiller les processus parents des installeurs RMM."
+        },
+        {
+          "en": "Incident Response: Preparation (Asset whitelisting), Detection (EDR query for non-standard RMM), Containment (Blocking RMM domains), Post-incident (Credential reset).",
+          "fr": "Réponse sur incident : Préparation (liste blanche), Détection (requête EDR RMM non standard), Confinement (blocage des domaines RMM), Post-incident (réinitialisation identifiants)."
+        }
+      ],
+      "tags": [
+        "RMM",
+        "Phishing",
+        "ScreenConnect"
+      ],
+      "sources": [
+        "https://any.run/cybersecurity-blog/rmm-blind-spot-for-cisos/"
+      ],
+      "date": "2026-04-28"
+    },
+    {
+      "title": {
+        "en": "FIRESTARTER: State-Sponsored Persistence on Cisco Devices",
+        "fr": "FIRESTARTER : Persistance étatique sur les équipements Cisco"
+      },
+      "description": {
+        "en": "The FIRESTARTER implant targets Cisco ASA/FTD devices, surviving patches by modifying boot sequences and hiding in the LINA process.",
+        "fr": "L'implant FIRESTARTER cible les appareils Cisco ASA/FTD, survivant aux correctifs en modifiant les séquences de démarrage et en se cachant dans le processus LINA."
+      },
+      "threat_actor": "UAT-4356",
+      "threat_actor_origin": "China",
+      "threat_actor_type": "State-sponsored",
+      "threat_actor_aliases": [
+        "Storm-1849"
+      ],
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement et Défense"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "lina_cs"
+        ]
+      },
+      "mitre_ttps": [
+        "T1542.001",
+        "T1190"
+      ],
+      "analyse": {
+        "en": "Attributed to Chinese actor UAT-4356, this implant represents a high level of sophistication by resisting standard remediation efforts like software patching.",
+        "fr": "Attribué à l'acteur chinois UAT-4356, cet implant représente un haut niveau de sophistication en résistant aux remédiations standards comme les correctifs logiciels."
+      },
+      "recommandations": [
+        {
+          "en": "Perform physical reboots and complete re-imaging of compromised Cisco hardware.",
+          "fr": "Effectuer des redémarrages physiques et une réinstallation complète des matériels Cisco compromis."
+        },
+        {
+          "en": "Incident Response: Preparation (Out-of-band management), Detection (Checking for svc_samcore.log), Containment (Disconnecting affected firewalls), Post-incident (Firmware re-flashing).",
+          "fr": "Réponse sur incident : Préparation (gestion hors-bande), Détection (vérification de svc_samcore.log), Confinement (déconnexion des pare-feux), Post-incident (re-flashing du firmware)."
+        }
+      ],
+      "tags": [
+        "Cisco",
+        "Backdoor",
+        "Persistence",
+        "China"
+      ],
+      "sources": [
+        "https://fieldeffect.com/blog/firestarter-backdoor-cisco-firewalls"
+      ],
+      "date": "2026-04-28"
+    },
+    {
+      "title": {
+        "en": "Morpheus Spyware: Targeted Surveillance on Android",
+        "fr": "Morpheus Spyware : Surveillance ciblée sur Android"
+      },
+      "description": {
+        "en": "Morpheus is an invasive Android spyware linked to Italian firm IPS Intelligence, using accessibility abuse to steal WhatsApp messages.",
+        "fr": "Morpheus est un spyware Android invasif lié à la firme italienne IPS Intelligence, utilisant l'abus d'accessibilité pour voler les messages WhatsApp."
+      },
+      "threat_actor": "IPS Intelligence",
+      "threat_actor_origin": "Italy",
+      "threat_actor_type": "Commercial Surveillance Vendor",
+      "threat_actor_aliases": [
+        "unknown"
+      ],
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement et Défense"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "ADB",
+          "Accessibility Service"
+        ]
+      },
+      "mitre_ttps": [
+        "T1546.012",
+        "T1624.001"
+      ],
+      "analyse": {
+        "en": "Morpheus disables mobile antivirus and Google Play Protect while using overlays to mask its surveillance activity from the user.",
+        "fr": "Morpheus désactive les antivirus mobiles et Google Play Protect tout en utilisant des overlays pour masquer son activité de surveillance à l'utilisateur."
+      },
+      "recommandations": [
+        {
+          "en": "Disable ADB and development options on corporate mobile devices.",
+          "fr": "Désactiver l'ADB et les options de développement sur les appareils mobiles d'entreprise."
+        },
+        {
+          "en": "Incident Response: Preparation (MTD deployment), Detection (Identifying generic system-update packages), Containment (Factory Reset), Post-incident (Compromised communication audit).",
+          "fr": "Réponse sur incident : Préparation (déploiement MTD), Détection (identification de paquets système suspects), Confinement (réinitialisation d'usine), Post-incident (audit des communications)."
+        }
+      ],
+      "tags": [
+        "Spyware",
+        "Android",
+        "Italy",
+        "Interception"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191398/malware/new-android-spyware-morpheus-linked-to-italian-surveillance-firm.html"
+      ],
+      "date": "2026-04-28"
+    },
+    {
+      "title": {
+        "en": "CI/CD Pipeline Abuse Detection with LLMs",
+        "fr": "Détection de l'abus des pipelines CI/CD via les LLM"
+      },
+      "description": {
+        "en": "Elastic Security Labs released a tool to detect CI/CD abuse using LLMs to analyze suspicious workflow modifications like secret exfiltration.",
+        "fr": "Elastic Security Labs a publié un outil pour détecter l'abus des pipelines CI/CD utilisant des LLM pour analyser les modifications de workflows suspectes."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [
+        "unknown"
+      ],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et Télécom"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "cicd-abuse-detector"
+        ]
+      },
+      "mitre_ttps": [
+        "T1195.002",
+        "T1552"
+      ],
+      "analyse": {
+        "en": "Attackers target triggers like pull_request_target to access secrets or use LD_PRELOAD for code execution within build environments.",
+        "fr": "Les attaquants ciblent des déclencheurs comme pull_request_target pour accéder aux secrets ou utilisent LD_PRELOAD pour l'exécution de code dans les environnements de build."
+      },
+      "recommandations": [
+        {
+          "en": "Pin Actions by SHA hash and enforce least-privilege permissions in CI YAML files.",
+          "fr": "Épingler les Actions par hash SHA et imposer les privilèges minimaux dans les fichiers CI YAML."
+        },
+        {
+          "en": "Incident Response: Preparation (Workflow auditing), Detection (Analyzing diffs for secrets context), Containment (Disabling workflows), Post-incident (Rotating CI secrets).",
+          "fr": "Réponse sur incident : Préparation (audit workflows), Détection (analyse des diffs), Confinement (désactivation workflows), Post-incident (renouvellement des secrets)."
+        }
+      ],
+      "tags": [
+        "CI/CD",
+        "Supply Chain",
+        "GitHub Actions",
+        "LLM"
+      ],
+      "sources": [
+        "https://www.elastic.co/security-labs/detecting-cicd-pipeline-abuse-with-llm-augmented-analysis"
+      ],
+      "date": "2026-04-28"
+    },
+    {
+      "title": {
+        "en": "Money Mule Intelligence: Combatting APP Fraud",
+        "fr": "Intelligence sur les comptes Mules : Combattre la fraude APP"
+      },
+      "description": {
+        "en": "Intelligence gathered via automated personas reveals that 28% of money mule accounts remain active 30 days after identification.",
+        "fr": "L'intelligence collectée via des personas automatisés révèle que 28 % des comptes mules restent actifs 30 jours après leur identification."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Criminal",
+      "threat_actor_aliases": [
+        "unknown"
+      ],
+      "sector": {
+        "en": [
+          "Finance"
+        ],
+        "fr": [
+          "Finance"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1566"
+      ],
+      "analyse": {
+        "en": "Mule accounts are the critical exit point for Authorized Push Payment (APP) fraud, with high prevalence in fintechs for fast onboarding.",
+        "fr": "Les comptes mules sont les points de sortie critiques pour la fraude aux paiements poussés autorisés (APP), avec une forte prévalence dans les fintechs."
+      },
+      "recommandations": [
+        {
+          "en": "Feed real-time mule intelligence lists into banking transaction monitoring systems.",
+          "fr": "Intégrer les listes d'intelligence sur les mules en temps réel dans les systèmes de surveillance des transactions bancaires."
+        },
+        {
+          "en": "Incident Response: Preparation (Threat intelligence ingestion), Detection (Identifying rapid inflows/outflows), Containment (Freezing accounts), Post-incident (Account closure and reporting).",
+          "fr": "Réponse sur incident : Préparation (ingestion d'intelligence), Détection (flux entrants/sortants rapides), Confinement (gel des comptes), Post-incident (clôture de compte)."
+        }
+      ],
+      "tags": [
+        "Fraud",
+        "Money Mules",
+        "Fintech",
+        "APP Fraud"
+      ],
+      "sources": [
+        "https://www.recordedfuture.com/blog/money-mule-solution"
+      ],
+      "date": "2026-04-28"
+    }
+  ]
+}
