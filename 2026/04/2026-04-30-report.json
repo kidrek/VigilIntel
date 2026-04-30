@@ -1,0 +1,1426 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The cyber threat landscape is currently dominated by critical supply chain attacks and the systemic exploitation of third-party integrations. A key trend is the 'industrialization' of software compromise, targeting development tools and CI/CD environments (SAP npm, VS Code). Simultaneously, OAuth sprawl is emerging as a major vector for massive data leaks, as seen in the Anodot breach affecting Vimeo and Vercel. Strategic priorities should focus on locking down CI/CD workflows, auditing OAuth integrations, and increased monitoring of development environments.",
+      "fr": "Le paysage des cybermenaces est marqué par une intensification des attaques sur la chaîne d'approvisionnement et l'exploitation systémique des intégrations tierces. Une tendance de fond est l'industrialisation de la compromission logicielle, ciblant les outils de développement et les environnements CI/CD (SAP npm, VS Code). Parallèlement, la surface d'attaque OAuth émerge comme un vecteur majeur de fuite de données massives, illustrée par l'incident Anodot affectant Vimeo et Vercel. Les priorités stratégiques doivent se concentrer sur le verrouillage des flux CI/CD, l'audit des intégrations OAuth et la surveillance accrue des environnements de développement."
+    },
+    "date": "2026-04-30"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": [
+          "Media_and_Communication"
+        ],
+        "fr": [
+          "Médias et Communication"
+        ]
+      },
+      "theme": {
+        "en": "Internet Censorship",
+        "fr": "Censure d'Internet"
+      },
+      "description": {
+        "en": "Russia leads the 2026 internet censorship index, blocking major independent media outlets like Meduza and Bellingcat, as well as circumvention tools.",
+        "fr": "La Russie arrive en tête de l'indice de censure de l'Internet 2026, bloquant des médias indépendants majeurs comme Meduza et Bellingcat, ainsi que des outils de contournement."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor the availability of secure communication channels for sensitive personnel in the region.",
+          "fr": "Surveiller la disponibilité des canaux de communication sécurisés pour le personnel sensible dans la région."
+        }
+      ],
+      "tags": [
+        "censorship",
+        "russia"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191475/security/internet-censorship-index-reveals-russias-lead-and-widespread-content-blocking.html"
+      ],
+      "date": "2026-04-29"
+    },
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement et Défense"
+        ]
+      },
+      "theme": {
+        "en": "State Fragmentation and Conflict",
+        "fr": "Fragmentation de l'État et Conflit"
+      },
+      "description": {
+        "en": "Mali faces risks of fragmentation following attacks by armed groups (JNIM, FLA) near Bamako, influencing regional stability.",
+        "fr": "Le Mali risque une fragmentation suite aux attaques de groupes armés (JNIM, FLA) près de Bamako, influençant la stabilité régionale."
+      },
+      "recommandations": [
+        {
+          "en": "Assess the physical and digital security of infrastructure in West Africa.",
+          "fr": "Évaluer la sécurité physique et numérique des infrastructures en Afrique de l'Ouest."
+        }
+      ],
+      "tags": [
+        "mali",
+        "conflict"
+      ],
+      "sources": [
+        "https://www.iris-france.org/mali-vers-la-fragmentation-avec-fatou-elise-ba/"
+      ],
+      "date": "2026-04-29"
+    },
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement et Défense"
+        ]
+      },
+      "theme": {
+        "en": "Political Violence",
+        "fr": "Violence Politique"
+      },
+      "description": {
+        "en": "Analysis of the impact of political violence in the United States following assassination attempts against Donald Trump.",
+        "fr": "Analyse de l'impact de la violence politique aux États-Unis suite aux tentatives d'assassinat contre Donald Trump."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor for cyber-influence campaigns exploiting political polarization.",
+          "fr": "Surveiller les campagnes de cyber-influence exploitant la polarisation politique."
+        }
+      ],
+      "tags": [
+        "usa",
+        "politics"
+      ],
+      "sources": [
+        "https://www.iris-france.org/violence-et-vie-politique-aux-etats-unis-phenomene-ineluctable-les-mardis-de-liris/"
+      ],
+      "date": "2026-04-29"
+    },
+    {
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et Télécoms"
+        ]
+      },
+      "theme": {
+        "en": "Digital Regulation (DSA)",
+        "fr": "Réglementation Numérique (DSA)"
+      },
+      "description": {
+        "en": "The European Commission finds Meta in breach of the Digital Services Act for failing to protect minors under 13 on Instagram and Facebook.",
+        "fr": "La Commission européenne estime que Meta enfreint le Digital Services Act pour n'avoir pas protégé les mineurs de moins de 13 ans sur Instagram et Facebook."
+      },
+      "recommandations": [
+        {
+          "en": "Ensure compliance with age verification requirements for digital platforms.",
+          "fr": "Assurer la conformité avec les exigences de vérification de l'âge pour les plateformes numériques."
+        }
+      ],
+      "tags": [
+        "dsa",
+        "meta",
+        "regulation"
+      ],
+      "sources": [
+        "https://digital-strategy.ec.europa.eu/en/news/commission-preliminarily-finds-meta-breach-digital-services-act-failing-prevent-minors-under-13"
+      ],
+      "date": "2026-04-29"
+    },
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement et Défense"
+        ]
+      },
+      "theme": {
+        "en": "Privacy and AI Surveillance",
+        "fr": "Vie Privée et Surveillance par IA"
+      },
+      "description": {
+        "en": "Hellenic DPA rules the Greek police's facial recognition system unlawful.",
+        "fr": "La DPA hellénique juge illégal le système de reconnaissance faciale de la police grecque."
+      },
+      "recommandations": [
+        {
+          "en": "Review facial recognition deployments against EU privacy standards.",
+          "fr": "Réviser les déploiements de reconnaissance faciale au regard des normes de confidentialité de l'UE."
+        }
+      ],
+      "tags": [
+        "privacy",
+        "ai",
+        "greece"
+      ],
+      "sources": [
+        "https://edri.org/our-work/greeces-ai-smart-policing-system-ruled-unlawful-after-e4-million-public-spending/"
+      ],
+      "date": "2026-04-29"
+    },
+    {
+      "sector": {
+        "en": [
+          "Security"
+        ],
+        "fr": [
+          "Sécurité"
+        ]
+      },
+      "theme": {
+        "en": "OSINT Legal Framework",
+        "fr": "Cadre Juridique OSINT"
+      },
+      "description": {
+        "en": "Advocacy for a legal framework in France to clarify the legitimacy of OSINT and cyber intelligence activities.",
+        "fr": "Plaidoyer pour un cadre juridique en France afin de clarifier la légitimité de l'OSINT et des activités de veille cyber."
+      },
+      "recommandations": [
+        {
+          "en": "Align OSINT activities with emerging legal guidelines to avoid liability.",
+          "fr": "Aligner les activités OSINT avec les directives juridiques émergentes pour éviter toute responsabilité."
+        }
+      ],
+      "tags": [
+        "osint",
+        "legal",
+        "france"
+      ],
+      "sources": [
+        "https://www.portail-ie.fr/univers/2026/cadre-juridique-osint/"
+      ],
+      "date": "2026-04-29"
+    },
+    {
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et Télécoms"
+        ]
+      },
+      "theme": {
+        "en": "GDPR and Digital Omnibus",
+        "fr": "RGPD et Digital Omnibus"
+      },
+      "description": {
+        "en": "Criticism of the European Commission's Digital Omnibus package for potentially weakening GDPR and ePrivacy.",
+        "fr": "Critiques contre le paquet Digital Omnibus de la Commission européenne risquant d'affaiblir le RGPD et l'ePrivacy."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor legislative changes to privacy frameworks in the EU.",
+          "fr": "Surveiller les changements législatifs des cadres de confidentialité dans l'UE."
+        }
+      ],
+      "tags": [
+        "gdpr",
+        "eu",
+        "regulation"
+      ],
+      "sources": [
+        "https://edri.org/our-work/edri-responds-to-european-commissions-consultation-call-on-the-digital-omnibus/"
+      ],
+      "date": "2026-04-29"
+    },
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement et Défense"
+        ]
+      },
+      "theme": {
+        "en": "Age Verification Policy",
+        "fr": "Politique de Vérification de l'Âge"
+      },
+      "description": {
+        "en": "EU Commission urges member states to rollout age verification apps by late 2026.",
+        "fr": "La Commission européenne presse les États membres de déployer des applications de vérification de l'âge d'ici fin 2026."
+      },
+      "recommandations": [
+        {
+          "en": "Prepare technical infrastructure for EU-compliant age verification integrations.",
+          "fr": "Préparer l'infrastructure technique pour les intégrations de vérification de l'âge conformes à l'UE."
+        }
+      ],
+      "tags": [
+        "eu",
+        "identity",
+        "regulation"
+      ],
+      "sources": [
+        "https://digital-strategy.ec.europa.eu/en/news/commission-urges-member-states-rollout-eu-age-verification-app"
+      ],
+      "date": "2026-04-29"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Vimeo",
+      "threat_actor": "ShinyHunters",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [
+        "ShinyHunters"
+      ],
+      "sector": {
+        "en": [
+          "Media_and_Communication"
+        ],
+        "fr": [
+          "Médias et Communication"
+        ]
+      },
+      "description": {
+        "en": "Compromise of third-party analytics platform Anodot led to the exposure of Vimeo customer emails and video metadata via stolen OAuth tokens.",
+        "fr": "La compromission de la plateforme analytique tierce Anodot a entraîné l'exposition des e-mails des clients de Vimeo et des métadonnées vidéo via des jetons OAuth volés."
+      },
+      "mitre_ttps": [
+        "T1528",
+        "T1537"
+      ],
+      "recommandations": [
+        {
+          "en": "Revoke all Anodot-related OAuth grants and rotate API keys.",
+          "fr": "Révoquer tous les accès OAuth liés à Anodot et faire tourner les clés API."
+        },
+        {
+          "en": "Perform an audit of all active third-party SaaS integrations.",
+          "fr": "Effectuer un audit de toutes les intégrations SaaS tierces actives."
+        }
+      ],
+      "tags": [
+        "breach",
+        "oauth",
+        "vimeo",
+        "anodot"
+      ],
+      "sources": [
+        "https://fieldeffect.com/blog/vimeo-linked-third-party-analytics-platform-breach",
+        "https://securityaffairs.com/191448/security/shinyhunters-exploit-anodot-incident-to-target-vimeo.html"
+      ],
+      "date": "2026-04-29"
+    },
+    {
+      "victim": "Asian Football Confederation",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Hospitality_and_Entertainment"
+        ],
+        "fr": [
+          "Hôtellerie et Divertissement"
+        ]
+      },
+      "description": {
+        "en": "A cyberattack targeting the AFC resulted in the exposure of personal information (passports, contracts) of high-profile athletes, including Ronaldo.",
+        "fr": "Une cyberattaque ciblant l'AFC a entraîné l'exposition d'informations personnelles (passeports, contrats) d'athlètes de haut niveau, dont Ronaldo."
+      },
+      "mitre_ttps": [
+        "unknown"
+      ],
+      "recommandations": [
+        {
+          "en": "Implement strict access controls and encryption for athlete personal data.",
+          "fr": "Mettre en œuvre des contrôles d'accès stricts et le chiffrement des données personnelles des athlètes."
+        }
+      ],
+      "tags": [
+        "breach",
+        "sports",
+        "afc"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/04/29/cyberattack-targeting-asian-football-confederation-involves-personal-info-of-high-profile-athletes-like-ronaldo/"
+      ],
+      "date": "2026-04-29"
+    },
+    {
+      "victim": "Sandhills Medical Foundation",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Healthcare_and_Life_Sciences"
+        ],
+        "fr": [
+          "Santé et Sciences de la vie"
+        ]
+      },
+      "description": {
+        "en": "A cyberattack affecting 169,017 people, involving sensitive health information (PHI).",
+        "fr": "Une cyberattaque affectant 169 017 personnes, impliquant des informations de santé sensibles (PHI)."
+      },
+      "mitre_ttps": [
+        "unknown"
+      ],
+      "recommandations": [
+        {
+          "en": "Ensure all PHI is encrypted at rest and in transit.",
+          "fr": "S'assurer que toutes les PHI sont chiffrées au repos et en transit."
+        }
+      ],
+      "tags": [
+        "breach",
+        "healthcare"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/04/29/almost-one-year-after-discovery-sandhills-medical-foundation-notifies-169017-people-affected-by-a-cyberattack/"
+      ],
+      "date": "2026-04-29"
+    },
+    {
+      "victim": "Roblox",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "Ukraine",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Hospitality_and_Entertainment"
+        ],
+        "fr": [
+          "Hôtellerie et Divertissement"
+        ]
+      },
+      "description": {
+        "en": "Ukrainian police arrested individuals for hijacking and selling over 610,000 Roblox accounts using infostealers disguised as game enhancers.",
+        "fr": "La police ukrainienne a arrêté des individus pour le détournement et la vente de plus de 610 000 comptes Roblox à l'aide d'infostealers déguisés en outils d'optimisation de jeu."
+      },
+      "mitre_ttps": [
+        "T1204.002",
+        "T1555"
+      ],
+      "recommandations": [
+        {
+          "en": "Educate users about the dangers of unofficial third-party game tools.",
+          "fr": "Éduquer les utilisateurs sur les dangers des outils de jeu tiers non officiels."
+        },
+        {
+          "en": "Enforce Multi-Factor Authentication (MFA) for all gaming accounts.",
+          "fr": "Imposer l'authentification multifacteur (MFA) pour tous les comptes de jeu."
+        }
+      ],
+      "tags": [
+        "breach",
+        "gaming",
+        "roblox"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/hackers-arrested-for-hijacking-and-selling-610-000-roblox-accounts/"
+      ],
+      "date": "2026-04-29"
+    },
+    {
+      "victim": "Pine Bluff School District",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Education_and_Research"
+        ],
+        "fr": [
+          "Éducation et Recherche"
+        ]
+      },
+      "description": {
+        "en": "Loss of $3.2 million in a Business Email Compromise (BEC) attack targeting financial transactions.",
+        "fr": "Perte de 3,2 millions de dollars lors d'une attaque de type Business Email Compromise (BEC) ciblant des transactions financières."
+      },
+      "mitre_ttps": [
+        "T1566"
+      ],
+      "recommandations": [
+        {
+          "en": "Implement dual-authorization for all large wire transfers.",
+          "fr": "Mettre en œuvre une double autorisation pour tous les virements bancaires importants."
+        }
+      ],
+      "tags": [
+        "breach",
+        "bec",
+        "education"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/04/29/ar-pine-bluff-school-district-loses-3-2-million-in-business-email-compromise-attack/"
+      ],
+      "date": "2026-04-29"
+    },
+    {
+      "victim": "SCS Engineers, Epcon Communities, Data Exchange Corporation, SunSource",
+      "threat_actor": "Payouts King",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Industry_and_Manufacturing"
+        ],
+        "fr": [
+          "Industrie et Fabrication"
+        ]
+      },
+      "description": {
+        "en": "Payouts King ransomware group listed four new victims, continuing its double-extortion campaigns using Tox for communication.",
+        "fr": "Le groupe de ransomware Payouts King a listé quatre nouvelles victimes, poursuivant ses campagnes de double extorsion en utilisant Tox pour la communication."
+      },
+      "mitre_ttps": [
+        "T1486",
+        "T1071.001"
+      ],
+      "recommandations": [
+        {
+          "en": "Detect and block Tox protocol traffic on non-standard ports.",
+          "fr": "Détecter et bloquer le trafic du protocole Tox sur des ports non standard."
+        },
+        {
+          "en": "Perform regular offline backups and validate restoration procedures.",
+          "fr": "Effectuer des sauvegardes hors ligne régulières et valider les procédures de restauration."
+        }
+      ],
+      "tags": [
+        "ransomware",
+        "payouts_king"
+      ],
+      "sources": [
+        "https://www.ransomlook.io//group/payoutsking"
+      ],
+      "date": "2026-04-30"
+    },
+    {
+      "victim": "Multiple Private Investors",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "Albania",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Finance"
+        ],
+        "fr": [
+          "Finance"
+        ]
+      },
+      "description": {
+        "en": "Dismantling of a 50 million euro crypto investment fraud ring operating from call centers in Albania.",
+        "fr": "Démantèlement d'un réseau de fraude à l'investissement crypto de 50 millions d'euros opérant depuis des centres d'appels en Albanie."
+      },
+      "mitre_ttps": [
+        "unknown"
+      ],
+      "recommandations": [
+        {
+          "en": "Warn employees and clients about remote control software (AnyDesk, TeamViewer) scams.",
+          "fr": "Avertir les employés et les clients sur les arnaques aux logiciels de contrôle à distance (AnyDesk, TeamViewer)."
+        }
+      ],
+      "tags": [
+        "fraud",
+        "crypto",
+        "law_enforcement"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/european-police-dismantles-50-million-crypto-investment-fraud-ring/"
+      ],
+      "date": "2026-04-29"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2024-1708",
+      "euvd_id": "unknown",
+      "cisa_kev": "TRUE",
+      "cvss": "8.4",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:connectwise:screenconnect:*:*:*:*:*:*:*:*",
+      "product": "ScreenConnect",
+      "vendor": "ConnectWise",
+      "description": {
+        "en": "Path traversal vulnerability in ConnectWise ScreenConnect allowing for remote code execution.",
+        "fr": "Vulnérabilité de traversée de chemin dans ConnectWise ScreenConnect permettant l'exécution de code à distance."
+      },
+      "mitre_ttps": [
+        "T1210"
+      ],
+      "recommandations": [
+        {
+          "en": "Update ScreenConnect to version 23.9.8 or later immediately.",
+          "fr": "Mettre à jour immédiatement ScreenConnect vers la version 23.9.8 ou ultérieure."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "rce"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191442/security/u-s-cisa-adds-microsoft-windows-shell-and-connectwise-screenconnect-flaws-to-its-known-exploited-vulnerabilities-catalog.html"
+      ],
+      "date": "2026-04-29"
+    },
+    {
+      "cve_id": "CVE-2026-32202",
+      "euvd_id": "unknown",
+      "cisa_kev": "TRUE",
+      "cvss": "4.3",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:o:microsoft:windows:*:*:*:*:*:*:*:*",
+      "product": "Windows Shell",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "Windows Shell vulnerability exploited by APT28 for NTLM coercion.",
+        "fr": "Vulnérabilité Windows Shell exploitée par APT28 pour la coercition NTLM."
+      },
+      "mitre_ttps": [
+        "T1550"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply Microsoft April 2026 patches and block outbound NTLM traffic.",
+          "fr": "Appliquer les correctifs Microsoft d'avril 2026 et bloquer le trafic NTLM sortant."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "ntlm"
+      ],
+      "sources": [
+        "https://go.theregister.com/feed/www.theregister.com/2026/04/29/microsoft_zero_click_exploit/"
+      ],
+      "date": "2026-04-29"
+    },
+    {
+      "cve_id": "CVE-2026-41940",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:cpanel:cpanel:*:*:*:*:*:*:*:*",
+      "product": "cPanel & WHM",
+      "vendor": "cPanel",
+      "description": {
+        "en": "Critical authentication bypass in cPanel & WHM leading to root access.",
+        "fr": "Contournement d'authentification critique dans cPanel & WHM menant à un accès root."
+      },
+      "mitre_ttps": [
+        "T1556"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply emergency updates for cPanel and block ports 2083/2087.",
+          "fr": "Appliquer les mises à jour d'urgence pour cPanel et bloquer les ports 2083/2087."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "auth_bypass"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/cpanel-whm-emergency-update-fixes-critical-auth-bypass-bug/"
+      ],
+      "date": "2026-04-29"
+    },
+    {
+      "cve_id": "CVE-2026-42208",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "LiteLLM",
+      "vendor": "LiteLLM",
+      "description": {
+        "en": "SQL Injection in LiteLLM exploited 36 hours after disclosure.",
+        "fr": "Injection SQL dans LiteLLM exploitée 36 heures après sa divulgation."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Disable error logging and sanitize inputs for LiteLLM.",
+          "fr": "Désactiver la journalisation des erreurs et assainir les entrées pour LiteLLM."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "sql_injection"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191483/hacking/cve-2026-42208-litellm-bug-exploited-36-hours-after-its-disclosure.html"
+      ],
+      "date": "2026-04-29"
+    },
+    {
+      "cve_id": "CVE-2026-7418",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "9.0",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "HiPER 1250GW",
+      "vendor": "UTT",
+      "description": {
+        "en": "Buffer overflow in UTT HiPER 1250GW allowing RCE.",
+        "fr": "Dépassement de tampon dans UTT HiPER 1250GW permettant une exécution de code à distance (RCE)."
+      },
+      "mitre_ttps": [
+        "T1210"
+      ],
+      "recommandations": [
+        {
+          "en": "Update device firmware to the latest secure version.",
+          "fr": "Mettre à jour le micrologiciel de l'appareil vers la dernière version sécurisée."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "rce"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-7418"
+      ],
+      "date": "2026-04-29"
+    },
+    {
+      "cve_id": "CVE-2026-7419",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "9.0",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "HiPER 1250GW",
+      "vendor": "UTT",
+      "description": {
+        "en": "Buffer overflow in UTT HiPER 1250GW allowing RCE.",
+        "fr": "Dépassement de tampon dans UTT HiPER 1250GW permettant une RCE."
+      },
+      "mitre_ttps": [
+        "T1210"
+      ],
+      "recommandations": [
+        {
+          "en": "Update device firmware.",
+          "fr": "Mettre à jour le micrologiciel de l'appareil."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "rce"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-7419"
+      ],
+      "date": "2026-04-29"
+    },
+    {
+      "cve_id": "CVE-2026-7420",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "9.0",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "HiPER 1250GW",
+      "vendor": "UTT",
+      "description": {
+        "en": "Buffer overflow in UTT HiPER 1250GW allowing RCE.",
+        "fr": "Dépassement de tampon dans UTT HiPER 1250GW permettant une RCE."
+      },
+      "mitre_ttps": [
+        "T1210"
+      ],
+      "recommandations": [
+        {
+          "en": "Update device firmware.",
+          "fr": "Mettre à jour le micrologiciel de l'appareil."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "rce"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-7420"
+      ],
+      "date": "2026-04-29"
+    },
+    {
+      "cve_id": "CVE-2026-6644",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "8.8",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "ADM",
+      "vendor": "ASUSTOR",
+      "description": {
+        "en": "Command injection in ASUSTOR ADM leading to root RCE.",
+        "fr": "Injection de commande dans ASUSTOR ADM menant à une RCE root."
+      },
+      "mitre_ttps": [
+        "T1059"
+      ],
+      "recommandations": [
+        {
+          "en": "Update ADM to version 5.1.3.RGO1.",
+          "fr": "Mettre à jour ADM vers la version 5.1.3.RGO1."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "rce"
+      ],
+      "sources": [
+        "https://securityonline.info/asustor-adm-root-rce-poc-cve-2026-6644-public-disclosure/"
+      ],
+      "date": "2026-04-30"
+    },
+    {
+      "cve_id": "CVE-2026-34965",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "8.8",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "Cockpit CMS",
+      "vendor": "Cockpit",
+      "description": {
+        "en": "Code injection in Cockpit CMS allowing RCE.",
+        "fr": "Injection de code dans Cockpit CMS permettant une RCE."
+      },
+      "mitre_ttps": [
+        "T1059"
+      ],
+      "recommandations": [
+        {
+          "en": "Update Cockpit CMS to the latest version.",
+          "fr": "Mettre à jour Cockpit CMS vers la dernière version."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "rce"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-34965"
+      ],
+      "date": "2026-04-29"
+    },
+    {
+      "cve_id": "CVE-2026-31431",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "7.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+      "product": "Linux Kernel",
+      "vendor": "Linux",
+      "description": {
+        "en": "Logic flaw 'Copy Fail' in Linux kernel cryptographic code leading to Local Privilege Escalation (LPE).",
+        "fr": "Défaut logique 'Copy Fail' dans le code cryptographique du noyau Linux menant à une élévation locale de privilèges (LPE)."
+      },
+      "mitre_ttps": [
+        "T1068"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply the latest standard kernel patches.",
+          "fr": "Appliquer les derniers correctifs de noyau standard."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "lpe"
+      ],
+      "sources": [
+        "https://go.theregister.com/feed/www.theregister.com/2026/04/30/linux_cryptographic_code_flaw/"
+      ],
+      "date": "2026-04-30"
+    },
+    {
+      "cve_id": "CVE-2026-7426",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "8.1",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "FreeRTOS-Plus-TCP",
+      "vendor": "AWS",
+      "description": {
+        "en": "Out-of-bounds write in FreeRTOS-Plus-TCP leading to DoS or crash.",
+        "fr": "Écriture hors limites dans FreeRTOS-Plus-TCP menant à un DoS ou un plantage."
+      },
+      "mitre_ttps": [
+        "T1499"
+      ],
+      "recommandations": [
+        {
+          "en": "Update FreeRTOS-Plus-TCP to V4.4.1 or V4.2.6.",
+          "fr": "Mettre à jour FreeRTOS-Plus-TCP vers V4.4.1 ou V4.2.6."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "dos"
+      ],
+      "sources": [
+        "https://aws.amazon.com/security/security-bulletins/rss/2026-023-aws/"
+      ],
+      "date": "2026-04-29"
+    },
+    {
+      "cve_id": "CVE-2026-0204",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "8.0",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:o:sonicwall:sonicos:*:*:*:*:*:*:*:*",
+      "product": "SonicOS",
+      "vendor": "SonicWall",
+      "description": {
+        "en": "Access control vulnerability in SonicWall SonicOS allowing authentication bypass.",
+        "fr": "Vulnérabilité de contrôle d'accès dans SonicWall SonicOS permettant un contournement d'authentification."
+      },
+      "mitre_ttps": [
+        "T1556"
+      ],
+      "recommandations": [
+        {
+          "en": "Disable HTTP management and apply SonicWall Gen6/7/8 patches.",
+          "fr": "Désactiver la gestion HTTP et appliquer les correctifs SonicWall Gen6/7/8."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "auth_bypass"
+      ],
+      "sources": [
+        "https://securityonline.info/sonicwall-sonicos-critical-vulnerabilities-gen6-gen7-gen8-patch/"
+      ],
+      "date": "2026-04-30"
+    },
+    {
+      "cve_id": "CVE-2026-3965",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "Qinglong",
+      "vendor": "Qinglong",
+      "description": {
+        "en": "Authentication bypass in Qinglong task scheduler due to middleware processing mismatch.",
+        "fr": "Contournement d'authentification dans le planificateur de tâches Qinglong dû à un décalage de traitement du middleware."
+      },
+      "mitre_ttps": [
+        "T1556"
+      ],
+      "recommandations": [
+        {
+          "en": "Update Qinglong to version after PR #2941 and restrict administrative access.",
+          "fr": "Mettre à jour Qinglong vers une version postérieure au PR #2941 et restreindre l'accès administratif."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "auth_bypass"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/hackers-exploit-rce-flaws-in-qinglong-task-scheduler-for-cryptomining/"
+      ],
+      "date": "2026-04-29"
+    },
+    {
+      "cve_id": "CVE-2026-4047",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "Qinglong",
+      "vendor": "Qinglong",
+      "description": {
+        "en": "Authentication bypass in Qinglong task scheduler (case sensitivity mismatch).",
+        "fr": "Contournement d'authentification dans le planificateur de tâches Qinglong (décalage de sensibilité à la casse)."
+      },
+      "mitre_ttps": [
+        "T1556"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply Qinglong patches.",
+          "fr": "Appliquer les correctifs Qinglong."
+        }
+      ],
+      "tags": [
+        "vulnerability",
+        "auth_bypass"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/hackers-exploit-rce-flaws-in-qinglong-task-scheduler-for-cryptomining/"
+      ],
+      "date": "2026-04-29"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "World Cup 2026 Infostealer Campaign",
+        "fr": "Campagne d'Infostealers Coupe du Monde 2026"
+      },
+      "description": {
+        "en": "Lumma and Rugmi stealers are targeting FIFA-related accounts via fake Google Drive pages and DLL side-loading to commit ticket fraud.",
+        "fr": "Les infostealers Lumma et Rugmi ciblent les comptes liés à la FIFA via de fausses pages Google Drive et du DLL side-loading pour commettre des fraudes à la billetterie."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Hospitality_and_Entertainment"
+        ],
+        "fr": [
+          "Hôtellerie et Divertissement"
+        ]
+      },
+      "indicators": {
+        "URL": [
+          "cloud01y[.]cfd",
+          "edge2[.]filehost74[.]sbs"
+        ],
+        "IPv4": [
+          "31[.]57[.]216[.]121"
+        ],
+        "IPv6": [],
+        "DOMAIN": [
+          "cloud01y.cfd"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [
+          "9af16f9fc35ce00688c20318e868664a",
+          "9eecf800853672a56fc46d26b6fa5bb1"
+        ],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Lumma",
+          "Rugmi",
+          "HijackLoader"
+        ]
+      },
+      "mitre_ttps": [
+        "T1574.002",
+        "T1027.003",
+        "T1555.003"
+      ],
+      "analyse": {
+        "en": "Opportunistic campaign exploiting interest in the 2026 World Cup. Uses Valve Steam legitimate binaries to bypass detection through DLL side-loading.",
+        "fr": "Campagne opportuniste exploitant l'intérêt pour la Coupe du Monde 2026. Utilise des binaires légitimes Valve Steam pour contourner la détection via le DLL side-loading."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor for unauthorized DLL loads (SDL3.dll) by legitimate binaries like steam.exe.",
+          "fr": "Surveiller les chargements de DLL non autorisés (SDL3.dll) par des binaires légitimes comme steam.exe."
+        },
+        {
+          "en": "Invalidate active session cookies for accounts showing impossible travel patterns.",
+          "fr": "Invalider les cookies de session actifs pour les comptes montrant des patterns de voyage impossibles."
+        }
+      ],
+      "tags": [
+        "infostealer",
+        "lumma",
+        "world_cup"
+      ],
+      "sources": [
+        "https://flare.io/learn/resources/blog/2026-world-cup-infostealer-pipeline"
+      ],
+      "date": "2026-04-30"
+    },
+    {
+      "title": {
+        "en": "Mini Shai-Hulud SAP npm Supply Chain Attack",
+        "fr": "Attaque Supply Chain SAP npm Mini Shai-Hulud"
+      },
+      "description": {
+        "en": "Compromise of official SAP npm packages using a Bun-based malware to exfiltrate cloud secrets and propagate through GitHub.",
+        "fr": "Compromission de packages npm SAP officiels utilisant un malware basé sur Bun pour exfiltrer des secrets cloud et se propager via GitHub."
+      },
+      "threat_actor": "TeamPCP",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et Télécoms"
+        ]
+      },
+      "indicators": {
+        "URL": [
+          "https://github.com/search?q=%22A+Mini+Shai-Hulud+has+Appeared%22"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [
+          "4066781fa830224c8bbcc3aa005a396657f9c8f9016f9a64ad44a9d7f5f45e34",
+          "80a3d2877813968ef847ae73b5eeeb70b9435254e74d7f07d8cf4057f0a710ac"
+        ],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Bun",
+          "Mini Shai-Hulud"
+        ]
+      },
+      "mitre_ttps": [
+        "T1195.002",
+        "T1059",
+        "T1552"
+      ],
+      "analyse": {
+        "en": "Sophisticated supply chain worm abusing VS Code tasks.json and AI tools (Claude Code) hooks to maintain persistence.",
+        "fr": "Ver de chaîne d'approvisionnement sophistiqué abusant des tâches tasks.json de VS Code et des hooks d'outils IA (Claude Code) pour maintenir la persistance."
+      },
+      "recommandations": [
+        {
+          "en": "Rotate all secrets accessible from environments where the compromised npm packages were installed.",
+          "fr": "Faire tourner tous les secrets accessibles depuis les environnements où les packages npm compromis ont été installés."
+        },
+        {
+          "en": "Disable automatic Workspace Trust in VS Code and implement SHA-pinning for npm dependencies.",
+          "fr": "Désactiver le Workspace Trust automatique dans VS Code et implémenter le SHA-pinning pour les dépendances npm."
+        }
+      ],
+      "tags": [
+        "supply_chain",
+        "sap",
+        "npm"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/official-sap-npm-packages-compromised-to-steal-credentials/",
+        "https://opensourcemalware.com/blog/mini-shai-hulud"
+      ],
+      "date": "2026-04-30"
+    },
+    {
+      "title": {
+        "en": "CI/CD Pipeline Abuse via LLM Analysis",
+        "fr": "Abus de Pipelines CI/CD via Analyse LLM"
+      },
+      "description": {
+        "en": "Elastic highlights the increase in attacks targeting CI/CD automation, using tools like Nord Stream and Gato-X to harvest secrets.",
+        "fr": "Elastic souligne l'augmentation des attaques ciblant l'automatisation CI/CD, utilisant des outils comme Nord Stream et Gato-X pour récolter des secrets."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et Télécoms"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Nord Stream",
+          "Gato-X",
+          "cicd-abuse-detector"
+        ]
+      },
+      "mitre_ttps": [
+        "T1552",
+        "T1070.006"
+      ],
+      "analyse": {
+        "en": "Attackers move from targeting production servers to targeting the automation itself. Detection engineering now requires analyzing YAML diffs with LLMs.",
+        "fr": "Les attaquants passent du ciblage des serveurs de production au ciblage de l'automatisation elle-même. L'ingénierie de la détection nécessite désormais l'analyse des diffs YAML avec des LLM."
+      },
+      "recommandations": [
+        {
+          "en": "Restrict GITHUB_TOKEN permissions to the strict minimum and audit PAT usage.",
+          "fr": "Restreindre les permissions GITHUB_TOKEN au strict minimum et auditer l'utilisation des PAT."
+        }
+      ],
+      "tags": [
+        "cicd",
+        "devops",
+        "llm"
+      ],
+      "sources": [
+        "https://www.elastic.co/security-labs/detecting-cicd-pipeline-abuse-with-llm-augmented-analysis"
+      ],
+      "date": "2026-04-30"
+    },
+    {
+      "title": {
+        "en": "WordPress Quick Page/Post Redirect Backdoor",
+        "fr": "Backdoor dans le Plugin WordPress Quick Page/Post Redirect"
+      },
+      "description": {
+        "en": "A popular WordPress plugin contained a dormant backdoor for 5 years, allowing arbitrary code injection for SEO poisoning.",
+        "fr": "Un plugin WordPress populaire contenait une backdoor dormante depuis 5 ans, permettant l'injection de code arbitraire pour du SEO poisoning."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et Télécoms"
+        ]
+      },
+      "indicators": {
+        "URL": [
+          "anadnet[.]com",
+          "w[.]anadnet[.]com"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "anadnet.com"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1195"
+      ],
+      "analyse": {
+        "en": "Supply chain compromise via a hidden auto-update mechanism pointing to a malicious C2 server.",
+        "fr": "Compromission de la chaîne d'approvisionnement via un mécanisme d'auto-mise à jour caché pointant vers un serveur C2 malveillant."
+      },
+      "recommandations": [
+        {
+          "en": "Uninstall the plugin immediately and scan files for references to anadnet.com.",
+          "fr": "Désinstaller immédiatement le plugin et scanner les fichiers pour toute référence à anadnet.com."
+        }
+      ],
+      "tags": [
+        "wordpress",
+        "backdoor",
+        "seo_poisoning"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/popular-wordpress-redirect-plugin-hid-dormant-backdoor-for-years/"
+      ],
+      "date": "2026-04-30"
+    },
+    {
+      "title": {
+        "en": "VECT Ransomware Wiper",
+        "fr": "Wiper VECT déguisé en Ransomware"
+      },
+      "description": {
+        "en": "Malware presenting as ransomware but performing irreversible data wiping, rendering payment useless.",
+        "fr": "Malware se présentant comme un ransomware mais effectuant un effacement irréversible des données, rendant le paiement inutile."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Industry_and_Manufacturing"
+        ],
+        "fr": [
+          "Industrie et Fabrication"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "VECT"
+        ]
+      },
+      "mitre_ttps": [
+        "T1485"
+      ],
+      "analyse": {
+        "en": "Destructive malware designed to look like ransomware. No key storage or transmission exists.",
+        "fr": "Malware destructeur conçu pour ressembler à un ransomware. Aucun stockage ou transmission de clé n'existe."
+      },
+      "recommandations": [
+        {
+          "en": "Do not pay the ransom. Use offline backups for restoration.",
+          "fr": "Ne pas payer la rançon. Utiliser des sauvegardes hors ligne pour la restauration."
+        }
+      ],
+      "tags": [
+        "wiper",
+        "ransomware",
+        "vect"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/04/29/vect-ransomware-is-a-wiper-not-ransomware-dont-bother-paying-says-checkpoint-research/"
+      ],
+      "date": "2026-04-29"
+    },
+    {
+      "title": {
+        "en": "Libredtail Cryptomining Campaign",
+        "fr": "Campagne de Cryptominage Libredtail"
+      },
+      "description": {
+        "en": "Exploitation of PHP CGI vulnerabilities (CVE-2024-4577) to deploy Redtail miners on Linux and ARM systems.",
+        "fr": "Exploitation des vulnérabilités PHP CGI (CVE-2024-4577) pour déployer des mineurs Redtail sur des systèmes Linux et ARM."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et Télécoms"
+        ]
+      },
+      "indicators": {
+        "URL": [
+          "31[.]57[.]216[.]121"
+        ],
+        "IPv4": [
+          "31[.]57[.]216[.]121"
+        ],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Redtail"
+        ]
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "analyse": {
+        "en": "Uses 'Best-fit' character mapping to bypass PHP CGI protections and consumes 100% CPU on infected hosts.",
+        "fr": "Utilise le mapping de caractères 'Best-fit' pour contourner les protections PHP CGI et consomme 100 % du CPU sur les hôtes infectés."
+      },
+      "recommandations": [
+        {
+          "en": "Patch PHP to the latest version and block User-Agent 'libredtail-http'.",
+          "fr": "Corriger PHP vers la dernière version et bloquer l'User-Agent 'libredtail-http'."
+        }
+      ],
+      "tags": [
+        "cryptomining",
+        "php",
+        "redtail"
+      ],
+      "sources": [
+        "https://isc.sans.edu/diary/rss/32936"
+      ],
+      "date": "2026-04-30"
+    },
+    {
+      "title": {
+        "en": "AI-Powered Adaptive Honeypots",
+        "fr": "Pots de Miel Adaptatifs Propulsés par l'IA"
+      },
+      "description": {
+        "en": "Cisco Talos presents a method to use LLMs to create convincing, adaptive honeyots to collect attacker TTPs.",
+        "fr": "Cisco Talos présente une méthode pour utiliser les LLM afin de créer des pots de miel adaptatifs convaincants pour collecter les TTP des attaquants."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Security"
+        ],
+        "fr": [
+          "Sécurité"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "unknown"
+      ],
+      "analyse": {
+        "en": "Defensive use of ChatGPT to simulate Linux environments or IoT devices, wasting attacker resources.",
+        "fr": "Utilisation défensive de ChatGPT pour simuler des environnements Linux ou des appareils IoT, gaspillant les ressources des attaquants."
+      },
+      "recommandations": [
+        {
+          "en": "Explore LLM integration in network deception strategies.",
+          "fr": "Explorer l'intégration des LLM dans les stratégies de déception réseau."
+        }
+      ],
+      "tags": [
+        "ai",
+        "honeypot",
+        "defense"
+      ],
+      "sources": [
+        "https://blog.talosintelligence.com/ai-powered-honeypots-turning-the-tables-on-malicious-ai-agents/"
+      ],
+      "date": "2026-04-30"
+    }
+  ]
+}
