@@ -1,1 +1,1808 @@
-{"strategic_analysis": {"analyse": {"en": "The strategic landscape for May 2026 shows a critical intersection between long-standing logical flaws (Linux kernel) and the industrialization of phishing through Generative AI (Bluekit). There is a marked shift towards 'Supply Chain Worming' using development tool configurations (VS Code, Claude Code) and persistent threats targeting hosting infrastructures like cPanel. Geopolitically, cyber alignment between Russia and North Korea and Chinese transnational repression remain high-priority risks.", "fr": "Le paysage strat\u00e9gique de mai 2026 montre une intersection critique entre des failles de logique anciennes (noyau Linux) et l'industrialisation du phishing via l'IA g\u00e9n\u00e9rative (Bluekit). On observe un virage marqu\u00e9 vers le 'Supply Chain Worming' utilisant les configurations d'outils de d\u00e9veloppement (VS Code, Claude Code) et des menaces persistantes ciblant les infrastructures d'h\u00e9bergement comme cPanel. G\u00e9opolitiquement, l'alignement cyber entre la Russie et la Cor\u00e9e du Nord ainsi que la r\u00e9pression transnationale chinoise demeurent des risques prioritaires."}, "date": "2026-05-01"}, "geopolitical_analyse": [{"sector": {"en": ["Government_and_Defense"], "fr": ["Gouvernement et D\u00e9fense"]}, "theme": {"en": "US-China Diplomatic Summit Pre-positioning", "fr": "Pr\u00e9-positionnement avant le sommet diplomatique USA-Chine"}, "description": {"en": "Likely pre-positioning of cyber sabotage tools by Chinese actors ahead of the Trump-Xi diplomatic meetings in May 2026.", "fr": "Pr\u00e9-positionnement probable d'outils de sabotage cyber par des acteurs chinois avant les rencontres diplomatiques Trump-Xi de mai 2026."}, "recommandations": [{"en": "IR - Preparation: Increase monitoring of critical infrastructure networks for unusual lateral movement.", "fr": "IR - Pr\u00e9paration : Renforcer la surveillance des r\u00e9seaux d'infrastructures critiques pour d\u00e9tecter des mouvements lat\u00e9raux inhabituels."}, {"en": "Audit all external-facing assets for unauthorized configuration changes.", "fr": "Auditer tous les actifs expos\u00e9s pour d\u00e9tecter des changements de configuration non autoris\u00e9s."}], "tags": ["geopolitics", "espionage"], "sources": ["https://go.theregister.com/feed/www.theregister.com/2026/04/30/chinese_spies_lurking_networks/"], "date": "2026-04-30"}, {"sector": {"en": ["Government_and_Defense"], "fr": ["Gouvernement et D\u00e9fense"]}, "theme": {"en": "Russia-North Korea Defense Cooperation", "fr": "Coop\u00e9ration de d\u00e9fense Russie-Cor\u00e9e du Nord"}, "description": {"en": "Formalization of a long-term defense cooperation agreement including aerospace technology transfers and munitions.", "fr": "Formalisation d'un accord de coop\u00e9ration de d\u00e9fense \u00e0 long terme incluant des transferts de technologies a\u00e9rospatiales et de munitions."}, "recommandations": [{"en": "IR - Detection: Monitor for North Korean APT activity (Lazarus, Kimsuky) targeting aerospace sectors.", "fr": "IR - D\u00e9tection : Surveiller l'activit\u00e9 des APT nord-cor\u00e9ens (Lazarus, Kimsuky) ciblant les secteurs a\u00e9rospatiaux."}, {"en": "Strengthen security for intellectual property related to satellite and missile technology.", "fr": "Renforcer la s\u00e9curit\u00e9 de la propri\u00e9t\u00e9 intellectuelle li\u00e9e aux technologies de satellites et de missiles."}], "tags": ["military_alliance", "technology_transfer"], "sources": ["https://sploited.blog/2026/04/30/weekly-threat-landscape-thursday-roundup-6/"], "date": "2026-04-30"}, {"sector": {"en": ["Media_and_Communication"], "fr": ["M\u00e9dias et communication"]}, "theme": {"en": "Transnational Repression (GLITTER CARP)", "fr": "R\u00e9pression transnationale (GLITTER CARP)"}, "description": {"en": "Targeted phishing campaigns by GLITTER CARP against journalists and diasporas to suppress dissent.", "fr": "Campagnes de phishing cibl\u00e9es par GLITTER CARP contre les journalistes et les diasporas pour supprimer la dissidence."}, "recommandations": [{"en": "IR - Containment: Reset credentials for compromised accounts immediately and enable hardware-based MFA.", "fr": "IR - Confinement : R\u00e9initialiser imm\u00e9diatement les identifiants des comptes compromis et activer le MFA mat\u00e9riel."}, {"en": "Provide digital security training for high-risk individuals and journalists.", "fr": "Fournir une formation en s\u00e9curit\u00e9 num\u00e9rique aux personnes \u00e0 haut risque et aux journalistes."}], "tags": ["human_rights", "phishing"], "sources": ["https://sploited.blog/2026/04/30/weekly-threat-landscape-thursday-roundup-6/"], "date": "2026-04-30"}, {"sector": {"en": ["Government_and_Defense"], "fr": ["Gouvernement et D\u00e9fense"]}, "theme": {"en": "US Strategic Pivot in Americas", "fr": "Pivot strat\u00e9gique am\u00e9ricain dans les Am\u00e9riques"}, "description": {"en": "Risk scenarios related to the shift towards a security strategy led by military force against Transnational Criminal Organizations (TCO).", "fr": "Sc\u00e9narios de risques li\u00e9s au passage vers une strat\u00e9gie de s\u00e9curit\u00e9 dirig\u00e9e par la force militaire contre les organisations criminelles transnationales (TCO)."}, "recommandations": [{"en": "IR - Post-incident: Evaluate organizational exposure to retaliatory cyber attacks from criminal groups.", "fr": "IR - Post-incident : \u00c9valuer l'exposition de l'organisation aux cyberattaques de repr\u00e9sailles de la part de groupes criminels."}, {"en": "Enhance information sharing with regional law enforcement agencies.", "fr": "Am\u00e9liorer le partage d'informations avec les agences de police r\u00e9gionales."}], "tags": ["strategy", "organized_crime"], "sources": ["https://www.recordedfuture.com/research/us-strategic-pivot"], "date": "2026-04-30"}, {"sector": {"en": ["Government_and_Defense"], "fr": ["Gouvernement et D\u00e9fense"]}, "theme": {"en": "WhatsApp Threats to US Troops (Handala)", "fr": "Menaces WhatsApp contre les troupes US (Handala)"}, "description": {"en": "Handala group targets US troops in Bahrain via WhatsApp messages threatening drone attacks.", "fr": "Le groupe Handala cible les troupes am\u00e9ricaines \u00e0 Bahre\u00efn via des messages WhatsApp mena\u00e7ant d'attaques de drones."}, "recommandations": [{"en": "IR - Detection: Identify and report social engineering attempts on personal devices of personnel.", "fr": "IR - D\u00e9tection : Identifier et signaler les tentatives d'ing\u00e9nierie sociale sur les appareils personnels du personnel."}, {"en": "Implement strict mobile device usage policies in operational areas.", "fr": "Mettre en \u0153uvre des politiques strictes d'utilisation des appareils mobiles dans les zones op\u00e9rationnelles."}], "tags": ["psychological_operations", "social_engineering"], "sources": ["https://thehackernews.com/2026/04/threatsday-bulletin-sms-blaster-busts.html"], "date": "2026-04-30"}], "breach_analyse": [{"victim": "ANTS (France Titres)", "threat_actor": "unknown", "threat_actor_origin": "unknown", "threat_actor_type": "unknown", "threat_actor_aliases": [], "sector": {"en": ["Government_and_Defense"], "fr": ["Gouvernement et D\u00e9fense"]}, "description": {"en": "Data breach affecting millions of French citizens including names, addresses, and birth dates. A 15-year-old minor was arrested.", "fr": "Violation de donn\u00e9es affectant des millions de citoyens fran\u00e7ais, incluant noms, adresses et dates de naissance. Un mineur de 15 ans a \u00e9t\u00e9 interpell\u00e9."}, "mitre_ttps": ["T1566"], "recommandations": [{"en": "IR - Post-incident: Implement robust monitoring of dark web forums for identity theft of citizens.", "fr": "IR - Post-incident : Mettre en place une surveillance robuste des forums du dark web pour le vol d'identit\u00e9 des citoyens."}, {"en": "Notify affected users and provide guidance on identity protection.", "fr": "Notifier les utilisateurs affect\u00e9s et fournir des conseils sur la protection de l'identit\u00e9."}], "tags": ["data_breach", "pii"], "sources": ["https://www.lemonde.fr/pixels/article/2026/04/30/piratage-de-l-ants-un-mineur-de-15-ans-interpelle_6684591_4408996.html"], "date": "2026-04-30"}, {"victim": "ADT", "threat_actor": "unknown", "threat_actor_origin": "unknown", "threat_actor_type": "unknown", "threat_actor_aliases": [], "sector": {"en": ["Security"], "fr": ["S\u00e9curit\u00e9"]}, "description": {"en": "SSO accounts compromised via vishing, affecting 5.5 million people.", "fr": "Comptes SSO compromis via vishing, affectant 5,5 millions de personnes."}, "mitre_ttps": ["T1566.003", "T1078"], "recommandations": [{"en": "IR - Containment: Revoke all compromised SSO tokens and force password resets.", "fr": "IR - Confinement : R\u00e9voquer tous les jetons SSO compromis et forcer la r\u00e9initialisation des mots de passe."}, {"en": "Train employees to recognize sophisticated voice-based phishing attempts.", "fr": "Former les employ\u00e9s \u00e0 reconna\u00eetre les tentatives sophistiqu\u00e9es de phishing vocal."}], "tags": ["vishing", "sso"], "sources": ["https://blog.talosintelligence.com/great-responsibility-without-great-power/"], "date": "2026-04-30"}, {"victim": "elementary-data (PyPI)", "threat_actor": "unknown", "threat_actor_origin": "unknown", "threat_actor_type": "unknown", "threat_actor_aliases": [], "sector": {"en": ["Technology_and_Telecom"], "fr": ["Technologie et t\u00e9l\u00e9communications"]}, "description": {"en": "Compromise of developer credentials and crypto wallets via a malicious PyPI package version 0.23.3.", "fr": "Compromission d'identifiants de d\u00e9veloppeurs et de portefeuilles crypto via une version malveillante (0.23.3) d'un paquet PyPI."}, "mitre_ttps": ["T1195.002"], "recommandations": [{"en": "IR - Eradication: Remove version 0.23.3 of elementary-data from all environments.", "fr": "IR - \u00c9radication : Supprimer la version 0.23.3 d'elementary-data de tous les environnements."}, {"en": "Audit all software dependencies for unauthorized modifications.", "fr": "Auditer toutes les d\u00e9pendances logicielles pour d\u00e9tecter des modifications non autoris\u00e9s."}], "tags": ["supply_chain", "pypi"], "sources": ["https://thehackernews.com/2026/04/threatsday-bulletin-sms-blaster-busts.html"], "date": "2026-04-30"}, {"victim": "Huge Networks", "threat_actor": "unknown", "threat_actor_origin": "unknown", "threat_actor_type": "unknown", "threat_actor_aliases": [], "sector": {"en": ["Security"], "fr": ["S\u00e9curit\u00e9"]}, "description": {"en": "Infrastructure of an anti-DDoS firm compromised and used to launch attacks against Brazilian ISPs.", "fr": "L'infrastructure d'une entreprise anti-DDoS a \u00e9t\u00e9 compromise et utilis\u00e9e pour lancer des attaques contre des FAI br\u00e9siliens."}, "mitre_ttps": ["T1552.004", "T1498.002"], "recommandations": [{"en": "IR - Recovery: Wipe and reinstall all compromised servers; rotate all SSH keys and API secrets.", "fr": "IR - R\u00e9cup\u00e9ration : Effacer et r\u00e9installer tous les serveurs compromis ; renouveler toutes les cl\u00e9s SSH et secrets d'API."}, {"en": "Implement hardware-based MFA for administrative SSH access.", "fr": "Mettre en \u0153uvre un MFA mat\u00e9riel pour les acc\u00e8s SSH administratifs."}], "tags": ["ddos", "ssh_compromise"], "sources": ["https://krebsonsecurity.com/2026/04/anti-ddos-firm-heaped-attacks-on-brazilian-isps/"], "date": "2026-04-30"}, {"victim": "Roblox Users", "threat_actor": "unknown", "threat_actor_origin": "Ukraine", "threat_actor_type": "Cybercrime", "threat_actor_aliases": [], "sector": {"en": ["Hospitality_and_Entertainment"], "fr": ["H\u00f4tellerie et divertissement"]}, "description": {"en": "Over 610,000 Roblox accounts hacked via session cookie theft for resale on underground markets.", "fr": "Plus de 610 000 comptes Roblox pirat\u00e9s via le vol de cookies de session pour revente sur des march\u00e9s clandestins."}, "mitre_ttps": ["T1539", "T1098"], "recommandations": [{"en": "IR - Containment: Force logout of all active sessions and reset account passwords.", "fr": "IR - Confinement : Forcer la d\u00e9connexion de toutes les sessions actives et r\u00e9initialiser les mots de passe des comptes."}, {"en": "Advise users to never share their session cookie files.", "fr": "Conseiller aux utilisateurs de ne jamais partager leurs fichiers de cookies de session."}], "tags": ["session_hijacking", "gaming"], "sources": ["https://securityaffairs.com/191500/cyber-crime/large-scale-roblox-hacking-operation-shut-down-by-ukrainian-authorities.html"], "date": "2026-04-30"}, {"victim": "Logistics and Freight Brokers", "threat_actor": "Diesel Vortex", "threat_actor_origin": "unknown", "threat_actor_type": "Cybercrime", "threat_actor_aliases": [], "sector": {"en": ["Industry_and_Manufacturing"], "fr": ["Industrie et fabrication"]}, "description": {"en": "FBI reports 60% surge in cargo theft enabled by cyber infiltration of freight broker platforms.", "fr": "Le FBI signale une augmentation de 60 % des vols de fret favoris\u00e9s par l'infiltration cyber des plateformes de courtiers de fret."}, "mitre_ttps": ["T1566.002", "T1078"], "recommandations": [{"en": "IR - Detection: Monitor broker portals for abnormal bank account or insurance detail changes.", "fr": "IR - D\u00e9tection : Surveiller les portails de courtiers pour des changements anormaux de comptes bancaires ou de d\u00e9tails d'assurance."}, {"en": "Verify all shipment requests via a secondary communication channel.", "fr": "V\u00e9rifier toutes les demandes d'exp\u00e9dition via un canal de communication secondaire."}], "tags": ["cargo_theft", "fraud"], "sources": ["https://www.bleepingcomputer.com/news/security/fbi-links-cybercriminals-to-sharp-surge-in-cargo-theft-attacks/"], "date": "2026-04-30"}], "vulnerabilities_analyse": [{"cve_id": "CVE-2026-41940", "euvd_id": "unknown", "cisa_kev": "FALSE", "cvss": "9.8", "epss": "unknown", "cpe": "cpe:2.3:a:cpanel:cpanel:*:*:*:*:*:*:*:*", "product": "cPanel & WHM", "vendor": "cPanel", "description": {"en": "Critical CRLF injection in cPanel & WHM allowing for authentication bypass.", "fr": "Injection CRLF critique dans cPanel & WHM permettant un contournement de l'authentification."}, "mitre_ttps": ["T1190"], "recommandations": [{"en": "IR - Recovery: Update to version 11.110.0.97 or later and restart the cpsrvd service.", "fr": "IR - R\u00e9cup\u00e9ration : Mettre \u00e0 jour vers la version 11.110.0.97 ou ult\u00e9rieure et red\u00e9marrer le service cpsrvd."}, {"en": "Monitor for unauthorized administrative access to the web hosting panel.", "fr": "Surveiller les acc\u00e8s administratifs non autoris\u00e9s au panneau d'h\u00e9bergement web."}], "tags": ["vulnerability", "auth_bypass"], "sources": ["https://www.bleepingcomputer.com/news/security/critical-cpanel-and-whm-bug-exploited-as-a-zero-day-poc-now-available/"], "date": "2026-04-30"}, {"cve_id": "CVE-2026-7503", "euvd_id": "unknown", "cisa_kev": "FALSE", "cvss": "9.0", "epss": "unknown", "cpe": "cpe:2.3:a:code-projects:plugin:*:*:*:*:*:*:*:*", "product": "Plugin code-projects", "vendor": "code-projects", "description": {"en": "Buffer overflow in code-projects plugin leading to Remote Code Execution (RCE).", "fr": "D\u00e9bordement de tampon dans le plugin code-projects menant \u00e0 une ex\u00e9cution de code \u00e0 distance (RCE)."}, "mitre_ttps": ["T1203"], "recommandations": [{"en": "IR - Preparation: Deploy WAF rules to detect and block buffer overflow patterns.", "fr": "IR - Pr\u00e9paration : D\u00e9ployer des r\u00e8gles WAF pour d\u00e9tecter et bloquer les motifs de d\u00e9bordement de tampon."}, {"en": "Apply the latest patch provided by the vendor immediately.", "fr": "Appliquer imm\u00e9diatement le dernier correctif fourni par le fournisseur."}], "tags": ["vulnerability", "rce"], "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-7503"], "date": "2026-04-30"}, {"cve_id": "CVE-2026-31431", "euvd_id": "unknown", "cisa_kev": "FALSE", "cvss": "7.8", "epss": "unknown", "cpe": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*", "product": "Linux Kernel", "vendor": "Linux Foundation", "description": {"en": "Logic flaw in AF_ALG module of the Linux kernel allowing Local Privilege Escalation (Root).", "fr": "Faille de logique dans le module AF_ALG du noyau Linux permettant une \u00e9l\u00e9vation locale de privil\u00e8ges (Root)."}, "mitre_ttps": ["T1068"], "recommandations": [{"en": "IR - Containment: Disable the 'algif_aead' kernel module if not required.", "fr": "IR - Confinement : D\u00e9sactiver le module noyau 'algif_aead' s'il n'est pas requis."}, {"en": "Apply security patches to the Linux distribution immediately.", "fr": "Appliquer imm\u00e9diatement les correctifs de s\u00e9curit\u00e9 \u00e0 la distribution Linux."}], "tags": ["vulnerability", "lpe"], "sources": ["https://cert.europa.eu/publications/security-advisories/2026-005/"], "date": "2026-04-30"}, {"cve_id": "CVE-2026-30893", "euvd_id": "unknown", "cisa_kev": "FALSE", "cvss": "9.0", "epss": "unknown", "cpe": "cpe:2.3:a:wazuh:wazuh:*:*:*:*:*:*:*:*", "product": "Wazuh Cluster", "vendor": "Wazuh", "description": {"en": "Path traversal in Wazuh Cluster synchronization allowing for Remote Code Execution (RCE).", "fr": "Travers\u00e9e de r\u00e9pertoire dans la synchronisation du cluster Wazuh permettant une ex\u00e9cution de code \u00e0 distance (RCE)."}, "mitre_ttps": ["T1210"], "recommandations": [{"en": "IR - Detection: Monitor Wazuh cluster logs for path traversal patterns (../).", "fr": "IR - D\u00e9tection : Surveiller les logs du cluster Wazuh pour les motifs de travers\u00e9e de r\u00e9pertoire (../)."}, {"en": "Update the Wazuh cluster nodes and normalize all synchronization paths.", "fr": "Mettre \u00e0 jour les n\u0153uds du cluster Wazuh et normaliser tous les chemins de synchronisation."}], "tags": ["vulnerability", "rce"], "sources": ["https://securityonline.info/wazuh-cluster-sync-vulnerability-cve-2026-30893-rce-guide/"], "date": "2026-04-30"}, {"cve_id": "CVE-2026-7551", "euvd_id": "unknown", "cisa_kev": "FALSE", "cvss": "8.8", "epss": "unknown", "cpe": "cpe:2.3:a:hkuds:openharness:*:*:*:*:*:*:*:*", "product": "HKUDS OpenHarness", "vendor": "HKUDS", "description": {"en": "Command injection vulnerability in HKUDS OpenHarness.", "fr": "Vuln\u00e9rabilit\u00e9 d'injection de commande dans HKUDS OpenHarness."}, "mitre_ttps": ["T1059"], "recommandations": [{"en": "IR - Eradication: Apply commit 438e373 fix.", "fr": "IR - \u00c9radication : Appliquer le correctif du commit 438e373."}, {"en": "Restrict network access to OpenHarness interfaces.", "fr": "Restreindre l'acc\u00e8s r\u00e9seau aux interfaces OpenHarness."}], "tags": ["vulnerability", "rce"], "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-7551"], "date": "2026-04-30"}, {"cve_id": "CVE-2026-6543", "euvd_id": "unknown", "cisa_kev": "FALSE", "cvss": "8.8", "epss": "unknown", "cpe": "cpe:2.3:a:ibm:langflow:*:*:*:*:*:*:*:*", "product": "IBM Langflow Desktop", "vendor": "IBM", "description": {"en": "Code injection in IBM Langflow Desktop leading to RCE.", "fr": "Injection de code dans IBM Langflow Desktop menant \u00e0 une RCE."}, "mitre_ttps": ["T1059"], "recommandations": [{"en": "IR - Preparation: Audit AI-related desktop tools for insecure code execution capabilities.", "fr": "IR - Pr\u00e9paration : Auditer les outils de bureau li\u00e9s \u00e0 l'IA pour les capacit\u00e9s d'ex\u00e9cution de code non s\u00e9curis\u00e9es."}, {"en": "Update Langflow to the latest version and restrict process privileges.", "fr": "Mettre \u00e0 jour Langflow vers la derni\u00e8re version et restreindre les privil\u00e8ges des processus."}], "tags": ["vulnerability", "ai"], "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-6543"], "date": "2026-04-30"}, {"cve_id": "CVE-2026-42520", "euvd_id": "unknown", "cisa_kev": "FALSE", "cvss": "unknown", "epss": "unknown", "cpe": "cpe:2.3:a:jenkins:credentials_binding:*:*:*:*:*:*:*:*", "product": "Jenkins Credentials Binding Plugin", "vendor": "Jenkins", "description": {"en": "Path traversal in Jenkins Credentials Binding Plugin enabling RCE.", "fr": "Travers\u00e9e de r\u00e9pertoire dans le plugin Jenkins Credentials Binding permettant une RCE."}, "mitre_ttps": ["T1210"], "recommandations": [{"en": "IR - Containment: Update the plugin and activate Jenkins Content Security Policy (CSP).", "fr": "IR - Confinement : Mettre \u00e0 jour le plugin et activer la Content Security Policy (CSP) de Jenkins."}, {"en": "Restrict access to Jenkins credentials storage.", "fr": "Restreindre l'acc\u00e8s au stockage des identifiants Jenkins."}], "tags": ["vulnerability", "devops"], "sources": ["https://cybersecuritynews.com/jenkins-patches-multiple-vulnerabilities-2/"], "date": "2026-04-30"}, {"cve_id": "CVE-2026-6389", "euvd_id": "unknown", "cisa_kev": "FALSE", "cvss": "8.8", "epss": "unknown", "cpe": "cpe:2.3:a:ibm:turbonomic:*:*:*:*:*:*:*:*", "product": "IBM Turbonomic agent", "vendor": "IBM", "description": {"en": "Privilege management vulnerability in IBM Turbonomic agent allowing LPE.", "fr": "Vuln\u00e9rabilit\u00e9 de gestion des privil\u00e8ges dans l'agent IBM Turbonomic permettant une LPE."}, "mitre_ttps": ["T1068"], "recommandations": [{"en": "IR - Containment: Reduce permissions of the service account used by the Turbonomic agent.", "fr": "IR - Confinement : R\u00e9duire les privil\u00e8ges du compte de service utilis\u00e9 par l'agent Turbonomic."}, {"en": "Apply security updates from IBM for Turbonomic.", "fr": "Appliquer les mises \u00e0 jour de s\u00e9curit\u00e9 d'IBM pour Turbonomic."}], "tags": ["vulnerability", "lpe"], "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-6389"], "date": "2026-04-30"}, {"cve_id": "CVE-2026-7435", "euvd_id": "unknown", "cisa_kev": "FALSE", "cvss": "8.6", "epss": "unknown", "cpe": "cpe:2.3:a:sscms:sscms:*:*:*:*:*:*:*:*", "product": "SSCMS", "vendor": "SSCMS", "description": {"en": "SQL Injection in SSCMS leading to data breach.", "fr": "Injection SQL dans SSCMS menant \u00e0 une violation de donn\u00e9es."}, "mitre_ttps": ["T1190"], "recommandations": [{"en": "IR - Detection: Monitor web logs for SQL injection patterns in SSCMS parameters.", "fr": "IR - D\u00e9tection : Surveiller les logs web pour les motifs d'injection SQL dans les param\u00e8tres SSCMS."}, {"en": "Use parameterized queries and update SSCMS to the latest version.", "fr": "Utiliser des requ\u00e9tes param\u00e9tr\u00e9es et mettre \u00e0 jour SSCMS vers la derni\u00e8re version."}], "tags": ["vulnerability", "sql_injection"], "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-7435"], "date": "2026-04-30"}, {"cve_id": "CVE-2026-33451", "euvd_id": "unknown", "cisa_kev": "FALSE", "cvss": "8.5", "epss": "unknown", "cpe": "cpe:2.3:a:ivanti:secure_access:*:*:*:*:*:*:*:*", "product": "Secure Access Windows", "vendor": "Ivanti", "description": {"en": "Memory corruption in Secure Access Windows client allowing LPE.", "fr": "Corruption de m\u00e9moire dans le client Secure Access Windows permettant une LPE."}, "mitre_ttps": ["T1068"], "recommandations": [{"en": "IR - Recovery: Update to Windows client version 14.50 or higher.", "fr": "IR - R\u00e9cup\u00e9ration : Mettre \u00e0 jour vers le client Windows version 14.50 ou sup\u00e9rieure."}, {"en": "Apply endpoint security policies to prevent exploitation of memory corruption flaws.", "fr": "Appliquer des politiques de s\u00e9curit\u00e9 des terminaux pour emp\u00eacher l'exploitation des failles de corruption de m\u00e9moire."}], "tags": ["vulnerability", "lpe"], "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-33451"], "date": "2026-04-30"}, {"cve_id": "CVE-2026-40904", "euvd_id": "unknown", "cisa_kev": "FALSE", "cvss": "8.1", "epss": "unknown", "cpe": "cpe:2.3:a:chartbrew:chartbrew:*:*:*:*:*:*:*:*", "product": "Chartbrew", "vendor": "Chartbrew", "description": {"en": "Access control vulnerability in Chartbrew leading to information disclosure.", "fr": "Vuln\u00e9rabilit\u00e9 de contr\u00f4le d'acc\u00e8s dans Chartbrew menant \u00e0 une divulgation d'informations."}, "mitre_ttps": ["T1020"], "recommandations": [{"en": "IR - Post-incident: Audit sensitive data accessed during the vulnerability window.", "fr": "IR - Post-incident : Auditer les donn\u00e9es sensibles consult\u00e9es pendant la fen\u00eatre de vuln\u00e9rabilit\u00e9."}, {"en": "Update to Chartbrew v5.0.0 immediately.", "fr": "Mettre \u00e0 jour vers Chartbrew v5.0.0 imm\u00e9diatement."}], "tags": ["vulnerability", "access_control"], "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-40904"], "date": "2026-04-30"}, {"cve_id": "CVE-2026-32936", "euvd_id": "unknown", "cisa_kev": "FALSE", "cvss": "7.5", "epss": "unknown", "cpe": "cpe:2.3:a:coredns:coredns:*:*:*:*:*:*:*:*", "product": "CoreDNS", "vendor": "CoreDNS", "description": {"en": "Resource exhaustion in CoreDNS leading to Denial of Service (DoS).", "fr": "\u00c9puisement des ressources dans CoreDNS menant \u00e0 un d\u00e9ni de service (DoS)."}, "mitre_ttps": ["T1499"], "recommandations": [{"en": "IR - Containment: Rate limit DNS requests and upgrade to CoreDNS v1.14.3.", "fr": "IR - Confinement : Limiter le d\u00e9bit des requ\u00eates DNS et passer \u00e0 CoreDNS v1.14.3."}, {"en": "Deploy redundant DNS resolvers to mitigate DoS impact.", "fr": "D\u00e9ployer des r\u00e9solveurs DNS redondants pour att\u00e9nuer l'impact des DoS."}], "tags": ["vulnerability", "dos"], "sources": ["https://securityonline.info/coredns-v1-14-3-security-patch-doh-doq-vulnerabilities/"], "date": "2026-04-30"}], "threats_analyse": [{"title": {"en": "Redtail Cryptomining Malware exploiting PHP", "fr": "Malware de cryptominage Redtail exploitant PHP"}, "description": {"en": "Active exploitation of CVE-2024-4577 (PHP CGI Argument Injection) to deliver Redtail cryptominer on Linux servers.", "fr": "Exploitation active de CVE-2024-4577 (PHP CGI Argument Injection) pour diffuser le mineur Redtail sur des serveurs Linux."}, "threat_actor": "unknown", "threat_actor_origin": "unknown", "threat_actor_type": "Cybercrime", "threat_actor_aliases": [], "sector": {"en": ["Technology_and_Telecom"], "fr": ["Technologie et t\u00e9l\u00e9communications"]}, "indicators": {"URL": [""], "IPv4": ["103.40.61.98", "31.57.216.121", "178.16.55.224"], "IPv6": [""], "DOMAIN": [""], "EMAIL": [""], "HASH_SHA256": [""], "HASH_SHA1": [""], "HASH_MD5": [""], "TOOLS": ["libredtail-http"]}, "mitre_ttps": ["T1190", "T1059.004", "T1053.003", "T1496"], "analyse": {"en": "Attackers use HTTP POST requests with auto_prepend_file to inject code. The malware installs as '.redtail' and uses cron for persistence.", "fr": "Les attaquants utilisent des requ\u00eates HTTP POST avec auto_prepend_file pour injecter du code. Le malware s'installe sous le nom '.redtail' et utilise cron pour la persistance."}, "recommandations": [{"en": "IR - Detection: Search for '.redtail' hidden files and unusual cron jobs.", "fr": "IR - D\u00e9tection : Rechercher les fichiers cach\u00e9s '.redtail' et les t\u00e2ches cron inhabituelles."}, {"en": "Block the 'libredtail-http' User-Agent on WAF.", "fr": "Bloquer l'User-Agent 'libredtail-http' sur le WAF."}], "tags": ["malware", "cryptomining"], "sources": ["https://isc.sans.edu/diary/rss/32936"], "date": "2026-05-01"}, {"title": {"en": "Bluekit AI-Powered Phishing Service", "fr": "Service de phishing Bluekit propuls\u00e9 par l'IA"}, "description": {"en": "New PhaaS platform integrating AI assistants (GPT-4, Claude) for crafting convincing phishing emails and bypassing MFA via AiTM.", "fr": "Nouvelle plateforme PhaaS int\u00e9grant des assistants IA (GPT-4, Claude) pour r\u00e9diger des emails de phishing convaincants et contourner le MFA via AiTM."}, "threat_actor": "unknown", "threat_actor_origin": "unknown", "threat_actor_type": "Cybercrime", "threat_actor_aliases": [], "sector": {"en": ["Finance", "Retail_and_Consumer"], "fr": ["Finance", "Commerce de d\u00e9tail et consommation"]}, "indicators": {"URL": ["hxxps://yiban.io/extension/proxy.pac"], "IPv4": ["158.160.66.115"], "IPv6": [""], "DOMAIN": ["chatgptforchrome.com"], "EMAIL": [""], "HASH_SHA256": [""], "HASH_SHA1": [""], "HASH_MD5": [""], "TOOLS": ["Bluekit"]}, "mitre_ttps": ["T1566.001", "T1557", "T1071.001"], "analyse": {"en": "Bluekit lowers the barrier for entry in cybercrime by automating phishing templates and real-time session token theft.", "fr": "Bluekit abaisse la barri\u00e8re \u00e0 l'entr\u00e9e de la cybercriminalit\u00e9 en automatisant les mod\u00e8les de phishing et le vol de jetons de session en temps r\u00e9el."}, "recommandations": [{"en": "IR - Preparation: Deploy phishing-resistant MFA (FIDO2) and audit cloud application tokens.", "fr": "IR - Pr\u00e9paration : D\u00e9ployer un MFA r\u00e9sistant au phishing (FIDO2) et auditer les jetons d'applications cloud."}, {"en": "Monitor for anomalous logins with 'AiTM' characteristics in Identity Provider logs.", "fr": "Surveiller les connexions anormales pr\u00e9sentant des caract\u00e9ristiques 'AiTM' dans les logs de l'IDP."}], "tags": ["phishing", "ai", "aitm"], "sources": ["https://www.bleepingcomputer.com/news/security/new-bluekit-phishing-service-includes-an-ai-assistant-40-templates/"], "date": "2026-04-30"}, {"title": {"en": "Silver Fox Campaign distributing ABCDoor", "fr": "Campagne Silver Fox distribuant ABCDoor"}, "description": {"en": "Silver Fox targets Russia, India, and Japan using RustSL loader to deliver ValleyRAT and the Python-based ABCDoor backdoor.", "fr": "Silver Fox cible la Russie, l'Inde et le Japon en utilisant le loader RustSL pour diffuser ValleyRAT et la backdoor Python ABCDoor."}, "threat_actor": "Silver Fox", "threat_actor_origin": "unknown", "threat_actor_type": "State-sponsored", "threat_actor_aliases": [], "sector": {"en": ["Industry_and_Manufacturing", "Finance"], "fr": ["Industrie et fabrication", "Finance"]}, "indicators": {"URL": [""], "IPv4": ["45.118.133.203:5000", "154.82.81.205"], "IPv6": [""], "DOMAIN": ["abc.haijing88.com", "vnc.kcii2.com"], "EMAIL": [""], "HASH_SHA256": [""], "HASH_SHA1": [""], "HASH_MD5": ["5b998a5bc5ad1c550564294034d4a62c"], "TOOLS": ["ABCDoor", "ValleyRAT", "RustSL"]}, "mitre_ttps": ["T1566.001", "T1547.001", "T1113", "T1027.002"], "analyse": {"en": "ABCDoor uses asyncio/Socket.IO and implements 'Phantom Persistence' by hijacking system shutdown signals.", "fr": "ABCDoor utilise asyncio/Socket.IO et impl\u00e9mente la 'Phantom Persistence' en d\u00e9tournant les signaux d'arr\u00eat du syst\u00e8me."}, "recommandations": [{"en": "IR - Detection: Alert on 'RegisterApplicationRestart' calls by unsigned processes.", "fr": "IR - D\u00e9tection : Alerter sur les appels \u00e0 'RegisterApplicationRestart' par des processus non sign\u00e9s."}, {"en": "Audit pythonw.exe executions with arguments pointing to local app data folders.", "fr": "Auditer les ex\u00e9cutions de pythonw.exe avec des arguments pointant vers les dossiers de donn\u00e9es d'application locaux."}], "tags": ["apt", "backdoor", "persistence"], "sources": ["https://securelist.com/silver-fox-tax-notification-campaign/119575/"], "date": "2026-04-30"}, {"title": {"en": "High-risk GenAI Browser Extensions", "fr": "Extensions de navigateur GenAI \u00e0 haut risque"}, "description": {"en": "Malicious Chrome extensions posing as AI tools to monitor emails, capture prompts, and steal passwords.", "fr": "Extensions Chrome malveillantes se faisant passer pour des outils d'IA afin de surveiller les emails, capturer les prompts et voler les mots de passe."}, "threat_actor": "unknown", "threat_actor_origin": "unknown", "threat_actor_type": "Cybercrime", "threat_actor_aliases": [], "sector": {"en": ["Technology_and_Telecom"], "fr": ["Technologie et t\u00e9l\u00e9communications"]}, "indicators": {"URL": [""], "IPv4": [""], "IPv6": [""], "DOMAIN": ["mcp-browser.qubecare.ai", "api.reverserecruiting.io"], "EMAIL": [""], "HASH_SHA256": [""], "HASH_SHA1": [""], "HASH_MD5": [""], "TOOLS": ["Chrome MCP Server", "Supersonic AI"]}, "mitre_ttps": ["T1176", "T1557", "T1056.001"], "analyse": {"en": "Extensions use DOM-based exfiltration and browser API hooking to intercept sensitive intellectual property sent to LLMs.", "fr": "Les extensions utilisent l'exfiltration bas\u00e9e sur le DOM et le hooking d'API de navigateur pour intercepter la propri\u00e9t\u00e9 intellectuelle sensible envoy\u00e9e aux LLM."}, "recommandations": [{"en": "IR - Containment: Force uninstall extensions via Google Admin console and reset all API keys.", "fr": "IR - Confinement : Forcer la d\u00e9sinstallation des extensions via la console Google Admin et r\u00e9initialiser toutes les cl\u00e9s d'API."}, {"en": "Restrict extension installations via GPO or MDM policies.", "fr": "Restreindre l'installation d'extensions via des politiques GPO ou MDM."}], "tags": ["browser_extension", "ai", "stealer"], "sources": ["https://unit42.paloaltonetworks.com/high-risk-gen-ai-browser-extensions/"], "date": "2026-04-30"}, {"title": {"en": "Mini Shai-Hulud Software Supply Chain Worm", "fr": "Ver de supply chain logicielle Mini Shai-Hulud"}, "description": {"en": "NPM-based worm targeting VS Code and Claude Code users via malicious tasks.json and folderOpen hooks.", "fr": "Ver bas\u00e9 sur NPM ciblant les utilisateurs de VS Code et Claude Code via des t\u00e2ches.json malveillantes et des hooks folderOpen."}, "threat_actor": "TeamPCP", "threat_actor_origin": "unknown", "threat_actor_type": "Cybercrime", "threat_actor_aliases": [], "sector": {"en": ["Technology_and_Telecom"], "fr": ["Technologie et t\u00e9l\u00e9communications"]}, "indicators": {"URL": ["hxxps://github.com/search?q=\"A+Mini+Shai-Hulud+has+Appeared\""], "IPv4": [""], "IPv6": [""], "DOMAIN": [""], "EMAIL": [""], "HASH_SHA256": ["4066781fa830224c8bbcc3aa005a396657f9c8f9016f9a64ad44a9d7f5f45e34"], "HASH_SHA1": [""], "HASH_MD5": [""], "TOOLS": ["Bun", "tasks.json"]}, "mitre_ttps": ["T1195.002", "T1543.003", "T1555"], "analyse": {"en": "The worm self-propagates by committing malicious configuration files into accessible GitHub repositories. It uses 'Bun' runtime for stealth.", "fr": "Le ver s'auto-propage en committant des fichiers de configuration malveillants dans les r\u00e9pertoires GitHub accessibles. Il utilise le runtime 'Bun' pour la discr\u00e9tion."}, "recommandations": [{"en": "IR - Eradication: Revoke GitHub PATs and cloud sessions; remove branches named dependabout/.", "fr": "IR - \u00c9radication : R\u00e9voquer les jetons GitHub (PAT) et les sessions cloud ; supprimer les branches nomm\u00e9es dependabout/."}, {"en": "Disable 'Workspace Trust' auto-execution of tasks in VS Code.", "fr": "D\u00e9sactiver l'ex\u00e9cution automatique des t\u00e2ches dans VS Code via 'Workspace Trust'."}], "tags": ["supply_chain", "npm", "worm"], "sources": ["https://opensourcemalware.com/blog/mini-shai-hulud"], "date": "2026-04-30"}, {"title": {"en": "Microsoft Q1 2026 Email Threat Landscape", "fr": "Paysage des menaces par email Microsoft T1 2026"}, "description": {"en": "Analysis of 8.3 billion phishing threats, highlighting the massive growth of QR code phishing (+146%).", "fr": "Analyse de 8,3 milliards de menaces de phishing, soulignant la croissance massive du phishing par QR code (+146 %)."}, "threat_actor": "Storm-1747", "threat_actor_origin": "unknown", "threat_actor_type": "Cybercrime", "threat_actor_aliases": ["Tycoon2FA operator"], "sector": {"en": ["Technology_and_Telecom", "Critical_Infrastructure"], "fr": ["Technologie et t\u00e9l\u00e9communications", "Infrastructures critiques"]}, "indicators": {"URL": [""], "IPv4": [""], "IPv6": [""], "DOMAIN": ["bouleversement.niovapahrm.com", "haematogenesis.hvishay.com"], "EMAIL": [""], "HASH_SHA256": [""], "HASH_SHA1": [""], "HASH_MD5": [""], "TOOLS": ["Tycoon2FA"]}, "mitre_ttps": ["T1566.003", "T1204.001", "T1557.001"], "analyse": {"en": "78% of threats are link-based. The use of CAPTCHA-protected pages to delay automated detection increased by 125%.", "fr": "78 % des menaces sont bas\u00e9es sur des liens. L'utilisation de pages prot\u00e9g\u00e9es par CAPTCHA pour retarder la d\u00e9tection automatis\u00e9e a augment\u00e9 de 125 %."}, "recommandations": [{"en": "IR - Preparation: Activate 'Zero-hour Auto Purge' (ZAP) in Microsoft Defender.", "fr": "IR - Pr\u00e9paration : Activer 'Zero-hour Auto Purge' (ZAP) dans Microsoft Defender."}, {"en": "Implement network protection to block malicious domains at the endpoint.", "fr": "Mettre en \u0153uvre une protection r\u00e9seau pour bloquer les domaines malveillants au niveau de l'ordinateur."}], "tags": ["phishing", "quishing", "bec"], "sources": ["https://www.microsoft.com/en-us/security/blog/2026/04/30/email-threat-landscape-q1-2026-trends-and-insights/"], "date": "2026-04-30"}]}
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The transition into May 2026 is defined by a critical intersection of kinetic geopolitical conflicts and systemic technical vulnerabilities. The maritime blockade in the Strait of Hormuz and the escalation of the Iran-Israel conflict are driving significant energy market volatility and shifts in Russian supply chains. Concurrently, the cyber threat landscape is reeling from the 'Copy Fail' Linux kernel vulnerability (CVE-2026-31431) and a massive cPanel authentication bypass (CVE-2026-41940). State-sponsored actors like Lazarus and SHADOW-EARTH-053 are increasingly industrializing AI for social engineering and malware development, while the convergence of cybercriminal and APT techniques is evidenced by the adoption of advanced persistence methods (VS Code tasks.json) by groups like TeamPCP.",
+      "fr": "La période de début mai 2026 est marquée par une convergence critique de crises géopolitiques et de vulnérabilités systémiques. L'escalade du conflit iranien avec le blocage effectif du détroit d'Ormuz perturbe massivement les marchés de l'énergie et les chaînes d'approvisionnement russes. Parallèlement, le paysage des cybermenaces est dominé par la vulnérabilité 'Copy Fail' (CVE-2026-31431) affectant le noyau Linux, et une exploitation massive de cPanel (CVE-2026-41940). On observe une industrialisation de l'IA par les acteurs étatiques (Lazarus, SHADOW-EARTH-053) pour l'ingénierie sociale, tandis que les groupes de ransomware comme TeamPCP adoptent des techniques de persistance sophistiquées (VS Code tasks.json) jusqu'alors réservées aux APT."
+    },
+    "date": "2026-05-01"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": [
+          "Critical_Infrastructure",
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Infrastructures Critiques",
+          "Gouvernement et Défense"
+        ]
+      },
+      "theme": {
+        "en": "Iran-Israel Conflict and Hormuz Blockade",
+        "fr": "Conflit Iran-Israël et Blocus d'Ormuz"
+      },
+      "description": {
+        "en": "The conflict between Iran and Israel has escalated into a regional war with a naval blockade in the Strait of Hormuz. Iran is institutionalizing control, demanding payments in crypto or yuan, while Israel targets supply chains in the Caspian Sea.",
+        "fr": "Le conflit entre l'Iran et Israël a dégénéré en guerre régionale avec un blocus naval dans le détroit d'Ormuz. L'Iran institutionnalise le contrôle du détroit, tandis qu'Israël cible les chaînes d'approvisionnement en mer Caspienne."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor energy prices and maritime route volatility.",
+          "fr": "Surveiller les prix de l'énergie et la volatilité des routes maritimes."
+        },
+        {
+          "en": "Diversify logistics away from the Persian Gulf and Caspian zones.",
+          "fr": "Diversifier la logistique hors des zones du Golfe Persique et de la Caspienne."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Assess dependency on energy and logistics in the Middle East.",
+            "Update business continuity plans for maritime disruptions."
+          ],
+          "fr": [
+            "Évaluer la dépendance énergétique et logistique au Moyen-Orient.",
+            "Mettre à jour les plans de continuité d'activité pour les perturbations maritimes."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor phishing campaigns using Iranian conflict lures.",
+            "Track scans on ICS/OT infrastructure from Iranian IP ranges."
+          ],
+          "fr": [
+            "Surveiller les campagnes de phishing utilisant le conflit iranien comme leurre.",
+            "Suivre les scans sur les infrastructures OT/ICS provenant d'IP iraniennes."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate internet-exposed OT systems, specifically Rockwell/Allen-Bradley controllers.",
+            "Reset credentials linked to critical sectors in the region."
+          ],
+          "fr": [
+            "Isoler les systèmes OT exposés, notamment les contrôleurs Rockwell/Allen-Bradley.",
+            "Réinitialiser les accès liés aux secteurs critiques de la région."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Analyze financial impact of transportation and energy price hikes.",
+            "Evaluate infrastructure resilience against sabotage campaigns."
+          ],
+          "fr": [
+            "Analyser l'impact financier de la hausse des prix du transport et de l'énergie.",
+            "Évaluer la résilience des infrastructures face aux campagnes de sabotage."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for unauthorized PLC engineering software connections from foreign IPs.",
+            "Hunt for cognitive sabotage indicators in regional communication channels."
+          ],
+          "fr": [
+            "Rechercher des connexions logicielles PLC non autorisées depuis des IP étrangères.",
+            "Rechercher des indicateurs de sabotage cognitif dans les canaux régionaux."
+          ]
+        }
+      },
+      "tags": [
+        "conflict",
+        "strait_of_hormuz",
+        "energy_security"
+      ],
+      "sources": [
+        "https://www.recordedfuture.com/blog/the-iran-war-what-you-need-to-know",
+        "https://www.iris-france.org/trump-iran-nier-la-realite-ne-la-change-pas/",
+        "https://www.rusi.org/explore-our-research/publications/commentary/iran-israel-war-presents-problem-russias-military-supply-chains"
+      ],
+      "date": "2026-05-01"
+    },
+    {
+      "sector": {
+        "en": [
+          "Technology_and_Telecom",
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Technologie et Télécom",
+          "Gouvernement et Défense"
+        ]
+      },
+      "theme": {
+        "en": "US Strategic Pivot to Latin America",
+        "fr": "Pivot stratégique américain vers l'Amérique latine"
+      },
+      "description": {
+        "en": "The United States is shifting focus towards military and economic pressure in Latin America to counter Chinese and Russian influence, leading to increased cyber risk for regional assets.",
+        "fr": "Les États-Unis réorientent leur stratégie vers une pression militaire et économique en Amérique latine pour contrer l'influence chinoise et russe, augmentant les cyber-risques régionaux."
+      },
+      "recommandations": [
+        {
+          "en": "Assess exposure of LatAm subsidiaries to sanction regimes.",
+          "fr": "Évaluer l'exposition des filiales en Amérique latine aux régimes de sanctions."
+        },
+        {
+          "en": "Audit integrity of telecom infrastructure involving Chinese components.",
+          "fr": "Auditer l'intégrité des infrastructures télécoms impliquant des composants chinois."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Map technological assets of Chinese or Russian origin in regional networks.",
+            "Establish secure communication protocols for Latin American offices."
+          ],
+          "fr": [
+            "Cartographier les actifs technologiques d'origine chinoise ou russe.",
+            "Établir des protocoles de communication sécurisés pour les bureaux en Amérique latine."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect unusual network surveillance activities on Smart Cities infrastructure.",
+            "Monitor industrial-scale cybercrime fraud campaigns from regional call centers."
+          ],
+          "fr": [
+            "Détecter les activités de surveillance réseau inhabituelles sur les Smart Cities.",
+            "Surveiller les campagnes de fraude cybercriminelle industrielle dans la région."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Revoke privileged access for entities under US sanctions.",
+            "Isolate network segments using un-audited surveillance equipment."
+          ],
+          "fr": [
+            "Révoquer les accès privilégiés des entités sous sanctions américaines.",
+            "Isoler les segments réseau utilisant des équipements de surveillance non audités."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Audit data loss related to industrial espionage in the energy sectors."
+          ],
+          "fr": [
+            "Auditer les pertes de données liées à l'espionnage industriel dans l'énergie."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for regional phishing infrastructures targeting US operations.",
+            "Identify anomalous traffic to known Chinese/Russian surveillance C2s."
+          ],
+          "fr": [
+            "Rechercher des infrastructures de phishing régionales ciblant les USA.",
+            "Identifier les trafics anormaux vers les C2 de surveillance chinois/russes."
+          ]
+        }
+      },
+      "tags": [
+        "us_pivot",
+        "latam",
+        "china_influence"
+      ],
+      "sources": [
+        "https://www.recordedfuture.com/research/us-strategic-pivot"
+      ],
+      "date": "2026-05-01"
+    },
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement et Défense"
+        ]
+      },
+      "theme": {
+        "en": "Global Geopolitical Trends 2027 and Dakar Forum",
+        "fr": "Tendances géopolitiques 2027 et Forum de Dakar"
+      },
+      "description": {
+        "en": "Studies indicate a rising voter interest in geopolitics for the 2027 French elections, while the Dakar Forum promotes African sovereignty and conflict prevention.",
+        "fr": "Des études indiquent un intérêt croissant des électeurs pour la géopolitique pour 2027, tandis que le Forum de Dakar promeut la souveraineté africaine."
+      },
+      "recommandations": [
+        {
+          "en": "Align corporate strategy with technological sovereignty principles.",
+          "fr": "Aligner la stratégie d'entreprise sur les principes de souveraineté technologique."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Incorporate geopolitical risk analysis into executive decision-making."
+          ],
+          "fr": [
+            "Intégrer l'analyse des risques géopolitiques dans les décisions de direction."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "geopolitics",
+        "dakar_forum",
+        "sovereignty"
+      ],
+      "sources": [
+        "https://www.iris-france.org/la-geopolitique-est-une-preoccupation-sous-estimee-de-lelectorat-pour-2027/",
+        "https://www.iris-france.org/10%E1%B5%89-forum-international-de-dakar-sur-la-paix-et-la-securite/"
+      ],
+      "date": "2026-05-01"
+    },
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense",
+          "Media_and_Communication"
+        ],
+        "fr": [
+          "Gouvernement et Défense",
+          "Médias et Communication"
+        ]
+      },
+      "theme": {
+        "en": "Russian Disinformation and Sahel Instability",
+        "fr": "Désinformation russe et instabilité au Sahel"
+      },
+      "description": {
+        "en": "Russia is flooding the information space with false nuclear drill alerts to mask security failures of Wagner/Africa Corps in Mali and justify its own militarization.",
+        "fr": "La Russie inonde l'espace informationnel de fausses alertes nucléaires pour masquer les échecs de Wagner au Mali et justifier sa propre militarisation."
+      },
+      "recommandations": [
+        {
+          "en": "Verify information sources via certified fact-checking organizations.",
+          "fr": "Vérifier les sources d'information via des organismes de fact-checking certifiés."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Train communication teams on identifying state-sponsored disinformation."
+          ],
+          "fr": [
+            "Former les équipes de communication à l'identification de la désinformation étatique."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor social media for bot-driven amplification of Kremlin narratives."
+          ],
+          "fr": [
+            "Surveiller les réseaux sociaux pour l'amplification automatisée des narratifs du Kremlin."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Coordinate with platform providers to flag or remove disinformation assets."
+          ],
+          "fr": [
+            "Coordonner avec les plateformes pour signaler ou supprimer les comptes de désinformation."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Publish corrective statements to clarify official positions."
+          ],
+          "fr": [
+            "Publier des correctifs pour clarifier les positions officielles."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Trace origins of false news sites and coordinate with intelligence partners."
+          ],
+          "fr": [
+            "Tracer les origines des sites de fausses nouvelles et coordonner avec les partenaires du renseignement."
+          ]
+        }
+      },
+      "tags": [
+        "disinformation",
+        "russia",
+        "mali",
+        "nato"
+      ],
+      "sources": [
+        "https://euvsdisinfo.eu/russias-fake-nuclear-drills-and-real-failure-in-mali/"
+      ],
+      "date": "2026-05-01"
+    }
+  ],
+  "regulatory_and_legal": [
+    {
+      "title": {
+        "en": "Meta Accused of DSA Violations Regarding Minors",
+        "fr": "Meta accusée de violations du DSA concernant les mineurs"
+      },
+      "description": {
+        "en": "The European Commission accuses Meta of failing to safeguard minors on Instagram and Facebook, violating the Digital Services Act (DSA). Potential fines reach up to 6% of global turnover.",
+        "fr": "La Commission Européenne accuse Meta de ne pas avoir protégé les mineurs sur Instagram et Facebook, violant le Digital Services Act (DSA). Risque d'amende de 6% du CA mondial."
+      },
+      "organisation": {
+        "en": [
+          "European Commission"
+        ],
+        "fr": [
+          "Commission Européenne"
+        ]
+      },
+      "jurisdiction": {
+        "en": [
+          "European Union"
+        ],
+        "fr": [
+          "Union Européenne"
+        ]
+      },
+      "references": {
+        "en": [
+          "Digital Services Act"
+        ],
+        "fr": [
+          "Règlement sur les services numériques"
+        ]
+      },
+      "tags": [
+        "dsa",
+        "compliance",
+        "child_safety"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191511/laws-and-regulations/meta-accused-of-violating-dsa-by-failing-to-safeguard-minors.html",
+        "https://edri.org/our-work/announcing-the-summit-fight-for-us-not-for-them-a-public-interest-vision-for-eu-tech-policy/"
+      ],
+      "date": "2026-05-01"
+    },
+    {
+      "title": {
+        "en": "Sentencing of US Ransomware Negotiators turned BlackCat Affiliates",
+        "fr": "Condamnation de négociateurs de ransomwares affiliés à BlackCat"
+      },
+      "description": {
+        "en": "Two former employees of incident response firms were sentenced to 4 years for acting as affiliates for the BlackCat (ALPHV) ransomware group.",
+        "fr": "Deux anciens employés de sociétés de réponse aux incidents condamnés à 4 ans de prison pour avoir agi comme affiliés du ransomware BlackCat."
+      },
+      "organisation": {
+        "en": [
+          "U.S. Department of Justice"
+        ],
+        "fr": [
+          "Département de la Justice des États-Unis"
+        ]
+      },
+      "jurisdiction": {
+        "en": [
+          "USA"
+        ],
+        "fr": [
+          "États-Unis"
+        ]
+      },
+      "references": {
+        "en": [
+          "US Federal Court Sentencing"
+        ],
+        "fr": [
+          "Condamnation par un tribunal fédéral américain"
+        ]
+      },
+      "tags": [
+        "insider_threat",
+        "alphv",
+        "justice"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/us-ransomware-negotiators-get-4-years-in-prison-over-blackcat-attacks/"
+      ],
+      "date": "2026-05-01"
+    },
+    {
+      "title": {
+        "en": "Cybersecurity Settlements: Delta Dental and PowerSchool",
+        "fr": "Règlements de cybersécurité : Delta Dental et PowerSchool"
+      },
+      "description": {
+        "en": "Delta Dental agreed to a $2.25 million settlement with NYSDFS. Meanwhile, a private equity firm is being scrutinized for liability in the PowerSchool data breach.",
+        "fr": "Delta Dental accepte un règlement de 2,25 millions de dollars avec le NYSDFS. Parallèlement, une firme de capital-investissement est scrutée pour sa responsabilité dans la fuite de PowerSchool."
+      },
+      "organisation": {
+        "en": [
+          "NYSDFS"
+        ],
+        "fr": [
+          "NYSDFS"
+        ]
+      },
+      "jurisdiction": {
+        "en": [
+          "USA"
+        ],
+        "fr": [
+          "États-Unis"
+        ]
+      },
+      "references": {
+        "en": [
+          "NYSDFS Cybersecurity Settlement"
+        ],
+        "fr": [
+          "Règlement de cybersécurité NYSDFS"
+        ]
+      },
+      "tags": [
+        "settlement",
+        "compliance",
+        "liability"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/05/01/nysdfs-secures-2-25-million-cybersecurity-settlement-with-delta-dental/",
+        "https://databreaches.net/2026/05/01/unprecedented-private-equity-firm-potentially-on-hook-for-powerschools-data-breach/"
+      ],
+      "date": "2026-05-01"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Agence Nationale des Titres Sécurisés (ANTS)",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "France",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [
+        "breach3d"
+      ],
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement et Défense"
+        ]
+      },
+      "description": {
+        "en": "A 15-year-old hacker breached ANTS, exfiltrating millions of records containing names, addresses, and phone numbers. The French government is allocating €200M to modernize security.",
+        "fr": "Un adolescent de 15 ans a piraté l'ANTS, exfiltrant des millions de lignes de données (noms, adresses, téléphones). Le gouvernement débloque 200M€ pour moderniser la sécurité."
+      },
+      "mitre_ttps": [
+        "T1567",
+        "T1078"
+      ],
+      "recommandations": [
+        {
+          "en": "Update public agent authentication systems.",
+          "fr": "Mettre à jour les systèmes d'authentification des agents publics."
+        },
+        {
+          "en": "Strengthen monitoring of unusual activity on state databases.",
+          "fr": "Renforcer le monitoring des activités inhabituelles sur les bases de l'État."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Audit access logs for sensitive ANTS files.",
+            "Implement dark web monitoring for stolen PII."
+          ],
+          "fr": [
+            "Auditer les logs d'accès aux fichiers ANTS sensibles.",
+            "Mettre en place une surveillance du dark web pour les données personnelles volées."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Identify unusual exfiltration volumes to third-party services.",
+            "Monitor aliases associated with the breach."
+          ],
+          "fr": [
+            "Identifier les volumes d'exfiltration inhabituels vers des services tiers.",
+            "Surveiller les pseudonymes associés à la fuite."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Cut network access for identified compromised accounts.",
+            "Isolate affected network segments."
+          ],
+          "fr": [
+            "Couper les accès réseau des comptes compromis identifiés.",
+            "Isoler les segments réseau affectés."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Notify citizens whose data was compromised.",
+            "Deploy modernization funds for state cyber resilience."
+          ],
+          "fr": [
+            "Notifier les citoyens dont les données ont été compromises.",
+            "Déployer les fonds de modernisation pour la cyber-résilience de l'État."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Query logs for massive data exports performed by non-admin accounts."
+          ],
+          "fr": [
+            "Rechercher dans les logs les exports de données massifs par des comptes non-admin."
+          ]
+        }
+      },
+      "tags": [
+        "france",
+        "pii",
+        "government_breach"
+      ],
+      "sources": [
+        "https://www.lemonde.fr/pixels/article/2026/04/30/piratage-de-l-ants-un-mineur-de-15-ans-interpelle_6684591_4408996.html"
+      ],
+      "date": "2026-05-01"
+    },
+    {
+      "victim": "Aman Resorts",
+      "threat_actor": "ShinyHunters",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminal Group",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Hospitality_and_Entertainment"
+        ],
+        "fr": [
+          "Hôtellerie et Divertissement"
+        ]
+      },
+      "description": {
+        "en": "Luxury hotel brand Aman was targeted by ShinyHunters via a Salesforce CRM intrusion. Data for 215,563 accounts was exposed.",
+        "fr": "La marque d'hôtels de luxe Aman a été ciblée par ShinyHunters via une intrusion dans leur CRM Salesforce. 215 563 comptes ont été exposés."
+      },
+      "mitre_ttps": [
+        "T1567.002",
+        "T1078.004"
+      ],
+      "recommandations": [
+        {
+          "en": "Audit Salesforce sharing and access permissions.",
+          "fr": "Auditer les permissions de partage et d'accès Salesforce."
+        },
+        {
+          "en": "Activate MFA for all third-party CRM accesses.",
+          "fr": "Activer le MFA pour tous les accès CRM tiers."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Verify Salesforce security configurations using CSPM tools."
+          ],
+          "fr": [
+            "Vérifier les configurations Salesforce via des outils CSPM."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor massive download activities from the CRM environment."
+          ],
+          "fr": [
+            "Surveiller les activités de téléchargement massif depuis l'environnement CRM."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Revoke suspicious Salesforce access tokens."
+          ],
+          "fr": [
+            "Révoquer les tokens d'accès Salesforce suspects."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Notify VIP clients of targeted phishing risks."
+          ],
+          "fr": [
+            "Notifier les clients VIP des risques de phishing ciblé."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for unauthorized Salesforce API exports from unknown locations."
+          ],
+          "fr": [
+            "Rechercher des exports API Salesforce non autorisés depuis des lieux inconnus."
+          ]
+        }
+      },
+      "tags": [
+        "shinyhunters",
+        "crm_breach",
+        "luxury_sector"
+      ],
+      "sources": [
+        "https://haveibeenpwned.com/Breach/Aman"
+      ],
+      "date": "2026-05-01"
+    },
+    {
+      "victim": "Huge Networks",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminal Group",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et Télécom"
+        ]
+      },
+      "description": {
+        "en": "An open directory leak revealed that Anti-DDoS firm Huge Networks' infrastructure was used to drive a Mirai botnet targeting Brazilian ISPs.",
+        "fr": "Une fuite de répertoire a révélé que l'infrastructure de la société anti-DDoS Huge Networks était utilisée pour piloter un botnet Mirai ciblant des FAI brésiliens."
+      },
+      "mitre_ttps": [
+        "T1584.005",
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Reset all SSH keys and privileged access credentials.",
+          "fr": "Réinitialiser toutes les clés SSH et les identifiants privilégiés."
+        },
+        {
+          "en": "Scan network for routers vulnerable to CVE-2023-1389.",
+          "fr": "Scanner le réseau pour détecter les routeurs vulnérables à CVE-2023-1389."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Harden public-facing infrastructure against directory listing vulnerabilities."
+          ],
+          "fr": [
+            "Sécuriser les infrastructures publiques contre les vulnérabilités de listing de répertoires."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor outbound traffic for Mirai-like botnet patterns."
+          ],
+          "fr": [
+            "Surveiller le trafic sortant pour détecter des motifs de botnet type Mirai."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Destroy compromised instances as identified in leak archives."
+          ],
+          "fr": [
+            "Détruire les instances compromises identifiées dans les archives de fuite."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Conduct full infrastructure integrity audit."
+          ],
+          "fr": [
+            "Mener un audit complet de l'intégrité de l'infrastructure."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for rogue SSH authorized_keys entries across the fleet."
+          ],
+          "fr": [
+            "Rechercher des entrées authorized_keys SSH frauduleuses sur l'ensemble du parc."
+          ]
+        }
+      },
+      "tags": [
+        "mirai",
+        "ddos_infra",
+        "compromise"
+      ],
+      "sources": [
+        "https://krebsonsecurity.com/2026/04/anti-ddos-firm-heaped-attacks-on-brazilian-isps/"
+      ],
+      "date": "2026-05-01"
+    },
+    {
+      "victim": "Jerry's Store (Carding Service)",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminal Group",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Finance"
+        ],
+        "fr": [
+          "Finance"
+        ]
+      },
+      "description": {
+        "en": "An AI coding assistant (Cursor) error led to an open web directory exposing 345,000 stolen credit cards from the Jerry’s Store carding service.",
+        "fr": "Une erreur d'assistant IA (Cursor) a mené à un répertoire web ouvert exposant 345 000 cartes bancaires volées sur le service Jerry’s Store."
+      },
+      "mitre_ttps": [
+        "unknown"
+      ],
+      "recommandations": [
+        {
+          "en": "Use virtual cards for online transactions.",
+          "fr": "Utiliser des cartes virtuelles pour les transactions en ligne."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Check client card numbers against leaked datasets."
+          ],
+          "fr": [
+            "Vérifier les numéros de cartes clients par rapport aux jeux de données fuités."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "carding",
+        "data_leak",
+        "ai_error"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191536/cyber-crime/carding-service-jerrys-store-leak-exposes-345000-stolen-payment-cards.html"
+      ],
+      "date": "2026-05-01"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-31431",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "7.8",
+      "epss": "unknown",
+      "cpe": "cpe:/o:linux:linux_kernel",
+      "product": "Linux Kernel",
+      "vendor": "Linux",
+      "description": {
+        "en": "Logic flaw in AF_ALG crypto interface (algif_aead) allowing local users to corrupt page cache and gain root access via setuid binaries.",
+        "fr": "Faille logique dans l'interface crypto AF_ALG permettant à un utilisateur local de corrompre le cache de pages et d'obtenir un accès root."
+      },
+      "mitre_ttps": [
+        "T1068"
+      ],
+      "recommandations": [
+        {
+          "en": "Block AF_ALG socket creation via seccomp.",
+          "fr": "Bloquer la création de sockets AF_ALG via seccomp."
+        },
+        {
+          "en": "Apply kernel patches and reboot.",
+          "fr": "Appliquer les correctifs noyau et redémarrer."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory all Linux nodes and kernels in the environment."
+          ],
+          "fr": [
+            "Inventorier tous les nœuds Linux et noyaux de l'environnement."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for unusual syscalls to AF_ALG from non-root users."
+          ],
+          "fr": [
+            "Surveiller les appels système inhabituels vers AF_ALG par des non-root."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Deploy seccomp profiles to container workloads to restrict AF_ALG."
+          ],
+          "fr": [
+            "Déployer des profils seccomp pour restreindre AF_ALG dans les conteneurs."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify integrity of setuid binaries like /usr/bin/su."
+          ],
+          "fr": [
+            "Vérifier l'intégrité des binaires setuid comme /usr/bin/su."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for unauthorized root shell spawns originating from user-space applications."
+          ],
+          "fr": [
+            "Rechercher des ouvertures de shells root non autorisées depuis des applications utilisateur."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "linux",
+        "kernel",
+        "lpe"
+      ],
+      "sources": [
+        "https://webflow.sysdig.com/blog/cve-2026-31431-copy-fail-linux-kernel-flaw-lets-local-users-gain-root-in-seconds"
+      ],
+      "date": "2026-05-01"
+    },
+    {
+      "cve_id": "CVE-2026-41940",
+      "euvd_id": "unknown",
+      "cisa_kev": "TRUE",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "cpe:/a:cpanel:cpanel",
+      "product": "cPanel & WHM",
+      "vendor": "cPanel",
+      "description": {
+        "en": "CRLF injection in session loading allowing unauthenticated attackers to inject administrative properties and take over the server.",
+        "fr": "Injection CRLF dans le chargement de session permettant à un attaquant non authentifié de prendre le contrôle total du serveur."
+      },
+      "mitre_ttps": [
+        "T1190",
+        "T1078.002"
+      ],
+      "recommandations": [
+        {
+          "en": "Update to version 11.136.0.5 or later immediately.",
+          "fr": "Mettre à jour vers la version 11.136.0.5 ou supérieure immédiatement."
+        },
+        {
+          "en": "Restrict access to cPanel management ports (2083, 2087) via firewall.",
+          "fr": "Restreindre l'accès aux ports de gestion cPanel (2083, 2087) par pare-feu."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Identify all exposed cPanel/WHM instances."
+          ],
+          "fr": [
+            "Identifier toutes les instances cPanel/WHM exposées."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Search for CRLF characters (%0D%0A) in session-related HTTP logs."
+          ],
+          "fr": [
+            "Rechercher les caractères CRLF (%0D%0A) dans les logs HTTP liés aux sessions."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Shutdown the cpsrvd service during emergency patching."
+          ],
+          "fr": [
+            "Arrêter le service cpsrvd pendant l'application d'urgence des patchs."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Audit all cPanel user accounts for unauthorized additions."
+          ],
+          "fr": [
+            "Auditer tous les comptes cPanel pour déceler des ajouts non autorisés."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for web shells (Godzilla, Behinder) deployed on compromised cPanel hosts."
+          ],
+          "fr": [
+            "Rechercher des web shells (Godzilla, Behinder) sur les hôtes cPanel compromis."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "cpanel",
+        "auth_bypass",
+        "critical"
+      ],
+      "sources": [
+        "https://socprime.com/blog/cve-2026-41940-critical-cpanel-whm-authentication-bypass-exposes-hosting-servers-to-admin-takeover/"
+      ],
+      "date": "2026-05-01"
+    },
+    {
+      "cve_id": "CVE-2024-4577",
+      "euvd_id": "unknown",
+      "cisa_kev": "TRUE",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "cpe:/a:php:php",
+      "product": "PHP",
+      "vendor": "PHP Group",
+      "description": {
+        "en": "Argument injection vulnerability in PHP-CGI exploited by Libredtail botnet to install cryptominers.",
+        "fr": "Vulnérabilité d'injection d'arguments dans PHP-CGI exploitée par le botnet Libredtail pour installer des mineurs."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Upgrade PHP to the latest secure version.",
+          "fr": "Mettre à jour PHP vers la dernière version sécurisée."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Identify PHP-CGI configurations in the infrastructure."
+          ],
+          "fr": [
+            "Identifier les configurations PHP-CGI dans l'infrastructure."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for HTTP requests containing PHP argument injection payloads."
+          ],
+          "fr": [
+            "Surveiller les requêtes HTTP contenant des payloads d'injection d'arguments PHP."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Block malicious User-Agents like 'libredtail-http' at WAF level."
+          ],
+          "fr": [
+            "Bloquer les User-Agents malveillants comme 'libredtail-http' au niveau du WAF."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Scan for persistence mechanisms (cronjobs) created by Libredtail."
+          ],
+          "fr": [
+            "Scanner les mécanismes de persistance (cronjobs) créés par Libredtail."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "php",
+        "cryptomining"
+      ],
+      "sources": [
+        "https://isc.sans.edu/diary/rss/32936"
+      ],
+      "date": "2026-05-01"
+    },
+    {
+      "cve_id": "CVE-2026-0205",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:/o:sonicwall:sonicos",
+      "product": "SonicOS",
+      "vendor": "SonicWall",
+      "description": {
+        "en": "Path traversal vulnerability in SonicOS Gen 6, 7, and 8 firewalls allowing access to restricted services.",
+        "fr": "Vulnérabilité de path traversal dans SonicOS Gen 6, 7, et 8 permettant l'accès à des services restreints."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply official SonicWall patches for SonicOS.",
+          "fr": "Appliquer les correctifs officiels SonicWall pour SonicOS."
+        },
+        {
+          "en": "Disable HTTP/HTTPS management on external interfaces.",
+          "fr": "Désactiver la gestion HTTP/HTTPS sur les interfaces externes."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor management interface logs for path traversal attempts."
+          ],
+          "fr": [
+            "Surveiller les logs d'interface de gestion pour les tentatives de path traversal."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Restrict administration access to trusted Out-of-Band (OOB) networks."
+          ],
+          "fr": [
+            "Restreindre l'accès d'administration aux réseaux Out-of-Band (OOB) de confiance."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "firewall",
+        "sonicwall"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191527/security/sonicwall-patches-three-sonicos-flaws-in-gen-6-7-and-8-firewalls-patch-them-now.html"
+      ],
+      "date": "2026-05-01"
+    },
+    {
+      "cve_id": "unknown",
+      "euvd_id": "EUVD-2026-26531",
+      "cisa_kev": "FALSE",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:/a:hashcat_project:hashcat",
+      "product": "Hashcat",
+      "vendor": "Hashcat",
+      "description": {
+        "en": "Heap-based buffer overflow in Hashcat v7.1.2 during PKZIP hash analysis.",
+        "fr": "Dépassement de tampon dans Hashcat v7.1.2 lors de l'analyse de hashes PKZIP."
+      },
+      "mitre_ttps": [
+        "unknown"
+      ],
+      "recommandations": [
+        {
+          "en": "Update Hashcat to the latest version.",
+          "fr": "Mettre à jour Hashcat vers la dernière version."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "hashcat",
+        "security_tools"
+      ],
+      "sources": [
+        "https://mastodon.social/@EUVD_Bot/116499925283916122"
+      ],
+      "date": "2026-05-01"
+    },
+    {
+      "cve_id": "unknown",
+      "euvd_id": "unknown",
+      "cisa_kev": "unknown",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "MISP, Wireshark, Kernel Linux",
+      "vendor": "Various",
+      "description": {
+        "en": "Multiple vulnerabilities (SQLi, RCE, LPE) reported by CERT-FR affecting MISP, Wireshark, SUSE and Red Hat kernels.",
+        "fr": "Multiples vulnérabilités (SQLi, RCE, LPE) signalées par le CERT-FR affectant MISP, Wireshark, et les noyaux SUSE et Red Hat."
+      },
+      "mitre_ttps": [
+        "unknown"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply security updates from CERT-FR advisories without delay.",
+          "fr": "Appliquer les mises à jour de sécurité des avis CERT-FR sans délai."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Update patch management policies for Linux critical kernels."
+          ],
+          "fr": [
+            "Mettre à jour les politiques de patch pour les noyaux Linux critiques."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "cert_fr",
+        "kernel"
+      ],
+      "sources": [
+        "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0515/",
+        "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0518/",
+        "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0520/",
+        "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0521/"
+      ],
+      "date": "2026-05-01"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "Lazarus Group Industrialized AI Operations",
+        "fr": "Industrialisation des opérations par le groupe Lazarus via l'IA"
+      },
+      "description": {
+        "en": "Lazarus and its subgroups are using AI to generate corporate personas and tainted coding tests targeting Web3 developers. They use VS Code tasks.json for persistence.",
+        "fr": "Lazarus utilise l'IA pour générer des personas et des tests de code piégés ciblant les développeurs Web3. Utilisation de tasks.json dans VS Code pour la persistance."
+      },
+      "threat_actor": "Lazarus Group",
+      "threat_actor_origin": "North Korea",
+      "threat_actor_type": "State-sponsored",
+      "threat_actor_aliases": [
+        "HexagonalRodent",
+        "PolinRider"
+      ],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom",
+          "Finance"
+        ],
+        "fr": [
+          "Technologie et Télécom",
+          "Finance"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "VS Code",
+          "IA"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566.001",
+        "T1195.002",
+        "T1059.007"
+      ],
+      "analyse": {
+        "en": "Over 2,700 systems exfiltrated in Q1 2026. The group creates fake 'mini Shai-Hulud' GitHub repositories to store stolen data.",
+        "fr": "Plus de 2 700 systèmes exfiltrés en Q1 2026. Création de faux dépôts GitHub 'mini Shai-Hulud' pour stocker les données volées."
+      },
+      "recommandations": [
+        {
+          "en": "Audit VS Code tasks.json for unauthorized command executions.",
+          "fr": "Auditer les fichiers tasks.json de VS Code pour les exécutions non autorisées."
+        },
+        {
+          "en": "Implement deep verification for new remote developers and skill tests.",
+          "fr": "Mettre en place une vérification approfondie pour les nouveaux développeurs."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Harden developer workstations against untrusted IDE configurations."
+          ],
+          "fr": [
+            "Sécuriser les postes de travail contre les configurations d'IDE non fiables."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Search for unauthorized outbound traffic to unknown GitHub repositories."
+          ],
+          "fr": [
+            "Rechercher les trafics sortants vers des dépôts GitHub inconnus."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Revoke Git tokens and SSH keys for affected developers."
+          ],
+          "fr": [
+            "Révoquer les tokens Git et clés SSH des développeurs affectés."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for 'mini Shai-Hulud' artifacts across the source control pipeline."
+          ],
+          "fr": [
+            "Rechercher les artefacts 'mini Shai-Hulud' dans les pipelines de code source."
+          ]
+        }
+      },
+      "tags": [
+        "lazarus",
+        "web3",
+        "ia_phishing"
+      ],
+      "sources": [
+        "https://expel.com/blog/q1-2026-part-two/",
+        "https://opensourcemalware.com/blog/mini-shai-hulud"
+      ],
+      "date": "2026-05-01"
+    },
+    {
+      "title": {
+        "en": "Bluekit Phishing-as-a-Service with AI",
+        "fr": "Bluekit : Phishing-as-a-Service assisté par IA"
+      },
+      "description": {
+        "en": "New PhaaS platform integrating Llama and GPT-4.1 to write high-quality phishing emails and manage anti-analysis redirects.",
+        "fr": "Nouvelle plateforme de PhaaS intégrant Llama et GPT-4.1 pour rédiger des emails de phishing de haute qualité."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminal Group",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Security"
+        ],
+        "fr": [
+          "Sécurité"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "GPT-4.1",
+          "Claude",
+          "Bluekit"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566"
+      ],
+      "analyse": {
+        "en": "AI adoption increases the scale and credibility of social engineering campaigns.",
+        "fr": "L'adoption de l'IA augmente l'échelle et la crédibilité des campagnes d'ingénierie sociale."
+      },
+      "recommandations": [
+        {
+          "en": "Implement FIDO2 phishing-resistant multi-factor authentication.",
+          "fr": "Implémenter l'authentification multifacteur résistante au phishing (FIDO2)."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Train users on high-quality AI-generated phishing detection."
+          ],
+          "fr": [
+            "Former les utilisateurs à la détection du phishing généré par IA."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Use header analysis tools to detect Bluekit redirection anomalies."
+          ],
+          "fr": [
+            "Utiliser l'analyse d'en-tête pour détecter les anomalies de redirection Bluekit."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "phaas",
+        "bluekit",
+        "ai_phishing"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/new-bluekit-phishing-service-includes-an-ai-assistant-40-templates/"
+      ],
+      "date": "2026-05-01"
+    },
+    {
+      "title": {
+        "en": "TeamPCP Supply Chain Attacks",
+        "fr": "Attaques de la chaîne d'approvisionnement par TeamPCP"
+      },
+      "description": {
+        "en": "Criminal group active in npm/PyPI lifecycle script injections and deploying custom Bun environments for malware execution.",
+        "fr": "Groupe criminel actif dans l'injection de scripts npm/PyPI et le déploiement d'environnements Bun personnalisés pour l'exécution de malware."
+      },
+      "threat_actor": "TeamPCP",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminal Group",
+      "threat_actor_aliases": [
+        "DeadCatx3"
+      ],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et Télécom"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Bun",
+          "npm",
+          "PyPI"
+        ]
+      },
+      "mitre_ttps": [
+        "T1195.001",
+        "T1546.004"
+      ],
+      "analyse": {
+        "en": "TeamPCP is rapidly adopting state-sponsored persistence techniques, indicating convergence.",
+        "fr": "TeamPCP adopte rapidement des techniques de persistance étatiques, indiquant une convergence."
+      },
+      "recommandations": [
+        {
+          "en": "Audit package dependency trees regularly.",
+          "fr": "Auditer régulièrement les arbres de dépendance des paquets."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect lifecycle scripts in lockfiles that trigger outbound network connections."
+          ],
+          "fr": [
+            "Détecter les scripts de cycle de vie dans les lockfiles qui déclenchent des connexions réseau."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Freeze affected registries and roll back to known clean versions."
+          ],
+          "fr": [
+            "Geler les registres affectés et revenir à des versions saines."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "teampcp",
+        "supply_chain",
+        "bun"
+      ],
+      "sources": [
+        "https://opensourcemalware.com/blog/opensourcemalware-show-episode02"
+      ],
+      "date": "2026-05-01"
+    },
+    {
+      "title": {
+        "en": "Microsoft Email Threat Trends Q1 2026",
+        "fr": "Tendances des menaces par email Microsoft Q1 2026"
+      },
+      "description": {
+        "en": "Explosion of QR code phishing (+146%) and credential phishing dominating payloads (94%). Tycoon2FA remains the top infrastructure.",
+        "fr": "Explosion du QR code phishing (+146%) et domination du phishing de credentials (94%). Tycoon2FA reste l'infrastructure principale."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Business_Services"
+        ],
+        "fr": [
+          "Services aux entreprises"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "2fspectrumbusiness.net"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Tycoon2FA"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566.003"
+      ],
+      "analyse": {
+        "en": "Threat actors are increasingly using SVG and local HTML to evade email filters.",
+        "fr": "Les attaquants utilisent de plus en plus SVG et l'HTML local pour contourner les filtres email."
+      },
+      "recommandations": [
+        {
+          "en": "Educate users on Quishing (QR code phishing).",
+          "fr": "Sensibiliser les utilisateurs au Quishing (phishing par QR code)."
+        },
+        {
+          "en": "Scan SVG files for hidden malicious URLs.",
+          "fr": "Scanner les fichiers SVG pour déceler des URLs malveillantes cachées."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Deploy Microsoft Defender for Office 365 URL scanning."
+          ],
+          "fr": [
+            "Déployer le scan d'URL Microsoft Defender for Office 365."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "quishing",
+        "phishing",
+        "tycoon2fa"
+      ],
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/04/30/email-threat-landscape-q1-2026-trends-and-insights/"
+      ],
+      "date": "2026-05-01"
+    },
+    {
+      "title": {
+        "en": "FBI Warning on Cyber-Enabled Cargo Theft",
+        "fr": "Alerte du FBI sur le vol de fret assisté par ordinateur"
+      },
+      "description": {
+        "en": "Attackers use phishing and compromised broker accounts to divert physical shipments. Losses reached $6.6B in 2025.",
+        "fr": "Les attaquants utilisent le phishing et des comptes de courtiers compromis pour détourner des cargaisons. Pertes de 6,6 milliards $ en 2025."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Industry_and_Manufacturing"
+        ],
+        "fr": [
+          "Industrie et Fabrication"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1213"
+      ],
+      "analyse": {
+        "en": "Logistics systems are being infiltrated via RMM tools.",
+        "fr": "Les systèmes logistiques sont infiltrés via des outils RMM."
+      },
+      "recommandations": [
+        {
+          "en": "Verify shipping via independent communication channels.",
+          "fr": "Vérifier les expéditions via des canaux de communication indépendants."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect typosquatted email domains targeting transport brokers."
+          ],
+          "fr": [
+            "Détecter les domaines typosquattés ciblant les courtiers en transport."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "cargo_theft",
+        "fbi",
+        "supply_chain"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191556/cyber-crime/digital-attacks-drive-a-new-wave-of-cargo-theft-fbi-says.html"
+      ],
+      "date": "2026-05-01"
+    }
+  ]
+}
