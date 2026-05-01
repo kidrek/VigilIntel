@@ -1,0 +1,2027 @@
+{
+  "meta": {
+    "report_date": "2026-05-01",
+    "schema_version": "2.0",
+    "languages": [
+      "fr"
+    ]
+  },
+  "strategic_analysis": {
+    "content": {
+      "fr": "La période fin avril - début mai 2026 est marquée par une convergence critique de crises géopolitiques et de vulnérabilités systémiques. L'escalade du conflit iranien avec le blocage effectif du détroit d'Ormuz perturbe massivement les marchés de l'énergie et les chaînes d'approvisionnement russes dans la Caspienne. Parallèlement, le paysage des cybermenaces est dominé par la divulgation de la vulnérabilité 'Copy Fail' (CVE-2026-31431) affectant le noyau Linux depuis 2017, et une exploitation massive de cPanel (CVE-2026-41940) touchant des millions de sites. On observe une industrialisation sans précédent de l'IA par les acteurs étatiques (Lazarus, SHADOW-EARTH-053) pour le développement de malware et l'ingénierie sociale, tandis que les groupes de ransomware comme TeamPCP adoptent des techniques de persistance sophistiquées (VS Code tasks.json) jusqu'alors réservées aux APT."
+    }
+  },
+  "syntheses": {
+    "threat_actors": [
+      {
+        "id": "lazarus_group",
+        "aliases": [
+          "HexagonalRodent",
+          "PolinRider",
+          "TasksJacker",
+          "Contagious Interview"
+        ],
+        "mitre_ttps": [
+          {
+            "id": "T1566.001",
+            "label": "Phishing: Spearphishing Attachment"
+          },
+          {
+            "id": "T1195.002",
+            "label": "Supply Chain Compromise: Compromise Software Dependencies"
+          },
+          {
+            "id": "T1059.007",
+            "label": "Command and Scripting Interpreter: JavaScript"
+          }
+        ],
+        "sources": [
+          {
+            "label": "Expel Q1 2026 Report",
+            "url": "https://expel.com/blog/q1-2026-part-two/"
+          },
+          {
+            "label": "OpenSourceMalware Shai-Hulud Analysis",
+            "url": "https://opensourcemalware.com/blog/mini-shai-hulud"
+          }
+        ],
+        "content": {
+          "fr": {
+            "name": "Lazarus Group (Subgroups)",
+            "analyse": "Le groupe Lazarus, via ses sous-groupes HexagonalRodent et PolinRider, a industrialisé ses opérations en Q1 2026. Ils utilisent l'IA pour générer des personas d'entreprises crédibles et des tests de compétences piégés ciblant les développeurs Web3. Plus de 2 700 systèmes ont été exfiltrés, drainant des millions en crypto-actifs.",
+            "targeted_sectors": [
+              "Cryptocurrency",
+              "Web3",
+              "Software Development"
+            ],
+            "origin": "North Korea",
+            "actor_type": "State-sponsored",
+            "modus_operandi": "Utilisation massive de l'IA pour le social engineering, corruption de fichiers tasks.json dans VS Code pour la persistance, et création de faux dépôts GitHub 'mini Shai-Hulud' pour stocker les données volées."
+          }
+        }
+      },
+      {
+        "id": "teampcp",
+        "aliases": [
+          "DeadCatx3",
+          "PCPcat",
+          "ShellForce"
+        ],
+        "mitre_ttps": [
+          {
+            "id": "T1195.001",
+            "label": "Supply Chain Compromise: Compromise Software Dependencies and Development Tools"
+          },
+          {
+            "id": "T1546.004",
+            "label": "Event Triggered Execution: Unix Shell Configuration Modification"
+          }
+        ],
+        "sources": [
+          {
+            "label": "OpenSourceMalware Show Ep 2",
+            "url": "https://opensourcemalware.com/blog/opensourcemalware-show-episode02"
+          }
+        ],
+        "content": {
+          "fr": {
+            "name": "TeamPCP",
+            "analyse": "Groupe criminel très actif dans les attaques de chaîne d'approvisionnement (Lightning, Intercom). Ils ont récemment adopté les techniques de persistance de Lazarus (VS Code tasks.json), démontrant une convergence rapide entre cybercriminalité et méthodes étatiques.",
+            "targeted_sectors": [
+              "AI Tech Stacks",
+              "Software Supply Chain",
+              "E-commerce"
+            ],
+            "origin": "Unknown",
+            "actor_type": "Cybercriminal Group",
+            "modus_operandi": "Injection de scripts de cycle de vie dans npm/PyPI, déploiement d'environnements Bun personnalisés pour l'exécution de malware, et exfiltration vers des dépôts GitHub publics."
+          }
+        }
+      },
+      {
+        "id": "shadow_earth_053",
+        "aliases": [
+          "CL-STA-0049",
+          "Earth Alux"
+        ],
+        "mitre_ttps": [
+          {
+            "id": "T1190",
+            "label": "Exploit Public-Facing Application"
+          },
+          {
+            "id": "T1574.002",
+            "label": "Hijack Execution Flow: DLL Side-Loading"
+          }
+        ],
+        "sources": [
+          {
+            "label": "Trend Micro Analysis",
+            "url": "https://thehackernews.com/2026/05/china-linked-hackers-target-asian.html"
+          }
+        ],
+        "content": {
+          "fr": {
+            "name": "SHADOW-EARTH-053",
+            "analyse": "Campagne d'espionnage liée à la Chine ciblant les gouvernements asiatiques et de l'OTAN. Utilise des vulnérabilités N-day sur Exchange et IIS pour déployer ShadowPad.",
+            "targeted_sectors": [
+              "Government",
+              "Defense",
+              "Journalism"
+            ],
+            "origin": "China",
+            "actor_type": "State-sponsored",
+            "modus_operandi": "Exploitation de vulnérabilités ProxyLogon, utilisation de web shells Godzilla, DLL side-loading de binaires signés (Samsung, Toshiba) et tunneling via IOX/GOST."
+          }
+        }
+      }
+    ],
+    "geopolitics": [
+      {
+        "id": "iran_war_2026",
+        "sources": [
+          {
+            "label": "Recorded Future - Iran War",
+            "url": "https://www.recordedfuture.com/blog/the-iran-war-what-you-need-to-know"
+          },
+          {
+            "label": "IRIS - Trump/Iran",
+            "url": "https://www.iris-france.org/trump-iran-nier-la-realite-ne-la-change-pas/"
+          },
+          {
+            "label": "RUSI - Russian Supply Chains",
+            "url": "https://www.rusi.org/explore-our-research/publications/commentary/iran-israel-war-presents-problem-russias-military-supply-chains"
+          }
+        ],
+        "content": {
+          "fr": {
+            "regions": [
+              "Middle East",
+              "Iran",
+              "Israel",
+              "USA",
+              "Russia"
+            ],
+            "sector": "Energy & Maritime",
+            "theme": "Guerre Régionale et Blocus du Détroit d'Ormuz",
+            "analyse": "Le conflit entre l'Iran et Israël a atteint un stade de guerre régionale avec un blocus naval américain effectif. L'Iran a institutionnalisé le contrôle du détroit d'Ormuz, exigeant des paiements en crypto ou yuan. Israël cible désormais les chaînes d'approvisionnement russo-iraniennes en mer Caspienne (ports de Bandar Anzali). L'élection de Mojtaba Khamenei comme Guide Suprême renforce l'influence du CGRI.",
+            "recommendations": [
+              "Surveiller les prix de l'énergie et la volatilité des marchés.",
+              "Diversifier les routes maritimes hors de la zone golfe Persique/Caspienne.",
+              "Renforcer la protection des infrastructures critiques face aux menaces cyber iraniennes (MuddyWater, Cyber Avengers)."
+            ]
+          }
+        },
+        "incident_response_playbook": {
+          "phase1_preparation": {
+            "content": {
+              "fr": {
+                "steps": [
+                  "Identifier les dépendances logistiques et énergétiques envers la région du Golfe.",
+                  "Mettre à jour les plans de continuité d'activité pour les perturbations massives du transport maritime."
+                ]
+              }
+            }
+          },
+          "phase2_detection": {
+            "content": {
+              "fr": {
+                "steps": [
+                  "Monitorer les activités de phishing utilisant des leurres sur le conflit iranien.",
+                  "Surveiller les tentatives de scan sur les automates programmables (PLC) par des IPs iraniennes."
+                ]
+              }
+            }
+          },
+          "phase3_containment": {
+            "content": {
+              "fr": {
+                "steps": [
+                  "Isoler les systèmes OT exposés à internet, particulièrement les contrôleurs Rockwell/Allen-Bradley.",
+                  "Réinitialiser les identifiants compromis liés à des secteurs critiques."
+                ]
+              }
+            }
+          },
+          "phase4_post_incident": {
+            "content": {
+              "fr": {
+                "steps": [
+                  "Analyser l'impact financier de la hausse du baril et des frais de transport.",
+                  "Évaluer la résilience des infrastructures critiques face aux campagnes de sabotage cognitif."
+                ]
+              }
+            }
+          },
+          "phase5_threat_hunting": {
+            "hypotheses": [
+              {
+                "ttp_id": "T1190",
+                "data_source": "OT/ICS Network Logs",
+                "query": "process.name: 'Studio 5000' AND connection.origin: 'IR'",
+                "content": {
+                  "fr": {
+                    "hypothesis": "Des acteurs iraniens utilisent des logiciels d'ingénierie légitimes pour manipuler des PLCs exposés."
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "tags": [
+          "conflict",
+          "strait_of_hormuz",
+          "energy_security",
+          "khamenei",
+          "instc"
+        ]
+      },
+      {
+        "id": "us_strategic_pivot_latam",
+        "sources": [
+          {
+            "label": "Recorded Future - US Pivot",
+            "url": "https://www.recordedfuture.com/research/us-strategic-pivot"
+          }
+        ],
+        "content": {
+          "fr": {
+            "regions": [
+              "USA",
+              "Latin America",
+              "China",
+              "Russia"
+            ],
+            "sector": "Telecommunications & Energy",
+            "theme": "Pivot Stratégique Américain vers l'Hémisphère Ouest",
+            "analyse": "Les États-Unis réorientent leur stratégie vers la pression militaire et économique en Amérique latine pour contrer l'influence de la Chine et de la Russie. Cela crée un risque de fragmentation réglementaire et une augmentation des cyberattaques étatiques contre les actifs américains dans la région.",
+            "recommendations": [
+              "Évaluer l'exposition des filiales en Amérique Latine aux régimes de sanctions.",
+              "Vérifier l'intégrité des infrastructures télécoms (Huawei/surveillance russe)."
+            ]
+          }
+        },
+        "incident_response_playbook": {
+          "phase1_preparation": {
+            "content": {
+              "fr": {
+                "steps": [
+                  "Cartographier les actifs technologiques d'origine chinoise ou russe dans les réseaux régionaux.",
+                  "Établir des protocoles de communication sécurisés pour les bureaux d'Amérique latine."
+                ]
+              }
+            }
+          },
+          "phase2_detection": {
+            "content": {
+              "fr": {
+                "steps": [
+                  "Détecter les activités de surveillance réseau inhabituelles sur les infrastructures Smart Cities.",
+                  "Surveiller les campagnes de fraude cybercriminelle à l'échelle industrielle (centres d'appels)."
+                ]
+              }
+            }
+          },
+          "phase3_containment": {
+            "content": {
+              "fr": {
+                "steps": [
+                  "Révoquer les accès privilégiés des entités sous sanctions américaines.",
+                  "Isoler les segments réseau utilisant des équipements de surveillance non audités."
+                ]
+              }
+            }
+          },
+          "phase4_post_incident": {
+            "content": {
+              "fr": {
+                "steps": [
+                  "Auditer les pertes de données liées à l'espionnage industriel dans les secteurs de l'énergie."
+                ]
+              }
+            }
+          },
+          "phase5_threat_hunting": {
+            "hypotheses": [
+              {
+                "ttp_id": "T1583.003",
+                "data_source": "Domain Registration Data",
+                "query": "domain.registrar: 'Nicaragua' OR domain.registrar: 'Venezuela' AND domain.name: '*gov.us*'",
+                "content": {
+                  "fr": {
+                    "hypothesis": "Des acteurs étatiques créent des infrastructures de phishing régionales pour cibler les opérations américaines."
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "tags": [
+          "us_pivot",
+          "latam",
+          "strategic_risk",
+          "china_influence"
+        ]
+      }
+    ],
+    "regulatory": [
+      {
+        "id": "meta_dsa_violations",
+        "date": "2026-04-30",
+        "reference": "Digital Services Act (DSA)",
+        "sources": [
+          {
+            "label": "Security Affairs - Meta DSA",
+            "url": "https://securityaffairs.com/191511/laws-and-regulations/meta-accused-of-violating-dsa-by-failing-to-safeguard-minors.html"
+          },
+          {
+            "label": "EDRi - EU Tech Policy",
+            "url": "https://edri.org/our-work/announcing-the-summit-fight-for-us-not-for-them-a-public-interest-vision-for-eu-tech-policy/"
+          }
+        ],
+        "content": {
+          "fr": {
+            "authority": "European Commission",
+            "jurisdiction": "European Union",
+            "analyse": "La Commission Européenne accuse Meta d'avoir violé le DSA en échouant à protéger les mineurs de moins de 13 ans sur Instagram et Facebook. Le manque de vérification d'âge et les mécanismes de signalement inefficaces sont pointés du doigt. Risque d'amende jusqu'à 6% du chiffre d'affaires mondial.",
+            "recommendations": [
+              "Implémenter des solutions de vérification d'âge robustes et conformes à la vie privée (eID, appli UE).",
+              "Refondre les algorithmes évitant les effets de 'rabbit hole' pour les mineurs."
+            ]
+          }
+        },
+        "tags": [
+          "dsa",
+          "compliance",
+          "child_safety",
+          "privacy"
+        ]
+      },
+      {
+        "id": "blackcat_sentencing_usa",
+        "date": "2026-04-30",
+        "reference": "US Federal Court Sentencing",
+        "sources": [
+          {
+            "label": "BleepingComputer - BlackCat Sentencing",
+            "url": "https://www.bleepingcomputer.com/news/security/us-ransomware-negotiators-get-4-years-in-prison-over-blackcat-attacks/"
+          }
+        ],
+        "content": {
+          "fr": {
+            "authority": "U.S. Department of Justice",
+            "jurisdiction": "USA",
+            "analyse": "Condamnation à 4 ans de prison de deux anciens employés de sociétés de réponse aux incidents (Sygnia, DigitalMint) pour avoir agi comme affiliés du ransomware BlackCat (ALPHV). Ils utilisaient leurs connaissances spécialisées pour extorquer des entreprises américaines.",
+            "recommendations": [
+              "Renforcer l'audit interne des accès pour les équipes de réponse aux incidents.",
+              "Vérifier les antécédents et la conformité éthique des prestataires de sécurité tiers."
+            ]
+          }
+        },
+        "tags": [
+          "insider_threat",
+          "alphv",
+          "justice",
+          "cybercrime"
+        ]
+      }
+    ],
+    "data_breaches": [
+      {
+        "id": "ants_france_breach",
+        "victim": "Agence Nationale des Titres Sécurisés (ANTS)",
+        "event_date": "2026-04-15",
+        "sources": [
+          {
+            "label": "Le Monde - Piratage ANTS",
+            "url": "https://www.lemonde.fr/pixels/article/2026/04/30/piratage-de-l-ants-un-mineur-de-15-ans-interpelle_6684591_4408996.html"
+          }
+        ],
+        "content": {
+          "fr": {
+            "sector": "Public Administration",
+            "estimated_volume": "Millions of records",
+            "analyse": "Un adolescent de 15 ans ('breach3d') a été interpellé pour le piratage de l'ANTS. Des millions de lignes contenant des noms, adresses, et numéros de téléphone ont été dérobées. Le gouvernement débloque 200 millions d'euros pour renforcer la cybersécurité des services de l'État.",
+            "compromised_data": "PII, Identity Documents data",
+            "recommendations": [
+              "Mettre à jour les systèmes d'authentification des agents publics.",
+              "Renforcer le monitoring des activités inhabituelles sur les bases de données régaliennes."
+            ]
+          }
+        },
+        "mitre_ttps": [
+          {
+            "id": "T1567",
+            "label": "Exfiltration Over Web Service"
+          }
+        ],
+        "incident_response_playbook": {
+          "phase1_preparation": {
+            "content": {
+              "fr": {
+                "steps": [
+                  "Auditer les logs d'accès aux fichiers sensibles de l'ANTS.",
+                  "Implémenter une surveillance spécifique sur les forums de cybercriminalité."
+                ]
+              }
+            }
+          },
+          "phase2_detection": {
+            "content": {
+              "fr": {
+                "steps": [
+                  "Identifier les volumes d'exfiltration inhabituels vers des services tiers.",
+                  "Monitorer les pseudonymes associés à la fuite (breach3d)."
+                ]
+              }
+            }
+          },
+          "phase3_containment": {
+            "content": {
+              "fr": {
+                "steps": [
+                  "Couper les accès réseau des comptes compromis identifiés.",
+                  "Isoler les segments réseau affectés."
+                ]
+              }
+            }
+          },
+          "phase4_post_incident": {
+            "content": {
+              "fr": {
+                "steps": [
+                  "Informer les citoyens dont les données ont été compromises.",
+                  "Déployer les 200M€ de fonds de modernisation cyber."
+                ]
+              }
+            }
+          },
+          "phase5_threat_hunting": {
+            "hypotheses": [
+              {
+                "ttp_id": "T1078",
+                "data_source": "Access Logs",
+                "query": "user.age < 18 AND action: 'massive_data_export'",
+                "content": {
+                  "fr": {
+                    "hypothesis": "Un acteur non sophistiqué a pu abuser d'une configuration faible pour accéder à des données de masse."
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "tags": [
+          "france",
+          "pii",
+          "identity_theft",
+          "government"
+        ]
+      },
+      {
+        "id": "aman_hotel_breach",
+        "victim": "Aman Resorts",
+        "event_date": "2026-04-29",
+        "sources": [
+          {
+            "label": "Have I Been Pwned - Aman",
+            "url": "https://haveibeenpwned.com/Breach/Aman"
+          }
+        ],
+        "content": {
+          "fr": {
+            "sector": "Hospitality / Luxury",
+            "estimated_volume": "215,563 accounts",
+            "analyse": "La marque d'hôtels de luxe Aman a été la cible de ShinyHunters via une intrusion Salesforce CRM. Les données incluent des adresses, téléphones, nationalités et statuts VIP.",
+            "compromised_data": "Email, Phone, VIP codes, Physical Address",
+            "recommendations": [
+              "Auditer les permissions de partage Salesforce.",
+              "Activer le MFA pour tous les accès CRM tiers."
+            ]
+          }
+        },
+        "mitre_ttps": [
+          {
+            "id": "T1567.002",
+            "label": "Exfiltration Over Web Service: Exfiltration to Cloud Storage"
+          }
+        ],
+        "incident_response_playbook": {
+          "phase1_preparation": {
+            "content": {
+              "fr": {
+                "steps": [
+                  "Vérifier les configurations de sécurité Salesforce (Cloud Security Posture Management)."
+                ]
+              }
+            }
+          },
+          "phase2_detection": {
+            "content": {
+              "fr": {
+                "steps": [
+                  "Surveiller les activités de téléchargement massif depuis le CRM."
+                ]
+              }
+            }
+          },
+          "phase3_containment": {
+            "content": {
+              "fr": {
+                "steps": [
+                  "Révoquer les tokens d'accès Salesforce suspects."
+                ]
+              }
+            }
+          },
+          "phase4_post_incident": {
+            "content": {
+              "fr": {
+                "steps": [
+                  "Notifier les clients VIP des risques de phishing ciblé."
+                ]
+              }
+            }
+          },
+          "phase5_threat_hunting": {
+            "hypotheses": [
+              {
+                "ttp_id": "T1078.004",
+                "data_source": "SaaS Audit Logs",
+                "query": "app.name: 'Salesforce' AND action: 'Export' AND user.location: 'unknown'",
+                "content": {
+                  "fr": {
+                    "hypothesis": "Accès illégitime via une clé API Salesforce exposée ou volée."
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "tags": [
+          "shinyhunters",
+          "salesforce",
+          "luxury",
+          "pii"
+        ]
+      }
+    ],
+    "vulnerabilities": [
+      {
+        "cve_id": "CVE-2026-31431",
+        "cvss_score": 7.8,
+        "cisa_kev": false,
+        "exploitation_status": "Active",
+        "event_date": "2026-04-29",
+        "mitre_ttps": [
+          {
+            "id": "T1068",
+            "label": "Exploitation for Privilege Escalation"
+          }
+        ],
+        "tags": [
+          "linux",
+          "kernel",
+          "copy_fail",
+          "privilege_escalation"
+        ],
+        "sources": [
+          {
+            "label": "CERT-EU Advisory 2026-005",
+            "url": "https://cert.europa.eu/publications/security-advisories/2026-005/"
+          },
+          {
+            "label": "Sysdig Blog - Copy Fail",
+            "url": "https://webflow.sysdig.com/blog/cve-2026-31431-copy-fail-linux-kernel-flaw-lets-local-users-gain-root-in-seconds"
+          }
+        ],
+        "content": {
+          "fr": {
+            "affected_product": "Linux Kernel (algif_aead module)",
+            "vendor": "Linux",
+            "vuln_type": "Local Privilege Escalation (LPE)",
+            "analyse": "Surnommée 'Copy Fail', cette faille logique dans l'interface crypto AF_ALG permet à un utilisateur local non privilégié de corrompre le cache de page de fichiers setuid en mémoire (ex: /usr/bin/su) pour obtenir un shell root. La faille date de 2017.",
+            "impact": "Accès root complet sur la majorité des distributions Linux (Ubuntu, RHEL, SUSE, Amazon Linux). Risque élevé pour les nœuds Kubernetes et pipelines CI/CD.",
+            "mitigation": "Bloquer la création de sockets AF_ALG via les politiques seccomp sur les workloads conteneurisés. Appliquer les correctifs noyau et redémarrer."
+          }
+        }
+      },
+      {
+        "cve_id": "CVE-2026-41940",
+        "cvss_score": 9.8,
+        "cisa_kev": true,
+        "exploitation_status": "Active",
+        "event_date": "2026-04-30",
+        "mitre_ttps": [
+          {
+            "id": "T1190",
+            "label": "Exploit Public-Facing Application"
+          },
+          {
+            "id": "T1078.002",
+            "label": "Valid Accounts: Domain Accounts"
+          }
+        ],
+        "tags": [
+          "cpanel",
+          "auth_bypass",
+          "rce",
+          "active_exploitation"
+        ],
+        "sources": [
+          {
+            "label": "The Register - cPanel Critical Vuln",
+            "url": "https://go.theregister.com/feed/www.theregister.com/2026/05/01/critical_cpanel_vuln_hits_cisa/"
+          },
+          {
+            "label": "SOCPrime - cPanel Bypass",
+            "url": "https://socprime.com/blog/cve-2026-41940-critical-cpanel-whm-authentication-bypass-exposes-hosting-servers-to-admin-takeover/"
+          }
+        ],
+        "content": {
+          "fr": {
+            "affected_product": "cPanel & WHM (including DNSOnly)",
+            "vendor": "cPanel",
+            "vuln_type": "Authentication Bypass",
+            "analyse": "Une injection CRLF dans le processus de chargement de session permet à un attaquant non authentifié d'injecter des propriétés arbitraires (ex: user=root) dans les fichiers de session et de prendre le contrôle total du serveur de gestion.",
+            "impact": "Prise de contrôle administrative totale de l'hôte, des bases de données et de tous les sites hébergés. Environ 1.5 million d'instances exposées.",
+            "mitigation": "Mettre à jour vers les versions patchées immédiatement (ex: 11.136.0.5). Redémarrer le service cpsrvd. Restreindre l'accès aux ports 2083, 2087, 2095, 2096 au niveau du pare-feu."
+          }
+        }
+      }
+    ]
+  },
+  "articles": [
+    {
+      "id": "isc_stormcast_may_2026",
+      "event_date": "2026-05-01",
+      "sources": [
+        {
+          "label": "ISC Stormcast May 1st",
+          "url": "https://isc.sans.edu/diary/rss/32940"
+        },
+        {
+          "label": "ISC Stormcast April 30th",
+          "url": "https://isc.sans.edu/diary/rss/32938"
+        }
+      ],
+      "content": {
+        "fr": {
+          "title": "SANS ISC Stormcast - Bulletin Quotidien",
+          "technical_summary": "Bulletins audio quotidiens de l'Internet Storm Center traitant des menaces émergentes.",
+          "analyse": "Les épisodes récents se concentrent sur la gestion des vulnérabilités critiques de la semaine (cPanel et Copy Fail).",
+          "impact_analysis": {
+            "operational": "Information continue pour les administrateurs système sur les menaces actives."
+          },
+          "recommendations": [
+            "Écouter quotidiennement pour une veille opérationnelle rapide."
+          ]
+        }
+      },
+      "iocs": [],
+      "mitre_ttps": [],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "content": {
+            "fr": {
+              "steps": [
+                "Intégrer les flux RSS de l'ISC dans la veille CTI."
+              ]
+            }
+          }
+        }
+      },
+      "tags": [
+        "podcast",
+        "daily_briefing"
+      ]
+    },
+    {
+      "id": "libredtail_cryptomining",
+      "event_date": "2026-04-30",
+      "sources": [
+        {
+          "label": "ISC Diary - Danger of Libredtail",
+          "url": "https://isc.sans.edu/diary/rss/32936"
+        }
+      ],
+      "content": {
+        "fr": {
+          "title": "Analyse de Libredtail : Malware de Cryptomining exploitant PHP",
+          "technical_summary": "Exploitation de CVE-2024-4577 (PHP) pour injecter des scripts 'apache.selfrep' et installer le mineur de crypto Redtail.",
+          "analyse": "Le malware utilise l'obfuscation Base64 et des techniques de contournement de répertoires pour s'implanter sur les serveurs PHP vulnérables.",
+          "impact_analysis": {
+            "performance": "Consommation CPU excessive due au minage non autorisé.",
+            "persistence": "Installation de cronjobs et modification de binaires shell."
+          },
+          "recommendations": [
+            "Mettre à jour PHP vers une version non vulnérable à CVE-2024-4577.",
+            "Bloquer les User-Agents 'libredtail-http' au niveau du WAF.",
+            "Surveiller les connexions sortantes vers les IPs connues du C2 (31.57.216.121)."
+          ]
+        }
+      },
+      "iocs": [
+        {
+          "type": "ip",
+          "value": "31.57.216[.]121",
+          "reliability": "Haute"
+        },
+        {
+          "type": "ip",
+          "value": "178.16.55[.]224",
+          "reliability": "Haute"
+        },
+        {
+          "type": "ip",
+          "value": "82.165.66[.]87",
+          "reliability": "Haute"
+        },
+        {
+          "type": "url",
+          "value": "https://31.57.216[.]121/sh",
+          "reliability": "Haute"
+        }
+      ],
+      "mitre_ttps": [
+        {
+          "id": "T1496",
+          "label": "Resource Hijacking: Endpoint Denial of Service"
+        },
+        {
+          "id": "T1059.006",
+          "label": "Command and Scripting Interpreter: Python"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase2_detection": {
+          "content": {
+            "fr": {
+              "steps": [
+                "Vérifier la présence de fichiers nommés '.redtail' ou 'apache.selfrep'."
+              ]
+            }
+          }
+        },
+        "phase3_containment": {
+          "content": {
+            "fr": {
+              "steps": [
+                "Tuer les processus suspects utilisant 100% du CPU.",
+                "Bloquer les IPs de C2 identifiées."
+              ]
+            }
+          }
+        }
+      },
+      "tags": [
+        "cryptomining",
+        "php",
+        "redtail"
+      ]
+    },
+    {
+      "id": "anyrun_release_april_2026",
+      "event_date": "2026-04-30",
+      "sources": [
+        {
+          "label": "ANY.RUN Blog - Release Notes",
+          "url": "https://any.run/cybersecurity-blog/release-notes-april-2026/"
+        }
+      ],
+      "content": {
+        "fr": {
+          "title": "ANY.RUN : Nouvelles Fonctionnalités de Threat Intelligence",
+          "technical_summary": "Mise à jour incluant 1 770 nouvelles détections, accès étendu à TI Lookup pour les utilisateurs gratuits et recherche assistée par IA.",
+          "analyse": "ANY.RUN renforce ses capacités de détection comportementale et facilite le pivotage entre indicateurs pour les analystes SOC.",
+          "impact_analysis": {
+            "operational": "Amélioration de la vitesse de triage des malwares."
+          },
+          "recommendations": [
+            "Utiliser TI Lookup pour valider les hashes suspects trouvés dans les emails."
+          ]
+        }
+      },
+      "iocs": [],
+      "mitre_ttps": [],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "content": {
+            "fr": {
+              "steps": [
+                "Former les analystes à l'utilisation des nouveaux rapports de Threat Intelligence ANY.RUN."
+              ]
+            }
+          }
+        }
+      },
+      "tags": [
+        "sandbox",
+        "ti",
+        "release_notes"
+      ]
+    },
+    {
+      "id": "criminal_ip_securonix",
+      "event_date": "2026-05-01",
+      "sources": [
+        {
+          "label": "BleepingComputer - Collaboration Intelligence",
+          "url": "https://www.bleepingcomputer.com/news/security/criminal-ip-and-securonix-threatq-collaborate-to-enhance-threat-intelligence-operations/"
+        }
+      ],
+      "content": {
+        "fr": {
+          "title": "Partenariat Criminal IP et Securonix ThreatQ",
+          "technical_summary": "Intégration des APIs de Criminal IP dans la plateforme ThreatQ pour l'enrichissement automatique des indicateurs IP.",
+          "analyse": "L'accent est mis sur l'intelligence basée sur l'exposition (ports ouverts, vulnérabilités connues) plutôt que sur de simples listes noires d'IP.",
+          "impact_analysis": {
+            "efficiency": "Réduction du temps manuel d'investigation pour les équipes SOC."
+          },
+          "recommendations": [
+            "Intégrer les scores de malveillance de Criminal IP dans les workflows de priorisation ThreatQ."
+          ]
+        }
+      },
+      "iocs": [],
+      "mitre_ttps": [],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "content": {
+            "fr": {
+              "steps": [
+                "Configurer les connecteurs API Criminal IP dans ThreatQ."
+              ]
+            }
+          }
+        }
+      },
+      "tags": [
+        "partnership",
+        "enrichment",
+        "ip_intelligence"
+      ]
+    },
+    {
+      "id": "microsoft_updates_april_2026",
+      "event_date": "2026-05-01",
+      "sources": [
+        {
+          "label": "BleepingComputer - Windows 11 KB5083631",
+          "url": "https://www.bleepingcomputer.com/news/microsoft/windows-11-kb5083631-update-released-with-34-changes-and-fixes/"
+        },
+        {
+          "label": "BleepingComputer - Remote Desktop fix",
+          "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-remote-desktop-warnings-displaying-incorrectly/"
+        },
+        {
+          "label": "BleepingComputer - Microsoft Store policy",
+          "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-now-lets-admins-choose-pre-installed-store-apps-to-uninstall/"
+        }
+      ],
+      "content": {
+        "fr": {
+          "title": "Mises à jour Windows et Correction RDP (Avril 2026)",
+          "technical_summary": "Sortie de la mise à jour optionnelle KB5083631 (Windows 11) et correctifs pour les alertes de sécurité RDP mal affichées.",
+          "analyse": "Microsoft corrige un bug d'affichage critique dans les boîtes de dialogue RDP qui empêchait l'interaction avec les avertissements de sécurité. De nouvelles politiques permettent également de désinstaller Copilot et les apps MSIX pré-installées.",
+          "impact_analysis": {
+            "usability": "Restauration des capacités de vérification de sécurité RDP.",
+            "administration": "Contrôle accru sur les applications système installées par défaut."
+          },
+          "recommendations": [
+            "Appliquer le correctif pour RDP sur les postes multi-écrans avec des échelles d'affichage différentes.",
+            "Tester KB5083631 avant le déploiement massif de mai."
+          ]
+        }
+      },
+      "iocs": [],
+      "mitre_ttps": [],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "content": {
+            "fr": {
+              "steps": [
+                "Vérifier les certificats Secure Boot avant leur expiration en juin 2026."
+              ]
+            }
+          }
+        }
+      },
+      "tags": [
+        "windows",
+        "patch_management",
+        "rdp",
+        "microsoft_store"
+      ]
+    },
+    {
+      "id": "bluekit_phishing_ai",
+      "event_date": "2026-04-30",
+      "sources": [
+        {
+          "label": "BleepingComputer - Bluekit phishing",
+          "url": "https://www.bleepingcomputer.com/news/security/new-bluekit-phishing-service-includes-an-ai-assistant-40-templates/"
+        }
+      ],
+      "content": {
+        "fr": {
+          "title": "Bluekit : Nouveau Service de Phishing assisté par IA",
+          "technical_summary": "Plateforme de PhaaS intégrant un assistant IA (Llama, GPT-4.1, Claude) pour la rédaction d'emails de phishing et 40 modèles prêts à l'emploi.",
+          "analyse": "Bluekit permet de configurer dynamiquement le comportement des pages de phishing (redirections, anti-analyse) et de capturer des sessions en temps réel.",
+          "impact_analysis": {
+            "threat_evolution": "Scale et qualité accrue des campagnes de social engineering grâce à l'IA."
+          },
+          "recommendations": [
+            "Former les utilisateurs à la détection de phishing de haute qualité généré par IA.",
+            "Implémenter l'authentification multifacteur résistante au phishing (FIDO2)."
+          ]
+        }
+      },
+      "iocs": [],
+      "mitre_ttps": [
+        {
+          "id": "T1566",
+          "label": "Phishing"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase2_detection": {
+          "content": {
+            "fr": {
+              "steps": [
+                "Utiliser des outils d'analyse d'en-tête pour détecter les anomalies de redirection Bluekit."
+              ]
+            }
+          }
+        }
+      },
+      "tags": [
+        "phaas",
+        "ai_phishing",
+        "bluekit"
+      ]
+    },
+    {
+      "id": "romanian_swatting_sentencing",
+      "event_date": "2026-04-30",
+      "sources": [
+        {
+          "label": "BleepingComputer - Romanian Swatting",
+          "url": "https://www.bleepingcomputer.com/news/security/romanian-leader-of-online-swatting-ring-gets-4-years-in-prison/"
+        }
+      ],
+      "content": {
+        "fr": {
+          "title": "Condamnation du Leader d'un Réseau de Swatting Roumain",
+          "technical_summary": "Thomasz Szabo condamné à 4 ans de prison pour avoir orchestré des milliers de fausses alertes à la bombe et attaques de swatting aux USA.",
+          "analyse": "Le réseau visait des membres du Congrès et des institutions religieuses. Szabo a été extradé de Roumanie.",
+          "impact_analysis": {
+            "judicial": "Signal fort contre les pratiques de harcèlement coordonné par cyber-moyens."
+          },
+          "recommendations": []
+        }
+      },
+      "iocs": [],
+      "mitre_ttps": [],
+      "incident_response_playbook": {},
+      "tags": [
+        "swatting",
+        "legal",
+        "extradition"
+      ]
+    },
+    {
+      "id": "elastic_osquery_dfir",
+      "event_date": "2026-05-01",
+      "sources": [
+        {
+          "label": "Elastic Security Labs - Osquery DFIR",
+          "url": "https://www.elastic.co/security-labs/dfir-osquery-elastic-security"
+        }
+      ],
+      "content": {
+        "fr": {
+          "title": "DFIR Moderne : Osquery et Elastic Security",
+          "technical_summary": "Utilisation d'Osquery pour l'investigation forensique distribuée sans imagerie disque, directement via des requêtes SQL sur les endpoints.",
+          "analyse": "Elastic intègre des extensions Osquery pour l'historique de navigation, AmCache et JumpLists, permettant de reconstruire une chronologie d'attaque en quelques minutes.",
+          "impact_analysis": {
+            "forensics": "Accélération massive des investigations post-incident."
+          },
+          "recommendations": [
+            "Déployer l'intégration Osquery Manager dans Elastic Defend.",
+            "Utiliser les packs de requêtes forensiques curatés pour identifier la persistance."
+          ]
+        }
+      },
+      "iocs": [],
+      "mitre_ttps": [],
+      "incident_response_playbook": {
+        "phase5_threat_hunting": {
+          "hypotheses": [
+            {
+              "ttp_id": "T1204.002",
+              "data_source": "Osquery prefetch table",
+              "query": "SELECT * FROM prefetch WHERE path LIKE '%mimikatz%';",
+              "content": {
+                "fr": {
+                  "hypothesis": "Identifier l'exécution binaire via les fichiers prefetch sur les hôtes suspectés."
+                }
+              }
+            }
+          ]
+        }
+      },
+      "tags": [
+        "dfir",
+        "osquery",
+        "elastic"
+      ]
+    },
+    {
+      "id": "flare_ai_cybercrime_data",
+      "event_date": "2026-04-30",
+      "sources": [
+        {
+          "label": "Flare Blog - AI Security Agents",
+          "url": "https://flare.io/learn/resources/blog/ai-security-agents-cybercrime-intelligence"
+        }
+      ],
+      "content": {
+        "fr": {
+          "title": "Importance de la Donnée Cybercrime pour les Agents IA",
+          "technical_summary": "Discussion sur la nécessité de données structurées et fraîches pour alimenter les agents de sécurité IA.",
+          "analyse": "Flare propose des terminaux API compatibles MCP pour connecter les agents IA à des milliards de credentials fuyés et d'activités sur le dark web.",
+          "impact_analysis": {
+            "ai_strategy": "L'efficacité de l'IA de sécurité est limitée par la couverture des données de cybercriminalité sous-jacentes."
+          },
+          "recommendations": [
+            "Vérifier la provenance légale et la conformité GDPR des données ingérées par vos agents IA."
+          ]
+        }
+      },
+      "iocs": [],
+      "mitre_ttps": [],
+      "incident_response_playbook": {},
+      "tags": [
+        "ai",
+        "threat_intel",
+        "cybercrime_data"
+      ]
+    },
+    {
+      "id": "guidepoint_identity_fragmentation",
+      "event_date": "2026-04-30",
+      "sources": [
+        {
+          "label": "GuidePoint Security - Identity Risk",
+          "url": "https://www.guidepointsecurity.com/blog/why-identity-fragmentation-continues-to-drive-security-risk/"
+        }
+      ],
+      "content": {
+        "fr": {
+          "title": "Risques de la Fragmentation de l'Identité",
+          "technical_summary": "Analyse de la convergence de l'identité comme pilier de la stratégie de sécurité moderne.",
+          "analyse": "La multiplicité des modèles d'identité (cloud vs on-prem) crée des angles morts exploités par les attaquants.",
+          "impact_analysis": {
+            "security_posture": "Nécessité de passer à un plan de contrôle unique pour l'identité."
+          },
+          "recommendations": [
+            "Adopter une stratégie de convergence d'identité pour réduire les alertes de dérive."
+          ]
+        }
+      },
+      "iocs": [],
+      "mitre_ttps": [],
+      "incident_response_playbook": {},
+      "tags": [
+        "identity",
+        "iam",
+        "convergence"
+      ]
+    },
+    {
+      "id": "huge_networks_ddos_incident",
+      "event_date": "2026-04-30",
+      "sources": [
+        {
+          "label": "KrebsOnSecurity - Huge Networks",
+          "url": "https://krebsonsecurity.com/2026/04/anti-ddos-firm-heaped-attacks-on-brazilian-isps/"
+        }
+      ],
+      "content": {
+        "fr": {
+          "title": "Société Anti-DDoS Huge Networks Compromise",
+          "technical_summary": "Une fuite de répertoire ouvert a révélé que l'infrastructure de Huge Networks était utilisée pour piloter un botnet Mirai attaquant des FAI brésiliens.",
+          "analyse": "Des clés SSH privées du PDG ont été trouvées dans l'archive. Le botnet exploitait la vulnérabilité CVE-2023-1389 sur les routeurs TP-Link.",
+          "impact_analysis": {
+            "reputational": "Suspicion d'utilisation de botnets pour 'créer le besoin' de protection DDoS.",
+            "operational": "Interruption massive des services internet au Brésil."
+          },
+          "recommendations": [
+            "Réinitialiser immédiatement toutes les clés SSH et les identifiants d'accès privilégiés.",
+            "Scanner les réseaux pour détecter les routeurs vulnérables à CVE-2023-1389."
+          ]
+        }
+      },
+      "iocs": [
+        {
+          "type": "domain",
+          "value": "hikylover[.]st",
+          "reliability": "Haute"
+        },
+        {
+          "type": "domain",
+          "value": "c.loyaltyservices[.]lol",
+          "reliability": "Haute"
+        }
+      ],
+      "mitre_ttps": [
+        {
+          "id": "T1584.005",
+          "label": "Compromise Infrastructure: Botnet"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase3_containment": {
+          "content": {
+            "fr": {
+              "steps": [
+                "Détruire les instances (droplets) compromises signalées par Digital Ocean."
+              ]
+            }
+          }
+        }
+      },
+      "tags": [
+        "ddos",
+        "mirai",
+        "brazil",
+        "isps"
+      ]
+    },
+    {
+      "id": "microsoft_email_threats_q1_2026",
+      "event_date": "2026-04-30",
+      "sources": [
+        {
+          "label": "Microsoft Security Blog - Q1 Trends",
+          "url": "https://www.microsoft.com/en-us/security/blog/2026/04/30/email-threat-landscape-q1-2026-trends-and-insights/"
+        }
+      ],
+      "content": {
+        "fr": {
+          "title": "Paysage des Menaces Email Q1 2026",
+          "technical_summary": "8.3 milliards de menaces de phishing détectées. Explosion du QR code phishing (+146%) et des attaques par CAPTCHA-gate.",
+          "analyse": "Le credential phishing représente 94% des payloads malveillantes. Tycoon2FA reste l'infrastructure dominante malgré les efforts de démantèlement.",
+          "impact_analysis": {
+            "threat_volume": "Augmentation des techniques d'évasion (SVG, HTML local, redirects complexes)."
+          },
+          "recommendations": [
+            "Sensibiliser les utilisateurs aux risques du Quishing (phishing par QR code).",
+            "Utiliser Microsoft Defender for Office 365 pour scanner les URLs dans les fichiers SVG."
+          ]
+        }
+      },
+      "iocs": [
+        {
+          "type": "domain",
+          "value": "2fspectrumbusiness[.]net",
+          "reliability": "Moyenne"
+        }
+      ],
+      "mitre_ttps": [
+        {
+          "id": "T1566.003",
+          "label": "Phishing: Spearphishing Service"
+        }
+      ],
+      "incident_response_playbook": {},
+      "tags": [
+        "phishing",
+        "quishing",
+        "bec",
+        "tycoon2fa"
+      ]
+    },
+    {
+      "id": "recorded_future_ai_building",
+      "event_date": "2026-04-30",
+      "sources": [
+        {
+          "label": "Recorded Future Blog - Building with AI",
+          "url": "https://www.recordedfuture.com/blog/building-with-ai"
+        }
+      ],
+      "content": {
+        "fr": {
+          "title": "Réalité du Développement avec l'IA en 2026",
+          "technical_summary": "Réflexion sur l'écart de compréhension entre les cadres et les praticiens concernant l'IA.",
+          "analyse": "Les avantages compétitifs basés sur le code disparaissent ; seule la donnée propriétaire et sa fidélité historique constituent un rempart (moat).",
+          "impact_analysis": {
+            "strategic": "Le dernier kilomètre du déploiement IA (scalabilité, monitoring) reste le défi majeur."
+          },
+          "recommendations": [
+            "Encourager les ingénieurs à garder 5% de leur temps pour coder sans IA afin d'éviter l'atrophie des compétences."
+          ]
+        }
+      },
+      "iocs": [],
+      "mitre_ttps": [],
+      "incident_response_playbook": {},
+      "tags": [
+        "ai",
+        "strategy",
+        "engineering"
+      ]
+    },
+    {
+      "id": "fbi_cyber_cargo_theft",
+      "event_date": "2026-05-01",
+      "sources": [
+        {
+          "label": "Security Affairs - Cargo Theft",
+          "url": "https://securityaffairs.com/191556/cyber-crime/digital-attacks-drive-a-new-wave-of-cargo-theft-fbi-says.html"
+        }
+      ],
+      "content": {
+        "fr": {
+          "title": "Le FBI alerte sur le vol de fret assisté par ordinateur",
+          "technical_summary": "Utilisation du phishing et de la compromission de comptes de courtiers pour détourner des cargaisons physiques.",
+          "analyse": "Les pertes en Amérique du Nord ont atteint 6,6 milliards de dollars en 2025. Les attaquants utilisent des outils RMM pour infiltrer les systèmes logistiques.",
+          "impact_analysis": {
+            "physical_impact": "Vols massifs de biens de consommation (nourriture, boissons).",
+            "operational": "Déstabilisation des chaînes d'approvisionnement critiques."
+          },
+          "recommendations": [
+            "Vérifier les expéditions via des canaux de communication indépendants.",
+            "Surveiller les règles de redirection de boîtes mail suspectes."
+          ]
+        }
+      },
+      "iocs": [],
+      "mitre_ttps": [
+        {
+          "id": "T1213",
+          "label": "Data from Information Repositories"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase2_detection": {
+          "content": {
+            "fr": {
+              "steps": [
+                "Détecter les domaines d'emails mimétiques (typosquatting) ciblant les courtiers en transport."
+              ]
+            }
+          }
+        }
+      },
+      "tags": [
+        "cargo_theft",
+        "supply_chain",
+        "fbi"
+      ]
+    },
+    {
+      "id": "jerrys_store_leak",
+      "event_date": "2026-05-01",
+      "sources": [
+        {
+          "label": "Security Affairs - Jerry's Store",
+          "url": "https://securityaffairs.com/191536/cyber-crime/carding-service-jerrys-store-leak-exposes-345000-stolen-payment-cards.html"
+        }
+      ],
+      "content": {
+        "fr": {
+          "title": "Fuite du service de carding Jerry’s Store",
+          "technical_summary": "Exposition accidentelle d'un serveur contenant 345 000 données de cartes bancaires volées.",
+          "analyse": "La fuite provient d'une erreur d'un assistant IA de codage (Cursor) utilisé par les administrateurs criminels, créant un répertoire web non authentifié.",
+          "impact_analysis": {
+            "financial": "Données valides estimées entre 1 et 2,6 millions de dollars."
+          },
+          "recommendations": [
+            "Utiliser des cartes virtuelles pour les transactions en ligne."
+          ]
+        }
+      },
+      "iocs": [],
+      "mitre_ttps": [],
+      "incident_response_playbook": {
+        "phase2_detection": {
+          "content": {
+            "fr": {
+              "steps": [
+                "Vérifier si des cartes clients apparaissent dans les listes fuitées de Jerry's Store."
+              ]
+            }
+          }
+        }
+      },
+      "tags": [
+        "carding",
+        "data_leak",
+        "ai_coding_error"
+      ]
+    },
+    {
+      "id": "anthropic_claude_security",
+      "event_date": "2026-05-01",
+      "sources": [
+        {
+          "label": "Security Affairs - Anthropic",
+          "url": "https://securityaffairs.com/191532/ai/anthropic-launches-claude-security-to-counter-rapid-ai-powered-exploits.html"
+        }
+      ],
+      "content": {
+        "fr": {
+          "title": "Lancement de Claude Security par Anthropic",
+          "technical_summary": "Nouvelle offre utilisant Opus 4.7 pour scanner le code et générer des correctifs de sécurité.",
+          "analyse": "Anthropic répond à l'émergence de modèles comme 'Mythos' qui automatisent l'exploitation de failles.",
+          "impact_analysis": {
+            "defensive": "Amélioration de la précision de détection et réduction des faux positifs pour les entreprises."
+          },
+          "recommendations": [
+            "Intégrer Claude Security dans les pipelines CI/CD pour un scan continu."
+          ]
+        }
+      },
+      "iocs": [],
+      "mitre_ttps": [],
+      "incident_response_playbook": {},
+      "tags": [
+        "ai_security",
+        "appsec",
+        "anthropic"
+      ]
+    },
+    {
+      "id": "sonicos_sonicwall_patches",
+      "event_date": "2026-05-01",
+      "sources": [
+        {
+          "label": "Security Affairs - SonicWall",
+          "url": "https://securityaffairs.com/191527/security/sonicwall-patches-three-sonicos-flaws-in-gen-6-7-and-8-firewalls-patch-them-now.html"
+        }
+      ],
+      "content": {
+        "fr": {
+          "title": "Correctifs urgents pour SonicWall SonicOS",
+          "technical_summary": "Trois failles corrigées, dont CVE-2026-0205 (path traversal) permettant l'accès à des services restreints.",
+          "analyse": "Affecte les pare-feux de générations 6, 7 et 8. Risque de contournement des contrôles de sécurité.",
+          "impact_analysis": {
+            "integrity": "Possibilité d'altération des configurations de sécurité réseau."
+          },
+          "recommendations": [
+            "Désactiver la gestion HTTP/HTTPS sur les interfaces externes jusqu'à l'application des correctifs.",
+            "Restreindre l'accès à SSH uniquement."
+          ]
+        }
+      },
+      "iocs": [],
+      "mitre_ttps": [
+        {
+          "id": "T1190",
+          "label": "Exploit Public-Facing Application"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase3_containment": {
+          "content": {
+            "fr": {
+              "steps": [
+                "Limiter les accès administratifs aux réseaux d'administration de confiance (OOB)."
+              ]
+            }
+          }
+        }
+      },
+      "tags": [
+        "sonicwall",
+        "firewall",
+        "patch"
+      ]
+    },
+    {
+      "id": "whatsapp_encryption_debate",
+      "event_date": "2026-04-30",
+      "sources": [
+        {
+          "label": "Security Affairs - WhatsApp Claims",
+          "url": "https://securityaffairs.com/191515/social-networks/agents-claims-on-whatsapp-access-spark-security-concerns.html"
+        }
+      ],
+      "content": {
+        "fr": {
+          "title": "Controverse sur le chiffrement de WhatsApp",
+          "technical_summary": "Un agent du BIS (USA) affirme que Meta peut accéder aux messages WhatsApp sous forme non chiffrée via un système de permissions à plusieurs niveaux.",
+          "analyse": "Bien que Meta démente, des témoignages de modérateurs tiers (Accenture) évoquent un accès large aux contenus.",
+          "impact_analysis": {
+            "confidentiality": "Remise en question de l'utilisation de WhatsApp pour des communications professionnelles sensibles."
+          },
+          "recommendations": [
+            "Privilégier des outils de communication souverains ou certifiés (Signal, Threema) pour les données sensibles."
+          ]
+        }
+      },
+      "iocs": [],
+      "mitre_ttps": [],
+      "incident_response_playbook": {},
+      "tags": [
+        "whatsapp",
+        "encryption",
+        "privacy",
+        "meta"
+      ]
+    },
+    {
+      "id": "synacktiv_pike_agent",
+      "event_date": "2026-05-01",
+      "sources": [
+        {
+          "label": "Synacktiv - Pike LLM Agent",
+          "url": "https://www.synacktiv.com/en/publications/say-hi-to-pike.html"
+        }
+      ],
+      "content": {
+        "fr": {
+          "title": "Pike : Agent LLM pour l'analyse de traces d'exécution Linux",
+          "technical_summary": "Outil expérimental utilisant Pydantic AI et SQLite FTS5 pour interroger des journaux strace volumineux via SQL généré par IA.",
+          "analyse": "Permet d'identifier rapidement des malwares ou de débugger des crashes en analysant des milliers d'appels système.",
+          "impact_analysis": {
+            "operational": "Simplification de l'analyse 'black box' pour les chercheurs en sécurité."
+          },
+          "recommendations": [
+            "Utiliser Pike pour auditer les comportements de conteneurs suspects."
+          ]
+        }
+      },
+      "iocs": [],
+      "mitre_ttps": [],
+      "incident_response_playbook": {},
+      "tags": [
+        "ai",
+        "linux",
+        "strace",
+        "agent"
+      ]
+    },
+    {
+      "id": "synacktiv_named_pipes",
+      "event_date": "2026-05-01",
+      "sources": [
+        {
+          "label": "Synacktiv - Hooking Named Pipes",
+          "url": "https://www.synacktiv.com/en/publications/hooking-windows-named-pipes.html"
+        }
+      ],
+      "content": {
+        "fr": {
+          "title": "Interception des Named Pipes sous Windows",
+          "technical_summary": "Techniques de Man-in-the-Middle sur les communications inter-processus (IPC) via Frida.",
+          "analyse": "L'article détaille comment intercepter les lectures et écritures synchrones/asynchrones et les ports de complétion d'E/S pour attaquer des processus élevés.",
+          "impact_analysis": {
+            "privilege_escalation": "Possibilité pour un processus non privilégié de manipuler les données envoyées à un processus SYSTEM."
+          },
+          "recommendations": [
+            "Utiliser FILE_FLAG_FIRST_PIPE_INSTANCE lors de la création de pipes.",
+            "Appliquer des ACLs strictes sur les objets de communication IPC."
+          ]
+        }
+      },
+      "iocs": [],
+      "mitre_ttps": [
+        {
+          "id": "T1559.001",
+          "label": "Inter-Process Communication: Component Object Model"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase5_threat_hunting": {
+          "hypotheses": [
+            {
+              "ttp_id": "T1559",
+              "data_source": "System Monitor",
+              "query": "process.command_line: '*pipe*'",
+              "content": {
+                "fr": {
+                  "hypothesis": "Détecter des processus inhabituels créant des instances de pipes nommés déjà existants."
+                }
+              }
+            }
+          ]
+        }
+      },
+      "tags": [
+        "windows",
+        "ipc",
+        "named_pipes",
+        "frida"
+      ]
+    },
+    {
+      "id": "synacktiv_kubernetes_forensics",
+      "event_date": "2026-05-01",
+      "sources": [
+        {
+          "label": "Synacktiv - Kubernetes Forensics 1/3",
+          "url": "https://www.synacktiv.com/en/publications/kubernetes-forensics-13-what-the-container.html"
+        }
+      ],
+      "content": {
+        "fr": {
+          "title": "Forensique Kubernetes - Partie 1 : Les Conteneurs",
+          "technical_summary": "Introduction technique aux runtimes (runc, crun) et moteurs de conteneurs (Docker, Podman) du point de vue de l'investigation.",
+          "analyse": "Explication des namespaces, cgroups et OverlayFS. Comparaison entre l'architecture à daemon de Docker et le mode rootless de Podman.",
+          "impact_analysis": {
+            "forensics": "Nécessité de comprendre la couche d'abstraction pour collecter des artefacts volatils."
+          },
+          "recommendations": [
+            "Utiliser des outils comme 'dive' ou 'diffoci' pour inspecter les couches d'images suspectes."
+          ]
+        }
+      },
+      "iocs": [],
+      "mitre_ttps": [],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "content": {
+            "fr": {
+              "steps": [
+                "Établir des procédures de capture mémoire pour les nœuds Kubernetes."
+              ]
+            }
+          }
+        }
+      },
+      "tags": [
+        "kubernetes",
+        "forensics",
+        "podman",
+        "docker"
+      ]
+    },
+    {
+      "id": "synacktiv_rbcd_cross_domain",
+      "event_date": "2026-05-01",
+      "sources": [
+        {
+          "label": "Synacktiv - Cross-Forest RBCD",
+          "url": "https://www.synacktiv.com/en/publications/exploring-cross-domain-cross-forest-rbcd.html"
+        }
+      ],
+      "content": {
+        "fr": {
+          "title": "Exploration du RBCD Cross-Domain et Cross-Forest",
+          "technical_summary": "Implémentation d'attaques de délégation contrainte basée sur les ressources entre différentes forêts Active Directory.",
+          "analyse": "Utilisation d'Impacket et Rubeus pour l'impersonation d'utilisateurs via la modification de msDS-AllowedToActOnBehalfOfOtherIdentity.",
+          "impact_analysis": {
+            "lateral_movement": "Compromission d'hôtes dans une forêt de ressources à partir d'un compte dans une forêt d'utilisateurs."
+          },
+          "recommendations": [
+            "Enforcer le LDAP signing et le channel binding.",
+            "Désactiver LLMNR et IPv6 pour prévenir les relais NTLM."
+          ]
+        }
+      },
+      "iocs": [],
+      "mitre_ttps": [
+        {
+          "id": "T1558.001",
+          "label": "Steal or Forge Kerberos Tickets: Golden Ticket"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase5_threat_hunting": {
+          "hypotheses": [
+            {
+              "ttp_id": "T1558",
+              "data_source": "Active Directory Logs",
+              "query": "event_id: 4742 AND attribute: 'msDS-AllowedToActOnBehalfOfOtherIdentity'",
+              "content": {
+                "fr": {
+                  "hypothesis": "Identifier des modifications suspectes de délégation sur les comptes machines."
+                }
+              }
+            }
+          ]
+        }
+      },
+      "tags": [
+        "active_directory",
+        "kerberos",
+        "rbcd",
+        "impacket"
+      ]
+    },
+    {
+      "id": "synacktiv_on_prem_llm",
+      "event_date": "2026-05-01",
+      "sources": [
+        {
+          "label": "Synacktiv - On-prem LLM Server",
+          "url": "https://www.synacktiv.com/en/publications/deep-dive-into-the-deployment-of-an-on-premise-low-privileged-llm-server.html"
+        }
+      ],
+      "content": {
+        "fr": {
+          "title": "Déploiement Sécurisé d'un Serveur LLM On-Premise",
+          "technical_summary": "Architecture utilisant llama.cpp dans des conteneurs Podman rootless avec CDI (Container Device Interface) pour l'accès GPU.",
+          "analyse": "Focus sur l'isolation du processus, l'utilisation de sockets UNIX pour éviter la pile TCP/IP et la gestion sécurisée de l'UVM (Unified Virtual Memory) de NVIDIA via ACLs.",
+          "impact_analysis": {
+            "data_protection": "Garantie de confidentialité des données d'entreprise face aux LLMs cloud."
+          },
+          "recommendations": [
+            "Désactiver GGML_CUDA_ENABLE_UNIFIED_MEMORY pour éviter les fuites de mémoire vRAM entre utilisateurs.",
+            "Utiliser AppArmor pour auditer les accès aux périphériques /dev/nvidia*."
+          ]
+        }
+      },
+      "iocs": [],
+      "mitre_ttps": [],
+      "incident_response_playbook": {},
+      "tags": [
+        "ai",
+        "gpu",
+        "security_architecture",
+        "on_prem"
+      ]
+    },
+    {
+      "id": "sysdig_pci_dss_compliance",
+      "event_date": "2026-04-30",
+      "sources": [
+        {
+          "label": "Sysdig - PCI DSS v4.0.1",
+          "url": "https://webflow.sysdig.com/blog/pci-dss-v4-0-1-compliance-in-the-cloud-and-kubernetes-with-sysdig"
+        }
+      ],
+      "content": {
+        "fr": {
+          "title": "Conformité PCI DSS v4.0.1 dans le Cloud et Kubernetes",
+          "technical_summary": "Guide opérationnel pour l'utilisation de Sysdig Secure afin de répondre aux nouvelles exigences de monitoring continu.",
+          "analyse": "L'accent est mis sur l'inventaire dynamique des zones PCI, le FIM (File Integrity Monitoring) au niveau du runtime et la segmentation réseau dans Kubernetes.",
+          "impact_analysis": {
+            "compliance": "Aide au passage d'audit via la collecte automatique de preuves de comportement système."
+          },
+          "recommendations": [
+            "Mapper les politiques de détection Sysdig aux contrôles internes de la matrice PCI."
+          ]
+        }
+      },
+      "iocs": [],
+      "mitre_ttps": [],
+      "incident_response_playbook": {},
+      "tags": [
+        "pci_dss",
+        "compliance",
+        "cloud_security"
+      ]
+    },
+    {
+      "id": "talos_q1_2026_review",
+      "event_date": "2026-04-30",
+      "sources": [
+        {
+          "label": "Cisco Talos - Year in Review Priorities",
+          "url": "https://blog.talosintelligence.com/great-responsibility-without-great-power/"
+        }
+      ],
+      "content": {
+        "fr": {
+          "title": "Priorités Défensives Talos Q1 2026",
+          "technical_summary": "Synthèse des tendances : explosion des compromissions d'identités et retour du phishing comme vecteur principal.",
+          "analyse": "Talos souligne la nécessité de prioriser les patchs basés sur l'exposition internet plutôt que sur le seul score CVSS.",
+          "impact_analysis": {
+            "threat_landscape": "Automatisation accrue des attaques générant néanmoins des comportements anormaux détectables."
+          },
+          "recommendations": [
+            "Sécuriser l'infrastructure d'identité comme un actif de rang 1.",
+            "Casser la fatigue des alertes en se concentrant sur les événements de plan de gestion."
+          ]
+        }
+      },
+      "iocs": [
+        {
+          "type": "hash_sha256",
+          "value": "9f1f11a708d393e0a4109ae189bc64f1f3e312653dcf317a2bd406f18ffcc507",
+          "reliability": "Haute"
+        },
+        {
+          "type": "hash_sha256",
+          "value": "96fa6a7714670823c83099ea01d24d6d3ae8fef027f01a4ddac14f123b1c9974",
+          "reliability": "Haute"
+        }
+      ],
+      "mitre_ttps": [],
+      "incident_response_playbook": {
+        "phase2_detection": {
+          "content": {
+            "fr": {
+              "steps": [
+                "Utiliser les signatures 'Win.Worm.Coinminer' pour détecter les malwares identifiés par Talos."
+              ]
+            }
+          }
+        }
+      },
+      "tags": [
+        "threat_trends",
+        "identity",
+        "phishing"
+      ]
+    },
+    {
+      "id": "unit42_genai_browser_extensions",
+      "event_date": "2026-04-30",
+      "sources": [
+        {
+          "label": "Palo Alto Unit 42 - GenAI Extensions",
+          "url": "https://unit42.paloaltonetworks.com/high-risk-gen-ai-browser-extensions/"
+        }
+      ],
+      "content": {
+        "fr": {
+          "title": "Extensions Navigateur GenAI à Haut Risque",
+          "technical_summary": "Analyse d'extensions (ex: Chrome MCP Server) délivrant des RATs et des infostealers via des leurres de productivité IA.",
+          "analyse": "Les extensions interceptent les prompts, les sessions Gmail et capturent les clés API (OpenAI, Gemini) en abusant des permissions de débogage et de scripting.",
+          "impact_analysis": {
+            "confidentiality": "Fuite massive de plans stratégiques et de code propriétaire partagés avec les outils d'IA."
+          },
+          "recommendations": [
+            "Appliquer le principe du moindre privilège pour l'installation d'extensions en entreprise.",
+            "Auditer les extensions demandant l'accès au protocole de débogage Chrome."
+          ]
+        }
+      },
+      "iocs": [
+        {
+          "type": "url",
+          "value": "wss[:]//mcp-browser.qubecare[.]ai/chrome",
+          "reliability": "Haute"
+        },
+        {
+          "type": "domain",
+          "value": "api.reverserecruiting[.]io",
+          "reliability": "Haute"
+        }
+      ],
+      "mitre_ttps": [
+        {
+          "id": "T1176",
+          "label": "Browser Extensions"
+        },
+        {
+          "id": "T1213",
+          "label": "Data from Information Repositories"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase3_containment": {
+          "content": {
+            "fr": {
+              "steps": [
+                "Désinstaller immédiatement les extensions 'Chrome MCP Server' et 'Supersonic AI'."
+              ]
+            }
+          }
+        }
+      },
+      "tags": [
+        "browser_extensions",
+        "ai",
+        "infostealer",
+        "rat"
+      ]
+    },
+    {
+      "id": "qilin_worldleaks_victims_may_2026",
+      "event_date": "2026-05-01",
+      "sources": [
+        {
+          "label": "RansomLook - WorldLeaks Victims",
+          "url": "https://www.ransomlook.io//group/worldleaks"
+        },
+        {
+          "label": "RansomLook - Qilin Victims",
+          "url": "https://www.ransomlook.io//group/qilin"
+        }
+      ],
+      "content": {
+        "fr": {
+          "title": "Activités des Groupes de Ransomware et Extorsion",
+          "technical_summary": "Liste de nouvelles victimes pour les groupes WorldLeaks (ex-Hunters International) et Qilin.",
+          "analyse": "WorldLeaks opère désormais en mode 'extortion-as-a-service' sans chiffrement, se focalisant uniquement sur le vol de données. Qilin continue de cibler des entités de santé et de services.",
+          "impact_analysis": {
+            "data_loss": "Publication de données sensibles sur des sites Tor pour les victimes refusant de payer."
+          },
+          "recommendations": [
+            "Renforcer la protection contre l'exfiltration de données massives (DLP)."
+          ]
+        }
+      },
+      "iocs": [],
+      "mitre_ttps": [
+        {
+          "id": "T1659",
+          "label": "Extortion"
+        }
+      ],
+      "incident_response_playbook": {},
+      "tags": [
+        "ransomware",
+        "worldleaks",
+        "qilin",
+        "extortion"
+      ]
+    },
+    {
+      "id": "euvd_bot_hashcat_vuln",
+      "event_date": "2026-05-01",
+      "sources": [
+        {
+          "label": "Mastodon - EUVD Bot",
+          "url": "https://mastodon.social/@EUVD_Bot/116499925283916122"
+        }
+      ],
+      "content": {
+        "fr": {
+          "title": "Vulnérabilité EUVD-2026-26531 dans Hashcat",
+          "technical_summary": "Heap-based buffer overflow dans hashcat v7.1.2 lors de l'analyse de hashes PKZIP.",
+          "analyse": "Permet potentiellement l'exécution de code arbitraire via un fichier de hash PKZIP malveillant.",
+          "impact_analysis": {
+            "confidentiality": "Risque pour les chercheurs en sécurité et testeurs d'intrusion utilisant des outils de cassage de mot de passe."
+          },
+          "recommendations": [
+            "Mettre à jour hashcat vers la dernière version disponible."
+          ]
+        }
+      },
+      "iocs": [],
+      "mitre_ttps": [],
+      "incident_response_playbook": {},
+      "tags": [
+        "vulnerability",
+        "hashcat",
+        "euvd"
+      ]
+    },
+    {
+      "id": "geopolitics_iris_trends_2027",
+      "event_date": "2026-04-30",
+      "sources": [
+        {
+          "label": "IRIS - Géopolitique 2027",
+          "url": "https://www.iris-france.org/la-geopolitique-est-une-preoccupation-sous-estimee-de-lelectorat-pour-2027/"
+        },
+        {
+          "label": "IRIS - Forum Dakar",
+          "url": "https://www.iris-france.org/10%E1%B5%89-forum-international-de-dakar-sur-la-paix-et-la-securite/"
+        }
+      ],
+      "content": {
+        "fr": {
+          "title": "Analyse Géopolitique et Défis de Stabilité",
+          "technical_summary": "Études de l'IRIS sur l'intérêt croissant des électeurs pour la géopolitique et les conclusions du Forum de Dakar.",
+          "analyse": "Le Forum de Dakar met en avant la 'Doctrine de Dakar' sur la souveraineté africaine et la prévention des conflits. En France, la géopolitique devient un enjeu central pour l'élection présidentielle de 2027.",
+          "impact_analysis": {
+            "strategic_influence": "Transition vers une diplomatie des valeurs de liberté et de souveraineté technologique."
+          },
+          "recommendations": []
+        }
+      },
+      "iocs": [],
+      "mitre_ttps": [],
+      "incident_response_playbook": {},
+      "tags": [
+        "geopolitics",
+        "dakar_forum",
+        "strategy"
+      ]
+    },
+    {
+      "id": "euvsdisinfo_russia_fake_drills",
+      "event_date": "2026-05-01",
+      "sources": [
+        {
+          "label": "EUvsDisinfo - Fake Nuclear Drills",
+          "url": "https://euvsdisinfo.eu/russias-fake-nuclear-drills-and-real-failure-in-mali/"
+        }
+      ],
+      "content": {
+        "fr": {
+          "title": "Désinformation Pro-Kremlin et Échec au Mali",
+          "technical_summary": "Analyse des narratifs russes sur de prétendus exercices nucléaires de l'OTAN et l'instabilité croissante au Sahel.",
+          "analyse": "La Russie inonde l'espace informationnel de fausses alertes pour justifier sa propre militarisation, tout en masquant les échecs sécuritaires du groupe Wagner/Africa Corps au Mali.",
+          "impact_analysis": {
+            "cognitive": "Tentative de déstabilisation des opinions publiques européennes."
+          },
+          "recommendations": [
+            "Vérifier les sources d'information via des organismes certifiés de fact-checking."
+          ]
+        }
+      },
+      "iocs": [],
+      "mitre_ttps": [
+        {
+          "id": "T1566",
+          "label": "Phishing (Info Ops context)"
+        }
+      ],
+      "incident_response_playbook": {},
+      "tags": [
+        "disinfo",
+        "russia",
+        "mali",
+        "nato"
+      ]
+    },
+    {
+      "id": "cert_fr_advisories_april_2026",
+      "event_date": "2026-04-30",
+      "sources": [
+        {
+          "label": "CERT-FR AVI-0515 MISP",
+          "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0515/"
+        },
+        {
+          "label": "CERT-FR AVI-0518 Wireshark",
+          "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0518/"
+        },
+        {
+          "label": "CERT-FR AVI-0520 SUSE Kernel",
+          "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0520/"
+        },
+        {
+          "label": "CERT-FR AVI-0521 Red Hat Kernel",
+          "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0521/"
+        }
+      ],
+      "content": {
+        "fr": {
+          "title": "Bulletins de Vulnérabilités CERT-FR",
+          "technical_summary": "Série d'avis concernant MISP (SQLi), Wireshark (RCE) et de multiples vulnérabilités noyau dans les distributions SUSE et Red Hat.",
+          "analyse": "Le CERT-FR alerte sur des risques d'élévation de privilèges et de déni de service massifs affectant les infrastructures critiques françaises.",
+          "impact_analysis": {
+            "operational": "Risque critique pour la confidentialité des données traitées par les instances MISP."
+          },
+          "recommendations": [
+            "Appliquer les mises à jour de sécurité identifiées par le CERT-FR sans délai."
+          ]
+        }
+      },
+      "iocs": [],
+      "mitre_ttps": [],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "content": {
+            "fr": {
+              "steps": [
+                "Mettre à jour les politiques de patch management pour inclure les correctifs noyau Linux critiques."
+              ]
+            }
+          }
+        }
+      },
+      "tags": [
+        "cert_fr",
+        "misp",
+        "wireshark",
+        "kernel_linux"
+      ]
+    },
+    {
+      "id": "databreaches_delta_dental_settlement",
+      "event_date": "2026-05-01",
+      "sources": [
+        {
+          "label": "DataBreaches.net - Delta Dental Settlement",
+          "url": "https://databreaches.net/2026/05/01/nysdfs-secures-2-25-million-cybersecurity-settlement-with-delta-dental/"
+        },
+        {
+          "label": "DataBreaches.net - PowerSchool Breach",
+          "url": "https://databreaches.net/2026/05/01/unprecedented-private-equity-firm-potentially-on-hook-for-powerschools-data-breach/"
+        }
+      ],
+      "content": {
+        "fr": {
+          "title": "Régulation et Sanctions après Fuites de Données",
+          "technical_summary": "Settlement de 2,25 millions de dollars pour Delta Dental (NYSDFS) et mise en cause d'une firme de private equity dans la fuite de PowerSchool.",
+          "analyse": "Les autorités durcissent le ton sur la responsabilité des investisseurs et des assureurs dans la protection des données.",
+          "impact_analysis": {
+            "legal": "Établissement d'un précédent sur la responsabilité des sociétés mères en cas de négligence cyber de leurs filiales."
+          },
+          "recommendations": []
+        }
+      },
+      "iocs": [],
+      "mitre_ttps": [],
+      "incident_response_playbook": {},
+      "tags": [
+        "legal",
+        "settlement",
+        "nysdfs",
+        "compliance"
+      ]
+    }
+  ]
+}
