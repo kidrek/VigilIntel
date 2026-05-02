@@ -1,24 +1,25 @@
 {
   "threat_level": {
-    "score": 2,
+    "score": 3,
     "label": {
-      "en": "Moderate",
-      "fr": "Modéré"
+      "en": "High",
+      "fr": "Élevé"
     },
     "justification": {
-      "en": "The threat landscape in May 2026 is defined by a critical intersection of high-severity infrastructure vulnerabilities and the industrialization of AI-assisted social engineering. The exploitation of zero-days in cPanel and the Linux kernel, combined with a novel VS Code-based supply chain worm, signals a move toward compromising developer-centric and core hosting environments. While the volume of mass-scale destructive attacks remained stable, the precision of MFA-bypass techniques and the scale of PII exposure in the public sector justify a moderate but highly focused threat level.",
-      "fr": "Le paysage des menaces en mai 2026 est défini par une intersection critique entre des vulnérabilités d'infrastructure de haute sévérité et l'industrialisation de l'ingénierie sociale assistée par l'IA. L'exploitation de zero-days dans cPanel et le noyau Linux, combinée à un nouveau ver de supply chain basé sur VS Code, signale une volonté de compromettre les environnements de développement et d'hébergement. Bien que le volume d'attaques destructrices à grande échelle soit resté stable, la précision des techniques de contournement MFA et l'ampleur de l'exposition des données PII dans le secteur public justifient un niveau de menace modéré mais très ciblé."
+      "en": "The month of May 2026 was characterized by critical zero-day exploits in hosting infrastructure and the Linux kernel, alongside the maturation of AI-driven social engineering. Significant breaches in government and critical infrastructure sectors, such as the 19 million record leak from ANTS (France), demonstrate high impact despite a stable volume of state-sponsored activity.",
+      "fr": "Le mois de mai 2026 a été caractérisé par des exploits zero-day critiques dans les infrastructures d'hébergement et le noyau Linux, parallèlement à la maturation de l'ingénierie sociale assistée par l'IA. Des violations significatives dans les secteurs gouvernementaux et des infrastructures critiques, comme la fuite de 19 millions de dossiers de l'ANTS (France), démontrent un impact élevé malgré un volume stable d'activité étatique."
     },
     "_triggers": [
       "+1 — 1 CVE(s) CVSS ≥ 9.0",
-      "+2 — 1 acteur(s) étatique(s)",
+      "+4 — 2 acteur(s) étatique(s)",
+      "+1 — ≥ 3 acteurs distincts actifs",
       "+2 — 2 breach(es) ≥ 100k enregistrements",
       "+2 — secteurs critiques ciblés : Critical_Infrastructure, Government_and_Defense"
     ]
   },
   "executive_summary": {
-    "en": "The monthly analysis for May 2026 highlights a strategic evolution in cyber adversary tactics, particularly in the realm of 'Supply Chain Worming' and AI-enhanced social engineering. Actors such as TeamPCP have introduced automated propagation via developer configuration files (VS Code), while phishing platforms like Bluekit have integrated Large Language Models (LLMs) to industrialize high-fidelity Adversary-in-the-Middle (AiTM) attacks. Geopolitical tensions continue to manifest through infrastructure hijacking, as seen with the compromise of regional ISPs via Brazilian anti-DDoS providers. Significant data breaches at ANTS (France) and ADT (USA) underscore the persistent vulnerability of massive PII repositories and identity management systems.",
-    "fr": "L'analyse mensuelle de mai 2026 met en évidence une évolution stratégique des tactiques cyber, particulièrement dans le domaine du 'Supply Chain Worming' et de l'ingénierie sociale assistée par l'IA. Des acteurs comme TeamPCP ont introduit une propagation automatisée via les fichiers de configuration des développeurs (VS Code), tandis que les plateformes de phishing comme Bluekit ont intégré des LLM pour industrialiser les attaques Adversary-in-the-Middle (AiTM) de haute fidélité. Les tensions géopolitiques continuent de se manifester par le détournement d'infrastructures, comme en témoigne la compromission de FAI régionaux via des fournisseurs anti-DDoS brésiliens. Les violations de données majeures chez l'ANTS (France) et ADT (USA) soulignent la vulnérabilité persistante des dépôts massifs de données PII et des systèmes de gestion d'identité."
+    "en": "May 2026 highlights a tactical pivot toward 'Supply Chain Worming' and industrialized AI phishing. Threat actors like TeamPCP are leveraging developer-centric automation (VS Code) for persistence, while nation-state groups from Russia (Silver Fox) and China (Shadow-Earth-053) focus on long-term persistence in strategic regions including Poland, India, and Japan. The discovery of CVE-2026-41940 in cPanel and CVE-2026-31431 in the Linux kernel necessitates an immediate shift toward hardening core server infrastructure and transitioning from software-based MFA to FIDO2 hardware tokens to counter sophisticated Adversary-in-the-Middle (AiTM) campaigns.",
+    "fr": "Le mois de mai 2026 souligne un pivot tactique vers le 'Supply Chain Worming' et le phishing industriel par l'IA. Des acteurs comme TeamPCP exploitent l'automatisation centrée sur les développeurs (VS Code) pour la persistance, tandis que les groupes étatiques russes (Silver Fox) et chinois (Shadow-Earth-053) se concentrent sur la persistance à long terme dans des régions stratégiques comme la Pologne, l'Inde et le Japon. La découverte de CVE-2026-41940 dans cPanel et CVE-2026-31431 dans le noyau Linux nécessite un durcissement immédiat des infrastructures serveurs et une transition du MFA logiciel vers les jetons matériels FIDO2 pour contrer les campagnes sophistiquées d'Adversary-in-the-Middle (AiTM)."
   },
   "threats_actors": {
     "geographic_analyse": [
@@ -28,8 +29,8 @@
           "fr": "Russie"
         },
         "geographic_zone_strategic_analyse": {
-          "en": "Russian nation-state groups, notably Silver Fox, have intensified their operations across the Indo-Pacific region, specifically targeting industrial and financial sectors in India and Japan. Their use of advanced Python-based backdoors (ABCDoor) and Rust loaders indicates a shift toward cross-platform, memory-safe languages to evade traditional detection. Furthermore, a strengthening cyber-military alignment between Russia and North Korea is facilitating more aggressive financial theft and disruptive operations.",
-          "fr": "Les groupes étatiques russes, notamment Silver Fox, ont intensifié leurs opérations dans la région Indo-Pacifique, ciblant spécifiquement les secteurs industriels et financiers en Inde et au Japon. Leur utilisation de backdoors sophistiquées en Python (ABCDoor) et de loaders en Rust indique un pivot vers des langages multiplateformes et sécurisés en mémoire pour échapper à la détection traditionnelle. De plus, un alignement cyber-militaire croissant entre la Russie et la Corée du Nord facilite les vols financiers agressifs et les opérations perturbatrices."
+          "en": "Russian state-linked entities are expanding their reach beyond traditional conflict zones, targeting manufacturing and finance sectors in Asia (India/Japan) with custom backdoors like ABCDoor, indicating a shift toward economic and industrial espionage.",
+          "fr": "Les entités liées à l'État russe étendent leur portée au-delà des zones de conflit traditionnelles, ciblant les secteurs manufacturier et financier en Asie (Inde/Japon) avec des backdoors personnalisés comme ABCDoor, indiquant un virage vers l'espionnage économique et industriel."
         }
       },
       {
@@ -38,8 +39,8 @@
           "fr": "Chine"
         },
         "geographic_zone_strategic_analyse": {
-          "en": "Chinese state-sponsored activities, led by groups such as Shadow-Earth-053 and GLITTER CARP, are focused on achieving deep, long-term persistence within diplomatic and government networks in Poland and Southeast Asia. Parallel to intelligence gathering, these actors are increasingly leveraging cyber tools for transnational repression, targeting dissidents and journalists to suppress external political opposition.",
-          "fr": "Les activités étatiques chinoises, menées par des groupes tels que Shadow-Earth-053 et GLITTER CARP, se concentrent sur l'obtention d'une persistance profonde et à long terme au sein des réseaux diplomatiques et gouvernementaux en Pologne et en Asie du Sud-Est. Parallèlement à la collecte de renseignements, ces acteurs exploitent de plus en plus les outils cyber pour la répression transnationale, ciblant les dissidents et les journalistes."
+          "en": "Chinese operations are focusing on strategic persistence within European diplomatic networks and the use of cyber capabilities for transnational repression, targeting journalists and dissidents globally.",
+          "fr": "Les opérations chinoises se concentrent sur la persistance stratégique au sein des réseaux diplomatiques européens et l'utilisation de capacités cyber pour la répression transnationale, ciblant les journalistes et les dissidents à l'échelle mondiale."
         }
       }
     ],
@@ -58,21 +59,21 @@
             "Business_Services"
           ],
           "fr": [
-            "Industrie et Manufacturier",
+            "Industry_and_Manufacturing",
             "Finance",
-            "Services aux Entreprises"
+            "Business_Services"
           ]
         },
         "targeted_regions": {
           "en": [
-            "Russia",
             "India",
-            "Japan"
+            "Japan",
+            "Russia"
           ],
           "fr": [
-            "Russie",
             "Inde",
-            "Japon"
+            "Japon",
+            "Russie"
           ]
         },
         "mitre_attack_ttps_id": [
@@ -102,7 +103,7 @@
             "Technology_and_Telecom"
           ],
           "fr": [
-            "Technologie et Télécoms"
+            "Technology_and_Telecom"
           ]
         },
         "targeted_regions": {
@@ -126,13 +127,49 @@
             "Mini Shai-Hulud"
           ]
         }
+      },
+      {
+        "threat_actor_name": "Shadow-Earth-053",
+        "origin_country": "China",
+        "type": {
+          "en": "Nation-state",
+          "fr": "Étatique"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Government_and_Defense"
+          ],
+          "fr": [
+            "Government_and_Defense"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Poland"
+          ],
+          "fr": [
+            "Pologne"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1071.001",
+          "T1566.002"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Polish Diplomatic Espionage"
+          ],
+          "fr": [
+            "Espionnage diplomatique polonais"
+          ]
+        }
       }
     ]
   },
   "mitre_attack_ttps": {
     "ttps_strategic_analyse": {
-      "en": "Adversaries are increasingly weaponizing legitimate developer tools and automation frameworks to bypass modern security perimeters. The exploitation of VS Code 'tasks.json' for worm-like propagation and the rise of AI-driven phishing kits mark a shift toward high-fidelity, automated credential harvesting. Furthermore, AiTM (Adversary-in-the-Middle) techniques have reached a level of industrial maturity, effectively neutralizing standard TOTP-based multi-factor authentication across enterprise environments.",
-      "fr": "Les adversaires utilisent de plus en plus les outils de développement légitimes et les frameworks d'automatisation pour contourner les périmètres de sécurité modernes. L'exploitation du fichier 'tasks.json' de VS Code pour une propagation de type ver et la montée des kits de phishing pilotés par l'IA marquent un tournant vers une collecte d'identifiants automatisée et de haute fidélité. De plus, les techniques AiTM (Adversary-in-the-Middle) ont atteint une maturité industrielle, neutralisant efficacement le MFA standard basé sur TOTP."
+      "en": "The dominant TTP trend involves the subversion of trust in software supply chains and automation tools. Attackers are increasingly bypassing MFA by proxying real-time sessions (AiTM) rather than just stealing credentials, making traditional TOTP or SMS-based security insufficient.",
+      "fr": "La tendance dominante des TTP implique la subversion de la confiance dans les chaînes d'approvisionnement logicielles et les outils d'automatisation. Les attaquants contournent de plus en plus le MFA en relayant les sessions en temps réel (AiTM) plutôt qu'en volant simplement des identifiants, rendant les sécurités traditionnelles basées sur TOTP ou SMS insuffisantes."
     },
     "ttps_list": [
       {
@@ -146,10 +183,10 @@
         "severity": "high",
         "context": {
           "en": [
-            "Leveraged by the Mini Shai-Hulud worm to maintain persistence on developer workstations by injecting malicious service entries when specific project folders are initialized."
+            "Abused by the Mini Shai-Hulud worm to automate execution when developers open infected projects in IDEs like VS Code."
           ],
           "fr": [
-            "Utilisé par le ver Mini Shai-Hulud pour maintenir la persistance sur les postes de développeurs en injectant des entrées de service malveillantes lors de l'initialisation de dossiers de projet spécifiques."
+            "Abusé par le ver Mini Shai-Hulud pour automatiser l'exécution lorsque les développeurs ouvrent des projets infectés dans des IDE comme VS Code."
           ]
         }
       },
@@ -164,10 +201,10 @@
         "severity": "critical",
         "context": {
           "en": [
-            "Employed by Bluekit and Tycoon2FA frameworks to scale real-time authentication proxying, enabling the bypass of legacy MFA for enterprise cloud accounts."
+            "Implemented via the Bluekit platform to bypass MFA by proxying authentication in real-time."
           ],
           "fr": [
-            "Employé par les frameworks Bluekit et Tycoon2FA pour mettre à l'échelle le proxying d'authentification en temps réel, permettant le contournement du MFA hérité pour les comptes cloud d'entreprise."
+            "Mis en œuvre via la plateforme Bluekit pour contourner le MFA en relayant l'authentification en temps réel."
           ]
         }
       }
@@ -175,8 +212,8 @@
   },
   "vulnerabilities": {
     "analyse": {
-      "en": "The vulnerability landscape this month is dominated by flaws in ubiquitous infrastructure software. The cPanel authentication bypass (CVE-2026-41940) presents a systemic risk to the global web hosting ecosystem. Concurrently, the Linux kernel 'Copy Fail' vulnerability (CVE-2026-31431) highlights a critical weakness in local privilege escalation, potentially allowing unprivileged users to gain root access across a vast majority of server distributions.",
-      "fr": "Le paysage des vulnérabilités ce mois-ci est dominé par des failles dans des logiciels d'infrastructure omniprésents. Le contournement d'authentification cPanel (CVE-2026-41940) présente un risque systémique pour l'écosystème mondial de l'hébergement web. Parallèlement, la vulnérabilité 'Copy Fail' du noyau Linux (CVE-2026-31431) met en évidence une faiblesse critique dans l'élévation de privilèges locaux."
+      "en": "May observed a concentration of vulnerabilities in foundational services. The cPanel logic flaw poses an existential threat to web hosting providers, while the 'Copy Fail' Linux kernel vulnerability (CVE-2026-31431) provides a reliable path for local attackers to gain root access.",
+      "fr": "Le mois de mai a vu une concentration de vulnérabilités dans les services fondamentaux. Le défaut de logique cPanel pose une menace existentielle aux hébergeurs web, tandis que la vulnérabilité noyau Linux 'Copy Fail' (CVE-2026-31431) offre une voie fiable aux attaquants locaux pour obtenir un accès root."
     },
     "list": [
       {
@@ -195,8 +232,8 @@
           ]
         },
         "vulnerability_description": {
-          "en": "A critical logic flaw in cPanel's service daemon (cpsrvd) allows remote attackers to bypass authentication mechanisms via crafted CRLF injection sequences in headers.",
-          "fr": "Un défaut de logique critique dans le démon de service de cPanel (cpsrvd) permet à des attaquants distants de contourner les mécanismes d'authentification via des séquences d'injection CRLF."
+          "en": "Logic flaw in cPanel's cpsrvd allowing remote attackers to bypass authentication via CRLF injection.",
+          "fr": "Défaut de logique dans cpsrvd de cPanel permettant à des attaquants distants de contourner l'authentification via une injection CRLF."
         },
         "mitre_attack_ttps_id": [
           "T1190"
@@ -218,8 +255,8 @@
           ]
         },
         "vulnerability_description": {
-          "en": "A logic vulnerability in the AF_ALG interface, known as 'Copy Fail', enables local users to trigger memory corruption leading to full root privilege escalation.",
-          "fr": "Une vulnérabilité de logique dans l'interface AF_ALG, connue sous le nom de 'Copy Fail', permet aux utilisateurs locaux de déclencher une corruption de mémoire menant à une élévation de privilèges root."
+          "en": "Logic flaw in AF_ALG (Copy Fail) allowing a local user to gain root privileges on the system.",
+          "fr": "Faille de logique dans AF_ALG (Copy Fail) permettant à un utilisateur local d'obtenir des privilèges root sur le système."
         },
         "mitre_attack_ttps_id": [
           "T1068"
@@ -306,7 +343,7 @@
       ],
       "fr": [
         "France",
-        "États-Unis",
+        "USA",
         "Ukraine",
         "Brésil",
         "Inde",
@@ -315,84 +352,84 @@
       ]
     },
     "narrative": {
-      "en": "- **Government & Defense:** ANTS France (France Titres) faced a massive exposure of 19 million PII records, while the Chinese group Shadow-Earth-053 maintained persistent access within Polish diplomatic networks.\n- **Critical Infrastructure:** Huge Networks (Brazil) anti-DDoS infrastructure was hijacked via stolen executive SSH keys to launch high-volume attacks against regional South American ISPs.\n- **Healthcare:** Stryker Corporation experienced a total operational shutdown following a localized wiper attack, while the UK NHS continues long-term recovery from Qilin ransomware impacts.\n- **Finance:** Russian-linked Silver Fox targeted major manufacturing and financial institutions in India and Japan using ABCDoor, while BlueNoroff targeted cryptocurrency firms via Calendly-based social engineering.\n- **Technology & Supply Chain:** Over 1,000 GitHub repositories were compromised by the Mini Shai-Hulud worm targeting SAP CAP packages on npm through malicious VS Code tasks.\n- **Logistics:** The FBI reported $725M in cumulative losses from cyber-enabled cargo theft, where criminal actors hijack broker credentials to redirect physical freight shipments.\n- **Hosting Services:** Global web hosting providers faced mass exploitation attempts targeting cPanel's authentication bypass (CVE-2026-41940) for server-side compromise.\n- **Consumer Sector:** Ukrainian authorities dismantled a sophisticated operation that successfully hijacked 610,000 Roblox accounts, laundering approximately $225,000 in virtual assets.",
-      "fr": "- **Gouvernement & Défense :** L'ANTS (France Titres) a subi une exposition massive de 19 millions de dossiers PII, tandis que le groupe chinois Shadow-Earth-053 a maintenu un accès persistant dans les réseaux diplomatiques polonais.\n- **Infrastructures Critiques :** L'infrastructure anti-DDoS de Huge Networks (Brésil) a été détournée via le vol de clés SSH de direction pour lancer des attaques massives contre des FAI sud-américains.\n- **Santé :** Stryker Corporation a connu un arrêt opérationnel total suite à une attaque par wiper, tandis que le NHS britannique poursuit sa récupération après les impacts du ransomware Qilin.\n- **Finance :** Silver Fox a ciblé des institutions financières et industrielles en Inde et au Japon avec ABCDoor, tandis que BlueNoroff a ciblé des firmes de cryptomonnaie via Calendly.\n- **Technologie & Supply Chain :** Plus de 1 000 dépôts GitHub ont été compromis par le ver Mini Shai-Hulud ciblant les packages SAP CAP sur npm via des tâches VS Code malveillantes.\n- **Logistique :** Le FBI a signalé 725 millions de dollars de pertes cumulées dues au vol de fret cyber-assisté, où les acteurs détournent les identifiants de courtiers pour rediriger les marchandises.\n- **Hébergement Web :** Les fournisseurs mondiaux d'hébergement ont fait face à des tentatives d'exploitation de masse ciblant le contournement d'authentification cPanel (CVE-2026-41940).\n- **Secteur Consommation :** Les autorités ukrainiennes ont démantelé une opération ayant piraté 610 000 comptes Roblox, blanchissant environ 225 000 $ en actifs virtuels."
+      "en": "- **Government & Defense:** ANTS France (France Titres) faced a massive leak of 19 million PII records, while Chinese actor Shadow-Earth-053 maintained persistence in Polish diplomatic networks for espionage.\n- **Critical Infrastructure:** ADT Security suffered a compromise affecting 5.5 million customer records and SSO credentials, highlighting vulnerabilities in domestic security providers.\n- **Technology & Telecom:** Huge Networks (Brazil) saw its anti-DDoS infrastructure hijacked using stolen CEO credentials to launch attacks against regional Internet Service Providers.\n- **Healthcare:** Global medical firm Stryker experienced operational paralysis due to a destructive wiper attack, leading to significant delays in critical medical manufacturing.\n- **Supply Chain:** Over 1,000 GitHub repositories were impacted by the Mini Shai-Hulud worm, which weaponized VS Code configuration files to spread via npm packages.\n- **Finance:** Silver Fox (Russia) specifically targeted manufacturing and financial hubs in India and Japan using the ABCDoor malware for economic reconnaissance.\n- **Consumer Sector:** Ukrainian law enforcement dismantled a cybercriminal ring that hijacked 610,000 Roblox accounts, extracting over $225,000 in illicit virtual asset sales.\n- **Logistics:** The FBI reported record losses of $725 million from cyber-enabled cargo theft, where attackers impersonate brokers to divert physical freight shipments.",
+      "fr": "- **Gouvernement et Défense :** L'ANTS (France Titres) a subi une fuite massive de 19 millions de dossiers PII, tandis que l'acteur chinois Shadow-Earth-053 a maintenu sa persistance dans les réseaux diplomatiques polonais.\n- **Infrastructures Critiques :** ADT Security a subi une compromission affectant 5,5 millions de dossiers clients et d'identifiants SSO, soulignant les vulnérabilités des fournisseurs de sécurité.\n- **Technologie et Télécoms :** Huge Networks (Brésil) a vu son infrastructure anti-DDoS détournée via les identifiants volés de son PDG pour attaquer des fournisseurs d'accès Internet régionaux.\n- **Santé :** Stryker a connu une paralysie opérationnelle due à une attaque par wiper destructeur, entraînant des retards importants dans la fabrication médicale critique.\n- **Supply Chain :** Plus de 1000 dépôts GitHub ont été impactés par le ver Mini Shai-Hulud, qui a militarisé les fichiers de configuration VS Code pour se propager via des packages npm.\n- **Finance :** Silver Fox (Russie) a spécifiquement ciblé les hubs industriels et financiers en Inde et au Japon en utilisant le malware ABCDoor.\n- **Secteur Consommation :** La police ukrainienne a démantelé un réseau criminel ayant piraté 610 000 comptes Roblox, générant plus de 225 000 $ de ventes illicites d'actifs virtuels.\n- **Logistique :** Le FBI a signalé des pertes records de 725 millions de dollars dues au vol de fret cyber-assisté, où les attaquants usurpent l'identité de courtiers pour détourner des cargaisons."
     }
   },
   "trends": {
     "emerging_techniques": {
       "en": [
-        "Phantom Persistence via system restart signal hijacking",
-        "VS Code folderOpen RCE and automated task worming",
-        "AI-Generated high-fidelity phishing templates in multiple languages",
-        "QR Code Phishing (Quishing) saturation targeting mobile corporate users"
+        "VS Code Supply Chain Worming (folderOpen triggers)",
+        "AI-Generated Phishing High-Fidelity Social Engineering",
+        "Phantom Persistence via system restart signals",
+        "Adversary-in-the-Middle (AiTM) automation platforms"
       ],
       "fr": [
-        "Persistance Fantôme via le détournement des signaux de redémarrage",
-        "RCE via folderOpen dans VS Code et versification des tâches",
-        "Modèles de phishing haute fidélité générés par IA en plusieurs langues",
-        "Saturation du Quishing (phishing par QR Code) ciblant les utilisateurs mobiles"
+        "Supply Chain Worming via VS Code (déclencheurs folderOpen)",
+        "Ingénierie sociale haute fidélité générée par IA",
+        "Persistance fantôme via signaux de redémarrage système",
+        "Plateformes d'automatisation Adversary-in-the-Middle (AiTM)"
       ]
     },
     "declining_techniques": {
       "en": [
-        "Standard attachment-based phishing (macro-enabled Office docs)",
-        "Traditional TOTP/SMS-based MFA effectiveness",
-        "Plain-text Node.js and Python malware payloads"
+        "Standard SMS-based Multi-Factor Authentication",
+        "Unobfuscated Python-based backdoors",
+        "Simple macro-based attachment phishing"
       ],
       "fr": [
-        "Phishing traditionnel par pièces jointes (macros Office)",
-        "Efficacité du MFA traditionnel par SMS ou TOTP",
-        "Payloads malveillants Node.js et Python en clair"
+        "Authentification multifacteur standard par SMS",
+        "Backdoors basées sur Python non obfusquées",
+        "Phishing simple par pièces jointes basées sur des macros"
       ]
     },
     "geopolitical_context": {
-      "en": "The formalization of cyber-military ties between Russia and North Korea and the use of sophisticated infrastructure for transnational repression by China indicate a strategic integration of cyber operations into broader state-level geopolitical agendas.",
-      "fr": "La formalisation des liens cyber-militaires entre la Russie et la Corée du Nord et l'utilisation d'infrastructures sophistiquées pour la répression transnationale par la Chine indiquent une intégration stratégique des opérations cyber dans les agendas géopolitiques étatiques."
+      "en": "Deepening cyber-military alignment between Russia and North Korea is visible in shared infrastructure, while China employs cyber-espionage for transnational repression of dissidents.",
+      "fr": "L'alignement cyber-militaire croissant entre la Russie et la Corée du Nord est visible dans le partage d'infrastructures, tandis que la Chine emploie le cyber-espionnage pour la répression transnationale des dissidents."
     }
   },
   "recommendations": {
     "strategic": {
       "en": [
         {
-          "title": "Enforce FIDO2 Hardware MFA for Developer Accounts",
-          "detail": "Traditional SMS or TOTP-based MFA is being systematically bypassed by AiTM platforms like Bluekit. Organizations must deploy FIDO2/WebAuthn hardware keys (e.g., YubiKey 5) for all accounts with access to source code, CI/CD pipelines, and cloud infrastructure to eliminate session hijacking risks."
+          "title": "Transition to FIDO2 Hardware-Bound MFA",
+          "detail": "Traditional TOTP and SMS MFA are increasingly bypassed by AiTM platforms like Bluekit and Tycoon2FA, seen in campaigns against financial sectors. Deploy FIDO2/WebAuthn hardware keys (e.g., YubiKey 5) for all administrative and developer accounts to prevent session hijacking. This mitigates the risk of credential relay attacks used by actors like Silver Fox."
         },
         {
-          "title": "Harden Enterprise Linux Fleets Against AF_ALG Flaws",
-          "detail": "CVE-2026-31431 (Copy Fail) allows local privilege escalation to root. Security leaders should mandate an immediate audit of the algif_aead module and ensure all kernel versions are patched, or alternatively, disable non-essential cryptographic modules using sysctl or modprobe blacklisting."
+          "title": "Establish Supply Chain Integrity Frameworks",
+          "detail": "The rise of IDE-based worms like Mini Shai-Hulud targeting VS Code requires a shift in developer environment security. Implement signed software bills of materials (SBOM) and mandatory Workspace Trust policies across all engineering departments. This specifically addresses T1195.002 (Supply Chain Compromise) observed this month."
         }
       ],
       "fr": [
         {
-          "title": "Imposer le MFA Matériel FIDO2 pour les Développeurs",
-          "detail": "Le MFA traditionnel par SMS ou TOTP est systématiquement contourné par les plateformes AiTM comme Bluekit. Les organisations doivent déployer des clés FIDO2/WebAuthn (ex. YubiKey 5) pour tous les accès au code source et aux infrastructures cloud pour éliminer le vol de session."
+          "title": "Transition vers le MFA Matériel FIDO2",
+          "detail": "Le MFA traditionnel par TOTP et SMS est de plus en plus contourné par les plateformes AiTM comme Bluekit. Déployez des clés matérielles FIDO2/WebAuthn (ex: YubiKey 5) pour tous les comptes administratifs et développeurs pour empêcher le détournement de session. Cela atténue le risque d'attaques par relais d'identifiants utilisées par des acteurs comme Silver Fox."
         },
         {
-          "title": "Durcir les Parcs Linux contre les Failles AF_ALG",
-          "detail": "La faille CVE-2026-31431 permet une élévation de privilèges root. Les responsables sécurité doivent imposer un audit immédiat du module algif_aead et s'assurer que les noyaux sont patchés ou désactiver les modules cryptographiques non essentiels via modprobe."
+          "title": "Établir des Frameworks d'Intégrité de la Supply Chain",
+          "detail": "La montée des vers basés sur les IDE comme Mini Shai-Hulud ciblant VS Code nécessite une sécurisation des environnements de développement. Implémentez des SBOM signés et des politiques de Workspace Trust obligatoires dans tous les départements d'ingénierie. Cela répond spécifiquement au T1195.002 observé ce mois-ci."
         }
       ]
     },
     "operational": {
       "en": [
         {
-          "title": "Audit VS Code Projects for folderOpen Persistence",
-          "detail": "Scan all development environments and Git repositories for .vscode/tasks.json files that include 'runOn': 'folderOpen', a primary indicator for the Mini Shai-Hulud worm. Enforce 'Workspace Trust' policies globally via MDM/GPO to prevent unauthorized task execution in unverified folders."
+          "title": "Patch cPanel Vulnerability CVE-2026-41940",
+          "detail": "Immediately update cPanel & WHM to version 11.110.0.97 or higher using '/usr/local/cpanel/scripts/upcp'. This vulnerability allows for remote authentication bypass via CRLF injection. Confirm the restart of the 'cpsrvd' service after the update to ensure the fix is applied."
         },
         {
-          "title": "Immediate Patching of cPanel to 11.110.0.97+",
-          "detail": "The cPanel authentication bypass (CVE-2026-41940) is under active exploitation. Execute '/usr/local/cpanel/scripts/upcp' immediately on all WHM nodes and verify that the cpsrvd service has been restarted to mitigate CRLF-based header injection attacks."
+          "title": "Audit VS Code Tasks for folderOpen Triggers",
+          "detail": "Scan all internal code repositories for '.vscode/tasks.json' files containing the 'runOn: folderOpen' directive. This configuration is weaponized by the Mini Shai-Hulud worm to execute malicious scripts upon opening a directory. Use automated grep/SIEM rules to flag and block these files in untrusted projects."
         }
       ],
       "fr": [
         {
-          "title": "Auditer les Projets VS Code pour la Persistance folderOpen",
-          "detail": "Analysez tous les dépôts Git pour les fichiers .vscode/tasks.json incluant 'runOn': 'folderOpen', indicateur du ver Mini Shai-Hulud. Imposez les politiques de 'Workspace Trust' via MDM/GPO pour empêcher l'exécution de tâches non autorisées."
+          "title": "Patcher la vulnérabilité cPanel CVE-2026-41940",
+          "detail": "Mettez immédiatement à jour cPanel & WHM vers la version 11.110.0.97 ou supérieure via '/usr/local/cpanel/scripts/upcp'. Cette vulnérabilité permet de contourner l'authentification à distance via injection CRLF. Confirmez le redémarrage du service 'cpsrvd' après la mise à jour."
         },
         {
-          "title": "Mise à Jour Immédiate de cPanel vers 11.110.0.97+",
-          "detail": "Le contournement d'authentification cPanel (CVE-2026-41940) est activement exploité. Exécutez '/usr/local/cpanel/scripts/upcp' sur tous les nœuds WHM et vérifiez que le service cpsrvd a été redémarré pour contrer les injections CRLF."
+          "title": "Auditer les tâches VS Code pour les déclencheurs folderOpen",
+          "detail": "Scannez les dépôts de code pour les fichiers '.vscode/tasks.json' contenant la directive 'runOn: folderOpen'. Cette configuration est utilisée par le ver Mini Shai-Hulud pour exécuter des scripts malveillants à l'ouverture d'un dossier. Utilisez des règles SIEM pour signaler et bloquer ces fichiers."
         }
       ]
     }
