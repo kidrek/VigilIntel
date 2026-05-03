@@ -1,0 +1,2242 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The cyber landscape in early May 2026 is characterized by massive exploitation of critical vulnerabilities in core infrastructures. The cPanel flaw (CVE-2026-41940) and the Linux kernel 'Copy Fail' vulnerability (CVE-2026-31431) demonstrate attackers' ability to target millions of systems simultaneously. There is also a marked professionalization of supply chain attacks (npm via TeamPCP) and a convergence between AI and offensive exploitation, evidenced by vulnerabilities in LLM backends (llama.cpp) and discussions on AI-driven kernel exploit discovery. Simultaneously, judicial pressure is mounting against insider threats and ransomware operators like ALPHV/BlackCat.",
+      "fr": "Le paysage cyber de début mai 2026 est marqué par une exploitation massive de vulnérabilités critiques affectant les infrastructures de base. La faille cPanel (CVE-2026-41940) et la vulnérabilité du noyau Linux « Copy Fail » (CVE-2026-31431) démontrent une capacité des attaquants à cibler des millions de systèmes simultanément. On observe également une professionnalisation accrue des attaques sur la chaîne d'approvisionnement (npm via TeamPCP) et une convergence entre l'IA et l'exploitation offensive, avec l'émergence de vulnérabilités dans les backends LLM (llama.cpp) et l'utilisation de l'IA pour la découverte de failles noyau. Parallèlement, la pression judiciaire s'intensifie contre les acteurs internes (insider threats) et les opérateurs de ransomware (BlackCat)."
+    },
+    "date": "2026-05-03"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement et Défense"
+        ]
+      },
+      "theme": {
+        "en": "Regional Intelligence Collection and Critical Infrastructure Targeting",
+        "fr": "Collecte de renseignements régionaux et ciblage des infrastructures critiques"
+      },
+      "description": {
+        "en": "A sophisticated campaign targeting government and military infrastructures in South-East Asia. Attackers exploited CVE-2026-41940 to exfiltrate 4GB of sensitive documents related to Chinese railways and Indonesian defense. Tools like Adaptix C2 and Ligolo were used for persistence.",
+        "fr": "Une campagne sophistiquée ciblant les infrastructures gouvernementales et militaires d'Asie du Sud-Est. Les attaquants ont exploité CVE-2026-41940 pour exfiltrer 4 Go de documents sensibles liés aux chemins de fer chinois et à la défense indonésienne. Des outils comme Adaptix C2 et Ligolo ont été utilisés pour la persistance."
+      },
+      "recommandations": [
+        {
+          "en": "Immediately update cPanel/WHM to patched versions.",
+          "fr": "Mettre à jour immédiatement cPanel/WHM vers les versions corrigées."
+        },
+        {
+          "en": "Monitor for suspicious usage of pg_read_file() in PostgreSQL databases.",
+          "fr": "Surveiller l'utilisation suspecte de pg_read_file() dans les bases de données PostgreSQL."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Audit all exposed cPanel instances in the region.",
+            "Hardening web session management policies."
+          ],
+          "fr": [
+            "Audit de toutes les instances cPanel exposées dans la région.",
+            "Durcissement des politiques de gestion des sessions web."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Search for CRLF injection patterns in login requests.",
+            "Detect suspicious ELF binaries named '1' in system directories."
+          ],
+          "fr": [
+            "Recherche de motifs d'injection CRLF dans les requêtes de connexion.",
+            "Détecter les binaires ELF suspects nommés '1' dans les répertoires système."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Block C2 IP 95[.]111[.]250[.]175.",
+            "Isolate compromised government network segments."
+          ],
+          "fr": [
+            "Bloquer l'IP C2 95[.]111[.]250[.]175.",
+            "Isoler les segments de réseau gouvernementaux compromis."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Conduct forensic analysis of exfiltrated railway and defense documents.",
+            "Reset all administrative credentials for the affected portals."
+          ],
+          "fr": [
+            "Effectuer une analyse forensique des documents ferroviaires et de défense exfiltrés.",
+            "Réinitialiser tous les identifiants administratifs des portails concernés."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for Adaptix C2 beacons using dynamic DNS services like serveftp[.]com."
+          ],
+          "fr": [
+            "Chasser les balises Adaptix C2 utilisant des services DNS dynamiques comme serveftp[.]com."
+          ]
+        }
+      },
+      "tags": [
+        "South-East Asia",
+        "Espionage",
+        "cPanel",
+        "APT"
+      ],
+      "sources": [
+        "https://cybersecuritynews.com/cpanel-vulnerability-exploited/"
+      ],
+      "date": "2026-05-02"
+    },
+    {
+      "id": "GEO-2026-002",
+      "sector": {
+        "en": [
+          "Critical_Infrastructure"
+        ],
+        "fr": [
+          "Infrastructures critiques"
+        ]
+      },
+      "theme": {
+        "en": "State-Aligned Cybercrime and Accountability",
+        "fr": "Cybercriminalité alignée sur l'État et responsabilité"
+      },
+      "description": {
+        "en": "Russian hacker 'Digit' pleaded guilty to cyberattacks against Ukraine and the United States, highlighting the ongoing integration of independent actors into state-level disruptive operations.",
+        "fr": "Le hacker russe 'Digit' a plaidé coupable d'attaques informatiques contre l'Ukraine et les États-Unis, soulignant l'intégration continue d'acteurs indépendants dans des opérations de perturbation au niveau étatique."
+      },
+      "recommandations": [
+        {
+          "en": "Apply historical indicators of compromise associated with Russian offensive operations.",
+          "fr": "Appliquer les indicateurs de compromission historiques associés aux opérations offensives russes."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Strengthen monitoring for critical US and Ukrainian infrastructure."
+          ],
+          "fr": [
+            "Renforcer la surveillance des infrastructures critiques américaines et ukrainiennes."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for brute force activities linked to 'Digit' past campaigns."
+          ],
+          "fr": [
+            "Recherche d'activités de force brute liées aux campagnes passées de 'Digit'."
+          ]
+        }
+      },
+      "tags": [
+        "Russia",
+        "Ukraine",
+        "USA",
+        "Law Enforcement"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/05/02/russian-hacker-known-as-digit-pleads-guilty-to-cyberattacks-on-ukraine-and-the-us/"
+      ],
+      "date": "2026-05-02"
+    }
+  ],
+  "regulatory_and_legal": [
+    {
+      "title": {
+        "en": "Sentencing of US Cybersecurity Experts in ALPHV Case",
+        "fr": "Condamnation d'experts américains en cybersécurité dans l'affaire ALPHV"
+      },
+      "description": {
+        "en": "Ryan Goldberg and Kevin Martin were sentenced to 4 years in prison for acting as affiliates for ALPHV BlackCat, extorting $1.2 million from US companies.",
+        "fr": "Ryan Goldberg et Kevin Martin ont été condamnés à 4 ans de prison pour avoir agi en tant qu'affiliés pour ALPHV BlackCat, extorquant 1,2 million de dollars à des entreprises américaines."
+      },
+      "organisation": {
+        "en": [
+          "Department of Justice (DoJ)"
+        ],
+        "fr": [
+          "Département de la Justice (DoJ)"
+        ]
+      },
+      "jurisdiction": {
+        "en": [
+          "USA"
+        ],
+        "fr": [
+          "États-Unis"
+        ]
+      },
+      "references": {
+        "en": [
+          "US DOJ Press Release - ALPHV Case"
+        ],
+        "fr": [
+          "Communiqué de presse de l'US DOJ - Affaire ALPHV"
+        ]
+      },
+      "tags": [
+        "Ransomware",
+        "Insider Threat",
+        "Sentencing"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191591/cyber-crime/two-us-cybersecurity-experts-sentenced-in-ransomware-case-third-awaits-july-ruling.html"
+      ],
+      "date": "2026-05-02"
+    },
+    {
+      "title": {
+        "en": "Indictment of Pharmacist for HIPAA Violations and Identity Theft",
+        "fr": "Inculpation d'un pharmacien pour violations de la loi HIPAA et vol d'identité"
+      },
+      "description": {
+        "en": "Matthew Bathula, a clinical pharmacist at University of Maryland Medical Center, was indicted for unauthorized access to patient records affecting 195 individuals for identity theft purposes.",
+        "fr": "Matthew Bathula, pharmacien clinicien au centre médical de l'université du Maryland, a été inculpé pour accès non autorisé aux dossiers des patients, affectant 195 personnes à des fins de vol d'identité."
+      },
+      "organisation": {
+        "en": [
+          "USAO Maryland"
+        ],
+        "fr": [
+          "USAO Maryland"
+        ]
+      },
+      "jurisdiction": {
+        "en": [
+          "USA"
+        ],
+        "fr": [
+          "États-Unis"
+        ]
+      },
+      "references": {
+        "en": [
+          "USAO Maryland Indictment"
+        ],
+        "fr": [
+          "Inculpation de l'USAO Maryland"
+        ]
+      },
+      "tags": [
+        "HIPAA",
+        "Insider Threat",
+        "Healthcare"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/05/02/maryland-pharmacist-indicted-on-unauthorized-computer-access-related-to-u-maryland-medical-center/",
+        "https://infosec.exchange/@PogoWasRight/116504966234662401"
+      ],
+      "date": "2026-05-02"
+    },
+    {
+      "title": {
+        "en": "Arrest of Minor Linked to ANTS Massive Data Breach",
+        "fr": "Arrestation d'un mineur lié à la violation massive de données de l'ANTS"
+      },
+      "description": {
+        "en": "A 15-year-old hacker using the alias 'breach3d' was arrested in France for the theft of 11.7 million account details from the ANTS (National Agency for Secure Documents).",
+        "fr": "Un hacker de 15 ans utilisant le pseudonyme 'breach3d' a été arrêté en France pour le vol des données de 11,7 millions de comptes de l'ANTS (Agence Nationale des Titres Sécurisés)."
+      },
+      "organisation": {
+        "en": [
+          "French Public Prosecutor"
+        ],
+        "fr": [
+          "Procureur de la République"
+        ]
+      },
+      "jurisdiction": {
+        "en": [
+          "France"
+        ],
+        "fr": [
+          "France"
+        ]
+      },
+      "references": {
+        "en": [
+          "French Judicial Investigation"
+        ],
+        "fr": [
+          "Enquête judiciaire française"
+        ]
+      },
+      "tags": [
+        "Arrest",
+        "Data Theft",
+        "Government"
+      ],
+      "sources": [
+        "https://cyberinsider.com/france-arrests-15-year-old-hacker-who-stole-data-of-11-7-million-people/",
+        "https://mas.to/@nemo/116505587602564375",
+        "https://mastodon.thenewoil.org/@thenewoil/116504513912866361"
+      ],
+      "date": "2026-05-02"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Trellix",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Security"
+        ],
+        "fr": [
+          "Sécurité"
+        ]
+      },
+      "description": {
+        "en": "Unauthorized access to a Trellix source code repository was confirmed. Trellix stated there is no evidence of unauthorized code modification or malicious distribution.",
+        "fr": "Un accès non autorisé à un dépôt de code source de Trellix a été confirmé. Trellix a déclaré qu'il n'y avait aucune preuve de modification non autorisée du code ou de distribution malveillante."
+      },
+      "mitre_ttps": [
+        "T1560"
+      ],
+      "recommandations": [
+        {
+          "en": "Rotate all access tokens for code repositories.",
+          "fr": "Faire pivoter tous les jetons d'accès pour les dépôts de code."
+        },
+        {
+          "en": "Implement continuous secret scanning in development pipelines.",
+          "fr": "Mettre en œuvre un scan continu des secrets dans les pipelines de développement."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Enable branch protection and code signing."
+          ],
+          "fr": [
+            "Activer la protection des branches et la signature du code."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for unusual cloning patterns from unknown IPs."
+          ],
+          "fr": [
+            "Surveiller les schémas de clonage inhabituels provenant d'IP inconnues."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Revoke compromised repository credentials."
+          ],
+          "fr": [
+            "Révoquer les identifiants de dépôt compromis."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify code integrity against trusted local baselines."
+          ],
+          "fr": [
+            "Vérifier l'intégrité du code par rapport à des bases locales de confiance."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for exfiltrated source code on dark web forums."
+          ],
+          "fr": [
+            "Rechercher le code source exfiltré sur les forums du dark web."
+          ]
+        }
+      },
+      "tags": [
+        "Source Code",
+        "Data Breach"
+      ],
+      "sources": [
+        "https://www.trellix.com/statement/",
+        "https://thehackernews.com/2026/05/trellix-confirms-source-code-breach.html",
+        "https://securityaffairs.com/191584/data-breach/trellix-discloses-the-breach-of-a-code-repository.html",
+        "https://infosec.exchange/@AAKL/116505636799253205"
+      ],
+      "date": "2026-05-02"
+    },
+    {
+      "victim": "ZenBusiness",
+      "threat_actor": "ShinyHunters",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminal Group",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Business_Services"
+        ],
+        "fr": [
+          "Services aux entreprises"
+        ]
+      },
+      "description": {
+        "en": "ShinyHunters exfiltrated data of over 5.1 million accounts from ZenBusiness using compromised Snowflake and Salesforce access. The data includes emails, names, and phone numbers.",
+        "fr": "ShinyHunters a exfiltré les données de plus de 5,1 millions de comptes de ZenBusiness en utilisant des accès compromis à Snowflake et Salesforce. Les données comprennent des emails, des noms et des numéros de téléphone."
+      },
+      "mitre_ttps": [
+        "T1567"
+      ],
+      "recommandations": [
+        {
+          "en": "Implement mandatory MFA for all SaaS and Cloud storage platforms.",
+          "fr": "Mettre en œuvre le MFA obligatoire pour toutes les plateformes SaaS et de stockage Cloud."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Review Snowflake and Salesforce access policies."
+          ],
+          "fr": [
+            "Passer en revue les politiques d'accès Snowflake et Salesforce."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Audit cloud logs for large-scale data exfiltration."
+          ],
+          "fr": [
+            "Auditer les journaux cloud pour l'exfiltration de données à grande échelle."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Reset credentials for service accounts in SaaS platforms."
+          ],
+          "fr": [
+            "Réinitialiser les identifiants des comptes de service dans les plateformes SaaS."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Notify impacted users via Have I Been Pwned."
+          ],
+          "fr": [
+            "Notifier les utilisateurs impactés via Have I Been Pwned."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for unauthorized Snowflake tokens in local files."
+          ],
+          "fr": [
+            "Rechercher des jetons Snowflake non autorisés dans les fichiers locaux."
+          ]
+        }
+      },
+      "tags": [
+        "Cloud Security",
+        "Snowflake",
+        "Exfiltration"
+      ],
+      "sources": [
+        "https://haveibeenpwned.com/Breach/ZenBusiness"
+      ],
+      "date": "2026-03-01"
+    },
+    {
+      "victim": "Elections Alberta",
+      "threat_actor": "Centurion Group Ltd",
+      "threat_actor_origin": "Canada",
+      "threat_actor_type": "Commercial Entity",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement et Défense"
+        ]
+      },
+      "description": {
+        "en": "Unauthorized use of the List of Electors in Alberta by Centurion Group Ltd caused public concern. Hundreds of complaints were filed regarding privacy violations.",
+        "fr": "L'utilisation non autorisée de la liste des électeurs en Alberta par Centurion Group Ltd a provoqué l'inquiétude du public. Des centaines de plaintes ont été déposées concernant des violations de la vie privée."
+      },
+      "mitre_ttps": [
+        "unknown"
+      ],
+      "recommandations": [
+        {
+          "en": "Restrict third-party usage of sensitive voter data through strict contracts.",
+          "fr": "Restreindre l'usage par des tiers des données sensibles des électeurs via des contrats stricts."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Review data sharing agreements for voter rolls."
+          ],
+          "fr": [
+            "Passer en revue les accords de partage de données pour les listes électorales."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor public complaints for unauthorized data usage signals."
+          ],
+          "fr": [
+            "Surveiller les plaintes publiques pour les signaux d'utilisation non autorisée des données."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Issue judicial injunctions against the unauthorized data holder."
+          ],
+          "fr": [
+            "Émettre des injonctions judiciaires contre le détenteur non autorisé des données."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Conduct public transparency report on the data misuse."
+          ],
+          "fr": [
+            "Réaliser un rapport public de transparence sur l'utilisation abusive des données."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Check for duplicate database exports in third-party systems."
+          ],
+          "fr": [
+            "Vérifier les exports de base de données en double dans les systèmes tiers."
+          ]
+        }
+      },
+      "tags": [
+        "Privacy",
+        "Public Sector",
+        "Unauthorized Access"
+      ],
+      "sources": [
+        "https://www.elections.ab.ca/resources/media/news-releases/update-unauthorized-use-of-list-of-electors/",
+        "https://mstdn.ca/@idren/116506121393794288",
+        "https://mstdn.ca/@idren/116505585900566094"
+      ],
+      "date": "2026-05-02"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-41940",
+      "euvd_id": "unknown",
+      "cisa_kev": "TRUE",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:cpanel:cpanel_\\&_whm:*:*:*:*:*:*:*:*",
+      "product": "cPanel & WHM, WP Squared",
+      "vendor": "WebPros",
+      "description": {
+        "en": "Critical authentication bypass in cPanel/WHM via CRLF injection. Attackers can inject session data into the file system, gaining root access. Exploited in 'Sorry' ransomware attacks.",
+        "fr": "Contournement d'authentification critique dans cPanel/WHM via une injection CRLF. Les attaquants peuvent injecter des données de session dans le système de fichiers, obtenant ainsi un accès root. Exploité dans les attaques du ransomware 'Sorry'."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Update to cPanel 11.40+ or WP Squared v136.1.7 immediately.",
+          "fr": "Mettre à jour vers cPanel 11.40+ ou WP Squared v136.1.7 immédiatement."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Audit all exposed cPanel versions."
+          ],
+          "fr": [
+            "Audit de toutes les versions de cPanel exposées."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for root access from unknown IP addresses."
+          ],
+          "fr": [
+            "Surveiller les accès root provenant d'adresses IP inconnues."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate servers displaying 'Sorry' ransom notes."
+          ],
+          "fr": [
+            "Isoler les serveurs affichant des notes de rançon 'Sorry'."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Reinstall cPanel core from a clean source."
+          ],
+          "fr": [
+            "Réinstaller le cœur de cPanel à partir d'une source propre."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for Adaptix C2 indicators (delicate-dew[.]serveftp[.]com)."
+          ],
+          "fr": [
+            "Rechercher des indicateurs Adaptix C2 (delicate-dew[.]serveftp[.]com)."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "cPanel",
+        "Ransomware"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/critrical-cpanel-flaw-mass-exploited-in-sorry-ransomware-attacks/",
+        "https://securityonline.info/cpanel-auth-bypass-cve-2026-41940-9-8-cvss-44k-ips-compromised/",
+        "https://cybersecuritynews.com/cpanelsniper-poc-exploit/"
+      ],
+      "date": "2026-05-02"
+    },
+    {
+      "cve_id": "CVE-2026-31431",
+      "euvd_id": "unknown",
+      "cisa_kev": "TRUE",
+      "cvss": "7.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+      "product": "Linux Kernel (from 4.14)",
+      "vendor": "Linux Foundation",
+      "description": {
+        "en": "'Copy Fail' vulnerability in the authencesn cryptographic subsystem allows a 4-byte write to the page cache of any readable file via AF_ALG/splice, leading to root privilege escalation.",
+        "fr": "Vulnérabilité 'Copy Fail' dans le sous-système cryptographique authencesn permettant une écriture de 4 octets dans le cache de page de n'importe quel fichier lisible via AF_ALG/splice, menant à une élévation de privilèges root."
+      },
+      "mitre_ttps": [
+        "T1068"
+      ],
+      "recommandations": [
+        {
+          "en": "Update Linux kernel to the latest stable version.",
+          "fr": "Mettre à jour le noyau Linux vers la dernière version stable."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Identify vulnerable kernels in containerized environments."
+          ],
+          "fr": [
+            "Identifier les noyaux vulnérables dans les environnements conteneurisés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for unusual AF_ALG socket activity."
+          ],
+          "fr": [
+            "Surveiller toute activité inhabituelle de socket AF_ALG."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Restrict use of unprivileged AF_ALG if possible."
+          ],
+          "fr": [
+            "Restreindre l'utilisation d'AF_ALG non privilégié si possible."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Re-audit system users and groups."
+          ],
+          "fr": [
+            "Ré-auditer les utilisateurs et groupes système."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for unauthorized modifications in /etc/passwd or /etc/shadow."
+          ],
+          "fr": [
+            "Rechercher des modifications non autorisées dans /etc/passwd ou /etc/shadow."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "Linux",
+        "Privilege Escalation"
+      ],
+      "sources": [
+        "https://securityonline.info/copy-fail-cve-2026-31431-exploited-in-wild-linux-root-privileges-millions/",
+        "https://mastodon.social/@bms48/116507727276665989"
+      ],
+      "date": "2026-05-02"
+    },
+    {
+      "cve_id": "CVE-2026-34159",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:llama_cpp:llama_cpp:*:*:*:*:*:*:*:*",
+      "product": "llama.cpp RPC backend",
+      "vendor": "llama.cpp",
+      "description": {
+        "en": "Unauthenticated remote code execution vulnerability in llama.cpp due to a missing bounds check in deserialize_tensor(). A null buffer field allows arbitrary memory write.",
+        "fr": "Vulnérabilité d'exécution de code à distance non authentifiée dans llama.cpp due à un manque de vérification des limites dans deserialize_tensor(). Un champ buffer nul permet une écriture arbitraire en mémoire."
+      },
+      "mitre_ttps": [
+        "T1203"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply patch b8492 to llama.cpp immediately.",
+          "fr": "Appliquer immédiatement le correctif b8492 à llama.cpp."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Isolate LLM backend services from the public internet."
+          ],
+          "fr": [
+            "Isoler les services de backend LLM du réseau public."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor RPC traffic for malformed tensor packets."
+          ],
+          "fr": [
+            "Surveiller le trafic RPC pour les paquets de tenseurs malformés."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Disable RPC backend if not strictly required."
+          ],
+          "fr": [
+            "Désactiver le backend RPC s'il n'est pas strictement requis."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Check for AI model weight integrity."
+          ],
+          "fr": [
+            "Vérifier l'intégrité des poids des modèles d'IA."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Analyze crash logs for memory corruption events."
+          ],
+          "fr": [
+            "Analyser les journaux de crash pour les événements de corruption de mémoire."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "AI",
+        "RCE"
+      ],
+      "sources": [
+        "https://www.valtersit.com/cve/2026/04/cve-2026-34159/",
+        "https://mastodon.social/@hugovalters/116507712990315527"
+      ],
+      "date": "2026-05-03"
+    },
+    {
+      "cve_id": "CVE-2026-2554",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:wc_frontend_manager:wcfm:*:*:*:*:*:*:*:*",
+      "product": "WCFM WooCommerce Frontend Manager",
+      "vendor": "WC Frontend Manager",
+      "description": {
+        "en": "Severe IDOR vulnerability in WCFM allows a vendor to delete any user account by manipulating the 'customerid' in the wcfm_delete_wcfm_customer action.",
+        "fr": "Grave vulnérabilité IDOR dans WCFM permettant à un vendeur de supprimer n'importe quel compte utilisateur en manipulant le 'customerid' dans l'action wcfm_delete_wcfm_customer."
+      },
+      "mitre_ttps": [
+        "unknown"
+      ],
+      "recommandations": [
+        {
+          "en": "Update WCFM to the latest version and audit account deletions.",
+          "fr": "Mettre à jour WCFM vers la dernière version et auditer les suppressions de comptes."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Implement stricter access control logic for user deletion."
+          ],
+          "fr": [
+            "Mettre en œuvre une logique de contrôle d'accès plus stricte pour la suppression d'utilisateurs."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor logs for frequent user deletions by non-admin accounts."
+          ],
+          "fr": [
+            "Surveiller les journaux pour les suppressions fréquentes d'utilisateurs par des comptes non-administrateurs."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Temporarily disable the user deletion feature for vendors."
+          ],
+          "fr": [
+            "Désactiver temporairement la fonction de suppression d'utilisateurs pour les vendeurs."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Restore deleted accounts from backups if needed."
+          ],
+          "fr": [
+            "Restaurer les comptes supprimés à partir de sauvegardes si nécessaire."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "WordPress",
+        "IDOR"
+      ],
+      "sources": [
+        "https://infosec.exchange/@offseq/116507701459533210",
+        "https://cvefeed.io/vuln/detail/CVE-2026-2554"
+      ],
+      "date": "2026-05-02"
+    },
+    {
+      "cve_id": "CVE-2026-7491",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:zyosoft:school_app:*:*:*:*:*:*:*:*",
+      "product": "School App",
+      "vendor": "Zyosoft",
+      "description": {
+        "en": "IDOR vulnerability in Zyosoft School App due to improper object validation.",
+        "fr": "Vulnérabilité IDOR dans l'application School App de Zyosoft due à une validation d'objet incorrecte."
+      },
+      "mitre_ttps": [
+        "unknown"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply vendor updates for the application.",
+          "fr": "Appliquer les mises à jour du fournisseur pour l'application."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "IDOR"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-7491"
+      ],
+      "date": "2026-05-02"
+    },
+    {
+      "cve_id": "CVE-2026-7489",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:sunnet:ctms:*:*:*:*:*:*:*:*",
+      "product": "CTMS",
+      "vendor": "Sunnet",
+      "description": {
+        "en": "SQL injection vulnerability in Sunnet CTMS allows for unauthorized data extraction.",
+        "fr": "Vulnérabilité d'injection SQL dans Sunnet CTMS permettant l'extraction non autorisée de données."
+      },
+      "mitre_ttps": [
+        "unknown"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply vendor patches.",
+          "fr": "Appliquer les correctifs du fournisseur."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "SQLi"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-7489"
+      ],
+      "date": "2026-05-02"
+    },
+    {
+      "cve_id": "CVE-2026-7607",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:h:trendnet:tew-821dap:*:*:*:*:*:*:*:*",
+      "product": "TEW-821DAP Firmware",
+      "vendor": "TRENDnet",
+      "description": {
+        "en": "Buffer overflow in the auto_update_firmware function of TRENDnet TEW-821DAP. This product is End-of-Life.",
+        "fr": "Débordement de tampon dans la fonction auto_update_firmware de TRENDnet TEW-821DAP. Ce produit est en fin de vie."
+      },
+      "mitre_ttps": [
+        "unknown"
+      ],
+      "recommandations": [
+        {
+          "en": "Replace obsolete hardware.",
+          "fr": "Remplacer le matériel obsolète."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Identify all EOL hardware in the environment."
+          ],
+          "fr": [
+            "Identifier tout le matériel en fin de vie dans l'environnement."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate vulnerable access points from the main network."
+          ],
+          "fr": [
+            "Isoler les points d'accès vulnérables du réseau principal."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "Hardware",
+        "EOL"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-7607"
+      ],
+      "date": "2026-05-02"
+    },
+    {
+      "cve_id": "CVE-2026-2052",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:widget_options:widget_options:*:*:*:*:*:*:*:*",
+      "product": "Widget Options",
+      "vendor": "Widget Options",
+      "description": {
+        "en": "Remote Code Execution in WordPress Widget Options plugin via Display Logic functionality using eval() on user-controlled inputs.",
+        "fr": "Exécution de code à distance dans l'extension WordPress Widget Options via la fonctionnalité Display Logic utilisant eval() sur des entrées contrôlées par l'utilisateur."
+      },
+      "mitre_ttps": [
+        "T1203"
+      ],
+      "recommandations": [
+        {
+          "en": "Disable Display Logic or patch the plugin.",
+          "fr": "Désactiver Display Logic ou patcher l'extension."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "WordPress",
+        "RCE"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-2052"
+      ],
+      "date": "2026-05-02"
+    },
+    {
+      "cve_id": "CVE-2026-7647",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:profile_builder_pro:profile_builder_pro:*:*:*:*:*:*:*:*",
+      "product": "Profile Builder Pro",
+      "vendor": "Cozmoslabs",
+      "description": {
+        "en": "PHP Object Injection in Profile Builder Pro due to insecure use of maybe_unserialize() without nonce verification.",
+        "fr": "Injection d'objet PHP dans Profile Builder Pro due à une utilisation non sécurisée de maybe_unserialize() sans vérification de nonce."
+      },
+      "mitre_ttps": [
+        "unknown"
+      ],
+      "recommandations": [
+        {
+          "en": "Update to the fixed version of Profile Builder Pro.",
+          "fr": "Mettre à jour vers la version corrigée de Profile Builder Pro."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor POST requests to profile endpoints for serialized PHP objects."
+          ],
+          "fr": [
+            "Surveiller les requêtes POST vers les terminaux de profil pour les objets PHP sérialisés."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "WordPress",
+        "PHP Injection"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-7647"
+      ],
+      "date": "2026-05-02"
+    },
+    {
+      "cve_id": "CVE-2026-7641",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:import_export_users:import_export_users:*:*:*:*:*:*:*:*",
+      "product": "Import/Export Users and Customers",
+      "vendor": "Import/Export Users",
+      "description": {
+        "en": "Multisite privilege escalation in Import/Export Users via bypassing privilege meta-key blocklists for sub-sites.",
+        "fr": "Élévation de privilèges multisite dans Import/Export Users via le contournement des listes de blocage de méta-clés de privilèges pour les sous-sites."
+      },
+      "mitre_ttps": [
+        "T1068"
+      ],
+      "recommandations": [
+        {
+          "en": "Disable 'Show fields in profile' for imports.",
+          "fr": "Désactiver 'Afficher les champs dans le profil' pour les imports."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Audit all sub-site administrator privileges."
+          ],
+          "fr": [
+            "Auditer tous les privilèges d'administrateur de sous-site."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "WordPress",
+        "Privilege Escalation"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-7641"
+      ],
+      "date": "2026-05-02"
+    },
+    {
+      "cve_id": "CVE-2026-7567",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:temporary_login:temporary_login:*:*:*:*:*:*:*:*",
+      "product": "Temporary Login Without Password",
+      "vendor": "Temporary Login",
+      "description": {
+        "en": "Account takeover vulnerability in 'Temporary Login' plugin allowing admin login via an empty token due to an array bypass failure.",
+        "fr": "Vulnérabilité de prise de contrôle de compte dans l'extension 'Temporary Login' permettant une connexion admin via un jeton vide en raison d'un échec de contournement de tableau."
+      },
+      "mitre_ttps": [
+        "unknown"
+      ],
+      "recommandations": [
+        {
+          "en": "Update or remove the plugin immediately.",
+          "fr": "Mettre à jour ou supprimer l'extension immédiatement."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "WordPress",
+        "Account Takeover"
+      ],
+      "sources": [
+        "https://securityonline.info/wordpress-temporary-login-cve-2026-7567-account-takeover-alert/"
+      ],
+      "date": "2026-05-02"
+    },
+    {
+      "cve_id": "unknown",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:exim:exim:*:*:*:*:*:*:*:*",
+      "product": "Exim Mail Server",
+      "vendor": "Exim",
+      "description": {
+        "en": "DNS-related vulnerabilities in Exim Mail Server causing server crashes via malicious DNS data.",
+        "fr": "Vulnérabilités liées au DNS dans le serveur de messagerie Exim provoquant des plantages du serveur via des données DNS malveillantes."
+      },
+      "mitre_ttps": [
+        "unknown"
+      ],
+      "recommandations": [
+        {
+          "en": "Update Exim to the latest version.",
+          "fr": "Mettre à jour Exim vers la dernière version."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor Exim logs for unusual segmentation faults."
+          ],
+          "fr": [
+            "Surveiller les journaux Exim pour les fautes de segmentation inhabituelles."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "Mail Server",
+        "DNS"
+      ],
+      "sources": [
+        "https://cybersecuritynews.com/exim-mail-server-vulnerabilities/"
+      ],
+      "date": "2026-05-02"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "ConsentFix v3: Automated OAuth Phishing on Azure",
+        "fr": "ConsentFix v3 : Phishing OAuth automatisé sur Azure"
+      },
+      "description": {
+        "en": "A new version of the ConsentFix tool uses Cloudflare pages to deceive users into granting OAuth tokens, which are then imported into the Specter Portal for automated abuse of Azure environments.",
+        "fr": "Une nouvelle version de l'outil ConsentFix utilise des pages Cloudflare pour tromper les utilisateurs et obtenir des jetons OAuth, qui sont ensuite importés dans le portail Specter pour un abus automatisé des environnements Azure."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminal Group",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et Télécom"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "hunter[.]io"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "ConsentFix v3",
+          "Specter Portal"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566.002"
+      ],
+      "analyse": {
+        "en": "The tool automates the 'ClickFix' flow for Azure CLI, allowing attackers to bypass passwords through legitimate-looking authorization requests.",
+        "fr": "L'outil automatise le flux 'ClickFix' pour Azure CLI, permettant aux attaquants de contourner les mots de passe via des demandes d'autorisation d'apparence légitime."
+      },
+      "recommandations": [
+        {
+          "en": "Restrict third-party application registration in Entra ID.",
+          "fr": "Restreindre l'enregistrement d'applications tierces dans Entra ID."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Enable conditional access for all OAuth apps."
+          ],
+          "fr": [
+            "Activer l'accès conditionnel pour toutes les applications OAuth."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for redirects to localhost URLs in Azure CLI logs."
+          ],
+          "fr": [
+            "Surveiller les redirections vers des URL localhost dans les journaux Azure CLI."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Revoke unauthorized user consent grants."
+          ],
+          "fr": [
+            "Révoquer les autorisations de consentement utilisateur non autorisées."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Audit all enterprise applications for suspicious permissions."
+          ],
+          "fr": [
+            "Auditer toutes les applications d'entreprise pour des permissions suspectes."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for unauthorized application IDs in sign-in logs."
+          ],
+          "fr": [
+            "Rechercher des ID d'applications non autorisées dans les journaux de connexion."
+          ]
+        }
+      },
+      "tags": [
+        "OAuth",
+        "Phishing",
+        "Azure"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/consentfix-v3-attacks-target-azure-with-automated-oauth-abuse/"
+      ],
+      "date": "2026-05-02"
+    },
+    {
+      "title": {
+        "en": "Deep#Door RAT Targeting Windows Systems",
+        "fr": "RAT Deep#Door ciblant les systèmes Windows"
+      },
+      "description": {
+        "en": "Deep#Door is a Python-based Remote Access Trojan (RAT) deployed via batch droppers. It uses public TCP tunnels for stealthy C2 communication.",
+        "fr": "Deep#Door est un cheval de Troie d'accès à distance (RAT) basé sur Python, déployé via des droppers batch. Il utilise des tunnels TCP publics pour une communication C2 furtive."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Critical_Infrastructure"
+        ],
+        "fr": [
+          "Infrastructures critiques"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "bore[.]pub"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Deep#Door"
+        ]
+      },
+      "mitre_ttps": [
+        "T1027.002"
+      ],
+      "analyse": {
+        "en": "The RAT disables Windows Defender and uses scheduled tasks for persistence, making it difficult to detect by traditional means.",
+        "fr": "Le RAT désactive Windows Defender et utilise des tâches planifiées pour la persistance, ce qui le rend difficile à détecter par les moyens traditionnels."
+      },
+      "recommandations": [
+        {
+          "en": "Block the tunneling domain bore[.]pub at the firewall level.",
+          "fr": "Bloquer le domaine de tunneling bore[.]pub au niveau du pare-feu."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Enable EDR monitoring for Windows Defender state changes."
+          ],
+          "fr": [
+            "Activer la surveillance EDR pour les changements d'état de Windows Defender."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor outbound connections to bore[.]pub on ports 41234-41243."
+          ],
+          "fr": [
+            "Surveiller les connexions sortantes vers bore[.]pub sur les ports 41234-41243."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Kill processes related to unauthorized Python interpreters."
+          ],
+          "fr": [
+            "Arrêter les processus liés aux interpréteurs Python non autorisés."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Delete scheduled tasks created by the dropper."
+          ],
+          "fr": [
+            "Supprimer les tâches planifiées créées par le dropper."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for batch files containing obfuscated Python payloads."
+          ],
+          "fr": [
+            "Rechercher des fichiers batch contenant des charges utiles Python offusquées."
+          ]
+        }
+      },
+      "tags": [
+        "RAT",
+        "Python",
+        "Windows"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191567/malware/new-deepdoor-rat-uses-stealth-and-persistence-to-target-windows.html"
+      ],
+      "date": "2026-05-02"
+    },
+    {
+      "title": {
+        "en": "TeamPCP npm Supply Chain Attacks",
+        "fr": "Attaques de la chaîne d'approvisionnement npm par TeamPCP"
+      },
+      "description": {
+        "en": "The TeamPCP group is intensifying supply chain attacks against the npm ecosystem, using a worm named 'Shai-Hulud' for self-propagation via malicious preinstall hooks.",
+        "fr": "Le groupe TeamPCP intensifie les attaques de la chaîne d'approvisionnement contre l'écosystème npm, utilisant un ver nommé 'Shai-Hulud' pour l'auto-propagation via des hooks preinstall malveillants."
+      },
+      "threat_actor": "TeamPCP",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminal Group",
+      "threat_actor_aliases": [
+        "pcpcats"
+      ],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et Télécom"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "audit[.]checkmarx[.]cx"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [
+          "167ce57ef59a32a6a0ef4137785828077879092d7f83ddbc1755d6e69116e0ad"
+        ],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Shai-Hulud"
+        ]
+      },
+      "mitre_ttps": [
+        "T1195.001"
+      ],
+      "analyse": {
+        "en": "The attacks target security tools and developer CLIs (like Bitwarden CLI), stealing CI/CD tokens to further propagate within development environments.",
+        "fr": "Les attaques ciblent les outils de sécurité et les CLI des développeurs (comme Bitwarden CLI), volant les jetons CI/CD pour se propager davantage dans les environnements de développement."
+      },
+      "recommandations": [
+        {
+          "en": "Block npm packages published within the last 72 hours.",
+          "fr": "Bloquer les paquets npm publiés au cours des 72 dernières heures."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Implement dependency scanning in all pipelines."
+          ],
+          "fr": [
+            "Mettre en œuvre le scan des dépendances dans tous les pipelines."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Search for npm packages using preinstall hooks to execute shell scripts."
+          ],
+          "fr": [
+            "Rechercher les paquets npm utilisant des hooks preinstall pour exécuter des scripts shell."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Revoke all CI/CD secrets exposed in development logs."
+          ],
+          "fr": [
+            "Révoquer tous les secrets CI/CD exposés dans les journaux de développement."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Perform a full audit of the npm organization's published packages."
+          ],
+          "fr": [
+            "Effectuer un audit complet des paquets publiés par l'organisation npm."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for unauthorized @bitwarden/cli versions in the environment."
+          ],
+          "fr": [
+            "Rechercher des versions non autorisées de @bitwarden/cli dans l'environnement."
+          ]
+        }
+      },
+      "tags": [
+        "Supply Chain",
+        "npm",
+        "Malware"
+      ],
+      "sources": [
+        "https://unit42.paloaltonetworks.com/monitoring-npm-supply-chain-attacks/"
+      ],
+      "date": "2026-05-02"
+    },
+    {
+      "title": {
+        "en": "E2EE Identity Verification on Matrix Protocol",
+        "fr": "Vérification d'identité E2EE sur le protocole Matrix"
+      },
+      "description": {
+        "en": "A discussion on the technical difference between the Padlock (encryption) and Shield (verified identity) icons in the Matrix protocol, emphasizing emoji-based verification.",
+        "fr": "Une discussion sur la différence technique entre les icônes de cadenas (chiffrement) et de bouclier (identité vérifiée) dans le protocole Matrix, soulignant la vérification par emoji."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Media_and_Communication"
+        ],
+        "fr": [
+          "Médias et Communication"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "Encryption alone does not guarantee identity without manual cross-verification. Attackers can still spoof identities in E2EE rooms if verification is ignored.",
+        "fr": "Le chiffrement seul ne garantit pas l'identité sans vérification manuelle croisée. Les attaquants peuvent toujours usurper des identités dans des salons E2EE si la vérification est ignorée."
+      },
+      "recommandations": [
+        {
+          "en": "Always perform emoji cross-verification for new Matrix sessions.",
+          "fr": "Toujours effectuer une vérification croisée par emoji pour les nouvelles sessions Matrix."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Establish identity verification protocols for secure communication."
+          ],
+          "fr": [
+            "Établir des protocoles de vérification d'identité pour les communications sécurisées."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Identify unverified devices in secure rooms."
+          ],
+          "fr": [
+            "Identifier les appareils non vérifiés dans les salons sécurisés."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Remove unverified devices from high-security rooms."
+          ],
+          "fr": [
+            "Supprimer les appareils non vérifiés des salons à haute sécurité."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Audit message history for spoofed identities."
+          ],
+          "fr": [
+            "Auditer l'historique des messages pour des identités usurpées."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "Encryption",
+        "Matrix",
+        "Privacy"
+      ],
+      "sources": [
+        "https://dragonscave.space/@somegregariousdude/116507878604628029"
+      ],
+      "date": "2026-05-03"
+    },
+    {
+      "title": {
+        "en": "Under-compensation as a Security Vulnerability",
+        "fr": "La sous-rémunération comme vulnérabilité de sécurité"
+      },
+      "description": {
+        "en": "An analysis suggesting that under-compensating SRE and Infosec experts acts as a critical vulnerability by increasing the risk of insider threats and burnout.",
+        "fr": "Une analyse suggérant que la sous-rémunération des experts SRE et Infosec agit comme une vulnérabilité critique en augmentant le risque d'insider threat et de burnout."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Security"
+        ],
+        "fr": [
+          "Sécurité"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "Economic dissatisfaction correlates with vulnerability to recruitment by cybercriminal groups, as seen in the ALPHV affiliate case.",
+        "fr": "L'insatisfaction économique est corrélée à la vulnérabilité au recrutement par des groupes cybercriminels, comme on l'a vu dans l'affaire des affiliés ALPHV."
+      },
+      "recommandations": [
+        {
+          "en": "Align Infosec salaries with industry standards to mitigate insider risks.",
+          "fr": "Aligner les salaires Infosec sur les standards de l'industrie pour atténuer les risques internes."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Conduct salary and job satisfaction audits."
+          ],
+          "fr": [
+            "Réaliser des audits de salaire et de satisfaction professionnelle."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for behavioral indicators of burnout or grievance."
+          ],
+          "fr": [
+            "Surveiller les indicateurs comportementaux de burnout ou de griefs."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Implement two-person control for highly sensitive administrative tasks."
+          ],
+          "fr": [
+            "Mettre en œuvre un contrôle à deux personnes pour les tâches administratives hautement sensibles."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Review hiring and retention policies."
+          ],
+          "fr": [
+            "Passer en revue les politiques de recrutement et de rétention."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "HR",
+        "Insider Threat",
+        "Risk Management"
+      ],
+      "sources": [
+        "https://hachyderm.io/@unixorn/116507812680315329"
+      ],
+      "date": "2026-05-03"
+    },
+    {
+      "title": {
+        "en": "Epistemological Limits of LLMs in Vulnerability Research",
+        "fr": "Limites épistémologiques des LLM dans la recherche de vulnérabilités"
+      },
+      "description": {
+        "en": "Discussions on the inability of LLMs to truly understand software architecture context, specifically in the case of the Linux 'Copy Fail' vulnerability discovery.",
+        "fr": "Discussions sur l'incapacité des LLM à comprendre réellement le contexte de l'architecture logicielle, spécifiquement dans le cas de la découverte de la vulnérabilité 'Copy Fail' de Linux."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Education_and_Research"
+        ],
+        "fr": [
+          "Éducation et Recherche"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "AI-discovered vulnerabilities still require human abductive reasoning to understand broader architectural impacts and to craft resilient defenses.",
+        "fr": "Les vulnérabilités découvertes par l'IA nécessitent toujours un raisonnement abductif humain pour comprendre les impacts architecturaux plus larges et élaborer des défenses résilientes."
+      },
+      "recommandations": [
+        {
+          "en": "Prioritize human expert review for AI-generated security findings.",
+          "fr": "Prioriser l'examen par des experts humains pour les conclusions de sécurité générées par l'IA."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Train security staff on the limitations of AI tools."
+          ],
+          "fr": [
+            "Former le personnel de sécurité aux limites des outils d'IA."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Identify false positives generated by automated AI scanning."
+          ],
+          "fr": [
+            "Identifier les faux positifs générés par le scan automatisé par l'IA."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "AI",
+        "Vulnerability Research",
+        "Epistemology"
+      ],
+      "sources": [
+        "https://mastodon.social/@bms48/116507712999404070"
+      ],
+      "date": "2026-05-03"
+    },
+    {
+      "title": {
+        "en": "Local Encryption Advocacy for Cloud Privacy",
+        "fr": "Plaidoyer pour le chiffrement local pour la confidentialité du cloud"
+      },
+      "description": {
+        "en": "Recommendation to encrypt data locally before uploading to cloud services to prevent privacy loss in case of provider breaches.",
+        "fr": "Recommandation de chiffrer les données localement avant de les télécharger vers des services cloud afin de prévenir la perte de confidentialité en cas de violation du fournisseur."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et Télécom"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Cryptomator",
+          "Veracrypt"
+        ]
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "Relying on provider-side encryption leaves users vulnerable to subpoena or provider-side compromises.",
+        "fr": "Se fier au chiffrement côté fournisseur laisse les utilisateurs vulnérables aux assignations ou aux compromissions côté fournisseur."
+      },
+      "recommandations": [
+        {
+          "en": "Use tools like Cryptomator for zero-knowledge cloud storage.",
+          "fr": "Utiliser des outils comme Cryptomator pour un stockage cloud à connaissance zéro."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Implement client-side encryption for all sensitive files."
+          ],
+          "fr": [
+            "Mettre en œuvre le chiffrement côté client pour tous les fichiers sensibles."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "Cloud",
+        "Encryption",
+        "Privacy"
+      ],
+      "sources": [
+        "https://mastobot.ping.moi/@Bobe_bot/116507699551648693"
+      ],
+      "date": "2026-05-03"
+    },
+    {
+      "title": {
+        "en": "Shift Toward Local AI Coding Agents",
+        "fr": "Transition vers les agents de codage par l'IA locaux"
+      },
+      "description": {
+        "en": "Developers are moving toward local AI agents (e.g., Qwen, Claude Code hosted on Llama.cpp) to ensure code privacy and reduce costs.",
+        "fr": "Les développeurs se tournent vers des agents d'IA locaux (ex. Qwen, Claude Code hébergés sur Llama.cpp) pour garantir la confidentialité du code et réduire les coûts."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et Télécom"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Llama.cpp",
+          "Qwen",
+          "Claude Code"
+        ]
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "Local hosting prevents proprietary source code from being used for model training or being leaked from third-party platforms.",
+        "fr": "L'hébergement local empêche que le code source propriétaire ne soit utilisé pour l'entraînement des modèles ou qu'il ne fuite de plateformes tierces."
+      },
+      "recommandations": [
+        {
+          "en": "Isolate autonomous AI agents within Docker containers.",
+          "fr": "Isoler les agents d'IA autonomes dans des conteneurs Docker."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Standardize on specific local LLM versions."
+          ],
+          "fr": [
+            "Standardiser des versions spécifiques de LLM locaux."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Audit local LLM API usage logs."
+          ],
+          "fr": [
+            "Auditer les journaux d'utilisation de l'API des LLM locaux."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Restrict agent access to sensitive file directories."
+          ],
+          "fr": [
+            "Restreindre l'accès des agents aux répertoires de fichiers sensibles."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for unauthorized autonomous agent processes."
+          ],
+          "fr": [
+            "Rechercher des processus d'agents autonomes non autorisés."
+          ]
+        }
+      },
+      "tags": [
+        "AI",
+        "Development",
+        "Privacy"
+      ],
+      "sources": [
+        "https://www.theregister.com/2026/05/02/local_ai_coding_agents/"
+      ],
+      "date": "2026-05-02"
+    }
+  ]
+}
