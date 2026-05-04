@@ -1,0 +1,1597 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The threat landscape on May 4, 2026, is dominated by high-impact data breaches and state-sponsored espionage. Salt Typhoon's intrusion into Italian critical infrastructure via an IBM subsidiary highlights ongoing supply chain risks. Simultaneously, the threat actor ShinyHunters has executed massive data exfiltrations in the education and real estate sectors, impacting hundreds of millions. Vulnerability management is critical as CISA adds a major cPanel flaw to its KEV catalog, while a significant Linux Kernel privilege escalation (CVE-2026-31431) affects widespread hosting environments.",
+      "fr": "Le paysage des menaces au 4 mai 2026 est dominé par des violations de données à fort impact et l'espionnage étatique. L'intrusion de Salt Typhoon dans les infrastructures critiques italiennes via une filiale d'IBM souligne les risques persistants sur la chaîne d'approvisionnement. Parallèlement, l'acteur ShinyHunters a procédé à des exfiltrations massives dans les secteurs de l'éducation et de l'immobilier, touchant des centaines de millions de personnes. La gestion des vulnérabilités est critique alors que la CISA ajoute une faille majeure de cPanel à son catalogue KEV, tandis qu'une escalade de privilèges importante du noyau Linux (CVE-2026-31431) affecte les environnements d'hébergement."
+    },
+    "date": "2026-05-04"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense",
+          "Technology_and_Telecom",
+          "Critical_Infrastructure"
+        ],
+        "fr": [
+          "Gouvernement et Défense",
+          "Technologie et Télécom",
+          "Infrastructures Critiques"
+        ]
+      },
+      "theme": {
+        "en": "Chinese State-Sponsored Espionage in Europe",
+        "fr": "Espionnage étatique chinois en Europe"
+      },
+      "description": {
+        "en": "Salt Typhoon (linked to China) breached Sistemi Informativi, an Italian subsidiary of IBM. This operation appears aimed at gathering intelligence on government contracts and critical infrastructure projects managed by the IT service provider.",
+        "fr": "Salt Typhoon (lié à la Chine) a compromis Sistemi Informativi, une filiale italienne d'IBM. Cette opération semble viser la collecte de renseignements sur les contrats gouvernementaux et les projets d'infrastructures critiques gérés par le prestataire IT."
+      },
+      "recommandations": [
+        {
+          "en": "Perform deep compromise assessments on IT service providers with government access.",
+          "fr": "Effectuer des évaluations approfondies de compromission sur les prestataires de services IT ayant des accès gouvernementaux."
+        },
+        {
+          "en": "Monitor for unauthorized administrative lateral movement from MSP/subsidiary networks.",
+          "fr": "Surveiller les mouvements latéraux administratifs non autorisés provenant des réseaux de MSP ou de filiales."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Map third-party dependencies and network access paths.",
+            "Implement strict network segmentation between service provider environments."
+          ],
+          "fr": [
+            "Cartographier les dépendances tierces et les chemins d'accès réseau.",
+            "Mettre en œuvre une segmentation réseau stricte entre les environnements des prestataires."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Alert on unusual VPN source locations for service provider accounts.",
+            "Scan for persistence mechanisms like web shells on network appliances."
+          ],
+          "fr": [
+            "Alerter sur des localisations VPN inhabituelles pour les comptes de prestataires.",
+            "Rechercher des mécanismes de persistance comme des web shells sur les équipements réseau."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Revoke compromised service provider credentials.",
+            "Temporarily isolate external management segments."
+          ],
+          "fr": [
+            "Révoquer les identifiants de prestataires compromis.",
+            "Isoler temporairement les segments de gestion externes."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Update SLAs to include mandatory security transparency.",
+            "Rotate all keys and secrets shared with the provider."
+          ],
+          "fr": [
+            "Mettre à jour les SLA pour inclure une transparence de sécurité obligatoire.",
+            "Renouveler toutes les clés et secrets partagés avec le prestataire."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for tunnels (SSH/RDP) established through edge firewalls.",
+            "Analyze DNS logs for domain-generation algorithms (DGA) used by Salt Typhoon."
+          ],
+          "fr": [
+            "Rechercher des tunnels (SSH/RDP) établis à travers les pare-feux de bordure.",
+            "Analyser les logs DNS pour détecter les algorithmes de génération de domaine (DGA) utilisés par Salt Typhoon."
+          ]
+        }
+      },
+      "tags": [
+        "Salt Typhoon",
+        "Espionage",
+        "Italy",
+        "IBM"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191638/apt/salt-typhoon-breach-ibm-subsidiary-in-italy-a-warning-for-europes-digital-defenses.html"
+      ],
+      "date": "2026-05-04"
+    }
+  ],
+  "regulatory_and_legal": [
+    {
+      "title": {
+        "en": "Google VRP Policy Update Regarding AI and Proof-of-Concepts",
+        "fr": "Mise à jour de la politique Google VRP concernant l'IA et les preuves de concept"
+      },
+      "description": {
+        "en": "Google has revamped its Vulnerability Reward Program (VRP) to filter out low-quality AI-generated bug reports. It increases rewards for complex Android exploits but demands higher quality Proof-of-Concept (PoC) data for Chrome submissions.",
+        "fr": "Google a refondu son programme de récompense de vulnérabilités (VRP) pour filtrer les rapports de bugs de faible qualité générés par IA. Il augmente les primes pour les exploits Android complexes mais exige des preuves de concept (PoC) de meilleure qualité pour Chrome."
+      },
+      "organisation": {
+        "en": [
+          "Google"
+        ],
+        "fr": [
+          "Google"
+        ]
+      },
+      "jurisdiction": {
+        "en": [
+          "Global"
+        ],
+        "fr": [
+          "Mondiale"
+        ]
+      },
+      "references": {
+        "en": [
+          "Google VRP 2026 Policy"
+        ],
+        "fr": [
+          "Politique Google VRP 2026"
+        ]
+      },
+      "tags": [
+        "Bug Bounty",
+        "Artificial Intelligence",
+        "Compliance"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191600/security/google-revamps-bug-bounty-programs-android-rewards-rise-chrome-payouts-drop-in-the-age-of-ai.html"
+      ],
+      "date": "2026-05-03"
+    },
+    {
+      "title": {
+        "en": "Patch Management SLA Standardization Guidelines",
+        "fr": "Directives de standardisation des SLA de gestion des correctifs"
+      },
+      "description": {
+        "en": "Security researchers emphasize a 24/72/30 SLA framework (24h for Critical, 72h for High, 30 days for others) to counter the increasing speed of exploit weaponization.",
+        "fr": "Les chercheurs en sécurité insistent sur un cadre de SLA 24/72/30 (24h pour Critique, 72h pour Haut, 30 jours pour les autres) pour contrer la vitesse croissante de l'arsenalisation des exploits."
+      },
+      "organisation": {
+        "en": [
+          "unknown"
+        ],
+        "fr": [
+          "unknown"
+        ]
+      },
+      "jurisdiction": {
+        "en": [
+          "unknown"
+        ],
+        "fr": [
+          "unknown"
+        ]
+      },
+      "references": {
+        "en": [
+          "SLA Framework 24/72/30"
+        ],
+        "fr": [
+          "Cadre SLA 24/72/30"
+        ]
+      },
+      "tags": [
+        "Best Practices",
+        "Vulnerability Management"
+      ],
+      "sources": [
+        "https://techhub.social/@cvedatabase/116513007368620427"
+      ],
+      "date": "2026-05-03"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Instructure (Canvas LMS)",
+      "threat_actor": "ShinyHunters",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [
+        "Shiny Hunters"
+      ],
+      "sector": {
+        "en": [
+          "Education_and_Research",
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Éducation et Recherche",
+          "Technologie et Télécom"
+        ]
+      },
+      "description": {
+        "en": "Major breach of the Canvas learning management system. ShinyHunters claims to have exfiltrated 275 million user records, including Student IDs, PII, and private messages. This is the second breach for the company in a year.",
+        "fr": "Violation majeure du système de gestion de l'apprentissage Canvas. ShinyHunters prétend avoir exfiltré 275 millions de dossiers d'utilisateurs, incluant des identifiants d'étudiants, des données personnelles et des messages privés. C'est la deuxième violation pour l'entreprise en un an."
+      },
+      "mitre_ttps": [
+        "T1567",
+        "T1078.004"
+      ],
+      "recommandations": [
+        {
+          "en": "Reset all user credentials and force multi-factor authentication enrollment.",
+          "fr": "Réinitialiser tous les identifiants utilisateurs et forcer l'inscription à l'authentification multi-facteur."
+        },
+        {
+          "en": "Conduct a thorough audit of Salesforce and cloud API access logs.",
+          "fr": "Effectuer un audit approfondi des logs d'accès Salesforce et des API cloud."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Enable comprehensive logging for all Cloud SaaS environments.",
+            "Draft notification templates for various global jurisdictions."
+          ],
+          "fr": [
+            "Activer une journalisation complète pour tous les environnements Cloud SaaS.",
+            "Rédiger des modèles de notification pour les différentes juridictions mondiales."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Search for large outbound data transfers via unexpected user agents.",
+            "Monitor for credential stuffing attempts against student portals."
+          ],
+          "fr": [
+            "Rechercher des transferts massifs de données sortantes via des agents utilisateurs inattendus.",
+            "Surveiller les tentatives de credential stuffing contre les portails étudiants."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Revoke all active API tokens and sessions.",
+            "Rotate administrative credentials for Salesforce instances."
+          ],
+          "fr": [
+            "Révoquer tous les jetons API et sessions actives.",
+            "Renouveler les identifiants administratifs des instances Salesforce."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Implement data loss prevention (DLP) rules for student PII.",
+            "Partner with identity protection services for impacted students."
+          ],
+          "fr": [
+            "Mettre en œuvre des règles de prévention contre la perte de données (DLP) pour les données étudiantes.",
+            "Partenariat avec des services de protection d'identité pour les étudiants touchés."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Query for unusual service account logins from known VPN/Tor exit nodes.",
+            "Identify if exfiltration occurred through web hooks or cloud automation."
+          ],
+          "fr": [
+            "Rechercher des connexions de comptes de service inhabituelles depuis des nœuds VPN/Tor connus.",
+            "Identifier si l'exfiltration a eu lieu via des web hooks ou l'automatisation cloud."
+          ]
+        }
+      },
+      "tags": [
+        "Data Breach",
+        "PII",
+        "Canvas",
+        "Salesforce"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/instructure-confirms-data-breach-shinyhunters-claims-attack/",
+        "https://databreaches.net/2026/05/03/instructure-discloses-second-data-breach-in-less-than-a-year/",
+        "https://osintsights.com/instructure-breach-exposes-data-of-275-million-users"
+      ],
+      "date": "2026-05-04"
+    },
+    {
+      "victim": "Marcus & Millichap",
+      "threat_actor": "ShinyHunters",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [
+        "Shiny Hunters"
+      ],
+      "sector": {
+        "en": [
+          "Real_Estate_and_Construction"
+        ],
+        "fr": [
+          "Immobilier et Construction"
+        ]
+      },
+      "description": {
+        "en": "1.8 million records from the real estate firm Marcus & Millichap were leaked. The data includes contact lists, marketing materials, and internal corporate forms.",
+        "fr": "1,8 million de dossiers de la société immobilière Marcus & Millichap ont fuité. Les données incluent des listes de contacts, des documents marketing et des formulaires d'entreprise internes."
+      },
+      "mitre_ttps": [
+        "T1567",
+        "T1213"
+      ],
+      "recommandations": [
+        {
+          "en": "Monitor for targeted phishing campaigns using corporate contact lists.",
+          "fr": "Surveiller les campagnes de phishing ciblées utilisant les listes de contacts d'entreprise."
+        },
+        {
+          "en": "Verify if internal forms contained sensitive financial banking details.",
+          "fr": "Vérifier si les formulaires internes contenaient des détails bancaires financiers sensibles."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Implement email filtering rules to block domains commonly used by ShinyHunters.",
+            "Enforce encryption for sensitive corporate documents at rest."
+          ],
+          "fr": [
+            "Mettre en œuvre des règles de filtrage d'e-mails pour bloquer les domaines couramment utilisés par ShinyHunters.",
+            "Imposer le chiffrement des documents d'entreprise sensibles au repos."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Alert on bulk downloading of files from SharePoint or corporate drives.",
+            "Monitor 'Have I Been Pwned' for corporate domain leakage."
+          ],
+          "fr": [
+            "Alerter sur le téléchargement massif de fichiers depuis SharePoint ou les lecteurs d'entreprise.",
+            "Surveiller 'Have I Been Pwned' pour les fuites de domaines d'entreprise."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Disable compromised user accounts detected in leak datasets.",
+            "Block IP addresses associated with unauthorized access."
+          ],
+          "fr": [
+            "Désactiver les comptes utilisateurs compromis détectés dans les jeux de données fuités.",
+            "Bloquer les adresses IP associées à des accès non autorisés."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Provide security awareness training on spear-phishing for real estate agents.",
+            "Evaluate data retention policies for old marketing leads."
+          ],
+          "fr": [
+            "Fournir une formation de sensibilisation à la sécurité sur le spear-phishing pour les agents immobiliers.",
+            "Évaluer les politiques de rétention des données pour les anciens prospects marketing."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Check for unauthorized changes to mailbox delegation rules.",
+            "Audit file access history for the 30 days prior to the public leak."
+          ],
+          "fr": [
+            "Vérifier les modifications non autorisées des règles de délégation de boîte aux lettres.",
+            "Auditer l'historique d'accès aux fichiers pour les 30 jours précédant la fuite publique."
+          ]
+        }
+      },
+      "tags": [
+        "Data Breach",
+        "Real Estate",
+        "HIBP"
+      ],
+      "sources": [
+        "https://haveibeenpwned.com/Breach/MarcusMillichap",
+        "https://www.redpacketsecurity.com/marcus-millichap-1-837-078-breached-accounts/"
+      ],
+      "date": "2026-05-04"
+    },
+    {
+      "victim": "Trellix",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Security",
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Sécurité",
+          "Technologie et Télécom"
+        ]
+      },
+      "description": {
+        "en": "Cybersecurity firm Trellix confirmed a breach resulting in the theft of partial source code. This poses a significant risk for the discovery of zero-day vulnerabilities in security software.",
+        "fr": "La société de cybersécurité Trellix a confirmé une violation entraînant le vol d'une partie de son code source. Cela pose un risque important pour la découverte de vulnérabilités zero-day dans ses logiciels de sécurité."
+      },
+      "mitre_ttps": [
+        "T1567",
+        "T1195"
+      ],
+      "recommandations": [
+        {
+          "en": "Review upcoming Trellix security advisories and apply patches immediately.",
+          "fr": "Consulter les avis de sécurité Trellix à venir et appliquer les correctifs immédiatement."
+        },
+        {
+          "en": "Implement behavioral monitoring on endpoints where Trellix agents are installed.",
+          "fr": "Mettre en œuvre une surveillance comportementale sur les terminaux où les agents Trellix sont installés."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Ensure off-site backups of development environments are available.",
+            "Enforce hardware-based MFA for all code repository access."
+          ],
+          "fr": [
+            "S'assurer que des sauvegardes hors site des environnements de développement sont disponibles.",
+            "Imposer le MFA matériel pour tout accès aux dépôts de code."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for unusual Git clone or pull volumes from developer workstations.",
+            "Search for unauthorized access to CI/CD pipelines."
+          ],
+          "fr": [
+            "Surveiller les volumes inhabituels de 'Git clone' ou 'pull' depuis les postes de travail des développeurs.",
+            "Rechercher des accès non autorisés aux pipelines CI/CD."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Rotate all secrets, certificates, and keys embedded in repositories.",
+            "Isolate the impacted development branch environments."
+          ],
+          "fr": [
+            "Renouveler tous les secrets, certificats et clés intégrés dans les dépôts.",
+            "Isoler les environnements de branches de développement impactés."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Perform a security code review focusing on the leaked components.",
+            "Analyze the impact on the supply chain for customers."
+          ],
+          "fr": [
+            "Effectuer une revue de sécurité du code en se concentrant sur les composants fuités.",
+            "Analyser l'impact sur la chaîne d'approvisionnement pour les clients."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for unauthorized SSH keys in ~/.ssh/authorized_keys on dev servers.",
+            "Audit internal chat logs for social engineering attempts targeting engineers."
+          ],
+          "fr": [
+            "Rechercher des clés SSH non autorisées dans ~/.ssh/authorized_keys sur les serveurs dev.",
+            "Auditer les logs de chat internes pour des tentatives d'ingénierie sociale ciblant les ingénieurs."
+          ]
+        }
+      },
+      "tags": [
+        "Source Code",
+        "Security Vendor",
+        "Supply Chain"
+      ],
+      "sources": [
+        "https://thehackernews.com/2026/05/trellix-confirms-source-code-breach.html"
+      ],
+      "date": "2026-05-04"
+    },
+    {
+      "victim": "Kiwi Electrical Contractor",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Real_Estate_and_Construction",
+          "Industry_and_Manufacturing"
+        ],
+        "fr": [
+          "Immobilier et Construction",
+          "Industrie et Manufacturier"
+        ]
+      },
+      "description": {
+        "en": "New Zealand electrical contractor confirms a cyber attack, suspected to be ransomware, impacting its operational systems.",
+        "fr": "Un entrepreneur en électricité néo-zélandais confirme une cyberattaque, suspectée d'être un ransomware, impactant ses systèmes opérationnels."
+      },
+      "mitre_ttps": [
+        "T1486"
+      ],
+      "recommandations": [
+        {
+          "en": "Verify the integrity of offline backups.",
+          "fr": "Vérifier l'intégrité des sauvegardes hors ligne."
+        },
+        {
+          "en": "Test disaster recovery plans (DRP) specifically for operational outages.",
+          "fr": "Tester les plans de reprise d'activité (PRA) spécifiquement pour les pannes opérationnelles."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Implement air-gapped backup solutions.",
+            "Maintain an updated asset inventory including OT/IoT devices."
+          ],
+          "fr": [
+            "Mettre en œuvre des solutions de sauvegarde 'air-gapped'.",
+            "Maintenir un inventaire des actifs à jour incluant les appareils OT/IoT."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for sudden spikes in CPU and disk I/O usage (encryption activity).",
+            "Detect execution of known ransomware discovery tools (e.g., Advanced IP Scanner)."
+          ],
+          "fr": [
+            "Surveiller les pics soudains d'utilisation du CPU et des E/S disque (activité de chiffrement).",
+            "Détecter l'exécution d'outils de découverte de ransomware connus (ex: Advanced IP Scanner)."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Disconnect the affected network segment from the internet.",
+            "Disable RDP and other remote access services."
+          ],
+          "fr": [
+            "Déconnecter du réseau internet le segment réseau affecté.",
+            "Désactiver le RDP et les autres services d'accès à distance."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Review firewall rules for any persistent remote access trojans (RATs).",
+            "Coordinate with regional law enforcement and NCSC."
+          ],
+          "fr": [
+            "Revoir les règles de pare-feu pour tout cheval de Troie d'accès à distance (RAT) persistant.",
+            "Coordonner avec les forces de l'ordre régionales et le NCSC."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Identify lateral movement via PsExec or PowerShell Remoting.",
+            "Scan for persistence through newly created scheduled tasks."
+          ],
+          "fr": [
+            "Identifier les mouvements latéraux via PsExec ou PowerShell Remoting.",
+            "Rechercher la persistance via de nouvelles tâches planifiées."
+          ]
+        }
+      },
+      "tags": [
+        "Ransomware",
+        "New Zealand",
+        "Construction"
+      ],
+      "sources": [
+        "https://www.cyberdaily.au/security/13537-exclusive-kiwi-electrical-contractor-confirms-cyber-attack"
+      ],
+      "date": "2026-05-04"
+    },
+    {
+      "victim": "Multiple (See's Candies, Vimeo, Liberty Mutual, Pitney Bowes, ADT)",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Retail_and_Consumer",
+          "Finance",
+          "Business_Services",
+          "Security"
+        ],
+        "fr": [
+          "Commerce et Consommation",
+          "Finance",
+          "Services aux Entreprises",
+          "Sécurité"
+        ]
+      },
+      "description": {
+        "en": "A series of security incidents and data breaches were reported affecting various major corporations this week, including retail, insurance, and security vendors.",
+        "fr": "Une série d'incidents de sécurité et de violations de données a été signalée touchant diverses grandes entreprises cette semaine, notamment dans le commerce, l'assurance et les fournisseurs de sécurité."
+      },
+      "mitre_ttps": [
+        "T1486",
+        "T1567"
+      ],
+      "recommandations": [
+        {
+          "en": "Audit third-party vendor access for these entities.",
+          "fr": "Auditer l'accès des fournisseurs tiers pour ces entités."
+        },
+        {
+          "en": "Review credential management for administrative portals.",
+          "fr": "Revoir la gestion des identifiants pour les portails administratifs."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Centralize logs for all public-facing applications.",
+            "Implement Zero Trust Architecture (ZTA)."
+          ],
+          "fr": [
+            "Centraliser les logs pour toutes les applications exposées au public.",
+            "Mettre en œuvre une architecture Zero Trust (ZTA)."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Identify suspicious API calls targeting database endpoints.",
+            "Monitor for credential reuse across different platforms."
+          ],
+          "fr": [
+            "Identifier les appels API suspects ciblant les points de terminaison de base de données.",
+            "Surveiller la réutilisation des identifiants sur différentes plateformes."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Initiate global password resets for sensitive accounts.",
+            "Place temporary IP blocks on malicious source domains."
+          ],
+          "fr": [
+            "Initier des réinitialisations de mots de passe globales pour les comptes sensibles.",
+            "Mettre en place des blocages IP temporaires sur les domaines sources malveillants."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Perform multi-vendor forensic investigations.",
+            "Update external incident communication strategy."
+          ],
+          "fr": [
+            "Effectuer des enquêtes forensiques multi-fournisseurs.",
+            "Mettre à jour la stratégie de communication externe en cas d'incident."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Analyze NetFlow data for unusual outbound traffic patterns.",
+            "Search for unauthorized Docker or Kubernetes container deployments."
+          ],
+          "fr": [
+            "Analyser les données NetFlow pour des modèles de trafic sortant inhabituels.",
+            "Rechercher des déploiements de conteneurs Docker ou Kubernetes non autorisés."
+          ]
+        }
+      },
+      "tags": [
+        "Breach Roundup",
+        "Retail",
+        "Finance"
+      ],
+      "sources": [
+        "https://youtu.be/q4Q2F0IDTnA",
+        "https://soundcloud.com/nickaesp/b2026-05-03"
+      ],
+      "date": "2026-05-04"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-41940",
+      "euvd_id": "unknown",
+      "cisa_kev": "TRUE",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:cpanel:cpanel:*:*:*:*:*:*:*:*",
+      "product": "cPanel & WHM",
+      "vendor": "WebPros",
+      "description": {
+        "en": "Authentication bypass in cPanel & WHM allows remote attackers to gain full administrative access without valid credentials. CISA has added this to the Known Exploited Vulnerabilities (KEV) catalog due to active exploitation affecting over 44,000 servers.",
+        "fr": "Un contournement d'authentification dans cPanel & WHM permet à des attaquants distants d'obtenir un accès administratif complet sans identifiants valides. La CISA a ajouté cette faille au catalogue KEV en raison de son exploitation active touchant plus de 44 000 serveurs."
+      },
+      "mitre_ttps": [
+        "T1068",
+        "T1078"
+      ],
+      "recommandations": [
+        {
+          "en": "Update cPanel to the latest security patch immediately.",
+          "fr": "Mettre à jour cPanel vers le dernier correctif de sécurité immédiatement."
+        },
+        {
+          "en": "Restrict access to the WHM/cPanel administration interface to trusted IPs only.",
+          "fr": "Restreindre l'accès à l'interface d'administration WHM/cPanel aux seules IP de confiance."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Identify all public-facing cPanel instances.",
+            "Audit all administrative accounts for unauthorized additions."
+          ],
+          "fr": [
+            "Identifier toutes les instances cPanel exposées au public.",
+            "Auditer tous les comptes administratifs pour détecter des ajouts non autorisés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Scan access logs for successful logins without a corresponding credential challenge.",
+            "Look for new users created with high-level privileges."
+          ],
+          "fr": [
+            "Scanner les logs d'accès pour les connexions réussies sans défi d'identifiants correspondant.",
+            "Rechercher les nouveaux utilisateurs créés avec des privilèges de haut niveau."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Disable cPanel login services until the patch is applied.",
+            "Terminate any active unauthorized administrative sessions."
+          ],
+          "fr": [
+            "Désactiver les services de connexion cPanel jusqu'à l'application du correctif.",
+            "Mettre fin à toutes les sessions administratives non autorisées actives."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Perform a malware scan on hosted files for backdoors.",
+            "Verify the integrity of all server configuration files."
+          ],
+          "fr": [
+            "Effectuer un scan de malware sur les fichiers hébergés à la recherche de backdoors.",
+            "Vérifier l'intégrité de tous les fichiers de configuration du serveur."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for unauthorized sudoers file modifications.",
+            "Identify processes running as root that were initiated by the cPanel user."
+          ],
+          "fr": [
+            "Rechercher des modifications non autorisées du fichier sudoers.",
+            "Identifier les processus s'exécutant en tant que root initiés par l'utilisateur cPanel."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "cPanel",
+        "CISA KEV"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191613/hacking/u-s-cisa-adds-a-flaw-in-webpros-cpanel-to-its-known-exploited-vulnerabilities-catalog.html"
+      ],
+      "date": "2026-05-04"
+    },
+    {
+      "cve_id": "CVE-2026-31431",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "8.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+      "product": "Linux Kernel",
+      "vendor": "Linux Foundation",
+      "description": {
+        "en": "A local privilege escalation vulnerability in the Linux Kernel, referred to as 'Copy Fail', allows a low-privileged local user to obtain root access due to memory management flaws.",
+        "fr": "Une vulnérabilité d'escalade de privilèges locale dans le noyau Linux, appelée 'Copy Fail', permet à un utilisateur local peu privilégié d'obtenir un accès root en raison de failles de gestion de la mémoire."
+      },
+      "mitre_ttps": [
+        "T1068"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply the latest Linux kernel security updates.",
+          "fr": "Appliquer les dernières mises à jour de sécurité du noyau Linux."
+        },
+        {
+          "en": "Enforce strict local user permissioning and monitor for privilege escalation tools.",
+          "fr": "Imposer des autorisations strictes aux utilisateurs locaux et surveiller les outils d'escalade de privilèges."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory all Linux server kernel versions.",
+            "Restrict access to compilers and debuggers for regular users."
+          ],
+          "fr": [
+            "Inventorier toutes les versions du noyau des serveurs Linux.",
+            "Restreindre l'accès aux compilateurs et débogueurs pour les utilisateurs réguliers."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect execution of known kernel exploit payloads.",
+            "Monitor for unusual kernel crash logs in dmesg."
+          ],
+          "fr": [
+            "Détecter l'exécution de charges utiles d'exploit de noyau connues.",
+            "Surveiller les logs de crash de noyau inhabituels dans dmesg."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate compromised hosts from the production environment.",
+            "Suspend local access for suspicious accounts."
+          ],
+          "fr": [
+            "Isoler les hôtes compromis de l'environnement de production.",
+            "Suspendre l'accès local pour les comptes suspects."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Update kernel and reboot nodes during maintenance windows.",
+            "Audit binary permissions on the filesystem."
+          ],
+          "fr": [
+            "Mettre à jour le noyau et redémarrer les nœuds pendant les fenêtres de maintenance.",
+            "Auditer les permissions des binaires sur le système de fichiers."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for unauthorized setuid binaries.",
+            "Query auditd for calls to sensitive syscalls related to the exploit."
+          ],
+          "fr": [
+            "Rechercher des binaires setuid non autorisés.",
+            "Interroger auditd pour des appels à des syscalls sensibles liés à l'exploit."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "Linux",
+        "Kernel"
+      ],
+      "sources": [
+        "https://rubystacknews.com/2026/05/03/when-your-rails-app-is-secure-but-your-kernel-isnt/"
+      ],
+      "date": "2026-05-04"
+    },
+    {
+      "cve_id": "CVE-2026-7685",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "8.1",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:h:edimax:br-6208ac:*:*:*:*:*:*:*:*",
+      "product": "BR-6208AC",
+      "vendor": "Edimax",
+      "description": {
+        "en": "Stack-based buffer overflow in Edimax BR-6208AC routers via the pptpDfGateway argument in /goform/setWAN allows remote code execution.",
+        "fr": "Dépassement de tampon dans la pile dans les routeurs Edimax BR-6208AC via l'argument pptpDfGateway dans /goform/setWAN permettant l'exécution de code à distance."
+      },
+      "mitre_ttps": [
+        "T1210"
+      ],
+      "recommandations": [
+        {
+          "en": "Disable the router's WAN management interface.",
+          "fr": "Désactiver l'interface de gestion WAN du routeur."
+        },
+        {
+          "en": "Update firmware or replace with supported hardware.",
+          "fr": "Mettre à jour le firmware ou remplacer par du matériel supporté."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Identify all Edimax devices in the inventory.",
+            "Implement a separate IoT VLAN."
+          ],
+          "fr": [
+            "Identifier tous les appareils Edimax dans l'inventaire.",
+            "Mettre en œuvre un VLAN IoT séparé."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Scan for WAN-facing management portals on port 80/443.",
+            "Detect long strings or shellcode-like patterns in HTTP POST requests."
+          ],
+          "fr": [
+            "Rechercher les portails de gestion exposés sur le WAN sur les ports 80/443.",
+            "Détecter les chaînes longues ou les motifs de type shellcode dans les requêtes HTTP POST."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Physically disconnect the device or block its MAC address on the upstream switch.",
+            "Change all administrative passwords."
+          ],
+          "fr": [
+            "Déconnecter physiquement l'appareil ou bloquer son adresse MAC sur le commutateur amont.",
+            "Changer tous les mots de passe administratifs."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify device firmware status.",
+            "Decommission legacy EoL hardware."
+          ],
+          "fr": [
+            "Vérifier le statut du firmware de l'appareil.",
+            "Mettre au rebut le matériel en fin de vie (EoL)."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Monitor IoT device traffic for lateral scanning activity.",
+            "Analyze router logs for unusual restart events."
+          ],
+          "fr": [
+            "Surveiller le trafic des appareils IoT pour détecter toute activité de scan latéral.",
+            "Analyser les logs du routeur pour des événements de redémarrage inhabituels."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "IoT",
+        "Edimax"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-7685"
+      ],
+      "date": "2026-05-04"
+    },
+    {
+      "cve_id": "CVE-2026-7684",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "8.1",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:h:edimax:br-6428nc:*:*:*:*:*:*:*:*",
+      "product": "BR-6428nC",
+      "vendor": "Edimax",
+      "description": {
+        "en": "Remote code execution vulnerability in Edimax BR-6428nC routers via buffer overflow in the WAN configuration service.",
+        "fr": "Vulnérabilité d'exécution de code à distance dans les routeurs Edimax BR-6428nC via un dépassement de tampon dans le service de configuration WAN."
+      },
+      "mitre_ttps": [
+        "T1210"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply firmware updates if available.",
+          "fr": "Appliquer les mises à jour du firmware si disponibles."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Disable remote administration."
+          ],
+          "fr": [
+            "Désactiver l'administration à distance."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for high traffic volume to administrative ports."
+          ],
+          "fr": [
+            "Surveiller les volumes de trafic élevés vers les ports administratifs."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate the router from the rest of the network."
+          ],
+          "fr": [
+            "Isoler le routeur du reste du réseau."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Replace outdated IoT devices."
+          ],
+          "fr": [
+            "Remplacer les appareils IoT obsolètes."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Scan for botnet beaconing behavior from the router IP."
+          ],
+          "fr": [
+            "Rechercher des comportements de beaconing de botnet depuis l'IP du routeur."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "IoT",
+        "Edimax"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-7684"
+      ],
+      "date": "2026-05-04"
+    },
+    {
+      "cve_id": "CVE-2026-7675",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "7.5",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:h:libituo:lbt-t300-hw1:*:*:*:*:*:*:*:*",
+      "product": "LBT-T300-HW1",
+      "vendor": "Shenzhen Libituo",
+      "description": {
+        "en": "Stack-based buffer overflow in Shenzhen Libituo LBT-T300-HW1 routers via ApCliSsid in start_lan function.",
+        "fr": "Dépassement de tampon dans la pile dans les routeurs Shenzhen Libituo LBT-T300-HW1 via ApCliSsid dans la fonction start_lan."
+      },
+      "mitre_ttps": [
+        "T1210"
+      ],
+      "recommandations": [
+        {
+          "en": "Deactivate unused wireless bridging features.",
+          "fr": "Désactiver les fonctionnalités de pontage sans fil inutilisées."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory Libituo devices."
+          ],
+          "fr": [
+            "Inventorier les appareils Libituo."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor local network traffic for malformed SSID broadcast responses."
+          ],
+          "fr": [
+            "Surveiller le trafic réseau local pour les réponses de diffusion SSID malformées."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Block device communication at the switch level."
+          ],
+          "fr": [
+            "Bloquer la communication de l'appareil au niveau du commutateur."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Assess the risk to connected clients."
+          ],
+          "fr": [
+            "Évaluer le risque pour les clients connectés."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for unauthorized access attempts from the router to internal servers."
+          ],
+          "fr": [
+            "Rechercher des tentatives d'accès non autorisées du routeur vers les serveurs internes."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "IoT",
+        "Hardware"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-7675"
+      ],
+      "date": "2026-05-04"
+    },
+    {
+      "cve_id": "CVE-2026-7674",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "7.5",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:h:libituo:vpn_server:*:*:*:*:*:*:*:*",
+      "product": "Libituo VPN Server",
+      "vendor": "Shenzhen Libituo",
+      "description": {
+        "en": "Buffer overflow in the VPN management interface of Libituo devices via vpn_pptp_server/vpn_l2tp_server parameters.",
+        "fr": "Dépassement de tampon dans l'interface de gestion VPN des appareils Libituo via les paramètres vpn_pptp_server/vpn_l2tp_server."
+      },
+      "mitre_ttps": [
+        "T1210"
+      ],
+      "recommandations": [
+        {
+          "en": "Restrict VPN management access to trusted subnets.",
+          "fr": "Restreindre l'accès à la gestion VPN aux sous-réseaux de confiance."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Audit VPN exposure."
+          ],
+          "fr": [
+            "Auditer l'exposition du VPN."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Alert on abnormal configuration changes to the VPN service."
+          ],
+          "fr": [
+            "Alerter sur des changements de configuration anormaux du service VPN."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Disable the VPN server if compromise is suspected."
+          ],
+          "fr": [
+            "Désactiver le serveur VPN si une compromission est suspectée."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Update firmware."
+          ],
+          "fr": [
+            "Mettre à jour le firmware."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Identify accounts that connected during suspicious time windows."
+          ],
+          "fr": [
+            "Identifier les comptes qui se sont connectés pendant des fenêtres de temps suspectes."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "VPN",
+        "IoT"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-7674"
+      ],
+      "date": "2026-05-04"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "FEMITBOT Platform Telegram Phishing Campaign",
+        "fr": "Campagne de Phishing via Telegram de la Plateforme FEMITBOT"
+      },
+      "description": {
+        "en": "The FEMITBOT platform uses Telegram Mini Apps to host phishing pages for cryptocurrency services and distribute Android malware through WebViews, bypassing traditional browser protections.",
+        "fr": "La plateforme FEMITBOT utilise les Mini Apps de Telegram pour héberger des pages de phishing pour les services de cryptomonnaie et distribuer des malwares Android via des WebViews, contournant les protections traditionnelles des navigateurs."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Finance",
+          "Retail_and_Consumer"
+        ],
+        "fr": [
+          "Finance",
+          "Commerce et Consommation"
+        ]
+      },
+      "indicators": {
+        "URL": [
+          "unknown"
+        ],
+        "IPv4": [
+          "unknown"
+        ],
+        "IPv6": [],
+        "DOMAIN": [
+          "unknown"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Telegram Mini Apps",
+          "FEMITBOT"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566.003",
+        "T1204.001"
+      ],
+      "analyse": {
+        "en": "Exploiting the trust users have in the Telegram application UI makes these phishing attempts highly effective.",
+        "fr": "L'exploitation de la confiance des utilisateurs dans l'interface de l'application Telegram rend ces tentatives de phishing très efficaces."
+      },
+      "recommandations": [
+        {
+          "en": "Educate users about the risks of interacting with financial bots on Telegram.",
+          "fr": "Éduquer les utilisateurs sur les risques d'interaction avec des bots financiers sur Telegram."
+        },
+        {
+          "en": "Implement mobile device management (MDM) to restrict unauthorized application extensions.",
+          "fr": "Mettre en œuvre une gestion des appareils mobiles (MDM) pour restreindre les extensions d'applications non autorisées."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Establish an incident reporting channel for Telegram-based threats."
+          ],
+          "fr": [
+            "Établir un canal de signalement d'incidents pour les menaces basées sur Telegram."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor network traffic to known Telegram Bot API endpoints (api.telegram.org) for high frequency."
+          ],
+          "fr": [
+            "Surveiller le trafic réseau vers les terminaux API de bots Telegram connus pour une fréquence élevée."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Block malicious Telegram bot usernames at the organizational level if possible."
+          ],
+          "fr": [
+            "Bloquer les noms d'utilisateurs de bots Telegram malveillants au niveau de l'organisation si possible."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Wipe compromised mobile devices."
+          ],
+          "fr": [
+            "Effacer les appareils mobiles compromis."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Analyze WebView logs on Android devices for external URL navigation."
+          ],
+          "fr": [
+            "Analyser les logs WebView sur les appareils Android pour la navigation vers des URL externes."
+          ]
+        }
+      },
+      "tags": [
+        "Phishing",
+        "Telegram",
+        "Crypto"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/telegram-mini-apps-abused-for-crypto-scams-android-malware-delivery/"
+      ],
+      "date": "2026-05-04"
+    },
+    {
+      "title": {
+        "en": "Microsoft Defender DigiCert Root False Positive",
+        "fr": "Faux Positif de Microsoft Defender pour la Racine DigiCert"
+      },
+      "description": {
+        "en": "A signature update in Microsoft Defender (Trojan:Win32/Cerdigent.A!dha) incorrectly flagged legitimate DigiCert certificates as malicious, causing operational disruption for Windows users.",
+        "fr": "Une mise à jour de signature dans Microsoft Defender (Trojan:Win32/Cerdigent.A!dha) a marqué à tort des certificats DigiCert légitimes comme malveillants, provoquant des perturbations opérationnelles pour les utilisateurs de Windows."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et Télécom"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [
+          "0563B8630D62D75ABBC8AB1E4BDFB5A899B24D43"
+        ],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Microsoft Defender"
+        ]
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "This highlights the risk of automated security software causing self-inflicted denial of service due to signature errors.",
+        "fr": "Ceci souligne le risque que les logiciels de sécurité automatisés causent des dénis de service auto-infligés en raison d'erreurs de signature."
+      },
+      "recommandations": [
+        {
+          "en": "Update Defender definitions to version 1.449.430.0 or later.",
+          "fr": "Mettre à jour les définitions Defender vers la version 1.449.430.0 ou ultérieure."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Configure antivirus to alert only (Audit Mode) for critical system drivers if possible."
+          ],
+          "fr": [
+            "Configurer l'antivirus pour alerter seulement (mode Audit) pour les pilotes système critiques si possible."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for high volumes of certificate-related error logs in Windows Event Viewer."
+          ],
+          "fr": [
+            "Surveiller les volumes élevés de logs d'erreurs liés aux certificats dans l'Observateur d'événements Windows."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Whitelist the impacted DigiCert hash in the security console."
+          ],
+          "fr": [
+            "Ajouter le hash DigiCert impacté à la liste blanche dans la console de sécurité."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Restore deleted certificates from backup or re-import from official sources."
+          ],
+          "fr": [
+            "Restaurer les certificats supprimés depuis une sauvegarde ou les réimporter depuis des sources officielles."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Verify the source of the false positive to ensure no real threat was masked."
+          ],
+          "fr": [
+            "Vérifier la source du faux positif pour s'assurer qu'aucune menace réelle n'a été masquée."
+          ]
+        }
+      },
+      "tags": [
+        "False Positive",
+        "Defender",
+        "DigiCert"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/microsoft-defender-wrongly-flags-digicert-certs-as-trojan-win32-cerdigentadha/"
+      ],
+      "date": "2026-05-04"
+    },
+    {
+      "title": {
+        "en": "Daily Security News and Newsletters Compilation",
+        "fr": "Compilation quotidienne des nouvelles de sécurité et newsletters"
+      },
+      "description": {
+        "en": "Daily summaries covering Wireshark 4.6.5 release, SANS ISC Stormcast operational updates, and various weekly malware/strategic roundups.",
+        "fr": "Résumés quotidiens couvrant la sortie de Wireshark 4.6.5, les mises à jour opérationnelles SANS ISC Stormcast, et diverses revues hebdomadaires malveillantes/stratégiques."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Security"
+        ],
+        "fr": [
+          "Sécurité"
+        ]
+      },
+      "indicators": {
+        "URL": [
+          "https://isc.sans.edu/diary/rss/32946",
+          "https://isc.sans.edu/diary/rss/32944"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "blog.didierstevens.com"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Wireshark"
+        ]
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "Routine operational intelligence updates for security personnel.",
+        "fr": "Mises à jour de routine de l'intelligence opérationnelle pour le personnel de sécurité."
+      },
+      "recommandations": [
+        {
+          "en": "Update network analysis tools to current versions.",
+          "fr": "Mettre à jour les outils d'analyse réseau vers les versions actuelles."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Subscribe to critical security RSS feeds."
+          ],
+          "fr": [
+            "S'abonner aux flux RSS de sécurité critiques."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "Operational Intelligence",
+        "Malware News"
+      ],
+      "sources": [
+        "https://isc.sans.edu/diary/rss/32946",
+        "https://isc.sans.edu/diary/rss/32944",
+        "https://securityaffairs.com/191623/malware/security-affairs-malware-newsletter-round-95.html",
+        "https://securityaffairs.com/191607/breaking-news/security-affairs-newsletter-round-575-by-pierluigi-paganini-international-edition.html"
+      ],
+      "date": "2026-05-04"
+    },
+    {
+      "title": {
+        "en": "SOC Operations and Strategic Intelligence methodology",
+        "fr": "Méthodologie des opérations SOC et intelligence stratégique"
+      },
+      "description": {
+        "en": "Security analysts debate alert prioritization (e.g., Domain Admin brute force vs. mass exfiltration) and discuss new AI inference hardware trends and OSINT tools like Raspberry Pi countersurveillance.",
+        "fr": "Les analystes en sécurité débattent de la priorité des alertes (ex: force brute Domain Admin vs exfiltration massive) et discutent des nouvelles tendances du matériel d'inférence IA et des outils OSINT comme la contre-surveillance par Raspberry Pi."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Security",
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Sécurité",
+          "Technologie et Télécom"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Shodan",
+          "Raspberry Pi"
+        ]
+      },
+      "mitre_ttps": [
+        "T1041"
+      ],
+      "analyse": {
+        "en": "The focus is shifting from simple detection to complex risk analysis and the hardware-software AI intersection.",
+        "fr": "L'accent se déplace de la simple détection vers l'analyse de risque complexe et l'intersection entre le matériel et le logiciel IA."
+      },
+      "recommandations": [
+        {
+          "en": "Prioritize exfiltration-related alerts over simple access attempts.",
+          "fr": "Prioriser les alertes liées à l'exfiltration sur les simples tentatives d'accès."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Establish alert severity levels based on business impact."
+          ],
+          "fr": [
+            "Établir des niveaux de sévérité d'alerte basés sur l'impact métier."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Use behavioral analytics for exfiltration detection."
+          ],
+          "fr": [
+            "Utiliser l'analyse comportementale pour la détection d'exfiltration."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "SOC",
+        "OSINT",
+        "AI Hardware"
+      ],
+      "sources": [
+        "https://www.youtube.com/watch?v=t9LV5Hsew7c",
+        "https://infosec.exchange/@shodansafari/116513597799099583",
+        "https://www.theregister.com/2026/05/03/microsoft_promises_to_do_better/",
+        "https://m.youtube.com/watch?v=YDDQ4qP-Q_w",
+        "https://wccftech.com/anthropic-sets-eyes-on-uk-startup-tech-speeds-up-ai-inference-100x-reduces-costs-10x/"
+      ],
+      "date": "2026-05-04"
+    }
+  ]
+}
