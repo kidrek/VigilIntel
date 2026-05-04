@@ -6,58 +6,32 @@
       "fr": "Élevé"
     },
     "justification": {
-      "en": "The month of May 2026 is characterized by a surge in critical infrastructure exploitation targeting core web services (cPanel) and system kernels (Linux). The emergence of automated identity hijacking tools and 'wormified' supply chain attacks by actors like TeamPCP and Lazarus has significantly reduced the time between initial access and full environment compromise. The threat is compounded by massive data leaks in the government and healthcare sectors.",
-      "fr": "Le mois de mai 2026 est caractérisé par une augmentation de l'exploitation d'infrastructures critiques ciblant les services web de base (cPanel) et les noyaux système (Linux). L'émergence d'outils automatisés de détournement d'identité et d'attaques de supply chain 'wormifiées' par des acteurs tels que TeamPCP et Lazarus a considérablement réduit le temps entre l'accès initial et la compromission totale de l'environnement. La menace est aggravée par des fuites de données massives dans les secteurs gouvernemental et de la santé."
+      "en": "May 2026 is characterized by a critical shift in supply chain exploitation and identity-centric attacks. The emergence of 'wormified' npm packages by TeamPCP and the mass exploitation of cPanel (CVE-2026-41940) represent systemic risks to web infrastructure. Large-scale data exfiltration (275M records from Instructure) and state-sponsored intrusions into European MSPs (Salt Typhoon) further exacerbate the threat landscape.",
+      "fr": "Le mois de mai 2026 est caractérisé par un virage critique dans l'exploitation de la supply chain et les attaques centrées sur l'identité. L'émergence de paquets npm 'vermifiés' par TeamPCP et l'exploitation massive de cPanel (CVE-2026-41940) représentent des risques systémiques pour l'infrastructure web. L'exfiltration de données à grande échelle (275M de dossiers chez Instructure) et les intrusions étatiques dans les MSP européens (Salt Typhoon) exacerbent davantage le paysage des menaces."
     },
     "_triggers": [
       "+4 — 2 CVE(s) CISA KEV",
       "+1 — 1 CVE(s) CVSS ≥ 9.0",
       "+2 — 1 acteur(s) étatique(s)",
+      "+1 — ≥ 3 acteurs distincts actifs",
       "+3 — 3 breach(es) ≥ 100k enregistrements",
       "+2 — secteurs critiques ciblés : Government_and_Defense"
     ]
   },
   "executive_summary": {
-    "en": "May 2026 has seen a strategic shift in cyber-adversary tactics, moving toward identity-centric flows and automated dependency compromise. Key incidents include the exploitation of CVE-2026-41940 (cPanel) and CVE-2026-31431 (Linux Kernel), which allowed for rapid lateral movement and administrative takeovers across cloud environments. Notable breaches at ANTS (France), Medtronic, and Trellix highlight the vulnerability of even high-security organizations to sophisticated phishing and supply chain 'worms' like Shai-Hulud. Regulatory bodies are responding with increased enforcement, notably targeting Meta under the DSA and imposing significant fines for historical MOVEit-related failures.",
-    "fr": "Mai 2026 a vu un changement stratégique dans les tactiques des cyber-adversaires, se tournant vers les flux centrés sur l'identité et la compromission automatisée des dépendances. Les incidents clés incluent l'exploitation des CVE-2026-41940 (cPanel) et CVE-2026-31431 (noyau Linux), qui ont permis un mouvement latéral rapide et des prises de contrôle administratives dans les environnements cloud. Des violations notables chez l'ANTS (France), Medtronic et Trellix soulignent la vulnérabilité des organisations, même de haute sécurité, face au phishing sophistiqué et aux 'vers' de supply chain comme Shai-Hulud. Les organismes de réglementation réagissent par un renforcement de l'application des lois, ciblant notamment Meta dans le cadre du DSA et imposant des amendes importantes pour des défaillances historiques liées à MOVEit."
+    "en": "The threat landscape in May 2026 was dominated by the industrialization of supply chain attacks and the bypass of traditional MFA through advanced phishing techniques. A significant 'worm' affecting the npm ecosystem, dubbed 'Shai-Hulud' by TeamPCP, automated the theft of CI/CD secrets and malicious package republication. Simultaneously, vulnerabilities in core web management tools (cPanel) and the Linux kernel were weaponized globally. Major data breaches impacted the education, government, and healthcare sectors, with victims including Instructure, ANTS France, and Medtronic. Geopolitically, Chinese APT activity intensified against European critical infrastructure via managed service providers.",
+    "fr": "Le paysage des menaces en mai 2026 a été dominé par l'industrialisation des attaques de la supply chain et le contournement du MFA traditionnel via des techniques de phishing avancées. Un ver significatif affectant l'écosystème npm, nommé 'Shai-Hulud' par TeamPCP, a automatisé le vol de secrets CI/CD et la republication de paquets malveillants. Simultanément, des vulnérabilités dans les outils de gestion web (cPanel) et le noyau Linux ont été armées à l'échelle mondiale. Des violations de données majeures ont touché les secteurs de l'éducation, du gouvernement et de la santé, avec des victimes comme Instructure, l'ANTS France et Medtronic. Sur le plan géopolitique, l'activité des APT chinois s'est intensifiée contre les infrastructures critiques européennes via des prestataires de services managés."
   },
   "regulatory": {
     "analyse": {
-      "en": "Regulators are increasingly focusing on the liability of large platform providers and the cost of delayed remediation. The European Commission's enforcement of the DSA against Meta signals a low tolerance for systemic safety failures, while state-level actions in the US continue to penalize companies for failing to patch known vulnerabilities (e.g., MOVEit), emphasizing that security maintenance is a core compliance requirement.",
-      "fr": "Les régulateurs se concentrent de plus en plus sur la responsabilité des grands fournisseurs de plateformes et sur le coût d'une remédiation tardive. L'application du DSA par la Commission européenne contre Meta signale une faible tolérance pour les défaillances de sécurité systémiques, tandis que les actions au niveau des États américains continuent de pénaliser les entreprises pour leur incapacité à corriger des vulnérabilités connues (ex: MOVEit), soulignant que la maintenance de la sécurité est une exigence de conformité fondamentale."
+      "en": "Regulators are increasingly focusing on the security of digital supply chains and the protection of minors. The European Commission's enforcement of the DSA against major platforms like Meta signals a shift toward proactive safety auditing. Meanwhile, heavy fines for historical breaches (Delta Dental) demonstrate that regulatory bodies are holding organizations accountable for third-party software risks like MOVEit.",
+      "fr": "Les régulateurs se concentrent de plus en plus sur la sécurité des chaînes d'approvisionnement numériques et la protection des mineurs. L'application du DSA par la Commission européenne contre des plateformes majeures comme Meta signale un virage vers l'audit de sécurité proactif. Parallèlement, de lourdes amendes pour des violations historiques (Delta Dental) démontrent que les organismes de réglementation tiennent les organisations responsables des risques liés aux logiciels tiers comme MOVEit."
     },
     "events": [
       {
         "title": {
-          "en": "Meta Digital Services Act Enforcement Action",
-          "fr": "Action d'application du Digital Services Act contre Meta"
-        },
-        "issuing_body": "European Commission",
-        "date": "2026-04-30",
-        "jurisdiction": {
-          "region": "EU",
-          "countries": [
-            "FR",
-            "DE"
-          ]
-        },
-        "type": "Enforcement_Action",
-        "status": "Active",
-        "reference": "DSA Art.28",
-        "affected_sectors": [
-          "Technology_and_Telecom",
-          "Media_and_Communication"
-        ],
-        "description": {
-          "en": "The EC initiated proceedings against Meta for systemic failures in protecting minors and managing harmful content, potentially resulting in fines up to 6% of global turnover.",
-          "fr": "La CE a entamé des poursuites contre Meta pour des défaillances systémiques dans la protection des mineurs et la gestion des contenus malveillants, pouvant entraîner des amendes allant jusqu'à 6 % du chiffre d'affaires mondial."
-        },
-        "source_url": "https://securityaffairs.com/191511/laws-and-regulations/meta-accused-of-violating-dsa-by-failing-to-safeguard-minors.html"
-      },
-      {
-        "title": {
-          "en": "Delta Dental NYSDFS Cybersecurity Settlement",
-          "fr": "Règlement de cybersécurité NYSDFS de Delta Dental"
+          "en": "Delta Dental MOVEit Settlement",
+          "fr": "Accord de règlement Delta Dental MOVEit"
         },
         "issuing_body": "NYSDFS",
         "date": "2026-05-01",
@@ -67,18 +41,44 @@
             "US"
           ]
         },
-        "type": "Fine",
+        "type": "Enforcement_Action",
         "status": "Active",
-        "reference": "23 NYCRR 500",
+        "reference": "23 NYCRR Part 500",
         "affected_sectors": [
-          "Healthcare_and_Life_Sciences",
-          "Finance"
+          "Healthcare_and_Life_Sciences"
         ],
         "description": {
-          "en": "A $2.25 million fine was levied against Delta Dental for MFA and patch management failures related to the MOVEit breach, violating Part 500 regulations.",
-          "fr": "Une amende de 2,25 millions de dollars a été infligée à Delta Dental pour des défaillances du MFA et de la gestion des correctifs liées à la violation MOVEit, en violation de la réglementation Part 500."
+          "en": "A $2.25 million fine following a 2023 data breach involving the MOVEit vulnerability, citing failure to maintain effective risk assessment and oversight of service providers.",
+          "fr": "Une amende de 2,25 millions de dollars suite à une violation de données en 2023 impliquant la vulnérabilité MOVEit, invoquant l'incapacité à maintenir une évaluation des risques et une surveillance efficaces des prestataires."
         },
         "source_url": "https://databreaches.net/2026/05/01/nysdfs-secures-2-25-million-cybersecurity-settlement-with-delta-dental/"
+      },
+      {
+        "title": {
+          "en": "Meta DSA Minor Protection Investigation",
+          "fr": "Enquête DSA Meta sur la protection des mineurs"
+        },
+        "issuing_body": "European Commission",
+        "date": "2026-04-30",
+        "jurisdiction": {
+          "region": "EU",
+          "countries": [
+            "FR",
+            "DE",
+            "IT"
+          ]
+        },
+        "type": "Enforcement_Action",
+        "status": "Active",
+        "reference": "DSA Art. 28",
+        "affected_sectors": [
+          "Technology_and_Telecom"
+        ],
+        "description": {
+          "en": "Official proceedings initiated against Meta for alleged failures to mitigate risks to minors, including addictive interface design and age verification inadequacies.",
+          "fr": "Procédure officielle engagée contre Meta pour manquement présumé à l'atténuation des risques pour les mineurs, notamment la conception d'interfaces addictives et l'insuffisance de vérification de l'âge."
+        },
+        "source_url": "https://securityaffairs.com/191511/laws-and-regulations/meta-accused-of-violating-dsa-by-failing-to-safeguard-minors.html"
       }
     ]
   },
@@ -86,32 +86,22 @@
     "geographic_analyse": [
       {
         "geographic_zone_name": {
-          "en": "Russia",
-          "fr": "Russie"
-        },
-        "geographic_zone_strategic_analyse": {
-          "en": "Russian state actors are prioritizing information operations focused on nuclear deterrence narratives while cybercriminal syndicates maintain persistent pressure on Western healthcare and government entities.",
-          "fr": "Les acteurs étatiques russes donnent la priorité aux opérations d'information axées sur les récits de dissuasion nucléaire, tandis que les syndicats cybercriminels maintiennent une pression persistante sur les entités de santé et gouvernementales occidentales."
-        }
-      },
-      {
-        "geographic_zone_name": {
-          "en": "North Korea",
-          "fr": "Corée du Nord"
-        },
-        "geographic_zone_strategic_analyse": {
-          "en": "Groups like Lazarus continue to pioneer supply chain attacks, targeting the software development lifecycle through IDE extensions and package repository poisoning to finance state objectives.",
-          "fr": "Des groupes comme Lazarus continuent d'innover dans les attaques de supply chain, ciblant le cycle de vie du développement logiciel via des extensions IDE et l'empoisonnement de dépôts de paquets pour financer les objectifs de l'État."
-        }
-      },
-      {
-        "geographic_zone_name": {
           "en": "China",
           "fr": "Chine"
         },
         "geographic_zone_strategic_analyse": {
-          "en": "Chinese espionage groups such as SHADOW-EARTH-053 are leveraging N-day vulnerabilities and multi-stage RATs to infiltrate government and critical infrastructure across Southeast Asia and NATO members.",
-          "fr": "Des groupes d'espionnage chinois tels que SHADOW-EARTH-053 exploitent des vulnérabilités N-day et des RAT multi-étapes pour infiltrer les gouvernements et les infrastructures critiques en Asie du Sud-Est et chez les membres de l'OTAN."
+          "en": "Chinese nation-state actors, notably Salt Typhoon, are focusing on long-term persistence within European telecommunications and government service providers. By targeting Managed Service Providers (MSPs), they gain lateral access to high-value government targets while maintaining a low signature.",
+          "fr": "Les acteurs étatiques chinois, notamment Salt Typhoon, se concentrent sur la persistance à long terme au sein des télécommunications européennes et des prestataires de services gouvernementaux. En ciblant les MSP, ils obtiennent un accès latéral à des cibles gouvernementales de haute valeur tout en maintenant une signature discrète."
+        }
+      },
+      {
+        "geographic_zone_name": {
+          "en": "Russia",
+          "fr": "Russie"
+        },
+        "geographic_zone_strategic_analyse": {
+          "en": "Russian operations are characterized by hybrid warfare, blending cyber espionage by the 'Digit' group with synchronized disinformation campaigns targeting NATO's nuclear exercises (Steadfast Noon) to create strategic ambiguity.",
+          "fr": "Les opérations russes sont caractérisées par une guerre hybride, mélangeant le cyber-espionnage du groupe 'Digit' avec des campagnes de désinformation synchronisées ciblant les exercices nucléaires de l'OTAN (Steadfast Noon) pour créer une ambiguïté stratégique."
         }
       }
     ],
@@ -130,7 +120,7 @@
           ],
           "fr": [
             "Technology_and_Telecom",
-            "Sécurité"
+            "Security"
           ]
         },
         "targeted_regions": {
@@ -143,54 +133,100 @@
         },
         "mitre_attack_ttps_id": [
           "T1195.001",
-          "T1552",
+          "T1552.001",
           "T1567"
         ],
         "campaign_or_operation": {
           "en": [
-            "Shai-Hulud npm Worm"
+            "Shai-Hulud Worm"
           ],
           "fr": [
-            "Ver npm Shai-Hulud"
+            "Ver Shai-Hulud"
           ]
         }
       },
       {
-        "threat_actor_name": "Lazarus Group",
-        "origin_country": "North Korea",
+        "threat_actor_name": "Salt Typhoon",
+        "origin_country": "China",
         "type": {
           "en": "Nation-state",
-          "fr": "Étatique"
+          "fr": "Nation-state"
         },
         "targeted_sectors": {
           "en": [
-            "Finance",
+            "Critical_Infrastructure",
+            "Government_and_Defense",
             "Technology_and_Telecom"
           ],
           "fr": [
-            "Finance",
-            "Technologie et Télécom"
+            "Critical_Infrastructure",
+            "Government_and_Defense",
+            "Technology_and_Telecom"
           ]
         },
         "targeted_regions": {
           "en": [
+            "Italy",
+            "Europe"
+          ],
+          "fr": [
+            "Italie",
+            "Europe"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1195",
+          "T1190",
+          "T1071.001"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Sistemi Informativi Intrusion"
+          ],
+          "fr": [
+            "Intrusion Sistemi Informativi"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "ShinyHunters",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Cybercriminal",
+          "fr": "Cybercriminel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Education_and_Research",
+            "Real_Estate_and_Construction",
+            "Finance"
+          ],
+          "fr": [
+            "Education_and_Research",
+            "Real_Estate_and_Construction",
+            "Finance"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "USA",
             "Global"
           ],
           "fr": [
+            "États-Unis",
             "Mondial"
           ]
         },
         "mitre_attack_ttps_id": [
-          "T1566.001",
-          "T1195.002",
-          "T1059.007"
+          "T1567",
+          "T1078"
         ],
         "campaign_or_operation": {
           "en": [
-            "VS Code Task Corruption"
+            "Instructure / Canvas Breach"
           ],
           "fr": [
-            "Corruption de tâches VS Code"
+            "Violation Instructure / Canvas"
           ]
         }
       }
@@ -198,43 +234,61 @@
   },
   "mitre_attack_ttps": {
     "ttps_strategic_analyse": {
-      "en": "The dominant trend involves the automation of the software supply chain compromise (T1195) to achieve wide distribution, coupled with advanced identity theft techniques that bypass legacy MFA. Adversaries are focusing on developer tools (VS Code, npm) and identity flows (OAuth/Device Code) as high-value targets.",
-      "fr": "La tendance dominante implique l'automatisation de la compromission de la supply chain logicielle (T1195) pour obtenir une large distribution, couplée à des techniques avancées d'usurpation d'identité qui contournent le MFA hérité. Les adversaires se concentrent sur les outils de développement (VS Code, npm) et les flux d'identité (OAuth/Device Code) comme cibles de haute valeur."
+      "en": "Identity is the primary attack surface this month. Adversaries have moved beyond simple password theft to abusing OAuth consent and Device Code flows, which bypass most non-FIDO2 MFA implementations. Furthermore, the automation of supply chain attacks through 'wormified' dependencies indicates a significant maturation in cybercriminal capabilities.",
+      "fr": "L'identité est la principale surface d'attaque ce mois-ci. Les adversaires ont dépassé le simple vol de mots de passe pour abuser des flux de consentement OAuth et de Device Code, qui contournent la plupart des implémentations MFA non-FIDO2. De plus, l'automatisation des attaques de la supply chain via des dépendances 'vermifiées' indique une maturation significative des capacités cybercriminelles."
     },
     "ttps_list": [
       {
-        "id": "T1195.001",
-        "technique_name": "Supply Chain Compromise: Compromise Software Dependencies",
+        "id": "T1190",
         "tactic": {
           "en": "Initial Access",
           "fr": "Accès Initial"
         },
+        "technique_name": "Exploit Public-Facing Application",
         "frequency": 1,
         "severity": "critical",
         "context": {
           "en": [
-            "Observed in the Shai-Hulud npm worm campaign by TeamPCP, which automated the exfiltration of CI/CD environmental secrets from developers' local environments."
+            "Exploitation of CVE-2026-41940 (cPanel) and CVE-2024-4577 (PHP-CGI) for mass initial access by ransomware affiliates."
           ],
           "fr": [
-            "Observé dans la campagne du ver npm Shai-Hulud par TeamPCP, qui a automatisé l'exfiltration de secrets environnementaux CI/CD depuis les environnements locaux des développeurs."
+            "Exploitation de CVE-2026-41940 (cPanel) et CVE-2024-4577 (PHP-CGI) pour un accès initial massif par des affiliés de ransomware."
           ]
         }
       },
       {
-        "id": "T1190",
-        "technique_name": "Exploit Public-Facing Application",
+        "id": "T1195.001",
         "tactic": {
           "en": "Initial Access",
           "fr": "Accès Initial"
         },
+        "technique_name": "Supply Chain Compromise: Compromise Software Dependencies",
         "frequency": 1,
         "severity": "critical",
         "context": {
           "en": [
-            "Mass exploitation of cPanel installations using CVE-2026-41940 to deploy ransomware and establish persistent backdoors on web infrastructure."
+            "TeamPCP 'Shai-Hulud' worm propagating via npm packages to harvest secrets and auto-republish malicious versions."
           ],
           "fr": [
-            "Exploitation massive d'installations cPanel utilisant la CVE-2026-41940 pour déployer des ransomwares et établir des portes dérobées persistantes sur l'infrastructure web."
+            "Ver 'Shai-Hulud' de TeamPCP se propageant via des paquets npm pour récolter des secrets et republier automatiquement des versions malveillantes."
+          ]
+        }
+      },
+      {
+        "id": "T1566",
+        "tactic": {
+          "en": "Initial Access",
+          "fr": "Accès Initial"
+        },
+        "technique_name": "Phishing",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Advanced usage of Device Code phishing (EvilTokens) and AI-assisted lure generation (Bluekit)."
+          ],
+          "fr": [
+            "Utilisation avancée du phishing par Device Code (EvilTokens) et génération de leurres assistée par IA (Bluekit)."
           ]
         }
       }
@@ -242,8 +296,8 @@
   },
   "vulnerabilities": {
     "analyse": {
-      "en": "May 2026 saw the emergence of critical flaws in baseline infrastructure. The cPanel authentication bypass (CVE-2026-41940) and the Linux Kernel 'Copy Fail' (CVE-2026-31431) represent two of the most dangerous vectors this year, enabling unauthenticated remote access and instant local privilege escalation respectively.",
-      "fr": "Le mois de mai 2026 a vu l'émergence de failles critiques dans les infrastructures de base. Le contournement d'authentification cPanel (CVE-2026-41940) et le 'Copy Fail' du noyau Linux (CVE-2026-31431) représentent deux des vecteurs les plus dangereux de cette année, permettant respectivement un accès distant non authentifié et une élévation instantanée des privilèges locaux."
+      "en": "The vulnerability landscape is dominated by critical unauthenticated access to web hosting infrastructure (cPanel) and a severe logic flaw in the Linux kernel Page Cache. These vulnerabilities are being utilized for both mass opportunistic attacks and targeted espionage.",
+      "fr": "Le paysage des vulnérabilités est dominé par l'accès non authentifié critique à l'infrastructure d'hébergement web (cPanel) et une faille logique grave dans le Page Cache du noyau Linux. Ces vulnérabilités sont utilisées tant pour des attaques opportunistes massives que pour l'espionnage ciblé."
     },
     "list": [
       {
@@ -252,18 +306,20 @@
         "epss_score": "N/A",
         "cisa_kev": true,
         "affected_product": "cPanel & WHM",
-        "affected_product_vendor": "cPanel",
+        "affected_product_vendor": "WebPros",
         "vulnerability_type": {
           "en": [
-            "Authentication Bypass"
+            "Authentication Bypass",
+            "Remote Code Execution"
           ],
           "fr": [
-            "Contournement d'authentification"
+            "Contournement d'authentification",
+            "Exécution de code à distance"
           ]
         },
         "vulnerability_description": {
-          "en": "A critical authentication bypass in cPanel allows remote unauthenticated users to gain administrative control over the management panel via CRLF injection in authentication headers.",
-          "fr": "Un contournement d'authentification critique dans cPanel permet à des utilisateurs distants non authentifiés de prendre le contrôle administratif du panneau de gestion via une injection CRLF dans les en-têtes d'authentification."
+          "en": "A critical CRLF injection vulnerability in cPanel's internal API allows unauthenticated attackers to achieve root-level administrative access.",
+          "fr": "Une vulnérabilité d'injection CRLF critique dans l'API interne de cPanel permet à des attaquants non authentifiés d'obtenir un accès administratif de niveau root."
         },
         "mitre_attack_ttps_id": [
           "T1190"
@@ -285,8 +341,8 @@
           ]
         },
         "vulnerability_description": {
-          "en": "Known as 'Copy Fail', this logic bug in the page cache subsystem allows local users to overwrite read-only files, resulting in immediate root access.",
-          "fr": "Connu sous le nom de 'Copy Fail', ce bug logique dans le sous-système de cache de pages permet aux utilisateurs locaux d'écraser des fichiers en lecture seule, entraînant un accès root immédiat."
+          "en": "Logic bug in the Linux Page Cache ('Copy Fail') allowing local users to gain root privileges on modern distributions.",
+          "fr": "Bug logique dans le Page Cache Linux ('Copy Fail') permettant aux utilisateurs locaux d'obtenir des privilèges root sur les distributions modernes."
         },
         "mitre_attack_ttps_id": [
           "T1068"
@@ -296,181 +352,187 @@
   },
   "data_breaches": [
     {
-      "victim": "ANTS (Agence Nationale des Titres Sécurisés)",
+      "victim": "Instructure (Canvas LMS)",
+      "sector": "Education_and_Research",
+      "country": "USA",
+      "records_count": 275000000,
+      "data_types": {
+        "en": [
+          "Student IDs",
+          "Emails",
+          "Private Messages"
+        ],
+        "fr": [
+          "IDs étudiants",
+          "Emails",
+          "Messages privés"
+        ]
+      },
+      "threat_actor": "ShinyHunters",
+      "financial_impact_usd": null,
+      "source_url": "https://www.bleepingcomputer.com/news/security/instructure-confirms-data-breach-shinyhunters-claims-attack/"
+    },
+    {
+      "victim": "ANTS (France)",
       "sector": "Government_and_Defense",
       "country": "France",
       "records_count": 11700000,
       "data_types": {
         "en": [
+          "Identity Documents",
           "PII",
-          "Identity documents",
-          "Account credentials"
+          "Credentials"
         ],
         "fr": [
-          "Données personnelles",
           "Documents d'identité",
-          "Identifiants de compte"
+          "PII",
+          "Identifiants"
         ]
       },
       "threat_actor": "breach3d",
       "financial_impact_usd": null,
-      "source_url": "https://cyberinsider.com/france-arrests-15-year-old-hacker-who-stole-data-of-11-7-million-people/"
+      "source_url": "https://www.lemonde.fr/pixels/article/2026/04/30/piratage-de-l-ants-un-mineur-de-15-ans-interpelle_6684591_4408996.html"
     },
     {
       "victim": "Medtronic",
       "sector": "Healthcare_and_Life_Sciences",
-      "country": "Global",
+      "country": "USA",
       "records_count": 9000000,
       "data_types": {
         "en": [
-          "Medical records",
-          "Personal identity information"
+          "Medical Records",
+          "PII"
         ],
         "fr": [
           "Dossiers médicaux",
-          "Données d'identité personnelles"
+          "PII"
         ]
       },
       "threat_actor": null,
       "financial_impact_usd": null,
       "source_url": "https://mastodon.social/@Analyst207/116501230698154066"
-    },
-    {
-      "victim": "ZenBusiness",
-      "sector": "Business_Services",
-      "country": "United States",
-      "records_count": 5100000,
-      "data_types": {
-        "en": [
-          "CRM records",
-          "Business contact details"
-        ],
-        "fr": [
-          "Enregistrements CRM",
-          "Coordonnées professionnelles"
-        ]
-      },
-      "threat_actor": null,
-      "financial_impact_usd": null,
-      "source_url": "https://databreaches.net/2026/05/01/zenbusiness-leaks-5-1m-crm-records/"
     }
   ],
   "target": {
     "sectors": {
       "en": [
+        "Education_and_Research",
         "Government_and_Defense",
         "Healthcare_and_Life_Sciences",
         "Technology_and_Telecom",
-        "Security",
+        "Real_Estate_and_Construction",
+        "Finance",
         "Hospitality_and_Entertainment",
-        "Business_Services",
-        "Retail_and_Consumer",
-        "Finance"
+        "Industry_and_Manufacturing"
       ],
       "fr": [
-        "Gouvernement et Défense",
-        "Santé et Sciences de la vie",
-        "Technologie et Télécom",
-        "Sécurité",
-        "Hôtellerie et Divertissement",
-        "Services aux entreprises",
-        "Commerce de détail et Consommation",
-        "Finance"
+        "Education_and_Research",
+        "Government_and_Defense",
+        "Healthcare_and_Life_Sciences",
+        "Technology_and_Telecom",
+        "Real_Estate_and_Construction",
+        "Finance",
+        "Hospitality_and_Entertainment",
+        "Industry_and_Manufacturing"
       ]
     },
     "countries": {
       "en": [
         "France",
-        "United States",
-        "Canada",
-        "Brazil"
+        "USA",
+        "Italy",
+        "Brazil",
+        "New Zealand",
+        "United Kingdom"
       ],
       "fr": [
         "France",
         "États-Unis",
-        "Canada",
-        "Brésil"
+        "Italie",
+        "Brésil",
+        "Nouvelle-Zélande",
+        "Royaume-Uni"
       ]
     },
     "narrative": {
-      "en": "- **Government & Public Sector:** ANTS France suffered a monumental breach affecting 11.7M citizens' identity records; Elections Alberta (Canada) reported unauthorized exposure of voter lists.\n- **Healthcare:** Medtronic disclosed a leak of 9M medical files; University of Maryland Medical Center managed a critical insider threat involving illicit medication database access.\n- **Technology & Security:** Trellix confirmed a source code breach via compromised developer repositories; Huge Networks (ISP) infrastructure was hijacked to support Mirai-based DDoS botnets.\n- **Business Services:** ZenBusiness exposed 5.1M CRM records containing sensitive client business data; global logistics firms reported $725M in losses from cyber-enabled cargo redirection scams.\n- **Hospitality:** Luxury provider Aman Resorts reported the compromise of 215k high-net-worth individual accounts, including VIP travel itineraries.\n- **Retail & Cybercrime:** Carding marketplace Jerry's Store leaked 345k payment card records after an AI-assisted coding error exposed its database backend.\n- **Critical Infrastructure:** Middle Eastern water utilities were targeted by state-sponsored actors using ICS-specific malware to disrupt supply flows.\n- **Finance:** Crypto-exchanges in Southeast Asia were targeted by Lazarus Group using corrupted VS Code tasks to exfiltrate cold-wallet keys.",
-      "fr": "- **Secteur Public et Gouvernement :** L'ANTS (France) a subi une violation monumentale affectant 11,7 millions de dossiers d'identité ; Elections Alberta (Canada) a signalé l'exposition non autorisée de listes électorales.\n- **Santé :** Medtronic a divulgué une fuite de 9 millions de dossiers médicaux ; le centre médical de l'université du Maryland a géré une menace interne critique impliquant un accès illicite à la base de données des médicaments.\n- **Technologie et Sécurité :** Trellix a confirmé une violation de code source via des dépôts de développeurs compromis ; l'infrastructure de Huge Networks (FAI) a été détournée pour soutenir des botnets DDoS basés sur Mirai.\n- **Services aux Entreprises :** ZenBusiness a exposé 5,1 millions d'enregistrements CRM contenant des données commerciales sensibles ; des entreprises de logistique mondiales ont signalé 725 millions de dollars de pertes dues à des escroqueries de redirection de fret.\n- **Hôtellerie :** Le prestataire de luxe Aman Resorts a signalé la compromission de 215 000 comptes de clients fortunés, incluant des itinéraires de voyage VIP.\n- **Commerce et Cybercriminalité :** La marketplace de carding Jerry's Store a laissé fuiter 345 000 cartes de paiement après qu'une erreur de codage assistée par IA a exposé son backend de base de données.\n- **Infrastructures Critiques :** Des services d'eau au Moyen-Orient ont été ciblés par des acteurs étatiques utilisant des malwares spécifiques aux ICS pour perturber les flux d'approvisionnement.\n- **Finance :** Des crypto-échanges en Asie du Sud-Est ont été ciblés par le groupe Lazarus utilisant des tâches VS Code corrompues pour exfiltrer des clés de portefeuilles froids."
+      "en": "- **Education & Research:** Instructure (Canvas LMS) suffered a massive breach by ShinyHunters involving 275 million student records and private communications.\n- **Government & Defense:** France's ANTS agency was compromised, exposing 11.7M to 19M citizen identity documents; Salt Typhoon (China) targeted IBM Italy's Sistemi Informativi for state espionage.\n- **Healthcare & Life Sciences:** Medtronic reported the exposure of 9 million medical records; Delta Dental (US) faced a $2.25M regulatory fine for MOVEit-related security failures.\n- **Technology & Telecom:** Trellix confirmed a source code breach via developer environments; Brazilian infrastructure provider Huge Networks was hijacked to host Mirai botnet nodes.\n- **Real Estate & Construction:** Marcus & Millichap disclosed a data breach affecting 1.8M records; Kiwi Electrical (NZ) was paralyzed by a ransomware attack affecting 140 staff.\n- **Finance:** The FEMITBOT Telegram PhaaS platform targeted cryptocurrency assets via malicious Mini Apps; Jerry's Store leaked 345,000 credit cards due to AI-generated code errors.\n- **Hospitality & Entertainment:** Aman Resorts suffered an exfiltration event exposing the PII of 215,563 high-net-worth VIP guests.\n- **Industry & Manufacturing:** European industrial targets were hit by MuddyWater using the new Rust-based LampoRAT for operational espionage.",
+      "fr": "- **Education & Research :** Instructure (Canvas LMS) a subi une violation massive par ShinyHunters impliquant 275 millions de dossiers d'étudiants et des communications privées.\n- **Government & Defense :** L'agence française ANTS a été compromise, exposant 11,7M à 19M de documents d'identité de citoyens ; Salt Typhoon (Chine) a ciblé Sistemi Informativi d'IBM Italie pour l'espionnage d'État.\n- **Healthcare & Life Sciences :** Medtronic a signalé l'exposition de 9 millions de dossiers médicaux ; Delta Dental (US) a fait face à une amende réglementaire de 2,25M $ pour des défaillances liées à MOVEit.\n- **Technology & Telecom :** Trellix a confirmé une violation de code source via des environnements de développement ; le fournisseur brésilien Huge Networks a été détourné pour héberger des nœuds de botnet Mirai.\n- **Real Estate & Construction :** Marcus & Millichap a divulgué une violation de données affectant 1,8M de dossiers ; Kiwi Electrical (NZ) a été paralysé par un ransomware touchant 140 employés.\n- **Finance :** La plateforme PhaaS Telegram FEMITBOT a ciblé des crypto-actifs via des Mini Apps malveillantes ; Jerry's Store a fuité 345 000 cartes bancaires suite à des erreurs de code généré par IA.\n- **Hospitality & Entertainment :** Aman Resorts a subi une exfiltration exposant les données personnelles de 215 563 clients VIP fortunés.\n- **Industry & Manufacturing :** Des cibles industrielles européennes ont été frappées par MuddyWater utilisant le nouveau LampoRAT en Rust pour l'espionnage opérationnel."
     }
   },
   "trends": {
     "emerging_techniques": {
       "en": [
-        "Self-propagating supply chain worms (Shai-Hulud)",
-        "Automated Device Code and OAuth phishing (EvilTokens, ConsentFix v3)",
-        "AI-assisted coding tool exploitation (Cursor, LLM injection)",
-        "Cyber-enabled physical cargo theft redirection"
+        "Wormified npm dependencies (Shai-Hulud)",
+        "Device Code/OAuth token theft (EvilTokens)",
+        "AI-assisted coding errors leading to data leaks",
+        "Telegram Mini App WebView phishing"
       ],
       "fr": [
-        "Vers de supply chain auto-propageables (Shai-Hulud)",
-        "Phishing automatisé par Device Code et OAuth (EvilTokens, ConsentFix v3)",
-        "Exploitation d'outils de codage assistés par IA (Cursor, injection LLM)",
-        "Redirection de vol de fret physique assistée par cyber"
+        "Dépendances npm vermifiées (Shai-Hulud)",
+        "Vol de jetons OAuth/Device Code (EvilTokens)",
+        "Erreurs de codage assistées par IA menant à des fuites",
+        "Phishing via WebView de Mini App Telegram"
       ]
     },
     "declining_techniques": {
       "en": [
-        "Legacy SMS-based Multi-Factor Authentication",
-        "Non-automated dependency scanning as a primary defense",
-        "Direct brute-force against hardened administrative panels"
+        "Traditional SMS/TOTP MFA",
+        "Manual SQL injection for data theft",
+        "Standard SMTP attachment phishing"
       ],
       "fr": [
-        "Authentification multifacteur héritée par SMS",
-        "Scan de dépendance non automatisé comme défense primaire",
-        "Force brute directe contre les panneaux d'administration durcis"
+        "MFA traditionnel par SMS/TOTP",
+        "Injection SQL manuelle pour le vol de données",
+        "Phishing par pièce jointe SMTP standard"
       ]
     },
     "geopolitical_context": {
-      "en": "The convergence of regional conflicts in the Middle East and Southeast Asia is driving a trend of 'dual-purpose' cyber operations—combining espionage with active disruption of critical infrastructure and logistics chains.",
-      "fr": "La convergence des conflits régionaux au Moyen-Orient et en Asie du Sud-Est entraîne une tendance d'opérations cyber à 'double usage', combinant l'espionnage avec la perturbation active des infrastructures critiques et des chaînes logistiques."
+      "en": "Cyber operations are increasingly used as a force multiplier in the Middle East and Eastern Europe, with a focus on destabilizing infrastructure and conducting hybrid disinformation campaigns during NATO exercises.",
+      "fr": "Les opérations cyber sont de plus en plus utilisées comme multiplicateur de force au Moyen-Orient et en Europe de l'Est, avec un accent sur la déstabilisation des infrastructures et les campagnes de désinformation hybride pendant les exercices de l'OTAN."
     }
   },
   "recommendations": {
     "strategic": {
       "en": [
         {
-          "title": "Adopt Phishing-Resistant FIDO2 Hardware MFA",
-          "detail": "Standard TOTP/SMS MFA is ineffective against automated OAuth hijacking (ConsentFix v3) and Device Code phishing (EvilTokens) observed this month. Organizations must deploy FIDO2/WebAuthn hardware keys (e.g., YubiKey 5 Series) for all administrative and developer identities to prevent session hijacking."
+          "title": "Enforce FIDO2 Hardware MFA for Developer Accounts",
+          "detail": "Traditional SMS/TOTP MFA is being consistently bypassed by Device Code phishing (EvilTokens) and OAuth abuse. Deploy FIDO2 hardware keys (YubiKey 5) for all accounts with access to cloud infrastructure, source code repositories, and CI/CD pipelines to prevent session hijacking."
         },
         {
-          "title": "Establish a Zero-Trust Supply Chain Architecture",
-          "detail": "The Shai-Hulud worm highlights the danger of direct npm/PyPI access. Implement a private repository manager (Artifactory, Sonatype) with automated behavioral analysis and a mandatory 72-hour quarantine for all new package versions before they reach developer environments."
+          "title": "Implement SBOM and Automated Dependency Verification",
+          "detail": "The 'Shai-Hulud' worm demonstrates that trusted npm packages can be weaponized automatically. Require a Software Bill of Materials (SBOM) for all projects and use tools like Snyk or GitHub Advanced Security to audit dependencies for malicious behaviors and typosquatting before builds."
         }
       ],
       "fr": [
         {
-          "title": "Adopter le MFA Matériel FIDO2 Résistant au Phishing",
-          "detail": "Le MFA TOTP/SMS standard est inefficace contre le détournement OAuth automatisé (ConsentFix v3) et le phishing Device Code (EvilTokens) observés ce mois-ci. Les organisations doivent déployer des clés matérielles FIDO2/WebAuthn pour toutes les identités administratives et de développeurs."
+          "title": "Imposer le MFA matériel FIDO2 pour les comptes développeurs",
+          "detail": "Le MFA traditionnel SMS/TOTP est systématiquement contourné par le phishing Device Code (EvilTokens) et l'abus d'OAuth. Déployez des clés matérielles FIDO2 (YubiKey 5) pour tous les comptes ayant accès aux infrastructures cloud et aux dépôts de code source."
         },
         {
-          "title": "Établir une Architecture Supply Chain Zero-Trust",
-          "detail": "Le ver Shai-Hulud souligne le danger d'un accès direct à npm/PyPI. Implémentez un gestionnaire de dépôts privé avec une analyse comportementale automatisée et une quarantaine obligatoire de 72 heures pour toutes les nouvelles versions de paquets."
+          "title": "Implémenter le SBOM et la vérification automatisée des dépendances",
+          "detail": "Le ver 'Shai-Hulud' démontre que des paquets npm de confiance peuvent être armés automatiquement. Exigez un SBOM pour tous les projets et utilisez des outils comme Snyk pour auditer les dépendances avant les builds."
         }
       ]
     },
     "operational": {
       "en": [
         {
-          "title": "Execute Immediate Patching of cPanel Assets",
-          "detail": "Identify all internet-facing cPanel/WHM instances and update to version 11.136.0.5 or later to remediate CVE-2026-41940. Until patched, restrict access to ports 2083, 2087, and 2089 to verified VPN ranges only."
+          "title": "Patch cPanel and Linux Kernel Immediately",
+          "detail": "CVE-2026-41940 and CVE-2026-31431 are under active exploitation for root access. Update cPanel to version 11.140.0.5+ and upgrade Linux kernels to the latest stable versions (6.8.9+). Prioritize internet-facing web servers and hosting environments."
         },
         {
-          "title": "Audit and Purge Unverified Entra ID App Consents",
-          "detail": "Run the Microsoft Graph PowerShell SDK to list all third-party applications with 'Mail.Read', 'Notes.Read.All', or 'Files.ReadWrite' permissions. Revoke any consents from unverified publishers to mitigate ConsentFix v3 automated exploitation."
+          "title": "Restrict Device Code Flows in Entra ID",
+          "detail": "The 'Device Code' authentication flow is the primary vector for current token theft campaigns. Disable this flow in Microsoft Entra ID (Azure AD) for all users unless explicitly required for specific headless devices, and monitor for unusual 'Add-AppRoleAssignment' events."
         }
       ],
       "fr": [
         {
-          "title": "Exécuter le Patching Immédiat des Actifs cPanel",
-          "detail": "Identifiez toutes les instances cPanel/WHM exposées sur Internet et mettez-les à jour vers la version 11.136.0.5 ou ultérieure pour corriger la CVE-2026-41940. En attendant, restreignez les ports 2083/2087 aux plages VPN vérifiées."
+          "title": "Patcher cPanel et le noyau Linux immédiatement",
+          "detail": "Les CVE-2026-41940 et CVE-2026-31431 sont activement exploitées pour un accès root. Mettez à jour cPanel vers 11.140.0.5+ et les noyaux Linux vers les dernières versions stables (6.8.9+), en priorité sur les serveurs web exposés."
         },
         {
-          "title": "Auditer et Purger les Consentements d'Apps Entra ID",
-          "detail": "Utilisez le SDK PowerShell Microsoft Graph pour lister les applications tierces avec des permissions 'Mail.Read' ou 'Files.ReadWrite'. Révoquez tout consentement d'éditeurs non vérifiés pour atténuer ConsentFix v3."
+          "title": "Restreindre les flux Device Code dans Entra ID",
+          "detail": "Le flux d'authentification 'Device Code' est le vecteur principal des campagnes actuelles de vol de jetons. Désactivez ce flux dans Microsoft Entra ID (Azure AD) pour tous les utilisateurs, sauf nécessité absolue pour des appareils spécifiques."
         }
       ]
     }
