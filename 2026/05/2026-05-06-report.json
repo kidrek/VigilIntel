@@ -1,0 +1,507 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The cyber threat landscape on May 6, 2026, is dominated by the exploitation of critical vulnerabilities in infrastructure software, notably the 'Copy Fail' Linux kernel flaw and severe bypasses in MOVEit and Android. Nation-state activity remains high with UAT-8302 and Lazarus refining their infiltration techniques through supply chain tools like Git hooks and software dependencies. Geopolitically, the focus shifts to European industrial sovereignty and tensions regarding critical infrastructure protection in conflict zones, alongside increased regulatory scrutiny on data brokers like Kochava.",
+      "fr": "Le paysage des cybermenaces au 6 mai 2026 est dominé par l'exploitation de vulnérabilités critiques dans les logiciels d'infrastructure, notamment la faille 'Copy Fail' du noyau Linux et des contournements sévères dans MOVEit et Android. L'activité des États-nations reste élevée avec UAT-8302 et Lazarus affinant leurs techniques d'infiltration via des outils de chaîne d'approvisionnement comme les hooks Git. Sur le plan géopolitique, l'accent est mis sur la souveraineté industrielle européenne et les tensions concernant la protection des infrastructures critiques dans les zones de conflit, parallèlement à une surveillance réglementaire accrue des courtiers de données comme Kochava."
+    },
+    "date": "2026-05-06"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": ["Industry_and_Manufacturing", "Government_and_Defense"],
+        "fr": ["Industrie et Fabrication", "Gouvernement et Défense"]
+      },
+      "theme": {
+        "en": "European Industrial Sovereignty",
+        "fr": "Souveraineté industrielle européenne"
+      },
+      "description": {
+        "en": "The acquisition of Italian aerospace firm Mecaer by French interests highlights the shifting landscape of European defense control and the struggle for strategic autonomy.",
+        "fr": "L'acquisition de l'entreprise aérospatiale italienne Mecaer par des intérêts français souligne l'évolution du contrôle de la défense européenne et la lutte pour l'autonomie stratégique."
+      },
+      "recommandations": [
+        {
+          "en": "Strengthen investment screening mechanisms for critical defense sub-systems.",
+          "fr": "Renforcer les mécanismes de filtrage des investissements pour les sous-systèmes de défense critiques."
+        },
+        {
+          "en": "Develop a unified European doctrine for protecting industrial sovereignty.",
+          "fr": "Développer une doctrine européenne unifiée pour protéger la souveraineté industrielle."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Map critical supply chain dependencies in aerospace.", "Establish 'Golden Share' protocols."],
+          "fr": ["Cartographier les dépendances critiques de la chaîne d'approvisionnement aérospatiale.", "Établir des protocoles d'actions spécifiques (Golden Shares)."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor foreign capital flows in defense contractors.", "Track intellectual property transfers."],
+          "fr": ["Surveiller les flux de capitaux étrangers chez les sous-traitants de défense.", "Suivre les transferts de propriété intellectuelle."]
+        },
+        "phase3_containment": {
+          "en": ["Apply regulatory blocks on strategic asset sales.", "Isolate sensitive data during transitions."],
+          "fr": ["Appliquer des blocages réglementaires sur les ventes d'actifs stratégiques.", "Isoler les données sensibles pendant les transitions."]
+        },
+        "phase4_post_incident": {
+          "en": ["Audit technological leakage after ownership changes.", "Revise national security vetting processes."],
+          "fr": ["Auditer les fuites technologiques après les changements de propriétaire.", "Réviser les processus de contrôle de la sécurité nationale."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search for signs of economic espionage during M&A activity.", "Analyze unusual patent filing patterns."],
+          "fr": ["Rechercher des signes d'espionnage économique pendant les activités de fusion-acquisition.", "Analyser les modèles inhabituels de dépôt de brevets."]
+        }
+      },
+      "tags": ["sovereignty", "aerospace", "M&A"],
+      "sources": ["https://www.epge.fr/mecaer-la-souverainete-qui-change-de-main/"],
+      "date": "2026-05-06"
+    },
+    {
+      "sector": {
+        "en": ["Government_and_Defense"],
+        "fr": ["Gouvernement et Défense"]
+      },
+      "theme": {
+        "en": "Russian Diplomatic and Territorial Pressures",
+        "fr": "Pressions diplomatiques et territoriales russes"
+      },
+      "description": {
+        "en": "Analysis of Putin's domestic difficulties and theoretical conflict scenarios in the Baltics (Zilupe) raising nuclear deterrence concerns.",
+        "fr": "Analyse des difficultés internes de Poutine et scénarios de conflit théoriques dans les pays baltes (Zilupe) soulevant des inquiétudes sur la dissuasion nucléaire."
+      },
+      "recommandations": [
+        {
+          "en": "Enhance NATO's eastern flank cyber and physical resilience.",
+          "fr": "Améliorer la résilience cyber et physique du flanc oriental de l'OTAN."
+        },
+        {
+          "en": "Reinforce unified European communication on nuclear deterrence.",
+          "fr": "Renforcer la communication européenne unifiée sur la dissuasion nucléaire."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Drill for hybrid warfare scenarios in the Baltics.", "Secure government communications channels."],
+          "fr": ["S'entraîner à des scénarios de guerre hybride dans les pays baltes.", "Sécuriser les canaux de communication gouvernementaux."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor Russian disinformation campaigns.", "Track troop movements and cyber probes."],
+          "fr": ["Surveiller les campagnes de désinformation russes.", "Suivre les mouvements de troupes et les sondages cyber."]
+        },
+        "phase3_containment": {
+          "en": ["Activate rapid response cyber teams.", "Counteract misinformation with verified facts."],
+          "fr": ["Activer les équipes de réponse cyber rapide.", "Contrer la désinformation par des faits vérifiés."]
+        },
+        "phase4_post_incident": {
+          "en": ["Analyze the effectiveness of deterrence strategies.", "Update threat models for hybrid threats."],
+          "fr": ["Analyser l'efficacité des stratégies de dissuasion.", "Mettre à jour les modèles de menaces pour les menaces hybrides."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Identify dormant implants in Baltic power grids.", "Search for state-sponsored propaganda bots."],
+          "fr": ["Identifier les implants dormants dans les réseaux électriques baltes.", "Rechercher des bots de propagande étatiques."]
+        }
+      },
+      "tags": ["Russia", "Baltics", "Geopolitics"],
+      "sources": ["https://www.iris-france.org/mourir-pour-zilupe-la-guerre-qui-vient/", "https://www.iris-france.org/politique-interieure-diplomatie-poutine-en-difficulte-les-mardis-de-liris/"],
+      "date": "2026-05-06"
+    }
+  ],
+  "regulatory_and_legal": [
+    {
+      "title": {
+        "en": "EU-Japan Digital Partnership Expansion",
+        "fr": "Expansion du partenariat numérique UE-Japon"
+      },
+      "description": {
+        "en": "Cooperation on AI, quantum computing, and semiconductor security to align digital standards and ensure secure data flows.",
+        "fr": "Coopération sur l'IA, l'informatique quantique et la sécurité des semi-conducteurs pour aligner les normes numériques et garantir des flux de données sécurisés."
+      },
+      "organisation": {
+        "en": ["European Commission", "Japanese Government"],
+        "fr": ["Commission européenne", "Gouvernement japonais"]
+      },
+      "jurisdiction": {
+        "en": ["European Union", "Japan"],
+        "fr": ["Union européenne", "Japon"]
+      },
+      "references": {
+        "en": ["EU-Japan Digital Partnership Council"],
+        "fr": ["Conseil du partenariat numérique UE-Japon"]
+      },
+      "tags": ["AI", "Quantum", "Semiconductors"],
+      "sources": ["https://digital-strategy.ec.europa.eu/en/news/eu-and-japan-accelerate-cooperation-ai-data-quantum-and-chips"],
+      "date": "2026-05-06"
+    },
+    {
+      "title": {
+        "en": "FTC Ban on Kochava Location Data Sales",
+        "fr": "Interdiction de la FTC sur la vente de données de localisation par Kochava"
+      },
+      "description": {
+        "en": "The FTC moves to ban data broker Kochava from selling sensitive location data without explicit consent.",
+        "fr": "La FTC agit pour interdire au courtier de données Kochava de vendre des données de localisation sensibles sans consentement explicite."
+      },
+      "organisation": {
+        "en": ["FTC"],
+        "fr": ["FTC"]
+      },
+      "jurisdiction": {
+        "en": ["USA"],
+        "fr": ["USA"]
+      },
+      "references": {
+        "en": ["FTC vs Kochava"],
+        "fr": ["FTC contre Kochava"]
+      },
+      "tags": ["Privacy", "Data Broker", "Location"],
+      "sources": ["https://www.bleepingcomputer.com/news/security/ftc-to-ban-data-broker-kochava-from-selling-americans-location-data/"],
+      "date": "2026-05-06"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Instructure (Canvas)",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": ["unknown"],
+      "sector": {
+        "en": ["Education_and_Research"],
+        "fr": ["Éducation et Recherche"]
+      },
+      "description": {
+        "en": "A massive data theft affecting 8,800 schools and universities, exposing student IDs, PII, and private messages via API abuse.",
+        "fr": "Un vol massif de données affectant 8 800 écoles et universités, exposant les identifiants d'étudiants, les PII et les messages privés via l'abus d'API."
+      },
+      "mitre_ttps": ["T1078", "T1530", "T1133"],
+      "recommandations": [
+        {
+          "en": "Audit all API access logs for mass data export events.",
+          "fr": "Auditer tous les journaux d'accès aux API pour les événements d'exportation de données massive."
+        },
+        {
+          "en": "Implement rate limiting and strict authentication on provisioning reports.",
+          "fr": "Mettre en œuvre une limitation de débit et une authentification stricte sur les rapports de provisionnement."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Review API permission sets.", "Enforce MFA for administrative accounts."],
+          "fr": ["Réviser les ensembles de permissions API.", "Appliquer le MFA pour les comptes administratifs."]
+        },
+        "phase2_detection": {
+          "en": ["Alert on large data transfers from LMS platforms.", "Monitor for unauthorized API key usage."],
+          "fr": ["Alerter sur les transferts de données volumineux depuis les plateformes LMS.", "Surveiller l'utilisation non autorisée des clés API."]
+        },
+        "phase3_containment": {
+          "en": ["Rotate compromised API tokens.", "Restrict access to export functionalities."],
+          "fr": ["Renouveler les jetons API compromis.", "Restreindre l'accès aux fonctionnalités d'exportation."]
+        },
+        "phase4_post_incident": {
+          "en": ["Notify affected educational institutions.", "Perform full security audit of SaaS integrations."],
+          "fr": ["Notifier les établissements d'enseignement touchés.", "Effectuer un audit de sécurité complet des intégrations SaaS."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Query for unusual user agents accessing student databases.", "Search for shadow accounts in LMS environments."],
+          "fr": ["Rechercher des agents utilisateurs inhabituels accédant aux bases de données étudiants.", "Rechercher des comptes fantômes dans les environnements LMS."]
+        }
+      },
+      "tags": ["PII", "LMS", "SaaS"],
+      "sources": ["https://www.bleepingcomputer.com/news/security/instructure-hacker-claims-data-theft-from-8-800-schools-universities/"],
+      "date": "2026-05-06"
+    },
+    {
+      "victim": "Vimeo",
+      "threat_actor": "ShinyHunters",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": ["The Com"],
+      "sector": {
+        "en": ["Technology_and_Telecom", "Media_and_Communication"],
+        "fr": ["Technologie et Télécom", "Média et Communication"]
+      },
+      "description": {
+        "en": "A breach impacting 119,000 users where metadata and emails were exposed through a compromised token from third-party vendor Anodot.",
+        "fr": "Une violation impactant 119 000 utilisateurs où les métadonnées et les e-mails ont été exposés via un jeton compromis du fournisseur tiers Anodot."
+      },
+      "mitre_ttps": ["T1550.001", "T1078.004"],
+      "recommandations": [
+        {
+          "en": "Revoke third-party integration tokens immediately.",
+          "fr": "Révoquer immédiatement les jetons d'intégration tiers."
+        },
+        {
+          "en": "Apply the principle of least privilege to data warehouse connectors.",
+          "fr": "Appliquer le principe du moindre privilège aux connecteurs d'entrepôt de données."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Inventory all SaaS-to-SaaS connections.", "Set up monitoring for Snowflake/BigQuery activity."],
+          "fr": ["Inventorier toutes les connexions SaaS à SaaS.", "Configurer la surveillance de l'activité Snowflake/BigQuery."]
+        },
+        "phase2_detection": {
+          "en": ["Detect logins from unusual third-party service IPs.", "Identify unauthorized metadata queries."],
+          "fr": ["Détecter les connexions provenant d'IP de services tiers inhabituelles.", "Identifier les requêtes de métadonnées non autorisées."]
+        },
+        "phase3_containment": {
+          "en": ["Disable the Anodot service link.", "Reset affected user session tokens."],
+          "fr": ["Désactiver le lien du service Anodot.", "Réinitialiser les jetons de session utilisateur affectés."]
+        },
+        "phase4_post_incident": {
+          "en": ["Conduct a third-party risk assessment audit.", "Notify users about PII exposure."],
+          "fr": ["Mener un audit d'évaluation des risques tiers.", "Informer les utilisateurs de l'exposition des PII."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Look for credentials shared across different SaaS vendors.", "Search for data exfiltration via API connectors."],
+          "fr": ["Rechercher des identifiants partagés entre différents fournisseurs SaaS.", "Rechercher l'exfiltration de données via des connecteurs API."]
+        }
+      },
+      "tags": ["Third-party", "SaaS", "Metadata"],
+      "sources": ["https://www.bleepingcomputer.com/news/security/vimeo-data-breach-exposes-personal-information-of-119-000-people/", "https://haveibeenpwned.com/Breach/Vimeo"],
+      "date": "2026-05-06"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-31431",
+      "euvd_id": "unknown",
+      "cisa_kev": "TRUE",
+      "cvss": "7.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+      "product": "Linux Kernel",
+      "vendor": "Linux Foundation",
+      "description": {
+        "en": "Deterministic Local Privilege Escalation (LPE) in the Linux Kernel nicknamed 'Copy Fail'. Exploits a logic flaw in the AF_ALG subsystem.",
+        "fr": "Élévation de privilèges locaux (LPE) déterministe dans le noyau Linux surnommée 'Copy Fail'. Exploite un défaut logique dans le sous-système AF_ALG."
+      },
+      "mitre_ttps": ["T1068"],
+      "recommandations": [
+        {
+          "en": "Update Linux kernel to the latest patched version.",
+          "fr": "Mettre à jour le noyau Linux vers la dernière version corrigée."
+        },
+        {
+          "en": "Disable AF_ALG if not strictly necessary for cryptographic operations.",
+          "fr": "Désactiver AF_ALG s'il n'est pas strictement nécessaire pour les opérations cryptographiques."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Deploy kernel monitoring tools (e.g., Falco).", "Maintain inventory of Linux distributions."],
+          "fr": ["Déployer des outils de surveillance du noyau (ex: Falco).", "Maintenir un inventaire des distributions Linux."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor for unusual 'splice' syscalls.", "Detect unauthorized root access from unprivileged accounts."],
+          "fr": ["Surveiller les appels système 'splice' inhabituels.", "Détecter les accès root non autorisés à partir de comptes non privilégiés."]
+        },
+        "phase3_containment": {
+          "en": ["Isolate affected servers from the network.", "Reboot with an older, unaffected kernel if patch is unavailable."],
+          "fr": ["Isoler les serveurs affectés du réseau.", "Redémarrer avec un noyau plus ancien non affecté si le correctif est indisponible."]
+        },
+        "phase4_post_incident": {
+          "en": ["Audit all system configuration changes made during the breach.", "Rotate all local service passwords."],
+          "fr": ["Auditer tous les changements de configuration système effectués pendant la violation.", "Renouveler tous les mots de passe des services locaux."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search for the signature of the 'Copy Fail' python script in memory.", "Check for modifications to /etc/shadow or /etc/passwd."],
+          "fr": ["Rechercher la signature du script python 'Copy Fail' en mémoire.", "Vérifier les modifications de /etc/shadow ou /etc/passwd."]
+        }
+      },
+      "tags": ["vulnerability", "linux", "kernel", "LPE"],
+      "sources": ["https://unit42.paloaltonetworks.com/cve-2026-31431-copy-fail/"],
+      "date": "2026-05-06"
+    },
+    {
+      "cve_id": "CVE-2026-4670",
+      "euvd_id": "unknown",
+      "cisa_kev": "TRUE",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:progress:moveit_automation:*:*:*:*:*:*:*:*",
+      "product": "MOVEit Automation",
+      "vendor": "Progress Software",
+      "description": {
+        "en": "Critical authentication bypass in MOVEit Automation allowing remote unauthenticated access to the administrative console.",
+        "fr": "Contournement d'authentification critique dans MOVEit Automation permettant un accès distant non authentifié à la console d'administration."
+      },
+      "mitre_ttps": ["T1211", "T1078"],
+      "recommandations": [
+        {
+          "en": "Apply the Progress Software full installer patch immediately.",
+          "fr": "Appliquer immédiatement le correctif d'installation complet de Progress Software."
+        },
+        {
+          "en": "Restrict access to the management console to internal VPNs only.",
+          "fr": "Restreindre l'accès à la console de gestion aux réseaux VPN internes uniquement."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Inventory all public-facing MOVEit instances.", "Establish backup of file transfer configs."],
+          "fr": ["Inventorier toutes les instances MOVEit exposées publiquement.", "Établir une sauvegarde des configurations de transfert de fichiers."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor logs for administrative login from unknown IPs.", "Watch for unauthorized task modifications."],
+          "fr": ["Surveiller les journaux pour les connexions administratives depuis des IP inconnues.", "Surveiller les modifications de tâches non autorisées."]
+        },
+        "phase3_containment": {
+          "en": ["Disable MOVEit automation services until patched.", "Block access at the perimeter firewall."],
+          "fr": ["Désactiver les services d'automatisation MOVEit jusqu'à ce qu'ils soient corrigés.", "Bloquer l'accès au niveau du pare-feu périmétrique."]
+        },
+        "phase4_post_incident": {
+          "en": ["Scan for any data exfiltration via transfer logs.", "Rotate all service credentials stored in MOVEit."],
+          "fr": ["Rechercher toute exfiltration de données via les journaux de transfert.", "Renouveler tous les identifiants de service stockés dans MOVEit."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search for unauthorized administrative accounts created on the platform.", "Analyze transfer traffic for spikes to unusual destinations."],
+          "fr": ["Rechercher des comptes administratifs non autorisés créés sur la plateforme.", "Analyser le trafic de transfert pour détecter des pics vers des destinations inhabituelles."]
+        }
+      },
+      "tags": ["vulnerability", "MOVEit", "AuthBypass"],
+      "sources": ["https://fieldeffect.com/blog/authentication-bypass-progress-moveit-automation"],
+      "date": "2026-05-06"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "UAT-8302 State-Sponsored Cyber Espionage",
+        "fr": "Espionnage cybernétique étatique UAT-8302"
+      },
+      "description": {
+        "en": "A Chinese state-sponsored group (UAT-8302) targeting governments in South America and Southeast Europe using advanced custom malware (NetDraft, CloudSorcerer).",
+        "fr": "Un groupe étatique chinois (UAT-8302) ciblant les gouvernements en Amérique du Sud et en Europe du Sud-Est utilisant des malwares personnalisés avancés (NetDraft, CloudSorcerer)."
+      },
+      "threat_actor": "UAT-8302",
+      "threat_actor_origin": "China",
+      "threat_actor_type": "APT",
+      "threat_actor_aliases": ["LongNosedGoblin", "Earth Estries"],
+      "sector": {
+        "en": ["Government_and_Defense", "Technology_and_Telecom"],
+        "fr": ["Gouvernement et Défense", "Technologie et Télécom"]
+      },
+      "indicators": {
+        "URL": ["https://drivelivelime[.]com/api/v3/auth"],
+        "IPv4": ["103.27.108.55"],
+        "IPv6": [],
+        "DOMAIN": ["drivelivelime[.]com"],
+        "EMAIL": [],
+        "HASH_SHA256": ["unknown"],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": ["NetDraft", "CloudSorcerer", "SkyGofree"]
+      },
+      "mitre_ttps": ["T1574.002", "T1567", "T1071.001"],
+      "analyse": {
+        "en": "The actor uses OneDrive and Microsoft Graph APIs for C2 communication to blend in with legitimate traffic, making detection difficult.",
+        "fr": "L'acteur utilise OneDrive et les API Microsoft Graph pour la communication C2 afin de se fondre dans le trafic légitime, rendant la détection difficile."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor and restrict unauthorized usage of Microsoft Graph APIs in corporate environments.",
+          "fr": "Surveiller et restreindre l'utilisation non autorisée des API Microsoft Graph dans les environnements d'entreprise."
+        },
+        {
+          "en": "Implement DLL side-loading protections for sensitive binaries.",
+          "fr": "Mettre en œuvre des protections contre le DLL side-loading pour les binaires sensibles."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Audit cloud storage usage policies.", "Deploy EDR with DLL monitoring capabilities."],
+          "fr": ["Auditer les politiques d'utilisation du stockage cloud.", "Déployer un EDR avec des capacités de surveillance des DLL."]
+        },
+        "phase2_detection": {
+          "en": ["Detect unusual OAuth tokens for OneDrive.", "Monitor for network connections to unknown subdomains of cloud services."],
+          "fr": ["Détecter des jetons OAuth inhabituels pour OneDrive.", "Surveiller les connexions réseau vers des sous-domaines inconnus de services cloud."]
+        },
+        "phase3_containment": {
+          "en": ["Block identified C2 domains at DNS/Firewall.", "Revoke malicious OAuth application permissions."],
+          "fr": ["Bloquer les domaines C2 identifiés au niveau DNS/Pare-feu.", "Révoquer les permissions des applications OAuth malveillantes."]
+        },
+        "phase4_post_incident": {
+          "en": ["Perform forensic imaging of affected hosts.", "Review cloud access logs for unauthorized file access."],
+          "fr": ["Effectuer une imagerie forensique des hôtes affectés.", "Réviser les journaux d'accès cloud pour les accès aux fichiers non autorisés."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search for signed binaries loading unsigned DLLs in unusual directories.", "Analyze cloud API calls for excessive data syncing."],
+          "fr": ["Rechercher des binaires signés chargeant des DLL non signées dans des répertoires inhabituels.", "Analyser les appels d'API cloud pour une synchronisation de données excessive."]
+        }
+      },
+      "tags": ["APT", "China", "Espionage"],
+      "sources": ["https://blog.talosintelligence.com/uat-8302/"],
+      "date": "2026-05-06"
+    },
+    {
+      "title": {
+        "en": "Lazarus Malicious Git Hooks Campaign",
+        "fr": "Campagne de hooks Git malveillants de Lazarus"
+      },
+      "description": {
+        "en": "North Korean group Lazarus uses malicious pre-commit hooks in cloned repositories to execute malware on developers' machines.",
+        "fr": "Le groupe nord-coréen Lazarus utilise des hooks pre-commit malveillants dans des dépôts clonés pour exécuter des malwares sur les machines des développeurs."
+      },
+      "threat_actor": "Lazarus Group",
+      "threat_actor_origin": "North Korea",
+      "threat_actor_type": "APT",
+      "threat_actor_aliases": ["APT38", "Hidden Cobra"],
+      "sector": {
+        "en": ["Technology_and_Telecom", "Finance"],
+        "fr": ["Technologie et Télécom", "Finance"]
+      },
+      "indicators": {
+        "URL": ["https://precommit[.]vercel[.]app/payload"],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": ["precommit[.]vercel[.]app"],
+        "EMAIL": [],
+        "HASH_SHA256": ["unknown"],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": ["InvisiFerret", "Git"]
+      },
+      "mitre_ttps": ["T1195.003", "T1059.006"],
+      "analyse": {
+        "en": "Lazarus continues to target the software supply chain by abusing trusted development tools and social engineering ('Contagious Interview').",
+        "fr": "Lazarus continue de cibler la chaîne d'approvisionnement logicielle en abusant d'outils de développement de confiance et de l'ingénierie sociale ('Contagious Interview')."
+      },
+      "recommandations": [
+        {
+          "en": "Disable global execution of Git hooks from untrusted repositories.",
+          "fr": "Désactiver l'exécution globale des hooks Git provenant de dépôts non fiables."
+        },
+        {
+          "en": "Train developers to audit .git/hooks directory after cloning external projects.",
+          "fr": "Former les développeurs à auditer le répertoire .git/hooks après avoir cloné des projets externes."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Implement developer workstation hardening.", "Use containerized development environments."],
+          "fr": ["Mettre en œuvre le durcissement des postes de travail des développeurs.", "Utiliser des environnements de développement conteneurisés."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor for child processes spawned by Git.", "Detect outbound connections from pre-commit scripts."],
+          "fr": ["Surveiller les processus enfants générés par Git.", "Détecter les connexions sortantes des scripts pre-commit."]
+        },
+        "phase3_containment": {
+          "en": ["Delete the malicious repository.", "Disconnect infected dev machine from the corporate network."],
+          "fr": ["Supprimer le dépôt malveillant.", "Déconnecter la machine de développement infectée du réseau d'entreprise."]
+        },
+        "phase4_post_incident": {
+          "en": ["Audit SSH keys and secrets on the dev machine.", "Notify project contributors."],
+          "fr": ["Auditer les clés SSH et les secrets sur la machine de développement.", "Informer les contributeurs du projet."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search filesystem for suspicious scripts in hidden .git folders.", "Check bash history for execution of hooks."],
+          "fr": ["Rechercher dans le système de fichiers des scripts suspects dans les dossiers cachés .git.", "Vérifier l'historique bash pour l'exécution de hooks."]
+        }
+      },
+      "tags": ["Lazarus", "SupplyChain", "Git"],
+      "sources": ["https://opensourcemalware.com/blog/dprk-git-hooks-malware"],
+      "date": "2026-05-06"
+    }
+  ]
+}
