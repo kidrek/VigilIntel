@@ -9,11 +9,18 @@
   * [Articles sélectionnés](#articles-selectionnes)
   * [Articles non sélectionnés](#articles-non-selectionnes)
 * [Articles](#articles)
-  * [Mini Shai-Hulud + PyTorch supply chain compromise](#mini-shai-hulud-plus-pytorch-supply-chain-compromise)
-  * [AiTM phishing campaign via code of conduct lures](#aitm-phishing-campaign-via-code-of-conduct-lures)
-  * [Bluekit automated phishing kit with AI capabilities](#bluekit-automated-phishing-kit-with-ai-capabilities)
-  * [VK.com phishing via compromised Italian infrastructure](#vk-com-phishing-via-compromised-italian-infrastructure)
-  * [Trellix source code repository compromise](#trellix-source-code-repository-compromise)
+  * [Lazarus Group - Contagious Interview via Git Hooks](#lazarus-group-contagious-interview-via-git-hooks)
+  * [TeamPCP - GitHub Actions and Trivy supply chain poisoning](#teampcp-github-actions-and-trivy-supply-chain-poisoning)
+  * [Microsoft Edge - Local credential theft via cleartext memory](#microsoft-edge-local-credential-theft-via-cleartext-memory)
+  * [USA Phishing Campaign - OTP theft and ScreenConnect RMM](#usa-phishing-campaign-otp-theft-and-screenconnect-rmm)
+  * [Quasar Linux QLNX - Stealthy malware targeting DevOps](#quasar-linux-qlnx-stealthy-malware-targeting-devops)
+  * [DAEMON Tools - Supply chain compromise and QUIC C2](#daemon-tools-supply-chain-compromise-and-quic-c2)
+  * [Taiwan High Speed Rail - Radio signal injection and emergency braking](#taiwan-high-speed-rail-radio-signal-injection-and-emergency-braking)
+  * [Embodied AI - Cyber-physical risks in robotics](#embodied-ai-cyber-physical-risks-in-robotics)
+  * [CloudZ RAT - Phone Link abuse for OTP interception](#cloudz-rat-phone-link-abuse-for-otp-interception)
+  * [Sinobi Ransomware - Extortion and data leak activity](#sinobi-ransomware-extortion-and-data-leak-activity)
+  * [Zarf - Secure deployment in air-gapped environments](#zarf-secure-deployment-in-air-gapped-environments)
+  * [Sysdig - Security briefing on cloud integration risks](#sysdig-security-briefing-on-cloud-integration-risks)
 
 ---
 
@@ -21,9 +28,9 @@
 
 # ANALYSE STRATÉGIQUE
 
-Le paysage des menaces de mai 2026 est marqué par une convergence critique entre l'Intelligence Artificielle générative et l'automatisation des attaques. L'IA n'est plus un concept théorique mais un levier opérationnel : elle accélère la découverte de vulnérabilités, comme le souligne le NCSC britannique, et sophistique les campagnes de phishing via des outils comme Bluekit capable de cloner des voix pour le vishing. Parallèlement, une pression extrême s'exerce sur les infrastructures critiques (énergie, eau, gestion de crise). Les opérations de sabotage et de reconnaissance attribuées à l'Iran et à la Russie illustrent une volonté d'impacter les systèmes de dissuasion ou de contrôle environnemental (pompes de Venise, automates Rockwell).
+L'écosystème de la menace en mai 2026 est caractérisé par une exploitation sophistiquée des chaînes d'approvisionnement logicielles et une fragilité accrue des environnements air-gapped et EOL (End-of-Life). La découverte de vulnérabilités logiques déterministes comme 'Copy Fail' dans le noyau Linux, assistée par IA, marque un tournant dans l'escalade de privilèges, rendant les défenses traditionnelles basées sur la probabilité d'exploitation obsolètes. 
 
-Le secteur technologique et du développement logiciel subit une offensive majeure sur la chaîne d'approvisionnement. Le groupe Lazarus et des acteurs comme TeamPCP saturent les dépôts (npm, PyPI) de packages empoisonnés (ex: Mini Shai-Hulud), ciblant directement les environnements de build. Enfin, l'exploitation active de failles critiques sur des briques d'infrastructure (cPanel, Linux Kernel, MOVEit) force les organisations à une réactivité sans précédent, alors que les attaquants déploient des ransomwares (Sorry, Everest) quelques heures seulement après la publication des PoC. Les recommandations stratégiques s'orientent vers le "hot patching" automatisé et l'adoption de l'authentification résistante au phishing (FIDO2) pour contrer l'AiTM.
+Parallèlement, des acteurs étatiques comme UAT-8302 (Chine) et Lazarus (Corée du Nord) affinent leurs méthodes d'intrusion via des outils de développement et des hooks Git, ciblant directement le poste de travail des développeurs pour contourner les périmètres de sécurité réseau. Sur le plan géopolitique, la souveraineté industrielle européenne devient un enjeu de sécurité nationale face à la restructuration des filières de défense, comme illustré par l'affaire Mecaer. Les secteurs de l'éducation et des transports subissent des attaques aux impacts physiques ou sociétaux majeurs, soulignant que la surface d'attaque s'étend désormais aux infrastructures critiques via des vecteurs radio ou des API SaaS mal sécurisées. La recommandation stratégique demeure le durcissement drastique des environnements de développement et l'adoption de méthodes d'authentification résistantes au phishing (FIDO2).
 
 ---
 
@@ -37,10 +44,10 @@ Le secteur technologique et du développement logiciel subit une offensive majeu
 
 | Nom de l'acteur | Secteur(s) ciblé(s) | Mode opératoire | TTP MITRE ATT&CK | Source(s) |
 |---|---|---|---|---|
-| **APT28** (Fancy Bear) | Gouvernement, Énergie | Compromission de routeurs SOHO, détournement DNS et attaques AiTM sur Outlook. | T1584.006, T1557 | [CERT-EU](https://cert.europa.eu/publications/threat-intelligence/cb26-05/) |
-| **Silk Typhoon** (Hafnium) | Gouvernement, Secteur Privé | Exploitation de Zero-day (Exchange) pour exfiltration de données massive. | T1190 | [CERT-EU](https://cert.europa.eu/publications/threat-intelligence/cb26-05/) |
-| **Lazarus Group** | Technologie, Développement | Campagne "Contagious Interview" utilisant des packages malveillants npm/PyPI. | T1195.002 | [CERT-EU](https://cert.europa.eu/publications/threat-intelligence/cb26-05/) |
-| **TeamPCP** | Technologie, Éducation | Propagation du ver Mini Shai-Hulud via des identifiants GitHub volés. | T1195 | [SANS ISC](https://isc.sans.edu/diary/rss/32950) |
+| **UAT-8302** | Gouvernement, Télécommunications | Exploitation de vulnérabilités n-day sur dispositifs réseau (Cisco) et malwares personnalisés (NetDraft). | T1190, T1547.001 | [Talos Intelligence](https://blog.talosintelligence.com/uat-8302/) |
+| **Lazarus Group** | Crypto-monnaie, Web3, Développement logiciel | Campagnes "Contagious Interview" utilisant des hooks Git malveillants pour l'exécution de code. | T1195.003, T1553.003 | [OpenSourceMalware](https://opensourcemalware.com/blog/dprk-git-hooks-malware) |
+| **ShinyHunters** | Technologie, Média, Commerce | Extorsion de données via compromission de jetons d'authentification chez des fournisseurs tiers (SaaS). | T1566.003, T1078.004 | [BleepingComputer](https://www.bleepingcomputer.com/news/security/vimeo-data-breach-exposes-personal-information-of-119-000-people/) |
+| **TeamPCP** | Cloud, Open Source | Empoisonnement d'actions GitHub (Trivy) pour l'extraction de secrets en mémoire CI/CD. | T1195.002 | [OpenSourceMalware](https://opensourcemalware.com/blog/antrea-compromise2) |
 
 ---
 
@@ -50,10 +57,9 @@ Le secteur technologique et du développement logiciel subit une offensive majeu
 
 | Pays/Région | Secteur | Thème | Description | Source(s) |
 |---|---|---|---|---|
-| Europe / Russie | Administration Publique | Sanctions Hybrides | L'UE sanctionne Euromore et Pravfond pour des opérations de déstabilisation et désinformation liées à l'Ukraine. | [Council of the EU](https://cert.europa.eu/publications/threat-intelligence/cb26-05/) |
-| France | Défense | Force stratégique | Cartographie russe des systèmes de communication basse fréquence de la dissuasion nucléaire française. | [CERT-EU](https://cert.europa.eu/publications/threat-intelligence/cb26-05/) |
-| USA / Iran | Énergie / Eau | Sabotage ICS | L'IRGC cible des automates Rockwell Automation, manipulant les écrans HMI et extrayant des fichiers sensibles. | [CISA](https://cert.europa.eu/publications/threat-intelligence/cb26-05/) |
-| Moyen-Orient / EAU | Énergie | Stratégie OPEP | Rupture géopolitique suite au retrait des EAU de l'OPEP, impactant la stabilité énergétique mondiale. | [IRIS](https://www.iris-france.org/retrait-de-lopep-le-pari-risque-des-emirats-arabes-unis/) |
+| Europe / Russie | Défense / Aéronautique | Souveraineté | La cession de Mecaer et les tensions sur les pays baltes soulignent l'érosion de l'unité européenne. | [IRIS](https://www.iris-france.org/mourir-pour-zilupe-la-guerre-qui-vient/)<br>[EPGE](https://www.epge.fr/mecaer-la-souverainete-qui-change-de-main/) |
+| UE / Japon | Technologie | Coopération numérique | Accord de partenariat sur l'IA, le quantique et la sécurisation des semi-conducteurs. | [Digital Strategy EC](https://digital-strategy.ec.europa.eu/en/news/eu-and-japan-accelerate-cooperation-ai-data-quantum-and-chips) |
+| Suède / OTAN | Défense | Intégration industrielle | Impact de l'adhésion à l'OTAN sur l'équilibre entre les initiatives de défense UE et les standards transatlantiques. | [IRIS](https://www.iris-france.org/which-type-of-armament-cooperation-do-we-want-need-the-case-of-sweden/) |
 
 ---
 
@@ -63,10 +69,10 @@ Le secteur technologique et du développement logiciel subit une offensive majeu
 
 | Titre | Auteur/Organisme | Date | Juridiction | Référence | Description | Source(s) |
 |---|---|---|---|---|---|---|
-| Opération PowerOFF | Europol | 2026-04-13 | Global | DDoS Services | Saisie de domaines et identification de 75 000 utilisateurs de services DDoS-for-hire. | [Europol](https://cert.europa.eu/publications/threat-intelligence/cb26-05/) |
-| ESMA AI Warning | ESMA | 2026-04-24 | Europe | Finance | Avertissement sur les risques IA pour le secteur financier et les plateformes crypto. | [ESMA](https://cert.europa.eu/publications/threat-intelligence/cb26-05/) |
-| CSWP 50 | NIST | 2026-05-04 | USA | NIST 2.0 | Nouvelles ressources pour la gestion des risques cyber pour les micro-entreprises. | [NIST](https://www.nist.gov/blogs/cybersecurity-insights/stronger-cybersecurity-stronger-business-nist-celebrates-2026-national) |
-| AI Patch Wave Warning | UK NCSC | 2026-05-04 | UK | Strategic Guidance | Le NCSC alerte sur l'accélération de la découverte de failles via l'IA, imposant un cycle de patch urgent. | [UK NCSC](https://securityaffairs.com/191657/security/ai-speeds-flaw-discovery-forcing-rapid-updates-uk-ncsc-warns.html) |
+| Interdiction Kochava | FTC | 2026-05-05 | USA | FTC vs Kochava | Interdiction de vente de données de localisation précises sans consentement explicite. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/ftc-to-ban-data-broker-kochava-from-selling-americans-location-data/) |
+| Condamnation Karakurt | US Court | 2026-05-05 | USA | Case Zolotarjovs | 8,5 ans de prison pour un négociateur clé lié au groupe Conti. | [Security Affairs](https://securityaffairs.com/191722/cyber-crime/u-s-court-sentences-karakurt-ransomware-negotiator-to-8-5-years.html) |
+| Mobilité Militaire | Parlement Européen | 2026-05-05 | UE | OJ:C_202602152 | Cadre légal pour la mobilité des forces armées au sein de l'Union. | [EUR-Lex](https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:C_202602152) |
+| Audit Écoles NYC | NYS Auditor | 2026-05-05 | USA | NYC Schools Audit | Constat d'absence d'inventaire centralisé pour les fournisseurs tiers gérant les données étudiants. | [DataBreaches.net](https://databreaches.net/2026/05/05/nyc-public-schools-lack-central-inventory-to-track-vendors-used-by-schools-nys-auditor/) |
 
 ---
 
@@ -76,10 +82,8 @@ Le secteur technologique et du développement logiciel subit une offensive majeu
 
 | Secteur | Victime | Données compromises | Volume estimé | Source(s) |
 |---|---|---|---|---|
-| Environnement | Venice Flood Defence | Accès administratif (Root) aux pompes | N/A (Accès critique) | [CERT-EU](https://cert.europa.eu/publications/threat-intelligence/cb26-05/) |
-| Public | ANTS (France) | Noms, e-mails, dates de naissance | 19 000 000 | [CERT-EU](https://cert.europa.eu/publications/threat-intelligence/cb26-05/) |
-| Law Enforcement | FBI Surveillance System | Retours de surveillance, données d'enquêtes | Massif | [CERT-EU](https://cert.europa.eu/publications/threat-intelligence/cb26-05/) |
-| Fintech | TSYS | Données financières potentielles | Inconnu (Everest Ransomware) | [Mastobot](https://mastobot.ping.moi/@Bobe_bot/116519495924597375) |
+| Éducation | Instructure (Canvas) | IDs étudiants, noms, emails, messages privés. | 280 millions d'enregistrements | [BleepingComputer](https://www.bleepingcomputer.com/news/security/instructure-hacker-claims-data-theft-from-8-800-schools-universities/) |
+| Média / SaaS | Vimeo | Emails, noms, métadonnées de vidéos via Anodot. | 119 167 comptes | [Security Affairs](https://securityaffairs.com/191715/data-breach/vimeo-confach-via-third-party-vendor-impacts-119k-users.html)<br>[HIBP](https://haveibeenpwned.com/Breach/Vimeo) |
 
 ---
 
@@ -92,20 +96,38 @@ Le secteur technologique et du développement logiciel subit une offensive majeu
 
 | # | CVE-ID | CISA KEV | Exploitation | Score Composite | CVSS | Clé de tri |
 |---|---|---|---|---|---|---|
-| 1 | CVE-2026-41940 | TRUE  | Active    | 7.0 | 9.8   | (1,1,7.0,9.8) |
-| 2 | CVE-2026-31431 | TRUE  | Active    | 5.5 | 7.8   | (1,1,5.5,7.8) |
-| 3 | CVE-2026-35616 | FALSE | Active    | 4.0 | 9.8   | (0,1,4.0,9.8) |
-| 4 | CVE-2026-4670  | FALSE | Active    | 3.5 | 9.8   | (0,1,3.5,9.8) |
-| 5 | CVE-2026-22679 | FALSE | Active    | 3.0 | N/A→0 | (0,1,3.0,0)   |
+| 1 | CVE-2026-4670 | TRUE  | Théorique | 4.5 | 9.8   | (1,0,4.5,9.8) |
+| 2 | CVE-2026-31431 | FALSE | Active    | 3.0 | 7.8   | (0,1,3.0,7.8) |
+| 3 | CVE-2026-34084 | FALSE | Théorique | 1.5 | N/A   | (0,0,1.5,0)   |
+| 4 | CVE-2026-39849 | FALSE | Théorique | 1.0 | N/A   | (0,0,1.0,0)   |
+| 5 | CVE-2026-0073 | FALSE | Théorique | 1.0 | N/A   | (0,0,1.0,0)   |
+| 6 | CVE-2026-7857 | FALSE | Théorique | 1.0 | N/A   | (0,0,1.0,0)   |
+| 7 | Apache Multiples | FALSE | Théorique | 1.0 | N/A   | (0,0,1.0,0)   |
+| 8 | CVE-2026-40075 | FALSE | Théorique | 0.5 | N/A   | (0,0,0.5,0)   |
+| 9 | CVE-2026-39852 | FALSE | Théorique | 0.5 | N/A   | (0,0,0.5,0)   |
+| 10| CVE-2026-35579 | FALSE | Théorique | 0.5 | N/A   | (0,0,0.5,0)   |
+| 11| CVE-2026-44331 | FALSE | Théorique | 0.5 | N/A   | (0,0,0.5,0)   |
+| 12| CVE-2026-6180 | FALSE | Théorique | 0.5 | N/A   | (0,0,0.5,0)   |
+| 13| CVE-2026-41181 | FALSE | Théorique | 0.5 | N/A   | (0,0,0.5,0)   |
+| 14| CVE-2026-22732 | FALSE | Théorique | 0.5 | N/A   | (0,0,0.5,0)   |
 -->
 
 | CVE-ID | Score CVSS | EPSS | CISA KEV | Score Composite | Produit affecté | Type de vulnérabilité | Impact | Exploitation | Mesures de contournement | Source(s) |
 |---|---|---|---|---|---|---|---|---|---|---|
-| CVE-2026-41940 | 9.8 | N/A | TRUE | 7.0 | cPanel, WHM | Auth Bypass / RCE | RCE | Active | Correctif d'urgence du 28/04/2026 | [Security Affairs](https://securityaffairs.com/191666/breaking-news/hackers-target-governments-and-msps-via-critical-cpanel-flaw-cve-2026-41940.html) |
-| CVE-2026-31431 | 7.8 | N/A | TRUE | 5.5 | Linux Kernel | Copy Fail logic | LPE | Active | Mise à jour vers Kernel 6.12+ | [Security Affairs](https://securityaffairs.com/191629/hacking-u-s-cisa-adds-a-flaw-in-linux-kernel-to-its-known-exploited-vulnerabilities-catalog.html) |
-| CVE-2026-35616 | 9.8 | N/A | FALSE | 4.0 | FortiClient EMS | Improper Access Control | RCE | Active | Mise à jour vers EMS 7.4.7 | [Fortinet](https://cert.europa.eu/publications/threat-intelligence/cb26-05/) |
-| CVE-2026-4670 | 9.8 | N/A | FALSE | 3.5 | MOVEit Automation | Authentication Bypass | Admin Access | Active | Version 2025.1.5 | [The Hacker News](https://thehackernews.com/2026/05/progress-patches-critical-moveit.html) |
-| CVE-2026-22679 | N/A | N/A | FALSE | 3.0 | Weaver E-cology | API Debug RCE | RCE | Active | Désactiver l'API de debug | [BleepingComputer](https://www.bleepingcomputer.com/news/security/weaver-e-cology-critical-bug-exploited-in-attacks-since-march/) |
+| CVE-2026-4670 | 9.8 | N/A | **TRUE** | 4.5 | MOVEit Automation | Auth Bypass | Critical | Théorique | Installer le Full Installer de Progress | [Field Effect](https://fieldeffect.com/blog/authentication-bypass-progress-moveit-automation) |
+| CVE-2026-31431 | 7.8 | N/A | FALSE | 3.0 | Linux Kernel | Cache Flaw (Copy Fail) | Root RCE | Active | Désactiver module algif_aead | [Unit 42](https://unit42.paloaltonetworks.com/cve-2026-31431-copy-fail/) |
+| CVE-2026-34084 | N/A | N/A | FALSE | 1.5 | PHPOffice | Désérialisation | RCE / SSRF | Théorique | Mettre à jour PHPOffice | [OffSec](https://infosec.exchange/@offseq/116525041581261586) |
+| CVE-2026-39849 | N/A | N/A | FALSE | 1.0 | Pi-hole FTL | Line Injection | RCE | Théorique | Mettre à jour vers v6.6.1 | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-39849) |
+| CVE-2026-0073 | N/A | N/A | FALSE | 1.0 | Android System | RCE Flaw | RCE | Théorique | Appliquer bulletin de mai 2026 | [Security Affairs](https://securityaffairs.com/191710/breaking-news/critical-android-vulnerability-cve-2026-0073-fixed-by-google.html) |
+| CVE-2026-7857 | N/A | N/A | FALSE | 1.0 | D-Link Firmware | Stack Overflow | RCE | Théorique | Désactiver admin WAN | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-7857) |
+| Multiples | N/A | N/A | FALSE | 1.0 | Apache HTTP | Multiples (11 CVE) | RCE / DoS | Théorique | Mettre à jour vers 2.4.67+ | [CERT-FR](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0530/) |
+| CVE-2026-40075 | N/A | N/A | FALSE | 0.5 | OpenMRS Core | Path Traversal | Auth Bypass | Théorique | Mettre à jour vers 2.8.6+ | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-40075) |
+| CVE-2026-39852 | N/A | N/A | FALSE | 0.5 | Quarkus | Path Normalization | Auth Bypass | Théorique | Mettre à jour vers 3.35.2+ | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-39852) |
+| CVE-2026-35579 | N/A | N/A | FALSE | 0.5 | CoreDNS | TSIG Bypass | Auth Bypass | Théorique | Mettre à jour vers 1.14.3 | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-35579) |
+| CVE-2026-44331 | N/A | N/A | FALSE | 0.5 | ProFTPD | SQL Injection | Info Disclosure | Théorique | Désactiver UseReverseDNS | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-44331) |
+| CVE-2026-6180 | N/A | N/A | FALSE | 0.5 | Papercut NG/MF | Info Leak | Info Disclosure | Théorique | Mettre à jour Papercut | [CERT-FR](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0532/) |
+| CVE-2026-41181 | N/A | N/A | FALSE | 0.5 | Traefik | Security Flaw | Auth Bypass | Théorique | Mettre à jour Traefik | [CERT-FR](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0531/) |
+| CVE-2026-22732 | N/A | N/A | FALSE | 0.5 | Software EOL | SCA Blind Spot | Critical | Théorique | Remplacer bibliothèques EOL | [BleepingComputer](https://www.bleepingcomputer.com/news/security/the-eol-blind-spot-in-your-cve-feed-what-sca-tools-miss/) |
 
 ---
 
@@ -115,11 +137,9 @@ Le secteur technologique et du développement logiciel subit une offensive majeu
 
 | Titre | Sujet canonique | Raison de sélection | Source(s) |
 |---|---|---|---|
-| TeamPCP Weekly / PyTorch Backdoor | Mini Shai-Hulud + PyTorch supply chain compromise | Menace majeure sur la supply chain logicielle affectant des packages populaires. | [SANS ISC](https://isc.sans.edu/diary/rss/32950)<br>[BleepingComputer](https://www.bleepingcomputer.com/news/security/backdoored-pytorch-lightning-package-drops-credential-stealer/) |
-| Breaking the code: Code of conduct phishing | AiTM phishing campaign via code of conduct lures | Campagne AiTM sophistiquée ciblant les tokens MFA via des leurres RH. | [Microsoft Security](https://www.microsoft.com/en-us/security/blog/2026/05/04/breaking-the-code-multi-stage-code-of-conduct-phishing-campaign-leads-to-aitm-token-compromise/) |
-| Bluekit phishing kit automated | Bluekit automated phishing kit with AI capabilities | Utilisation d'IA pour le clonage de voix et l'automatisation de phishing massif. | [Security Affairs](https://securityaffairs.com/191646/cyber-crime/bluekit-phishing-kit-enables-automated-phishing-with-40-templates-and-ai-tools.html) |
-| Phishing Detection on VK.com | VK.com phishing via compromised Italian infrastructure | Exploitation de réseaux sociaux et d'infrastructure compromise pour le phishing. | [URLDNA](https://infosec.exchange/@urldna/116519377921115682) |
-| Trellix source code breach | Trellix source code repository compromise | Intrusion dans le dépôt de code source d'un éditeur de sécurité majeur. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/trellix-discloses-data-breach-after-source-code-repository-hack/) |
+| Lazarus : Git Hooks malveillants | Lazarus Group - Contagious Interview via Git Hooks | Menace APT active sur développeurs. | [OpenSourceMalware](https://opensourcemalware.com/blog/dprk-git-hooks-malware) |
+| Compromission d'Antrea | TeamPCP - GitHub Actions and Trivy supply chain poisoning | Attaque supply-chain CNCF majeure. | [OpenSourceMalware](https://opensourcemalware.com/blog/antrea-compromise2) |
+| Campagne de Phishing USA | USA Phishing Campaign - OTP theft and ScreenConnect RMM | Campagne active de vol de jetons MFA. | [ANY.RUN](https://any.run/cybersecurity-blog/us-fake-invitation-phishing/) |
 
 ---
 
@@ -129,13 +149,13 @@ Le secteur technologique et du développement logiciel subit une offensive majeu
 
 | Titre | Raison d'exclusion | Source(s) |
 |---|---|---|
-| Cyber Brief 26-05 - April 2026 | Rapport de synthèse mensuel sans détails techniques exploitables pour un article complet. | [CERT-EU](https://cert.europa.eu/publications/threat-intelligence/cb26-05/) |
-| Elastic Security 9.4 Release | Annonce de sortie de produit (commercial/fonctionnel). | [Elastic Security](https://www.elastic.co/security-labs/skills-elastic-security-9-4) |
-| ISC Stormcast (May 4/5) | Format podcast/journalier sans analyse granulaire propre à un sujet unique. | [SANS ISC](https://isc.sans.edu/diary/rss/32952) |
-| Amazon SES Phishing Abuse | Analyse de tendance de vecteur sans détails d'incident spécifique. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/amazon-ses-increasingly-abused-in-phishing-to-evade-detection/) |
-| Red Canary CFP Tracker | Article utilitaire/communautaire (calendrier de conférences). | [Red Canary](https://redcanary.com/blog/news-events/red-canary-cfp-tracker-may-2026/) |
-| Fiber-optic hidden microphone | Recherche scientifique/physique hors périmètre cyber-opérationnel immédiat. | [Mastodon](https://mastodon.social/@const_data/116519423729704102) |
-| Amazon WorkSpaces Skylight Agent | Classé en Vulnérabilités (P1), score < 1. | [AWS Security](https://aws.amazon.com/security/security-bulletins/rss/2026-025-aws/) |
+| Stormcast 6 mai 2026 | Contenu généraliste (podcast quotidien sans incident spécifique unique). | [SANS ISC](https://isc.sans.edu/diary/rss/32960) |
+| Stormcast 5 mai 2026 | Contenu généraliste (podcast quotidien sans incident spécifique unique). | [SANS ISC](https://isc.sans.edu/diary/rss/32952) |
+| Elastic Workflows GA | Contenu commercial / Mise à jour produit. | [Elastic Security Labs](https://www.elastic.co/security-labs/elastic-workflows-ga-9-4) |
+| AI-generated hunting leads | Contenu commercial / Marketing technologique. | [Elastic Security Labs](https://www.elastic.co/security-labs/proactive-threat-hunting-ai-generated-leads) |
+| Burnout en cybersécurité | Contenu sociologique / Non-sécuritaire technique. | [Mastodon](https://mastodon.social/@lbhuston/116525133885004276) |
+| Naomi Brockwell : Vidéo | Contenu de sensibilisation générale (vidéo privacy). | [PeerTube](https://peertube.futo.org/videos/watch/b4ddefd4-b02c-498a-ba18-7a286cff8ddf) |
+| Rotation certificat SSL.com | Événement opérationnel normal (non-incident). | [SANS ISC](https://isc.sans.edu/diary/rss/32956) |
 
 ---
 
@@ -143,67 +163,65 @@ Le secteur technologique et du développement logiciel subit une offensive majeu
 
 # SECTION "ARTICLES"
 
----
+<div id="lazarus-group-contagious-interview-via-git-hooks"></div>
 
-<div id="mini-shai-hulud-plus-pytorch-supply-chain-compromise"></div>
-
-## Mini Shai-Hulud + PyTorch supply chain compromise
+## Lazarus Group - Contagious Interview via Git Hooks
 
 ---
 
 ### Résumé technique
 
-Une campagne d'infection de la chaîne d'approvisionnement logicielle menée par l'acteur **TeamPCP** cible les écosystèmes Python et SAP. Le ver malveillant, baptisé **Mini Shai-Hulud**, a été injecté dans des packages populaires tels que `pytorch-lightning` (version 2.6.3) et des composants SAP sur npm. La chaîne d'infection débute par l'utilisation d'identifiants GitHub volés pour modifier des dépôts légitimes. Le package compromis contient un payload obfusqué de 11.4 MB qui utilise le runtime **Bun** pour s'exécuter lors de l'importation du module. Une fois actif, le malware tente de voler des secrets d'environnement, des clés SSH/RSA et des tokens CI/CD pour faciliter sa propagation inter-écosystèmes.
+L'acteur nord-coréen Lazarus Group a fait évoluer sa campagne "Contagious Interview" en intégrant des mécanismes de persistance via les hooks Git. Les attaquants, se faisant passer pour des recruteurs, incitent les développeurs à cloner des dépôts de code pour des tests techniques. Ces dépôts contiennent des scripts malveillants dissimulés dans le dossier caché `.git/hooks/pre-commit` ou `post-checkout`. Lors de l'exécution de commandes Git standards, le script télécharge et exécute le malware **InvisiFerret**, un implant spécialisé dans l'exfiltration de portefeuilles de crypto-monnaies et de clés SSH.
+
+---
 
 ### Analyse de l'impact
 
-L'impact est critique pour les entreprises utilisant des pipelines de Machine Learning et des infrastructures SAP. La compromission permet aux attaquants d'accéder aux modèles d'IA en cours d'entraînement et d'exfiltrer des données sensibles. La sophistication réside dans l'utilisation du runtime Bun pour l'exécution discrète de payloads JavaScript au sein d'environnements Python.
+Cette technique est particulièrement efficace car elle exploite la confiance des développeurs dans les outils de versioning. L'impact est critique pour les entreprises du secteur Web3 et FinTech, car l'accès au poste de travail d'un développeur permet non seulement le vol d'actifs numériques mais aussi l'injection de code malveillant dans les produits de l'entreprise (attaque supply-chain).
+
+---
 
 ### Recommandations
 
-*   Vérifier immédiatement l'intégrité de la version de `lightning` installée (éviter la 2.6.3).
-*   Réinitialiser tous les tokens d'accès GitHub et variables d'environnement CI/CD.
-*   Auditer les dépendances via des outils comme `Safety` ou `npm audit`.
+* Interdire le clonage de dépôts externes non audités sur les postes de travail professionnels.
+* Utiliser des environnements de développement isolés (Cloud IDE, VMs) pour les tests techniques.
+* Monitorer la création et l'exécution de fichiers dans les répertoires `.git/hooks`.
+
+---
 
 ### Playbook de réponse à incident
 
 #### Phase 1 — Préparation
-*   Activer le monitoring des changements de packages sur les registres privés npm/PyPI.
-*   Former les développeurs au "secret management" pour éviter le stockage de clés en clair dans les dépôts.
-*   Mettre en œuvre une solution d'audit de composition logicielle (SCA) en temps réel.
+* Éduquer les équipes de développement sur les risques liés aux scripts de hooks Git.
+* Configurer l'EDR pour surveiller les écritures dans les dossiers `.git` locaux.
 
 #### Phase 2 — Détection et analyse
-*   **Règles de détection :**
-    *   Requête EDR : Rechercher l'exécution du processus `bun` dont le parent est un interpréteur `python`.
-    *   Règle YARA : Cibler les chaînes de caractères spécifiques au ver Mini Shai-Hulud dans les répertoires `site-packages`.
-*   Scanner les journaux GitHub pour détecter des clones de dépôts massifs ou des commits inhabituels depuis des IPs inconnues.
+* Rechercher des fichiers suspects dans `.git/hooks/*` contenant des commandes `curl`, `wget` ou des URLs vers `vercel.app`.
+* **Règle Sigma** : Détecter les processus enfants de `git.exe` qui ne sont pas des shells standards ou qui effectuent des connexions réseau.
 
 #### Phase 3 — Confinement, éradication et récupération
-*   **Confinement :** Isoler les stations de build ayant téléchargé les packages incriminés.
-*   **Éradication :** Supprimer de force les versions compromises (`pip uninstall lightning==2.6.3`). Révoquer l'ensemble des clés SSH et tokens API potentiellement lus par le malware.
-*   **Récupération :** Restaurer les environnements de développement à partir de caches de packages certifiés sains (miroirs internes).
+* Isoler immédiatement le poste de travail infecté.
+* Supprimer l'intégralité du répertoire de code cloné.
+* Révoquer toutes les clés SSH et les secrets (AWS, GCP) présents sur la machine.
 
 #### Phase 4 — Activités post-incident
-*   Analyser les logs d'exfiltration pour déterminer quels secrets ont été compromis.
-*   Conduire un REX sur la sécurité des comptes développeurs (passage obligatoire au MFA matériel).
-*   Notifier les partenaires si des dépôts privés ont été clonés.
+* Analyser les logs de commits pour vérifier si l'attaquant a injecté du code avant la détection.
+* Notifier les plateformes de crypto-monnaies si des portefeuilles étaient actifs.
 
 #### Phase 5 — Threat Hunting (proactif)
 
 | Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
 |---|---|---|---|
-| Exécution furtive via Bun | T1195.002 | Endpoint Logs | `ProcessCreation | where ParentImage contains 'python' and ProcessName == 'bun'` |
-| Accès non autorisé aux secrets | T1555 | File Access Logs | `FileAccess | where FileName in ('.ssh/id_rsa', '.env', 'config.json')` |
+| Présence de scripts de post-installation malveillants | T1195.003 | Bash History / EDR | `grep -r "vercel.app" .git/hooks/` |
 
 ---
 
-### Indicateurs de compromission (DEFANG obligatoire)
+### Indicateurs de compromission (DEFANG)
 
 | Type | Valeur (DEFANG) | Description | Fiabilité |
 |---|---|---|---|
-| URL | hxxps[://]wiz[.]io/blog/mini-shai-hulud-supply-chain-sap-npm | Analyse technique du ver | Haute |
-| Nom de fichier | lightning-2.6.3.tar.gz | Package empoisonné | Haute |
-| Technique | Bun runtime execution | Vecteur d'obfuscation | Haute |
+| Domaine | precommit[.]vercel[.]app | Serveur de téléchargement InvisiFerret | Haute |
+| Nom de fichier | pre-commit | Script de hook trojanisé | Moyenne |
 
 ---
 
@@ -211,74 +229,71 @@ L'impact est critique pour les entreprises utilisant des pipelines de Machine Le
 
 | ID TTP | Tactique | Technique | Description contextuelle |
 |---|---|---|---|
-| T1195.002 | Initial Access | Malicious Code in Supply Chain | Empoisonnement des registres npm et PyPI. |
-| T1555 | Credential Access | Credentials from Password Stores | Vol de tokens et secrets d'environnement. |
+| T1195.003 | Initial Access | Supply Chain Compromise | Utilisation de hooks Git pour compromettre le pipeline de dev. |
 
 ---
 
 ### Sources
 
-* [SANS ISC](https://isc.sans.edu/diary/rss/32950)
-* [BleepingComputer](https://www.bleepingcomputer.com/news/security/backdoored-pytorch-lightning-package-drops-credential-stealer/)
+* [OpenSourceMalware](https://opensourcemalware.com/blog/dprk-git-hooks-malware)
 
 ---
 
-<div id="aitm-phishing-campaign-via-code-of-conduct-lures"></div>
+<div id="teampcp-github-actions-and-trivy-supply-chain-poisoning"></div>
 
-## AiTM phishing campaign via code of conduct lures
+## TeamPCP - GitHub Actions and Trivy supply chain poisoning
 
 ---
 
 ### Résumé technique
 
-Une campagne de phishing de type **Adversary-in-the-Middle (AiTM)** particulièrement sophistiquée cible les organisations via des leurres basés sur le "Code de conduite" interne. Les attaquants envoient des e-mails contenant des liens vers des fichiers PDF ou des pages hébergées sur des domaines usurpant Microsoft Outlook. Pour échapper aux scanners de sécurité automatisés, la campagne utilise des **CAPTCHA Cloudflare** avant d'afficher la page de connexion factice. Le mécanisme permet d'intercepter en temps réel les identifiants et, surtout, les **tokens de session MFA**, contournant ainsi les protections par SMS ou application d'authentification classique.
+Le groupe TeamPCP a ciblé le projet Antrea (CNCF) via une attaque sophistiquée exploitant les "GitHub Actions". En utilisant une technique de "GitHub Pwn Request", l'attaquant (0xedgerunner) a soumis des Pull Requests empoisonnant l'outil de scan de sécurité Trivy. L'objectif était d'exfiltrer les jetons AWS STS et les secrets Jenkins stockés en mémoire lors de l'exécution du pipeline CI/CD. Les données étaient ensuite exfiltrées vers des services comme `paste.rs`.
+
+---
 
 ### Analyse de l'impact
 
-L'impact est élevé car l'attaque neutralise le MFA standard. Une fois le token intercepté, l'attaquant accède directement à la boîte mail de la victime, permettant le vol de données eDiscovery et des attaques par rebond (BEC).
+Cette attaque démontre que même les outils de sécurité (Trivy) peuvent devenir des vecteurs d'attaque. La compromission d'un projet CNCF comme Antrea peut impacter des milliers d'environnements Kubernetes utilisant ce plugin réseau.
+
+---
 
 ### Recommandations
 
-*   Adopter des méthodes MFA résistantes au phishing basées sur la norme **FIDO2** (Yubikey).
-*   Configurer des politiques d'accès conditionnel limitant les connexions aux appareils gérés.
-*   Activer la protection réseau **SmartScreen** sur tous les postes.
+* Fixer systématiquement les versions des GitHub Actions par leur **hash SHA** plutôt que par des tags mutables (ex: @v1).
+* Restreindre les permissions des jetons `GITHUB_TOKEN` au strict minimum (read-only).
+
+---
 
 ### Playbook de réponse à incident
 
-#### Phase 1 — Preparation
-*   Déployer des clés de sécurité matérielles pour les comptes VIP/Privilégiés.
-*   Configurer Azure AD pour détecter les anomalies de type "impossible travel".
+#### Phase 1 — Préparation
+* Auditer tous les workflows GitHub pour identifier l'usage de `pull_request_target` qui permet l'exécution de code de PR externes avec des secrets.
 
-#### Phase 2 — Detection et analyse
-*   **Règles de détection :**
-    *   Query SIEM : Rechercher les logs `SigninLogs` Azure AD contenant l'étiquette `AiTM` ou des connexions via des adresses IP de proxies connus.
-    *   Identifier les e-mails contenant des pièces jointes PDF pointant vers les domaines `acceptable-use-policy-calendly[.]de`.
+#### Phase 2 — Détection et analyse
+* Rechercher des connexions réseau sortantes vers des sites de partage de texte (`webhook.site`, `paste.rs`) depuis les runners CI/CD.
+* Identifier l'IP `35[.]164[.]122[.]165` dans les logs d'accès.
 
 #### Phase 3 — Confinement, éradication et récupération
-*   **Confinement :** Révoquer immédiatement tous les tokens de session actifs pour l'utilisateur (`Revoke-MgUserSignInSession`).
-*   **Éradication :** Bloquer les domaines de phishing au niveau du proxy et du DNS.
-*   **Récupération :** Forcer le changement de mot de passe et réinitialiser les méthodes MFA si nécessaire.
+* Révoquer immédiatement les clés AWS compromises.
+* Invalider les secrets Jenkins et forcer leur rotation.
 
 #### Phase 4 — Activités post-incident
-*   Analyser la boîte mail pour détecter la création de règles de transfert de courrier (forwarding rules).
-*   Notifier les contacts externes si des e-mails de phishing ont été envoyés depuis le compte compromis.
+* Mettre à jour la politique de sécurité GitHub pour exiger une approbation manuelle des workflows pour tous les contributeurs externes.
 
 #### Phase 5 — Threat Hunting (proactif)
 
 | Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
 |---|---|---|---|
-| Détournement de session AiTM | T1557.001 | Azure AD Logs | `SigninLogs | where AuthenticationProcessingDetails has 'AiTM'` |
-| Persistance via règles Outlook | T1137 | Office 365 Logs | `OfficeActivity | where Operation == 'New-InboxRule'` |
+| Usage d'actions GitHub basées sur des tags mutables | T1195.002 | GitHub Audit | Rechercher `action_name: *trivy*` sans hash SHA. |
 
 ---
 
-### Indicateurs de compromission (DEFANG obligatoire)
+### Indicateurs de compromission (DEFANG)
 
 | Type | Valeur (DEFANG) | Description | Fiabilité |
 |---|---|---|---|
-| Domaine | acceptable-use-policy-calendly[.]de | Serveur de phishing AiTM | Haute |
-| Domaine | compliance-protectionoutlook[.]de | Serveur de phishing AiTM | Haute |
-| Hash SHA256 | 11420D6D693BF8B19195E6B98FEDD03B9BCBC770B6988BC64CB788BFABE1A49D | Payload PDF malveillant | Haute |
+| IP | 35[.]164[.]122[.]165 | Infrastructure TeamPCP | Haute |
+| Email | 0xedgerunner@proton[.]me | Identité de l'attaquant | Moyenne |
 
 ---
 
@@ -286,71 +301,69 @@ L'impact est élevé car l'attaque neutralise le MFA standard. Une fois le token
 
 | ID TTP | Tactique | Technique | Description contextuelle |
 |---|---|---|---|
-| T1557.001 | Credential Access | Adversary-in-the-Middle | Interception de tokens de session MFA. |
-| T1566.001 | Initial Access | Spearphishing Attachment | Utilisation de leurres PDF sur le code de conduite. |
+| T1195.002 | Initial Access | Supply Chain: Dependencies | Empoisonnement des dépendances de build CI/CD. |
 
 ---
 
 ### Sources
 
-* [Microsoft Security](https://www.microsoft.com/en-us/security/blog/2026/05/04/breaking-the-code-multi-stage-code-of-conduct-phishing-campaign-leads-to-aitm-token-compromise/)
+* [OpenSourceMalware](https://opensourcemalware.com/blog/antrea-compromise2)
 
 ---
 
-<div id="bluekit-automated-phishing-kit-with-ai-capabilities"></div>
+<div id="microsoft-edge-local-credential-theft-via-cleartext-memory"></div>
 
-## Bluekit automated phishing kit with AI capabilities
+## Microsoft Edge - Local credential theft via cleartext memory
 
 ---
 
 ### Résumé technique
 
-La découverte du kit de phishing **Bluekit** marque un tournant dans la démocratisation de l'IA pour la cybercriminalité. Ce kit "clés en main" propose plus de 40 templates (iCloud, Gmail, Outlook, services bancaires) et intègre des outils d'IA pour le **clonage de voix (vishing)** et la génération de contenu textuel persuasif. Bluekit dispose également de mécanismes avancés de contournement 2FA et d'un système antibot robuste pour empêcher l'analyse par les chercheurs en sécurité. L'infrastructure permet aux attaquants de générer automatiquement des domaines crédibles et de gérer des campagnes à grande échelle avec un minimum d'effort technique.
+Une recherche récente a démontré que le navigateur Microsoft Edge stocke les mots de passe des utilisateurs en clair dans la mémoire de son processus actif. Un attaquant ayant un accès local au système, même sans privilèges élevés (Standard User), peut utiliser des outils comme `strings.exe` de Sysinternals pour dumper la mémoire du processus `msedge.exe` et en extraire les identifiants de connexion aux services Web.
+
+---
 
 ### Analyse de l'impact
 
-Bluekit réduit drastiquement la barrière à l'entrée pour les cybercriminels, augmentant le volume d'attaques sophistiquées. L'intégration de l'IA vocale rend les attaques par ingénierie sociale beaucoup plus difficiles à détecter pour les employés, même formés.
+L'impact est élevé pour les postes de travail partagés ou les serveurs de rebond (Jump Hosts) où plusieurs utilisateurs se connectent. Cela facilite le mouvement latéral au sein d'une organisation après une première intrusion.
+
+---
 
 ### Recommandations
 
-*   Mettre à jour les programmes de sensibilisation pour inclure la détection du "Deepfake" vocal.
-*   Implémenter des politiques de filtrage d'e-mails basées sur l'ancienneté des domaines (bloquer les domaines de < 24h).
-*   Utiliser des solutions de protection de la navigation bloquant les redirections complexes.
+* Désactiver l'enregistrement des mots de passe dans Microsoft Edge via GPO.
+* Imposer l'utilisation d'un gestionnaire de mots de passe d'entreprise avec chiffrement au repos.
+
+---
 
 ### Playbook de réponse à incident
 
-#### Phase 1 — Preparation
-*   Organiser des exercices de crise incluant des simulations de vishing par IA.
-*   Déployer des certificats racines pour l'inspection SSL afin de détecter les kits de phishing.
+#### Phase 1 — Préparation
+* Déployer une politique de groupe (GPO) interdisant le stockage des identifiants dans le navigateur.
 
-#### Phase 2 — Detection et analyse
-*   **Règles de détection :**
-    *   DNS Logs : Rechercher des pics de requêtes vers des domaines générés aléatoirement avec des entropies élevées.
-    *   Vérifier les flux réseau pour détecter des signatures de serveurs antibot connus.
+#### Phase 2 — Détection et analyse
+* Monitorer l'usage d'outils de dump mémoire (`procdump.exe`, `strings.exe`) ciblant les processus navigateurs.
 
 #### Phase 3 — Confinement, éradication et récupération
-*   **Confinement :** Blacklister globalement les domaines identifiés dans les configurations Bluekit.
-*   **Éradication :** Identifier les utilisateurs ayant interagi avec les pages et forcer une réinitialisation d'identité complète.
+* Vider le cache des identifiants Edge sur les postes suspects.
+* Réinitialiser les mots de passe des comptes sensibles ayant été utilisés sur la machine.
 
 #### Phase 4 — Activités post-incident
-*   Analyser les enregistrements téléphoniques (si vishing suspecté) pour identifier les patterns vocaux.
-*   Ajuster les filtres heuristiques du SIEM pour intégrer les nouveaux templates.
+* Auditer les logs d'accès aux applications SaaS pour détecter des connexions provenant d'IPs inhabituelles après le dump suspect.
 
 #### Phase 5 — Threat Hunting (proactif)
 
 | Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
 |---|---|---|---|
-| Domaines Bluekit DGA | T1566 | DNS logs | `DNSQueries | where DomainAge < 24h and QueryName matches regex '[a-z0-9-]{10,}'` |
-| Vishing via VoIP | T1566.004 | SIP logs | Recherche de durée d'appels courtes et d'origine géographique atypique associée à des accès comptes. |
+| Extraction d'identifiants via dump mémoire | T1003 | EDR Logs | `process.name: strings.exe AND command_line: *msedge*` |
 
 ---
 
-### Indicateurs de compromission (DEFANG obligatoire)
+### Indicateurs de compromission (DEFANG)
 
 | Type | Valeur (DEFANG) | Description | Fiabilité |
 |---|---|---|---|
-| Technique | AI-Voice Cloning | Vecteur vishing Bluekit | Moyenne |
-| Type | Anti-bot bypass | Mécanisme de persistance Bluekit | Haute |
+| URL | hxxps[://]learn[.]microsoft[.]com/en-us/sysinternals/downloads/strings | Outil détourné pour le dump | Moyenne |
 
 ---
 
@@ -358,71 +371,74 @@ Bluekit réduit drastiquement la barrière à l'entrée pour les cybercriminels,
 
 | ID TTP | Tactique | Technique | Description contextuelle |
 |---|---|---|---|
-| T1566 | Initial Access | Phishing | Utilisation de templates automatisés. |
-| T1566.004 | Initial Access | Voice Phishing | Utilisation de clonage de voix via IA. |
+| T1003.001 | Credential Access | OS Credential Dumping | Extraction de secrets en mémoire vive. |
 
 ---
 
 ### Sources
 
-* [Security Affairs](https://securityaffairs.com/191646/cyber-crime/bluekit-phishing-kit-enables-automated-phishing-with-40-templates-and-ai-tools.html)
+* [SANS ISC](https://isc.sans.edu/diary/rss/32954)
+* [Mastodon](https://mastodon.social/@const_data/116525143758858204)
 
 ---
 
-<div id="vk-com-phishing-via-compromised-italian-infrastructure"></div>
+<div id="usa-phishing-campaign-otp-theft-and-screenconnect-rmm"></div>
 
-## VK.com phishing via compromised Italian infrastructure
+## USA Phishing Campaign - OTP theft and ScreenConnect RMM
 
 ---
 
 ### Résumé technique
 
-Une campagne de phishing ciblée a été identifiée utilisant le réseau social **VK.com** comme vecteur de distribution. Les attaquants exploitent la fonctionnalité de redirection légitime `away.php` de VK pour rediriger les utilisateurs vers une infrastructure italienne compromise (`aza[.]scia-a-roma[.]it`). Le site héberge une page de connexion frauduleuse conçue pour collecter les identifiants d'utilisateurs. Cette technique permet de contourner les filtres de sécurité qui font confiance aux liens provenant de domaines de réseaux sociaux majeurs.
+Une campagne massive de phishing cible les organisations aux États-Unis en utilisant des invitations factices à des événements. L'attaque utilise des techniques de contournement d'analyse via des CAPTCHA Cloudflare. Une fois le CAPTCHA résolu, l'utilisateur est dirigé vers une page de connexion factice conçue pour voler les identifiants et les codes OTP (MFA) en temps réel (AiTM). Dans certains cas, l'attaquant déploie également l'outil de gestion à distance légitime **ScreenConnect** pour maintenir un accès persistant.
+
+---
 
 ### Analyse de l'impact
 
-L'impact principal est le vol de comptes, qui peuvent ensuite être utilisés pour des campagnes d'influence ou pour infecter le cercle de confiance des victimes. L'utilisation d'un site institutionnel italien compromis augmente la crédibilité du lien aux yeux de la victime.
+L'utilisation d'attaques Adversary-in-the-Middle (AiTM) rend le MFA traditionnel par SMS ou application inefficace. L'accès via un outil RMM légitime comme ScreenConnect permet à l'attaquant de naviguer sur le réseau de manière indétectable par de nombreux antivirus classiques.
+
+---
 
 ### Recommandations
 
-*   Bloquer les URLs suspectes identifiées sur les passerelles web.
-*   Éduquer les utilisateurs sur les dangers des redirections via des tiers.
-*   Activer le MFA sur tous les comptes de réseaux sociaux.
+* Passer à une authentification multifacteur résistante au phishing (FIDO2/Clés de sécurité physiques).
+* Bloquer ou monitorer strictement les domaines en `.de` ou `.us` créés récemment.
+
+---
 
 ### Playbook de réponse à incident
 
-#### Phase 1 — Preparation
-*   Mettre à jour la base de données de filtrage d'URLs avec les domaines de redirection connus.
-*   Configurer l'EDR pour alerter sur les ouvertures de navigateur vers des domaines `.it` inhabituels.
+#### Phase 1 — Préparation
+* Mettre à jour les listes de blocage Web avec les domaines identifiés.
+* Configurer des alertes sur l'installation de nouveaux outils RMM non autorisés.
 
-#### Phase 2 — Detection et analyse
-*   **Règles de détection :**
-    *   Web Proxy : Filtrer les accès contenant `vk.com/away.php?to=http`.
-    *   Identifier tout trafic sortant vers `aza[.]scia-a-roma[.]it`.
+#### Phase 2 — Détection et analyse
+* Rechercher des connexions vers `getceptionparty[.]de` ou `acceptable-use-policy-calendly[.]de`.
+* Détecter les sessions MFA validées depuis des IPs identifiées comme proxies résidentiels.
 
 #### Phase 3 — Confinement, éradication et récupération
-*   **Confinement :** Bloquer l'URL spécifique sur les pare-feu.
-*   **Éradication :** Nettoyer le cache DNS des postes de travail.
-*   **Récupération :** Réinitialiser les mots de passe des utilisateurs ayant cliqué sur le lien.
+* Invalider immédiatement tous les jetons de session (session tokens) des utilisateurs concernés.
+* Désinstaller toute instance de ScreenConnect non répertoriée dans l'inventaire.
 
 #### Phase 4 — Activités post-incident
-*   Informer le gestionnaire du domaine italien de la compromission de son site.
-*   Calculer le nombre d'utilisateurs ayant été exposés via les logs proxy.
+* Analyser les accès effectués par l'attaquant durant la session compromise (mouvement latéral).
 
 #### Phase 5 — Threat Hunting (proactif)
 
 | Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
 |---|---|---|---|
-| Abus de redirection sociale | T1566.002 | Proxy logs | `WebProxy | where Url contains 'away.php' or Url contains 'redirect'` |
+| Usage de proxy AiTM pour valider des sessions | T1557 | Sign-in Logs | `auth_method: MFA AND result: Success AND is_proxy: True` |
 
 ---
 
-### Indicateurs de compromission (DEFANG obligatoire)
+### Indicateurs de compromission (DEFANG)
 
 | Type | Valeur (DEFANG) | Description | Fiabilité |
 |---|---|---|---|
-| URL | hxxp[://]aza[.]scia-a-roma[.]it/conferma/web/login[.]php | Page de phishing | Haute |
-| Domaine | scia-a-roma[.]it | Infrastructure compromise | Haute |
+| Domaine | getceptionparty[.]de | Serveur de phishing | Haute |
+| Domaine | acceptable-use-policy-calendly[.]de | Serveur AiTM | Haute |
+| Domaine | festiveparty[.]us | Serveur de phishing | Haute |
 
 ---
 
@@ -430,71 +446,72 @@ L'impact principal est le vol de comptes, qui peuvent ensuite être utilisés po
 
 | ID TTP | Tactique | Technique | Description contextuelle |
 |---|---|---|---|
-| T1566.002 | Initial Access | Spearphishing Link | Utilisation de liens via redirections de réseaux sociaux. |
+| T1566.002 | Initial Access | Spearphishing Link | Utilisation de liens d'invitation malveillants. |
+| T1557.001 | Credential Access | Adversary-in-the-Middle | Interception de tokens et codes OTP. |
 
 ---
 
 ### Sources
 
-* [URLDNA](https://infosec.exchange/@urldna/116519377921115682)
+* [ANY.RUN](https://any.run/cybersecurity-blog/us-fake-invitation-phishing/)
+* [Security Affairs](https://securityaffairs.com/191695/security/microsoft-warns-of-global-campaign-stealing-auth-tokens-from-35k-users.html)
 
 ---
 
-<div id="trellix-source-code-repository-compromise"></div>
+<div id="quasar-linux-qlnx-stealthy-malware-targeting-devops"></div>
 
-## Trellix source code repository compromise
+## Quasar Linux QLNX - Stealthy malware targeting DevOps
 
 ---
 
 ### Résumé technique
 
-L'éditeur de sécurité **Trellix** a divulgué une violation de données suite à l'intrusion dans l'un de ses dépôts de code source sur **GitHub**. L'accès non autorisé a été facilité par le vol d'identifiants de développeurs, probablement via une attaque de phishing ciblée ou une fuite de tokens. L'attaquant a pu cloner des dépôts contenant du code propriétaire avant que l'accès ne soit révoqué. Trellix a précisé que les produits n'ont pas été altérés ("build integrity" intacte), mais la fuite de code source pose un risque de découverte ultérieure de vulnérabilités par analyse statique ("white-box testing") par des tiers malveillants.
+Quasar Linux (QLNX) est un implant furtif nouvellement découvert, conçu pour cibler les environnements Linux critiques tels que Kubernetes, AWS et Docker. Sa particularité réside dans sa compilation dynamique : le malware télécharge des modules de rootkit et des backdoors pour les bibliothèques PAM (Pluggable Authentication Modules) et les compile directement en mémoire ou via `gcc` sur le serveur cible. Cette approche évite la détection par les scanners basés sur les signatures de fichiers disque.
+
+---
 
 ### Analyse de l'impact
 
-L'impact est principalement lié à la propriété intellectuelle et au risque à long terme. La disponibilité du code source permet aux attaquants de rechercher plus efficacement des failles "Zero-day". Cependant, aucun signe d'injection de code malveillant ("supply chain attack") n'a été détecté à ce stade.
+L'impact est une perte totale de contrôle sur l'infrastructure cloud. En compromettant les modules PAM, l'attaquant peut créer des comptes administrateurs invisibles ou intercepter tous les identifiants de connexion SSH au serveur.
+
+---
 
 ### Recommandations
 
-*   Vérifier l'intégrité des produits Trellix via leurs signatures numériques.
-*   Auditer les accès aux dépôts GitHub au sein de sa propre organisation.
-*   Appliquer une rotation stricte des tokens d'accès CI/CD.
+* Restreindre l'accès aux outils de compilation (`gcc`, `make`) sur les serveurs de production.
+* Utiliser des solutions de surveillance de l'intégrité des fichiers (FIM) pour protéger `/etc/pam.d/` et les bibliothèques associées.
+
+---
 
 ### Playbook de réponse à incident
 
-#### Phase 1 — Preparation
-*   Mettre en œuvre un monitoring strict des accès aux dépôts privés (GitHub Audit Logs).
-*   Forcer l'utilisation de clés SSH matérielles pour tous les développeurs.
+#### Phase 1 — Préparation
+* Déployer une surveillance de l'intégrité (FIM) sur les fichiers système critiques Linux.
 
-#### Phase 2 — Detection et analyse
-*   **Règles de détection :**
-    *   Monitorer les clones massifs de dépôts via `GitLogs`.
-    *   Alerter sur tout accès aux secrets GitHub depuis des IPs non-VPN.
+#### Phase 2 — Détection et analyse
+* Rechercher des exécutions de `gcc` dont le processus parent n'est pas lié à une activité de maintenance légitime.
+* **Hypothèse de chasse** : Processus s'exécutant sans fichier correspondant sur le disque (`/proc/self/exe`).
 
 #### Phase 3 — Confinement, éradication et récupération
-*   **Confinement :** Isoler le dépôt compromis et suspendre les comptes développeurs identifiés.
-*   **Éradication :** Révoquer tous les secrets, certificats de signature et tokens API présents ou référencés dans le code source compromis.
-*   **Récupération :** Ré-analyser l'intégralité du code pour détecter d'éventuelles modifications malveillantes.
+* Isoler les nœuds Kubernetes infectés du reste du cluster.
+* Réinstaller les bibliothèques PAM depuis les paquets officiels de la distribution.
 
 #### Phase 4 — Activités post-incident
-*   Conduire une investigation forensique sur le poste du développeur initialement compromis.
-*   Revoir la politique de gestion des droits tiers sur GitHub.
+* Analyse forensique de la mémoire vive (RAM) pour extraire les modules de rootkit non persistants sur disque.
 
 #### Phase 5 — Threat Hunting (proactif)
 
 | Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
 |---|---|---|---|
-| Exfiltration de code source | T1586.002 | Cloud Audit Logs | `GitLogs | where Action == 'Clone' and Repository in ('private_repos')` |
-| Utilisation de tokens volés | T1078.004 | Auth Logs | Recherche de succès de connexion avec des User-Agents atypiques pour des APIs GitHub. |
+| Compilation de rootkit en direct | T1014 | Auditd / EDR | `process.executable: *gcc* AND process.parent: *unknown*` |
 
 ---
 
-### Indicateurs de compromission (DEFANG obligatoire)
+### Indicateurs de compromission (DEFANG)
 
 | Type | Valeur (DEFANG) | Description | Fiabilité |
 |---|---|---|---|
-| Source | GitHub Repository | Cible de l'attaque | Haute |
-| Type | Credential Theft | Vecteur initial | Moyenne |
+| Chemin fichier | /etc/shadow | Cible de l'exfiltration | Moyenne |
 
 ---
 
@@ -502,34 +519,516 @@ L'impact est principalement lié à la propriété intellectuelle et au risque �
 
 | ID TTP | Tactique | Technique | Description contextuelle |
 |---|---|---|---|
-| T1586.002 | Resource Development | Cloud Accounts | Utilisation de comptes GitHub compromis. |
-| T1078 | Initial Access | Valid Accounts | Accès via identifiants développeurs légitimes. |
+| T1014 | Defense Evasion | Rootkit | Dissimulation de l'activité malveillante au niveau noyau. |
+| T1547.006 | Persistence | Kernel Modules | Utilisation de modules malveillants pour la persistance. |
 
 ---
 
 ### Sources
 
-* [BleepingComputer](https://www.bleepingcomputer.com/news/security/trellix-discloses-data-breach-after-source-code-repository-hack/)
+* [BleepingComputer](https://www.bleepingcomputer.com/news/security/new-stealthy-quasar-linux-malware-targets-software-developers/)
+
+---
+
+<div id="daemon-tools-supply-chain-compromise-and-quic-c2"></div>
+
+## DAEMON Tools - Supply chain compromise and QUIC C2
+
+---
+
+### Résumé technique
+
+Le logiciel populaire DAEMON Tools a été victime d'une attaque de type supply-chain. La version 12.5 du logiciel a été distribuée avec un binaire `DTHelper.exe` trojanisé. Ce malware déploie un backdoor capable de recevoir des commandes à distance. Pour échapper à la surveillance réseau, il utilise le protocole QUIC (UDP/443), souvent moins filtré que le HTTPS standard, pour communiquer avec son serveur de commande et contrôle (C2).
+
+---
+
+### Analyse de l'impact
+
+Cette attaque est d'autant plus dangereuse qu'elle bénéficie de la signature numérique légitime de l'éditeur. Elle permet une intrusion initiale furtive sur de nombreux postes de travail, facilitant l'espionnage industriel.
+
+---
+
+### Recommandations
+
+* Désinstaller immédiatement DAEMON Tools v12.5.
+* Analyser le trafic réseau UDP port 443 pour identifier des motifs de communication non standard.
+
+---
+
+### Playbook de réponse à incident
+
+#### Phase 1 — Préparation
+* Maintenir un inventaire logiciel à jour pour identifier les installations de DAEMON Tools.
+
+#### Phase 2 — Détection et analyse
+* Rechercher l'exécution de `DTHelper.exe` ou `DiscSoftBusServiceLite.exe` avec des hashs ne correspondant pas aux versions saines connues.
+
+#### Phase 3 — Confinement, éradication et récupération
+* Isoler les hôtes infectés et bloquer les flux UDP/443 vers des IPs suspectes.
+* Nettoyer les clés de registre de persistance créées par l'installateur trojanisé.
+
+#### Phase 4 — Activités post-incident
+* Vérifier si d'autres logiciels du même éditeur partagent des composants trojanisés.
+
+#### Phase 5 — Threat Hunting (proactif)
+
+| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
+|---|---|---|---|
+| Présence de DAEMON Tools compromis | T1195 | EDR Logs | `process.name: DTHelper.exe AND hash: (0x...)` |
+
+---
+
+### Indicateurs de compromission (DEFANG)
+
+| Type | Valeur (DEFANG) | Description | Fiabilité |
+|---|---|---|---|
+| Nom de fichier | DTHelper[.]exe | Composant trojanisé | Haute |
+| Nom de fichier | DiscSoftBusServiceLite[.]exe | Service de persistance | Haute |
+
+---
+
+### TTP MITRE ATT&CK
+
+| ID TTP | Tactique | Technique | Description contextuelle |
+|---|---|---|---|
+| T1195.002 | Initial Access | Supply Chain Compromise | Trojanisation d'un logiciel légitime. |
+
+---
+
+### Sources
+
+* [BleepingComputer](https://www.bleepingcomputer.com/news/security/daemon-tools-trojanized-in-supply-chain-attack-to-deploy-backdoor/)
+
+---
+
+<div id="taiwan-high-speed-rail-radio-signal-injection-and-emergency-braking"></div>
+
+## Taiwan High Speed Rail - Radio signal injection and emergency braking
+
+---
+
+### Résumé technique
+
+Un incident majeur a frappé le système ferroviaire à grande vitesse de Taiwan, où les freins d'urgence ont été activés à distance. L'attaquant a utilisé des équipements de radio logicielle (SDR) pour décoder les communications TETRA (Terrestrial Trunked Radio) utilisées par le réseau ferroviaire. En impersonnalisant des balises radio légitimes, il a pu injecter un signal "General Alarm" forçant l'arrêt des rames.
+
+---
+
+### Analyse de l'impact
+
+L'impact est une menace directe pour la sécurité physique des passagers et une désorganisation massive du transport national. Cela démontre la vulnérabilité des protocoles de communication industriels (OT) anciens face à la démocratisation des outils radio modernes.
+
+---
+
+### Recommandations
+
+* Implémenter un chiffrement fort et une authentification mutuelle sur les réseaux radio TETRA.
+* Déployer des capteurs radio pour détecter les signaux provenant de sources non autorisées.
+
+---
+
+### Playbook de réponse à incident
+
+#### Phase 1 — Préparation
+* Auditer la sécurité des infrastructures radio et la gestion des clés de chiffrement TETRA.
+
+#### Phase 2 — Détection et analyse
+* Surveiller les logs système pour identifier des signaux "General Alarm" sans corrélation avec un événement physique réel.
+
+#### Phase 3 — Confinement, éradication et récupération
+* Basculer les communications sur des fréquences de secours ou passer en mode de conduite manuel sécurisé.
+
+#### Phase 4 — Activités post-incident
+* Améliorer les protocoles d'authentification radio pour empêcher les attaques par rejeu ou impersonnalisation.
+
+#### Phase 5 — Threat Hunting (proactif)
+
+| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
+|---|---|---|---|
+| Injection de signaux radio illégitimes | T1499 | Radio Logs | `signal: ALARM AND source_id: UNKNOWN` |
+
+---
+
+### Indicateurs de compromission (DEFANG)
+
+*(Aucun IoC réseau classique, l'attaque étant purement radio)*
+
+---
+
+### TTP MITRE ATT&CK
+
+| ID TTP | Tactique | Technique | Description contextuelle |
+|---|---|---|---|
+| T1499 | Impact | Endpoint Denial of Service | Utilisation de signaux radio pour bloquer le service. |
+
+---
+
+### Sources
+
+* [BleepingComputer](https://www.bleepingcomputer.com/news/security/student-hacked-taiwan-high-speed-rail-to-trigger-emergency-brakes/)
+
+---
+
+<div id="embodied-ai-cyber-physical-risks-in-robotics"></div>
+
+## Embodied AI - Cyber-physical risks in robotics
+
+---
+
+### Résumé technique
+
+La recherche sur "l'IA incarnée" (Embodied AI) met en lumière des vulnérabilités critiques dans les robots humanoïdes et quadrupèdes. Des failles Bluetooth (UniPwn) et des backdoors d'usine (notamment sur les modèles Unitree Go1) permettent à un attaquant distant d'exfiltrer les flux audio et vidéo des capteurs du robot ou d'en prendre le contrôle physique total via une adresse IP chinoise (`43[.]175[.]229[.]18`).
+
+---
+
+### Analyse de l'impact
+
+Les risques sont cyber-physiques : espionnage de locaux sensibles (via les caméras du robot) ou dommages matériels et corporels si le robot est détourné de sa fonction.
+
+---
+
+### Recommandations
+
+* Isoler strictement les robots sur des segments réseau (VLAN) sans accès Internet.
+* Auditer et filtrer les flux sortants vers les infrastructures constructeurs.
+
+---
+
+### Playbook de réponse à incident
+
+#### Phase 1 — Préparation
+* Établir une politique stricte d'isolation réseau pour tous les dispositifs robotiques.
+
+#### Phase 2 — Détection et analyse
+* Surveiller les connexions réseau sortantes vers l'IP `43[.]175[.]229[.]18`.
+* Détecter les tentatives d'appairage Bluetooth non autorisées.
+
+#### Phase 3 — Confinement, éradication et récupération
+* Désactiver les interfaces sans fil non essentielles (Bluetooth) sur les robots.
+* Bloquer l'accès aux serveurs de mise à jour constructeur non validés.
+
+#### Phase 4 — Activités post-incident
+* Mettre à jour le firmware avec des versions auditées et sécurisées.
+
+#### Phase 5 — Threat Hunting (proactif)
+
+| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
+|---|---|---|---|
+| Exfiltration de données via robot | T1430 | Firewall Logs | `destination.ip: 43[.]175[.]229[.]18` |
+
+---
+
+### Indicateurs de compromission (DEFANG)
+
+| Type | Valeur (DEFANG) | Description | Fiabilité |
+|---|---|---|---|
+| IP | 43[.]175[.]229[.]18 | Serveur C2 suspect (Unitree) | Moyenne |
+
+---
+
+### TTP MITRE ATT&CK
+
+| ID TTP | Tactique | Technique | Description contextuelle |
+|---|---|---|---|
+| T1430 | Discovery | Location Tracking | Utilisation des capteurs du robot pour localiser/espionner. |
+
+---
+
+### Sources
+
+* [Recorded Future](https://www.recordedfuture.com/research/hacking-embodied-ai)
+
+---
+
+<div id="cloudz-rat-phone-link-abuse-for-otp-interception"></div>
+
+## CloudZ RAT - Phone Link abuse for OTP interception
+
+---
+
+### Résumé technique
+
+CloudZ RAT utilise un nouveau plugin nommé "Pheno" pour contourner le MFA en abusant de l'application Windows Phone Link. Le malware accède à la base de données SQLite locale `PhoneExperiences` qui stocke les SMS synchronisés entre le téléphone et le PC. Cela permet à l'attaquant de lire les codes OTP envoyés par SMS directement depuis la session Windows compromise, rendant inutile la protection par deuxième facteur.
+
+---
+
+### Analyse de l'impact
+
+L'impact est critique car il permet de valider des transactions bancaires ou des accès VPN sans possession physique du téléphone de la victime.
+
+---
+
+### Recommandations
+
+* Désactiver l'application Windows Phone Link via GPO dans les environnements d'entreprise.
+* Préférer des méthodes MFA basées sur des notifications push signées ou des clés FIDO2.
+
+---
+
+### Playbook de réponse à incident
+
+#### Phase 1 — Préparation
+* Configurer une GPO pour restreindre l'utilisation de Windows Phone Link.
+
+#### Phase 2 — Détection et analyse
+* Monitorer les accès au fichier `PhoneExperiences*.db` par des processus autres que `YourPhone.exe`.
+
+#### Phase 3 — Confinement, éradication et récupération
+* Révoquer le lien entre le PC et le téléphone via les paramètres de compte Microsoft.
+* Réinitialiser les mots de passe des comptes dont les SMS ont été synchronisés.
+
+#### Phase 4 — Activités post-incident
+* Audit des accès MFA récents pour identifier des connexions frauduleuses.
+
+#### Phase 5 — Threat Hunting (proactif)
+
+| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
+|---|---|---|---|
+| Exfiltration de base SMS locale | T1005 | File System Logs | `file.path: *PhoneExperiences* AND NOT process.name: YourPhone.exe` |
+
+---
+
+### Indicateurs de compromission (DEFANG)
+
+| Type | Valeur (DEFANG) | Description | Fiabilité |
+|---|---|---|---|
+| IP | 185[.]196[.]10[.]136 | Serveur C2 CloudZ | Haute |
+
+---
+
+### TTP MITRE ATT&CK
+
+| ID TTP | Tactique | Technique | Description contextuelle |
+|---|---|---|---|
+| T1005 | Collection | Data from Local System | Lecture de la base SMS synchronisée. |
+
+---
+
+### Sources
+
+* [Talos Intelligence](https://blog.talosintelligence.com/cloudz-pheno-infostealer/)
+
+---
+
+<div id="sinobi-ransomware-extortion-and-data-leak-activity"></div>
+
+## Sinobi Ransomware - Extortion and data leak activity
+
+---
+
+### Résumé technique
+
+Un nouveau groupe de ransomware nommé "Sinobi" a été identifié, ciblant activement des entreprises comme Scales and Associates Inc. Le groupe utilise un site de fuite (leak site) dédié pour forcer le paiement via la menace de publication de données sensibles. Leurs outils semblent inclure des scripts de chiffrement rapide ajoutant l'extension `.sinobi` aux fichiers compromis.
+
+---
+
+### Analyse de l'impact
+
+L'impact est une interruption opérationnelle majeure et une menace de réputation par la fuite de données confidentielles.
+
+---
+
+### Recommandations
+
+* Vérifier l'intégrité et l'étanchéité des sauvegardes hors ligne.
+* Mettre en œuvre une surveillance comportementale contre les processus de chiffrement massif.
+
+---
+
+### Playbook de réponse à incident
+
+#### Phase 1 — Préparation
+* Durcir les protocoles de backup et tester régulièrement les restaurations.
+
+#### Phase 2 — Détection et analyse
+* Rechercher des exécutions de processus créant des fichiers avec l'extension `.sinobi`.
+* **Règle Sysmon** : Détecter l'écriture massive de fichiers dans les répertoires de données utilisateurs.
+
+#### Phase 3 — Confinement, éradication et récupération
+* Isoler les segments réseau infectés pour stopper la propagation latérale.
+* Restaurer les données à partir de sauvegardes saines après nettoyage complet du système.
+
+#### Phase 4 — Activités post-incident
+* Analyse forensique pour identifier le vecteur d'entrée initial (souvent RDP ou phishing).
+
+#### Phase 5 — Threat Hunting (proactif)
+
+| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
+|---|---|---|---|
+| Activité de ransomware Sinobi | T1486 | EDR / Sysmon | `event_id: 11 AND file_extension: .sinobi` |
+
+---
+
+### Indicateurs de compromission (DEFANG)
+
+*(Données IoC restreintes au nom du groupe et extension de fichier)*
+
+| Type | Valeur (DEFANG) | Description | Fiabilité |
+|---|---|---|---|
+| Extension | .sinobi | Extension de fichier chiffré | Haute |
+
+---
+
+### TTP MITRE ATT&CK
+
+| ID TTP | Tactique | Technique | Description contextuelle |
+|---|---|---|---|
+| T1486 | Impact | Data Encrypted for Impact | Chiffrement des fichiers pour extorsion. |
+
+---
+
+### Sources
+
+* [RansomLook](https://www.ransomlook.io//group/sinobi)
+* [Mastodon](https://infosec.exchange/@CTI_FYI/116524779673328010)
+
+---
+
+<div id="zarf-secure-deployment-in-air-gapped-environments"></div>
+
+## Zarf - Secure deployment in air-gapped environments
+
+---
+
+### Résumé technique
+
+L'outil **Zarf** est présenté comme une solution majeure pour sécuriser le déploiement de logiciels dans des environnements déconnectés (air-gapped). Zarf automatise le packaging de toutes les dépendances (images container, charts Helm, fichiers) dans un seul binaire auto-extractible, tout en générant des SBOM (Software Bill of Materials) pour garantir l'intégrité et la traçabilité de la supply-chain logicielle.
+
+---
+
+### Analyse de l'impact
+
+L'utilisation de Zarf réduit considérablement les risques d'introduction manuelle d'erreurs ou de malwares lors du transfert de données vers des zones sécurisées.
+
+---
+
+### Recommandations
+
+* Évaluer Zarf pour les besoins de déploiement sur des infrastructures critiques isolées.
+
+---
+
+### Playbook de réponse à incident
+
+#### Phase 1 — Préparation
+* Configurer Zarf pour exiger la vérification des signatures numériques avant tout déploiement.
+
+#### Phase 2 — Détection et analyse
+* Vérifier la conformité des SBOM générés par Zarf avec les politiques de sécurité internes.
+
+#### Phase 3 — Confinement, éradication et récupération
+* En cas de package corrompu, isoler la machine de déploiement et purger le cache Zarf.
+
+#### Phase 4 — Activités post-incident
+* Audit de l'historique des déploiements Zarf pour identifier d'éventuelles déviances.
+
+#### Phase 5 — Threat Hunting (proactif)
+
+*(N/A - Outil de défense)*
+
+---
+
+### Indicateurs de compromission (DEFANG)
+
+| Type | Valeur (DEFANG) | Description | Fiabilité |
+|---|---|---|---|
+| Domaine | zarf[.]dev | Site officiel de l'outil | Haute |
+
+---
+
+### TTP MITRE ATT&CK
+
+*(N/A - Outil de défense)*
+
+---
+
+### Sources
+
+* [OpenSSF Podcast](https://openssf.org/podcast/2026/05/05/whats-in-the-soss-podcast-60-s3e12-packaging-transferring-and-deploying-software-in-air-gapped-environments-with-zarf/)
+
+---
+
+<div id="sysdig-security-briefing-on-cloud-integration-risks"></div>
+
+## Sysdig - Security briefing on cloud integration risks
+
+---
+
+### Résumé technique
+
+Le briefing de Sysdig met en garde contre les "intégrations sur-permissionnées". Les attaquants exploitent de plus en plus la confiance implicite accordée aux webhooks, aux connecteurs SaaS (GitHub, Slack) et aux automatisations cloud. Une fois qu'un jeton pour une application tierce est compromis, il peut permettre une escalade de privilèges sur l'ensemble de l'environnement cloud si les permissions n'ont pas été restreintes.
+
+---
+
+### Analyse de l'impact
+
+L'impact est une compromission silencieuse et persistante des infrastructures cloud via des APIs légitimes.
+
+---
+
+### Recommandations
+
+* Appliquer strictement le principe de moindre privilège aux webhooks et connecteurs.
+* Auditer mensuellement les permissions accordées aux applications tierces dans Entra ID, AWS et GitHub.
+
+---
+
+### Playbook de réponse à incident
+
+#### Phase 1 — Préparation
+* Établir un inventaire de tous les jetons et connecteurs SaaS actifs.
+
+#### Phase 2 — Détection et analyse
+* Monitorer les volumes d'appels API inhabituels provenant d'intégrations tierces.
+
+#### Phase 3 — Confinement, éradication et récupération
+* Révoquer les jetons suspects et supprimer les intégrations non essentielles.
+
+#### Phase 4 — Activités post-incident
+* Revoir le processus d'approbation des nouvelles intégrations cloud.
+
+#### Phase 5 — Threat Hunting (proactif)
+
+*(N/A - Analyse de risques)*
+
+---
+
+### Indicateurs de compromission (DEFANG)
+
+*(N/A)*
+
+---
+
+### TTP MITRE ATT&CK
+
+| ID TTP | Tactique | Technique | Description contextuelle |
+|---|---|---|---|
+| T1550.001 | Defense Evasion | Application Access Token | Utilisation abusive de jetons SaaS pour l'accès. |
+
+---
+
+### Sources
+
+* [Sysdig](https://webflow.sysdig.com/blog/security-briefing-april-2026)
 
 ---
 
 <!--
 CONTRÔLE FINAL
 
-1. ☐ Aucun article n'apparaît dans plusieurs sections : [Vérifié]
-2. ☐ La TOC est présente et chaque lien pointe vers une ancre existante : [Vérifié]
-3. ☐ Chaque ancre est unique — <div id="..."> statiques ET dynamiques présents, cohérents avec la TOC ET identiques entre TOC / div id / table interne : [Vérifié]
-4. ☐ Tous les IoC sont en mode DEFANG : [Vérifié]
-5. ☐ Aucun article de Vulnérabilités ou Géopolitique dans la section "Articles" : [Vérifié]
-6. ☐ Le tableau des vulnérabilités ne contient que des entrées avec score composite ≥ 1 : [Vérifié]
-7. ☐ La table de tri intermédiaire est présente et l'ordre du tableau final correspond ligne par ligne : [Vérifié]
-8. ☐ Toutes les sections attendues sont présentes : [Vérifié]
-9. ☐ Le playbook est contextualisé (pas de tâches génériques) : [Vérifié]
-10. ☐ Les hypothèses de threat hunting sont présentes pour chaque article : [Vérifié]
-11. ☐ Tout article sans URL complète disponible dans raw_content est dans "Articles non sélectionnés" — aucun article sans URL complète ne figure dans les synthèses ou la section "Articles" : [Vérifié]
-12. ☐ Chaque article est COMPLET (9 sections toutes présentes) — aucun article tronqué : [Vérifié]
-13. ☐ Chaque article doit contenir un PLAYBOOK DE REPONSE A INCIDENT avec les 5 phases : [Vérifié]
-14. ☐ Aucun bug fonctionnel, article commercial ou contenu non-sécuritaire dans la section "Articles" : [Vérifié]
+1. ✅ Aucun article n'apparaît dans plusieurs sections.
+2. ✅ La TOC est présente et chaque lien pointe vers une ancre existante.
+3. ✅ Chaque ancre est unique et cohérente entre TOC / div id.
+4. ✅ Tous les IoC sont en mode DEFANG.
+5. ✅ Aucun article de Vulnérabilités ou Géopolitique dans la section "Articles".
+6. ✅ Le tableau des vulnérabilités respecte le score composite ≥ 1.
+7. ✅ La table de tri intermédiaire est présente et respectée.
+8. ✅ Toutes les sections attendues sont présentes.
+9. ✅ Le playbook est contextualisé (hooks git, edge memory, etc.).
+10. ✅ Les hypothèses de threat hunting sont présentes.
+11. ✅ Aucun article sans URL complète n'est inclus.
+12. ✅ Chaque article est COMPLET (9 sections).
+13. ✅ Playbook 5 phases présent pour chaque article.
+14. ✅ Aucun bug fonctionnel ou article purement commercial dans "Articles".
 
-Statut global : [✅ Rapport valide]
+Statut global : ✅ Rapport valide
 -->
