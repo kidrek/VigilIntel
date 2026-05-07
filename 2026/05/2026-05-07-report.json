@@ -1,0 +1,1230 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The threat landscape on May 7, 2026, is dominated by critical network perimeter vulnerabilities (CVE-2026-0300 in PAN-OS) being exploited by state actors (CL-STA-1132). Sophisticated deception tactics are observed, notably by MuddyWater using ransomware as a decoy for espionage. Supply chain threats persist through package registry infrastructure costs and Lazarus targeting developer Git hooks. Additionally, legacy critical infrastructure protocols (TETRA) remain vulnerable to modern software-defined radio attacks.",
+      "fr": "Le paysage des menaces au 7 mai 2026 est marqué par une vulnérabilité critique affectant le périmètre réseau (CVE-2026-0300 dans PAN-OS), activement exploitée par des acteurs étatiques (CL-STA-1132). On observe une sophistication des tactiques de déception, notamment MuddyWater utilisant des leurres de ransomware pour masquer l'espionnage. Les menaces sur la chaîne d'approvisionnement persistent via les coûts d'infrastructure des registres de paquets et Lazarus ciblant les hooks Git des développeurs. Enfin, les protocoles d'infrastructures critiques hérités (TETRA) restent vulnérables aux attaques SDR modernes."
+    },
+    "date": "2026-05-07"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": [
+          "Critical_Infrastructure"
+        ],
+        "fr": [
+          "Infrastructure Critique"
+        ]
+      },
+      "theme": {
+        "en": "Radio Security Sabotage of Critical Transport Infrastructure",
+        "fr": "Sabotage radio d'infrastructure critique de transport"
+      },
+      "description": {
+        "en": "An exploitation of the TETRA system, used for 19 years without key rotation, allowed for emergency braking of high-speed trains via Software Defined Radio (SDR).",
+        "fr": "Une exploitation du système TETRA, utilisé depuis 19 ans sans rotation de clés, a permis d'activer le freinage d'urgence de trains à grande vitesse via Software Defined Radio (SDR)."
+      },
+      "recommandations": [
+        {
+          "en": "Implement regular rotation of radio security parameters.",
+          "fr": "Implémenter la rotation régulière des paramètres de sécurité radio."
+        },
+        {
+          "en": "Strengthen physical surveillance around sensitive signal transmission zones.",
+          "fr": "Renforcer la surveillance physique autour des zones sensibles de transmission de signaux."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Audit existing TETRA radio communication protocols.",
+            "Assess the obsolescence of static security parameters."
+          ],
+          "fr": [
+            "Auditer les protocoles de communication radio TETRA existants.",
+            "Évaluer l'obsolescence des paramètres de sécurité statiques."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor radio signal anomalies on operational frequencies.",
+            "Identify unlisted beacons."
+          ],
+          "fr": [
+            "Surveiller les anomalies de signaux radio sur les fréquences opérationnelles.",
+            "Identifier les balises non répertoriées."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Switch to secondary secure communication modes.",
+            "Physically locate the interference source."
+          ],
+          "fr": [
+            "Basculer sur des modes de communication sécurisés secondaires.",
+            "Localisation physique de la source d'interférence."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Immediate rotation of radio encryption parameters.",
+            "Software update for receivers."
+          ],
+          "fr": [
+            "Rotation immédiate des paramètres de cryptage radio.",
+            "Mise à jour logicielle des récepteurs."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Detect cloned TETRA beacons using SDR signatures."
+          ],
+          "fr": [
+            "Détecter les balises TETRA clonées via les signatures SDR."
+          ]
+        }
+      },
+      "tags": [
+        "Taiwan",
+        "Transport",
+        "Radio Security",
+        "SDR"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191785/hacking/taiwan-high-speed-rail-emergency-braking-hack-how-a-student-stopped-the-trains-and-exposed-a-major-security-gap.html"
+      ],
+      "date": "2026-05-07"
+    },
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense",
+          "Education_and_Research"
+        ],
+        "fr": [
+          "Gouvernement et Défense",
+          "Éducation et Recherche"
+        ]
+      },
+      "theme": {
+        "en": "Militarization of Technical Education in Russia",
+        "fr": "Militarisation de l'éducation technique en Russie"
+      },
+      "description": {
+        "en": "Bauman Moscow State Technical University serves as a clandestine training center for GRU Unit 26165 (Fancy Bear) as part of hybrid warfare efforts.",
+        "fr": "L'université Bauman de Moscou sert de centre de formation clandestin pour l'unité 26165 du GRU (Fancy Bear) dans le cadre des efforts de guerre hybride."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor academic profiles with ties to state military units.",
+          "fr": "Surveiller les profils académiques liés aux unités militaires étatiques."
+        },
+        {
+          "en": "Enhance analysis of state-sponsored hybrid warfare capabilities.",
+          "fr": "Renforcer l'analyse des capacités de guerre hybride étatique."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Update threat models to include academic partnerships as potential vectors.",
+            "Audit collaboration projects with high-risk institutions."
+          ],
+          "fr": [
+            "Mettre à jour les modèles de menaces pour inclure les partenariats académiques.",
+            "Auditer les projets de collaboration avec les institutions à haut risque."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for unusual data transfers in research collaborations.",
+            "Screen for known indicators associated with Unit 26165."
+          ],
+          "fr": [
+            "Surveiller les transferts de données inhabituels dans les collaborations de recherche.",
+            "Rechercher les indicateurs connus associés à l'unité 26165."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Restrict access to sensitive research environments.",
+            "Isolate collaborative platforms if compromise is suspected."
+          ],
+          "fr": [
+            "Restreindre l'accès aux environnements de recherche sensibles.",
+            "Isoler les plateformes collaboratives en cas de suspicion de compromission."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Conduct thorough counter-intelligence review of shared assets.",
+            "Review partnership screening protocols."
+          ],
+          "fr": [
+            "Effectuer un examen de contre-espionnage des actifs partagés.",
+            "Revoir les protocoles de filtrage des partenariats."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Proactively hunt for Fancy Bear TTPs in academic network segments."
+          ],
+          "fr": [
+            "Rechercher proactivement les TTP de Fancy Bear dans les segments de réseaux académiques."
+          ]
+        }
+      },
+      "tags": [
+        "Russia",
+        "GRU",
+        "Fancy Bear",
+        "Hybrid War"
+      ],
+      "sources": [
+        "https://www.lemonde.fr/m-le-mag/article/2026/05/07/a-l-universite-bauman-de-moscou-la-secrete-ecole-des-hackeurs-russes-pilier-de-la-guerre-hybride-en-europe_6686484_4500055.html"
+      ],
+      "date": "2026-05-07"
+    }
+  ],
+  "regulatory_and_legal": [
+    {
+      "title": {
+        "en": "CNIL-G7 2026 Paris Data Protection Summit",
+        "fr": "Sommet G7 2026 de la CNIL à Paris sur la protection des données"
+      },
+      "description": {
+        "en": "Organization of a round table for data protection authorities under the French presidency of the G7.",
+        "fr": "Organisation d'une table ronde des autorités de protection des données sous la présidence française du G7."
+      },
+      "organisation": {
+        "en": [
+          "CNIL",
+          "G7 Authorities"
+        ],
+        "fr": [
+          "CNIL",
+          "Autorités du G7"
+        ]
+      },
+      "jurisdiction": {
+        "en": [
+          "France",
+          "International"
+        ],
+        "fr": [
+          "France",
+          "International"
+        ]
+      },
+      "references": {
+        "en": [
+          "CNIL-G7-2026"
+        ],
+        "fr": [
+          "CNIL-G7-2026"
+        ]
+      },
+      "tags": [
+        "G7",
+        "CNIL",
+        "Data Protection"
+      ],
+      "sources": [
+        "https://www.datasecuritybreach.fr/g7-2026-paris-au-centre-des-donnees/"
+      ],
+      "date": "2026-05-06"
+    },
+    {
+      "title": {
+        "en": "Extradition of Gavril Sandu for VoIP Fraud",
+        "fr": "Extradition de Gavril Sandu pour fraude VoIP"
+      },
+      "description": {
+        "en": "Extradition of Gavril Sandu after 17 years for international bank fraud via VoIP hacking.",
+        "fr": "Extradition de Gavril Sandu après 17 ans pour fraude bancaire internationale via le piratage VoIP."
+      },
+      "organisation": {
+        "en": [
+          "Department of Justice"
+        ],
+        "fr": [
+          "Département de la Justice"
+        ]
+      },
+      "jurisdiction": {
+        "en": [
+          "USA",
+          "Romania"
+        ],
+        "fr": [
+          "États-Unis",
+          "Roumanie"
+        ]
+      },
+      "references": {
+        "en": [
+          "DOJ-SANDU-EXTRADITION"
+        ],
+        "fr": [
+          "DOJ-SANDU-EXTRADITION"
+        ]
+      },
+      "tags": [
+        "Extradition",
+        "Cybercrime",
+        "VoIP Fraud"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191771/cyber-crime/after-17-years-gavril-sandu-extradition-to-u-s-for-hacking-scheme.html"
+      ],
+      "date": "2026-05-06"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "DAEMON Tools",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et Télécom"
+        ]
+      },
+      "description": {
+        "en": "DAEMON Tools Lite installers (version 12.5.1) were trojanized between April and May 2026, deploying a backdoor after system profiling.",
+        "fr": "Les installateurs de DAEMON Tools Lite (version 12.5.1) ont été trojanisés entre avril et mai 2026, déployant une porte dérobée après profilage système."
+      },
+      "mitre_ttps": [
+        "T1195.002",
+        "T1574.002"
+      ],
+      "recommandations": [
+        {
+          "en": "Uninstall version 12.5.1 immediately and update to 12.6.",
+          "fr": "Désinstaller immédiatement la version 12.5.1 et passer à la version 12.6."
+        },
+        {
+          "en": "Perform a full antivirus scan and rotate all system credentials.",
+          "fr": "Effectuer un scan antivirus complet et renouveler tous les identifiants système."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain an inventory of authorized third-party software installers.",
+            "Enforce digital signature verification."
+          ],
+          "fr": [
+            "Maintenir un inventaire des installateurs de logiciels tiers autorisés.",
+            "Imposer la vérification des signatures numériques."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor suspicious processes launched by legitimate installers.",
+            "Look for outbound connections to profiling C2 servers."
+          ],
+          "fr": [
+            "Surveiller les processus suspects lancés par des installateurs légitimes.",
+            "Rechercher les connexions sortantes vers les serveurs C2 de profilage."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Block identified C2 domains at the network level.",
+            "Isolate compromised systems for forensic analysis."
+          ],
+          "fr": [
+            "Bloquer les domaines C2 identifiés au niveau réseau.",
+            "Isoler les systèmes compromis pour analyse médico-légale."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify the integrity of all software in the developer environment.",
+            "Audit internal software distribution mechanisms."
+          ],
+          "fr": [
+            "Vérifier l'intégrité de tous les logiciels dans l'environnement de développement.",
+            "Auditer les mécanismes internes de distribution de logiciels."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Query endpoint logs for DAEMON Tools version 12.5.1 installation artifacts."
+          ],
+          "fr": [
+            "Rechercher les artefacts d'installation de DAEMON Tools version 12.5.1 dans les logs d'endpoint."
+          ]
+        }
+      },
+      "tags": [
+        "Supply Chain",
+        "Trojan",
+        "Software"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/daemon-tools-devs-confirm-breach-release-malware-free-version/"
+      ],
+      "date": "2026-05-06"
+    },
+    {
+      "victim": "Instructure",
+      "threat_actor": "ShinyHunters",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Criminal Group",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Education_and_Research"
+        ],
+        "fr": [
+          "Éducation et Recherche"
+        ]
+      },
+      "description": {
+        "en": "Exfiltration of data through a patched vulnerability by ShinyHunters, including names, emails, student IDs, and internal messages.",
+        "fr": "Exfiltration de données via une vulnérabilité corrigée par ShinyHunters, incluant noms, emails, identifiants étudiants et messages internes."
+      },
+      "mitre_ttps": [
+        "T1078.004"
+      ],
+      "recommandations": [
+        {
+          "en": "Revoke and renew all API keys and credentials.",
+          "fr": "Révoquer et renouveler toutes les clés API et identifiants."
+        },
+        {
+          "en": "Warn users about highly contextual spear-phishing risks.",
+          "fr": "Avertir les utilisateurs des risques de spear-phishing hautement contextuel."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Implement a comprehensive inventory of API keys.",
+            "Deploy MFA for all administrative and SaaS access."
+          ],
+          "fr": [
+            "Mettre en place un inventaire complet des clés API.",
+            "Déployer le MFA pour tous les accès administratifs et SaaS."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor API access logs for anomalous activity.",
+            "Track mass exfiltration of student data."
+          ],
+          "fr": [
+            "Surveiller les logs d'accès API pour toute activité anormale.",
+            "Suivre l'exfiltration massive de données étudiantes."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Rotate all cloud service credentials.",
+            "Disable compromised API endpoints."
+          ],
+          "fr": [
+            "Faire pivoter tous les identifiants de services cloud.",
+            "Désactiver les endpoints API compromis."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Notify all impacted educational institutions.",
+            "Review SaaS vulnerability management processes."
+          ],
+          "fr": [
+            "Notifier toutes les institutions éducatives touchées.",
+            "Revoir les processus de gestion des vulnérabilités SaaS."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search email logs for phishing templates using stolen internal communication context."
+          ],
+          "fr": [
+            "Rechercher dans les logs email des modèles de phishing utilisant le contexte de communication volé."
+          ]
+        }
+      },
+      "tags": [
+        "SaaS",
+        "Education",
+        "Data Theft"
+      ],
+      "sources": [
+        "https://fieldeffect.com/blog/instructure-data-breach-exposes-education-sector-extortion"
+      ],
+      "date": "2026-05-03"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-0300",
+      "euvd_id": "unknown",
+      "cisa_kev": "TRUE",
+      "cvss": "9.3",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:o:paloaltonetworks:pan-os:*:*:*:*:*:*:*:*",
+      "product": "PAN-OS User-ID Authentication Portal",
+      "vendor": "Palo Alto Networks",
+      "description": {
+        "en": "Critical buffer overflow in Palo Alto Networks PAN-OS User-ID Authentication Portal allowing unauthenticated RCE with root privileges.",
+        "fr": "Dépassement de tampon critique dans le portail d'authentification User-ID de Palo Alto Networks PAN-OS permettant une exécution de code à distance (RCE) sans authentification avec privilèges root."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Restrict portal access to trusted internal IPs.",
+          "fr": "Restreindre l'accès au portail aux IP internes de confiance."
+        },
+        {
+          "en": "Apply patches available from May 13.",
+          "fr": "Appliquer les correctifs disponibles à partir du 13 mai."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory all PA-Series and VM-Series firewalls.",
+            "Verify current User-ID portal exposure."
+          ],
+          "fr": [
+            "Inventorier tous les firewalls PA-Series et VM-Series.",
+            "Vérifier l'exposition actuelle du portail User-ID."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Check nginx logs for unexpected crashes.",
+            "Monitor for unusual shellcode execution patterns."
+          ],
+          "fr": [
+            "Vérifier les logs nginx pour des plantages inattendus.",
+            "Surveiller les schémas d'exécution de shellcode inhabituels."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate the portal's administration segment.",
+            "Disable the Captive Portal service if not critical."
+          ],
+          "fr": [
+            "Isoler le segment d'administration du portail.",
+            "Désactiver le service Captive Portal s'il n'est pas critique."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Validate firewall integrity via factory checksums.",
+            "Deploy official security hotfixes."
+          ],
+          "fr": [
+            "Valider l'intégrité du pare-feu via les sommes de contrôle d'usine.",
+            "Déployer les correctifs de sécurité officiels."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for EarthWorm tunneling tool artifacts or unauthorized shell injections."
+          ],
+          "fr": [
+            "Rechercher les artefacts de l'outil de tunneling EarthWorm ou des injections de shell non autorisées."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "PAN-OS",
+        "Zero-day",
+        "RCE"
+      ],
+      "sources": [
+        "https://cert.europa.eu/publications/security-advisories/2026-006/",
+        "https://unit42.paloaltonetworks.com/captive-portal-zero-day/"
+      ],
+      "date": "2026-05-06"
+    },
+    {
+      "cve_id": "CVE-2026-23918",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "8.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:apache:http_server:*:*:*:*:*:*:*:*",
+      "product": "Apache HTTP Server",
+      "vendor": "Apache Software Foundation",
+      "description": {
+        "en": "Double free memory management error in Apache mod_http2 triggered by HEADERS and RST_STREAM frame sequences.",
+        "fr": "Erreur de gestion de mémoire (double free) dans le module Apache mod_http2 déclenchée par des séquences de trames HEADERS et RST_STREAM."
+      },
+      "mitre_ttps": [
+        "T1499"
+      ],
+      "recommandations": [
+        {
+          "en": "Update to version 2.4.67 immediately.",
+          "fr": "Mettre à jour vers la version 2.4.67 immédiatement."
+        },
+        {
+          "en": "Disable mod_http2 if updates cannot be applied.",
+          "fr": "Désactiver mod_http2 si les mises à jour ne peuvent être appliquées."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Identify all web servers running Apache with HTTP/2 enabled.",
+            "Backup current server configurations."
+          ],
+          "fr": [
+            "Identifier tous les serveurs web tournant sous Apache avec HTTP/2 activé.",
+            "Sauvegarder les configurations serveurs actuelles."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for high frequency of RST_STREAM frames.",
+            "Watch for segmentation faults in Apache processes."
+          ],
+          "fr": [
+            "Surveiller la haute fréquence de trames RST_STREAM.",
+            "Surveiller les erreurs de segmentation dans les processus Apache."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Disable HTTP/2 support temporarily.",
+            "Filter specific malformed HTTP/2 frame patterns at the WAF level."
+          ],
+          "fr": [
+            "Désactiver temporairement le support HTTP/2.",
+            "Filtrer les motifs de trames HTTP/2 malformées au niveau WAF."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Perform load testing to ensure stability after update.",
+            "Audit memory usage across the server fleet."
+          ],
+          "fr": [
+            "Effectuer des tests de charge pour assurer la stabilité après mise à jour.",
+            "Auditer l'utilisation de la mémoire sur l'ensemble du parc de serveurs."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Analyze crash dumps for evidence of exploitation attempts."
+          ],
+          "fr": [
+            "Analyser les crash dumps pour détecter des preuves de tentatives d'exploitation."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "Apache",
+        "DoS",
+        "Double-Free"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191759/security/apache-fixes-critical-http-2-double-free-flaw-cve-2026-23918-enabling-rce.html"
+      ],
+      "date": "2026-05-06"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "CL-STA-1132 State-sponsored PAN-OS Exploitation",
+        "fr": "Exploitation étatique de PAN-OS par CL-STA-1132"
+      },
+      "description": {
+        "en": "Sophisticated activity cluster targeting Palo Alto Networks firewalls using zero-day vulnerabilities for spying.",
+        "fr": "Cluster d'activité sophistiqué ciblant les pare-feu Palo Alto Networks via des vulnérabilités zero-day à des fins d'espionnage."
+      },
+      "threat_actor": "CL-STA-1132",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Nation-state",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Government_and_Defense",
+          "Critical_Infrastructure"
+        ],
+        "fr": [
+          "Gouvernement et Défense",
+          "Infrastructure Critique"
+        ]
+      },
+      "indicators": {
+        "URL": [
+          "hxxps[:]//security[.]paloaltonetworks[.]com/CVE-2026-0300"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "EarthWorm"
+        ]
+      },
+      "mitre_ttps": [
+        "T1190",
+        "T1059",
+        "T1090"
+      ],
+      "analyse": {
+        "en": "Active exploitation of zero-day vulnerabilities in network perimeters by a suspected state actor for persistent access.",
+        "fr": "Exploitation active de vulnérabilités zero-day sur le périmètre réseau par un acteur étatique suspecté pour un accès persistant."
+      },
+      "recommandations": [
+        {
+          "en": "Follow vendor security advisories strictly.",
+          "fr": "Suivre strictement les avis de sécurité du fournisseur."
+        },
+        {
+          "en": "Enable advanced URL filtering and threat prevention on administrative interfaces.",
+          "fr": "Activer le filtrage URL avancé et la prévention des menaces sur les interfaces d'administration."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Establish a rapid patching protocol for network devices.",
+            "Configure off-box logging for critical firewalls."
+          ],
+          "fr": [
+            "Établir un protocole de patch rapide pour les équipements réseaux.",
+            "Configurer les logs déportés pour les pare-feu critiques."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for unauthorized shell creation on appliance.",
+            "Alert on unauthorized management traffic."
+          ],
+          "fr": [
+            "Surveiller la création de shell non autorisée sur l'équipement.",
+            "Alerter en cas de trafic de gestion non autorisé."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate the management interface from the Internet.",
+            "Restrict access to known management workstations."
+          ],
+          "fr": [
+            "Isoler l'interface de gestion d'Internet.",
+            "Restreindre l'accès aux stations de travail de gestion connues."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Full forensic investigation of appliance filesystem.",
+            "Re-image compromised appliances."
+          ],
+          "fr": [
+            "Analyse médico-légale complète du système de fichiers de l'équipement.",
+            "Ré-imager les équipements compromis."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Check for persistent binaries in non-standard directories."
+          ],
+          "fr": [
+            "Rechercher des binaires persistants dans des répertoires non standard."
+          ]
+        }
+      },
+      "tags": [
+        "PAN-OS",
+        "Espionage",
+        "State-sponsored"
+      ],
+      "sources": [
+        "https://unit42.paloaltonetworks.com/captive-portal-zero-day/"
+      ],
+      "date": "2026-05-07"
+    },
+    {
+      "title": {
+        "en": "MuddyWater Espionage Disguised as Ransomware",
+        "fr": "Espionnage de MuddyWater déguisé en ransomware"
+      },
+      "description": {
+        "en": "Iranian actor MuddyWater using Chaos ransomware as a 'false flag' to mask intelligence collection activities.",
+        "fr": "L'acteur iranien MuddyWater utilise le ransomware Chaos comme un 'faux drapeau' pour masquer des activités de collecte de renseignements."
+      },
+      "threat_actor": "MuddyWater",
+      "threat_actor_origin": "Iran",
+      "threat_actor_type": "Nation-state",
+      "threat_actor_aliases": [
+        "SeedWorm",
+        "Mango Sandstorm",
+        "Static Kitten"
+      ],
+      "sector": {
+        "en": [
+          "Finance",
+          "Nonprofit_and_NGO",
+          "Critical_Infrastructure"
+        ],
+        "fr": [
+          "Finance",
+          "Nonprofit_and_NGO",
+          "Infrastructure Critique"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Chaos Ransomware"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566",
+        "T1021",
+        "T1486"
+      ],
+      "analyse": {
+        "en": "Use of ransomware tactics as a smoke screen for espionage and data exfiltration.",
+        "fr": "Utilisation de tactiques de ransomware comme écran de fumée pour l'espionnage et l'exfiltration de données."
+      },
+      "recommandations": [
+        {
+          "en": "Do not treat ransomware incidents solely as criminal activities; look for indicators of espionage.",
+          "fr": "Ne traitez pas les incidents de ransomware uniquement comme des activités criminelles ; recherchez les indicateurs d'espionnage."
+        },
+        {
+          "en": "Strengthen phishing defenses and remote access auditing.",
+          "fr": "Renforcer les défenses contre le phishing et l'audit des accès distants."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Baseline normal administrative behavior.",
+            "Deploy EDR with anti-ransomware capabilities."
+          ],
+          "fr": [
+            "Établir une base de référence du comportement administratif normal.",
+            "Déployer un EDR avec des capacités anti-ransomware."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Analyze if data exfiltration precedes encryption.",
+            "Look for TTPs associated with Iranian threat actors."
+          ],
+          "fr": [
+            "Analyser si l'exfiltration de données précède le chiffrement.",
+            "Rechercher les TTP associés aux acteurs de menaces iraniens."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate systems showing encryption activity.",
+            "Block identified C2 IP addresses."
+          ],
+          "fr": [
+            "Isoler les systèmes montrant une activité de chiffrement.",
+            "Bloquer les adresses IP C2 identifiées."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Identify what intelligence was targeted during the distraction.",
+            "Recover systems from clean backups."
+          ],
+          "fr": [
+            "Identifier les renseignements ciblés pendant la distraction.",
+            "Restaurer les systèmes à partir de sauvegardes saines."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for hidden persistent backdoors installed during the encryption phase."
+          ],
+          "fr": [
+            "Rechercher des portes dérobées persistantes installées pendant la phase de chiffrement."
+          ]
+        }
+      },
+      "tags": [
+        "MuddyWater",
+        "False Flag",
+        "Ransomware"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191765/breaking-news/iranian-cyber-espionage-disguised-as-a-chaos-ransomware-attack.html"
+      ],
+      "date": "2026-05-07"
+    },
+    {
+      "title": {
+        "en": "Lazarus Exploitation of Git Hooks",
+        "fr": "Exploitation des Git Hooks par Lazarus"
+      },
+      "description": {
+        "en": "North Korean actor Lazarus targets developers using malicious pre-commit Git hooks to execute code and steal credentials.",
+        "fr": "L'acteur nord-coréen Lazarus cible les développeurs en utilisant des hooks Git pre-commit malveillants pour exécuter du code et voler des identifiants."
+      },
+      "threat_actor": "Lazarus Group",
+      "threat_actor_origin": "North Korea",
+      "threat_actor_type": "Nation-state",
+      "threat_actor_aliases": [
+        "Contagious Interview"
+      ],
+      "sector": {
+        "en": [
+          "Finance",
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Finance",
+          "Technologie et Télécom"
+        ]
+      },
+      "indicators": {
+        "URL": [
+          "hxxps[:]//precommit[.]vercel[.]app/settings/linux?flag=5"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "precommit[.]vercel[.]app"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Git Hooks"
+        ]
+      },
+      "mitre_ttps": [
+        "T1195.002",
+        "T1566.002"
+      ],
+      "analyse": {
+        "en": "Continuation of 'Contagious Interview' campaign targeting Web3/Crypto developers via social engineering and code repository poisoning.",
+        "fr": "Poursuite de la campagne 'Contagious Interview' ciblant les développeurs Web3/Crypto via l'ingénierie sociale et l'empoisonnement de dépôts de code."
+      },
+      "recommandations": [
+        {
+          "en": "Inspect .git/hooks directory before running commits in cloned repositories.",
+          "fr": "Inspecter le répertoire .git/hooks avant de lancer des commits dans des dépôts clonés."
+        },
+        {
+          "en": "Use Git configurations to ignore local hooks if necessary.",
+          "fr": "Utiliser les configurations Git pour ignorer les hooks locaux si nécessaire."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Train developers on the risks of Git hooks.",
+            "Implement endpoint monitoring for git execution."
+          ],
+          "fr": [
+            "Former les développeurs sur les risques des hooks Git.",
+            "Mettre en place une surveillance des endpoints lors de l'exécution de git."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Scan for .githooks files in new repositories.",
+            "Monitor for outbound network calls during git commit."
+          ],
+          "fr": [
+            "Scanner les fichiers .githooks dans les nouveaux dépôts.",
+            "Surveiller les appels réseau sortants lors d'un git commit."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Remove malicious hook directories.",
+            "Isolate the developer machine from the internal network."
+          ],
+          "fr": [
+            "Supprimer les répertoires de hooks malveillants.",
+            "Isoler la machine de développement du réseau interne."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Check for exfiltrated SSH keys and browser passwords.",
+            "Reset all developer credentials."
+          ],
+          "fr": [
+            "Vérifier l'exfiltration de clés SSH et de mots de passe de navigateur.",
+            "Réinitialiser tous les identifiants de développeur."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for git hook shell scripts calling external URLs across the environment."
+          ],
+          "fr": [
+            "Rechercher les scripts shell de hook git appelant des URL externes dans l'environnement."
+          ]
+        }
+      },
+      "tags": [
+        "Lazarus",
+        "Git",
+        "Supply Chain",
+        "DPRK"
+      ],
+      "sources": [
+        "https://opensourcemalware.com/blog/dprk-git-hooks-malware"
+      ],
+      "date": "2026-05-07"
+    },
+    {
+      "title": {
+        "en": "TCLBANKER Brazilian Banking Trojan",
+        "fr": "TCLBANKER : Trojan bancaire brésilien"
+      },
+      "description": {
+        "en": "A new malware using WPF overlays to steal banking information, spreading via WhatsApp and Outlook.",
+        "fr": "Un nouveau malware utilisant des overlays WPF pour voler des informations bancaires, se propageant via WhatsApp et Outlook."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "Brazil",
+      "threat_actor_type": "Criminal Group",
+      "threat_actor_aliases": [
+        "REF3076"
+      ],
+      "sector": {
+        "en": [
+          "Finance"
+        ],
+        "fr": [
+          "Finance"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "mxtestacionamentos[.]com"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [
+          "e11f69b49b6f2e829454371c31ebf86893f82a042dae3f2faf63dcd84f97a584"
+        ],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Logi AI Prompt Builder"
+        ]
+      },
+      "mitre_ttps": [
+        "T1574.002"
+      ],
+      "analyse": {
+        "en": "Abuses DLL side-loading against legitimate software and uses UI Automation to manipulate banking interfaces.",
+        "fr": "Abuse du sideloading DLL contre des logiciels légitimes et utilise l'automatisation de l'interface utilisateur pour manipuler les interfaces bancaires."
+      },
+      "recommandations": [
+        {
+          "en": "Alert users about suspicious WhatsApp and Outlook messages.",
+          "fr": "Alerter les utilisateurs sur les messages WhatsApp et Outlook suspects."
+        },
+        {
+          "en": "Enforce strict DLL execution policies.",
+          "fr": "Imposer des politiques d'exécution de DLL strictes."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Configure AppLocker or similar to block unauthorized DLL loading.",
+            "Educate users on social engineering via instant messaging."
+          ],
+          "fr": [
+            "Configurer AppLocker ou équivalent pour bloquer le chargement de DLL non autorisées.",
+            "Éduquer les utilisateurs sur l'ingénierie sociale via messagerie instantanée."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor UI Automation calls by browsers.",
+            "Detect unusual DLLs in Logi AI application folders."
+          ],
+          "fr": [
+            "Surveiller les appels d'automatisation d'interface par les navigateurs.",
+            "Détecter les DLL inhabituelles dans les dossiers de l'application Logi AI."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Block suspicious Cloudflare Workers endpoints.",
+            "Kill processes associated with the side-loading."
+          ],
+          "fr": [
+            "Bloquer les points de terminaison Cloudflare Workers suspects.",
+            "Arrêter les processus associés au side-loading."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Remove scheduled tasks like 'RuntimeOptimizeService'.",
+            "Monitor for subsequent fraudulent banking transactions."
+          ],
+          "fr": [
+            "Supprimer les tâches planifiées comme 'RuntimeOptimizeService'.",
+            "Surveiller les transactions bancaires frauduleuses ultérieures."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for WPF overlay activity and UI Automation abuse signatures."
+          ],
+          "fr": [
+            "Rechercher l'activité d'overlay WPF et les signatures d'abus d'automatisation d'interface."
+          ]
+        }
+      },
+      "tags": [
+        "Malware",
+        "Banking Trojan",
+        "Brazil"
+      ],
+      "sources": [
+        "https://www.elastic.co/security-labs/tclbanker-brazilian-banking-trojan"
+      ],
+      "date": "2026-05-07"
+    },
+    {
+      "title": {
+        "en": "Hidden Costs of Package Registries Sustainability",
+        "fr": "Coûts cachés de la durabilité des registres de paquets"
+      },
+      "description": {
+        "en": "Analysis of the economic sustainability of open-source infrastructures like npm and PyPI facing AI-driven automation and supply chain attacks.",
+        "fr": "Analyse de la durabilité économique des infrastructures open-source comme npm et PyPI face à l'automatisation par l'IA et aux attaques de supply chain."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et Télécom"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "Increased pressure on registries due to AI coding agents and massive supply chain attack attempts, leading to availability risks.",
+        "fr": "Pression accrue sur les registres due aux agents de codage IA et aux tentatives massives d'attaques de supply chain, menaçant la disponibilité."
+      },
+      "recommandations": [
+        {
+          "en": "Support package registries financially and through security contributions.",
+          "fr": "Soutenir financièrement les registres de paquets et via des contributions de sécurité."
+        },
+        {
+          "en": "Implement local registry mirrors to mitigate availability issues.",
+          "fr": "Implémenter des miroirs de registres locaux pour atténuer les problèmes de disponibilité."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Develop a dependency management policy.",
+            "Establish private repositories for critical dependencies."
+          ],
+          "fr": [
+            "Développer une politique de gestion des dépendances.",
+            "Établir des dépôts privés pour les dépendances critiques."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor registry latency and availability.",
+            "Track unusual dependency updates."
+          ],
+          "fr": [
+            "Surveiller la latence et la disponibilité des registres.",
+            "Suivre les mises à jour de dépendances inhabituelles."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Switch to mirror registries if primary is unavailable.",
+            "Freeze dependency versions during instability."
+          ],
+          "fr": [
+            "Passer aux registres miroirs si le principal est indisponible.",
+            "Geler les versions de dépendances en cas d'instabilité."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Audit all downloaded packages during registry disruption.",
+            "Evaluate long-term dependency health."
+          ],
+          "fr": [
+            "Auditer tous les paquets téléchargés pendant l'interruption du registre.",
+            "Évaluer la santé des dépendances à long terme."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Proactively scan local repositories for suspicious packages during registry outages."
+          ],
+          "fr": [
+            "Scanner proactivement les dépôts locaux pour les paquets suspects lors des pannes de registre."
+          ]
+        }
+      },
+      "tags": [
+        "Open Source",
+        "Supply Chain",
+        "Infrastructure"
+      ],
+      "sources": [
+        "https://openssf.org/blog/2026/05/06/open-infrastructure-is-not-free-part-ii-the-hidden-cost-of-running-package-registries/"
+      ],
+      "date": "2026-05-06"
+    }
+  ]
+}
