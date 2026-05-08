@@ -1,0 +1,3186 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The cyber landscape on May 8, 2026, is dominated by critical Zero-Day exploitations in edge infrastructure, specifically Palo Alto PAN-OS (CVE-2026-0300) and Ivanti EPMM (CVE-2026-6973), which are being leveraged by nation-state actors for persistent access. Simultaneously, a massive extortion campaign by ShinyHunters targeting the Canvas LMS platform highlights the ongoing vulnerability of the education sector. New technical evolutions in malware, such as the TCLBanker trojan and PCPJack worm, demonstrate increased automation in propagation and cloud credential theft. Regulatory focus remains sharp with the EU clarifying AI Act timelines and focusing on automated compliance and dual-use export controls.",
+      "fr": "L'actualité cyber du 8 mai 2026 est dominée par l'exploitation critique de vulnérabilités Zero-Day dans les infrastructures de périphérie, notamment Palo Alto PAN-OS (CVE-2026-0300) et Ivanti EPMM (CVE-2026-6973), utilisées par des acteurs étatiques pour un accès persistant. Parallèlement, une vaste campagne d'extorsion menée par ShinyHunters contre la plateforme Canvas LMS souligne la vulnérabilité continue du secteur de l'éducation. Les évolutions techniques des malwares, tels que le troyen TCLBanker et le ver PCPJack, démontrent une automatisation accrue de la propagation et du vol d'identifiants cloud. L'attention réglementaire reste vive avec l'UE clarifiant le calendrier de l'AI Act et se concentrant sur la conformité automatisée et le contrôle des exportations à double usage."
+    },
+    "date": "2026-05-08"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": [
+          "Education_and_Research",
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Éducation et Recherche",
+          "Gouvernement et Défense"
+        ]
+      },
+      "theme": {
+        "en": "Militarization of Technical Education in Russia",
+        "fr": "Militarisation de l'éducation technique en Russie"
+      },
+      "description": {
+        "en": "Investigations reveal that Bauman Moscow State Technical University serves as a secret training hub for GRU Unit 26165 (Fancy Bear), integrating offensive cyber operations into civilian curriculums to fuel hybrid warfare in Europe.",
+        "fr": "Des enquêtes révèlent que l'Université technique d'État Bauman de Moscou sert de centre de formation secret pour l'unité 26165 du GRU (Fancy Bear), intégrant des opérations cyber offensives dans les cursus civils pour alimenter la guerre hybride en Europe."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor talent flows from Russian military-aligned academic institutions.",
+          "fr": "Surveiller les flux de talents issus des institutions académiques russes alignées sur le secteur militaire."
+        },
+        {
+          "en": "Strengthen European critical infrastructure against hybrid state-sponsored operations.",
+          "fr": "Renforcer la protection des infrastructures critiques européennes contre les opérations hybrides étatiques."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Establish baseline for normal network activity from academic regions",
+            "Update threat models to include academic-sponsored APT recruitment"
+          ],
+          "fr": [
+            "Établir une base de référence pour l'activité réseau normale provenant des régions académiques",
+            "Mettre à jour les modèles de menace pour inclure le recrutement d'APT via le secteur académique"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Audit for IPs and tools associated with Bauman University research clusters",
+            "Monitor for unusual data exfiltration patterns toward RU academic IPs"
+          ],
+          "fr": [
+            "Auditer les adresses IP et les outils associés aux clusters de recherche de l'université Bauman",
+            "Surveiller les modèles d'exfiltration de données inhabituels vers des IP académiques russes"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Block identified malicious IPs associated with GRU-sponsored hubs",
+            "Isolate compromised research environments"
+          ],
+          "fr": [
+            "Bloquer les adresses IP malveillantes identifiées associées aux centres parrainés par le GRU",
+            "Isoler les environnements de recherche compromis"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Conduct deep forensic analysis to identify TTPs used by trained recruits",
+            "Share findings with international law enforcement and intelligence communities"
+          ],
+          "fr": [
+            "Mener une analyse forensique approfondie pour identifier les TTP utilisées par les recrues formées",
+            "Partager les conclusions avec les forces de l'ordre internationales et les services de renseignement"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for dormant backdoors installed via academic cooperation programs",
+            "Verify integrity of shared research repositories"
+          ],
+          "fr": [
+            "Rechercher des portes dérobées dormantes installées via des programmes de coopération académique",
+            "Vérifier l'intégrité des référentiels de recherche partagés"
+          ]
+        }
+      },
+      "tags": [
+        "GRU",
+        "Fancy Bear",
+        "Hybrid Warfare",
+        "Russia"
+      ],
+      "sources": [
+        "https://www.lemonde.fr/m-le-mag/article/2026/05/07/a-l-universite-bauman-de-moscou-la-secrete-ecole-des-hackeurs-russes-pilier-de-la-guerre-hybride-en-europe_6686484_4500055.html"
+      ],
+      "date": "2026-05-08"
+    },
+    {
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologies et Télécoms"
+        ]
+      },
+      "theme": {
+        "en": "North Korean Remote Worker Infiltration via Laptop Farms",
+        "fr": "Infiltration de travailleurs distants nord-coréens via des fermes d'ordinateurs"
+      },
+      "description": {
+        "en": "US citizens were sentenced for operating laptop farms that allowed North Korean IT workers to fraudulently obtain employment at American companies, facilitating financial gains for the DPRK regime.",
+        "fr": "Des citoyens américains ont été condamnés pour avoir exploité des fermes d'ordinateurs permettant à des travailleurs IT nord-coréens d'obtenir frauduleusement des emplois dans des entreprises américaines, facilitant ainsi les gains financiers du régime de la RPDC."
+      },
+      "recommandations": [
+        {
+          "en": "Implement rigorous identity verification for remote hiring processes.",
+          "fr": "Mettre en œuvre une vérification d'identité rigoureuse pour les processus de recrutement à distance."
+        },
+        {
+          "en": "Audit corporate hardware location and usage of remote desktop software.",
+          "fr": "Auditer la localisation du matériel de l'entreprise et l'utilisation des logiciels de bureau à distance."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Update onboarding procedures to include video verification and ID checks",
+            "Define policy for corporate asset geographical boundaries"
+          ],
+          "fr": [
+            "Mettre à jour les procédures d'intégration pour inclure la vérification vidéo et le contrôle d'identité",
+            "Définir une politique pour les limites géographiques des actifs de l'entreprise"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for multiple remote logins originating from the same residential IP subnet",
+            "Detect unauthorized remote access tools (RDP, TeamViewer) on company laptops"
+          ],
+          "fr": [
+            "Surveiller les connexions à distance multiples provenant du même sous-réseau IP résidentiel",
+            "Détecter les outils d'accès à distance non autorisés (RDP, TeamViewer) sur les ordinateurs de l'entreprise"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Revoke access for suspected fraudulent accounts",
+            "Recover and forensic audit the hardware used in the laptop farm"
+          ],
+          "fr": [
+            "Révoquer l'accès pour les comptes suspectés de fraude",
+            "Récupérer et effectuer un audit forensique du matériel utilisé dans la ferme d'ordinateurs"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Conduct a background check review of all remote employees hired in the last 24 months",
+            "Strengthen vetting partnerships with specialized identity providers"
+          ],
+          "fr": [
+            "Effectuer une vérification des antécédents de tous les employés à distance embauchés au cours des 24 derniers mois",
+            "Renforcer les partenariats d'audit avec des prestataires spécialisés en identité"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for unauthorized financial exfiltration pathways set up by fraudulent workers",
+            "Identify lateral movement attempts from remote access nodes"
+          ],
+          "fr": [
+            "Rechercher des voies d'exfiltration financière non autorisées mises en place par des travailleurs frauduleux",
+            "Identifier les tentatives de mouvement latéral à partir des nœuds d'accès à distance"
+          ]
+        }
+      },
+      "tags": [
+        "DPRK",
+        "Insider Threat",
+        "Fraud",
+        "Remote Work"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/americans-sentenced-for-running-laptop-farms-for-north-korea/"
+      ],
+      "date": "2026-05-08"
+    },
+    {
+      "sector": {
+        "en": [
+          "Security"
+        ],
+        "fr": [
+          "Sécurité"
+        ]
+      },
+      "theme": {
+        "en": "Quantum Computing Risks and HNDL Threats",
+        "fr": "Risques de l'informatique quantique et menaces HNDL"
+      },
+      "description": {
+        "en": "The 'Harvest Now, Decrypt Later' (HNDL) strategy poses a significant long-term risk to current encryption standards, as state actors collect encrypted data today to decrypt it when quantum computers arrive.",
+        "fr": "La stratégie 'Harvest Now, Decrypt Later' (HNDL) pose un risque majeur à long terme pour les normes de chiffrement actuelles, car les acteurs étatiques collectent des données chiffrées aujourd'hui pour les déchiffrer lors de l'arrivée des ordinateurs quantiques."
+      },
+      "recommandations": [
+        {
+          "en": "Inventory long-term sensitive data protected by quantum-vulnerable algorithms.",
+          "fr": "Inventorier les données sensibles à long terme protégées par des algorithmes vulnérables au quantique."
+        },
+        {
+          "en": "Develop a migration plan to Post-Quantum Cryptography (PQC).",
+          "fr": "Élaborer un plan de migration vers la cryptographie post-quantique (PQC)."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Assess cryptographic agility within critical systems",
+            "Identify data with a sensitivity lifespan of over 10 years"
+          ],
+          "fr": [
+            "Évaluer l'agilité cryptographique au sein des systèmes critiques",
+            "Identifier les données dont la durée de vie de sensibilité est supérieure à 10 ans"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for massive encrypted data transfers to known HNDL-active nations",
+            "Detect unusual export of bulk database backups"
+          ],
+          "fr": [
+            "Surveiller les transferts massifs de données chiffrées vers des pays pratiquant le HNDL",
+            "Détecter les exportations inhabituelles de sauvegardes de bases de données volumineuses"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Implement stricter access controls on data at rest",
+            "Enhance DLP rules for large outbound encrypted files"
+          ],
+          "fr": [
+            "Mettre en œuvre des contrôles d'accès plus stricts sur les données au repos",
+            "Améliorer les règles DLP pour les gros fichiers chiffrés sortants"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Evaluate the potential future impact of stolen data after Q-Day",
+            "Accelerate PQC implementation for affected data categories"
+          ],
+          "fr": [
+            "Évaluer l'impact futur potentiel des données volées après le Q-Day",
+            "Accélérer la mise en œuvre de la PQC pour les catégories de données concernées"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Audit archives for signs of past exfiltration of high-value encrypted assets",
+            "Search for unauthorized shadow copies of database clusters"
+          ],
+          "fr": [
+            "Auditer les archives pour détecter des signes d'exfiltration passée d'actifs chiffrés à haute valeur",
+            "Rechercher des copies fantômes non autorisées de clusters de bases de données"
+          ]
+        }
+      },
+      "tags": [
+        "Quantum",
+        "HNDL",
+        "Encryption",
+        "Strategic Risk"
+      ],
+      "sources": [
+        "https://www.recordedfuture.com/research/quantum-risk-explained"
+      ],
+      "date": "2026-05-08"
+    },
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense",
+          "Healthcare_and_Life_Sciences"
+        ],
+        "fr": [
+          "Gouvernement et Défense",
+          "Santé et Sciences de la vie"
+        ]
+      },
+      "theme": {
+        "en": "US Global Health Foreign Policy Shift",
+        "fr": "Changement de politique étrangère américaine en santé mondiale"
+      },
+      "description": {
+        "en": "The United States is pivoting towards an 'America First' global health strategy, weaponizing international health aid for national security and transactional alliances.",
+        "fr": "Les États-Unis pivotent vers une stratégie de santé mondiale 'America First', instrumentalisant l'aide sanitaire internationale pour la sécurité nationale et des alliances transactionnelles."
+      },
+      "recommandations": [
+        {
+          "en": "Adapt international health cooperation strategies to the new US transactional posture.",
+          "fr": "Adapter les stratégies de coopération sanitaire internationale à la nouvelle posture transactionnelle américaine."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Identify dependencies on US-funded health initiatives",
+            "Unknown"
+          ],
+          "fr": [
+            "Identifier les dépendances vis-à-vis des initiatives de santé financées par les États-Unis",
+            "Inconnu"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "USA",
+        "Geopolitics",
+        "Health Policy"
+      ],
+      "sources": [
+        "https://www.iris-france.org/la-sante-mondiale-nouvelle-arme-de-la-politique-etrangere-americaine/",
+        "https://www.iris-france.org/quest-ce-que-lanti-trumpisme-primaire/"
+      ],
+      "date": "2026-05-08"
+    },
+    {
+      "sector": {
+        "en": [
+          "Technology_and_Telecom",
+          "Education_and_Research"
+        ],
+        "fr": [
+          "Technologies et Télécoms",
+          "Éducation et Recherche"
+        ]
+      },
+      "theme": {
+        "en": "European Digital Sovereignty (HiPEAC Vision 2026)",
+        "fr": "Souveraineté numérique européenne (HiPEAC Vision 2026)"
+      },
+      "description": {
+        "en": "HiPEAC Vision 2026 highlights Europe's ambition to define its own technological path in computing and AI infrastructure, moving away from reliance on non-EU hyperscalers.",
+        "fr": "HiPEAC Vision 2026 souligne l'ambition de l'Europe de définir sa propre voie technologique dans l'informatique et les infrastructures d'IA, en s'éloignant de la dépendance aux hyperscalers non-UE."
+      },
+      "recommandations": [
+        {
+          "en": "Support local R&D initiatives aligned with European values of privacy and autonomy.",
+          "fr": "Soutenir les initiatives locales de R&D alignées sur les valeurs européennes de confidentialité et d'autonomie."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Map dependencies on critical hardware and software from outside the EU",
+            "Invest in internal competence for open-source alternatives"
+          ],
+          "fr": [
+            "Cartographier les dépendances au matériel et aux logiciels critiques hors-UE",
+            "Investir dans les compétences internes pour les alternatives open-source"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "Sovereignty",
+        "Europe",
+        "HiPEAC",
+        "AI"
+      ],
+      "sources": [
+        "https://digital-strategy.ec.europa.eu/en/events/hipeac-vision-2026-connect-university"
+      ],
+      "date": "2026-05-08"
+    }
+  ],
+  "regulatory_and_legal": [
+    {
+      "title": {
+        "en": "EU AI Act Implementation and Simplification",
+        "fr": "Mise en œuvre et simplification de l'AI Act de l'UE"
+      },
+      "description": {
+        "en": "The EU has agreed on timelines for the AI Act, simplifying rules to boost innovation while banning harmful applications like 'nudification' apps. High-risk system rules will apply from December 2027.",
+        "fr": "L'UE a convenu des calendriers pour l'AI Act, simplifiant les règles pour stimuler l'innovation tout en interdisant les applications nuisibles comme les applications de 'nudification'. Les règles pour les systèmes à haut risque s'appliqueront dès décembre 2027."
+      },
+      "organisation": {
+        "en": [
+          "European Commission"
+        ],
+        "fr": [
+          "Commission Européenne"
+        ]
+      },
+      "jurisdiction": {
+        "en": [
+          "European Union"
+        ],
+        "fr": [
+          "Union Européenne"
+        ]
+      },
+      "references": {
+        "en": [
+          "AI Act"
+        ],
+        "fr": [
+          "AI Act"
+        ]
+      },
+      "tags": [
+        "AI",
+        "Regulation",
+        "Compliance"
+      ],
+      "sources": [
+        "https://digital-strategy.ec.europa.eu/en/news/eu-agrees-simplify-ai-rules-boost-innovation-and-ban-nudification-apps-protect-citizens"
+      ],
+      "date": "2026-05-08"
+    },
+    {
+      "title": {
+        "en": "EU Call for Proposals: Digital Solutions for Regulatory Compliance",
+        "fr": "Appel à propositions de l'UE : Solutions numériques pour la conformité réglementaire"
+      },
+      "description": {
+        "en": "The European Union is funding initiatives that automate regulatory compliance through advanced data exploitation to reduce administrative burdens.",
+        "fr": "L'Union européenne finance des initiatives qui automatisent la conformité réglementaire grâce à l'exploitation avancée des données afin de réduire la charge administrative."
+      },
+      "organisation": {
+        "en": [
+          "European Union"
+        ],
+        "fr": [
+          "Union Européenne"
+        ]
+      },
+      "jurisdiction": {
+        "en": [
+          "Europe"
+        ],
+        "fr": [
+          "Europe"
+        ]
+      },
+      "references": {
+        "en": [
+          "DIGITAL-2026-AI-DATA-10"
+        ],
+        "fr": [
+          "DIGITAL-2026-AI-DATA-10"
+        ]
+      },
+      "tags": [
+        "Compliance",
+        "Automation",
+        "Funding"
+      ],
+      "sources": [
+        "https://digital-strategy.ec.europa.eu/en/events/info-session-call-proposals-digital-solutions-regulatory-compliance-through-data"
+      ],
+      "date": "2026-05-08"
+    },
+    {
+      "title": {
+        "en": "EU Information Note on Dual-Use Export Controls",
+        "fr": "Note d'information de l'UE sur les contrôles d'exportation à double usage"
+      },
+      "description": {
+        "en": "Update on measures adopted by EU member states regarding the export control of dual-use goods under Regulation (EU) 2021/821.",
+        "fr": "Mise à jour des mesures adoptées par les États membres de l'UE concernant le contrôle des exportations de biens à double usage en vertu du règlement (UE) 2021/821."
+      },
+      "organisation": {
+        "en": [
+          "European Parliament",
+          "Council of the EU"
+        ],
+        "fr": [
+          "Parlement Européen",
+          "Conseil de l'UE"
+        ]
+      },
+      "jurisdiction": {
+        "en": [
+          "European Union"
+        ],
+        "fr": [
+          "Union Européenne"
+        ]
+      },
+      "references": {
+        "en": [
+          "Regulation (EU) 2021/821"
+        ],
+        "fr": [
+          "Règlement (UE) 2021/821"
+        ]
+      },
+      "tags": [
+        "Dual-use",
+        "Trade",
+        "Export Control"
+      ],
+      "sources": [
+        "https://eur-lex.europa.eu/legal-content/AUTO/?uri=OJ:C_202602595"
+      ],
+      "date": "2026-05-08"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Instructure (Canvas LMS)",
+      "threat_actor": "ShinyHunters",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [
+        "Shiny Hunters"
+      ],
+      "sector": {
+        "en": [
+          "Education_and_Research"
+        ],
+        "fr": [
+          "Éducation et Recherche"
+        ]
+      },
+      "description": {
+        "en": "ShinyHunters compromised over 330 Canvas login portals, defacing them and threatening to leak 280 million student and staff records if an extortion demand is not met.",
+        "fr": "ShinyHunters a compromis plus de 330 portails de connexion Canvas, les défaçant et menaçant de divulguer 280 millions de dossiers d'étudiants et de personnels si une demande d'extorsion n'est pas satisfaite."
+      },
+      "mitre_ttps": [
+        "T1491",
+        "T1567",
+        "T1586"
+      ],
+      "recommandations": [
+        {
+          "en": "Reset all administrator and privileged account passwords.",
+          "fr": "Réinitialiser tous les mots de passe des comptes administrateurs et privilégiés."
+        },
+        {
+          "en": "Audit SSO portal configurations and monitor for unauthorized modifications.",
+          "fr": "Auditer les configurations des portails SSO et surveiller les modifications non autorisées."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Implement multi-factor authentication (MFA) across all LMS access points",
+            "Maintain offline backups of critical student data"
+          ],
+          "fr": [
+            "Mettre en œuvre l'authentification multi-facteurs (MFA) sur tous les points d'accès LMS",
+            "Maintenir des sauvegardes hors ligne des données étudiantes critiques"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor web server file integrity for login portal defacement",
+            "Alert on large API data exports from LMS databases"
+          ],
+          "fr": [
+            "Surveiller l'intégrité des fichiers du serveur Web pour détecter le défaçage du portail de connexion",
+            "Alerter sur les exportations massives de données API des bases de données LMS"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Take compromised portal instances offline",
+            "Rotate all API keys and service tokens"
+          ],
+          "fr": [
+            "Mettre hors ligne les instances de portail compromises",
+            "Effectuer une rotation de toutes les clés API et des jetons de service"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Provide transparent communication to affected students and institutions",
+            "Conduct a full security audit of the supply chain provider (Instructure)"
+          ],
+          "fr": [
+            "Fournir une communication transparente aux étudiants et institutions concernés",
+            "Mener un audit de sécurité complet du fournisseur de la chaîne d'approvisionnement (Instructure)"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for persistent web shells or backdoors in the LMS environment",
+            "Analyze access logs for vishing-based credential harvesting patterns"
+          ],
+          "fr": [
+            "Rechercher des web shells ou des portes dérobées persistantes dans l'environnement LMS",
+            "Analyser les journaux d'accès pour détecter les modèles de collecte d'identifiants par vishing"
+          ]
+        }
+      },
+      "tags": [
+        "Data Breach",
+        "Extortion",
+        "Education",
+        "Defacement"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/canvas-login-portals-hacked-in-mass-shinyhunters-extortion-campaign/",
+        "https://databreaches.net/2026/05/07/developing-shinyhunters-hacks-instructure-again-canvas-down/"
+      ],
+      "date": "2026-05-08"
+    },
+    {
+      "victim": "Woflow",
+      "threat_actor": "ShinyHunters",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [
+        "Shiny Hunters"
+      ],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologies et Télécoms"
+        ]
+      },
+      "description": {
+        "en": "A massive leak of 447,593 accounts and 2TB of data from Woflow, a merchant data platform, was claimed by ShinyHunters.",
+        "fr": "Une fuite massive de 447 593 comptes et 2 To de données de Woflow, une plateforme de données marchandes, a été revendiquée par ShinyHunters."
+      },
+      "mitre_ttps": [
+        "T1567"
+      ],
+      "recommandations": [
+        {
+          "en": "Notify all affected account holders of potential PII exposure.",
+          "fr": "Informer tous les titulaires de comptes concernés de l'exposition potentielle de leurs données personnelles (PII)."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Ensure encryption of PII at rest and in transit",
+            "Implement robust DLP policies"
+          ],
+          "fr": [
+            "Assurer le chiffrement des PII au repos et en transit",
+            "Mettre en œuvre des politiques DLP robustes"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for unauthorized database access from anomalous geographies",
+            "Detect bulk data exfiltration via cloud service accounts"
+          ],
+          "fr": [
+            "Surveiller les accès non autorisés aux bases de données depuis des zones géographiques anormales",
+            "Détecter l'exfiltration massive de données via des comptes de services cloud"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Freeze affected database user accounts",
+            "Isolate the suspected exfiltration point"
+          ],
+          "fr": [
+            "Geler les comptes utilisateurs des bases de données concernées",
+            "Isoler le point d'exfiltration suspecté"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Submit mandatory data breach reports to relevant authorities (e.g., GDPR)",
+            "Review access management logs for compromised credentials"
+          ],
+          "fr": [
+            "Soumettre les rapports de violation de données obligatoires aux autorités compétentes (ex: RGPD)",
+            "Examiner les journaux de gestion des accès pour détecter les identifiants compromis"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for unauthorized API tokens created during the breach",
+            "Check for shadow data stores created by the attacker"
+          ],
+          "fr": [
+            "Rechercher les jetons API non autorisés créés lors de la violation",
+            "Vérifier la présence de stockages de données fantômes créés par l'attaquant"
+          ]
+        }
+      },
+      "tags": [
+        "Data Breach",
+        "SaaS",
+        "PII"
+      ],
+      "sources": [
+        "https://haveibeenpwned.com/Breach/Woflow"
+      ],
+      "date": "2026-05-08"
+    },
+    {
+      "victim": "ChipSoft",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Healthcare_and_Life_Sciences"
+        ],
+        "fr": [
+          "Santé et Sciences de la vie"
+        ]
+      },
+      "description": {
+        "en": "ChipSoft confirmed that patient data stolen during a recent cyberattack was destroyed following negotiations or technical verification.",
+        "fr": "ChipSoft a confirmé que les données de patients volées lors d'une récente cyberattaque ont été détruites à la suite de négociations ou de vérifications techniques."
+      },
+      "mitre_ttps": [],
+      "recommandations": [
+        {
+          "en": "Verify destruction evidence independently.",
+          "fr": "Vérifier les preuves de destruction de manière indépendante."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Develop data destruction verification protocols",
+            "Maintain secure, immutable patient data backups"
+          ],
+          "fr": [
+            "Développer des protocoles de vérification de destruction de données",
+            "Maintenir des sauvegardes de données patients sécurisées et immuables"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor dark web for any appearance of suspected 'destroyed' data",
+            "Alert on unauthorized access to electronic health records (EHR)"
+          ],
+          "fr": [
+            "Surveiller le dark web pour toute apparition de données suspectées 'détruites'",
+            "Alerter sur les accès non autorisés aux dossiers de santé électroniques (EHR)"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Close access vulnerabilities discovered during the initial attack",
+            "Rotate internal encryption keys"
+          ],
+          "fr": [
+            "Fermer les vulnérabilités d'accès découvertes lors de l'attaque initiale",
+            "Effectuer une rotation des clés de chiffrement internes"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Perform a long-term dark web monitoring campaign",
+            "Update incident response plans for healthcare data loss"
+          ],
+          "fr": [
+            "Mener une campagne de surveillance du dark web à long terme",
+            "Mettre à jour les plans de réponse aux incidents pour la perte de données de santé"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for latent persistence within the EHR system",
+            "Validate that no residual data remains in attacker-controlled cloud storage"
+          ],
+          "fr": [
+            "Rechercher une persistance latente au sein du système EHR",
+            "Valider qu'aucune donnée résiduelle ne subsiste dans le stockage cloud contrôlé par l'attaquant"
+          ]
+        }
+      },
+      "tags": [
+        "Healthcare",
+        "Data Destruction",
+        "Privacy"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/05/07/cybersecurity-stolen-chipsoft-claims-patient-data-confirmed-destroyed-following-cyberattack/"
+      ],
+      "date": "2026-05-08"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-0300",
+      "euvd_id": "unknown",
+      "cisa_kev": "true",
+      "cvss": "9.3",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:o:paloaltonetworks:pan-os:*",
+      "product": "PAN-OS",
+      "vendor": "Palo Alto Networks",
+      "description": {
+        "en": "Critical buffer overflow vulnerability in the Captive Portal service (User-ID) of PAN-OS allows unauthenticated remote code execution (RCE) with root privileges. Actively exploited by nation-state actors.",
+        "fr": "Vulnérabilité critique de débordement de tampon dans le service Captive Portal (User-ID) de PAN-OS permettant l'exécution de code à distance (RCE) non authentifiée avec les privilèges root. Exploitée activement par des acteurs étatiques."
+      },
+      "mitre_ttps": [
+        "T1210",
+        "T1190",
+        "T1090"
+      ],
+      "recommandations": [
+        {
+          "en": "Restrict access to the Captive Portal to trusted internal IP addresses immediately.",
+          "fr": "Restreindre immédiatement l'accès au Captive Portal aux adresses IP internes de confiance."
+        },
+        {
+          "en": "Apply security patches scheduled for release on May 13, 2026.",
+          "fr": "Appliquer les correctifs de sécurité dont la sortie est prévue le 13 mai 2026."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory all PAN-OS devices with Captive Portal enabled",
+            "Implement centralized logging for firewall kernel events"
+          ],
+          "fr": [
+            "Inventorier tous les équipements PAN-OS avec le Captive Portal activé",
+            "Mettre en œuvre une journalisation centralisée pour les événements noyau du pare-feu"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Search logs for shellcode injection patterns in the nginx service",
+            "Detect unauthorized use of ptrace or kernel-level debugging tools"
+          ],
+          "fr": [
+            "Rechercher dans les journaux les modèles d'injection de shellcode dans le service nginx",
+            "Détecter l'utilisation non autorisée de ptrace ou d'outils de débogage au niveau du noyau"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Disable the Captive Portal feature until patched",
+            "Enable Threat ID 510019 to block known exploitation attempts"
+          ],
+          "fr": [
+            "Désactiver la fonctionnalité Captive Portal jusqu'à l'application du correctif",
+            "Activer le Threat ID 510019 pour bloquer les tentatives d'exploitation connues"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Perform a complete factory reset and firmware re-flash for compromised units",
+            "Rotate all AD service account credentials used for User-ID"
+          ],
+          "fr": [
+            "Effectuer une réinitialisation complète et un nouveau flashage du micrologiciel pour les unités compromises",
+            "Effectuer une rotation de tous les identifiants de compte de service AD utilisés pour le User-ID"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for files in /var/tmp/linuxupdate and other temporary directories",
+            "Audit for unauthorized persistent tunnels (EarthWorm, ReverseSocks5)"
+          ],
+          "fr": [
+            "Rechercher des fichiers dans /var/tmp/linuxupdate et autres répertoires temporaires",
+            "Auditer les tunnels persistants non autorisés (EarthWorm, ReverseSocks5)"
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "Zero-day",
+        "Edge Security",
+        "PAN-OS"
+      ],
+      "sources": [
+        "https://unit42.paloaltonetworks.com/captive-portal-zero-day/",
+        "https://securityaffairs.com/191831/security/nation-state-actors-exploit-palo-alto-pan-os-zero-day-for-weeks.html",
+        "https://cybersecuritynews.com/palo-alto-pan-os-vulnerability-exploited/"
+      ],
+      "date": "2026-05-08"
+    },
+    {
+      "cve_id": "CVE-2026-6973",
+      "euvd_id": "unknown",
+      "cisa_kev": "true",
+      "cvss": "7.1",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:ivanti:endpoint_manager_mobile:*",
+      "product": "Endpoint Manager Mobile (EPMM)",
+      "vendor": "Ivanti",
+      "description": {
+        "en": "An improper input validation vulnerability in Ivanti EPMM (formerly MobileIron Core) allows an authenticated remote attacker with administrator privileges to execute arbitrary code. Actively used in zero-day attacks.",
+        "fr": "Une vulnérabilité de validation d'entrée incorrecte dans Ivanti EPMM (anciennement MobileIron Core) permet à un attaquant distant authentifié avec des privilèges d'administrateur d'exécuter du code arbitraire. Activement utilisée dans des attaques zero-day."
+      },
+      "mitre_ttps": [
+        "T1210",
+        "T1078"
+      ],
+      "recommandations": [
+        {
+          "en": "Upgrade to EPMM versions 12.6.1.1, 12.7.0.1, or 12.8.0.1 immediately.",
+          "fr": "Passer immédiatement aux versions EPMM 12.6.1.1, 12.7.0.1 ou 12.8.0.1."
+        },
+        {
+          "en": "Enforce strict multi-factor authentication for all administrative accounts.",
+          "fr": "Appliquer une authentification multi-facteurs stricte pour tous les comptes administratifs."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Audit all Ivanti EPMM on-premise installations",
+            "Establish baseline for administrative API calls"
+          ],
+          "fr": [
+            "Auditer toutes les installations Ivanti EPMM sur site",
+            "Établir une base de référence pour les appels API administratifs"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect unusual administrative sessions originating from unknown IPs",
+            "Monitor for unauthorized shell command execution via the MDM management interface"
+          ],
+          "fr": [
+            "Détecter les sessions administratives inhabituelles provenant d'IP inconnues",
+            "Surveiller l'exécution de commandes shell non autorisées via l'interface de gestion MDM"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate the management interface from the public internet",
+            "Revoke compromised admin sessions"
+          ],
+          "fr": [
+            "Isoler l'interface de gestion de l'Internet public",
+            "Révoquer les sessions d'administration compromises"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Mandatory rotation of all administrative credentials",
+            "Validate integrity of mobile device configurations"
+          ],
+          "fr": [
+            "Rotation obligatoire de tous les identifiants administratifs",
+            "Valider l'intégrité des configurations des appareils mobiles"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for unauthorized device enrollment profiles",
+            "Check for persistent backdoors created in the underlying Linux OS"
+          ],
+          "fr": [
+            "Rechercher des profils d'enrôlement d'appareils non autorisés",
+            "Vérifier la présence de portes dérobées persistantes créées dans l'OS Linux sous-jacent"
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "MDM",
+        "Zero-day",
+        "Ivanti"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/ivanti-warns-of-new-epmm-flaw-exploited-in-zero-day-attacks/",
+        "https://securityaffairs.com/191822/security-u-s-cisa-adds-a-flaw-in-ivanti-endpoint-manager-mobile-epmm-to-its-known-exploited-vulnerabilities-catalog.html",
+        "https://thehackernews.com/2026/05/ivanti-epmm-cve-2026-6973-rce-under.html"
+      ],
+      "date": "2026-05-08"
+    },
+    {
+      "cve_id": "CVE-2026-DIRTYFRAG",
+      "euvd_id": "unknown",
+      "cisa_kev": "true",
+      "cvss": "7.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:o:linux:linux_kernel:*",
+      "product": "Linux Kernel",
+      "vendor": "Linux Foundation",
+      "description": {
+        "en": "A local privilege escalation (LPE) vulnerability, dubbed 'Dirty Frag' or 'Copy Fail', exists in the Linux kernel's handling of fragmentation since 2017. It allows a local user to gain root privileges.",
+        "fr": "Une vulnérabilité d'élévation locale de privilèges (LPE), surnommée 'Dirty Frag' ou 'Copy Fail', existe dans la gestion de la fragmentation du noyau Linux depuis 2017. Elle permet à un utilisateur local d'obtenir les privilèges root."
+      },
+      "mitre_ttps": [
+        "T1068"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply the latest kernel security updates from your distribution provider (Ubuntu, RHEL, Debian, SUSE).",
+          "fr": "Appliquer les dernières mises à jour de sécurité du noyau de votre distribution (Ubuntu, RHEL, Debian, SUSE)."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory kernel versions across the server estate",
+            "Enable auditing for privilege escalation attempts"
+          ],
+          "fr": [
+            "Inventorier les versions de noyau sur l'ensemble du parc de serveurs",
+            "Activer l'audit des tentatives d'élévation de privilèges"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for unusual process behaviors following system fragmentation activity",
+            "Detect attempts to overwrite sensitive system memory regions"
+          ],
+          "fr": [
+            "Surveiller les comportements de processus inhabituels après une activité de fragmentation du système",
+            "Détecter les tentatives d'écrasement des régions de mémoire système sensibles"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Restrict access to compilers and debugging tools for non-privileged users",
+            "Apply temporary mitigations for memory fragmentation if available"
+          ],
+          "fr": [
+            "Restreindre l'accès aux compilateurs et aux outils de débogage pour les utilisateurs non privilégiés",
+            "Appliquer des mesures d'atténuation temporaires pour la fragmentation de la mémoire si disponibles"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify the integrity of all binaries and configurations that could have been modified with root access",
+            "Reboot systems into patched kernels"
+          ],
+          "fr": [
+            "Vérifier l'intégrité de tous les binaires et configurations ayant pu être modifiés avec un accès root",
+            "Redémarrer les systèmes sur les noyaux corrigés"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for unauthorized root-owned files created in temporary directories",
+            "Audit SSH keys for unauthorized additions"
+          ],
+          "fr": [
+            "Rechercher des fichiers appartenant à root non autorisés créés dans des répertoires temporaires",
+            "Auditer les clés SSH pour détecter des ajouts non autorisés"
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "Linux",
+        "Kernel",
+        "LPE",
+        "DirtyFrag"
+      ],
+      "sources": [
+        "https://blog.talosintelligence.com/unplug-your-way-to-better-code/",
+        "https://aus.social/@shlee/116536206077309995",
+        "https://mastodon.social/@nwcs/116536272662450370",
+        "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0545/"
+      ],
+      "date": "2026-05-08"
+    },
+    {
+      "cve_id": "CVE-2026-8090",
+      "euvd_id": "unknown",
+      "cisa_kev": "unknown",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:mozilla:firefox:*",
+      "product": "Firefox / Thunderbird",
+      "vendor": "Mozilla",
+      "description": {
+        "en": "Multiple vulnerabilities in Mozilla products could allow for arbitrary code execution if a user visits a malicious website.",
+        "fr": "De multiples vulnérabilités dans les produits Mozilla pourraient permettre l'exécution de code arbitraire si un utilisateur visite un site web malveillant."
+      },
+      "mitre_ttps": [
+        "T1203"
+      ],
+      "recommandations": [
+        {
+          "en": "Update Firefox and Thunderbird to the latest versions.",
+          "fr": "Mettre à jour Firefox et Thunderbird vers les dernières versions."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Automate browser updates across the organization",
+            "Implement web filtering to block known malicious domains"
+          ],
+          "fr": [
+            "Automatiser les mises à jour du navigateur au sein de l'organisation",
+            "Mettre en œuvre un filtrage Web pour bloquer les domaines malveillants connus"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for unusual child processes spawned by browser executables",
+            "Detect anomalous network connections from browser processes"
+          ],
+          "fr": [
+            "Surveiller les processus enfants inhabituels générés par les exécutables du navigateur",
+            "Détecter les connexions réseau anormales à partir des processus du navigateur"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Terminate suspicious browser sessions",
+            "Clear browser cache and persistent storage"
+          ],
+          "fr": [
+            "Mettre fin aux sessions de navigateur suspectes",
+            "Effacer le cache du navigateur et le stockage persistant"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Review browser history and session data for the infected endpoint",
+            "Unknown"
+          ],
+          "fr": [
+            "Examiner l'historique du navigateur et les données de session du point de terminaison infecté",
+            "Inconnu"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for unauthorized extensions installed in the browser",
+            "Audit for credentials stolen from the browser password store"
+          ],
+          "fr": [
+            "Rechercher des extensions non autorisées installées dans le navigateur",
+            "Auditer les identifiants volés dans le magasin de mots de passe du navigateur"
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "Browser",
+        "Mozilla"
+      ],
+      "sources": [
+        "https://www.cisecurity.org/advisory/multiple-vulnerabilities-in-mozilla-products-could-allow-for-arbitrary-code-execution_2026-045"
+      ],
+      "date": "2026-05-08"
+    },
+    {
+      "cve_id": "CVE-2026-44193",
+      "euvd_id": "unknown",
+      "cisa_kev": "unknown",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:opnsense:opnsense:*",
+      "product": "OPNsense",
+      "vendor": "Deciso",
+      "description": {
+        "en": "Critical remote code execution (RCE) vulnerability in OPNsense firewalls involving the XMLRPC configuration restore function.",
+        "fr": "Vulnérabilité critique d'exécution de code à distance (RCE) dans les pare-feu OPNsense impliquant la fonction de restauration de configuration XMLRPC."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Update to OPNsense version 26.1.7 immediately.",
+          "fr": "Mettre à jour vers OPNsense version 26.1.7 immédiatement."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Implement configuration backup integrity checks",
+            "Restrict access to management interfaces"
+          ],
+          "fr": [
+            "Mettre en œuvre des contrôles d'intégrité des sauvegardes de configuration",
+            "Restreindre l'accès aux interfaces de gestion"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for unauthorized XMLRPC calls to the firewall",
+            "Detect anomalous configuration changes"
+          ],
+          "fr": [
+            "Surveiller les appels XMLRPC non autorisés vers le pare-feu",
+            "Détecter les changements de configuration anormaux"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Disable XMLRPC sync until patched",
+            "Isolate the management network"
+          ],
+          "fr": [
+            "Désactiver la synchronisation XMLRPC jusqu'à l'application du correctif",
+            "Isoler le réseau de gestion"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Restore configuration from a known-good backup",
+            "Rotate all administrative keys and passwords"
+          ],
+          "fr": [
+            "Restaurer la configuration à partir d'une sauvegarde saine connue",
+            "Effectuer une rotation de toutes les clés et mots de passe administratifs"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for unauthorized admin users created in the firewall",
+            "Audit for changes in firewall rules (e.g., newly allowed outbound connections)"
+          ],
+          "fr": [
+            "Rechercher des utilisateurs administrateurs non autorisés créés dans le pare-feu",
+            "Auditer les changements dans les règles de pare-feu (ex: nouvelles connexions sortantes autorisées)"
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "Firewall",
+        "RCE",
+        "OPNsense"
+      ],
+      "sources": [
+        "https://fieldeffect.com/blog/opnsense-code-execution-issue-poc-available"
+      ],
+      "date": "2026-05-08"
+    },
+    {
+      "cve_id": "CVE-2026-20034",
+      "euvd_id": "unknown",
+      "cisa_kev": "unknown",
+      "cvss": "9.1",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:cisco:unity_connection:*",
+      "product": "Unity Connection",
+      "vendor": "Cisco",
+      "description": {
+        "en": "Critical vulnerability in Cisco Unity Connection that could allow an unauthenticated remote attacker to execute arbitrary commands with root privileges.",
+        "fr": "Vulnérabilité critique dans Cisco Unity Connection qui pourrait permettre à un attaquant distant non authentifié d'exécuter des commandes arbitraires avec les privilèges root."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply security patches released by Cisco for affected Unity Connection versions.",
+          "fr": "Appliquer les correctifs de sécurité publiés par Cisco pour les versions de Unity Connection concernées."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory all Cisco collaboration services",
+            "Unknown"
+          ],
+          "fr": [
+            "Inventorier tous les services de collaboration Cisco",
+            "Inconnu"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for unauthorized API requests targeting Unity Connection endpoints",
+            "Unknown"
+          ],
+          "fr": [
+            "Surveiller les requêtes API non autorisées ciblant les points de terminaison Unity Connection",
+            "Inconnu"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "Cisco",
+        "RCE"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191808/breaking-news/cisco-patches-high-severity-flaws-enabling-ssrf-code-execution-attacks.html",
+        "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0544/"
+      ],
+      "date": "2026-05-08"
+    },
+    {
+      "cve_id": "CVE-2026-42880",
+      "euvd_id": "unknown",
+      "cisa_kev": "unknown",
+      "cvss": "7.5",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:argoproj:argo_cd:*",
+      "product": "Argo CD",
+      "vendor": "Argo Project",
+      "description": {
+        "en": "Improper authorization flaw in Argo CD allows unprivileged users to extract Kubernetes secrets via Server-Side Diff functionality.",
+        "fr": "Défaut d'autorisation incorrect dans Argo CD permettant aux utilisateurs non privilégiés d'extraire des secrets Kubernetes via la fonctionnalité Server-Side Diff."
+      },
+      "mitre_ttps": [
+        "T1555"
+      ],
+      "recommandations": [
+        {
+          "en": "Upgrade Argo CD to versions 3.2.11 or 3.3.9.",
+          "fr": "Mettre à jour Argo CD vers les versions 3.2.11 ou 3.3.9."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Audit RBAC roles within Argo CD",
+            "Implement secret encryption at rest in Kubernetes"
+          ],
+          "fr": [
+            "Auditer les rôles RBAC au sein d'Argo CD",
+            "Mettre en œuvre le chiffrement des secrets au repos dans Kubernetes"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor Argo CD audit logs for unusual ServerSideDiff requests",
+            "Detect unauthorized access to the application-controller API"
+          ],
+          "fr": [
+            "Surveiller les journaux d'audit d'Argo CD pour détecter des requêtes ServerSideDiff inhabituelles",
+            "Détecter l'accès non autorisé à l'API de l'application-controller"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Disable Server-Side Diff functionality globally if not critical",
+            "Isolate the affected Argo CD instance"
+          ],
+          "fr": [
+            "Désactiver la fonctionnalité Server-Side Diff globalement si elle n'est pas critique",
+            "Isoler l'instance Argo CD concernée"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Rotate all secrets potentially exposed in etcd",
+            "Re-validate RBAC configurations"
+          ],
+          "fr": [
+            "Effectuer une rotation de tous les secrets potentiellement exposés dans etcd",
+            "Re-valider les configurations RBAC"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for unauthorized access tokens created in Kubernetes",
+            "Check for signs of persistent lateral movement from Argo CD nodes"
+          ],
+          "fr": [
+            "Rechercher des jetons d'accès non autorisés créés dans Kubernetes",
+            "Vérifier les signes de mouvement latéral persistant à partir des nœuds Argo CD"
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "Kubernetes",
+        "ArgoCD",
+        "DevOps"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-42880"
+      ],
+      "date": "2026-05-08"
+    },
+    {
+      "cve_id": "CVE-2026-7891",
+      "euvd_id": "unknown",
+      "cisa_kev": "unknown",
+      "cvss": "7.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:mendix:studio_pro:*",
+      "product": "Mendix Studio Pro",
+      "vendor": "Mendix",
+      "description": {
+        "en": "Permission inheritance flaw in Mendix Studio Pro allows anonymous users to gain unauthorized access to application records by inheriting permissions from authenticated roles.",
+        "fr": "Défaut d'héritage de permissions dans Mendix Studio Pro permettant aux utilisateurs anonymes d'obtenir un accès non autorisé aux enregistrements de l'application en héritant des permissions des rôles authentifiés."
+      },
+      "mitre_ttps": [
+        "T1078"
+      ],
+      "recommandations": [
+        {
+          "en": "Review and correct permission settings for anonymous user roles.",
+          "fr": "Examiner et corriger les paramètres de permissions pour les rôles d'utilisateurs anonymes."
+        },
+        {
+          "en": "Update to fixed versions beyond 11.8.0 Beta.",
+          "fr": "Mettre à jour vers les versions corrigées au-delà de la 11.8.0 Beta."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Audit all Mendix-built applications for anonymous access enabling",
+            "Unknown"
+          ],
+          "fr": [
+            "Auditer toutes les applications conçues avec Mendix pour l'activation de l'accès anonyme",
+            "Inconnu"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor application access logs for unauthorized record access from unauthenticated sessions",
+            "Unknown"
+          ],
+          "fr": [
+            "Surveiller les journaux d'accès aux applications pour détecter l'accès non autorisé aux enregistrements depuis des sessions non authentifiées",
+            "Inconnu"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Disable anonymous access globally on affected apps",
+            "Unknown"
+          ],
+          "fr": [
+            "Désactiver globalement l'accès anonyme sur les applications concernées",
+            "Inconnu"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Identify and notify individuals whose data was exposed through anonymous access",
+            "Unknown"
+          ],
+          "fr": [
+            "Identifier et informer les personnes dont les données ont été exposées via l'accès anonyme",
+            "Inconnu"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for mass data scraping patterns in anonymous web logs",
+            "Unknown"
+          ],
+          "fr": [
+            "Rechercher des modèles de scraping massif de données dans les journaux Web anonymes",
+            "Inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "Mendix",
+        "Auth Bypass"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-7891",
+        "https://infosec.exchange/@offseq/116536365967570800"
+      ],
+      "date": "2026-05-08"
+    },
+    {
+      "cve_id": "CVE-2026-42826",
+      "euvd_id": "unknown",
+      "cisa_kev": "unknown",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:microsoft:azure_devops:*",
+      "product": "Azure DevOps",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "Information disclosure vulnerability in Azure DevOps.",
+        "fr": "Vulnérabilité de divulgation d'informations dans Azure DevOps."
+      },
+      "mitre_ttps": [],
+      "recommandations": [
+        {
+          "en": "Apply security updates from Microsoft.",
+          "fr": "Appliquer les mises à jour de sécurité de Microsoft."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "Azure",
+        "DevOps"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-42826"
+      ],
+      "date": "2026-05-08"
+    },
+    {
+      "cve_id": "CVE-2026-41105",
+      "euvd_id": "unknown",
+      "cisa_kev": "unknown",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:microsoft:azure_monitor:*",
+      "product": "Azure Monitor",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "Privilege escalation vulnerability in Azure Monitor action group notifications.",
+        "fr": "Vulnérabilité d'élévation de privilèges dans les notifications des groupes d'action d'Azure Monitor."
+      },
+      "mitre_ttps": [],
+      "recommandations": [
+        {
+          "en": "Apply security updates from Microsoft.",
+          "fr": "Appliquer les mises à jour de sécurité de Microsoft."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "Azure",
+        "Privilege Escalation"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-41105"
+      ],
+      "date": "2026-05-08"
+    },
+    {
+      "cve_id": "CVE-2026-35435",
+      "euvd_id": "unknown",
+      "cisa_kev": "unknown",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:microsoft:azure_ai_foundry:*",
+      "product": "Azure AI Foundry",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "Privilege escalation vulnerability in Azure AI Foundry.",
+        "fr": "Vulnérabilité d'élévation de privilèges dans Azure AI Foundry."
+      },
+      "mitre_ttps": [],
+      "recommandations": [
+        {
+          "en": "Apply security updates from Microsoft.",
+          "fr": "Appliquer les mises à jour de sécurité de Microsoft."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "Azure",
+        "AI"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-35435"
+      ],
+      "date": "2026-05-08"
+    },
+    {
+      "cve_id": "CVE-2026-35428",
+      "euvd_id": "unknown",
+      "cisa_kev": "unknown",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:microsoft:azure_cloud_shell:*",
+      "product": "Azure Cloud Shell",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "Spoofing vulnerability in Azure Cloud Shell.",
+        "fr": "Vulnérabilité d'usurpation d'identité (spoofing) dans Azure Cloud Shell."
+      },
+      "mitre_ttps": [],
+      "recommandations": [
+        {
+          "en": "Apply security updates from Microsoft.",
+          "fr": "Appliquer les mises à jour de sécurité de Microsoft."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "Azure",
+        "Spoofing"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-35428"
+      ],
+      "date": "2026-05-08"
+    },
+    {
+      "cve_id": "CVE-2026-34327",
+      "euvd_id": "unknown",
+      "cisa_kev": "unknown",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:microsoft:partner_center:*",
+      "product": "Microsoft Partner Center",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "Spoofing vulnerability in Microsoft Partner Center.",
+        "fr": "Vulnérabilité d'usurpation d'identité (spoofing) dans Microsoft Partner Center."
+      },
+      "mitre_ttps": [],
+      "recommandations": [
+        {
+          "en": "Apply security updates from Microsoft.",
+          "fr": "Appliquer les mises à jour de sécurité de Microsoft."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "Microsoft",
+        "Spoofing"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-34327"
+      ],
+      "date": "2026-05-08"
+    },
+    {
+      "cve_id": "CVE-2026-20188",
+      "euvd_id": "unknown",
+      "cisa_kev": "unknown",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:h:cisco:network_device:*",
+      "product": "Cisco Network Devices",
+      "vendor": "Cisco",
+      "description": {
+        "en": "Vulnerability in Cisco network products allowing Denial of Service (DoS) attacks.",
+        "fr": "Vulnérabilité dans les produits réseau Cisco permettant des attaques par déni de service (DoS)."
+      },
+      "mitre_ttps": [
+        "T1498"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply security updates from Cisco.",
+          "fr": "Appliquer les mises à jour de sécurité de Cisco."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "Cisco",
+        "DoS"
+      ],
+      "sources": [
+        "https://cybersecuritynews.com/cisco-network-vulnerability-dos-attack/"
+      ],
+      "date": "2026-05-08"
+    },
+    {
+      "cve_id": "CVE-2026-7896",
+      "euvd_id": "unknown",
+      "cisa_kev": "unknown",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:google:chrome:*",
+      "product": "Chrome",
+      "vendor": "Google",
+      "description": {
+        "en": "Multiple vulnerabilities corrected in Google Chrome version 148, including critical bug fixes.",
+        "fr": "De multiples vulnérabilités corrigées dans Google Chrome version 148, incluant des correctifs de bugs critiques."
+      },
+      "mitre_ttps": [],
+      "recommandations": [
+        {
+          "en": "Update Google Chrome to version 148 immediately.",
+          "fr": "Mettre à jour Google Chrome vers la version 148 immédiatement."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "Browser",
+        "Chrome"
+      ],
+      "sources": [
+        "https://thecyberthrone.in/2026/05/07/google-148-stable-channel-released-with-127-bug-fixes/"
+      ],
+      "date": "2026-05-08"
+    },
+    {
+      "cve_id": "CVE-2024-41073",
+      "euvd_id": "unknown",
+      "cisa_kev": "unknown",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:o:redhat:enterprise_linux:*",
+      "product": "RHEL",
+      "vendor": "Red Hat",
+      "description": {
+        "en": "Multiple vulnerabilities in the Linux kernel on Red Hat platforms allowing RCE, LPE, and DoS.",
+        "fr": "Multiples vulnérabilités dans le noyau Linux sur les plateformes Red Hat permettant l'exécution de code à distance, l'élévation locale de privilèges et le déni de service."
+      },
+      "mitre_ttps": [
+        "T1203",
+        "T1068",
+        "T1499"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply RHSA security errata immediately.",
+          "fr": "Appliquer les erratas de sécurité RHSA immédiatement."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "Linux",
+        "RedHat"
+      ],
+      "sources": [
+        "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0549/"
+      ],
+      "date": "2026-05-08"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "TCLBanker: Brazilian Banking Trojan Spreading via WhatsApp and Outlook",
+        "fr": "TCLBanker : Troyen bancaire brésilien se propageant via WhatsApp et Outlook"
+      },
+      "description": {
+        "en": "TCLBanker is a sophisticated malware targeting Brazilian banking users. It utilizes DLL sideloading and abuses legitimate services like WhatsApp (via WA-JS) and Outlook to propagate and capture credentials via WPF overlays.",
+        "fr": "TCLBanker est un malware sophistiqué ciblant les utilisateurs bancaires brésiliens. Il utilise le DLL sideloading et abuse de services légitimes comme WhatsApp (via WA-JS) et Outlook pour se propager et capturer des identifiants via des overlays WPF."
+      },
+      "threat_actor": "REF3076",
+      "threat_actor_origin": "Brazil",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Finance"
+        ],
+        "fr": [
+          "Finance"
+        ]
+      },
+      "indicators": {
+        "URL": [
+          "hxxps://campanha1-api[.]ef971a42[.]workers[.]dev/api/campaign"
+        ],
+        "IPv4": [
+          "191.96.224[.]96"
+        ],
+        "IPv6": [],
+        "DOMAIN": [
+          "workers.dev"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [
+          "e11f69b49b6f2e829454371c31ebf86893f82a042dae3f2faf63dcd84f97a584"
+        ],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "WA-JS",
+          "WPF Overlays"
+        ]
+      },
+      "mitre_ttps": [
+        "T1574",
+        "T1566",
+        "T1185"
+      ],
+      "analyse": {
+        "en": "The malware targets 59 distinct Brazilian financial domains. It maintains persistence using scheduled tasks via COM and captures real-time data using WebSocket-controlled overlays.",
+        "fr": "Le malware cible 59 domaines financiers brésiliens distincts. Il maintient sa persistance à l'aide de tâches planifiées via COM et capture des données en temps réel à l'aide d'overlays contrôlés par WebSocket."
+      },
+      "recommandations": [
+        {
+          "en": "Block access to unauthorized Cloudflare Workers (.workers.dev) domains.",
+          "fr": "Bloquer l'accès aux domaines Cloudflare Workers (.workers.dev) non autorisés."
+        },
+        {
+          "en": "Monitor for unauthorized DLL sideloading in legitimate apps like Logi AI Prompt Builder.",
+          "fr": "Surveiller le DLL sideloading non autorisé dans les applications légitimes comme Logi AI Prompt Builder."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Implement endpoint application control (Allowlisting)",
+            "Disable PowerShell execution for end users"
+          ],
+          "fr": [
+            "Mettre en œuvre le contrôle des applications sur les points de terminaison (Allowlisting)",
+            "Désactiver l'exécution de PowerShell pour les utilisateurs finaux"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect UI Automation usage by unsigned processes",
+            "Monitor network traffic to unusual WebSocket endpoints"
+          ],
+          "fr": [
+            "Détecter l'utilisation de l'UI Automation par des processus non signés",
+            "Surveiller le trafic réseau vers des points de terminaison WebSocket inhabituels"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Terminate malicious 'LogiAiPromptBuilder.exe' and related processes",
+            "Quarantine infected workstations"
+          ],
+          "fr": [
+            "Arrêter 'LogiAiPromptBuilder.exe' et les processus associés malveillants",
+            "Mettre en quarantaine les postes de travail infectés"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Clean malicious files in %LocalAppData%\\LogiAI",
+            "Rotate bank access credentials"
+          ],
+          "fr": [
+            "Nettoyer les fichiers malveillants dans %LocalAppData%\\LogiAI",
+            "Effectuer une rotation des identifiants d'accès bancaires"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for .versionmarker files in user profiles",
+            "Search for scheduled tasks created via COM objects"
+          ],
+          "fr": [
+            "Rechercher les fichiers .versionmarker dans les profils utilisateurs",
+            "Rechercher les tâches planifiées créées via des objets COM"
+          ]
+        }
+      },
+      "tags": [
+        "Banking",
+        "Trojan",
+        "Brazil",
+        "WhatsApp",
+        "Outlook"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/new-tclbanker-malware-self-spreads-over-whatsapp-and-outlook/",
+        "https://www.elastic.co/security-labs/tclbanker-brazilian-banking-trojan"
+      ],
+      "date": "2026-05-08"
+    },
+    {
+      "title": {
+        "en": "PCPJack: Cloud Credential-Stealing Worm Targeting DevOps Environments",
+        "fr": "PCPJack : Ver de vol d'identifiants Cloud ciblant les environnements DevOps"
+      },
+      "description": {
+        "en": "A new worm named PCPJack is exploiting 5 known vulnerabilities to propagate through cloud environments, stealing keys for AWS, OpenAI, Slack, and SSH while eliminating rival malware like TeamPCP.",
+        "fr": "Un nouveau ver nommé PCPJack exploite 5 vulnérabilités connues pour se propager dans les environnements cloud, volant des clés pour AWS, OpenAI, Slack et SSH tout en éliminant les malwares rivaux comme TeamPCP."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologies et Télécoms"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Sliver",
+          "Common Crawl"
+        ]
+      },
+      "mitre_ttps": [
+        "T1078",
+        "T1555",
+        "T1543"
+      ],
+      "analyse": {
+        "en": "PCPJack targets Kubernetes/Docker environments and exploits IMDSv1 to steal metadata credentials. It uses Sliver C2 and cleans existing infections to ensure maximum resource availability for its operations.",
+        "fr": "PCPJack cible les environnements Kubernetes/Docker et exploite l'IMDSv1 pour voler des identifiants de métadonnées. Il utilise le C2 Sliver et nettoie les infections existantes pour assurer une disponibilité maximale des ressources pour ses opérations."
+      },
+      "recommandations": [
+        {
+          "en": "Enforce IMDSv2 on all AWS EC2 instances to prevent metadata theft.",
+          "fr": "Appliquer l'IMDSv2 sur toutes les instances AWS EC2 pour empêcher le vol de métadonnées."
+        },
+        {
+          "en": "Regularly audit cloud secrets and never store API keys in plain text.",
+          "fr": "Auditer régulièrement les secrets cloud et ne jamais stocker de clés API en clair."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Implement secret management solutions (e.g., HashiCorp Vault)",
+            "Harden Kubernetes cluster configurations"
+          ],
+          "fr": [
+            "Mettre en œuvre des solutions de gestion des secrets (ex: HashiCorp Vault)",
+            "Durcir les configurations des clusters Kubernetes"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect unauthorized API requests to cloud metadata services",
+            "Monitor for Sliver C2 network beacons"
+          ],
+          "fr": [
+            "Détecter les requêtes API non autorisées vers les services de métadonnées cloud",
+            "Surveiller les balises réseau du C2 Sliver"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Rotate all cloud and SSH keys from suspected compromised nodes",
+            "Isolate affected containers"
+          ],
+          "fr": [
+            "Effectuer une rotation de toutes les clés cloud et SSH des nœuds suspectés de compromission",
+            "Isoler les conteneurs concernés"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Revoke and regenerate all service account tokens",
+            "Patch vulnerabilities used for worm propagation (CVE-2025-29927)"
+          ],
+          "fr": [
+            "Révoquer et régénérer tous les jetons de compte de service",
+            "Corriger les vulnérabilités utilisées pour la propagation du ver (CVE-2025-29927)"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for unauthorized 'cleaning' scripts that remove other malwares",
+            "Audit for dormant SSH backdoors in developer environments"
+          ],
+          "fr": [
+            "Rechercher les scripts de 'nettoyage' non autorisés qui suppriment d'autres malwares",
+            "Auditer les portes dérobées SSH dormantes dans les environnements de développement"
+          ]
+        }
+      },
+      "tags": [
+        "Cloud",
+        "Worm",
+        "Credential Theft",
+        "DevOps"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/new-pcpjack-worm-steals-credentials-cleans-teampcp-infections/",
+        "https://thehackernews.com/2026/05/pcpjack-credential-stealer-exploits-5.html"
+      ],
+      "date": "2026-05-08"
+    },
+    {
+      "title": {
+        "en": "PamDOORa: Linux PAM-based Backdoor sold on Dark Web",
+        "fr": "PamDOORa : Porte dérobée Linux basée sur PAM vendue sur le Dark Web"
+      },
+      "description": {
+        "en": "A new Linux backdoor named PamDOORa is being sold on Russian cybercrime forums. It embeds itself in the Pluggable Authentication Modules (PAM) stack to provide persistent SSH access and steal credentials in real-time.",
+        "fr": "Une nouvelle porte dérobée Linux nommée PamDOORa est vendue sur des forums cybercriminels russes. Elle s'insère dans la pile Pluggable Authentication Modules (PAM) pour fournir un accès SSH persistant et voler des identifiants en temps réel."
+      },
+      "threat_actor": "darkworm",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologies et Télécoms"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "pam_linux.so"
+        ]
+      },
+      "mitre_ttps": [
+        "T1556",
+        "T1078"
+      ],
+      "analyse": {
+        "en": "The malware is extremely stealthy because it integrates directly into legitimate system authentication flows. It captures passwords as users log in.",
+        "fr": "Le malware est extrêmement furtif car il s'intègre directement dans les flux d'authentification système légitimes. Il capture les mots de passe lors de la connexion des utilisateurs."
+      },
+      "recommandations": [
+        {
+          "en": "Regularly audit the integrity of shared libraries in /lib/security/.",
+          "fr": "Auditer régulièrement l'intégrité des bibliothèques partagées dans /lib/security/."
+        },
+        {
+          "en": "Monitor /etc/pam.d/ for unauthorized configuration changes.",
+          "fr": "Surveiller /etc/pam.d/ pour détecter des changements de configuration non autorisés."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Implement file integrity monitoring (FIM) for system authentication paths",
+            "Use central authentication services where possible"
+          ],
+          "fr": [
+            "Mettre en œuvre la surveillance de l'intégrité des fichiers (FIM) pour les chemins d'authentification système",
+            "Utiliser des services d'authentification centralisés lorsque cela est possible"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect unusual PAM modules being loaded into sshd",
+            "Monitor for unauthorized modifications to /etc/pam.d/sshd"
+          ],
+          "fr": [
+            "Détecter le chargement de modules PAM inhabituels dans sshd",
+            "Surveiller les modifications non autorisées de /etc/pam.d/sshd"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate the affected Linux host",
+            "Remove the malicious PAM module and restore original configuration"
+          ],
+          "fr": [
+            "Isoler l'hôte Linux concerné",
+            "Supprimer le module PAM malveillant et restaurer la configuration d'origine"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Force a password reset for all users who logged in during the infection period",
+            "Unknown"
+          ],
+          "fr": [
+            "Forcer une réinitialisation du mot de passe pour tous les utilisateurs s'étant connectés pendant la période d'infection",
+            "Inconnu"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for unauthorized .so files in /lib/ and /usr/lib/",
+            "Audit system logs for 'successful' logins from suspicious sources without password prompts"
+          ],
+          "fr": [
+            "Rechercher des fichiers .so non autorisés dans /lib/ et /usr/lib/",
+            "Auditer les journaux système pour détecter des connexions 'réussies' à partir de sources suspectes sans demande de mot de passe"
+          ]
+        }
+      },
+      "tags": [
+        "Linux",
+        "PAM",
+        "Backdoor",
+        "Credential Stealing"
+      ],
+      "sources": [
+        "https://flare.io/learn/resources/blog/pamdoora-new-linux-pam-based-backdoor-sale-dark-web"
+      ],
+      "date": "2026-05-08"
+    },
+    {
+      "title": {
+        "en": "xlabs_v1: Mirai-based Botnet targeting Android TVs and Routers",
+        "fr": "xlabs_v1 : Botnet basé sur Mirai ciblant les Android TV et les routeurs"
+      },
+      "description": {
+        "en": "xlabs_v1 is a new DDoS botnet based on Mirai source code that exploits exposed Android Debug Bridge (ADB) ports on TCP/5555 to infect devices.",
+        "fr": "xlabs_v1 est un nouveau botnet DDoS basé sur le code source de Mirai qui exploite les ports Android Debug Bridge (ADB) exposés sur TCP/5555 pour infecter les appareils."
+      },
+      "threat_actor": "Tadashi",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Retail_and_Consumer"
+        ],
+        "fr": [
+          "Retail et Consommation"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [
+          "176.65.139[.]134"
+        ],
+        "IPv6": [],
+        "DOMAIN": [
+          "xlabslover[.]lol"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Mirai",
+          "ADB"
+        ]
+      },
+      "mitre_ttps": [
+        "T1498",
+        "T1190"
+      ],
+      "analyse": {
+        "en": "The botnet utilizes ChaCha20 encryption for string obfuscation and offers 21 different types of flood attacks, functioning as a DDoS-for-hire service.",
+        "fr": "Le botnet utilise le chiffrement ChaCha20 pour l'offuscation des chaînes et propose 21 types d'attaques par inondation (flood), fonctionnant comme un service de DDoS à la demande."
+      },
+      "recommandations": [
+        {
+          "en": "Disable ADB on IoT devices unless strictly required.",
+          "fr": "Désactiver l'ADB sur les appareils IoT à moins que cela ne soit strictement requis."
+        },
+        {
+          "en": "Block incoming traffic on port TCP/5555 at the network perimeter.",
+          "fr": "Bloquer le trafic entrant sur le port TCP/5555 au périmètre du réseau."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory IoT assets and their exposed services",
+            "Implement network segmentation for consumer IoT devices"
+          ],
+          "fr": [
+            "Inventorier les actifs IoT et leurs services exposés",
+            "Mettre en œuvre la segmentation réseau pour les appareils IoT grand public"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect outbound DDoS traffic originating from internal IoT subnets",
+            "Monitor for ADB scanning activity on port 5555"
+          ],
+          "fr": [
+            "Détecter le trafic DDoS sortant provenant des sous-réseaux IoT internes",
+            "Surveiller l'activité de scan ADB sur le port 5555"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Block C2 domain 'xlabslover.lol' and associated IPs",
+            "Power cycle and reset infected IoT devices"
+          ],
+          "fr": [
+            "Bloquer le domaine C2 'xlabslover.lol' et les IP associées",
+            "Éteindre et réinitialiser les appareils IoT infectés"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Audit for residual Mirai binaries in IoT storage",
+            "Unknown"
+          ],
+          "fr": [
+            "Auditer la présence de binaires Mirai résiduels dans le stockage IoT",
+            "Inconnu"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for devices with weak or default administrative credentials",
+            "Unknown"
+          ],
+          "fr": [
+            "Rechercher des appareils dotés d'identifiants administratifs faibles ou par défaut",
+            "Inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "IoT",
+        "Botnet",
+        "Mirai",
+        "DDoS",
+        "ADB"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191796/malware/from-android-tvs-to-routers-the-xlabs_v1-mirai-based-botnet-built-for-ddos-attacks.html"
+      ],
+      "date": "2026-05-08"
+    },
+    {
+      "title": {
+        "en": "ClickFix: Social Engineering Campaign pushing Vidar Stealer in Australia",
+        "fr": "ClickFix : Campagne d'ingénierie sociale propageant Vidar Stealer en Australie"
+      },
+      "description": {
+        "en": "Australian authorities warned of 'ClickFix' attacks where fake CAPTCHAs or system alerts trick users into executing malicious PowerShell commands to deliver Vidar Stealer.",
+        "fr": "Les autorités australiennes ont mis en garde contre les attaques 'ClickFix' où de faux CAPTCHAs ou des alertes système incitent les utilisateurs à exécuter des commandes PowerShell malveillantes pour diffuser Vidar Stealer."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Finance",
+          "Retail_and_Consumer"
+        ],
+        "fr": [
+          "Finance",
+          "Retail et Consommation"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "PowerShell",
+          "Vidar Stealer"
+        ]
+      },
+      "mitre_ttps": [
+        "T1204",
+        "T1566",
+        "T1059"
+      ],
+      "analyse": {
+        "en": "Vidar Stealer targets browser-stored passwords, session cookies, and crypto wallets. The ClickFix technique relies on users copying and pasting malicious code directly into their terminal.",
+        "fr": "Vidar Stealer cible les mots de passe stockés dans les navigateurs, les cookies de session et les portefeuilles crypto. La technique ClickFix repose sur le copier-coller par les utilisateurs de code malveillant directement dans leur terminal."
+      },
+      "recommandations": [
+        {
+          "en": "Block execution of unsigned PowerShell scripts for end users.",
+          "fr": "Bloquer l'exécution de scripts PowerShell non signés pour les utilisateurs finaux."
+        },
+        {
+          "en": "Educate users about the risks of copying code from unknown websites.",
+          "fr": "Éduquer les utilisateurs sur les risques liés au copier-coller de code provenant de sites web inconnus."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Enable PowerShell transcription and logging (Script Block Logging)",
+            "Unknown"
+          ],
+          "fr": [
+            "Activer la transcription et la journalisation de PowerShell (Script Block Logging)",
+            "Inconnu"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect base64-encoded PowerShell commands in user logs",
+            "Monitor for Vidar Stealer C2 traffic patterns"
+          ],
+          "fr": [
+            "Détecter les commandes PowerShell encodées en base64 dans les journaux utilisateurs",
+            "Surveiller les modèles de trafic C2 de Vidar Stealer"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate compromised endpoints",
+            "Revoke sessions associated with exposed browser cookies"
+          ],
+          "fr": [
+            "Isoler les points de terminaison compromis",
+            "Révoquer les sessions associées aux cookies de navigateur exposés"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Perform a full credential reset for affected users",
+            "Analyze the PowerShell script for further persistence mechanisms"
+          ],
+          "fr": [
+            "Effectuer une réinitialisation complète des identifiants pour les utilisateurs concernés",
+            "Analyser le script PowerShell pour détecter d'autres mécanismes de persistance"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for scheduled tasks that execute PowerShell",
+            "Audit browser history for 'ClickFix' lure sites"
+          ],
+          "fr": [
+            "Rechercher des tâches planifiées qui exécutent PowerShell",
+            "Auditer l'historique du navigateur pour détecter les sites de leurre 'ClickFix'"
+          ]
+        }
+      },
+      "tags": [
+        "Vidar",
+        "Stealer",
+        "Social Engineering",
+        "Australia"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/australia-warns-of-clickfix-attacks-pushing-vidar-stealer-malware/"
+      ],
+      "date": "2026-05-08"
+    },
+    {
+      "title": {
+        "en": "Archaic Vulnerabilities and AI-driven Discovery in Q1 2026",
+        "fr": "Vulnérabilités archaïques et découverte par l'IA au T1 2026"
+      },
+      "description": {
+        "en": "Kaspersky's Q1 2026 report highlights an increase in the use of AI tools for vulnerability discovery and the exploitation of legacy flaws in MS Office and Windows by groups like OceanLotus.",
+        "fr": "Le rapport T1 2026 de Kaspersky souligne une augmentation de l'utilisation des outils d'IA pour la découverte de vulnérabilités et l'exploitation de failles héritées dans MS Office et Windows par des groupes comme OceanLotus."
+      },
+      "threat_actor": "OceanLotus",
+      "threat_actor_origin": "Vietnam",
+      "threat_actor_type": "Nation-State",
+      "threat_actor_aliases": [
+        "APT32"
+      ],
+      "sector": {
+        "en": [
+          "Government_and_Defense",
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Gouvernement et Défense",
+          "Technologies et Télécoms"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "React2Shell"
+        ]
+      },
+      "mitre_ttps": [
+        "T1203",
+        "T1566"
+      ],
+      "analyse": {
+        "en": "Attackers are utilizing 'React2Shell' and AI agent authentication bypasses. State actors are increasingly using automated fuzzing to find flaws in edge security products.",
+        "fr": "Les attaquants utilisent 'React2Shell' et des contournements d'authentification d'agents IA. Les acteurs étatiques utilisent de plus en plus le fuzzing automatisé pour trouver des failles dans les produits de sécurité périmétrique."
+      },
+      "recommandations": [
+        {
+          "en": "Prioritize patching based on real-world exploit availability (EPSS/KEV).",
+          "fr": "Prioriser le déploiement de correctifs en fonction de la disponibilité réelle d'exploits (EPSS/KEV)."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "Kaspersky",
+        "AI",
+        "OceanLotus",
+        "Trend Analysis"
+      ],
+      "sources": [
+        "https://securelist.com/vulnerabilities-and-exploits-in-q1-2026/119733/"
+      ],
+      "date": "2026-05-08"
+    },
+    {
+      "title": {
+        "en": "Generic/Operational Security News: SANS ISC Stormcast and OpenSSF Standards",
+        "fr": "Actualités de sécurité génériques/opérationnelles : SANS ISC Stormcast et normes OpenSSF"
+      },
+      "description": {
+        "en": "Bulletins from May 7-8 covering daily cyber threats, AI-driven cyber analytics UI for honeypots, and the ONAP CPS project reaching OpenSSF Gold security status.",
+        "fr": "Bulletins des 7 et 8 mai couvrant les menaces cyber quotidiennes, l'interface d'analyse cyber pilotée par l'IA pour les honeypots, et le projet ONAP CPS atteignant le statut de sécurité OpenSSF Gold."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Security"
+        ],
+        "fr": [
+          "Sécurité"
+        ]
+      },
+      "indicators": {
+        "URL": [
+          "hxxps://github[.]com/gnarcoding/bespoke-ui-cyber-analytics/"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "DShield",
+          "Claude AI"
+        ]
+      },
+      "mitre_ttps": [
+        "T1595"
+      ],
+      "analyse": {
+        "en": "Focus on automating threat analysis and securing the open-source supply chain through strict 2FA and code reviews.",
+        "fr": "Focus sur l'automatisation de l'analyse des menaces et la sécurisation de la chaîne d'approvisionnement open-source via une 2FA stricte et des revues de code."
+      },
+      "recommandations": [
+        {
+          "en": "Adopt OpenSSF Gold badge criteria for critical internal open-source projects.",
+          "fr": "Adopter les critères du badge OpenSSF Gold pour les projets open-source internes critiques."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "SANS",
+        "OpenSource",
+        "Threat Intelligence",
+        "AI"
+      ],
+      "sources": [
+        "https://isc.sans.edu/diary/rss/32966",
+        "https://isc.sans.edu/diary/rss/32962",
+        "https://openssf.org/blog/2026/05/07/the-road-to-gold-how-cps-set-a-new-standard-for-security-and-quality-in-open-source/"
+      ],
+      "date": "2026-05-08"
+    },
+    {
+      "title": {
+        "en": "Browser Security: DLP Evasion and Anonymized Mail Services (QRYPTY)",
+        "fr": "Sécurité des navigateurs : Évasion de DLP et services de mail anonymisés (QRYPTY)"
+      },
+      "description": {
+        "en": "Analysis of how browsers bypass modern DLP controls through SaaS/AI copy-pasting. Concurrently, promotional activity for QRYPTY, a zero-logs anonymous mail service, has increased.",
+        "fr": "Analyse de la façon dont les navigateurs contournent les contrôles DLP modernes via le copier-coller SaaS/IA. Parallèlement, l'activité promotionnelle pour QRYPTY, un service de mail anonyme sans journaux, a augmenté."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom",
+          "Media_and_Communication"
+        ],
+        "fr": [
+          "Technologies et Télécoms",
+          "Médias et Communication"
+        ]
+      },
+      "indicators": {
+        "URL": [
+          "hxxps://qrypty[.]com"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "qrypty.com"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1567"
+      ],
+      "analyse": {
+        "en": "Traditional DLP fails to monitor context within encrypted browser sessions, leading to sensitive data leakage to unsanctioned AI tools.",
+        "fr": "La DLP traditionnelle échoue à surveiller le contexte au sein des sessions de navigateur chiffrées, ce qui entraîne des fuites de données sensibles vers des outils d'IA non autorisés."
+      },
+      "recommandations": [
+        {
+          "en": "Implement browser-native DLP or enterprise browser solutions to maintain visibility.",
+          "fr": "Mettre en œuvre des solutions DLP natives au navigateur ou des navigateurs d'entreprise pour maintenir la visibilité."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Unknown",
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu",
+            "Inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "DLP",
+        "Browser",
+        "Privacy",
+        "SaaS"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/the-browser-is-breaking-your-dlp-how-data-slips-past-modern-controls/",
+        "https://mastodon.social/@vynvvyvvn/116536375401996401",
+        "https://redcanary.com/blog/security-operations/spring-cleaning-your-browser/"
+      ],
+      "date": "2026-05-08"
+    }
+  ]
+}
