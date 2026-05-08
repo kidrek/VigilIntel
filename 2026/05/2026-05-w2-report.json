@@ -1,0 +1,479 @@
+{
+  "threat_level": {
+    "score": 3,
+    "label": {
+      "en": "High",
+      "fr": "Élevé"
+    },
+    "justification": {
+      "en": "The week was characterized by the simultaneous exploitation of multiple Zero-Day vulnerabilities in perimeter security devices (Palo Alto, Ivanti) by state-sponsored actors, alongside a massive data breach in the education sector affecting 280 million records. The emergence of specialized malware like PCPJack targeting cloud secrets and PamDOORa targeting Linux authentication stacks indicates a high level of technical sophistication.",
+      "fr": "La semaine a été marquée par l'exploitation simultanée de plusieurs vulnérabilités Zero-Day dans les équipements de sécurité périmétrique (Palo Alto, Ivanti) par des acteurs étatiques, parallèlement à une violation massive de données dans le secteur de l'éducation touchant 280 millions d'enregistrements. L'émergence de malwares spécialisés comme PCPJack ciblant les secrets cloud et PamDOORa ciblant les piles d'authentification Linux indique un haut niveau de sophistication technique."
+    },
+    "_triggers": [
+      "+4 — 2 CVE(s) CISA KEV",
+      "+1 — 1 CVE(s) CVSS ≥ 9.0",
+      "+2 — 1 acteur(s) étatique(s)",
+      "+2 — 2 breach(es) ≥ 100k enregistrements",
+      "+2 — secteurs critiques ciblés : Government_and_Defense, Critical_Infrastructure"
+    ]
+  },
+  "executive_summary": {
+    "en": "May 2026 Week 2 saw a significant escalation in 'Edge' infrastructure targeting. State-sponsored cluster CL-STA-1132 exploited critical vulnerabilities in PAN-OS and Ivanti EPMM to gain persistent root access. Concurrently, the ShinyHunters group executed a massive extortion campaign against Instructure (Canvas), compromising 280 million records. New malware trends emerged with TCLBanker's self-propagation via WhatsApp and PCPJack's aggressive 'cleanup' of rival malware infections in cloud environments. Geopolitically, the militarization of academic institutions in Russia (Bauman University) and the rising risk of 'Harvest Now, Decrypt Later' (HNDL) quantum threats dominate the strategic landscape.",
+    "fr": "La deuxième semaine de mai 2026 a vu une escalade significative du ciblage des infrastructures de périphérie ('Edge'). Le cluster étatique CL-STA-1132 a exploité des vulnérabilités critiques dans PAN-OS et Ivanti EPMM pour obtenir un accès root persistant. Parallèlement, le groupe ShinyHunters a mené une vaste campagne d'extorsion contre Instructure (Canvas), compromettant 280 millions d'enregistrements. De nouvelles tendances de malwares sont apparues avec l'auto-propagation de TCLBanker via WhatsApp et le 'nettoyage' agressif des infections concurrentes par PCPJack dans les environnements cloud. Sur le plan géopolitique, la militarisation des institutions académiques en Russie (Université Bauman) et le risque croissant des menaces quantiques 'Harvest Now, Decrypt Later' (HNDL) dominent le paysage stratégique."
+  },
+  "regulatory": {
+    "analyse": {
+      "en": "The European Commission is pivoting toward practical enforcement and simplification of the AI Act, specifically targeting harmful applications like 'nudification' apps. There is a clear signal toward automating regulatory compliance through data-driven solutions (DIGITAL-2026-AI-DATA), while simultaneously tightening controls on dual-use technologies to prevent the export of sensitive cyber-surveillance tools.",
+      "fr": "La Commission européenne s'oriente vers une application pratique et une simplification de l'IA Act, ciblant spécifiquement les applications malveillantes telles que les applications de 'nudification'. Un signal clair est envoyé vers l'automatisation de la conformité réglementaire via des solutions axées sur les données (DIGITAL-2026-AI-DATA), tout en renforçant les contrôles sur les biens à double usage pour empêcher l'exportation d'outils de cyber-surveillance sensibles."
+    },
+    "events": [
+      {
+        "title": {
+          "en": "EU AI Act Simplification and Nudification Ban",
+          "fr": "Simplification de l'IA Act et interdiction de la nudification"
+        },
+        "issuing_body": "European Commission",
+        "date": "2026-05-07",
+        "jurisdiction": {
+          "region": "EU",
+          "countries": [
+            "FR",
+            "DE",
+            "BE",
+            "IT"
+          ]
+        },
+        "type": "New_Law",
+        "status": "Active",
+        "reference": "AI Act Implementation",
+        "affected_sectors": [
+          "Technology_and_Telecom",
+          "Media_and_Communication"
+        ],
+        "description": {
+          "en": "Simplification of AI rules to boost innovation while strictly banning nudification apps to protect citizen privacy and dignity.",
+          "fr": "Simplification des règles sur l'IA pour favoriser l'innovation tout en interdisant strictement les applications de nudification pour protéger la vie privée et la dignité des citoyens."
+        },
+        "source_url": "https://digital-strategy.ec.europa.eu/en/news/eu-agrees-simplify-ai-rules-boost-innovation-and-ban-nudification-apps-protect-citizens"
+      },
+      {
+        "title": {
+          "en": "Dual-Use Goods Export Controls Update",
+          "fr": "Mise à jour du contrôle des exportations de biens à double usage"
+        },
+        "issuing_body": "European Parliament & Council",
+        "date": "2026-05-08",
+        "jurisdiction": {
+          "region": "EU",
+          "countries": [
+            "FR",
+            "DE"
+          ]
+        },
+        "type": "Amendment",
+        "status": "Active",
+        "reference": "(EU) 2021/821",
+        "affected_sectors": [
+          "Technology_and_Telecom",
+          "Government_and_Defense",
+          "Security"
+        ],
+        "description": {
+          "en": "Updated national measures regarding the export of sensitive technologies and dual-use items to non-EU countries.",
+          "fr": "Mise à jour des mesures nationales concernant l'exportation de technologies sensibles et d'articles à double usage vers des pays hors UE."
+        },
+        "source_url": "https://eur-lex.europa.eu/legal-content/AUTO/?uri=OJ:C_202602595"
+      }
+    ]
+  },
+  "threats_actors": {
+    "geographic_analyse": [
+      {
+        "geographic_zone_name": {
+          "en": "Russia",
+          "fr": "Russie"
+        },
+        "geographic_zone_strategic_analyse": {
+          "en": "Russia continues to integrate its academic infrastructure (Bauman University) with military intelligence (GRU) for cyber-warfare recruitment. Their focus remains on high-level espionage and hybrid warfare targeting European sovereignty and defense institutions.",
+          "fr": "La Russie continue d'intégrer son infrastructure académique (Université Bauman) au renseignement militaire (GRU) pour le recrutement en vue de la cyber-guerre. Leur priorité reste l'espionnage de haut niveau et la guerre hybride ciblant la souveraineté européenne et les institutions de défense."
+        }
+      },
+      {
+        "geographic_zone_name": {
+          "en": "North Korea",
+          "fr": "Corée du Nord"
+        },
+        "geographic_zone_strategic_analyse": {
+          "en": "DPRK actors are increasingly using 'laptop farms' managed by Western accomplices to infiltrate global technology firms and generate illicit revenue through remote IT work.",
+          "fr": "Les acteurs de la RPDC utilisent de plus en plus des 'fermes d'ordinateurs' gérées par des complices occidentaux pour infiltrer les entreprises technologiques mondiales et générer des revenus illicites via le travail informatique à distance."
+        }
+      }
+    ],
+    "details": [
+      {
+        "threat_actor_name": "ShinyHunters",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Cybercriminal",
+          "fr": "Cybercriminel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Education_and_Research",
+            "Technology_and_Telecom",
+            "Business_Services"
+          ],
+          "fr": [
+            "Education_and_Research",
+            "Technology_and_Telecom",
+            "Business_Services"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Global",
+            "United States"
+          ],
+          "fr": [
+            "Global",
+            "États-Unis"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1567",
+          "T1491",
+          "T1586"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Instructure/Canvas Mass Extortion"
+          ],
+          "fr": [
+            "Extorsion de masse Instructure/Canvas"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "CL-STA-1132",
+        "origin_country": "Unknown (State-sponsored cluster)",
+        "type": {
+          "en": "Nation-state",
+          "fr": "Étatique"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Government_and_Defense",
+            "Critical_Infrastructure"
+          ],
+          "fr": [
+            "Government_and_Defense",
+            "Critical_Infrastructure"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Global"
+          ],
+          "fr": [
+            "Global"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1190",
+          "T1090",
+          "T1078"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Captive Portal Zero-Day Exploitation"
+          ],
+          "fr": [
+            "Exploitation Zero-Day Captive Portal"
+          ]
+        }
+      }
+    ]
+  },
+  "mitre_attack_ttps": {
+    "ttps_strategic_analyse": {
+      "en": "A shift toward perimeter-less exploitation is evident, with T1190 (Exploit Public-Facing Application) being the primary entry vector for both state and criminal actors. We also observe a trend in 'living-off-the-authentication-stack' with PAM-based backdoors and UI Automation abuse to bypass MFA.",
+      "fr": "Un glissement vers l'exploitation sans périmètre est évident, la T1190 (Exploitation d'applications tournées vers le public) étant le principal vecteur d'entrée pour les acteurs étatiques et criminels. Nous observons également une tendance à 'vivre sur la pile d'authentification' avec des backdoors basées sur PAM et l'abus de l'UI Automation pour contourner la MFA."
+    },
+    "ttps_list": [
+      {
+        "id": "T1190",
+        "tactic": {
+          "en": "Initial Access",
+          "fr": "Accès Initial"
+        },
+        "technique_name": "Exploit Public-Facing Application",
+        "frequency": 1,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "Used by CL-STA-1132 to exploit CVE-2026-0300 in Palo Alto PAN-OS and CVE-2026-6973 in Ivanti EPMM."
+          ],
+          "fr": [
+            "Utilisé par CL-STA-1132 pour exploiter CVE-2026-0300 dans Palo Alto PAN-OS et CVE-2026-6973 dans Ivanti EPMM."
+          ]
+        }
+      },
+      {
+        "id": "T1556",
+        "tactic": {
+          "en": "Persistence",
+          "fr": "Persistance"
+        },
+        "technique_name": "Modify Authentication Process",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Implementation of PamDOORa Linux PAM-based backdoors to capture credentials and maintain persistent SSH access."
+          ],
+          "fr": [
+            "Mise en œuvre de backdoors PamDOORa basées sur PAM Linux pour capturer les identifiants et maintenir un accès SSH persistant."
+          ]
+        }
+      },
+      {
+        "id": "T1204",
+        "tactic": {
+          "en": "Execution",
+          "fr": "Exécution"
+        },
+        "technique_name": "User Execution",
+        "frequency": 1,
+        "severity": "medium",
+        "context": {
+          "en": [
+            "ClickFix social engineering technique used to trick users into manual execution of PowerShell commands for Vidar Stealer."
+          ],
+          "fr": [
+            "Technique d'ingénierie sociale ClickFix utilisée pour inciter les utilisateurs à exécuter manuellement des commandes PowerShell pour Vidar Stealer."
+          ]
+        }
+      }
+    ]
+  },
+  "vulnerabilities": {
+    "analyse": {
+      "en": "The vulnerability landscape is dominated by 'Edge' devices. CVE-2026-0300 and CVE-2026-6973 are actively exploited in the wild, requiring immediate patching. Linux systems are also under threat from the 'Dirty Frag' (CVE-2026-COPYFAIL) local privilege escalation flaw.",
+      "fr": "Le paysage des vulnérabilités est dominé par les équipements de périphérie ('Edge'). CVE-2026-0300 et CVE-2026-6973 sont activement exploités, nécessitant un correctif immédiat. Les systèmes Linux sont également menacés par la faille d'escalade de privilèges locaux 'Dirty Frag' (CVE-2026-COPYFAIL)."
+    },
+    "list": [
+      {
+        "cve_id": "CVE-2026-0300",
+        "cvss_score": 9.3,
+        "epss_score": null,
+        "cisa_kev": true,
+        "affected_product": "PAN-OS",
+        "affected_product_vendor": "Palo Alto Networks",
+        "vulnerability_type": {
+          "en": [
+            "Buffer Overflow",
+            "Remote Code Execution"
+          ],
+          "fr": [
+            "Dépassement de tampon",
+            "Exécution de code à distance"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Critical buffer overflow in the Captive Portal component allowing unauthenticated root RCE.",
+          "fr": "Dépassement de tampon critique dans le composant Captive Portal permettant une RCE root non authentifiée."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-6973",
+        "cvss_score": 7.1,
+        "epss_score": null,
+        "cisa_kev": true,
+        "affected_product": "EPMM",
+        "affected_product_vendor": "Ivanti",
+        "vulnerability_type": {
+          "en": [
+            "Input Validation",
+            "Remote Code Execution"
+          ],
+          "fr": [
+            "Validation des entrées",
+            "Exécution de code à distance"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Input validation flaw in Ivanti Endpoint Manager Mobile (EPMM) leading to RCE.",
+          "fr": "Défaut de validation des entrées dans Ivanti Endpoint Manager Mobile (EPMM) menant à une RCE."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      }
+    ]
+  },
+  "data_breaches": [
+    {
+      "victim": "Instructure (Canvas)",
+      "sector": "Education_and_Research",
+      "country": "United States",
+      "records_count": 280000000,
+      "data_types": {
+        "en": [
+          "Emails",
+          "Student IDs",
+          "Private communications"
+        ],
+        "fr": [
+          "Emails",
+          "IDs étudiants",
+          "Communications privées"
+        ]
+      },
+      "threat_actor": "ShinyHunters",
+      "financial_impact_usd": null,
+      "source_url": "https://www.bleepingcomputer.com/news/security/canvas-login-portals-hacked-in-mass-shinyhunters-extortion-campaign/"
+    },
+    {
+      "victim": "Woflow",
+      "sector": "Technology_and_Telecom",
+      "country": "United States",
+      "records_count": 447593,
+      "data_types": {
+        "en": [
+          "Names",
+          "Emails",
+          "Phone numbers",
+          "Physical addresses"
+        ],
+        "fr": [
+          "Noms",
+          "Emails",
+          "Numéros de téléphone",
+          "Adresses physiques"
+        ]
+      },
+      "threat_actor": "Unknown",
+      "financial_impact_usd": null,
+      "source_url": "https://haveibeenpwned.com/Breach/Woflow"
+    }
+  ],
+  "target": {
+    "sectors": {
+      "en": [
+        "Education_and_Research",
+        "Technology_and_Telecom",
+        "Government_and_Defense",
+        "Critical_Infrastructure",
+        "Finance",
+        "Healthcare_and_Life_Sciences"
+      ],
+      "fr": [
+        "Éducation et Recherche",
+        "Technologie et Télécom",
+        "Gouvernement et Défense",
+        "Infrastructures Critiques",
+        "Finance",
+        "Santé et Sciences de la Vie"
+      ]
+    },
+    "countries": {
+      "en": [
+        "United States",
+        "France",
+        "Brazil",
+        "Australia",
+        "Russia"
+      ],
+      "fr": [
+        "États-Unis",
+        "France",
+        "Brésil",
+        "Australie",
+        "Russie"
+      ]
+    },
+    "narrative": {
+      "en": "- **Education & Research:** Instructure (Canvas) suffered a massive breach by ShinyHunters impacting 280M records, highlighting the vulnerability of SaaS learning platforms.\n- **Technology & SaaS:** Woflow exposed 2TB of data (447k accounts), while PCPJack worm specifically targets Kubernetes/Docker environments for API secrets (OpenAI, Anthropic).\n- **Public Sector & Defense:** CL-STA-1132 targeted OIVs and Government entities globally using zero-day exploits in Palo Alto and Ivanti gateways.\n- **Finance:** TCLBanker targeted 59 Brazilian financial institutions using sophisticated WPF overlays and WhatsApp-based propagation to bypass MFA.\n- **Healthcare:** ChipSoft faced a data destruction attack, though they claim patient data was confirmed destroyed rather than exfiltrated.\n- **Critical Infrastructure:** OPNsense (CVE-2026-44193) and Cisco Unity (CVE-2026-20034) vulnerabilities put communication and network integrity at risk.\n- **Consumer IoT:** xlabs_v1 Mirai variant infected thousands of Android TV devices via exposed ADB port 5555 for DDoS capabilities.\n- **Geopolitical Strategy:** Bauman University (Russia) identified as a primary pipeline for GRU hybrid warfare operators.",
+      "fr": "- **Éducation et Recherche :** Instructure (Canvas) a subi une violation massive par ShinyHunters touchant 280M d'enregistrements, soulignant la vulnérabilité des plateformes d'apprentissage SaaS.\n- **Technologie et SaaS :** Woflow a exposé 2 To de données (447k comptes), tandis que le ver PCPJack cible spécifiquement les environnements Kubernetes/Docker pour les secrets d'API (OpenAI, Anthropic).\n- **Secteur Public et Défense :** CL-STA-1132 a ciblé des OIV et des entités gouvernementales via des exploits zero-day dans les passerelles Palo Alto et Ivanti.\n- **Finance :** TCLBanker a ciblé 59 institutions financières brésiliennes en utilisant des overlays WPF sophistiqués et une propagation via WhatsApp pour contourner la MFA.\n- **Santé :** ChipSoft a fait face à une attaque de destruction de données, bien qu'ils affirment que les données patients ont été détruites plutôt qu'exfiltrées.\n- **Infrastructures Critiques :** Les vulnérabilités d'OPNsense (CVE-2026-44193) et Cisco Unity (CVE-2026-20034) mettent en péril l'intégrité des communications et des réseaux.\n- **IoT Grand Public :** La variante Mirai xlabs_v1 a infecté des milliers d'appareils Android TV via le port ADB 5555 exposé pour des capacités DDoS.\n- **Stratégie Géopolitique :** L'Université Bauman (Russie) est identifiée comme un vivier principal pour les opérateurs de guerre hybride du GRU."
+    }
+  },
+  "trends": {
+    "emerging_techniques": {
+      "en": [
+        "Self-propagation via WA-JS libraries in banking trojans",
+        "Worm-based 'Cleanup' of competitor malware in cloud clusters",
+        "ClickFix social engineering via manual command execution",
+        "PAM stack manipulation for stealthy Linux persistence"
+      ],
+      "fr": [
+        "Auto-propagation via les bibliothèques WA-JS dans les trojans bancaires",
+        "Nettoyage par ver des malwares concurrents dans les clusters cloud",
+        "Ingénierie sociale ClickFix via exécution manuelle de commandes",
+        "Manipulation de la pile PAM pour une persistance Linux furtive"
+      ]
+    },
+    "declining_techniques": {
+      "en": [
+        "Standard phishing attachments (shifting to ClickFix/Social Engineering)",
+        "Single-factor authentication targets (shifting to MFA bypass via overlays/UI Automation)"
+      ],
+      "fr": [
+        "Pièces jointes de phishing standard (déplacement vers ClickFix/Ingénierie sociale)",
+        "Cibles à authentification simple (déplacement vers le contournement MFA via overlays/UI Automation)"
+      ]
+    },
+    "geopolitical_context": {
+      "en": "A heightening 'Cyber-Cold War' is visible, with academic institutions being openly weaponized for state intelligence services (Bauman-GRU link) and the emergence of 'Health Diplomacy' as a tool for US national security interests.",
+      "fr": "Une 'cyber-guerre froide' s'intensifie, avec des institutions académiques ouvertement militarisées pour les services de renseignement (lien Bauman-GRU) et l'émergence de la 'Diplomatie de la Santé' comme outil pour les intérêts de sécurité nationale des États-Unis."
+    }
+  },
+  "recommendations": {
+    "strategic": {
+      "en": [
+        {
+          "title": "Adopt Zero-Trust Architecture for Edge Devices",
+          "detail": "Given the exploitation of CVE-2026-0300 and CVE-2026-6973 by CL-STA-1132, move away from trusting edge gateways. Implement micro-segmentation and assume the perimeter is breached by default. Use hardware-based FIDO2 MFA to neutralize session theft techniques seen in TCLBanker."
+        },
+        {
+          "title": "Establish a Post-Quantum Cryptography (PQC) Roadmap",
+          "detail": "Addressing the 'Harvest Now, Decrypt Later' (HNDL) risk mentioned by Recorded Future, organizations should audit long-term sensitive data and begin transitioning to PQC algorithms (NIST standards) for data-at-rest and long-term communications."
+        }
+      ],
+      "fr": [
+        {
+          "title": "Adopter une architecture Zero-Trust pour les équipements Edge",
+          "detail": "Suite à l'exploitation de CVE-2026-0300 et CVE-2026-6973 par CL-STA-1132, ne plus faire confiance aux passerelles de périphérie. Implémenter la micro-segmentation et supposer que le périmètre est compromis par défaut. Utiliser une MFA matérielle FIDO2 pour neutraliser le vol de session observé chez TCLBanker."
+        },
+        {
+          "title": "Établir une feuille de route pour la cryptographie post-quantique (PQC)",
+          "detail": "Pour contrer le risque 'Harvest Now, Decrypt Later' (HNDL), les organisations doivent auditer les données sensibles à long terme et commencer la transition vers les algorithmes PQC (standards NIST) pour les données au repos et les communications durables."
+        }
+      ]
+    },
+    "operational": {
+      "en": [
+        {
+          "title": "Verify Linux PAM Integrity and Lock ADB Ports",
+          "detail": "Execute 'debsums -c' or 'rpm -V' on Linux servers to detect PamDOORa modules in /lib/security/. Immediately block TCP port 5555 on all firewalls to prevent xlabs_v1 Mirai propagation to Android-based devices."
+        },
+        {
+          "title": "Rotate Cloud Secrets and Harden Kubernetes IMDS",
+          "detail": "In response to PCPJack, rotate all OpenAI, Anthropic, and Slack API keys. Enforce IMDSv2 on AWS instances to prevent credential theft via metadata services and audit Kubernetes logs for unauthorized secret access."
+        }
+      ],
+      "fr": [
+        {
+          "title": "Vérifier l'intégrité de PAM Linux et bloquer les ports ADB",
+          "detail": "Exécuter 'debsums -c' ou 'rpm -V' sur les serveurs Linux pour détecter les modules PamDOORa dans /lib/security/. Bloquer immédiatement le port TCP 5555 sur tous les pare-feux pour empêcher la propagation de xlabs_v1 Mirai."
+        },
+        {
+          "title": "Rotation des secrets Cloud et durcissement de l'IMDS Kubernetes",
+          "detail": "Suite à PCPJack, procéder à la rotation de toutes les clés API OpenAI, Anthropic et Slack. Imposer IMDSv2 sur les instances AWS pour empêcher le vol d'identifiants via les métadonnées et auditer les logs Kubernetes."
+        }
+      ]
+    }
+  }
+}
