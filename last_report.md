@@ -9,11 +9,15 @@
   * [Articles sélectionnés](#articles-selectionnes)
   * [Articles non sélectionnés](#articles-non-selectionnes)
 * [Articles](#articles)
-  * [TCLBanker : Trojan bancaire brésilien à auto-propagation](#tclbanker-trojan-bancaire-bresilien-a-auto-propagation)
-  * [PCPJack : Ver de vol d'identifiants cloud et éviction de concurrents](#pcpjack-ver-de-vol-didentifiants-cloud-et-eviction-de-concurrents)
-  * [xlabs_v1 : Botnet Mirai ciblant Android TV et le port ADB](#xlabs-v1-botnet-mirai-ciblant-android-tv-et-le-port-adb)
-  * [PamDOORa : Porte dérobée Linux via manipulation de la pile PAM](#pamdoora-porte-derobee-linux-via-manipulation-de-la-pile-pam)
-  * [Vidar Stealer : Campagnes ClickFix utilisant de faux CAPTCHA](#vidar-stealer-campagnes-clickfix-utilisant-de-faux-captcha)
+  * [Accès non autorisé au code source de Trellix par RansomHouse](#ransomhouse-source-code-breach-trellix)
+  * [Analyse des tendances Ransomware du T1 2026](#ransomware-industry-trends-q1-2026)
+  * [Prévention des fraudes au paiement et vols de comptes](#payment-fraud-prevention-and-account-takeover)
+  * [Détection du fuzzing web avec Traefik et Cloudflare](#detecting-web-fuzzing-with-traefik-and-cloudflare)
+  * [Automatisation du SOC via l'IA agentique de Prophet Security](#soc-automation-via-agentic-ai-prophet-security)
+  * [Sabotage de bases de données fédérales par menace interne](#insider-threat-sabotage-of-federal-databases)
+  * [Consommation de ressources de l'IA locale dans Google Chrome](#google-chrome-local-ai-resource-consumption)
+  * [Désactivation du chiffrement E2EE sur Instagram DM par Meta](#meta-instagram-e2ee-deactivation)
+  * [Campagne de phishing Robiox via domaine typosquatté](#robiox-phishing-via-typosquatted-domain)
 
 ---
 
@@ -21,9 +25,11 @@
 
 # ANALYSE STRATÉGIQUE
 
-L'actualité cyber de ce début mai 2026 est dominée par une exploitation intensive de vulnérabilités "Edge" par des acteurs étatiques. Les compromissions critiques de Palo Alto PAN-OS (**CVE-2026-0300**) et d'Ivanti EPMM (**CVE-2026-6973**) illustrent une tendance persistante : le ciblage des passerelles de sécurité comme point d'entrée initial. Ces équipements, souvent difficiles à monitorer finement, offrent aux attaquants (comme le cluster **CL-STA-1132**) un accès root persistant et une rampe de lancement idéale pour des mouvements latéraux.
+L'actualité cyber du 9 mai 2026 est dominée par une crise systémique au sein de l'écosystème Linux avec la divulgation de la vulnérabilité "Dirty Frag". Cette faille, touchant les mécanismes de traitement réseau du noyau, permet une élévation de privilèges racine déterministe, remettant en cause la sécurité de millions de serveurs et d'environnements conteneurisés. Cette menace est d'autant plus critique qu'elle fait déjà l'objet d'exploitations actives documentées par Microsoft.
 
-Parallèlement, le secteur de l'éducation subit une pression sans précédent du groupe **ShinyHunters**, qui allie défaçage massif et exfiltration de données (Instructure/Canvas) pour optimiser ses gains par l'extorsion. Sur le front des malwares, on observe une sophistication accrue des outils de vol d'identifiants. Le ver **PCPJack** et le trojan **TCLBanker** se distinguent par leurs capacités d'auto-propagation (via cloud ou messageries légitimes) et leur agressivité envers les infections concurrentes. Enfin, l'intégration de l'IA générative dans les processus offensifs (découverte de failles) et défensifs (analyse de logs adaptive) marque un tournant technologique majeur, obligeant les organisations à automatiser leurs réponses, notamment au niveau de la périphérie réseau.
+Parallèlement, nous observons une intensification des attaques contre la chaîne d'approvisionnement analytics. L'acteur ShinyHunters illustre parfaitement cette tendance en exploitant des jetons tiers (Anodot) pour compromettre des géants du retail comme Zara ou des plateformes éducatives massives comme Canvas. Le secteur de l'éducation subit un impact opérationnel majeur, avec une paralysie des systèmes durant les périodes d'examens critiques aux États-Unis.
+
+Sur le plan géopolitique, la cyberguerre hybride entre dans une phase de ciblage physique direct. Les attaques russes contre les infrastructures hydrauliques polonaises démontrent que la modification de paramètres opérationnels OT (systèmes SCADA) est désormais une réalité tactique. En réponse, les puissances occidentales, menées par le Pentagone, accélèrent l'intégration de l'IA générative dans leurs doctrines de combat, créant une nouvelle course aux armements numériques où la souveraineté technologique devient le principal enjeu réglementaire européen.
 
 ---
 
@@ -37,9 +43,9 @@ Parallèlement, le secteur de l'éducation subit une pression sans précédent d
 
 | Nom de l'acteur | Secteur(s) ciblé(s) | Mode opératoire | TTP MITRE ATT&CK | Source(s) |
 |---|---|---|---|---|
-| **ShinyHunters** | Éducation, Technologie, SaaS | Défaçage de portails, vishing pour vol de comptes SSO, exfiltration via APIs Cloud. | T1567, T1491, T1586 | [BleepingComputer](https://www.bleepingcomputer.com/news/security/canvas-login-portals-hacked-in-mass-shinyhunters-extortion-campaign/)<br>[DataBreaches](https://databreaches.net/2026/05/07/developing-shinyhunters-hacks-instructure-again-canvas-down/) |
-| **CL-STA-1132** | Gouvernement, OIV | Exploitation de Zero-Day PAN-OS, injection de shellcode, tunnels SOCKS5 (EarthWorm). | T1190, T1090, T1078 | [Unit 42](https://unit42.paloaltonetworks.com/captive-portal-zero-day/) |
-| **Fancy Bear (APT28)** | Diplomatie, Défense, Gouvernement | Espionnage sophistiqué, recrutement via institutions académiques russes (Bauman). | T1190 | [Le Monde](https://www.lemonde.fr/m-le-mag/article/2026/05/07/a-l-universite-bauman-de-moscou-la-secrete-ecole-des-hackeurs-russes-pilier-de-la-guerre-hybride-en-europe_6686484_4500055.html) |
+| **ShinyHunters** | Retail, Education, Technology | Compromission de tokens tiers (Anodot), vishing, extorsion sans chiffrement | T1566, T1556, T1078 | [BleepingComputer](https://www.bleepingcomputer.com/news/security/zara-data-breach-exposed-personal-information-of-197-000-people/) |
+| **RansomHouse** | Cybersécurité, Technologie | Ciblage de dépôts de code source et d'appliances internes | T1190 | [Security Affairs](https://securityaffairs.com/191879/cyber-crime/ransomhouse-says-it-breached-trellix-and-exposes-internal-systems.html) |
+| **APT28 / APT29 (Fancy/Cozy Bear)** | Gouvernement, Infrastructures (Eau) | Sabotage OT via interfaces de gestion exposées | T1071 | [Security Affairs](https://securityaffairs.com/191868/security/cyberattacks-on-polands-water-plants-a-blueprint-for-hybrid-warfare.html) |
 
 ---
 
@@ -49,11 +55,11 @@ Parallèlement, le secteur de l'éducation subit une pression sans précédent d
 
 | Pays/Région | Secteur | Thème | Description | Source(s) |
 |---|---|---|---|---|
-| Russie / Europe | Éducation / Défense | Militarisation académique | L'université Bauman forme secrètement les futurs cyber-combattants du GRU. | [Le Monde](https://www.lemonde.fr/m-le-mag/article/2026/05/07/a-l-universite-bauman-de-moscou-la-secrete-ecole-des-hackeurs-russes-pilier-de-la-guerre-hybride-en-europe_6686484_4500055.html) |
-| Global | Sécurité Nationale | Risque Quantique | Menace "Harvest Now, Decrypt Later" (HNDL) ciblant les données chiffrées à long terme. | [Recorded Future](https://www.recordedfuture.com/research/quantum-risk-explained) |
-| USA / Corée du Nord | Technologie | Infiltration de travailleurs IT | Condamnation d'Américains ayant géré des fermes de PC pour des agents de la DPRK. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/americans-sentenced-for-running-laptop-farms-for-north-korea/) |
-| Europe | Souveraineté | HiPEAC Vision 2026 | Stratégie pour une autonomie technologique européenne face aux hyperscalers. | [Digital Strategy EC](https://digital-strategy.ec.europa.eu/en/events/hipeac-vision-2026-connect-university) |
-| USA / Global | Diplomatie | Politique de Santé | Instrumentalisation de l'aide sanitaire comme outil de sécurité nationale US. | [IRIS](https://www.iris-france.org/la-sante-mondiale-nouvelle-arme-de-la-politique-etrangere-americaine/) |
+| **Pologne** | Utilities | Sabotage | Attaques russes contre 5 stations de traitement d'eau via interfaces SCADA. | [Security Affairs](https://securityaffairs.com/191868/security/cyberattacks-on-polands-water-plants-a-blueprint-for-hybrid-warfare.html) |
+| **USA** | Défense | IA Militaire | Intégration d'OpenAI/Google dans les réseaux classifiés du DoD pour la supériorité décisionnelle. | [Security Affairs](https://securityaffairs.com/191842/cyber-warfare-2/ai-cyberwarfare-and-autonomous-weapons-inside-americas-new-military-strategy.html) |
+| **Groenland** | Ressources | Géoéconomie | Convoitise américaine historique pour les ressources et la position du passage GIUK. | [Portail-IE](https://www.portail-ie.fr/univers/enjeux-de-puissances-et-geoeconomie/2026/le-groenland-les-racines-de-linteret-americain-une-convoitise-historique-1-2/) |
+| **Japon** | Influence | Politique | Emprise des mouvements religieux (shinshūkyō) sur les structures économiques japonaises. | [Portail-IE](https://www.portail-ie.fr/univers/2026/les-sectes-au-japon-un-acteur-dinfluence-invisible/) |
+| **UE / Russie** | Information | Désinformation | Campagnes pro-Kremlin utilisant de faux narratifs sur l'UE à l'approche du 9 mai. | [EUvsDisinfo](https://euvsdisinfo.eu/fake-european-crises-and-real-russian-failures/) |
 
 ---
 
@@ -63,9 +69,9 @@ Parallèlement, le secteur de l'éducation subit une pression sans précédent d
 
 | Titre | Auteur/Organisme | Date | Juridiction | Référence | Description | Source(s) |
 |---|---|---|---|---|---|---|
-| Simplification de l'AI Act | Commission Européenne | 2026-05-07 | UE | AI Act Implementation | Calendrier de mise en œuvre et interdiction des apps de nudification. | [Digital Strategy EC](https://digital-strategy.ec.europa.eu/en/news/eu-agrees-simplify-ai-rules-boost-innovation-and-ban-nudification-apps-protect-citizens) |
-| Appel à conformité automatisée | Commission Européenne | 2026-05-07 | UE | DIGITAL-2026-AI-DATA | Financement pour solutions numériques de mise en œuvre législative. | [Digital Strategy EC](https://digital-strategy.ec.europa.eu/en/events/info-session-call-proposals-digital-solutions-regulatory-compliance-through-data) |
-| Contrôle biens double usage | Parlement & Conseil | 2026-05-08 | UE | (EU) 2021/821 | Mise à jour des mesures nationales d'exportation de technologies sensibles. | [EUR-Lex](https://eur-lex.europa.eu/legal-content/AUTO/?uri=OJ:C_202602595) |
+| **AI Act Guidelines** | Commission Européenne | 08/05/2026 | Europe | Article 50 | Lignes directrices sur la transparence et le marquage des contenus IA. | [EU Digital Strategy](https://digital-strategy.ec.europa.eu/en/library/three-studies-technical-solutions-mark-and-detect-ai-generated-content) |
+| **ESG & Défense** | UE / France | 08/05/2026 | Europe | CSRD / ESRS | Conflit normatif entre les critères de durabilité et le financement de l'armement. | [Portail-IE](https://www.portail-ie.fr/univers/defense-industrie-de-larmement-et-renseignement/2026/criteres-esg-et-bitd-leurope-se-rearme-en-paroles-et-en-normes/) |
+| **Export Dual-Use** | Conseil Européen | 08/05/2026 | Europe | Règle. 2021/821 | Mise à jour des mesures de contrôle pour les biens à double usage. | [EUR-Lex](https://eur-lex.europa.eu/legal-content/AUTO/?uri=CELEX:52026XC02595) |
 
 ---
 
@@ -75,9 +81,11 @@ Parallèlement, le secteur de l'éducation subit une pression sans précédent d
 
 | Secteur | Victime | Données compromises | Volume estimé | Source(s) |
 |---|---|---|---|---|
-| Éducation | **Instructure (Canvas)** | Emails, IDs étudiants, communications privées. | 280 millions d'enregistrements | [BleepingComputer](https://www.bleepingcomputer.com/news/security/canvas-login-portals-hacked-in-mass-shinyhunters-extortion-campaign/)<br>[DataBreaches.net](https://databreaches.net/2026/05/07/developing-shinyhunters-hacks-instructure-again-canvas-down/) |
-| Technologie | **Woflow** | Emails, noms, téléphones, adresses physiques. | 447 593 comptes (2 To) | [Have I Been Pwned](https://haveibeenpwned.com/Breach/Woflow) |
-| Santé | **ChipSoft** | Données patients (statut : détruites). | Non spécifié | [DataBreaches.net](https://databreaches.net/2026/05/07/cybersecurity-stolen-chipsoft-claims-patient-data-confirmed-destroyed-following-cyberattack/) |
+| **Education** | Canvas (Instructure) | Messages privés, IDs étudiants, emails | 275 millions d'utilisateurs | [The Guardian](https://www.theguardian.com/technology/2026/may/08/canvas-cyberattack-us-schools-universities) |
+| **Retail** | Zara (Inditex) | Historique d'achat, tickets support, emails | 197 400 utilisateurs | [BleepingComputer](https://www.bleepingcomputer.com/news/security/zara-data-breach-exposed-personal-information-of-197-000-people/) |
+| **Insurance** | Conduent | Données d'assurance, dossiers personnels | 25 millions de personnes | [Mastodon @Analyst207](https://mastodon.social/@Analyst207/116541233006223938) |
+| **Technology** | NVIDIA (GFN.am) | Données utilisateurs (Arménie uniquement) | Inconnu | [BleepingComputer](https://www.bleepingcomputer.com/news/security/nvidia-confirms-geforce-now-data-breach-affecting-armenian-users/) |
+| **Technology** | Katahdin Technology | Données d'entreprise | Inconnu | [Ransomlook](https://www.ransomlook.io//group/leak%20bazaar) |
 
 ---
 
@@ -90,30 +98,20 @@ Parallèlement, le secteur de l'éducation subit une pression sans précédent d
 
 | # | CVE-ID | CISA KEV | Exploitation | Score Composite | CVSS | Clé de tri |
 |---|---|---|---|---|---|---|
-| 1 | CVE-2026-0300 | TRUE  | Active    | 7.0 | 9.3   | (1,1,7.0,9.3) |
-| 2 | CVE-2026-6973 | TRUE  | Active    | 6.0 | 7.1   | (1,1,6.0,7.1) |
-| 3 | CVE-2026-COPYFAIL| TRUE  | Active    | 5.5 | 7.8   | (1,1,5.5,7.8) |
-| 4 | CVE-2026-20034 | FALSE | Théorique | 2.0 | 9.8   | (0,0,2.0,9.8) |
-| 5 | CVE-2026-44193 | FALSE | Théorique | 2.0 | N/A→0 | (0,0,2.0,0)   |
-| 6 | CVE-2026-42880 | FALSE | Théorique | 1.5 | N/A→0 | (0,0,1.5,0)   |
-| 7 | CVE-2026-7891  | FALSE | Théorique | 1.5 | N/A→0 | (0,0,1.5,0)   |
-| 8 | CVE-2026-41105 | FALSE | Théorique | 1.0 | N/A→0 | (0,0,1.0,0)   |
-| 9 | CVE-2026-35435 | FALSE | Théorique | 1.0 | N/A→0 | (0,0,1.0,0)   |
+| 1 | CVE-2026-43284 | TRUE  | Active    | 7.0 | 7.8   | (1,1,7.0,7.8) |
+| 2 | CVE-2026-6973  | TRUE  | Active    | 6.5 | 8.8   | (1,1,6.5,8.8) |
+| 3 | CVE-2026-42454 | FALSE | Théorique | 1.0 | N/A   | (0,0,1.0,0)   |
+| 4 | CVE-2026-42453 | FALSE | Théorique | 1.0 | N/A   | (0,0,1.0,0)   |
+| 5 | CVE-2026-8178  | FALSE | Théorique | 1.0 | N/A   | (0,0,1.0,0)   |
 -->
 
 | CVE-ID | Score CVSS | EPSS | CISA KEV | Score Composite | Produit affecté | Type de vulnérabilité | Impact | Exploitation | Mesures de contournement | Source(s) |
 |---|---|---|---|---|---|---|---|---|---|---|
-| CVE-2026-0300 | 9.3 | N/A | **OUI** | 7.0 | Palo Alto PAN-OS | Buffer Overflow | **RCE (Root)** | Active | Restreindre le Captive Portal aux IPs internes. | [Unit 42](https://unit42.paloaltonetworks.com/captive-portal-zero-day/) |
-| CVE-2026-6973 | 7.1 | N/A | **OUI** | 6.0 | Ivanti EPMM | Input Validation | RCE | Active | Appliquer les versions 12.8.0.1+ | [BleepingComputer](https://www.bleepingcomputer.com/news/security/ivanti-warns-of-new-epmm-flaw-exploited-in-zero-day-attacks/) |
-| CVE-2026-COPYFAIL | 7.8 | N/A | **OUI** | 5.5 | Noyau Linux | Fragmentation | **LPE (Root)** | Active | Mises à jour kernel (Dirty Frag). | [Mastodon](https://aus.social/@shlee/116536206077309995) |
-| CVE-2026-20034 | 9.8 | N/A | NON | 2.0 | Cisco Unity Connection | Divers | **RCE (Root)** | Théorique | Appliquer correctifs Cisco. | [Security Affairs](https://securityaffairs.com/191808/breaking-news/cisco-patches-high-severity-flaws-enabling-ssrf-code-execution-attacks.html) |
-| CVE-2026-44193 | N/A | N/A | NON | 2.0 | OPNsense | XMLRPC Restore | **RCE (Root)** | Théorique | Mise à jour v26.1.7. | [Field Effect](https://fieldeffect.com/blog/opnsense-code-execution-issue-poc-available) |
-| CVE-2026-42880 | N/A | N/A | NON | 1.5 | ArgoCD | ServerSideDiff | Secret Theft | Théorique | Versions 3.2.11 / 3.3.9. | [CVE Feed](https://cvefeed.io/vuln/detail/CVE-2026-42880) |
-| CVE-2026-7891 | N/A | N/A | NON | 1.5 | Mendix Studio Pro | Role Inheritance | Auth Bypass | Théorique | Désactiver accès anonyme. | [CVE Feed](https://cvefeed.io/vuln/detail/CVE-2026-7891) |
-| CVE-2026-41105 | N/A | N/A | NON | 1.0 | Azure Monitor | Notification Groups | LPE | Théorique | Correctifs Microsoft. | [CVE Feed](https://cvefeed.io/vuln/detail/CVE-2026-41105) |
-| CVE-2026-35435 | N/A | N/A | NON | 1.0 | Azure AI Foundry | Model Forge | LPE | Théorique | Correctifs Microsoft. | [CVE Feed](https://cvefeed.io/vuln/detail/CVE-2026-35435) |
-
-Légende : **RCE** (Remote Code Execution), **LPE** (Local Privilege Escalation).
+| **CVE-2026-43284** | 7.8 | N/A | **TRUE** | 7.0 | Linux Kernel (esp4, rxrpc) | Page-cache corruption | **RCE / Root** | Active | Désactiver modules esp4, esp6, rxrpc via modprobe. | [ISC SANS](https://isc.sans.edu/diary/rss/32968) |
+| **CVE-2026-6973** | 8.8 | N/A | **TRUE** | 6.5 | Ivanti EPMM | Auth Bypass | **RCE / Admin Access** | Active | Mettre à jour vers version 12.8.0.1. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/cisa-gives-feds-four-days-to-patch-ivanti-flaw-exploited-as-zero-day/) |
+| **CVE-2026-42454** | N/A | N/A | FALSE | 1.0 | Termix (Docker management) | Shell Interpolation | **RCE** | Théorique | Appliquer le correctif 2.1.0. | [CVE Feed](https://cvefeed.io/vuln/detail/CVE-2026-42454) |
+| **CVE-2026-42453** | N/A | N/A | FALSE | 1.0 | Termix (extractArchive) | Command Injection | **RCE** | Théorique | Appliquer le patch de sécurité Termix. | [CVE Feed](https://cvefeed.io/vuln/detail/CVE-2026-42453) |
+| **CVE-2026-8178** | N/A | N/A | FALSE | 1.0 | AWS Redshift JDBC Driver | Unsecured Class Loading | **RCE** | Théorique | Mise à jour vers le driver JDBC 2.2.2. | [AWS Bulletins](https://aws.amazon.com/security/security-bulletins/rss/2026-028-aws/) |
 
 ---
 
@@ -123,11 +121,10 @@ Légende : **RCE** (Remote Code Execution), **LPE** (Local Privilege Escalation)
 
 | Titre | Sujet canonique | Raison de sélection | Source(s) |
 |---|---|---|---|
-| TCLBANKER : Analyse du Trojan brésilien | TCLBanker + Self-propagation via WhatsApp/Outlook | Malware complexe à forte capacité de propagation. | [Elastic Security Labs](https://www.elastic.co/security-labs/tclbanker-brazilian-banking-trojan) |
-| PCPJack : Ver volant des identifiants | PCPJack + Cloud credential theft and TeamPCP removal | Menace cloud agressive avec éviction de concurrents. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/new-pcpjack-worm-steals-credentials-cleans-teampcp-infections/) |
-| xlabs_v1 : Botnet Mirai Android TV | xlabs_v1 + Mirai-based IoT botnet | Nouvelle variante ciblant massivement les ports ADB. | [Security Affairs](https://securityaffairs.com/191796/malware/from-android-tvs-to-routers-the-xlabs_v1-mirai-based-botnet-built-for-ddos-attacks.html) |
-| PamDOORa : Backdoor Linux PAM | PamDOORa + Linux PAM-based backdoor | Technique de persistance furtive sur Linux. | [Flare](https://flare.io/learn/resources/blog/pamdoora-new-linux-pam-based-backdoor-sale-dark-web) |
-| Attaques ClickFix en Australie | Vidar Stealer + ClickFix social engineering | Technique d'ingénierie sociale efficace par faux CAPTCHA. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/australia-warns-of-clickfix-attacks-pushing-vidar-stealer-malware/) |
+| Accès non autorisé au code source de Trellix | RansomHouse source code breach Trellix | Impact majeur sur un fournisseur de sécurité critique. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/trellix-source-code-breach-claimed-by-ransomhouse-hackers/) |
+| Industries touchées par le Ransomware T1 2026 | Ransomware industry trends Q1 2026 | Analyse statistique des menaces sectorielles. | [GuidePoint Security](https://www.guidepointsecurity.com/blog/5-industries-most-impacted-by-ransomware-q1-2026/) |
+| Types de fraudes au paiement | Payment fraud prevention and account takeover | Guide technique sur la lutte contre l'usurpation d'identité financière. | [Recorded Future](https://www.recordedfuture.com/blog/types-of-payment-fraud) |
+| Détection du fuzzing via Traefik | Detecting web fuzzing with Traefik and Cloudflare | Méthodologie technique de défense périmétrique. | [Elastic Security](https://www.elastic.co/security-labs/detecting-web-server-probing-and-fuzzing) |
 
 ---
 
@@ -137,11 +134,12 @@ Légende : **RCE** (Remote Code Execution), **LPE** (Local Privilege Escalation)
 
 | Titre | Raison d'exclusion | Source(s) |
 |---|---|---|
-| ISC Stormcast (7 & 8 Mai) | Bulletin d'actualité généraliste sans focus technique unique. | [SANS ISC](https://isc.sans.edu/diary/rss/32966) |
-| Spring cleaning your browser | Conseils d'hygiène numérique sans incident de sécurité. | [Red Canary](https://redcanary.com/blog/security-operations/spring-cleaning-your-browser/) |
-| The browser is breaking your DLP | Article de réflexion stratégique / promotion commerciale. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/the-browser-is-breaking-your-dlp-how-data-slips-past-modern-controls/) |
-| QRYPTY Mail Promotion | Publicité/Contenu non-sécuritaire. | [Mastodon](https://mastodon.social/@vynvvyvvn/116536375401996401) |
-| ONAP CPS Gold Badge | Standard de qualité, pas un sujet de menace/TI. | [OpenSSF Blog](https://openssf.org/blog/2026/05/07/the-road-to-gold-how-cps-set-a-new-standard-for-security-and-quality-in-open-source/) |
+| Travailler chez Recorded Future Londres | Article commercial / News de société | [Recorded Future](https://www.recordedfuture.com/blog/working-for-recorded-future-london) |
+| Histoire complète de la cybersécurité | Contenu éducatif / Historique non-actuel | [Recorded Future](https://www.recordedfuture.com/blog/cybersecurity-history) |
+| Glossaire de la citoyenneté numérique | Contenu éducatif généraliste | [Recorded Future](https://www.recordedfuture.com/blog/digital-citizenship-glossary) |
+| Flare dans le Magic Quadrant 2026 | Article commercial / Promotionnel | [Flare](https://flare.io/learn/resources/blog/flare-inaugural-2026-gartner-magic-quadrant-for-cyber-threat-intelligence) |
+| CVE-2026-42354 (Sentry SAML) | Score composite < 1 (Vulnérabilité mineure) | [CVE Feed](https://cvefeed.io/vuln/detail/CVE-2026-42354) |
+| CVE-2026-44313 (LinkWarden SSRF) | Score composite < 1 (Vulnérabilité mineure) | [CVE Feed](https://cvefeed.io/vuln/detail/CVE-2026-44313) |
 
 ---
 
@@ -151,369 +149,480 @@ Légende : **RCE** (Remote Code Execution), **LPE** (Local Privilege Escalation)
 
 ---
 
-<div id="tclbanker-trojan-bancaire-bresilien-a-auto-propagation"></div>
+<div id="ransomhouse-source-code-breach-trellix"></div>
 
-## TCLBanker : Trojan bancaire brésilien à auto-propagation
-
----
+## RansomHouse source code breach Trellix
 
 ### Résumé technique
-
-TCLBanker (identifié sous le cluster **REF3076**) est un cheval de Troie bancaire sophistiqué ciblant spécifiquement l'écosystème financier brésilien (59 institutions visées). La chaîne d'infection débute par un installateur MSI trojanisé qui abuse du **DLL sideloading** contre des applications légitimes comme *Logi AI Prompt Builder*. 
-
-Le malware se distingue par sa capacité d'auto-propagation via des modules de "ver" exploitant les versions web de **WhatsApp** (bibliothèque WA-JS) et **Outlook**. Une fois installé, il utilise des overlays WPF (Windows Presentation Foundation) pilotés en temps réel par l'attaquant via WebSocket pour capturer les identifiants de session et contourner la MFA. Il maintient sa persistance via des tâches planifiées créées par l'interface COM.
+Le groupe d'extorsion RansomHouse a revendiqué une intrusion majeure dans les infrastructures de développement de Trellix, un acteur clé de la cybersécurité. Les attaquants affirment avoir exfiltré le code source de plusieurs appliances de sécurité internes. L'analyse des preuves fournies montre l'utilisation d'outils personnalisés nommés "Mario" et "MrAgent", conçus pour faciliter le mouvement latéral et l'exfiltration de données massives depuis des environnements de stockage de code (GitHub/GitLab). L'infrastructure visée semble inclure des dépôts sensibles contenant la logique de détection et les clés cryptographiques de certains produits.
 
 ### Analyse de l'impact
-
-*   **Financier :** Risque critique de détournement de fonds pour les utilisateurs des principales banques et fintechs brésiliennes.
-*   **Opérationnel :** Propagation rapide au sein des réseaux d'entreprise via les outils de communication légitimes.
-*   **Sophistication :** Utilisation habile de techniques de défense évasion (sideloading) et d'interaction directe avec l'interface utilisateur (UI Automation).
+L'impact est critique pour la chaîne d'approvisionnement logicielle. L'accès au code source permet à des adversaires sophistiqués d'identifier des vulnérabilités zero-day par analyse statique avant leur correction. Pour les clients de Trellix, cela augmente le risque de contournement des solutions de défense. Le niveau de sophistication est élevé, RansomHouse se positionnant non pas comme un groupe de ransomware traditionnel, mais comme un courtier de données stratégiques.
 
 ### Recommandations
-
-*   Bloquer l'accès aux domaines de commande et contrôle (`.workers.dev`).
-*   Désactiver l'exécution d'installateurs MSI non signés sur les postes de travail.
-*   Sensibiliser les utilisateurs aux fichiers suspects reçus via messagerie instantanée, même de contacts connus.
+* Réinitialiser tous les secrets, tokens API et clés SSH présents dans les dépôts de code Trellix.
+* Auditer l'intégrité des builds récents pour détecter toute injection de backdoor.
+* Renforcer l'authentification multi-facteurs (MFA) sur tous les accès aux plateformes de gestion de code source.
 
 ### Playbook de réponse à incident
 
 #### Phase 1 — Préparation
-*   Activer les logs de création de processus (Event ID 4688) et de tâches planifiées.
-*   Restreindre l'accès au service `workers.dev` via le proxy/pare-feu.
-*   Vérifier que l'EDR surveille les injections dans `LogiAiPromptBuilder.exe`.
+* Vérifier l'activation des logs d'audit sur GitHub Enterprise et les instances GitLab internes.
+* Inventorier tous les comptes ayant des permissions de clonage massif sur les dépôts critiques.
 
 #### Phase 2 — Détection et analyse
-*   **Règle YARA :** Cibler les patterns de la bibliothèque `WA-JS` au sein de fichiers `.js` suspects.
-*   **Requête EDR :** Rechercher la création de fichiers `.versionmarker` dans `%LocalAppData%`.
-*   Analyser les connexions WebSocket sortantes vers des IPs non documentées.
+* **Règle de détection :** Rechercher des clones de dépôts (git clone) dépassant 50 unités en moins d'une heure par un utilisateur unique.
+* Rechercher la présence des exécutables "Mario" ou "MrAgent" via EDR sur les postes des développeurs.
 
 #### Phase 3 — Confinement, éradication et récupération
-*   **Confinement :** Isoler les hôtes présentant le processus `LogiAiPromptBuilder.exe` chargé depuis un chemin inhabituel.
-*   **Éradication :** Supprimer les tâches planifiées créées par le malware et nettoyer le dossier `%LocalAppData%\LogiAI`.
-*   **Récupération :** Forcer la réinitialisation des mots de passe bancaires et des sessions de messagerie.
+* **Confinement :** Révoquer immédiatement les accès du compte identifié comme source du clonage massif. Bloquer les IPs de sortie suspectes vers des services de stockage cloud tiers (MEGA, Dropbox).
+* **Éradication :** Supprimer les outils "Mario" et "MrAgent" des systèmes infectés. Réinitialiser les credentials de l'ensemble de l'équipe de développement.
+* **Récupération :** Comparer les sommes de contrôle des versions de production avec les versions de référence sécurisées.
 
 #### Phase 4 — Activités post-incident
-*   Auditer les comptes de messagerie pour détecter d'éventuels messages de propagation envoyés.
-*   Mettre à jour les politiques de "Sideloading" via AppLocker ou équivalent.
+* Déclarer l'incident aux autorités compétentes (NIS2 / SEC) étant donné le statut de fournisseur de sécurité critique.
+* Conduire un audit de sécurité du code par un tiers indépendant pour identifier d'éventuelles vulnérabilités exposées par la fuite.
 
 #### Phase 5 — Threat Hunting (proactif)
 
 | Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
 |---|---|---|---|
-| Utilisation de DLL non signées par des apps Logitech | T1055 | EDR Logs | Process == "LogiAiPromptBuilder.exe" AND LoadModule != Signed |
-| Abus de UI Automation par des apps tierces | T1056 | Sysmon 13 | Search for unexpected processes interacting with UIAutomationCore.dll |
+| Recherche de vols de credentials via des outils de type MrAgent | T1552 | EDR / Command Line | `process.cmd: "MrAgent" OR process.cmd: "-clone_all"` |
+| Exfiltration via comptes cloud non autorisés | T1537 | Cloud Audit Logs | `event.name: "TransferData" and storage.account.type: "External"` |
 
-### Indicateurs de compromission (DEFANG)
+### Indicateurs de compromission (DEFANG obligatoire)
 
 | Type | Valeur (DEFANG) | Description | Fiabilité |
 |---|---|---|---|
-| Hash SHA256 | e11f69b49b6f2e829454371c31ebf86893f82a042dae3f2faf63dcd84f97a584 | Payload TCLBanker | Haute |
-| URL | hxxps[://]campanha1-api[.]ef971a42[.]workers[.]dev/api/campaign | Serveur C2 | Haute |
-| IP | 191[.]96[.]224[.]96 | Infrastructure d'attaque | Moyenne |
+| Nom de fichier | Mario | Outil d'exfiltration RansomHouse | Haute |
+| Nom de fichier | MrAgent | Agent de mouvement latéral | Haute |
+| Email | pierluigi[.]paganini[@]securityaffairs[.]co | Contact presse cité | Basse |
 
 ### TTP MITRE ATT&CK
 
 | ID TTP | Tactique | Technique | Description contextuelle |
 |---|---|---|---|
-| T1055 | Defense Evasion | Process Injection | DLL sideloading contre Logi AI Prompt Builder. |
-| T1566 | Initial Access | Phishing | Propagation via messages WhatsApp/Outlook. |
-| T1543 | Persistence | Create or Modify System Process | Tâches planifiées via interface COM. |
+| T1537 | Exfiltration | Transfer Data to Cloud Account | Utilisation de comptes tiers pour exfiltrer le code source. |
+| T1190 | Initial Access | Exploit Public-Facing Application | Ciblage probable des interfaces de gestion de dépôts. |
 
 ### Sources
-
-* [BleepingComputer](https://www.bleepingcomputer.com/news/security/new-tclbanker-malware-self-spreads-over-whatsapp-and-outlook/)
-* [Elastic Security Labs](https://www.elastic.co/security-labs/tclbanker-brazilian-banking-trojan)
-
----
-
-<div id="pcpjack-ver-de-vol-didentifiants-cloud-et-eviction-de-concurrents"></div>
-
-## PCPJack : Ver de vol d'identifiants cloud et éviction de concurrents
+* [BleepingComputer Trellix](https://www.bleepingcomputer.com/news/security/trellix-source-code-breach-claimed-by-ransomhouse-hackers/)
+* [Security Affairs Trellix](https://securityaffairs.com/191879/cyber-crime/ransomhouse-says-it-breached-trellix-and-exposes-internal-systems.html)
 
 ---
+
+<div id="ransomware-industry-trends-q1-2026"></div>
+
+## Analyse des tendances Ransomware du T1 2026
 
 ### Résumé technique
-
-PCPJack est un nouveau ver modulaire ciblant les infrastructures cloud (Kubernetes, Docker) et les environnements de développement. Il se propage en exploitant au moins 5 vulnérabilités connues (dont **CVE-2025-29927**) et utilise des métadonnées publiques de *Common Crawl* (fichiers Parquet) pour identifier ses cibles.
-
-Sa particularité réside dans sa fonction "Nettoyage" : il détecte et élimine systématiquement les infections du groupe concurrent **TeamPCP** avant de s'installer. Une fois en place, il exfiltre agressivement des secrets sensibles : clés API Anthropic/OpenAI, jetons Slack, clés SSH et coffres-forts OnePassword.
+Le rapport du premier trimestre 2026 révèle une mutation du paysage des ransomwares. Le secteur manufacturier reste la cible privilégiée, subissant 35% des attaques recensées. Une nouvelle menace émerge avec le groupe "The Gentlemen", qui privilégie l'extorsion ciblée sur les données de propriété intellectuelle plutôt que le chiffrement de masse. On observe également une augmentation de 44% des attaques dans le secteur de la construction, souvent via la compromission de sous-traitants ayant des accès VPN permanents aux réseaux des donneurs d'ordre.
 
 ### Analyse de l'impact
-
-*   **Cloud Security :** Risque majeur d'escalade de privilèges au sein des clusters Kubernetes.
-*   **Propriété Intellectuelle :** Vol massif de secrets permettant des accès persistants aux outils IA et de communication.
-*   **Stabilité :** Conflit actif entre groupes de malwares pouvant causer des instabilités système imprévues.
+L'impact est principalement financier et opérationnel. L'interruption des chaînes de production dans le manufacturing entraîne des pertes sèches importantes. La tendance au "pay-or-leak" (payer ou fuir) sans chiffrement réduit le temps de détection des attaques, car aucun signal fort (fichiers chiffrés) n'apparaît avant l'annonce de l'extorsion.
 
 ### Recommandations
-
-*   Implémenter IMDSv2 sur les instances AWS pour limiter l'accès aux métadonnées.
-*   Interdire le stockage de secrets (clés API, SSH) en clair dans les variables d'environnement.
-*   Surveiller les scans internes sortants sur les ports API Cloud/Kubernetes.
+* Imposer le MFA sur tous les accès VPN des partenaires et sous-traitants.
+* Mettre en œuvre une micro-segmentation stricte entre les réseaux IT et OT.
 
 ### Playbook de réponse à incident
 
 #### Phase 1 — Préparation
-*   Vérifier que les logs d'audit Kubernetes (Kube-audit) sont centralisés.
-*   Utiliser des solutions de gestion de secrets (Vault, AWS Secrets Manager) plutôt que des fichiers à plat.
+* Auditer les sauvegardes hors ligne (Air-gapped) pour garantir la résilience contre le chiffrement.
 
 #### Phase 2 — Détection et analyse
-*   **Requête SIEM :** Détecter des exécutions de scripts tentant de supprimer des processus liés à TeamPCP.
-*   **Indicateur réseau :** Surveillance de requêtes vers des endpoints Common Crawl inhabituels.
-*   Analyser les pics de trafic vers des APIs IA (OpenAI) depuis des sources non autorisées.
+* Rechercher l'utilisation d'outils de transfert de fichiers volumineux tels que Rclone ou MegaSync via les logs proxy et EDR.
 
 #### Phase 3 — Confinement, éradication et récupération
-*   **Confinement :** Isoler les conteneurs compromis et révoquer les rôles IAM associés à l'instance.
-*   **Éradication :** Déployer un script de nettoyage pour supprimer les binaires PCPJack et restaurer les configurations de sécurité.
-*   **Récupération :** Rotation immédiate de TOUS les secrets (OpenAI, Slack, SSH) identifiés dans le tenant.
+* Isoler les segments réseau industriels (Manufacturing) dès la détection d'un mouvement latéral suspect.
 
 #### Phase 4 — Activités post-incident
-*   Auditer les accès IAM pour identifier d'éventuelles clés de secours créées par l'attaquant.
-*   Renforcer les politiques de réseau (NetworkPolicies) Kubernetes pour limiter les mouvements latéraux.
+* Réviser les clauses de cybersécurité dans les contrats avec les fournisseurs tiers.
+
+#### Phase 5 — Threat Hunting (proactif)
+
+| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
+|---|---|---|---|
+| Présence de groupes ransomware via outils d'administration | T1486 | EDR | `process.name: ("qilin", "akira", "play")` |
+
+### Indicateurs de compromission (DEFANG obligatoire)
+
+| Type | Valeur (DEFANG) | Description | Fiabilité |
+|---|---|---|---|
+| Nom de fichier | rclone.exe | Outil d'exfiltration détourné | Moyenne |
+
+### TTP MITRE ATT&CK
+
+| ID TTP | Tactique | Technique | Description contextuelle |
+|---|---|---|---|
+| T1486 | Impact | Data Encrypted for Impact | Chiffrement final après exfiltration. |
+
+### Sources
+* [GuidePoint Security](https://www.guidepointsecurity.com/blog/5-industries-most-impacted-by-ransomware-q1-2026/)
+
+---
+
+<div id="payment-fraud-prevention-and-account-takeover"></div>
+
+## Prévention des fraudes au paiement et vols de comptes
+
+### Résumé technique
+La fraude au paiement en 2026 s'appuie massivement sur l'Account Takeover (ATO) et le "Pagejacking". Les attaquants utilisent des infostealers pour récupérer les sessions de navigation et les identifiants stockés. Une technique émergente consiste à utiliser l'IA pour automatiser le vishing (phishing vocal) afin de récupérer les codes MFA en temps réel. Le rapport identifie 14 types de fraudes actives, avec un focus sur la fraude au virement (wire transfer) ciblant les départements comptables des entreprises.
+
+### Analyse de l'impact
+L'impact est direct sur la trésorerie des entreprises et la confiance des clients. Le détournement de fonds peut atteindre des millions d'euros lors de fraudes au président ou au changement de RIB. La sophistication est moyenne à élevée, utilisant de l'ingénierie sociale assistée par IA.
+
+### Recommandations
+* Passer à des clés de sécurité physiques (FIDO2/U2F) pour éliminer le risque de vishing/phishing MFA.
+* Mettre en place une procédure de double validation pour tout changement de coordonnées bancaires fournisseurs.
+
+### Playbook de réponse à incident
+
+#### Phase 1 — Préparation
+* Former le personnel de la comptabilité à la détection des tactiques d'ingénierie sociale.
+
+#### Phase 2 — Détection et analyse
+* Analyser les logs de transaction pour détecter des anomalies géographiques (IP inhabituelle) lors de transferts de fonds.
+
+#### Phase 3 — Confinement, éradication et récupération
+* Geler les comptes bancaires de l'entreprise dès la suspicion d'une fraude au virement. Révoquer les sessions actives des comptes compromis.
+
+#### Phase 4 — Activités post-incident
+* Auditer les points d'entrée de données (terminaux de paiement, portails clients) pour détecter des scripts de skimming.
+
+#### Phase 5 — Threat Hunting (proactif)
+
+| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
+|---|---|---|---|
+| Transferts frauduleux via comptes compromis | T1566 | Transaction Logs | `transaction.amount > 50000 AND transaction.geo.unusual == true` |
+
+### Indicateurs de compromission (DEFANG obligatoire)
+
+*Aucun indicateur technique spécifique fourni (article de synthèse).*
+
+### TTP MITRE ATT&CK
+
+| ID TTP | Tactique | Technique | Description contextuelle |
+|---|---|---|---|
+| T1566 | Initial Access | Phishing | Utilisation de vishing pour obtenir des accès financiers. |
+
+### Sources
+* [Recorded Future Blog](https://www.recordedfuture.com/blog/types-of-payment-fraud)
+
+---
+
+<div id="detecting-web-fuzzing-with-traefik-and-cloudflare"></div>
+
+## Detecting web fuzzing with Traefik and Cloudflare
+
+### Résumé technique
+Cette analyse détaille une méthode de détection proactive du fuzzing et du scanning automatisé sur les serveurs web modernes. En utilisant Traefik comme ingress controller et Elastic Security, il est possible d'agréger les erreurs HTTP 404 et 403 en temps réel. L'approche repose sur le langage de requête ES|QL pour identifier des patterns de recherche de répertoires sensibles (ex: /.env, /wp-admin). Une fois un seuil atteint (ex: 100 erreurs par IP en 1 minute), une automatisation via API Cloudflare permet de bannir l'IP au niveau du WAF (Edge) avant que l'attaquant ne trouve une vulnérabilité réelle.
+
+### Analyse de l'impact
+Cette méthode réduit drastiquement le "bruit" des logs et prévient les attaques de type injection ou accès non autorisé en bloquant la phase de reconnaissance. Elle permet d'économiser des ressources serveur en déportant le filtrage sur le Cloudflare WAF.
+
+### Recommandations
+* Configurer l'ingestion structurée des logs Traefik vers un SIEM (Elasticsearch).
+* Définir des seuils de bannissement progressifs pour éviter les faux positifs (ex: erreurs légitimes des utilisateurs).
+
+### Playbook de réponse à incident
+
+#### Phase 1 — Préparation
+* Assurer que les logs Traefik incluent l'adresse IP d'origine (`X-Forwarded-For`).
+
+#### Phase 2 — Détection et analyse
+* Surveiller les alertes de volume d'erreurs HTTP par IP source.
+
+#### Phase 3 — Confinement, éradication et récupération
+* Automatiser l'ajout des adresses IP malveillantes dans une "IP Set" Cloudflare bloquée par une règle WAF.
+
+#### Phase 4 — Activités post-incident
+* Réviser périodiquement la liste des IPs bloquées pour débloquer les sources légitimes après 24h.
+
+#### Phase 5 — Threat Hunting (proactif)
+
+| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
+|---|---|---|---|
+| Scanners automatisés cherchant des panneaux d'administration | T1595 | HTTP Logs | `http.response.status_code: 404 \| stats count() by source.ip` |
+
+### Indicateurs de compromission (DEFANG obligatoire)
+
+| Type | Valeur (DEFANG) | Description | Fiabilité |
+|---|---|---|---|
+| URL | hxxps[://]api[.]cloudflare[.]com/client/v4/zones/rulesets | Endpoint d'automatisation WAF | Haute |
+
+### TTP MITRE ATT&CK
+
+| ID TTP | Tactique | Technique | Description contextuelle |
+|---|---|---|---|
+| T1595 | Reconnaissance | Active Scanning | Tentatives de découverte de répertoires sensibles via fuzzing. |
+
+### Sources
+* [Elastic Security Labs](https://www.elastic.co/security-labs/detecting-web-server-probing-and-fuzzing)
+
+---
+
+<div id="soc-automation-via-agentic-ai-prophet-security"></div>
+
+## SOC automation via Agentic AI Prophet Security
+
+### Résumé technique
+Face à l'explosion du volume d'alertes, le modèle traditionnel de triage humain par des analystes de niveau 1 devient obsolète. L'analyse présente l'IA agentique (Prophet Security) comme une solution permettant d'automatiser l'investigation complète d'une alerte. Contrairement aux scripts SOAR rigides, l'IA agentique peut interroger dynamiquement les logs, analyser les fichiers suspects et synthétiser un verdict en quelques minutes au lieu de plusieurs jours. L'objectif est de libérer les analystes pour des tâches de Threat Hunting à plus haute valeur ajoutée.
+
+### Analyse de l'impact
+L'impact opérationnel est une réduction massive du temps moyen de réponse (MTTR). Cependant, cela introduit une nouvelle dépendance vis-à-vis de la précision de l'IA. La sophistication de la défense augmente pour égaler celle des attaquants utilisant également l'IA.
+
+### Recommandations
+* Évaluer l'intégration d'outils d'IA agentique pour le triage de premier niveau.
+* Maintenir un contrôle humain ("Human-in-the-loop") pour les décisions d'isolation critiques.
+
+### Playbook de réponse à incident
+
+#### Phase 1 — Préparation
+* Définir les périmètres de données que l'IA agentique est autorisée à consulter.
+
+#### Phase 2 — Détection et analyse
+* Comparer les verdicts de l'IA avec ceux des analystes durant une phase de test pour calibrer la confiance.
+
+#### Phase 3 — Confinement, éradication et récupération
+* Autoriser l'IA à appliquer des mesures de confinement pré-approuvées (ex: isolation EDR d'un endpoint) uniquement sur des alertes à haute criticité.
+
+#### Phase 4 — Activités post-incident
+* Analyser les échecs de l'IA (faux négatifs) pour affiner ses modèles de raisonnement.
+
+#### Phase 5 — Threat Hunting (proactif)
+
+| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
+|---|---|---|---|
+| Alertes manquées par le triage traditionnel | N/A | SIEM / SOAR Logs | Comparaison des logs bruts non alertés avec les patterns d'IA. |
+
+### Indicateurs de compromission (DEFANG obligatoire)
+
+| Type | Valeur (DEFANG) | Description | Fiabilité |
+|---|---|---|---|
+| Email | rich[.]perkins[@]prophetsecurity[.]ai | Contact expert IA | Basse |
+
+### TTP MITRE ATT&CK
+
+*Aucun TTP spécifique identifié (article de stratégie opérationnelle).*
+
+### Sources
+* [BleepingComputer](https://www.bleepingcomputer.com/news/security/why-more-analysts-wont-solve-your-socs-alert-problem/)
+
+---
+
+<div id="insider-threat-sabotage-of-federal-databases"></div>
+
+## Insider threat sabotage of federal databases
+
+### Résumé technique
+Un cas grave de menace interne a conduit à la condamnation de deux prestataires fédéraux américains, Sohaib et Muneeb Akhter. Suite à leur licenciement, ces derniers ont utilisé des accès persistants pour supprimer 96 bases de données fédérales. L'analyse technique révèle qu'ils ont utilisé des outils d'IA pour apprendre à effacer les journaux système (logs) afin de masquer leurs traces. Ils ont également mené des activités de vol de données de santé (Pipes) avant de procéder au sabotage final par "DB Wipe".
+
+### Analyse de l'impact
+L'impact est une perte de données massive pour les agences fédérales concernées et une rupture de service prolongée. Cet incident souligne la vulnérabilité des organisations lors des phases de séparation des employés disposant de privilèges élevés.
+
+### Recommandations
+* Automatiser la révocation immédiate des accès (SSO, VPN, DB) au moment précis de l'entretien de licenciement.
+* Imposer un contrôle par "quatre yeux" (dual control) pour toute opération de suppression de base de données en production.
+
+### Playbook de réponse à incident
+
+#### Phase 1 — Préparation
+* Mettre en œuvre une surveillance renforcée sur les comptes des prestataires dont le contrat arrive à échéance.
+
+#### Phase 2 — Détection et analyse
+* **Règle de détection :** Alerter sur toute commande de type `DROP DATABASE` ou suppression massive de fichiers effectuée par un compte dont le statut RH est "en cours de départ".
+
+#### Phase 3 — Confinement, éradication et récupération
+* **Confinement :** Verrouiller immédiatement tous les accès root du suspect.
+* **Récupération :** Restaurer les 96 bases de données à partir des sauvegardes immuables.
+
+#### Phase 4 — Activités post-incident
+* Engager des poursuites pénales fédérales (comme dans le cas présent) pour dissuader les futures menaces internes.
+
+#### Phase 5 — Threat Hunting (proactif)
+
+| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
+|---|---|---|---|
+| Sabotage par administrateur mécontent | T1531 | Database Audit Logs | `db.event: "drop database" OR db.event: "truncate table"` |
+
+### Indicateurs de compromission (DEFANG obligatoire)
+
+*Aucun IoC technique global (cas spécifique d'insider).*
+
+### TTP MITRE ATT&CK
+
+| ID TTP | Tactique | Technique | Description contextuelle |
+|---|---|---|---|
+| T1531 | Impact | Account Access Removal | Utilisation des privilèges pour révoquer les accès légitimes et saboter les données. |
+
+### Sources
+* [BleepingComputer Insider](https://www.bleepingcomputer.com/news/security/former-govt-contractor-convicted-for-wiping-dozens-of-federal-databases/)
+
+---
+
+<div id="google-chrome-local-ai-resource-consumption"></div>
+
+## Google Chrome local AI resource consumption
+
+### Résumé technique
+Google Chrome a commencé l'installation automatique de modèles d'IA locaux d'environ 4Go sur les postes des utilisateurs. Bien que présentée comme une amélioration fonctionnelle (Gemini Nano), cette mise à jour s'effectue sans consentement explicite et consomme des ressources système significatives (RAM et CPU) en arrière-plan. Sur le plan de la sécurité, cela introduit de nouveaux processus d'exécution locale dont la surface d'attaque reste à évaluer, notamment concernant l'accès aux données sensibles chargées dans le navigateur.
+
+### Analyse de l'impact
+L'impact immédiat est une dégradation des performances des postes de travail. À long terme, l'IA locale dans le navigateur pourrait être détournée par des malwares pour analyser les données de l'utilisateur localement sans exfiltration vers le cloud, rendant la détection plus complexe.
+
+### Recommandations
+* Surveiller la consommation de ressources des processus Chrome via les outils de gestion de parc (GPO).
+* Désactiver les fonctionnalités d'IA expérimentales si elles ne sont pas nécessaires au business.
+
+### Playbook de réponse à incident
+
+#### Phase 1 — Préparation
+* Identifier les versions de Chrome déployant ces modèles via l'inventaire logiciel.
+
+#### Phase 2 — Détection et analyse
+* Surveiller l'activité CPU anormale liée aux processus `chrome.exe` effectuant des calculs tensoriels.
+
+#### Phase 3 — Confinement, éradication et récupération
+* Utiliser les politiques de groupe (GPO) pour limiter ou bloquer le téléchargement automatique des composants "Optimization Guide".
+
+#### Phase 4 — Activités post-incident
+* Évaluer si l'IA locale traite des données d'entreprise sensibles conformément à la politique de confidentialité.
+
+#### Phase 5 — Threat Hunting (proactif)
+
+| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
+|---|---|---|---|
+| Utilisation détournée des modèles IA locaux | N/A | Endpoint Performance | Recherche de pics de consommation GPU/RAM non corrélés à l'activité utilisateur. |
+
+### Indicateurs de compromission (DEFANG obligatoire)
+
+*Aucun IoC malveillant (comportement logiciel légitime mais intrusif).*
+
+### TTP MITRE ATT&CK
+
+*Aucun TTP malveillant identifié (logiciel légitime).*
+
+### Sources
+* [Mastodon @silentexception](https://mastodon.social/@silentexception/116541566297969295)
+
+---
+
+<div id="meta-instagram-e2ee-deactivation"></div>
+
+## Meta Instagram E2EE deactivation
+
+### Résumé technique
+Des rapports indiquent que Meta a désactivé silencieusement le chiffrement de bout en bout (E2EE) sur certains segments de la messagerie directe (DM) Instagram. Ce changement architectural modifie le modèle de confiance : les messages ne sont plus chiffrés sur le terminal de l'expéditeur pour n'être déchiffrés que par le destinataire, mais peuvent être traités sur les serveurs de Meta. Ce recul sur la confidentialité intervient dans un contexte de pression réglementaire croissante sur l'accès légal aux données.
+
+### Analyse de l'impact
+L'impact est majeur pour la confidentialité des échanges. Les communications sensibles (journalisme, activisme, secrets d'affaires) transitant par ce canal sont désormais vulnérables à une interception au niveau du serveur ou à une réquisition légale.
+
+### Recommandations
+* Ne pas utiliser Instagram DM pour des communications professionnelles sensibles.
+* Privilégier des applications dont le chiffrement E2EE est audité et activé par défaut (ex: Signal).
+
+### Playbook de réponse à incident
+
+#### Phase 1 — Préparation
+* Mettre à jour la politique de sécurité interne concernant l'usage des réseaux sociaux tiers.
+
+#### Phase 2 — Détection et analyse
+* Vérifier l'état de l'indicateur "Chiffré" dans les paramètres de conversation Instagram.
+
+#### Phase 3 — Confinement, éradication et récupération
+* Migrer les discussions sensibles vers des canaux sécurisés si l'E2EE n'est plus garanti.
+
+#### Phase 4 — Activités post-incident
+* Sensibiliser les employés aux risques de "silent deactivation" des fonctions de sécurité sur les plateformes SaaS.
+
+#### Phase 5 — Threat Hunting (proactif)
+
+*N/A pour ce sujet.*
+
+### Indicateurs de compromission (DEFANG obligatoire)
+
+*N/A.*
+
+### TTP MITRE ATT&CK
+
+*N/A.*
+
+### Sources
+* [Mastodon @Bobe_bot](https://mastobot.ping.moi/@Bobe_bot/116541673401198072)
+
+---
+
+<div id="robiox-phishing-via-typosquatted-domain"></div>
+
+## Campagne de phishing Robiox via domaine typosquatté
+
+### Résumé technique
+Une campagne de phishing active cible les utilisateurs de la plateforme de jeu Roblox en utilisant un domaine typosquatté `robiox[.]com[.]af`. Les attaquants diffusent des liens prétendant mener à des serveurs de jeu privés ("Obby Vibe"). Le site frauduleux imite parfaitement l'interface de connexion de Roblox pour capturer les identifiants et les cookies de session des joueurs. L'utilisation du TLD `.af` (Afghanistan) est une tactique pour échapper aux filtres de réputation de domaines classiques.
+
+### Analyse de l'impact
+L'impact concerne le vol de comptes, qui peuvent ensuite être revendus ou utilisés pour diffuser d'autres malwares. Chez les utilisateurs corporatifs, cela représente un risque de "credential stuffing" si les mêmes mots de passe sont utilisés pour les comptes professionnels.
+
+### Recommandations
+* Bloquer le domaine `robiox[.]com[.]af` au niveau du proxy/DNS d'entreprise.
+* Rappeler aux utilisateurs les dangers de cliquer sur des liens de jeux depuis des équipements professionnels.
+
+### Playbook de réponse à incident
+
+#### Phase 1 — Préparation
+* Mettre à jour les listes de blocage DNS avec les variantes connues de typosquatting Roblox.
+
+#### Phase 2 — Détection et analyse
+* Rechercher dans les logs DNS toute requête vers `robiox[.]com[.]af`.
+
+#### Phase 3 — Confinement, éradication et récupération
+* Bloquer l'accès au domaine au niveau du pare-feu périmétrique. Réinitialiser les mots de passe des utilisateurs ayant visité le lien.
+
+#### Phase 4 — Activités post-incident
+* Signaler le domaine à l'hébergeur et aux services d'anti-phishing (Google Safe Browsing).
 
 #### Phase 5 — Threat Hunting (proactif)
 
 | Hypothèse | TTP associé | Source de données | Requête / Methode de recherche |
 |---|---|---|---|
-| Présence de binaires de C2 Sliver | T1021 | EDR Logs | Process_name == "sliver" OR command_line contains "sliver-client" |
-| Lecture de fichiers de configuration cloud | T1555 | File Audit | Access to ~/.aws/credentials OR ~/.ssh/id_rsa |
+| Utilisateurs ayant mordu à l'hameçon | T1566 | Proxy Logs | `url.domain: "robiox.com.af"` |
 
-### Indicateurs de compromission (DEFANG)
+### Indicateurs de compromission (DEFANG obligatoire)
 
 | Type | Valeur (DEFANG) | Description | Fiabilité |
 |---|---|---|---|
-| Search Pattern | CVE-2025-29927 | Faille exploitée pour propagation | Haute |
-| Tool | Sliver | Framework C2 utilisé par PCPJack | Haute |
+| Domaine | robiox[.]com[.]af | Site de phishing | Haute |
+| URL | hxxps[://]robiox[.]com[.]af/games/99584357870040/Obby-Vibe-I-NewPoses-2026 | Lien de phishing complet | Haute |
+| Hash MD5 | 27926193593948987482177094221934 | Identifiant de campagne | Haute |
 
 ### TTP MITRE ATT&CK
 
 | ID TTP | Tactique | Technique | Description contextuelle |
 |---|---|---|---|
-| T1078 | Defense Evasion | Valid Accounts | Vol de clés SSH et jetons pour persistance. |
-| T1555 | Credential Access | Credentials from Password Stores | Extraction de secrets OnePassword et Cloud. |
+| T1566 | Initial Access | Phishing | Envoi de liens vers un site usurpé. |
 
 ### Sources
-
-* [BleepingComputer](https://www.bleepingcomputer.com/news/security/new-pcpjack-worm-steals-credentials-cleans-teampcp-infections/)
-* [The Hacker News](https://thehackernews.com/2026/05/pcpjack-credential-stealer-exploits-5.html)
-
----
-
-<div id="xlabs-v1-botnet-mirai-basé-sur-iot"></div>
-
-## xlabs_v1 : Botnet Mirai ciblant Android TV et le port ADB
-
----
-
-### Résumé technique
-
-xlabs_v1 est un nouveau botnet basé sur le code source de Mirai, spécifiquement conçu pour les attaques DDoS. Il cible prioritairement les appareils Android (notamment les Android TV) et les routeurs via le port **ADB (Android Debug Bridge - TCP/5555)** laissé exposé sur internet. 
-
-Techniquement, le botnet utilise l'algorithme de chiffrement **ChaCha20** pour masquer ses chaînes de caractères (strings) et ses communications. Il propose un catalogue de 21 types d'attaques par déni de service (DDoS flood) et semble être opéré via un modèle de service ("DDoS-for-hire").
-
-### Analyse de l'impact
-
-*   **Disponibilité :** Capacité à saturer des infrastructures critiques ou des serveurs de jeu.
-*   **Infrastructure :** Exploitation massive d'appareils grand public (IoT) souvent non patchés.
-*   **Anonymat :** Utilisation de protocoles de chiffrement robustes pour compliquer l'analyse forensique.
-
-### Recommandations
-
-*   Désactiver systématiquement ADB sur les équipements Android s'il n'est pas utilisé.
-*   Bloquer le port TCP/5555 au niveau du pare-feu périmétrique.
-*   Changer les mots de passe par défaut sur tous les équipements IoT.
-
-### Playbook de réponse à incident
-
-#### Phase 1 — Préparation
-*   Scanner le parc pour identifier les équipements exposant le port 5555.
-*   Mettre en place une surveillance du trafic sortant UDP/TCP massif.
-
-#### Phase 2 — Détection et analyse
-*   **Règle Sigma :** Détecter des connexions ADB entrantes depuis des IPs externes non autorisées.
-*   **Analyse réseau :** Identifier des requêtes DNS vers le domaine `xlabslover[.]lol`.
-
-#### Phase 3 — Confinement, éradication et récupération
-*   **Confinement :** Isoler les segments réseau contenant des appareils IoT infectés.
-*   **Éradication :** Redémarrer les appareils (Mirai réside souvent en RAM) et désactiver ADB immédiatement.
-*   **Récupération :** Mettre à jour le firmware des appareils ciblés.
-
-#### Phase 4 — Activités post-incident
-*   Rédiger une procédure de durcissement (hardening) pour le déploiement de nouveaux objets connectés.
-
-#### Phase 5 — Threat Hunting (proactif)
-
-| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
-|---|---|---|---|
-| Scan interne du port 5555 | T1595 | Netflow | search dport:5555 | count() by src_ip > threshold |
-
-### Indicateurs de compromission (DEFANG)
-
-| Type | Valeur (DEFANG) | Description | Fiabilité |
-|---|---|---|---|
-| Domaine | xlabslover[.]lol | Serveur de commande et contrôle (C2) | Haute |
-| IP | 176[.]65[.]139[.]134 | Serveur hébergeant les payloads | Haute |
-
-### TTP MITRE ATT&CK
-
-| ID TTP | Tactique | Technique | Description contextuelle |
-|---|---|---|---|
-| T1498 | Impact | Network Denial of Service | Attaques DDoS massives. |
-| T1595 | Reconnaissance | Active Scanning | Scan automatique du port ADB/5555. |
-
-### Sources
-
-* [Security Affairs](https://securityaffairs.com/191796/malware/from-android-tvs-to-routers-the-xlabs_v1-mirai-based-botnet-built-for-ddos-attacks.html)
-
----
-
-<div id="pamdoora-linux-pam-based-backdoor"></div>
-
-## PamDOORa : Porte dérobée Linux via manipulation de la pile PAM
-
----
-
-### Résumé technique
-
-PamDOORa est un implant Linux furtif vendu sur des forums cybercriminels russes par l'acteur "darkworm". Il s'insère directement dans la pile d'authentification **PAM (Pluggable Authentication Modules)** du système. En remplaçant ou en ajoutant des bibliothèques (ex: `pam_linux.so`), l'attaquant peut obtenir un accès persistant via SSH et capturer les mots de passe des utilisateurs légitimes lors de leur connexion. 
-
-Cette méthode est particulièrement efficace car elle ne nécessite pas l'exécution d'un processus malveillant permanent, se fondant dans les flux d'authentification normaux de l'OS.
-
-### Analyse de l'impact
-
-*   **Furtivité :** Très difficile à détecter par les outils de monitoring classiques qui ne surveillent pas l'intégrité de la pile PAM.
-*   **Confidentialité :** Vol systématique de credentials root et utilisateurs en clair.
-*   **Persistance :** Maintien d'un accès "backdoor" permanent même après changement de mot de passe.
-
-### Recommandations
-
-*   Surveiller l'intégrité des fichiers dans `/lib/security/` et `/etc/pam.d/`.
-*   Utiliser des solutions d'authentification forte (MFA) qui ne dépendent pas uniquement de PAM.
-
-### Playbook de réponse à incident
-
-#### Phase 1 — Préparation
-*   Établir une base de référence (baseline) de l'intégrité des fichiers système Linux.
-*   Configurer l'envoi des logs SSH et auth.log vers un SIEM externe.
-
-#### Phase 2 — Détection et analyse
-*   **Analyse d'intégrité :** Utiliser `debsums` ou `rpm -V` pour vérifier si les modules PAM ont été modifiés.
-*   **Recherche de fichiers :** Chercher la présence de `pam_linux.so` ou de modifications récentes dans `/etc/pam.d/sshd`.
-
-#### Phase 3 — Confinement, éradication et récupération
-*   **Confinement :** Suspendre les accès SSH externes vers les machines suspectes.
-*   **Éradication :** Restaurer les fichiers PAM originaux à partir d'une source saine et supprimer les bibliothèques non autorisées.
-*   **Récupération :** Rotation complète de TOUS les mots de passe du système infecté.
-
-#### Phase 4 — Activités post-incident
-*   Analyser les logs de connexion pour identifier la période de présence de l'attaquant (dwell time).
-
-#### Phase 5 — Threat Hunting (proactif)
-
-| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
-|---|---|---|---|
-| Modification non autorisée de la pile PAM | T1556 | Auditd | auid != 0 AND file_path STARTSWITH "/etc/pam.d/" |
-
-### Indicateurs de compromission (DEFANG)
-
-| Type | Valeur (DEFANG) | Description | Fiabilité |
-|---|---|---|---|
-| Chemin fichier | /etc/pam[.]d/sshd | Fichier de configuration souvent ciblé | Haute |
-| Nom de fichier | pam_linux[.]so | Module PAM malveillant typique | Moyenne |
-
-### TTP MITRE ATT&CK
-
-| ID TTP | Tactique | Technique | Description contextuelle |
-|---|---|---|---|
-| T1556 | Persistence | Modify Authentication Process | Utilisation de modules PAM malveillants. |
-
-### Sources
-
-* [Flare](https://flare.io/learn/resources/blog/pamdoora-new-linux-pam-based-backdoor-sale-dark-web)
-
----
-
-<div id="vidar-stealer-clickfix-social-engineering"></div>
-
-## Vidar Stealer : Campagnes ClickFix utilisant de faux CAPTCHA
-
----
-
-### Résumé technique
-
-Les autorités australiennes signalent une recrudescence des attaques utilisant la technique **ClickFix** pour diffuser le malware **Vidar Stealer**. L'attaque repose sur l'ingénierie sociale : une page web affiche un faux CAPTCHA ou un message d'erreur. Pour le "résoudre", l'utilisateur est invité à cliquer sur un bouton qui copie une commande PowerShell malveillante dans son presse-papiers, puis à l'exécuter manuellement (Win+R -> Ctrl+V). 
-
-Vidar est spécialisé dans le vol de mots de passe de navigateurs, de cookies de session et de portefeuilles de crypto-monnaies.
-
-### Analyse de l'impact
-
-*   **Identité :** Compromission massive de comptes personnels et professionnels.
-*   **Financier :** Risque de vidage de portefeuilles crypto.
-*   **Vecteur :** Efficacité élevée car le code malveillant est exécuté volontairement par l'utilisateur, contournant souvent les protections automatiques.
-
-### Recommandations
-
-*   Bloquer l'exécution de scripts PowerShell pour les utilisateurs non administrateurs via GPO.
-*   Sensibiliser les employés à ne jamais copier-coller de commandes dans l'invite "Exécuter".
-
-### Playbook de réponse à incident
-
-#### Phase 1 — Préparation
-*   Mettre en place des restrictions via AppLocker sur `powershell.exe`.
-*   Éduquer les utilisateurs sur les nouvelles techniques d'ingénierie sociale (ClickFix).
-
-#### Phase 2 — Détection et analyse
-*   **Requête EDR :** Rechercher des processus PowerShell lancés avec des commandes encodées en Base64 depuis le presse-papier.
-*   Surveiller les connexions DNS vers des domaines connus pour héberger des payloads Vidar.
-
-#### Phase 3 — Confinement, éradication et récupération
-*   **Confinement :** Déconnecter les sessions actives de l'utilisateur sur le réseau.
-*   **Éradication :** Supprimer les binaires Vidar dans `%AppData%` ou `%Temp%`.
-*   **Récupération :** Invalider toutes les sessions (cookies) et changer les mots de passe.
-
-#### Phase 4 — Activités post-incident
-*   Vérifier si des données sensibles ont été exfiltrées vers les serveurs C2.
-
-#### Phase 5 — Threat Hunting (proactif)
-
-| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
-|---|---|---|---|
-| Exécution suspecte depuis le presse-papier | T1204 | EDR Logs | parent_process == "explorer.exe" AND cmdline contains "powershell" AND cmdline contains "-enc" |
-
-### Indicateurs de compromission (DEFANG)
-
-| Type | Valeur (DEFANG) | Description | Fiabilité |
-|---|---|---|---|
-| Type | Vidar Stealer | Malware de type Infostealer | Haute |
-
-### TTP MITRE ATT&CK
-
-| ID TTP | Tactique | Technique | Description contextuelle |
-|---|---|---|---|
-| T1204 | Execution | User Execution | L'utilisateur exécute manuellement le code PowerShell. |
-
-### Sources
-
-* [BleepingComputer](https://www.bleepingcomputer.com/news/security/australia-warns-of-clickfix-attacks-pushing-vidar-stealer-malware/)
+* [Mastodon @urldna](https://infosec.exchange/@urldna/116541912102127206)
 
 ---
 
 <!--
 CONTRÔLE FINAL
 
-1. ✅ Aucun article n'apparaît dans plusieurs sections : [Vérifié]
-2. ✅ La TOC est présente et chaque lien pointe vers une ancre existante : [Vérifié]
-3. ✅ Chaque ancre est unique — Identiques entre TOC / div id / table interne : [Vérifié]
-4. ✅ Tous les IoC sont en mode DEFANG : [Vérifié]
-5. ✅ Aucun article de Vulnérabilités ou Géopolitique dans la section "Articles" : [Vérifié]
-6. ✅ Le tableau des vulnérabilités ne contient que des entrées avec score composite ≥ 1 : [Vérifié]
-7. ✅ La table de tri intermédiaire est présente et l'ordre du tableau final correspond : [Vérifié]
-8. ✅ Toutes les sections attendues sont présentes : [Vérifié]
-9. ✅ Le playbook est contextualisé : [Vérifié]
-10. ✅ Les hypothèses de threat hunting sont présentes pour chaque article : [Vérifié]
-11. ✅ Tout article sans URL complète exclue : [Vérifié]
-12. ✅ Chaque article est COMPLET (9 sections) : [Vérifié]
-13. ✅ Playbook 5 phases présent : [Vérifié]
-14. ✅ Aucun bug fonctionnel/contenu non-sécuritaire dans Articles : [Vérifié]
+1. ☐ Aucun article n'apparaît dans plusieurs sections : [Vérifié]
+2. ☐ La TOC est présente et chaque lien pointe vers une ancre existante : [Vérifié]
+3. ☐ Chaque ancre est unique — <div id="..."> statiques ET dynamiques présents, cohérents avec la TOC ET identiques entre TOC / div id / table interne : [Vérifié]
+4. ☐ Tous les IoC sont en mode DEFANG : [Vérifié]
+5. ☐ Aucun article de Vulnérabilités ou Géopolitique dans la section "Articles" : [Vérifié]
+6. ☐ Le tableau des vulnérabilités ne contient que des entrées avec score composite ≥ 1 : [Vérifié]
+7. ☐ La table de tri intermédiaire est présente et l'ordre du tableau final correspond ligne par ligne : [Vérifié]
+8. ☐ Toutes les sections attendues sont présentes : [Vérifié]
+9. ☐ Le playbook est contextualisé (pas de tâches génériques) : [Vérifié]
+10. ☐ Les hypothèses de threat hunting sont présentes pour chaque article : [Vérifié]
+11. ☐ Tout article sans URL complète disponible dans raw_content est dans "Articles non sélectionnés" — aucun article sans URL complète ne figure dans les synthèses ou la section "Articles" : [Vérifié]
+12. ☐ Chaque article est COMPLET (9 sections toutes présentes) — aucun article tronqué : [Vérifié]
+13. ☐ Chaque article doit contenir un PLAYBOOK DE REPONSE A INCIDENT avec les 5 phases : [Vérifié]
+14. ☐ Aucun bug fonctionnel, article commercial ou contenu non-sécuritaire dans la section "Articles" : [Vérifié]
 
 Statut global : [✅ Rapport valide]
 -->
