@@ -1,0 +1,1617 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The cyber landscape on May 9, 2026, is dominated by the 'Dirty Frag' Linux kernel vulnerability, which presents a significant local privilege escalation risk across major distributions. Simultaneously, the threat actor group ShinyHunters has launched a series of high-profile data breaches targeting the retail (Zara), education (Canvas), and technology (NVIDIA) sectors, often exploiting third-party supply chain weaknesses. Geopolitical tensions are reflected in hybrid warfare tactics against Polish critical infrastructure and the rapid integration of AI into military doctrines, while European regulatory bodies tighten AI transparency and export controls.",
+      "fr": "Le paysage cyber du 9 mai 2026 est dominé par la vulnérabilité 'Dirty Frag' du noyau Linux, présentant un risque majeur d'élévation de privilèges locaux sur les distributions principales. Simultanément, le groupe ShinyHunters a lancé une série de violations de données ciblant les secteurs du commerce (Zara), de l'éducation (Canvas) et de la technologie (NVIDIA), exploitant souvent les faiblesses de la chaîne d'approvisionnement tierce. Les tensions géopolitiques se traduisent par des tactiques de guerre hybride contre les infrastructures critiques polonaises et l'intégration rapide de l'IA dans les doctrines militaires, tandis que les organismes de régulation européens durcissent la transparence de l'IA et les contrôles à l'exportation."
+    },
+    "date": "2026-05-09"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": [
+          "Critical_Infrastructure"
+        ],
+        "fr": [
+          "Infrastructures critiques"
+        ]
+      },
+      "theme": {
+        "en": "Hybrid Warfare and Critical Infrastructure Sabotage",
+        "fr": "Guerre hybride et sabotage d'infrastructures critiques"
+      },
+      "description": {
+        "en": "Russian state-sponsored actors (APT28, APT29, UNC1151) targeted Polish water treatment plants, demonstrating capabilities to manipulate physical operational parameters via exposed SCADA interfaces.",
+        "fr": "Des acteurs étatiques russes (APT28, APT29, UNC1151) ont ciblé des usines de traitement d'eau polonaises, démontrant des capacités de manipulation des paramètres opérationnels physiques via des interfaces SCADA exposées."
+      },
+      "recommandations": [
+        {
+          "en": "Isolate ICS/SCADA systems from the public internet.",
+          "fr": "Isoler les systèmes ICS/SCADA de l'Internet public."
+        },
+        {
+          "en": "Implement strong multi-factor authentication for all remote access.",
+          "fr": "Mettre en œuvre une authentification multi-facteurs robuste pour tous les accès distants."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Map all OT assets and network connections.",
+            "Conduct emergency response drills for physical sabotage scenarios."
+          ],
+          "fr": [
+            "Cartographier tous les actifs OT et les connexions réseau.",
+            "Réaliser des exercices de réponse d'urgence pour les scénarios de sabotage physique."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor PLC logs for unauthorized logic changes.",
+            "Alert on logins from non-domestic IP ranges to OT management interfaces."
+          ],
+          "fr": [
+            "Surveiller les logs PLC pour détecter des changements de logique non autorisés.",
+            "Alerter sur les connexions provenant de plages IP étrangères aux interfaces de gestion OT."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Physically disconnect compromised controllers.",
+            "Reset all administrative credentials in the OT environment."
+          ],
+          "fr": [
+            "Déconnecter physiquement les contrôleurs compromis.",
+            "Réinitialiser tous les identifiants administratifs dans l'environnement OT."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Perform a complete firmware integrity audit on all field devices.",
+            "Collaborate with national security agencies (e.g., ABW) for forensic analysis."
+          ],
+          "fr": [
+            "Effectuer un audit complet de l'intégrité du firmware sur tous les appareils de terrain.",
+            "Collaborer avec les agences de sécurité nationales (ex: ABW) pour l'analyse forensique."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for Shodan-style scanning activity against common ICS ports (502, 44818).",
+            "Verify integrity of network segmentation between IT and OT."
+          ],
+          "fr": [
+            "Rechercher des activités de scan de type Shodan contre les ports ICS courants (502, 44818).",
+            "Vérifier l'intégrité de la segmentation réseau entre l'IT et l'OT."
+          ]
+        }
+      },
+      "tags": [
+        "Russia",
+        "Poland",
+        "OT",
+        "APT28"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191868/security/cyberattacks-on-polands-water-plants-a-blueprint-for-hybrid-warfare.html"
+      ],
+      "date": "2026-05-09"
+    },
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement et Défense"
+        ]
+      },
+      "theme": {
+        "en": "Military AI Strategy and Integration",
+        "fr": "Stratégie et intégration de l'IA militaire"
+      },
+      "description": {
+        "en": "The US Pentagon is integrating large-scale AI models from big tech providers into classified networks to enhance combat decision-making and autonomous capabilities.",
+        "fr": "Le Pentagone américain intègre des modèles d'IA à grande échelle provenant de grands fournisseurs technologiques dans ses réseaux classifiés afin d'améliorer la prise de décision au combat et les capacités autonomes."
+      },
+      "recommandations": [
+        {
+          "en": "Secure AI data pipelines against adversarial poisoning.",
+          "fr": "Sécuriser les pipelines de données d'IA contre l'empoisonnement adverse."
+        },
+        {
+          "en": "Maintain 'human-in-the-loop' protocols for kinetic AI applications.",
+          "fr": "Maintenir des protocoles 'humain dans la boucle' pour les applications d'IA cinétiques."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Establish secure environments for AI model testing.",
+            "Define ethical and operational boundaries for AI use."
+          ],
+          "fr": [
+            "Établir des environnements sécurisés pour le test des modèles d'IA.",
+            "Définir les limites éthiques et opérationnelles de l'utilisation de l'IA."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for anomalies in AI output that suggest data manipulation.",
+            "Detect unauthorized access to model weights or training data."
+          ],
+          "fr": [
+            "Surveiller les anomalies dans les sorties d'IA suggérant une manipulation de données.",
+            "Détecter les accès non autorisés aux poids des modèles ou aux données d'entraînement."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate compromised AI models to prevent propagation of biased decisions.",
+            "Roll back to known-good versions of the model."
+          ],
+          "fr": [
+            "Isoler les modèles d'IA compromis pour empêcher la propagation de décisions biaisées.",
+            "Revenir à des versions saines connues du modèle."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Evaluate model performance and retrain with validated data sets.",
+            "Audit access logs to identify the source of the compromise."
+          ],
+          "fr": [
+            "Évaluer les performances du modèle et ré-entraîner avec des jeux de données validés.",
+            "Auditer les logs d'accès pour identifier la source de la compromission."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for evidence of adversarial machine learning attacks.",
+            "Inspect infrastructure for backdoors in third-party AI software integrations."
+          ],
+          "fr": [
+            "Rechercher des preuves d'attaques de machine learning adverse.",
+            "Inspecter l'infrastructure pour des portes dérobées dans les intégrations logicielles d'IA tierces."
+          ]
+        }
+      },
+      "tags": [
+        "AI",
+        "Pentagon",
+        "Sovereignty"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191842/cyber-warfare-2/ai-cyberwarfare-and-autonomous-weapons-inside-americas-new-military-strategy.html"
+      ],
+      "date": "2026-05-09"
+    }
+  ],
+  "regulatory_and_legal": [
+    {
+      "title": {
+        "en": "EU AI Act Transparency Guidelines",
+        "fr": "Lignes directrices sur la transparence de l'EU AI Act"
+      },
+      "description": {
+        "en": "Publication of guidelines under Article 50 of the AI Act regarding transparency obligations for generative AI and synthetic content marking.",
+        "fr": "Publication de lignes directrices au titre de l'article 50 de l'AI Act concernant les obligations de transparence pour l'IA générative et le marquage des contenus synthétiques."
+      },
+      "organisation": {
+        "en": [
+          "European Commission"
+        ],
+        "fr": [
+          "Commission Européenne"
+        ]
+      },
+      "jurisdiction": {
+        "en": [
+          "European Union"
+        ],
+        "fr": [
+          "Union Européenne"
+        ]
+      },
+      "references": {
+        "en": [
+          "Article 50 AI Act"
+        ],
+        "fr": [
+          "Article 50 AI Act"
+        ]
+      },
+      "tags": [
+        "AI",
+        "Regulation",
+        "Transparency"
+      ],
+      "sources": [
+        "https://digital-strategy.ec.europa.eu/en/library/three-studies-technical-solutions-mark-and-detect-ai-generated-content",
+        "https://digital-strategy.ec.europa.eu/en/consultations/consultation-draft-guidelines-transparency-obligations-under-ai-act"
+      ],
+      "date": "2026-05-08"
+    },
+    {
+      "title": {
+        "en": "EU Dual-Use Export Control Update",
+        "fr": "Mise à jour du contrôle des exportations de biens à double usage de l'UE"
+      },
+      "description": {
+        "en": "Information note on Regulation (EU) 2021/821 regarding updated measures for controlling exports of dual-use items across member states.",
+        "fr": "Note d'information sur le Règlement (UE) 2021/821 concernant les mesures mises à jour pour le contrôle des exportations de biens à double usage dans les États membres."
+      },
+      "organisation": {
+        "en": [
+          "European Union"
+        ],
+        "fr": [
+          "Union Européenne"
+        ]
+      },
+      "jurisdiction": {
+        "en": [
+          "European Union"
+        ],
+        "fr": [
+          "Union Européenne"
+        ]
+      },
+      "references": {
+        "en": [
+          "Regulation (EU) 2021/821"
+        ],
+        "fr": [
+          "Règlement (UE) 2021/821"
+        ]
+      },
+      "tags": [
+        "ExportControl",
+        "DualUse"
+      ],
+      "sources": [
+        "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:52026XC02595"
+      ],
+      "date": "2026-05-08"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Zara (Inditex)",
+      "threat_actor": "ShinyHunters",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime Group",
+      "threat_actor_aliases": [
+        "ShinyHunters"
+      ],
+      "sector": {
+        "en": [
+          "Retail_and_Consumer"
+        ],
+        "fr": [
+          "Commerce de détail et Consommation"
+        ]
+      },
+      "description": {
+        "en": "Data breach affecting 197,376 customers via compromised third-party analytics provider Anodot. Data includes emails, support tickets, and purchase history.",
+        "fr": "Violation de données affectant 197 376 clients via le fournisseur d'analyses tiers compromis Anodot. Les données incluent des e-mails, des tickets de support et l'historique des achats."
+      },
+      "mitre_ttps": [
+        "T1566",
+        "T1078",
+        "T1537"
+      ],
+      "recommandations": [
+        {
+          "en": "Rotate all third-party API tokens immediately.",
+          "fr": "Renouveler immédiatement tous les jetons API tiers."
+        },
+        {
+          "en": "Implement strict IP allowlisting for cloud database access.",
+          "fr": "Implémenter une liste blanche d'IP stricte pour l'accès aux bases de données cloud."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain an inventory of all third-party access tokens.",
+            "Implement automated token rotation policies."
+          ],
+          "fr": [
+            "Maintenir un inventaire de tous les jetons d'accès tiers.",
+            "Mettre en œuvre des politiques de rotation automatique des jetons."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor cloud audit logs for bulk data exports from BigQuery.",
+            "Detect anomalous login activity from partner service accounts."
+          ],
+          "fr": [
+            "Surveiller les logs d'audit cloud pour les exports de données massifs depuis BigQuery.",
+            "Détecter les activités de connexion anormales des comptes de service partenaires."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Revoke compromised Anodot authentication tokens.",
+            "Isolate the affected cloud data partitions."
+          ],
+          "fr": [
+            "Révoquer les jetons d'authentification Anodot compromis.",
+            "Isoler les partitions de données cloud affectées."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Notify affected customers and relevant data protection authorities.",
+            "Review and strengthen third-party security assessment processes."
+          ],
+          "fr": [
+            "Notifier les clients concernés et les autorités de protection des données compétentes.",
+            "Revoir et renforcer les processus d'évaluation de la sécurité des tiers."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for unauthorized use of legitimate tokens in application logs.",
+            "Verify if other third-party integrations share similar vulnerabilities."
+          ],
+          "fr": [
+            "Rechercher l'utilisation non autorisée de jetons légitimes dans les logs applicatifs.",
+            "Vérifier si d'autres intégrations tierces partagent des vulnérabilités similaires."
+          ]
+        }
+      },
+      "tags": [
+        "Breach",
+        "SupplyChain",
+        "ShinyHunters"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/zara-data-breach-exposed-personal-information-of-197-000-people/",
+        "https://haveibeenpwned.com/Breach/Zara"
+      ],
+      "date": "2026-05-09"
+    },
+    {
+      "victim": "Canvas (Instructure)",
+      "threat_actor": "ShinyHunters",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime Group",
+      "threat_actor_aliases": [
+        "ShinyHunters"
+      ],
+      "sector": {
+        "en": [
+          "Education_and_Research"
+        ],
+        "fr": [
+          "Éducation et Recherche"
+        ]
+      },
+      "description": {
+        "en": "Massive breach of the Canvas learning management system, disrupting schools nationwide during final exams. ShinyHunters claims access to private messages of millions of users.",
+        "fr": "Violation massive du système de gestion de l'apprentissage Canvas, perturbant les écoles à l'échelle nationale pendant les examens finaux. ShinyHunters prétend avoir accès aux messages privés de millions d'utilisateurs."
+      },
+      "mitre_ttps": [
+        "T1489",
+        "T1491",
+        "T1566"
+      ],
+      "recommandations": [
+        {
+          "en": "Do not pay the ransom; verify data exposure via legitimate forensics.",
+          "fr": "Ne pas payer la rançon ; vérifier l'exposition des données via une expertise légitime."
+        },
+        {
+          "en": "Secure or disable 'Free-for-Teacher' accounts to prevent horizontal movement.",
+          "fr": "Sécuriser ou désactiver les comptes 'Free-for-Teacher' pour empêcher le mouvement horizontal."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Develop education-specific business continuity plans (BCP).",
+            "Establish secure communication channels for students/faculty."
+          ],
+          "fr": [
+            "Développer des plans de continuité d'activité (PCA) spécifiques à l'éducation.",
+            "Établir des canaux de communication sécurisés pour les étudiants et le corps enseignant."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor LMS performance for signs of service disruption or defacement.",
+            "Detect mass database extraction patterns."
+          ],
+          "fr": [
+            "Surveiller les performances du LMS pour détecter des signes de perturbation de service ou de défaçage.",
+            "Détecter les modèles d'extraction massive de bases de données."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Temporarily take the platform offline to assess integrity.",
+            "Invalidate all active user sessions."
+          ],
+          "fr": [
+            "Mettre temporairement la plateforme hors ligne pour évaluer son intégrité.",
+            "Invalider toutes les sessions utilisateur actives."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Perform a security audit of the authentication module.",
+            "Communicate transparently with educational institutions."
+          ],
+          "fr": [
+            "Effectuer un audit de sécurité du module d'authentification.",
+            "Communiquer de manière transparente avec les institutions éducatives."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for unauthorized privilege escalation from low-tier accounts.",
+            "Investigate for secondary persistence mechanisms in API integrations."
+          ],
+          "fr": [
+            "Rechercher des élévations de privilèges non autorisées à partir de comptes de bas niveau.",
+            "Enquêter sur les mécanismes de persistance secondaires dans les intégrations API."
+          ]
+        }
+      },
+      "tags": [
+        "Education",
+        "Breach",
+        "ShinyHunters"
+      ],
+      "sources": [
+        "https://krebsonsecurity.com/2026/05/canvas-breach-disrupts-schools-colleges-nationwide/",
+        "https://www.theguardian.com/technology/2026/may/08/canvas-cyberattack-us-schools-universities"
+      ],
+      "date": "2026-05-09"
+    },
+    {
+      "victim": "Trellix",
+      "threat_actor": "RansomHouse",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Extortion Group",
+      "threat_actor_aliases": [
+        "RansomHouse"
+      ],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologies et Télécoms"
+        ]
+      },
+      "description": {
+        "en": "Unauthorized access to Trellix internal systems and source code repositories claimed by RansomHouse. Risk of supply chain attacks or zero-day discovery by threat actors.",
+        "fr": "Accès non autorisé aux systèmes internes et aux dépôts de code source de Trellix revendiqué par RansomHouse. Risque d'attaques sur la chaîne d'approvisionnement ou de découverte de zero-day par des acteurs malveillants."
+      },
+      "mitre_ttps": [
+        "T1537",
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Perform a rigorous audit of all source code for potential backdoors.",
+          "fr": "Effectuer un audit rigoureux de tout le code source pour détecter d'éventuelles portes dérobées."
+        },
+        {
+          "en": "Implement multi-factor authentication (MFA) for all developer accounts.",
+          "fr": "Mettre en œuvre l'authentification multi-facteurs (MFA) pour tous les comptes de développeurs."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Store sensitive API keys and secrets in hardened vaults.",
+            "Set up branch protection and mandatory code reviews."
+          ],
+          "fr": [
+            "Stocker les clés API et les secrets sensibles dans des coffres-forts durcis.",
+            "Mettre en place la protection des branches et des revues de code obligatoires."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Alert on large-scale repository clones, especially from unusual locations.",
+            "Monitor for unauthorized creation of new developer credentials."
+          ],
+          "fr": [
+            "Alerter sur les clones de dépôts à grande échelle, surtout depuis des lieux inhabituels.",
+            "Surveiller la création non autorisée de nouveaux identifiants de développeur."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Lock down affected VCS (Version Control System) accounts.",
+            "Rotate all secrets exposed in the compromised code."
+          ],
+          "fr": [
+            "Verrouiller les comptes VCS (Version Control System) concernés.",
+            "Renouveler tous les secrets exposés dans le code compromis."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Validate code integrity via cryptographic hashes of official releases.",
+            "Inform customers of potential risks to their security appliances."
+          ],
+          "fr": [
+            "Valider l'intégrité du code via les hachages cryptographiques des versions officielles.",
+            "Informer les clients des risques potentiels pour leurs appliances de sécurité."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for unauthorized commits in the software supply chain pipeline.",
+            "Analyze dark web forums for potential auctions of discovered vulnerabilities."
+          ],
+          "fr": [
+            "Rechercher des commits non autorisés dans le pipeline de la chaîne d'approvisionnement logicielle.",
+            "Analyser les forums du dark web pour d'éventuelles enchères sur des vulnérabilités découvertes."
+          ]
+        }
+      },
+      "tags": [
+        "SourceCode",
+        "Breach",
+        "Trellix"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/trellix-source-code-breach-claimed-by-ransomhouse-hackers/",
+        "https://securityaffairs.com/191879/cyber-crime/ransomhouse-says-it-breached-trellix-and-exposes-internal-systems.html"
+      ],
+      "date": "2026-05-09"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-43284",
+      "euvd_id": "unknown",
+      "cisa_kev": "TRUE",
+      "cvss": "7.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+      "product": "Linux Kernel",
+      "vendor": "Linux Foundation",
+      "description": {
+        "en": "Part of the 'Dirty Frag' local privilege escalation flaw. It exploits a logic error in page-cache corruption via network-related crypto modules (esp4, esp6, rxrpc).",
+        "fr": "Fait partie de la faille d'élévation de privilèges locaux 'Dirty Frag'. Elle exploite une erreur de logique dans la corruption du cache de pages via des modules crypto liés au réseau (esp4, esp6, rxrpc)."
+      },
+      "mitre_ttps": [
+        "T1068"
+      ],
+      "recommandations": [
+        {
+          "en": "Disable affected modules: modprobe -r esp4 esp6 rxrpc.",
+          "fr": "Désactiver les modules affectés : modprobe -r esp4 esp6 rxrpc."
+        },
+        {
+          "en": "Apply the latest kernel security patches immediately.",
+          "fr": "Appliquer immédiatement les derniers correctifs de sécurité du noyau."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory all Linux systems and kernel versions.",
+            "Pre-configure denylists for vulnerable kernel modules."
+          ],
+          "fr": [
+            "Inventorier tous les systèmes Linux et les versions du noyau.",
+            "Pré-configurer des listes de refus pour les modules de noyau vulnérables."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for unauthorized 'vmsplice' or 'splice' system calls targeting sensitive files.",
+            "Detect loading of AF_RXRPC sockets by non-privileged users."
+          ],
+          "fr": [
+            "Surveiller les appels système 'vmsplice' ou 'splice' non autorisés ciblant des fichiers sensibles.",
+            "Détecter le chargement de sockets AF_RXRPC par des utilisateurs non privilégiés."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Immediately disable rxrpc and esp kernel modules on critical assets.",
+            "Isolate potentially compromised servers from the internal network."
+          ],
+          "fr": [
+            "Désactiver immédiatement les modules de noyau rxrpc et esp sur les actifs critiques.",
+            "Isoler du réseau interne les serveurs potentiellement compromis."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Reboot updated systems to clear compromised memory pages.",
+            "Audit /etc/passwd and suid binaries for unauthorized modifications."
+          ],
+          "fr": [
+            "Redémarrer les systèmes mis à jour pour vider les pages de mémoire compromises.",
+            "Auditer /etc/passwd et les binaires suid pour détecter des modifications non autorisées."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for Dirty Frag PoC filenames or execution patterns in EDR logs.",
+            "Verify the integrity of system configuration files on all Linux endpoints."
+          ],
+          "fr": [
+            "Rechercher des noms de fichiers ou des modèles d'exécution PoC Dirty Frag dans les logs EDR.",
+            "Vérifier l'intégrité des fichiers de configuration système sur tous les terminaux Linux."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "Linux",
+        "LPE",
+        "DirtyFrag"
+      ],
+      "sources": [
+        "https://isc.sans.edu/diary/rss/32968",
+        "https://www.bleepingcomputer.com/news/security/new-linux-dirty-frag-zero-day-with-poc-exploit-gives-root-privileges/",
+        "https://aws.amazon.com/security/security-bulletins/rss/2026-027-aws/"
+      ],
+      "date": "2026-05-09"
+    },
+    {
+      "cve_id": "CVE-2026-43500",
+      "euvd_id": "unknown",
+      "cisa_kev": "TRUE",
+      "cvss": "7.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+      "product": "Linux Kernel",
+      "vendor": "Linux Foundation",
+      "description": {
+        "en": "Second part of the 'Dirty Frag' local privilege escalation chain. Together with CVE-2026-43284, it allows deterministic root access on major Linux distributions.",
+        "fr": "Deuxième partie de la chaîne d'élévation de privilèges locaux 'Dirty Frag'. Couplée à la CVE-2026-43284, elle permet un accès root déterministe sur les principales distributions Linux."
+      },
+      "mitre_ttps": [
+        "T1068"
+      ],
+      "recommandations": [
+        {
+          "en": "Update the Linux kernel to the latest patched version.",
+          "fr": "Mettre à jour le noyau Linux vers la dernière version corrigée."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain up-to-date kernel patching cycles."
+          ],
+          "fr": [
+            "Maintenir des cycles de mise à jour du noyau à jour."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor kernel logs for 'in-place decryption' logic errors."
+          ],
+          "fr": [
+            "Surveiller les logs du noyau pour détecter des erreurs de logique de 'déchiffrement sur place'."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Restrict access to low-level network modules."
+          ],
+          "fr": [
+            "Restreindre l'accès aux modules réseau de bas niveau."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Audit system integrity after patching."
+          ],
+          "fr": [
+            "Auditer l'intégrité du système après le déploiement du correctif."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Query for unusual socket creations using AF_RXRPC."
+          ],
+          "fr": [
+            "Rechercher des créations de sockets inhabituelles utilisant AF_RXRPC."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "Linux",
+        "DirtyFrag"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191847/hacking/dirty-frag-a-new-linux-privilege-escalation-vulnerability-is-already-in-the-wild.html"
+      ],
+      "date": "2026-05-09"
+    },
+    {
+      "cve_id": "CVE-2026-6973",
+      "euvd_id": "unknown",
+      "cisa_kev": "TRUE",
+      "cvss": "8.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:ivanti:endpoint_manager_mobile:*:*:*:*:*:*:*:*",
+      "product": "Endpoint Manager Mobile (EPMM)",
+      "vendor": "Ivanti",
+      "description": {
+        "en": "Authentication bypass vulnerability in Ivanti EPMM (formerly MobileIron Core). Actively exploited as a zero-day.",
+        "fr": "Vulnérabilité de contournement d'authentification dans Ivanti EPMM (anciennement MobileIron Core). Exploitée activement comme zero-day."
+      },
+      "mitre_ttps": [
+        "T1190",
+        "T1210"
+      ],
+      "recommandations": [
+        {
+          "en": "Upgrade to EPMM version 12.8.0.1 or higher immediately.",
+          "fr": "Passer immédiatement à la version 12.8.0.1 d'EPMM ou supérieure."
+        },
+        {
+          "en": "Rotate all administrator credentials.",
+          "fr": "Renouveler tous les identifiants administrateurs."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain an updated inventory of all Ivanti appliances."
+          ],
+          "fr": [
+            "Maintenir un inventaire à jour de toutes les appliances Ivanti."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Search logs for successful logins to administrative interfaces from unknown IPs."
+          ],
+          "fr": [
+            "Rechercher dans les logs les connexions réussies aux interfaces administratives depuis des IP inconnues."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Temporarily block external access to management ports."
+          ],
+          "fr": [
+            "Bloquer temporairement l'accès externe aux ports de gestion."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Full forensic investigation to check for lateral movement."
+          ],
+          "fr": [
+            "Enquête forensique complète pour vérifier les mouvements latéraux."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Check for unauthorized API calls performed with admin privileges."
+          ],
+          "fr": [
+            "Vérifier les appels API non autorisés effectués avec des privilèges d'administrateur."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "Ivanti",
+        "CISA"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/cisa-gives-feds-four-days-to-patch-ivanti-flaw-exploited-as-zero-day/"
+      ],
+      "date": "2026-05-09"
+    },
+    {
+      "cve_id": "CVE-2026-8178",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:amazon:redshift_jdbc_driver:*:*:*:*:*:*:*:*",
+      "product": "Redshift JDBC Driver",
+      "vendor": "AWS",
+      "description": {
+        "en": "Remote Code Execution (RCE) vulnerability in AWS Redshift JDBC driver due to unsafe class loading via connection parameters.",
+        "fr": "Vulnérabilité d'exécution de code à distance (RCE) dans le pilote JDBC AWS Redshift due à un chargement de classe non sécurisé via les paramètres de connexion."
+      },
+      "mitre_ttps": [
+        "T1210"
+      ],
+      "recommandations": [
+        {
+          "en": "Update JDBC driver to version 2.2.2.",
+          "fr": "Mettre à jour le pilote JDBC vers la version 2.2.2."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Audit all applications using Redshift JDBC."
+          ],
+          "fr": [
+            "Auditer toutes les applications utilisant le pilote JDBC Redshift."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Scan connection strings for 'class' or other suspicious parameters."
+          ],
+          "fr": [
+            "Scanner les chaînes de connexion pour les paramètres 'class' ou d'autres paramètres suspects."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Restrict outbound network traffic from Redshift clients."
+          ],
+          "fr": [
+            "Restreindre le trafic réseau sortant des clients Redshift."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Deploy the patched driver version."
+          ],
+          "fr": [
+            "Déployer la version corrigée du pilote."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search application logs for unauthorized class loading errors."
+          ],
+          "fr": [
+            "Rechercher des erreurs de chargement de classe non autorisées dans les logs applicatifs."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "AWS",
+        "RCE"
+      ],
+      "sources": [
+        "https://aws.amazon.com/security/security-bulletins/rss/2026-028-aws/"
+      ],
+      "date": "2026-05-09"
+    },
+    {
+      "cve_id": "CVE-2026-44313",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:linkwarden:linkwarden:*:*:*:*:*:*:*:*",
+      "product": "LinkWarden",
+      "vendor": "LinkWarden",
+      "description": {
+        "en": "Server-Side Request Forgery (SSRF) vulnerability in LinkWarden allowing requests to internal services.",
+        "fr": "Vulnérabilité SSRF dans LinkWarden permettant des requêtes vers des services internes."
+      },
+      "mitre_ttps": [
+        "T1552"
+      ],
+      "recommandations": [
+        {
+          "en": "Update LinkWarden to version 2.13.0.",
+          "fr": "Mettre à jour LinkWarden vers la version 2.13.0."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory LinkWarden instances."
+          ],
+          "fr": [
+            "Inventorier les instances LinkWarden."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor outbound HTTP traffic for internal IP targets."
+          ],
+          "fr": [
+            "Surveiller le trafic HTTP sortant vers des cibles IP internes."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Implement a network egress proxy."
+          ],
+          "fr": [
+            "Mettre en œuvre un proxy de sortie réseau."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Update application software."
+          ],
+          "fr": [
+            "Mettre à jour le logiciel applicatif."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Check for SSRF payloads in the database."
+          ],
+          "fr": [
+            "Rechercher des charges utiles SSRF dans la base de données."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "SSRF"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-44313"
+      ],
+      "date": "2026-05-09"
+    },
+    {
+      "cve_id": "CVE-2026-42455",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:linkwarden:linkwarden:*:*:*:*:*:*:*:*",
+      "product": "LinkWarden",
+      "vendor": "LinkWarden",
+      "description": {
+        "en": "Stored Cross-Site Scripting (XSS) in LinkWarden via HTML archive uploads.",
+        "fr": "XSS stocké dans LinkWarden via le téléchargement d'archives HTML."
+      },
+      "mitre_ttps": [
+        "unknown"
+      ],
+      "recommandations": [
+        {
+          "en": "Avoid opening untrusted HTML archives.",
+          "fr": "Éviter d'ouvrir des archives HTML non fiables."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Generic XSS prevention training."
+          ],
+          "fr": [
+            "Formation générique à la prévention XSS."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Scan database for script tags."
+          ],
+          "fr": [
+            "Scanner la base de données pour les balises de script."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Sanitize existing uploads."
+          ],
+          "fr": [
+            "Assainir les téléchargements existants."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Implement input sanitization."
+          ],
+          "fr": [
+            "Mettre en œuvre l'assainissement des entrées."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Check for malicious archive uploads."
+          ],
+          "fr": [
+            "Rechercher les téléchargements d'archives malveillantes."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "XSS"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-42455"
+      ],
+      "date": "2026-05-09"
+    },
+    {
+      "cve_id": "CVE-2026-42556",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:postiz:postiz:*:*:*:*:*:*:*:*",
+      "product": "Postiz",
+      "vendor": "Postiz",
+      "description": {
+        "en": "Stored XSS in Postiz AI scheduling tool due to unsafe innerHTML usage.",
+        "fr": "XSS stocké dans l'outil de planification Postiz AI en raison d'une utilisation non sécurisée d'innerHTML."
+      },
+      "mitre_ttps": [
+        "unknown"
+      ],
+      "recommandations": [
+        {
+          "en": "Update to version 2.21.7.",
+          "fr": "Mettre à jour vers la version 2.21.7."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Review frontend code for dangerous sinks."
+          ],
+          "fr": [
+            "Revoir le code frontend pour les puits dangereux."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Audit social media post previews."
+          ],
+          "fr": [
+            "Auditer les aperçus de publications sur les réseaux sociaux."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Disable rich text rendering."
+          ],
+          "fr": [
+            "Désactiver le rendu de texte enrichi."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Implement secure coding standards."
+          ],
+          "fr": [
+            "Mettre en œuvre des normes de codage sécurisées."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Look for scripts in post metadata."
+          ],
+          "fr": [
+            "Rechercher des scripts dans les métadonnées des publications."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "XSS"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-42556"
+      ],
+      "date": "2026-05-09"
+    },
+    {
+      "cve_id": "CVE-2026-42454",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:termix:termix:*:*:*:*:*:*:*:*",
+      "product": "Termix",
+      "vendor": "Termix",
+      "description": {
+        "en": "Command injection vulnerability in Termix Docker management endpoints.",
+        "fr": "Vulnérabilité d'injection de commande dans les terminaux de gestion Docker de Termix."
+      },
+      "mitre_ttps": [
+        "T1059"
+      ],
+      "recommandations": [
+        {
+          "en": "Update Termix to version 2.1.0.",
+          "fr": "Mettre à jour Termix vers la version 2.1.0."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Harden Docker container management permissions."
+          ],
+          "fr": [
+            "Durcir les permissions de gestion des conteneurs Docker."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor shell execution on the host machine."
+          ],
+          "fr": [
+            "Surveiller l'exécution de shell sur la machine hôte."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Restrict access to Termix API."
+          ],
+          "fr": [
+            "Restreindre l'accès à l'API Termix."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Audit container logs for abnormal behavior."
+          ],
+          "fr": [
+            "Auditer les logs des conteneurs pour détecter des comportements anormaux."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Scan for escaped container IDs in command history."
+          ],
+          "fr": [
+            "Scanner les identifiants de conteneurs échappés dans l'historique des commandes."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "Docker"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-42454"
+      ],
+      "date": "2026-05-09"
+    },
+    {
+      "cve_id": "CVE-2026-42453",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:termix:termix:*:*:*:*:*:*:*:*",
+      "product": "Termix",
+      "vendor": "Termix",
+      "description": {
+        "en": "Command injection via extractArchive function in Termix due to unsafe shell command construction.",
+        "fr": "Injection de commande via la fonction extractArchive dans Termix due à une construction de commande shell non sécurisée."
+      },
+      "mitre_ttps": [
+        "unknown"
+      ],
+      "recommandations": [
+        {
+          "en": "Upgrade to version 2.1.0.",
+          "fr": "Mettre à jour vers la version 2.1.0."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Validate all file extraction utilities."
+          ],
+          "fr": [
+            "Valider tous les utilitaires d'extraction de fichiers."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect unusual parent-child process relationships."
+          ],
+          "fr": [
+            "Détecter des relations processus parent-enfant inhabituelles."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Block shell access from the application user."
+          ],
+          "fr": [
+            "Bloquer l'accès shell de l'utilisateur applicatif."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Secure file handling processes."
+          ],
+          "fr": [
+            "Sécuriser les processus de manipulation de fichiers."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Analyze extracted file metadata."
+          ],
+          "fr": [
+            "Analyser les métadonnées des fichiers extraits."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "CommandInjection"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-42453"
+      ],
+      "date": "2026-05-09"
+    },
+    {
+      "cve_id": "CVE-2026-42452",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:termix:termix:*:*:*:*:*:*:*:*",
+      "product": "Termix",
+      "vendor": "Termix",
+      "description": {
+        "en": "Two-factor authentication (2FA) bypass in Termix where temporary TOTP tokens are incorrectly accepted by regular endpoints.",
+        "fr": "Contournement de l'authentification à deux facteurs (2FA) dans Termix où les jetons TOTP temporaires sont incorrectement acceptés par les terminaux réguliers."
+      },
+      "mitre_ttps": [
+        "T1550"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply version 2.1.0 patch and force all users to re-authenticate.",
+          "fr": "Appliquer le correctif de la version 2.1.0 et forcer tous les utilisateurs à se ré-authentifier."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Audit authentication middleware logic."
+          ],
+          "fr": [
+            "Auditer la logique du middleware d'authentification."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Alerter on use of short-lived tokens on sensitive endpoints."
+          ],
+          "fr": [
+            "Alerter sur l'utilisation de jetons à courte durée de vie sur des terminaux sensibles."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Invalidate all temporary authentication tokens."
+          ],
+          "fr": [
+            "Invalider tous les jetons d'authentification temporaires."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Redesign session management architecture."
+          ],
+          "fr": [
+            "Repenser l'architecture de gestion de session."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Review session logs for potential takeover activity."
+          ],
+          "fr": [
+            "Revoir les logs de session pour détecter d'éventuelles activités de prise de contrôle."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "AuthBypass",
+        "2FA"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-42452"
+      ],
+      "date": "2026-05-09"
+    },
+    {
+      "cve_id": "CVE-2026-42354",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:sentry:sentry:*:*:*:*:*:*:*:*",
+      "product": "Sentry",
+      "vendor": "Sentry",
+      "description": {
+        "en": "Critical account takeover vulnerability in Sentry due to unsafe SAML identity linking.",
+        "fr": "Vulnérabilité critique de prise de contrôle de compte dans Sentry due à une liaison d'identité SAML non sécurisée."
+      },
+      "mitre_ttps": [
+        "T1078"
+      ],
+      "recommandations": [
+        {
+          "en": "Update Sentry to version 26.4.1.",
+          "fr": "Mettre à jour Sentry vers la version 26.4.1."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Verify SAML provider configurations."
+          ],
+          "fr": [
+            "Vérifier les configurations du fournisseur SAML."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Audit new SSO identity links in administrative logs."
+          ],
+          "fr": [
+            "Auditer les nouvelles liaisons d'identité SSO dans les logs administratifs."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Suspend new SAML account linking."
+          ],
+          "fr": [
+            "Suspendre les nouvelles liaisons de compte SAML."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify all recent SSO-based login events."
+          ],
+          "fr": [
+            "Vérifier tous les événements de connexion récents basés sur le SSO."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Check for unauthorized IdP registration."
+          ],
+          "fr": [
+            "Rechercher des enregistrements d'IdP non autorisés."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "Sentry",
+        "SAML",
+        "AuthBypass"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-42354"
+      ],
+      "date": "2026-05-09"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "Widespread Phishing Campaign Targeting Roblox Users",
+        "fr": "Vaste campagne de phishing ciblant les utilisateurs de Roblox"
+      },
+      "description": {
+        "en": "A phishing campaign uses typosquatted domains (e.g., robiox.com.af) and fake private server links to steal player credentials.",
+        "fr": "Une campagne de phishing utilise des domaines typosquattés (ex: robiox.com.af) et de faux liens de serveurs privés pour voler les identifiants des joueurs."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime Group",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Hospitality_and_Entertainment"
+        ],
+        "fr": [
+          "Hospitalité et Divertissement"
+        ]
+      },
+      "indicators": {
+        "URL": [
+          "hxxps://robiox.com.af/games/99584357870040/Obby-Vibe-I-NewPoses-2026"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "robiox.com.af"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [
+          "27926193593948987482177094221934"
+        ],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1566"
+      ],
+      "analyse": {
+        "en": "The campaign targets younger demographics through social engineering on platforms like Mastodon and Discord.",
+        "fr": "La campagne cible les populations plus jeunes par ingénierie sociale sur des plateformes comme Mastodon et Discord."
+      },
+      "recommandations": [
+        {
+          "en": "Block the robiox.com.af domain at the DNS level.",
+          "fr": "Bloquer le domaine robiox.com.af au niveau DNS."
+        },
+        {
+          "en": "Educate users about typosquatted domains and official login URLs.",
+          "fr": "Éduquer les utilisateurs sur les domaines typosquattés et les URL de connexion officielles."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain a list of known typosquatted domains for blocking."
+          ],
+          "fr": [
+            "Maintenir une liste de domaines typosquattés connus pour le blocage."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor outbound web logs for connections to unauthorized .af domains."
+          ],
+          "fr": [
+            "Surveiller les logs web sortants pour les connexions à des domaines .af non autorisés."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Reset passwords for any user who accessed the phishing site."
+          ],
+          "fr": [
+            "Réinitialiser les mots de passe pour tout utilisateur ayant accédé au site de phishing."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Report the phishing domain to relevant registrars and safety groups."
+          ],
+          "fr": [
+            "Signaler le domaine de phishing aux registraires concernés et aux groupes de sécurité."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for similar typosquatting patterns across multiple TLDs."
+          ],
+          "fr": [
+            "Rechercher des modèles de typosquattage similaires sur plusieurs TLD."
+          ]
+        }
+      },
+      "tags": [
+        "Phishing",
+        "Roblox",
+        "Scam"
+      ],
+      "sources": [
+        "https://infosec.exchange/@urldna/116541912102127206"
+      ],
+      "date": "2026-05-09"
+    },
+    {
+      "title": {
+        "en": "Missouri Investigation into Conduent Security Breach",
+        "fr": "Enquête du Missouri sur la violation de sécurité de Conduent"
+      },
+      "description": {
+        "en": "Authorities in Missouri are probing a major security incident at Conduent affecting up to 25 million individuals. The company is accused of withholding details about the breach impact.",
+        "fr": "Les autorités du Missouri enquêtent sur un incident de sécurité majeur chez Conduent affectant jusqu'à 25 millions de personnes. L'entreprise est accusée de retenir des détails sur l'impact de la violation."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Healthcare_and_Life_Sciences"
+        ],
+        "fr": [
+          "Santé et Sciences de la vie"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "conduent.com"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1537"
+      ],
+      "analyse": {
+        "en": "This breach highlights the critical nature of transparency and the regulatory risks associated with large-scale data handling.",
+        "fr": "Cette violation souligne la nature critique de la transparence et les risques réglementaires associés à la manipulation de données à grande échelle."
+      },
+      "recommandations": [
+        {
+          "en": "Establish a clear incident transparency policy.",
+          "fr": "Établir une politique claire de transparence des incidents."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Define regulatory reporting timelines."
+          ],
+          "fr": [
+            "Définir les délais de rapport réglementaire."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor data exfiltration alerts."
+          ],
+          "fr": [
+            "Surveiller les alertes d'exfiltration de données."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate compromised storage buckets."
+          ],
+          "fr": [
+            "Isoler les compartiments de stockage compromis."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Cooperate with government probes."
+          ],
+          "fr": [
+            "Coopérer aux enquêtes gouvernementales."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Audit historical access to the exfiltrated datasets."
+          ],
+          "fr": [
+            "Auditer les accès historiques aux ensembles de données exfiltrés."
+          ]
+        }
+      },
+      "tags": [
+        "Breach",
+        "Missouri",
+        "Conduent"
+      ],
+      "sources": [
+        "https://mastodon.social/@Analyst207/116541233006223938",
+        "https://mastodon.clinicians-exchange.org/@rsstosecurity/116541026735358342"
+      ],
+      "date": "2026-05-09"
+    }
+  ]
+}
