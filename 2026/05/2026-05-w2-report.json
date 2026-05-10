@@ -6,30 +6,30 @@
       "fr": "Élevé"
     },
     "justification": {
-      "en": "The period is marked by the active exploitation of critical zero-day vulnerabilities in security gateways (Ivanti, Palo Alto) and a systemic 'Dirty Frag' flaw in the Linux kernel. Significant supply chain compromises affecting security vendors (Trellix) and massive data exfiltration in the education and retail sectors (Canvas, Zara) by ShinyHunters further elevate the risk. Geopolitical tensions are manifested through physical sabotage of critical infrastructure (Polish water plants).",
-      "fr": "La période est marquée par l'exploitation active de vulnérabilités zero-day critiques dans les passerelles de sécurité (Ivanti, Palo Alto) et une faille systémique 'Dirty Frag' dans le noyau Linux. Des compromissions majeures de la chaîne d'approvisionnement affectant des fournisseurs de sécurité (Trellix) et des exfiltrations massives de données dans les secteurs de l'éducation et du commerce (Canvas, Zara) par ShinyHunters augmentent encore le risque. Les tensions géopolitiques se manifestent par le sabotage physique d'infrastructures critiques (stations d'eau en Pologne)."
+      "en": "This week is marked by a critical 'Edge-to-Kernel' threat landscape. Sophisticated state and criminal actors are exploiting zero-day vulnerabilities in security gateways (Palo Alto, Ivanti) while simultaneously weaponizing a major Linux kernel fragmentation flaw (Dirty Frag). The scale of data exfiltration (280M records from Canvas) and the shift toward physical sabotage of critical infrastructure (Polish water systems) indicate a high-intensity period.",
+      "fr": "Cette semaine est marquée par un paysage de menaces critique 'Edge-to-Kernel'. Des acteurs étatiques et criminels sophistiqués exploitent des vulnérabilités zero-day dans les passerelles de sécurité (Palo Alto, Ivanti) tout en armant une faille majeure de fragmentation du noyau Linux (Dirty Frag). L'ampleur de l'exfiltration de données (280 millions d'enregistrements de Canvas) et le passage au sabotage physique d'infrastructures critiques (systèmes d'eau polonais) indiquent une période de haute intensité."
     },
     "_triggers": [
-      "+6 — 3 CVE(s) CISA KEV",
+      "+4 — 2 CVE(s) CISA KEV",
       "+1 — 1 CVE(s) CVSS ≥ 9.0",
       "+3 — 3 breach(es) ≥ 100k enregistrements",
-      "+2 — secteurs critiques ciblés : Government_and_Defense, Critical_Infrastructure"
+      "+2 — secteurs critiques ciblés : Critical_Infrastructure, Government_and_Defense"
     ]
   },
   "executive_summary": {
-    "en": "Week 2 of May 2026 witnessed a surge in edge-device exploitation and infrastructure sabotage. State-sponsored and criminal actors are targeting security appliances to bypass perimeters, while the 'Dirty Frag' Linux vulnerability poses a widespread risk to cloud environments. Major data breaches at Instructure (280M records) and Zara highlight the vulnerability of third-party analytics tokens. Geopolitically, the focus shifted to hybrid warfare with Russian-linked attacks on Polish water utilities and the integration of generative AI into national defense strategies.",
-    "fr": "La deuxième semaine de mai 2026 a vu une recrudescence de l'exploitation des équipements de périphérie (Edge) et du sabotage d'infrastructures. Les acteurs étatiques et criminels ciblent les appliances de sécurité pour contourner les périmètres, tandis que la vulnérabilité Linux 'Dirty Frag' pose un risque généralisé pour les environnements cloud. Des violations de données majeures chez Instructure (280 millions d'enregistrements) et Zara soulignent la vulnérabilité des jetons d'analyse tiers. Sur le plan géopolitique, l'attention s'est portée sur la guerre hybride avec des attaques liées à la Russie contre les services d'eau polonais et l'intégration de l'IA générative dans les stratégies de défense nationale."
+    "en": "Week 2 of May 2026 saw a convergence of systemic infrastructure threats and massive data breaches. Organizations faced active exploitation of Edge devices via CVE-2026-0300 and CVE-2026-6973, alongside the emergence of 'Dirty Frag' (CVE-2026-43284) affecting Linux environments. ShinyHunters dominated the extortion landscape with the breach of 280 million records from Canvas. Geopolitically, the sabotage of Polish water treatment plants by Russian-linked actors signals an escalation in hybrid warfare targeting operational technology (OT).",
+    "fr": "La deuxième semaine de mai 2026 a vu une convergence de menaces systémiques sur les infrastructures et de violations massives de données. Les organisations ont fait face à l'exploitation active d'équipements Edge via CVE-2026-0300 et CVE-2026-6973, parallèlement à l'émergence de 'Dirty Frag' (CVE-2026-43284) affectant les environnements Linux. ShinyHunters a dominé le paysage de l'extorsion avec le vol de 280 millions d'enregistrements de Canvas. Sur le plan géopolitique, le sabotage de stations de traitement d'eau polonaises par des acteurs liés à la Russie signale une escalade de la guerre hybride ciblant les technologies opérationnelles (OT)."
   },
   "regulatory": {
     "analyse": {
-      "en": "The European Union continues to lead regulatory trends with a focus on simplifying AI Act implementation and tightening controls on dual-use technology exports. There is a clear signal that compliance must become automated and data-driven to keep pace with rapid technological shifts, particularly in AI and quantum-resistant cryptography.",
-      "fr": "L'Union européenne continue de mener les tendances réglementaires en mettant l'accent sur la simplification de la mise en œuvre de l'AI Act et le renforcement des contrôles sur les exportations de technologies à double usage. Un signal clair indique que la conformité doit devenir automatisée et axée sur les données pour suivre le rythme des évolutions technologiques rapides, notamment dans l'IA et la cryptographie post-quantique."
+      "en": "Regulatory focus is shifting toward AI transparency and technological sovereignty. The EU's simplification of the AI Act targets high-risk applications like nudification while enforcing marking for AI-generated content. Concurrently, intense debates in France regarding the weakening of encryption for public safety highlight the growing tension between privacy and national security. Compliance teams must now navigate updated dual-use export controls and emerging ESG-aligned defense reporting requirements.",
+      "fr": "L'accent réglementaire se déplace vers la transparence de l'IA et la souveraineté technologique. La simplification de l'AI Act par l'UE cible les applications à haut risque comme la nudification tout en imposant le marquage des contenus générés par IA. Parallèlement, des débats intenses en France concernant l'affaiblissement du chiffrement pour la sécurité publique soulignent la tension croissante entre vie privée et sécurité nationale."
     },
     "events": [
       {
         "title": {
-          "en": "AI Act Implementation Simplification",
-          "fr": "Simplification de la mise en œuvre de l'AI Act"
+          "en": "EU AI Act Implementation & Nudification Ban",
+          "fr": "Mise en œuvre de l'AI Act et interdiction de la nudification"
         },
         "issuing_body": "European Commission",
         "date": "2026-05-07",
@@ -41,44 +41,17 @@
             "BE"
           ]
         },
-        "type": "Guidance",
+        "type": "New_Law",
         "status": "Active",
-        "reference": "AI Act Implementation",
+        "reference": "AI Act Art. 50",
         "affected_sectors": [
           "Technology_and_Telecom"
         ],
         "description": {
-          "en": "Agreement on simplifying rules to boost innovation while banning high-risk applications like nudification apps to protect citizens.",
-          "fr": "Accord sur la simplification des règles pour stimuler l'innovation tout en interdisant les applications à haut risque comme les applications de nudification pour protéger les citoyens."
+          "en": "Agreement to simplify AI rules for innovation while banning harmful nudification apps and establishing guidelines for marking AI-generated content.",
+          "fr": "Accord pour simplifier les règles de l'IA pour l'innovation tout en interdisant les applications de nudification et en établissant des directives pour le marquage des contenus générés par IA."
         },
-        "source_url": "https://digital-strategy.ec.europa.io/en/news/eu-agrees-simplify-ai-rules-boost-innovation-and-ban-nudification-apps-protect-citizens"
-      },
-      {
-        "title": {
-          "en": "Dual-Use Goods Export Control Update",
-          "fr": "Mise à jour du contrôle des exportations de biens à double usage"
-        },
-        "issuing_body": "European Parliament & Council",
-        "date": "2026-05-08",
-        "jurisdiction": {
-          "region": "EU",
-          "countries": [
-            "FR",
-            "DE"
-          ]
-        },
-        "type": "Amendment",
-        "status": "Active",
-        "reference": "(EU) 2021/821",
-        "affected_sectors": [
-          "Industry_and_Manufacturing",
-          "Security"
-        ],
-        "description": {
-          "en": "Updated national measures for the export of sensitive technologies, directly impacting cybersecurity firms and surveillance tech manufacturers.",
-          "fr": "Mise à jour des mesures nationales pour l'exportation de technologies sensibles, impactant directement les entreprises de cybersécurité et les fabricants de technologies de surveillance."
-        },
-        "source_url": "https://eur-lex.europa.eu/legal-content/AUTO/?uri=OJ:C_202602595"
+        "source_url": "https://digital-strategy.ec.europa.eu/en/news/eu-agrees-simplify-ai-rules-boost-innovation-and-ban-nudification-apps-protect-citizens"
       }
     ]
   },
@@ -90,18 +63,8 @@
           "fr": "Russie"
         },
         "geographic_zone_strategic_analyse": {
-          "en": "Russian state actors (APT28/29) are evolving from pure espionage to disruptive hybrid operations, targeting utilities like water treatment plants in Poland and recruiting through academic institutions like Bauman University.",
-          "fr": "Les acteurs étatiques russes (APT28/29) évoluent de l'espionnage pur vers des opérations hybrides perturbatrices, ciblant des services publics comme les usines de traitement d'eau en Pologne et recrutant via des institutions académiques comme l'université Bauman."
-        }
-      },
-      {
-        "geographic_zone_name": {
-          "en": "North Korea",
-          "fr": "Corée du Nord"
-        },
-        "geographic_zone_strategic_analyse": {
-          "en": "Continued focus on financial gain and technical infiltration through the management of 'laptop farms' in the US to facilitate clandestine work by DPRK IT agents.",
-          "fr": "Maintien de l'accent sur le gain financier et l'infiltration technique via la gestion de 'fermes de PC' aux États-Unis pour faciliter le travail clandestin d'agents informatiques de la RPDC."
+          "en": "Russian operations (APT28/APT29) have shifted toward direct physical impact on European NATO allies, specifically targeting Polish water utilities. There is also a continued focus on military-academic pipelines (Bauman University) to fuel hybrid warfare capabilities.",
+          "fr": "Les opérations russes (APT28/APT29) se sont orientées vers un impact physique direct sur les alliés européens de l'OTAN, ciblant spécifiquement les services d'eau polonais. L'accent est également mis sur les filières militaro-académiques (Université Bauman) pour alimenter les capacités de guerre hybride."
         }
       }
     ],
@@ -128,7 +91,7 @@
         "targeted_regions": {
           "en": [
             "Global",
-            "United States",
+            "USA",
             "Europe"
           ],
           "fr": [
@@ -138,19 +101,19 @@
           ]
         },
         "mitre_attack_ttps_id": [
-          "T1566",
-          "T1491",
           "T1567",
+          "T1491",
+          "T1586",
           "T1078"
         ],
         "campaign_or_operation": {
           "en": [
-            "Canvas Extortion",
-            "Zara Token Abuse"
+            "Canvas/Instructure Mass Extortion",
+            "Zara Supply Chain Analytics Breach"
           ],
           "fr": [
-            "Extorsion Canvas",
-            "Abus de jetons Zara"
+            "Extorsion massive Canvas/Instructure",
+            "Violation de la chaîne d'approvisionnement analytics de Zara"
           ]
         }
       },
@@ -173,17 +136,15 @@
         },
         "targeted_regions": {
           "en": [
-            "United States",
             "Global"
           ],
           "fr": [
-            "États-Unis",
             "Global"
           ]
         },
         "mitre_attack_ttps_id": [
-          "T1190",
-          "T1537"
+          "T1537",
+          "T1190"
         ],
         "campaign_or_operation": {
           "en": [
@@ -198,8 +159,8 @@
   },
   "mitre_attack_ttps": {
     "ttps_strategic_analyse": {
-      "en": "Attackers are increasingly moving away from simple malware towards the abuse of valid tokens and the exploitation of security gateways. The use of custom tools like 'Mario' and 'MrAgent' for automated code cloning and 'Dirty Frag' for kernel-level privilege escalation indicates a high level of technical maturity.",
-      "fr": "Les attaquants délaissent de plus en plus les malwares simples au profit de l'abus de jetons valides et de l'exploitation des passerelles de sécurité. L'utilisation d'outils personnalisés comme 'Mario' et 'MrAgent' pour le clonage automatisé de code et 'Dirty Frag' pour l'escalade de privilèges au niveau du noyau indique une maturité technique élevée."
+      "en": "TTP trends this week show a heavy reliance on exploiting edge security appliances as an entry point (T1190) followed by the manipulation of authentication processes (T1556) like Linux PAM to maintain invisibility. We also see a rise in user-assisted execution (T1204) through social engineering like 'ClickFix' fake CAPTCHAs.",
+      "fr": "Les tendances TTP cette semaine montrent une forte dépendance à l'exploitation des équipements de sécurité périmétriques comme point d'entrée (T1190), suivie de la manipulation des processus d'authentification (T1556) comme Linux PAM pour maintenir l'invisibilité."
     },
     "ttps_list": [
       {
@@ -213,32 +174,32 @@
         "severity": "critical",
         "context": {
           "en": [
-            "Exploitation of Palo Alto PAN-OS and Ivanti EPMM edge devices.",
-            "Targeting of Git repositories for source code theft."
+            "Active exploitation of Palo Alto PAN-OS (CVE-2026-0300) and Ivanti EPMM (CVE-2026-6973) vulnerabilities.",
+            "Ciblage des appliances de sécurité Trellix pour l'exfiltration de code source."
           ],
           "fr": [
-            "Exploitation d'équipements Palo Alto PAN-OS et Ivanti EPMM.",
-            "Ciblage de dépôts Git pour le vol de code source."
+            "Exploitation active des vulnérabilités Palo Alto PAN-OS (CVE-2026-0300) et Ivanti EPMM (CVE-2026-6973).",
+            "Ciblage des appliances de sécurité Trellix pour l'exfiltration de code source."
           ]
         }
       },
       {
-        "id": "T1566",
+        "id": "T1556",
         "tactic": {
-          "en": "Initial Access",
-          "fr": "Accès Initial"
+          "en": "Persistence",
+          "fr": "Persistance"
         },
-        "technique_name": "Phishing",
+        "technique_name": "Modify Authentication Process",
         "frequency": 2,
         "severity": "high",
         "context": {
           "en": [
-            "ClickFix campaigns using fake CAPTCHAs for Vidar Stealer distribution.",
-            "Self-propagation via WhatsApp/Outlook web interfaces by TCLBanker."
+            "Use of malicious PAM modules in PamDOORa backdoor.",
+            "QLNX malware injecting backdoors into the Linux PAM stack to steal SSH keys."
           ],
           "fr": [
-            "Campagnes ClickFix utilisant de faux CAPTCHA pour la diffusion de Vidar Stealer.",
-            "Auto-propagation via les interfaces web WhatsApp/Outlook par TCLBanker."
+            "Utilisation de modules PAM malveillants dans la porte dérobée PamDOORa.",
+            "Malware QLNX injectant des backdoors dans la pile PAM Linux pour voler des clés SSH."
           ]
         }
       },
@@ -253,12 +214,12 @@
         "severity": "high",
         "context": {
           "en": [
-            "Abuse of Anodot tokens for retail data exfiltration.",
-            "PCPJack stealing cloud and SSH keys for persistence."
+            "ShinyHunters using stolen SSO/Anodot tokens to access cloud environments.",
+            "PCPJack worm exfiltrating cloud and SSH credentials for persistence."
           ],
           "fr": [
-            "Abus de jetons Anodot pour l'exfiltration de données retail.",
-            "PCPJack volant des clés cloud et SSH pour la persistance."
+            "ShinyHunters utilisant des jetons SSO/Anodot volés pour accéder aux environnements cloud.",
+            "Ver PCPJack exfiltrant des identifiants cloud et SSH pour la persistance."
           ]
         }
       }
@@ -266,55 +227,30 @@
   },
   "vulnerabilities": {
     "analyse": {
-      "en": "The vulnerability landscape is currently dominated by 'Edge-to-Root' exploits. CVE-2026-6973 (Ivanti) and CVE-2026-0300 (Palo Alto) allow immediate external entry, while the 'Dirty Frag' kernel vulnerability (CVE-2026-43284) provides a reliable path to full system compromise across Linux distributions.",
-      "fr": "Le paysage des vulnérabilités est actuellement dominé par les exploits de type 'Edge-to-Root'. CVE-2026-6973 (Ivanti) et CVE-2026-0300 (Palo Alto) permettent une entrée externe immédiate, tandis que la vulnérabilité kernel 'Dirty Frag' (CVE-2026-43284) offre une voie fiable vers la compromission complète du système sur les distributions Linux."
+      "en": "The vulnerability landscape is dominated by critical RCE flaws in edge devices and local privilege escalation (LPE) in the Linux kernel. 'Dirty Frag' (CVE-2026-43284) is the most significant threat to server infrastructure, allowing deterministic root access through network packet fragmentation handling.",
+      "fr": "Le paysage des vulnérabilités est dominé par des failles RCE critiques dans les équipements périmétriques et l'escalade de privilèges locale (LPE) dans le noyau Linux. 'Dirty Frag' (CVE-2026-43284) est la menace la plus importante pour les infrastructures serveurs."
     },
     "list": [
-      {
-        "cve_id": "CVE-2026-6973",
-        "cvss_score": 8.8,
-        "epss_score": "N/A",
-        "cisa_kev": true,
-        "affected_product": "Ivanti EPMM",
-        "affected_product_vendor": "Ivanti",
-        "vulnerability_type": {
-          "en": [
-            "Authentication Bypass",
-            "Remote Code Execution"
-          ],
-          "fr": [
-            "Contournement d'Authentification",
-            "Exécution de Code à Distance"
-          ]
-        },
-        "vulnerability_description": {
-          "en": "A critical vulnerability in Ivanti EPMM allows an unauthenticated attacker to bypass authentication and achieve remote code execution on the appliance.",
-          "fr": "Une vulnérabilité critique dans Ivanti EPMM permet à un attaquant non authentifié de contourner l'authentification et d'exécuter du code à distance sur l'appliance."
-        },
-        "mitre_attack_ttps_id": [
-          "T1190"
-        ]
-      },
       {
         "cve_id": "CVE-2026-43284",
         "cvss_score": 7.8,
         "epss_score": "N/A",
         "cisa_kev": true,
-        "affected_product": "Linux Kernel",
-        "affected_product_vendor": "Linux",
+        "affected_product": "Linux Kernel (esp4, rxrpc)",
+        "affected_product_vendor": "Linux Foundation",
         "vulnerability_type": {
           "en": [
-            "Privilege Escalation",
-            "Page-cache Corruption"
+            "Page-cache corruption",
+            "LPE"
           ],
           "fr": [
-            "Élévation de Privilèges",
-            "Corruption de page-cache"
+            "Corruption du cache de page",
+            "LPE"
           ]
         },
         "vulnerability_description": {
-          "en": "Known as 'Dirty Frag', this vulnerability in the Linux kernel allows for local privilege escalation to root via network fragmentation handling errors.",
-          "fr": "Connue sous le nom de 'Dirty Frag', cette vulnérabilité du noyau Linux permet une élévation de privilèges locale vers root via des erreurs de gestion de la fragmentation réseau."
+          "en": "A fragmentation handling error in the Linux kernel allows an attacker to achieve root privileges on the system.",
+          "fr": "Une erreur de gestion de la fragmentation dans le noyau Linux permet à un attaquant d'obtenir des privilèges root sur le système."
         },
         "mitre_attack_ttps_id": [
           "T1068"
@@ -330,16 +266,16 @@
         "vulnerability_type": {
           "en": [
             "Buffer Overflow",
-            "Remote Code Execution"
+            "RCE"
           ],
           "fr": [
-            "Dépassement de Tampon",
-            "Exécution de Code à Distance"
+            "Dépassement de tampon",
+            "RCE"
           ]
         },
         "vulnerability_description": {
-          "en": "Remote code execution vulnerability in the Captive Portal component of PAN-OS, exploited as a zero-day.",
-          "fr": "Vulnérabilité d'exécution de code à distance dans le composant Captive Portal de PAN-OS, exploitée en tant que zero-day."
+          "en": "Critical buffer overflow in the Captive Portal component allowing unauthenticated root RCE.",
+          "fr": "Dépassement de tampon critique dans le composant Captive Portal permettant une RCE root non authentifiée."
         },
         "mitre_attack_ttps_id": [
           "T1190"
@@ -351,23 +287,23 @@
     {
       "victim": "Instructure (Canvas)",
       "sector": "Education_and_Research",
-      "country": "United States",
+      "country": "USA",
       "records_count": 280000000,
       "data_types": {
         "en": [
-          "Private messages",
+          "Emails",
           "Student IDs",
-          "Emails"
+          "Private communications"
         ],
         "fr": [
-          "Messages privés",
+          "Emails",
           "IDs étudiants",
-          "Emails"
+          "Communications privées"
         ]
       },
       "threat_actor": "ShinyHunters",
       "financial_impact_usd": null,
-      "source_url": "https://www.theguardian.com/technology/2026/may/08/canvas-cyberattack-us-schools-universities"
+      "source_url": "https://www.bleepingcomputer.com/news/security/canvas-login-portals-hacked-in-mass-shinyhunters-extortion-campaign/"
     },
     {
       "victim": "Zara (Inditex)",
@@ -378,12 +314,12 @@
         "en": [
           "Purchase history",
           "Support tickets",
-          "Customer emails"
+          "Emails"
         ],
         "fr": [
           "Historique d'achat",
           "Tickets support",
-          "Emails clients"
+          "Emails"
         ]
       },
       "threat_actor": "ShinyHunters",
@@ -392,13 +328,13 @@
     },
     {
       "victim": "Conduent",
-      "sector": "Business_Services",
-      "country": "United States",
+      "sector": "Finance",
+      "country": "USA",
       "records_count": 25000000,
       "data_types": {
         "en": [
           "Insurance data",
-          "Personal files"
+          "Personal dossiers"
         ],
         "fr": [
           "Données d'assurance",
@@ -413,117 +349,115 @@
   "target": {
     "sectors": {
       "en": [
-        "Critical_Infrastructure",
         "Education_and_Research",
         "Retail_and_Consumer",
-        "Technology_and_Telecom",
+        "Government_and_Defense",
+        "Critical_Infrastructure",
         "Security",
-        "Government_and_Defense"
+        "Finance"
       ],
       "fr": [
-        "Critical_Infrastructure",
         "Education_and_Research",
         "Retail_and_Consumer",
-        "Technology_and_Telecom",
+        "Government_and_Defense",
+        "Critical_Infrastructure",
         "Security",
-        "Government_and_Defense"
+        "Finance"
       ]
     },
     "countries": {
       "en": [
-        "United States",
+        "USA",
         "Poland",
         "Spain",
         "Brazil",
-        "Armenia",
-        "Australia"
+        "France"
       ],
       "fr": [
         "États-Unis",
         "Pologne",
         "Espagne",
         "Brésil",
-        "Arménie",
-        "Australie"
+        "France"
       ]
     },
     "narrative": {
-      "en": "- **Education:** Instructure/Canvas suffered a massive breach impacting 280M records, orchestrated by ShinyHunters via extortion tactics during critical exam periods.\n- **Retail:** Zara (Inditex) exposed 197k customer profiles, including purchase history, due to an analytics token compromise.\n- **Utilities:** Polish water treatment plants were physically sabotaged by Russian-linked actors targeting SCADA interfaces, threatening public safety.\n- **Security/Tech:** Trellix source code was allegedly exfiltrated by RansomHouse using custom automated tools (Mario/MrAgent), threatening the security supply chain.\n- **Finance:** 59 Brazilian financial institutions are actively targeted by the TCLBanker trojan, which uses WhatsApp web for self-propagation.\n- **Government:** US Federal databases (96 in total) were wiped by malicious insiders (Akhter brothers), leading to massive data loss and operational paralysis.\n- **Technology:** NVIDIA's GeForce Now Armenian user base was compromised, while Roblox users were targeted by the Robiox typosquatted phishing campaign.",
-      "fr": "- **Éducation :** Instructure/Canvas a subi une violation massive impactant 280 millions d'enregistrements, orchestrée par ShinyHunters via des tactiques d'extorsion pendant les périodes d'examens.\n- **Commerce :** Zara (Inditex) a exposé 197 000 profils clients, y compris l'historique d'achat, suite à une compromission de jetons d'analyse.\n- **Services Publics :** Des usines de traitement d'eau polonaises ont été sabotées par des acteurs liés à la Russie ciblant les interfaces SCADA, menaçant la sécurité publique.\n- **Sécurité/Tech :** Le code source de Trellix aurait été exfiltré par RansomHouse à l'aide d'outils automatisés personnalisés (Mario/MrAgent), menaçant la chaîne d'approvisionnement.\n- **Finance :** 59 institutions financières brésiliennes sont activement ciblées par le trojan TCLBanker, qui utilise WhatsApp web pour s'auto-propager.\n- **Gouvernement :** 96 bases de données fédérales américaines ont été effacées par des insiders malveillants (frères Akhter), entraînant une perte massive de données.\n- **Technologie :** La base d'utilisateurs arméniens de GeForce Now (NVIDIA) a été compromise, tandis que les joueurs de Roblox ont été ciblés par une campagne de phishing 'Robiox'."
+      "en": "- **Education & Research:** Massive breach at Instructure (Canvas) exposing 280M records by ShinyHunters, impacting global student privacy.\n- **Critical Infrastructure:** Sabotage of 5 water treatment plants in Poland by Russian actors (APT28/29) via SCADA manipulation, threatening public safety.\n- **Public Sector & Govt:** Destruction of 96 federal databases in the US by malicious internal contractors using AI-guided log wiping techniques.\n- **Security Sector:** RansomHouse exfiltration of source code and internal appliances from Trellix, exposing potential zero-days in security tools.\n- **Retail:** Zara (197k records) and Woflow (447k records/2TB data) targeted through third-party analytics token compromise.\n- **Technology:** NVIDIA (GFN.am) user data breach in Armenia and widespread exploitation of Palo Alto PAN-OS zero-days.\n- **Finance:** Brazilian banking sector targeted by TCLBanker, spreading via WhatsApp and Outlook to bypass MFA.\n- **Healthcare:** ChipSoft confirmed patient data destruction following a cyberattack, emphasizing operational risk.",
+      "fr": "- **Éducation & Recherche :** Violation massive chez Instructure (Canvas) exposant 280M d'enregistrements par ShinyHunters, impactant la vie privée des étudiants.\n- **Infrastructures Critiques :** Sabotage de 5 stations de traitement d'eau en Pologne par des acteurs russes (APT28/29) via manipulation SCADA.\n- **Secteur Public & Gouv :** Destruction de 96 bases de données fédérales aux USA par des prestataires internes malveillants utilisant l'IA pour effacer les logs.\n- **Sécurité :** Exfiltration du code source et des appliances internes de Trellix par RansomHouse, exposant des vulnérabilités potentielles.\n- **Retail :** Zara (197k enregistrements) et Woflow (447k enregistrements/2To de données) ciblés via la compromission de jetons tiers.\n- **Technologie :** Violation des données utilisateurs NVIDIA (GFN.am) en Arménie et exploitation généralisée des zero-days Palo Alto PAN-OS.\n- **Finance :** Secteur bancaire brésilien ciblé par TCLBanker, se propageant via WhatsApp et Outlook pour contourner la MFA.\n- **Santé :** Destruction confirmée des données patients de ChipSoft suite à une cyberattaque, soulignant le risque opérationnel."
     }
   },
   "trends": {
     "emerging_techniques": {
       "en": [
-        "Agentic AI for SOC automation",
-        "ClickFix (fake CAPTCHA) social engineering",
-        "Self-propagation via WA-JS (WhatsApp Web APIs)",
-        "Edge-to-Root gateway exploitation"
+        "eBPF-based rootkits for process hiding",
+        "AI-guided log wiping for internal sabotage",
+        "ClickFix social engineering using fake CAPTCHAs",
+        "Malware self-propagation via WhatsApp Web libraries"
       ],
       "fr": [
-        "IA agentique pour l'automatisation du SOC",
-        "Ingénierie sociale ClickFix (faux CAPTCHA)",
-        "Auto-propagation via WA-JS (APIs WhatsApp Web)",
-        "Exploitation de passerelles Edge-to-Root"
+        "Rootkits basés sur eBPF pour masquer les processus",
+        "Effacement de logs guidé par IA pour le sabotage interne",
+        "Ingénierie sociale ClickFix utilisant de faux CAPTCHAs",
+        "Auto-propagation de malwares via les bibliothèques WhatsApp Web"
       ]
     },
     "declining_techniques": {
       "en": [
-        "Standard SMS MFA",
-        "Simple mass-encryption without exfiltration"
+        "Traditional SMS MFA (increasingly bypassed by token theft)",
+        "Mass disk encryption (shift toward data exfiltration only)"
       ],
       "fr": [
-        "MFA par SMS standard",
-        "Chiffrement de masse simple sans exfiltration"
+        "MFA SMS traditionnelle (de plus en plus contournée par le vol de jetons)",
+        "Chiffrement de disque de masse (passage à l'exfiltration seule)"
       ]
     },
     "geopolitical_context": {
-      "en": "Hybrid warfare in Europe is escalating with physical infrastructure sabotage. Meanwhile, the US and Japan are navigating deep influence operations (sectarian influence, IA military integration).",
-      "fr": "La guerre hybride en Europe s'intensifie avec le sabotage d'infrastructures physiques. Parallèlement, les États-Unis et le Japon font face à des opérations d'influence profondes (sectes, intégration militaire de l'IA)."
+      "en": "Hybrid warfare in Europe is intensifying, moving from data theft to physical sabotage of utilities (water). Simultaneously, the US is integrating GenAI into classified military networks for decision superiority, while the EU pursues technological autonomy via HiPEAC and the AI Act.",
+      "fr": "La guerre hybride en Europe s'intensifie, passant du vol de données au sabotage physique des services publics (eau). Simultanément, les États-Unis intègrent l'IA générative dans les réseaux militaires classifiés."
     }
   },
   "recommendations": {
     "strategic": {
       "en": [
         {
-          "title": "Enforce FIDO2 Hardware MFA for Developer and Admin Accounts",
-          "detail": "Traditional SMS/TOTP MFA is being systematically bypassed by vishing and session theft tools (used by ShinyHunters and TCLBanker). Deploy FIDO2/WebAuthn hardware keys (YubiKey 5) to all accounts with access to cloud infrastructure and source code repositories (GitHub/GitLab). This mitigates the risk of session hijacking and credential theft observed in the Trellix and Zara breaches."
+          "title": "Enforce FIDO2 Hardware MFA for Developer Accounts",
+          "detail": "Traditional SMS/TOTP MFA is bypassed by EvilTokens Device Code phishing and token theft (used by ShinyHunters and TCLBanker this period). Deploy FIDO2/WebAuthn hardware keys (YubiKey 5, Google Titan) for all accounts with access to cloud infrastructure and CI/CD pipelines."
         },
         {
-          "title": "Establish Immutable Offline Backdrops for Critical Databases",
-          "detail": "The sabotage of 96 federal databases by insiders proves that high-level privileges can be turned against the organization. Implement immutable, air-gapped backups that require dual-authorization (four-eyes principle) for deletion. This ensures recovery even after a successful 'DB Wipe' or Ransomware-as-a-Service attack."
+          "title": "Implement Kernel Integrity Monitoring for Linux Fleet",
+          "detail": "Threats like QLNX and 'Dirty Frag' (CVE-2026-43284) bypass traditional detection. Use tools like 'bpftool' to monitor loaded eBPF programs and enforce signed kernel modules to prevent rootkits and unauthorized privilege escalation."
         }
       ],
       "fr": [
         {
-          "title": "Imposer le MFA matériel FIDO2 pour les développeurs et administrateurs",
-          "detail": "Le MFA traditionnel (SMS/TOTP) est systématiquement contourné par le vishing et le vol de session (utilisés par ShinyHunters et TCLBanker). Déployez des clés matérielles FIDO2/WebAuthn (YubiKey 5) pour tous les comptes ayant accès aux infrastructures cloud et aux dépôts de code (GitHub/GitLab). Cela atténue le risque de détournement de session observé lors des violations de Trellix et Zara."
+          "title": "Imposer la MFA matérielle FIDO2 pour les comptes développeurs",
+          "detail": "La MFA traditionnelle par SMS/TOTP est contournée par le phishing de jetons (utilisé par ShinyHunters et TCLBanker). Déployez des clés matérielles FIDO2/WebAuthn pour tous les comptes ayant accès aux infrastructures cloud et aux pipelines CI/CD."
         },
         {
-          "title": "Établir des sauvegardes immuables hors ligne pour les bases de données",
-          "detail": "Le sabotage de 96 bases de données fédérales par des insiders prouve que les privilèges élevés peuvent être retournés contre l'organisation. Implémentez des sauvegardes immuables et déconnectées nécessitant une double autorisation pour toute suppression. Cela garantit la récupération même après un 'DB Wipe' ou une attaque par Ransomware."
+          "title": "Mettre en œuvre la surveillance de l'intégrité du noyau Linux",
+          "detail": "Les menaces comme QLNX et 'Dirty Frag' (CVE-2026-43284) contournent la détection traditionnelle. Utilisez des outils comme 'bpftool' pour surveiller les programmes eBPF et imposez des modules noyau signés."
         }
       ]
     },
     "operational": {
       "en": [
         {
-          "title": "Patch Linux Kernels and Disable rxrpc/esp4 Modules",
-          "detail": "Immediately apply patches for CVE-2026-43284 (Dirty Frag). If patching is delayed, use 'modprobe -r esp4 esp6 rxrpc' to disable vulnerable modules. This prevents local privilege escalation to root on servers and container hosts currently targeted in the wild."
+          "title": "Audit and Baseline Linux PAM Modules Immediately",
+          "detail": "Actors like darkworm (PamDOORa) and QLNX are modifying /etc/pam.d/ and /lib/security/ to capture credentials. Use 'debsums' or 'rpm -V' to verify the integrity of authentication libraries and alert on any unauthorized modifications."
         },
         {
-          "title": "Block ADB Port 5555 and Scrutinize X-Forwarded-For Logs",
-          "detail": "The xlabs_v1 Mirai botnet is mass-scanning for ADB (TCP/5555). Disable ADB on all Android-based devices (TVs, tablets) and block the port at the firewall. Use Traefik/Cloudflare logs to identify and ban IPs generating excessive 404/403 errors, indicating active fuzzing for management panels."
+          "title": "Block ADB Port 5555 on Perimeter Firewalls",
+          "detail": "The xlabs_v1 Mirai variant is actively scanning for exposed Android Debug Bridge (ADB) ports to build a DDoS botnet. Restrict port TCP/5555 to internal management IPs only and disable ADB on all Android TV and IoT devices by default."
         }
       ],
       "fr": [
         {
-          "title": "Patcher les noyaux Linux et désactiver les modules rxrpc/esp4",
-          "detail": "Appliquez immédiatement les correctifs pour CVE-2026-43284 (Dirty Frag). Si le déploiement est retardé, utilisez 'modprobe -r esp4 esp6 rxrpc' pour désactiver les modules vulnérables. Cela empêche l'escalade de privilèges root sur les serveurs et hôtes de conteneurs actuellement ciblés."
+          "title": "Auditer immédiatement les modules PAM Linux",
+          "detail": "Des acteurs comme darkworm (PamDOORa) et QLNX modifient /etc/pam.d/ pour capturer des identifiants. Utilisez 'debsums' ou 'rpm -V' pour vérifier l'intégrité des bibliothèques d'authentification."
         },
         {
-          "title": "Bloquer le port ADB 5555 et surveiller les logs X-Forwarded-For",
-          "detail": "Le botnet Mirai xlabs_v1 scanne massivement le port ADB (TCP/5555). Désactivez ADB sur tous les appareils Android (TV, tablettes) et bloquez le port au pare-feu. Utilisez les logs Traefik/Cloudflare pour bannir les IPs générant des erreurs 404/403 excessives, signe de fuzzing actif."
+          "title": "Bloquer le port ADB 5555 sur les pare-feu périmétriques",
+          "detail": "La variante xlabs_v1 de Mirai scanne activement les ports ADB exposés. Restreignez le port TCP/5555 aux IPs de gestion internes et désactivez ADB sur tous les appareils IoT par défaut."
         }
       ]
     }
