@@ -1,0 +1,1863 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The cyber landscape of May 11, 2026, is dominated by a major authentication bypass in hosting control panels (cPanel) and a massive extortion campaign by ShinyHunters targeting the education sector via SaaS platforms like Canvas. State-sponsored activity remains high with North Korean agents infiltrating Western corporate HR processes. The abuse of legitimate AI platforms (Claude.ai) and software supply chains (JDownloader) highlights the ongoing evolution of initial access vectors, while law enforcement continues to disrupt darknet marketplaces in Europe.",
+      "fr": "Le paysage cyber du 11 mai 2026 est dominé par un bypass d'authentification majeur dans les panneaux de contrôle d'hébergement (cPanel) et une campagne d'extorsion massive de ShinyHunters ciblant le secteur de l'éducation via des plateformes SaaS comme Canvas. L'activité étatique reste élevée avec l'infiltration d'agents nord-coréens dans les processus RH des entreprises occidentales. L'abus de plateformes d'IA légitimes (Claude.ai) et des chaînes d'approvisionnement logicielles (JDownloader) souligne l'évolution continue des vecteurs d'accès initiaux, tandis que les forces de l'ordre continuent de démanteler les places de marché du darknet en Europe."
+    },
+    "date": "2026-05-11"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": [
+          "Security"
+        ],
+        "fr": [
+          "Sécurité"
+        ]
+      },
+      "theme": {
+        "en": "Darknet Marketplace Disruption",
+        "fr": "Démantèlement de place de marché Darknet"
+      },
+      "description": {
+        "en": "German police, in collaboration with international authorities, shut down the rebooted 'Crimenetwork' marketplace and arrested its administrator in Mallorca. The site had reappeared shortly after an initial takedown.",
+        "fr": "La police allemande, en collaboration avec les autorités internationales, a fermé le reboot de la place de marché 'Crimenetwork' et a arrêté son administrateur à Majorque. Le site était réapparu peu après un premier démantèlement."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor underground forums for the emergence of alternative German-speaking marketplaces.",
+          "fr": "Surveiller les forums clandestins pour l'émergence de places de marché alternatives de langue allemande."
+        },
+        {
+          "en": "Collaborate with international law enforcement for cross-border infrastructure tracking.",
+          "fr": "Collaborer avec les forces de l'ordre internationales pour le traçage des infrastructures transfrontalières."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Establish intelligence sharing with BKA and Europol.",
+            "Maintain a list of known darknet mirror sites."
+          ],
+          "fr": [
+            "Établir un partage de renseignements avec le BKA et Europol.",
+            "Maintenir une liste de sites miroirs connus du darknet."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Identify new domains using similar naming conventions to original markets.",
+            "Track DNS migrations of established criminal infrastructures."
+          ],
+          "fr": [
+            "Identifier les nouveaux domaines utilisant des conventions de nommage similaires aux marchés originaux.",
+            "Tracer les migrations DNS des infrastructures criminelles établies."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Coordinate domain seizures with registrars.",
+            "Implement IP blocking at the ISP level for known malicious nodes."
+          ],
+          "fr": [
+            "Coordonner les saisies de domaines avec les bureaux d'enregistrement.",
+            "Mettre en œuvre le blocage d'IP au niveau du FAI pour les nœuds malveillants connus."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Analyze seized server data for user identification.",
+            "Publish public warnings to deter potential new administrators."
+          ],
+          "fr": [
+            "Analyser les données des serveurs saisis pour l'identification des utilisateurs.",
+            "Publier des avertissements publics pour dissuader les administrateurs potentiels."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for PGP keys associated with the arrested admin on other forums.",
+            "Monitor cryptocurrency wallets used for market transactions."
+          ],
+          "fr": [
+            "Rechercher des clés PGP associées à l'administrateur arrêté sur d'autres forums.",
+            "Surveiller les portefeuilles de crypto-monnaies utilisés pour les transactions du marché."
+          ]
+        }
+      },
+      "tags": [
+        "takedown",
+        "crimenetwork",
+        "germany"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/police-shut-down-reboot-of-crimenetwork-marketplace-arrest-admin/"
+      ],
+      "date": "2026-05-10"
+    }
+  ],
+  "regulatory_and_legal": [
+    {
+      "title": {
+        "en": "Sentencing of Crimenetwork Administrator",
+        "fr": "Condamnation de l'administrateur de Crimenetwork"
+      },
+      "description": {
+        "en": "The original operator of Crimenetwork was sentenced to over seven years in prison, with €10 million in criminal proceeds seized.",
+        "fr": "L'opérateur original de Crimenetwork a été condamné à plus de sept ans de prison, avec la saisie de 10 millions d'euros de produits criminels."
+      },
+      "organisation": {
+        "en": [
+          "Frankfurt Public Prosecutor's Office"
+        ],
+        "fr": [
+          "Parquet de Francfort-sur-le-Main"
+        ]
+      },
+      "jurisdiction": {
+        "en": [
+          "Germany"
+        ],
+        "fr": [
+          "Allemagne"
+        ]
+      },
+      "references": {
+        "en": [
+          "BKA 2026 Rulings"
+        ],
+        "fr": [
+          "Décisions BKA 2026"
+        ]
+      },
+      "tags": [
+        "sentencing",
+        "legal",
+        "cybercrime"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/police-shut-down-reboot-of-crimenetwork-marketplace-arrest-admin/"
+      ],
+      "date": "2026-05-10"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Canvas (Instructure) / Australian Computer Society (ACS)",
+      "threat_actor": "ShinyHunters",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminel",
+      "threat_actor_aliases": [
+        "Shiny Hunters"
+      ],
+      "sector": {
+        "en": [
+          "Education_and_Research",
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Éducation et Recherche",
+          "Technologie et Télécom"
+        ]
+      },
+      "description": {
+        "en": "ShinyHunters launched a mass extortion campaign targeting 330 schools via Canvas portals and claimed a breach of the Australian Computer Society (ACS). Attackers defaced login pages and threatened data leaks.",
+        "fr": "ShinyHunters a lancé une campagne d'extorsion massive ciblant 330 écoles via les portails Canvas et a revendiqué une intrusion au sein de l'Australian Computer Society (ACS). Les attaquants ont défacé les pages de connexion et menacé de fuites de données."
+      },
+      "mitre_ttps": [
+        "T1567",
+        "T1659"
+      ],
+      "recommandations": [
+        {
+          "en": "Verify the integrity of all SaaS login scripts and portals.",
+          "fr": "Vérifier l'intégrité de tous les scripts et portails de connexion SaaS."
+        },
+        {
+          "en": "Implement strict MFA for all administrative accounts in learning management systems.",
+          "fr": "Mettre en œuvre un MFA strict pour tous les comptes administratifs dans les systèmes de gestion de l'apprentissage."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Audit third-party SaaS integrations.",
+            "Establish a rapid incident communication plan for students and staff."
+          ],
+          "fr": [
+            "Auditer les intégrations SaaS tierces.",
+            "Établir un plan de communication d'incident rapide pour les étudiants et le personnel."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for unauthorized HTML/JavaScript changes on login portals.",
+            "Track abnormal API usage from Instructure administrative accounts."
+          ],
+          "fr": [
+            "Surveiller les modifications HTML/JavaScript non autorisées sur les portails de connexion.",
+            "Tracer l'utilisation anormale des API à partir des comptes administratifs Instructure."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Reset SSO configurations and API keys.",
+            "Temporarily take down defaced portals to restore clean backups."
+          ],
+          "fr": [
+            "Réinitialiser les configurations SSO et les clés API.",
+            "Mettre temporairement hors ligne les portails défacés pour restaurer des sauvegardes propres."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Conduct a forensic audit to identify exfiltrated data records.",
+            "Rotate all corporate secrets and administrative passwords."
+          ],
+          "fr": [
+            "Mener un audit forensique pour identifier les enregistrements de données exfiltrés.",
+            "Effectuer une rotation de tous les secrets d'entreprise et mots de passe administratifs."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for unauthorized OAuth tokens created during the incident.",
+            "Look for evidence of data staging in cloud storage buckets."
+          ],
+          "fr": [
+            "Rechercher des jetons OAuth non autorisés créés pendant l'incident.",
+            "Rechercher des preuves de staging de données dans les buckets de stockage cloud."
+          ]
+        }
+      },
+      "tags": [
+        "extortion",
+        "shinyhunters",
+        "data_breach"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/canvas-login-portals-hacked-in-mass-shinyhunters-extortion-campaign/",
+        "https://www.cyberdaily.au/security/13572-exclusive-australian-computer-society-investigating-possible-breach-after-shinyhunters-hack-claims"
+      ],
+      "date": "2026-05-11"
+    },
+    {
+      "victim": "RXNT",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Healthcare_and_Life_Sciences"
+        ],
+        "fr": [
+          "Santé et Sciences de la vie"
+        ]
+      },
+      "description": {
+        "en": "Healthcare technology firm RXNT reported a data breach exposing Protected Health Information (PHI). Unauthorized access to systems led to the compromise of patient records.",
+        "fr": "La société de technologie de santé RXNT a signalé une violation de données exposant des informations de santé protégées (PHI). Un accès non autorisé aux systèmes a entraîné la compromission des dossiers des patients."
+      },
+      "mitre_ttps": [
+        "T1537"
+      ],
+      "recommandations": [
+        {
+          "en": "Encrypt all PHI data at rest and in transit.",
+          "fr": "Chiffrer toutes les données PHI au repos et en transit."
+        },
+        {
+          "en": "Review all third-party access logs for medical databases.",
+          "fr": "Examiner tous les journaux d'accès tiers pour les bases de données médicales."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Ensure HIPAA compliance documentation is up to date.",
+            "Implement database activity monitoring (DAM)."
+          ],
+          "fr": [
+            "S'assurer que la documentation de conformité HIPAA est à jour.",
+            "Mettre en œuvre la surveillance de l'activité des bases de données (DAM)."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Alert on large data exports from patient management modules.",
+            "Detect multiple failed logins from administrative interfaces."
+          ],
+          "fr": [
+            "Alerter sur les exports de données importants des modules de gestion des patients.",
+            "Détecter les échecs de connexion multiples à partir des interfaces administratives."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate the affected database servers.",
+            "Suspend compromised user accounts immediately."
+          ],
+          "fr": [
+            "Isoler les serveurs de bases de données affectés.",
+            "Suspendre immédiatement les comptes utilisateurs compromis."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Notify affected patients as per regulatory requirements.",
+            "Perform a full security gap analysis."
+          ],
+          "fr": [
+            "Notifier les patients affectés conformément aux exigences réglementaires.",
+            "Effectuer une analyse complète des lacunes de sécurité."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for backdoors in medical software updates.",
+            "Monitor darknet markets for the sale of PHI datasets."
+          ],
+          "fr": [
+            "Rechercher des backdoors dans les mises à jour de logiciels médicaux.",
+            "Surveiller les marchés du darknet pour la vente de jeux de données PHI."
+          ]
+        }
+      },
+      "tags": [
+        "healthcare",
+        "PHI",
+        "RXNT"
+      ],
+      "sources": [
+        "https://verisizintisi.com/en/blog/2026-05-11-rxnt-data-breach-exposes-patient-health-information"
+      ],
+      "date": "2026-05-11"
+    },
+    {
+      "victim": "JDownloader Official Site",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et Télécom"
+        ]
+      },
+      "description": {
+        "en": "A supply chain attack compromised the JDownloader official site, serving malicious installers to Windows and Linux users. The installers contained a Python-based RAT.",
+        "fr": "Une attaque de la chaîne d'approvisionnement a compromis le site officiel de JDownloader, servant des installateurs malveillants aux utilisateurs de Windows et Linux. Les installateurs contenaient un RAT basé sur Python."
+      },
+      "mitre_ttps": [
+        "T1195.002",
+        "T1105"
+      ],
+      "recommandations": [
+        {
+          "en": "Verify digital signatures of all software installers before execution.",
+          "fr": "Vérifier les signatures numériques de tous les installateurs de logiciels avant exécution."
+        },
+        {
+          "en": "Users who downloaded between May 6-7 should scan systems for malware.",
+          "fr": "Les utilisateurs ayant téléchargé entre le 6 et le 7 mai doivent analyser leurs systèmes pour détecter les malwares."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Implement code integrity checks for web downloads.",
+            "Use EDR tools to block unsigned binary execution."
+          ],
+          "fr": [
+            "Mettre en œuvre des contrôles d'intégrité du code pour les téléchargements Web.",
+            "Utiliser des outils EDR pour bloquer l'exécution de binaires non signés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect installers signed by 'Zipline LLC' instead of 'AppWork GmbH'.",
+            "Monitor for Python scripts making external network connections."
+          ],
+          "fr": [
+            "Détecter les installateurs signés par 'Zipline LLC' au lieu de 'AppWork GmbH'.",
+            "Surveiller les scripts Python effectuant des connexions réseau externes."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Block the C2 domain parkspringshotel[.]com.",
+            "Isolate infected endpoints from the corporate network."
+          ],
+          "fr": [
+            "Bloquer le domaine C2 parkspringshotel[.]com.",
+            "Isoler les terminaux infectés du réseau d'entreprise."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Rebuild systems infected by the malicious installer.",
+            "Audit the CMS security of the official download site."
+          ],
+          "fr": [
+            "Reconstruire les systèmes infectés par l'installateur malveillant.",
+            "Auditer la sécurité du CMS du site de téléchargement officiel."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for scheduled tasks related to Python execution.",
+            "Look for file creations in /tmp or AppData with suspicious names."
+          ],
+          "fr": [
+            "Rechercher des tâches planifiées liées à l'exécution de Python.",
+            "Rechercher des créations de fichiers dans /tmp ou AppData avec des noms suspects."
+          ]
+        }
+      },
+      "tags": [
+        "supply_chain",
+        "jdownloader",
+        "RAT"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191920/malware/official-jdownloader-site-served-malware-to-windows-and-linux-users.html"
+      ],
+      "date": "2026-05-10"
+    },
+    {
+      "victim": "Federal Deposit Insurance Corporation (FDIC) / Opexus",
+      "threat_actor": "North Korean IT Workers",
+      "threat_actor_origin": "North Korea",
+      "threat_actor_type": "State-sponsored",
+      "threat_actor_aliases": [
+        "Lazarus Group",
+        "Kimsuky"
+      ],
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement et Défense"
+        ]
+      },
+      "description": {
+        "en": "North Korean IT workers used stolen identities to infiltrate government contractors like Opexus, gaining access to sensitive agency systems. Two US men were sentenced for assisting the scheme.",
+        "fr": "Des travailleurs IT nord-coréens ont utilisé des identités volées pour infiltrer des sous-traitants gouvernementaux comme Opexus, accédant ainsi à des systèmes d'agences sensibles. Deux Américains ont été condamnés pour avoir aidé à ce stratagème."
+      },
+      "mitre_ttps": [
+        "T1566",
+        "T1078"
+      ],
+      "recommandations": [
+        {
+          "en": "Mandate physical ID verification and live video interviews for remote hires.",
+          "fr": "Imposer une vérification physique de l'identité et des entretiens vidéo en direct pour les embauches à distance."
+        },
+        {
+          "en": "Conduct deep background checks for contractors with privileged access.",
+          "fr": "Effectuer des vérifications d'antécédents approfondies pour les sous-traitants ayant un accès privilégié."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Train HR on state-sponsored social engineering tactics.",
+            "Implement geolocation-based VPN alerting for remote workers."
+          ],
+          "fr": [
+            "Former les RH aux tactiques d'ingénierie sociale parrainées par l'État.",
+            "Mettre en œuvre des alertes VPN basées sur la géolocalisation pour les travailleurs à distance."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Identify inconsistencies in employee documentation (e.g., social security numbers).",
+            "Monitor for laptop shipments to 'laptop farms' or residential mules."
+          ],
+          "fr": [
+            "Identifier les incohérences dans la documentation des employés (ex: numéros de sécurité sociale).",
+            "Surveiller les expéditions d'ordinateurs portables vers des 'fermes de portables' ou des mules résidentielles."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Revoke system access for any worker with unverified identity.",
+            "Block IP ranges associated with known North Korean mule networks."
+          ],
+          "fr": [
+            "Révoquer l'accès au système pour tout travailleur ayant une identité non vérifiée.",
+            "Bloquer les plages IP associées aux réseaux de mules nord-coréens connus."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Audit all code and database queries performed by the compromised worker.",
+            "Verify all financial transfers made to suspicious accounts."
+          ],
+          "fr": [
+            "Auditer tout le code et les requêtes de base de données effectués par le travailleur compromis.",
+            "Vérifier tous les transferts financiers effectués vers des comptes suspects."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for common North Korean malware (e.g., BeaverTail) on dev machines.",
+            "Scan for unauthorized remote access tools (AnyDesk, TeamViewer) used for proxies."
+          ],
+          "fr": [
+            "Rechercher des malwares nord-coréens courants (ex: BeaverTail) sur les machines de développement.",
+            "Rechercher des outils d'accès à distance non autorisés (AnyDesk, TeamViewer) utilisés pour les proxys."
+          ]
+        }
+      },
+      "tags": [
+        "insider_threat",
+        "north_korea",
+        "recruitment_fraud"
+      ],
+      "sources": [
+        "https://hackread.com/us-men-sentenced-north-korean-hackers-hack-us-firms/",
+        "https://databreaches.net/2026/05/10/a-government-contractor-hired-twin-brothers-who-were-convicted-felons-a-year-later-they-regretted-it/"
+      ],
+      "date": "2026-05-10"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-41940",
+      "euvd_id": "unknown",
+      "cisa_kev": "true",
+      "cvss": "9.3",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:cpanel:cpanel_whm:*:*:*:*:*:*:*:*",
+      "product": "cPanel & WHM",
+      "vendor": "cPanel",
+      "description": {
+        "en": "A critical authentication bypass vulnerability in cPanel & WHM allows remote attackers to gain full administrative control of hosting servers. Exploited by Mirai botnet.",
+        "fr": "Une vulnérabilité critique de contournement d'authentification dans cPanel & WHM permet à des attaquants distants d'obtenir un contrôle administratif complet des serveurs d'hébergement. Exploitée par le botnet Mirai."
+      },
+      "mitre_ttps": [
+        "T1556",
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Update cPanel & WHM to version 11.136.0.9, 11.134.0.25, or higher immediately.",
+          "fr": "Mettre à jour immédiatement cPanel & WHM vers la version 11.136.0.9, 11.134.0.25 ou supérieure."
+        },
+        {
+          "en": "Restrict WHM interface access to trusted IP ranges only.",
+          "fr": "Restreindre l'accès à l'interface WHM aux plages IP de confiance uniquement."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory all exposed cPanel/WHM instances.",
+            "Enable automated security updates for control panels."
+          ],
+          "fr": [
+            "Inventorier toutes les instances cPanel/WHM exposées.",
+            "Activer les mises à jour de sécurité automatisées pour les panneaux de contrôle."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Search logs for unusual successful logins without prior failures.",
+            "Use watchTowr detection artifact generator for signature matching."
+          ],
+          "fr": [
+            "Rechercher dans les journaux les connexions réussies inhabituelles sans échecs préalables.",
+            "Utiliser le générateur d'artefacts de détection watchTowr pour la correspondance de signatures."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Block IPs showing scanning patterns for port 2087.",
+            "Isolate compromised servers to prevent DDoS activity."
+          ],
+          "fr": [
+            "Bloquer les IP montrant des schémas de scan pour le port 2087.",
+            "Isoler les serveurs compromis pour empêcher l'activité DDoS."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Scan for Mirai-related files and backdoors.",
+            "Audit all hosted website files for malicious modifications."
+          ],
+          "fr": [
+            "Rechercher des fichiers liés à Mirai et des backdoors.",
+            "Auditer tous les fichiers des sites hébergés pour détecter des modifications malveillantes."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Query web server logs for specific bypass payload signatures.",
+            "Look for unauthorized new administrative accounts created."
+          ],
+          "fr": [
+            "Interroger les journaux du serveur Web pour des signatures de payload de bypass spécifiques.",
+            "Rechercher la création de nouveaux comptes administratifs non autorisés."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "cpanel",
+        "mirai",
+        "KEV"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191931/security/new-cpanel-vulnerabilities-could-allow-file-access-and-remote-code-execution.html"
+      ],
+      "date": "2026-05-10"
+    },
+    {
+      "cve_id": "CVE-2022-50944",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:aerocms:aerocms:*:*:*:*:*:*:*:*",
+      "product": "Aero CMS",
+      "vendor": "Aero CMS",
+      "description": {
+        "en": "Authenticated RCE in Aero CMS allows attackers to upload PHP webshells via the image parameter in posts.php.",
+        "fr": "RCE authentifiée dans Aero CMS permettant aux attaquants de télécharger des webshells PHP via le paramètre image dans posts.php."
+      },
+      "mitre_ttps": [
+        "T1505.003"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply the latest security patches for Aero CMS.",
+          "fr": "Appliquer les derniers correctifs de sécurité pour Aero CMS."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Harden PHP upload directories."
+          ],
+          "fr": [
+            "Sécuriser les répertoires de téléchargement PHP."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Scan for .php files in image directories."
+          ],
+          "fr": [
+            "Rechercher des fichiers .php dans les répertoires d'images."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Disable file upload functionality if not required."
+          ],
+          "fr": [
+            "Désactiver la fonctionnalité de téléchargement de fichiers si elle n'est pas requise."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Remove any discovered webshells."
+          ],
+          "fr": [
+            "Supprimer tous les webshells découverts."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Check server access logs for requests to suspicious PHP files."
+          ],
+          "fr": [
+            "Vérifier les logs d'accès serveur pour les requêtes vers des fichiers PHP suspects."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "CMS",
+        "RCE"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2022-50944"
+      ],
+      "date": "2026-05-10"
+    },
+    {
+      "cve_id": "CVE-2021-47949",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:cyberpanel:cyberpanel:*:*:*:*:*:*:*:*",
+      "product": "CyberPanel",
+      "vendor": "CyberPanel",
+      "description": {
+        "en": "Authenticated RCE in CyberPanel due to a symlink vulnerability in the filemanager controller.",
+        "fr": "RCE authentifiée dans CyberPanel en raison d'une vulnérabilité par lien symbolique dans le contrôleur filemanager."
+      },
+      "mitre_ttps": [
+        "T1059"
+      ],
+      "recommandations": [
+        {
+          "en": "Upgrade CyberPanel to version 2.2 or later.",
+          "fr": "Mettre à jour CyberPanel vers la version 2.2 ou ultérieure."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Audit file manager permissions."
+          ],
+          "fr": [
+            "Auditer les permissions du gestionnaire de fichiers."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for unauthorized symlink creation in web roots."
+          ],
+          "fr": [
+            "Surveiller la création de liens symboliques non autorisés dans les racines Web."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Restrict file manager access to admin IPs."
+          ],
+          "fr": [
+            "Restreindre l'accès au gestionnaire de fichiers aux IP d'administration."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Check for exfiltrated database configuration files."
+          ],
+          "fr": [
+            "Vérifier les fichiers de configuration de base de données exfiltrés."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Scan for abnormal file read operations via CyberPanel logs."
+          ],
+          "fr": [
+            "Rechercher des opérations de lecture de fichiers anormales via les logs CyberPanel."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "symlink",
+        "cyberpanel"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2021-47949"
+      ],
+      "date": "2026-05-10"
+    },
+    {
+      "cve_id": "CVE-2021-47945",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:argus:surveillance_dvr:*:*:*:*:*:*:*:*",
+      "product": "Argus Surveillance DVR",
+      "vendor": "Argus",
+      "description": {
+        "en": "Privilege escalation vulnerability in Argus Surveillance DVR due to an unquoted service path in DVRWatchdog.",
+        "fr": "Vulnérabilité d'escalade de privilèges dans Argus Surveillance DVR due à un chemin de service non cité dans DVRWatchdog."
+      },
+      "mitre_ttps": [
+        "T1574.009"
+      ],
+      "recommandations": [
+        {
+          "en": "Wrap the service path in quotes in the Windows registry.",
+          "fr": "Encadrer le chemin du service par des guillemets dans le registre Windows."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Scan for unquoted service paths using PowerShell scripts."
+          ],
+          "fr": [
+            "Rechercher les chemins de service non cités à l'aide de scripts PowerShell."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect program.exe execution from root directories."
+          ],
+          "fr": [
+            "Détecter l'exécution de program.exe à partir des répertoires racines."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Fix registry entries for affected services."
+          ],
+          "fr": [
+            "Corriger les entrées de registre pour les services affectés."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Audit for unauthorized persistent binaries."
+          ],
+          "fr": [
+            "Auditer les binaires persistants non autorisés."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for suspicious file names like 'program.exe' in service paths."
+          ],
+          "fr": [
+            "Rechercher des noms de fichiers suspects comme 'program.exe' dans les chemins de service."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "LPE",
+        "IoT"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2021-47945"
+      ],
+      "date": "2026-05-10"
+    },
+    {
+      "cve_id": "CVE-2021-47944",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:memono:memono:*:*:*:*:*:*:*:*",
+      "product": "memono Notepad",
+      "vendor": "memono",
+      "description": {
+        "en": "A buffer overflow in memono Notepad for iOS can be triggered by pasting extremely long text, leading to a crash.",
+        "fr": "Un buffer overflow dans memono Notepad pour iOS peut être déclenché en collant un texte extrêmement long, entraînant un crash."
+      },
+      "mitre_ttps": [
+        "T1499"
+      ],
+      "recommandations": [
+        {
+          "en": "Avoid pasting massive blocks of text into unverified applications.",
+          "fr": "Éviter de coller des blocs de texte massifs dans des applications non vérifiées."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Update iOS applications to the latest versions."
+          ],
+          "fr": [
+            "Mettre à jour les applications iOS vers les dernières versions."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Identify frequent application crashes."
+          ],
+          "fr": [
+            "Identifier les crashs d'application fréquents."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Uninstall affected software if unstable."
+          ],
+          "fr": [
+            "Désinstaller le logiciel affecté s'il est instable."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Recover lost data from iCloud backups."
+          ],
+          "fr": [
+            "Récupérer les données perdues à partir des sauvegardes iCloud."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "iOS",
+        "DoS"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2021-47944"
+      ],
+      "date": "2026-05-10"
+    },
+    {
+      "cve_id": "CVE-2021-47943",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:textpattern:textpattern:*:*:*:*:*:*:*:*",
+      "product": "TextPattern CMS",
+      "vendor": "TextPattern",
+      "description": {
+        "en": "TextPattern CMS allows remote authenticated users to execute arbitrary code via malicious PHP file uploads.",
+        "fr": "TextPattern CMS permet aux utilisateurs authentifiés à distance d'exécuter du code arbitraire via des téléchargements de fichiers PHP malveillants."
+      },
+      "mitre_ttps": [
+        "T1505.003"
+      ],
+      "recommandations": [
+        {
+          "en": "Harden CMS configuration to block PHP execution in upload folders.",
+          "fr": "Sécuriser la configuration du CMS pour bloquer l'exécution de PHP dans les dossiers de téléchargement."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Audit CMS users and roles regularly."
+          ],
+          "fr": [
+            "Auditer régulièrement les utilisateurs et les rôles du CMS."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for new files in /textpattern/files/."
+          ],
+          "fr": [
+            "Surveiller les nouveaux fichiers dans /textpattern/files/."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Suspend accounts uploading suspicious extensions."
+          ],
+          "fr": [
+            "Suspendre les comptes téléchargeant des extensions suspectes."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Clear malicious uploads and review account security."
+          ],
+          "fr": [
+            "Effacer les téléchargements malveillants et revoir la sécurité du compte."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Analyze web logs for direct access to uploaded files."
+          ],
+          "fr": [
+            "Analyser les logs Web pour l'accès direct aux fichiers téléchargés."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "CMS",
+        "RCE"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2021-47943"
+      ],
+      "date": "2026-05-10"
+    },
+    {
+      "cve_id": "CVE-2021-47941",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:survey_poll_project:survey_poll:*:*:*:*:*:*:wordpress:*",
+      "product": "WordPress Survey & Poll Plugin",
+      "vendor": "unknown",
+      "description": {
+        "en": "SQL injection vulnerability in the WordPress Survey & Poll plugin (v1.5.7.3) allows unauthenticated data extraction via the sss_params cookie.",
+        "fr": "Une vulnérabilité d'injection SQL dans le plugin WordPress Survey & Poll (v1.5.7.3) permet l'extraction de données non authentifiée via le cookie sss_params."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Update the plugin to the latest version or remove it.",
+          "fr": "Mettre à jour le plugin vers la dernière version ou le supprimer."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Implement a Web Application Firewall (WAF)."
+          ],
+          "fr": [
+            "Mettre en œuvre un pare-feu d'application Web (WAF)."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect SQL syntax in HTTP cookie headers."
+          ],
+          "fr": [
+            "Détecter la syntaxe SQL dans les en-têtes de cookies HTTP."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Block IP addresses sending malformed cookies."
+          ],
+          "fr": [
+            "Bloquer les adresses IP envoyant des cookies malformés."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Reset WordPress user passwords if SQLi occurred."
+          ],
+          "fr": [
+            "Réinitialiser les mots de passe des utilisateurs WordPress si une injection SQL a eu lieu."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for time-based SQL injection patterns in logs."
+          ],
+          "fr": [
+            "Rechercher des schémas d'injection SQL basés sur le temps dans les logs."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "SQLi",
+        "WordPress"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2021-47941"
+      ],
+      "date": "2026-05-10"
+    },
+    {
+      "cve_id": "CVE-2021-47940",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:download_from_files_project:download_from_files:*:*:*:*:*:*:wordpress:*",
+      "product": "WordPress Download From Files Plugin",
+      "vendor": "unknown",
+      "description": {
+        "en": "Bypass of file type restrictions in WP Download From Files allows remote shells via AJAX upload.",
+        "fr": "Contournement des restrictions de type de fichier dans WP Download From Files permettant des shells distants via un téléchargement AJAX."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Remove Download From Files version 1.48.",
+          "fr": "Supprimer Download From Files version 1.48."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory all WordPress plugins."
+          ],
+          "fr": [
+            "Inventorier tous les plugins WordPress."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Alert on AJAX file upload requests with PHP extensions."
+          ],
+          "fr": [
+            "Alerter sur les requêtes de téléchargement de fichiers AJAX avec des extensions PHP."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Disable the vulnerable AJAX action in functions.php."
+          ],
+          "fr": [
+            "Désactiver l'action AJAX vulnérable dans functions.php."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Clean up uploaded shells and check for persistence."
+          ],
+          "fr": [
+            "Nettoyer les shells téléchargés et vérifier la persistance."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Scan the entire wp-content/uploads directory for executable scripts."
+          ],
+          "fr": [
+            "Scanner tout le répertoire wp-content/uploads pour les scripts exécutables."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "WordPress",
+        "RCE"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2021-47940"
+      ],
+      "date": "2026-05-10"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "MacSync Malware Campaign via Claude.ai and Google Ads",
+        "fr": "Campagne de malware MacSync via Claude.ai et Google Ads"
+      },
+      "description": {
+        "en": "Attackers are abusing Google Ads to push polymorphic Mac malware via legitimate Claude.ai chat links. The malware, MacSync, targets Keychain and browser cookies.",
+        "fr": "Des attaquants abusent de Google Ads pour diffuser un malware Mac polymorphe via des liens de chat Claude.ai légitimes. Le malware, MacSync, cible le Keychain et les cookies du navigateur."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminel",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et Télécom"
+        ]
+      },
+      "indicators": {
+        "URL": [
+          "hxxps[:]//bernasibutuwqu2[.]com/debug/loader[.]sh?build=a39427f9d5bfda11277f1a58c89b7c2d"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "briskinternet[.]com",
+          "bernasibutuwqu2[.]com"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [
+          "b42a0ed9d1ecb72e42d6034502c304845d98805481d99cea4e259359f9ab206e"
+        ],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "osascript",
+          "curl"
+        ]
+      },
+      "mitre_ttps": [
+        "T1189",
+        "T1059.002",
+        "T1539"
+      ],
+      "analyse": {
+        "en": "The use of legitimate AI platform chat links as lures makes detection difficult for traditional filters. The malware specifically excludes CIS regions, suggesting a probable origin from those areas.",
+        "fr": "L'utilisation de liens de chat de plateformes d'IA légitimes comme leurres rend la détection difficile pour les filtres traditionnels. Le malware exclut spécifiquement les régions de la CEI, suggérant une origine probable de ces zones."
+      },
+      "recommandations": [
+        {
+          "en": "Educate users to verify URLs in Google Ads before clicking.",
+          "fr": "Éduquer les utilisateurs à vérifier les URL dans Google Ads avant de cliquer."
+        },
+        {
+          "en": "Deploy EDR solutions capable of monitoring osascript execution.",
+          "fr": "Déployer des solutions EDR capables de surveiller l'exécution d'osascript."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Block access to known CIS-blocked malware domains."
+          ],
+          "fr": [
+            "Bloquer l'accès aux domaines de malware connus bloqués en CEI."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for curl processes fetching scripts from unknown domains."
+          ],
+          "fr": [
+            "Surveiller les processus curl récupérant des scripts à partir de domaines inconnus."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate infected macOS devices from the network."
+          ],
+          "fr": [
+            "Isoler les appareils macOS infectés du réseau."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Reset all browser-stored passwords and session cookies."
+          ],
+          "fr": [
+            "Réinitialiser tous les mots de passe et cookies de session stockés dans le navigateur."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for signs of Keychain exfiltration in system logs."
+          ],
+          "fr": [
+            "Rechercher des signes d'exfiltration du Keychain dans les logs système."
+          ]
+        }
+      },
+      "tags": [
+        "infostealer",
+        "macOS",
+        "AI_lure"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/hackers-abuse-google-ads-claudeai-chats-to-push-mac-malware/"
+      ],
+      "date": "2026-05-10"
+    },
+    {
+      "title": {
+        "en": "AI Agent Tool Poisoning Threat",
+        "fr": "Menace d'empoisonnement d'outils d'agents d'IA"
+      },
+      "description": {
+        "en": "A study by Gravitee reveals that 88% of firms face security incidents with AI agents, primarily through 'tool poisoning' where agents are tricked into using malicious registry tools.",
+        "fr": "Une étude de Gravitee révèle que 88 % des entreprises font face à des incidents de sécurité avec les agents d'IA, principalement via l'empoisonnement d'outils ('tool poisoning') où les agents sont trompés pour utiliser des outils de registre malveillants."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et Télécom"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "AI Agents"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566"
+      ],
+      "analyse": {
+        "en": "AI agents lack the logic to verify tool authenticity, relying on registry descriptions which can be manipulated by attackers.",
+        "fr": "Les agents d'IA manquent de logique pour vérifier l'authenticité des outils, se fiant aux descriptions de registre qui peuvent être manipulées par des attaquants."
+      },
+      "recommandations": [
+        {
+          "en": "Implement runtime visibility and verification for AI agent tools.",
+          "fr": "Mettre en œuvre une visibilité au runtime et une vérification pour les outils d'agents d'IA."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory all AI agents and their toolsets."
+          ],
+          "fr": [
+            "Inventorier tous les agents d'IA et leurs ensembles d'outils."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor agent logs for calls to unauthorized external APIs."
+          ],
+          "fr": [
+            "Surveiller les logs d'agents pour les appels à des API externes non autorisées."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Disable compromised AI agents."
+          ],
+          "fr": [
+            "Désactiver les agents d'IA compromis."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Review and patch agent tool registry security."
+          ],
+          "fr": [
+            "Revoir et corriger la sécurité du registre des outils d'agents."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Scan registries for descriptions matching common attack patterns."
+          ],
+          "fr": [
+            "Scanner les registres pour les descriptions correspondant à des schémas d'attaque courants."
+          ]
+        }
+      },
+      "tags": [
+        "AI",
+        "tool_poisoning",
+        "emerging_threat"
+      ],
+      "sources": [
+        "https://mastodon.social/@AIntelligenceHub/116552821350820903"
+      ],
+      "date": "2026-05-10"
+    },
+    {
+      "title": {
+        "en": "YARA-X 1.16.0 Release",
+        "fr": "Sortie de YARA-X 1.16.0"
+      },
+      "description": {
+        "en": "A new version of YARA-X (Rust implementation) focuses on performance improvements and enhanced scanning capabilities.",
+        "fr": "Une nouvelle version de YARA-X (implémentation Rust) se concentre sur l'amélioration des performances et des capacités de scan."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Security"
+        ],
+        "fr": [
+          "Sécurité"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "blog[.]didierstevens[.]com"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "YARA-X"
+        ]
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "YARA-X continues to modernize malware detection engines with Rust's safety and speed.",
+        "fr": "YARA-X continue de moderniser les moteurs de détection de malwares avec la sécurité et la rapidité de Rust."
+      },
+      "recommandations": [
+        {
+          "en": "Update analysis tools to utilize the latest YARA-X engine.",
+          "fr": "Mettre à jour les outils d'analyse pour utiliser le dernier moteur YARA-X."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Integrate YARA-X into automated malware pipelines."
+          ],
+          "fr": [
+            "Intégrer YARA-X dans les pipelines de malwares automatisés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Develop new YARA rules based on recent 2026 malware samples."
+          ],
+          "fr": [
+            "Développer de nouvelles règles YARA basées sur les récents échantillons de malwares de 2026."
+          ]
+        }
+      },
+      "tags": [
+        "detection",
+        "yara-x",
+        "tool"
+      ],
+      "sources": [
+        "https://isc.sans.edu/diary/rss/32970"
+      ],
+      "date": "2026-05-10"
+    },
+    {
+      "title": {
+        "en": "Phishing Attacks Abusing Ionos and Cloudflare Pages",
+        "fr": "Attaques de Phishing abusant d'Ionos et Cloudflare Pages"
+      },
+      "description": {
+        "en": "Detection of phishing lures hosted on ultrafima[.]com (impersonating Ionos) and Cloudflare Pages (impersonating Amazon/Books).",
+        "fr": "Détection de leurres de phishing hébergés sur ultrafima[.]com (usurpant Ionos) et Cloudflare Pages (usurpant Amazon/Books)."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Retail_and_Consumer"
+        ],
+        "fr": [
+          "Commerce de détail et Consommation"
+        ]
+      },
+      "indicators": {
+        "URL": [
+          "hxxp[:]//ultrafima[.]com/ionos/b2286bd03c73e76f930941af9fcfc59d92a64fc4/index[.]html",
+          "hxxps[:]//dfgdh1[.]pages[.]dev/gp/new-releases/books/"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "ultrafima[.]com",
+          "dfgdh1[.]pages[.]dev"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1566"
+      ],
+      "analyse": {
+        "en": "Widespread abuse of reputable cloud services (Ionos, Cloudflare) allows phishing pages to bypass reputation-based web filters.",
+        "fr": "L'abus généralisé de services cloud réputés (Ionos, Cloudflare) permet aux pages de phishing de contourner les filtres Web basés sur la réputation."
+      },
+      "recommandations": [
+        {
+          "en": "Blacklist identified phishing domains at the firewall/proxy level.",
+          "fr": "Placer les domaines de phishing identifiés sur liste noire au niveau du pare-feu/proxy."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Enable DMARC/SPF/DKIM for corporate domains."
+          ],
+          "fr": [
+            "Activer DMARC/SPF/DKIM pour les domaines d'entreprise."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Scan mail logs for the identified phishing URLs."
+          ],
+          "fr": [
+            "Scanner les logs de messagerie pour les URL de phishing identifiées."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Submit takedown requests to Cloudflare and Ionos."
+          ],
+          "fr": [
+            "Soumettre des demandes de suppression (takedown) à Cloudflare et Ionos."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Enforce password resets for any user who clicked the links."
+          ],
+          "fr": [
+            "Imposer des réinitialisations de mot de passe pour tout utilisateur ayant cliqué sur les liens."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for web access patterns to pages.dev subdomains."
+          ],
+          "fr": [
+            "Rechercher des schémas d'accès Web aux sous-domaines pages.dev."
+          ]
+        }
+      },
+      "tags": [
+        "phishing",
+        "ionos",
+        "cloudflare"
+      ],
+      "sources": [
+        "https://infosec.exchange/@urldna/116553233771083827",
+        "https://infosec.exchange/@urldna/116553115823145712"
+      ],
+      "date": "2026-05-11"
+    },
+    {
+      "title": {
+        "en": "Claude in Chrome AI Hijacking Vulnerability",
+        "fr": "Vulnérabilité de Hijacking d'IA dans Claude in Chrome"
+      },
+      "description": {
+        "en": "A security flaw in the 'Claude in Chrome' extension allows attackers to hijack AI agents and exfiltrate data from user queries.",
+        "fr": "Une faille de sécurité dans l'extension 'Claude in Chrome' permet à des attaquants de détourner des agents d'IA et d'exfiltrer des données à partir des requêtes des utilisateurs."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et Télécom"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Claude in Chrome Extension"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566"
+      ],
+      "analyse": {
+        "en": "Third-party AI browser extensions often operate with excessive permissions, creating a high-risk surface for session hijacking.",
+        "fr": "Les extensions de navigateur d'IA tierces fonctionnent souvent avec des permissions excessives, créant une surface à haut risque pour le détournement de session."
+      },
+      "recommandations": [
+        {
+          "en": "Avoid third-party browser extensions for sensitive AI interactions.",
+          "fr": "Éviter les extensions de navigateur tierces pour les interactions d'IA sensibles."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Audit all browser extensions via MDM/GPO."
+          ],
+          "fr": [
+            "Auditer toutes les extensions de navigateur via MDM/GPO."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor extension network traffic for unknown API endpoints."
+          ],
+          "fr": [
+            "Surveiller le trafic réseau des extensions pour les points de terminaison d'API inconnus."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Block the extension's ID in Google Workspace or Chrome Enterprise."
+          ],
+          "fr": [
+            "Bloquer l'ID de l'extension dans Google Workspace ou Chrome Enterprise."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Notify users and clear browser local storage."
+          ],
+          "fr": [
+            "Notifier les utilisateurs et effacer le stockage local du navigateur."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "AI",
+        "chrome_extension",
+        "hijacking"
+      ],
+      "sources": [
+        "https://rocket-boys.co.jp/security-measures-lab/claude-in-chrome-vulnerability-ai-agent-hijacking/"
+      ],
+      "date": "2026-05-10"
+    },
+    {
+      "title": {
+        "en": "Forensics and Tooling Updates (KAPE, PH4NTXM, SBOM)",
+        "fr": "Mises à jour des outils de Forensics et SBOM (KAPE, PH4NTXM, SBOM)"
+      },
+      "description": {
+        "en": "Multiple updates for security tools: KAPE guide for cloud storage forensics, PH4NTXM OS documentation update, and SBOM transparency recommendations.",
+        "fr": "Plusieurs mises à jour d'outils de sécurité : guide KAPE pour la forensique du stockage cloud, mise à jour de la documentation de PH4NTXM OS, et recommandations sur la transparence du SBOM."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Security"
+        ],
+        "fr": [
+          "Sécurité"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "cyberengage[.]org",
+          "cvedatabase[.]com"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "KAPE",
+          "PH4NTXM",
+          "SBOM"
+        ]
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "Focus on improving DFIR capabilities and supply chain visibility.",
+        "fr": "Accent mis sur l'amélioration des capacités DFIR et de la visibilité de la chaîne d'approvisionnement."
+      },
+      "recommandations": [
+        {
+          "en": "Adopt SBOM standards to speed up CVE identification.",
+          "fr": "Adopter les standards SBOM pour accélérer l'identification des CVE."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Train DFIR teams on KAPE cloud artifacts."
+          ],
+          "fr": [
+            "Former les équipes DFIR sur les artefacts cloud KAPE."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "DFIR",
+        "SBOM",
+        "KAPE"
+      ],
+      "sources": [
+        "https://www.cyberengage.org/post/using-kape-to-collect-cloud-storage-artifacts",
+        "https://infosec.exchange/@PH4NTXMOFFICIAL/116552693727407428",
+        "https://techhub.social/@cvedatabase/116552643682553688"
+      ],
+      "date": "2026-05-10"
+    },
+    {
+      "title": {
+        "en": "Cybersecurity Weekly Roundups and Newsletters",
+        "fr": "Synthèses Hebdomadaires et Newsletters Cybersécurité"
+      },
+      "description": {
+        "en": "Compilation of the week's top breaches including Zara, Medtronic, and Citizens Bank, alongside technical newsletters focusing on IoT botnets and AI-driven DGA detection.",
+        "fr": "Compilation des principales violations de la semaine incluant Zara, Medtronic et Citizens Bank, ainsi que des newsletters techniques axées sur les botnets IoT et la détection DGA par IA."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Security"
+        ],
+        "fr": [
+          "Sécurité"
+        ]
+      },
+      "indicators": {
+        "URL": [
+          "https://youtu.be/Ui8wsSHr_2w"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "securityaffairs[.]com"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "Ongoing focus on large-scale data breaches and IoT exploitation (Mirai variants).",
+        "fr": "Focus continu sur les violations de données à grande échelle et l'exploitation de l'IoT (variantes de Mirai)."
+      },
+      "recommandations": [
+        {
+          "en": "Review recent breach lists for exposure of corporate or personal data.",
+          "fr": "Examiner les listes de violations récentes pour détecter l'exposition de données professionnelles ou personnelles."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Monitor CTI feeds for mention of company domains in data leaks."
+          ],
+          "fr": [
+            "Surveiller les flux CTI pour toute mention de domaines de l'entreprise dans les fuites de données."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "newsletter",
+        "summary",
+        "weekly_recap"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191911/malware/security-affairs-malware-newsletter-round-96.html",
+        "https://securityaffairs.com/191908/breaking-news/security-affairs-newsletter-round-576-by-pierluigi-paganini-international-edition.html",
+        "https://youtu.be/Ui8wsSHr_2w",
+        "https://soundcloud.com/nickaesp/b2026-05-10"
+      ],
+      "date": "2026-05-11"
+    }
+  ]
+}
