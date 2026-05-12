@@ -1,0 +1,1749 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The threat landscape in May 2026 is characterized by the industrialization of generative AI by state actors (China, Russia, North Korea) and cybercriminals. AI is no longer just a productivity tool for phishing but an autonomous engine for zero-day discovery and malware orchestration. Simultaneously, identity infrastructure (AD CS) and Linux kernel vulnerabilities (Dirty Frag) remain critical vectors. Geopolitically, competition for strategic resources in the Arctic and US 'cryptomercantilism' via the Genius Act are reshaping global dynamics.",
+      "fr": "L'écosystème de la menace en mai 2026 est marqué par l'industrialisation de l'IA générative par les acteurs étatiques (Chine, Russie, Corée du Nord) et cybercriminels. L'IA n'est plus seulement un outil de productivité pour le phishing, mais un moteur autonome pour la découverte de vulnérabilités zero-day et l'orchestration de malwares. Parallèlement, l'exploitation des infrastructures d'identité (AD CS) et les vulnérabilités noyau Linux (Dirty Frag) restent des vecteurs critiques. Sur le plan géopolitique, la compétition pour les ressources stratégiques en Arctique et le 'cryptomercantilisme' américain via le Genius Act redéfinissent les dynamiques mondiales."
+    },
+    "date": "2026-05-12"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense",
+          "Industry_and_Manufacturing"
+        ],
+        "fr": [
+          "Gouvernement et Défense",
+          "Industrie et Fabrication"
+        ]
+      },
+      "theme": {
+        "en": "Arctic Sovereignty and Critical Minerals",
+        "fr": "Souveraineté Arctique et Minéraux Critiques"
+      },
+      "description": {
+        "en": "The Arctic, specifically Greenland, has become a pivot for US security. Simultaneously, France and the EU are launching national plans to reduce 90% dependency on China for rare earth magnets essential for defense and green tech.",
+        "fr": "L'Arctique, et spécifiquement le Groenland, est devenu un pivot de la sécurité américaine. Parallèlement, la France et l'UE lancent des plans nationaux pour réduire la dépendance à 90% envers la Chine pour les aimants permanents indispensables à la défense et aux technologies vertes."
+      },
+      "recommandations": [
+        {
+          "en": "Diversify supply chains for rare earth minerals to include Brazil, Sweden, and South Africa.",
+          "fr": "Diversifier les chaînes d'approvisionnement en terres rares vers le Brésil, la Suède et l'Afrique du Sud."
+        },
+        {
+          "en": "Invest in local refining capabilities and monitor foreign investments in Arctic infrastructure.",
+          "fr": "Investir dans les capacités de raffinage locales et surveiller les investissements étrangers dans les infrastructures arctiques."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Establish a strategic resource monitoring unit.",
+            "Map critical dependencies on foreign minerals."
+          ],
+          "fr": [
+            "Établir une cellule de veille sur les ressources stratégiques.",
+            "Cartographier les dépendances critiques aux minéraux étrangers."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor geopolitical shifts and export restriction announcements.",
+            "Track foreign acquisition attempts of mining entities."
+          ],
+          "fr": [
+            "Surveiller les basculements géopolitiques et les annonces de restrictions d'exportation.",
+            "Suivre les tentatives d'acquisition étrangère d'entités minières."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Implement strategic stockpiling for critical components.",
+            "Activate bilateral trade agreements with allied mineral producers."
+          ],
+          "fr": [
+            "Mettre en œuvre des stocks stratégiques pour les composants critiques.",
+            "Activer des accords commerciaux bilatéraux avec des producteurs alliés."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Evaluate the resilience of the defense supply chain post-restriction.",
+            "Update national security investment screening protocols."
+          ],
+          "fr": [
+            "Évaluer la résilience de la chaîne d'approvisionnement de défense après restriction.",
+            "Mettre à jour les protocoles de filtrage des investissements de sécurité nationale."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Scan for economic espionage campaigns targeting geological survey data."
+          ],
+          "fr": [
+            "Rechercher des campagnes d'espionnage économique ciblant les données d'études géologiques."
+          ]
+        }
+      },
+      "tags": [
+        "Arctic",
+        "Rare_Earths",
+        "Geopolitics"
+      ],
+      "sources": [
+        "https://www.portail-ie.fr/univers/enjeux-de-puissances-et-geoeconomie/2026/choc-trump-groenland-arctique-mutation/",
+        "https://www.iris-france.org/plan-national-sur-les-terres-rares-la-france-et-lue-peuvent-elles-endiguer-leur-retard-face-a-la-chine/"
+      ],
+      "date": "2026-05-11"
+    },
+    {
+      "sector": {
+        "en": [
+          "Finance",
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Finance",
+          "Gouvernement et Défense"
+        ]
+      },
+      "theme": {
+        "en": "Monetary Hegemony and Cryptomercantilism",
+        "fr": "Hégémonie monétaire et cryptomercantilisme"
+      },
+      "description": {
+        "en": "The US administration is using the Genius Act to transform stablecoins into a pro-dollar infrastructure, countering BRICS de-dollarization efforts by mandating US Treasury reserves for private digital currencies.",
+        "fr": "L'administration américaine utilise le Genius Act pour transformer les stablecoins en infrastructure pro-dollar, contrant la dédollarisation des BRICS en imposant des réserves en bons du Trésor US pour les monnaies numériques privées."
+      },
+      "recommandations": [
+        {
+          "en": "Analyze the impact of stablecoin regulations on international liquidity.",
+          "fr": "Analyser l'impact des réglementations sur les stablecoins sur la liquidité internationale."
+        },
+        {
+          "en": "Monitor capital flows through private stablecoin networks for potential sanctions evasion.",
+          "fr": "Surveiller les flux de capitaux via les réseaux de stablecoins privés pour d'éventuels contournements de sanctions."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Assess financial exposure to US-regulated stablecoins.",
+            "Establish protocols for digital asset compliance."
+          ],
+          "fr": [
+            "Évaluer l'exposition financière aux stablecoins réglementés par les USA.",
+            "Établir des protocoles de conformité pour les actifs numériques."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Track sudden shifts in sovereign reserve compositions.",
+            "Monitor blockchain forensics for abnormal US Treasury-backed stablecoin minting."
+          ],
+          "fr": [
+            "Suivre les changements soudains dans la composition des réserves souveraines.",
+            "Surveiller les preuves blockchain de frappe anormale de stablecoins adossés au Trésor US."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Adjust foreign exchange reserve strategies to mitigate Genius Act impacts.",
+            "Liaise with central banks regarding cross-border payment disruptions."
+          ],
+          "fr": [
+            "Ajuster les stratégies de réserve de change pour atténuer les impacts du Genius Act.",
+            "Liaiser avec les banques centrales concernant les perturbations de paiements transfrontaliers."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Review global economic stability metrics post-Genius Act implementation.",
+            "Recalibrate monetary policy to reflect digital dollar dominance."
+          ],
+          "fr": [
+            "Examiner les indicateurs de stabilité économique mondiale après mise en œuvre du Genius Act.",
+            "Recalibrer la politique monétaire pour refléter la dominance du dollar numérique."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Identify state-sponsored attempts to compromise stablecoin reserve audit systems."
+          ],
+          "fr": [
+            "Identifier les tentatives étatiques de compromission des systèmes d'audit de réserve de stablecoins."
+          ]
+        }
+      },
+      "tags": [
+        "Finance",
+        "Genius_Act",
+        "De-dollarization"
+      ],
+      "sources": [
+        "https://www.epge.fr/la-bataille-des-monnaies-dans-la-guerre-economique/"
+      ],
+      "date": "2026-05-11"
+    }
+  ],
+  "regulatory_and_legal": [
+    {
+      "title": {
+        "en": "EU ePrivacy Derogation Expiration",
+        "fr": "Expiration de la dérogation ePrivacy de l'UE"
+      },
+      "description": {
+        "en": "The failure of negotiations to extend the ePrivacy derogation ends the legal basis for mass scanning of private messages for CSAM by tech companies.",
+        "fr": "L'échec des négociations pour prolonger la dérogation ePrivacy met fin à la base légale du scan de masse des messages privés pour le CSAM par les entreprises tech."
+      },
+      "organisation": {
+        "en": [
+          "European Parliament"
+        ],
+        "fr": [
+          "Parlement Européen"
+        ]
+      },
+      "jurisdiction": {
+        "en": [
+          "European Union"
+        ],
+        "fr": [
+          "Union Européenne"
+        ]
+      },
+      "references": {
+        "en": [
+          "Regulation (EU) 2021/1232"
+        ],
+        "fr": [
+          "Règlement (UE) 2021/1232"
+        ]
+      },
+      "tags": [
+        "Privacy",
+        "ePrivacy",
+        "CSAM"
+      ],
+      "sources": [
+        "https://edri.org/our-work/did-the-eu-parliament-really-vote-not-to-protect-children-online/"
+      ],
+      "date": "2026-05-11"
+    },
+    {
+      "title": {
+        "en": "US Take It Down Act Implementation",
+        "fr": "Mise en œuvre du Take It Down Act US"
+      },
+      "description": {
+        "en": "Instagram has removed end-to-end encryption (E2EE) to comply with the Take It Down Act, which requires rapid removal of intimate deepfakes.",
+        "fr": "Instagram a supprimé le chiffrement de bout en bout (E2EE) pour se conformer au Take It Down Act, qui exige le retrait rapide des deepfakes intimes."
+      },
+      "organisation": {
+        "en": [
+          "Meta",
+          "US Government"
+        ],
+        "fr": [
+          "Meta",
+          "Gouvernement US"
+        ]
+      },
+      "jurisdiction": {
+        "en": [
+          "USA",
+          "Global"
+        ],
+        "fr": [
+          "USA",
+          "Global"
+        ]
+      },
+      "references": {
+        "en": [
+          "Take It Down Act 2025"
+        ],
+        "fr": [
+          "Take It Down Act 2025"
+        ]
+      },
+      "tags": [
+        "Deepfakes",
+        "Encryption",
+        "Social_Media"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191941/security/instagram-removed-end-to-end-encryption-for-dms-what-should-users-do.html"
+      ],
+      "date": "2026-05-11"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "South Staffordshire Water",
+      "threat_actor": "Cl0p Ransomware",
+      "threat_actor_origin": "Russia",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [
+        "TA505",
+        "FIN11"
+      ],
+      "sector": {
+        "en": [
+          "Critical_Infrastructure"
+        ],
+        "fr": [
+          "Infrastructures critiques"
+        ]
+      },
+      "description": {
+        "en": "A massive data breach affecting 634,000 customers due to outdated servers (Windows Server 2003) and lack of MFA. Cl0p exfiltrated 4.1 TB of data and remained in the network for 20 months.",
+        "fr": "Une fuite de données massive touchant 634 000 clients due à des serveurs obsolètes (Windows Server 2003) et à l'absence de MFA. Cl0p a exfiltré 4,1 To de données et est resté 20 mois dans le réseau."
+      },
+      "mitre_ttps": [
+        "T1566.001",
+        "T1190",
+        "T1078",
+        "T1486"
+      ],
+      "recommandations": [
+        {
+          "en": "Decommission all legacy Operating Systems (Windows 2003/2008).",
+          "fr": "Désinstaller tous les systèmes d'exploitation obsolètes (Windows 2003/2008)."
+        },
+        {
+          "en": "Implement mandatory Multi-Factor Authentication (MFA) across all corporate and administrative accounts.",
+          "fr": "Implémenter l'authentification multi-facteurs (MFA) obligatoire sur tous les comptes d'entreprise et d'administration."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory all legacy systems and plan migration.",
+            "Deploy EDR across the entire infrastructure."
+          ],
+          "fr": [
+            "Inventorier tous les systèmes obsolètes et planifier la migration.",
+            "Déployer un EDR sur l'ensemble de l'infrastructure."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for ZeroLogon (CVE-2020-1472) exploitation attempts.",
+            "Alert on large data exfiltration to known cloud storage providers."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'exploitation de ZeroLogon (CVE-2020-1472).",
+            "Alerter sur les exfiltrations massives de données vers des hébergeurs cloud connus."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate compromised legacy servers from the main network.",
+            "Force global password resets and revoke all active sessions."
+          ],
+          "fr": [
+            "Isoler les serveurs obsolètes compromis du réseau principal.",
+            "Forcer la réinitialisation globale des mots de passe et révoquer les sessions actives."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Conduct full forensic analysis of the 20-month dwell time.",
+            "Notify data protection authorities (ICO) and affected customers."
+          ],
+          "fr": [
+            "Mener une analyse forensique complète sur les 20 mois de présence.",
+            "Notifier les autorités de protection des données (ICO) et les clients concernés."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for SDBbot payloads in email archives and temporary folders."
+          ],
+          "fr": [
+            "Rechercher des payloads SDBbot dans les archives email et les dossiers temporaires."
+          ]
+        }
+      },
+      "tags": [
+        "Ransomware",
+        "UK",
+        "Water_Utility",
+        "Legacy_Systems"
+      ],
+      "sources": [
+        "https://www.security.nl/posting/936140/Brits+drinkwaterbedrijf+krijgt+1%2C1+miljoen+euro+boete+wegens+groot+datalek"
+      ],
+      "date": "2026-05-11"
+    },
+    {
+      "victim": "SailPoint",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom",
+          "Security"
+        ],
+        "fr": [
+          "Technologie et Télécoms",
+          "Sécurité"
+        ]
+      },
+      "description": {
+        "en": "Identity security firm SailPoint disclosed a breach of its GitHub repositories via an unauthorized access through a third-party application.",
+        "fr": "La firme de sécurité de l'identité SailPoint a révélé une compromission de ses dépôts GitHub via un accès non autorisé à travers une application tierce."
+      },
+      "mitre_ttps": [
+        "T1190",
+        "T1550"
+      ],
+      "recommandations": [
+        {
+          "en": "Audit all third-party integrations with GitHub and other code repositories.",
+          "fr": "Auditer toutes les intégrations tierces avec GitHub et les autres dépôts de code."
+        },
+        {
+          "en": "Rotate all secrets, tokens, and API keys stored or used within the affected repositories.",
+          "fr": "Effectuer une rotation de tous les secrets, tokens et clés API stockés ou utilisés dans les dépôts affectés."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Implement GitHub secret scanning.",
+            "Restrict third-party app permissions to 'least privilege'."
+          ],
+          "fr": [
+            "Implémenter le scan de secrets GitHub.",
+            "Restreindre les permissions des applications tierces au 'moindre privilège'."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Review GitHub audit logs for unusual repository clones or access.",
+            "Monitor for credential leaks on the dark web."
+          ],
+          "fr": [
+            "Revoir les logs d'audit GitHub pour des clones ou accès inhabituels.",
+            "Surveiller les fuites d'identifiants sur le dark web."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Revoke the third-party application's OAuth tokens immediately.",
+            "Temporarily lock affected repositories."
+          ],
+          "fr": [
+            "Révoquer immédiatement les tokens OAuth de l'application tierce.",
+            "Verrouiller temporairement les dépôts affectés."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Scan source code for maliciously injected backdoors.",
+            "Strengthen third-party risk management (TPRM) processes."
+          ],
+          "fr": [
+            "Scanner le code source pour détecter des backdoors injectées.",
+            "Renforcer les processus de gestion des risques tiers (TPRM)."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Identify similar third-party integrations across the development pipeline."
+          ],
+          "fr": [
+            "Identifier les intégrations tierces similaires dans le pipeline de développement."
+          ]
+        }
+      },
+      "tags": [
+        "GitHub",
+        "Supply_Chain",
+        "Source_Code"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191997/data-breach/identity-security-firm-sailpoint-discloses-github-repository-breach.html"
+      ],
+      "date": "2026-04-20"
+    },
+    {
+      "victim": "Elections Alberta",
+      "threat_actor": "Separatist Group",
+      "threat_actor_origin": "Canada",
+      "threat_actor_type": "Hacktiviste / État",
+      "threat_actor_aliases": [
+        "unknown"
+      ],
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement et Défense"
+        ]
+      },
+      "description": {
+        "en": "A separatist group leaked personal data belonging to 2.9 million voters in Alberta. The RCMP is currently investigating the incident.",
+        "fr": "Un groupe séparatiste a fait fuiter les données personnelles de 2,9 millions d'électeurs en Alberta. La GRC enquête actuellement sur l'incident."
+      },
+      "mitre_ttps": [
+        "unknown"
+      ],
+      "recommandations": [
+        {
+          "en": "Harden voter database security and implement rigorous access controls.",
+          "fr": "Renforcer la sécurité des bases de données électorales et implémenter des contrôles d'accès rigoureux."
+        },
+        {
+          "en": "Establish a victim support program for identity theft protection.",
+          "fr": "Établir un programme de soutien aux victimes pour la protection contre le vol d'identité."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Encrypt sensitive voter data at rest.",
+            "Conduct regular database security audits."
+          ],
+          "fr": [
+            "Chiffrer les données électorales sensibles au repos.",
+            "Mener des audits de sécurité réguliers des bases de données."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor public leak sites and Pastebin for voter records.",
+            "Monitor database query logs for unauthorized mass exports."
+          ],
+          "fr": [
+            "Surveiller les sites de fuite publics et Pastebin pour des fichiers d'électeurs.",
+            "Surveiller les logs de requêtes SQL pour des exports massifs non autorisés."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Secure the leak source and disable compromised administrative accounts.",
+            "Coordinate with legal teams for takedown requests on public mirrors."
+          ],
+          "fr": [
+            "Sécuriser la source de la fuite et désactiver les comptes administrateurs compromis.",
+            "Coordonner avec les équipes juridiques les demandes de retrait sur les miroirs publics."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Provide transparent communication to the 2.9M affected individuals.",
+            "Implement enhanced monitoring for electoral fraud."
+          ],
+          "fr": [
+            "Assurer une communication transparente vers les 2,9M de personnes touchées.",
+            "Mettre en place une surveillance renforcée contre la fraude électorale."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for indicators of insider threat or misconfigured database endpoints."
+          ],
+          "fr": [
+            "Rechercher des indicateurs de menace interne ou de serveurs de bases de données mal configurés."
+          ]
+        }
+      },
+      "tags": [
+        "Voter_Data",
+        "Alberta",
+        "Hacktivism"
+      ],
+      "sources": [
+        "https://mastodon.hongkongers.net/@cbccanada_mirror/116557940399829925"
+      ],
+      "date": "2026-05-11"
+    },
+    {
+      "victim": "rbh aerospace inc",
+      "threat_actor": "INC Ransom",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Industry_and_Manufacturing"
+        ],
+        "fr": [
+          "Industrie et Fabrication"
+        ]
+      },
+      "description": {
+        "en": "RBH Aerospace has been listed on the INC Ransom leak site, indicating a successful ransomware attack and potential exfiltration of sensitive design data.",
+        "fr": "RBH Aerospace a été listée sur le site de fuite d'INC Ransom, indiquant une attaque réussie par ransomware et l'exfiltration potentielle de données de conception sensibles."
+      },
+      "mitre_ttps": [
+        "T1486",
+        "T1048"
+      ],
+      "recommandations": [
+        {
+          "en": "Aerospace partners should verify the integrity of all communications from RBH Aerospace.",
+          "fr": "Les partenaires de l'aérospatiale doivent vérifier l'intégrité de toutes les communications provenant de RBH Aerospace."
+        },
+        {
+          "en": "Implement network segmentation between R&D environments and general corporate IT.",
+          "fr": "Implémenter une segmentation réseau entre les environnements R&D et l'informatique générale."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Establish offline backup protocols for intellectual property.",
+            "Conduct ransomware simulation exercises."
+          ],
+          "fr": [
+            "Établir des protocoles de sauvegarde hors-ligne pour la propriété intellectuelle.",
+            "Mener des exercices de simulation de ransomware."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for INC Ransom indicators (e.g., specific file extensions, ransom notes).",
+            "Detect unusual internal traffic patterns to R&D file shares."
+          ],
+          "fr": [
+            "Surveiller les indicateurs d'INC Ransom (ex: extensions de fichiers, notes).",
+            "Détecter des schémas de trafic interne inhabituels vers les partages de fichiers R&D."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Shutdown affected VMs and isolate the storage area network (SAN).",
+            "Block C2 domains associated with INC Ransom."
+          ],
+          "fr": [
+            "Éteindre les VM affectées et isoler le réseau de stockage (SAN).",
+            "Bloquer les domaines C2 associés à INC Ransom."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Restore from clean backups and verify data integrity.",
+            "Engage in supply chain risk assessment for aerospace clients."
+          ],
+          "fr": [
+            "Restaurer à partir de sauvegardes saines et vérifier l'intégrité des données.",
+            "Engager une évaluation des risques de la supply chain pour les clients aérospatiaux."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for unauthorized RDP or VPN access prior to the encryption event."
+          ],
+          "fr": [
+            "Rechercher des accès RDP ou VPN non autorisés avant l'événement de chiffrement."
+          ]
+        }
+      },
+      "tags": [
+        "Aerospace",
+        "Ransomware",
+        "INC_Ransom"
+      ],
+      "sources": [
+        "https://www.ransomlook.io//group/inc%20ransom"
+      ],
+      "date": "2026-05-11"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-43500",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "7.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+      "product": "Linux Kernel",
+      "vendor": "Linux",
+      "description": {
+        "en": "Part of the 'Dirty Frag' chain affecting the RxRPC subsystem. Allows a local user to overwrite page cache data (like /etc/passwd) without disk modifications, leading to privilege escalation.",
+        "fr": "Fait partie de la chaîne 'Dirty Frag' affectant le sous-système RxRPC. Permet à un utilisateur local d'écraser les données du cache de pages (comme /etc/passwd) sans modification disque, entraînant une élévation de privilèges."
+      },
+      "mitre_ttps": [
+        "T1068"
+      ],
+      "recommandations": [
+        {
+          "en": "Disable the rxrpc kernel module if not required (modprobe -r rxrpc).",
+          "fr": "Désactiver le module noyau rxrpc s'il n'est pas nécessaire (modprobe -r rxrpc)."
+        },
+        {
+          "en": "Apply the latest kernel patches from your distribution provider.",
+          "fr": "Appliquer les derniers correctifs noyau de votre fournisseur de distribution."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory Linux assets and their kernel versions.",
+            "Configure centralized logging for 'su' and 'sudo' commands."
+          ],
+          "fr": [
+            "Inventorier les actifs Linux et leurs versions de noyau.",
+            "Configurer la journalisation centralisée pour les commandes 'su' et 'sudo'."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for unusual memory access patterns related to page cache.",
+            "Detect execution of known Dirty Frag exploit scripts."
+          ],
+          "fr": [
+            "Surveiller les schémas d'accès mémoire inhabituels liés au cache de pages.",
+            "Détecter l'exécution de scripts d'exploitation Dirty Frag connus."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Restrict local shell access for non-privileged users on critical servers.",
+            "Deploy runtime protection to block unauthorized page cache writes."
+          ],
+          "fr": [
+            "Restreindre l'accès au shell local pour les utilisateurs non privilégiés.",
+            "Déployer une protection au runtime pour bloquer les écritures non autorisées du cache."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify file integrity of critical system files (/etc/passwd, /etc/shadow).",
+            "Perform a full reboot after patching to clear memory cache."
+          ],
+          "fr": [
+            "Vérifier l'intégrité des fichiers système critiques (/etc/passwd, /etc/shadow).",
+            "Effectuer un redémarrage complet après correction pour vider le cache mémoire."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for anomalies in kernel module loading logs."
+          ],
+          "fr": [
+            "Rechercher des anomalies dans les logs de chargement de modules noyau."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "Linux",
+        "Dirty_Frag",
+        "LPE"
+      ],
+      "sources": [
+        "https://arstechnica.com/security/2026/05/linux-bitten-by-second-severe-vulnerability-in-as-many-weeks/",
+        "https://socprime.com/blog/cve-2026-43500-and-cve-2026-43284-analysis/"
+      ],
+      "date": "2026-05-12"
+    },
+    {
+      "cve_id": "CVE-2026-43284",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "7.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+      "product": "Linux Kernel",
+      "vendor": "Linux",
+      "description": {
+        "en": "A companion vulnerability in the 'Dirty Frag' chain allowing local privilege escalation via kernel memory corruption.",
+        "fr": "Une vulnérabilité compagnon dans la chaîne 'Dirty Frag' permettant l'escalade de privilèges locaux via la corruption de la mémoire noyau."
+      },
+      "mitre_ttps": [
+        "T1068"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply urgent kernel updates on all x86 and ARM64 Linux systems.",
+          "fr": "Appliquer d'urgence les mises à jour noyau sur tous les systèmes Linux x86 et ARM64."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain a ready-to-deploy patch management workflow."
+          ],
+          "fr": [
+            "Maintenir un flux de gestion des correctifs prêt à l'emploi."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Scan for Dirty Frag exploitation artifacts in /tmp."
+          ],
+          "fr": [
+            "Rechercher des artefacts d'exploitation Dirty Frag dans /tmp."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate non-updated systems from sensitive data zones."
+          ],
+          "fr": [
+            "Isoler les systèmes non mis à jour des zones de données sensibles."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Audit all local account changes during the window of vulnerability."
+          ],
+          "fr": [
+            "Auditer les changements de comptes locaux pendant la période de vulnérabilité."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Analyze system logs for crashes in the RxRPC subsystem."
+          ],
+          "fr": [
+            "Analyser les logs système pour des plantages du sous-système RxRPC."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "Linux",
+        "LPE"
+      ],
+      "sources": [
+        "https://socprime.com/blog/cve-2026-43500-and-cve-2026-43284-analysis/"
+      ],
+      "date": "2026-05-12"
+    },
+    {
+      "cve_id": "CVE-2026-42208",
+      "euvd_id": "unknown",
+      "cisa_kev": "TRUE",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:berriai:litellm:*:*:*:*:*:*:*:*",
+      "product": "LiteLLM",
+      "vendor": "BerriAI",
+      "description": {
+        "en": "SQL Injection in LiteLLM API key verification allows attackers to extract virtual API keys and AI provider credentials from the proxy infrastructure.",
+        "fr": "Une injection SQL dans la vérification des clés API de LiteLLM permet aux attaquants d'extraire des clés API virtuelles et des identifiants de fournisseurs d'IA de l'infrastructure proxy."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Immediately update LiteLLM to version 1.83.7 or higher.",
+          "fr": "Mettre à jour immédiatement LiteLLM vers la version 1.83.7 ou supérieure."
+        },
+        {
+          "en": "Rotate all AI provider API keys (OpenAI, Anthropic, etc.) integrated through the proxy.",
+          "fr": "Effectuer une rotation de toutes les clés API de fournisseurs (OpenAI, Anthropic, etc.) intégrées via le proxy."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain an inventory of all AI gateway/proxy deployments.",
+            "Implement database query monitoring for AI middleware."
+          ],
+          "fr": [
+            "Maintenir un inventaire de tous les déploiements de passerelles/proxy IA.",
+            "Implémenter une surveillance des requêtes SQL pour le middleware IA."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect SQL syntax patterns in Authorization headers.",
+            "Monitor AI provider usage for unusual spikes or unauthorized access."
+          ],
+          "fr": [
+            "Détecter des schémas de syntaxe SQL dans les en-têtes d'autorisation.",
+            "Surveiller l'usage des fournisseurs d'IA pour des pics inhabituels."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Shut down the LiteLLM proxy service until patched.",
+            "Revoke all exposed virtual API keys."
+          ],
+          "fr": [
+            "Arrêter le service proxy LiteLLM jusqu'à application du correctif.",
+            "Révoquer toutes les clés API virtuelles exposées."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Audit LLM provider logs for unauthorized completions or data extraction.",
+            "Verify the integrity of the LiteLLM internal database."
+          ],
+          "fr": [
+            "Auditer les logs des fournisseurs de LLM pour des complétions non autorisées.",
+            "Vérifier l'intégrité de la base de données interne de LiteLLM."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for SQLi attempts in web application firewall (WAF) logs targeting AI proxies."
+          ],
+          "fr": [
+            "Rechercher des tentatives de SQLi dans les logs WAF ciblant les proxys IA."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "AI_Security",
+        "LiteLLM",
+        "SQLi"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191964/security/u-s-cisa-adds-a-flaw-in-berriai-litellm-to-its-known-exploited-vulnerabilities-catalog.html"
+      ],
+      "date": "2026-05-12"
+    },
+    {
+      "cve_id": "CVE-2026-41940",
+      "euvd_id": "unknown",
+      "cisa_kev": "TRUE",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:cpanel:cpanel:*:*:*:*:*:*:*:*",
+      "product": "cPanel",
+      "vendor": "cPanel",
+      "description": {
+        "en": "Authentication bypass in cPanel/WHM used to implant backdoors, steal SSH keys, and deploy cryptominers. Over 2000 attacking IPs detected.",
+        "fr": "Contournement d'authentification dans cPanel/WHM utilisé pour implanter des backdoors, voler des clés SSH et déployer des mineurs. Plus de 2000 IPs attaquantes détectées."
+      },
+      "mitre_ttps": [
+        "T1505.003",
+        "T1552.004"
+      ],
+      "recommandations": [
+        {
+          "en": "Update cPanel immediately to the latest patched version.",
+          "fr": "Mettre à jour cPanel immédiatement vers la dernière version corrigée."
+        },
+        {
+          "en": "Check for the existence of suspicious files like 'helper.php' and unknown SSH keys.",
+          "fr": "Vérifier l'existence de fichiers suspects comme 'helper.php' et de clés SSH inconnues."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Enforce MFA for all WHM and cPanel logins.",
+            "Limit access to WHM ports (2087/2083) to trusted IPs."
+          ],
+          "fr": [
+            "Forcer le MFA pour toutes les connexions WHM et cPanel.",
+            "Limiter l'accès aux ports WHM (2087/2083) aux IPs de confiance."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for network connections to wpsock.com or wrned.com.",
+            "Scan for unauthorized scripts in cPanel public_html directories."
+          ],
+          "fr": [
+            "Surveiller les connexions vers wpsock.com ou wrned.com.",
+            "Rechercher des scripts non autorisés dans les dossiers public_html."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Block identified attacking IPs at the firewall level.",
+            "Isolate compromised hosting accounts."
+          ],
+          "fr": [
+            "Bloquer les IPs attaquantes au niveau du pare-feu.",
+            "Isoler les comptes d'hébergement compromis."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Clean all bash histories and rotate system credentials.",
+            "Consider a full server re-image if deep persistence is found."
+          ],
+          "fr": [
+            "Nettoyer les historiques bash et effectuer une rotation des identifiants.",
+            "Envisager une réinstallation complète si une persistance profonde est détectée."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for indicators of cross-platform malware deployment on hosting nodes."
+          ],
+          "fr": [
+            "Rechercher des indicateurs de déploiement de malwares cross-platform sur les serveurs."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "cPanel",
+        "Authentication_Bypass"
+      ],
+      "sources": [
+        "https://thehackernews.com/2026/05/cpanel-cve-2026-41940-under-active.html"
+      ],
+      "date": "2026-05-12"
+    },
+    {
+      "cve_id": "unknown",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:o:apple:iphone_os:*:*:*:*:*:*:*:*",
+      "product": "iOS, macOS, tvOS, watchOS, visionOS",
+      "vendor": "Apple",
+      "description": {
+        "en": "Massive security update from Apple addressing 84 vulnerabilities across multiple operating systems, including kernel and system component flaws.",
+        "fr": "Mise à jour de sécurité massive d'Apple corrigeant 84 vulnérabilités sur plusieurs systèmes d'exploitation, incluant des failles du noyau et des composants système."
+      },
+      "mitre_ttps": [
+        "unknown"
+      ],
+      "recommandations": [
+        {
+          "en": "Deploy Apple updates (iOS 18/19, macOS 14/15/16) within 72 hours.",
+          "fr": "Déployer les mises à jour Apple (iOS 18/19, macOS 14/15/16) sous 72 heures."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory all Apple devices via MDM."
+          ],
+          "fr": [
+            "Inventorier tous les appareils Apple via un MDM."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Check MDM compliance reports for unpatched OS versions."
+          ],
+          "fr": [
+            "Vérifier les rapports de conformité MDM pour les versions d'OS non patchées."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Quarantine non-compliant devices from accessing corporate resources."
+          ],
+          "fr": [
+            "Mettre en quarantaine les appareils non conformes."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Document patch completion percentage for audit requirements."
+          ],
+          "fr": [
+            "Documenter le pourcentage de déploiement des correctifs pour l'audit."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "Apple",
+        "Patch_Tuesday"
+      ],
+      "sources": [
+        "https://isc.sans.edu/diary/rss/32976"
+      ],
+      "date": "2026-05-12"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "AI-Enhanced Vulnerability Discovery and Exploitation",
+        "fr": "Découverte et exploitation de vulnérabilités assistées par IA"
+      },
+      "description": {
+        "en": "State-sponsored actors (PRC, North Korea) are using autonomous AI agents to automate reconnaissance, discover zero-days, and orchestrate massive exploitation campaigns via proxy networks (ORB).",
+        "fr": "Des acteurs étatiques (Chine, Corée du Nord) utilisent des agents IA autonomes pour automatiser la reconnaissance, découvrir des zero-days et orchestrer des campagnes d'exploitation massives via des réseaux de proxy (ORB)."
+      },
+      "threat_actor": "PRC-Nexus-Actors",
+      "threat_actor_origin": "China",
+      "threat_actor_type": "Nation-state",
+      "threat_actor_aliases": [
+        "APT27",
+        "UNC6201",
+        "UNC5673"
+      ],
+      "sector": {
+        "en": [
+          "Government_and_Defense",
+          "Technology_and_Telecom",
+          "Healthcare_and_Life_Sciences"
+        ],
+        "fr": [
+          "Gouvernement et Défense",
+          "Technologie et Télécoms",
+          "Santé et Sciences de la vie"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "CLIProxyAPI",
+          "OpenClaw"
+        ]
+      },
+      "mitre_ttps": [
+        "T1588.007",
+        "T1090.003"
+      ],
+      "analyse": {
+        "en": "Google's GTIG report indicates the first AI-developed zero-day for 2FA bypass. AI agents are dramatically lowering the entry barrier for sophisticated attacks and speeding up the weaponization of vulnerabilities.",
+        "fr": "Le rapport GTIG de Google indique le premier zero-day développé par IA pour le bypass de 2FA. Les agents IA abaissent radicalement la barrière à l'entrée pour les attaques sophistiquées et accélèrent l'armement des vulnérabilités."
+      },
+      "recommandations": [
+        {
+          "en": "Adopt the Secure AI Framework (SAIF) for corporate AI usage.",
+          "fr": "Adopter le Secure AI Framework (SAIF) pour l'usage de l'IA en entreprise."
+        },
+        {
+          "en": "Monitor for anomalous API calls to LLM providers like Gemini or OpenAI.",
+          "fr": "Surveiller les appels API anormaux vers les fournisseurs de LLM comme Gemini ou OpenAI."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Establish corporate policies for sanctioned LLM tools.",
+            "Harden public-facing applications against rapid automated exploitation."
+          ],
+          "fr": [
+            "Établir des politiques d'entreprise pour les outils LLM autorisés.",
+            "Renforcer les applications web contre l'exploitation automatisée rapide."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect high-frequency reconnaissance patterns characteristic of AI agents.",
+            "Monitor for bypass attempts on MFA systems."
+          ],
+          "fr": [
+            "Détecter des schémas de reconnaissance à haute fréquence propres aux agents IA.",
+            "Surveiller les tentatives de bypass sur les systèmes MFA."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Rate-limit or block suspicious IP ranges identified as AI relay nodes.",
+            "Invalidate compromised API tokens."
+          ],
+          "fr": [
+            "Limiter le débit ou bloquer les plages IP identifiées comme nœuds de relais IA.",
+            "Invalider les tokens API compromis."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Analyze the speed of the attack to determine if AI orchestration was used.",
+            "Recalibrate detection thresholds for automated threats."
+          ],
+          "fr": [
+            "Analyser la vitesse de l'attaque pour déterminer si l'orchestration par IA a été utilisée.",
+            "Recalibrer les seuils de détection pour les menaces automatisées."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for AI-generated code snippets in detected malware samples."
+          ],
+          "fr": [
+            "Rechercher des fragments de code générés par IA dans les échantillons de malwares détectés."
+          ]
+        }
+      },
+      "tags": [
+        "AI",
+        "China",
+        "Zero-Day",
+        "Automation"
+      ],
+      "sources": [
+        "https://cloud.google.com/blog/topics/threat-intelligence/ai-vulnerability-exploitation-initial-access/"
+      ],
+      "date": "2026-05-12"
+    },
+    {
+      "title": {
+        "en": "Active Directory Certificate Services (AD CS) Exploitation",
+        "fr": "Exploitation des services de certificats Active Directory (AD CS)"
+      },
+      "description": {
+        "en": "Russian state actors (APT28) are increasingly abusing AD CS to gain domain dominance. Techniques like ESC1-ESC8 and shadow credentials (msDS-KeyCredentialLink) allow for near-invisible privilege escalation.",
+        "fr": "Les acteurs étatiques russes (APT28) abusent de plus en plus d'AD CS pour gagner la dominance du domaine. Les techniques comme ESC1-ESC8 et les shadow credentials permettent une élévation de privilèges quasi invisible."
+      },
+      "threat_actor": "Russia-Nexus-Actors",
+      "threat_actor_origin": "Russia",
+      "threat_actor_type": "Nation-state",
+      "threat_actor_aliases": [
+        "APT28",
+        "Fancy Bear",
+        "Fighting Ursa"
+      ],
+      "sector": {
+        "en": [
+          "Government_and_Defense",
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Gouvernement et Défense",
+          "Technologie et Télécoms"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Certipy",
+          "ADExplorer"
+        ]
+      },
+      "mitre_ttps": [
+        "T1649",
+        "T1550"
+      ],
+      "analyse": {
+        "en": "AD CS abuse has become a standard post-exploitation step for nation-states. It bypasses traditional malware signatures by utilizing legitimate identity infrastructure features.",
+        "fr": "L'abus d'AD CS est devenu une étape standard de post-exploitation pour les États-nations. Il contourne les signatures de malwares classiques en utilisant des fonctionnalités légitimes de l'infrastructure d'identité."
+      },
+      "recommandations": [
+        {
+          "en": "Audit all certificate templates for misconfigurations (ESC1-ESC8).",
+          "fr": "Auditer tous les templates de certificats pour les mauvaises configurations (ESC1-ESC8)."
+        },
+        {
+          "en": "Monitor Event ID 4898 and 5136 for unauthorized certificate template changes.",
+          "fr": "Surveiller les Event ID 4898 et 5136 pour des changements de templates non autorisés."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Disable 'Supply subject in request' for all certificate templates where not strictly needed.",
+            "Implement AD CS security hardening guides."
+          ],
+          "fr": [
+            "Désactiver 'Supply subject in request' pour tous les templates de certificats non essentiels.",
+            "Implémenter les guides de durcissement AD CS."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Alert on low-privilege accounts performing massive LDAP queries for PKI objects.",
+            "Detect the usage of tools like Certipy on the network."
+          ],
+          "fr": [
+            "Alerter sur des comptes peu privilégiés effectuant des requêtes LDAP massives vers les objets PKI.",
+            "Détecter l'usage d'outils comme Certipy sur le réseau."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Revoke suspicious certificates issued via misconfigured templates.",
+            "Temporarily disable the CA service if mass escalation is detected."
+          ],
+          "fr": [
+            "Révoquer les certificats suspects émis via des templates mal configurés.",
+            "Désactiver temporairement le service d'autorité de certification si une escalade massive est détectée."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Perform a full AD CS audit and reset the krbtgt account twice.",
+            "Cleanse the msDS-KeyCredentialLink attributes of privileged users."
+          ],
+          "fr": [
+            "Mener un audit AD CS complet et réinitialiser le compte krbtgt deux fois.",
+            "Nettoyer les attributs msDS-KeyCredentialLink des comptes privilégiés."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for certificates issued with unusual SAN (Subject Alternative Names)."
+          ],
+          "fr": [
+            "Rechercher des certificats émis avec des SAN (Subject Alternative Names) inhabituels."
+          ]
+        }
+      },
+      "tags": [
+        "AD_CS",
+        "Identity",
+        "Russia",
+        "Privilege_Escalation"
+      ],
+      "sources": [
+        "https://unit42.paloaltonetworks.com/active-directory-certificate-services-exploitation/"
+      ],
+      "date": "2026-05-12"
+    },
+    {
+      "title": {
+        "en": "The Gentlemen Ransomware Campaign",
+        "fr": "Campagne du ransomware The Gentlemen"
+      },
+      "description": {
+        "en": "A sophisticated campaign using EtherRAT and the AI-generated TukTuk malware. The group exfiltrates data via cloud storage (Wasabi/S3) and uses blockchain gateways (1rpc.io) for C2 stealth.",
+        "fr": "Une campagne sophistiquée utilisant EtherRAT et le malware TukTuk généré par IA. Le groupe exfiltre les données via le cloud (Wasabi/S3) et utilise des passerelles blockchain (1rpc.io) pour son C2."
+      },
+      "threat_actor": "The-Gentlemen-Ransomware",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [
+        "The Gentlemen"
+      ],
+      "sector": {
+        "en": [
+          "Industry_and_Manufacturing",
+          "Business_Services"
+        ],
+        "fr": [
+          "Industrie et Fabrication",
+          "Services aux entreprises"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "1rpc.io",
+          "trycloudflare.com"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "EtherRAT",
+          "TukTuk",
+          "Rclone",
+          "GoTo Resolve"
+        ]
+      },
+      "mitre_ttps": [
+        "T1486",
+        "T1567.002",
+        "T1543.003",
+        "T1574.002"
+      ],
+      "analyse": {
+        "en": "The group uses DLL sideloading on legitimate binaries (Greenshot, SyncTrayzor) and deploys ransomware via Group Policy Objects (GPOs) within 3 days of entry. Persistence is maintained through blockchain-based C2 infrastructure.",
+        "fr": "Le groupe utilise le sideloading DLL sur des binaires légitimes (Greenshot, SyncTrayzor) et déploie le ransomware via GPO sous 3 jours. La persistance est maintenue via une infrastructure C2 basée sur la blockchain."
+      },
+      "recommandations": [
+        {
+          "en": "Block access to Web3 gateways (1rpc.io) and Arweave if not required for business.",
+          "fr": "Bloquer l'accès aux passerelles Web3 (1rpc.io) et Arweave si non nécessaires."
+        },
+        {
+          "en": "Implement AppLocker or WDAC to prevent execution of unsigned binaries.",
+          "fr": "Implémenter AppLocker ou WDAC pour empêcher l'exécution de binaires non signés."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Audit GPO modification permissions.",
+            "Monitor for Rclone usage on servers."
+          ],
+          "fr": [
+            "Auditer les permissions de modification des GPO.",
+            "Surveiller l'usage de Rclone sur les serveurs."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Alert on TryCloudflare tunnel initiations from servers.",
+            "Monitor for massive LDAP queries from non-system processes."
+          ],
+          "fr": [
+            "Alerter sur l'initiation de tunnels TryCloudflare depuis les serveurs.",
+            "Surveiller les requêtes LDAP massives depuis des processus non-système."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate machines executing suspicious RAMMap MSI installers.",
+            "Disable GoTo Resolve across the organization if not used."
+          ],
+          "fr": [
+            "Isoler les machines exécutant des installateurs MSI RAMMap suspects.",
+            "Désactiver GoTo Resolve dans toute l'organisation s'il n'est pas utilisé."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Revert malicious GPO changes and clean the sysvol share.",
+            "Verify the integrity of R&D data."
+          ],
+          "fr": [
+            "Annuler les changements de GPO malveillants et nettoyer le partage sysvol.",
+            "Vérifier l'intégrité des données R&D."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for exfiltration traffic to Wasabi or S3 buckets with >10GB transfers."
+          ],
+          "fr": [
+            "Rechercher du trafic d'exfiltration vers des buckets Wasabi ou S3 >10Go."
+          ]
+        }
+      },
+      "tags": [
+        "Ransomware",
+        "Blockchain_C2",
+        "IA_Malware"
+      ],
+      "sources": [
+        "https://thedfirreport.com/2026/05/11/flash-alert-etherrat-and-tuktuk-c2-end-in-the-gentleman-ransomware/"
+      ],
+      "date": "2026-05-12"
+    },
+    {
+      "title": {
+        "en": "Crimenetwork Underground Forum Takedown",
+        "fr": "Démantèlement du forum criminel Crimenetwork"
+      },
+      "description": {
+        "en": "German BKA authorities dismantled Crimenetwork for the second time, arresting the administrator and seizing infrastructure that supported 22,000 cybercriminals.",
+        "fr": "Le BKA allemand a démantelé Crimenetwork pour la seconde fois, arrêtant l'administrateur et saisissant l'infrastructure qui supportait 22 000 cybercriminels."
+      },
+      "threat_actor": "Crimenetwork Admin",
+      "threat_actor_origin": "Germany",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Security"
+        ],
+        "fr": [
+          "Sécurité"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "Despite a previous takedown in 2024, the forum regrouped and expanded. The seizure provides law enforcement with massive amounts of transaction and user data.",
+        "fr": "Malgré un précédent démantèlement en 2024, le forum s'est reformé et agrandi. La saisie fournit aux autorités des masses de données de transactions et d'utilisateurs."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor for the emergence of replacement forums or migration to Telegram.",
+          "fr": "Surveiller l'émergence de forums de remplacement ou la migration vers Telegram."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Follow law enforcement announcements for potential data leaks."
+          ],
+          "fr": [
+            "Suivre les annonces de la police pour d'éventuelles fuites de données."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Cross-reference company email addresses against seized forum user lists."
+          ],
+          "fr": [
+            "Recouper les adresses email de l'entreprise avec les listes d'utilisateurs du forum saisies."
+          ]
+        }
+      },
+      "tags": [
+        "Takedown",
+        "Underground_Forum",
+        "Law_Enforcement"
+      ],
+      "sources": [
+        "https://securityaffairs.com/191969/cyber-crime/crimenetwork-returns-after-takedown-dismantled-again-by-german-authorities.html"
+      ],
+      "date": "2026-05-12"
+    },
+    {
+      "title": {
+        "en": "Corporate Infrastructure Access via Infostealers",
+        "fr": "Accès aux infrastructures d'entreprise via les Infostealers"
+      },
+      "description": {
+        "en": "An analysis of over 10,000 logs shows that 25% of infostealer victims have credentials for corporate VPN or SaaS systems, often due to personal use of professional devices.",
+        "fr": "Une analyse de plus de 10 000 logs montre que 25% des victimes d'infostealers détiennent des accès VPN ou SaaS d'entreprise, souvent à cause de l'usage personnel de machines professionnelles."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Business_Services",
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Services aux entreprises",
+          "Technologie et Télécoms"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1555.003",
+        "T1539"
+      ],
+      "analyse": {
+        "en": "The blur between personal and professional usage is a major risk; 16% of infections are linked to gaming activities on corporate machines.",
+        "fr": "Le flou entre usage personnel et professionnel est un risque majeur ; 16% des infections sont liées au gaming sur des machines d'entreprise."
+      },
+      "recommandations": [
+        {
+          "en": "Implement strictly enforced application whitelisting on all corporate laptops.",
+          "fr": "Implémenter une liste blanche d'applications stricte sur tous les PC portables d'entreprise."
+        },
+        {
+          "en": "Monitor dark web 'stealer logs' for company domains.",
+          "fr": "Surveiller les 'stealer logs' du dark web pour les domaines de l'entreprise."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Disable browser password saving via GPO/MDM.",
+            "Enforce session timeout for critical SaaS applications."
+          ],
+          "fr": [
+            "Désactiver l'enregistrement des mots de passe dans le navigateur via GPO/MDM.",
+            "Forcer l'expiration des sessions pour les applications SaaS critiques."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for unusual login locations for corporate accounts.",
+            "Integrate infostealer intelligence feeds into the SOC."
+          ],
+          "fr": [
+            "Surveiller les localisations de connexion inhabituelles pour les comptes d'entreprise.",
+            "Intégrer les flux d'intelligence infostealer au SOC."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Immediately invalidate all sessions and rotate passwords if a credential leak is found.",
+            "Revoke VPN certificates for compromised devices."
+          ],
+          "fr": [
+            "Invalider immédiatement les sessions et changer les mots de passe si une fuite est détectée.",
+            "Révoquer les certificats VPN pour les machines compromises."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Scan the entire device for persistence before returning it to service.",
+            "Reset MFA enrollment for the affected user."
+          ],
+          "fr": [
+            "Scanner toute la machine pour détecter une persistance avant remise en service.",
+            "Réinitialiser l'enrôlement MFA pour l'utilisateur affecté."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for unauthorized session cookie usage from unknown IP addresses."
+          ],
+          "fr": [
+            "Rechercher l'usage non autorisé de cookies de session depuis des adresses IP inconnues."
+          ]
+        }
+      },
+      "tags": [
+        "Infostealers",
+        "Credential_Access",
+        "Remote_Work"
+      ],
+      "sources": [
+        "https://flare.io/learn/resources/blog/one-out-of-four-infostealer-victims-corporate-infrastructure-access"
+      ],
+      "date": "2026-05-12"
+    },
+    {
+      "title": {
+        "en": "Elastic Security MCP App: Interactive AI in the SOC",
+        "fr": "Elastic Security MCP App : l'IA interactive au SOC"
+      },
+      "description": {
+        "en": "Elastic launched an MCP (Model Context Protocol) app allowing analysts to integrate SOC workflows directly into AI tools like Claude Desktop and VS Code.",
+        "fr": "Elastic a lancé une application MCP (Model Context Protocol) permettant aux analystes d'intégrer les flux SOC directement dans des outils IA comme Claude Desktop et VS Code."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Security"
+        ],
+        "fr": [
+          "Sécurité"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Elastic Security MCP"
+        ]
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "This tool aims to reduce incident triage and timeline generation time by allowing natural language interaction with security event data.",
+        "fr": "Cet outil vise à réduire le temps de triage des incidents et de génération de timeline en permettant une interaction en langage naturel avec les données d'événements."
+      },
+      "recommandations": [
+        {
+          "en": "Evaluate the use of MCP apps to streamline SOC investigations.",
+          "fr": "Évaluer l'usage d'applications MCP pour fluidifier les investigations SOC."
+        },
+        {
+          "en": "Ensure proper data governance when connecting internal SOC data to LLMs.",
+          "fr": "Assurer une gouvernance des données rigoureuse lors de la connexion des données SOC aux LLM."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Define access controls for the MCP application."
+          ],
+          "fr": [
+            "Définir des contrôles d'accès pour l'application MCP."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Use the MCP app to hunt for lateral movement indicators across indices."
+          ],
+          "fr": [
+            "Utiliser l'application MCP pour chasser les indicateurs de mouvement latéral."
+          ]
+        }
+      },
+      "tags": [
+        "AI",
+        "SOC",
+        "Automation"
+      ],
+      "sources": [
+        "https://www.elastic.co/security-labs/elastic-security-mcp-app"
+      ],
+      "date": "2026-05-12"
+    }
+  ]
+}
