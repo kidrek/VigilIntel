@@ -1,0 +1,2688 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The cyber threat landscape in May 2026 is characterized by growing hybridization between state actors (Gamaredon, MuddyWater) and organized cybercrime (The Gentlemen, TeamPCP). Systematic exploitation of the software supply chain, particularly through npm and PyPI ecosystems, has become an offensive norm enabling rapid viral propagation (Worm Mini Shai-Hulud). Simultaneously, the vulnerability of critical edge infrastructure (Palo Alto, Fortinet, Ivanti) remains a primary entry vector. A major trend is the shift from classic ransomware to massive data exfiltration coupled with regulatory pressure (GDPR/DSA) used as extortion leverage. Geopolitically, tensions in Ukraine and the assertion of the Global South via Sino-African agreements are redefining strategic priorities and informational influence vectors.",
+      "fr": "Le paysage des menaces cyber en mai 2026 est marqué par une hybridation croissante entre les acteurs étatiques (Gamaredon, MuddyWater) et le cybercrime organisé (The Gentlemen, TeamPCP). L'exploitation systématique de la chaîne d'approvisionnement logicielle, notamment via les écosystèmes npm et PyPI, devient une norme offensive permettant une propagation virale rapide (Worm Mini Shai-Hulud). Parallèlement, la vulnérabilité des infrastructures critiques de bordure (Palo Alto, Fortinet, Ivanti) reste un vecteur d'entrée prioritaire. La tendance majeure est le passage du rançongiciel classique à une exfiltration de données massive couplée à une pression réglementaire (RGPD/DSA) utilisée comme levier d'extorsion. Géopolitiquement, les tensions en Ukraine et l'affirmation du Sud Global via des accords sino-africains redéfinissent les priorités stratégiques et les vecteurs d'influence informationnelle."
+    },
+    "date": "2026-05-14"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement et Défense"
+        ]
+      },
+      "theme": {
+        "en": "Technological mutation of trench warfare",
+        "fr": "Mutation technologique de la guerre de tranchée"
+      },
+      "description": {
+        "en": "Dronization is gradually replacing conventional artillery, transforming the conflict into a low-cost high-tech war.",
+        "fr": "La dronisation remplace progressivement l'artillerie conventionnelle, transformant le conflit en une guerre de haute technologie à bas coût."
+      },
+      "recommandations": [
+        {
+          "en": "Invest in electronic warfare capabilities",
+          "fr": "Investir dans les capacités de guerre électronique"
+        },
+        {
+          "en": "Industrial sovereignty on critical components",
+          "fr": "Souveraineté industrielle sur les composants critiques"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory of C-UAS defense systems",
+            "Hardening of radio communications"
+          ],
+          "fr": [
+            "Inventaire des systèmes de défense anti-drone (C-UAS)",
+            "Renforcement du durcissement des communications radio"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Spectral monitoring for drone command frequencies",
+            "Analysis of satellite video feeds"
+          ],
+          "fr": [
+            "Surveillance spectrale pour détecter les fréquences de commande des drones",
+            "Analyse des flux vidéo relayés par satellite"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Targeted electronic jamming",
+            "Deployment of GNSS decoys"
+          ],
+          "fr": [
+            "Brouillage électronique ciblé (Jamming)",
+            "Déploiement de leurres GNSS"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Technical analysis of captured drone debris",
+            "Update visual recognition algorithms"
+          ],
+          "fr": [
+            "Analyse technique des débris de drones capturés",
+            "Mise à jour des algorithmes de reconnaissance visuelle"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for RF signatures between 2.4GHz and 5.8GHz",
+            "Identify anomalous radio patterns in specific sectors"
+          ],
+          "fr": [
+            "Recherche de signatures RF entre 2,4 GHz et 5,8 GHz",
+            "Identifier des modèles radio anormaux dans des secteurs spécifiques"
+          ]
+        }
+      },
+      "tags": [
+        "Military",
+        "Drones",
+        "Ukraine"
+      ],
+      "sources": [
+        "https://www.portail-ie.fr/univers/defense-industrie-de-larmement-et-renseignement/2026/drones-contre-artillerie-conflit-russo-ukrainien/"
+      ],
+      "date": "2026-05-14"
+    },
+    {
+      "sector": {
+        "en": [
+          "Business_Services"
+        ],
+        "fr": [
+          "Services aux entreprises"
+        ]
+      },
+      "theme": {
+        "en": "Economic soft power and dedollarization",
+        "fr": "Soft power économique et dédollarisation"
+      },
+      "description": {
+        "en": "China's removal of tariffs for 53 African countries aims to secure critical resources and promote the CIPS payment system.",
+        "fr": "La suppression des droits de douane chinois pour 53 pays africains vise à sécuriser les ressources critiques et à promouvoir le système de paiement CIPS."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor CIPS system integration",
+          "fr": "Surveiller l'intégration du système CIPS"
+        },
+        {
+          "en": "Evaluate impact on energy transition value chains",
+          "fr": "Évaluer l'impact sur les chaînes de valeur de transition énergétique"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Audit financial dependencies on non-western systems"
+          ],
+          "fr": [
+            "Audit des dépendances financières vis-à-vis des systèmes non occidentaux"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Track transaction volume shifts toward CIPS"
+          ],
+          "fr": [
+            "Suivre les changements de volume de transactions vers CIPS"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Diversify payment gateway providers"
+          ],
+          "fr": [
+            "Diversifier les fournisseurs de passerelles de paiement"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Review geopolitical risk assessment models"
+          ],
+          "fr": [
+            "Réviser les modèles d'évaluation des risques géopolitiques"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "Economy",
+        "China",
+        "Africa"
+      ],
+      "sources": [
+        "https://www.iris-france.org/levee-des-barrieres-douanieres-par-la-chine-au-profit-des-pays-africains-un-instrument-strategique-pour-pekin/"
+      ],
+      "date": "2026-05-14"
+    },
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement et Défense"
+        ]
+      },
+      "theme": {
+        "en": "Western geopolitical decline analysis",
+        "fr": "Analyse du déclin géopolitique occidental"
+      },
+      "description": {
+        "en": "Strategic analysis of the Global South's challenge to the Western universal model.",
+        "fr": "Analyse stratégique de la remise en cause du modèle universel occidental par le Sud Global."
+      },
+      "recommandations": [
+        {
+          "en": "Reassess strategic alliances",
+          "fr": "Réévaluer les alliances stratégiques"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "Geopolitics",
+        "Strategy"
+      ],
+      "sources": [
+        "https://www.iris-france.org/apres-loccident-avec-hubert-vedrine-maurice-godelier/"
+      ],
+      "date": "2026-05-13"
+    },
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement et Défense"
+        ]
+      },
+      "theme": {
+        "en": "Finnish defense planning in the EU",
+        "fr": "Planification de la défense finlandaise dans l'UE"
+      },
+      "description": {
+        "en": "Case study on how Finland integrates European capability processes while maintaining national ambition.",
+        "fr": "Étude de cas sur la manière dont la Finlande intègre les processus capacitaires européens tout en maintenant son ambition nationale."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor EU military funding instruments",
+          "fr": "Surveiller les instruments de financement militaire de l'UE"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "Finland",
+        "Defense",
+        "EU"
+      ],
+      "sources": [
+        "https://www.iris-france.org/integration-of-the-european-capability-process-in-member-states-administration-the-finnish-case/"
+      ],
+      "date": "2026-05-13"
+    }
+  ],
+  "regulatory_and_legal": [
+    {
+      "title": {
+        "en": "Meta DSA Investigation",
+        "fr": "Enquête Meta DSA"
+      },
+      "description": {
+        "en": "Formal investigation into Meta's 'dark patterns' preventing flow choice without profiling, violating the Digital Services Act.",
+        "fr": "Enquête formelle sur les 'dark patterns' de Meta empêchant le choix de flux sans profilage, en violation du Digital Services Act."
+      },
+      "organisation": {
+        "en": [
+          "Coimisiún na Meán (CnaM)"
+        ],
+        "fr": [
+          "Commission des médias (Irlande)"
+        ]
+      },
+      "jurisdiction": {
+        "en": [
+          "European Union",
+          "Ireland"
+        ],
+        "fr": [
+          "Union Européenne",
+          "Irlande"
+        ]
+      },
+      "references": {
+        "en": [
+          "DSA-2026-META"
+        ],
+        "fr": [
+          "DSA-2026-META"
+        ]
+      },
+      "tags": [
+        "GDPR",
+        "DSA",
+        "Meta"
+      ],
+      "sources": [
+        "https://edri.org/our-work/ireland-investigates-meta-for-breaching-the-dsa-a-year-on-from-our-complaint/"
+      ],
+      "date": "2026-05-05"
+    },
+    {
+      "title": {
+        "en": "Legarcon[.]net Investigation",
+        "fr": "Enquête Legarcon[.]net"
+      },
+      "description": {
+        "en": "Judicial action against platforms facilitating illicit transactions and child exploitation.",
+        "fr": "Action judiciaire contre des plateformes facilitant des transactions illicites et l'exploitation de mineurs."
+      },
+      "organisation": {
+        "en": [
+          "Paris Prosecutor's Office"
+        ],
+        "fr": [
+          "Parquet de Paris"
+        ]
+      },
+      "jurisdiction": {
+        "en": [
+          "France"
+        ],
+        "fr": [
+          "France"
+        ]
+      },
+      "references": {
+        "en": [
+          "FR-PARIS-CYBER-2026"
+        ],
+        "fr": [
+          "FR-PARIS-CYBER-2026"
+        ]
+      },
+      "tags": [
+        "Cybercriminalité",
+        "Law Enforcement"
+      ],
+      "sources": [
+        "https://www.lemonde.fr/societe/article/2026/05/13/pedocriminalite-une-enquete-ouverte-sur-le-forum-legarcon-net_6688682_3224.html"
+      ],
+      "date": "2026-05-13"
+    },
+    {
+      "title": {
+        "en": "UK Water Company Fine",
+        "fr": "Amende compagnie des eaux britannique"
+      },
+      "description": {
+        "en": "Regulator fines water company almost £1M for serious cybersecurity failures.",
+        "fr": "Le régulateur inflige une amende de près de 1 million de livres sterling à une compagnie des eaux pour des défaillances graves en matière de cybersécurité."
+      },
+      "organisation": {
+        "en": [
+          "UK Information Commissioner's Office"
+        ],
+        "fr": [
+          "Bureau du Commissaire à l'information (Royaume-Uni)"
+        ]
+      },
+      "jurisdiction": {
+        "en": [
+          "United Kingdom"
+        ],
+        "fr": [
+          "Royaume-Uni"
+        ]
+      },
+      "references": {
+        "en": [
+          "unknown"
+        ],
+        "fr": [
+          "unknown"
+        ]
+      },
+      "tags": [
+        "Regulatory",
+        "Water",
+        "Fine"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/05/13/uk-regulator-fines-water-company-almost-1m-for-cybersecurity-failures/"
+      ],
+      "date": "2026-05-13"
+    },
+    {
+      "title": {
+        "en": "Police Data Protection Breach",
+        "fr": "Violation de la protection des données par la police"
+      },
+      "description": {
+        "en": "Aylesbury police officer found guilty of snapping confidential information with a personal phone.",
+        "fr": "Un officier de police d'Aylesbury reconnu coupable d'avoir photographié des informations confidentielles avec un téléphone personnel."
+      },
+      "organisation": {
+        "en": [
+          "Aylesbury Police"
+        ],
+        "fr": [
+          "Police d'Aylesbury"
+        ]
+      },
+      "jurisdiction": {
+        "en": [
+          "United Kingdom"
+        ],
+        "fr": [
+          "Royaume-Uni"
+        ]
+      },
+      "references": {
+        "en": [
+          "unknown"
+        ],
+        "fr": [
+          "unknown"
+        ]
+      },
+      "tags": [
+        "Insider_Threat",
+        "Police",
+        "Data_Protection"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/05/13/uk-aylesbury-police-officer-found-guilty-of-data-protection-breaches-after-snapping-confidential-information/"
+      ],
+      "date": "2026-05-13"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "West Pharmaceutical Services",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Healthcare_and_Life_Sciences"
+        ],
+        "fr": [
+          "Santé et sciences de la vie"
+        ]
+      },
+      "description": {
+        "en": "Ransomware attack forcing global systems offline after data exfiltration.",
+        "fr": "Attaque de ransomware forçant la mise hors ligne des systèmes mondiaux après exfiltration de données."
+      },
+      "mitre_ttps": [
+        "T1486"
+      ],
+      "recommandations": [
+        {
+          "en": "Segment industrial and administrative networks",
+          "fr": "Segmenter les réseaux industriels et administratifs"
+        },
+        {
+          "en": "Implement EDR in blocking mode",
+          "fr": "Implémenter EDR en mode blocage"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Verify offline backup isolation",
+            "Establish crisis communication plan"
+          ],
+          "fr": [
+            "Vérification de l'isolation des sauvegardes hors ligne",
+            "Mise en place d'un plan de communication de crise"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "SIEM alerts on mass service stoppage",
+            "NetFlow exfiltration spike detection"
+          ],
+          "fr": [
+            "Alerte SIEM sur l'arrêt massif de services",
+            "Détection de pics d'exfiltration via NetFlow"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Global system shutdown",
+            "Revocation of all privileged tokens"
+          ],
+          "fr": [
+            "Mise hors ligne globale des systèmes",
+            "Révocation de tous les jetons d'accès privilégiés"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Forensic entry point analysis",
+            "Priority restoration of production systems"
+          ],
+          "fr": [
+            "Analyse forensique des points d'entrée",
+            "Restauration prioritaire des systèmes de production"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for compromised admin accounts in authentication logs"
+          ],
+          "fr": [
+            "Recherche de comptes administrateurs compromis dans les logs d'authentification"
+          ]
+        }
+      },
+      "tags": [
+        "Ransomware",
+        "SEC"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/west-pharmaceutical-says-hackers-stole-data-encrypted-systems/"
+      ],
+      "date": "2026-05-14"
+    },
+    {
+      "victim": "Canada Life",
+      "threat_actor": "ShinyHunters",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Finance"
+        ],
+        "fr": [
+          "Finance"
+        ]
+      },
+      "description": {
+        "en": "Extortion campaign targeting customer support tickets and emails.",
+        "fr": "Campagne d'extorsion ciblant les tickets de support client et les emails."
+      },
+      "mitre_ttps": [
+        "T1567"
+      ],
+      "recommandations": [
+        {
+          "en": "MFA mandatory for all customer access",
+          "fr": "MFA obligatoire pour tous les accès clients"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Classify sensitive PII data",
+            "Deploy DLP solutions"
+          ],
+          "fr": [
+            "Classification des données sensibles (PII)",
+            "Déploiement de solutions DLP"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Dark web monitoring for company mentions",
+            "Analyze support ticket access logs"
+          ],
+          "fr": [
+            "Surveillance du Dark Web pour mentions de l'entreprise",
+            "Analyse des logs d'accès aux tickets de support"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Forced password resets",
+            "Restrict support API access"
+          ],
+          "fr": [
+            "Réinitialisation forcée des mots de passe",
+            "Restriction des accès aux API de support"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "PIPEDA notification",
+            "Identity monitoring for customers"
+          ],
+          "fr": [
+            "Notification PIPEDA",
+            "Surveillance de l'identité des clients"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "Extortion",
+        "Insurance"
+      ],
+      "sources": [
+        "https://haveibeenpwned.com/Breach/CanadaLife"
+      ],
+      "date": "2026-04-01"
+    },
+    {
+      "victim": "Dutch Healthcare Lab",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Healthcare_and_Life_Sciences"
+        ],
+        "fr": [
+          "Santé et sciences de la vie"
+        ]
+      },
+      "description": {
+        "en": "Exposure of 850,000 patient records due to security failures.",
+        "fr": "Exposition de 850 000 dossiers patients suite à des défaillances de sécurité."
+      },
+      "mitre_ttps": [
+        "unknown"
+      ],
+      "recommandations": [
+        {
+          "en": "Encrypt databases at rest",
+          "fr": "Chiffrer les bases de données au repos"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Compliance audits"
+          ],
+          "fr": [
+            "Audits de conformité"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor large SQL queries"
+          ],
+          "fr": [
+            "Surveiller les requêtes SQL volumineuses"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate lab network segments"
+          ],
+          "fr": [
+            "Isoler les segments réseau du laboratoire"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Public notification to 850k patients"
+          ],
+          "fr": [
+            "Notification publique aux 850k patients"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "Healthcare",
+        "Netherlands"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/05/13/nl-dutch-watchdog-says-healthcare-lab-failed-data-security-rules-before-cyberattack-affecting-850000/"
+      ],
+      "date": "2026-05-13"
+    },
+    {
+      "victim": "Skoda Auto",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Industry_and_Manufacturing"
+        ],
+        "fr": [
+          "Industrie et manufacture"
+        ]
+      },
+      "description": {
+        "en": "Online store compromise exposing customer names, addresses, and hashed passwords.",
+        "fr": "Compromission de la boutique en ligne exposant les noms, adresses et mots de passe hashés des clients."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Password rotation if reused",
+          "fr": "Rotation des mots de passe si réutilisés"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Harden e-commerce platforms",
+            "Use Argon2 hashing"
+          ],
+          "fr": [
+            "Durcir les plateformes e-commerce",
+            "Utiliser le hashage Argon2"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor HTTP 500 errors",
+            "Mass export alerts"
+          ],
+          "fr": [
+            "Surveillance des erreurs HTTP 500",
+            "Alertes sur les exports massifs"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Block attacker IP",
+            "Remove vulnerable payment module"
+          ],
+          "fr": [
+            "Bloquer l'IP de l'attaquant",
+            "Retirer le module de paiement vulnérable"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Email notifications",
+            "Patching"
+          ],
+          "fr": [
+            "Notifications par email",
+            "Correctifs"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "Automotive",
+        "E-commerce"
+      ],
+      "sources": [
+        "https://infosec.exchange/@DevaOnBreaches/116569841139819922"
+      ],
+      "date": "2026-05-14"
+    },
+    {
+      "victim": "Mistral AI",
+      "threat_actor": "TeamPCP",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologies et télécoms"
+        ]
+      },
+      "description": {
+        "en": "Attempted sale of internal repositories after supply chain attack.",
+        "fr": "Tentative de vente de dépôts internes suite à une attaque de la chaîne d'approvisionnement."
+      },
+      "mitre_ttps": [
+        "T1195.002"
+      ],
+      "recommandations": [
+        {
+          "en": "Use ephemeral build environments",
+          "fr": "Utiliser des environnements de build éphémères"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Enable GitHub secret scanning"
+          ],
+          "fr": [
+            "Activer le scan de secrets GitHub"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect mass repository cloning"
+          ],
+          "fr": [
+            "Détecter les clonages massifs de dépôts"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Rotate SSH keys and tokens"
+          ],
+          "fr": [
+            "Rotation des clés SSH et des jetons"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "IP theft impact assessment"
+          ],
+          "fr": [
+            "Évaluation de l'impact du vol de propriété intellectuelle"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "AI",
+        "GitHub"
+      ],
+      "sources": [
+        "https://hackread.com/teampcp-mistral-ai-repositories-mini-shai-hulud-attack/"
+      ],
+      "date": "2026-05-14"
+    },
+    {
+      "victim": "Cushman & Wakefield",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Real_Estate_and_Construction"
+        ],
+        "fr": [
+          "Immobilier et construction"
+        ]
+      },
+      "description": {
+        "en": "Compromise of 310,431 accounts in the real estate sector.",
+        "fr": "Compromission de 310 431 comptes dans le secteur de l'immobilier."
+      },
+      "mitre_ttps": [
+        "unknown"
+      ],
+      "recommandations": [
+        {
+          "en": "Implement MFA",
+          "fr": "Mettre en œuvre le MFA"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "Real_Estate",
+        "Data_Leak"
+      ],
+      "sources": [
+        "https://mastodon.social/@RedPacketSecurity/116570459446643817"
+      ],
+      "date": "2026-05-14"
+    },
+    {
+      "victim": "Zara",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Retail_and_Consumer"
+        ],
+        "fr": [
+          "Commerce et consommation"
+        ]
+      },
+      "description": {
+        "en": "Potential leak risk affecting 197,000 personal files following a cyberattack in Japan.",
+        "fr": "Risque potentiel de fuite affectant 197 000 dossiers personnels suite à une cyberattaque au Japon."
+      },
+      "mitre_ttps": [
+        "unknown"
+      ],
+      "recommandations": [
+        {
+          "en": "Audit data access logs",
+          "fr": "Auditer les logs d'accès aux données"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "Retail",
+        "Japan"
+      ],
+      "sources": [
+        "https://mastodon.social/@securityLab_jp/116569991139053391"
+      ],
+      "date": "2026-05-14"
+    },
+    {
+      "victim": "Feature",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologies et télécoms"
+        ]
+      },
+      "description": {
+        "en": "Leak of 144 GitHub repositories including source code following ransomware.",
+        "fr": "Fuite de 144 dépôts GitHub incluant le code source suite à un ransomware."
+      },
+      "mitre_ttps": [
+        "unknown"
+      ],
+      "recommandations": [
+        {
+          "en": "Verify integrity of published software",
+          "fr": "Vérifier l'intégrité des logiciels publiés"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "GitHub",
+        "Ransomware"
+      ],
+      "sources": [
+        "https://mastodon.social/@securityLab_jp/116569875528401585"
+      ],
+      "date": "2026-05-14"
+    },
+    {
+      "victim": "Fujitsu Japan",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Insider",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologies et télécoms"
+        ]
+      },
+      "description": {
+        "en": "Former employee arrested for stealing 26 confidential trade secrets.",
+        "fr": "Ancien employé arrêté pour vol de 26 secrets commerciaux confidentiels."
+      },
+      "mitre_ttps": [
+        "unknown"
+      ],
+      "recommandations": [
+        {
+          "en": "Monitor large SMTP exports to personal webmails",
+          "fr": "Surveiller les exports SMTP volumineux vers des adresses webmail"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Data classification policies"
+          ],
+          "fr": [
+            "Politiques de classification des données"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor unusual data transfers"
+          ],
+          "fr": [
+            "Surveiller les transferts de données inhabituels"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Access revocation for departing employees"
+          ],
+          "fr": [
+            "Révocation d'accès pour les employés sortants"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Legal action and policy review"
+          ],
+          "fr": [
+            "Action en justice et révision des politiques"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "Insider_Threat",
+        "Japan"
+      ],
+      "sources": [
+        "https://mastodon.social/@securityLab_jp/116569754171978157"
+      ],
+      "date": "2026-05-13"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-0300",
+      "euvd_id": "unknown",
+      "cisa_kev": "TRUE",
+      "cvss": "10.0",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:o:paloaltonetworks:pan-os:*:*:*:*:*:*:*:*",
+      "product": "PAN-OS",
+      "vendor": "Palo Alto Networks",
+      "description": {
+        "en": "Critical buffer overflow in User-ID portal allowing unauthenticated root RCE.",
+        "fr": "Débordement de tampon critique dans le portail User-ID permettant une RCE root non authentifiée."
+      },
+      "mitre_ttps": [
+        "T1210"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply hotfixes from May 13",
+          "fr": "Appliquer les correctifs du 13 mai"
+        },
+        {
+          "en": "Restrict User-ID portal access to trusted IPs",
+          "fr": "Restreindre l'accès au portail User-ID aux IPs de confiance"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory PA-Series and VM-Series devices"
+          ],
+          "fr": [
+            "Inventorier les dispositifs PA-Series et VM-Series"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor portal authentication attempts"
+          ],
+          "fr": [
+            "Surveiller les tentatives d'authentification du portail"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Disable User-ID portal temporarily"
+          ],
+          "fr": [
+            "Désactiver temporairement le portail User-ID"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Configuration integrity verification"
+          ],
+          "fr": [
+            "Vérification de l'intégrité de la configuration"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Check for unauthorized root sessions"
+          ],
+          "fr": [
+            "Recherche de sessions root non autorisées"
+          ]
+        }
+      },
+      "tags": [
+        "Zero-Day",
+        "PaloAlto"
+      ],
+      "sources": [
+        "https://www.datasecuritybreach.fr/palo-alto-corrige-en-urgence-un-zero-day-pan-os/"
+      ],
+      "date": "2026-05-13"
+    },
+    {
+      "cve_id": "CVE-2026-45185",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:exim:exim:*:*:*:*:*:*:*:*",
+      "product": "Exim",
+      "vendor": "Exim",
+      "description": {
+        "en": "Use-after-free in Exim MTA via GnuTLS during SMTP BDAT chunked traffic.",
+        "fr": "Use-after-free dans Exim MTA via GnuTLS lors du trafic chunked SMTP BDAT."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Update to Exim 4.99.3 or higher",
+          "fr": "Mettre à jour vers Exim 4.99.3 ou supérieur"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Check Exim version"
+          ],
+          "fr": [
+            "Vérifier la version d'Exim"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Filter SMTP BDAT traffic"
+          ],
+          "fr": [
+            "Filtrer le trafic SMTP BDAT"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Mail server integrity audit"
+          ],
+          "fr": [
+            "Audit d'intégrité du serveur de messagerie"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "RCE",
+        "Mail_Server"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/new-critical-exim-mailer-flaw-allows-remote-code-execution/"
+      ],
+      "date": "2026-05-13"
+    },
+    {
+      "cve_id": "CVE-2026-29206",
+      "euvd_id": "unknown",
+      "cisa_kev": "unknown",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:apache:sqloptimizer:*:*:*:*:*:*:*:*",
+      "product": "sqloptimizer",
+      "vendor": "Apache",
+      "description": {
+        "en": "SQL Injection in Apache sqloptimizer affecting cPanel/WHM environments.",
+        "fr": "Injection SQL dans Apache sqloptimizer affectant les environnements cPanel/WHM."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply cPanel security updates",
+          "fr": "Appliquer les mises à jour de sécurité cPanel"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "WAF rule implementation"
+          ],
+          "fr": [
+            "Mise en place de règles WAF"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "HTTP log monitoring for SQL chars"
+          ],
+          "fr": [
+            "Surveillance des logs HTTP pour les caractères SQL"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "WAF blocking mode"
+          ],
+          "fr": [
+            "Mode blocage WAF"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Update sqloptimizer"
+          ],
+          "fr": [
+            "Mettre à jour sqloptimizer"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "SQLi",
+        "Apache"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-29206"
+      ],
+      "date": "2026-05-13"
+    },
+    {
+      "cve_id": "CVE-2026-45158",
+      "euvd_id": "unknown",
+      "cisa_kev": "unknown",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:opnsense:opnsense:*:*:*:*:*:*:*:*",
+      "product": "OPNsense",
+      "vendor": "OPNsense",
+      "description": {
+        "en": "Command injection in OPNsense DHCP script handling.",
+        "fr": "Injection de commande dans le traitement des scripts DHCP d'OPNsense."
+      },
+      "mitre_ttps": [
+        "T1059"
+      ],
+      "recommandations": [
+        {
+          "en": "Update to OPNsense 26.1.8",
+          "fr": "Mettre à jour vers OPNsense 26.1.8"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory OPNsense versions"
+          ],
+          "fr": [
+            "Inventorier les versions d'OPNsense"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Alert on root processes from DHCP"
+          ],
+          "fr": [
+            "Alerte sur les processus root issus du DHCP"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate exposed interfaces"
+          ],
+          "fr": [
+            "Isoler les interfaces exposées"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Update firmware"
+          ],
+          "fr": [
+            "Mettre à jour le firmware"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "RCE",
+        "OPNsense"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-45158"
+      ],
+      "date": "2026-05-13"
+    },
+    {
+      "cve_id": "CVE-2026-44277",
+      "euvd_id": "unknown",
+      "cisa_kev": "unknown",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:o:fortinet:fortios:*:*:*:*:*:*:*:*",
+      "product": "FortiOS",
+      "vendor": "Fortinet",
+      "description": {
+        "en": "Multiple vulnerabilities in Fortinet products allowing RCE and privilege escalation.",
+        "fr": "Multiples vulnérabilités dans les produits Fortinet permettant RCE et élévation de privilèges."
+      },
+      "mitre_ttps": [
+        "T1210"
+      ],
+      "recommandations": [
+        {
+          "en": "Update priority based on PSIRT bulletins",
+          "fr": "Mise à jour prioritaire selon les bulletins PSIRT"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory FortiOS and FortiProxy"
+          ],
+          "fr": [
+            "Inventorier FortiOS et FortiProxy"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Admin logs analysis for unauth access"
+          ],
+          "fr": [
+            "Analyse des logs admin pour accès non auth"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Restrict admin port to VPN IPs"
+          ],
+          "fr": [
+            "Restreindre le port admin aux IPs VPN"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Rotate encryption keys"
+          ],
+          "fr": [
+            "Rotation des clés de chiffrement"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "Fortinet",
+        "RCE"
+      ],
+      "sources": [
+        "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0575/"
+      ],
+      "date": "2026-05-13"
+    },
+    {
+      "cve_id": "CVE-2026-8051",
+      "euvd_id": "unknown",
+      "cisa_kev": "unknown",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:ivanti:connect_secure:*:*:*:*:*:*:*:*",
+      "product": "Connect Secure",
+      "vendor": "Ivanti",
+      "description": {
+        "en": "Critical flaws in Ivanti products allowing arbitrary code execution.",
+        "fr": "Failles critiques dans les produits Ivanti permettant l'exécution de code arbitraire."
+      },
+      "mitre_ttps": [
+        "unknown"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply May 2026 patches immediately",
+          "fr": "Appliquer les correctifs de mai 2026 immédiatement"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Scan for vulnerable Ivanti versions"
+          ],
+          "fr": [
+            "Scanner les versions vulnérables d'Ivanti"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for new local admin accounts"
+          ],
+          "fr": [
+            "Surveiller les nouveaux comptes admin locaux"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Revoke session certificates"
+          ],
+          "fr": [
+            "Révoquer les certificats de session"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Full access audit"
+          ],
+          "fr": [
+            "Audit complet des accès"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Use ICT tool for integrity verification"
+          ],
+          "fr": [
+            "Utiliser l'outil ICT pour vérification d'intégrité"
+          ]
+        }
+      },
+      "tags": [
+        "Ivanti",
+        "VPN"
+      ],
+      "sources": [
+        "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0576/"
+      ],
+      "date": "2026-05-13"
+    },
+    {
+      "cve_id": "unknown",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:o:microsoft:windows:*:*:*:*:*:*:*:*",
+      "product": "BitLocker",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "YellowKey and GreenPlasma: Zero-day bypass of BitLocker via WinRE.",
+        "fr": "YellowKey et GreenPlasma : Contournement Zero-day de BitLocker via WinRE."
+      },
+      "mitre_ttps": [
+        "T1068"
+      ],
+      "recommandations": [
+        {
+          "en": "Use BitLocker PIN and BIOS password",
+          "fr": "Utiliser un code PIN BitLocker et un mot de passe BIOS"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Configure mandatory PIN",
+            "Disable USB boot"
+          ],
+          "fr": [
+            "Configurer le PIN obligatoire",
+            "Désactiver le boot USB"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Audit winpeshl.ini deletions"
+          ],
+          "fr": [
+            "Auditer les suppressions de winpeshl.ini"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Disable WinRE",
+            "Lock USB ports"
+          ],
+          "fr": [
+            "Désactiver WinRE",
+            "Verrouiller les ports USB"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Re-enable BitLocker with TPM+PIN"
+          ],
+          "fr": [
+            "Ré-activer BitLocker avec TPM+PIN"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "Zero-Day",
+        "BitLocker"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/windows-bitlocker-zero-day-gives-access-to-protected-drives-poc-released/"
+      ],
+      "date": "2026-05-13"
+    },
+    {
+      "cve_id": "CVE-2026-44194",
+      "euvd_id": "unknown",
+      "cisa_kev": "unknown",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:opnsense:opnsense:*:*:*:*:*:*:*:*",
+      "product": "OPNsense",
+      "vendor": "OPNsense",
+      "description": {
+        "en": "Authenticated RCE in OPNsense via user sync flow.",
+        "fr": "RCE authentifiée dans OPNsense via le flux de synchronisation utilisateur."
+      },
+      "mitre_ttps": [
+        "unknown"
+      ],
+      "recommandations": [
+        {
+          "en": "Update to OPNsense 26.1.8",
+          "fr": "Mettre à jour vers OPNsense 26.1.8"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "OPNsense",
+        "RCE"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-44194"
+      ],
+      "date": "2026-05-13"
+    },
+    {
+      "cve_id": "CVE-2026-44447",
+      "euvd_id": "unknown",
+      "cisa_kev": "unknown",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:frappe:erpnext:*:*:*:*:*:*:*:*",
+      "product": "ERPNext",
+      "vendor": "Frappe",
+      "description": {
+        "en": "SQL injection in ERPNext endpoints.",
+        "fr": "Injection SQL dans les points de terminaison d'ERPNext."
+      },
+      "mitre_ttps": [
+        "unknown"
+      ],
+      "recommandations": [
+        {
+          "en": "Update to ERPNext 16.9.0",
+          "fr": "Mettre à jour vers ERPNext 16.9.0"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "ERPNext",
+        "SQLi"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-44447"
+      ],
+      "date": "2026-05-13"
+    },
+    {
+      "cve_id": "CVE-2026-44446",
+      "euvd_id": "unknown",
+      "cisa_kev": "unknown",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:frappe:erpnext:*:*:*:*:*:*:*:*",
+      "product": "ERPNext",
+      "vendor": "Frappe",
+      "description": {
+        "en": "SQL injection affecting ERPNext 15.x and 16.x.",
+        "fr": "Injection SQL affectant ERPNext 15.x et 16.x."
+      },
+      "mitre_ttps": [
+        "unknown"
+      ],
+      "recommandations": [
+        {
+          "en": "Update to 15.104.3 or 16.14.0",
+          "fr": "Mettre à jour vers 15.104.3 ou 16.14.0"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "ERPNext",
+        "SQLi"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-44446"
+      ],
+      "date": "2026-05-13"
+    },
+    {
+      "cve_id": "CVE-2026-44442",
+      "euvd_id": "unknown",
+      "cisa_kev": "unknown",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:frappe:erpnext:*:*:*:*:*:*:*:*",
+      "product": "ERPNext",
+      "vendor": "Frappe",
+      "description": {
+        "en": "Unauthorized document modification in ERPNext.",
+        "fr": "Modification de document non autorisée dans ERPNext."
+      },
+      "mitre_ttps": [
+        "unknown"
+      ],
+      "recommandations": [
+        {
+          "en": "Update to 16.9.1",
+          "fr": "Mettre à jour vers 16.9.1"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "ERPNext",
+        "Auth"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-44442"
+      ],
+      "date": "2026-05-13"
+    },
+    {
+      "cve_id": "CVE-2026-44369",
+      "euvd_id": "unknown",
+      "cisa_kev": "unknown",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:opencv:cvat:*:*:*:*:*:*:*:*",
+      "product": "CVAT",
+      "vendor": "OpenCV",
+      "description": {
+        "en": "Stored XSS in CVAT annotation guides.",
+        "fr": "XSS stockée dans les guides d'annotation CVAT."
+      },
+      "mitre_ttps": [
+        "unknown"
+      ],
+      "recommandations": [
+        {
+          "en": "Update to CVAT 2.64.0",
+          "fr": "Mettre à jour vers CVAT 2.64.0"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "XSS",
+        "CVAT"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-44369"
+      ],
+      "date": "2026-05-13"
+    },
+    {
+      "cve_id": "unknown",
+      "euvd_id": "unknown",
+      "cisa_kev": "unknown",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*",
+      "product": "Chrome",
+      "vendor": "Google",
+      "description": {
+        "en": "Multiple critical vulnerabilities corrected in Google Chrome stable channel.",
+        "fr": "Multiples vulnérabilités critiques corrigées dans le canal stable de Google Chrome."
+      },
+      "mitre_ttps": [
+        "unknown"
+      ],
+      "recommandations": [
+        {
+          "en": "Update Chrome immediately",
+          "fr": "Mettre à jour Chrome immédiatement"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "Chrome",
+        "Browser"
+      ],
+      "sources": [
+        "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0574/"
+      ],
+      "date": "2026-05-13"
+    },
+    {
+      "cve_id": "unknown",
+      "euvd_id": "unknown",
+      "cisa_kev": "unknown",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:apache:tomcat:*:*:*:*:*:*:*:*",
+      "product": "Tomcat",
+      "vendor": "Apache",
+      "description": {
+        "en": "Vulnerabilities allowing security policy bypass in Apache Tomcat 9.0, 10.1, 11.0.",
+        "fr": "Vulnérabilités permettant le contournement des politiques de sécurité dans Apache Tomcat 9.0, 10.1, 11.0."
+      },
+      "mitre_ttps": [
+        "unknown"
+      ],
+      "recommandations": [
+        {
+          "en": "Update to versions 9.0.118, 10.1.55 or 11.0.22",
+          "fr": "Mettre à jour vers les versions 9.0.118, 10.1.55 ou 11.0.22"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "Tomcat",
+        "Web"
+      ],
+      "sources": [
+        "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0577/"
+      ],
+      "date": "2026-05-13"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "Worm Mini Shai-Hulud: 170 packages compromised",
+        "fr": "Ver npm 'Mini Shai-Hulud' : 170 packages compromis"
+      },
+      "description": {
+        "en": "Sophisticated supply chain attack using CI token hijacking via TeamPCP.",
+        "fr": "Attaque sophistiquée de la chaîne d'approvisionnement utilisant le détournement de jetons CI via TeamPCP."
+      },
+      "threat_actor": "TeamPCP",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologies et télécoms"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "git-tanstack[.]com",
+          "seed1[.]getsession[.]org"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Bun",
+          "Signal/Session"
+        ]
+      },
+      "mitre_ttps": [
+        "T1195.002",
+        "T1539"
+      ],
+      "analyse": {
+        "en": "Uses Bun as LOLBin for exfiltration and routing via the P2P Session network.",
+        "fr": "Utilise Bun comme LOLBin pour l'exfiltration et le routage via le réseau P2P Session."
+      },
+      "recommandations": [
+        {
+          "en": "Restrict npm tokens via OIDC federation",
+          "fr": "Restreindre les jetons npm via la fédération OIDC"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Deploy supply chain firewalls"
+          ],
+          "fr": [
+            "Déployer des firewalls de supply chain"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect P2P Session traffic from runners"
+          ],
+          "fr": [
+            "Détecter le trafic P2P Session depuis les runners"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Revoke npm tokens"
+          ],
+          "fr": [
+            "Révoquer les jetons npm"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Rotate secrets in Vault/Secrets Manager"
+          ],
+          "fr": [
+            "Rotation des secrets dans Vault/Secrets Manager"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "Worm",
+        "npm",
+        "Supply_Chain"
+      ],
+      "sources": [
+        "https://opensourcemalware.com/blog/teampcp-mistralai-opensearch-compromised"
+      ],
+      "date": "2026-05-13"
+    },
+    {
+      "title": {
+        "en": "NATS-as-C2: Cloud and AI API Key Theft",
+        "fr": "NATS-as-C2 : Vol de clés API Cloud et IA"
+      },
+      "description": {
+        "en": "C2 infrastructure using NATS message broker to manage scanning workers.",
+        "fr": "Infrastructure C2 utilisant le broker de messages NATS pour gérer des workers de scan."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologies et télécoms"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [
+          "159[.]89[.]205[.]184",
+          "45[.]192[.]109[.]25"
+        ],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "NATS",
+          "Langflow",
+          "DirtyPipe"
+        ]
+      },
+      "mitre_ttps": [
+        "T1071.001"
+      ],
+      "analyse": {
+        "en": "Exploits Langflow vulnerability followed by Go/Python malware using uTLS for evasion.",
+        "fr": "Exploite une vulnérabilité Langflow suivie de malwares Go/Python utilisant uTLS."
+      },
+      "recommandations": [
+        {
+          "en": "Restrict outgoing connections on port 4222",
+          "fr": "Restreindre les connexions sortantes sur le port 4222"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Harden Langflow configurations"
+          ],
+          "fr": [
+            "Durcir les configurations Langflow"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor traffic to NATS port 4222"
+          ],
+          "fr": [
+            "Surveiller le trafic vers le port NATS 4222"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Block identified NATS server IPs"
+          ],
+          "fr": [
+            "Bloquer les IPs de serveurs NATS identifiées"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Immediate rotation of AWS/OpenAI keys"
+          ],
+          "fr": [
+            "Rotation immédiate des clés AWS/OpenAI"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Query network logs for destination port 4222"
+          ],
+          "fr": [
+            "Rechercher le port de destination 4222 dans les logs réseau"
+          ]
+        }
+      },
+      "tags": [
+        "Cloud",
+        "API",
+        "C2"
+      ],
+      "sources": [
+        "https://webflow.sysdig.com/blog/nats-as-c2-inside-a-new-technique-attackers-are-using-to-harvest-cloud-credentials-and-ai-api-keys"
+      ],
+      "date": "2026-05-14"
+    },
+    {
+      "title": {
+        "en": "Gamaredon Campaign: GammaDrop and GammaLoad",
+        "fr": "Campagne Gamaredon : GammaDrop et GammaLoad"
+      },
+      "description": {
+        "en": "Active campaign targeting Ukrainian institutions via trapped RAR archives.",
+        "fr": "Campagne active ciblant les institutions ukrainiennes via des archives RAR piégées."
+      },
+      "threat_actor": "Gamaredon",
+      "threat_actor_origin": "Russia",
+      "threat_actor_type": "State-sponsored",
+      "threat_actor_aliases": [
+        "Aqua Blizzard",
+        "Primitive Bear",
+        "UAC-0010"
+      ],
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement et Défense"
+        ]
+      },
+      "indicators": {
+        "URL": [
+          "hxxps://heart7766[.]vmkyieebw2[.]workers[.]dev/snstead/wordpress[.]php="
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "kosoyed[.]ru"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "GammaDrop",
+          "GammaLoad",
+          "Cloudflare Workers"
+        ]
+      },
+      "mitre_ttps": [
+        "T1218.005",
+        "T1566.001"
+      ],
+      "analyse": {
+        "en": "Uses Cloudflare Workers and fast-flux DNS for resilience.",
+        "fr": "Utilise Cloudflare Workers et un DNS fast-flux pour la résilience."
+      },
+      "recommandations": [
+        {
+          "en": "Block subnet 194.58.66.0/24",
+          "fr": "Bloquer le sous-réseau 194.58.66.0/24"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Set DMARC to reject"
+          ],
+          "fr": [
+            "Régler DMARC sur 'reject'"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Alert on MSHTA with workers.dev URLs"
+          ],
+          "fr": [
+            "Alerte sur MSHTA avec des URLs workers.dev"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate hosts communicating with .ru domains"
+          ],
+          "fr": [
+            "Isoler les hôtes communiquant avec des domaines .ru"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Remove scripts from Startup folder"
+          ],
+          "fr": [
+            "Supprimer les scripts du dossier Startup"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for vbs files in AppData/Startup"
+          ],
+          "fr": [
+            "Rechercher des fichiers vbs dans AppData/Startup"
+          ]
+        }
+      },
+      "tags": [
+        "APT",
+        "Ukraine",
+        "VBScript"
+      ],
+      "sources": [
+        "https://harfanglab.io/insidethelab/gamaredon-gammadrop-gammaload/"
+      ],
+      "date": "2026-05-13"
+    },
+    {
+      "title": {
+        "en": "126 Malicious Chrome Extensions Network",
+        "fr": "Réseau de 126 extensions Chrome malveillantes"
+      },
+      "description": {
+        "en": "Extensions capturing WhatsApp data and advertising cookies sharing a backend.",
+        "fr": "Extensions capturant des données WhatsApp et des cookies publicitaires partageant un backend."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologies et télécoms"
+        ]
+      },
+      "indicators": {
+        "URL": [
+          "wascript[.]com[.]br"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Google Tag Manager"
+        ]
+      },
+      "mitre_ttps": [
+        "T1176"
+      ],
+      "analyse": {
+        "en": "Operator pushes arbitrary code via Google Tag Manager.",
+        "fr": "L'opérateur injecte du code arbitraire via Google Tag Manager."
+      },
+      "recommandations": [
+        {
+          "en": "Limit non-audited extension installation",
+          "fr": "Limiter l'installation d'extensions non auditées"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Browser extension whitelist policy"
+          ],
+          "fr": [
+            "Politique de liste blanche pour les extensions"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor traffic to tracking domains"
+          ],
+          "fr": [
+            "Surveiller le trafic vers les domaines de tracking"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Forced extension uninstall via GPO"
+          ],
+          "fr": [
+            "Désinstallation forcée des extensions via GPO"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Session cookie cleanup"
+          ],
+          "fr": [
+            "Nettoyage des cookies de session"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "Spyware",
+        "Chrome",
+        "WhatsApp"
+      ],
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1tcbina/126_chrome_extensions_all_secretly_the_same/"
+      ],
+      "date": "2026-05-14"
+    }
+  ]
+}
