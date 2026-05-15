@@ -485,7 +485,7 @@
           "fr": "Restreindre l'accès NETCONF uniquement aux adresses IP autorisées."
         }
       ],
-      "incident_reponse_playbook": {
+      "incident_response_playbook": {
         "phase1_preparation": {
           "en": [
             "Gather vManage and auth.log logs",
@@ -575,7 +575,7 @@
           "fr": "Remplacer les captures non nommées ($1, $2) par des captures nommées dans les directives de réécriture."
         }
       ],
-      "incident_reponse_playbook": {
+      "incident_response_playbook": {
         "phase1_preparation": {
           "en": [
             "Identify all NGINX instances using the rewrite module",
@@ -659,7 +659,7 @@
           "fr": "Mettre en liste noire les modules espintcp, esp4 et esp6 s'ils ne sont pas nécessaires."
         }
       ],
-      "incident_reponse_playbook": {
+      "incident_response_playbook": {
         "phase1_preparation": {
           "en": [
             "Inventory Linux kernel versions across the environment"
@@ -735,7 +735,7 @@
           "fr": "Appliquer le correctif introduisant le rôle dédié cnpg_metrics_exporter."
         }
       ],
-      "incident_reponse_playbook": {
+      "incident_response_playbook": {
         "phase1_preparation": {
           "en": [
             "Audit all Kubernetes clusters running CloudNativePG"
@@ -814,7 +814,7 @@
           "fr": "Forcer la lecture en texte brut dans Outlook comme mesure d'atténuation temporaire."
         }
       ],
-      "incident_reponse_playbook": {
+      "incident_response_playbook": {
         "phase1_preparation": {
           "en": [
             "Configure group policies to disable HTML rendering if possible"
