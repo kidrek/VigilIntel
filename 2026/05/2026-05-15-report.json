@@ -1,0 +1,1104 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The threat landscape on May 15, 2026, is dominated by critical vulnerabilities in networking infrastructure (Cisco SD-WAN, NGINX) and sophisticated supply chain attacks targeting AI leaders like OpenAI and Mistral. Geopolitical tensions continue to drive cyber espionage, notably against the Azerbaijani energy sector, while ransomware groups like Nitrogen and Inc Ransom expand their industrial targeting. The emergence of novel C2 techniques (NATS-as-C2) and the weaponization of developer tools (VS Code scripts) signal a shift toward more stealthy execution methods.",
+      "fr": "Le panorama des menaces du 15 mai 2026 est dominé par des vulnérabilités critiques dans les infrastructures réseau (Cisco SD-WAN, NGINX) et des attaques sophistiquées de la chaîne d'approvisionnement ciblant des leaders de l'IA comme OpenAI et Mistral. Les tensions géopolitiques continuent de stimuler le cyber-espionnage, notamment contre le secteur énergétique azerbaïdjanais, tandis que des groupes de rançongiciels comme Nitrogen et Inc Ransom étendent leur ciblage industriel. L'émergence de nouvelles techniques C2 (NATS-as-C2) et la militarisation des outils de développement (scripts VS Code) signalent un virage vers des méthodes d'exécution plus furtives."
+    },
+    "date": "2026-05-15"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": [
+          "Critical_Infrastructure",
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Infrastructures Critiques",
+          "Gouvernement et Défense"
+        ]
+      },
+      "theme": {
+        "en": "South Caucasus Energy Espionage",
+        "fr": "Espionnage énergétique dans le Caucase du Sud"
+      },
+      "description": {
+        "en": "Multi-wave espionage campaign by Chinese APT FamousSparrow targeting the Azerbaijani energy sector, exploiting strategic shifts in European energy supply chains.",
+        "fr": "Campagne d'espionnage multi-vagues menée par l'APT chinois FamousSparrow ciblant le secteur énergétique azerbaïdjanais, exploitant les changements stratégiques des chaînes d'approvisionnement énergétique européennes."
+      },
+      "recommandations": [
+        {
+          "en": "Audit all Exchange servers for ProxyNotShell exploitation artifacts.",
+          "fr": "Auditer tous les serveurs Exchange pour les artefacts d'exploitation ProxyNotShell."
+        },
+        {
+          "en": "Implement strict egress filtering for critical energy infrastructure networks.",
+          "fr": "Mettre en œuvre un filtrage strict des sorties pour les réseaux d'infrastructures énergétiques critiques."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Baseline normal administrative traffic for Exchange management",
+            "Establish secure communication channels with regional energy CERTs"
+          ],
+          "fr": [
+            "Établir une base de référence du trafic administratif normal pour la gestion Exchange",
+            "Établir des canaux de communication sécurisés avec les CERT régionaux de l'énergie"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for DLL side-loading in LMIGuardianSvc.exe",
+            "Detect unusual web shell activity on IIS worker processes"
+          ],
+          "fr": [
+            "Surveiller le side-loading de DLL dans LMIGuardianSvc.exe",
+            "Détecter l'activité inhabituelle de shells web sur les processus worker IIS"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate compromised Exchange servers immediately",
+            "Block IP addresses associated with FamousSparrow C2 infrastructure"
+          ],
+          "fr": [
+            "Isoler immédiatement les serveurs Exchange compromis",
+            "Bloquer les adresses IP associées à l'infrastructure C2 de FamousSparrow"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Perform full credential rotation for domain admins",
+            "Sanitize staging directories and remove Deed RAT persistence"
+          ],
+          "fr": [
+            "Effectuer une rotation complète des identifiants des administrateurs de domaine",
+            "Nettoyer les répertoires de staging et supprimer la persistance de Deed RAT"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for unauthorized use of EarthWorm or ReverseSocks5 tools",
+            "Hunt for suspicious 'pipename-kernel-' patterns in named pipes"
+          ],
+          "fr": [
+            "Rechercher l'utilisation non autorisée des outils EarthWorm ou ReverseSocks5",
+            "Rechercher des motifs 'pipename-kernel-' suspects dans les pipes nommés"
+          ]
+        }
+      },
+      "tags": [
+        "Azerbaijan",
+        "FamousSparrow",
+        "Energy",
+        "Espionage"
+      ],
+      "sources": [
+        "https://securityaffairs.com/192113/apt/famoussparrow-targets-azerbaijani-energy-sector-in-multi-wave-espionage-campaign.html",
+        "https://cybersecuritynews.com/chinese-apt-hackers-exploit-microsoft-exchange/"
+      ],
+      "date": "2026-05-15"
+    },
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement et Défense"
+        ]
+      },
+      "theme": {
+        "en": "Industrialization of Drone Warfare",
+        "fr": "Industrialisation de la guerre des drones"
+      },
+      "description": {
+        "en": "Transformation of drone production from artisanal to massive industrial scale in the Ukraine-Russia conflict, with significant implications for future cyber-physical combat.",
+        "fr": "Transformation de la production de drones de l'artisanat à l'échelle industrielle massive dans le conflit Ukraine-Russie, avec des implications majeures pour le futur combat cyber-physique."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor global component supply chains for unauthorized diversion of dual-use electronics.",
+          "fr": "Surveiller les chaînes d'approvisionnement mondiales de composants pour détecter le détournement non autorisé d'électronique à double usage."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Develop electronic warfare countermeasures",
+            "Secure drone control frequencies"
+          ],
+          "fr": [
+            "Développer des contre-mesures de guerre électronique",
+            "Sécuriser les fréquences de contrôle des drones"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect jamming and spoofing attempts in operational theaters"
+          ],
+          "fr": [
+            "Détecter les tentatives de brouillage et d'usurpation sur les théâtres opérationnels"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Switch to autonomous navigation modes upon signal loss"
+          ],
+          "fr": [
+            "Passer aux modes de navigation autonomes en cas de perte de signal"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Analyze captured enemy drone firmware for software vulnerabilities"
+          ],
+          "fr": [
+            "Analyser le firmware des drones ennemis capturés pour détecter des vulnérabilités logicielles"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for industrial espionage targeting drone production facilities"
+          ],
+          "fr": [
+            "Rechercher l'espionnage industriel ciblant les installations de production de drones"
+          ]
+        }
+      },
+      "tags": [
+        "Ukraine",
+        "Russia",
+        "Drones",
+        "Military"
+      ],
+      "sources": [
+        "https://www.portail-ie.fr/univers/defense-industrie-de-larmement-et-renseignement/2026/production-de-drones-nouvelle-ere-ukraine/"
+      ],
+      "date": "2026-05-15"
+    }
+  ],
+  "regulatory_and_legal": [
+    {
+      "title": {
+        "en": "NIST NVD Enrichment Policy Shift",
+        "fr": "Changement de politique d'enrichissement du NIST NVD"
+      },
+      "description": {
+        "en": "NIST announces it will only enrich vulnerabilities that are actively exploited or critical, leaving a large portion of CVEs without metadata.",
+        "fr": "Le NIST annonce qu'il n'enrichira que les vulnérabilités activement exploitées ou critiques, laissant une grande partie des CVE sans métadonnées."
+      },
+      "organisation": {
+        "en": [
+          "NIST"
+        ],
+        "fr": [
+          "NIST"
+        ]
+      },
+      "jurisdiction": {
+        "en": [
+          "USA"
+        ],
+        "fr": [
+          "États-Unis"
+        ]
+      },
+      "references": {
+        "en": [
+          "NVD Policy 2026"
+        ],
+        "fr": [
+          "Politique NVD 2026"
+        ]
+      },
+      "tags": [
+        "NIST",
+        "NVD",
+        "Compliance"
+      ],
+      "sources": [
+        "https://www.recordedfuture.com/blog/nist-nvd-enrichment"
+      ],
+      "date": "2026-05-15"
+    },
+    {
+      "title": {
+        "en": "CMMC 2.0 Final Rule Enforcement",
+        "fr": "Application de la règle finale CMMC 2.0"
+      },
+      "description": {
+        "en": "Final Rule for CMMC 2.0 requires third-party certification for DoD subcontractors handling controlled unclassified information (CUI).",
+        "fr": "La règle finale de la CMMC 2.0 impose une certification tierce partie pour les sous-traitants du DoD gérant des informations non classifiées contrôlées (CUI)."
+      },
+      "organisation": {
+        "en": [
+          "Department of Defense"
+        ],
+        "fr": [
+          "Département de la Défense"
+        ]
+      },
+      "jurisdiction": {
+        "en": [
+          "USA"
+        ],
+        "fr": [
+          "États-Unis"
+        ]
+      },
+      "references": {
+        "en": [
+          "CMMC 2.0"
+        ],
+        "fr": [
+          "CMMC 2.0"
+        ]
+      },
+      "tags": [
+        "CMMC",
+        "DoD",
+        "Defense"
+      ],
+      "sources": [
+        "https://www.huntress.com/blog/cmmc-final-rule-guide-for-dod-subcontractors"
+      ],
+      "date": "2026-05-15"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Mistral AI / OpenAI",
+      "threat_actor": "TeamPCP",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [
+        "Mini Shai-Hulud operators"
+      ],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et Télécom"
+        ]
+      },
+      "description": {
+        "en": "Supply chain compromise via TanStack allowed TeamPCP to exfiltrate 5GB of source code and internal secrets from Mistral AI and OpenAI employees.",
+        "fr": "Une compromission de la chaîne d'approvisionnement via TanStack a permis à TeamPCP d'exfiltrer 5 Go de code source et des secrets internes de Mistral AI et des employés d'OpenAI."
+      },
+      "mitre_ttps": [
+        "T1195.002",
+        "T1552.001",
+        "T1567"
+      ],
+      "recommandations": [
+        {
+          "en": "Rotate all CI/CD secrets and GitHub personal access tokens.",
+          "fr": "Faire tourner tous les secrets CI/CD et les jetons d'accès personnels GitHub."
+        },
+        {
+          "en": "Update desktop applications (OpenAI) to versions patched after supply chain review.",
+          "fr": "Mettre à jour les applications de bureau (OpenAI) vers les versions patchées après revue de la chaîne d'approvisionnement."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Implement one-time deployment tokens",
+            "Audit GitHub Actions workflows for hardcoded secrets"
+          ],
+          "fr": [
+            "Mettre en œuvre des jetons de déploiement à usage unique",
+            "Auditer les workflows GitHub Actions pour les secrets en dur"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for unusual source code repository cloning activity",
+            "Detect Mini Shai-Hulud malware signatures on employee endpoints"
+          ],
+          "fr": [
+            "Surveiller l'activité inhabituelle de clonage de dépôts de code source",
+            "Détecter les signatures du malware Mini Shai-Hulud sur les postes des employés"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Revoke compromised employee sessions",
+            "Block malicious TanStack package versions in internal registries"
+          ],
+          "fr": [
+            "Révoquer les sessions des employés compromises",
+            "Bloquer les versions malveillantes des paquets TanStack dans les registres internes"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Perform third-party forensic audit of developer workstations",
+            "Notify users of potential desktop app compromise"
+          ],
+          "fr": [
+            "Effectuer un audit forensique tiers des postes de travail des développeurs",
+            "Informer les utilisateurs d'une éventuelle compromission de l'application de bureau"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for unauthorized memory extraction of CI/CD tokens"
+          ],
+          "fr": [
+            "Rechercher l'extraction non autorisée de jetons CI/CD en mémoire"
+          ]
+        }
+      },
+      "tags": [
+        "OpenAI",
+        "Mistral",
+        "SupplyChain",
+        "AI"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/teampcp-hackers-advertise-mistral-ai-code-repos-for-sale/",
+        "https://www.bleepingcomputer.com/news/security/openai-confirms-security-breach-in-tanstack-supply-chain-attack/"
+      ],
+      "date": "2026-05-15"
+    },
+    {
+      "victim": "Foxconn",
+      "threat_actor": "Nitrogen",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Ransomware Group",
+      "threat_actor_aliases": [
+        "Nitrogen Ransomware"
+      ],
+      "sector": {
+        "en": [
+          "Industry_and_Manufacturing"
+        ],
+        "fr": [
+          "Industrie et Fabrication"
+        ]
+      },
+      "description": {
+        "en": "Massive data theft of 8TB claimed by Nitrogen ransomware, including technical documents from Intel, Apple, and Google.",
+        "fr": "Vol massif de 8 To de données revendiqué par le rançongiciel Nitrogen, incluant des documents techniques d'Intel, Apple et Google."
+      },
+      "mitre_ttps": [
+        "T1486",
+        "T1048"
+      ],
+      "recommandations": [
+        {
+          "en": "Harden network segmentation between production sites.",
+          "fr": "Renforcer la segmentation réseau entre les sites de production."
+        },
+        {
+          "en": "Monitor for large file exfiltration to Tor exit nodes.",
+          "fr": "Surveiller l'exfiltration de fichiers volumineux vers les nœuds de sortie Tor."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Ensure off-line backups of technical IP are current",
+            "Validate business continuity plans for manufacturing sites"
+          ],
+          "fr": [
+            "S'assurer que les sauvegardes hors ligne de la PI technique sont à jour",
+            "Valider les plans de continuité d'activité pour les sites de fabrication"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Set alerts for massive data transfers out of the CAD/CAM network"
+          ],
+          "fr": [
+            "Configurer des alertes pour les transferts massifs de données hors du réseau CAD/CAM"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate North American manufacturing sites",
+            "Cut suspected VPN tunnels used for exfiltration"
+          ],
+          "fr": [
+            "Isoler les sites de fabrication nord-américains",
+            "Couper les tunnels VPN suspects utilisés pour l'exfiltration"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Investigate initial entry vector, possibly phishing or vulnerable gateway"
+          ],
+          "fr": [
+            "Enquêter sur le vecteur d'entrée initial, probablement du phishing ou une passerelle vulnérable"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for unauthorized RDP connections between global plants"
+          ],
+          "fr": [
+            "Rechercher des connexions RDP non autorisées entre les usines mondiales"
+          ]
+        }
+      },
+      "tags": [
+        "Foxconn",
+        "Nitrogen",
+        "Ransomware",
+        "IntellectualProperty"
+      ],
+      "sources": [
+        "https://securityaffairs.com/192099/uncategorized/nitrogen-ransomware-claims-massive-data-theft-from-foxconn.html"
+      ],
+      "date": "2026-05-15"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-20182",
+      "euvd_id": "unknown",
+      "cisa_kev": "TRUE",
+      "cvss": "10.0",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:*:*:*:*:*:*:*:*",
+      "product": "Catalyst SD-WAN Controller / Manager",
+      "vendor": "Cisco",
+      "description": {
+        "en": "Authentication bypass in the peering mechanism of Cisco Catalyst SD-WAN allows remote attackers to gain administrative privileges via NETCONF.",
+        "fr": "Un contournement d'authentification dans le mécanisme de peering de Cisco Catalyst SD-WAN permet à des attaquants distants d'obtenir des privilèges administratifs via NETCONF."
+      },
+      "mitre_ttps": [
+        "T1078.001",
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply software updates from February 2026 immediately.",
+          "fr": "Appliquer immédiatement les mises à jour logicielles de février 2026."
+        },
+        {
+          "en": "Restrict NETCONF access to authorized IP addresses only.",
+          "fr": "Restreindre l'accès NETCONF uniquement aux adresses IP autorisées."
+        }
+      ],
+      "incident_reponse_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Gather vManage and auth.log logs",
+            "Update IPS signatures for NETCONF exploits"
+          ],
+          "fr": [
+            "Collecter les journaux vManage et auth.log",
+            "Mettre à jour les signatures IPS pour les exploits NETCONF"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Search for 'Accepted publickey for vmanage-admin' from unknown IPs",
+            "Monitor port UDP 12346 for unusual traffic patterns"
+          ],
+          "fr": [
+            "Rechercher 'Accepted publickey for vmanage-admin' depuis des IPs inconnues",
+            "Surveiller le port UDP 12346 pour des motifs de trafic inhabituels"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate affected SD-WAN controllers",
+            "Remove unauthorized SSH keys from the system"
+          ],
+          "fr": [
+            "Isoler les contrôleurs SD-WAN affectés",
+            "Supprimer les clés SSH non autorisées du système"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify all NETCONF configuration changes",
+            "Rebuild compromised appliances from a clean image"
+          ],
+          "fr": [
+            "Vérifier toutes les modifications de configuration NETCONF",
+            "Reconstruire les appliances compromises à partir d'une image saine"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for XenShell, Godzilla, or Behinder web shells in /tmp or web directories"
+          ],
+          "fr": [
+            "Rechercher des shells web XenShell, Godzilla ou Behinder dans /tmp ou les répertoires web"
+          ]
+        }
+      },
+      "tags": [
+        "Cisco",
+        "SD-WAN",
+        "Critical",
+        "AuthBypass"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/cisco-warns-of-new-critical-sd-wan-flaw-exploited-in-zero-day-attacks/",
+        "https://thehackernews.com/2026/05/cisco-catalyst-sd-wan-controller-auth.html",
+        "https://securityaffairs.com/192157/hacking/u-s-cisa-adds-a-flaw-in-cisco-catalyst-sd-wan-to-its-known-exploited-vulnerabilities-catalog.html"
+      ],
+      "date": "2026-05-15"
+    },
+    {
+      "cve_id": "CVE-2026-42945",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "9.2",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:f5:nginx:*:*:*:*:*:*:*:*",
+      "product": "NGINX Plus / Open Source",
+      "vendor": "F5 / NGINX",
+      "description": {
+        "en": "NGINX Rift: An 18-year-old heap buffer overflow in ngx_http_rewrite_module allows for DoS or potential RCE when PCRE captures are misused.",
+        "fr": "NGINX Rift : Un dépassement de tampon de tas de 18 ans dans ngx_http_rewrite_module permet un DoS ou une RCE potentielle lorsque les captures PCRE sont mal utilisées."
+      },
+      "mitre_ttps": [
+        "T1499.002",
+        "T1210"
+      ],
+      "recommandations": [
+        {
+          "en": "Update to NGINX 1.30.1 or 1.31.0 immediately.",
+          "fr": "Mettre à jour vers NGINX 1.30.1 ou 1.31.0 immédiatement."
+        },
+        {
+          "en": "Replace unnamed captures ($1, $2) with named captures in rewrite directives.",
+          "fr": "Remplacer les captures non nommées ($1, $2) par des captures nommées dans les directives de réécriture."
+        }
+      ],
+      "incident_reponse_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Identify all NGINX instances using the rewrite module",
+            "Audit configuration files for regex-based URI modifications"
+          ],
+          "fr": [
+            "Identifier toutes les instances NGINX utilisant le module rewrite",
+            "Auditer les fichiers de configuration pour les modifications d'URI basées sur regex"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for NGINX worker process crashes (SIGSEGV)",
+            "Detect malformed URI requests targeting rewrite rules"
+          ],
+          "fr": [
+            "Surveiller les plantages des processus worker NGINX (SIGSEGV)",
+            "Détecter les requêtes d'URI malformées ciblant les règles de réécriture"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Disable vulnerable rewrite rules temporarily if patching is delayed"
+          ],
+          "fr": [
+            "Désactiver temporairement les règles de réécriture vulnérables si le patch est retardé"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify the integrity of NGINX binaries and configuration"
+          ],
+          "fr": [
+            "Vérifier l'intégrité des binaires et de la configuration NGINX"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for shell execution spawned from NGINX processes"
+          ],
+          "fr": [
+            "Rechercher l'exécution de shell générée par les processus NGINX"
+          ]
+        }
+      },
+      "tags": [
+        "NGINX",
+        "Rift",
+        "HeapOverflow",
+        "Critical"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/18-year-old-nginx-vulnerability-allows-dos-potential-rce/",
+        "https://socprime.com/blog/cve-2026-42945-critical-nginx-rewrite-flaw/"
+      ],
+      "date": "2026-05-15"
+    },
+    {
+      "cve_id": "CVE-2026-46300",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "7.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+      "product": "Linux Kernel",
+      "vendor": "Linux Foundation",
+      "description": {
+        "en": "Fragnesia: A Linux kernel vulnerability in XFRM/TCP allowing local root escalation via page cache corruption.",
+        "fr": "Fragnesia : Une vulnérabilité du noyau Linux dans XFRM/TCP permettant une escalade de privilèges root locale via la corruption du cache de page."
+      },
+      "mitre_ttps": [
+        "T1068"
+      ],
+      "recommandations": [
+        {
+          "en": "Update Linux kernel to the latest stable version.",
+          "fr": "Mettre à jour le noyau Linux vers la dernière version stable."
+        },
+        {
+          "en": "Blacklist espintcp, esp4, and esp6 modules if not required.",
+          "fr": "Mettre en liste noire les modules espintcp, esp4 et esp6 s'ils ne sont pas nécessaires."
+        }
+      ],
+      "incident_reponse_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory Linux kernel versions across the environment"
+          ],
+          "fr": [
+            "Inventorier les versions du noyau Linux dans l'environnement"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for unauthorized writes to /usr/bin/su",
+            "Watch for espintcp module loading by non-root users"
+          ],
+          "fr": [
+            "Surveiller les écritures non autorisées dans /usr/bin/su",
+            "Surveiller le chargement du module espintcp par des utilisateurs non root"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Disable IPsec and espintcp services temporarily"
+          ],
+          "fr": [
+            "Désactiver temporairement les services IPsec et espintcp"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Check integrity of SUID binaries"
+          ],
+          "fr": [
+            "Vérifier l'intégrité des binaires SUID"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for suspicious page cache drops or manipulation patterns"
+          ],
+          "fr": [
+            "Rechercher des motifs de suppression ou de manipulation suspecte du cache de page"
+          ]
+        }
+      },
+      "tags": [
+        "Linux",
+        "Fragnesia",
+        "LPE"
+      ],
+      "sources": [
+        "https://securityaffairs.com/192145/uncategorized/linux-kernel-bug-fragnesia-allows-local-root-access-attacks.html"
+      ],
+      "date": "2026-05-15"
+    },
+    {
+      "cve_id": "CVE-2026-44477",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "9.4",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:enterprise-db:cloudnativepg:*:*:*:*:*:*:*:*",
+      "product": "CloudNativePG",
+      "vendor": "EnterpriseDB",
+      "description": {
+        "en": "Vulnerability in CloudNativePG operator for Kubernetes allows for role demotion failure, potentially leading to PostgreSQL superuser RCE.",
+        "fr": "Une vulnérabilité dans l'opérateur CloudNativePG pour Kubernetes permet l'échec de la rétrogradation de rôle, menant potentiellement à une RCE super-utilisateur PostgreSQL."
+      },
+      "mitre_ttps": [
+        "T1068"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply the patch introducing the dedicated cnpg_metrics_exporter role.",
+          "fr": "Appliquer le correctif introduisant le rôle dédié cnpg_metrics_exporter."
+        }
+      ],
+      "incident_reponse_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Audit all Kubernetes clusters running CloudNativePG"
+          ],
+          "fr": [
+            "Auditer tous les clusters Kubernetes exécutant CloudNativePG"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor SQL logs for RESET ROLE commands near metrics scrapes"
+          ],
+          "fr": [
+            "Surveiller les journaux SQL pour les commandes RESET ROLE près des collectes de métriques"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Disable metrics scraping until the operator is updated"
+          ],
+          "fr": [
+            "Désactiver la collecte de métriques jusqu'à la mise à jour de l'opérateur"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Audit PostgreSQL user privilege changes"
+          ],
+          "fr": [
+            "Auditer les changements de privilèges des utilisateurs PostgreSQL"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for persistent superuser access from non-admin namespaces"
+          ],
+          "fr": [
+            "Rechercher un accès super-utilisateur persistant depuis des namespaces non-admin"
+          ]
+        }
+      },
+      "tags": [
+        "PostgreSQL",
+        "Kubernetes",
+        "CloudNativePG",
+        "RCE"
+      ],
+      "sources": [
+        "https://securityonline.info/cloudnativepg-vulnerability-cve-2026-44477-postgresql-rce/"
+      ],
+      "date": "2026-05-15"
+    },
+    {
+      "cve_id": "CVE-2026-40361",
+      "euvd_id": "unknown",
+      "cisa_kev": "unknown",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:microsoft:word:*:*:*:*:*:*:*:*",
+      "product": "Microsoft Word / Outlook",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "Zero-click RCE in Microsoft Word via Outlook email rendering in the preview pane.",
+        "fr": "RCE zero-click dans Microsoft Word via le rendu des e-mails Outlook dans le volet de prévisualisation."
+      },
+      "mitre_ttps": [
+        "T1203"
+      ],
+      "recommandations": [
+        {
+          "en": "Patch Microsoft Office immediately.",
+          "fr": "Patcher Microsoft Office immédiatement."
+        },
+        {
+          "en": "Force plain text reading in Outlook as a temporary mitigation.",
+          "fr": "Forcer la lecture en texte brut dans Outlook comme mesure d'atténuation temporaire."
+        }
+      ],
+      "incident_reponse_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Configure group policies to disable HTML rendering if possible"
+          ],
+          "fr": [
+            "Configurer les politiques de groupe pour désactiver le rendu HTML si possible"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for unusual wwlib.dll crashes"
+          ],
+          "fr": [
+            "Surveiller les plantages inhabituels de wwlib.dll"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Block incoming emails with complex embedded Word structures at the gateway"
+          ],
+          "fr": [
+            "Bloquer les e-mails entrants contenant des structures Word intégrées complexes au niveau de la passerelle"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Inspect user profiles for persistent backdoors"
+          ],
+          "fr": [
+            "Inspecter les profils utilisateurs pour les backdoors persistantes"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for suspicious child processes of Winword.exe or Outlook.exe"
+          ],
+          "fr": [
+            "Rechercher les processus enfants suspects de Winword.exe ou Outlook.exe"
+          ]
+        }
+      },
+      "tags": [
+        "Microsoft",
+        "Outlook",
+        "Word",
+        "Zero-Click"
+      ],
+      "sources": [
+        "https://fieldeffect.com/blog/word-rce-via-outlook-emails"
+      ],
+      "date": "2026-05-15"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "Kazuar Botnet Evolution (Secret Blizzard)",
+        "fr": "Évolution du botnet Kazuar (Secret Blizzard)"
+      },
+      "description": {
+        "en": "Secret Blizzard (Russian state-sponsored actor) has updated Kazuar into a modular P2P botnet using Protobuf for inter-process communication.",
+        "fr": "Secret Blizzard (acteur étatique russe) a mis à jour Kazuar en un botnet P2P modulaire utilisant Protobuf pour la communication inter-processus."
+      },
+      "threat_actor": "Secret Blizzard",
+      "threat_actor_origin": "Russia",
+      "threat_actor_type": "APT",
+      "threat_actor_aliases": [
+        "Kazuar",
+        "Kala"
+      ],
+      "sector": {
+        "en": [
+          "Government_and_Defense",
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Gouvernement et Défense",
+          "Technologie et Télécom"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "ip-api.com"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [
+          "436cfce71290c2fc2f2c362541db68ced6847c66a73b55487e5e5c73b0636c85"
+        ],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Kazuar",
+          "Protobuf"
+        ]
+      },
+      "mitre_ttps": [
+        "T1071.001",
+        "T1132.001",
+        "T1573"
+      ],
+      "analyse": {
+        "en": "Kazuar's new architecture uses a Kernel/Bridge/Worker model, making it highly resilient and stealthy. It targets high-value intelligence in government networks.",
+        "fr": "La nouvelle architecture de Kazuar utilise un modèle Kernel/Bridge/Worker, le rendant très résilient et furtif. Il cible des renseignements de haute valeur dans les réseaux gouvernementaux."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor for unusual named pipe activity matching 'pipename-kernel-'.",
+          "fr": "Surveiller l'activité inhabituelle des pipes nommés correspondant à 'pipename-kernel-'."
+        },
+        {
+          "en": "Enable behavioral analysis in Microsoft Defender XDR.",
+          "fr": "Activer l'analyse comportementale dans Microsoft Defender XDR."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Deploy XDR solutions with deep kernel visibility"
+          ],
+          "fr": [
+            "Déployer des solutions XDR avec une visibilité approfondie du noyau"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect ClassName 'Bridge' or 'Kernel' in running processes"
+          ],
+          "fr": [
+            "Détecter ClassName 'Bridge' ou 'Kernel' dans les processus en cours d'exécution"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate hosts communicating with known botnet nodes"
+          ],
+          "fr": [
+            "Isoler les hôtes communiquant avec des nœuds de botnet connus"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Audit staging directories used for exfiltration"
+          ],
+          "fr": [
+            "Auditer les répertoires de staging utilisés pour l'exfiltration"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for unauthorized Protobuf-encoded traffic internally"
+          ],
+          "fr": [
+            "Rechercher le trafic encodé Protobuf non autorisé en interne"
+          ]
+        }
+      },
+      "tags": [
+        "Kazuar",
+        "APT",
+        "Russia",
+        "Botnet"
+      ],
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/14/kazuar-anatomy-of-a-nation-state-botnet/"
+      ],
+      "date": "2026-05-15"
+    },
+    {
+      "title": {
+        "en": "NATS-as-C2 Infrastructure (KeyHunter)",
+        "fr": "Infrastructure NATS-as-C2 (KeyHunter)"
+      },
+      "description": {
+        "en": "Attackers are utilizing the NATS messaging protocol as a stealthy Command & Control channel to harvest cloud credentials and AI API keys.",
+        "fr": "Les attaquants utilisent le protocole de messagerie NATS comme canal de Command & Control furtif pour collecter des identifiants cloud et des clés API d'IA."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminal",
+      "threat_actor_aliases": [
+        "KeyHunter operators"
+      ],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom",
+          "Business_Services"
+        ],
+        "fr": [
+          "Technologie et Télécom",
+          "Services aux Entreprises"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [
+          "159.89.205.184",
+          "45.192.109.25"
+        ],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [
+          "16b279aa018c64294d58280636e538f86e3dd9bdcb5734c203373394b72d101a"
+        ],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "NATS",
+          "Langflow"
+        ]
+      },
+      "mitre_ttps": [
+        "T1071",
+        "T1552.001"
+      ],
+      "analyse": {
+        "en": "By exploiting Langflow (CVE-2026-33017), attackers deploy static Go binaries that use NATS to exfiltrate AWS and OpenAI keys, bypassing traditional HTTP monitoring.",
+        "fr": "En exploitant Langflow (CVE-2026-33017), les attaquants déploient des binaires Go statiques qui utilisent NATS pour exfiltrer des clés AWS et OpenAI, contournant la surveillance HTTP traditionnelle."
+      },
+      "recommandations": [
+        {
+          "en": "Block egress traffic on port 14222 unless NATS is explicitly required.",
+          "fr": "Bloquer le trafic sortant sur le port 14222 à moins que NATS ne soit explicitement requis."
+        },
+        {
+          "en": "Scan .py and .env files for exposed API keys regularly.",
+          "fr": "Scanner régulièrement les fichiers .py et .env pour les clés API exposées."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Audit all Langflow deployments in the environment"
+          ],
+          "fr": [
+            "Auditer tous les déploiements Langflow dans l'environnement"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for static Go binaries communicating over non-standard ports"
+          ],
+          "fr": [
+            "Surveiller les binaires Go statiques communiquant sur des ports non standard"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Revoke all AWS/OpenAI keys found in the compromised instances"
+          ],
+          "fr": [
+            "Révoquer toutes les clés AWS/OpenAI trouvées dans les instances compromises"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Perform forensic analysis of the VPS used for the NATS server"
+          ],
+          "fr": [
+            "Effectuer une analyse forensique du VPS utilisé pour le serveur NATS"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for unauthorized NATS protocol headers in network logs"
+          ],
+          "fr": [
+            "Rechercher des en-têtes de protocole NATS non autorisés dans les logs réseau"
+          ]
+        }
+      },
+      "tags": [
+        "NATS",
+        "KeyHunter",
+        "Cloud",
+        "AI"
+      ],
+      "sources": [
+        "https://webflow.sysdig.com/blog/nats-as-c2-inside-a-new-technique-attackers-are-using-to-harvest-cloud-credentials-and-ai-api-keys"
+      ],
+      "date": "2026-05-15"
+    }
+  ]
+}
