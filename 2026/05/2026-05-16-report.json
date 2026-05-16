@@ -1,14 +1,842 @@
 {
   "strategic_analysis": {
     "analyse": {
-      "en": "No cyber security articles or incident reports were provided for analysis on the date of 2026-05-16. As a result, no specific threats, vulnerabilities, or geopolitical trends could be extracted or analyzed.",
-      "fr": "Aucun article de cybersécurité ou rapport d'incident n'a été fourni pour analyse à la date du 2026-05-16. Par conséquent, aucune menace, vulnérabilité ou tendance géopolitique spécifique n'a pu être extraite ou analysée."
+      "en": "The threat landscape of mid-May 2026 is characterized by intensive exploitation of the WordPress ecosystem and collaborative platforms such as Microsoft Exchange. There is a notable persistence of historical botnets (Outlaw/Shellbot) adapting their technical infrastructure (libssh) while maintaining initial access vectors. Simultaneously, Pwn2Own Berlin 2026 reveals critical vulnerabilities in Linux, Windows, and AI tools, highlighting an expanding attack surface towards intelligent agents.",
+      "fr": "Le paysage des menaces de la mi-mai 2026 est marqué par une exploitation intensive de l'écosystème WordPress et des plateformes collaboratives comme Microsoft Exchange. On observe une persistance remarquable de botnets historiques (Outlaw/Shellbot) qui cyber-adaptent leur infrastructure technique (libssh) tout en conservant leurs vecteurs d'accès initiaux. Parallèlement, le concours Pwn2Own Berlin 2026 révèle des vulnérabilités critiques dans les environnements Linux, Windows et les outils d'IA, soulignant une surface d'attaque en constante expansion vers les agents intelligents."
     },
     "date": "2026-05-16"
   },
   "geopolitical_analyse": [],
   "regulatory_and_legal": [],
-  "breach_analyse": [],
-  "vulnerabilities_analyse": [],
-  "threats_analyse": []
+  "breach_analyse": [
+    {
+      "victim": "WordPress E-commerce Users",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminalité",
+      "threat_actor_aliases": [
+        "Magecart Style Actor"
+      ],
+      "sector": {
+        "en": [
+          "Retail_and_Consumer"
+        ],
+        "fr": [
+          "Commerce et Consommation"
+        ]
+      },
+      "description": {
+        "en": "Attackers exploited an unprotected checkout endpoint in the Funnel Builder WordPress plugin to inject malicious JavaScript. This script, masquerading as Google Tag Manager, steals credit card data via WebSockets (wss://protect-wss.com).",
+        "fr": "Des attaquants ont exploité un point de terminaison de paiement non protégé dans le plugin WordPress Funnel Builder pour injecter du JavaScript malveillant. Ce script, déguisé en Google Tag Manager, vole les données de cartes bancaires via WebSockets (wss://protect-wss.com)."
+      },
+      "mitre_ttps": [
+        "T1553",
+        "T1071.001"
+      ],
+      "recommandations": [
+        {
+          "en": "Immediately update the Funnel Builder plugin and inspect the 'External Scripts' configuration.",
+          "fr": "Mettre à jour immédiatement le plugin Funnel Builder et inspecter la configuration 'External Scripts'."
+        },
+        {
+          "en": "Implement a strict Content Security Policy (CSP) to restrict unauthorized WebSocket connections.",
+          "fr": "Mettre en œuvre une politique de sécurité du contenu (CSP) stricte pour restreindre les connexions WebSocket non autorisées."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Deploy a strict Content Security Policy (CSP) header.",
+            "Use file integrity monitoring tools for WordPress."
+          ],
+          "fr": [
+            "Mettre en place une Content Security Policy (CSP) stricte.",
+            "Utiliser un moniteur d'intégrité de fichiers pour WordPress."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Scan the 'External Scripts' section within FunnelKit settings.",
+            "Monitor outbound connections to protect-wss.com or analytics-reports.com."
+          ],
+          "fr": [
+            "Scanner les 'External Scripts' dans les réglages de FunnelKit.",
+            "Détecter les connexions sortantes vers protect-wss.com ou analytics-reports.com."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Remove the injected script from the plugin configuration tables.",
+            "Force an immediate update of the Funnel Builder plugin."
+          ],
+          "fr": [
+            "Supprimer le script injecté dans les réglages du plugin.",
+            "Forcer la mise à jour du plugin Funnel Builder."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify the integrity of the wp_options table.",
+            "Notify customers who completed transactions during the breach period."
+          ],
+          "fr": [
+            "Vérifier l'intégrité de la table wp_options.",
+            "Avertir les clients ayant effectué un paiement pendant l'infection."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Query network logs for destination_domain='protect-wss.com'.",
+            "Search for unauthorized changes in WordPress plugin settings via SQL."
+          ],
+          "fr": [
+            "Rechercher dans les logs réseau destination_domain='protect-wss.com'.",
+            "Rechercher des modifications non autorisées dans les configurations de plugins WordPress via SQL."
+          ]
+        }
+      },
+      "tags": [
+        "Magecart",
+        "WordPress",
+        "Skimming"
+      ],
+      "sources": [
+        "[https://www.bleepingcomputer.com/news/security/funnel-builder-wordpress-plugin-bug-exploited-to-steal-credit-cards/](https://www.bleepingcomputer.com/news/security/funnel-builder-wordpress-plugin-bug-exploited-to-steal-credit-cards/)"
+      ],
+      "date": "2026-05-15"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-42897",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "8.1",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:microsoft:exchange_server:-:*:*:*:*:*:*:*",
+      "product": "Exchange Server",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "A Cross-Site Scripting (XSS) / Security Bypass vulnerability in Microsoft Exchange Outlook Web Access (OWA) allows indirect code execution via a specially crafted email.",
+        "fr": "Une vulnérabilité de type Cross-Site Scripting (XSS) / Contournement de sécurité dans Microsoft Exchange Outlook Web Access (OWA) permet l'exécution indirecte de code via un courriel piégé."
+      },
+      "mitre_ttps": [
+        "T1566.001",
+        "T1203"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply the May 2026 security updates for Microsoft Exchange immediately.",
+          "fr": "Appliquer les mises à jour de sécurité de mai 2026 pour Microsoft Exchange immédiatement."
+        },
+        {
+          "en": "Enable the Exchange Emergency Mitigation Service (EEMS) where possible.",
+          "fr": "Activer le service d'atténuation d'urgence Exchange (EEMS) si possible."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Ensure patch management processes support out-of-band updates.",
+            "Harden OWA security configurations."
+          ],
+          "fr": [
+            "S'assurer que les processus de gestion des correctifs prennent en charge les mises à jour hors cycle.",
+            "Durcir les configurations de sécurité d'OWA."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor OWA application logs for anomalies.",
+            "Audit Exchange environments for unusual PowerShell execution chains."
+          ],
+          "fr": [
+            "Surveiller les journaux d'application OWA pour détecter les anomalies.",
+            "Auditer les environnements Exchange pour des chaînes d'exécution PowerShell inhabituelles."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate vulnerable or compromised Exchange instances.",
+            "Apply temporary mitigations via EEMS."
+          ],
+          "fr": [
+            "Isoler les instances Exchange vulnérables ou compromises.",
+            "Appliquer des mesures d'atténuation temporaires via l'EEMS."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Validate that the May 2026 patches are thoroughly installed.",
+            "Perform a security audit on mailboxes potentially exposed."
+          ],
+          "fr": [
+            "Valider que les correctifs de mai 2026 sont correctement installés.",
+            "Effectuer un audit de sécurité sur les boîtes aux lettres potentiellement exposées."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for indicators of web shell deployment in OWA directories.",
+            "Analyze mail server inbound rules for automated forwarding rules."
+          ],
+          "fr": [
+            "Rechercher des indicateurs de déploiement de web shell dans les répertoires OWA.",
+            "Analyser les règles de messagerie entrantes pour déceler des règles de transfert automatisées."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "Microsoft Exchange",
+        "XSS",
+        "OWA"
+      ],
+      "sources": [
+        "[https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-005/](https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-005/)"
+      ],
+      "date": "2026-05-14"
+    },
+    {
+      "cve_id": "CVE-2026-4782",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "7.7",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:themefusion:avada_builder:-:*:*:*:*:wordpress:*:*",
+      "product": "Avada Builder Plugin",
+      "vendor": "ThemeFusion",
+      "description": {
+        "en": "An arbitrary file read flaw in the custom_svg parameter of the Avada Builder WordPress plugin allows attackers to extract sensitive local files like wp-config.php.",
+        "fr": "Un défaut de validation dans le paramètre custom_svg du plugin Avada Builder pour WordPress permet à des attaquants de lire des fichiers locaux sensibles tels que wp-config.php."
+      },
+      "mitre_ttps": [
+        "T1083"
+      ],
+      "recommandations": [
+        {
+          "en": "Update Avada Builder to version 3.15.3 or higher.",
+          "fr": "Mettre à jour Avada Builder vers la version 3.15.3 ou ultérieure."
+        },
+        {
+          "en": "Restrict web application file system read permissions.",
+          "fr": "Restreindre les autorisations de lecture du système de fichiers pour l'application web."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Establish file integrity monitoring over critical config files.",
+            "Perform regular automated plugin vulnerability scanning."
+          ],
+          "fr": [
+            "Établir une surveillance de l'intégrité des fichiers de configuration critiques.",
+            "Effectuer des analyses automatisées régulières des vulnérabilités des plugins."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Audit web server access logs for path traversal attempts targeting custom_svg.",
+            "Look for unauthorized read attempts on wp-config.php."
+          ],
+          "fr": [
+            "Auditer les logs d'accès du serveur web pour repérer les tentatives de traversée de chemin ciblant custom_svg.",
+            "Rechercher les tentatives de lecture non autorisées sur wp-config.php."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Disable the Avada Builder plugin temporarily if patching cannot be immediate.",
+            "Block source IPs generating directory traversal patterns."
+          ],
+          "fr": [
+            "Désactiver temporairement le plugin Avada Builder si le correctif ne peut être appliqué immédiatement.",
+            "Bloquer les adresses IP sources générant des motifs de traversée de répertoire."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Rotate WordPress database credentials and security salts immediately.",
+            "Verify system configurations for any unauthorized changes."
+          ],
+          "fr": [
+            "Changer immédiatement les identifiants de base de données WordPress et les clés de sel.",
+            "Vérifier les configurations système pour tout changement non autorisé."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for unauthorized administrative accounts or modifications inside the database.",
+            "Check for anomalous local file inclusions patterns across logs."
+          ],
+          "fr": [
+            "Rechercher des comptes d'administration non autorisés ou des modifications dans la base de données.",
+            "Vérifier les motifs anomaux d'inclusion de fichiers locaux dans les logs."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "WordPress",
+        "Avada Builder",
+        "Arbitrary File Read"
+      ],
+      "sources": [
+        "[https://www.bleepingcomputer.com/news/security/avada-builder-wordpress-plugin-flaws-allow-site-credential-theft/](https://www.bleepingcomputer.com/news/security/avada-builder-wordpress-plugin-flaws-allow-site-credential-theft/)"
+      ],
+      "date": "2026-05-15"
+    },
+    {
+      "cve_id": "CVE-2026-4798",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:themefusion:avada_builder:-:*:*:*:*:wordpress:*:*",
+      "product": "Avada Builder Plugin",
+      "vendor": "ThemeFusion",
+      "description": {
+        "en": "A critical SQL injection vulnerability in the product_order parameter within SQL ORDER BY clauses in Avada Builder allows remote extraction of full database contents, including password hashes.",
+        "fr": "Une vulnérabilité critique d'injection SQL dans le paramètre product_order au sein des clauses SQL ORDER BY dans Avada Builder permet l'extraction à distance du contenu complet de la base de données, y compris les condensats de mots de passe."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Update Avada Builder to version 3.15.2 or higher immediately.",
+          "fr": "Mettre à jour immédiatement Avada Builder vers la version 3.15.2 ou ultérieure."
+        },
+        {
+          "en": "Deploy a Web Application Firewall (WAF) to detect and block SQL injection parameters.",
+          "fr": "Déployer un pare-feu d'application Web (WAF) pour détecter et bloquer les paramètres d'injection SQL."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Ensure database user privileges follow the principle of least privilege.",
+            "Deploy Web Application Firewall generic SQLi prevention rules."
+          ],
+          "fr": [
+            "S'assurer que les privilèges des utilisateurs de la base de données suivent le principe du moindre privilège.",
+            "Déployer des règles de prévention SQLi génériques sur le WAF."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor web logs for SQL commands or time-delay functions in product_order fields.",
+            "Detect unusual spikes in database outbound data volume."
+          ],
+          "fr": [
+            "Surveiller les logs web pour des commandes SQL ou des fonctions de délai dans les champs product_order.",
+            "Détecter des pics inhabituels dans le volume de données sortantes de la base de données."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate the web server database or put the application into maintenance mode.",
+            "Block malicious source IPs at edge firewalls."
+          ],
+          "fr": [
+            "Isoler la base de données du serveur web ou passer l'application en mode maintenance.",
+            "Bloquer les adresses IP sources malveillantes sur les pare-feux périphériques."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Enforce a mandatory global password reset for all system users.",
+            "Conduct a thorough forensic investigation on database exfiltration scope."
+          ],
+          "fr": [
+            "Imposer une réinitialisation globale obligatoire des mots de passe pour tous les utilisateurs.",
+            "Mener une enquête légale approfondie sur l'étendue de l'exfiltration de la base de données."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for unauthorized database dumps or backup tasks within database system logs.",
+            "Review web server access history for blind SQLi indicators."
+          ],
+          "fr": [
+            "Rechercher des exportations de bases de données ou des tâches de sauvegarde non autorisées dans les journaux système SQL.",
+            "Examiner l'historique des accès au serveur web pour détecter des indicateurs de SQLi aveugle."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "WordPress",
+        "SQL Injection",
+        "WooCommerce"
+      ],
+      "sources": [
+        "[https://www.bleepingcomputer.com/news/security/avada-builder-wordpress-plugin-flaws-allow-site-credential-theft/](https://www.bleepingcomputer.com/news/security/avada-builder-wordpress-plugin-flaws-allow-site-credential-theft/)"
+      ],
+      "date": "2026-05-15"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "Outlaw Botnet Technical Evolution",
+        "fr": "Évolution technique du botnet Outlaw"
+      },
+      "description": {
+        "en": "The Outlaw botnet (Shellbot) has integrated libssh 0.11.x into its infrastructure, altering its network HASSH signature to evade legacy detections. It continues brute-forcing SSH access to inject cryptominers.",
+        "fr": "Le botnet Outlaw (Shellbot) a intégré libssh 0.11.x dans son infrastructure, modifiant sa signature réseau HASSH pour échapper aux détections traditionnelles. Il continue de forcer l'accès SSH pour injecter des cryptomineurs."
+      },
+      "threat_actor": "Outlaw",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminalité / Botnet",
+      "threat_actor_aliases": [
+        "Shellbot",
+        "Dota",
+        "mdrfckr"
+      ],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom",
+          "Critical_Infrastructure"
+        ],
+        "fr": [
+          "Technologie et Télécommunications",
+          "Infrastructures Critiques"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [
+          "146.59.32.130",
+          "147.45.50.81"
+        ],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [
+          "a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2"
+        ],
+        "HASH_SHA1": [],
+        "HASH_MD5": [
+          "03a80b21afa810682a776a7d42e5e6fb"
+        ],
+        "TOOLS": [
+          "Shellbot",
+          "libssh"
+        ]
+      },
+      "mitre_ttps": [
+        "T1133",
+        "T1098",
+        "T1078"
+      ],
+      "analyse": {
+        "en": "The threat actor showcases technical persistence by maintaining the same core backdoor mechanics (authorized_keys payload strings) while swapping its client networking libraries to bypass fingerprint-based network filters.",
+        "fr": "L'attaquant fait preuve d'une persistance technique en conservant les mêmes mécanismes de porte dérobée (chaînes de payload dans authorized_keys) tout en changeant ses bibliothèques réseau clientes pour contourner les filtres basés sur les empreintes réseau."
+      },
+      "recommandations": [
+        {
+          "en": "Do not rely exclusively on static HASSH signatures for detection profiles.",
+          "fr": "Ne pas se fier uniquement aux signatures HASSH statiques pour les profils de détection."
+        },
+        {
+          "en": "Enforce strict public key-only SSH authentication and eliminate weak password methods.",
+          "fr": "Imposer une authentification SSH stricte par clé publique uniquement et éliminer les méthodes de mot de passe faibles."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Deploy extensive SSH connection logging (Syslog).",
+            "Maintain an internal baseline of authorized client HASSH fingerprints."
+          ],
+          "fr": [
+            "Déployer une journalisation SSH détaillée (Syslog).",
+            "Maintenir une liste blanche interne de hassh connus."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Alert on client connections utilizing HASSH 03a80b21afa810682a776a7d42e5e6fb.",
+            "Monitor files system modifications on .ssh/authorized_keys."
+          ],
+          "fr": [
+            "Alerter sur le hassh 03a80b21afa810682a776a7d42e5e6fb.",
+            "Surveiller les écritures dans .ssh/authorized_keys."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Block identified source network IPs at edge devices.",
+            "Reset credentials for targeted accounts (steam, postgres, sammy)."
+          ],
+          "fr": [
+            "Bloquer les IPs sources identifiées.",
+            "Réinitialiser les mots de passe des comptes ciblés (steam, postgres, sammy)."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Audit all authorized_keys contents across entire Linux fleet.",
+            "Migrate entirely to key-based SSH authentication mechanisms."
+          ],
+          "fr": [
+            "Auditer l'intégralité du fichier authorized_keys.",
+            "Passer à une authentification par clé uniquement sans mot de passe."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Execute SIEM query: index=linux sourcetype=syslog 'authorized_keys' 'mdrfckr'.",
+            "Search for unauthorized high CPU mining processes running in temporary directories."
+          ],
+          "fr": [
+            "Exécuter la requête SIEM : index=linux sourcetype=syslog 'authorized_keys' 'mdrfckr'.",
+            "Rechercher des processus de minage de CPU élevés non autorisés s'exécutant dans des répertoires temporaires."
+          ]
+        }
+      },
+      "tags": [
+        "SSH",
+        "Botnet",
+        "Hassh",
+        "Persistence"
+      ],
+      "sources": [
+        "[https://isc.sans.edu/diary/rss/32986](https://isc.sans.edu/diary/rss/32986)"
+      ],
+      "date": "2026-05-15"
+    },
+    {
+      "title": {
+        "en": "Node-ipc NPM Supply Chain Attack",
+        "fr": "Attaque de la chaîne d'approvisionnement NPM node-ipc"
+      },
+      "description": {
+        "en": "The node-ipc package was deliberately compromised with obfuscated code to exfiltrate system environment variables and local secret files using DNS TXT tunnels to evade conventional boundary controls.",
+        "fr": "Le paquet node-ipc a été délibérément compromis avec du code obfusqué pour exfiltrer des variables d'environnement système et des fichiers de secrets locaux en utilisant des tunnels DNS TXT pour contourner les contrôles réseau conventionnels."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Hacktiviste / Cybercriminel",
+      "threat_actor_aliases": [
+        "Protestware Actor"
+      ],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et Télécommunications"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "sh.azurestaticprovider.net",
+          "bt.node.js"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "node-ipc"
+        ]
+      },
+      "mitre_ttps": [
+        "T1195.002",
+        "T1071.004"
+      ],
+      "analyse": {
+        "en": "The injection relies on malicious dependency manipulation (protestware mechanism). Using fake Azure bootstrap resolver subdomains allows clandestine exfiltration over open internal DNS channels.",
+        "fr": "L'injection repose sur la manipulation malveillante de dépendances (mécanisme de protestware). L'utilisation de faux sous-domaines de résolveur bootstrap Azure permet une exfiltration clandestine via les canaux DNS internes ouverts."
+      },
+      "recommandations": [
+        {
+          "en": "Employ comprehensive Software Composition Analysis (SCA) tooling in all development structures.",
+          "fr": "Employer des outils d'analyse de composition logicielle (SCA) dans toutes les structures de développement."
+        },
+        {
+          "en": "Lock and sign NPM dependency chains tightly to stop automatic rogue package pulled in pipelines.",
+          "fr": "Verrouiller et signer fermement les chaînes de dépendance NPM pour stopper l'importation automatique de paquets malveillants dans les pipelines."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Implement a strict local NPM proxy registry featuring vulnerability scanning.",
+            "Enforce outbound DNS egress filtering policies to unknown zones."
+          ],
+          "fr": [
+            "Implémenter un proxy NPM avec analyse de vulnérabilités.",
+            "Restreindre les requêtes DNS sortantes non autorisées."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Analyze internal DNS lookup patterns targeting azurestaticprovider.net.",
+            "Verify package-lock.json trees for rogue node-ipc artifact entries."
+          ],
+          "fr": [
+            "Analyser les logs DNS pour les requêtes vers azurestaticprovider.net.",
+            "Vérifier la présence de paquets node-ipc suspects dans package-lock.json."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Purge the infected node-ipc software releases and downgrade dependencies immediately.",
+            "Revoke environment context credentials (such as AWS access tokens, API keys) across all compromised endpoints."
+          ],
+          "fr": [
+            "Supprimer node-ipc et ses dépendances.",
+            "Révoquer les variables d'environnement (clés AWS, tokens) des serveurs touchés."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Perform absolute cryptographic credentials rotation throughout affected operations.",
+            "Transition build dependencies toward completely audited and long-term maintained variants."
+          ],
+          "fr": [
+            "Réaliser une rotation complète des secrets.",
+            "Migrer vers une bibliothèque alternative maintenue."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search network histories via: query_type='TXT' domain='bt.node.js'.",
+            "Hunt for anomalous large data contents sent out through low-frequency DNS TXT query records."
+          ],
+          "fr": [
+            "Rechercher dans les historiques réseau via : query_type='TXT' domain='bt.node.js'.",
+            "Chasser l'exfiltration de données via des tunnels DNS TXT."
+          ]
+        }
+      },
+      "tags": [
+        "NPM",
+        "Malware",
+        "Exfiltration",
+        "DNS",
+        "Supply Chain"
+      ],
+      "sources": [
+        "[https://www.bleepingcomputer.com/news/security/popular-node-ipc-npm-package-compromised-to-steal-credentials/](https://www.bleepingcomputer.com/news/security/popular-node-ipc-npm-package-compromised-to-steal-credentials/)"
+      ],
+      "date": "2026-05-15"
+    },
+    {
+      "title": {
+        "en": "Pwn2Own Berlin 2026 Summary",
+        "fr": "Résumé Pwn2Own Berlin 2026"
+      },
+      "description": {
+        "en": "During Pwn2Own Berlin 2026, researchers demonstrated 15 major zero-day exploits impacting Microsoft Exchange (achieving SYSTEM-level RCE), Windows 11, Red Hat Enterprise Linux (RHEL), and modern AI coding software such as Cursor.",
+        "fr": "Lors du Pwn2Own Berlin 2026, des chercheurs ont démontré l'exploitation de 15 vulnérabilités zero-day majeures impactant Microsoft Exchange (RCE de niveau SYSTEM), Windows 11, Red Hat Enterprise Linux (RHEL) et des outils de développement d'IA comme Cursor."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Researchers / Bug Bounty",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom",
+          "Business_Services"
+        ],
+        "fr": [
+          "Technologie et Télécommunications",
+          "Services aux Entreprises"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1203",
+        "T1068"
+      ],
+      "analyse": {
+        "en": "Attackers chain logical bugs and classic integer overflows to gain initial entry. A significant shift toward targeting AI application infrastructures, developer assistance tool chains, and NVIDIA execution packages is highlighted.",
+        "fr": "Les attaquants enchaînent des bugs logiques et des débordements d'entiers pour obtenir un accès initial. Un changement significatif est mis en évidence vers le ciblage des infrastructures d'applications d'IA, des outils d'assistance aux développeurs et des packages d'exécution NVIDIA."
+      },
+      "recommandations": [
+        {
+          "en": "Track post-Pwn2Own vendor security publications closely for immediate mitigation steps.",
+          "fr": "Suivre de près les publications de sécurité des éditeurs post-Pwn2Own pour des mesures d'atténuation immédiates."
+        },
+        {
+          "en": "Isolate high-risk developer tools and advanced AI pipeline nodes within strict execution sandboxes.",
+          "fr": "Isoler les outils de développement à haut risque et les nœuds de pipeline d'IA avancés dans des bacs à sable d'exécution stricts."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Enable enterprise-grade software application process sandboxing controls.",
+            "Harden global system level administrator privilege definitions across environments."
+          ],
+          "fr": [
+            "Activer les mécanismes d'isolation (Sandboxing) au niveau de l'entreprise.",
+            "Durcir les politiques de privilèges SYSTEM/root sur l'ensemble des environnements."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for erratic runtime execution behaviors stemming from AI platforms like Cursor.",
+            "Track unexpected kernel or low-level API system execution hooks inside Linux environments."
+          ],
+          "fr": [
+            "Surveiller les comportements d'exécution anormaux provenant de plateformes d'IA comme Cursor.",
+            "Surveiller les appels systèmes suspects ou les hooks d'API de bas niveau sur RHEL."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Segregate core production Exchange environments from unpatched subnets.",
+            "Suspend unvetted third-party AI integrations and assistive extensions."
+          ],
+          "fr": [
+            "Isoler les instances Exchange vulnérables des sous-réseaux non corrigés.",
+            "Désactiver temporairement les intégrations d'IA tierces et les extensions non vérifiées."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Implement vendor official updates swiftly within standard 90 days windows.",
+            "Evaluate isolation setups of underlying processing units like NVIDIA runtime packages."
+          ],
+          "fr": [
+            "Appliquer les correctifs officiels des éditeurs sous 90 jours.",
+            "Revoir la configuration de sécurité et l'isolation des runtimes de traitement comme NVIDIA."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Query Linux configurations for unusual root privilege transformations: type=SYSCALL action=success auid!=4294967295 euid=0.",
+            "Audit Windows security logs for suspicious SYSTEM shell child process births."
+          ],
+          "fr": [
+            "Rechercher des élévations de privilèges root inhabituelles sur Linux via : type=SYSCALL action=success auid!=4294967295 euid=0.",
+            "Auditer les logs de sécurité Windows pour détecter l'apparition de processus fils suspect sous SYSTEM."
+          ]
+        }
+      },
+      "tags": [
+        "Zero-day",
+        "Pwn2Own",
+        "RCE",
+        "LPE",
+        "AI Security"
+      ],
+      "sources": [
+        "[https://www.bleepingcomputer.com/news/security/pwn2own-day-two-hackers-demo-microsoft-exchange-windows-11-red-had-enterprise-linux-zero-days/](https://www.bleepingcomputer.com/news/security/pwn2own-day-two-hackers-demo-microsoft-exchange-windows-11-red-had-enterprise-linux-zero-days/)"
+      ],
+      "date": "2026-05-15"
+    },
+    {
+      "title": {
+        "en": "SANS ISC Stormcast - May 15, 2026",
+        "fr": "SANS ISC Stormcast - 15 Mai 2026"
+      },
+      "description": {
+        "en": "Daily operational cyber security podcast update summarizing current threat patterns, focusing on tactical contexts such as WordPress flaws and Microsoft Exchange risks.",
+        "fr": "Bulletin audio quotidien résumant le contexte des menaces opérationnelles et tactiques, mettant l'accent sur les failles WordPress et les risques Microsoft Exchange."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Security"
+        ],
+        "fr": [
+          "Sécurité"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "Aggregated routine review of daily malicious events and security vulnerabilities discovered across the cyber defense community.",
+        "fr": "Revue de routine agrégée des événements malveillants quotidiens et des vulnérabilités de sécurité découvertes dans la communauté de la cyberdéfense."
+      },
+      "recommandations": [
+        {
+          "en": "Listen to daily briefings to maintain granular technical context over emerging bugs.",
+          "fr": "Écouter les briefings quotidiens pour maintenir un contexte technique précis sur les failles émergentes."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Incorporate daily community feeds into tactical tracking workflows."
+          ],
+          "fr": [
+            "Intégrer les flux communautaires quotidiens dans les workflows de suivi tactique."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Cross-reference public threat findings with active local event dashboards."
+          ],
+          "fr": [
+            "Croiser les découvertes publiques de menaces avec les tableaux de bord d'événements locaux."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Execute preventive perimeter hardening based on newly reported indicators."
+          ],
+          "fr": [
+            "Exécuter un durcissement périmétrique préventif basé sur les nouveaux indicateurs signalés."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Refine detection profiles based on community security recommendations."
+          ],
+          "fr": [
+            "Ajuster les profils de détection en fonction des recommandations de sécurité communautaires."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for newly discussed weaponization techniques across active log repositories."
+          ],
+          "fr": [
+            "Rechercher les techniques de cyber-attaque récemment discutées dans les référentiels de logs actifs."
+          ]
+        }
+      },
+      "tags": [
+        "Podcast",
+        "Daily Briefing"
+      ],
+      "sources": [
+        "[https://isc.sans.edu/diary/rss/32992](https://isc.sans.edu/diary/rss/32992)"
+      ],
+      "date": "2026-05-15"
+    }
+  ]
 }
