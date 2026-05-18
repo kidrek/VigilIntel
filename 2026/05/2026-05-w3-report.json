@@ -1,36 +1,64 @@
 {
   "threat_level": {
-    "score": 3,
+    "score": 4,
     "label": {
-      "en": "High",
-      "fr": "Élevé"
+      "en": "Critical",
+      "fr": "Critique"
     },
     "justification": {
-      "en": "The period was characterized by a massive exploitation of critical zero-day vulnerabilities in edge infrastructure (Cisco, Quest KACE, Exchange), the emergence of ultra-sophisticated modular P2P botnets by nation-state actors (Kazuar/Turla), and a systemic targeting of the AI development supply chain (OpenAI, Mistral).",
-      "fr": "La période a été marquée par une exploitation massive de vulnérabilités zero-day critiques dans les infrastructures de bordure (Cisco, Quest KACE, Exchange), l'émergence de botnets P2P modulaires ultra-sophistiqués par des acteurs étatiques (Kazuar/Turla), et un ciblage systémique de la chaîne d'approvisionnement du développement de l'IA (OpenAI, Mistral)."
+      "en": "The threat landscape is dominated by CVSS 10.0 vulnerabilities in network infrastructure (Cisco Catalyst) and management appliances (Quest KACE), coupled with a massive wave of supply chain attacks targeting AI leaders like OpenAI and Mistral AI. The industrialization of zero-day exploits (47 discovered at Pwn2Own) and the emergence of stealthy P2P botnets (Kazuar) indicate high actor sophistication.",
+      "fr": "Le paysage des menaces est dominé par des vulnérabilités CVSS 10.0 dans les infrastructures réseau (Cisco) et les appliances de gestion (Quest KACE), couplées à une vague massive d'attaques de la chaîne d'approvisionnement ciblant les leaders de l'IA. L'industrialisation des exploits zero-day et l'émergence de botnets P2P furtifs (Kazuar) indiquent une sophistication accrue des acteurs."
     },
     "_triggers": [
       "+4 — 2 CVE(s) CISA KEV",
       "+2 — 2 CVE(s) CVSS ≥ 9.0",
       "+2 — 1 acteur(s) étatique(s)",
-      "+1 — 1 breach(es) ≥ 100k enregistrements",
+      "+1 — 1 opérateur(s) ransomware",
+      "+1 — ≥ 3 acteurs distincts actifs",
+      "+2 — 2 breach(es) ≥ 100k enregistrements",
       "+2 — secteurs critiques ciblés : Critical_Infrastructure, Government_and_Defense"
     ]
   },
   "executive_summary": {
-    "en": "Week 3 of May 2026 highlights a shift in threat actor strategy toward the core components of modern technological sovereignty. Nation-state groups like Turla have evolved their persistence mechanisms into modular P2P architectures to evade perimeter detection, while supply chain attacks have moved 'left' into the AI development ecosystem, compromising tools like TanStack and npm to harvest secrets from major AI labs. Concurrently, the return of critical infrastructure exploits (CVSS 10.0 on Cisco and Quest KACE) and demonstration of zero-click exploits at Pwn2Own Berlin indicate a high-pressure environment for administrators. Organizations must prioritize patching public-facing Exchange servers and hardening developer workflows against lifecycle script abuses.",
-    "fr": "La troisième semaine de mai 2026 met en lumière un changement de stratégie des attaquants vers les composants centraux de la souveraineté technologique moderne. Des groupes étatiques comme Turla ont fait évoluer leurs mécanismes de persistance vers des architectures P2P modulaires pour échapper à la détection périmétrique, tandis que les attaques de la chaîne d'approvisionnement se sont déplacées vers l'écosystème de développement de l'IA, compromettant des outils comme TanStack et npm. Parallèlement, le retour d'exploits d'infrastructures critiques (CVSS 10.0 sur Cisco et Quest KACE) et la démonstration d'exploits zero-click au Pwn2Own Berlin indiquent un environnement de forte pression pour les administrateurs. Les organisations doivent prioriser le correctif des serveurs Exchange et le durcissement des workflows de développement contre l'abus de scripts de cycle de vie."
+    "en": "Week 3 of May 2026 highlights a strategic shift toward supply chain poisoning targeting development environments (npm, VS Code) and AI infrastructure. Major data breaches in the French tourism sector (Itea) and the electronics industry (Foxconn) underscore the systemic risks of third-party dependencies. Nation-state activity remains intense with Turla's P2P modular evolution and FamousSparrow's targeting of energy sovereignty in the Caucasus.",
+    "fr": "La troisième semaine de mai 2026 met en lumière un virage stratégique vers l'empoisonnement de la chaîne d'approvisionnement ciblant les environnements de développement (npm, VS Code) et les infrastructures d'IA. Des violations de données majeures dans le tourisme français (Itea) et l'industrie électronique (Foxconn) soulignent les risques systémiques des dépendances tierces. L'activité étatique reste intense avec l'évolution P2P de Turla et le ciblage de la souveraineté énergétique par FamousSparrow."
   },
   "regulatory": {
     "analyse": {
-      "en": "Regulatory focus this week centered on rapid vulnerability response and data protection liability. CISA's enforcement of BOD 22-01 mandates accelerated patching for high-impact flaws like Exchange XSS, signaling zero tolerance for unpatched edge infrastructure. US court rulings regarding Illuminate suggest a evolving jurisprudence on post-breach corporate responsibility, while the CMMC 2.0 final rule implementation continues to force security maturity in the defense supply chain.",
-      "fr": "L'accent réglementaire cette semaine s'est concentré sur la réponse rapide aux vulnérabilités et la responsabilité en matière de protection des données. La mise en œuvre par la CISA de la directive BOD 22-01 impose un correctif accéléré pour les failles à fort impact comme Exchange XSS. Les décisions de justice américaines concernant Illuminate suggèrent une évolution de la jurisprudence sur la responsabilité des entreprises après une brèche, tandis que la règle finale CMMC 2.0 continue de forcer la maturité sécuritaire dans la chaîne d'approvisionnement de la défense."
+      "en": "Regulatory focus is shifting toward immediate remediation of known exploited vulnerabilities, with CISA mandating 21-day patching cycles for critical Exchange flaws. The finalization of CMMC 2.0 and NIST's NVD enrichment policy updates signal a move toward more rigorous certification for defense subcontractors and prioritized vulnerability intelligence.",
+      "fr": "L'accent réglementaire se déplace vers la remédiation immédiate des vulnérabilités exploitées, la CISA imposant des cycles de correction de 21 jours pour Exchange. La finalisation de CMMC 2.0 et les mises à jour du NIST sur l'enrichissement de la NVD signalent une évolution vers une certification plus rigoureuse des sous-traitants de la défense."
     },
     "events": [
       {
         "title": {
-          "en": "CISA BOD 22-01 Update: Exchange Exploitation",
-          "fr": "Mise à jour CISA BOD 22-01 : Exploitation d'Exchange"
+          "en": "CMMC 2.0 Final Rule (32 CFR Part 170)",
+          "fr": "Règle finale CMMC 2.0 (32 CFR Part 170)"
+        },
+        "issuing_body": "DoD",
+        "date": "2026-05-15",
+        "jurisdiction": {
+          "region": "US",
+          "countries": [
+            "US"
+          ]
+        },
+        "type": "New_Law",
+        "status": "Active",
+        "reference": "32 CFR Part 170",
+        "affected_sectors": [
+          "Government_and_Defense",
+          "Technology_and_Telecom"
+        ],
+        "description": {
+          "en": "Mandates third-party certification (Level 2) for all defense subcontractors handling Controlled Unclassified Information (CUI), impacting the entire defense industrial base.",
+          "fr": "Impose une certification tierce partie (Niveau 2) pour tous les sous-traitants de la défense gérant des informations non classifiées contrôlées (CUI)."
+        },
+        "source_url": "https://www.huntress.com/blog/cmmc-final-rule-guide-for-dod-subcontractors"
+      },
+      {
+        "title": {
+          "en": "CISA BOD 22-01 Exchange Flaw Update",
+          "fr": "Mise à jour CISA BOD 22-01 pour Exchange"
         },
         "issuing_body": "CISA",
         "date": "2026-05-16",
@@ -42,40 +70,16 @@
         },
         "type": "Enforcement_Action",
         "status": "Active",
-        "reference": "BOD 22-01 / CVE-2026-42897",
+        "reference": "BOD 22-01",
         "affected_sectors": [
-          "Government_and_Defense"
+          "Government_and_Defense",
+          "Critical_Infrastructure"
         ],
         "description": {
-          "en": "CISA added CVE-2026-42897 (Exchange Server XSS) to the Known Exploited Vulnerabilities catalog, mandating federal agencies to patch within 21 days due to active exploitation for session hijacking.",
-          "fr": "La CISA a ajouté la CVE-2026-42897 (XSS Exchange Server) au catalogue KEV, obligeant les agences fédérales à appliquer le correctif sous 21 jours en raison d'une exploitation active."
+          "en": "Requires federal agencies and critical sectors to patch CVE-2026-42897 within 21 days due to active exploitation in the wild.",
+          "fr": "Exige que les agences fédérales et les secteurs critiques corrigent la faille CVE-2026-42897 sous 21 jours en raison d'une exploitation active."
         },
         "source_url": "https://securityaffairs.com/192240/hacking/u-s-cisa-adds-a-flaw-in-microsoft-exchange-server-to-its-known-exploited-vulnerabilities-catalog.html"
-      },
-      {
-        "title": {
-          "en": "NIST NVD Enrichment Policy Shift",
-          "fr": "Changement de politique d'enrichissement de la NVD du NIST"
-        },
-        "issuing_body": "NIST",
-        "date": "2026-04-15",
-        "jurisdiction": {
-          "region": "US",
-          "countries": [
-            "US"
-          ]
-        },
-        "type": "Guidance",
-        "status": "Active",
-        "reference": "NVD Policy 2026",
-        "affected_sectors": [
-          "Technology_and_Telecom"
-        ],
-        "description": {
-          "en": "NIST announced it will prioritize enriching only critical CVEs or those listed in the CISA KEV due to resource constraints, affecting global vulnerability management workflows.",
-          "fr": "Le NIST a annoncé qu'il donnerait la priorité à l'enrichissement des seules CVE critiques ou listées par la CISA KEV, impactant les workflows mondiaux de gestion des vulnérabilités."
-        },
-        "source_url": "https://www.recordedfuture.com/blog/nist-nvd-enrichment"
       }
     ]
   },
@@ -87,8 +91,8 @@
           "fr": "Russie"
         },
         "geographic_zone_strategic_analyse": {
-          "en": "Russian state-sponsored activity (Turla/Secret Blizzard) is shifting toward highly resilient P2P botnet architectures (Kazuar) to maintain long-term persistence within government and defense networks without relying on centralized C2 infrastructure.",
-          "fr": "L'activité étatique russe (Turla/Secret Blizzard) se déplace vers des architectures de botnets P2P hautement résilientes (Kazuar) pour maintenir une persistance à long terme dans les réseaux de défense sans dépendre d'une infrastructure C2 centralisée."
+          "en": "Russian groups like Turla (Secret Blizzard) are deploying advanced P2P modular botnets (Kazuar) to maintain long-term, stealthy access within diplomatic and government networks. The Qilin ransomware group continues its aggressive targeting of financial and insurance institutions globally.",
+          "fr": "Les groupes russes comme Turla déploient des botnets P2P modulaires avancés (Kazuar) pour maintenir un accès furtif à long terme dans les réseaux diplomatiques. Le groupe Qilin continue son ciblage agressif des institutions financières."
         }
       },
       {
@@ -97,18 +101,8 @@
           "fr": "Chine"
         },
         "geographic_zone_strategic_analyse": {
-          "en": "Chinese APTs like FamousSparrow (Earth Estries) are actively targeting the South Caucasus energy sector, likely to gain strategic leverage over European energy diversification routes.",
-          "fr": "Les APT chinoises comme FamousSparrow ciblent activement le secteur de l'énergie dans le Caucase du Sud, probablement pour obtenir un levier stratégique sur les routes de diversification énergétique européennes."
-        }
-      },
-      {
-        "geographic_zone_name": {
-          "en": "North Korea",
-          "fr": "Corée du Nord"
-        },
-        "geographic_zone_strategic_analyse": {
-          "en": "DPRK actors (Velvet Chollima) continue to focus on direct financial theft via social engineering and malicious trading applications, specifically targeting crypto-asset holders.",
-          "fr": "Les acteurs de la RPDC (Velvet Chollima) continuent de se concentrer sur le vol financier direct via l'ingénierie sociale et des applications de trading malveillantes."
+          "en": "FamousSparrow (Earth Estries) is focusing on high-value energy infrastructure in the South Caucasus, utilizing ProxyNotShell exploits to compromise production data relevant to European energy security.",
+          "fr": "FamousSparrow se concentre sur les infrastructures énergétiques de haute valeur dans le Caucase du Sud, utilisant des exploits ProxyNotShell pour compromettre les données de production liées à la sécurité énergétique européenne."
         }
       }
     ],
@@ -118,40 +112,39 @@
         "origin_country": "Russia",
         "type": {
           "en": "Nation-state",
-          "fr": "Éta-nation"
+          "fr": "Étatique"
         },
         "targeted_sectors": {
           "en": [
-            "Government_and_Defense",
-            "Security"
+            "Government_and_Defense"
           ],
           "fr": [
-            "Gouvernement et défense",
-            "Sécurité"
+            "Gouvernement et Défense"
           ]
         },
         "targeted_regions": {
           "en": [
             "Europe",
-            "Global"
+            "Asia"
           ],
           "fr": [
             "Europe",
-            "Mondial"
+            "Asie"
           ]
         },
         "mitre_attack_ttps_id": [
-          "T1071.001",
+          "T1071",
           "T1573.002",
-          "T1014",
-          "T1011"
+          "T1543",
+          "T1011",
+          "T1014"
         ],
         "campaign_or_operation": {
           "en": [
-            "Kazuar P2P Botnet Evolution"
+            "Kazuar P2P Evolution"
           ],
           "fr": [
-            "Évolution du botnet P2P Kazuar"
+            "Évolution P2P de Kazuar"
           ]
         }
       },
@@ -185,10 +178,51 @@
         ],
         "campaign_or_operation": {
           "en": [
-            "TanStack AI Supply Chain Attack"
+            "TanStack Supply Chain Attack"
           ],
           "fr": [
-            "Attaque Supply Chain TanStack AI"
+            "Attaque Supply Chain TanStack"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "Qilin",
+        "origin_country": "Russia",
+        "type": {
+          "en": "Ransomware",
+          "fr": "Rançongiciel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Finance",
+            "Healthcare_and_Life_Sciences"
+          ],
+          "fr": [
+            "Finance",
+            "Santé"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Australia",
+            "Europe"
+          ],
+          "fr": [
+            "Australie",
+            "Europe"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1486",
+          "T1078",
+          "T1567.002"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Generation Life Breach"
+          ],
+          "fr": [
+            "Violation de Generation Life"
           ]
         }
       }
@@ -196,8 +230,8 @@
   },
   "mitre_attack_ttps": {
     "ttps_strategic_analyse": {
-      "en": "This period saw a significant emphasis on stealth and 'living off the software' techniques. C2 communications are increasingly using non-standard or trusted protocols like NATS and WebSockets in P2P configurations to evade detection. Furthermore, attackers are weaponizing developer environment features (npm hooks, VS Code tasks) to achieve persistence at the source of code production.",
-      "fr": "Cette période a vu un accent significatif sur la furtivité et les techniques 'living off the software'. Les communications C2 utilisent de plus en plus des protocoles non standard ou de confiance comme NATS et les WebSockets dans des configurations P2P. De plus, les attaquants militarisent les fonctionnalités des environnements de développement (hooks npm, tâches VS Code) pour obtenir une persistance à la source."
+      "en": "Supply chain compromise (T1195.002) has reached peak frequency this week, with every daily report highlighting poisoned dependencies or lifecycle scripts. Ransomware (T1486) remains highly pervasive, shifting toward credential-based access (T1078) and OAuth Device Code phishing (T1566.002) to bypass MFA.",
+      "fr": "Le compromis de la chaîne d'approvisionnement (T1195.002) a atteint une fréquence maximale cette semaine, chaque rapport quotidien soulignant des dépendances empoisonnées. Le rançongiciel (T1486) reste omniprésent, s'orientant vers l'accès par identifiants (T1078) et le phishing de codes de périphérique OAuth (T1566.002)."
     },
     "ttps_list": [
       {
@@ -207,60 +241,56 @@
           "fr": "Accès Initial"
         },
         "technique_name": "Supply Chain Compromise: Compromise Software Dependencies",
-        "frequency": 2,
+        "frequency": 4,
         "severity": "critical",
         "context": {
           "en": [
-            "Used by TeamPCP to target OpenAI and Mistral AI via TanStack libraries.",
-            "Abused via npm lifecycle scripts (pre/post-install) to execute malware on developer machines."
+            "Used by TeamPCP against OpenAI/Mistral via TanStack",
+            "Observed in node-ipc protestware and VS Code lifecycle scripts"
           ],
           "fr": [
-            "Utilisé par TeamPCP pour cibler OpenAI et Mistral AI via les bibliothèques TanStack.",
-            "Abusé via les scripts de cycle de vie npm pour exécuter des malwares."
+            "Utilisé par TeamPCP contre OpenAI/Mistral via TanStack",
+            "Observé dans le protestware node-ipc et les scripts VS Code"
           ]
         }
       },
       {
-        "id": "T1071.001",
+        "id": "T1486",
         "tactic": {
-          "en": "Command and Control",
-          "fr": "Commandement et Contrôle"
+          "en": "Impact",
+          "fr": "Impact"
         },
-        "technique_name": "Application Layer Protocol: Web Protocols",
+        "technique_name": "Data Encrypted for Impact",
         "frequency": 3,
         "severity": "high",
         "context": {
           "en": [
-            "Kazuar botnet uses WebSockets for leader-worker P2P communication.",
-            "Agent Tesla uses HTTPS for fingerprinting via ip-api.",
-            "KeyHunter malware uses NATS on port 14222 as a novel C2 channel."
+            "Deployed by Nitrogen against Foxconn",
+            "Used by Qilin and Nihon Shisan Soken attackers"
           ],
           "fr": [
-            "Le botnet Kazuar utilise des WebSockets pour la communication P2P.",
-            "Agent Tesla utilise HTTPS pour le fingerprinting via ip-api.",
-            "Le malware KeyHunter utilise NATS sur le port 14222 comme canal C2 innovant."
+            "Déployé par Nitrogen contre Foxconn",
+            "Utilisé par Qilin et les attaquants de Nihon Shisan Soken"
           ]
         }
       },
       {
-        "id": "T1190",
+        "id": "T1566.002",
         "tactic": {
           "en": "Initial Access",
           "fr": "Accès Initial"
         },
-        "technique_name": "Exploit Public-Facing Application",
+        "technique_name": "Phishing: Spearphishing Link",
         "frequency": 3,
-        "severity": "critical",
+        "severity": "high",
         "context": {
           "en": [
-            "Exploitation of CVE-2026-20182 in Cisco Catalyst SD-WAN.",
-            "Exploitation of CVE-2025-32975 in Quest KACE SMA.",
-            "Exploitation of CVE-2026-42897 in MS Exchange."
+            "Tycoon2FA kit using OAuth 2.0 Device Code phishing",
+            "BEC campaigns targeting logistical dispatchers"
           ],
           "fr": [
-            "Exploitation de la CVE-2026-20182 dans Cisco Catalyst SD-WAN.",
-            "Exploitation de la CVE-2025-32975 dans Quest KACE SMA.",
-            "Exploitation de la CVE-2026-42897 dans MS Exchange."
+            "Kit Tycoon2FA utilisant le phishing de code OAuth 2.0",
+            "Campagnes BEC ciblant les répartiteurs logistiques"
           ]
         }
       }
@@ -268,8 +298,8 @@
   },
   "vulnerabilities": {
     "analyse": {
-      "en": "The vulnerability landscape was dominated by three CVSS 8.0-10.0 flaws with active exploitation. Cisco and Quest KACE flaws provided full administrative control over critical management infrastructure. Meanwhile, MS Exchange (CVE-2026-42897) became a top priority for government agencies, proving that the 'Proxy' class of vulnerabilities continues to plague collaborative platforms.",
-      "fr": "Le paysage des vulnérabilités a été dominé par trois failles CVSS 8.0-10.0 en cours d'exploitation active. Les failles Cisco et Quest KACE permettaient un contrôle administratif total sur les infrastructures de gestion critiques. MS Exchange (CVE-2026-42897) est devenu une priorité absolue."
+      "en": "The week is defined by CVSS 10.0 flaws in core networking (Cisco) and IT management (Quest KACE). Mass exploitation of Exchange XSS (CVE-2026-42897) is being used for both espionage and e-skimming. Pwn2Own results have introduced a wave of 47 zero-days targeting AI agents and kernel-level drivers.",
+      "fr": "La semaine est marquée par des failles CVSS 10.0 dans les réseaux (Cisco) et la gestion IT (Quest KACE). L'exploitation massive de l'XSS d'Exchange (CVE-2026-42897) est utilisée pour l'espionnage et l'e-skimming. Le Pwn2Own a introduit 47 zero-days ciblant les agents d'IA."
     },
     "list": [
       {
@@ -277,48 +307,25 @@
         "cvss_score": 10.0,
         "epss_score": "N/A",
         "cisa_kev": true,
-        "affected_product": "Catalyst SD-WAN",
+        "affected_product": "Cisco Catalyst SD-WAN",
         "affected_product_vendor": "Cisco",
         "vulnerability_type": {
           "en": [
-            "Authentication Bypass"
+            "Authentication Bypass",
+            "Remote Code Execution"
           ],
           "fr": [
-            "Contournement d'authentification"
+            "Contournement d'authentification",
+            "Exécution de code à distance"
           ]
         },
         "vulnerability_description": {
-          "en": "Critical flaw in Cisco Catalyst SD-WAN allowing a remote attacker to bypass authentication and gain full control of the SD-WAN fabric.",
-          "fr": "Faille critique dans Cisco Catalyst SD-WAN permettant à un attaquant distant de contourner l'authentification et de prendre le contrôle total du fabric SD-WAN."
-        },
-        "mitre_attack_ttps_id": [
-          "T1190"
-        ]
-      },
-      {
-        "cve_id": "CVE-2026-42897",
-        "cvss_score": 8.1,
-        "epss_score": "N/A",
-        "cisa_kev": true,
-        "affected_product": "Exchange Server",
-        "affected_product_vendor": "Microsoft",
-        "vulnerability_type": {
-          "en": [
-            "Cross-Site Scripting (XSS)",
-            "Spoofing"
-          ],
-          "fr": [
-            "Cross-Site Scripting (XSS)",
-            "Usurpation"
-          ]
-        },
-        "vulnerability_description": {
-          "en": "A spoofing vulnerability in Microsoft Exchange Server allows attackers to hijack user sessions via malicious HTML emails.",
-          "fr": "Une vulnérabilité d'usurpation dans Microsoft Exchange Server permet aux attaquants de détourner des sessions utilisateur via des emails HTML malveillants."
+          "en": "A critical authentication bypass in Cisco Catalyst SD-WAN allows remote attackers to gain full administrative control. Actively exploited by UAT-8616 to deploy XenShell webshells.",
+          "fr": "Un contournement d'authentification critique dans Cisco Catalyst SD-WAN permet aux attaquants de prendre le contrôle administratif. Exploité par UAT-8616."
         },
         "mitre_attack_ttps_id": [
           "T1190",
-          "T1566.001"
+          "T1505.003"
         ]
       },
       {
@@ -330,25 +337,68 @@
         "affected_product_vendor": "Quest",
         "vulnerability_type": {
           "en": [
-            "Authentication Bypass",
-            "RCE"
+            "SSO Authentication Bypass"
           ],
           "fr": [
-            "Contournement d'authentification",
-            "RCE"
+            "Contournement d'authentification SSO"
           ]
         },
         "vulnerability_description": {
-          "en": "Bypass of SSO authentication leading to remote code execution and total system takeover of the management appliance.",
-          "fr": "Contournement de l'authentification SSO menant à l'exécution de code à distance et à la prise de contrôle totale de l'appliance de gestion."
+          "en": "Flaw in KACE Systems Management Appliance allowing full takeover of MSP endpoints. Leveraged in the HIQ breach affecting 60+ organizations.",
+          "fr": "Faille dans l'appliance KACE SMA permettant la prise de contrôle des endpoints de MSP. Utilisée dans la brèche HIQ affectant 60+ clients."
         },
         "mitre_attack_ttps_id": [
-          "T1190"
+          "T1190",
+          "T1078"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-33825",
+        "cvss_score": 7.8,
+        "epss_score": "N/A",
+        "cisa_kev": true,
+        "affected_product": "Windows 10/11 (cldflt.sys)",
+        "affected_product_vendor": "Microsoft",
+        "vulnerability_type": {
+          "en": [
+            "Privilege Escalation"
+          ],
+          "fr": [
+            "Élévation de privilèges"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "A zero-day known as 'MiniPlasma' in the Windows Cloud Filter driver allowing Local Privilege Escalation to SYSTEM. Proof-of-concept is publicly available.",
+          "fr": "Une faille zero-day nommée 'MiniPlasma' dans le pilote Windows Cloud Filter permettant une élévation de privilèges vers SYSTEM."
+        },
+        "mitre_attack_ttps_id": [
+          "T1068"
         ]
       }
     ]
   },
   "data_breaches": [
+    {
+      "victim": "Itea (Gîtes de France / Belambra)",
+      "sector": "Hospitality_and_Entertainment",
+      "country": "France",
+      "records_count": 472000,
+      "data_types": {
+        "en": [
+          "Names",
+          "Contact details",
+          "Historical booking records (30 years)"
+        ],
+        "fr": [
+          "Noms",
+          "Coordonnées",
+          "Historique des réservations (30 ans)"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://www.lemonde.fr/pixels/article/2026/05/18/gites-de-france-annonce-a-son-tour-avoir-ete-vise-par-une-cyberattaque-apres-les-groupes-pierre-et-vacances-center-parcs-et-belambra_6690376_4408996.html"
+    },
     {
       "victim": "Foxconn",
       "sector": "Industry_and_Manufacturing",
@@ -356,52 +406,35 @@
       "records_count": null,
       "data_types": {
         "en": [
-          "Confidential documents",
-          "Technical drawings (Intel, Apple, Google)"
+          "Technical drawings (Apple, Google, Intel)",
+          "Confidential blueprints",
+          "8TB of data"
         ],
         "fr": [
-          "Documents confidentiels",
-          "Dessins techniques (Intel, Apple, Google)"
+          "Dessins techniques (Apple, Google, Intel)",
+          "Plans confidentiels",
+          "8 To de données"
         ]
       },
-      "threat_actor": "Nitrogen Ransomware",
+      "threat_actor": "Nitrogen",
       "financial_impact_usd": null,
       "source_url": "https://securityaffairs.com/192099/uncategorized/nitrogen-ransomware-claims-massive-data-theft-from-foxconn.html"
     },
     {
-      "victim": "OpenAI / Mistral AI",
-      "sector": "Technology_and_Telecom",
-      "country": "US/France",
-      "records_count": null,
-      "data_types": {
-        "en": [
-          "Source code",
-          "CI/CD secrets",
-          "GitHub/npm tokens"
-        ],
-        "fr": [
-          "Code source",
-          "Secrets CI/CD",
-          "Jetons GitHub/npm"
-        ]
-      },
-      "threat_actor": "TeamPCP",
-      "financial_impact_usd": null,
-      "source_url": "https://www.bleepingcomputer.com/news/security/openai-confirms-security-breach-in-tanstack-supply-chain-attack/"
-    },
-    {
-      "victim": "Atrium Health",
+      "victim": "Atrium Health / Interim Health",
       "sector": "Healthcare_and_Life_Sciences",
-      "country": "US",
+      "country": "USA",
       "records_count": 2600000,
       "data_types": {
         "en": [
-          "Social Security Numbers (SSN)",
-          "Patient Medical Records"
+          "SSN",
+          "Medical records",
+          "PHI"
         ],
         "fr": [
-          "Numéros de sécurité sociale (SSN)",
-          "Dossiers médicaux patients"
+          "Numéros de sécurité sociale",
+          "Dossiers médicaux",
+          "Informations de santé"
         ]
       },
       "threat_actor": null,
@@ -413,130 +446,120 @@
     "sectors": {
       "en": [
         "Technology_and_Telecom",
-        "Critical_Infrastructure",
-        "Government_and_Defense",
+        "Hospitality_and_Entertainment",
         "Industry_and_Manufacturing",
-        "Healthcare_and_Life_Sciences"
+        "Healthcare_and_Life_Sciences",
+        "Finance",
+        "Critical_Infrastructure",
+        "Government_and_Defense"
       ],
       "fr": [
         "Technologie et Télécom",
-        "Infrastructures Critiques",
-        "Gouvernement et Défense",
+        "Hôtellerie et Divertissement",
         "Industrie et Manufacturier",
-        "Santé et Sciences de la vie"
+        "Santé et Sciences de la vie",
+        "Finance",
+        "Infrastructures Critiques",
+        "Gouvernement et Défense"
       ]
     },
     "countries": {
       "en": [
-        "United States",
         "France",
-        "Chile",
+        "USA",
         "Azerbaijan",
-        "Germany"
+        "Japan",
+        "Australia",
+        "UK",
+        "Chile"
       ],
       "fr": [
-        "États-Unis",
         "France",
-        "Chili",
+        "États-Unis",
         "Azerbaïdjan",
-        "Allemagne"
+        "Japon",
+        "Australie",
+        "Royaume-Uni",
+        "Chili"
       ]
     },
     "narrative": {
-      "en": "- **AI & Tech Labs:** OpenAI and Mistral AI faced significant source code and secret exfiltration (450 repositories) following a supply chain attack on the TanStack library by TeamPCP.\n- **Manufacturing:** Electronics giant Foxconn suffered a massive 8TB data theft by Nitrogen ransomware, involving blueprints from major clients like Apple and Intel.\n- **Energy Infrastructure:** The Azerbaijani energy sector was targeted by FamousSparrow (China) using Exchange exploits to compromise strategic production data linked to European energy security.\n- **MSP & IT Services:** HIQ, a Swedish MSP, saw 60+ clients compromised simultaneously through an exploited Quest KACE SMA appliance (CVE-2025-32975).\n- **Healthcare:** Atrium Health notified 2.6 million patients of a data breach involving SSNs and medical records, while West Pharmaceutical Services faced a global operational intrusion.\n- **Critical Infrastructure:** Cisco Catalyst SD-WAN users were targeted via a CVSS 10.0 zero-day (CVE-2026-20182) for direct network fabric takeover.\n- **Public Sector:** FBI and French ANTS were mentioned in the context of record theft and operational disruption by state-sponsored actors.\n- **Defense R&D:** Discovery of the 'Fast16' framework revealed a decade-long sabotage effort against nuclear detonation simulations by altering memory-resident physical calculations.",
-      "fr": "- **IA et Tech :** OpenAI et Mistral AI ont subi une exfiltration massive de code source et de secrets (450 dépôts) suite à une attaque supply chain sur TanStack par TeamPCP.\n- **Industrie :** Le géant Foxconn a subi un vol de 8 To de données par le ransomware Nitrogen, incluant des plans techniques de clients comme Apple et Intel.\n- **Énergie :** Le secteur énergétique azerbaïdjanais a été ciblé par FamousSparrow pour compromettre les données de production stratégiques liées à l'Europe.\n- **Services IT (MSP) :** Le MSP HIQ a vu plus de 60 clients compromis simultanément via l'exploitation d'une appliance Quest KACE SMA (CVE-2025-32975).\n- **Santé :** Atrium Health a notifié 2,6 millions de patients d'une brèche impliquant des SSN et des dossiers médicaux.\n- **Infrastructures Critiques :** Les utilisateurs de Cisco Catalyst SD-WAN ont été ciblés par une zero-day CVSS 10.0 (CVE-2026-20182) pour une prise de contrôle du réseau.\n- **Secteur Public :** Le FBI et l'ANTS (France) ont été cités dans le contexte de vols de dossiers et de perturbations opérationnelles.\n- **R&D Défense :** La découverte du framework 'Fast16' a révélé un sabotage ciblant les simulations nucléaires par altération des calculs physiques en mémoire."
+      "en": "- **Hospitality & Entertainment:** Supply chain breach at software provider Itea affecting Gîtes de France, Belambra, and Pierre & Vacances, exposing 30 years of history and over 472,000 files.\n- **Technology & Telecom:** OpenAI and Mistral AI compromised via the TanStack npm library, leading to the exfiltration of 5GB of source code, CI/CD secrets, and 450 GitHub repositories.\n- **Industry & Manufacturing:** Nitrogen ransomware theft of 8TB of data from Foxconn, including intellectual property and technical drawings for Apple, Google, and Intel products.\n- **Healthcare:** Massive breach at Atrium Health and Interim Health affecting 2.6 million patients, compromising SSNs and protected health information.\n- **Finance:** Ransomware attacks targeting Generation Life (Australia) and Nihon Shisan Soken (Japan), with Abrigo reporting a breach of 711,099 professional contacts via Salesforce.\n- **Critical Infrastructure:** Azerbaijani energy sector targeted by FamousSparrow (China) using ProxyNotShell to compromise energy production data.\n- **Business Services:** Quest KACE SMA vulnerability exploitation leading to the total compromise of HIQ (MSP) and its 60+ downstream client organizations.",
+      "fr": "- **Hôtellerie et Divertissement :** Violation de la chaîne d'approvisionnement chez Itea affectant Gîtes de France, Belambra et Pierre & Vacances, exposant 30 ans d'historique et 472 000 fichiers.\n- **Technologie et Télécom :** OpenAI et Mistral AI compromis via la bibliothèque TanStack, entraînant l'exfiltration de 5 Go de code source et de secrets CI/CD.\n- **Industrie et Manufacturier :** Vol par Nitrogen de 8 To de données chez Foxconn, incluant la propriété intellectuelle pour Apple, Google et Intel.\n- **Santé :** Violation massive chez Atrium Health affectant 2,6 millions de patients, compromettant les numéros de sécurité sociale.\n- **Finance :** Attaques par rançongiciel ciblant Generation Life (Australie) et Nihon Shisan Soken (Japon) ; Abrigo signale la fuite de 711 099 contacts.\n- **Infrastructures Critiques :** Secteur de l'énergie azerbaïdjanais ciblé par FamousSparrow (Chine) pour compromettre les données de production.\n- **Services aux entreprises :** Exploitation de Quest KACE SMA menant à la compromission totale de HIQ (MSP) et de ses 60+ clients."
     }
   },
   "trends": {
     "emerging_techniques": {
       "en": [
-        "P2P Modular Botnets (Kazuar)",
-        "NATS protocol for C2 traffic",
-        "AI Developer Tool exploitation (Cursor/Codex)",
-        "Physical simulation sabotage via memory-resident malware (Fast16)"
+        "C2 via NATS messaging protocol (KeyHunter)",
+        "OAuth 2.0 Device Code phishing (Tycoon2FA)",
+        "P2P Leader Election in botnets (Kazuar)",
+        "VPU Memory Corruption in mobile chipsets (Google Pixel 10)"
       ],
       "fr": [
-        "Botnets P2P modulaires (Kazuar)",
-        "Protocole NATS pour le trafic C2",
-        "Exploitation d'outils de développement IA (Cursor/Codex)",
-        "Sabotage de simulation physique via malware résidant en mémoire (Fast16)"
+        "C2 via le protocole de messagerie NATS (KeyHunter)",
+        "Phishing par code de périphérique OAuth 2.0 (Tycoon2FA)",
+        "Élection de leader P2P dans les botnets (Kazuar)",
+        "Corruption de mémoire VPU dans les chipsets mobiles (Pixel 10)"
       ]
     },
     "declining_techniques": {
       "en": [
-        "Static signature-based C2 detection",
-        "Single-tier C2 architectures",
-        "Simple SMS-based MFA"
+        "Traditional SMS/TOTP MFA (bypassed by Device Code phishing)",
+        "Static network fingerprinting (Hassh bypassed by libssh 0.11.x)"
       ],
       "fr": [
-        "Détection C2 basée sur des signatures statiques",
-        "Architectures C2 à un seul niveau",
-        "MFA simple basé sur SMS"
+        "MFA traditionnel SMS/TOTP (contourné par le phishing Device Code)",
+        "Empreintes réseau statiques (Hassh contourné par libssh 0.11.x)"
       ]
     },
     "geopolitical_context": {
-      "en": "Cyber operations are increasingly tied to energy sovereignty (Azerbaijan/Europe) and the race for AI dominance. The sabotage of nuclear R&D simulations indicates a return to highly specialized industrial warfare tradecraft.",
-      "fr": "Les opérations cyber sont de plus en plus liées à la souveraineté énergétique et à la course pour la domination de l'IA. Le sabotage des simulations R&D nucléaires indique un retour aux techniques de guerre industrielle spécialisée."
+      "en": "Cyber operations are increasingly synchronized with energy sovereignty, as seen in the Caucasus. The drone production race in Ukraine/Russia is driving cyber espionage for industrial blueprints, while the 89% market concentration of AI creates a global systemic failure risk.",
+      "fr": "Les cyber-opérations se synchronisent avec la souveraineté énergétique (Caucase). La course à la production de drones (Ukraine/Russie) stimule l'espionnage industriel, tandis que la concentration du marché de l'IA à 89 % crée un risque de défaillance systémique mondiale."
     }
   },
   "recommendations": {
     "strategic": {
       "en": [
         {
-          "title": "Enforce FIDO2 Hardware MFA for Developer Accounts",
-          "detail": "Traditional MFA is being bypassed by session theft tools used by Velvet Chollima and TeamPCP. Deploy hardware keys (e.g., YubiKey 5) to secure CI/CD pipelines and cloud consoles, effectively mitigating EvilTokens and session hijacking risks."
+          "title": "Enforce FIDO2 Hardware MFA Organization-Wide",
+          "detail": "Observed Tycoon2FA campaigns use OAuth 2.0 Device Code phishing to bypass legacy TOTP/SMS MFA. Deploy FIDO2/WebAuthn hardware keys (YubiKey 5) to eliminate phishing-susceptible flows and restrict Device Code logins in Entra ID."
         },
         {
-          "title": "Harden AI/ML Development Supply Chains",
-          "detail": "Given the attacks on OpenAI/Mistral via TanStack and npm, implement SLSA-aligned artifact verification. Use private registries and mandatory dependency pinning to prevent 'left-shift' compromises at the source level."
-        },
-        {
-          "title": "Implement Microsegmentation for P2P Evasion",
-          "detail": "The Kazuar P2P botnet uses local IPC and WebSockets to hide within internal traffic. Segment networks to prevent inter-workstation P2P flows (SMB, Named Pipes, RPC) unless strictly required for operations."
+          "title": "Harden CI/CD and npm Supply Chain",
+          "detail": "Given the TanStack and node-ipc incidents affecting OpenAI, implement mandatory Software Composition Analysis (SCA) and use private repositories (Artifactory/Nexus) that mirror and scan external npm packages before deployment."
         }
       ],
       "fr": [
         {
-          "title": "Imposer le MFA matériel FIDO2 pour les développeurs",
-          "detail": "Le MFA traditionnel est contourné par le vol de session (Velvet Chollima, TeamPCP). Déployez des clés matérielles pour sécuriser les pipelines CI/CD et les consoles cloud contre le hijacking."
+          "title": "Imposer le MFA matériel FIDO2 à l'échelle de l'organisation",
+          "detail": "Les campagnes Tycoon2FA utilisent le phishing Device Code pour contourner le MFA TOTP. Déployez des clés matérielles FIDO2 (YubiKey 5) pour éliminer les flux sensibles au phishing."
         },
         {
-          "title": "Durcir la chaîne d'approvisionnement IA/ML",
-          "detail": "Suite aux attaques sur TanStack et npm, implémentez une vérification des artefacts alignée sur SLSA. Utilisez des registres privés pour prévenir les compromissions au niveau du code source."
-        },
-        {
-          "title": "Implémenter la microsegmentation contre l'évasion P2P",
-          "detail": "Le botnet Kazuar utilise l'IPC local et les WebSockets. Segmentez les réseaux pour empêcher les flux P2P entre postes de travail (SMB, Named Pipes, RPC)."
+          "title": "Durcir la chaîne d'approvisionnement CI/CD et npm",
+          "detail": "Vu les incidents TanStack, implémentez une analyse de composition logicielle (SCA) obligatoire et utilisez des dépôts privés (Artifactory) pour scanner les paquets npm."
         }
       ]
     },
     "operational": {
       "en": [
         {
-          "title": "Patch Exchange Server for CVE-2026-42897 Immediately",
-          "detail": "Active exploitation is ongoing. Use 'Exchange Management Shell' to verify patch status (May 2026 Update) or apply EEMS (Exchange Emergency Mitigation) to block XSS vectors on OWA interfaces."
+          "title": "Revoke Active OAuth Sessions and Device Registrations",
+          "detail": "Search Entra ID sign-in logs for AuthMethod='Device Code'. Immediately use 'Revoke-AzureADUserAllRefreshToken' for suspicious users and delete unknown cross-platform devices from the tenant."
         },
         {
-          "title": "Audit VS Code and npm Lifecycle Scripts",
-          "detail": "Run 'npm install --ignore-scripts' for all untrusted packages and set 'task.allowAutomaticTasks: off' in VS Code. Monitor for 'node.exe' or 'code.exe' spawning child shells (cmd/powershell)."
-        },
-        {
-          "title": "Block NATS Port 14222 to Untrusted IPs",
-          "detail": "The KeyHunter malware uses port 14222 for exfiltration via the NATS protocol. Configure EDR/Firewall alerts for any outbound traffic on this port originating from non-authorized cloud infrastructure nodes."
+          "title": "Patch Quest KACE SMA and Exchange Instantly",
+          "detail": "CVE-2025-32975 and CVE-2026-42897 are under active exploitation. Update KACE SMA to v13.x+ and apply Microsoft's May 2026 cumulative updates for Exchange Server within 24 hours."
         }
       ],
       "fr": [
         {
-          "title": "Patcher Exchange immédiatement pour la CVE-2026-42897",
-          "detail": "L'exploitation active est en cours. Vérifiez le statut du patch de mai 2026 ou appliquez l'atténuation d'urgence EEMS pour bloquer les vecteurs XSS sur les interfaces OWA."
+          "title": "Révoquer les sessions OAuth et les enregistrements d'appareils",
+          "detail": "Recherchez 'Device Code' dans les logs de connexion. Utilisez 'Revoke-AzureADUserAllRefreshToken' pour les utilisateurs suspects et supprimez les appareils inconnus du tenant."
         },
         {
-          "title": "Auditer les scripts de cycle de vie VS Code et npm",
-          "detail": "Utilisez 'npm install --ignore-scripts' et désactivez 'task.allowAutomaticTasks' dans VS Code. Surveillez les processus fils suspects issus de 'node.exe'."
-        },
-        {
-          "title": "Bloquer le port NATS 14222 vers les IPs non fiables",
-          "detail": "Le malware KeyHunter utilise le port 14222 pour l'exfiltration via NATS. Configurez des alertes pour tout trafic sortant sur ce port depuis des nœuds non autorisés."
+          "title": "Corriger Quest KACE SMA et Exchange immédiatement",
+          "detail": "CVE-2025-32975 et CVE-2026-42897 sont activement exploitées. Mettez à jour KACE SMA en v13.x+ et appliquez les correctifs Exchange de mai 2026 sous 24h."
         }
       ]
     }
