@@ -1,0 +1,2074 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The threat landscape for May 2026 is characterized by aggressive zero-day exploitation (MiniPlasma, Exchange) and a systemic crisis in the French tourism sector due to a supply chain breach (Itea). Emerging threats include sophisticated PhaaS kits like Tycoon2FA using OAuth device flows. Market concentration in AI also presents significant supply chain risks.",
+      "fr": "Le paysage des menaces de mai 2026 est marqué par l'exploitation agressive de vulnérabilités zero-day (MiniPlasma, Exchange) et une crise systémique dans le secteur du tourisme français suite à une violation de la chaîne d'approvisionnement (Itea). Les menaces émergentes incluent des kits PhaaS sophistiqués comme Tycoon2FA utilisant des flux OAuth. La concentration du marché de l'IA présente également des risques importants pour la supply chain."
+    },
+    "date": "2026-05-18"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense",
+          "Finance"
+        ],
+        "fr": [
+          "Gouvernement et Défense",
+          "Finance"
+        ]
+      },
+      "theme": {
+        "en": "Economic Impact of Crime in UK",
+        "fr": "Impact économique de la criminalité au Royaume-Uni"
+      },
+      "description": {
+        "en": "Business leaders report that crime, including cyberattacks and theft, is a primary barrier to growth, with 40% of businesses affected yearly.",
+        "fr": "Les chefs d'entreprise signalent que la criminalité, y compris les cyberattaques et le vol, est un frein majeur à la croissance, avec 40 % des entreprises touchées chaque année."
+      },
+      "recommandations": [
+        {
+          "en": "Implement mandatory cyber-attack reporting for SMEs.",
+          "fr": "Mettre en œuvre un rapport obligatoire des cyberattaques pour les PME."
+        },
+        {
+          "en": "Strengthen public-private partnerships for regional crime hubs.",
+          "fr": "Renforcer les partenariats public-privé pour les centres régionaux de lutte contre le crime."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Establish secure communication channels with regional law enforcement."
+          ],
+          "fr": [
+            "Établir des canaux de communication sécurisés avec les forces de l'ordre régionales."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor business loss indicators related to fraud and cybercrime."
+          ],
+          "fr": [
+            "Surveiller les indicateurs de perte d'activité liés à la fraude et à la cybercriminalité."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Activate legal and policy support frameworks."
+          ],
+          "fr": [
+            "Activer les cadres de soutien juridique et politique."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Review economic resilience metrics post-incident."
+          ],
+          "fr": [
+            "Passer en revue les mesures de résilience économique après l'incident."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "UK",
+        "Economy",
+        "Policy"
+      ],
+      "sources": [
+        "https://www.theguardian.com/uk-news/2026/may/17/crime-serious-barrier-uk-growth-business-leaders"
+      ],
+      "date": "2026-05-17"
+    },
+    {
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et télécoms"
+        ]
+      },
+      "theme": {
+        "en": "AI Market Concentration Risks",
+        "fr": "Risques liés à la concentration du marché de l'IA"
+      },
+      "description": {
+        "en": "Anthropic and OpenAI capture 89% of AI startup revenue, creating a systemic single point of failure risk.",
+        "fr": "Anthropic et OpenAI captent 89 % des revenus des startups de l'IA, créant un risque de point de défaillance unique systémique."
+      },
+      "recommandations": [
+        {
+          "en": "Diversify AI model dependencies.",
+          "fr": "Diversifier les dépendances aux modèles d'IA."
+        },
+        {
+          "en": "Develop contingency plans for major AI provider outages.",
+          "fr": "Développer des plans de contingence en cas d'interruption des services des grands fournisseurs d'IA."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Map all critical business processes dependent on centralized AI APIs."
+          ],
+          "fr": [
+            "Cartographier tous les processus critiques dépendant d'API d'IA centralisées."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor AI service availability and performance latency."
+          ],
+          "fr": [
+            "Surveiller la disponibilité des services d'IA et la latence des performances."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Switch to fallback open-source or local LLM instances."
+          ],
+          "fr": [
+            "Basculer vers des instances LLM locales ou open-source de secours."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Conduct vendor risk assessment review."
+          ],
+          "fr": [
+            "Réaliser une revue de l'évaluation des risques fournisseurs."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for shadow AI usage within the organization."
+          ],
+          "fr": [
+            "Rechercher l'utilisation d'IA fantôme (shadow AI) au sein de l'organisation."
+          ]
+        }
+      },
+      "tags": [
+        "AI",
+        "Supply Chain",
+        "Risk"
+      ],
+      "sources": [
+        "https://www.techmeme.com/260517/p12#a260517p12"
+      ],
+      "date": "2026-05-17"
+    }
+  ],
+  "regulatory_and_legal": [],
+  "breach_analyse": [
+    {
+      "victim": "Gîtes de France, Belambra, Pierre & Vacances-Center Parcs",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Hospitality_and_Entertainment"
+        ],
+        "fr": [
+          "Hôtellerie et divertissement"
+        ]
+      },
+      "description": {
+        "en": "Supply chain breach via software provider Itea. Over 472,000 files exfiltrated, including data spanning 30 years.",
+        "fr": "Violation de la chaîne d'approvisionnement via le fournisseur Itea. Plus de 472 000 dossiers exfiltrés, incluant des données sur 30 ans."
+      },
+      "mitre_ttps": [
+        "T1190",
+        "T1078"
+      ],
+      "recommandations": [
+        {
+          "en": "Audit all Itea software access logs immediately.",
+          "fr": "Auditer immédiatement tous les logs d'accès au logiciel Itea."
+        },
+        {
+          "en": "Notify customers per GDPR requirements.",
+          "fr": "Notifier les clients conformément aux exigences du RGPD."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Review third-party vendor access controls."
+          ],
+          "fr": [
+            "Revoir les contrôles d'accès des fournisseurs tiers."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Identify unauthorized database exports from Itea modules."
+          ],
+          "fr": [
+            "Identifier les exports de base de données non autorisés depuis les modules Itea."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate compromised servers and reset service account passwords."
+          ],
+          "fr": [
+            "Isoler les serveurs compromis et réinitialiser les mots de passe des comptes de service."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Submit CNIL reports and conduct full forensic audit."
+          ],
+          "fr": [
+            "Soumettre les rapports à la CNIL et mener un audit forensique complet."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Scan for lateral movement from service accounts."
+          ],
+          "fr": [
+            "Rechercher les mouvements latéraux à partir des comptes de service."
+          ]
+        }
+      },
+      "tags": [
+        "Supply Chain",
+        "Tourism",
+        "France"
+      ],
+      "sources": [
+        "https://www.lemonde.fr/pixels/article/2026/05/18/gites-de-france-annonce-a-son-tour-avoir-ete-vise-par-une-cyberattaque-apres-les-groupes-pierre-et-vacances-center-parcs-et-belambra_6690376_4408996.html"
+      ],
+      "date": "2026-05-18"
+    },
+    {
+      "victim": "Grafana Labs",
+      "threat_actor": "CoinbaseCartel",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Extortionist",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et télécoms"
+        ]
+      },
+      "description": {
+        "en": "Exfiltration of internal source code via a compromised GitHub Personal Access Token (PAT). Ransom demand refused.",
+        "fr": "Exfiltration du code source interne via un jeton d'accès personnel (PAT) GitHub compromis. Demande de rançon refusée."
+      },
+      "mitre_ttps": [
+        "T1528"
+      ],
+      "recommandations": [
+        {
+          "en": "Rotate all PATs and switch to GitHub Apps for automation.",
+          "fr": "Faire pivoter tous les PAT et passer aux GitHub Apps pour l'automatisation."
+        },
+        {
+          "en": "Enforce secret scanning on all repositories.",
+          "fr": "Imposer le scan de secrets sur tous les dépôts."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Implement fine-grained access tokens policies."
+          ],
+          "fr": [
+            "Mettre en œuvre des politiques de jetons d'accès granulaires."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Audit GitHub audit logs for unusual repository clones."
+          ],
+          "fr": [
+            "Auditer les logs d'audit GitHub pour détecter des clones de dépôts inhabituels."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Revoke the specific compromised token and block associated IPs."
+          ],
+          "fr": [
+            "Révoquer le jeton compromis spécifique et bloquer les IP associées."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Review code for potential backdoors injected during the breach."
+          ],
+          "fr": [
+            "Examiner le code pour d'éventuelles backdoors injectées pendant la violation."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for exfiltrated secrets being reused in other systems."
+          ],
+          "fr": [
+            "Rechercher les secrets exfiltrés réutilisés dans d'autres systèmes."
+          ]
+        }
+      },
+      "tags": [
+        "GitHub",
+        "Source Code",
+        "Extortion"
+      ],
+      "sources": [
+        "https://beyondmachines.net/event_details/grafana-labs-refuses-extortion-demand-following-github-codebase-breach-3-9-l-z-7/gD2P6Ple2L"
+      ],
+      "date": "2026-05-17"
+    },
+    {
+      "victim": "AXA Pet Insurance Japan",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Finance"
+        ],
+        "fr": [
+          "Finance"
+        ]
+      },
+      "description": {
+        "en": "Data leak affecting 64,000 records due to an auto-registration mechanism flaw.",
+        "fr": "Fuite de données affectant 64 000 enregistrements en raison d'une faille dans le mécanisme d'auto-enregistrement."
+      },
+      "mitre_ttps": [
+        "unknown"
+      ],
+      "recommandations": [
+        {
+          "en": "Disable insecure auto-registration flows.",
+          "fr": "Désactiver les flux d'auto-enregistrement non sécurisés."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Audit registration APIs for bypass vulnerabilities."
+          ],
+          "fr": [
+            "Auditer les API d'enregistrement pour les vulnérabilités de contournement."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Search for bulk registration patterns from single IPs."
+          ],
+          "fr": [
+            "Rechercher des modèles d'enregistrement en masse à partir d'IP uniques."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Patch registration logic and verify user identity."
+          ],
+          "fr": [
+            "Corriger la logique d'enregistrement et vérifier l'identité des utilisateurs."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Implement mandatory MFA for account creation."
+          ],
+          "fr": [
+            "Mettre en œuvre le MFA obligatoire pour la création de compte."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Check for other configurations flaws in related insurance portals."
+          ],
+          "fr": [
+            "Vérifier d'autres défauts de configuration dans les portails d'assurance connexes."
+          ]
+        }
+      },
+      "tags": [
+        "Japan",
+        "Insurance",
+        "Data Leak"
+      ],
+      "sources": [
+        "https://mastodon.social/@securityLab_jp/116592368757790175"
+      ],
+      "date": "2026-05-17"
+    },
+    {
+      "victim": "OpenAI",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et télécoms"
+        ]
+      },
+      "description": {
+        "en": "Compromise of two employee devices via a supply chain attack on TanStack. Authentication info leaked.",
+        "fr": "Compromission de deux appareils d'employés via une attaque de la chaîne d'approvisionnement sur TanStack. Informations d'authentification fuitées."
+      },
+      "mitre_ttps": [
+        "unknown"
+      ],
+      "recommandations": [
+        {
+          "en": "Audit npm/TanStack dependencies.",
+          "fr": "Auditer les dépendances npm/TanStack."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Enforce EDR on all developer endpoints."
+          ],
+          "fr": [
+            "Imposer un EDR sur tous les terminaux des développeurs."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor dependency updates for unusual scripts."
+          ],
+          "fr": [
+            "Surveiller les mises à jour de dépendances pour les scripts inhabituels."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate affected terminals and revoke session tokens."
+          ],
+          "fr": [
+            "Isoler les terminaux affectés et révoquer les jetons de session."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Harden CI/CD pipelines to scan for malicious packages."
+          ],
+          "fr": [
+            "Renforcer les pipelines CI/CD pour scanner les packages malveillants."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "AI",
+        "Supply Chain",
+        "npm"
+      ],
+      "sources": [
+        "https://mastodon.social/@securityLab_jp/116592649134198171"
+      ],
+      "date": "2026-05-18"
+    },
+    {
+      "victim": "Generation Life",
+      "threat_actor": "Qilin",
+      "threat_actor_origin": "Russia",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [
+        "Agenda"
+      ],
+      "sector": {
+        "en": [
+          "Finance"
+        ],
+        "fr": [
+          "Finance"
+        ]
+      },
+      "description": {
+        "en": "Qilin ransomware group claims responsibility for the attack on Generation Life in Australia.",
+        "fr": "Le groupe de ransomware Qilin revendique l'attaque contre Generation Life en Australie."
+      },
+      "mitre_ttps": [
+        "T1486"
+      ],
+      "recommandations": [
+        {
+          "en": "Ensure offline backups are functional and tested.",
+          "fr": "S'assurer que les sauvegardes hors ligne sont fonctionnelles et testées."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Prepare ransomware communication templates."
+          ],
+          "fr": [
+            "Préparer des modèles de communication pour les ransomwares."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Alert on unauthorized exfiltration to known Qilin drop sites."
+          ],
+          "fr": [
+            "Alerter en cas d'exfiltration non autorisée vers les sites de dépôt connus de Qilin."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Block all exfiltration IPs and isolate management servers."
+          ],
+          "fr": [
+            "Bloquer toutes les IP d'exfiltration et isoler les serveurs de gestion."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Rebuild infrastructure from clean snapshots."
+          ],
+          "fr": [
+            "Reconstruire l'infrastructure à partir de snapshots propres."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Check for persistent RDP/VPN access used by Qilin affiliates."
+          ],
+          "fr": [
+            "Vérifier les accès RDP/VPN persistants utilisés par les affiliés Qilin."
+          ]
+        }
+      },
+      "tags": [
+        "Ransomware",
+        "Australia",
+        "Extortion"
+      ],
+      "sources": [
+        "https://www.cyberdaily.au/security/13608-exclusive-qilin-ransomware-group-claims-responsibility-for-generation-life-hack"
+      ],
+      "date": "2026-05-18"
+    },
+    {
+      "victim": "Nihon Shisan Soken",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Finance"
+        ],
+        "fr": [
+          "Finance"
+        ]
+      },
+      "description": {
+        "en": "Major ransomware incident at Nihon Shisan Soken involving file encryption and potential data leak.",
+        "fr": "Incident de ransomware majeur chez Nihon Shisan Soken impliquant le chiffrement de fichiers et une fuite potentielle de données."
+      },
+      "mitre_ttps": [
+        "T1486"
+      ],
+      "recommandations": [
+        {
+          "en": "Verify integrity of sensitive financial databases.",
+          "fr": "Vérifier l'intégrité des bases de données financières sensibles."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain an immutable backup strategy."
+          ],
+          "fr": [
+            "Maintenir une stratégie de sauvegarde immuable."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for massive file renaming activities."
+          ],
+          "fr": [
+            "Surveiller les activités de renommage massif de fichiers."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Shutdown compromised storage networks."
+          ],
+          "fr": [
+            "Arrêter les réseaux de stockage compromis."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Implement stricter network segmentation."
+          ],
+          "fr": [
+            "Mettre en œuvre une segmentation réseau plus stricte."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Scan for backdoors used for persistence."
+          ],
+          "fr": [
+            "Rechercher les backdoors utilisées pour la persistance."
+          ]
+        }
+      },
+      "tags": [
+        "Japan",
+        "Ransomware",
+        "Finance"
+      ],
+      "sources": [
+        "https://mastodon.social/@securityLab_jp/116592883924491805"
+      ],
+      "date": "2026-05-18"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-33825",
+      "euvd_id": "unknown",
+      "cisa_kev": "true",
+      "cvss": "7.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:o:microsoft:windows:*:*:*:*:*:*:*:*",
+      "product": "Windows 10, Windows 11",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "The 'MiniPlasma' zero-day exploit targets the Cloud Filter driver (cldflt.sys) allowing an attacker to gain SYSTEM privileges.",
+        "fr": "L'exploit zero-day 'MiniPlasma' cible le pilote Cloud Filter (cldflt.sys), permettant à un attaquant d'obtenir des privilèges SYSTEM."
+      },
+      "mitre_ttps": [
+        "T1068"
+      ],
+      "recommandations": [
+        {
+          "en": "Disable the Cloud Filter service if not required.",
+          "fr": "Désactiver le service Cloud Filter s'il n'est pas nécessaire."
+        },
+        {
+          "en": "Monitor for CfAbortHydration API calls.",
+          "fr": "Surveiller les appels à l'API CfAbortHydration."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory all Windows 11 assets."
+          ],
+          "fr": [
+            "Inventorier tous les actifs Windows 11."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect registry key creation in .DEFAULT user hive associated with cldflt.sys."
+          ],
+          "fr": [
+            "Détecter la création de clés de registre dans la ruche utilisateur .DEFAULT associée à cldflt.sys."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Restict driver installation privileges."
+          ],
+          "fr": [
+            "Restreindre les privilèges d'installation des pilotes."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Apply official patches immediately upon release."
+          ],
+          "fr": [
+            "Appliquer les correctifs officiels dès leur sortie."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "zero-day",
+        "Privilege Escalation"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/microsoft/new-windows-miniplasma-zero-day-exploit-gives-system-access-poc-released/"
+      ],
+      "date": "2026-05-17"
+    },
+    {
+      "cve_id": "CVE-2026-42897",
+      "euvd_id": "unknown",
+      "cisa_kev": "true",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:microsoft:exchange_server:*:*:*:*:*:*:*:*",
+      "product": "Exchange Server, Funnel Builder WordPress Plugin",
+      "vendor": "Microsoft / FunnelKit",
+      "description": {
+        "en": "Zero-day exploit used to inject e-skimmers into e-stores and web shells into Exchange servers.",
+        "fr": "Exploit zero-day utilisé pour injecter des e-skimmers dans des boutiques en ligne et des web shells dans des serveurs Exchange."
+      },
+      "mitre_ttps": [
+        "T1190",
+        "T1505.003"
+      ],
+      "recommandations": [
+        {
+          "en": "Update Funnel Builder to v3.15.0.3.",
+          "fr": "Mettre à jour Funnel Builder vers la v3.15.0.3."
+        },
+        {
+          "en": "Apply May 2026 Exchange cumulative updates.",
+          "fr": "Appliquer les mises à jour cumulatives Exchange de mai 2026."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory public-facing Exchange servers."
+          ],
+          "fr": [
+            "Inventorier les serveurs Exchange exposés au public."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Scan for new .aspx files in Exchange directories."
+          ],
+          "fr": [
+            "Rechercher les nouveaux fichiers .aspx dans les répertoires Exchange."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate compromised Exchange nodes from internal network."
+          ],
+          "fr": [
+            "Isoler les nœuds Exchange compromis du réseau interne."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Perform full audit of WordPress external script settings."
+          ],
+          "fr": [
+            "Effectuer un audit complet des paramètres de scripts externes WordPress."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "Exchange",
+        "Skimmer"
+      ],
+      "sources": [
+        "https://securityaffairs.com/192260/cyber-crime/attackers-exploit-funnel-builder-bug-to-inject-e-skimmers-into-e-stores.html",
+        "https://mastodon.social/@securityLab_jp/116592407663592016"
+      ],
+      "date": "2026-05-17"
+    },
+    {
+      "cve_id": "CVE-2026-8764",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:h:h3c:magic_b3:*:*:*:*:*:*:*:*",
+      "product": "Magic B3",
+      "vendor": "H3C",
+      "description": {
+        "en": "Stack-based buffer overflow in UpdateWanParams in /goform/aspForm allows remote attackers to execute code.",
+        "fr": "Dépassement de tampon basé sur la pile dans UpdateWanParams dans /goform/aspForm permettant aux attaquants distants d'exécuter du code."
+      },
+      "mitre_ttps": [
+        "T1203"
+      ],
+      "recommandations": [
+        {
+          "en": "Disable remote management on WAN interface.",
+          "fr": "Désactiver la gestion à distance sur l'interface WAN."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Identify H3C Magic B3 routers."
+          ],
+          "fr": [
+            "Identifier les routeurs H3C Magic B3."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor POST requests to /goform/aspForm with long 'param' values."
+          ],
+          "fr": [
+            "Surveiller les requêtes POST vers /goform/aspForm avec de longues valeurs 'param'."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Restrict access to router management ports."
+          ],
+          "fr": [
+            "Restreindre l'accès aux ports de gestion du routeur."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Apply firmware updates."
+          ],
+          "fr": [
+            "Appliquer les mises à jour du firmware."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Check for unauthorized configuration changes."
+          ],
+          "fr": [
+            "Vérifier les modifications de configuration non autorisées."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "Router",
+        "Buffer Overflow"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-8764"
+      ],
+      "date": "2026-05-17"
+    },
+    {
+      "cve_id": "CVE-2018-25339",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:zechat:zechat:1.5:*:*:*:*:*:*:*",
+      "product": "Zechat",
+      "vendor": "Zechat",
+      "description": {
+        "en": "Blind SQL injection in Zechat 1.5 via the 'v' parameter.",
+        "fr": "Injection SQL aveugle dans Zechat 1.5 via le paramètre 'v'."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Upgrade or decommission legacy Zechat instances.",
+          "fr": "Mettre à jour ou mettre hors service les instances Zechat héritées."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Identify legacy chat applications."
+          ],
+          "fr": [
+            "Identifier les applications de chat héritées."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "SQLi",
+        "Legacy"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2018-25339"
+      ],
+      "date": "2026-05-17"
+    },
+    {
+      "cve_id": "CVE-2018-25338",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:zechat:zechat:1.5:*:*:*:*:*:*:*",
+      "product": "Zechat",
+      "vendor": "Zechat",
+      "description": {
+        "en": "SQL injection in Zechat 1.5 via the hashtag parameter.",
+        "fr": "Injection SQL dans Zechat 1.5 via le paramètre hashtag."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Upgrade to a supported chat platform.",
+          "fr": "Passer à une plateforme de chat supportée."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Identify Zechat usage."
+          ],
+          "fr": [
+            "Identifier l'utilisation de Zechat."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "SQLi"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2018-25338"
+      ],
+      "date": "2026-05-17"
+    },
+    {
+      "cve_id": "CVE-2018-25335",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:peugeot:music:1.0:*:*:*:*:wordpress:*:*",
+      "product": "Peugeot Music Plugin",
+      "vendor": "Peugeot",
+      "description": {
+        "en": "Arbitrary file upload in Peugeot Music Plugin 1.0 for WordPress.",
+        "fr": "Upload de fichiers arbitraires dans le plugin Peugeot Music 1.0 pour WordPress."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Delete the plugin immediately.",
+          "fr": "Supprimer le plugin immédiatement."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "WordPress"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2018-25335"
+      ],
+      "date": "2026-05-17"
+    },
+    {
+      "cve_id": "CVE-2018-25333",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:h:nordex:n149:*:*:*:*:*:*:*:*",
+      "product": "N149 Wind Turbine Web Server",
+      "vendor": "Nordex",
+      "description": {
+        "en": "SQL injection in the login interface of Nordex N149 Wind Turbine web servers.",
+        "fr": "Injection SQL dans l'interface de connexion des serveurs web des éoliennes Nordex N149."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Isolate wind turbine management interfaces from public internet.",
+          "fr": "Isoler les interfaces de gestion des éoliennes de l'internet public."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Identify OT assets connected to the WAN."
+          ],
+          "fr": [
+            "Identifier les actifs OT connectés au WAN."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "OT",
+        "Critical Infrastructure"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2018-25333"
+      ],
+      "date": "2026-05-17"
+    },
+    {
+      "cve_id": "CVE-2018-25332",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:gitbucket:gitbucket:4.23.1:*:*:*:*:*:*:*",
+      "product": "GitBucket",
+      "vendor": "GitBucket",
+      "description": {
+        "en": "Remote code execution in GitBucket 4.23.1 via weak secrets and file upload.",
+        "fr": "Exécution de code à distance dans GitBucket 4.23.1 via des secrets faibles et l'upload de fichiers."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Update GitBucket to a version higher than 4.23.1.",
+          "fr": "Mettre à jour GitBucket vers une version supérieure à 4.23.1."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "RCE"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2018-25332"
+      ],
+      "date": "2026-05-17"
+    },
+    {
+      "cve_id": "CVE-2018-25330",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:joomla:ekrishta:*:*:*:*:*:*:*:*",
+      "product": "EkRishta extension",
+      "vendor": "Joomla",
+      "description": {
+        "en": "Persistent XSS in the EkRishta extension for Joomla.",
+        "fr": "XSS persistante dans l'extension EkRishta pour Joomla."
+      },
+      "mitre_ttps": [
+        "unknown"
+      ],
+      "recommandations": [
+        {
+          "en": "Disable or update the EkRishta extension.",
+          "fr": "Désactiver ou mettre à jour l'extension EkRishta."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "XSS",
+        "Joomla"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2018-25330"
+      ],
+      "date": "2026-05-17"
+    },
+    {
+      "cve_id": "unknown",
+      "euvd_id": "unknown",
+      "cisa_kev": "true",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "SharePoint, ESXi, Windows 11, OpenAI Codex",
+      "vendor": "Microsoft, VMware, OpenAI",
+      "description": {
+        "en": "Multiple zero-day vulnerabilities discovered during Pwn2Own Berlin 2026.",
+        "fr": "Plusieurs vulnérabilités zero-day découvertes lors du Pwn2Own Berlin 2026."
+      },
+      "mitre_ttps": [
+        "unknown"
+      ],
+      "recommandations": [
+        {
+          "en": "Stay alert for post-competition security updates from vendors.",
+          "fr": "Rester attentif aux mises à jour de sécurité post-compétition des éditeurs."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Identify assets listed in Pwn2Own targets."
+          ],
+          "fr": [
+            "Identifier les actifs listés dans les cibles du Pwn2Own."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "Pwn2Own",
+        "zero-day"
+      ],
+      "sources": [
+        "https://securityaffairs.com/192250/hacking/pwn2own-berlin-2026-day-three-devcore-crowned-master-of-pwn-1-298-million-total.html"
+      ],
+      "date": "2026-05-17"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "Tycoon2FA OAuth Phishing",
+        "fr": "Phishing OAuth Tycoon2FA"
+      },
+      "description": {
+        "en": "New phishing-as-a-service campaign using M365 device code flows to bypass MFA.",
+        "fr": "Nouvelle campagne de phishing-as-a-service utilisant les flux de code d'appareil M365 pour contourner le MFA."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom",
+          "Business_Services"
+        ],
+        "fr": [
+          "Technologie et télécoms",
+          "Services aux entreprises"
+        ]
+      },
+      "indicators": {
+        "URL": [
+          "https://microsoft[.]com/devicelogin"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Tycoon2FA"
+        ]
+      },
+      "mitre_ttps": [
+        "T1566.002",
+        "T1528"
+      ],
+      "analyse": {
+        "en": "Tycoon2FA bypasses traditional MFA by tricking users into authorizing an attacker-controlled device through the legitimate Microsoft device login portal.",
+        "fr": "Tycoon2FA contourne le MFA traditionnel en trompant les utilisateurs pour qu'ils autorisent un appareil contrôlé par l'attaquant via le portail de connexion d'appareil légitime de Microsoft."
+      },
+      "recommandations": [
+        {
+          "en": "Disable Device Code Flow if not business-essential.",
+          "fr": "Désactiver le flux de code d'appareil s'il n'est pas essentiel à l'entreprise."
+        },
+        {
+          "en": "Use Conditional Access to limit OAuth authorizations.",
+          "fr": "Utiliser l'Accès Conditionnel pour limiter les autorisations OAuth."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Train users on device code phishing risks."
+          ],
+          "fr": [
+            "Former les utilisateurs aux risques de phishing par code d'appareil."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Audit successful /devicelogin events from unexpected locations."
+          ],
+          "fr": [
+            "Auditer les événements /devicelogin réussis provenant d'emplacements inattendus."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Revoke all active OAuth sessions for the user."
+          ],
+          "fr": [
+            "Révoquer toutes les sessions OAuth actives pour l'utilisateur."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Enable Continuous Access Evaluation (CAE)."
+          ],
+          "fr": [
+            "Activer l'évaluation continue de l'accès (CAE)."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for unauthorized app consents in Entra ID."
+          ],
+          "fr": [
+            "Rechercher des consentements d'applications non autorisés dans Entra ID."
+          ]
+        }
+      },
+      "tags": [
+        "Phishing",
+        "OAuth",
+        "MFA-Bypass"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/tycoon2fa-hijacks-microsoft-365-accounts-via-device-code-phishing/"
+      ],
+      "date": "2026-05-17"
+    },
+    {
+      "title": {
+        "en": "Azure Incident Response Architecture Guide",
+        "fr": "Guide d'architecture Azure pour l'incident response"
+      },
+      "description": {
+        "en": "Technical guide on Azure hierarchy and logging for incident responders.",
+        "fr": "Guide technique sur la hiérarchie Azure et les logs pour les intervenants en cas d'incident."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Security"
+        ],
+        "fr": [
+          "Sécurité"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "Understanding Tenant/Subscription structure is critical for effective log collection.",
+        "fr": "Comprendre la structure Tenant/Abonnement est crucial pour une collecte efficace des logs."
+      },
+      "recommandations": [
+        {
+          "en": "Centralize Azure activity logs in Log Analytics.",
+          "fr": "Centraliser les logs d'activité Azure dans Log Analytics."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory Azure assets hierarchy."
+          ],
+          "fr": [
+            "Inventorier la hiérarchie des actifs Azure."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "Azure",
+        "Analysis"
+      ],
+      "sources": [
+        "https://www.cyberengage.org/post/azure-architecture-what-every-incident-responder-must-understand-before-touching-a-case"
+      ],
+      "date": "2026-05-17"
+    },
+    {
+      "title": {
+        "en": "Malware and Security Newsletters Roundup",
+        "fr": "Synthèse des newsletters Malware et Sécurité"
+      },
+      "description": {
+        "en": "Weekly summaries of global malware incidents and cybersecurity research.",
+        "fr": "Résumés hebdomadaires des incidents mondiaux de malwares et de la recherche en cybersécurité."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Security"
+        ],
+        "fr": [
+          "Sécurité"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "Compilation of various malware reports and international incidents.",
+        "fr": "Compilation de divers rapports sur les malwares et les incidents internationaux."
+      },
+      "recommandations": [],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Follow newsletter feeds for early threat warnings."
+          ],
+          "fr": [
+            "Suivre les flux de newsletters pour les alertes précoces sur les menaces."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "Intelligence",
+        "Newsletter"
+      ],
+      "sources": [
+        "https://securityaffairs.com/192278/security/security-affairs-malware-newsletter-round-97.html",
+        "https://securityaffairs.com/192269/security/security-affairs-newsletter-round-577-by-pierluigi-paganini-international-edition.html"
+      ],
+      "date": "2026-05-17"
+    },
+    {
+      "title": {
+        "en": "APT Trends Report - April 2026",
+        "fr": "Rapport sur les tendances APT - Avril 2026"
+      },
+      "description": {
+        "en": "AhnLab analysis of state-sponsored activities targeting critical infrastructure.",
+        "fr": "Analyse d'AhnLab sur les activités étatiques ciblant les infrastructures critiques."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Critical_Infrastructure",
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Infrastructures critiques",
+          "Gouvernement et Défense"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "Ongoing observation of cyber espionage tactics from global threat actors.",
+        "fr": "Observation continue des tactiques de cyberespionnage des acteurs de menaces mondiaux."
+      },
+      "recommandations": [],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Apply IoCs from April APT reports."
+          ],
+          "fr": [
+            "Appliquer les IoC des rapports APT d'avril."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "APT",
+        "Analysis"
+      ],
+      "sources": [
+        "https://asec.ahnlab.com/en/93744/"
+      ],
+      "date": "2026-05-17"
+    },
+    {
+      "title": {
+        "en": "Privacy Infrastructure and Research",
+        "fr": "Infrastructure de confidentialité et recherche"
+      },
+      "description": {
+        "en": "Promotion of decentralized privacy services and comparative studies between Nym and Tor.",
+        "fr": "Promotion des services de confidentialité décentralisés et études comparatives entre Nym et Tor."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et télécoms"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Tor",
+          "Nym",
+          "Sphinx"
+        ]
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "Exploration of mixnets and onion routing to counter global surveillance.",
+        "fr": "Exploration des mixnets et du routage en oignon pour contrer la surveillance globale."
+      },
+      "recommandations": [],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "Privacy",
+        "Decentralization"
+      ],
+      "sources": [
+        "https://infosec.exchange/@virebent/116592694806652199",
+        "https://infosec.exchange/@virebent/116592678109435020",
+        "https://mastobot.ping.moi/@Bobe_bot/116592162030325689"
+      ],
+      "date": "2026-05-18"
+    },
+    {
+      "title": {
+        "en": "Out-of-Band Communication Advice for IR",
+        "fr": "Conseils sur la communication hors-bande pour l'IR"
+      },
+      "description": {
+        "en": "Importance of 'Break Glass' communication channels during network-wide incidents.",
+        "fr": "Importance des canaux de communication 'Break Glass' lors d'incidents à l'échelle du réseau."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Security"
+        ],
+        "fr": [
+          "Sécurité"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "Internal collaboration tools are often unavailable when the main network is compromised.",
+        "fr": "Les outils de collaboration internes sont souvent indisponibles lorsque le réseau principal est compromis."
+      },
+      "recommandations": [
+        {
+          "en": "Prepare independent secure messaging platforms.",
+          "fr": "Préparer des plateformes de messagerie sécurisées indépendantes."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Define 'out-of-band' communication protocols."
+          ],
+          "fr": [
+            "Définir des protocoles de communication 'hors-bande'."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "Blue Team",
+        "Resilience"
+      ],
+      "sources": [
+        "https://techhub.social/@cvedatabase/116592279753009827"
+      ],
+      "date": "2026-05-17"
+    },
+    {
+      "title": {
+        "en": "BSides Brisbane and Mobile OS Security Updates",
+        "fr": "BSides Brisbane et mises à jour de sécurité des OS mobiles"
+      },
+      "description": {
+        "en": "Community announcements regarding BSides conference and postmarketOS updates.",
+        "fr": "Annonces communautaires concernant la conférence BSides et les mises à jour de postmarketOS."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Security",
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Sécurité",
+          "Technologie et télécoms"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "Community efforts help reduce attack surfaces by maintaining legacy hardware.",
+        "fr": "Les efforts communautaires aident à réduire les surfaces d'attaque en maintenant le matériel hérité."
+      },
+      "recommandations": [],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "inconnu"
+          ]
+        }
+      },
+      "tags": [
+        "Community",
+        "Mobile Security"
+      ],
+      "sources": [
+        "https://mastodon.social/@bsidesbrisbane/116592635115613442",
+        "https://mastobot.ping.moi/@Bobe_bot/116592162415202877"
+      ],
+      "date": "2026-05-18"
+    }
+  ]
+}
