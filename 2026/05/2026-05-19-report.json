@@ -1,0 +1,1342 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The news of May 19, 2026, is marked by a major software supply chain crisis and a surge in critical vulnerabilities affecting cloud and network infrastructures. The TeamPCP actor (UNC1069) is intensifying operations via NPM/PyPI worms and CI/CD pipeline compromises, exploiting legitimate OIDC identities. In parallel, the discovery of 'zero-day' vulnerabilities in Windows (MiniPlasma) and NGINX (Rift) puts pressure on patch management. Institutionally, massive leaks of AWS GovCloud secrets and alarming CNIL reports highlight persistent public sector fragility.",
+      "fr": "L'actualité du 19 mai 2026 est marquée par une crise majeure de la supply chain logicielle et une recrudescence de vulnérabilités critiques affectant les infrastructures cloud et réseau. L'acteur TeamPCP (UNC1069) intensifie ses opérations via des vers NPM/PyPI et des compromissions de pipelines CI/CD, exploitant des identités OIDC légitimes. En parallèle, la découverte de vulnérabilités 'zéro-jour' dans Windows (MiniPlasma) et NGINX (Rift) met sous pression le patch management. Sur le plan institutionnel, les fuites de secrets AWS GovCloud et les rapports alarmants de la CNIL soulignent une fragilité persistante du secteur public."
+    },
+    "date": "2026-05-19"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement et Défense"
+        ]
+      },
+      "theme": {
+        "en": "Sino-American Tensions and Iranian Conflict",
+        "fr": "Tensions sino-américaines et conflit iranien"
+      },
+      "description": {
+        "en": "Diplomatic failure of the visit to Beijing and strengthening of Russia-China ties. The conflict in Iran serves as a catalyst for geographically targeted cyber operations.",
+        "fr": "Échec diplomatique de la visite à Pékin et renforcement des liens Russie-Chine. Le conflit en Iran sert de catalyseur à des cyber-opérations ciblées géographiquement."
+      },
+      "recommandations": [
+        {
+          "en": "Reassess energy and logistical dependencies on polarized regions.",
+          "fr": "Réévaluer les dépendances énergétiques et logistiques vis-à-vis des régions polarisées."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Increase monitoring of assets in conflict zones."
+          ],
+          "fr": [
+            "Augmenter la surveillance des actifs dans les zones de conflit."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Identify traffic from unusual state-nexus IPs."
+          ],
+          "fr": [
+            "Identifier le trafic provenant d'IP inhabituelles liées à des États."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate non-critical communications with high-risk regions."
+          ],
+          "fr": [
+            "Isoler les communications non critiques avec les régions à haut risque."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Conduct geopolitical impact analysis on IT infrastructure."
+          ],
+          "fr": [
+            "Réaliser une analyse d'impact géopolitique sur l'infrastructure IT."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for APT persistence indicators related to regional actors."
+          ],
+          "fr": [
+            "Rechercher des indicateurs de persistance d'APT liés aux acteurs régionaux."
+          ]
+        }
+      },
+      "tags": [
+        "Iran",
+        "China",
+        "USA",
+        "Geopolitics"
+      ],
+      "sources": [
+        "https://www.iris-france.org/visite-de-trump-a-pekin-un-echec-attendu/"
+      ],
+      "date": "2026-05-18"
+    },
+    {
+      "sector": {
+        "en": [
+          "Industry_and_Manufacturing"
+        ],
+        "fr": [
+          "Industrie et Manufacturier"
+        ]
+      },
+      "theme": {
+        "en": "French Fuel and Logistics Crisis",
+        "fr": "Crise du carburant et de la logistique en France"
+      },
+      "description": {
+        "en": "High diesel prices threatening 85% of SMEs in the transport sector, risking logistical sovereignty.",
+        "fr": "Prix élevés du gazole menaçant 85% des PME du secteur du transport, risquant la souveraineté logistique."
+      },
+      "recommandations": [
+        {
+          "en": "Implement business continuity plans for supply chains.",
+          "fr": "Mettre en œuvre des plans de continuité d'activité pour les chaînes d'approvisionnement."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Map critical logistics providers."
+          ],
+          "fr": [
+            "Cartographier les prestataires logistiques critiques."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor supply chain delays."
+          ],
+          "fr": [
+            "Surveiller les retards dans la chaîne d'approvisionnement."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Activate backup logistics routes."
+          ],
+          "fr": [
+            "Activer des routes logistiques de secours."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Review logistics resilience strategy."
+          ],
+          "fr": [
+            "Revoir la stratégie de résilience logistique."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "France",
+        "Logistics",
+        "Economy"
+      ],
+      "sources": [
+        "https://www.portail-ie.fr/univers/enjeux-de-puissances-et-geoeconomie/2026/crise-du-carburant-la-logistique-francaise-au-bord-de-la-rupture/"
+      ],
+      "date": "2026-05-18"
+    }
+  ],
+  "regulatory_and_legal": [
+    {
+      "title": {
+        "en": "Cyber Resilience Act (CRA) Compliance Status",
+        "fr": "État de la conformité au Cyber Resilience Act (CRA)"
+      },
+      "description": {
+        "en": "66% of organizations ignore CRA requirements despite reporting obligations starting Sept 2026.",
+        "fr": "66% des organisations ignorent les exigences du CRA malgré les obligations de signalement dès sept. 2026."
+      },
+      "organisation": {
+        "en": [
+          "European Commission"
+        ],
+        "fr": [
+          "Commission Européenne"
+        ]
+      },
+      "jurisdiction": {
+        "en": [
+          "European Union"
+        ],
+        "fr": [
+          "Union Européenne"
+        ]
+      },
+      "references": {
+        "en": [
+          "CRA"
+        ],
+        "fr": [
+          "CRA"
+        ]
+      },
+      "tags": [
+        "Regulatory",
+        "Compliance"
+      ],
+      "sources": [
+        "https://openssf.org/blog/2026/05/18/taking-stock-of-the-state-of-european-cyber-resilience-act-cra-compliance-an-urgent-wake-up-call-for-the-open-source-ecosystem/"
+      ],
+      "date": "2026-05-18"
+    },
+    {
+      "title": {
+        "en": "CNIL 2025 Annual Report",
+        "fr": "Bilan annuel CNIL 2025"
+      },
+      "description": {
+        "en": "50% increase in data breaches in 3 years. MFA mandatory for databases over 1M individuals.",
+        "fr": "Hausse de 50% des violations de données en 3 ans. MFA obligatoire pour les bases de plus de 1M d'individus."
+      },
+      "organisation": {
+        "en": [
+          "CNIL"
+        ],
+        "fr": [
+          "CNIL"
+        ]
+      },
+      "jurisdiction": {
+        "en": [
+          "France"
+        ],
+        "fr": [
+          "France"
+        ]
+      },
+      "references": {
+        "en": [
+          "GDPR"
+        ],
+        "fr": [
+          "RGPD"
+        ]
+      },
+      "tags": [
+        "Privacy",
+        "Data Protection"
+      ],
+      "sources": [
+        "https://www.lemonde.fr/pixels/article/2026/05/18/marie-laure-denis-presidente-de-la-cnil-l-etat-a-une-responsabilite-particuliere-a-l-egard-des-donnees-des-francais_6691073_4408997.html"
+      ],
+      "date": "2026-05-18"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "CISA",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Insider Error",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement et Défense"
+        ]
+      },
+      "description": {
+        "en": "Contractor leaked AWS GovCloud keys on a public GitHub repository named 'Private-CISA'.",
+        "fr": "Un sous-traitant a divulgué des clés AWS GovCloud sur un dépôt GitHub public nommé 'Private-CISA'."
+      },
+      "mitre_ttps": [
+        "T1552.001"
+      ],
+      "recommandations": [
+        {
+          "en": "Prohibit use of personal repositories for work code.",
+          "fr": "Interdire l'usage de dépôts personnels pour le code professionnel."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Deploy secret scanning tools in pre-commit hooks."
+          ],
+          "fr": [
+            "Déployer des outils de scan de secrets dans les hooks de pré-commit."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor public GitHub for organization keywords."
+          ],
+          "fr": [
+            "Surveiller GitHub public pour les mots-clés de l'organisation."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Revoke compromised AWS keys immediately."
+          ],
+          "fr": [
+            "Révoquer immédiatement les clés AWS compromises."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Rotate all environment credentials."
+          ],
+          "fr": [
+            "Effectuer une rotation de tous les identifiants de l'environnement."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Check CloudTrail logs for usage of the leaked keys from foreign IPs."
+          ],
+          "fr": [
+            "Vérifier les logs CloudTrail pour l'usage des clés fuitées depuis des IPs étrangères."
+          ]
+        }
+      },
+      "tags": [
+        "Data Breach",
+        "Cloud",
+        "Secrets Leak"
+      ],
+      "sources": [
+        "https://krebsonsecurity.com/2026/05/cisa-admin-leaked-aws-govcloud-keys-on-github/"
+      ],
+      "date": "2026-05-18"
+    },
+    {
+      "victim": "Grafana Labs",
+      "threat_actor": "Coinbase Cartel",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime / Extortionist",
+      "threat_actor_aliases": [
+        "Lapsus$ Affiliates"
+      ],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et Télécommunications"
+        ]
+      },
+      "description": {
+        "en": "Source code theft via stolen GitHub Personal Access Token (PAT).",
+        "fr": "Vol de code source via un jeton d'accès personnel (PAT) GitHub volé."
+      },
+      "mitre_ttps": [
+        "T1567"
+      ],
+      "recommandations": [
+        {
+          "en": "Implement GitHub Secret Scanning and move to GitHub Apps.",
+          "fr": "Implémenter le scan de secrets GitHub et passer aux GitHub Apps."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Enforce strict PAT rotation policies."
+          ],
+          "fr": [
+            "Imposer des politiques strictes de rotation des PAT."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor GitHub logs for massive repo downloads."
+          ],
+          "fr": [
+            "Surveiller les logs GitHub pour des téléchargements massifs de dépôts."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Revoke compromised token."
+          ],
+          "fr": [
+            "Révoquer le jeton compromis."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Audit exfiltrated code for internal secrets."
+          ],
+          "fr": [
+            "Auditer le code exfiltré pour des secrets internes."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for unusual Git clone patterns."
+          ],
+          "fr": [
+            "Rechercher des schémas de clonage Git inhabituels."
+          ]
+        }
+      },
+      "tags": [
+        "Data Breach",
+        "Source Code",
+        "GitHub"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/grafana-says-stolen-github-token-let-hackers-steal-codebase/"
+      ],
+      "date": "2026-05-18"
+    },
+    {
+      "victim": "7-Eleven Franchisees",
+      "threat_actor": "ShinyHunters",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime Group",
+      "threat_actor_aliases": [
+        "ShinySp1d3r"
+      ],
+      "sector": {
+        "en": [
+          "Retail_and_Consumer"
+        ],
+        "fr": [
+          "Commerce de détail et Consommation"
+        ]
+      },
+      "description": {
+        "en": "Exposure of 600k Salesforce records including franchisee data.",
+        "fr": "Exposition de 600 000 enregistrements Salesforce incluant des données de franchisés."
+      },
+      "mitre_ttps": [
+        "T1567",
+        "T1078.004"
+      ],
+      "recommandations": [
+        {
+          "en": "Audit Salesforce permissions and API access.",
+          "fr": "Auditer les permissions Salesforce et les accès API."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Implement phishing-resistant MFA."
+          ],
+          "fr": [
+            "Implémenter un MFA résistant au phishing."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor Salesforce Export logs."
+          ],
+          "fr": [
+            "Surveiller les logs d'export Salesforce."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Disable compromised cloud accounts."
+          ],
+          "fr": [
+            "Désactiver les comptes cloud compromis."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Notify affected franchisees."
+          ],
+          "fr": [
+            "Notifier les franchisés affectés."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "Salesforce",
+        "Extortion"
+      ],
+      "sources": [
+        "https://securityaffairs.com/192336/data-breach/shinyhunters-hack-7-eleven-franchisee-data-and-salesforce-records-exposed.html"
+      ],
+      "date": "2026-05-18"
+    },
+    {
+      "victim": "Tabiq (Japan)",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Hospitality_and_Entertainment"
+        ],
+        "fr": [
+          "Hôtellerie et Divertissement"
+        ]
+      },
+      "description": {
+        "en": "Public AWS S3 bucket exposed 1 million identity documents (passports, selfies).",
+        "fr": "Un bucket AWS S3 public a exposé 1 million de documents d'identité (passeports, selfies)."
+      },
+      "mitre_ttps": [
+        "T1530"
+      ],
+      "recommandations": [
+        {
+          "en": "Enable 'S3 Block Public Access' at the account level.",
+          "fr": "Activer 'S3 Block Public Access' au niveau du compte."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Audit S3 bucket policies."
+          ],
+          "fr": [
+            "Auditer les politiques des buckets S3."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Use AWS Trusted Advisor to find public buckets."
+          ],
+          "fr": [
+            "Utiliser AWS Trusted Advisor pour trouver les buckets publics."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Switch bucket to private immediately."
+          ],
+          "fr": [
+            "Passer le bucket en privé immédiatement."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Analyze access logs to see if documents were scraped."
+          ],
+          "fr": [
+            "Analyser les logs d'accès pour voir si les documents ont été aspirés."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "S3",
+        "Japan",
+        "Privacy"
+      ],
+      "sources": [
+        "https://securityaffairs.com/192302/data-breach/public-amazon-bucket-leaks-sensitive-guest-data-from-japanese-hotel-platform-tabiq.html"
+      ],
+      "date": "2026-05-18"
+    },
+    {
+      "victim": "Gîtes de France / Pierre et Vacances / Belambra",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Hospitality_and_Entertainment"
+        ],
+        "fr": [
+          "Hôtellerie et Divertissement"
+        ]
+      },
+      "description": {
+        "en": "Breach of tourism platforms via a compromise of IT provider Itea; 389k Gîtes de France customers exposed.",
+        "fr": "Violation de plateformes touristiques via la compromission du prestataire Itea ; 389 000 clients Gîtes de France exposés."
+      },
+      "mitre_ttps": [
+        "T1567"
+      ],
+      "recommandations": [
+        {
+          "en": "Audit security of third-party SaaS and IT providers.",
+          "fr": "Auditer la sécurité des prestataires SaaS et IT tiers."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Review third-party access agreements."
+          ],
+          "fr": [
+            "Revoir les accords d'accès des tiers."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor unusual activity from provider accounts."
+          ],
+          "fr": [
+            "Surveiller l'activité inhabituelle des comptes prestataires."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate compromised provider instances."
+          ],
+          "fr": [
+            "Isoler les instances prestataires compromises."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Mandatory credential reset for all exposed users."
+          ],
+          "fr": [
+            "Réinitialisation obligatoire des identifiants pour tous les utilisateurs exposés."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "France",
+        "Tourism",
+        "Supply Chain"
+      ],
+      "sources": [
+        "https://www.lemonde.fr/pixels/article/2026/05/18/gites-de-france-annonce-a-son-tour-avoir-ete-vise-par-une-cyberattaque-apres-les-groupes-pierre-et-vacances-center-parcs-et-belambra_6690376_4408996.html"
+      ],
+      "date": "2026-05-18"
+    },
+    {
+      "victim": "Addi (Colombian Fintech)",
+      "threat_actor": "ShinyHunters",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime Group",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Finance"
+        ],
+        "fr": [
+          "Finance"
+        ]
+      },
+      "description": {
+        "en": "34 million accounts compromised including credit bureau files.",
+        "fr": "34 millions de comptes compromis incluant des dossiers de bureau de crédit."
+      },
+      "mitre_ttps": [
+        "T1567"
+      ],
+      "recommandations": [
+        {
+          "en": "Strengthen identity verification for all customers.",
+          "fr": "Renforcer la vérification d'identité pour tous les clients."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Audit API authentication logs."
+          ],
+          "fr": [
+            "Auditer les logs d'authentification API."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect massive data scraping patterns."
+          ],
+          "fr": [
+            "Détecter les schémas de scraping massif de données."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "Fintech",
+        "Colombia",
+        "ShinyHunters"
+      ],
+      "sources": [
+        "https://haveibeenpwned.com/Breach/ADDI"
+      ],
+      "date": "2026-05-18"
+    },
+    {
+      "victim": "NYC Health + Hospitals",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Healthcare_and_Life_Sciences"
+        ],
+        "fr": [
+          "Santé et Sciences de la vie"
+        ]
+      },
+      "description": {
+        "en": "Data theft affecting 1.8 million people, including medical records, SSN, and fingerprints.",
+        "fr": "Vol de données affectant 1,8 million de personnes, incluant dossiers médicaux, SSN et empreintes digitales."
+      },
+      "mitre_ttps": [
+        "unknown"
+      ],
+      "recommandations": [
+        {
+          "en": "Provide credit and fraud monitoring to all victims.",
+          "fr": "Fournir une surveillance du crédit et de la fraude à toutes les victimes."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Harden healthcare data access control."
+          ],
+          "fr": [
+            "Durcir le contrôle d'accès aux données de santé."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "Healthcare",
+        "NYC",
+        "Fingerprints"
+      ],
+      "sources": [
+        "https://infosec.exchange/@DevaOnBreaches/116598284960836404"
+      ],
+      "date": "2026-05-19"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-42945",
+      "euvd_id": "NGINX Rift",
+      "cisa_kev": "TRUE",
+      "cvss": "8.8",
+      "epss": "unknown",
+      "cpe": "cpe:/a:f5:nginx",
+      "product": "NGINX Plus and Open Source",
+      "vendor": "F5",
+      "description": {
+        "en": "Critical heap buffer overflow in ngx_http_rewrite_module triggered by specific rewrite directives, allowing RCE or DoS.",
+        "fr": "Dépassement de tampon de tas critique dans ngx_http_rewrite_module déclenché par des directives rewrite spécifiques, permettant RCE ou DoS."
+      },
+      "mitre_ttps": [
+        "T1203"
+      ],
+      "recommandations": [
+        {
+          "en": "Update NGINX to the latest patched version immediately.",
+          "fr": "Mettre à jour NGINX vers la dernière version corrigée immédiatement."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Audit NGINX configuration for rewrite rules."
+          ],
+          "fr": [
+            "Auditer la configuration NGINX pour les règles rewrite."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor NGINX error logs for segmentation faults."
+          ],
+          "fr": [
+            "Surveiller les logs d'erreur NGINX pour les erreurs de segmentation."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Apply the patch or disable affected modules temporarily."
+          ],
+          "fr": [
+            "Appliquer le correctif ou désactiver temporairement les modules affectés."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify proxy integrity."
+          ],
+          "fr": [
+            "Vérifier l'intégrité du proxy."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for shellcodes in NGINX process memory."
+          ],
+          "fr": [
+            "Rechercher des shellcodes dans la mémoire du processus NGINX."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "NGINX"
+      ],
+      "sources": [
+        "https://securityaffairs.com/192289/hacking/experts-warn-of-active-exploitation-of-critical-nginx-flaw-cve-2026-42945.html"
+      ],
+      "date": "2026-05-18"
+    },
+    {
+      "cve_id": "CVE-2020-17103",
+      "euvd_id": "MiniPlasma",
+      "cisa_kev": "FALSE",
+      "cvss": "7.8",
+      "epss": "unknown",
+      "cpe": "cpe:/o:microsoft:windows_11",
+      "product": "Windows 11, Cloud Files Mini Filter Driver",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "Local Privilege Escalation (LPE) in cldflt.sys; a regression of a 2020 flaw allowing SYSTEM access.",
+        "fr": "Élévation de privilèges locaux (LPE) dans cldflt.sys ; une régression d'une faille de 2020 permettant un accès SYSTEM."
+      },
+      "mitre_ttps": [
+        "T1068"
+      ],
+      "recommandations": [
+        {
+          "en": "Monitor for unusual SYSTEM processes and limit local admin rights.",
+          "fr": "Surveiller les processus SYSTEM inhabituels et limiter les droits d'administration locale."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor access to the Cloud Files Mini Filter Driver."
+          ],
+          "fr": [
+            "Surveiller l'accès au pilote Cloud Files Mini Filter."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "No patch yet; isolate high-value endpoints."
+          ],
+          "fr": [
+            "Pas de patch pour l'instant ; isoler les endpoints sensibles."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for PoC execution signatures in Windows Event Logs."
+          ],
+          "fr": [
+            "Rechercher les signatures d'exécution de PoC dans les logs d'événements Windows."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "LPE",
+        "Zero-day"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/microsoft/new-windows-miniplasma-zero-day-exploit-gives-system-access-poc-released/"
+      ],
+      "date": "2026-05-18"
+    },
+    {
+      "cve_id": "CVE-2026-20182",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "10.0",
+      "epss": "unknown",
+      "cpe": "cpe:/a:cisco:sd-wan",
+      "product": "Cisco Catalyst SD-WAN Controllers",
+      "vendor": "Cisco",
+      "description": {
+        "en": "Authentication bypass in vdaemon service via vHub device spoofing, allowing SSH key injection.",
+        "fr": "Contournement d'authentification dans le service vdaemon via l'usurpation d'appareil vHub, permettant l'injection de clé SSH."
+      },
+      "mitre_ttps": [
+        "T1556"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply Cisco updates immediately.",
+          "fr": "Appliquer les mises à jour Cisco immédiatement."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Audit SD-WAN authorized SSH keys."
+          ],
+          "fr": [
+            "Auditer les clés SSH autorisées SD-WAN."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Check /home/vmanage-admin/.ssh/authorized_keys for unknown keys."
+          ],
+          "fr": [
+            "Vérifier /home/vmanage-admin/.ssh/authorized_keys pour des clés inconnues."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Block access to vdaemon control plane from untrusted IPs."
+          ],
+          "fr": [
+            "Bloquer l'accès au plan de contrôle vdaemon depuis des IPs non fiables."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "Cisco",
+        "SD-WAN"
+      ],
+      "sources": [
+        "https://www.resecurity.com/blog/article/cve-2026-20182-unauthenticated-cisco-sd-wan-control-plane-compromise-via-vhub-authentication-bypass"
+      ],
+      "date": "2026-05-18"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "TeamPCP Supply Chain Campaign",
+        "fr": "Campagne Supply Chain TeamPCP"
+      },
+      "description": {
+        "en": "North Korean group using NPM/PyPI worms (Mini Shai-Hulud) to steal developer OIDC tokens.",
+        "fr": "Groupe nord-coréen utilisant des vers NPM/PyPI (Mini Shai-Hulud) pour voler les jetons OIDC des développeurs."
+      },
+      "threat_actor": "TeamPCP",
+      "threat_actor_origin": "North Korea",
+      "threat_actor_type": "Nation-state",
+      "threat_actor_aliases": [
+        "UNC1069",
+        "Sapphire Sleet"
+      ],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom",
+          "Finance"
+        ],
+        "fr": [
+          "Technologie et Télécommunications",
+          "Finance"
+        ]
+      },
+      "indicators": {
+        "URL": [
+          "filev2.getsession[.]org",
+          "git-tanstack[.]com"
+        ],
+        "IPv4": [
+          "18.208.244[.]120"
+        ],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [
+          "ab4fcadaec49c03278063dd269ea5eef82d24f2124a8e15d7b90f2fa8601266c"
+        ],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Mini Shai-Hulud",
+          "Reaper"
+        ]
+      },
+      "mitre_ttps": [
+        "T1195.002",
+        "T1552.001"
+      ],
+      "analyse": {
+        "en": "Complex attacks targeting CI/CD pipelines (TanStack, Checkmarx) to poison build caches and extract credentials.",
+        "fr": "Attaques complexes ciblant les pipelines CI/CD (TanStack, Checkmarx) pour empoisonner les caches de build et extraire des identifiants."
+      },
+      "recommandations": [
+        {
+          "en": "Enforce dependency pinning and audit OIDC flux in GitHub Actions.",
+          "fr": "Imposer le pinning des dépendances et auditer les flux OIDC dans GitHub Actions."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Audit GitHub Actions OIDC permissions."
+          ],
+          "fr": [
+            "Auditer les permissions OIDC GitHub Actions."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Scan for .vscode/tasks.json modifications."
+          ],
+          "fr": [
+            "Scanner les modifications de .vscode/tasks.json."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate infected dev machines."
+          ],
+          "fr": [
+            "Isoler les machines de dev infectées."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Rotate all CI/CD secrets."
+          ],
+          "fr": [
+            "Réaliser une rotation de tous les secrets CI/CD."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for OIDC token extraction in GitHub Audit Logs."
+          ],
+          "fr": [
+            "Rechercher l'extraction de jetons OIDC dans les logs d'audit GitHub."
+          ]
+        }
+      },
+      "tags": [
+        "NPM",
+        "Supply Chain",
+        "North Korea"
+      ],
+      "sources": [
+        "https://isc.sans.edu/diary/rss/32994",
+        "https://opensourcemalware.com/blog/axios-attacker-additional-npm-packages"
+      ],
+      "date": "2026-05-18"
+    },
+    {
+      "title": {
+        "en": "Interpol Operation Ramz",
+        "fr": "Opération Ramz d'Interpol"
+      },
+      "description": {
+        "en": "Seizure of 53 malware and phishing servers by Interpol.",
+        "fr": "Saisie de 53 serveurs de malwares et de phishing par Interpol."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime Group",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Security"
+        ],
+        "fr": [
+          "Sécurité"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1583.003"
+      ],
+      "analyse": {
+        "en": "Dismantling of infrastructure affecting nearly 4000 victims globally.",
+        "fr": "Démantèlement d'infrastructure affectant près de 4000 victimes mondialement."
+      },
+      "recommandations": [
+        {
+          "en": "Update IP blocklists with newly identified malicious infrastructure.",
+          "fr": "Mettre à jour les listes de blocage IP avec l'infrastructure malveillante nouvellement identifiée."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Collaborate with Law Enforcement."
+          ],
+          "fr": [
+            "Collaborer avec les forces de l'ordre."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Check logs for traffic to seized IPs."
+          ],
+          "fr": [
+            "Vérifier les logs pour le trafic vers les IPs saisies."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Sinkhole relevant domains."
+          ],
+          "fr": [
+            "Sinkholer les domaines pertinents."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "Law Enforcement",
+        "Dismantling",
+        "Phishing"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/interpol-operation-ramz-seizes-53-malware-phishing-servers/"
+      ],
+      "date": "2026-05-18"
+    },
+    {
+      "title": {
+        "en": "Qilin Ransomware Activity in Australia",
+        "fr": "Activité du ransomware Qilin en Australie"
+      },
+      "description": {
+        "en": "Qilin group claiming attack against Australian College of Business Intelligence.",
+        "fr": "Le groupe Qilin revendique une attaque contre l'Australian College of Business Intelligence."
+      },
+      "threat_actor": "Qilin",
+      "threat_actor_origin": "Russia",
+      "threat_actor_type": "Cybercrime Group",
+      "threat_actor_aliases": [
+        "Agenda"
+      ],
+      "sector": {
+        "en": [
+          "Education_and_Research"
+        ],
+        "fr": [
+          "Éducation et Recherche"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1486"
+      ],
+      "analyse": {
+        "en": "Active campaign in the Pacific region targeting educational institutions.",
+        "fr": "Campagne active dans la région Pacifique ciblant les institutions éducatives."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor Qilin's initial access vectors (VPN/Phishing).",
+          "fr": "Surveiller les vecteurs d'accès initiaux de Qilin (VPN/Phishing)."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Harden remote access services."
+          ],
+          "fr": [
+            "Durcir les services d'accès à distance."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Look for lateral movement signs."
+          ],
+          "fr": [
+            "Rechercher des signes de mouvement latéral."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate the affected network segments."
+          ],
+          "fr": [
+            "Isoler les segments de réseau affectés."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "unknown"
+          ],
+          "fr": [
+            "unknown"
+          ]
+        }
+      },
+      "tags": [
+        "Ransomware",
+        "Australia"
+      ],
+      "sources": [
+        "https://mastodon.social/@David_Hollingworth/116598615221411250"
+      ],
+      "date": "2026-05-19"
+    }
+  ]
+}
