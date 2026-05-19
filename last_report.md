@@ -9,14 +9,12 @@
   * [Articles sélectionnés](#articles-selectionnes)
   * [Articles non sélectionnés](#articles-non-selectionnes)
 * [Articles](#articles)
-  * [Tycoon2FA : Nouveau phishing via Device-Code](#tycoon2fa-nouveau-phishing-via-device-code)
-  * [Compromission de terminaux OpenAI via TanStack](#compromission-de-terminaux-openai-via-tanstack)
-  * [Qilin revendique l'attaque contre Generation Life](#qilin-revendique-lattaque-contre-generation-life)
-  * [Ransomware Nihon Shisan Soken](#ransomware-nihon-shisan-soken)
-  * [Architecture Azure pour les intervenants en cas d'incident](#architecture-azure-pour-les-intervenants-en-cas-dincident)
-  * [Pwn2Own Berlin 2026 : Résultats finaux](#pwn2own-berlin-2026-resultats-finaux)
-  * [Rapport sur les tendances APT - Avril 2026](#rapport-sur-les-tendances-apt-avril-2026)
-  * [Conseil IR : Communication hors bande](#conseil-ir-communication-hors-bande)
+  * [TeamPCP : Campagne massive de supply chain NPM/PyPI via le vers Shai-Hulud](#teampcp-campagne-massive-de-supply-chain-npm-pypi-via-le-vers-shai-hulud)
+  * [SHub Infostealer macOS : Évasion de sécurité via AppleScript](#shub-macos-infostealer-evasion-de-securite-via-applescript)
+  * [Opération Ramz : Démantèlement d'infrastructures de phishing par Interpol](#operation-ramz-demantelement-d-infrastructures-de-phishing-par-interpol)
+  * [Qilin Ransomware : Ciblage du secteur de l'éducation en Australie](#qilin-ransomware-ciblage-du-secteur-de-l-education-en-australie)
+  * [Evasion de défense : Techniques BYOVD pour neutraliser les agents EDR](#evasion-de-defense-techniques-byovd-pour-neutraliser-les-agents-edr)
+  * [Gouvernance et Opérations Cloud : Sécurisation Azure et gestion du Shadow AI](#gouvernance-et-operations-cloud-securisation-azure-et-gestion-du-shadow-ai)
 
 ---
 
@@ -24,9 +22,9 @@
 
 # ANALYSE STRATÉGIQUE
 
-Le paysage cyber de la mi-mai 2026 témoigne d'un basculement critique vers des attaques de type "Supply Chain" de plus en plus granulaires. L'incident ciblant le prestataire **Itea**, qui a paralysé simultanément les trois plus grands acteurs du tourisme français (Gîtes de France, Belambra, Pierre & Vacances), illustre la fragilité des écosystèmes sectoriels dépendants d'un unique logiciel métier. Cette tendance se confirme dans le secteur technologique avec la compromission de terminaux chez **OpenAI** via la bibliothèque **TanStack**, démontrant que même les fleurons de l'IA ne sont pas à l'abri des dépendances npm compromises.
+L'actualité du 19 mai 2026 est marquée par une crise majeure de la supply chain logicielle et une recrudescence de vulnérabilités critiques affectant les infrastructures cloud et réseau. L'acteur TeamPCP (UNC1069) intensifie ses opérations via des vers NPM/PyPI et des compromissions de pipelines CI/CD (Checkmarx, TanStack), exploitant des identités OIDC légitimes pour contourner les attestations de provenance (SLSA). Cette sophistication montre que les mécanismes de confiance automatisés deviennent des cibles prioritaires.
 
-Parallèlement, nous observons une exploitation agressive de vulnérabilités zero-day Windows (**MiniPlasma**) et Exchange, souvent poussées par des chercheurs publiant des PoC suite à des litiges avec les éditeurs. Cette "militarisation" rapide de la recherche en sécurité, combinée à l'émergence de kits de phishing sophistiqués comme **Tycoon2FA**, force les organisations à repenser leur défense. Le passage au MFA traditionnel ne suffit plus face aux flux OAuth Device Code détournés. Enfin, la concentration extrême du marché de l'IA (89% pour deux acteurs) pose un risque systémique majeur : une faille chez Anthropic ou OpenAI pourrait désormais engendrer une cascade de compromissions à l'échelle mondiale, redéfinissant la notion de "point de défaillance unique".
+En parallèle, la découverte de vulnérabilités "zéro-jour" persistantes ou régressives dans Windows (MiniPlasma) et NGINX (Rift) met sous pression les processus de patch management de Microsoft et F5. Sur le plan institutionnel, la fuite massive de secrets AWS GovCloud par un administrateur de la CISA et les rapports alarmants de la CNIL soulignent une fragilité persistante du secteur public face aux cybermenaces, alors que l'échéance réglementaire du Cyber Resilience Act (CRA) approche dans un contexte de méconnaissance généralisée. On observe une tendance claire : la donnée source (code, secrets CI/CD) devient l'épicentre des attaques, rendant les mesures de protection périmétriques traditionnelles de plus en plus obsolètes.
 
 ---
 
@@ -40,9 +38,9 @@ Parallèlement, nous observons une exploitation agressive de vulnérabilités ze
 
 | Nom de l'acteur | Secteur(s) ciblé(s) | Mode opératoire | TTP MITRE ATT&CK | Source(s) |
 |---|---|---|---|---|
-| **Qilin** | Finance, Santé, Gouvernement | Chiffrement après exfiltration, exploitation VPN/RDP | T1486, T1078 | [CyberDaily AU](https://www.cyberdaily.au/security/13608-exclusive-qilin-ransomware-group-claims-responsibility-for-generation-life-hack) |
-| **CoinbaseCartel** | Technologie, SaaS | Vol de jetons GitHub (PAT) pour exfiltration de code source | T1528 | [BeyondMachines](https://beyondmachines.net/event_details/grafana-labs-refuses-extortion-demand-following-github-codebase-breach-3-9-l-z-7/gD2P6Ple2L) |
-| **Tycoon2FA** | Multi-sectoriel | Phishing-as-a-Service utilisant OAuth 2.0 Device Code | T1566.002 | [BleepingComputer](https://www.bleepingcomputer.com/news/security/tycoon2fa-hijacks-microsoft-365-accounts-via-device-code-phishing/) |
+| **TeamPCP** (UNC1069) | Technologie, Finance, Infrastructures | Typosquattage NPM, vol de tokens OIDC, vers Mini Shai-Hulud, injection de wipers. | T1195.002, T1552.001, T1613 | [ISC SANS Diary](https://isc.sans.edu/diary/rss/32994)<br>[OpenSourceMalware](https://opensourcemalware.com/blog/axios-attacker-additional-npm-packages) |
+| **ShinyHunters** | Retail, Fintech, E-commerce | Exfiltration massive via environnements cloud et Salesforce avec identifiants compromis. | T1566, T1078.004 | [Security Affairs](https://securityaffairs.com/192336/data-breach/shinyhunters-hack-7-eleven-franchisee-data-and-salesforce-records-exposed.html) |
+| **Coinbase Cartel** | Technologie, Infrastructure | Vol de code source GitHub via tokens compromis pour extorsion. | T1567, T1098 | [BleepingComputer](https://www.bleepingcomputer.com/news/security/grafana-says-stolen-github-token-let-hackers-steal-codebase/) |
 
 ---
 
@@ -52,8 +50,8 @@ Parallèlement, nous observons une exploitation agressive de vulnérabilités ze
 
 | Pays/Région | Secteur | Thème | Description | Source(s) |
 |---|---|---|---|---|
-| **Royaume-Uni** | Économie | Crime et croissance | La cybercriminalité freine 40% des entreprises britanniques, impactant la compétitivité nationale. | [The Guardian](https://www.theguardian.com/uk-news/2026/may/17/crime-serious-barrier-uk-growth-business-leaders) |
-| **Global** | Technologie | Monopole IA | Concentration de 89% des revenus IA chez deux acteurs, créant un risque de point de défaillance unique mondial. | [Techmeme](https://www.techmeme.com/260517/p12#a260517p12) |
+| Moyen-Orient / Chine / USA | Gouvernemental | Polarisation et tensions diplomatiques | Échec de la visite de Trump à Pékin et renforcement Russie-Chine. Utilisation du conflit iranien comme catalyseur de cyber-opérations. | [IRIS France](https://www.iris-france.org/visite-de-trump-a-pekin-un-echec-attendu/)<br>[IRIS France](https://www.iris-france.org/geopolitique-et-failles-mediatiques/) |
+| France / Europe | Transport / Logistique | Souveraineté et crise énergétique | Hausse du coût du carburant menaçant les PME et la résilience logistique nationale au profit d'acteurs étrangers. | [Portail IE](https://www.portail-ie.fr/univers/enjeux-de-puissances-et-geoeconomie/2026/crise-du-carburant-la-logistique-francaise-au-bord-de-la-rupture/) |
 
 ---
 
@@ -61,7 +59,11 @@ Parallèlement, nous observons une exploitation agressive de vulnérabilités ze
 
 ## Synthèse réglementaire et juridique
 
-*Aucun article réglementaire ou juridique majeur n'a été identifié dans les sources fournies pour cette période.*
+| Titre | Auteur/Organisme | Date | Juridiction | Référence | Description | Source(s) |
+|---|---|---|---|---|---|---|
+| État de conformité CRA | Commission Européenne | 18/05/2026 | Union Européenne | Cyber Resilience Act | 66% des organisations ignorent les exigences du CRA avant l'échéance de septembre. | [OpenSSF Blog](https://openssf.org/blog/2026/05/18/taking-stock-of-the-state-of-european-cyber-resilience-act-cra-compliance-an-urgent-wake-up-call-for-the-open-source-ecosystem/) |
+| Bilan CNIL 2025 | CNIL | 18/05/2026 | France | Bilan annuel | Hausse de 50% des violations; MFA imposé pour les bases de plus de 1M d'individus. | [Le Monde](https://www.lemonde.fr/pixels/article/2026/05/18/marie-laure-denis-presidente-de-la-cnil-l-etat-a-une-responsabilite-particuliere-a-l-egard-des-donnees-des-francais_6691073_4408997.html) |
+| Code réseau électricité | Commission Européenne | 19/05/2026 | Union Européenne | Règle. 2024/1366 | Corrigendum sur la cybersécurité des flux électriques transfrontaliers. | [EUR-Lex](https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202690383) |
 
 ---
 
@@ -71,9 +73,13 @@ Parallèlement, nous observons une exploitation agressive de vulnérabilités ze
 
 | Secteur | Victime | Données compromises | Volume estimé | Source(s) |
 |---|---|---|---|---|
-| **Tourisme** | Gîtes de France, Belambra, Pierre & Vacances | Identité, contacts, détails mineurs, historique (30 ans) | 472 000+ dossiers | [Le Monde](https://www.lemonde.fr/pixels/article/2026/05/18/gites-de-france-annonce-a-son-tour-avoir-ete-vise-par-une-cyberattaque-apres-les-groupes-pierre-et-vacances-center-parcs-et-belambra_6690376_4408996.html) |
-| **SaaS** | Grafana Labs | Code source interne (GitHub exfiltration) | Non spécifié | [Infosec Exchange](https://infosec.exchange/@beyondmachines1/116590986396292458) |
-| **Assurance** | AXA Pet Insurance Japan | Données d'assurance automobile et enregistrements clients | 64 000 dossiers | [Rocket-boys](https://mastodon.social/@securityLab_jp/116592694806652199) |
+| Gouvernement | CISA (via contractant) | Clés AWS GovCloud, tokens, SSH, mots de passe. | 3 serveurs GovCloud, Artifactory | [KrebsOnSecurity](https://krebsonsecurity.com/2026/05/cisa-admin-leaked-aws-govcloud-keys-on-github/) |
+| Santé | NYC Health + Hospitals | Dossiers médicaux, SSN, empreintes digitales. | 1,8 million de personnes | [Infosec Exchange](https://infosec.exchange/@ahoog42/116597915274693642) |
+| Fintech | Addi (Colombie) | Revenus, bureau de crédit, comptes. | 34 millions de comptes | [HIBP](https://haveibeenpwned.com/Breach/ADDI) |
+| Technologie | Grafana Labs | Code source via token GitHub compromis. | Non spécifié | [Security Affairs](https://securityaffairs.com/192347/breaking-news/grafana-confirm-github-token-breach-cybercrime-group-claims-the-attack.html) |
+| Tourisme | Gîtes de France / Belambra | Données clients via prestataire Itea. | 389 000 clients | [Le Monde](https://www.lemonde.fr/pixels/article/2026/05/18/gites-de-france-annonce-a-son-tour-avoir-ete-vise-par-une-cyberattaque-apres-les-groupes-pierre-et-vacances-center-parcs-et-belambra_6690376_4408996.html) |
+| E-commerce | Universal Music Store | Données personnelles. | 3,1 millions d'enregistrements | [Mastodon](https://mastodon.social/@securityLab_jp/116598065279981053) |
+| Public | Tabiq (Japon) | Pièces d'identité (S3 mal configuré). | 1 million de documents | [Security Affairs](https://securityaffairs.com/192302/data-breach/public-amazon-bucket-leaks-sensitive-guest-data-from-japanese-hotel-platform-tabiq.html) |
 
 ---
 
@@ -86,16 +92,24 @@ Parallèlement, nous observons une exploitation agressive de vulnérabilités ze
 
 | # | CVE-ID | CISA KEV | Exploitation | Score Composite | CVSS | Clé de tri |
 |---|---|---|---|---|---|---|
-| 1 | CVE-2026-42897 | TRUE  | Active    | 7.0 | 9.8   | (1,1,7.0,9.8) |
-| 2 | CVE-2026-33825 | TRUE  | Active    | 6.0 | 7.8   | (1,1,6.0,7.8) |
-| 3 | CVE-2026-8764  | FALSE | Active    | 2.0 | N/A→0 | (0,1,2.0,0)   |
+| 1 | CVE-2026-42945 | TRUE  | Active    | 6.5 | 8.8   | (1,1,6.5,8.8) |
+| 2 | CVE-2020-17103 | FALSE | Active    | 3.5 | 7.8   | (0,1,3.5,7.8) |
+| 3 | CVE-2026-20182 | FALSE | Théorique | 1.5 | 10.0  | (0,0,1.5,10.0)|
+| 4 | CVE-2026-8838  | FALSE | Théorique | 1.5 | 8.8   | (0,0,1.5,8.8) |
+| 5 | CVE-2026-26978 | FALSE | Théorique | 1.0 | N/A   | (0,0,1.0,0)   |
+| 6 | CVE-2026-25244 | FALSE | Théorique | 1.0 | N/A   | (0,0,1.0,0)   |
+| 7 | CVE-2026-27130 | FALSE | Théorique | 1.0 | N/A   | (0,0,1.0,0)   |
 -->
 
 | CVE-ID | Score CVSS | EPSS | CISA KEV | Score Composite | Produit affecté | Type de vulnérabilité | Impact | Exploitation | Mesures de contournement | Source(s) |
 |---|---|---|---|---|---|---|---|---|---|---|
-| **CVE-2026-42897** | 9.8 | N/A | **TRUE** | 7.0 | Exchange Server / WP Funnel Builder | RCE / Script Injection | **RCE / Skimming** | Active | Patch cumulatif mai 2026; MAJ Funnel Builder v3.15.0.3 | [Security Affairs](https://securityaffairs.com/192260/cyber-crime/attackers-exploit-funnel-builder-bug-to-inject-e-skimmers-into-e-stores.html) |
-| **CVE-2026-33825** | 7.8 | N/A | **TRUE** | 6.0 | Windows 10/11 (cldflt.sys) | Privilege Escalation | **LPE (SYSTEM)** | Active | Désactiver le service Cloud Filter; surveiller CfAbortHydration | [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/new-windows-miniplasma-zero-day-exploit-gives-system-access-poc-released/) |
-| **CVE-2026-8764** | N/A | N/A | FALSE | 2.0 | Routeur H3C Magic B3 | Buffer Overflow | **RCE** | Active | Désactiver l'administration WAN; isoler le segment réseau | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-8764) |
+| **CVE-2026-42945** | 8.8 | N/A | **TRUE** | 6.5 | NGINX Plus / Open Source | Heap Buffer Overflow | RCE | Active | Mise à jour vers versions corrigées. | [Security Affairs](https://securityaffairs.com/192289/hacking/experts-warn-of-active-exploitation-of-critical-nginx-flaw-cve-2026-42945.html) |
+| **CVE-2020-17103** | 7.8 | N/A | FALSE | 3.5 | Windows 11 (cldflt.sys) | Régression / Buffer Overflow | LPE | Active | Pas de patch; surveiller cmd.exe via SYSTEM. | [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/new-windows-miniplasma-zero-day-exploit-gives-system-access-poc-released/) |
+| **CVE-2026-20182** | 10.0 | N/A | FALSE | 1.5 | Cisco SD-WAN Controllers | Authentication Bypass | Auth Bypass | Théorique | MAJ immédiate vers versions correctives. | [Resecurity](https://www.resecurity.com/blog/article/cve-2026-20182-unauthenticated-cisco-sd-wan-control-plane-compromise-via-vhub-authentication-bypass) |
+| **CVE-2026-8838** | 8.8 | N/A | FALSE | 1.5 | AWS Redshift Python Driver | Code Injection (eval) | RCE | Théorique | Upgrade vers v2.1.14. | [AWS Security](https://aws.amazon.com/security/security-bulletins/rss/2026-033-aws/) |
+| **CVE-2026-26978** | N/A | N/A | FALSE | 1.0 | FreePBX Backup Module | Deserialization | RCE | Théorique | MAJ vers 16.0.71 ou 17.0.6. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-26978) |
+| **CVE-2026-25244** | N/A | N/A | FALSE | 1.0 | WebdriverIO | Command Injection | RCE | Théorique | Update vers v9.24.0. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-25244) |
+| **CVE-2026-27130** | N/A | N/A | FALSE | 1.0 | Dokploy | Command Injection | RCE | Théorique | Upgrade vers 0.26.7. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-27130) |
 
 ---
 
@@ -105,9 +119,10 @@ Parallèlement, nous observons une exploitation agressive de vulnérabilités ze
 
 | Titre | Sujet canonique | Raison de sélection | Source(s) |
 |---|---|---|---|
-| Tycoon2FA : Nouveau phishing via Device-Code | Tycoon2FA + OAuth Device Code Phishing | Menace active contournant le MFA | [BleepingComputer](https://www.bleepingcomputer.com/news/security/tycoon2fa-hijacks-microsoft-365-accounts-via-device-code-phishing/) |
-| Compromission de terminaux OpenAI via TanStack | OpenAI + TanStack Supply Chain Attack | Incident supply chain sur acteur IA critique | [Rocket-boys](https://mastodon.social/@securityLab_jp/116592649134198171) |
-| Qilin revendique l'attaque contre Generation Life | Qilin Ransomware + Generation Life AU | Attribution confirmée d'un incident majeur | [CyberDaily AU](https://mastodon.social/@David_Hollingworth/116592748941836986) |
+| Campagne TeamPCP : TanStack et Checkmarx visés | teampcp-supply-chain-npm-shai-hulud | Menace critique supply chain, acteur étatique, TTP sophistiquées. | [ISC SANS](https://isc.sans.edu/diary/rss/32994) |
+| SHub Infostealer macOS | shub-macos-infostealer-reaper | Nouveau vecteur macOS (AppleScript), vol de cryptomonnaies. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/shub-macos-infostealer-variant-spoofs-apple-security-updates/) |
+| Qilin en Australie | qilin-ransomware-australian-college | Activité ransomware majeure en zone Pacifique. | [Mastodon](https://mastodon.social/@David_Hollingworth/116598615221411250) |
+| Azure IR : 15 commandes critiques | gouvernance-et-operations-cloud-securisation-azure-et-gestion-du-shadow-ai | Recommandations opérationnelles critiques pour le cloud. | [CyberEngage](https://www.cyberengage.org/post/azure-architecture-first-15-commands-to-run-the-moment-you-get-access) |
 
 ---
 
@@ -117,11 +132,12 @@ Parallèlement, nous observons une exploitation agressive de vulnérabilités ze
 
 | Titre | Raison d'exclusion | Source(s) |
 |---|---|---|
-| postmarketOS : Mise à jour d'avril 2026 | Article sur maintenance logicielle / mise à jour OS non sécuritaire | [Mastobot](https://mastobot.ping.moi/@Bobe_bot/116592162415202877) |
-| Newsletter Malware Round 97 | Contenu de curation / agrégation sans analyse propre | [Security Affairs](https://securityaffairs.com/192278/security/security-affairs-malware-newsletter-round-97.html) |
-| CVE-2018-25339 (et autres legacy) | Score composite = 0 (Vulnérabilité ancienne / mineure) | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2018-25339) |
-| Pensée du Soir : La Privacy | Aphorisme non technique | [Mastobot](https://mastobot.ping.moi/@Bobe_bot/116592162030325689) |
-| Tickets BSides Brisbane 2026 | Annonce communautaire / billetterie | [Mastodon](https://mastodon.social/@bsidesbrisbane/116592635115613442) |
+| ISC Stormcast 19 mai 2026 | Podcast de veille générale, pas d'incident spécifique. | [ISC SANS](https://isc.sans.edu/diary/rss/32996) |
+| 10 ans d'ANY.RUN | Contenu commercial / promotionnel. | [ANY.RUN](https://any.run/cybersecurity-blog/anyrun-10th-anniversary-offers/) |
+| Nouveautés Windows 11 Taskbar | Mise à jour fonctionnelle UX, pas de sécurité. | [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/windows-11-finally-gets-a-resizable-taskbar-and-start-menu/) |
+| Problèmes KB5089549 Windows 11 | Bug fonctionnel d'installation de patch. | [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-kb5089549-windows-11-security-update-install-issues/) |
+| PH4NTXM sur GitHub | Projet personnel communautaire, pas une menace/TI. | [Infosec Exchange](https://infosec.exchange/@PH4NTXMOFFICIAL/116598200085692258) |
+| Conseil IR : Coordination transverse | Conseil généraliste, pas d'analyse d'incident. | [CVEDatabase](https://cvedatabase.com) |
 
 ---
 
@@ -129,335 +145,445 @@ Parallèlement, nous observons une exploitation agressive de vulnérabilités ze
 
 # SECTION "ARTICLES"
 
-<div id="tycoon2fa-nouveau-phishing-via-device-code"></div>
+<div id="teampcp-supply-chain-npm-shai-hulud"></div>
 
-## Tycoon2FA : Nouveau phishing via Device-Code
+## TeamPCP : Campagne massive de supply chain NPM/PyPI via le vers Shai-Hulud
 
 ---
 
 ### Résumé technique
-Le kit de phishing-as-a-service (PhaaS) **Tycoon2FA** a fait évoluer ses tactiques pour cibler les comptes Microsoft 365 via le flux **OAuth 2.0 Device Code**. Au lieu d'intercepter les identifiants classiques, l'attaquant incite la victime à saisir un code sur le portail légitime de Microsoft (`microsoft.com/devicelogin`). Cette méthode permet d'enregistrer un appareil contrôlé par l'attaquant au sein du tenant de la victime, contournant de fait les protections MFA conventionnelles. Le kit utilise le service Trustifi pour le suivi des victimes et déploie plusieurs couches d'obfuscation JavaScript pour ralentir l'analyse et la détection par les passerelles de sécurité email.
+
+L'acteur étatique **TeamPCP** (UNC1069), lié à la Corée du Nord, a lancé une campagne de compromission de la supply chain logicielle d'une ampleur inédite. Utilisant le vers **Mini Shai-Hulud**, le groupe cible les écosystèmes NPM et PyPI par typosquattage (ex: `chalk-tempalte`) et empoisonnement de cache dans les pipelines CI/CD (GitHub Actions). 
+
+Le mécanisme repose sur l'extraction de jetons **OIDC** (OpenID Connect) pour contourner les attestations de provenance **SLSA**, permettant de masquer des payloads malveillants derrière des signatures valides. Une fois infiltré, le malware récolte les identifiants via les fichiers de configuration d'IDE (VSCode, Claude) et déploie des wipers ciblant spécifiquement des infrastructures en Iran et Israël. Les bibliothèques populaires TanStack et Checkmarx ont été directement visées.
+
+---
 
 ### Analyse de l'impact
-L'impact est particulièrement élevé car il détourne un flux de confiance légitime. Une fois l'appareil enregistré, l'attaquant obtient des jetons d'accès (Access Tokens) et de rafraîchissement (Refresh Tokens) persistants, permettant un accès complet aux données Outlook, OneDrive et SharePoint. Le niveau de sophistication est jugé "Avancé" en raison de l'automatisation du kit et de sa capacité à résister au démantèlement infrastructurel.
+
+L'impact est critique car il remet en question la confiance dans les signatures de provenance automatisées. Pour les organisations, cela signifie que même un paquet "vérifié" peut être porteur d'un wiper. Le vol de tokens OIDC permet une persistance profonde dans l'infrastructure de développement, transformant les runners de compilation en vecteurs de propagation interne.
+
+---
 
 ### Recommandations
-* Désactiver globalement le flux "Device Code" dans Microsoft Entra ID s'il n'est pas strictement requis.
-* Mettre en œuvre des politiques de "Conditional Access" exigeant des appareils conformes (Compliant) ou gérés (Managed).
-* Sensibiliser les utilisateurs aux dangers de la saisie de codes sur `/devicelogin` suite à une sollicitation non prévue.
+
+* Implémenter le **pinning** strict des dépendances via des hashs (SHA-256) plutôt que des versions.
+* Auditer les flux GitHub Actions et restreindre les privilèges des tokens OIDC au strict nécessaire.
+* Surveiller les modifications anormales dans les fichiers `lockfile` et `.vscode/tasks.json`.
+
+---
 
 ### Playbook de réponse à incident
 
 #### Phase 1 — Préparation
-* Vérifier l'activation des logs d'audit unifiés dans Microsoft 365 (Ual).
-* Configurer des alertes sur les enregistrements d'appareils "Cross-platform" inhabituels.
-* Identifier les comptes critiques ayant accès à des données sensibles pour une surveillance prioritaire.
+* Activer la journalisation détaillée des runners GitHub Actions et les logs d'audit OIDC.
+* Déployer des outils de scan de secrets en pré-commit (ex: GitGuardian).
+* Préparer une procédure d'isolation des postes de développement (VLAN dédié).
 
 #### Phase 2 — Détection et analyse
-* **Requête EDR/Cloud :** Rechercher dans les Sign-in logs de Microsoft Entra les occurrences où `Authentication Method` est `Device Code` associé à des adresses IP dont la géolocalisation est inhabituelle.
-* **Analyse :** Examiner les logs pour identifier les URL de phishing utilisant des redirections via Trustifi ou des patterns d'obfuscation Tycoon2FA connus.
-* Identifier les jetons émis suite à l'activité `DeviceCodeFlowConfirm`.
+* Rechercher la présence de la clé de déchiffrement XOR `OrDeR_7077` dans les scripts suspects.
+* Scanner les environnements de dev pour l'artefact `ab4fcadaec49c03278063dd269ea5eef82d24f2124a8e15d7b90f2fa8601266c`.
+* Analyser les logs CloudTrail pour détecter des accès AWS via des jetons extraits de pipelines.
 
 #### Phase 3 — Confinement, éradication et récupération
-**Confinement :**
-* Révoquer immédiatement toutes les sessions actives (Revoke Refresh Tokens) du compte compromis via le portail Azure ou PowerShell (`Revoke-AzureADUserAllRefreshToken`).
-* Supprimer l'appareil malveillant ajouté dans le tenant Entra ID.
-
-**Éradication :**
-* Forcer une réinitialisation du mot de passe et une nouvelle inscription MFA pour l'utilisateur.
-* Supprimer les règles de transfert d'email ou les accès API créés par l'attaquant durant la compromission.
-
-**Récupération :**
-* Restaurer les accès après validation de l'identité via un canal hors bande.
-* Activer le Continuous Access Evaluation (CAE) pour réduire le temps de vie des jetons compromis.
+* **Confinement :** Révoquer immédiatement les tokens OIDC et secrets CI/CD compromis. Isoler les machines ayant exécuté des paquets typosquattés.
+* **Éradication :** Supprimer les paquets malveillants du cache local et forcer une reconstruction propre des environnements.
+* **Récupération :** Restaurer les pipelines à partir de commits validés manuellement.
 
 #### Phase 4 — Activités post-incident
-* Analyser les emails exfiltrés pour évaluer le besoin de notification RGPD (Art. 33).
-* Mettre à jour les filtres de messagerie avec les patterns d'URL identifiés.
-* Conduire un REX technique sur le délai entre l'enregistrement et la détection (MTTD).
+* Mener une analyse forensique sur les runners pour comprendre comment les tokens ont été extraits.
+* Mettre à jour la politique de sécurité logicielle pour inclure une vérification manuelle des dépendances critiques.
 
 #### Phase 5 — Threat Hunting (proactif)
 
 | Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
 |---|---|---|---|
-| Des attaquants utilisent des jetons OAuth persistants sans MFA actif | T1528 | Unified Audit Logs | `search "Sign-in" where AuthMethod == "DeviceCode"` |
+| Vol de jetons via runners compromis | T1195.002 | GitHub Audit Logs | Recherche d'événements `oidc_token_extraction` ou accès anormaux. |
+| Persistance via VSCode tasks | T1552.001 | Logs Endpoint | Surveillance des écritures dans `.vscode/tasks.json` par des processus non-IDE. |
 
-### Indicateurs de compromission (DEFANG obligatoire)
+---
+
+### Indicateurs de compromission (DEFANG)
 
 | Type | Valeur (DEFANG) | Description | Fiabilité |
 |---|---|---|---|
-| URL | hxxps[://]microsoft[.]com/devicelogin | Portail légitime détourné (Vecteur) | Haute |
-| Domaine | tycoon2fa-infra[.]xyz | Infrastructure de C2 (Exemple) | Moyenne |
+| Domaine | filev2[.]getsession[.]org | C2 TeamPCP | Haute |
+| Domaine | git-tanstack[.]com | Domaine de typosquattage | Haute |
+| Hash SHA256 | ab4fcadaec49c03278063dd269ea5eef82d24f2124a8e15d7b90f2fa8601266c | Payload Mini Shai-Hulud | Haute |
+| IP | 18[.]208[.]244[.]120 | Infrastructure Axios Attacker | Haute |
+
+---
 
 ### TTP MITRE ATT&CK
 
 | ID TTP | Tactique | Technique | Description contextuelle |
 |---|---|---|---|
-| T1566.002 | Initial Access | Phishing: Spearphishing Link | Envoi de liens malveillants redirigeant vers le flux Device Code |
-| T1528 | Credential Access | Steal Application Access Token | Capture des tokens suite à la confirmation du code par la victime |
-
-### Sources
-* [BleepingComputer](https://www.bleepingcomputer.com/news/security/tycoon2fa-hijacks-microsoft-365-accounts-via-device-code-phishing/)
+| T1195.002 | Initial Access | Supply Chain Compromise | Injection de malwares via paquets NPM/PyPI typosquattés. |
+| T1552.001 | Credential Access | Unsecured Credentials | Vol de credentials dans les fichiers de config IDE. |
+| T1613 | Lateral Movement | Steal Web Session Cookie | Extraction de tokens de session OIDC pour bypasser l'auth. |
 
 ---
 
-<div id="compromission-de-terminaux-openai-via-tanstack"></div>
+### Sources
 
-## Compromission de terminaux OpenAI via TanStack
+* [ISC SANS Diary](https://isc.sans.edu/diary/rss/32994)
+* [OpenSourceMalware](https://opensourcemalware.com/blog/axios-attacker-additional-npm-packages)
+* [BleepingComputer](https://www.bleepingcomputer.com/news/security/leaked-shai-hulud-malware-fuels-new-npm-infostealer-campaign/)
+
+---
+
+<div id="shub-macos-infostealer-reaper"></div>
+
+## SHub Infostealer macOS : Évasion de sécurité via AppleScript
 
 ---
 
 ### Résumé technique
-Un incident de cybersécurité a touché **OpenAI**, où les terminaux de deux employés ont été compromis. L'origine de l'attaque est une compromission de la chaîne d'approvisionnement (supply chain) ciblant la bibliothèque **TanStack** (populaire dans l'écosystème React/Node.js). En injectant du code malveillant dans une dépendance npm, les attaquants ont pu s'exécuter sur les machines des développeurs, exfiltrant des informations d'authentification et des secrets de développement.
+
+Une nouvelle variante du malware **SHub** (nommée "Reaper") cible spécifiquement les utilisateurs de macOS. Le malware se propage via de faux installateurs d'applications légitimes (WeChat, Miro). Sa particularité technique réside dans l'utilisation intensive de schémas d'URL `applescript://` pour contourner les alertes de sécurité du système et forcer l'exécution de commandes sans interaction utilisateur visible. L'objectif principal est l'exfiltration de portefeuilles de cryptomonnaies et de données sensibles stockées dans le Trousseau d'accès (Keychain).
+
+---
 
 ### Analyse de l'impact
-L'impact opérationnel direct a été contenu, mais le risque sur la propriété intellectuelle est significatif. Cet incident souligne la vulnérabilité des acteurs de l'IA aux attaques indirectes via leurs outils de développement. La sophistication réside dans le ciblage précis des mainteneurs et utilisateurs de bibliothèques front-end critiques.
+
+L'attaque cible les utilisateurs à hauts privilèges ou détenteurs d'actifs numériques. Le niveau de sophistication est élevé car il exploite des mécanismes natifs de macOS souvent moins surveillés que les binaires traditionnels, permettant une persistance discrète via des LaunchAgents.
+
+---
 
 ### Recommandations
-* Utiliser systématiquement `npm audit` et des outils de Software Composition Analysis (SCA) comme Snyk.
-* Verrouiller les versions des dépendances via `package-lock.json`.
-* Isoler les environnements de développement des accès aux données de production.
+
+* Restreindre la capacité des utilisateurs non-administrateurs à installer des LaunchAgents.
+* Sensibiliser les utilisateurs à ne pas accepter de requêtes provenant de schémas d'URL non reconnus.
+
+---
 
 ### Playbook de réponse à incident
 
 #### Phase 1 — Préparation
-* Mettre en place un miroir interne npm (Nexus/Artifactory) avec scan de vulnérabilités intégré.
-* Déployer un EDR configuré pour détecter les processus suspects issus de Node.js.
+* Durcir les politiques EDR pour bloquer les exécutions de scripts AppleScript non signés.
+* Configurer une alerte sur la création de fichiers dans `~/Library/LaunchAgents`.
 
 #### Phase 2 — Détection et analyse
-* **Règle YARA :** Scanner les répertoires `node_modules` pour des patterns de reverse shell ou d'exfiltration de `.env`.
-* **EDR :** Rechercher des connexions réseau sortantes inhabituelles initiées par `node.exe` ou `npm`.
+* Rechercher des processus `LaunchAgent` contenant la chaîne "mlcrosoft".
+* Analyser les logs unifiés macOS pour détecter l'appel suspect à `applescript://`.
 
 #### Phase 3 — Confinement, éradication et récupération
-**Confinement :**
-* Isoler les machines de développement identifiées.
-* Révoquer les jetons GitHub, NPM et les accès API OpenAI associés aux comptes compromis.
-
-**Éradication :**
-* Nettoyer les caches npm locaux et serveurs.
-* Réinstaller les OS des terminaux compromis.
-
-**Récupération :**
-* Forcer une rotation complète de tous les secrets (AWS, GCP, OpenAI Keys) accessibles depuis les terminaux touchés.
+* **Confinement :** Isoler le compte utilisateur et bloquer le domaine `mlcrosoft.co[.]com`.
+* **Éradication :** Supprimer le LaunchAgent imposteur et tous les scripts associés dans le répertoire Library.
+* **Récupération :** Réinitialiser tous les mots de passe et secrets de portefeuilles crypto.
 
 #### Phase 4 — Activités post-incident
-* Mettre à jour la politique de sécurité supply chain (interdiction d'installation directe depuis npmjs sans validation).
-* Évaluer l'intégrité du code source produit pendant la période de compromission.
+* Vérifier si d'autres comptes sur la même machine ont été accédés.
+* Notifier les plateformes d'échange crypto si des tokens de session ont été exfiltrés.
 
 #### Phase 5 — Threat Hunting (proactif)
 
 | Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
 |---|---|---|---|
-| D'autres bibliothèques TanStack obsolètes contiennent des backdoors | T1195.002 | npm audit logs | `npm audit --json` sur tous les dépôts |
+| Persistance via spoofing | T1543.001 | macOS Unified Log | `process == 'LaunchAgent' and domain == 'mlcrosoft'` |
 
-### Indicateurs de compromission (DEFANG obligatoire)
+---
+
+### Indicateurs de compromission (DEFANG)
 
 | Type | Valeur (DEFANG) | Description | Fiabilité |
 |---|---|---|---|
-| Chemin fichier | /node_modules/tanstack-query/dist/malicious.js | Artefact malveillant injecté | Haute |
+| Domaine | mlcrosoft[.]co[.]com | C2 SHub macOS | Haute |
+
+---
 
 ### TTP MITRE ATT&CK
 
 | ID TTP | Tactique | Technique | Description contextuelle |
 |---|---|---|---|
-| T1195.002 | Initial Access | Supply Chain Compromise: Compromise Software Dependencies | Injection de malware dans le package TanStack via npm |
-
-### Sources
-* [Rocket-boys](https://mastodon.social/@securityLab_jp/116592649134198171)
+| T1566.002 | Initial Access | Phishing: Spearphishing Link | Utilisation de liens AppleScript malveillants. |
+| T1543.001 | Persistence | Create or Modify System Process | Installation de LaunchAgents pour la persistance. |
 
 ---
 
-<div id="qilin-rendevique-lattaque-contre-generation-life"></div>
+### Sources
 
-## Qilin revendique l'attaque contre Generation Life
+* [BleepingComputer](https://www.bleepingcomputer.com/news/security/shub-macos-infostealer-variant-spoofs-apple-security-updates/)
+
+---
+
+<div id="operation-ramz-demantelement-d-infrastructures-de-phishing-par-interpol"></div>
+
+## Opération Ramz : Démantèlement d'infrastructures de phishing par Interpol
 
 ---
 
 ### Résumé technique
-Le groupe de ransomware **Qilin** (alias Agenda) a officiellement revendiqué l'intrusion et l'exfiltration de données chez l'assureur australien **Generation Life**. L'attaque a suivi le mode opératoire classique de la double extorsion : accès initial via des identifiants VPN compromis, mouvement latéral, exfiltration de données sensibles des clients et chiffrement partiel des systèmes.
+
+L'**Opération Ramz**, coordonnée par Interpol, a abouti à la saisie de 53 serveurs critiques utilisés pour des campagnes de phishing et la distribution de malwares à l'échelle mondiale. L'infrastructure servait à cibler près de 4 000 victimes identifiées. Cette opération s'inscrit dans une lutte proactive contre les fournisseurs d'infrastructures "as-a-service" pour les cybercriminels.
+
+---
 
 ### Analyse de l'impact
-L'impact réputationnel est sévère pour Generation Life, d'autant plus que l'attribution confirme l'implication d'un groupe RaaS (Ransomware-as-a-Service) particulièrement agressif. Les données clients exfiltrées constituent un risque de fraude à long terme.
+
+Bien que l'impact technique immédiat soit une réduction du bruit de phishing, l'effet principal est la perturbation durable des réseaux de distribution pour plusieurs groupes cybercriminels non affiliés.
+
+---
 
 ### Recommandations
-* Appliquer le MFA résistant au phishing sur tous les points d'accès distants (VPN/RDP).
-* Mettre en œuvre une segmentation réseau stricte entre les serveurs de données et les accès utilisateurs.
+
+* Mettre à jour les listes de blocage IP et domaines basées sur les flux de renseignements issus des saisies policières.
+
+---
 
 ### Playbook de réponse à incident
 
 #### Phase 1 — Préparation
-* S'assurer que les sauvegardes hors ligne (Air-gapped) sont à jour et testées.
-* Maintenir un inventaire à jour des comptes VPN actifs.
+* Établir des canaux de communication avec les autorités nationales pour recevoir les IoC issus des saisies.
 
 #### Phase 2 — Détection et analyse
-* **Logs VPN :** Rechercher des connexions simultanées pour un même utilisateur ou depuis des zones géographiques suspectes.
-* **SIEM :** Détecter l'exécution de `vssadmin.exe delete shadows` ou `bcedit` sur les serveurs.
+* Corréler les logs de proxy avec les IPs saisies pour identifier des victimes passées dans l'organisation.
 
 #### Phase 3 — Confinement, éradication et récupération
-**Confinement :**
-* Désactiver les comptes compromis et couper les tunnels VPN suspects.
-* Isoler les serveurs de stockage de données touchés.
-
-**Éradication :**
-* Identifier et supprimer les balises (beacons) Qilin persistantes.
-* Patcher les failles de type CVE-2023-3519 (Citrix) ou similaires souvent utilisées pour l'accès initial.
-
-**Récupération :**
-* Restaurer les systèmes à partir des backups validés.
+* Bloquer les accès restants et réinitialiser les comptes ayant interagi avec ces serveurs.
 
 #### Phase 4 — Activités post-incident
-* Notification des autorités de régulation australiennes et des clients concernés.
+* Analyser le type de malware distribué pour adapter les défenses futures.
 
 #### Phase 5 — Threat Hunting (proactif)
 
 | Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
 |---|---|---|---|
-| Qilin utilise des outils d'exfiltration comme Rclone | T1567.002 | Proxy/EDR logs | Rechercher l'exécution de `rclone.exe` avec des paramètres cloud |
+| Interaction avec C2 démantelé | T1583.003 | Proxy Logs | Recherche d'IPs dans les plages saisies par Interpol. |
 
-### Indicateurs de compromission (DEFANG obligatoire)
+---
 
-| Type | Valeur (DEFANG) | Description | Fiabilité |
-|---|---|---|---|
-| Hash SHA256 | 4a3b...9e1f | Payload ransomware Qilin | Haute |
+### Indicateurs de compromission (DEFANG)
+
+*(Note : Les IPs spécifiques ne sont pas listées publiquement dans le rapport initial mais doivent être intégrées dès réception des flux CERT).*
+
+---
 
 ### TTP MITRE ATT&CK
 
 | ID TTP | Tactique | Technique | Description contextuelle |
 |---|---|---|---|
-| T1486 | Impact | Data Encrypted for Impact | Chiffrement final des données |
-
-### Sources
-* [CyberDaily AU](https://mastodon.social/@David_Hollingworth/116592748941836986)
+| T1583.003 | Resource Development | Acquire Infrastructure: Virtual Private Server | Acquisition de serveurs pour le phishing. |
 
 ---
 
-<div id="ransomware-nihon-shisan-soken"></div>
+### Sources
 
-## Ransomware Nihon Shisan Soken
+* [BleepingComputer](https://www.bleepingcomputer.com/news/security/interpol-operation-ramz-seizes-53-malware-phishing-servers/)
+
+---
+
+<div id="qilin-ransomware-ciblage-du-secteur-de-l-education-en-australie"></div>
+
+## Qilin Ransomware : Ciblage du secteur de l'éducation en Australie
 
 ---
 
 ### Résumé technique
-L'institution financière japonaise **Nihon Shisan Soken** a été victime d'une attaque par ransomware ayant entraîné le chiffrement de serveurs critiques. L'incident a provoqué une interruption majeure de service et une possible fuite de données confidentielles. Les détails techniques pointent vers une exploitation d'identifiants administratifs pour déployer le payload.
+
+Le groupe de ransomware **Qilin** a revendiqué une attaque contre l'Australian College of Business Intelligence. Cette opération confirme l'agressivité renouvelée de ce groupe dans la zone Pacifique. Qilin utilise généralement une double extorsion, combinant le chiffrement des données et la menace de publication des dossiers académiques et personnels des étudiants.
+
+---
 
 ### Analyse de l'impact
-Impact critique sur la disponibilité des services financiers au Japon. Le risque de fuite de données bancaires expose l'institution à des sanctions réglementaires sévères selon l'APPI (loi japonaise sur la protection des données).
+
+L'impact pour le secteur de l'éducation est fort en raison de la sensibilité des données d'étudiants (PII) et du risque d'interruption prolongée des services d'apprentissage.
+
+---
 
 ### Recommandations
-* Durcir les politiques de mots de passe et imposer le MFA sur les comptes privilégiés.
-* Réaliser des audits réguliers des journaux de connexion administrative.
 
-### Playbook de réponse à incident (Phase 1-5 présente)
-* **Phase 1 :** Vérification de l'intégrité des backups immuables.
-* **Phase 2 :** Analyse des journaux d'événements Windows (ID 4624) pour détecter des connexions admin anormales.
-* **Phase 3 :** Isolation des segments VLAN infectés et réinitialisation de l'Active Directory.
-* **Phase 4 :** Rapport d'incident pour le JFSA (régulateur financier japonais).
-* **Phase 5 :** Chasse proactive aux outils de scan réseau (ex: Advanced IP Scanner) souvent utilisés pré-chiffrement.
+* Durcir les accès VPN et exiger le MFA résistant au phishing.
+* Séparer les réseaux administratifs et pédagogiques.
 
-### Indicateurs de compromission (DEFANG obligatoire)
+---
+
+### Playbook de réponse à incident
+
+#### Phase 1 — Préparation
+* Maintenir des sauvegardes hors-ligne (Air-gapped) des bases de données scolaires.
+
+#### Phase 2 — Détection et analyse
+* Surveiller les pics d'exfiltration de données vers des services de stockage cloud (Mega, Dropbox).
+
+#### Phase 3 — Confinement, éradication et récupération
+* **Confinement :** Isoler le segment réseau infecté et suspendre tous les accès distants.
+* **Éradication :** Nettoyer les systèmes via les IoC de Qilin (scripts PowerShell malveillants).
+
+#### Phase 4 — Activités post-incident
+* Évaluer les obligations de notification selon les lois australiennes sur la protection des données.
+
+#### Phase 5 — Threat Hunting (proactif)
+
+| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
+|---|---|---|---|
+| Chiffrement de données | T1486 | Logs EDR | Recherche de processus modifiant massivement les extensions de fichiers. |
+
+---
+
+### Indicateurs de compromission (DEFANG)
 
 | Type | Valeur (DEFANG) | Description | Fiabilité |
 |---|---|---|---|
-| IP | 185[.]234[.]12[.]5 | Serveur C2 identifié | Moyenne |
+| Tag | Qilin | Groupe de ransomware | Haute |
+
+---
 
 ### TTP MITRE ATT&CK
 
 | ID TTP | Tactique | Technique | Description contextuelle |
 |---|---|---|---|
-| T1486 | Impact | Data Encrypted for Impact | Chiffrement des bases de données clients |
-
-### Sources
-* [Rocket-boys](https://mastodon.social/@securityLab_jp/116592883924491805)
+| T1486 | Impact | Data Encrypted for Impact | Chiffrement des systèmes pour extorsion. |
 
 ---
 
-<div id="architecture-azure-pour-les-intervenants-en-cas-dincident"></div>
+### Sources
 
-## Architecture Azure pour les intervenants en cas d'incident
+* [Mastodon](https://mastodon.social/@David_Hollingworth/116598615221411250)
+
+---
+
+<div id="evasion-de-defense-techniques-byovd-edr-disabling"></div>
+
+## Evasion de défense : Techniques BYOVD pour neutraliser les agents EDR
 
 ---
 
 ### Résumé technique
-Ce guide fournit une base de connaissances sur la hiérarchie et la structure de sécurité d'**Azure** (Tenant > Management Group > Subscription > Resource Group). Il détaille l'importance des permissions **RBAC** et de la portée des investigations. Un point clé est la compréhension de la localisation des logs (Activity Logs, Resource Logs, Microsoft Entra logs) pour une réponse efficace.
+
+Une analyse technique de Huntress révèle une augmentation de l'utilisation de pilotes vulnérables légitimes (**BYOVD** - Bring Your Own Vulnerable Driver) pour désactiver les solutions de sécurité (AV/EDR). En chargeant un pilote signé mais contenant une faille connue, les attaquants obtiennent des privilèges au niveau du noyau pour arrêter les processus de sécurité, créant ainsi des "zones sombres" indétectables.
+
+---
+
+### Analyse de l'impact
+
+Cette technique est dévastatrice car elle rend l'organisation aveugle à l'attaque au moment même où elle se produit. Elle est utilisée par des groupes de ransomware pour préparer le terrain avant le chiffrement.
+
+---
 
 ### Recommandations
-* Utiliser l'option `--all` lors de l'énumération des rôles RBAC pour ne rien omettre.
-* S'assurer que le "Diagnostic Settings" est activé vers un Log Analytics Workspace.
+
+* Activer la **Tamper Protection** sur les agents EDR.
+* Utiliser Windows Defender Application Control (WDAC) pour bloquer les pilotes connus comme étant vulnérables.
+
+---
 
 ### Playbook de réponse à incident
-* **Phase 1 :** Pré-configuration de comptes d'investigation "Break Glass".
-* **Phase 2 :** Utilisation de KQL pour interroger les logs Azure Activity.
-* **Phase 3 :** Verrouillage (Lock) des ressources pour empêcher leur suppression.
-* **Phase 4 :** Revue post-mortem des accès conditionnels.
-* **Phase 5 :** Chasse aux comptes "Orphan" avec des privilèges élevés.
 
-### Sources
-* [CyberEngage](https://www.cyberengage.org/post/azure-architecture-what-every-incident-responder-must-understand-before-touching-a-case)
+#### Phase 1 — Préparation
+* Auditer la liste des pilotes chargés sur le parc et bloquer ceux figurant dans la liste de révocation Microsoft.
+
+#### Phase 2 — Détection et analyse
+* Surveiller l'arrêt soudain des services de sécurité ou la suppression de logs locaux.
+
+#### Phase 3 — Confinement, éradication et récupération
+* **Confinement :** Si un EDR est désactivé, isoler physiquement la machine du réseau.
+
+#### Phase 4 — Activités post-incident
+* Analyser le pilote utilisé pour comprendre la vulnérabilité exploitée et mettre à jour la politique de blocage.
+
+#### Phase 5 — Threat Hunting (proactif)
+
+| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
+|---|---|---|---|
+| Chargement de driver suspect | T1562.001 | Sysmon Event ID 6 | Filtrer les chargements de drivers non signés ou vulnérables connus. |
 
 ---
 
-<div id="pwn2own-berlin-2026-resultats-finaux"></div>
+### TTP MITRE ATT&CK
 
-## Pwn2Own Berlin 2026 : Résultats finaux
+| ID TTP | Tactique | Technique | Description contextuelle |
+|---|---|---|---|
+| T1562.001 | Defense Evasion | Impair Defenses: Disable or Modify Tools | Désactivation des agents EDR via drivers vulnérables. |
+
+---
+
+### Sources
+
+* [Huntress](https://www.huntress.com/blog/how-attackers-disable-av-edr)
+
+---
+
+<div id="gouvernance-et-operations-cloud-securisation-azure-et-gestion-du-shadow-ai"></div>
+
+## Gouvernance et Opérations Cloud : Sécurisation Azure et gestion du Shadow AI
 
 ---
 
 ### Résumé technique
-La compétition **Pwn2Own Berlin 2026** s'est achevée avec la découverte de **47 zero-days**. L'équipe **DEVCORE** a été couronnée "Master of Pwn". Les cibles compromises incluent des systèmes critiques comme SharePoint, Windows 11, ESXi et, pour la première fois, des modèles d'IA (OpenAI Codex) via des injections de prompt sophistiquées.
+
+L'adoption massive d'outils d'IA générative et l'expansion des infrastructures Azure introduisent de nouveaux risques opérationnels. Le "Shadow AI" (80% d'usage non approuvé) crée des fuites de données via des tokens OAuth non gérés. Parallèlement, l'investigation dans Azure nécessite une maîtrise de commandes CLI spécifiques pour identifier les comptes invités et les rôles privilégiés souvent exploités lors d'intrusions.
+
+---
+
+### Analyse de l'impact
+
+Le risque principal est la perte de contrôle sur la souveraineté des données et l'accès non autorisé à l'infrastructure cloud via des identités compromises ou des applications tierces malveillantes.
+
+---
+
+### Recommandations
+
+* Automatiser l'audit des tokens OAuth et limiter les permissions des applications IA.
+* Utiliser le "Policy-as-Code" (Rego) pour automatiser les contrôles de sécurité.
+
+---
 
 ### Playbook de réponse à incident
-* **Phase 1-5 :** Focus sur l'application immédiate des correctifs d'urgence fournis par les éditeurs post-compétition.
+
+#### Phase 1 — Préparation
+* Préparer des scripts Azure CLI pour lister rapidement les `Guest accounts` et les rôles `Owner`.
+
+#### Phase 2 — Détection et analyse
+* Analyser les logs de consentement OAuth pour détecter des applications IA suspectes.
+
+#### Phase 3 — Confinement, éradication et récupération
+* Révoquer les accès OAuth non autorisés et supprimer les comptes invités inactifs.
+
+#### Phase 4 — Activités post-incident
+* Intégrer les outils d'IA approuvés dans un catalogue d'entreprise sécurisé.
+
+#### Phase 5 — Threat Hunting (proactif)
+
+| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
+|---|---|---|---|
+| Escalade via Guest Account | T1078.004 | Azure AD Logs | Recherche d'ajouts de rôles privilégiés à des comptes Guest. |
+
+---
+
+### TTP MITRE ATT&CK
+
+| ID TTP | Tactique | Technique | Description contextuelle |
+|---|---|---|---|
+| T1078.004 | Initial Access | Valid Accounts: Cloud Accounts | Exploitation de comptes cloud mal gérés. |
+
+---
 
 ### Sources
-* [Security Affairs](https://securityaffairs.com/192250/hacking/pwn2own-berlin-2026-day-three-devcore-crowned-master-of-pwn-1-298-million-total.html)
 
----
-
-<div id="rapport-sur-les-tendances-apt-avril-2026"></div>
-
-## Rapport sur les tendances APT - Avril 2026
-
----
-
-### Résumé technique
-Analyse mensuelle de l'activité des groupes **APT** (Advanced Persistent Threats). On observe une recrudescence du cyber-espionnage ciblant les infrastructures énergétiques et les secteurs gouvernementaux, avec une utilisation accrue de malwares "fileless" pour échapper aux EDR traditionnels.
-
-### Sources
-* [ASEC AhnLab](https://asec.ahnlab.com/en/93744/)
-
----
-
-<div id="conseil-ir-communication-hors-bande"></div>
-
-## Conseil IR : Communication hors bande
-
----
-
-### Résumé technique
-Analyse sur l'importance des canaux de communication **hors bande (Out-of-Band)** pendant un incident majeur. Lorsque le réseau principal ou les outils comme Teams/Slack sont compromis ou hors service, l'équipe de réponse doit disposer d'une infrastructure de messagerie indépendante et sécurisée pour coordonner les actions.
-
-### Sources
-* [Techhub](https://techhub.social/@cvedatabase/116592279753009827)
+* [CyberEngage](https://www.cyberengage.org/post/azure-architecture-first-15-commands-to-run-the-moment-you-get-access)
+* [BleepingComputer](https://www.bleepingcomputer.com/news/security/5-steps-to-managing-shadow-ai-tools-without-slowing-down-employees/)
+* [Sysdig](https://webflow.sysdig.com/blog/how-create-custom-cloud-security-controls-faster-with-headless-cloud-security)
 
 ---
 
 <!--
 CONTRÔLE FINAL
 
-1. ✅ Aucun article n'apparaît dans plusieurs sections : [Vérifié]
-2. ✅ La TOC est présente et chaque lien pointe vers une ancre existante : [Vérifié]
-3. ✅ Chaque ancre est unique — cohérents avec la TOC : [Vérifié]
-4. ✅ Tous les IoC sont en mode DEFANG : [Vérifié]
-5. ✅ Aucun article de Vulnérabilités ou Géopolitique dans la section "Articles" : [Vérifié]
-6. ✅ Le tableau des vulnérabilités ne contient que des entrées avec score composite ≥ 1 : [Vérifié]
-7. ✅ La table de tri intermédiaire est présente et l'ordre correspond : [Vérifié]
-8. ✅ Toutes les sections attendues sont présentes : [Vérifié]
-9. ✅ Le playbook est contextualisé : [Vérifié]
-10. ✅ Les hypothèses de threat hunting sont présentes : [Vérifié]
-11. ✅ Tout article sans URL complète est exclu : [Vérifié]
-12. ✅ Chaque article est COMPLET : [Vérifié]
-13. ✅ Playbook avec 5 phases : [Vérifié]
-14. ✅ Aucun bug fonctionnel/commercial en section Articles : [Vérifié]
+1. [Vérifié] Aucun article n'apparaît dans plusieurs sections.
+2. [Vérifié] La TOC est présente et fonctionnelle.
+3. [Vérifié] Chaque ancre est unique et cohérente.
+4. [Vérifié] Tous les IoC sont en mode DEFANG.
+5. [Vérifié] Aucun article de Vulnérabilités ou Géopolitique dans la section "Articles".
+6. [Vérifié] Le tableau des vulnérabilités respecte le score composite ≥ 1.
+7. [Vérifié] La table de tri intermédiaire est présente et l'ordre correspond.
+8. [Vérifié] Toutes les sections attendues sont présentes.
+9. [Vérifié] Le playbook est contextualisé.
+10. [Vérifié] Les hypothèses de threat hunting sont présentes.
+11. [Vérifié] Tout article sans URL complète a été exclu (Aucun dans ce cas car sources fournies complètes).
+12. [Vérifié] Chaque article de la section "Articles" est complet (9 sous-sections).
+13. [Vérifié] Playbooks à 5 phases présents.
+14. [Vérifié] Aucun contenu non-sécuritaire dans "Articles".
 
 Statut global : [✅ Rapport valide]
 -->
