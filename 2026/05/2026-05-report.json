@@ -1,83 +1,141 @@
 {
   "threat_level": {
-    "score": 4,
+    "score": 5,
     "label": {
-      "en": "Critical",
-      "fr": "Critique"
+      "en": "Severe",
+      "fr": "Sévère"
     },
     "justification": {
-      "en": "May 2026 witnessed a systemic collapse of perimeter security and a massive industrialization of supply chain attacks. The month was defined by CVSS 10.0 zero-days in core network infrastructure (Cisco Catalyst, PAN-OS) and the weaponization of developer tools (npm, VS Code) by actors like TeamPCP and Lazarus. The breach of AI leaders (OpenAI, Mistral) and the compromise of nearly 300 million education records signal an unprecedented scale of exposure.",
-      "fr": "Le mois de mai 2026 a été marqué par un effondrement systémique de la sécurité périmétrique et une industrialisation massive des attaques de la chaîne d'approvisionnement. La période a été définie par des vulnérabilités zero-day CVSS 10.0 dans les infrastructures réseau (Cisco Catalyst, PAN-OS) et l'exploitation des outils de développement (npm, VS Code) par des acteurs comme TeamPCP et Lazarus. La violation de leaders de l'IA (OpenAI, Mistral) et la compromission de près de 300 millions de dossiers d'éducation signalent une échelle d'exposition sans précédent."
+      "en": "May 2026 exhibited a highly severe threat landscape characterized by widespread exploitation of zero-day vulnerabilities in edge network infrastructure (PAN-OS, Cisco SD-WAN, Quest KACE) and an unprecedented surge in supply chain compromises targeting advanced AI development systems (OpenAI, Mistral AI) and general developers. Simultaneously, identity-based attacks bypassing traditional MFA via automated OAuth and Device Code phishing reached critical levels, resulting in massive data breaches exposing hundreds of millions of sensitive records globally.",
+      "fr": "Le mois de mai 2026 a présenté un paysage de menaces extrêmement sévère, caractérisé par une exploitation généralisée de vulnérabilités zero-day dans les infrastructures réseau de bordure (PAN-OS, Cisco SD-WAN, Quest KACE) et une recrudescence sans précédent des compromissions de supply chain ciblant les systèmes de développement d'IA (OpenAI, Mistral AI) et les développeurs. En parallèle, les attaques d'identité contournant le MFA classique via du phishing automatisé OAuth et Device Code ont atteint un niveau critique, entraînant des violations de données massives exposant des centaines de millions d'enregistrements à l'échelle mondiale."
     },
     "_triggers": [
-      "+4 — 2 CVE(s) CISA KEV",
-      "+3 — 3 CVE(s) CVSS ≥ 9.0",
-      "+2 — 1 acteur(s) étatique(s)",
+      "+8 — 7 CVE(s) CISA KEV",
+      "+4 — 6 CVE(s) CVSS ≥ 9.0",
+      "+6 — 3 acteur(s) étatique(s)",
+      "+1 — 1 opérateur(s) ransomware",
       "+1 — ≥ 3 acteurs distincts actifs",
-      "+2 — 2 breach(es) ≥ 100k enregistrements",
+      "+3 — 5 breach(es) ≥ 100k enregistrements",
       "+2 — secteurs critiques ciblés : Critical_Infrastructure, Government_and_Defense"
     ]
   },
   "executive_summary": {
-    "en": "The threat landscape in May 2026 shifted toward 'Identity-First' and 'Supply-Chain-First' strategies. Attackers successfully bypassed traditional MFA using AI-assisted phishing (Bluekit) and OAuth Device Code hijacking (Tycoon2FA). State-sponsored groups from Russia and China targeted energy sovereignty and managed service providers, while cybercriminal syndicates focused on massive data exfiltration from the education, healthcare, and manufacturing sectors. Organizations must pivot toward hardware-based FIDO2 authentication and cryptographic dependency verification to survive this new era of automated, viral exploitation.",
-    "fr": "Le paysage des menaces en mai 2026 s'est orienté vers des stratégies privilégiant l'identité et la chaîne d'approvisionnement. Les attaquants ont réussi à contourner le MFA traditionnel en utilisant le phishing assisté par IA (Bluekit) et le détournement de code d'appareil OAuth (Tycoon2FA). Les groupes étatiques russes et chinois ont ciblé la souveraineté énergétique et les fournisseurs de services managés, tandis que les syndicats cybercriminels se sont concentrés sur l'exfiltration massive de données dans les secteurs de l'éducation, de la santé et de l'industrie. Les organisations doivent pivoter vers l'authentification matérielle FIDO2 et la vérification cryptographique des dépendances pour survivre à cette nouvelle ère d'exploitation virale automatisée."
+    "en": "During May 2026, threat actors accelerated their operational tempo by weaponizing software dependencies and targeting identity trust boundaries. Major campaigns, notably North Korean TeamPCP's 'Shai-Hulud' worm, compromised development environments (npm, PyPI, GitHub Actions) to steal cloud credentials and proprietary source code, affecting industry leaders like OpenAI and Mistral AI. Concurrently, ransomware syndicates (Qilin, Nitrogen, RansomHouse) executed massive exfiltration campaigns against manufacturing, healthcare, and education sectors. The regulatory response has intensified, with Europe's Cyber Resilience Act countdown and France's CNIL imposing strict multi-factor authentication mandates on large databases, signaling a zero-tolerance policy for weak access controls.",
+    "fr": "Au cours du mois de mai 2026, les cyber-attaquants ont accéléré leur tempo opérationnel en militarisant les dépendances logicielles et en ciblant les frontières de confiance des identités. Les campagnes majeures, notamment le ver 'Shai-Hulud' du groupe nord-coréen TeamPCP, ont compromis des environnements de développement (npm, PyPI, GitHub Actions) pour dérober des identifiants cloud et du code source propriétaire, impactant des leaders de l'IA comme OpenAI et Mistral AI. En parallèle, les syndicats de ransomware (Qilin, Nitrogen, RansomHouse) ont mené des campagnes d'exfiltration massives visant l'industrie, la santé et l'éducation. Les réponses réglementaires se durcissent, avec l'échéance du Cyber Resilience Act en Europe et l'obligation de la CNIL en France imposant le MFA pour les bases de données d'envergure."
   },
   "regulatory": {
     "analyse": {
-      "en": "Regulatory authorities are moving from passive oversight to aggressive enforcement and prescriptive technical mandates. The harmonization of the EU AI Act transparency rules and the finalization of CMMC 2.0 in the US create a global baseline for high-assurance security. Enforcement actions against data brokers and major platforms like Meta signal that regulators will no longer tolerate systemic privacy failures, especially those involving minors or sensitive geolocation data.",
-      "fr": "Les autorités de régulation passent d'une surveillance passive à une application agressive et à des mandats techniques prescriptifs. L'harmonisation des règles de transparence de l'IA Act de l'UE et la finalisation du CMMC 2.0 aux États-Unis créent un socle mondial pour la sécurité à haute assurance. Les mesures de coercition contre les courtiers en données et les plateformes comme Meta signalent que les régulateurs ne toléreront plus les défaillances systémiques de confidentialité."
+      "en": "May 2026 marked a pivotal shift toward structural cyber enforcement, particularly in Europe and the United States. Regulators have moved past simple advisory warnings to enforce operational security mandates, focusing heavily on secure software supply chains (CRA compliance countdown), identity integrity (CNIL's strict MFA rules for databases containing over 1 million records), and federal asset patching (CISA's BOD 22-01 updates). Organizations must recognize that failure to implement phishing-resistant authentication and rigorous dependency audits will now carry immediate regulatory, civil, and financial liabilities.",
+      "fr": "Le mois de mai 2026 a marqué un tournant vers une application structurelle des réglementations cyber, en particulier en Europe et aux États-Unis. Les régulateurs ont dépassé les simples avertissements pour imposer des obligations opérationnelles de sécurité, ciblant en priorité la chaîne d'approvisionnement logicielle (compte à rebours du CRA), l'intégrité de l'identité (règles strictes de la CNIL imposant le MFA pour les bases de données de plus d'un million de fiches) et les correctifs fédéraux (mises à jour de la BOD 22-01 de la CISA). Les organisations doivent anticiper des sanctions immédiates en cas d'absence d'authentification forte."
     },
     "events": [
       {
         "title": {
-          "en": "CMMC 2.0 Final Rule (32 CFR Part 170)",
-          "fr": "Règle finale CMMC 2.0 (32 CFR Part 170)"
+          "en": "CNIL 2025 Annual Enforcement and MFA Mandate",
+          "fr": "Bilan annuel 2025 de la CNIL et obligation MFA"
         },
-        "issuing_body": "DoD",
-        "date": "2026-05-15",
+        "issuing_body": "CNIL",
+        "date": "2026-05-18",
+        "jurisdiction": {
+          "region": "France",
+          "countries": [
+            "FR"
+          ]
+        },
+        "type": "Enforcement_Action",
+        "status": "Active",
+        "reference": "GDPR Art. 32 / CNIL Guidance",
+        "affected_sectors": [
+          "Healthcare_and_Life_Sciences",
+          "Retail_and_Consumer",
+          "Finance",
+          "Government_and_Defense"
+        ],
+        "description": {
+          "en": "Following a 50% year-on-year increase in data breaches, the French CNIL officially mandated multi-factor authentication (MFA) for any public or private entity processing databases holding personal details on more than 1 million individuals, signaling a push for robust access controls.",
+          "fr": "Suite à une hausse de 50 % des violations de données, la CNIL a officiellement rendu obligatoire l'authentification multifacteur (MFA) pour toute entité publique ou privée gérant des bases de données de plus d'un million de personnes, renforçant les exigences de contrôle d'accès."
+        },
+        "source_url": "https://www.lemonde.fr/pixels/article/2026/05/18/marie-laure-denis-presidente-de-la-cnil-l-etat-a-une-responsabilite-particuliere-a-l-egard-des-donnees-des-francais_6691073_4408997.html"
+      },
+      {
+        "title": {
+          "en": "Cyber Resilience Act (CRA) Compliance Countdown",
+          "fr": "Compte à rebours de conformité du Cyber Resilience Act (CRA)"
+        },
+        "issuing_body": "European Commission",
+        "date": "2026-05-18",
+        "jurisdiction": {
+          "region": "EU",
+          "countries": [
+            "FR",
+            "DE",
+            "BE"
+          ]
+        },
+        "type": "New_Law",
+        "status": "Active",
+        "reference": "CRA Regulation (EU) 2024",
+        "affected_sectors": [
+          "Technology_and_Telecom",
+          "Critical_Infrastructure",
+          "Industry_and_Manufacturing"
+        ],
+        "description": {
+          "en": "A market assessment highlighted that 66% of European hardware and software vendors remain unprepared for the strict security-by-design and vulnerability reporting standards mandated by the CRA, ahead of the impending compliance deadlines.",
+          "fr": "Une évaluation sectorielle a révélé que 66 % des fabricants de matériel et éditeurs de logiciels en Europe ne sont pas prêts pour les exigences de sécurité dès la conception et de signalement de vulnérabilités imposées par le CRA d'ici les prochaines échéances."
+        },
+        "source_url": "https://openssf.org/blog/2026/05/18/taking-stock-of-the-state-of-european-cyber-resilience-act-cra-compliance-an-urgent-wake-up-call-for-the-open-source-ecosystem/"
+      },
+      {
+        "title": {
+          "en": "Binding Operational Directive 22-01 Update",
+          "fr": "Mise à jour de la Directive Opérationnelle Contraignante 22-01"
+        },
+        "issuing_body": "CISA",
+        "date": "2026-05-16",
         "jurisdiction": {
           "region": "US",
           "countries": [
             "US"
           ]
         },
-        "type": "New_Law",
+        "type": "Enforcement_Action",
         "status": "Active",
-        "reference": "32 CFR Part 170",
+        "reference": "BOD 22-01",
         "affected_sectors": [
-          "Government_and_Defense"
-        ],
-        "description": {
-          "en": "Mandates third-party certification for defense subcontractors handling CUI. This forces a massive security upgrade across the global defense industrial base to meet Level 2 requirements.",
-          "fr": "Impose une certification par une tierce partie pour les sous-traitants de la défense gérant des CUI. Cela impose une mise à niveau massive de la sécurité dans la base industrielle de défense mondiale."
-        },
-        "source_url": "https://www.huntress.com/blog/cmmc-final-rule-guide-for-dod-subcontractors"
-      },
-      {
-        "title": {
-          "en": "EU AI Act Transparency Guidelines",
-          "fr": "Lignes directrices sur la transparence de l'AI Act"
-        },
-        "issuing_body": "European Commission",
-        "date": "2026-05-09",
-        "jurisdiction": {
-          "region": "EU",
-          "countries": [
-            "FR",
-            "DE"
-          ]
-        },
-        "type": "Guidance",
-        "status": "Active",
-        "reference": "AI Act Art. 50",
-        "affected_sectors": [
+          "Government_and_Defense",
           "Technology_and_Telecom"
         ],
         "description": {
-          "en": "Strict requirements for marking and detecting AI-generated content to combat disinformation and ensure algorithmic accountability.",
-          "fr": "Exigences strictes pour le marquage et la détection de contenus générés par l'IA afin de lutter contre la désinformation."
+          "en": "CISA added CVE-2026-42897 (Microsoft Exchange Server security bypass) to the Known Exploited Vulnerabilities (KEV) catalog, requiring US federal civilian executive branch agencies to patch the issue within a 21-day window.",
+          "fr": "La CISA a ajouté la CVE-2026-42897 (contournement de sécurité Microsoft Exchange) au catalogue des vulnérabilités exploitées (KEV), obligeant les agences fédérales civiles américaines à appliquer les correctifs sous 21 jours."
         },
-        "source_url": "https://digital-strategy.ec.europa.eu/en/library/three-studies-technical-solutions-mark-and-detect-ai-generated-content"
+        "source_url": "https://securityaffairs.com/192240/hacking/u-s-cisa-adds-a-flaw-in-microsoft-exchange-server-to-its-known-exploited-vulnerabilities-catalog.html"
+      },
+      {
+        "title": {
+          "en": "South Staffordshire Water GDPR Fine",
+          "fr": "Amende RGPD South Staffordshire Water"
+        },
+        "issuing_body": "ICO",
+        "date": "2026-05-13",
+        "jurisdiction": {
+          "region": "UK",
+          "countries": [
+            "GB"
+          ]
+        },
+        "type": "Fine",
+        "status": "Active",
+        "reference": "GDPR Art. 83",
+        "affected_sectors": [
+          "Critical_Infrastructure"
+        ],
+        "description": {
+          "en": "The UK Information Commissioner's Office fined the utility operator 1.3 million USD for failing to implement appropriate security measures, leading to the exposure of personal details belonging to 664,000 customers during a previous breach.",
+          "fr": "L'ICO a infligé une amende de 1,3 million de dollars à l'opérateur de services publics pour manquement à la mise en œuvre de mesures de sécurité adéquates, ayant permis la fuite de données de 664 000 clients lors d'une cyberattaque."
+        },
+        "source_url": "https://www.bleepingcomputer.com/news/security/uk-fines-water-supplier-13m-for-exposing-data-of-664k-customers/"
       },
       {
         "title": {
@@ -96,11 +154,11 @@
         "status": "Active",
         "reference": "FTC vs Kochava",
         "affected_sectors": [
-          "Business_Services"
+          "Technology_and_Telecom"
         ],
         "description": {
-          "en": "Prohibits the sale of precise geolocation data that could track sensitive locations, setting a major precedent for the data brokerage industry.",
-          "fr": "Interdit la vente de données de géolocalisation précises pouvant tracer des lieux sensibles, créant un précédent majeur pour l'industrie des courtiers en données."
+          "en": "The FTC banned the data broker Kochava from selling precise geolocation data of Americans without explicit consent, highlighting systemic privacy risks associated with location tracking.",
+          "fr": "La FTC a interdit au courtier en données Kochava de vendre les données de géolocalisation précises des Américains sans leur consentement explicite, soulignant les risques de confidentialité du traçage géographique."
         },
         "source_url": "https://www.bleepingcomputer.com/news/security/ftc-to-ban-data-broker-kochava-from-selling-americans-location-data/"
       }
@@ -110,12 +168,22 @@
     "geographic_analyse": [
       {
         "geographic_zone_name": {
+          "en": "North Korea",
+          "fr": "Corée du Nord"
+        },
+        "geographic_zone_strategic_analyse": {
+          "en": "North Korean state-linked threat actors, notably Lazarus Group and TeamPCP, have transitioned from traditional cyber-heists to systematic supply chain compromises. By targeting software developers through fake recruiting interviews and automated repository poisoning (e.g. TanStack, node-ipc), they aim to compromise high-value technology, AI development, and Web3 sectors to exfiltrate proprietary source code and intellectual property.",
+          "fr": "Les cyber-attaquants liés à l'État nord-coréen, notamment Lazarus Group et TeamPCP, sont passés de vols financiers traditionnels à des compromissions systématiques de la supply chain. En ciblant les développeurs via de faux entretiens d'embauche et l'empoisonnement automatisé de dépôts (ex. TanStack, node-ipc), ils visent les secteurs de la technologie, de l'IA et du Web3 pour exfiltrer du code source et de la propriété intellectuelle."
+        }
+      },
+      {
+        "geographic_zone_name": {
           "en": "Russia",
           "fr": "Russie"
         },
         "geographic_zone_strategic_analyse": {
-          "en": "Russian state actors (Turla, APT28) and RaaS groups (Qilin) have focused on long-term stealth through P2P botnets and the targeting of European critical infrastructure, particularly in the water and finance sectors. Their operations show a high degree of coordination with kinetic and geopolitical pressures.",
-          "fr": "Les acteurs étatiques russes (Turla, APT28) et les groupes RaaS (Qilin) se sont concentrés sur la furtivité à long terme via des botnets P2P et le ciblage des infrastructures critiques européennes, particulièrement dans les secteurs de l'eau et de la finance."
+          "en": "Russian state-sponsored groups (such as Secret Blizzard/Turla and APT28) are deploying highly evasive, modular peer-to-peer (P2P) malware architectures (Kazuar) to isolate command-and-control flows. Their operations remain highly aligned with Kremlin geopolitical objectives, targeting European energy corridors, water utilities, and defense entities to collect intelligence and position themselves for potential physical sabotage.",
+          "fr": "Les groupes étatiques russes (comme Secret Blizzard/Turla et APT28) déploient des architectures de logiciels malveillants modulaires en réseau pair-à-pair (P2P) hautement furtives (Kazuar) pour masquer leurs flux C2. Leurs opérations restent alignées avec les objectifs du Kremlin, ciblant l'énergie, les services d'eau et la défense en Europe pour le renseignement et le sabotage potentiel."
         }
       },
       {
@@ -124,60 +192,112 @@
           "fr": "Chine"
         },
         "geographic_zone_strategic_analyse": {
-          "en": "Chinese operations (Salt Typhoon, FamousSparrow) are aggressively targeting regional energy sovereignty and Western MSPs. They utilize sophisticated exploits in edge devices and IT management software to gain deep persistence in government and industrial networks.",
-          "fr": "Les opérations chinoises (Salt Typhoon, FamousSparrow) ciblent agressivement la souveraineté énergétique régionale et les MSP occidentaux. Ils utilisent des exploits sophistiqués dans les équipements périmétriques pour s'infiltrer durablement."
+          "en": "Chinese advanced persistent threat groups, including Salt Typhoon, UAT-8302, and FamousSparrow, are executing persistent campaigns targeting Managed Service Providers (MSPs) and networking equipment. They are also actively compromising edge and communication infrastructure, such as Microsoft Exchange, to access national security networks, monitor energy corridors in Caucasus, and exfiltrate strategic operational data.",
+          "fr": "Les groupes APT chinois, dont Salt Typhoon, UAT-8302 et FamousSparrow, mènent des campagnes persistantes contre les fournisseurs de services gérés (MSP) et les équipements réseau. Ils compromettent également des serveurs Exchange pour pénétrer les réseaux gouvernementaux et surveiller les corridors énergétiques d'importance stratégique."
         }
       },
       {
         "geographic_zone_name": {
-          "en": "North Korea",
-          "fr": "Corée du Nord"
+          "en": "Iran",
+          "fr": "Iran"
         },
         "geographic_zone_strategic_analyse": {
-          "en": "Lazarus continues to pioneer supply chain compromise through social engineering of developers. Their 'Contagious Interview' campaign evolved to include malicious Git hooks and poisoned AI library dependencies.",
-          "fr": "Lazarus continue de pionner la compromission de la chaîne d'approvisionnement via l'ingénierie sociale de développeurs. Leur campagne 'Contagious Interview' inclut désormais des hooks Git malveillants."
+          "en": "Iranian state-aligned groups, including MuddyWater/Seedworm, have shifted their cyber focus toward global industrial espionage and critical sectors, specifically targeting aerospace, electronics, and engineering organizations within the Middle East and allied Western nations.",
+          "fr": "Les groupes affiliés à l'État iranien, dont MuddyWater/Seedworm, ont réorienté leurs cyber-opérations vers l'espionnage industriel mondial, ciblant particulièrement l'aérospatiale, l'électronique et l'ingénierie au Moyen-Orient et chez les nations occidentales alliées."
         }
       }
     ],
     "details": [
       {
         "threat_actor_name": "TeamPCP",
-        "origin_country": "Unknown",
+        "origin_country": "North Korea",
         "type": {
-          "en": "Cybercriminal",
-          "fr": "Cybercriminel"
+          "en": "Nation-state",
+          "fr": "Étatique"
         },
         "targeted_sectors": {
           "en": [
             "Technology_and_Telecom",
+            "Finance",
             "Education_and_Research"
           ],
           "fr": [
             "Technology_and_Telecom",
+            "Finance",
             "Education_and_Research"
           ]
         },
         "targeted_regions": {
           "en": [
-            "Global"
+            "Global",
+            "Middle East",
+            "North America"
           ],
           "fr": [
-            "Global"
+            "Global",
+            "Moyen-Orient",
+            "Amérique du Nord"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1195.001",
+          "T1195.002",
+          "T1552.001",
+          "T1613"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Shai-Hulud Worm CI/CD Campaign",
+            "TanStack/Checkmarx Poisoning Campaign",
+            "Mini Shai-Hulud npm worm"
+          ],
+          "fr": [
+            "Campagne de vers CI/CD Shai-Hulud",
+            "Campagne d'empoisonnement TanStack/Checkmarx",
+            "Ver npm Mini Shai-Hulud"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "Lazarus Group",
+        "origin_country": "North Korea",
+        "type": {
+          "en": "Nation-state",
+          "fr": "Étatique"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Technology_and_Telecom",
+            "Finance"
+          ],
+          "fr": [
+            "Technology_and_Telecom",
+            "Finance"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Global",
+            "United States",
+            "Europe"
+          ],
+          "fr": [
+            "Global",
+            "États-Unis",
+            "Europe"
           ]
         },
         "mitre_attack_ttps_id": [
           "T1195.002",
-          "T1567",
-          "T1552"
+          "T1195.003",
+          "T1566.002"
         ],
         "campaign_or_operation": {
           "en": [
-            "Shai-Hulud Worm",
-            "TanStack Poisoning"
+            "Contagious Interview"
           ],
           "fr": [
-            "Ver Shai-Hulud",
-            "Empoisonnement TanStack"
+            "Contagious Interview"
           ]
         }
       },
@@ -191,41 +311,46 @@
         "targeted_sectors": {
           "en": [
             "Education_and_Research",
-            "Retail_and_Consumer"
+            "Retail_and_Consumer",
+            "Technology_and_Telecom"
           ],
           "fr": [
             "Education_and_Research",
-            "Retail_and_Consumer"
+            "Retail_and_Consumer",
+            "Technology_and_Telecom"
           ]
         },
         "targeted_regions": {
           "en": [
+            "Global",
             "United States",
-            "Japan",
             "Australia"
           ],
           "fr": [
+            "Global",
             "États-Unis",
-            "Japon",
             "Australie"
           ]
         },
         "mitre_attack_ttps_id": [
           "T1567",
-          "T1078",
-          "T1491"
+          "T1491",
+          "T1586",
+          "T1078"
         ],
         "campaign_or_operation": {
           "en": [
-            "Canvas Mass Extortion"
+            "Canvas Mass Extortion",
+            "Zara Japan Data Breach"
           ],
           "fr": [
-            "Extorsion de masse Canvas"
+            "Extorsion de masse Canvas",
+            "Violation de données Zara Japon"
           ]
         }
       },
       {
-        "threat_actor_name": "Turla (Secret Blizzard)",
+        "threat_actor_name": "Secret Blizzard",
         "origin_country": "Russia",
         "type": {
           "en": "Nation-state",
@@ -233,10 +358,12 @@
         },
         "targeted_sectors": {
           "en": [
-            "Government_and_Defense"
+            "Government_and_Defense",
+            "Critical_Infrastructure"
           ],
           "fr": [
-            "Government_and_Defense"
+            "Government_and_Defense",
+            "Critical_Infrastructure"
           ]
         },
         "targeted_regions": {
@@ -250,16 +377,65 @@
           ]
         },
         "mitre_attack_ttps_id": [
-          "T1071",
-          "T1014",
-          "T1573.002"
+          "T1071.001",
+          "T1573.002",
+          "T1132.001"
         ],
         "campaign_or_operation": {
           "en": [
-            "Kazuar P2P Evolution"
+            "Kazuar P2P Botnet Operations"
           ],
           "fr": [
-            "Évolution P2P de Kazuar"
+            "Opérations du botnet P2P Kazuar"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "Qilin",
+        "origin_country": "Russia",
+        "type": {
+          "en": "Ransomware",
+          "fr": "Ransomware"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Finance",
+            "Healthcare_and_Life_Sciences",
+            "Education_and_Research",
+            "Government_and_Defense"
+          ],
+          "fr": [
+            "Finance",
+            "Healthcare_and_Life_Sciences",
+            "Education_and_Research",
+            "Government_and_Defense"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Australia",
+            "United Kingdom",
+            "Global"
+          ],
+          "fr": [
+            "Australie",
+            "Royaume-Uni",
+            "Global"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1486",
+          "T1078",
+          "T1567.002"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Generation Life AU Attack",
+            "Australian College of Business Intelligence Extortion"
+          ],
+          "fr": [
+            "Attaque contre Generation Life AU",
+            "Extorsion de l'Australian College of Business Intelligence"
           ]
         }
       }
@@ -267,8 +443,8 @@
   },
   "mitre_attack_ttps": {
     "ttps_strategic_analyse": {
-      "en": "Supply chain poisoning (T1195.002) has become the most frequent and effective entry vector, appearing in every report this month. Attackers have moved away from basic credential stuffing toward session hijacking and OAuth Device Code phishing (T1566.002) to bypass modern MFA. Persistence is increasingly fileless, utilizing eBPF and modular P2P botnets to evade endpoint detection.",
-      "fr": "L'empoisonnement de la chaîne d'approvisionnement (T1195.002) est devenu le vecteur d'entrée le plus fréquent et efficace ce mois-ci. Les attaquants délaissent le credential stuffing basique pour le détournement de session et le phishing OAuth (T1566.002). La persistance est de plus en plus sans fichier, utilisant eBPF."
+      "en": "The threat landscape is undergoing a major transition to 'identity-first' and 'supply-chain-centric' compromise. Attackers have demonstrated that traditional perimeter controls are readily bypassed by polluting packages on public repositories (npm, PyPI) to target software engineers. By stealing active session tokens and abusing OAuth 2.0 Device Code flows, threat actors completely bypass legacy multi-factor authentication (SMS/TOTP), achieving direct access to highly protected cloud environments (Entra ID, AWS GovCloud). Once inside, attackers leverage sophisticated exfiltration protocols and custom peer-to-peer (P2P) botnets to evade security inspection.",
+      "fr": "Le paysage des menaces subit une transition majeure vers des compromissions axées sur l'identité et la chaîne d'approvisionnement. Les attaquants ont démontré que les contrôles périmétriques traditionnels sont contournés en polluant des paquets sur les dépôts publics (npm, PyPI) pour cibler les ingénieurs logiciels. En dérobant des jetons de session actifs et en abusant des flux OAuth 2.0 Device Code, les acteurs contournent le MFA classique (SMS/TOTP), accédant directement aux environnements cloud protégés. Une fois à l'intérieur, les attaquants utilisent des protocoles d'exfiltration sophistiqués et des botnets P2P."
     },
     "ttps_list": [
       {
@@ -282,64 +458,28 @@
         "severity": "critical",
         "context": {
           "en": [
-            "Massive poisoning of npm, PyPI, and VS Code extensions targeting AI/Cloud developers (TeamPCP, Lazarus)."
+            "Observed across all weeks in May 2026. Attackers like TeamPCP and Lazarus poisoned developer dependencies (npm, PyPI, GitHub Actions OIDC) to execute worms and compromise corporate code bases."
           ],
           "fr": [
-            "Empoisonnement massif de npm, PyPI et des extensions VS Code ciblant les développeurs AI/Cloud (TeamPCP, Lazarus)."
+            "Observé chaque semaine en mai 2026. Des attaquants comme TeamPCP et Lazarus ont empoisonné des dépendances (npm, PyPI, OIDC GitHub Actions) pour propager des vers et compromettre des bases de code."
           ]
         }
       },
       {
-        "id": "T1190",
+        "id": "T1566",
         "tactic": {
           "en": "Initial Access",
           "fr": "Accès Initial"
         },
-        "technique_name": "Exploit Public-Facing Application",
-        "frequency": 3,
-        "severity": "critical",
-        "context": {
-          "en": [
-            "Exploitation of CVSS 10.0 flaws in Cisco Catalyst, PAN-OS, and Quest KACE throughout the month."
-          ],
-          "fr": [
-            "Exploitation de failles CVSS 10.0 dans Cisco Catalyst, PAN-OS et Quest KACE tout au long du mois."
-          ]
-        }
-      },
-      {
-        "id": "T1566.002",
-        "tactic": {
-          "en": "Initial Access",
-          "fr": "Accès Initial"
-        },
-        "technique_name": "Phishing: Spearphishing Link",
+        "technique_name": "Phishing",
         "frequency": 3,
         "severity": "high",
         "context": {
           "en": [
-            "Deployment of Tycoon2FA and Bluekit kits using OAuth 2.0 Device Code phishing to bypass MFA."
+            "Widespread deployment of AI-enhanced phishing kits (Bluekit, ConsentFix v3), Claude.ai shared-chat delivery systems, and Tycoon2FA OAuth Device Code phishing."
           ],
           "fr": [
-            "Déploiement des kits Tycoon2FA et Bluekit utilisant le phishing de code OAuth 2.0 pour contourner le MFA."
-          ]
-        }
-      },
-      {
-        "id": "T1078",
-        "tactic": {
-          "en": "Defense Evasion",
-          "fr": "Évasion de Défense"
-        },
-        "technique_name": "Valid Accounts",
-        "frequency": 2,
-        "severity": "high",
-        "context": {
-          "en": [
-            "Use of infostealer-harvested tokens by ShinyHunters and MuddyWater to maintain access in cloud environments."
-          ],
-          "fr": [
-            "Utilisation de jetons volés par ShinyHunters et MuddyWater pour maintenir l'accès aux environnements cloud."
+            "Déploiement généralisé de kits de phishing assistés par IA (Bluekit, ConsentFix v3), d'abus des chats partagés Claude.ai et de phishing Tycoon2FA ciblant le flux Device Code."
           ]
         }
       },
@@ -351,13 +491,67 @@
         },
         "technique_name": "Data Encrypted for Impact",
         "frequency": 2,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "Ransomware encryption operations deployed by ALPHV, Qilin, Nitrogen, and Sorry Ransomware targeting industrial control systems and healthcare facilities."
+          ],
+          "fr": [
+            "Opérations de chiffrement par ransomware déployées par ALPHV, Qilin, Nitrogen et Sorry Ransomware ciblant les systèmes industriels et les établissements de santé."
+          ]
+        }
+      },
+      {
+        "id": "T1190",
+        "tactic": {
+          "en": "Initial Access",
+          "fr": "Accès Initial"
+        },
+        "technique_name": "Exploit Public-Facing Application",
+        "frequency": 1,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "Active edge exploitation targeting CVE-2026-41940 (cPanel), CVE-2026-0300 (PAN-OS), and CVE-2026-20182 (Cisco Catalyst SD-WAN) to secure initial administrative access."
+          ],
+          "fr": [
+            "Exploitation active en bordure de réseau ciblant la CVE-2026-41940 (cPanel), la CVE-2026-0300 (PAN-OS) et la CVE-2026-20182 (Cisco Catalyst SD-WAN) pour obtenir des accès administrateur."
+          ]
+        }
+      },
+      {
+        "id": "T1078",
+        "tactic": {
+          "en": "Defense Evasion",
+          "fr": "Évasion de Défense"
+        },
+        "technique_name": "Valid Accounts",
+        "frequency": 1,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "Systemic abuse of valid administrative and user accounts harvested via infostealers or session hijacking to bypass perimeter protections and persist in cloud platforms."
+          ],
+          "fr": [
+            "Abus systémique de comptes d'utilisateurs et d'administrateurs légitimes dérobés via des infostealers ou du vol de session pour contourner la sécurité périmétrique."
+          ]
+        }
+      },
+      {
+        "id": "T1071",
+        "tactic": {
+          "en": "Command and Control",
+          "fr": "Commande et Contrôle"
+        },
+        "technique_name": "Application Layer Protocol",
+        "frequency": 1,
         "severity": "high",
         "context": {
           "en": [
-            "Ransomware activity by Qilin, Nitrogen, and Sorry Ransomware targeting manufacturing and healthcare."
+            "Abuse of non-standard messaging frameworks (NATS cloud messaging) to harvest API secrets, and custom WebSocket implementations within Kazuar's leader-worker P2P configuration."
           ],
           "fr": [
-            "Activité de rançongiciel par Qilin, Nitrogen et Sorry Ransomware ciblant l'industrie et la santé."
+            "Abus de frameworks de messagerie non standard (NATS) pour exfiltrer des clés d'API, et implémentations de WebSockets personnalisés au sein de l'architecture P2P de Kazuar."
           ]
         }
       }
@@ -365,33 +559,10 @@
   },
   "vulnerabilities": {
     "analyse": {
-      "en": "The month was dominated by high-impact vulnerabilities in perimeter and management appliances. The exposure of CVSS 10.0 flaws in Cisco and PAN-OS suggests that even hardened network stacks are failing against modern fuzzing. Simultaneously, kernel-level exploits (Dirty Frag, MiniPlasma) provided reliable root access for local privilege escalation on millions of Linux and Windows systems.",
-      "fr": "Le mois a été dominé par des vulnérabilités à fort impact dans les équipements de gestion et de périmètre. L'exposition de failles CVSS 10.0 chez Cisco et PAN-OS suggère que même les piles réseau durcies échouent face au fuzzing moderne."
+      "en": "May 2026 exposed severe vulnerabilities across edge network appliances, system core architectures, and web-hosting backbones. Zero-days in PAN-OS and Catalyst SD-WAN, coupled with regression bugs in widely used components like NGINX, allowed remote attackers to bypass authentication and execute code as root. Simultaneously, Linux kernel privilege escalation exploits (such as 'Dirty Frag' and 'Copy Fail') became highly prioritized by ransomware and state groups to transition from initial server access to deep network compromises.",
+      "fr": "Le mois de mai 2026 a révélé de graves vulnérabilités dans les équipements réseau de bordure, les architectures système et les serveurs web. Les failles zero-day dans PAN-OS et Catalyst SD-WAN, combinées à des régressions historiques dans des composants très répandus comme NGINX, ont permis à des attaquants distants de contourner l'authentification et d'exécuter du code comme root. De même, les élévations de privilèges du noyau Linux ont été priorisées par les rançongiciels."
     },
     "list": [
-      {
-        "cve_id": "CVE-2026-20182",
-        "cvss_score": 10.0,
-        "epss_score": "N/A",
-        "cisa_kev": true,
-        "affected_product": "Cisco Catalyst SD-WAN",
-        "affected_product_vendor": "Cisco",
-        "vulnerability_type": {
-          "en": [
-            "Authentication Bypass"
-          ],
-          "fr": [
-            "Contournement d'authentification"
-          ]
-        },
-        "vulnerability_description": {
-          "en": "Critical authentication bypass in SD-WAN management allowing unauthenticated RCE as root. Actively exploited by UAT-8616.",
-          "fr": "Contournement d'authentification critique dans la gestion SD-WAN permettant une RCE non authentifiée en tant que root."
-        },
-        "mitre_attack_ttps_id": [
-          "T1190"
-        ]
-      },
       {
         "cve_id": "CVE-2026-0300",
         "cvss_score": 10.0,
@@ -401,18 +572,174 @@
         "affected_product_vendor": "Palo Alto Networks",
         "vulnerability_type": {
           "en": [
-            "Buffer Overflow"
+            "Buffer Overflow",
+            "Remote Code Execution (RCE)"
           ],
           "fr": [
-            "Dépassement de tampon"
+            "Dépassement de tampon",
+            "Exécution de code à distance (RCE)"
           ]
         },
         "vulnerability_description": {
-          "en": "Buffer overflow in the Captive Portal component allowing unauthenticated remote code execution with root privileges.",
-          "fr": "Dépassement de tampon dans le composant Captive Portal permettant une exécution de code à distance non authentifiée."
+          "en": "A critical buffer overflow vulnerability in the Captive Portal component of PAN-OS allows an unauthenticated remote attacker to execute arbitrary code with root privileges on the device.",
+          "fr": "Un dépassement de tampon critique dans le composant Portail Captif de PAN-OS permet à un attaquant distant non authentifié d'exécuter du code arbitraire avec les privilèges root."
         },
         "mitre_attack_ttps_id": [
           "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-41940",
+        "cvss_score": 9.8,
+        "epss_score": "N/A",
+        "cisa_kev": true,
+        "affected_product": "cPanel & WHM",
+        "affected_product_vendor": "WebPros",
+        "vulnerability_type": {
+          "en": [
+            "Authentication Bypass",
+            "CRLF Injection"
+          ],
+          "fr": [
+            "Contournement d'authentification",
+            "Injection CRLF"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Critical authentication bypass via CRLF injection allowing remote code execution as root on web hosting servers running cPanel.",
+          "fr": "Contournement d'authentification critique via injection CRLF permettant une exécution de code à distance en tant que root sur les serveurs d'hébergement cPanel."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-42897",
+        "cvss_score": 9.8,
+        "epss_score": "N/A",
+        "cisa_kev": true,
+        "affected_product": "Exchange Server",
+        "affected_product_vendor": "Microsoft",
+        "vulnerability_type": {
+          "en": [
+            "Security Bypass",
+            "Cross-Site Scripting (XSS)",
+            "Remote Code Execution (RCE)"
+          ],
+          "fr": [
+            "Contournement de Sécurité",
+            "Cross-Site Scripting (XSS)",
+            "Exécution de code à distance (RCE)"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "A critical security bypass and cross-site scripting vulnerability in Outlook Web Access (OWA) allowing attackers to inject scripts and execute arbitrary code on web endpoints.",
+          "fr": "Une faille critique de contournement de sécurité et d'injection de script (XSS) dans OWA permettant aux attaquants d'injecter des scripts malveillants et d'exécuter du code sur les endpoints."
+        },
+        "mitre_attack_ttps_id": [
+          "T1203"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-20182",
+        "cvss_score": 10.0,
+        "epss_score": "N/A",
+        "cisa_kev": true,
+        "affected_product": "Catalyst SD-WAN",
+        "affected_product_vendor": "Cisco",
+        "vulnerability_type": {
+          "en": [
+            "Authentication Bypass",
+            "Remote Code Execution"
+          ],
+          "fr": [
+            "Contournement d'authentification",
+            "Exécution de code à distance"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Authentication bypass vulnerability in Cisco Catalyst SD-WAN's NETCONF/REST APIs allowing unauthenticated attackers to execute commands as an administrator on the controller plane.",
+          "fr": "Contournement d'authentification critique dans les API NETCONF/REST de Cisco Catalyst SD-WAN permettant à un attaquant d'exécuter des commandes d'administration."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-42945",
+        "cvss_score": 9.2,
+        "epss_score": "N/A",
+        "cisa_kev": true,
+        "affected_product": "NGINX Plus / NGINX Open Source",
+        "affected_product_vendor": "F5",
+        "vulnerability_type": {
+          "en": [
+            "Heap Buffer Overflow",
+            "Remote Code Execution"
+          ],
+          "fr": [
+            "Débordement de mémoire tas (Heap Overflow)",
+            "Exécution de code à distance"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "An 18-year-old heap buffer overflow regression in NGINX core's regular expression parser, enabling denial of service and potential remote code execution.",
+          "fr": "Régression de débordement de mémoire tas vieille de 18 ans dans le parseur de regex de NGINX, provoquant des dénis de service ou de l'exécution de code."
+        },
+        "mitre_attack_ttps_id": [
+          "T1203"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-31431",
+        "cvss_score": 7.8,
+        "epss_score": "N/A",
+        "cisa_kev": true,
+        "affected_product": "Linux Kernel",
+        "affected_product_vendor": "Linux Foundation",
+        "vulnerability_type": {
+          "en": [
+            "Logic Bug",
+            "Local Privilege Escalation"
+          ],
+          "fr": [
+            "Erreur logique",
+            "Élévation de privilèges locale"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "'Copy Fail' vulnerability in the algif_aead module allowing local privilege escalation to root.",
+          "fr": "Vulnérabilité 'Copy Fail' dans le module algif_aead permettant une élévation de privilèges locale vers root."
+        },
+        "mitre_attack_ttps_id": [
+          "T1068"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-43284",
+        "cvss_score": 7.8,
+        "epss_score": "N/A",
+        "cisa_kev": true,
+        "affected_product": "Linux Kernel",
+        "affected_product_vendor": "Linux Foundation",
+        "vulnerability_type": {
+          "en": [
+            "Memory Corruption",
+            "Fragmentation",
+            "Local Privilege Escalation"
+          ],
+          "fr": [
+            "Corruption de mémoire",
+            "Fragmentation",
+            "Élévation de privilèges locale"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Known as 'Dirty Frag', this page-cache corruption in network fragmentation handling allows deterministic local privilege escalation to root.",
+          "fr": "Connue sous le nom de 'Dirty Frag', cette corruption du cache de page dans la fragmentation réseau permet une élévation de privilèges locale et déterministe vers root."
+        },
+        "mitre_attack_ttps_id": [
+          "T1068"
         ]
       },
       {
@@ -420,22 +747,24 @@
         "cvss_score": 10.0,
         "epss_score": "N/A",
         "cisa_kev": false,
-        "affected_product": "KACE SMA",
+        "affected_product": "KACE Systems Management Appliance (SMA)",
         "affected_product_vendor": "Quest",
         "vulnerability_type": {
           "en": [
-            "SSO Authentication Bypass"
+            "Authentication Bypass",
+            "Remote Code Execution"
           ],
           "fr": [
-            "Contournement d'authentification SSO"
+            "Contournement d'authentification",
+            "Exécution de code à distance"
           ]
         },
         "vulnerability_description": {
-          "en": "Critical flaw in IT management appliance allowing takeover of all managed endpoints; used to breach HIQ and its 60+ clients.",
-          "fr": "Faille critique dans l'appliance de gestion IT permettant la prise de contrôle de tous les points de terminaison managés."
+          "en": "Critical authentication bypass in Quest KACE SMA Single Sign-On (SSO) configuration, allowing unauthenticated remote attackers to gain full administrative access and compromise connected endpoints.",
+          "fr": "Contournement d'authentification critique dans la configuration SSO de Quest KACE SMA, permettant à des attaquants distants de prendre le contrôle d'appliances et d'équipements gérés."
         },
         "mitre_attack_ttps_id": [
-          "T1078"
+          "T1203"
         ]
       }
     ]
@@ -449,39 +778,20 @@
       "data_types": {
         "en": [
           "Student IDs",
-          "Private messages",
-          "Academic records"
+          "Names",
+          "Emails",
+          "Private messages"
         ],
         "fr": [
           "IDs étudiants",
-          "Messages privés",
-          "Dossiers académiques"
+          "Noms",
+          "Emails",
+          "Messages privés"
         ]
       },
       "threat_actor": "ShinyHunters",
       "financial_impact_usd": null,
-      "source_url": "https://www.bleepingcomputer.com/news/security/instructure-confirms-data-breach-shinyhunters-claims-attack/"
-    },
-    {
-      "victim": "Foxconn",
-      "sector": "Industry_and_Manufacturing",
-      "country": "Taiwan",
-      "records_count": null,
-      "data_types": {
-        "en": [
-          "Technical blueprints (Apple, Google, Intel)",
-          "Confidential trade secrets",
-          "8TB data"
-        ],
-        "fr": [
-          "Plans techniques (Apple, Google, Intel)",
-          "Secrets commerciaux",
-          "8 To de données"
-        ]
-      },
-      "threat_actor": "Nitrogen",
-      "financial_impact_usd": null,
-      "source_url": "https://securityaffairs.com/192099/uncategorized/nitrogen-ransomware-claims-massive-data-theft-from-foxconn.html"
+      "source_url": "https://www.bleepingcomputer.com/news/security/canvas-login-portals-hacked-in-mass-shinyhunters-extortion-campaign/"
     },
     {
       "victim": "ANTS (France)",
@@ -490,145 +800,287 @@
       "records_count": 19000000,
       "data_types": {
         "en": [
-          "PII",
-          "Birth dates",
-          "Identity document metadata"
+          "Personally Identifiable Information (PII)",
+          "Names",
+          "Emails",
+          "Birth dates"
         ],
         "fr": [
-          "PII",
-          "Dates de naissance",
-          "Métadonnées de documents d'identité"
+          "Données d'identification personnelle (PII)",
+          "Noms",
+          "Emails",
+          "Dates de naissance"
         ]
       },
       "threat_actor": "breach3d",
       "financial_impact_usd": null,
       "source_url": "https://www.lemonde.fr/pixels/article/2026/04/30/piratage-de-l-ants-un-mineur-de-15-ans-interpelle_6684591_4408996.html"
+    },
+    {
+      "victim": "Atrium Health / Interim Health",
+      "sector": "Healthcare_and_Life_Sciences",
+      "country": "United States",
+      "records_count": 2600000,
+      "data_types": {
+        "en": [
+          "Social Security Numbers (SSN)",
+          "Patient medical records"
+        ],
+        "fr": [
+          "Numéros de sécurité sociale (SSN)",
+          "Dossiers médicaux des patients"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://infosec.exchange/@verisizintisi/116575658465063366"
+    },
+    {
+      "victim": "Gîtes de France / Belambra / Pierre & Vacances",
+      "sector": "Hospitality_and_Entertainment",
+      "country": "France",
+      "records_count": 472000,
+      "data_types": {
+        "en": [
+          "Personally Identifiable Information (PII)",
+          "Customer contacts",
+          "30-year historical booking logs"
+        ],
+        "fr": [
+          "Données d'identification personnelle (PII)",
+          "Contacts clients",
+          "Historique de réservation sur 30 ans"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://www.lemonde.fr/pixels/article/2026/05/18/gites-de-france-annonce-a-son-tour-avoir-ete-vise-par-une-cyberattaque-apres-les-groupes-pierre-et-vacances-center-parcs-et-belambra_6690376_4408996.html"
+    },
+    {
+      "victim": "Zara (Inditex)",
+      "sector": "Retail_and_Consumer",
+      "country": "Japan",
+      "records_count": 197400,
+      "data_types": {
+        "en": [
+          "Purchase History",
+          "Support Tickets",
+          "Emails"
+        ],
+        "fr": [
+          "Historique d'achat",
+          "Tickets support",
+          "Emails"
+        ]
+      },
+      "threat_actor": "ShinyHunters",
+      "financial_impact_usd": null,
+      "source_url": "https://www.bleepingcomputer.com/news/security/zara-data-breach-exposed-personal-information-of-197-000-people/"
+    },
+    {
+      "victim": "OpenAI / Mistral AI",
+      "sector": "Technology_and_Telecom",
+      "country": "United States",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "Source code",
+          "CI/CD secrets",
+          "GitHub repositories",
+          "npm tokens"
+        ],
+        "fr": [
+          "Code source",
+          "Secrets CI/CD",
+          "Dépôts GitHub",
+          "Jetons npm"
+        ]
+      },
+      "threat_actor": "TeamPCP",
+      "financial_impact_usd": null,
+      "source_url": "https://www.bleepingcomputer.com/news/security/teampcp-hackers-advertise-mistral-ai-code-repos-for-sale/"
+    },
+    {
+      "victim": "Foxconn",
+      "sector": "Industry_and_Manufacturing",
+      "country": "Taiwan",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "Confidential commercial documents",
+          "Industrial CAD drawings",
+          "Client designs (Intel, Apple, Google)"
+        ],
+        "fr": [
+          "Documents commerciaux confidentiels",
+          "Dessins industriels (CAD)",
+          "Modèles de conception clients (Intel, Apple, Google)"
+        ]
+      },
+      "threat_actor": "Nitrogen",
+      "financial_impact_usd": null,
+      "source_url": "https://securityaffairs.com/192099/uncategorized/nitrogen-ransomware-claims-massive-data-theft-from-foxconn.html"
+    },
+    {
+      "victim": "CISA (via GovCloud Administrator)",
+      "sector": "Government_and_Defense",
+      "country": "United States",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "AWS GovCloud API Keys",
+          "Artifactory access tokens",
+          "SSH private keys",
+          "Administrative credentials"
+        ],
+        "fr": [
+          "Clés d'API AWS GovCloud",
+          "Jetons d'accès Artifactory",
+          "Clés privées SSH",
+          "Identifiants d'administration"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://krebsonsecurity.com/2026/05/cisa-admin-leaked-aws-govcloud-keys-on-github/"
     }
   ],
   "target": {
     "sectors": {
       "en": [
-        "Education_and_Research",
         "Government_and_Defense",
+        "Education_and_Research",
         "Technology_and_Telecom",
-        "Industry_and_Manufacturing",
-        "Healthcare_and_Life_Sciences",
-        "Critical_Infrastructure",
         "Finance",
-        "Hospitality_and_Entertainment"
+        "Critical_Infrastructure",
+        "Healthcare_and_Life_Sciences",
+        "Retail_and_Consumer",
+        "Hospitality_and_Entertainment",
+        "Industry_and_Manufacturing",
+        "Real_Estate_and_Construction"
       ],
       "fr": [
-        "Education_and_Research",
         "Government_and_Defense",
+        "Education_and_Research",
         "Technology_and_Telecom",
-        "Industry_and_Manufacturing",
-        "Healthcare_and_Life_Sciences",
-        "Critical_Infrastructure",
         "Finance",
-        "Hospitality_and_Entertainment"
+        "Critical_Infrastructure",
+        "Healthcare_and_Life_Sciences",
+        "Retail_and_Consumer",
+        "Hospitality_and_Entertainment",
+        "Industry_and_Manufacturing",
+        "Real_Estate_and_Construction"
       ]
     },
     "countries": {
       "en": [
-        "United States",
         "France",
+        "United States",
+        "Italy",
+        "Brazil",
         "Taiwan",
+        "United Kingdom",
         "Poland",
-        "Azerbaijan",
         "Japan",
-        "Brazil"
+        "Australia",
+        "Canada",
+        "Colombia"
       ],
       "fr": [
-        "États-Unis",
         "France",
+        "États-Unis",
+        "Italie",
+        "Brésil",
         "Taïwan",
+        "Royaume-Uni",
         "Pologne",
-        "Azerbaïdjan",
         "Japon",
-        "Brésil"
+        "Australie",
+        "Canada",
+        "Colombie"
       ]
     },
     "narrative": {
-      "en": "- **Education & Research:** Instructure (Canvas LMS) suffered a monumental breach by ShinyHunters, affecting 280M records across 8,800 institutions worldwide.\n- **Public Sector & Govt:** ANTS (France) exposed 19M identity records, while the FBI and FDIC faced significant data compromises via third-party contractor failures.\n- **Technology & Telecom:** OpenAI and Mistral AI source code and secrets exfiltrated via TanStack npm poisoning; Trellix source code stolen by RansomHouse.\n- **Industry & Manufacturing:** Nitrogen ransomware exfiltrated 8TB of technical blueprints from Foxconn, including intellectual property for Apple and Intel.\n- **Healthcare:** Atrium Health (USA) and a major Dutch laboratory (850k patients) suffered massive PHI breaches impacting millions of citizens.\n- **Critical Infrastructure:** Sabotage of Polish water treatment plants by APT28 and unauthorized root access to Venice flood defense systems highlight physical safety risks.\n- **Finance:** Generation Life (Australia) and Brazilian banks targeted via WhatsApp and Qilin ransomware campaigns.\n- **Hospitality:** Itea (France) breach exposed 30 years of historical booking data for Gîtes de France and Belambra, affecting nearly 500k customers.",
-      "fr": "- **Éducation :** Instructure (Canvas LMS) a subi une violation monumentale par ShinyHunters, affectant 280 millions d'enregistrements dans 8 800 institutions.\n- **Secteur Public :** L'ANTS (France) a exposé 19 millions de dossiers d'identité ; le FBI et la FDIC ont également subi des compromissions via des prestataires.\n- **Technologie :** Le code source d'OpenAI et Mistral AI a été exfiltré via l'empoisonnement npm de TanStack ; Trellix a perdu son code source au profit de RansomHouse.\n- **Industrie :** Le ransomware Nitrogen a exfiltré 8 To de plans techniques de Foxconn, incluant la propriété intellectuelle d'Apple et d'Intel.\n- **Santé :** Atrium Health (USA) et un laboratoire néerlandais (850k patients) ont subi des violations massives de données de santé (PHI).\n- **Infrastructures Critiques :** Sabotage de stations d'eau en Pologne par APT28 et accès root non autorisé aux défenses contre les inondations à Venise.\n- **Finance :** Generation Life (Australie) et des banques brésiliennes ciblées par WhatsApp et les campagnes Qilin.\n- **Hôtellerie :** La violation d'Itea (France) a exposé 30 ans de données historiques pour Gîtes de France et Belambra, affectant 500 000 clients."
+      "en": "- **Technology & Telecom:** OpenAI and Mistral AI suffered major supply chain compromises via poisoned TanStack npm packages, exposing 5 GB of source code (450 repositories), while Grafana Labs' codebase was exfiltrated by CoinbaseCartel using stolen GitHub PAT tokens.\n- **Government & Defense:** A CISA administrator leaked AWS GovCloud credentials, access tokens, and SSH keys on a public GitHub repo, compromising 3 secure GovCloud servers, while the French ANTS agency was hit by a major breach exposing 19 million citizen records.\n- **Healthcare & Life Sciences:** Atrium Health and Interim Health were breached, leaking SSNs and medical records of 2.6 million patients, while NYC Health + Hospitals suffered a breach exposing medical records of 1.8 million individuals.\n- **Finance & Insurance:** Colombian fintech Addi had 34 million accounts leaked exposing credit scores and revenues; AXA Pet Insurance Japan leaked 64,000 policyholder records, and Brazil's banking sector was targeted by TCLBANKER via WhatsApp.\n- **Retail & Hospitality:** Over 472,000 historical customer profiles spanning 30 years were compromised at French tourism giants Gîtes de France, Belambra, and Pierre & Vacances following an attack on their shared software supplier Itea; Inditex (Zara Japan) exposed 197,400 records.\n- **Education & Research:** Canvas platform provider Instructure (Canvas LMS) suffered a monumental breach by ShinyHunters, affecting 280 million student and administrative records across 8,800 educational institutions worldwide.\n- **Industry & Manufacturing:** Electronics manufacturing giant Foxconn suffered a massive 8 TB data theft by the Nitrogen ransomware group, exposing technical drawings and industrial designs of global clients such as Apple, Intel, and Google.\n- **Critical Infrastructure:** Sabotage operations targeted Polish water treatment plants (APT28) and Venice Flood Defense systems (unauthorized root access), while Taiwan High Speed Rail emergency brakes were remotely activated via radio injection.",
+      "fr": "- **Technologie et Télécoms :** OpenAI et Mistral AI ont subi des intrusions de la chaîne d'approvisionnement via des paquets npm TanStack compromis, exposant 5 Go de code source, tandis que le code de Grafana Labs a été dérobé par CoinbaseCartel.\n- **Gouvernement et Défense :** Un administrateur de la CISA a publié par erreur des clés AWS GovCloud et SSH sur GitHub, exposant 3 serveurs étatiques d'importance nationale, alors que l'ANTS en France a été visée par une fuite de 19 millions d'enregistrements.\n- **Santé et Sciences de la vie :** Atrium Health et Interim Health ont été piratés, exposant les numéros de sécurité sociale et données médicales de 2,6 millions de patients, tandis que NYC Health + Hospitals a subi une violation affectant 1,8 million d'individus.\n- **Finance et Assurances :** La fintech colombienne Addi a vu 34 millions de comptes compromis, AXA Pet Insurance Japan a perdu 64 000 dossiers d'assurés, et le secteur bancaire brésilien a été ciblé par le malware de phishing WhatsApp TCLBANKER.\n- **Commerce et Consommation (Tourisme/E-commerce) :** Plus de 472 000 dossiers clients s'étendant sur 30 ans ont été volés chez Gîtes de France, Belambra et Pierre & Vacances suite à l'intrusion chez leur prestataire Itea ; Zara Japon a exposé 197 400 dossiers.\n- **Éducation et Recherche :** Instructure (Canvas LMS) a subi une violation monumentale par ShinyHunters, affectant 280 millions d'enregistrements d'étudiants et d'administrateurs au sein de 8 800 institutions.\n- **Industrie et Secteur Manufacturier :** Le constructeur d'électronique Foxconn a été victime du vol de 8 To de documents techniques confidentiels (plans industriels CAD) par le groupe Nitrogen, impactant des clients comme Intel, Apple et Google.\n- **Infrastructures Critiques :** Des opérations de sabotage ont visé des usines de traitement d'eau polonaises (APT28) et le système de vannes de Venise, tandis que les freins du TGV taïwanais ont été activés à distance par injection radio."
     }
   },
   "trends": {
     "emerging_techniques": {
       "en": [
-        "Wormified supply chain attacks (Mini Shai-Hulud)",
-        "OAuth 2.0 Device Code phishing (Tycoon2FA)",
-        "C2 over NATS messaging protocol (KeyHunter)",
-        "Rootkits leveraging eBPF for fileless persistence",
-        "AI-cloned voice vishing for helpdesk social engineering"
+        "Abusing OAuth 2.0 Device Code flow (microsoft.com/devicelogin) to register attacker-controlled machines inside Entra ID.",
+        "Compromising OpenID Connect (OIDC) identities in CI/CD environments to issue legitimate SLSA Level 3 code provenance attestations for malware.",
+        "Using NATS cloud-native messaging frameworks as evasive Command and Control (C2) protocols to harvest secrets from AI applications.",
+        "Exploiting VSCode local tasks config (.vscode/tasks.json) with runOn:folderOpen to execute code upon directory opening.",
+        "OIDC token theft for viral supply chain propagation (Mini Shai-Hulud worm)"
       ],
       "fr": [
-        "Attaques supply chain vermifiées (Mini Shai-Hulud)",
-        "Phishing de code d'appareil OAuth 2.0 (Tycoon2FA)",
-        "C2 via le protocole de messagerie NATS (KeyHunter)",
-        "Rootkits exploitant eBPF pour une persistance sans fichier",
-        "Vishing par clonage de voix IA pour l'ingénierie sociale"
+        "Détournement du flux OAuth 2.0 Device Code (microsoft.com/devicelogin) pour enregistrer des terminaux contrôlés par l'attaquant dans Entra ID.",
+        "Compromission d'identités OpenID Connect (OIDC) en environnement CI/CD pour émettre des attestations SLSA Niveau 3 de provenance légitime sur des codes malveillants.",
+        "Utilisation de frameworks de messagerie cloud NATS comme protocole C2 furtif pour exfiltrer des clés d'API d'applications d'IA.",
+        "Exploitation de la configuration locale de tâches VSCode (.vscode/tasks.json) avec l'instruction runOn:folderOpen pour forcer l'exécution de code à l'ouverture d'un répertoire.",
+        "Vol de jetons OIDC pour la propagation virale en supply chain (ver Mini Shai-Hulud)"
       ]
     },
     "declining_techniques": {
       "en": [
-        "Traditional SMS/TOTP MFA (consistently bypassed by AiTM/Device Code phishing)",
-        "Unobfuscated Python payloads",
-        "Ransomware encryption without double extortion (exfiltration is now mandatory)"
+        "Traditional web-based forms credentials harvesting, which is increasingly blocked by phishing-resistant security filters.",
+        "Symmetric, static-key C2 beaconing over basic HTTP ports (80/443), easily detected by modern NDR tools.",
+        "Traditional SMS/TOTP MFA (systematically bypassed by modern AiTM/Vishing tools)."
       ],
       "fr": [
-        "MFA traditionnel par SMS/TOTP (systématiquement contourné)",
-        "Payloads Python non obfusqués",
-        "Chiffrement ransomware sans double extorsion (l'exfiltration est désormais la norme)"
+        "Collecte classique d'identifiants par formulaires web, de plus en plus neutralisée par les filtres de sécurité anti-phishing.",
+        "Balises C2 symétriques à clés statiques via des ports HTTP basiques (80/443), facilement détectées par les solutions NDR modernes.",
+        "MFA traditionnel par SMS/TOTP (systématiquement contourné par les outils de phishing AiTM et de vishing)."
       ]
     },
     "geopolitical_context": {
-      "en": "Cyber operations are now fully integrated with kinetic and economic warfare. The targeting of energy infrastructure in the Caucasus and water systems in Europe reflects a strategy of 'destabilization via utilities.' The concentration of AI infrastructure has created a new global single-point-of-failure risk.",
-      "fr": "Les opérations cyber sont désormais pleinement intégrées à la guerre cinétique et économique. Le ciblage des infrastructures énergétiques dans le Caucase et des systèmes d'eau en Europe reflète une stratégie de déstabilisation des services publics."
+      "en": "Cyber operations are increasingly synchronized with physical conflicts and hybrid blockades, as seen in the energy corridor targeting in the Southern Caucasus and the sabotage of water utilities in Poland and Venice. Concurrently, North Korean and Russian state actors are heavily focusing cyber campaigns on Western technology, energy, and AI industries to circumvent international sanctions, bypass supply chain boundaries, and fuel state-directed military and intelligence programs.",
+      "fr": "Les cyber-opérations sont de plus en plus synchronisées avec les conflits physiques et les blocus hybrides, comme en témoignent le ciblage des corridors énergétiques dans le Caucase du Sud et le sabotage des infrastructures de distribution d'eau en Pologne et à Venise. En parallèle, les acteurs étatiques russes et nord-coréens concentrent leurs efforts sur la technologie, l'énergie et l'IA pour contourner les sanctions internationales."
     }
   },
   "recommendations": {
     "strategic": {
       "en": [
         {
-          "title": "Enforce FIDO2 Hardware MFA Organization-Wide",
-          "detail": "Legacy MFA (SMS/TOTP) is systematically bypassed by Tycoon2FA and Bluekit campaigns observed this month. Deploy FIDO2/WebAuthn hardware keys (e.g., YubiKey 5) for all accounts, prioritize developers and admins, and restrict Device Code flows in Entra ID to mitigate session hijacking."
+          "title": "Enforce Phishing-Resistant FIDO2 Hardware MFA",
+          "detail": "Given the widespread exploitation of session-hijacking and Device Code phishing (e.g., Tycoon2FA, EvilTokens) observed in May 2026, legacy MFA methods like SMS or TOTP are no longer viable. Deploy FIDO2/WebAuthn hardware keys (such as YubiKey 5 or Google Titan) for all administrative, developer, and high-privilege corporate accounts. Implement Entra ID Conditional Access policies to strictly block non-compliant, unmanaged endpoints from receiving session tokens."
         },
         {
-          "title": "Mandate Cryptographic Dependency Verification",
-          "detail": "Given the 'wormification' of npm/PyPI by TeamPCP, move from mutable version tags to pinning dependencies via SHA-256 hashes. Implement automated Software Composition Analysis (SCA) using tools like Snyk or Checkmarx to block malicious preinstall hooks and lifecycle scripts in CI/CD pipelines."
+          "title": "Harden Software Supply Chain and CI/CD Pipelines",
+          "detail": "In light of the automated repository poisoning campaigns launched by TeamPCP targeting developer ecosystems (npm, PyPI, GitHub), engineering groups must transition from loose semantic version ranges to strict cryptographic pinning (SHA-256 hashes) in dependency lockfiles. Configure CI/CD environments to enforce minimal-privilege OpenID Connect (OIDC) and GitHub Actions token scopes, preventing runners from acting as exfiltration conduits for cloud credentials."
         }
       ],
       "fr": [
         {
-          "title": "Imposer le MFA matériel FIDO2 dans toute l'organisation",
-          "detail": "Le MFA hérité (SMS/TOTP) est systématiquement contourné par les campagnes Tycoon2FA et Bluekit. Déployez des clés matérielles FIDO2 (ex: YubiKey 5) pour tous les comptes, en priorité les développeurs, et restreignez les flux 'Device Code' dans Entra ID."
+          "title": "Imposer l'authentification MFA matérielle FIDO2",
+          "detail": "Face aux compromissions massives de sessions et au phishing ciblant le flux Device Code (ex. Tycoon2FA, EvilTokens), le MFA traditionnel par SMS ou TOTP n'est plus suffisant. Déployez des clés matérielles FIDO2/WebAuthn (comme les YubiKey 5) pour tous les comptes d'administration et de développement. Configurez des règles d'accès conditionnel Entra ID pour rejeter l'accès des postes non gérés."
         },
         {
-          "title": "Imposer la vérification cryptographique des dépendances",
-          "detail": "Face à la 'vermification' des dépôts par TeamPCP, passez des tags de version mutables au verrouillage par hash SHA-256. Implémentez une analyse SCA automatisée (Snyk, Checkmarx) pour bloquer les hooks 'preinstall' malveillants dans les pipelines CI/CD."
+          "title": "Sécuriser la chaîne d'approvisionnement et CI/CD",
+          "detail": "Suite aux attaques de TeamPCP empoisonnant les registres npm/PyPI, les équipes d'ingénierie doivent abandonner l'usage de dépendances floues au profit d'un verrouillage par signatures cryptographiques (SHA-256) dans les fichiers de verrouillage. Limitez les droits des jetons OIDC de GitHub Actions au strict nécessaire pour empêcher que les serveurs de compilation ne soient détournés."
         }
       ]
     },
     "operational": {
       "en": [
         {
-          "title": "Immediate Patching of Cisco, PAN-OS, and Exchange",
-          "detail": "Exploitation of CVE-2026-20182 and CVE-2026-0300 is active. Update Cisco Catalyst SD-WAN and PAN-OS immediately. Apply May 2026 cumulative updates for Exchange to remediate CVE-2026-42897, as CISA has mandated a 21-day patching cycle for critical agencies."
+          "title": "Apply Immediate Edge and Communication Infrastructure Patches",
+          "detail": "Deploy security updates to address CVE-2026-0300 (PAN-OS), CVE-2026-42897 (Microsoft Exchange), CVE-2026-20182 (Cisco Catalyst SD-WAN), and CVE-2026-42945 (NGINX), all of which are actively exploited in the wild. If immediate patching of Exchange is unfeasible, verify active mitigations via the Exchange Emergency Mitigation Service (EEMS) and monitor for anomalous child processes originating from 'w3wp.exe'."
         },
         {
-          "title": "Audit eBPF Hooks and OAuth Session Logs",
-          "detail": "The Kazuar and Quasar Linux RATs use eBPF for stealth; use 'bpftool' to audit loaded programs on critical servers. Concurrently, search Entra ID logs for AuthMethod='Device Code' and use 'Revoke-AzureADUserAllRefreshToken' for any suspicious user sessions."
+          "title": "Audit all VSCode Tasks and npm Lifecycles",
+          "detail": "Malicious actors are actively exploiting npm lifecycle hooks (preinstall, postinstall) and VSCode automatic task runner configurations (.vscode/tasks.json). Instruct development teams to consistently run 'npm install --ignore-scripts' when installing third-party or untrusted libraries. Globally disable automatic task execution by deploying the VSCode configuration 'task.allowAutomaticTasks: off' across all enterprise developer endpoints."
         }
       ],
       "fr": [
         {
-          "title": "Correctif immédiat pour Cisco, PAN-OS et Exchange",
-          "detail": "L'exploitation de CVE-2026-20182 et CVE-2026-0300 est active. Mettez à jour Cisco Catalyst SD-WAN et PAN-OS immédiatement. Appliquez les mises à jour cumulatives de mai 2026 pour Exchange pour corriger la CVE-2026-42897."
+          "title": "Appliquer les correctifs d'urgence Exchange et NGINX",
+          "detail": "Déployez sans délai les correctifs pour les vulnérabilités CVE-2026-0300 (PAN-OS), CVE-2026-42897 (Exchange), CVE-2026-20182 (Cisco Catalyst) et CVE-2026-42945 (NGINX). En cas de report du patch d'Exchange, assurez-vous de l'activation du service d'atténuation d'urgence (EEMS) et surveillez tout processus enfant anormal initié par 'w3wp.exe' via votre EDR."
         },
         {
-          "title": "Auditer les hooks eBPF et les logs de session OAuth",
-          "detail": "Les RAT Kazuar et Quasar Linux utilisent eBPF pour la furtivité ; utilisez 'bpftool' pour auditer les programmes chargés. Parallèlement, recherchez 'Device Code' dans les logs Entra ID et révoquez les jetons rafraîchissement suspects."
+          "title": "Auditer les scripts npm et tâches VSCode",
+          "detail": "Les attaquants abusent activement des hooks de cycle de vie npm (preinstall, postinstall) et du lancement de tâches automatiques dans VSCode (.vscode/tasks.json). Imposez aux développeurs l'usage de la commande 'npm install --ignore-scripts' pour l'installation de bibliothèques tierces. Désactivez l'exécution automatique des tâches de manière centralisée en passant à 'task.allowAutomaticTasks: off'."
         }
       ]
     }
