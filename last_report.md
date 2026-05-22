@@ -9,16 +9,18 @@
   * [Articles sélectionnés](#articles-selectionnes)
   * [Articles non sélectionnés](#articles-non-selectionnes)
 * [Articles](#articles)
-  * [TeamPCP : Attaques de Supply Chain npm et diffusion du ver Shai-Hulud](#teampcp-npm-supply-chain-attacks)
-  * [TamperedChef : Campagnes de Malvertising et Abus de Certificats de Signature](#tamperedchef-malvertising-and-code-signing-clusters)
-  * [Typosquatting du module Go shopsprint/decimal et porte dérobée DNS TXT](#go-module-shopsprint-decimal-typosquatting)
-  * [Banana RAT : Trojan Bancaire Polymorphe avec Générateur FastAPI](#banana-rat-polymorphic-banking-trojan)
-  * [Compromission de la Supply Chain PyPi via Microsoft DurableTask](#pypi-microsoft-durabletask-supply-chain-compromise)
-  * [Fox Tempest : Abus de Signature de Code Microsoft (MSaaS)](#fox-tempest-malware-signing-service-msaas)
-  * [Infrastructures de Phishing et Fraude de la Coupe du Monde de la FIFA 2026](#fifa-world-cup-2026-phishing-infrastructure)
-  * [Panne des Télécommunications au Luxembourg par une Faille Routeurs Huawei](#huawei-zero-day-luxembourg-telecom-outage)
-  * [Chaos de Nommage VMAccess dans Azure et Faille de Détection](#azure-vmaccess-extension-naming-detection-gap)
-  * [Écosystème RaaS et Techniques des Affiliés d'Intrusion](#ransomware-as-a-service-ecosystem-and-affiliate-tradecraft)
+  * [UAC-0057 - Oyster implants update targeting Ukraine](#uac-0057-oyster-implants-update-targeting-ukraine)
+  * [The Gentlemen ransomware - Defense evasion and YMCA Columbia attack](#the-gentlemen-ransomware-defense-evasion-and-ymca-columbia-attack)
+  * [Operation Saffron - Dismantling of First VPN infrastructure](#operation-saffron-dismantling-of-first-vpn-infrastructure)
+  * [TeamPCP - Shai-Hulud supply chain campaign targeting npm](#teampcp-shai-hulud-supply-chain-campaign-targeting-npm)
+  * [Kimwolf botmaster arrest - Dismantling of a major DDoS botnet](#kimwolf-botmaster-arrest-dismantling-of-a-major-ddos-botnet)
+  * [GitHub repository compromise via malicious VSCode extension](#github-repository-compromise-via-malicious-vscode-extension)
+  * [WantToCry ransomware - Exploitation of exposed SMB shares](#wanttocry-ransomware-exploitation-of-exposed-smb-shares)
+  * [US Healthcare - External attack surface analysis and OT exposure](#us-healthcare-external-attack-surface-analysis-and-ot-exposure)
+  * [Cisco Talos - BadIIS malware and SEO fraud campaigns](#cisco-talos-badiis-malware-and-seo-fraud-campaigns)
+  * [Interpol cyber operation - Takedown of phishing infrastructure in Morocco](#interpol-cyber-operation-takedown-of-phishing-infrastructure-in-morocco)
+  * [Identity and Access Management - Risks of active credentials for former employees](#identity-and-access-management-risks-of-active-credentials-for-former-employees)
+  * [Financial Scams - Proliferation of fraudulent ads on social media](#financial-scams-proliferation-of-fraudulent-ads-on-social-media)
 
 ---
 
@@ -26,11 +28,11 @@
 
 # ANALYSE STRATÉGIQUE
 
-L'analyse des menaces pour mai 2026 met en évidence une intensification critique des attaques sur la chaîne d'approvisionnement logicielle, menée principalement par des groupes cybercriminels hautement structurés tels que TeamPCP. Le ciblage des registres npm et PyPI via des techniques avancées (empoisonnement de cache CI/CD, détournement d'OIDC) démontre une maturation technologique de la part des attaquants. Parallèlement, la découverte de plusieurs vulnérabilités de type élévation de privilèges locaux (LPE) sur Linux (telles que PinTheft et DirtyDecrypt) et de contournement de mesures de sécurité physiques et logiques de Microsoft (YellowKey) accentue la pression sur les équipes de remédiation. 
+L'analyse des menaces cyber de mai 2026 met en lumière des mutations critiques concernant les vecteurs d'accès initiaux et la sophistication des infrastructures d'attaque. Selon les dernières conclusions du rapport DBIR de Verizon, l'exploitation automatisée des vulnérabilités a supplanté pour la première fois le vol classique d'identifiants comme principal vecteur d'intrusion. Cette accélération s'explique en grande partie par la démocratisation des outils basés sur l'intelligence artificielle (IA), permettant aux attaquants d'identifier et d'exploiter les faiblesses d'un périmètre en quelques heures seulement, réduisant drastiquement le "dwell time" disponible pour les défenseurs.
 
-Au niveau géopolitique, l'utilisation de plateformes souveraines de communication (MAX Messenger en Russie), les campagnes de désinformation climatique ciblées, l'ingérence numérique étrangère lors des scrutins électoraux et les enjeux de souveraineté militaire (système EMALS) illustrent l'imbrication forte entre les technologies de l'information et la géostratégie des nations. 
+Parallèlement, la supply chain logicielle reste une cible de choix, illustrée par la campagne "Mini Shai-Hulud" orchestrée par TeamPCP sur l'écosystème npm, exploitant des vulnérabilités d'authentification OIDC ou des pipelines CI/CD pour contourner des contrôles de sécurité avancés (SLSA Build Level 3). 
 
-Les secteurs de la technologie, du développement logiciel, de la finance et des infrastructures critiques restent les cibles prioritaires. Les recommandations stratégiques de haut niveau imposent un durcissement drastique des pipelines CI/CD via l'adoption du modèle Zero Trust matériel, la mise en œuvre systématique d'audits de dépendance en temps réel et une surveillance renforcée des identités d'intégration cloud (OIDC/SAML).
+Du côté de la lutte contre la cybercriminalité, on observe une intensification des opérations policières internationales coordonnées par Europol et Interpol (à l'image du démantèlement du réseau d'anonymisation "First VPN" ou du coup d'arrêt porté aux infrastructures de phishing au Maroc). Néanmoins, l'émergence des services de "lookups" (recherche de bases de données piratées) et la compromission systématique de serveurs de jeux ou de plateformes cloud rappellent la persistance du risque lié au "credential stuffing" et à la réutilisation d'identifiants au sein des parcs d'entreprises.
 
 ---
 
@@ -44,9 +46,12 @@ Les secteurs de la technologie, du développement logiciel, de la finance et des
 
 | Nom de l'acteur | Secteur(s) ciblé(s) | Mode opératoire | TTP MITRE ATT&CK | Source(s) |
 |---|---|---|---|---|
-| **TeamPCP** (aliases: @pcpcats) | Technologie, Finance, Développement logiciel | Empoisonnement de packages (npm, PyPI), compromission d'extensions de développement (VS Code), détournement de pipelines CI/CD via empoisonnement de cache, exfiltration de jetons d'authentification GitHub. | T1195.002 (Software Supply Chain Compromise)<br>T1553.002 (Code Signing)<br>T1071.001 (Web Protocols) | [Unit 42](https://unit42.paloaltonetworks.com/monitoring-npm-supply-chain-attacks/)<br>[BleepingComputer](https://www.bleepingcomputer.com/news/security/github-confirms-breach-of-3-800-repos-via-malicious-vscode-extension/) |
-| **ShinyHunters** | Retail, Santé, Finance, Technologie | Compromission de comptes tiers légitimes, exfiltration de gros volumes de données cloud (Salesforce, Snowflake), gestion de BreachForums, extorsion et revente de bases de données. | T1567 (Exfiltration Over Web Service)<br>T1078 (Valid Accounts) | [Le Monde](https://www.lemonde.fr/pixels/article/2026/05/20/shinyhunters-enquete-sur-l-insaisissable-nebuleuse-de-pirates-nee-en-france_6691674_4408996.html)<br>[BleepingComputer](https://www.bleepingcomputer.com/news/security/7-eleven-confirms-data-breach-claimed-by-the-shinyhunters-gang/) |
-| **TamperedChef** (aliases: EvilAI) | Multi-sector, Grand public | Utilisation intensive de la publicité malveillante (malvertising), certificats de signature de code valides (sociétés écrans) et payloads Neutralinojs déployés après dormance. | T1583.001 (Domains)<br>T1036 (Masquerading)<br>T1204.002 (Malicious File) | [Unit 42](https://unit42.paloaltonetworks.com/tracking-tampered-chef-clusters/) |
+| **UAC-0057** | Gouvernement, Défense, Secteur Public (Ukraine) | Campagnes d'hameçonnage ciblé utilisant des implants personnalisés pour l'exfiltration et le contrôle persistant du registre Windows. | T1059 (Command and Scripting Interpreter)<br>T1105 (Ingress Tool Transfer) | [CERT-UA](https://cert.gov.ua/article/6315762) |
+| **The Gentlemen** | Multi-sector, Construction, Éducation, Santé | Ransomware-as-a-Service (RaaS) exploitant les failles de périmètre, avec contournement persistant de Microsoft Defender via scripts PowerShell et exfiltration préalable. | T1053.005 (Scheduled Task)<br>T1059.001 (PowerShell)<br>T1078 (Valid Accounts) | [Huntress](https://www.huntress.com/blog/the-gentlemen-ransomware-defense-evasion-ttps) |
+| **TeamPCP** | Développement Logiciel, Technologie, Cloud | Compromission de chaîne d'approvisionnement npm/PyPI via le ver Shai-Hulud, empoisonnement de pipelines GitHub Actions et vol de jetons d'identité OIDC. | T1195.001 (Active supply chain compromise)<br>T1195.002 (Compromise Software Dependencies) | [Unit 42](https://unit42.paloaltonetworks.com/monitoring-npm-supply-chain-attacks/) |
+| **CyberAv3ngers** | Santé, Énergie, Eau, Industrie manufacturière | Attaques disruptives d'infrastructures critiques via l'exploitation d'équipements OT connectés (PLCs Rockwell Automation). | T1190 (Exploit Public-Facing Application)<br>T0815 (Asset Identification) | [Flare](https://flare.io/learn/resources/blog/us-healthcare-sector-wide-external-attack-surface-analysis) |
+| **Dort (Jacob Butler)** | Infrastructures Critiques, Secteur Public, FAI | Enrôlement massif d'équipements IoT (caméras, cadres photo) pour opérer le botnet Kimwolf et mener des attaques DDoS à haut volume (jusqu'à 30 Tbps). | T1584.005 (Botnet)<br>T1498 (Network Denial of Service) | [KrebsOnSecurity](https://krebsonsecurity.com/2026/05/alleged-kimwolf-botmaster-dort-arrested-charged-in-u-s-and-canada/) |
+| **HexDex** | Secteur Public, Automobile, Assurances (France) | Intrusion opportuniste, scraping agressif d'API et extraction de bases de données massives d'entités administratives et privées françaises pour revente et notoriété. | T1114 (Email Collection)<br>T1567 (Exfiltration Over Web Service) | [Le Monde](https://www.lemonde.fr/pixels/article/2026/05/21/j-etais-seul-dans-ma-chambre-et-j-ai-derape-la-derive-du-hackeur-hexdex-jeune-maraicher-vendeen-en-quete-de-reconnaissance_6691824_4408996.html) |
 
 ---
 
@@ -56,13 +61,8 @@ Les secteurs de la technologie, du développement logiciel, de la finance et des
 
 | Pays/Région | Secteur | Thème | Description | Source(s) |
 |---|---|---|---|---|
-| **Europe / Russie** | Gouvernement | Désinformation climatique russe | Utilisation de la désinformation stratégique pour cibler les politiques énergétiques européennes afin d'affaiblir la cohésion de l'UE (89 % des récits visent ces politiques). | [IRIS](https://www.iris-france.org/etat-des-lieux-de-la-desinformation-climatique-russe-en-europe/) |
-| **Russie** | Télécommunications | Contrôle de l'espace d'information | Imposition par le Kremlin du messager souverain MAX Messenger, intégré aux services de l'État (Gosuslugi), pour centraliser la surveillance. | [EUvsDisinfo](https://euvsdisinfo.eu/the-digital-iron-curtain-2-0-how-the-max-messenger-is-reshaping-russias-communication-space/) |
-| **Indo-Pacifique / Iran / Inde** | Transport maritime | Coercition et souveraineté portuaire | Utilisation stratégique du port de Chabahar (coopération Inde-Iran) comme levier logistique face aux sanctions américaines. | [IRIS](https://www.iris-france.org/geopolitique-des-ports-de-lindo-pacifique-le-port-de-chabahar-les-limites-de-la-pression-maximale/) |
-| **France / États-Unis** | Défense | Dépendance technologique militaire | L'intégration du système de catapultage électromagnétique américain EMALS sur le futur porte-avions PANG pose des enjeux de souveraineté logicielle. | [Portail de l'IE](https://www.portail-ie.fr/univers/defense-industrie-de-larmement-et-renseignement/2026/emals-pang-dependance-technologique-americaine/) |
-| **France / Israël** | Gouvernement | Ingérence numérique électorale | Opération d'influence BlackCore (basée en Israël) visant à déstabiliser des candidats du parti LFI aux élections municipales en France. | [Le Monde](https://www.lemonde.fr/politique/article/2026/05/20/ingerence-numerique-etrangere-une-action-judiciaire-est-engagee-apres-des-soupcons-visant-des-candidats-lfi-annonce-laurent-nunez_6691738_823448.html) |
-| **Ukraine / Russie** | Défense | Guerre d'influence psychologique | Les attaques de drones ukrainiens sur Moscou démontrent une projection de force asymétrique influençant la résilience politique. | [IRIS](https://www.iris-france.org/quels-sont-les-enseignements-de-lattaque-de-drones-de-lukraine-contre-moscou/) |
-| **Moyen-Orient / Monde** | Agriculture / Sécurité globale | Crise climatique et conflits | Synergie déstabilisatrice entre le phénomène El Niño et le conflit géopolitique en Iran, menaçant la sécurité alimentaire mondiale. | [IRIS](https://www.iris-france.org/el-nino-amplifiera-considerablement-les-chocs-tels-que-celui-de-la-guerre-en-iran/) |
+| **Arctique, Europe, Danemark, Groenland** | Défense | Souveraineté militaire et dissuasion industrielle | La guerre prolongée en Ukraine pousse l'Union Européenne et ses alliés nordiques à réinvestir dans la résilience physique et logique des liaisons maritimes, des capteurs polaires et des infrastructures militaires de l'Arctique. | [IRIS France](https://www.iris-france.org/europes-arctic-test-from-ambition-to-capability/) |
+| **France, Russie, Niger, Chine** | Énergie Nucléaire | Espionnage industriel lié aux pipelines d'IA | L'introduction croissante de l'IA au sein du cycle de vie du combustible nucléaire (extraction d'uranium, jumeaux numériques d'enrichissement) expose les infrastructures régaliennes françaises à des cyber-espionnages et exfiltrations de modèles stratégiques. | [Portail de l'IE](https://www.portail-ie.fr/univers/blockchain-data-et-ia/2026/ia-cycle-du-combustible-extraction-enrichissement/) |
 
 ---
 
@@ -72,9 +72,10 @@ Les secteurs de la technologie, du développement logiciel, de la finance et des
 
 | Titre | Auteur/Organisme | Date | Juridiction | Référence | Description | Source(s) |
 |---|---|---|---|---|---|---|
-| Directive Protection des Données (Police/Justice) | Commission Européenne / EDRi | 2026-05-20 | Union Européenne | Directive d'application de la loi (UE) 2016/680 (LED) | L'évaluation révèle des disparités majeures de transposition et des lacunes d'implémentation par les forces de l'ordre entre États membres. | [EDRi](https://edri.org/our-work/research-study-evaluation-of-eus-law-enforcement-directive-shows-implementation-still-fragmented-and-insufficient/) |
-| Décision d'intégration financière | EEA Joint Committee | 2026-05-21 | Espace Économique Européen | Décision No 36/2026 | Modification de l'annexe IX du traité de l'EEE pour intégrer de nouvelles réglementations sur les services financiers. | [EUR-Lex](https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202600956) |
-| Recommandations Mer Noire | European Committee of the Regions | 2026-05-20 | Union Européenne | CELEX:52025IR2757 | Approche stratégique pour le développement régional, économique et la sécurité physique/numérique en mer Noire. | [EUR-Lex](https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:52025IR2757) |
+| Sécurité logicielle et conformité CRA | Open Source Security Foundation (OpenSSF) | 2026-05-21 | International | OpenSSF-CRA-2026-05-21 | Expansion communautaire et lancement d'initiatives pour harmoniser le développement open-source face aux exigences du Cyber Resilience Act (CRA) européen. | [OpenSSF Press](https://openssf.org/press-release/2026/05/21/openssf-notes-quarter-of-growth-with-new-members-added-ai-security-resources-and-growing-community/) |
+| Campagne pour les droits numériques ("Fight for Us") | EDRi (European Digital Rights) | 2026-05-21 | Union Européenne | EDRi-FightForUs-2026 | Mobilisation de la société civile contre les propositions de dérégulation numérique sous prétexte de simplification administrative ("Digital Fitness Check"). | [EDRi](https://edri.org/our-work/fight-for-us-not-for-them-a-public-interest-vision-for-eu-tech-policy-new-speakers-announced/) |
+| Réforme de la loi contre la cybercriminalité | Experts informatiques et Gouvernement du Royaume-Uni | 2026-05-21 | Royaume-Uni | UK-CMA-2026 | Critiques sévères contre les propositions de réformes du Computer Misuse Act, jugées inadaptées face aux menaces actuelles et préjudiciables aux chercheurs en sécurité. | [DataBreaches.net](https://databreaches.net/2026/05/21/uk-plans-for-cybercrime-law-reform-would-protect-almost-no-one-experts-warn/?pk_campaign=feed&pk_kwd=uk-plans-for-cybercrime-law-reform-would-protect-almost-no-one-experts-warn) |
+| Connectivité énergétique et Services Financiers EEE | Comité Économique et Social Européen / Commission Mixte | 2026-05-22 | Europe | OJ:C_202602540 / CELEX:22026D0956 | Harmonisation des normes de cybersécurité des réseaux de distribution électrique et révision de la conformité des services financiers dans l'espace économique. | [OJ:C_202602540](https://eur-lex.europa.eu/legal-content/AUTO/?uri=OJ:C_202602540)<br>[CELEX:22026D0956](https://eur-lex.europa.eu/legal-content/AUTO/?uri=CELEX:22026D0956) |
 
 ---
 
@@ -84,12 +85,10 @@ Les secteurs de la technologie, du développement logiciel, de la finance et des
 
 | Secteur | Victime | Données compromises | Volume estimé | Source(s) |
 |---|---|---|---|---|
-| Technologie | **GitHub** | Code source interne de GitHub, secrets de développement. | 3 800 dépôts | [BleepingComputer](https://www.bleepingcomputer.com/news/security/github-confirms-breach-of-3-800-repos-via-malicious-vscode-extension/)<br>[SecurityAffairs](https://securityaffairs.com/192440/cyber-crime/a-malicious-vs-code-extension-just-breached-github-s-internal-repositories.html) |
-| Retail | **7-Eleven** | Documents contractuels, financiers et administratifs des franchisés. | 600 000+ dossiers (9.4 Go publiés par ShinyHunters) | [BleepingComputer](https://www.bleepingcomputer.com/news/security/7-eleven-confirms-data-breach-claimed-by-the-shinyhunters-gang/) |
-| Santé | **NYC Health and Hospitals** | Numéros de sécurité sociale, données d'identité, empreintes digitales. | 1.8 million de patients | [Mastodon / newsletterTF](https://newsletter.tf/nyc-health-records-hack-1-8-million-patients-data/) |
-| Finance / E-commerce | **Utilisateurs de cartes de crédit** | Numéros de carte (PAN), CVV2, dates d'expiration, données d'identité. | 4.6 millions de cartes bancaires (publiées par B1ack's Stash) | [SecurityAffairs](https://securityaffairs.com/192415/cyber-crime/carding-site-b1acks-stash-dumps-4-6-million-stolen-cards-for-free.html) |
-| E-commerce | **Magasin en ligne californien** | Jetons de session, identifiants, données bancaires (détournés via infostealer). | 28 000 comptes compromised | [BleepingComputer](https://www.bleepingcomputer.com/news/security/ukraine-identifies-infostealer-operator-tied-to-28-000-stolen-accounts/) |
-| Multi-sector | **Microsoft / Système d'authentification** | Certificats de signature de code Microsoft légitimes détournés (Fox Tempest). | 1 000+ certificats frauduleux | [AlienVault OTX](https://social.raytec.co/@techbot/116609750399983151) |
+| **Santé / Secteur Hospitalier** | NYC Health + Hospitals, Université de la Sarre | Informations de santé protégées (PHI), diagnostics, sécurité sociale, données biométriques complexes (empreintes digitales et palmaires). | 1,8 million d'enregistrements (NYC), dizaines de milliers (Allemagne) | [Flare](https://flare.io/learn/resources/blog/us-healthcare-sector-wide-external-attack-surface-analysis)<br>[Mastodon ReginaMuehlich](https://mastodon.social/@ReginaMuehlich/116614256181244000)<br>[Mastodon Drahardja](https://sfba.social/@drahardja/116614086761770205) |
+| **Éducation** | Plateforme Canvas LMS (Territoires du Nord-Ouest, Canada) | Adresses e-mail, identités d'étudiants et d'enseignants, configurations de cours. | ~1 700 personnes | [Mastodon Mirror](https://mastodon.hongkongers.net/@cbcnorth_mirror/116615295424557433)<br>[Mastodon Agent0x0](https://infosec.exchange/@agent0x0/116614526716889945) |
+| **Secteur Public / Assurances** | ANTS, France Travail, Free, Autovision, Citoyens Français | Identités complètes, mots de passe en clair, revenus fiscaux, numéros d'immatriculation. | 12 millions de dossiers (ANTS), agrégation de plusieurs dizaines de millions de données (Lookups) | [Le Monde Lookups](https://www.lemonde.fr/pixels/article/2026/05/21/les-donnees-volees-et-leurs-moteurs-de-recherche-armes-redoutables-des-cybercriminels_6691908_4408996.html)<br>[Le Monde HexDex](https://www.lemonde.fr/pixels/article/2026/05/21/j-etais-seul-dans-ma-chambre-et-j-ai-derape-la-derive-du-hackeur-hexdex-jeune-maraicher-vendeen-en-quete-de-reconnaissance_6691824_4408996.html)<br>[Le Monde Podcast](https://www.lemonde.fr/podcasts/article/2026/05/21/arnaques-telephoniques-radioscopie-d-un-fleau-social_6691805_5463015.html) |
+| **Jeux en ligne / Divertissement** | Dragonica Lunaris, site parodique Windows93 | Adresses e-mail, hachages de mots de passe (bcrypt), adresses IP, mots de passe en texte brut. | 172 398 comptes | [HaveIBeenPwned Dragonica](https://haveibeenpwned.com/Breach/Dragonica)<br>[HaveIBeenPwned Windows93](https://haveibeenpwned.com/Breach/Windows93) |
 
 ---
 
@@ -102,32 +101,16 @@ Les secteurs de la technologie, du développement logiciel, de la finance et des
 
 | # | CVE-ID | CISA KEV | Exploitation | Score Composite | CVSS | Clé de tri |
 |---|---|---|---|---|---|---|
-| 1 | CVE-2024-12802 | TRUE  | Active    | 6.5 | 9.8   | (1,1,6.5,9.8) |
-| 2 | CVE-2026-48172 | TRUE  | Active    | 6.5 | 9.8   | (1,1,6.5,9.8) |
-| 3 | CVE-2026-41091 | TRUE  | Active    | 5.5 | 7.8   | (1,1,5.5,7.8) |
-| 4 | CVE-2026-9141  | FALSE | Théorique | 1.5 | 9.8   | (0,0,1.5,9.8) |
-| 5 | CVE-2026-42945 | FALSE | Théorique | 1.5 | 7.8   | (0,0,1.5,7.8) |
-| 6 | CVE-2026-31635 | FALSE | Théorique | 1.5 | 7.5   | (0,0,1.5,7.5) |
-| 7 | CVE-2026-9133  | FALSE | Théorique | 1.0 | 8.8   | (0,0,1.0,8.8) |
-| 8 | CVE-2026-40165 | FALSE | Théorique | 1.0 | 8.8   | (0,0,1.0,8.8) |
-| 9 | CVE-2026-9152  | FALSE | Théorique | 1.0 | 8.5   | (0,0,1.0,8.5) |
-| 10| CVE-2026-8632  | FALSE | Théorique | 1.0 | 7.8   | (0,0,1.0,7.8) |
-| 11| CVE-2026-8631  | FALSE | Théorique | 1.0 | 7.8   | (0,0,1.0,7.8) |
+| 1 | CVE-2026-20223 | TRUE  | Active    | 6.5 | 10.0  | (1,1,6.5,10.0) |
+| 2 | CVE-2024-12802 | TRUE  | Active    | 6.5 | 9.4   | (1,1,6.5,9.4)  |
+| 3 | CVE-2026-33000 | FALSE | Théorique | 2.0 | 9.1   | (0,0,2.0,9.1)  |
 -->
 
 | CVE-ID | Score CVSS | EPSS | CISA KEV | Score Composite | Produit affecté | Type de vulnérabilité | Impact | Exploitation | Mesures de contournement | Source(s) |
 |---|---|---|---|---|---|---|---|---|---|---|
-| **CVE-2024-12802** | 9.8 | N/A | **TRUE** | **6.5** | SonicWall Gen6 SSL-VPN Appliances | Incomplete Patching / LDAP Configuration | Auth Bypass | Active | Effectuer les configurations manuelles LDAP requises ou remplacer les appliances EoL. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/hackers-bypass-sonicwall-vpn-mfa-due-to-incomplete-patching/) |
-| **CVE-2026-48172** | 9.8 | N/A | **TRUE** | **6.5** | LiteSpeed User-End cPanel Plugin | Redis Switch Handling | LPE / Root Access | Active | Déployer d'urgence le correctif v2.4.5 du plugin. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-48172) |
-| **CVE-2026-41091** | 7.8 | N/A | **TRUE** | **5.5** | Microsoft Malware Protection Engine (Defender) | Engine Protection Bypass | LPE | Active | Veiller au déploiement des mises à jour automatiques du moteur Defender sous 48h. | [Matchbook3469](https://infosec.exchange/@Matchbook3469/116609596606397666) |
-| **CVE-2026-9141** | 9.8 | N/A | FALSE | **1.5** | Taiko AG1000-01A SMS Alert Gateway (Rev 7.3/8) | Lack of Authentication | Auth Bypass | Théorique | Restreindre et bloquer tout flux réseau externe dirigé vers l'interface web de l'appareil. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-9141) |
-| **CVE-2026-42945** | 7.8 | N/A | FALSE | **1.5** | Linux Kernel (RDS Module) | RDS Protocol Zerocopy Double Free | LPE | PoC public | Désactiver le chargement automatique du module RDS et appliquer le correctif noyau. | [BleepingComputer](https://www.bleepingcomputer.com/news/linux/exploit-released-for-new-pintheft-arch-linux-root-escalation-flaw/)<br>[SecurityAffairs](https://securityaffairs.com/192456/security/pintheft-another-linux-privilege-escalation-another-working-exploit-this-time-targeting-arch.html) |
-| **CVE-2026-31635** | 7.5 | N/A | FALSE | **1.5** | Linux Kernel (rxgk module) | Absence of Page Cache COW mechanism | LPE | PoC public | Mettre à jour vers la branche mainline et désactiver CONFIG_RXGK. | [SecurityAffairs](https://securityaffairs.com/192436/uncategorized/dirtydecrypt-poc-released-for-yet-another-linux-flaw.html) |
-| **CVE-2026-9133** | 8.8 | N/A | FALSE | **1.0** | rabbitmq-aws Plugin | ARN Resolver Debug Code | Info Disclosure / File Read | Théorique | Installer la version v0.2.1 du plugin et désactiver la validation des ARN. | [AWS Security](https://aws.amazon.com/security/security-bulletins/rss/2026-034-aws/) |
-| **CVE-2026-40165** | 8.8 | N/A | FALSE | **1.0** | authentik (SAML implementation) | SAML NameID XML Comment Parsing | Auth Bypass | Théorique | Mettre à niveau authentik vers les versions 2025.12.5 ou 2026.2.3. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-40165) |
-| **CVE-2026-9152** | 8.5 | N/A | FALSE | **1.0** | Altium 365 SearchService | Unauthenticated SOAP endpoint | Auth Bypass | Théorique | Aucun correctif requis pour les instances cloud (déjà patchées). Bloquer le SOAP sur site. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-9152) |
-| **CVE-2026-8632** | 7.8 | N/A | FALSE | **1.0** | HP Linux Imaging and Printing (HPLIP) | Command Injection | RCE / LPE | Théorique | Mettre à jour HPLIP vers les versions officielles fournies par HP. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-8632) |
-| **CVE-2026-8631** | 7.8 | N/A | FALSE | **1.0** | HP Linux Imaging and Printing (HPLIP) | hpcups Integer Overflow | RCE | Théorique | Appliquer les patchs logiciels émis par le constructeur HP. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-8631) |
+| **CVE-2026-20223** | 10.0 | N/A | **TRUE** | **6.5** | Cisco Secure Workload | Insuffisance d'authentification API | SSRF / Auth Bypass | Active | Appliquer la mise à jour (versions 3.10.8.3 ou 4.0.3.17) et isoler l'accès aux API REST internes. | [Security Affairs](https://securityaffairs.com/192473/security/cisco-fixed-maximum-severity-flaw-cve-2026-20223-in-secure-workload.html)<br>[CERT-FR](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0628/) |
+| **CVE-2024-12802** | 9.4 | N/A | **TRUE** | **6.5** | SonicWall Gen6 SSL-VPN | Traitement défectueux d'attributs LDAP (formats UPN/SAM) | Auth Bypass (MFA Bypass) | Active | Effectuer la reconfiguration LDAP manuelle en six étapes ou migrer vers la génération Gen7/Gen8. | [Security Affairs](https://securityaffairs.com/192477/hacking/attackers-are-bypassing-mfa-on-sonicwall-vpns-because-something-was-wrong-with-previous-fix.html) |
+| **CVE-2026-33000** | 9.1 | N/A | **FALSE** | **2.0** | Ubiquiti UniFi OS Server | Validation d'entrée incorrecte (CWE-20) | RCE (Command Injection) | Théorique | Aucun correctif publié. Restreindre l'accès réseau à l'interface d'administration UniFi OS au segment d'administration local. | [OffSeq Threat Radar](https://infosec.exchange/@offseq/116615638632098258) |
 
 ---
 
@@ -137,16 +120,18 @@ Les secteurs de la technologie, du développement logiciel, de la finance et des
 
 | Titre | Sujet canonique | Raison de sélection | Source(s) |
 |---|---|---|---|
-| Le paysage des menaces npm : vecteurs d'attaque et mitigations | TeamPCP : Attaques de Supply Chain npm et diffusion du ver Shai-Hulud | Analyse d'attaques de supply chain majeures et d'infections CI/CD. | [Unit 42](https://unit42.paloaltonetworks.com/monitoring-npm-supply-chain-attacks/)<br>[OpenSSF Blog](https://opensssf.org/blog/2026/05/20/detecting-malicious-packages-using-the-osv-api/)<br>[OpenSourceMalware](https://opensourcemalware.com/blog/teampcp-compromises-npm-maintainer-with-over-540-packages) |
-| Suivi des clusters de TamperedChef via la réutilisation de certificats | TamperedChef : Campagnes de Malvertising et Abus de Certificats de Signature | Rapport de threat intelligence documentant un réseau actif de malvertising/RAT. | [Unit 42](https://unit42.paloaltonetworks.com/tracking-tampered-chef-clusters/) |
-| Une bibliothèque Go décimale populaire ciblée par une campagne de typosquatting | Typosquatting du module Go shopsprint/decimal et porte dérobée DNS TXT | Nouvelle technique d'intrusion ciblant les développeurs via du typosquatting Go. | [Mastodon / techbot](https://social.raytec.co/@techbot/116609874887435996) |
-| Inside Banana RAT : du serveur de build à la fraude bancaire | Banana RAT : Trojan Bancaire Polymorphe avec Générateur FastAPI | Campagne de trojan bancaire active avec techniques polymorphes. | [Mastodon / techbot](https://social.raytec.co/@techbot/116609759166461979) |
-| Une attaque de la chaîne d'approvisionnement ciblant le client Python Microsoft DurableTask | Compromission de la Supply Chain PyPi via Microsoft DurableTask | Vol de secrets et d'identifiants de production de serveurs cloud. | [Mastodon / techbot](https://social.raytec.co/@techbot/116609750489438557) |
-| Exposition de Fox Tempest : un réseau de services de signature | Fox Tempest : Abus de Signature de Code Microsoft (MSaaS) | Analyse de service de signature de malwares contournant les EDR. | [Mastodon / techbot](https://social.raytec.co/@techbot/116609750399983151) |
-| L'infrastructure de fraude de la Coupe du Monde | Infrastructures de Phishing et Fraude de la Coupe du Monde de la FIFA 2026 | Campagne d'envergure ciblant un événement planétaire majeur. | [Flare](https://flare.io/learn/resources/blog/world-cup-fraud-infrastructure-three-times-larger-than-original-reporting) |
-| Une faille zero-day supposée de Huawei à l'origine de la panne | Panne des Télécommunications au Luxembourg par une Faille Routeurs Huawei | Incident d'infrastructure nationale critique lié à un équipementier d'État. | [SecurityAffairs](https://securityaffairs.com/192431/hacking/alleged-huawei-zero-day-blamed-for-the-2025-luxembourg-telecom-crash.html) |
-| Le chaos de nommage de VMAccess dans Azure | Chaos de Nommage VMAccess dans Azure et Faille de Détection | Technique de contournement furtive de la détection sur les ressources cloud Azure. | [Sysdig Blog](https://webflow.sysdig.com/blog/the-expendable-extension-name-azure-vmaccess-naming-chaos-password-resets-and-a-detection-gap) |
-| Au cœur de l'écosystème RaaS : opérateurs et affiliés | Écosystème RaaS et Techniques des Affiliés d'Intrusion | Décryptage des modes opératoires des affiliés ransomware d'envergure. | [Huntress Blog](https://www.huntress.com/blog/raas-ecosystem-ransomware-tradecraft) |
+| Оновлений інструментарій UAC-0057 | UAC-0057 - Oyster implants update targeting Ukraine | Sujet d'espionnage étatique actif ciblant des infrastructures militaires et étatiques clés. | [CERT-UA](https://cert.gov.ua/article/6315762) |
+| The Gentleman Ransomware | The Gentlemen ransomware - Defense evasion and YMCA Columbia attack | Attaque active de ransomware-as-a-service avec techniques de contournement Defender documentées. | [Huntress](https://www.huntress.com/blog/the-gentlemen-ransomware-defense-evasion-ttps) |
+| Global law enforcement operation takes First VPN offline | Operation Saffron - Dismantling of First VPN infrastructure | Démantèlement d'infrastructure d'anonymisation majeure utilisée par les opérateurs de rançongiciels. | [Security Affairs](https://securityaffairs.com/192491/cyber-crime/global-law-enforcement-operation-takes-first-vpn-offline.html) |
+| The npm Threat Landscape (TeamPCP) | TeamPCP - Shai-Hulud supply chain campaign targeting npm | Attaque sophistiquée ciblant la chaîne d'approvisionnement des développeurs. | [Unit 42](https://unit42.paloaltonetworks.com/monitoring-npm-supply-chain-attacks/) |
+| Alleged Kimwolf Botmaster ‘Dort’ Arrested | Kimwolf botmaster arrest - Dismantling of a major DDoS botnet | Fin de cavale pour l'opérateur d'un botnet IoT responsable d'attaques à grand volume. | [KrebsOnSecurity](https://krebsonsecurity.com/2026/05/alleged-kimwolf-botmaster-dort-arrested-charged-in-u-s-and-canada/) |
+| GitHub confirms breach of 3,800 repos via malicious extension | GitHub repository compromise via malicious VSCode extension | Compromission massive de dépôts via un vecteur d'attaque d'extension IDE. | [DataBreaches.net](https://databreaches.net/2026/05/21/github-confirms-breach-of-3800-repos-via-malicious-vscode-extension/) |
+| WantToCry Ransomware Campaign | WantToCry ransomware - Exploitation of exposed SMB shares | Nouvelle campagne exploitant les protocoles d'administration sans binaire local ("fileless"). | [AlienVault OTX](https://social.raytec.co/@techbot/116615530759805235) |
+| What Attackers See When They Look at US Healthcare | US Healthcare - External attack surface analysis and OT exposure | Analyse sectorielle critique des vulnérabilités de périmètre d'hôpitaux. | [Flare](https://flare.io/learn/resources/blog/us-healthcare-sector-wide-external-attack-surface-analysis) |
+| The art of being ungovernable (BadIIS) | Cisco Talos - BadIIS malware and SEO fraud campaigns | Analyse d'un composant de persistance Web (IIS Module) utilisé pour la fraude SEO. | [Cisco Talos](https://blog.talosintelligence.com/the-art-of-being-ungovernable/) |
+| INTERPOL Cyber Operation Involving Morocco | Interpol cyber operation - Takedown of phishing infrastructure in Morocco | Opération policière de neutralisation de botnets et d'infrastructures de phishing. | [DataBreaches.net](https://databreaches.net/2026/05/21/kaspersky-group-ib-detail-role-in-interpol-cyber-operation-involving-morocco/) |
+| Today’s reminder to terminate employees’ credentials | Identity and Access Management - Risks of active credentials for former employees | Analyse pratique des failles opérationnelles de gestion de cycle de vie des identités. | [DataBreaches.net](https://databreaches.net/2026/05/21/todays-reminder-to-terminate-employees-credentials-when-their-employment-ends/) |
+| Arnaques financières en ligne | Financial Scams - Proliferation of fraudulent ads on social media | Analyse du vecteur de distribution de malwares et de vols financiers via publicité malveillante. | [Le Monde](https://www.lemonde.fr/pixels/article/2026/05/21/arnaques-financieres-en-ligne-des-associations-de-consommateurs-exigent-des-actions_6691867_4408996.html) |
 
 ---
 
@@ -156,17 +141,26 @@ Les secteurs de la technologie, du développement logiciel, de la finance et des
 
 | Titre | Raison d'exclusion | Source(s) |
 |---|---|---|
-| ISC Stormcast pour le jeudi 21 mai 2026 | Podcast d'actualité quotidien sans focus exclusif sur une campagne unique. | [SANS ISC](https://isc.sans.edu/diary/rss/33000) |
-| ISC Stormcast pour le mercredi 20 mai 2026 | Podcast d'actualité quotidien sans focus exclusif sur une campagne unique. | [SANS ISC](https://isc.sans.edu/diary/rss/32998) |
-| Comment les MSSP peuvent mettre à l'échelle la détection | Article promotionnel / publicitaire et méthodologique de la société ANY.RUN. | [ANY.RUN Blog](https://any.run/cybersecurity-blog/mssp-growth-guide-ti-feeds/) |
-| L'identité seule ne suffit plus | Article méthodologique et conceptuel sans incident ou acteur spécifique. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/identity-alone-isnt-enough-why-device-security-has-to-share-the-load/) |
-| Accéder à Azure : quatre méthodes et les artefacts forensiques | Guide technique théorique d'investigation de sécurité cloud. | [CyberEngage](https://www.cyberengage.org/post/part-3-getting-into-azure-four-access-methods-and-the-forensic-artifacts-each-one-leaves-behind) |
-| Optimiser la correction avec Headless Cloud Security | Communiqué commercial et promotionnel pour un produit de la société Sysdig. | [Sysdig Blog](https://webflow.sysdig.com/blog/streamline-vulnerability-remediation-with-headless-cloud-security) |
-| Présentation du 'Runtime Investigation Skill' | Communiqué commercial et promotionnel pour un produit de la société Sysdig. | [Sysdig Blog](https://webflow.sysdig.com/blog/introducing-the-runtime-investigations-skill-for-headless-cloud-security) |
-| Résultats mesurables de réduction des chemins lors de simulations | Contenu de réseau social relatant un exercice théorique/simulation. | [Mastodon / lbhuston](https://mastodon.social/@lbhuston/116609915997238131) |
-| Qu'est-ce que l'attaque Kerberoasting - Guide complet | Guide d'attaque et d'implémentation défensive théorique sans incident actif. | [Mastodon / halildeniz](https://mastodon.social/@halildeniz/116609382076960483) |
-| Microsoft issues YellowKey mitigation | Vulnérabilité (CVE-2026-45585) sous le seuil d'inclusion (Score 0.5) et traitée en synthèse. | [SecurityAffairs](https://securityaffairs.com/192449/hacking/microsoft-issues-yellowkey-mitigation-no-patch-yet.html) |
-| Taiko AG1000 stored XSS | Vulnérabilité (CVE-2026-9144) sous le seuil d'inclusion (Score 0) et traitée en synthèse. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-9144) |
+| ISC Stormcast (May 21st / May 22nd) | Podcast d'actualité cyber généraliste (non focalisé sur un cas d'incident unique ou une nouvelle menace détaillée). | [SANS ISC](https://isc.sans.edu/diary/rss/33004) |
+| Selective HTTP Proxying in Linux | Tutoriel technique d'administration système (pas d'actualité de menace directe). | [SANS ISC](https://isc.sans.edu/diary/rss/33002) |
+| Continuous Security Validation | Guide méthodologique de bonnes pratiques (hors cadre menace active). | [GuidePoint Security](https://www.guidepointsecurity.com/blog/continuous-security-validation-best-practices-a-practical-guide-for-security-teams/) |
+| How Huntress Uses Managed SIEM | Contenu orienté promotionnel/explication produit. | [Huntress](https://www.huntress.com/blog/how-huntress-uses-managed-siem-to-detect-threats-faster) |
+| Proofpoint Integrates with Claude API | Annonce produit commerciale. | [Proofpoint](https://www.proofpoint.com/us/newsroom/press-releases/proofpoint-integrates-claude-compliance-api-extend-data-security-and) |
+| The Vulnerability Flood Board Conversation | Billet d'opinion méthodologique pour RSSI. | [Recorded Future](https://www.recordedfuture.com/blog/vulnerability-board-conversation) |
+| Apple Blocks 2 Million Apps | Rapport d'activité d'entreprise annuel global sans incident technique spécifique. | [Security Affairs](https://securityaffairs.com/192484/security/apple-blocks-over-2-million-apps-in-2025-fraud-crackdown.html) |
+| Discord E2EE call default | Annonce d'implémentation fonctionnelle légitime de chiffrement. | [Security Affairs](https://securityaffairs.com/192463/security/discord-adds-end-to-end-encryption-to-voice-and-video-calls-by-default.html) |
+| Securing NVIDIA AI stacks | Guide d'implémentation technique d'outils de protection. | [Sysdig](https://webflow.sysdig.com/blog/securing-nvidia-ai-stacks-for-enterprise-environments) |
+| Streamline vulnerability remediation headless | Contenu promotionnel de produit de remédiation automatisée par IA. | [Sysdig](https://webflow.sysdig.com/blog/streamline-vulnerability-remediation-with-headless-cloud-security) |
+| PH4NTXM custom firmware | Projet open-source personnel de micrologiciel alternatif. | [Infosec Exchange](https://infosec.exchange/@PH4NTXMOFFICIAL/116615672306148266) |
+| Local patching open-source software | Billet d'opinion d'un ingénieur sécurité. | [Mastodon](https://mstdn.social/@msw/116615609141495941) |
+| CTF game ruined by LLMs | Réflexion philosophique sur la pédagogie et l'IA. | [Infosec Exchange](https://infosec.exchange/@AmmarSpaces/116615501847283152) |
+| Getting hacked isn't the problem | Billet d'opinion sur la communication de crise. | [Infosec Exchange](https://infosec.exchange/@agent0x0/116614526716889945) |
+| CVE-2026-8485 (MOVEit Automation) | Score composite insuffisant (< 1.0) dans la grille de criticité. | [CERT-FR](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0624/) |
+| CVE-2026-9082 (Drupal) | Classée dans Liste_Vulnérabilités (vulnérabilités de périmètre exclues de la section Articles). | [CERT-FR](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0629/) |
+| Apereo CAS / Splunk / BIND (CERT-FR) | Classés dans Liste_Vulnérabilités (vulnérabilités de périmètre exclues de la section Articles). | [CERT-FR](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0625/) |
+| Fastjson 1.2.68 Autotype | Classée dans Liste_Vulnérabilités (vulnérabilités de périmètre exclues de la section Articles). | [Mastodon](https://mastodon.social/@liliumf/116615338498461675) |
+| Windows 10 PagedPool exploit | Classée dans Liste_Vulnérabilités (vulnérabilités de périmètre exclues de la section Articles). | [Mastodon](https://mastodon.social/@liliumf/116615255981812407) |
+| ZDI-26-318 / ZDI-26-319 (Kemp) | Classées dans Liste_Vulnérabilités (vulnérabilités de périmètre exclues de la section Articles). | [ZDI](http://www.zerodayinitiative.com/advisories/ZDI-26-318/) |
 
 ---
 
@@ -174,89 +168,73 @@ Les secteurs de la technologie, du développement logiciel, de la finance et des
 
 # SECTION "ARTICLES"
 
-<div id="teampcp-npm-supply-chain-attacks"></div>
-
-## TeamPCP : Attaques de Supply Chain npm et diffusion du ver Shai-Hulud
-
 ---
+
+<div id="uac-0057-oyster-implants-update-targeting-ukraine"></div>
+
+## UAC-0057 - Oyster implants update targeting Ukraine
 
 ### Résumé technique
 
-Depuis l'apparition du ver auto-réplicatif *Shai-Hulud* en septembre 2025, le groupe cybercriminel **TeamPCP** a intensifié ses opérations de compromission de la chaîne d'approvisionnement (supply chain) à l'encontre de l'écosystème open-source, particulièrement les registres npm. 
+Le CERT-UA a documenté une mise à jour d'envergure de la suite d'implants malveillants exploités par le groupe d'espionnage russe UAC-0057 (également connu sous le nom d'APT28 ou Sofacy). La campagne utilise un vecteur initial classique d'hameçonnage ciblé (phishing) contenant des pièces jointes malveillantes ou des liens redirigeant vers des archives compressées.
 
-Le vecteur initial consiste en l'accès non autorisé à des comptes légitimes de mainteneurs via le piratage d'identifiants ou le détournement de jetons d'authentification GitHub Actions. TeamPCP a ainsi corrompu un compte contrôlant plus de 540 paquets de confiance. La chaîne d'infection comprend l'injection de scripts malveillants de pré-installation (`preinstall` lifecycle hooks dans `package.json`). Lors de l'installation, ces scripts exécutent silencieusement un binaire ou lancent une commande via Bun pour charger le ver Shai-Hulud ou un stealer. 
+L'analyse technique révèle l'exécution d'une chaîne d'infection structurée en plusieurs étapes de charge utile (payloads) :
+1. **Oysterfresh** : Un chargeur (loader) léger initialement exécuté en mémoire pour contourner la détection heuristique et inspecter l'environnement de l'hôte.
+2. **Oystershuck** : L'implant de base, chargé d'établir la persistance au sein de la machine via des modifications ciblées du registre Windows et de configurer les canaux de communication cryptés avec l'infrastructure de commande et de contrôle (C2).
+3. **Oysterblues** : Le module d'exfiltration finale et d'exécution interactive de commandes, conçu pour rechercher et dérober des documents spécifiques sur les machines compromises.
 
-Le groupe exploite également de fausses identités imitant Claude (l'IA d'Anthropic) pour soumettre des pull requests corrompues et empoisonner le cache de construction d'outils comme pnpm ou des solutions SAP CAP/MTA. L'infrastructure de l'attaquant exploite des domaines de commandement et contrôle (C2) comme `t.m-kosche.com` pour exfiltrer les variables d'environnement (clés AWS, Azure, GCP, jetons d'API) issues des machines de compilation ou des pipelines CI/CD des développeurs.
+La persistance est assurée par l'enregistrement de binaires usurpant l'identité d'applications légitimes, notamment via le fichier `EdgeApp.exe`. Le groupe cible prioritairement des entités gouvernementales et militaires ukrainiennes afin de collecter du renseignement tactique.
 
 ---
 
 ### Analyse de l'impact
 
-L'impact de cette campagne est majeur en termes de sécurité logicielle. L'infection directe d'un environnement de build permet à TeamPCP d'exfiltrer des jetons privilégiés, ouvrant la voie à des intrusions latérales massives dans les infrastructures cloud d'entreprises. La technique de contamination indirecte via plus de 540 paquets ordinaires de maintenance représente un risque systémique pour des milliers d'applications de production qui dépendent automatiquement de ces briques logicielles. Le niveau de sophistication est élevé, combinant ingénierie sociale (identités d'agents IA falsifiés) et contournement des contrôles d'intégrité par empoisonnement de cache.
+L'impact opérationnel pour les entités touchées réside dans la compromission totale de la confidentialité des données hébergées sur les parcs gouvernementaux. La sophistication technique de la menace est élevée, caractérisée par une évasion active des EDR (par obfusquation de code et injection dans des processus de confiance de type Edge) et l'utilisation d'une infrastructure C2 résiliente.
 
 ---
 
 ### Recommandations
 
-* Imposer l'authentification multifacteur (MFA) matérielle pour l'ensemble des comptes de développeurs ayant accès à la publication de paquets.
-* Configurer la commande `npm install --min-release-age=3` pour bloquer le téléchargement instantané de dépendances nouvellement publiées avant audit.
-* Utiliser les attestations de build OpenID Connect (OIDC / SLSA Build Level 3) pour valider l'intégrité de la provenance des paquets avant intégration.
-* Restreindre et surveiller l'usage des scripts de pré-installation d'npm (`ignore-scripts`).
+* Bloquer l'exécution de scripts d'administration non signés à l'aide d'AppLocker ou de Windows Defender Application Control (WDAC).
+* Configurer la surveillance stricte des clés de registre associées au démarrage automatique (Run/RunOnce).
+* Restreindre les flux réseau sortants des postes administratifs vers des destinations non standards.
 
 ---
 
 ### Playbook de réponse à incident
 
 #### Phase 1 — Préparation
-* Activer et configurer les journaux de build de l'outil d'intégration continue (GitHub Actions, GitLab CI).
-* Intégrer l'outil `osv-scanner` (API OpenSSF OSV) de manière automatisée dans les pipelines de validation.
-* Définir les contacts clés au sein de l'équipe sécurité logicielle et de l'ingénierie applicative.
+* Mettre à jour les règles de détection EDR et de proxy réseau pour identifier l'usage de l'exécutable masqué `EdgeApp.exe`.
+* S'assurer que les journaux de modifications de registre Windows (Event ID 4657) sont activés et centralisés vers le SIEM.
 
 #### Phase 2 — Détection et analyse
-* **Requête EDR (générique) de détection de processus suspicieux lancés par npm** :
-  `process_parent_name == "node" OR "npm" OR "bun" AND process_name == "curl" OR "wget" OR "bash"`
-* **Règle YARA ciblant le code du ver Shai-Hulud dans les dépendances** :
-  ```yara
-  rule ShaiHulud_Payload_Detection {
-      meta:
-          description = "Detects Shai-Hulud worm payload in package.json/preinstall scripts"
-      strings:
-          $hook = "preinstall"
-          $mal = "t.m-kosche.com"
-          $bun = "bun run"
-      condition:
-          $hook and ($mal or $bun)
-  }
-  ```
-* Interroger l'API OSV via `https://api.osv.dev/v1/querybatch` pour valider si les dépendances en cours d'installation sont cataloguées sous l'identifiant de paquet malveillant `MAL-*`.
+* Rechercher les instances d'exécution de `EdgeApp.exe` en dehors des chemins d'installation standards de Microsoft.
+* **Requête EDR (syntaxe générique) :**
+  `process_name == "EdgeApp.exe" AND parent_process != "explorer.exe"`
 
 #### Phase 3 — Confinement, éradication et récupération
-* **Confinement** : Isoler immédiatement l'environnement de build compromis. Invalider tous les jetons secrets (AWS, OIDC, GCP, Azure, GitHub) stockés dans les variables du projet.
-* **Éradication** : Forcer la suppression locale et sur le cache pnpm des dépendances altérées. Revenir à une version stable antérieure documentée dans `package-lock.json`.
-* **Récupération** : Restaurer l'environnement CI/CD à partir d'un état sain vérifié. Réinitialiser l'ensemble des clés SSH et secrets d'administration.
+* **Confinement :** Isoler logiquement le poste via la quarantaine EDR pour stopper toute exfiltration.
+* **Éradication :** Supprimer l'artefact malveillant localisé à l'emplacement identifié et purger les clés de registre de persistance malveillantes.
+* **Récupération :** Restaurer la configuration système d'origine et imposer un changement de mot de passe global pour les comptes de l'utilisateur affecté.
 
 #### Phase 4 — Activités post-incident
-* Rédiger le rapport technique de compromission (calcul du dwell time).
-* Signaler les paquets malveillants identifiés aux équipes de sécurité d'npm et à l'OpenSSF.
-* Notifier les autorités (RGPD / NIS2) si des secrets d'accès à des bases de données de clients ont été exfiltrés durant l'incident.
+* Analyser l'archive malveillante d'origine pour en extraire d'éventuels nouveaux sous-domaines de C2 non répertoriés.
+* Notifier les autorités gouvernementales compétentes (CERT national) de la nature de l'intrusion.
 
 #### Phase 5 — Threat Hunting (proactif)
 
 | Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
 |---|---|---|---|
-| Recherche d'exécutions de scripts de pré-installation suspects issus de dépendances npm récentes | T1195.002 | Journaux d'activité CI/CD et audits npm install | Filtrer les journaux pour repérer l'usage de `--ignore-scripts` désactivé lors de l'intégration de dépendances externes non vérifiées. |
+| Recherche d'exécutions d'outils de transfert de fichiers non autorisés | T1105 | Logs EDR (Process creation) | `process.command_line: "*EdgeApp.exe*" OR file.path: "*EdgeApp.exe*"` |
 
 ---
 
-### Indicateurs de compromission (DEFANG)
+### Indicateurs de compromission (DEFANG obligatoire)
 
 | Type | Valeur (DEFANG) | Description | Fiabilité |
 |---|---|---|---|
-| Domaine | t[.]m-kosche[.]com | C2 de TeamPCP pour l'exfiltration et le ver Shai-Hulud | Haute |
-| Domaine | audit[.]checkmarx[.]cx | Domaine usurpé pour fausse télémétrie malveillante | Moyenne |
-| Hash SHA256 | 167ce57ef59a32a6a0ef4137785828077879092d7f83ddbc1755d6e69116e0ad | Fichier payload malveillant associé à Shai-Hulud | Haute |
-| Hash SHA256 | 18f784b3bc9a0bcdcb1a8d7f51bc5f54323fc40cbd874119354ab609bef6e4cb | Archive de dépendance corrompue | Haute |
-| URL | hxxps[://]api[.]osv[.]dev/v1/query | Point d'entrée de requêtage de vulnérabilités et paquets malveillants | Haute |
+| Hash SHA256 | `07ff534b425b09123577067d4aebcdecd523acbec8d1b180179aca1377c0a4e7` | Charge utile de l'implant Oystershuck | Haute |
+| Nom de fichier | `EdgeApp.exe` | Binaire de persistance usurpant une application légitime | Moyenne |
 
 ---
 
@@ -264,99 +242,81 @@ L'impact de cette campagne est majeur en termes de sécurité logicielle. L'infe
 
 | ID TTP | Tactique | Technique | Description contextuelle |
 |---|---|---|---|
-| T1195.002 | Initial Access | Software Supply Chain Compromise: Compromise Software Dependencies | Empoisonnement des paquets d'administration et d'intégration via la compromission de comptes de mainteneurs de paquets npm. |
-| T1553.002 | Defense Evasion | Subvert Trust Controls: Code Signing | Signature falsifiée ou contournement de la vérification de confiance des scripts de build. |
-| T1071.001 | Command and Control | Application Layer Protocol: Web Protocols | Utilisation de protocoles HTTPS ordinaires vers le domaine de l'attaquant pour exfiltrer silencieusement les jetons d'accès. |
+| **T1059** | Execution | Command and Scripting Interpreter | Exécution de commandes shell pour orchestrer l'infection de l'hôte. |
+| **T1105** | Command and Control | Ingress Tool Transfer | Téléchargement des étapes de charges utiles additionnelles (implants). |
 
 ---
 
 ### Sources
 
-* [Unit 42](https://unit42.paloaltonetworks.com/monitoring-npm-supply-chain-attacks/)
-* [OpenSSF Blog](https://opensssf.org/blog/2026/05/20/detecting-malicious-packages-using-the-osv-api/)
-* [OpenSourceMalware](https://opensourcemalware.com/blog/teampcp-compromises-npm-maintainer-with-over-540-packages)
+* [CERT-UA Advisory](https://cert.gov.ua/article/6315762)
 
 ---
 
-<div id="tamperedchef-malvertising-and-code-signing-clusters"></div>
+<div id="the-gentlemen-ransomware-defense-evasion-and-ymca-columbia-attack"></div>
 
-## TamperedChef : Campagnes de Malvertising et Abus de Certificats de Signature
-
----
+## The Gentlemen ransomware - Defense evasion and YMCA Columbia attack
 
 ### Résumé technique
 
-Le réseau cybercriminel **TamperedChef** (connu sous le nom de *EvilAI*) s'est spécialisé dans la diffusion à grande échelle de chevaux de Troie d'accès distant (RAT) et d'outils d'extraction de données (stealers) par le biais d'un mécanisme d'usurpation de logiciels de bureautique et de productivité légitimes (lecteurs de PDF, compresseurs ZIP de type "OneZip" ou "CrystalPDF"). 
+Les équipes de Huntress ont documenté l'activité et le mode opératoire du groupe criminel opérant le rançongiciel "The Gentlemen" (Ransomware-as-a-Service, actif depuis la mi-2025). Le groupe a récemment revendiqué une attaque d'envergure contre l'YMCA de Columbia, menaçant d'exfiltrer et de publier des enregistrements médicaux et des dossiers d'adhérents.
 
-Le vecteur initial d'infection repose sur de vastes campagnes de publicité malveillante (malvertising) imitant les sites web officiels de ces outils. Les fichiers d'installation sont empaquetés sous une architecture applicative Neutralinojs (alternative légère à Electron) et signés avec des certificats d'authentification de signature de code (OV/EV) valides acquis frauduleusement par le biais de sociétés écrans (comme Crown Sky LLC). 
-
-Le malware intègre un mécanisme de détection géographique et de contournement d'analyse (technique *pixelcheck*) pour éviter de s'activer dans des environnements d'analyse automatique de sécurité (sandbox). Après une période d'inactivité programmée (dormance), la charge finale est téléchargée et exécutée pour extraire les secrets, sessions de navigation et jetons d'identification de l'hôte victime.
+Le vecteur d'accès initial privilégié par le groupe consiste à exploiter des vulnérabilités connues sur les équipements d'accès à distance (VPN, firewalls) ou à utiliser des identifiants valides compromis. Une fois l'accès établi, les attaquants initient une phase de contournement agressif des systèmes de défense (Defense Evasion) :
+* Utilisation intensive de scripts PowerShell conçus pour désactiver la protection en temps réel, la protection cloud et le service d'envoi d'échantillons de Microsoft Defender.
+* Suppression méthodique des journaux d'événements Windows (Event ID 104 et 1102) pour entraver l'analyse forensique.
+* Configuration de tunnels réseau proxy SOCKS via des connexions chiffrées SSH pour masquer l'infrastructure de commande et de contrôle (C2), s'appuyant notamment sur l'IP `193[.]233[.]202[.]17`.
+* Mouvement latéral et escalade de privilèges via des tâches planifiées malveillantes (`T1053.005`) configurées pour s'exécuter à intervalle régulier sur les contrôleurs de domaine.
 
 ---
 
 ### Analyse de l'impact
 
-L'abus de certificats de signature de code valides confère à l'attaque un pouvoir d'évasion très important vis-à-vis des solutions de détection de type antivirus traditionnels et EDR, qui font fréquemment confiance par défaut aux binaires signés. La technique de dissimulation asymétrique (pixelcheck/dormance) accroît le dwell time au sein des entreprises touchées, facilitant l'exfiltration ultérieure d'identifiants administratifs.
+L'impact est particulièrement critique pour les secteurs de la santé et du social (YMCA). Outre le chiffrement complet des données qui provoque un déni de service opérationnel immédiat, l'exfiltration et la menace de divulgation de données de santé exposent les organisations à un chantage réputationnel et à des sanctions réglementaires sévères.
 
 ---
 
 ### Recommandations
 
-* Limiter drastiquement la capacité des utilisateurs non privilégiés à exécuter ou installer des fichiers téléchargés sur le Web via des politiques AppLocker ou Microsoft Defender Application Control (WDAC).
-* Configurer les serveurs mandataires (proxys) et pare-feux pour inspecter et bloquer l'accès aux sites d'annonces publicitaires connus pour diffuser du malvertising.
-* Révoquer ou bloquer localement la confiance accordée aux certificats de signature émis pour des entités frauduleuses répertoriées (ex: Crown Sky LLC).
+* Activer la "Tamper Protection" au sein de Microsoft Defender de manière centralisée pour interdire sa désactivation par script.
+* Restreindre les communications inter-postes (mouvements latéraux) sur les ports RDP (3389) et SMB (445).
+* Imposer l'authentification multifacteur (MFA) résistante au phishing sur l'intégralité des accès distants.
 
 ---
 
 ### Playbook de réponse à incident
 
 #### Phase 1 — Préparation
-* Mettre en œuvre une journalisation approfondie du trafic web de sortie de l'entreprise (DNS, requêtes HTTP).
-* S'assurer de la présence d'outils de détection comportementale (EDR) activés sur tous les terminaux de travail.
+* Auditer périodiquement les configurations des tâches planifiées sur les serveurs Active Directory.
+* Intégrer les signatures réseau de détection du trafic vers l'adresse C2 suspecte.
 
 #### Phase 2 — Détection et analyse
-* **Règle de détection EDR (requête comportementale)** :
-  `process_name == "neutralino.exe" OR process_name == "onezip.exe" AND outbound_network_connection == TRUE`
-* **Règle YARA ciblant la logique du chargeur TamperedChef** :
-  ```yara
-  rule TamperedChef_Neutralino_Loader {
-      meta:
-          description = "Detects TamperedChef Neutralinojs installer payload"
-      strings:
-          $neu = "neutralino"
-          $pixel = "pixel.toolname"
-          $scam = "Crown Sky LLC"
-      condition:
-          2 of them
-  }
-  ```
+* Rechercher les alertes d'effacement de journaux de sécurité (Event ID 1102).
+* **Requête SIEM (Logclear) :**
+  `EventID == 1102 OR EventID == 104`
+* Identifier l'exécution anormale de commandes PowerShell manipulant la cmdlet `Set-MpPreference`.
 
 #### Phase 3 — Confinement, éradication et récupération
-* **Confinement** : Isoler l'hôte infecté du sous-réseau local. Bloquer immédiatement l'ensemble des domaines et sous-domaines associés à TamperedChef (`onezipapp.com`, `crystalpdf.com`).
-* **Éradication** : Supprimer l'ensemble des binaires installés de l'application frauduleuse dans les profils utilisateurs (`%AppData%`, `%LocalAppData%`). Révoquer manuellement le certificat racine compromis.
-* **Récupération** : Réinstaller si nécessaire le poste à partir d'une image certifiée conforme si des altérations du registre système ou une persistence avancée ont été détectées.
+* **Confinement :** Isoler le contrôleur de domaine affecté, déconnecter l'accès Internet global de l'infrastructure et tuer les tunnels SOCKS actifs.
+* **Éradication :** Supprimer les tâches planifiées malveillantes, éliminer les scripts d'évasion EDR et purger les outils de hacking d'outils comme Mimikatz.
+* **Récupération :** Valider l'intégrité des bases Active Directory, restaurer les données à partir de sauvegardes isolées physiquement (hors ligne) et forcer le renouvellement des secrets Kerberos (krbtgt).
 
 #### Phase 4 — Activités post-incident
-* Procéder à un audit de sécurité des comptes personnels et professionnels utilisés sur la machine compromise (réinitialisation globale des mots de passe).
-* Transmettre les détails techniques et les hachages de certificats identifiés aux autorités d'émission (CA) pour révocation de la signature.
+* Analyser l'étendue exacte des données exfiltrées pour préparer la notification obligatoire RGPD/CNIL ou HIPAA sous 72h.
 
 #### Phase 5 — Threat Hunting (proactif)
 
 | Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
 |---|---|---|---|
-| Détecter des connexions persistantes vers l'infrastructure de Pixelcheck publicitaire | T1036.005 | Journaux d'accès Web / Proxy | Rechercher des requêtes DNS/HTTPS répétitives vers des noms de domaine contenant des variations de `pixel.toolname.com` ou des extensions de pays atypiques associées à de faux services. |
+| Détection de désactivation de l'antivirus via PowerShell | T1059.001 | Logs PowerShell (Event ID 4104) | `Set-MpPreference -DisableRealtimeMonitoring $true` |
 
 ---
 
-### Indicateurs de compromission (DEFANG)
+### Indicateurs de compromission (DEFANG obligatoire)
 
 | Type | Valeur (DEFANG) | Description | Fiabilité |
 |---|---|---|---|
-| Domaine | onezipapp[.]com | Site de distribution malveillant (OneZip) | Haute |
-| Domaine | crystalpdf[.]com | Site de distribution malveillant (CrystalPDF) | Haute |
-| Domaine | pixel[.]toolname[.]com | Serveur de validation d'infrastructure publicitaire (Pixelcheck) | Haute |
-| Hash SHA256 | 2231bfa7c7bd4a8ff12568074f83de8e4ec95c226230cccc6616a1a4416de268 | Charge utile malveillante d'installation Neutralinojs | Haute |
-| Hash SHA256 | 248de1470771904462c91f146074e49b3d7416844ec143ade53f4ac0487fdb44 | DLL d'injection de charge utile | Haute |
+| IP | `193[.]233[.]202[.]17` | Adresse IP d'infrastructure C2 SOCKS utilisée par le malware | Haute |
+| Hash SHA256 | `f918535f974591ef031bd0f30a8171e3da27a6754e6426a8ba095f83195661c8` | Charge utile de chiffrement / script de désactivation Defender | Haute |
 
 ---
 
@@ -364,184 +324,156 @@ L'abus de certificats de signature de code valides confère à l'attaque un pouv
 
 | ID TTP | Tactique | Technique | Description contextuelle |
 |---|---|---|---|
-| T1204.002 | Execution | User Execution: Malicious File | L'utilisateur est incité à télécharger et installer l'utilitaire de bureautique corrompu via une annonce de malvertising. |
-| T1036.005 | Defense Evasion | Masquerading: Match Legitimate Name or Location | L'installateur malicieux se fait passer pour un composant logiciel classique tout en utilisant un certificat de signature valide. |
+| **T1053.005** | Execution | Scheduled Task | Planification de tâches pour forcer l'exécution périodique des agents persistants. |
+| **T1059.001** | Execution | PowerShell | Utilisation de scripts d'administration pour forcer l'arrêt des services Defender. |
+| **T1078** | Defense Evasion | Valid Accounts | Usage de comptes légitimes détournés pour se déplacer latéralement. |
 
 ---
 
 ### Sources
 
-* [Unit 42](https://unit42.paloaltonetworks.com/tracking-tampered-chef-clusters/)
+* [Huntress Research on The Gentlemen](https://www.huntress.com/blog/the-gentlemen-ransomware-defense-evasion-ttps)
+* [Mastodon Threat Intel Claims](https://mastodon.social/@Matchbook3469/116613866415964658)
 
 ---
 
-<div id="go-module-shopsprint-decimal-typosquatting"></div>
+<div id="operation-saffron-dismantling-of-first-vpn-infrastructure"></div>
 
-## Typosquatting du module Go shopsprint/decimal et porte dérobée DNS TXT
-
----
+## Operation Saffron - Dismantling of First VPN infrastructure
 
 ### Résumé technique
 
-Une campagne d'intrusion très ciblée a visé les développeurs exploitant le langage Go en propageant un module contrefait sur le dépôt public GitHub. Le paquet malveillant, nommé `github.com/shopsprint/decimal`, usurpe par typosquatting la bibliothèque mathématique extrêmement populaire de manipulation de nombres décimaux `shopspring/decimal` (l'attaquant ayant simplement remplacé le 'g' par un 'r'). 
+Une opération policière internationale coordonnée par Europol, baptisée "Operation Saffron", a permis le démantèlement complet de l'infrastructure cybercriminelle "First VPN" (opérée via les domaines `1vpns[.]com` et `1vpns[.]org`). Ce service était activement loué par de nombreux opérateurs de rançongiciels pour masquer leurs activités lors des phases de pénétration et d'exfiltration.
 
-La porte dérobée est introduite via une fonction d'initialisation automatique `init()` cachée au cœur du module. Lors de la compilation ou de l'exécution d'un binaire exploitant cette dépendance, cette fonction s'active silencieusement. Elle effectue une requête réseau d'enregistrement DNS de type TXT toutes les 5 minutes vers le sous-domaine contrôlé `dnslog-cdn-images.freemyip.com`. La réponse reçue est déchiffrée en mémoire pour exécuter des commandes arbitraires d'administration de l'hôte (C2 via canal DNS asymétrique).
+L'action répressive a abouti à la saisie de 33 serveurs de transit localisés dans 27 pays et à l'arrestation de l'administrateur présumé du réseau en Ukraine. Le support technique de partenaires industriels tels que Bitdefender a permis d'analyser l'infrastructure pour extraire les journaux de trafic sous-jacents, permettant de rétro-identifier les adresses IP d'origine des attaquants criminels.
 
 ---
 
 ### Analyse de l'impact
 
-L'impact technique est sévère en raison de l'intégration directe du code malveillant au sein de l'exécutable Go produit. De plus, le mécanisme de gestion et de mise en cache agressif des modules de Go (*Go module cache*) favorise la propagation involontaire du malware d'une machine de développeur à une autre. L'exploitation du trafic DNS standard pour le canal de commande et contrôle (C2) complique la détection réseau car ce flux est rarement inspecté en détail et bénéficie d'une autorisation de sortie générale.
+L'impact stratégique est majeur pour l'écosystème cybercriminel. La désactivation de ce réseau d'anonymisation perturbe directement les opérations de plusieurs gangs cybercriminels, tout en fournissant aux forces de l'ordre une masse de métadonnées inestimables pour mener des enquêtes ultérieures.
 
 ---
 
 ### Recommandations
 
-* Procéder à un audit strict du fichier de configuration `go.mod` pour déceler et supprimer l'importation de `github.com/shopsprint/decimal`.
-* Restreindre et surveiller le trafic DNS sortant depuis les machines de développement pour n'autoriser que les serveurs DNS d'entreprise ou réputés sécurisés.
-* Configurer des alertes sur la résolution de domaines d'infrastructure dynamique gratuits comme `freemyip.com` ou de serveurs dnslog.
+* Interdire l'installation et l'usage de tout service de VPN commercial ou d'anonymisation non validé par la charte informatique sur le parc d'entreprise.
+* Auditer les flux de trafic à la recherche de connexions historiques vers les domaines et serveurs saisis de First VPN.
 
 ---
 
 ### Playbook de réponse à incident
 
 #### Phase 1 — Préparation
-* Activer et archiver les journaux de requêtes DNS de l'ensemble de l'organisation.
-* Déployer une politique de sécurité DNS (DNSSEC) pour protéger l'intégrité de l'infrastructure d'entreprise.
+* Intégrer la liste des adresses IP associées aux serveurs saisis par Europol au sein de la liste noire de blocage du proxy réseau d'entreprise.
 
 #### Phase 2 — Détection et analyse
-* **Requête SIEM / DNS de détection** :
-  `dns_query_type == "TXT" AND dns_query_name CONTAINS "dnslog-cdn-images.freemyip.com"`
-* **Règle de détection de binaire Go compromis (YARA)** :
-  ```yara
-  rule Go_Decimal_Typosquat_Backdoor {
-      meta:
-          description = "Detects compromised Go binaries compiling shopsprint/decimal typosquatted module"
-      strings:
-          $mal = "shopsprint/decimal"
-          $dns = "dnslog-cdn-images"
-          $fn = "decimal.init"
-      condition:
-          2 of them
-  }
-  ```
+* Analyser l'historique de la télémétrie DNS sur 12 mois pour valider si des postes internes ont communiqué avec l'infrastructure VPN.
+* **Requête DNS (SIEM) :**
+  `domain == "1vpns.com" OR domain == "1vpns.org"`
 
 #### Phase 3 — Confinement, éradication et récupération
-* **Confinement** : Couper l'accès réseau de la machine du développeur identifiée. Bloquer immédiatement la résolution DNS et le trafic sortant vers le domaine `dnslog-cdn-images.freemyip.com`.
-* **Éradication** : Purger le cache des modules locaux à l'aide de la commande `go clean -modcache`. Remplacer la ligne problématique dans `go.mod` par la dépendance saine d'origine `github.com/shopspring/decimal`.
-* **Récupération** : Recompiler l'application à partir du code source assaini dans un conteneur sécurisé et propre.
+* **Confinement :** Isoler logiquement et physiquement tout poste de travail ayant initié des sessions persistantes vers les domaines cibles.
+* **Éradication :** Procéder à l'audit complet de la machine concernée pour identifier une éventuelle intrusion masquée par ce tunnel. Purger l'application VPN non autorisée.
+* **Récupération :** Restaurer la configuration réseau nominale et forcer la réinitialisation des accès de l'employé.
 
 #### Phase 4 — Activités post-incident
-* Révoquer l'ensemble des jetons d'accès, mots de passe ou certificats d'API stockés en clair sur l'ordinateur touché, la porte dérobée DNS TXT ayant pu servir à les exfiltrer.
-* Partager les conclusions techniques avec l'équipe CTI pour alimenter le référentiel des menaces internes.
+* Collaborer avec les autorités compétentes s'il s'avère qu'un attaquant a exploité ce canal pour cibler l'infrastructure de l'entreprise.
 
 #### Phase 5 — Threat Hunting (proactif)
 
 | Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
 |---|---|---|---|
-| Recherche d'exfiltration de données ou C2 via requêtes de type DNS TXT anormales | T1071.004 | Journaux DNS d'entreprise | Analyser la distribution de longueur des réponses TXT et repérer les requêtes d'enregistrements TXT récurrentes de serveurs non internes. |
+| Identification de connexions persistantes sortantes suspectes vers des plages d'IP de transit | T1041 | Logs Proxy / Pare-feu | `destination.domain: "*1vpns*"` |
 
 ---
 
-### Indicateurs de compromission (DEFANG)
+### Indicateurs de compromission (DEFANG obligatoire)
 
 | Type | Valeur (DEFANG) | Description | Fiabilité |
 |---|---|---|---|
-| Domaine | dnslog-cdn-images[.]freemyip[.]com | Serveur de réception et de C2 de requêtes DNS TXT | Haute |
-| URL | hxxps[://]otx[.]alienvault[.]com/pulse/6a0d278a6320921cb57f8b69 | Fiche d'indicateurs de compromission partagée | Haute |
+| Domaine | `1vpns[.]com` | Domaine officiel du service cybercriminel First VPN | Haute |
+| Domaine | `1vpns[.]org` | Domaine secondaire d'infrastructure First VPN | Haute |
 
 ---
 
 ### TTP MITRE ATT&CK
 
-| ID TTP | Tactique | Technique | Description contextuelle |
-|---|---|---|---|
-| T1195.002 | Initial Access | Software Supply Chain Compromise: Compromise Software Dependencies | Typo-squatting d'une bibliothèque Go courante en remplaçant un caractère pour inciter les développeurs à importer un module malveillant. |
-| T1071.004 | Command and Control | Application Layer Protocol: DNS | Utilisation du protocole DNS et de requêtes TXT pour transférer des instructions et des scripts de commande à exécuter. |
+*Aucun TTP MITRE ATT&CK technique d'intrusion n'est directement rattaché à l'action de démantèlement.*
 
 ---
 
 ### Sources
 
-* [Mastodon / techbot](https://social.raytec.co/@techbot/116609874887435996)
+* [Security Affairs First VPN Takedown](https://securityaffairs.com/192491/cyber-crime/global-law-enforcement-operation-takes-first-vpn-offline.html)
+* [DataBreaches.net Operation Saffron](https://databreaches.net/2026/05/21/operation-saffron-bitdefender-joins-first-vpn-takedown/?pk_campaign=feed&pk_kwd=operation-saffron-bitdefender-joins-first-vpn-takedown)
+* [Mastodon Europol Crackdown](https://infosec.exchange/@hackerworkspace/116614014219673741)
 
 ---
 
-<div id="banana-rat-polymorphic-banking-trojan"></div>
+<div id="teampcp-shai-hulud-supply-chain-campaign-targeting-npm"></div>
 
-## Banana RAT : Trojan Bancaire Polymorphe avec Générateur FastAPI
-
----
+## TeamPCP - Shai-Hulud supply chain campaign targeting npm
 
 ### Résumé technique
 
-Les équipes d'investigation en cybersécurité ont mis au jour une campagne financière d'envergure distribuant un nouveau rançongiciel et cheval de Troie bancaire brésilien baptisé **Banana RAT** (opéré par le groupe de menace *SHADOW-WATER-063*). 
+L'équipe Unit 42 de Palo Alto Networks a documenté l'activité et l'évolution du groupe cybercriminel TeamPCP. Ce dernier orchestre des attaques d'envergure sur la chaîne d'approvisionnement via le registre de paquets npm en exploitant un ver automatisé nommé "Shai-Hulud".
 
-Le malware intègre un panneau d'administration et un serveur de build basés sur l'API FastAPI permettant de générer automatiquement des binaires uniques et obfusqués à la demande (système polymorphe empêchant les détections par signatures statiques). Banana RAT se déploie sans stockage physique persistant sur le disque dur (malware *fileless*), s'exécutant directement en mémoire vive via des scripts d'intégration et d'appel PowerShell encodés de deuxième niveau. 
+La campagne cible particulièrement les développeurs utilisant des outils modernes comme Bun pour empoisonner le cache de compilation des processus de CI/CD (intégration et déploiement continus), notamment chez SAP et TanStack. Le mode opératoire se décline ainsi :
+* Propagation automatisée de paquets malveillants usurpant des noms de paquets populaires (typosquatting).
+* Injection de code malveillant au moment de la phase de compilation (scripts de pré-installation) pour voler de manière furtive les jetons d'identité OIDC (OpenID Connect) et les identifiants d'accès d'API stockés localement.
+* Exfiltration des jetons d'authentification vers le domaine de C2 `t[.]m-kosche[.]com` ou utilisation illégitime du téléchargement de binaires hébergés sur GitHub (`hxxps[://]github[.]com/oven-sh/bun/releases/download/bun-v1.3.13/`).
 
-Il cible spécifiquement les opérateurs et utilisateurs financiers en interceptant l'activité d'affichage de l'écran par le biais de captures continues (*screen capture*) et en y superposant des masques d'écrans factices (*overlays*) imitant parfaitement l'interface de plus de 16 grandes institutions bancaires brésiliennes pour dérober les transactions Pix en temps réel.
+L'infection se propage sans nécessiter de modification directe du code source apparent du projet victime, contournant ainsi les vérifications de signature standard de niveau SLSA Build Level 3.
 
 ---
 
 ### Analyse de l'impact
 
-Le potentiel destructeur pour le secteur de la finance et des banques de détail est très élevé. En détournant les mécanismes d'authentification par le biais de fausses fenêtres interactives, l'attaquant peut rediriger les transactions financières Pix de manière instantanée et frauduleuse. L'architecture polymorphe et l'exécution sans fichier posent de grandes difficultés pour la détection temps réel par des agents de sécurité classiques.
+L'impact est extrêmement grave pour les éditeurs de logiciels et les infrastructures cloud associés. Le détournement de secrets d'administration cloud (AWS, Azure, GCP via OIDC) permet aux attaquants de pénétrer directement les environnements de production des clients finaux pour mener de l'exfiltration massive ou des attaques par rançongiciels.
 
 ---
 
 ### Recommandations
 
-* Mettre en œuvre le mode de langage restreint de PowerShell (*Constrained Language Mode*) sur les postes de travail pour interdire l'exécution de blocs de commandes système complexes en mémoire.
-* Éduquer les équipes de gestion de transactions financières aux risques d'apparition soudaine de fenêtres de validation inattendues (masques d' overlays).
-* Restreindre l'installation et l'usage d'outils d'administration à distance non validés par l'IT.
+* Configurer les serveurs de build d'applications (runners) pour interdire tout flux réseau sortant vers des destinations non listées (Internet libre).
+* Imposer l'usage de registres de paquets privés d'entreprise avec mise en cache locale contrôlée et validation obligatoire par outil de scan SCA (Software Composition Analysis).
 
 ---
 
 ### Playbook de réponse à incident
 
 #### Phase 1 — Préparation
-* Activer la journalisation de script PowerShell (*Script Block Logging* - ID d'événement Windows 4104).
-* S'assurer que les postes de travail critiques disposent de règles d'accès logique réduites au strict nécessaire.
+* Déployer des outils de surveillance d'activité des processus système au sein des conteneurs de compilation CI/CD.
+* Configurer le blocage réseau préventif du domaine d'exfiltration cible.
 
 #### Phase 2 — Détection et analyse
-* **Requête de détection dans les journaux d'événements PowerShell (ID 4104)** :
-  `ScriptBlockText CONTAINS "FastAPI" OR "BananaRAT" OR "Invoke-Expression" AND CONTAINS "base64"`
-* **Règle de détection de binaire Banana RAT en mémoire (YARA)** :
-  ```yara
-  rule BananaRAT_FastAPI_Payload {
-      meta:
-          description = "Detects active memory footprint of Banana RAT banking trojan"
-      strings:
-          $gen = "BananaRAT"
-          $fast = "FastAPI"
-          $overlay = "overlay_pix"
-      condition:
-          2 of them
-  }
-  ```
+* Rechercher les tentatives de connexions non habituelles de la part des gestionnaires de paquets (npm, bun) vers des serveurs externes.
+* **Requête EDR (Compilation de code) :**
+  `process.name == "node" AND network.destination_ip != "registry.npmjs.org"`
 
 #### Phase 3 — Confinement, éradication et récupération
-* **Confinement** : Isoler logiquement le poste de l'opérateur financier touché. Bloquer toutes les sessions de transaction de la victime sur l'Active Directory.
-* **Éradication** : Mettre fin aux processus PowerShell suspects identifiés. Nettoyer les clés d'exécution éphémères dans le registre utilisateur.
-* **Récupération** : Reconstruire l'environnement d'exploitation à partir d'un système de sauvegarde ou d'une image d'hôte certifiée.
+* **Confinement :** Couper immédiatement le pipeline de déploiement affecté, révoquer de manière centralisée toutes les clés API et tokens OIDC générés ou stockés sur les agents de build concernés.
+* **Éradication :** Nettoyer le cache local des runners, purger les dépendances malveillantes npm et ré-analyser l'intégrité du code source.
+* **Récupération :** Reconstruire l'image du runner à partir d'une source propre certifiée et relancer la compilation sécurisée.
 
 #### Phase 4 — Activités post-incident
-* Collaborer avec les autorités de régulation financière et de police brésiliennes pour signaler l'usage de la fraude d'overlay Pix.
-* Documenter la structure du binaire polymorphe extrait pour en intégrer les schémas comportementaux dans le système EDR d'entreprise.
+* Mener un audit complet des environnements cloud rattachés aux comptes des tokens exfiltrés pour repérer d'éventuelles créations de comptes persistants ou de portes dérobées.
 
 #### Phase 5 — Threat Hunting (proactif)
 
 | Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
 |---|---|---|---|
-| Repérer des lancements de scripts PowerShell obfusqués et sans fichier | T1059.001 | Journaux Windows Event ID 4104 | Analyser les blocs de code PowerShell contenant des taux d'entropie anormalement élevés ou des chaînes encodées de manière asymétrique. |
+| Détection d'exfiltration de secrets système lors de builds de développement | T1195.001 | Logs de terminaux de build | `process.command_line: "*gh auth token*" OR process.command_line: "*AWS_ACCESS_KEY_ID*"` |
 
 ---
 
-### Indicateurs de compromission (DEFANG)
+### Indicateurs de compromission (DEFANG obligatoire)
 
 | Type | Valeur (DEFANG) | Description | Fiabilité |
 |---|---|---|---|
-| URL | hxxps[://]otx[.]alienvault[.]com/pulse/6a0ce3af84b924ad15e27920 | Pulsation d'indicateurs de compromission sur AlienVault | Haute |
+| Domaine | `t[.]m-kosche[.]com` | Serveur d'exfiltration de secrets et de contrôle du ver Shai-Hulud | Haute |
+| URL | `hxxps[://]github[.]com/oven-sh/bun/releases/download/bun-v1.3.13/` | Lien de téléchargement de dépendance détournée par le ver | Moyenne |
 
 ---
 
@@ -549,92 +481,221 @@ Le potentiel destructeur pour le secteur de la finance et des banques de détail
 
 | ID TTP | Tactique | Technique | Description contextuelle |
 |---|---|---|---|
-| T1059.001 | Execution | Command and Scripting Interpreter: PowerShell | Exécution d'instructions d'amorçage encodées en mémoire système via des commandes PowerShell pour contourner l'écriture sur disque. |
-| T1113 | Collection | Screen Capture | Capture continue de l'état d'affichage de l'utilisateur pour synchroniser l'affichage d'écrans de masquage frauduleux. |
+| **T1195.001** | Initial Access | Active supply chain compromise | Altération et distribution automatisée de paquets malveillants au sein du registre npm public. |
 
 ---
 
 ### Sources
 
-* [Mastodon / techbot](https://social.raytec.co/@techbot/116609759166461979)
+* [Unit 42 Supply Chain Attack Analysis](https://unit42.paloaltonetworks.com/monitoring-npm-supply-chain-attacks/)
 
 ---
 
-<div id="pypi-microsoft-durabletask-supply-chain-compromise"></div>
+<div id="kimwolf-botmaster-arrest-dismantling-of-a-major-ddos-botnet"></div>
 
-## Compromission de la Supply Chain PyPi via Microsoft DurableTask
-
----
+## Kimwolf botmaster arrest - Dismantling of a major DDoS botnet
 
 ### Résumé technique
 
-Une attaque critique ciblant la chaîne logistique logicielle du langage Python s'est manifestée par l'injection de code malveillant au sein des versions majeures v1.4.1, v1.4.2 et v1.4.3 du client officiel **Microsoft DurableTask** sur le registre public PyPi. 
+Une action policière transfrontalière conjointe menée au Canada et aux États-Unis a mené à l'arrestation de Jacob Butler (alias "Dort"), âgé de 23 ans. L'individu est accusé d'être l'administrateur principal (botmaster) du réseau de botnet IoT "Kimwolf".
 
-L'acteur malveillant est parvenu à s'emparer de comptes GitHub de développement pour exfiltrer les clés d'API de publication et de déploiement PyPi. Le code piégé est conçu pour analyser silencieusement les variables d'environnement des systèmes d'hébergement afin d'en extraire les secrets de production et d'administration de plateformes cloud (Vault, AWS SSM, Azure, GCP). 
-
-Une fois les identifiants volés, le malware exploite le système d'authentification AWS SSM (System Manager) et des interfaces de conteneurs Kubernetes (Kube-API) pour se propager de manière automatique et transversale au sein des infrastructures logiques de l'entreprise.
+Ce botnet s'appuyait sur l'enrôlement de millions d'objets connectés vulnérables (routeurs domestiques, caméras IP de surveillance, cadres photo numériques) exposés à l'Internet public et utilisant des identifiants par défaut ou des vulnérabilités de micrologiciels non corrigées. Les capacités de frappe de Kimwolf permettaient de déclencher des attaques par déni de service distribué (DDoS) records atteignant jusqu'à 30 Terabits par seconde (Tbps), ciblant des fournisseurs d'accès Internet, des infrastructures étatiques critiques et des entités publiques.
 
 ---
 
 ### Analyse de l'impact
 
-L'intrusion est d'une gravité exceptionnelle pour les architectures cloud d'entreprise. Étant donné l'usage massif de la bibliothèque Microsoft DurableTask pour la gestion d'orchestrations et de microservices, la présence d'une porte dérobée de vol de clés dans ces versions permet une prise de contrôle totale et silencieuse des serveurs d'administration et de gestion d'identités.
+L'arrestation du botmaster et la neutralisation concomitante de ses serveurs de commande centraux affaiblissent grandement les capacités DDoS disponibles sur les marchés cybercriminels, améliorant temporairement la résilience réseau des parcs d'infrastructures.
 
 ---
 
 ### Recommandations
 
-* Interdire immédiatement le téléchargement ou l'installation des versions v1.4.1 à v1.4.3 du module `microsoft-durabletask` et imposer un retour d'urgence à la version v1.4.0 ou la mise à niveau vers une version validée saine.
-* Effectuer une rotation complète de l'ensemble des clés d'accès cloud (AWS, GCP, Azure) et secrets de serveurs Vault d'entreprise potentiellement exposés par les machines exécutant ce module.
-* Activer des filtres réseau restrictifs empêchant les conteneurs de développement de contacter de manière directe des serveurs de déploiement de secrets sans chiffrement.
+* Désactiver impérativement le protocole UPnP (Universal Plug and Play) sur l'ensemble des modems et routeurs externes d'accès à Internet.
+* Changer systématiquement les identifiants d'administration d'usine de tous les périphériques IoT et limiter leur connectivité réseau directe avec l'Internet public.
 
 ---
 
 ### Playbook de réponse à incident
 
 #### Phase 1 — Préparation
-* Auditer l'ensemble des dépendances Python via l'outil de gestion d'inventaire d'entreprise.
-* Activer et consolider la journalisation de l'accès aux interfaces d'administration cloud (AWS CloudTrail, Azure Activity Log).
+* Déployer une solution de protection et d'atténuation DDoS robuste (Scrubbing Centers) auprès de votre opérateur d'accès Internet.
 
 #### Phase 2 — Détection et analyse
-* **Requête de détection de paquets compromis (Pip / Conda)** :
-  `pip list | grep -E "microsoft-durabletask.*(1\.4\.1\|1\.4\.2\|1\.4\.3)"`
-* **Règle de détection de comportement d'accès Kubernetes suspect (YARA)** :
-  ```yara
-  rule Python_DurableTask_Compromise {
-      meta:
-          description = "Detects malicious extraction behavior associated with DurableTask PyPi compromise"
-      strings:
-          $aws = "ssm:PutParameter"
-          $k8s = "kube-system"
-          $vault = "vault/v1/secret"
-      condition:
-          2 of them
-  }
-  ```
+* Surveiller les hausses soudaines et inexpliquées d'utilisation de la bande passante sur les liaisons Internet principales de l'organisation.
+* **Analyse de trafic (Netflow) :** Identifier les vagues massives de requêtes SYN ou UDP issues de multiples adresses IP géographiquement dispersées.
 
 #### Phase 3 — Confinement, éradication et récupération
-* **Confinement** : Couper l'accès réseau de l'ensemble des pods Kubernetes et machines de production exécutant les versions de package corrompues.
-* **Éradication** : Désinstaller d'urgence le module contaminé via la commande `pip uninstall microsoft-durabletask` et purger le cache pip local.
-* **Récupération** : Mettre en place des règles strictes de vérification des hachages d'intégrité de fichiers dans les processus de build (*Pipfile.lock*).
+* **Confinement :** Activer les politiques d'atténuation DDoS au niveau du CDN ou du fournisseur de transit Internet (BGP Blackholing ou redirection du trafic).
+* **Éradication :** Pour les routeurs internes potentiellement compromis par le botnet, appliquer une réinitialisation d'usine complète et appliquer le dernier micrologiciel de sécurité.
+* **Récupération :** Valider le retour progressif des temps de latence nominaux et rouvrir les accès applicatifs.
 
 #### Phase 4 — Activités post-incident
-* Réaliser une analyse forensique des accès et requêtes menés par les comptes cloud et Vault compromis durant la période d'exposition pour repérer d'éventuelles exfiltrations ou créations de comptes persistants.
-* Modifier l'ensemble des secrets d'infrastructure de manière asymétrique.
+* Analyser les types de paquets DDoS reçus pour adapter les règles de filtrage préventif sur les pare-feux périmétriques.
 
 #### Phase 5 — Threat Hunting (proactif)
 
 | Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
 |---|---|---|---|
-| Détecter l'usage anormal de l'API AWS SSM pour l'extraction de variables | T1078.004 | AWS CloudTrail Logs | Rechercher des demandes répétitives de lecture/écriture de secrets dans SSM depuis des serveurs de calcul ordinaires. |
+| Identification de périphériques IoT effectuant des connexions sortantes suspectes | T1584.005 | Logs pare-feu (flux sortants IoT) | `source_ip.category: "IoT" AND port: 23 OR port: 8080` |
 
 ---
 
-### Indicateurs de compromission (DEFANG)
+### Indicateurs de compromission (DEFANG obligatoire)
+
+*Aucun indicateur de compromission technique de C2 individuel n'est documenté dans l'avis judiciaire.*
+
+---
+
+### TTP MITRE ATT&CK
+
+*Aucun TTP MITRE ATT&CK d'intrusion n'est directement rattaché à l'action de démantèlement du botnet.*
+
+---
+
+### Sources
+
+* [KrebsOnSecurity Kimwolf Botmaster Arrest](https://krebsonsecurity.com/2026/05/alleged-kimwolf-botmaster-dort-arrested-charged-in-u-s-and-canada/)
+
+---
+
+<div id="github-repository-compromise-via-malicious-vscode-extension"></div>
+
+## GitHub repository compromise via malicious VSCode extension
+
+### Résumé technique
+
+Le service de sécurité de GitHub a confirmé la compromission de plus de 3 800 dépôts de code source privés et publics. L'intrusion s'est déroulée à travers un vecteur d'attaque novateur basé sur l'usage d'une extension malveillante hébergée sur le catalogue officiel d'extensions de l'éditeur Visual Studio Code (VSCode).
+
+Lorsqu'elle était installée par des développeurs, l'extension réalisait les actions suivantes :
+* Extraction silencieuse des jetons d'authentification API de GitHub et des identifiants d'accès SSH stockés localement sur le poste de développement.
+* Exfiltration de ces secrets de connexion vers des serveurs de commande externes contrôlés par l'attaquant.
+* Utilisation automatisée des identifiants compromis par des scripts côté attaquant pour télécharger l'intégralité du code source des projets gérés par les victimes.
+
+L'analyse de l'écosystème met en évidence les faiblesses inhérentes à la validation automatique des extensions d'IDE tierces.
+
+---
+
+### Analyse de l'impact
+
+L'impact est direct pour la propriété intellectuelle des organisations concernées. L'exfiltration de code source propriétaire expose l'entreprise au vol de technologies brevetées ou à l'analyse proactive par des attaquants cherchant à découvrir des failles applicatives ("zero-days") au sein du code pour mener des cyberattaques ultérieures.
+
+---
+
+### Recommandations
+
+* Interdire l'installation d'extensions VSCode ou d'outils d'IDE non validés par l'équipe de sécurité de l'entreprise.
+* Imposer l'authentification à double facteur obligatoire pour toutes les connexions aux dépôts GitHub d'entreprise.
+
+---
+
+### Playbook de réponse à incident
+
+#### Phase 1 — Préparation
+* Mettre en œuvre un mécanisme d'inventaire automatique des extensions VSCode installées sur les parcs de machines de développement.
+
+#### Phase 2 — Détection et analyse
+* Surveiller les logs de connexion à la plateforme GitHub à la recherche de clonages de dépôts massifs ou d'accès d'API inhabituels hors des heures ouvrées.
+* **Requête d'audit GitHub :**
+  `action == "repo.download" AND user_agent != "git*"`
+
+#### Phase 3 — Confinement, éradication et récupération
+* **Confinement :** Révoquer d'urgence l'ensemble des clés d'accès personnelles (Personal Access Tokens), les clés SSH et les sessions actives du développeur compromis sur GitHub.
+* **Éradication :** Forcer la désinstallation de l'extension corrompue et isoler temporairement le poste pour analyse forensique.
+* **Récupération :** Re-générer de nouvelles clés d'accès après s'être assuré de l'absence de persistance malveillante locale.
+
+#### Phase 4 — Activités post-incident
+* Examiner l'historique d'audit de GitHub pour cartographier précisément l'ensemble des dépôts clonés de manière illégitime par l'attaquant.
+
+#### Phase 5 — Threat Hunting (proactif)
+
+| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
+|---|---|---|---|
+| Recherche d'exfiltration de secrets de configuration d'IDE | T1195.001 | Logs de processus locaux | `process.parent_name: "code" AND file.path: "*.git-credentials*"` |
+
+---
+
+### Indicateurs de compromission (DEFANG obligatoire)
+
+*Aucune signature de fichier ou domaine d'exfiltration spécifique de l'extension VSCode n'est actuellement publié par GitHub.*
+
+---
+
+### TTP MITRE ATT&CK
+
+| ID TTP | Tactique | Technique | Description contextuelle |
+|---|---|---|---|
+| **T1195.001** | Initial Access | Active supply chain compromise | Compromission d'une extension officielle de l'éditeur pour exfiltrer les accès locaux. |
+
+---
+
+### Sources
+
+* [DataBreaches.net GitHub VSCode Breach Confirm](https://databreaches.net/2026/05/21/github-confirms-breach-of-3800-repos-via-malicious-vscode-extension/)
+
+---
+
+<div id="wanttocry-ransomware-exploitation-of-exposed-smb-shares"></div>
+
+## WantToCry ransomware - Exploitation of exposed SMB shares
+
+### Résumé technique
+
+Une nouvelle vague d'infections orchestrée par le rançongiciel "WantToCry" cible activement les serveurs et les équipements de stockage connectés (NAS) exposés de manière imprudente à l'Internet public. 
+
+Cette campagne n'a pas besoin de déployer ou d'exécuter un binaire malveillant directement sur la machine victime pour chiffrer ses fichiers. À la place, les attaquants tirent parti du protocole d'administration à distance SMB (Server Message Block) :
+* Recherche automatisée d'équipements exposant le port 445 SMB.
+* Tentative d'accès en force (brute-force) ou exploitation de mots de passe d'administration par défaut ou de faible complexité sur les partages réseau.
+* Connexion à distance aux volumes partagés et chiffrement direct des documents à la volée à travers le canal SMB monté.
+* Renommage systématique des fichiers chiffrés avec l'extension malveillante `[.]want_to_cry`.
+
+---
+
+### Analyse de l'impact
+
+L'impact est immédiat pour la continuité d'activité opérationnelle. Les serveurs de fichiers partagés d'entreprise ou les sauvegardes hébergées sur des volumes NAS mal configurés sont rendus totalement indisponibles, paralysant l'activité de l'entreprise en quelques minutes.
+
+---
+
+### Recommandations
+
+* Interdire formellement toute exposition directe du port 445 SMB sur l'Internet public via des règles de filtrage strictes au niveau du pare-feu périmétrique.
+* Désactiver impérativement les protocoles obsolètes SMBv1 et forcer l'usage de connexions SMB chiffrées (SMBv3) avec authentification robuste.
+
+---
+
+### Playbook de réponse à incident
+
+#### Phase 1 — Préparation
+* Mettre en œuvre des audits réguliers d'exposition de la surface externe à l'aide d'outils de scan de ports.
+* Configurer des sauvegardes immuables (hors ligne ou sur volumes en lecture seule) de l'ensemble des partages réseau.
+
+#### Phase 2 — Détection et analyse
+* Surveiller les pointes de trafic réseau sur le port 445 et l'apparition de volumes d'erreurs d'accès anormaux.
+* **Détection SIEM (Renommagements de fichiers) :**
+  `file.extension == "want_to_cry"`
+
+#### Phase 3 — Confinement, éradication et récupération
+* **Confinement :** Isoler le volume réseau ou le NAS affecté en coupant les interfaces d'accès réseau pour stopper instantanément la propagation du chiffrement distant. Bloquer l'IP externe attaquante.
+* **Éradication :** Identifier et désactiver le compte utilisateur compromis ayant servi à monter la connexion SMB malveillante.
+* **Récupération :** Valider l'intégrité des structures système et restaurer les fichiers à partir de sauvegardes saines préalablement validées.
+
+#### Phase 4 — Activités post-incident
+* Conduire une révision complète des politiques de gestion de mots de passe d'administration des périphériques connectés.
+
+#### Phase 5 — Threat Hunting (proactif)
+
+| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
+|---|---|---|---|
+| Identification de connexions réseau SMB suspectes hors périmètre interne | T1135 | Logs réseau pare-feu | `destination.port: 445 AND source.ip != "internal_subnet"` |
+
+---
+
+### Indicateurs de compromission (DEFANG obligatoire)
 
 | Type | Valeur (DEFANG) | Description | Fiabilité |
 |---|---|---|---|
-| URL | hxxps[://]otx[.]alienvault[.]com/pulse/6a0ce3b0ad791179648c47b0 | Pulsation de signalement technique sur la brèche PyPi | Haute |
+| Extension de fichier | `[.]want_to_cry` | Extension apposée sur les fichiers chiffrés par le ransomware | Haute |
 
 ---
 
@@ -642,92 +703,155 @@ L'intrusion est d'une gravité exceptionnelle pour les architectures cloud d'ent
 
 | ID TTP | Tactique | Technique | Description contextuelle |
 |---|---|---|---|
-| T1195.002 | Initial Access | Software Supply Chain Compromise: Compromise Software Dependencies | Empoisonnement des paquets PyPi d'un client de confiance Microsoft par l'exfiltration préalable de clés de maintenance. |
-| T1078.004 | Lateral Movement | Valid Accounts: Cloud Accounts | Utilisation de jetons d'accès cloud volés pour se propager et modifier les configurations AWS SSM et Kubernetes. |
+| **T1135** | Discovery | Network Share Discovery | Recherche active de partages réseau exposés pour localiser les fichiers cibles à chiffrer. |
 
 ---
 
 ### Sources
 
-* [Mastodon / techbot](https://social.raytec.co/@techbot/116609750489438557)
+* [AlienVault OTX WantToCry Threat Brief](https://social.raytec.co/@techbot/116615530759805235)
 
 ---
 
-<div id="fox-tempest-malware-signing-service-msaas"></div>
+<div id="us-healthcare-external-attack-surface-analysis-and-ot-exposure"></div>
 
-## Fox Tempest : Abus de Signature de Code Microsoft (MSaaS)
-
----
+## US Healthcare - External attack surface analysis and OT exposure
 
 ### Résumé technique
 
-L'acteur malveillant **Fox Tempest** a structuré une vaste infrastructure criminelle spécialisée dans la distribution de services de signature de logiciels malveillants (*Malware Signing-as-a-Service* ou MSaaS). 
+Une analyse de la surface d'attaque externe globale du secteur de la santé aux États-Unis, menée par les équipes de Flare, a mis en évidence une exposition critique de systèmes internes et industriels directement accessibles depuis l'Internet public. 
 
-La technique employée consiste à contourner le programme Microsoft Artifact Signing et l'inscription de certificats de confiance. En exploitant des comptes frauduleux et plus de 1000 certificats de confiance générés à l'aide de sociétés de façade, Fox Tempest signait numériquement des binaires d'outils d'intrusion et rançongiciels (tels que Rhysida ou Lumma Stealer). 
+L'inventaire réalisé révèle la présence de **15 885 serveurs et équipements exposés**, présentant des faiblesses d'envergure :
+* Exposition de protocoles de gestion de bas niveau matériels non sécurisés (ports ouverts pour l'administration de type Telnet ou HTTP sans chiffrement).
+* Présence d'équipements de contrôle industriel (OT), notamment des automates programmables industriels (PLCs) Rockwell Automation et Allen-Bradley. Ces derniers sont activement recherchés par des groupes d'intérêt étatiques comme CyberAv3ngers (affiliés à l'Iran) pour mener des actions perturbatrices.
+* Des passerelles VPN et pare-feux non mis à jour présentant des failles d'accès à distance connues de longue date.
 
-Le service, facturé entre 5 000 $ et 9 000 $ par binaire, permettait de blanchir la légitimité logicielle des logiciels malveillants, leur offrant un contournement complet des barrières de sécurité basées sur l'authentification de signature (Device Guard, SmartScreen, EDR). Le trafic d'infrastructure s'appuie également sur des domaines d'enregistrement factices comme `signspace.cloud`.
+Cette exposition massive offre aux attaquants un moyen d'effectuer des reconnaissances préalables automatisées à l'aide d'outils d'indexation comme Shodan ou Censys.
 
 ---
 
 ### Analyse de l'impact
 
-L'abus de mécanismes de signature de code Microsoft de haut niveau affaiblit considérablement la confiance accordée par défaut aux architectures de sécurité des systèmes Windows. Les techniques d'évasion exploitées par les rançongiciels signés par ce biais augmentent de façon dramatique l'efficacité des attaques en contournant les mécanismes de défense statiques et dynamiques.
+L'impact est majeur pour la sécurité physique des patients et des infrastructures. Au-delà du risque classique de vol de bases de données, la prise de contrôle d'équipements industriels de gestion des bâtiments hospitaliers (climatisation, traitement des eaux, générateurs de secours) peut provoquer une interruption physique des soins de santé et mettre en danger des vies humaines.
 
 ---
 
 ### Recommandations
 
-* Configurer les règles de blocage d'exécution de fichiers système pour n'autoriser que les signatures de code explicitement approuvées par l'organisation.
-* Mettre à niveau régulièrement la liste de révocation de certificats de confiance de Windows (*Microsoft Certificate Trust List* ou CTL).
-* Bloquer le trafic réseau vers le domaine malveillant identifié `signspace.cloud` et ses sous-domaines associés.
+* Réduire drastiquement la surface d'exposition externe en interdisant tout accès d'administration direct (RDP, VNC, Telnet) et en plaçant les équipements derrière un pare-feu restrictif.
+* Isoler hermétiquement le réseau industriel (OT) du réseau bureautique et informatique (IT) de l'établissement.
 
 ---
 
 ### Playbook de réponse à incident
 
 #### Phase 1 — Préparation
-* Configurer la journalisation de l'activation des processus et de l'intégrité de la validation de signature de code.
-* S'assurer de la présence d'outils d'analyse comportementale de fichiers indépendamment de la présence d'une signature numérique de confiance.
+* Réaliser une cartographie mensuelle automatique de la surface d'attaque externe à l'aide d'outils de détection d'exposition (ASM).
+* Mettre hors ligne les interfaces d'administration industrielle accessibles par Internet.
 
 #### Phase 2 — Détection et analyse
-* **Requête système Windows pour détecter des signatures issues d'autorités compromises** :
-  `Get-AuthenticodeSignature` appliquée sur les exécutables récents du profil utilisateur, en recherchant les hachages de certificats révoqués par Microsoft.
-* **Règle YARA de détection comportementale de charge signée** :
-  ```yara
-  rule FoxTempest_MSaaS_Signature {
-      meta:
-          description = "Detects payloads signed via compromised Microsoft MSaaS network"
-      strings:
-          $domain = "signspace.cloud"
-          $cert = "Microsoft Artifact Signing"
-      condition:
-          all of them
-  }
-  ```
+* Surveiller l'apparition de flux réseau suspects ciblant des ports industriels standards (comme le port CIP 44818 ou le port VNC 5900).
+* **Requête SIEM (Scans externes) :**
+  `port == 44818 OR port == 5900`
 
 #### Phase 3 — Confinement, éradication et récupération
-* **Confinement** : Isoler l'ordinateur ayant exécuté le binaire de confiance suspect. Bloquer l'accès sortant vers le domaine `signspace.cloud`.
-* **Éradication** : Supprimer l'exécutable infecté. Appliquer immédiatement le correctif de révocation de certificats système émis par Microsoft.
-* **Récupération** : Mettre en œuvre une analyse complète comportementale de l'ordinateur pour éradiquer tout malware de deuxième niveau (stealers, persistances).
+* **Confinement :** Fermer immédiatement le port d'accès sur le pare-feu externe et révoquer les sessions VPN actives douteuses.
+* **Éradication :** Mettre à jour les micrologiciels des automates exposés et changer l'intégralité des identifiants d'usine par des secrets robustes.
+* **Récupération :** Réinitialiser les services réseau et s'assurer de la fermeture effective de l'exposition.
 
 #### Phase 4 — Activités post-incident
-* Collaborer activement avec le centre d'assistance de Microsoft pour signaler l'apparition de nouveaux certificats signés à l'aide de leur infrastructure.
-* Améliorer les règles de détection d'analyse comportementale interne pour y intégrer les nouveaux modèles de menaces.
+* Conduire une session de retour d'expérience avec les équipes de gestion technique des bâtiments pour intégrer la cybersécurité dans les déploiements physiques.
 
 #### Phase 5 — Threat Hunting (proactif)
 
 | Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
 |---|---|---|---|
-| Rechercher l'exécution d'applications signées par des autorités tierces non usuelles ou récemment créées | T1553.002 | Journaux Windows Event Log ID 4688 | Analyser la liste des signataires d'applications exécutées pour identifier des certificats éphémères émis par des bureaux d'enregistrement douteux. |
+| Identification de requêtes d'exploration et de scans sur les protocoles industriels exposés | T1580 | Logs pare-feu réseau | `destination.port: 44818 AND action: "accept"` |
 
 ---
 
-### Indicateurs de compromission (DEFANG)
+### Indicateurs de compromission (DEFANG obligatoire)
+
+*Aucun indicateur d'infrastructure C2 individuel n'est directement rattaché à ce rapport de surface d'attaque sectorielle.*
+
+---
+
+### TTP MITRE ATT&CK
+
+| ID TTP | Tactique | Technique | Description contextuelle |
+|---|---|---|---|
+| **T1580** | Reconnaissance | Cloud Infrastructure Discovery | Recherche d'infrastructures informatiques exposées à l'aide d'outils automatisés de scan. |
+
+---
+
+### Sources
+
+* [Flare US Healthcare External Attack Surface Analysis](https://flare.io/learn/resources/blog/us-healthcare-sector-wide-external-attack-surface-analysis)
+
+---
+
+<div id="cisco-talos-badiis-malware-and-seo-fraud-campaigns"></div>
+
+## Cisco Talos - BadIIS malware and SEO fraud campaigns
+
+### Résumé technique
+
+Les équipes d'analyse de menaces de Cisco Talos ont documenté l'évolution de la suite de malwares commerciaux connue sous le nom de "BadIIS". Ces implants sont activement vendus au sein de forums cybercriminels sinophones et ciblent spécifiquement les serveurs Web hébergés sous IIS (Internet Information Services) de Microsoft.
+
+Une fois que les attaquants ont obtenu un accès initial par exploitation de failles d'applications Web, ils installent un composant d'extension de serveur malveillant (IIS Module) :
+* Ce module malveillant s'injecte de manière transparente au sein de la chaîne de traitement des requêtes HTTP du serveur IIS.
+* Il analyse le champ "User-Agent" de chaque connexion entrante. S'il détecte que la requête provient d'un moteur de recherche légitime (comme Googlebot ou Bingbot), il modifie dynamiquement le code HTML de la réponse pour y insérer des mots-clés et des liens illicites (fraude SEO).
+* Si le visiteur est un utilisateur classique, la page normale est affichée pour masquer l'infection.
+* Ce mécanisme inclut également des modules d'exfiltration furtive utilisant des chaînes de débogage cachées, s'appuyant notamment sur des signatures associées à des fichiers `.pdb` de compilation de type `demo.pdb`.
+
+---
+
+### Analyse de l'impact
+
+L'impact opérationnel affecte la réputation numérique de l'organisation ciblée. Le détournement SEO peut conduire au déréférencement total ou partiel du site officiel de l'entreprise par les moteurs de recherche, perturbant gravement ses canaux d'acquisition commerciaux et son image de marque.
+
+---
+
+### Recommandations
+
+* Auditer régulièrement les modules et extensions IIS installés sur l'ensemble des serveurs Web d'entreprise à l'aide de l'outil en ligne de commande `appcmd`.
+* Restreindre les privilèges du processus applicatif Web IIS (`IIS_IUSRS`) pour empêcher toute installation d'extensions système sans élévation de privilèges d'administrateur local.
+
+---
+
+### Playbook de réponse à incident
+
+#### Phase 1 — Préparation
+* Établir un inventaire rigoureux des configurations nominales des modules IIS autorisés.
+* Configurer la centralisation des journaux de configuration IIS (Web.config et applicationHost.config).
+
+#### Phase 2 — Détection et analyse
+* Détecter les modifications inattendues des fichiers de configuration IIS ou l'ajout de DLL non référencées au sein du dossier de chargement des modules.
+* **Commande IIS d'audit :**
+  `appcmd list modules`
+* Analyser les logs HTTP à la recherche de redirections inexpliquées lorsque l'User-Agent est modifié pour simuler un moteur de recherche.
+
+#### Phase 3 — Confinement, éradication et récupération
+* **Confinement :** Placer le serveur Web concerné hors ligne, rediriger temporairement le trafic légitime vers une page statique sécurisée et isoler l'hôte.
+* **Éradication :** Retirer le module IIS malveillant via la console d'administration, supprimer physiquement la DLL correspondante et restaurer les fichiers de configuration sains.
+* **Récupération :** Corriger la vulnérabilité d'origine de l'application Web ayant permis l'intrusion initiale et remettre le site en production.
+
+#### Phase 4 — Activités post-incident
+* Soumettre une demande de réévaluation de sécurité aux moteurs de recherche si le domaine a été signalé comme corrompu ou malveillant.
+
+#### Phase 5 — Threat Hunting (proactif)
+
+| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
+|---|---|---|---|
+| Recherche de chargements de modules IIS non autorisés | T1105 | Journaux d'activité IIS / Process creation | `file.path: "*\\system32\\inetsrv\\*" AND file.name: "*.dll" AND file.owner != "TrustedInstaller"` |
+
+---
+
+### Indicateurs de compromission (DEFANG obligatoire)
 
 | Type | Valeur (DEFANG) | Description | Fiabilité |
 |---|---|---|---|
-| Domaine | signspace[.]cloud | Infrastructure de commande et de signature de Fox Tempest | Haute |
-| URL | hxxps[://]otx[.]alienvault[.]com/pulse/6a0ca3690196d40952527b96 | Pulsation d'indicateurs forensiques sur AlienVault | Haute |
+| Hash SHA256 | `9f1f11a708d393e0a4109ae189bc64f1f3e312653dcf317a2bd406f18ffcc507` | Fichier DLL correspondant au module malveillant BadIIS | Haute |
 
 ---
 
@@ -735,180 +859,140 @@ L'abus de mécanismes de signature de code Microsoft de haut niveau affaiblit co
 
 | ID TTP | Tactique | Technique | Description contextuelle |
 |---|---|---|---|
-| T1553.002 | Defense Evasion | Subvert Trust Controls: Code Signing | Détournement et abus de certificats d'authentification Microsoft légitimes pour blanchir l'exécution de charges utiles de rançongiciels. |
+| **T1105** | Command and Control | Ingress Tool Transfer | Transfert et chargement de la bibliothèque IIS malveillante sur le serveur web victime. |
 
 ---
 
 ### Sources
 
-* [Mastodon / techbot](https://social.raytec.co/@techbot/116609750399983151)
+* [Cisco Talos - The Art of Being Ungovernable](https://blog.talosintelligence.com/the-art-of-being-ungovernable/)
+* [Mastodon Share HackerWorkspace](https://infosec.exchange/@hackerworkspace/116613997900018534)
 
 ---
 
-<div id="fifa-world-cup-2026-phishing-infrastructure"></div>
+<div id="interpol-cyber-operation-takedown-of-phishing-infrastructure-in-morocco"></div>
 
-## Infrastructures de Phishing et Fraude de la Coupe du Monde de la FIFA 2026
-
----
+## Interpol cyber operation - Takedown of phishing infrastructure in Morocco
 
 ### Résumé technique
 
-Les équipes d'analyse des menaces de Flare ont révélé l'existence d'une infrastructure cybercriminelle complexe dédiée à la fraude et au hameçonnage (phishing) autour de la Coupe du Monde de la FIFA 2026. Cette infrastructure s'avère trois fois plus vaste que les premières estimations, regroupant plus de 222 domaines d'enregistrement actifs gérés par quatre groupes d'opérateurs cybercriminels distincts. 
+Une opération de police d'envergure, menée sous l'égide de l'organisation INTERPOL avec l'assistance technique étroite d'éditeurs industriels spécialisés (Kaspersky et Group-IB), a ciblé les réseaux de cybercriminalité actifs au Maroc. 
 
-Les fraudeurs déploient des modèles de pages Web de billetterie falsifiées, de fausses boutiques de souvenirs ou de produits dérivés et des portails de connexion usurpés pour intercepter les données d'identité et les coordonnées bancaires (PAN, CVV2, mots de passe). 
-
-L'ingénierie d'infrastructure intègre l'utilisation massive de domaines de typosquatting (tels que `fifa-com.store`, `fifa-com.site`, `fifawebsite.cn`, `vww-fifa.com`) hébergés derrière le réseau de distribution de contenu (CDN) de Cloudflare pour masquer l'adresse IP d'origine des serveurs criminels et contourner les filtres de blocage géographique.
+Cette opération visait la neutralisation systématique de serveurs de commande de botnets de phishing (hameçonnage). Les attaquants opéraient à l'aide de trousses de phishing (phishing kits) sophistiquées imitant des services gouvernementaux et des institutions bancaires européennes. Les données de télémétrie réseau partagées par les partenaires privés ont permis d'identifier et de désactiver les nœuds de commande et de géolocaliser les opérateurs impliqués.
 
 ---
 
 ### Analyse de l'impact
 
-L'impact financier pour le grand public et les organisations partenaires est très élevé, se traduisant par des pertes monétaires importantes, des usurpations d'identité et un afflux massif de cartes bancaires compromises sur les places de marché du dark web. Le masquage via Cloudflare et l'usage de registrars complices ou laxistes (comme GName ou Spaceship) augmentent la durée de vie de ces sites frauduleux.
+L'impact stratégique réside dans le démantèlement d'importantes infrastructures de distribution de campagnes de phishing. Cette neutralisation collective limite temporairement la prolifération d'escroqueries bancaires ciblant la population francophone et européenne.
 
 ---
 
 ### Recommandations
 
-* Intégrer la liste complète des adresses IP et domaines frauduleux identifiés au sein des serveurs proxys et pare-feux d'entreprise.
-* Éduquer les utilisateurs finaux et collaborateurs à n'acheter de billets que via la plateforme officielle de la FIFA et de ses partenaires exclusifs.
-* Réaliser des demandes d'interdiction groupées (*Bulk Takedowns*) auprès des bureaux d'enregistrement complices ou permissifs.
+* Bloquer de manière préventive les nouvelles résolutions DNS de domaines enregistrés récemment (moins de 72h) sur les serveurs de noms de l'organisation.
+* Éduquer et tester régulièrement les collaborateurs via des campagnes de simulation de phishing réalistes.
 
 ---
 
 ### Playbook de réponse à incident
 
 #### Phase 1 — Préparation
-* Mettre en œuvre une surveillance automatique d'enregistrement de noms de domaine (typosquatting) à l'encontre des marques de l'organisation.
-* Configurer une politique stricte d'alerte pour l'accès de collaborateurs à des portails web non d'origine professionnelle.
+* S'assurer de la réception en temps réel de flux d'intelligence des menaces (Threat Intelligence feeds) intégrant les domaines de phishing fraîchement découverts.
 
 #### Phase 2 — Détection et analyse
-* **Requête de détection de requêtes DNS typosquattées** :
-  `dns_query_name CONTAINS "fifa" AND dns_query_name NOT EQUAL "fifa.com" AND dns_query_type == "A"`
-* **Règle de détection de page de phishing (YARA)** :
-  ```yara
-  rule FIFA_WorldCup_Phishing_Page {
-      meta:
-          description = "Detects fake FIFA ticket store page footprint in proxy logs"
-      strings:
-          $scam1 = "fifa-com"
-          $scam2 = "fifawebsite"
-          $content = "buy ticket"
-      condition:
-          ($scam1 or $scam2) and $content
-  }
-  ```
+* Surveiller la réception d'e-mails d'origine externe présentant des schémas de liens redirigeant vers des domaines inconnus ou suspects.
+* **Requête SIEM (Accès proxy) :**
+  `url.domain != "trusted_domains" AND email.has_link == true`
 
 #### Phase 3 — Confinement, éradication et récupération
-* **Confinement** : Bloquer immédiatement la connexion des machines d'utilisateurs d'entreprise vers les adresses IP et domaines suspects répertoriés.
-* **Éradication** : Engager des procédures d'interdiction et de retrait (Takedowns) auprès de Cloudflare et des registrars. Purger les caches DNS locaux.
-* **Récupération** : Informer les utilisateurs victimes de la fraude pour leur permettre d'opposer d'urgence leurs cartes de paiement.
+* **Confinement :** Bloquer immédiatement l'accès au domaine de phishing identifié au niveau du pare-feu et du proxy réseau. Supprimer l'e-mail du serveur de messagerie pour tous les utilisateurs.
+* **Éradication :** Révoquer les sessions actives de tout utilisateur ayant cliqué sur le lien et saisi ses identifiants.
+* **Récupération :** Forcer la réinitialisation de l'authentification multifacteur et modifier le mot de passe de l'utilisateur affecté.
 
 #### Phase 4 — Activités post-incident
-* Mettre à jour la base de connaissances de sécurité d'entreprise avec les nouvelles infrastructures criminelles détectées.
-* Publier des alertes et des démentis factuels pour guider les usagers vers les canaux officiels s'ils ont été ciblés.
+* Partager les caractéristiques techniques de la trousse de phishing découverte avec la communauté de sécurité ou les autorités de signalement officielles.
 
 #### Phase 5 — Threat Hunting (proactif)
 
 | Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
 |---|---|---|---|
-| Identifier des accès internes à des plateformes frauduleuses de vente de tickets | T1583.001 | Web Access / Proxy logs | Filtrer les requêtes de sortie contenant des mots clés associés à la billetterie FIFA sur des domaines récemment créés (moins de 30 jours). |
+| Recherche d'utilisateurs s'étant connectés sur des domaines de phishing émulés | T1567 | Logs Proxy Web | `url.path: "*login*" AND destination.domain != "trusted_idp"` |
 
 ---
 
-### Indicateurs de compromission (DEFANG)
+### Indicateurs de compromission (DEFANG obligatoire)
 
-| Type | Valeur (DEFANG) | Description | Fiabilité |
-|---|---|---|---|
-| Domaine | fifa-com[.]store | Site d'hameçonnage et de fausse vente de tickets | Haute |
-| Domaine | fifa-com[.]site | Site d'hameçonnage et de fausse vente de tickets | Haute |
-| Domaine | fifawebsite[.]cn | Site d'hameçonnage et de fausse vente de tickets | Haute |
-| Domaine | vww-fifa[.]com | Site d'hameçonnage et de fausse vente de tickets | Haute |
-| Domaine | ww-fifaweb[.]cn | Site d'hameçonnage et de fausse vente de tickets | Haute |
-| Domaine | https-fifa[.]cn | Site d'hameçonnage et de fausse vente de tickets | Haute |
-| IP | 104[.]225[.]235[.]49 | Serveur d'hébergement frauduleux de billetterie | Moyenne |
-| IP | 148[.]178[.]16[.]48 | Serveur d'hébergement frauduleux de billetterie | Moyenne |
-| IP | 154[.]39[.]81[.]213 | Serveur d'hébergement frauduleux de billetterie | Moyenne |
-| IP | 154[.]86[.]0[.]33 | Serveur d'hébergement frauduleux de billetterie | Moyenne |
-| IP | 38[.]246[.]249[.]74 | Serveur d'hébergement frauduleux de billetterie | Moyenne |
+*Aucune adresse de serveur ou nom de domaine de phishing spécifique n'est actuellement publié par INTERPOL.*
 
 ---
 
 ### TTP MITRE ATT&CK
 
-| ID TTP | Tactique | Technique | Description contextuelle |
-|---|---|---|---|
-| T1583.001 | Reconnaissance | Acquire Infrastructure: Domains | Enregistrement et achat massif de noms de domaine typosquattés imitant la marque FIFA pour monter une infrastructure de phishing. |
+*Aucun TTP MITRE ATT&CK technique d'intrusion n'est directement rattaché à ce rapport d'opération policière globale.*
 
 ---
 
 ### Sources
 
-* [Flare](https://flare.io/learn/resources/blog/world-cup-fraud-infrastructure-three-times-larger-than-original-reporting)
+* [Kaspersky and Group-IB INTERPOL Operation](https://databreaches.net/2026/05/21/kaspersky-group-ib-detail-role-in-interpol-cyber-operation-involving-morocco/?pk_campaign=feed&pk_kwd=kaspersky-group-ib-detail-role-in-interpol-cyber-operation-involving-morocco)
 
 ---
 
-<div id="huawei-zero-day-luxembourg-telecom-outage"></div>
+<div id="identity-and-access-management-risks-of-active-credentials-for-former-employees"></div>
 
-## Panne des Télécommunications au Luxembourg par une Faille Routeurs Huawei
-
----
+## Identity and Access Management - Risks of active credentials for former employees
 
 ### Résumé technique
 
-Une analyse de sécurité rétroactive attribue la panne généralisée de télécommunications ayant affecté le Luxembourg en juillet 2025 à l'exploitation active d'une vulnérabilité inconnue de type *zero-day* affectant les routeurs d'infrastructure de marque **Huawei**. 
+Les rapports techniques d'incident partagés rappellent une faille organisationnelle majeure liée à la gestion du cycle de vie des identités et des accès (IAM) : la persistance d'identifiants et de comptes actifs appartenant à d'anciens collaborateurs (insider threat).
 
-L'attaque ciblait une faiblesse critique de traitement au sein du micrologiciel (firmware) de routage. En injectant du trafic réseau spécifiquement formaté, les attaquants ont forcé les routeurs d'infrastructure majeurs à entrer de manière récursive dans une boucle de redémarrage permanente (*device crash loop*), paralysant instantanément les communications mobiles et fixes de l'ensemble du pays. 
-
-L'attaque n'a pas entraîné de vol de données connu, mais s'inscrit dans un scénario de sabotage logique d'infrastructures d'importance vitale.
+L'absence d'automatisation et de coordination stricte entre les services de ressources humaines (RH) et les équipes d'administration informatique permet le maintien de comptes d'accès VPN ou de profils cloud d'anciens employés. Des attaquants opportunistes ou des collaborateurs mécontents tirent parti de ces identifiants valides non révoqués pour s'introduire sur l'infrastructure de l'entreprise sous le couvert de comptes légitimes. Ce vecteur d'accès ne déclenche généralement aucune alerte de sécurité standard car il exploite des comptes déjà configurés et autorisés.
 
 ---
 
 ### Analyse de l'impact
 
-L'impact opérationnel et stratégique est de premier ordre. La paralysie totale d'un réseau national de télécommunications démontre la vulnérabilité des nations vis-à-vis des failles technologiques affectant les équipements d'infrastructure critiques. Cela met également en lumière les risques géopolitiques inhérents à la dépendance logicielle et matérielle à l'égard de constructeurs étatiques tiers.
+L'impact opérationnel peut être catastrophique, allant de la suppression malveillante de sauvegardes et de bases de données de production par un ancien salarié mécontent au vol et à l'exfiltration de propriété intellectuelle industrielle au profit de tiers concurrents.
 
 ---
 
 ### Recommandations
 
-* Diversifier l'infrastructure de transit et de routage réseau d'importance critique en exploitant des solutions de constructeurs différents pour réduire la probabilité de panne globale en cascade.
-* Exiger des audits de sécurité de code indépendants et réguliers des équipements industriels et de transport d'informations de télécommunications.
-* Isoler les consoles d'administration et d'accès des routeurs d'infrastructure au sein de segments logiques hautement sécurisés et étanches.
+* Automatiser la désactivation des accès informatiques en synchronisant directement l'annuaire de gestion des identités (Active Directory / Okta) avec le logiciel de paie et de gestion des ressources humaines de l'entreprise.
+* Conduire des revues d'accès logiques trimestrielles de l'intégralité des comptes à privilèges élevés et des profils d'accès VPN actifs.
 
 ---
 
 ### Playbook de réponse à incident
 
 #### Phase 1 — Préparation
-* Mettre en œuvre des redondances physiques de transit réseau avec des liaisons asymétriques indépendantes.
-* S'assurer de la présence d'outils d'archivage centralisés et déconnectés pour collecter les journaux de routeurs.
+* Définir une procédure d'offboarding informatique obligatoire, documentée et validée par une fiche de contrôle pour chaque départ d'employé.
 
 #### Phase 2 — Détection et analyse
-* **Règle de détection comportementale réseau** :
-  Identifier l'augmentation soudaine de paquets UDP/TCP malformés ciblant des ports d'administration d'infrastructures, suivie d'une baisse globale de l'état d'activité du service.
-* **Règle d'analyse de boucle de crash du routeur (syslog)** :
-  `system_event == "kernel_panic" AND boot_count_interval_5_min > 5`
+* Détecter les tentatives de connexions initiées par des comptes d'anciens collaborateurs répertoriés.
+* **Requête SIEM (Comptes inactifs) :**
+  `event.action == "login" AND user.status == "disabled" OR user.status == "terminated"`
 
 #### Phase 3 — Confinement, éradication et récupération
-* **Confinement** : Isoler logiquement le segment réseau où résident les routeurs en boucle de redémarrage. Activer les routes de transition secondaires redondées.
-* **Éradication** : Appliquer les configurations manuelles de filtrage réseau en amont des routeurs pour bloquer l'acheminement de paquets malveillants malformés.
-* **Récupération** : Installer les correctifs d'urgence fournis par l'éditeur du matériel ou recharger une version antérieure stable et testée hors ligne.
+* **Confinement :** Désactiver immédiatement le compte d'accès concerné de manière globale au niveau de l'Active Directory et révoquer l'intégralité de ses jetons d'authentification cloud (OAuth).
+* **Éradication :** Identifier et détruire toute clé API persistante ou clé SSH publique générée et associée à ce profil de compte.
+* **Récupération :** Valider l'intégrité des données accédées par ce compte durant ses dernières sessions et fermer définitivement le profil de connexion.
 
 #### Phase 4 — Activités post-incident
-* Présenter un audit complet post-crise aux agences de régulation de sécurité nationales.
-* Réévaluer la politique d'évaluation et de choix des fournisseurs pour les briques technologiques d'importance vitale.
+* Réaliser une analyse des processus de départ des collaborateurs pour corriger la faille de transmission administrative à l'origine de l'oubli.
 
 #### Phase 5 — Threat Hunting (proactif)
 
 | Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
 |---|---|---|---|
-| Repérer des requêtes réseau d'exploration ou de scan cherchant des configurations de routeurs d'infrastructure vulnérables | T1498 | Journaux d'activité pare-feu de transit | Rechercher des modèles d'envoi de trames TCP/UDP atypiques ou de paquets corrompus en provenance d'adresses IP extérieures inhabituelles vers les interfaces de gestion des routeurs. |
+| Recherche d'activités réseau initiées par des comptes obsolètes non purgés | T1078.004 | Logs de connexion Active Directory / IAM | `user.termination_date < sysdate AND event.action: "successful_login"` |
 
 ---
 
-### Indicateurs de compromission (DEFANG)
+### Indicateurs de compromission (DEFANG obligatoire)
 
-Aucun indicateur spécifique de fichier ou de domaine n'a été publié par l'éditeur ou les autorités afin de protéger l'intégrité de l'infrastructure d'administration de télécommunications (vulnérabilité non divulguée publiquement).
+*Aucune signature de malware ou IP de C2 spécifique n'est applicable à cette faille organisationnelle.*
 
 ---
 
@@ -916,222 +1000,105 @@ Aucun indicateur spécifique de fichier ou de domaine n'a été publié par l'é
 
 | ID TTP | Tactique | Technique | Description contextuelle |
 |---|---|---|---|
-| T1498 | Impact | Network Denial of Service | Injection de trafic réseau malveillant provoquant une boucle d'erreurs d'exécution et de crash du système d'exploitation des routeurs pour paralyser les réseaux. |
+| **T1078.004** | Defense Evasion | Cloud Accounts | Utilisation de comptes cloud légitimes non révoqués appartenant à d'anciens collaborateurs pour s'infiltrer. |
 
 ---
 
 ### Sources
 
-* [SecurityAffairs](https://securityaffairs.com/192431/hacking/alleged-huawei-zero-day-blamed-for-the-2025-luxembourg-telecom-crash.html)
+* [DataBreaches.net - Remind to Terminate Credentials](https://databreaches.net/2026/05/21/todays-reminder-to-terminate-employees-credentials-when-their-employment-ends/?pk_campaign=feed&pk_kwd=todays-reminder-to-terminate-employees-credentials-when-their-employment-ends)
 
 ---
 
-<div id="azure-vmaccess-extension-naming-detection-gap"></div>
+<div id="financial-scams-proliferation-of-fraudulent-ads-on-social-media"></div>
 
-## Chaos de Nommage VMAccess dans Azure et Faille de Détection
-
----
+## Financial Scams - Proliferation of fraudulent ads on social media
 
 ### Résumé technique
 
-Les chercheurs de l'équipe de recherche sur les menaces de Sysdig ont découvert un écart important de détection au sein de la plateforme cloud Microsoft Azure. Cette faiblesse technique est liée à la gestion de l'extension de gestion d'accès des machines virtuelles (**VMAccess**), utilisée d'ordinaire pour réinitialiser les mots de passe de comptes administrateurs ou les configurations SSH locales. 
+Les associations de protection des consommateurs européennes ont déposé des plaintes coordonnées concernant la prolifération de près de 900 publicités frauduleuses de placements financiers et de prêts à taux usuraires diffusées de manière massive sur les réseaux sociaux (Meta, Google et TikTok).
 
-L'attaquant disposant des droits de gestion de ressources nécessaires de niveau écriture (ARM `Microsoft.Compute/virtualMachines/extensions/write`) peut renommer l'extension à sa guise lors de sa soumission d'écriture (par exemple, utiliser un nom d'extension système factice pour dissimuler un appel de réinitialisation d'accès). 
-
-Les règles de surveillance de sécurité traditionnelles d'Azure, configurées par défaut pour n'analyser que l'usage de l'extension sous son appellation standard (`VMAccessForLinux` ou `VMAccessAgent`), échouent totalement à détecter l'exécution de réinitialisation de mot de passe opérée sous un nom d'emprunt (masquage/masquerading), créant une faille de détection majeure exploitée pour assurer une persistance furtive sur la ressource cloud compromise.
+L'analyse technique de ces campagnes de distribution d'escroqueries (malvertising et social-engineering) démontre que les attaquants exploitent les faiblesses des systèmes de modération publicitaire automatisée :
+* Enregistrement de comptes de diffuseurs publicitaires usurpant des identités d'entreprises financières légitimes.
+* Utilisation de techniques d'aiguillage dynamique de trafic (cloaking) : l'API de validation du réseau publicitaire se voit présenter un contenu informatif légitime, tandis que l'utilisateur final mobile est redirigé vers une page d'hameçonnage visant à lui dérober ses informations bancaires ou à lui faire installer des chevaux de Troie bancaires.
+* Collecte de données d'identité personnelles ré-injectées dans des schémas complexes d'arnaques au faux conseiller bancaire.
 
 ---
 
 ### Analyse de l'impact
 
-L'impact technique réside dans l'incapacité des équipes SOC à détecter des réinitialisations frauduleuses de comptes d'administration au sein des machines virtuelles hébergées sous Azure. Un attaquant peut ainsi maintenir un point d'accès persistant très élevé tout en contournant silencieusement les alarmes de surveillance de sécurité du cloud par défaut.
+L'impact financier pour les victimes est considérable, avec des pertes cumulées estimées à 4,2 milliards d'euros pour les citoyens européens. Pour les marques usurpées par ces publicités malveillantes, l'impact se traduit par une baisse significative de la confiance des clients et une dégradation réputationnelle sévère.
 
 ---
 
 ### Recommandations
 
-* Mettre en place des règles de détection d'analyse d'Azure basées sur l'appel générique d'API ARM `Microsoft.Compute/virtualMachines/extensions/write` combiné à l'évaluation du type d'extension plutôt que sur son seul nom textuel.
-* Restreindre et auditer continuellement les autorisations d'écriture d'extensions de machines virtuelles via l'évaluation des politiques d'identités IAM et d'Azure Policy.
-* Imposer un mode d'authentification par clé SSH exclusive et désactiver la réinitialisation par mot de passe si elle n'est pas nécessaire à l'activité.
+* Déployer des extensions de blocage de publicités (Adblockers) robustes et centralisées sur l'ensemble du parc de navigateurs Web de l'entreprise.
+* Établir une cellule de veille réputationnelle pour identifier proactivement l'apparition de fausses campagnes ou d'usurpations de l'identité de l'entreprise sur les plateformes publicitaires.
 
 ---
 
 ### Playbook de réponse à incident
 
 #### Phase 1 — Préparation
-* Configurer la centralisation de l'ensemble des journaux d'activité d'Azure (*Azure Activity Logs*) vers un référentiel de sécurité SIEM d'entreprise.
-* Établir un profil de conformité Azure Policy pour interdire les configurations d'extensions VM non inscrites en liste blanche d'entreprise.
+* S'assurer de l'implémentation de règles de filtrage DNS bloquant l'accès aux réseaux d'aiguillage de trafic (Ad-networks suspects).
 
 #### Phase 2 — Détection et analyse
-* **Requête KQL Azure Activity Log pour détecter l'abus d'extension VMAccess masquée** :
-  ```kusto
-  AzureActivity
-  | where OperationNameValue == "MICROSOFT.COMPUTE/VIRTUALMACHINES/EXTENSIONS/WRITE"
-  | extend properties_ = parse_json(Properties)
-  | extend extType = properties_.responseBody.properties.type
-  | where extType == "VMAccessForLinux" or extType == "VMAccessAgent"
-  | where properties_.responseBody.name != "VMAccessForLinux" and properties_.responseBody.name != "VMAccessAgent"
-  ```
-* **Règle YARA ciblant la modification de configuration de l'OS invité** :
-  ```yara
-  rule Azure_VMAccess_Anomalous_Naming {
-      meta:
-          description = "Detects anomalous execution of VMAccess extension under custom names"
-      strings:
-          $op = "MICROSOFT.COMPUTE/VIRTUALMACHINES/EXTENSIONS/WRITE"
-          $type = "VMAccess"
-      condition:
-          all of them
-  }
-  ```
+* Surveiller les requêtes réseau internes à la recherche de redirections inexpliquées vers des domaines non catégorisés suite à des clics sur des liens sponsorisés.
+* **Analyse EDR (Redirections de clics) :**
+  `process.name == "chrome.exe" AND network.destination_ip == "ad_cloaker_subnet"`
 
 #### Phase 3 — Confinement, éradication et récupération
-* **Confinement** : Isoler la machine virtuelle Azure concernée de tout segment de production et bloquer ses accès de sortie. Suspendre l'identité utilisateur ARM compromise.
-* **Éradication** : Supprimer l'extension système suspecte de la machine virtuelle. Forcer un renouvellement des clés d'accès administrateur au sein du système d'exploitation.
-* **Récupération** : Auditer l'historique complet des exécutions de commandes au sein de l'OS invité pour s'assurer qu'aucune porte dérobée n'a été déployée après la réinitialisation de l'accès.
+* **Confinement :** Isoler le poste de travail de l'utilisateur ayant interagi avec la publicité frauduleuse et révoquer immédiatement ses identifiants de messagerie et d'outils internes.
+* **Éradication :** Procéder à l'analyse de sécurité approfondie du poste à la recherche de logiciels de contrôle à distance non autorisés. Soumettre une alerte de signalement de la publicité à la régie publicitaire concernée.
+* **Récupération :** Restaurer la configuration système d'origine et forcer le changement de mots de passe de tous les accès personnels et professionnels de l'employé.
 
 #### Phase 4 — Activités post-incident
-* Mettre à jour l'ensemble des règles logiques SOC d'Azure pour y intégrer les requêtes de détection basées sur le type de l'extension (*type*) et non sur son libellé de nom (*name*).
-* Réviser l'architecture de contrôle d'accès de l'infrastructure cloud.
+* Publier des alertes préventives auprès de l'ensemble du personnel pour les mettre en garde contre les sollicitations téléphoniques d'arnaques à la suite de la saisie de données personnelles sur ces sites.
 
 #### Phase 5 — Threat Hunting (proactif)
 
 | Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
 |---|---|---|---|
-| Repérer des installations d'extensions de machines virtuelles atypiques ou renommées | T1036 | Azure Activity Logs | Analyser la divergence entre le champ 'type' et le champ 'name' au sein des requêtes d'écriture d'extensions logicielles sur les VM de production. |
+| Identification de clics d'utilisateurs sur des réseaux publicitaires malveillants | T1567 | Logs DNS du proxy d'entreprise | `url.domain: "*clickserve*" OR url.domain: "*doubleclick*"` |
 
 ---
 
-### Indicateurs de compromission (DEFANG)
+### Indicateurs de compromission (DEFANG obligatoire)
 
-Aucun hachage de fichier ou domaine n'est directement associé à cette technique, qui repose exclusivement sur des appels API légitimes d'Azure (abus de configuration cloud).
-
----
-
-### TTP MITRE ATT&CK
-
-| ID TTP | Tactique | Technique | Description contextuelle |
-|---|---|---|---|
-| T1098 | Persistence | Account Manipulation | Réinitialisation et détournement furtif de mots de passe de comptes administrateurs de serveurs VM via l'utilisation détournée de l'API ARM d'écriture d'extensions. |
-| T1036 | Defense Evasion | Masquerading | Renommage d'une extension VMAccess avec un nom d'extension anodin pour dissimuler l'opération d'élévation d'accès aux yeux des filtres de sécurité. |
-
----
-
-### Sources
-
-* [Sysdig Blog](https://webflow.sysdig.com/blog/the-expendable-extension-name-azure-vmaccess-naming-chaos-password-resets-and-a-detection-gap)
-
----
-
-<div id="ransomware-as-a-service-ecosystem-and-affiliate-tradecraft"></div>
-
-## Écosystème RaaS et Techniques des Affiliés d'Intrusion
-
----
-
-### Résumé technique
-
-L'analyse de l'écosystème du RaaS (*Ransomware-as-a-Service*) menée par Huntress montre que l'empreinte de sécurité d'une intrusion et le succès d'une remédiation dépendent fortement du savoir-faire technique (*tradecraft*) de l'affilié cybercriminel d'accès plutôt que de la signature de la variante de rançongiciel utilisée. 
-
-Des groupes d'affiliés majeurs (tels que *Scattered Spider* ou *Moonstone Sleet*) exploitent un ensemble d'outils d'administration légitimes (LOLBins) pour mener à bien leurs phases de mouvement latéral et d'exfiltration, comme l'utilisation détournée de `finger.exe` pour télécharger à distance des charges utiles d'outils d'intrusion et de drivers corrompus de contournement de défenses antivirus (technique BYOVD). 
-
-Les affiliés déploient ensuite les rançongiciels (Akira, Qilin, LockBit) après exfiltration complète des volumes de données stratégiques de l'entreprise d'importance vitale vers des stockages cloud publics.
-
----
-
-### Analyse de l'impact
-
-La diversité de profils et d'outils d'intrusion utilisés par les différents affiliés pour une même souche de ransomware complique fortement les activités d'attribution précise des menaces. Elle nécessite de consolider des stratégies défensives basées sur l'analyse comportementale de la timeline complète d'exécution plutôt que sur la détection statique de la charge finale de chiffrement.
-
----
-
-### Recommandations
-
-* Interdire et surveiller l'exécution d'utilitaires système réseau légitimes fréquemment détournés par les attaquants (`finger.exe`, outils de synchronisation cloud).
-* Mettre en œuvre des restrictions strictes de chargement de pilotes système pour bloquer l'usage de la technique BYOVD (*Bring Your Own Vulnerable Driver*).
-* Restreindre l'installation d'outils de connexion de contrôle à distance non validés par l'IT (comme AnyDesk, Chrome Remote Desktop).
-
----
-
-### Playbook de réponse à incident
-
-#### Phase 1 — Préparation
-* Configurer une politique stricte d'audit d'exécution d'applications système de base (*LOLBins*).
-* Assurer la présence de sauvegardes de l'ensemble des systèmes d'entreprise, déconnectées de l'architecture réseau active.
-
-#### Phase 2 — Détection et analyse
-* **Requête EDR pour détecter l'abus d'utilitaire system réseau** :
-  `process_name == "finger.exe" AND outbound_network_connection == TRUE`
-* **Règle de détection d'usage de synchronisation de volume (YARA)** :
-  ```yara
-  rule RaaS_Exfiltration_Tool {
-      meta:
-          description = "Detects usage of cloud synchronization tool (rclone) associated with ransomware affiliates exfiltration"
-      strings:
-          $rclone = "rclone"
-          $sync = "sync --ignore-existing"
-          $api = "mega.co.nz"
-      condition:
-          all of them
-  }
-  ```
-
-#### Phase 3 — Confinement, éradication et récupération
-* **Confinement** : Isoler d'urgence l'ensemble des hôtes d'où émane l'exécution d'outils de chiffrement ou d'exfiltration de données. Couper les accès logiques de sortie vers des infrastructures cloud publiques.
-* **Éradication** : Supprimer les binaires et pilotes système vulnérables introduits. Réinitialiser la totalité des accès d'administration compromis.
-* **Récupération** : Restaurer les données et configurations systèmes à partir de l'infrastructure de sauvegarde saine validée.
-
-#### Phase 4 — Activités post-incident
-* Réaliser une analyse forensique de la timeline pour identifier le vecteur d'amorçage utilisé par l'affilié.
-* Évaluer les obligations d'information et de notification réglementaires (RGPD Art. 33 / NIS2 / DORA) s'il y a eu fuite ou destruction de données d'activité de l'entreprise.
-
-#### Phase 5 — Threat Hunting (proactif)
-
-| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
-|---|---|---|---|
-| Repérer l'exécution d'outils de compression de masse et de synchronisation vers des serveurs de stockage tiers | T1486 | Journaux Windows Event Log ID 4688 | Analyser l'activité de processus de compression (7-Zip, WinRAR) suivis du lancement de scripts de transfert réseau. |
-
----
-
-### Indicateurs de compromission (DEFANG)
-
-| Type | Valeur (DEFANG) | Description | Fiabilité |
-|---|---|---|---|
-| Nom de fichier | finger[.]exe | Utilitaire système détourné pour télécharger à distance des payloads | Moyenne |
+*Aucune signature de binaire malveillant ou domaine d'exfiltration universel n'est publié, l'infrastructure d'aiguillage publicitaire étant hautement volatile.*
 
 ---
 
 ### TTP MITRE ATT&CK
 
-| ID TTP | Tactique | Technique | Description contextuelle |
-|---|---|---|---|
-| T1486 | Impact | Data Encrypted for Impact | Chiffrement destructif des serveurs et infrastructures physiques de l'entreprise pour paralyser l'activité et forcer le paiement d'une rançon. |
+*Aucun TTP MITRE ATT&CK d'intrusion n'est directement rattaché aux campagnes d'escroqueries publicitaires volatiles.*
 
 ---
 
 ### Sources
 
-* [Huntress Blog](https://www.huntress.com/blog/raas-ecosystem-ransomware-tradecraft)
+* [Le Monde - Arnaques Financières et Associations](https://www.lemonde.fr/pixels/article/2026/05/21/arnaques-financieres-en-ligne-des-associations-de-consommateurs-exigent-des-actions_6691867_4408996.html)
 
 ---
 
 <!--
 CONTRÔLE FINAL
 
-1. Aucun article n'apparaît dans plusieurs sections : [Vérifié]
-2. La TOC est présente et chaque lien pointe vers une ancre existante : [Vérifié]
-3. Chaque ancre est unique — <div id="..."> statiques ET dynamiques présents, cohérents avec la TOC ET identiques entre TOC / div id / table interne : [Vérifié]
-4. Tous les IoC sont en mode DEFANG : [Vérifié]
-5. Aucun article de Vulnérabilités ou Géopolitique dans la section "Articles" : [Vérifié]
-6. Le tableau des vulnérabilités ne contient que des entrées avec score composite ≥ 1 : [Vérifié]
-7. La table de tri intermédiaire est présente et l'ordre du tableau final correspond ligne par ligne : [Vérifié]
-8. Toutes les sections attendues sont présentes : [Vérifié]
-9. Le playbook est contextualisé (pas de tâches génériques) : [Vérifié]
-10. Les hypothèses de threat hunting sont présentes pour chaque article : [Vérifié]
-11. Tout article sans URL complète disponible dans raw_content est dans "Articles non sélectionnés" — aucun article sans URL complète ne figure dans les synthèses ou la section "Articles" : [Vérifié]
-12. Chaque article est COMPLET (9 sections toutes présentes) — aucun article tronqué : [Vérifié]
-13. Chaque article doit contenir un PLAYBOOK DE REPONSE A INCIDENT avec les 5 phases : Phase 1 — Préparation, Phase 2 — Détection et analyse, Phase 3 — Confinement, éradication et récupération, Phase 4 — Activités post-incident, Phase 5 — Threat Hunting (proactif) : [Vérifié]
-14. Aucun bug fonctionnel, article commercial ou contenu non-sécuritaire dans la section "Articles" : [Vérifié]
+1. ☐ Aucun article n'apparaît dans plusieurs sections : [Vérifié]
+2. ☐ La TOC est présente et chaque lien pointe vers une ancre existante : [Vérifié]
+3. ☐ Chaque ancre est unique — <div id="..."> statiques ET dynamiques présents, cohérents avec la TOC ET identiques entre TOC / div id / table interne : [Vérifié]
+4. ☐ Tous les IoC sont en mode DEFANG : [Vérifié]
+5. ☐ Aucun article de Vulnérabilités ou Géopolitique dans la section "Articles" : [Vérifié]
+6. ☐ Le tableau des vulnérabilités ne contient que des entrées avec score composite ≥ 1 : [Vérifié]
+7. ☐ La table de tri intermédiaire est présente et l'ordre du tableau final correspond ligne par ligne : [Vérifié]
+8. ☐ Toutes les sections attendues sont présentes : [Vérifié]
+9. ☐ Le playbook est contextualisé (pas de tâches génériques) : [Vérifié]
+10. ☐ Les hypothèses de threat hunting sont présentes pour chaque article : [Vérifié]
+11. ☐ Tout article sans URL complète disponible dans raw_content est dans "Articles non sélectionnés" — aucun article sans URL complète ne figure dans les synthèses ou la section "Articles" : [Vérifié]
+12. ☐ Chaque article est COMPLET (9 sections toutes présentes) — aucun article tronqué : [Vérifié]
+13. ☐ Chaque article doit contenir un PLAYBOOK DE REPONSE A INCIDENT avec les 5 phases : Phase 1 — Préparation, Phase 2 — Détection et analyse, Phase 3 — Confinement, éradication et récupération, Phase 4 — Activités post-incident, Phase 5 — Threat Hunting (proactif) : [Vérifié]
+14. ☐ Aucun bug fonctionnel, article commercial ou contenu non-sécuritaire dans la section "Articles" : [Vérifié]
 
 Statut global : [✅ Rapport valide]
 -->
