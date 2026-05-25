@@ -1,0 +1,2503 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "Global strategic cyber threat analysis for May 2026. This report examines the active exploitation of critical vulnerabilities (Ghost CMS, Drupal, SonicWall, DMS) and major data breaches (7-Eleven, NYC Health, CISA Contractor) as well as the geopolitical evolution of physical threats targeting crypto-asset holders in France.",
+      "fr": "Analyse stratégique globale de la cybermenace pour mai 2026. Ce rapport examine l'exploitation active de vulnérabilités critiques (Ghost CMS, Drupal, SonicWall, DMS) et des fuites de données d'envergure (7-Eleven, NYC Health, CISA Contractor) ainsi que l'évolution géopolitique des menaces physiques sur les détenteurs de crypto-actifs en France."
+    },
+    "date": "2026-05-25"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": [
+          "Finance"
+        ],
+        "fr": [
+          "Finance"
+        ]
+      },
+      "theme": {
+        "en": "Physical attacks and cyber-extortion against crypto-asset holders in France",
+        "fr": "Attaques physiques et cyber-extorsion contre les détenteurs de crypto-actifs en France"
+      },
+      "description": {
+        "en": "Analysis of the violent targeting of crypto-asset holders in France.",
+        "fr": "Analyse du ciblage violent des détenteurs de crypto-actifs en France."
+      },
+      "recommandations": [
+        {
+          "en": "Set up multi-signature keys stored in geographically separate locations.",
+          "fr": "Mettre en place des clés multi-signatures stockées de manière géographiquement séparée."
+        },
+        {
+          "en": "Avoid public exposure of digital wealth on social media networks.",
+          "fr": "Éviter l'exposition publique de richesse numérique sur les réseaux sociaux."
+        },
+        {
+          "en": "Adopt rigorous personal operational security (OpSec) standards.",
+          "fr": "Adopter une hygiène rigoureuse sur la sécurité opérationnelle personnelle (OpSec)."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Train personnel in personal operational security (OpSec).",
+            "Implement multi-signature solutions and withdrawal timelocks on institutional wallets."
+          ],
+          "fr": [
+            "Former le personnel à la sécurité opérationnelle personnelle (OpSec).",
+            "Mettre en œuvre des solutions multi-signatures et des délais de retrait (timelocks) sur les portefeuilles institutionnels."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor phishing attempts targeting personal and financial information.",
+            "Detect anomalous requests on blockchain-related customer databases."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'hameçonnage ciblant les informations personnelles et financières.",
+            "Détecter les requêtes anormales sur les données clients liées à la blockchain."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate compromised physical devices.",
+            "Urgently transfer assets to secure cold wallets."
+          ],
+          "fr": [
+            "Isoler les appareils physiques compromis.",
+            "Transférer d'urgence les actifs vers des portefeuilles froids (hardware wallets) sécurisés."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Collaborer with local law enforcement for physical and judicial investigations.",
+            "Update disclosure and physical security guidelines."
+          ],
+          "fr": [
+            "Collaborer avec les autorités locales pour les enquêtes physiques et judiciaires.",
+            "Mettre à jour les politiques de divulgation et de sécurité physique."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Perform proactively scans looking for targeted phishing campaigns aiming to collect users' private keys."
+          ],
+          "fr": [
+            "Détection de campagnes de phishing ciblées visant à obtenir les clés privées des détenteurs."
+          ]
+        }
+      },
+      "tags": [
+        "france",
+        "physical_security",
+        "crypto"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/05/24/france-sees-more-violent-attacks-on-crypto-holders-than-any-other-country/?pk_campaign=feed&pk_kwd=france-sees-more-violent-attacks-on-crypto-holders-than-any-other-country"
+      ],
+      "date": "2026-05-24"
+    }
+  ],
+  "regulatory_and_legal": [],
+  "breach_analyse": [
+    {
+      "victim": "NYC Health + Hospitals",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Healthcare_and_Life_Sciences"
+        ],
+        "fr": [
+          "Santé et sciences de la vie"
+        ]
+      },
+      "description": {
+        "en": "A massive breach at NYC Health + Hospitals compromised the sensitive data of nearly 1.8 million patients and employees, posing severe identity fraud risks.",
+        "fr": "Une violation massive des systèmes de NYC Health + Hospitals a compromis les données sensibles de près de 1,8 million de patients et d'employés, présentant des risques de fraude d'identité."
+      },
+      "mitre_ttps": [],
+      "recommandations": [
+        {
+          "en": "Activate free credit monitoring for all affected patients and employees.",
+          "fr": "Activer un suivi de crédit gratuit pour tous les patients et employés touchés."
+        },
+        {
+          "en": "Audit access logs to medical databases to uncover unauthorized history.",
+          "fr": "Auditer les accès aux bases de données médicales d'un point de vue de l'historique d'accès."
+        },
+        {
+          "en": "Strengthen HIPAA compliance through strict IAM controls.",
+          "fr": "Renforcer la conformité HIPAA à travers des contrôles IAM stricts."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Establish an incident response plan specific to healthcare and medical data breaches.",
+            "Establish a robust HIPAA data governance framework."
+          ],
+          "fr": [
+            "Mettre en place un plan de réponse aux incidents spécifique aux violations de données médicales.",
+            "Établir un cadre solide de gouvernance des données HIPAA."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor unusual and large exfiltrations of data to external domains.",
+            "Detect anomalies in privileged medical access logs."
+          ],
+          "fr": [
+            "Surveiller les exfiltrations inhabituelles de gros volumes de données vers des domaines externes.",
+            "Rechercher des anomalies dans les comptes d'accès privilégiés."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Disable compromised or suspicious accounts immediately.",
+            "Temporarily isolate affected database segments."
+          ],
+          "fr": [
+            "Désactiver les comptes compromis ou suspects immédiatement.",
+            "Isoler temporairement les segments de base de données affectés."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Draft and submit mandatory legal notifications to healthcare regulators.",
+            "Improve perimeter security, database encryption, and audit logging."
+          ],
+          "fr": [
+            "Rédiger les notifications légales obligatoires pour les régulateurs de santé.",
+            "Améliorer la sécurité périmétrique et la journalisation."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for high volume outbound connections exfiltrating medical data."
+          ],
+          "fr": [
+            "Recherche d'exfiltrations de volumes élevés de données de santé."
+          ]
+        }
+      },
+      "tags": [
+        "healthcare",
+        "pii",
+        "data_breach"
+      ],
+      "sources": [
+        "https://mastodon.social/@netsecio/116630692108198612"
+      ],
+      "date": "2026-05-24"
+    },
+    {
+      "victim": "CISA",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement et défense"
+        ]
+      },
+      "description": {
+        "en": "A contractor working for CISA stored AWS GovCloud keys and internal credentials on a public GitHub repository for several months, exposing infrastructure to unauthorized access.",
+        "fr": "Un sous-traitant travaillant pour la CISA a stocké des clés AWS GovCloud et des identifiants internes sur un dépôt GitHub public pendant plusieurs mois, exposant l'infrastructure à des accès non autorisés."
+      },
+      "mitre_ttps": [
+        "T1552.001"
+      ],
+      "recommandations": [
+        {
+          "en": "Revoke and immediately renew all compromised cloud secrets.",
+          "fr": "Révoquer et renouveler immédiatement l'intégralité des secrets compromis."
+        },
+        {
+          "en": "Deploy continuous secret scanning tools across all code repositories.",
+          "fr": "Déployer des outils d'analyse de secrets en continu sur l'ensemble des dépôts de code (secrets scanning)."
+        },
+        {
+          "en": "Harden the security compliance policy imposed on third-party subcontractors.",
+          "fr": "Durcir la politique de conformité de sécurité imposée aux sous-traitants."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Train developers on secure secrets storage (e.g., HashiCorp Vault).",
+            "Configure pre-commit automated secret scanning integration."
+          ],
+          "fr": [
+            "Former les développeurs au stockage sécurisé des secrets (ex: HashiCorp Vault).",
+            "Configurer l'intégration de scanning automatisé de secrets pré-commit."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Analyze GitHub security alerts detecting secrets.",
+            "Detect unusual AWS API calls using the affected keys."
+          ],
+          "fr": [
+            "Analyser les alertes de sécurité GitHub de détection de secrets.",
+            "Détecter les appels d'API AWS inhabituels utilisant les clés concernées."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Immediately invalidate leaked AWS keys via IAM console.",
+            "Delete or make private the problematic public GitHub repository."
+          ],
+          "fr": [
+            "Invalider immédiatement les clés AWS divulguées via la console IAM.",
+            "Supprimer ou rendre privé le dépôt GitHub public problématique."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Perform a full access audit to detect potential persistent access.",
+            "Review the code validation process for subcontractors."
+          ],
+          "fr": [
+            "Effectuer un audit d'accès complet pour détecter d'éventuels accès persistants.",
+            "Revoir le processus de validation de code chez les sous-traitants."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for fraudulent use of compromised access keys in Cloud environments."
+          ],
+          "fr": [
+            "Recherche de l'utilisation frauduleuse de clés d'accès compromises en environnement Cloud."
+          ]
+        }
+      },
+      "tags": [
+        "government",
+        "cisa",
+        "credential_leak"
+      ],
+      "sources": [
+        "https://mastodon.social/@netsecio/116630690828668033"
+      ],
+      "date": "2026-05-24"
+    },
+    {
+      "victim": "Trump Mobile",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Retail_and_Consumer",
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Commerce de détail et biens de consommation",
+          "Technologie et télécommunications"
+        ]
+      },
+      "description": {
+        "en": "An unsecured API vulnerability exposed the personal details of 27,000 customers who pre-ordered the T1 smartphone.",
+        "fr": "Une faille d'API non sécurisée a permis d'exposer publiquement les données personnelles de 27 000 acheteurs ayant précommandé le smartphone T1."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Secure the API endpoints by implementing mandatory authentication and authorization.",
+          "fr": "Sécuriser l'API en implémentant l'authentification et l'autorisation obligatoires."
+        },
+        {
+          "en": "Run API security audits before going live in production (DevSecOps).",
+          "fr": "Faire passer des audits de sécurité d'API avant mise en production (DevSecOps)."
+        },
+        {
+          "en": "Notify affected customers of targeted phishing risks.",
+          "fr": "Notifier les clients affectés des risques de phishing ciblé."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Implement a centralized API Gateway with mandatory authentication.",
+            "Define rate limiting mechanisms on API endpoints."
+          ],
+          "fr": [
+            "Mettre en place une passerelle d'API (API Gateway) centralisée avec authentification obligatoire.",
+            "Définir des mécanismes de limitation de débit (rate limiting)."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Analyze API logs to detect unusual volumes of GET requests without authentication tokens.",
+            "Set up alerts for API scraping."
+          ],
+          "fr": [
+            "Analyser les journaux d'API pour détecter des volumes inhabituels de requêtes GET sans token d'authentification.",
+            "Mettre en place des alertes pour le scraping d'API."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Temporarily disable the vulnerable API endpoint.",
+            "Apply strict access control or strong authentication on the API."
+          ],
+          "fr": [
+            "Désactiver temporairement l'endpoint d'API vulnérable.",
+            "Appliquer un contrôle d'accès strict ou une authentification forte sur l'API."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Fix the API code to prevent unauthorized requests.",
+            "Perform a complete penetration test on the API endpoints."
+          ],
+          "fr": [
+            "Corriger le code de l'API pour empêcher les requêtes non autorisées.",
+            "Réaliser un test d'intrusion complet sur les endpoints d'API."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Identify unusual spikes in connections scraping data via application APIs."
+          ],
+          "fr": [
+            "Identifier un pic inhabituel de connexions de scraping de données via les APIs applicatives."
+          ]
+        }
+      },
+      "tags": [
+        "retail",
+        "api_security",
+        "privacy"
+      ],
+      "sources": [
+        "https://mastodon.social/@netsecio/116630690617266981"
+      ],
+      "date": "2026-05-24"
+    },
+    {
+      "victim": "University of Valencia",
+      "threat_actor": "Nova",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Ransomware Gang",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Education_and_Research"
+        ],
+        "fr": [
+          "Éducation et recherche"
+        ]
+      },
+      "description": {
+        "en": "The University of Valencia was targeted by the 'nova' threat actor, who claims to have compromised and stolen unspecified personal data from the institution.",
+        "fr": "L'Université de Valence a été ciblée par l'acteur 'nova', qui prétend avoir compromis et volé des données personnelles non spécifiées de l'établissement."
+      },
+      "mitre_ttps": [
+        "T1486"
+      ],
+      "recommandations": [
+        {
+          "en": "Verify the integrity of internal university systems and isolate potentially compromised networks.",
+          "fr": "Vérifier l'intégrité des systèmes internes de l'université."
+        },
+        {
+          "en": "Do not engage in direct negotiations with the ransomware group without expert advice.",
+          "fr": "Ne pas engager de négociation directe avec le groupe de ransomware sans avis d'experts."
+        },
+        {
+          "en": "Raise staff awareness about phishing and harden the Active Directory access policy.",
+          "fr": "Sensibiliser les équipes au phishing et durcir la politique d'accès à l'Active Directory."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Ensure regular offline backups of academic and administrative data.",
+            "Establish a ransomware response plan."
+          ],
+          "fr": [
+            "Assurer des sauvegardes régulières hors ligne des données académiques et administratives.",
+            "Établir un plan de réponse aux rançongiciels."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect abnormal file bulk modification activity.",
+            "Monitor suspicious VPN connections outside business hours."
+          ],
+          "fr": [
+            "Détecter les activités anormales de modification en masse de fichiers.",
+            "Surveiller les connexions VPN suspectes hors des heures ouvrables."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Immediately isolate affected servers from the main network.",
+            "Cut internet access if necessary to block exfiltration."
+          ],
+          "fr": [
+            "Isoler immédiatement les serveurs affectés du réseau principal.",
+            "Couper les accès à Internet si nécessaire pour bloquer l'exfiltration."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Restore systems from tested clean backups.",
+            "Perform a full forensic analysis to identify the initial entry vector."
+          ],
+          "fr": [
+            "Restaurer les systèmes à partir de sauvegardes saines testées.",
+            "Réaliser une analyse forensique complète pour identifier le vecteur d'entrée initial."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for suspicious file encryption waves on endpoints."
+          ],
+          "fr": [
+            "Recherche de vagues de chiffrement de fichiers suspectes sur les terminaux."
+          ]
+        }
+      },
+      "tags": [
+        "education",
+        "ransomware",
+        "nova"
+      ],
+      "sources": [
+        "https://infosec.exchange/@Matchbook3469/116629273990997825"
+      ],
+      "date": "2026-05-24"
+    },
+    {
+      "victim": "Cablematic Dos Mil SLU",
+      "threat_actor": "Gunra",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Ransomware Gang",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Retail_and_Consumer"
+        ],
+        "fr": [
+          "Commerce de détail et biens de consommation"
+        ]
+      },
+      "description": {
+        "en": "Cablematic has been listed as a victim of a cyberattack by the Gunra ransomware gang. Allegation is being verified.",
+        "fr": "L'entreprise Cablematic a été répertoriée comme victime d'une cyberattaque par le gang de ransomware Gunra. Allégation en cours de vérification."
+      },
+      "mitre_ttps": [
+        "T1486"
+      ],
+      "recommandations": [
+        {
+          "en": "Audit file servers and firewalls to detect signs of intrusion.",
+          "fr": "Auditer les serveurs de fichiers et les pare-feux pour déceler des signes d'intrusion."
+        },
+        {
+          "en": "Disable open remote access management ports on the WAN (RDP/SSH).",
+          "fr": "Désactiver les ports de gestion d'accès à distance ouverts sur le WAN (RDP/SSH)."
+        },
+        {
+          "en": "Verify the validity of latest system backups.",
+          "fr": "Vérifier la validité des dernières sauvegardes système."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Segment operational and corporate networks.",
+            "Verify physical isolation of backup systems."
+          ],
+          "fr": [
+            "Segmenter les réseaux opérationnels et d'entreprise.",
+            "Vérifier l'isolation physique des systèmes de sauvegarde."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor network traffic to known ransomware Command and Control (C2) servers.",
+            "Search for hijacked legitimate administration tools (e.g., Mimikatz, Rclone)."
+          ],
+          "fr": [
+            "Surveiller le trafic réseau vers des adresses IP connues de serveurs de commande (C2) de rançongiciels.",
+            "Rechercher la présence d'outils d'administration légitimes détournés (ex: Mimikatz, Rclone)."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Disable network connections between branches and HQ.",
+            "Block potentially compromised admin accounts."
+          ],
+          "fr": [
+            "Désactiver les liaisons réseau entre les succursales et le siège.",
+            "Bloquer les comptes d'administration potentiellement compromis."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Reinstall infected operating systems from original media.",
+            "Update firewall rules and EDR detection rules."
+          ],
+          "fr": [
+            "Réinstaller les systèmes d'exploitation infectés à partir de supports d'installation d'origine.",
+            "Mettre à jour les règles de pare-feu et de détection EDR."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Detect volume shadow copy (VSS) deletion attempts by native binaries."
+          ],
+          "fr": [
+            "Détection des tentatives de suppression des clichés instantanés de volume (VSS) par des binaires natifs."
+          ]
+        }
+      },
+      "tags": [
+        "retail",
+        "ransomware",
+        "gunra"
+      ],
+      "sources": [
+        "https://infosec.exchange/@Matchbook3469/116628817648219750"
+      ],
+      "date": "2026-05-24"
+    },
+    {
+      "victim": "7-Eleven",
+      "threat_actor": "ShinyHunters",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime Group",
+      "threat_actor_aliases": [
+        "Shiny Hunters"
+      ],
+      "sector": {
+        "en": [
+          "Retail_and_Consumer"
+        ],
+        "fr": [
+          "Commerce de détail et biens de consommation"
+        ]
+      },
+      "description": {
+        "en": "7-Eleven suffered an extortion campaign by ShinyHunters targeting document servers related to franchises, leading to the leak of information of over 185,000 accounts.",
+        "fr": "L'enseigne 7-Eleven a subi une campagne d'extorsion par ShinyHunters ayant ciblé des serveurs de documents liés aux franchises, menant à la fuite des informations de plus de 185 000 comptes."
+      },
+      "mitre_ttps": [
+        "T1567"
+      ],
+      "recommandations": [
+        {
+          "en": "Formally notify all franchisees of the compromise of their contractual information.",
+          "fr": "Avertir formellement tous les franchisés de la compromission de leurs informations contractuelles."
+        },
+        {
+          "en": "Recommend increased vigilance against phishing and commercial identity theft attempts.",
+          "fr": "Recommander une vigilance renforcée face aux tentatives de phishing et d'usurpation d'identité commerciale."
+        },
+        {
+          "en": "Implement FIDO2 physical security keys for franchise portals.",
+          "fr": "Mettre en œuvre des clés de sécurité physiques FIDO2 pour les portails de franchise."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Conduct a precise inventory of all third-party document storage servers.",
+            "Implement encryption at rest of sensitive franchise files."
+          ],
+          "fr": [
+            "Réaliser un dossier précis de tous les serveurs de stockage tiers de documents.",
+            "Mettre en œuvre un chiffrement au repos des fichiers sensibles de franchise."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Set up alerts on unusual download volumes of administrative files.",
+            "Search for abnormal use of franchise admin accounts."
+          ],
+          "fr": [
+            "Mettre en place des alertes sur le téléchargement de volumes inhabituels de fichiers administratifs.",
+            "Rechercher l'utilisation anormale de comptes d'administration de franchise."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Temporarily suspend external access to the affected document management platform.",
+            "Revoke all passwords and active session tokens."
+          ],
+          "fr": [
+            "Suspendre l'accès externe à la plateforme de gestion de documents affectée.",
+            "Révoquer tous les mots de passe et les jetons de session actifs."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Review third-party access policies and security compliance audits.",
+            "Improve the security of APIs accessing document repositories."
+          ],
+          "fr": [
+            "Réviser les politiques d'accès tiers et les audits de conformité de sécurité.",
+            "Améliorer la sécurité des API d'accès aux référentiels documentaires."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Identify massive document exfiltration through public cloud hosting services."
+          ],
+          "fr": [
+            "Identifier l'exfiltration massive de documents via des services de cloud d'hébergement public."
+          ]
+        }
+      },
+      "tags": [
+        "retail",
+        "extortion",
+        "shinyhunters"
+      ],
+      "sources": [
+        "https://haveibeenpwned.com/Breach/7-Eleven",
+        "https://mastodon.social/@NickAEsp/116631530956027974"
+      ],
+      "date": "2026-05-24"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-26980",
+      "euvd_id": "unknown",
+      "cisa_kev": "true",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:ghost:ghost:*:*:*:*:*:*:*:*",
+      "product": "Ghost CMS",
+      "vendor": "Ghost Foundation",
+      "description": {
+        "en": "Critical SQL injection vulnerability in Ghost CMS is actively exploited to inject lightweight malicious scripts in large-scale ClickFix campaigns.",
+        "fr": "Une vulnérabilité critique d'injection SQL dans Ghost CMS est activement exploitée pour injecter des scripts malveillants légers dans le cadre de campagnes ClickFix à grande échelle."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply immediately the security update provided by Ghost CMS.",
+          "fr": "Appliquer immédiatement la mise à jour de sécurité fournie par Ghost CMS."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Deploy regular security patches on CMS installations.",
+            "Train users not to click on fake ClickFix error messages ('update required')."
+          ],
+          "fr": [
+            "Déployer des correctifs de sécurité réguliers sur les installations CMS.",
+            "Former les utilisateurs à ne pas cliquer sur les faux messages d'erreur ClickFix ('mise à jour requise')."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Search for abnormal SQL queries targeting the CMS.",
+            "Monitor the execution of unusual processes on servers like UtilifySetup.exe."
+          ],
+          "fr": [
+            "Rechercher les requêtes SQL anormales ciblant le CMS.",
+            "Surveiller l'exécution de processus inhabituels sur les serveurs comme UtilifySetup.exe."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Temporarily isolate the web server hosting the infected Ghost CMS instance.",
+            "Remove malicious JavaScript injected into web page templates."
+          ],
+          "fr": [
+            "Isoler temporairement le serveur web hébergeant l'instance Ghost CMS infectée.",
+            "Supprimer le JavaScript malveillant injecté dans les templates de pages web."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Change all API keys and Ghost CMS database management passwords.",
+            "Audit other directories to ensure no persistent backdoors are installed."
+          ],
+          "fr": [
+            "Changer toutes les clés d'API et les mots de passe de gestion de la base de données de Ghost CMS.",
+            "Auditer les autres répertoires pour s'assurer qu'aucun backdoor persistant n'a été installé."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Identify third-party malicious script injections within public Ghost CMS content directories."
+          ],
+          "fr": [
+            "Identifier l'injection de scripts malveillants tiers au sein des répertoires de contenu public de Ghost CMS."
+          ]
+        }
+      },
+      "tags": [
+        "ghost_cms",
+        "sqli",
+        "clickfix"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/ghost-cms-sql-injection-flaw-exploited-in-large-scale-clickfix-campaign/"
+      ],
+      "date": "2026-05-24"
+    },
+    {
+      "cve_id": "CVE-2026-9082",
+      "euvd_id": "unknown",
+      "cisa_kev": "true",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:drupal:drupal:*:*:*:*:*:*:*:*",
+      "product": "Drupal Core",
+      "vendor": "Drupal",
+      "description": {
+        "en": "Critical SQL injection vulnerability within Drupal's sanitization API actively exploited in mass targeting instances utilizing PostgreSQL databases.",
+        "fr": "Une injection SQL critique au sein de l'API de sanitisation de Drupal exploitée en masse (plus de 15 000 attaques détectées) affectant les instances s'appuyant sur des bases de données PostgreSQL."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Urgently update to the highly critical patch published by Drupal on May 20, 2026.",
+          "fr": "Mettre à jour d'urgence vers le correctif hautement critique publié par Drupal le 20 mai 2026."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Keep an up-to-date inventory of all servers and applications running Drupal.",
+            "Verify alignment with CISA BOD 22-01 directives."
+          ],
+          "fr": [
+            "Tenir un inventaire à jour de l'ensemble des serveurs et applications exécutant Drupal.",
+            "Vérifier l'alignement avec les directives de la directive BOD 22-01 de la CISA."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Analyze suspicious requests targeting Drupal's database sanitization API module.",
+            "Check for unusual PostgreSQL SQL queries in database logs."
+          ],
+          "fr": [
+            "Analyser les requêtes suspectes ciblant le module d'API de désinfection de base de données de Drupal.",
+            "Vérifier si des requêtes SQL PostgreSQL inhabituelles apparaissent dans les logs de base de données."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Temporarily block public access requests to unpatched vulnerable Drupal servers.",
+            "Implement specific WAF temporary blocking signatures for Drupal Core SQL injection."
+          ],
+          "fr": [
+            "Bloquer temporairement les requêtes d'accès public vers les serveurs Drupal vulnérables non patchés.",
+            "Implémenter des signatures de blocage temporaire WAF spécifiques à l'injection SQL Drupal Core."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Apply the highly critical update published by Drupal on May 20, 2026.",
+            "Audit Drupal system files for web shells or persistent access created during the 48 hours following exposure."
+          ],
+          "fr": [
+            "Appliquer la mise à jour hautement critique publiée par Drupal le 20 mai 2026.",
+            "Auditer les fichiers système de Drupal à la recherche de shells web ou d'accès persistants créés durant les 48 heures suivant l'exploitation."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Identify the creation of PHP files or persistent webshells following successful exploitation of the Drupal API."
+          ],
+          "fr": [
+            "Identifier l'écriture de fichiers PHP ou de webshells persistants à la suite d'une exploitation réussie de l'API Drupal."
+          ]
+        }
+      },
+      "tags": [
+        "drupal",
+        "cisa_kev",
+        "sqli"
+      ],
+      "sources": [
+        "https://securityaffairs.com/192566/uncategorized/u-s-cisa-adds-a-flaw-in-drupal-core-to-its-known-exploited-vulnerabilities-catalog.html"
+      ],
+      "date": "2026-05-24"
+    },
+    {
+      "cve_id": "CVE-2026-5194",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "9.1",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:wolfssl:wolfssl:*:*:*:*:*:*:*:*",
+      "product": "WolfSSL",
+      "vendor": "WolfSSL",
+      "description": {
+        "en": "Critical certificate validation vulnerability in WolfSSL discovered by Anthropic's Glasswing project, allowing an attacker to forge certificates and intercept encrypted communications.",
+        "fr": "Découverte d'une faille critique par l'IA d'Anthropic (projet Glasswing), permettant à un attaquant de forger des certificats et d'intercepter des communications chiffrées."
+      },
+      "mitre_ttps": [],
+      "recommandations": [
+        {
+          "en": "Upgrade WolfSSL to a patched version and use robustly signed certificates.",
+          "fr": "Mettre à niveau WolfSSL vers une version patchée et utiliser des certificats signés de manière robuste."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Evaluate integration of AI-based source code analysis tools (SAST/DAST).",
+            "Implement agile and automated patching cycles to face the increasing volume of vulnerabilities."
+          ],
+          "fr": [
+            "Évaluer l'intégration d'outils d'analyse de code source basés sur l'IA (SAST/DAST).",
+            "Mettre en place des cycles de patching agiles et automatisés pour faire face au volume croissant de vulnérabilités."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor vulnerability reports and urgent patch releases on third-party libraries like WolfSSL."
+          ],
+          "fr": [
+            "Surveiller les rapports de vulnérabilités et l'apparition de correctifs urgents sur les bibliothèques tierces intégrées (ex: WolfSSL)."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Implement Web Application Firewalls (WAF) to filter request types associated with newly discovered vulnerabilities."
+          ],
+          "fr": [
+            "Mettre en œuvre des pare-feux applicatifs (WAF) pour filtrer les types de requêtes associées aux nouvelles vulnérabilités découvertes."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Urgently apply patches issued following security reports (e.g. WolfSSL CVE-2026-5194)."
+          ],
+          "fr": [
+            "Appliquer rapidement les correctifs émis suite aux rapports de sécurité (ex: WolfSSL CVE-2026-5194)."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for integration of outdated or vulnerable WolfSSL versions across IoT/firmware libraries."
+          ],
+          "fr": [
+            "Recherche de l'intégration de versions obsolètes ou vulnérables de WolfSSL dans l'ensemble des bibliothèques IoT/firmware."
+          ]
+        }
+      },
+      "tags": [
+        "wolfssl",
+        "glasswing",
+        "ai_discovery"
+      ],
+      "sources": [
+        "https://securityaffairs.com/192576/ai/anthropics-glasswing-10000-vulnerabilities-found-in-one-month-and-the-patching-problem-has-never-been-more-obvious.html"
+      ],
+      "date": "2026-05-24"
+    },
+    {
+      "cve_id": "CVE-2025-8853",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:2100_technology:document_management_system:*:*:*:*:*:*:*:*",
+      "product": "Document Management System",
+      "vendor": "2100 technology",
+      "description": {
+        "en": "Critical unpatched authentication bypass vulnerability in 2100 Technology DMS allows remote attackers to steal tokens and authenticate as any user.",
+        "fr": "Une faille de contournement d'authentification critique non corrigée permet de voler les jetons d'authentification et de se connecter au DMS en tant que n'importe quel utilisateur."
+      },
+      "mitre_ttps": [
+        "T1588.003"
+      ],
+      "recommandations": [
+        {
+          "en": "Isolate affected systems from the Internet immediately pending a patch release.",
+          "fr": "Isoler immédiatement les systèmes affectés d'Internet en attendant la publication d'un patch."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain a strict inventory of Document Management Systems (DMS).",
+            "Implement file integrity monitoring."
+          ],
+          "fr": [
+            "Maintenir un inventaire strict des systèmes de gestion documentaire (DMS).",
+            "Mettre en place une surveillance de l'intégrité des fichiers."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Analyze user token theft alerts.",
+            "Monitor logins from unusual geographical locations."
+          ],
+          "fr": [
+            "Analyser les alertes de vol de jetons d'utilisateurs.",
+            "Surveiller les connexions à partir de localisations géographiques inhabituelles."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Immediately isolate all systems running the affected DMS application from the network.",
+            "Revoke all access tokens and active sessions."
+          ],
+          "fr": [
+            "Isoler immédiatement du réseau tous les systèmes exécutant l'application DMS affectée.",
+            "Révoquer l'intégralité des jetons d'accès et de sessions actifs."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify absence of residual files or illicitly configured accounts.",
+            "Apply the patch from the vendor as soon as it is released."
+          ],
+          "fr": [
+            "Vérifier l'absence de fichiers ou de comptes résiduels configurés de manière illicite.",
+            "Appliquer le correctif de l'éditeur dès sa parution."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Identify illicit use of legitimate user accounts hijacked using stolen tokens."
+          ],
+          "fr": [
+            "Identifier l'utilisation illicite de comptes d'utilisateurs légitimes usurpés à l'aide de jetons volés."
+          ]
+        }
+      },
+      "tags": [
+        "dms",
+        "auth_bypass",
+        "2100_technology"
+      ],
+      "sources": [
+        "https://mastodon.social/@hugovalters/116632040110014070"
+      ],
+      "date": "2026-05-24"
+    },
+    {
+      "cve_id": "CVE-2026-20223",
+      "euvd_id": "unknown",
+      "cisa_kev": "unknown",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "unknown",
+      "vendor": "unknown",
+      "description": {
+        "en": "Critical vulnerability highlighted in Security Affairs Newsletter Round 578.",
+        "fr": "Vulnérabilité critique mentionnée dans la newsletter Security Affairs Édition 578."
+      },
+      "mitre_ttps": [],
+      "recommandations": [
+        {
+          "en": "Assess application posture against newly disclosed CVEs.",
+          "fr": "Évaluer la posture des applications par rapport aux CVE nouvellement publiées."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain software inventories to ensure rapid response to new CVEs."
+          ],
+          "fr": [
+            "Maintenir à jour l'inventaire des composants pour une corrélation rapide avec les CVEs publiées."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Check vulnerable systems logs for signs of probe or exploitation attempts."
+          ],
+          "fr": [
+            "Rechercher la présence de la CVE sur les équipements d'entreprise."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Restrict network access to vulnerable instances."
+          ],
+          "fr": [
+            "Bloquer temporairement l'accès public aux serveurs exposant des failles hautement critiques."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Apply patches once official guidelines are available."
+          ],
+          "fr": [
+            "Appliquer les correctifs requis fournis par les différents éditeurs."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Scan enterprise networks for known vulnerabilities and prioritize exploits."
+          ],
+          "fr": [
+            "Rechercher de potentielles tentatives d'exploitation sur les services exposés de l'entreprise."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability"
+      ],
+      "sources": [
+        "https://securityaffairs.com/192586/hacking/security-affairs-newsletter-round-578-by-pierluigi-paganini-international-edition.html"
+      ],
+      "date": "2026-05-24"
+    },
+    {
+      "cve_id": "CVE-2026-42945",
+      "euvd_id": "unknown",
+      "cisa_kev": "unknown",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "unknown",
+      "vendor": "unknown",
+      "description": {
+        "en": "Critical vulnerability highlighted in Security Affairs Newsletter Round 578.",
+        "fr": "Vulnérabilité critique mentionnée dans la newsletter Security Affairs Édition 578."
+      },
+      "mitre_ttps": [],
+      "recommandations": [
+        {
+          "en": "Assess application posture against newly disclosed CVEs.",
+          "fr": "Évaluer la posture des applications par rapport aux CVE nouvellement publiées."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain software inventories to ensure rapid response to new CVEs."
+          ],
+          "fr": [
+            "Maintenir à jour l'inventaire des composants pour une corrélation rapide avec les CVEs publiées."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Check vulnerable systems logs for signs of probe or exploitation attempts."
+          ],
+          "fr": [
+            "Rechercher la présence de la CVE sur les équipements d'entreprise."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Restrict network access to vulnerable instances."
+          ],
+          "fr": [
+            "Bloquer temporairement l'accès public aux serveurs exposant des failles hautement critiques."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Apply patches once official guidelines are available."
+          ],
+          "fr": [
+            "Appliquer les correctifs requis fournis par les différents éditeurs."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Scan enterprise networks for known vulnerabilities and prioritize exploits."
+          ],
+          "fr": [
+            "Rechercher de potentielles tentatives d'exploitation sur les services exposés de l'entreprise."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability"
+      ],
+      "sources": [
+        "https://securityaffairs.com/192586/hacking/security-affairs-newsletter-round-578-by-pierluigi-paganini-international-edition.html"
+      ],
+      "date": "2026-05-24"
+    },
+    {
+      "cve_id": "CVE-2026-31635",
+      "euvd_id": "unknown",
+      "cisa_kev": "unknown",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "unknown",
+      "vendor": "unknown",
+      "description": {
+        "en": "Critical vulnerability highlighted in Security Affairs Newsletter Round 578.",
+        "fr": "Vulnérabilité critique mentionnée dans la newsletter Security Affairs Édition 578."
+      },
+      "mitre_ttps": [],
+      "recommandations": [
+        {
+          "en": "Assess application posture against newly disclosed CVEs.",
+          "fr": "Évaluer la posture des applications par rapport aux CVE nouvellement publiées."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain software inventories to ensure rapid response to new CVEs."
+          ],
+          "fr": [
+            "Maintenir à jour l'inventaire des composants pour une corrélation rapide avec les CVEs publiées."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Check vulnerable systems logs for signs of probe or exploitation attempts."
+          ],
+          "fr": [
+            "Rechercher la présence de la CVE sur les équipements d'entreprise."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Restrict network access to vulnerable instances."
+          ],
+          "fr": [
+            "Bloquer temporairement l'accès public aux serveurs exposant des failles hautement critiques."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Apply patches once official guidelines are available."
+          ],
+          "fr": [
+            "Appliquer les correctifs requis fournis par les différents éditeurs."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Scan enterprise networks for known vulnerabilities and prioritize exploits."
+          ],
+          "fr": [
+            "Rechercher de potentielles tentatives d'exploitation sur les services exposés de l'entreprise."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability"
+      ],
+      "sources": [
+        "https://securityaffairs.com/192586/hacking/security-affairs-newsletter-round-578-by-pierluigi-paganini-international-edition.html"
+      ],
+      "date": "2026-05-24"
+    },
+    {
+      "cve_id": "CVE-2026-46333",
+      "euvd_id": "unknown",
+      "cisa_kev": "unknown",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "unknown",
+      "vendor": "unknown",
+      "description": {
+        "en": "Critical vulnerability highlighted in Security Affairs Newsletter Round 578.",
+        "fr": "Vulnérabilité critique mentionnée dans la newsletter Security Affairs Édition 578."
+      },
+      "mitre_ttps": [],
+      "recommandations": [
+        {
+          "en": "Assess application posture against newly disclosed CVEs.",
+          "fr": "Évaluer la posture des applications par rapport aux CVE nouvellement publiées."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain software inventories to ensure rapid response to new CVEs."
+          ],
+          "fr": [
+            "Maintenir à jour l'inventaire des composants pour une corrélation rapide avec les CVEs publiées."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Check vulnerable systems logs for signs of probe or exploitation attempts."
+          ],
+          "fr": [
+            "Rechercher la présence de la CVE sur les équipements d'entreprise."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Restrict network access to vulnerable instances."
+          ],
+          "fr": [
+            "Bloquer temporairement l'accès public aux serveurs exposant des failles hautement critiques."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Apply patches once official guidelines are available."
+          ],
+          "fr": [
+            "Appliquer les correctifs requis fournis par les différents éditeurs."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Scan enterprise networks for known vulnerabilities and prioritize exploits."
+          ],
+          "fr": [
+            "Rechercher de potentielles tentatives d'exploitation sur les services exposés de l'entreprise."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability"
+      ],
+      "sources": [
+        "https://securityaffairs.com/192586/hacking/security-affairs-newsletter-round-578-by-pierluigi-paganini-international-edition.html"
+      ],
+      "date": "2026-05-24"
+    },
+    {
+      "cve_id": "CVE-2026-40369",
+      "euvd_id": "unknown",
+      "cisa_kev": "unknown",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "unknown",
+      "vendor": "unknown",
+      "description": {
+        "en": "Critical vulnerability highlighted in Security Affairs Newsletter Round 578.",
+        "fr": "Vulnérabilité critique mentionnée dans la newsletter Security Affairs Édition 578."
+      },
+      "mitre_ttps": [],
+      "recommandations": [
+        {
+          "en": "Assess application posture against newly disclosed CVEs.",
+          "fr": "Évaluer la posture des applications par rapport aux CVE nouvellement publiées."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain software inventories to ensure rapid response to new CVEs."
+          ],
+          "fr": [
+            "Maintenir à jour l'inventaire des composants pour une corrélation rapide avec les CVEs publiées."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Check vulnerable systems logs for signs of probe or exploitation attempts."
+          ],
+          "fr": [
+            "Rechercher la présence de la CVE sur les équipements d'entreprise."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Restrict network access to vulnerable instances."
+          ],
+          "fr": [
+            "Bloquer temporairement l'accès public aux serveurs exposant des failles hautement critiques."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Apply patches once official guidelines are available."
+          ],
+          "fr": [
+            "Appliquer les correctifs requis fournis par les différents éditeurs."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Scan enterprise networks for known vulnerabilities and prioritize exploits."
+          ],
+          "fr": [
+            "Rechercher de potentielles tentatives d'exploitation sur les services exposés de l'entreprise."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability"
+      ],
+      "sources": [
+        "https://securityaffairs.com/192586/hacking/security-affairs-newsletter-round-578-by-pierluigi-paganini-international-edition.html"
+      ],
+      "date": "2026-05-24"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "Release of Wireshark 4.6.6",
+        "fr": "Sortie de Wireshark 4.6.6"
+      },
+      "description": {
+        "en": "Maintenance update of the Wireshark packet analyzer bringing important fixes and security optimizations.",
+        "fr": "Mise à jour de maintenance de l'analyseur de paquets Wireshark apportant des correctifs et des optimisations de sécurité importantes."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et télécommunications"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "blog.didierstevens.com"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Wireshark"
+        ]
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "The Wireshark update fixes potential vulnerabilities in protocol dissectors and integrates new general patches.",
+        "fr": "La mise à jour de Wireshark corrige des vulnérabilités potentielles dans les dissecteurs de protocole et intègre de nouveaux correctifs généraux."
+      },
+      "recommandations": [
+        {
+          "en": "Quickly install version 4.6.6 of Wireshark on network engineers' endpoints.",
+          "fr": "Installer rapidement la version 4.6.6 de Wireshark sur les terminaux des ingénieurs réseau."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Download the Wireshark tool only from official repositories.",
+            "Keep Wireshark parsers and plugins up to date."
+          ],
+          "fr": [
+            "Télécharger l'outil d'analyse réseau Wireshark uniquement à partir des dépôts officiels.",
+            "Maintenir à jour les parseurs et les plugins Wireshark."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor installed Wireshark versions on the corporate network.",
+            "Audit privilege elevations related to network capture tools."
+          ],
+          "fr": [
+            "Surveiller les versions installées de Wireshark sur le réseau d'entreprise.",
+            "Auditer les élévations de privilèges liées aux outils de capture réseau."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Restrict the execution of packet capture tools to system administrators and network engineers only."
+          ],
+          "fr": [
+            "Restreindre l'exécution d'outils de capture de paquets aux seuls administrateurs système et ingénieurs réseau."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify that all analysis workstations have the corrected Wireshark 4.6.6 version."
+          ],
+          "fr": [
+            "Vérifier que tous les postes d'analyse disposent de la version Wireshark 4.6.6 corrigée."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Check for unauthorized network packet capture tools on standard user workstations."
+          ],
+          "fr": [
+            "Vérifier l'utilisation d'outils de capture de paquets réseau non autorisés sur des postes de travail d'utilisateurs standards."
+          ]
+        }
+      },
+      "tags": [
+        "wireshark",
+        "update"
+      ],
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33010"
+      ],
+      "date": "2026-05-24"
+    },
+    {
+      "title": {
+        "en": "Azure Compute and Networking for Incident Response Analysts",
+        "fr": "Azure Compute et Networking pour les analystes de réponse aux incidents"
+      },
+      "description": {
+        "en": "A comprehensive guide describing Azure compute and network service specificities that investigators must consider to spot anomalies.",
+        "fr": "Un guide complet décrivant les spécificités des services de calcul et réseau d'Azure dont doivent tenir compte les investigateurs pour repérer les anomalies."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et télécommunications"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "access.site",
+          "meaningful.in"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "The document details VM series taxonomy, managed disk forensic snapshotting, network security rules (NSGs), and the need to activate NSG Flow Logs which are disabled by default.",
+        "fr": "Le document détaille la taxonomie des séries de VMs, l'importance de l'analyse des disques gérés par snapshots forensiques, la gestion des flux réseau (NSGs, VNet, Azure Firewall) et l'impératif d'activer les Flow Logs de NSG."
+      },
+      "recommandations": [
+        {
+          "en": "Systematically activate NSG Flow Logs on all critical VNets.",
+          "fr": "Activer systématiquement les NSG Flow Logs sur l'ensemble des VNets critiques."
+        },
+        {
+          "en": "Document the cloud network architecture beforehand to accelerate response in case of an attack.",
+          "fr": "Documenter à l'avance l'architecture réseau cloud pour accélérer l'intervention en cas d'attaque."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Ensure active logging of NSG Flow Logs and Azure Firewall.",
+            "Create read-only security investigator roles on Azure resources."
+          ],
+          "fr": [
+            "S'assurer de la journalisation active des NSG Flow Logs et Azure Firewall.",
+            "Créer des rôles d'investigateurs de sécurité avec des permissions de lecture en lecture seule sur les ressources Azure."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor unplanned VM deployment of expensive series (GPU) or unusual entry-level series (Burstable).",
+            "Analyze priority conflicts in network security rules (NSG)."
+          ],
+          "fr": [
+            "Surveiller le déploiement imprévu de machines virtuelles de séries coûteuses (GPU) ou d'entrée de gamme inhabituelles (Burstable).",
+            "Analyser les conflits de priorité dans les règles de sécurité réseau (NSG)."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Revoke access privileges or managed identity attached to compromised Azure VMs.",
+            "Take forensic snapshots of managed disks without disrupting production."
+          ],
+          "fr": [
+            "Révoquer les privilèges d'accès ou l'identité managée rattachée aux VMs Azure compromises.",
+            "Prendre des instantanés (snapshots) forensiques des disques gérés sans perturber la production."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Audit overall network security configuration to ensure least privilege.",
+            "Train Cloud teams on incident management lifecycle."
+          ],
+          "fr": [
+            "Auditer la configuration globale de sécurité réseau pour s'assurer du respect des règles de moindre privilège.",
+            "Former les équipes Cloud au cycle de vie de la gestion des incidents."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Identify stealth creation of high-end VMs for cryptomining or malicious computing."
+          ],
+          "fr": [
+            "Identifier la création furtive de VMs haut de gamme destinées à des activités de cryptomining ou de calcul malveillant."
+          ]
+        }
+      },
+      "tags": [
+        "azure",
+        "incident_response",
+        "cloud_security"
+      ],
+      "sources": [
+        "https://www.cyberengage.org/post/azure-compute-and-networking-what-incident-responders-actually-need-to-know"
+      ],
+      "date": "2026-05-24"
+    },
+    {
+      "title": {
+        "en": "Security Affairs Malware Newsletter - Edition 98",
+        "fr": "Lettre d'information sur les malwares Security Affairs - Édition 98"
+      },
+      "description": {
+        "en": "Weekly monitoring of malware developments, phishing campaigns, and attack tactics.",
+        "fr": "Veille hebdomadaire sur le développement des nouveaux logiciels malveillants, la prolifération de campagnes d'hameçonnage et l'analyse de tactiques d'attaque."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et télécommunications"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [
+          "pierluigi.paganini@securityaffairs.co"
+        ],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "Weekly aggregation of various contemporary malware campaigns, threat indicators, and remediation advice.",
+        "fr": "Regroupement de diverses campagnes et analyses de malware contemporains, intégrant des indicateurs de compromission généraux et des conseils de remédiation."
+      },
+      "recommandations": [
+        {
+          "en": "Regularly consult shared technical indicators to update firewall and IDS rules.",
+          "fr": "Consulter régulièrement les indicateurs techniques partagés pour mettre à jour les règles de pare-feu et d'IDS."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Subscribe to regular security intelligence newsletters.",
+            "Set up a triage process for new malware signatures."
+          ],
+          "fr": [
+            "S'abonner à des bulletins de veille technologique réguliers.",
+            "Mettre en place un processus de tri des nouvelles signatures de malware."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect presence of IOCs published in the newsletter within the IT infrastructure.",
+            "Correlate emerging threat information."
+          ],
+          "fr": [
+            "Détecter l'apparition d'IOCs publiés dans la newsletter au sein du SI.",
+            "Corréler les informations de menaces émergentes."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Update antivirus and firewall detection rules with newly identified IOCs."
+          ],
+          "fr": [
+            "Mettre à jour les règles de détection antivirus et de pare-feu avec les nouveaux IOCs identifiés."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Share remediation reports internally to improve infrastructure defenses."
+          ],
+          "fr": [
+            "Partager les rapports de remédiation en interne pour améliorer les défenses de l'infrastructure."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for anomalies or phishing attempts mimicking known newsletter domains."
+          ],
+          "fr": [
+            "Rechercher des anomalies ou tentatives d'hameçonnage imitant des domaines de newsletters connus."
+          ]
+        }
+      },
+      "tags": [
+        "newsletter",
+        "malware"
+      ],
+      "sources": [
+        "https://securityaffairs.com/192598/malware/security-affairs-malware-newsletter-round-98.html"
+      ],
+      "date": "2026-05-24"
+    },
+    {
+      "title": {
+        "en": "angr: A Robust and User-Friendly Binary Analysis Platform",
+        "fr": "angr : une plateforme robuste et conviviale d'analyse binaire"
+      },
+      "description": {
+        "en": "Reddit discussion and introduction to angr, a binary analysis tool combining symbolic execution and static analysis.",
+        "fr": "Présentation et discussion sur Reddit concernant angr, un outil puissant combinant exécution symbolique et analyse statique pour déceler des défauts de sécurité ou rétroconcevoir des binaires."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et télécommunications"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "angr"
+        ]
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "angr provides APIs for deep binary structure analysis across various architectures, supporting defensive malware reverse-engineering.",
+        "fr": "angr fournit des API pour analyser de manière approfondie les structures binaires pour diverses architectures, favorisant le travail de la défense pour l'audit et l'analyse de malwares complexes."
+      },
+      "recommandations": [
+        {
+          "en": "Explore integration of angr suite into the organization's vulnerability testing environments.",
+          "fr": "Explorer l'intégration de la suite angr dans les environnements de test de vulnérabilités de l'organisation."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Train reverse engineering analysts in using symbolic execution platforms.",
+            "Integrate static and dynamic analysis tools in malware lab environment."
+          ],
+          "fr": [
+            "Former les analystes de reverse engineering à l'usage de plateformes d'exécution symbolique.",
+            "Intégrer des outils d'analyse dynamique et statique dans l'environnement de laboratoire de malware."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Ensure logging of sandbox malware analysis environments."
+          ],
+          "fr": [
+            "Assurer la journalisation des environnements d'analyse de malware en bac à sable (sandbox)."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Physically and logically isolate tools and VMs used for analyzing suspicious binaries."
+          ],
+          "fr": [
+            "Isoler physiquement et logiquement les outils et machines virtuelles d'analyse de binaires suspects."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Document symbolic analysis results to improve internal signatures."
+          ],
+          "fr": [
+            "Documenter les résultats de l'analyse symbolique des binaires pour améliorer les signatures internes."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Check for unauthorized symbolic execution tools used for internal reverse engineering."
+          ],
+          "fr": [
+            "Vérifier l'utilisation d'outils d'exécution symbolique à des fins de rétro-ingénierie interne."
+          ]
+        }
+      },
+      "tags": [
+        "reddit",
+        "blueteam",
+        "tool"
+      ],
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1tmdfw7/angr_a_powerful_and_userfriendly_binary_analysis/"
+      ],
+      "date": "2026-05-25"
+    },
+    {
+      "title": {
+        "en": "Critique of Poor Authentication Interface Design",
+        "fr": "Critique sur la mauvaise conception d'interfaces d'authentification"
+      },
+      "description": {
+        "en": "A Mastodon post highlighting bad UX/UI design choices in Web forms and their indirect negative impact on security behaviors.",
+        "fr": "Un message de frustration mettant en avant les mauvaises pratiques de conception (UX/UI) des formulaires Web et leur impact négatif indirect sur l'adoption de comportements sécurisés."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et télécommunications"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [
+          "blakespot@oldbytes.space"
+        ],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "Badly structured authentication forms hinder security because they break password managers and cause user fatigue.",
+        "fr": "Les formulaires d'authentification mal structurés nuisent à la sécurité car ils empêchent souvent le bon fonctionnement des gestionnaires de mots de passe et fatiguent les utilisateurs."
+      },
+      "recommandations": [
+        {
+          "en": "Follow NIST usability guidelines to design intuitive authentication mechanisms.",
+          "fr": "Suivre les guides d'utilisabilité du NIST pour concevoir des mécanismes d'authentification intuitifs."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Define rigorous UX standards aligned with security-by-design.",
+            "Audit account creation and login forms."
+          ],
+          "fr": [
+            "Définir des standards rigoureux d'expérience utilisateur (UX) alignés sur la sécurité (Security-by-design).",
+            "Auditer les formulaires de création de comptes et de connexion."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor user drop-off rate during authentication interface interactions."
+          ],
+          "fr": [
+            "Surveiller le taux d'abandon des utilisateurs lors des interactions avec les interfaces d'authentification."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Temporarily disable or update forms that are non-intuitive or failing from a user experience standpoint."
+          ],
+          "fr": [
+            "Mettre à jour ou désactiver temporairement les modules de formulaires non intuitifs ou défaillants d'un point de vue de l'expérience utilisateur."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Implement clear interfaces allowing smooth user password management."
+          ],
+          "fr": [
+            "Implémenter des interfaces claires permettant une gestion fluide des mots de passe par les utilisateurs (compatibilité gestionnaires de mots de passe)."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Identify login anomalies caused by poor forms inducing keystroke errors."
+          ],
+          "fr": [
+            "Identifier des anomalies de connexion causées par des formulaires de mauvaise qualité induisant des erreurs de saisie."
+          ]
+        }
+      },
+      "tags": [
+        "ux",
+        "security_fail",
+        "privacy"
+      ],
+      "sources": [
+        "https://oldbytes.space/@blakespot/116632425717038243"
+      ],
+      "date": "2026-05-25"
+    },
+    {
+      "title": {
+        "en": "Alert on the Threat of Wallet Crypto Drainers",
+        "fr": "Alerte sur la menace des 'Crypto Drainers' de portefeuilles"
+      },
+      "description": {
+        "en": "Warning regarding the growing use of malicious smart contracts, phishing, and social engineering to drain crypto wallets.",
+        "fr": "Un avertissement concernant l'utilisation croissante de contrats malveillants, de phishing et d'attaques d'ingénierie sociale conçus pour piller les portefeuilles de cryptomonnaies des victimes."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Finance"
+        ],
+        "fr": [
+          "Finance"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "news.google.com"
+        ],
+        "EMAIL": [
+          "liliumf@mastodon.social"
+        ],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1566.002"
+      ],
+      "analyse": {
+        "en": "Crypto drainers exploit smart contract approvals signed by victims on hijacked Web3 platforms.",
+        "fr": "Les 'crypto drainers' exploitent l'autorisation de contrats malveillants signés par inadvertance par la victime via des plateformes Web3 contrefaites ou piratées."
+      },
+      "recommandations": [
+        {
+          "en": "Rigorously verify transaction details before signing.",
+          "fr": "Vérifier rigoureusement l'origine de chaque transaction avant signature."
+        },
+        {
+          "en": "Keep private keys and seed phrases offline under all circumstances.",
+          "fr": "Garder les clés privées et les phrases de récupération de portefeuilles hors ligne en toute circonstance."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Raise user awareness about the risks of signing smart contracts.",
+            "Deploy Web3 browser security extensions."
+          ],
+          "fr": [
+            "Sensibiliser les utilisateurs aux risques d'interactions non contrôlées avec des contrats intelligents.",
+            "Mettre en place des extensions de navigateur de sécurité Web3."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor unexplained cryptocurrency outflows from enterprise-controlled wallets.",
+            "Analyze unusual permission requests on Web3 applications."
+          ],
+          "fr": [
+            "Surveiller les flux de retrait inexpliqués de cryptomonnaies à partir des portefeuilles contrôlés par l'entreprise.",
+            "Analyser les demandes de permission inhabituelles reçues sur les applications Web3."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Urgently revoke all suspicious smart contract approvals.",
+            "Disconnect the compromised wallet from dApps."
+          ],
+          "fr": [
+            "Révoquer d'urgence toutes les approbations (allowances) de contrats intelligents suspectes.",
+            "Isoler et couper la connexion du portefeuille compromis avec les dApps."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Implement offline hardware keys and transfer remaining funds to safe addresses.",
+            "Document the malicious contract for blockchain forensics."
+          ],
+          "fr": [
+            "Mettre en œuvre des clés matérielles hors ligne et transférer le reste des fonds vers des adresses saines.",
+            "Documenter le contrat malveillant utilisé pour l'analyse forensique de la blockchain."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Identify fraudulent transactions or interactions targeting known drainer addresses."
+          ],
+          "fr": [
+            "Identifier les interactions ou transferts frauduleux vers des adresses connues de drainers de crypto-actifs."
+          ]
+        }
+      },
+      "tags": [
+        "crypto_drainer",
+        "scam",
+        "phishing"
+      ],
+      "sources": [
+        "https://mastodon.social/@liliumf/116632077984570907"
+      ],
+      "date": "2026-05-24"
+    },
+    {
+      "title": {
+        "en": "Security Tip: Integrating Container Scanning inside CI/CD Pipelines",
+        "fr": "Conseil de sécurité : intégration de l'analyse des conteneurs au sein des pipelines CI/CD"
+      },
+      "description": {
+        "en": "Practical recommendations promoting security 'Shift Left' by auditing container images for vulnerabilities before deployment.",
+        "fr": "Recommandation pratique encourageant à déplacer la sécurité au plus tôt dans le cycle de développement (Shift Left) en vérifiant l'absence de vulnérabilités dans les images de conteneurs avant leur déploiement."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et télécommunications"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "cvedatabase.com"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "trivy",
+          "grype"
+        ]
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "Automating container analysis using tools like Trivy or Grype prevents critical CVE imports into production environments by denying non-compliant builds.",
+        "fr": "L'automatisation de l'analyse de conteneurs via des outils tels que Trivy ou Grype prévient l'introduction de CVEs critiques en production en refusant le déploiement de builds non conformes."
+      },
+      "recommandations": [
+        {
+          "en": "Automate systematic build blocks on container images containing critical vulnerabilities.",
+          "fr": "Automatiser le blocage systématique de la mise en production des images contenant des vulnérabilités de niveau critique."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Integrate image scanners like Trivy or Grype inside CI/CD pipelines.",
+            "Automatically block builds with critical flaws."
+          ],
+          "fr": [
+            "Intégrer les scanneurs d'images comme Trivy ou Grype directement au sein des pipelines CI/CD.",
+            "Bloquer automatiquement les builds présentant des failles critiques."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Analyze weekly vulnerability scan reports.",
+            "Map deployed production images against patch databases."
+          ],
+          "fr": [
+            "Analyser les rapports de scans de vulnérabilités hebdomadaires.",
+            "Faire correspondre les images déployées en production avec les référentiels de correctifs."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate and destroy containers based on images with active critical vulnerabilities."
+          ],
+          "fr": [
+            "Isoler et détruire les conteneurs s'appuyant sur des images contenant des vulnérabilités critiques exploitées."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Update container software dependencies and rebuild clean image."
+          ],
+          "fr": [
+            "Mettre à jour les dépendances logicielles du conteneur et re-générer l'image saine."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Verify blocked build history to ensure proper function of continuous integration rules."
+          ],
+          "fr": [
+            "Vérifier l'historique des builds bloqués pour s'assurer du bon fonctionnement des règles de sécurité de l'intégration continue."
+          ]
+        }
+      },
+      "tags": [
+        "devsecops",
+        "trivy",
+        "grype",
+        "cicd"
+      ],
+      "sources": [
+        "https://techhub.social/@cvedatabase/116631915916642512"
+      ],
+      "date": "2026-05-24"
+    },
+    {
+      "title": {
+        "en": "MFA Bypass Alert on SonicWall VPN Gateways",
+        "fr": "Alerte sur le contournement de la double authentification des VPN SonicWall"
+      },
+      "description": {
+        "en": "A security flaw in SonicWall VPN gateways allows bypass of MFA if software patches are not applied, actively exploited by adversaries.",
+        "fr": "Une faille au sein du système VPN de SonicWall permet de contourner le mécanisme de double authentification si les correctifs logiciels requis ne sont pas appliqués. Des acteurs malveillants profitent activement de cette opportunité."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et télécommunications"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [
+          "liliumf@mastodon.social"
+        ],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1133"
+      ],
+      "analyse": {
+        "en": "This vulnerability bypasses the MFA challenge on enterprise entry points, paving the way for lateral movement and further infiltration.",
+        "fr": "La vulnérabilité permet de court-circuiter l'étape MFA pour s'authentifier directement sur les réseaux d'entreprise, ouvrant la porte à des mouvements latéraux et à l'implantation d'autres types d'attaques."
+      },
+      "recommandations": [
+        {
+          "en": "Urgently patch SonicWall appliances to the latest secure version.",
+          "fr": "Mettre immédiatement à jour les passerelles SonicWall affectées vers la dernière version corrigée."
+        },
+        {
+          "en": "Audit all successful VPN logins over the past 30 days.",
+          "fr": "Auditer de manière approfondie l'ensemble des connexions VPN réussies sur les 30 derniers jours."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain VPN gateway inventory and monitor software updates.",
+            "Enforce strict device posture check policies."
+          ],
+          "fr": [
+            "Maintenir un registre des passerelles VPN actives et de leurs niveaux de versioning.",
+            "Définir des politiques d'authentification strictes intégrant des vérifications d'état de l'appareil (device posture analysis)."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Audit VPN logs for successful logins without matching MFA logs.",
+            "Analyze origin IP anomalies."
+          ],
+          "fr": [
+            "Auditer les journaux d'accès VPN à la recherche de connexions réussies ne présentant pas de trace d'autorisation MFA.",
+            "Rechercher des anomalies dans les adresses IP d'origine."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Temporarily lock suspicious user VPN accounts.",
+            "Apply strict geo-blocking rules to VPN gateways."
+          ],
+          "fr": [
+            "Bloquer temporairement les profils d'accès des utilisateurs dont les connexions sont jugées suspectes.",
+            "Appliquer des restrictions géographiques sur l'accès aux passerelles VPN."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Apply official firmware patches.",
+            "Revoke and reissue VPN certificates/tokens."
+          ],
+          "fr": [
+            "Appliquer la dernière mise à jour de sécurité fournie par SonicWall pour éliminer le contournement de la MFA.",
+            "Révoquer l'ensemble des clés d'accès VPN résiduelles."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for authentication logs showing successful connection with disabled or bypassed MFA."
+          ],
+          "fr": [
+            "Identifier d'éventuels accès illégitimes ayant réussi à contourner la double authentification sur les passerelles SonicWall."
+          ]
+        }
+      },
+      "tags": [
+        "sonicwall",
+        "vpn",
+        "mfa_bypass"
+      ],
+      "sources": [
+        "https://mastodon.social/@liliumf/116631878842078520"
+      ],
+      "date": "2026-05-24"
+    },
+    {
+      "title": {
+        "en": "GitHub Implements Staged Publishing and Install-Time Controls for NPM",
+        "fr": "Nouveau mécanisme de publication et de contrôle de paquets par GitHub pour npm"
+      },
+      "description": {
+        "en": "GitHub introduces staged publishing and improved install-time controls within the npm registry to counter supply-chain attacks.",
+        "fr": "GitHub déploie de nouveaux mécanismes de contrôle de paquets et de publication progressive au sein du registre npm afin de contrer les attaques de type supply-chain."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et télécommunications"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "npm"
+        ]
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "New progressive publication controls and installation verification mechanisms help mitigate dependency substitution and dependency poisoning risks.",
+        "fr": "L'introduction de la publication progressive (staged publishing) et de mécanismes d'autorisation améliorés au moment de l'installation offre aux développeurs un moyen de valider l'intégrité des modules npm tiers."
+      },
+      "recommandations": [
+        {
+          "en": "Configure and enforce the new progressive publishing controls for all corporate npm packages.",
+          "fr": "Activer et paramétrer les nouveaux contrôles de publication progressifs npm de GitHub sur l'ensemble des dépôts d'entreprise."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Configure internal package proxies to scan and verify incoming modules.",
+            "Train developers on dependency substitution risks."
+          ],
+          "fr": [
+            "Configurer les registres de paquets internes (ex: JFrog Artifactory) pour contrôler les nouveaux paquets.",
+            "Sensibiliser les équipes de développement aux risques d'attaques par substitution de dépendance."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor install hooks and script executions during library installs.",
+            "Watch for alerts on package replacements/unusual dependencies."
+          ],
+          "fr": [
+            "Surveiller le comportement de l'installation de nouveaux modules npm dans l'infrastructure de développement.",
+            "Rechercher des alertes liées aux dépendances compromises."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Block automated installation of unsigned or unvetted NPM packages."
+          ],
+          "fr": [
+            "Bloquer l'installation automatique de dépendances npm non approuvées ou non signées."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Audit source code repositories and adjust pipeline build policies."
+          ],
+          "fr": [
+            "Vérifier l'intégrité des dépôts de code et ajuster les autorisations de build npm."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Audit the provenance of newly introduced NPM packages to rule out typo-squatting or dependency confusion attacks."
+          ],
+          "fr": [
+            "Vérifier la provenance de paquets npm nouvellement introduits pour écarter des attaques par empoisonnement de dépendance."
+          ]
+        }
+      },
+      "tags": [
+        "npm",
+        "github",
+        "supply_chain"
+      ],
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1tmjzhw/staged_publishing_and_new_install-time_controls/"
+      ],
+      "date": "2026-05-24"
+    },
+    {
+      "title": {
+        "en": "Security Synthesis: Critical Wave of Attacks Affecting Caesars, GitHub, Panasonic, and 7-Eleven",
+        "fr": "Synthèse de la semaine : Vague d'attaques critiques affectant Caesars, GitHub, Panasonic et 7-Eleven"
+      },
+      "description": {
+        "en": "Synthesis of recent major security incidents, stressing the intensity of cybercriminal pressure on large accounts.",
+        "fr": "Une synthèse des cyberattaques majeures et violations de données de la semaine passée, mettant en relief l'intensité de la pression cybercriminelle actuelle sur les grands comptes."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et télécommunications"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [
+          "NickAEsp@mastodon.social"
+        ],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "Vulnerabilities largely relate to secret disclosures via GitHub, SaaS configuration issues, and aggressive double extortion campaigns.",
+        "fr": "Les failles se situent principalement au niveau de la compromission de secrets via GitHub, d'accès à des infrastructures SaaS et d'actions agressives de double extorsion."
+      },
+      "recommandations": [
+        {
+          "en": "Thoroughly review security policies concerning third-party integrations and contractors.",
+          "fr": "Revoir en détail la politique de sécurité des tiers et prestataires externes intégrés aux infrastructures."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Conduct regular audits of third-party integrations and infrastructure administrator accounts.",
+            "Train leadership on extortion response procedures."
+          ],
+          "fr": [
+            "Auditer régulièrement l'ensemble des intégrations tierces et des comptes d'administration d'infrastructure.",
+            "Sensibiliser les cadres dirigeants aux menaces de double extorsion."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for compromise signals associated with major extortion cartels.",
+            "Analyze anomalous access spikes on corporate code repositories."
+          ],
+          "fr": [
+            "Surveiller les signaux de compromission réseau associés aux gangs d'extorsion majeurs.",
+            "Analyser les pics anormaux d'accès aux dépôts GitHub de l'entreprise."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate reported compromised platforms immediately.",
+            "Revoke credentials of suspected leaked accounts."
+          ],
+          "fr": [
+            "Isoler immédiatement les plateformes signalées compromises.",
+            "Révoquer l'accès des comptes d'employés et prestataires suspectés d'être fuis."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Conduct forensic investigation and close entry point.",
+            "Deliver transparent public crisis communications."
+          ],
+          "fr": [
+            "Mener une enquête forensique complète et corriger le point d'intrusion.",
+            "Rétablir l'image publique à travers une communication de crise transparente."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Scan logs for massive transfers of corporate data to sharing/hosting tools."
+          ],
+          "fr": [
+            "Identifier des fuites massives d'informations internes vers des outils de partage ou d'hébergement."
+          ]
+        }
+      },
+      "tags": [
+        "breach",
+        "panasonic",
+        "7eleven",
+        "caesars"
+      ],
+      "sources": [
+        "https://mastodon.social/@NickAEsp/116631530956027974"
+      ],
+      "date": "2026-05-24"
+    },
+    {
+      "title": {
+        "en": "Daily Cybersecurity Podcast: Caesars, GitHub, Panasonic, 7-Eleven, and NYC Health",
+        "fr": "Podcast quotidien : Caesars Entertainment, GitHub, Panasonic, 7-Eleven et NYC Health"
+      },
+      "description": {
+        "en": "Audio digest covering the backend of recent major security incidents targeting critical infrastructure.",
+        "fr": "Édition audio quotidienne couvrant les aspects opérationnels et les coulisses des récents incidents de sécurité majeurs."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et télécommunications"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "soundcloud.com"
+        ],
+        "EMAIL": [
+          "NickAEsp@mastodon.social"
+        ],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "This podcast highlights sophisticated phishing techniques and repository secret leaks aiding illicit access.",
+        "fr": "L'auteur présente une analyse des tactiques d'hameçonnage sophistiquées et de vol de secrets d'identification de dépôts."
+      },
+      "recommandations": [
+        {
+          "en": "Regularly listen to threat intelligence podcasts to recognize indicators of comparable threats.",
+          "fr": "Écouter les analyses d'incidents régulières pour identifier des vecteurs d'attaque similaires utilisables contre son organisation."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Ensure public relations and security teams are synchronized to handle audio leaks or external reports.",
+            "Audit disclosure risks."
+          ],
+          "fr": [
+            "Mettre en œuvre une cellule de communication de crise capable de réagir aux publications audio/vidéo cybercriminelles.",
+            "Auditer les risques liés aux diffusions de rapports de failles."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor brand exposure and leak mentions on file-sharing and darkweb sites.",
+            "Monitor audio hosting channels."
+          ],
+          "fr": [
+            "Surveiller le darknet et les plateformes de partage audio à la recherche de mentions de l'entreprise."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Execute standard content take-down requests for compromised/leaked private documents.",
+            "Isolate referenced systems."
+          ],
+          "fr": [
+            "Mettre en œuvre des procédures de retrait (takedown) de contenus contrefaits ou contenant des données confidentielles fuyant sur le web."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Harden internal procedures to reduce incident-to-disclosure timelines.",
+            "Update crisis playbooks."
+          ],
+          "fr": [
+            "Améliorer les processus internes de réponse pour réduire le délai d'annonce officielle d'une faille."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Analyze OSINT scanner queries looking for leaked corporate data across multimedia environments."
+          ],
+          "fr": [
+            "Détection proactive de fuites de données d'entreprise ou de discussions d'attaquants sur des plateformes multimédias."
+          ]
+        }
+      },
+      "tags": [
+        "podcast",
+        "breach",
+        "panasonic",
+        "7eleven"
+      ],
+      "sources": [
+        "https://mastodon.social/@NickAEsp/116631530736612623"
+      ],
+      "date": "2026-05-24"
+    }
+  ]
+}
