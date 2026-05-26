@@ -1,0 +1,2042 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "Late May 2026 is characterized by a major intensification of software supply chain attacks led by cyberthreat actor TeamPCP, which successfully compromised technology giants like GitHub and OpenAI via poisoned VS Code extensions and altered SDKs. Concurrently, we observe the rapid expansion of sophisticated Chinese-language Phishing-as-a-Service (PhaaS) ecosystems (such as YY Lai Yu and Kali365) industrializing the interception of OAuth session tokens to bypass MFA. At the geopolitical level, Europe reacts firmly by seizing hosting infrastructures complicit with Russia (MIRhosting/WorkTitans) and exploring trade defense mechanisms like the anti-coercion instrument.",
+      "fr": "La fin mai 2026 est caractérisée par une intensification majeure des attaques sur la supply chain logicielle menées par l'acteur de cybermenace TeamPCP, qui a réussi à compromettre des géants technologiques comme GitHub et OpenAI via des extensions VS Code empoisonnées et des SDK altérés. Parallèlement, nous constatons l'expansion rapide d'écosystèmes criminels de Phishing-as-a-Service (PhaaS) sophistiqués de langue chinoise (comme YY Lai Yu et Kali365) qui industrialisent l'interception de jetons de session OAuth pour contourner le MFA. Au niveau géopolitique, l'Europe réagit fermement en saisissant des infrastructures d'hébergement complices de la Russie (MIRhosting/WorkTitans) et en explorant des mécanismes de défense commerciale comme l'instrument anti-coercition."
+    },
+    "date": "2026-05-26"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": ["Technology_and_Telecom"],
+        "fr": ["Technologie et télécommunications"]
+      },
+      "theme": {
+        "en": "Massive police seizure of Russian-linked cyberattack hosting infrastructures",
+        "fr": "Saisie policière massive d'infrastructures d'hébergement russes impliquées dans des cyberattaques"
+      },
+      "description": {
+        "en": "The seizure of over 800 servers by the FIOD in the Netherlands and the arrest of two co-owners of MIRhosting and WorkTitans reveal a Russian sanctions evasion network that hosted Stark Industries Solutions and conducted major DDoS attacks against European targets, such as the Danish government.",
+        "fr": "La saisie de plus de 800 serveurs par la FIOD aux Pays-Bas et l'arrestation de deux co-propriétaires de MIRhosting et WorkTitans révèlent un réseau d'évasion de sanctions russes ayant hébergé Stark Industries Solutions et mené des attaques DDoS majeures contre des cibles européennes, notamment le gouvernement danois."
+      },
+      "recommandations": [
+        {
+          "en": "Avoid relying on third-party hosting providers with direct or indirect links to sanction-evasion jurisdictions.",
+          "fr": "Éviter de s'appuyer sur des fournisseurs d'hébergement tiers ayant des liens directs ou indirects avec des juridictions d'évasion de sanctions."
+        },
+        {
+          "en": "Strengthen security vetting and compliance audits for infrastructure-as-a-service vendors.",
+          "fr": "Renforcer l'évaluation de sécurité et les audits de conformité des fournisseurs d'infrastructures (IaaS)."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Audit transitive routing and hosting relationships with entities under EU/US sanctions.", "Set up enhanced network monitoring for traffic originating from suspicious ASNs."],
+          "fr": ["Auditer les relations de transit et d'hébergement avec des entités sous sanctions de l'UE ou des États-Unis.", "Mettre en place une surveillance réseau renforcée du trafic provenant d'ASNs suspectes."]
+        },
+        "phase2_detection": {
+          "en": ["Analyze anomalous connection attempts from MIRhosting and WorkTitans IP ranges.", "Monitor network telemetry for unexplained traffic spikes linked to known Russian proxy networks."],
+          "fr": ["Analyser les tentatives de connexion anormales provenant des plages IP de MIRhosting et WorkTitans.", "Surveiller la télémétrie réseau à la recherche de pics de trafic inexpliqués liés à des réseaux de proxy russes."]
+        },
+        "phase3_containment": {
+          "en": ["Block all IP blocks associated with the seized servers at the edge firewalls.", "Revoke sessions and API keys potentially exposed through compromised routing paths."],
+          "fr": ["Bloquer tous les blocs IP associés aux serveurs saisis au niveau des pare-feu périmétriques.", "Révoquer les sessions et clés d'API potentiellement exposées via des chemins de routage compromis."]
+        },
+        "phase4_post_incident": {
+          "en": ["Conduct a thorough post-mortem on any services that interacted with the blacklisted networks.", "Collaborate with national CERTs and law enforcement by sharing relevant forensic indicators."],
+          "fr": ["Réaliser un post-mortem approfondi sur tous les services ayant interagi avec les réseaux mis sur liste noire.", "Collaborer avec les CERT nationaux et les forces de l'ordre en partageant les indicateurs forensiques pertinents."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Query NetFlow logs to identify historical communication with banned Russian-affiliated hosting providers.", "Search for persistent backdoors or unauthorized proxy tunnels utilizing these networks."],
+          "fr": ["Rechercher dans les journaux NetFlow d'anciennes communications avec les hébergeurs russes interdits.", "Rechercher des portes dérobées persistantes ou des tunnels de proxy non autorisés exploitant ces réseaux."]
+        }
+      },
+      "tags": ["geopolitics", "seizure", "russia", "netherlands", "sanctions"],
+      "sources": ["https://krebsonsecurity.com/2026/05/netherlands-seizes-800-servers-arrests-2-for-aiding-cyberattacks/"],
+      "date": "2026-05-18"
+    },
+    {
+      "sector": {
+        "en": ["Government_and_Defense"],
+        "fr": ["Gouvernement et Défense"]
+      },
+      "theme": {
+        "en": "State-sponsored espionage campaign by UAC-0057 against Ukrainian public sector",
+        "fr": "Campagne d'espionnage étatique menée par UAC-0057 contre le secteur public ukrainien"
+      },
+      "description": {
+        "en": "The Belarus-aligned espionage group UAC-0057 (Ghostwriter/UNC1151) is actively targeting Ukrainian public institutions. Using compromised employee accounts, they deliver phishing lures that drop the OYSTER malware suite to gather intelligence and deploy Cobalt Strike.",
+        "fr": "Le groupe d'espionnage aligné sur la Biélorussie UAC-0057 (Ghostwriter/UNC1151) cible activement les institutions publiques ukrainiennes. En utilisant des comptes de collaborateurs compromis, ils diffusent des leurres d'hameçonnage déployant la suite malveillante OYSTER pour collecter du renseignement et charger Cobalt Strike."
+      },
+      "recommandations": [
+        {
+          "en": "Enforce phishing-resistant multi-factor authentication (MFA) to prevent employee account hijacking.",
+          "fr": "Imposer une authentification multifacteur (MFA) résistante au phishing pour empêcher le piratage des comptes d'employés."
+        },
+        {
+          "en": "Restrict the execution of native Windows scripting hosts such as wscript.exe and mshta.exe.",
+          "fr": "Restreindre l'exécution des moteurs de scripts Windows natifs tels que wscript.exe et mshta.exe."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Train public officials against highly tailored spearphishing themes mimicking educational or training platforms.", "Implement strict host restriction policies regarding JavaScript execution outside browser processes."],
+          "fr": ["Former les agents publics contre des thèmes d'hameçonnage ciblé imitant des plateformes éducatives ou de formation.", "Mettre en œuvre des politiques de restriction strictes sur l'exécution de JavaScript en dehors des processus de navigation."]
+        },
+        "phase2_detection": {
+          "en": ["Create behavioral rules to detect registry modifications associated with OYSTERBLUES.", "Monitor for unusual process spawning patterns, such as rundll32 or wscript initiating outbound external requests."],
+          "fr": ["Créer des règles comportementales pour détecter les modifications de registre associées à OYSTERBLUES.", "Surveiller les modèles d'exécution de processus inhabituels, comme rundll32 ou wscript initiant des requêtes externes."]
+        },
+        "phase3_containment": {
+          "en": ["Isolate endpoints running active OYSTER scripts or showing signs of Cobalt Strike beacons.", "Disable and reset credentials for hijacked sender mailboxes used to propagate lures."],
+          "fr": ["Isoler les terminaux exécutant des scripts OYSTER actifs ou montrant des signes de balises Cobalt Strike.", "Désactiver et réinitialiser les identifiants des boîtes de messagerie piratées utilisées pour propager les leurres."]
+        },
+        "phase4_post_incident": {
+          "en": ["Re-image affected systems and perform comprehensive identity audits to ensure no secondary backdoors exist.", "Submit technical indicators and malware samples to national cyber agencies like CERT-UA."],
+          "fr": ["Réinstaller les systèmes affectés et réaliser des audits d'identité complets pour s'assurer qu'aucune porte dérobée secondaire n'existe.", "Soumettre les indicateurs techniques et les échantillons de logiciels malveillants aux agences cyber nationales comme le CERT-UA."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Hunt for suspicious registry keys under CurrentVersion\\Run containing obfuscated JavaScript code payloads.", "Analyze proxy logs for domains ending in high-risk TLDs like '.icu' behind Cloudflare CDNs."],
+          "fr": ["Rechercher des clés de registre suspectes sous CurrentVersion\\Run contenant des charges utiles de code JavaScript obfusquées.", "Analyser les journaux de proxy pour détecter des domaines se terminant par des TLD à haut risque comme '.icu' masqués derrière des réseaux Cloudflare."]
+        }
+      },
+      "tags": ["geopolitics", "espionage", "belarus", "ukraine", "phishing"],
+      "sources": ["https://socprime.com/blog/uac-0057-attack-detection/"],
+      "date": "2026-05-21"
+    },
+    {
+      "sector": {
+        "en": ["Government_and_Defense"],
+        "fr": ["Gouvernement et Défense"]
+      },
+      "theme": {
+        "en": "EU trade defense mechanisms and the challenges of the Anti-Coercion Instrument (ACI)",
+        "fr": "Mécanismes de défense commerciale de l'UE et défis de l'Instrument Anti-Coercition (IAC)"
+      },
+      "description": {
+        "en": "The European Union's implementation of the Anti-Coercion Instrument (ACI) to counter US tariff threats highlights geopolitical trade disputes and the complexities of decision-making within the European Council, as well as WTO compliance issues.",
+        "fr": "La mise en œuvre par l'Union européenne de l'Instrument Anti-Coercition (IAC) pour contrer les menaces tarifaires américaines met en évidence les conflits commerciaux géopolitiques et la complexité de la prise de décision au sein du Conseil européen, ainsi que les problèmes de conformité avec l'OMC."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor regulatory developments and trade sanctions that may affect supply chains and logistics.",
+          "fr": "Surveiller les évolutions réglementaires et les sanctions commerciales susceptibles d'affecter les chaînes d'approvisionnement et la logistique."
+        },
+        {
+          "en": "Diversify supplier networks to mitigate risks arising from sudden international tariff penalties.",
+          "fr": "Diversifier les réseaux de fournisseurs pour atténuer les risques découlant de sanctions tarifaires internationales soudaines."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Establish a regulatory tracking team to monitor trade disputes and economic countermeasures.", "Model the financial and logistical impacts of targeted tariff increases on essential resources."],
+          "fr": ["Établir une équipe de veille réglementaire pour suivre les conflits commerciaux et les contre-mesures économiques.", "Modéliser les impacts financiers et logistiques de hausses tarifaires ciblées sur les ressources essentielles."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor official gazettes and geopolitical bulletins for changes in trade policies.", "Identify supply chain bottlenecks vulnerable to geopolitical escalation."],
+          "fr": ["Surveiller les journaux officiels et bulletins géopolitiques pour détecter les changements de politiques commerciales.", "Identifier les goulets d'étranglement de la chaîne d'approvisionnement vulnérables à une escalade géopolitique."]
+        },
+        "phase3_containment": {
+          "en": ["Activate backup contracts with alternative suppliers outside targeted geopolitical zones.", "Hedge critical asset acquisitions to absorb short-term price volatility."],
+          "fr": ["Activer les contrats de secours avec des fournisseurs alternatifs en dehors des zones géopolitiques visées.", "Couvrir les acquisitions d'actifs critiques pour absorber la volatilité des prix à court terme."]
+        },
+        "phase4_post_incident": {
+          "en": ["Update corporate risk registers regarding international geopolitical and economic friction.", "Adapt procurement guidelines to minimize exposure to high-friction jurisdictions."],
+          "fr": ["Mettre à jour les registres de risques de l'entreprise concernant les frictions géopolitiques et économiques internationales.", "Adapter les directives d'approvisionnement pour minimiser l'exposition aux juridictions à fortes tensions."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Conduct logic path analysis on critical vendor dependencies to discover hidden geographic risks.", "Perform continuous mapping of tier-2 and tier-3 supplier origins."],
+          "fr": ["Réaliser une analyse des dépendances des fournisseurs critiques pour découvrir les risques géographiques cachés.", "Cartographier en continu les origines des fournisseurs de rang 2 et de rang 3."]
+        }
+      },
+      "tags": ["geopolitics", "economic_warfare", "tariffs", "eu", "usa"],
+      "sources": ["https://www.portail-ie.fr/univers/droit-et-intelligence-juridique/2026/instrument-anti-coercition-union-europeenne-trump/"],
+      "date": "2026-05-25"
+    }
+  ],
+  "regulatory_and_legal": [
+    {
+      "title": {
+        "en": "Proposed Digital Omnibus Regulation for Cyber Regulatory Simplification",
+        "fr": "Proposition de règlement Digital Omnibus pour la simplification de la réglementation cyber"
+      },
+      "description": {
+        "en": "The European Central Bank (ECB) published an opinion supporting the Digital Omnibus regulation. This proposal aims to streamline cybersecurity reporting and compliance across major frameworks such as GDPR, NIS 2, DORA, and CER, reducing redundant filings for financial entities.",
+        "fr": "La Banque centrale européenne (BCE) a publié un avis soutenant le projet de règlement Digital Omnibus. Cette proposition vise à rationaliser et simplifier les exigences de déclaration cyber et de conformité sous d'importants cadres tels que le RGPD, NIS 2, DORA et CER, limitant les doublons administratifs pour les entités financières."
+      },
+      "organisation": {
+        "en": ["European Central Bank"],
+        "fr": ["Banque centrale européenne"]
+      },
+      "jurisdiction": {
+        "en": ["European Union"],
+        "fr": ["Union européenne"]
+      },
+      "references": {
+        "en": ["CON/2026/9", "OJ:C_202602621"],
+        "fr": ["CON/2026/9", "OJ:C_202602621"]
+      },
+      "tags": ["regulation", "digital_omnibus", "nis2", "dora", "compliance"],
+      "sources": ["https://eur-lex.europa.eu/legal-content/AUTO/?uri=OJ:C_202602621"],
+      "date": "2026-05-26"
+    },
+    {
+      "title": {
+        "en": "PowerSchool $17.25 Million Settlement Over Student Data Tracking",
+        "fr": "Règlement à l'amiable de 17,25 millions de dollars pour PowerSchool concernant le pistage de données d'étudiants"
+      },
+      "description": {
+        "en": "EdTech giant PowerSchool has agreed to a $17.25 million settlement, concluding years of lawsuits and investigations regarding unauthorized tracking, profiling, and monetization of student personal data through its educational software.",
+        "fr": "Le géant de l'EdTech PowerSchool a accepté un règlement de 17,25 millions de dollars, mettant fin à des années de litiges et d'enquêtes concernant le pistage, le profilage et la monétisation non autorisés des données personnelles des élèves via ses logiciels éducatifs."
+      },
+      "organisation": {
+        "en": ["US Civil Courts"],
+        "fr": ["Tribunaux civils des États-Unis"]
+      },
+      "jurisdiction": {
+        "en": ["United States"],
+        "fr": ["États-Unis"]
+      },
+      "references": {
+        "en": ["PowerSchool Settlement"],
+        "fr": ["PowerSchool Settlement"]
+      },
+      "tags": ["privacy", "settlement", "student_data", "edtech", "tracking"],
+      "sources": ["https://databreaches.net/2026/05/25/powerschools-17-25-million-settlement-exposes-years-of-student-data-tracking/"],
+      "date": "2026-05-25"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "GitHub, OpenAI, Mistral AI, Grafana Labs",
+      "threat_actor": "TeamPCP",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminalité / Espionnage",
+      "threat_actor_aliases": ["Mini Shai-Hulud Operator"],
+      "sector": {
+        "en": ["Technology_and_Telecom"],
+        "fr": ["Technologie et télécommunications"]
+      },
+      "description": {
+        "en": "An aggressive software supply chain compromise orchestrated by TeamPCP. The attackers poisoned popular VS Code extensions (such as Nx Console) and SDK packages to steal developer authentication tokens. This allowed them to infiltrate internal environments and exfiltrate over 3,800 GitHub repositories containing intellectual property and cloud secrets.",
+        "fr": "Une compromission agressive de la supply chain logicielle orchestrée par TeamPCP. Les attaquants ont empoisonné des extensions VS Code populaires (telles que Nx Console) et des packages de SDK pour dérober des jetons d'authentification de développeurs, leur permettant de s'infiltrer dans les environnements internes et d'exfiltrer plus de 3 800 dépôts GitHub contenant de la propriété intellectuelle et des secrets cloud."
+      },
+      "mitre_ttps": ["T1195.002", "T1553.006", "T1539"],
+      "recommandations": [
+        {
+          "en": "Rotate all cloud provider credentials and API tokens configured within compromised developer environments.",
+          "fr": "Effectuer une rotation complète de tous les identifiants de fournisseurs cloud et jetons d'API configurés dans les environnements de développement compromis."
+        },
+        {
+          "en": "Mandate cryptographic signing for commits and require manual review of dependency manifest updates.",
+          "fr": "Imposer la signature cryptographique des commits et exiger un examen manuel de toutes les mises à jour des fichiers de dépendances."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Implement binary hashing checks for developer tools and enforce code signing certificates verification.", "Establish strict policies prohibiting developer tools from automatic updates without peer-reviewed lockfiles."],
+          "fr": ["Mettre en œuvre des vérifications de hachage de binaires pour les outils de développement et imposer la vérification des certificats de signature de code.", "Établir des politiques strictes interdisant les mises à jour automatiques des outils de développement sans revue des fichiers de verrouillage (lockfiles)."]
+        },
+        "phase2_detection": {
+          "en": ["Scan developer filesystems for modifications within VS Code config directories (~/.vscode or ~/.claude).", "Alert on unexpected outbound web traffic to domains like *.getsession.org from development workstations."],
+          "fr": ["Analyser les systèmes de fichiers des développeurs pour détecter des modifications dans les répertoires de configuration de VS Code (~/.vscode ou ~/.claude).", "Alerter en cas de trafic web sortant inattendu vers des domaines comme *.getsession.org depuis les postes de développement."]
+        },
+        "phase3_containment": {
+          "en": ["Isolate developer workstations exhibiting active indicators of compromise.", "Revoke all active developer tokens, OIDC integrations, and cloud access keys immediately."],
+          "fr": ["Isoler les postes de travail des développeurs présentant des indicateurs de compromission actifs.", "Révoquer immédiatement l'ensemble des jetons de développeurs actifs, des intégrations OIDC et des clés d'accès cloud."]
+        },
+        "phase4_post_incident": {
+          "en": ["Perform comprehensive audits of all repositories accessed by compromised accounts to identify injected backdoors.", "Strengthen CI/CD trust models by employing short-lived, environment-restricted execution tokens."],
+          "fr": ["Réaliser un audit complet de tous les dépôts accédés par les comptes compromis afin de détecter d'éventuelles portes dérobées injectées.", "Renforcer les modèles de confiance CI/CD en utilisant des jetons d'exécution temporaires et restreints à leur environnement."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search CI/CD build logs for unauthorized modifications to build steps or task files.", "Hunt for unusual API calls in cloud trail logs indicating lateral movement from development accounts."],
+          "fr": ["Rechercher dans les journaux de build CI/CD des modifications non autorisées dans les étapes de build ou les fichiers de tâches.", "Rechercher des appels d'API inhabituels dans les journaux d'activité cloud indiquant un mouvement latéral à partir de comptes de développement."]
+        }
+      },
+      "tags": ["supply_chain", "secrets_leak", "github", "teampcp", "breach"],
+      "sources": ["https://isc.sans.edu/diary/rss/33016", "https://isc.sans.edu/diary/rss/33014"],
+      "date": "2026-05-18"
+    },
+    {
+      "victim": "PILLER AIMMCO",
+      "threat_actor": "Inc Ransom",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminalité",
+      "threat_actor_aliases": ["Inc Ransom"],
+      "sector": {
+        "en": ["Industry_and_Manufacturing"],
+        "fr": ["Industrie et fabrication"]
+      },
+      "description": {
+        "en": "PILLER AIMMCO was listed as a victim on the Inc Ransom leak site, indicating a successful double-extortion ransomware attack that compromised company data and operational files.",
+        "fr": "L'entreprise PILLER AIMMCO a été publiée en tant que victime sur le site de fuite d'Inc Ransom, indiquant une attaque réussie de rançongiciel par double extorsion ayant compromis des données d'entreprise et des fichiers opérationnels."
+      },
+      "mitre_ttps": ["T1486"],
+      "recommandations": [
+        {
+          "en": "Ensure offsite, offline, and immutable backups of critical manufacturing and business systems are maintained.",
+          "fr": "S'assurer du maintien de sauvegardes hors ligne, externalisées et immuables des systèmes de fabrication et de gestion critiques."
+        },
+        {
+          "en": "Implement network segmentation to separate industrial control networks from general corporate IT.",
+          "fr": "Mettre en œuvre une segmentation réseau rigoureuse pour séparer les réseaux industriels de l'informatique de gestion."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Develop a comprehensive business continuity plan covering complete system restoration from zero.", "Test incident response procedures specifically for ransomware outbreaks across IT and OT segments."],
+          "fr": ["Développer un plan de continuité d'activité complet couvrant la restauration intégrale des systèmes à partir de zéro.", "Tester les procédures de réponse aux incidents spécifiquement pour les attaques de ransomwares sur les segments IT et OT."]
+        },
+        "phase2_detection": {
+          "en": ["Configure endpoint security tools to alert on shadow copy deletion attempts (vssadmin).", "Monitor network performance for sudden bursts of high-volume data exfiltration to darknet endpoints."],
+          "fr": ["Configurer les outils de sécurité des terminaux pour alerter sur les tentatives de suppression des clichés instantanés (vssadmin).", "Surveiller les performances réseau à la recherche de pics soudains d'exfiltration de données vers des nœuds du darknet."]
+        },
+        "phase3_containment": {
+          "en": ["Disconnect affected subnets immediately to prevent lateral movement of encryption tools.", "Block communication to Tor network exit nodes at the perimeter firewall."],
+          "fr": ["Déconnecter immédiatement les sous-réseaux affectés pour empêcher le mouvement latéral des outils de chiffrement.", "Bloquer les communications vers les nœuds de sortie du réseau Tor au niveau du pare-feu périmétrique."]
+        },
+        "phase4_post_incident": {
+          "en": ["Restore systems sequentially from audited, clean offline backups.", "Conduct a forensic review of initial access vectors, such as corporate VPN or email systems, to close the loophole."],
+          "fr": ["Restaurer les systèmes de manière séquentielle à partir de sauvegardes hors ligne nettoyées et auditées.", "Mener une analyse forensique des vecteurs d'accès initiaux, tels que le VPN ou la messagerie, pour combler la faille."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Query authentication logs for anomalous admin logons outside of normal working hours.", "Search for unrecognized archiving tool executions (7zip, WinRAR) on critical file servers."],
+          "fr": ["Rechercher dans les journaux d'authentification des connexions d'administration anormales en dehors des heures de bureau.", "Rechercher des exécutions d'outils d'archivage non reconnus (7zip, WinRAR) sur les serveurs de fichiers critiques."]
+        }
+      },
+      "tags": ["ransomware", "extortion", "manufacturing", "inc_ransom", "breach"],
+      "sources": ["https://www.ransomlook.io/group/inc%20ransom"],
+      "date": "2026-05-26"
+    },
+    {
+      "victim": "700+ Ghost CMS websites",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminalité",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Technology_and_Telecom", "Education_and_Research", "Business_Services"],
+        "fr": ["Technologie et télécommunications", "Éducation et recherche", "Services aux entreprises"]
+      },
+      "description": {
+        "en": "Exploitation of SQL injection vulnerability CVE-2026-26980 in Ghost CMS allowed cybercriminals to extract administrative API keys, modify database content, and inject ClickFix social engineering scripts to infect visitors.",
+        "fr": "L'exploitation de la vulnérabilité d'injection SQL CVE-2026-26980 dans Ghost CMS a permis à des cybercriminels d'extraire des clés d'API d'administration, de modifier le contenu de la base de données et d'injecter des scripts d'ingénierie sociale ClickFix pour infecter les visiteurs."
+      },
+      "mitre_ttps": ["T1190", "T1565.002"],
+      "recommandations": [
+        {
+          "en": "Apply the official Ghost CMS security patch immediately to all public-facing instances.",
+          "fr": "Appliquer immédiatement le correctif de sécurité officiel de Ghost CMS sur toutes les instances exposées publiquement."
+        },
+        {
+          "en": "Perform a complete rotation of all administrative API keys and inspect published database content for malicious scripts.",
+          "fr": "Effectuer une rotation complète de toutes les clés d'API d'administration et inspecter le contenu publié en base de données pour détecter d'éventuels scripts malveillants."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Maintain an active inventory of all deployed CMS instances and apply prompt patching schedules.", "Implement a Web Application Firewall (WAF) configured to block common SQL injection patterns."],
+          "fr": ["Maintenir un inventaire actif de toutes les instances CMS déployées et appliquer des cycles de mise à jour rapides.", "Déployer un pare-feu d'application web (WAF) configuré pour bloquer les schémas courants d'injection SQL."]
+        },
+        "phase2_detection": {
+          "en": ["Analyze CMS access logs for unusual administrative activity or API queries containing SQL syntax errors.", "Audit public website source code regularly for unauthorized script inclusions, specifically targeting external CDNs like clo4shara.xyz."],
+          "fr": ["Analyser les logs d'accès du CMS pour détecter toute activité d'administration inhabituelle ou des requêtes d'API contenant des erreurs SQL.", "Auditer régulièrement le code source du site public pour détecter des inclusions de scripts non autorisées, ciblant spécifiquement des CDN externes comme clo4shara.xyz."]
+        },
+        "phase3_containment": {
+          "en": ["Revoke compromised administrative API keys and take affected websites offline.", "Revert modified database fields to a known clean state prior to the injection."],
+          "fr": ["Révoquer les clés d'API d'administration compromises et mettre hors ligne les sites concernés.", "Restaurer les champs de base de données modifiés à un état sain connu avant l'injection."]
+        },
+        "phase4_post_incident": {
+          "en": ["Upgrade Ghost CMS to version 6.19.1 or higher.", "Advise site visitors who encountered fake browser alerts on how to check for malware infection on their endpoints."],
+          "fr": ["Mettre à niveau Ghost CMS vers la version 6.19.1 ou supérieure.", "Conseiller les visiteurs du site ayant rencontré de faux avertissements de navigateur sur la façon de vérifier la présence d'un malware sur leur terminal."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Hunt for anomalous database modifications or bulk post updates in the CMS database logs.", "Search for signs of unauthorized files dropped in public-facing directories of the web server."],
+          "fr": ["Rechercher des modifications de base de données anormales ou des mises à jour massives d'articles dans les journaux de base de données du CMS.", "Rechercher des signes de dépôt de fichiers non autorisés dans les répertoires publics du serveur web."]
+        }
+      },
+      "tags": ["ghost", "sql_injection", "clickfix", "tampering", "compromise"],
+      "sources": ["https://thehackernews.com/2026/05/ghost-cms-cve-2026-26980-exploited-to.html"],
+      "date": "2026-05-07"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-5426",
+      "euvd_id": "unknown",
+      "cisa_kev": "true",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:digital_knowledge:knowledgedeliver:*:*:*:*:*:*:*:*",
+      "product": "KnowledgeDeliver LMS",
+      "vendor": "Digital Knowledge",
+      "description": {
+        "en": "An unauthenticated remote code execution vulnerability in KnowledgeDeliver LMS caused by the use of static, hardcoded machineKey configurations within ASP.NET, enabling malicious ViewState deserialization.",
+        "fr": "Une vulnérabilité d'exécution de code à distance non authentifiée dans KnowledgeDeliver LMS, causée par l'utilisation de configurations machineKey ASP.NET statiques et codées en dur, permettant la désérialisation d'objets ViewState malveillants."
+      },
+      "mitre_ttps": ["T1190"],
+      "recommandations": [
+        {
+          "en": "Apply the official security updates provided by Digital Knowledge after February 24, 2026.",
+          "fr": "Appliquer les mises à jour de sécurité officielles fournies par Digital Knowledge après le 24 février 2026."
+        },
+        {
+          "en": "Generate a unique, cryptographically random machineKey inside the web.config file of each server deployment.",
+          "fr": "Générer une machineKey unique et cryptographiquement aléatoire dans le fichier web.config de chaque serveur déployé."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Ensure that default configurations of ASP.NET applications do not rely on hardcoded validation and decryption keys.", "Deploy endpoint detection tools to monitor critical web application worker processes (w3wp.exe)."],
+          "fr": ["S'assurer que les configurations par défaut des applications ASP.NET ne reposent pas sur des clés de validation et de déchiffrement codées en dur.", "Déployer des outils d'EDR pour surveiller les processus de l'application web (w3wp.exe)."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor the event logs for ASP.NET decryption failures (Event ID 4009).", "Alert on anomalous child processes spawned by w3wp.exe, such as cmd.exe or powershell.exe."],
+          "fr": ["Surveiller les journaux d'événements à la recherche d'échecs de déchiffrement ASP.NET (Event ID 4009).", "Alerter sur les processus enfants anomaux générés par w3wp.exe, tels que cmd.exe ou powershell.exe."]
+        },
+        "phase3_containment": {
+          "en": ["Isolate the vulnerable IIS server from the production network.", "Stop the affected IIS application pool to prevent further execution of the memory-resident web shell."],
+          "fr": ["Isoler le serveur IIS vulnérable du réseau de production.", "Arrêter le pool d'applications IIS affecté pour empêcher toute nouvelle exécution du web shell résident en mémoire."]
+        },
+        "phase4_post_incident": {
+          "en": ["Re-generate unique application keys and audit the entire directory for persistence mechanisms (web shells like BLUEBEAM).", "Verify integrity of published assets and server configurations before returning online."],
+          "fr": ["Générer à nouveau des clés d'application uniques et auditer tout le répertoire à la recherche de mécanismes de persistance (web shells comme BLUEBEAM).", "Vérifier l'intégrité des ressources publiées et des configurations serveur avant la remise en ligne."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search IIS access logs for requests with large parameter payloads in __VIEWSTATE.", "Audit memory of w3wp.exe processes for unauthorized injection or execution of backdoor shells."],
+          "fr": ["Rechercher dans les journaux d'accès IIS des requêtes contenant de larges paramètres __VIEWSTATE.", "Auditer la mémoire des processus w3wp.exe pour détecter des injections ou l'exécution non autorisée de shells."]
+        }
+      },
+      "tags": ["vulnerability", "zero-day", "lms", "japan", "viewstate", "deserialization"],
+      "sources": [
+        "https://cloud.google.com/blog/topics/threat-intelligence/knowledgedeliver-viewstate-deserialization-vulnerability/",
+        "https://cybersecuritynews.com/knowledgedeliver-lms-zero-day-exploited/"
+      ],
+      "date": "2026-05-25"
+    },
+    {
+      "cve_id": "CVE-2026-48172",
+      "euvd_id": "unknown",
+      "cisa_kev": "true",
+      "cvss": "8.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:litespeedtech:litespeed_cpanel_plugin:*:*:*:*:*:*:*:*",
+      "product": "User-End cPanel Plugin",
+      "vendor": "LiteSpeed",
+      "description": {
+        "en": "An input validation flaw in the User-End cPanel Plugin for Redis administration allows low-privilege shared hosting users to escalate privileges to root on the physical host.",
+        "fr": "Un défaut de validation des entrées dans le plugin cPanel de gestion Redis permet à des utilisateurs d'hébergement partagé à bas privilèges d'élever leurs privilèges jusqu'à root sur l'hôte physique."
+      },
+      "mitre_ttps": ["T1068"],
+      "recommandations": [
+        {
+          "en": "Upgrade the LiteSpeed WHM plugin administration tool to version 5.3.1.0 or higher.",
+          "fr": "Mettre à niveau l'outil d'administration du plugin LiteSpeed WHM vers la version 5.3.1.0 ou supérieure."
+        },
+        {
+          "en": "Disable Redis management plugin access for untrusted shared hosting tenants.",
+          "fr": "Désactiver l'accès au plugin de gestion Redis pour les clients d'hébergement partagé non fiables."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Maintain regular patching workflows for all administrative plugins on hosting servers.", "Enforce restricted access to local APIs and execution endpoints on multi-tenant environments."],
+          "fr": ["Maintenir des cycles de mise à jour réguliers pour tous les plugins d'administration sur les serveurs d'hébergement.", "Imposer des restrictions d'accès aux API locales et aux endpoints d'exécution sur les environnements multi-locataires."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor system logs for requests matching cpanel_jsonapi_func=redisAble.", "Audit user shell command logs for unexpected root privilege transitions or sudo errors."],
+          "fr": ["Surveiller les journaux système pour détecter les requêtes contenant la chaîne cpanel_jsonapi_func=redisAble.", "Auditer les journaux de commandes utilisateur pour détecter des transitions de privilèges root ou des erreurs de sudo inattendues."]
+        },
+        "phase3_containment": {
+          "en": ["Suspend the user account initiating suspicious JSON API queries on cPanel.", "Uninstall the vulnerable Redis cPanel administration plugin component temporarily."],
+          "fr": ["Suspendre le compte utilisateur ayant initié des requêtes suspectes de l'API JSON sur cPanel.", "Désinstaller temporairement le composant vulnérable du plugin d'administration Redis cPanel."]
+        },
+        "phase4_post_incident": {
+          "en": ["Perform rootkit checks and system integrity verification on compromised hosting nodes.", "Apply security patches and limit capabilities of API-driven user extensions."],
+          "fr": ["Effectuer des vérifications de rootkits et d'intégrité système sur les serveurs d'hébergement compromis.", "Appliquer les correctifs de sécurité et limiter les privilèges des extensions utilisateur basées sur l'API."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search web administration server access logs for anomalous Redis configuration actions.", "Analyze system authorization files for unauthorized modifications."],
+          "fr": ["Rechercher dans les logs d'accès du serveur d'administration web des actions de configuration Redis anormales.", "Analyser les fichiers d'autorisation du système pour détecter des modifications non autorisées."]
+        }
+      },
+      "tags": ["vulnerability", "cpanel", "litespeed", "privilege_escalation", "root"],
+      "sources": ["https://fieldeffect.com/blog/actively-exploited-litespeed-cpanel-flaw-enables-full-server-takeover"],
+      "date": "2026-05-25"
+    },
+    {
+      "cve_id": "CVE-2026-9058",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "7.5",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:kir:szafir_sdk:*:*:*:*:*:*:*:*",
+      "product": "Szafir SDK",
+      "vendor": "KIR (Krajowa Izba Rozliczeniowa)",
+      "description": {
+        "en": "A cryptographic validation vulnerability in Szafir SDK by KIR where the software reports positive validation status even when signature certificate chains are untrusted or undetermined.",
+        "fr": "Une vulnérabilité de validation cryptographique dans le SDK Szafir de KIR, où le logiciel signale un statut de validation positif même lorsque la chaîne de certificats de signature n'est pas fiable ou reste indéterminée."
+      },
+      "mitre_ttps": ["T1556"],
+      "recommandations": [
+        {
+          "en": "Apply the latest patched library versions provided by KIR.",
+          "fr": "Appliquer les dernières versions de la bibliothèque corrigée fournies par KIR."
+        },
+        {
+          "en": "Configure application logic to explicitly reject signature outcomes when certificate state is labeled as nondetermined.",
+          "fr": "Configurer la logique applicative pour rejeter explicitement les signatures lorsque l'état du certificat est marqué comme indéterminé."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Document all internal applications that leverage the Szafir SDK for digital signature processing.", "Enforce secondary certificate validation steps independent of the vendor SDK logic."],
+          "fr": ["Répertorier toutes les applications internes qui s'appuient sur le SDK Szafir pour le traitement des signatures numériques.", "Imposer des étapes de validation de certificat secondaires indépendantes de la logique du SDK de l'éditeur."]
+        },
+        "phase2_detection": {
+          "en": ["Log detailed transaction variables, specifically auditing signature certificates associated with 'nondetermined' status.", "Detect if any invalidly signed documents were approved by the system workflow."],
+          "fr": ["Journaliser les variables de transaction détaillées, en auditant spécifiquement les certificats de signature associés au statut 'nondetermined'.", "Détecter si des documents incorrectement signés ont été approuvés par le système."]
+        },
+        "phase3_containment": {
+          "en": ["Temporarily suspend programmatic processing of unverified digital signatures.", "Restrict transaction thresholds for operations utilizing electronic signatures until patching is complete."],
+          "fr": ["Suspendre temporairement le traitement automatique des signatures numériques non vérifiées.", "Restreindre les seuils de transaction pour les opérations utilisant des signatures électroniques jusqu'à l'application du correctif."]
+        },
+        "phase4_post_incident": {
+          "en": ["Deploy patched SDK versions across all development and production environments.", "Perform retroactive audits on transactions finalized during the vulnerability period."],
+          "fr": ["Déployer les versions corrigées du SDK sur tous les environnements de développement et de production.", "Réaliser des audits rétroactifs sur les transactions finalisées pendant la période de vulnérabilité."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search application server databases for records flagged with certificate validation errors.", "Hunt for unusual signature profiles originating from unknown issuers but processed as valid."],
+          "fr": ["Rechercher dans les bases de données d'applications des enregistrements marqués par des erreurs de validation de certificat.", "Rechercher des profils de signature inhabituels provenant d'émetteurs inconnus mais traités comme valides."]
+        }
+      },
+      "tags": ["vulnerability", "szafir", "poland", "cryptography", "signature_bypass"],
+      "sources": ["https://cert.pl/en/posts/2026/05/CVE-2026-9058/"],
+      "date": "2026-05-25"
+    },
+    {
+      "cve_id": "CVE-2026-7766",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "7.5",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:h:kenik:camera:*:*:*:*:*:*:*:*",
+      "product": "Kenik Camera Firmware / Panel",
+      "vendor": "Kenik",
+      "description": {
+        "en": "A path traversal vulnerability in the web server of Kenik cameras allows remote attackers to read arbitrary files from the local operating system via unauthenticated GET requests.",
+        "fr": "Une vulnérabilité de traversée de chemin dans le serveur web des caméras Kenik permet à des attaquants distants de lire des fichiers arbitraires du système d'exploitation sous-jacent via des requêtes GET non authentifiées."
+      },
+      "mitre_ttps": ["T1083"],
+      "recommandations": [
+        {
+          "en": "Isolate the camera management interface within dedicated, non-routable administration VLANs.",
+          "fr": "Isoler l'interface de gestion des caméras dans des VLAN d'administration dédiés et non routables."
+        },
+        {
+          "en": "Apply firmware updates from Kenik addressing the GET request validation weakness.",
+          "fr": "Appliquer les mises à jour de micrologiciel fournies par Kenik pour corriger la faiblesse de validation des requêtes GET."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Maintain a detailed inventory of all IoT and IP camera devices on the enterprise network.", "Implement boundary firewalls to drop administrative port traffic from public internet ranges."],
+          "fr": ["Maintenir un inventaire détaillé de tous les appareils IoT et caméras IP sur le réseau d'entreprise.", "Déployer des pare-feu périmétriques pour rejeter le trafic vers les ports d'administration depuis l'extérieur."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor network traffic for GET requests containing path traversal sequences (../ or ..\\).", "Alert on persistent, non-authenticated requests to administrative paths of IP cameras."],
+          "fr": ["Surveiller le trafic réseau pour détecter des requêtes GET contenant des séquences de traversée de chemin (../ ou ..\\).", "Alerter sur des requêtes non authentifiées persistantes vers les chemins d'administration des caméras IP."]
+        },
+        "phase3_containment": {
+          "en": ["Block external IP addresses targeting camera management ports.", "Isolate the compromised IoT devices from internal segment routing tables."],
+          "fr": ["Bloquer les adresses IP externes ciblant les ports d'administration des caméras.", "Isoler les équipements IoT compromis des tables de routage des segments internes."]
+        },
+        "phase4_post_incident": {
+          "en": ["Apply firmware security updates and change all default camera credentials.", "Validate device security posture before reconnecting them to isolated zones."],
+          "fr": ["Appliquer les mises à jour de sécurité du micrologiciel et modifier l'ensemble des identifiants par défaut.", "Valider la posture de sécurité des équipements avant de les reconnecter aux zones isolées."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Query network flow logs for persistent, inbound traffic directed to camera port 80/443.", "Search for exposed system configurations or camera password hashes in internet leakage dumps."],
+          "fr": ["Analyser les flux réseau à la recherche de trafic entrant persistant vers les ports 80/443 des caméras.", "Rechercher des configurations de systèmes exposées ou des empreintes de mots de passe de caméras dans des fuites de données."]
+        }
+      },
+      "tags": ["vulnerability", "kenik", "iot", "camera", "path_traversal"],
+      "sources": ["https://cert.pl/en/posts/2026/05/CVE-2026-7766/"],
+      "date": "2026-05-25"
+    },
+    {
+      "cve_id": "CVE-2026-25185",
+      "euvd_id": "unknown",
+      "cisa_kev": "true",
+      "cvss": "7.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:o:microsoft:windows:*:*:*:*:*:*:*:*",
+      "product": "Windows Explorer",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "A spoofing vulnerability in Windows Shell Link parsing (CShellLink) enables forced NTLM authentication relay attempts. When a folder containing a malicious .LNK file with Darwin metadata is viewed, Windows Explorer automatically initiates an SMB request to the attacker's server.",
+        "fr": "Une vulnérabilité d'usurpation dans l'analyseur de liens de fichiers Windows (CShellLink) permet de forcer des tentatives de relais d'authentification NTLM. Lors de la simple consultation d'un dossier contenant un fichier .LNK malveillant doté de métadonnées Darwin, Windows Explorer initie automatiquement une requête SMB vers le serveur de l'attaquant."
+      },
+      "mitre_ttps": ["T1557.001"],
+      "recommandations": [
+        {
+          "en": "Apply the official Microsoft security updates or use 0patch hotfixes for unsupported systems.",
+          "fr": "Appliquer les mises à jour de sécurité de Microsoft ou utiliser les micro-correctifs de 0patch pour les systèmes hors support."
+        },
+        {
+          "en": "Restrict outbound SMB (port 445) from corporate workstations to the external internet.",
+          "fr": "Restreindre le trafic SMB sortant (port 445) depuis les postes de travail de l'entreprise vers l'Internet externe."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Configure Windows host firewalls to block external outbound SMB traffic.", "Deploy automated patch management procedures covering Windows OS components and active micro-patch agents."],
+          "fr": ["Configurer le pare-feu local de Windows pour bloquer le trafic SMB sortant vers l'extérieur.", "Déployer des procédures de gestion automatisée des correctifs couvrant les composants de l'OS Windows et les agents de micro-correctifs actifs."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor host traffic for unexpected outbound SMB connection attempts from explorer.exe.", "Detect execution of Darwin metadata blocks inside newly dropped .LNK shortcut files."],
+          "fr": ["Surveiller le trafic des hôtes pour détecter des connexions SMB sortantes inattendues de la part d'explorer.exe.", "Détecter l'exécution de blocs de métadonnées Darwin dans les fichiers de raccourcis .LNK nouvellement déposés."]
+        },
+        "phase3_containment": {
+          "en": ["Isolate affected user hosts displaying signs of NTLM credentials leakage.", "Block the destination IP addresses associated with the rogue SMB target server."],
+          "fr": ["Isoler les postes utilisateurs affectés présentant des signes de fuite d'empreintes NTLM.", "Bloquer les adresses IP de destination associées au serveur cible SMB malveillant."]
+        },
+        "phase4_post_incident": {
+          "en": ["Force credential rotations for accounts whose hashes may have been exfiltrated.", "Ensure Microsoft cumulative updates are properly applied across all enterprise endpoints."],
+          "fr": ["Forcer la rotation des identifiants pour les comptes dont les empreintes ont pu être exfiltrées.", "S'assurer que les mises à jour cumulatives de Microsoft sont correctement appliquées sur l'ensemble des terminaux de l'entreprise."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search host logs for folder browse events immediately preceding external SMB connection attempts.", "Hunt for unusual .LNK files with Darwin parameters in user profile downloads and temporary paths."],
+          "fr": ["Rechercher dans les journaux d'hôtes des événements de navigation dans des dossiers précédant immédiatement des connexions SMB externes.", "Rechercher des fichiers .LNK inhabituels avec des paramètres Darwin dans les dossiers de téléchargement des profils utilisateurs."]
+        }
+      },
+      "tags": ["vulnerability", "windows", "micropatch", "lnk", "credential_relay", "0patch"],
+      "sources": ["https://blog.0patch.com/2026/05/micropatches-released-for-windows-shell.html"],
+      "date": "2026-05-25"
+    },
+    {
+      "cve_id": "CVE-2025-1041",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "9.9",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:avaya:call_management_system:*:*:*:*:*:*:*:*",
+      "product": "Call Management System (CMS)",
+      "vendor": "Avaya",
+      "description": {
+        "en": "A critical remote code execution vulnerability in Avaya Call Management System (CMS) caused by improper input validation, allowing unauthenticated attackers to execute system commands on vulnerable telephony infrastructure.",
+        "fr": "Une vulnérabilité d'exécution de code à distance critique dans Avaya Call Management System (CMS) due à une mauvaise validation des entrées, permettant à des attaquants non authentifiés d'exécuter des commandes système sur des serveurs de téléphonie vulnérables."
+      },
+      "mitre_ttps": ["T1190"],
+      "recommandations": [
+        {
+          "en": "Disable direct, external network access to the Avaya CMS administration console immediately.",
+          "fr": "Désactiver immédiatement tout accès réseau externe direct à la console d'administration d'Avaya CMS."
+        },
+        {
+          "en": "Place Avaya servers behind tight IP-restricted access lists or secure VPN gateways.",
+          "fr": "Placer les serveurs Avaya derrière des listes de contrôle d'accès par IP strictes ou des passerelles VPN sécurisées."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Audit internal environments to identify all instances of Avaya CMS.", "Establish network isolation policies restricting telecommunication platform access to authorized personnel."],
+          "fr": ["Auditer les environnements internes pour identifier toutes les instances d'Avaya CMS.", "Établir des politiques d'isolation réseau limitant l'accès aux plateformes de télécommunication au personnel autorisé."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor web server logs of Avaya appliances for anomalous parameter values.", "Alert on unauthorized command executions originating from Avaya application execution pools."],
+          "fr": ["Surveiller les logs du serveur web des équipements Avaya pour détecter des valeurs de paramètres anormales.", "Alerter sur des exécutions de commandes non autorisées issues des pools d'exécution de l'application Avaya."]
+        },
+        "phase3_containment": {
+          "en": ["Sever external routing connections to affected Avaya CMS servers.", "Enforce local firewalls to restrict traffic to known trusted management endpoints only."],
+          "fr": ["Couper les connexions de routage externe vers les serveurs Avaya CMS affectés.", "Imposer des pare-feu locaux pour restreindre le trafic aux seuls points de gestion approuvés."]
+        },
+        "phase4_post_incident": {
+          "en": ["Inspect server operating system files for persistent backdoors or shell scripts.", "Implement vendor patches once officially released and validated."],
+          "fr": ["Inspecter les fichiers du système d'exploitation du serveur à la recherche de portes dérobées persistantes ou de scripts shell.", "Déployer les correctifs du constructeur dès leur publication officielle et leur validation."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Hunt for unrecognized running processes or abnormal CPU spikes on Avaya host systems.", "Audit local user accounts and administrative groups for unauthorized privilege additions."],
+          "fr": ["Rechercher des processus en cours d'exécution non reconnus ou des pics d'utilisation CPU anomaux sur les serveurs Avaya.", "Auditer les comptes utilisateurs locaux et groupes d'administration pour détecter l'ajout de privilèges non autorisés."]
+        }
+      },
+      "tags": ["vulnerability", "avaya", "rce", "telephony", "unpatched"],
+      "sources": ["https://mastodon.social/@hugovalters/116637710815186444"],
+      "date": "2026-05-25"
+    },
+    {
+      "cve_id": "CVE-2026-42773",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "7.5",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:emagicone:store_manager:*:*:*:*:*:wordpress:*:*",
+      "product": "Store Manager plugin for WordPress",
+      "vendor": "eMagicOne",
+      "description": {
+        "en": "An unauthenticated SQL injection vulnerability in eMagicOne Store Manager plugin <= 1.3.2 for WordPress allows remote attackers to execute arbitrary SQL commands.",
+        "fr": "Une vulnérabilité d'injection SQL non authentifiée dans le plugin WordPress eMagicOne Store Manager <= 1.3.2 permet à des attaquants distants d'exécuter des commandes SQL arbitraires."
+      },
+      "mitre_ttps": ["T1190"],
+      "recommandations": [
+        {
+          "en": "Deactivate and uninstall the eMagicOne Store Manager plugin if it is not business critical.",
+          "fr": "Désactiver et désinstaller le plugin eMagicOne Store Manager s'il n'est pas critique pour l'activité de l'entreprise."
+        },
+        {
+          "en": "Upgrade to a secure, patched version of the plugin above 1.3.2.",
+          "fr": "Mettre à niveau vers une version corrigée et sécurisée du plugin supérieure à la version 1.3.2."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Maintain up-to-date inventories of all WordPress websites and associated third-party plugins.", "Configure the Web Application Firewall (WAF) to drop typical SQL injection request patterns."],
+          "fr": ["Maintenir à jour l'inventaire de tous les sites WordPress et de leurs extensions tierces associées.", "Configurer le pare-feu d'application web (WAF) pour bloquer les requêtes d'injection SQL courantes."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor database access logs for unexpected errors or blind SQL injection syntax signatures.", "Alert on abnormal transaction requests targeting web e-commerce plugin files."],
+          "fr": ["Surveiller les logs d'accès à la base de données pour détecter des erreurs inhabituelles ou des signatures d'injection SQL.", "Alerter sur des requêtes de transaction anormales ciblant les fichiers du plugin e-commerce."]
+        },
+        "phase3_containment": {
+          "en": ["Disable the eMagicOne plugin through the WordPress administration dashboard or CLI.", "Implement temporary database read-only constraints if active exploitation is observed."],
+          "fr": ["Désactiver le plugin eMagicOne via la console d'administration de WordPress ou en ligne de commande.", "Imposer des restrictions de lecture seule temporaires sur la base de données si une exploitation active est détectée."]
+        },
+        "phase4_post_incident": {
+          "en": ["Deploy the verified patched software version.", "Review application database audit logs to ensure no credentials were extracted."],
+          "fr": ["Déployer la version logicielle corrigée et vérifiée.", "Passer en revue les logs d'audit de la base de données applicative pour s'assurer qu'aucun identifiant n'a été extrait."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Hunt for unauthorized administrative accounts created in the WordPress database.", "Query web server log files for automated vulnerability scanner footprints directed at the plugin directory."],
+          "fr": ["Rechercher des comptes d'administration non autorisés créés dans la base de données WordPress.", "Rechercher dans les logs d'accès web des traces de scanners de vulnérabilités automatisés ciblant le répertoire du plugin."]
+        }
+      },
+      "tags": ["vulnerability", "wordpress", "sql_injection", "emagicone"],
+      "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-42773"],
+      "date": "2026-05-25"
+    },
+    {
+      "cve_id": "CVE-2026-42774",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "7.5",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:crocoblock:jetengine:*:*:*:*:*:wordpress:*:*",
+      "product": "JetEngine plugin for WordPress",
+      "vendor": "Crocoblock",
+      "description": {
+        "en": "An input validation vulnerability in the WordPress JetEngine plugin <= 3.8.8.1 by Crocoblock enables unauthenticated remote attackers to perform SQL injection attacks.",
+        "fr": "Une vulnérabilité de validation des entrées dans le plugin WordPress JetEngine <= 3.8.8.1 de Crocoblock permet à des attaquants distants non authentifiés de réaliser des attaques d'injection SQL."
+      },
+      "mitre_ttps": ["T1190"],
+      "recommandations": [
+        {
+          "en": "Upgrade Crocoblock JetEngine to a version higher than 3.8.8.1.",
+          "fr": "Mettre à jour Crocoblock JetEngine vers une version supérieure à 3.8.8.1."
+        },
+        {
+          "en": "Protect the WordPress administration paths using a robust Web Application Firewall (WAF).",
+          "fr": "Protéger les chemins d'administration de WordPress à l'aide d'un pare-feu d'application web (WAF) robuste."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Configure automated testing routines to identify outdated CMS components.", "Enforce strict query filtering and prepared statements across custom web application assets."],
+          "fr": ["Configurer des routines de test automatisées pour identifier les composants CMS obsolètes.", "Imposer le filtrage des requêtes et l'utilisation de requêtes préparées sur l'ensemble des applications web personnalisées."]
+        },
+        "phase2_detection": {
+          "en": ["Analyze WAF logs for queries containing typical SQL execution functions directed at JetEngine paths.", "Monitor database service query delays indicating blind time-based injection attempts."],
+          "fr": ["Analyser les logs du WAF pour détecter des requêtes contenant des fonctions d'exécution SQL courantes ciblant JetEngine.", "Surveiller les délais de réponse du service de base de données indiquant d'éventuels essais d'injection en aveugle basée sur le temps."]
+        },
+        "phase3_containment": {
+          "en": ["Disable JetEngine operations or restrict access to administrative tools.", "Block suspicious source IPs at the perimeter firewall."],
+          "fr": ["Désactiver le plugin JetEngine ou restreindre l'accès aux outils d'administration.", "Bloquer les adresses IP sources suspectes au niveau du pare-feu périmétrique."]
+        },
+        "phase4_post_incident": {
+          "en": ["Apply the official security update provided by Crocoblock.", "Audit database tables to confirm the absence of injected administrative accounts or script tags."],
+          "fr": ["Appliquer la mise à jour de sécurité officielle fournie par Crocoblock.", "Auditer les tables de la base de données pour confirmer l'absence de comptes d'administration injectés ou de balises de script."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Hunt for unusual database errors containing SQL syntax exceptions.", "Analyze administrative session activity logs for anomalous IP transitions during session context."],
+          "fr": ["Rechercher des erreurs de base de données inhabituelles contenant des exceptions de syntaxe SQL.", "Analyser les logs d'activité des sessions d'administration pour détecter des transitions d'IP anormales au cours d'une session."]
+        }
+      },
+      "tags": ["vulnerability", "wordpress", "sql_injection", "jetengine"],
+      "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-42774"],
+      "date": "2026-05-25"
+    },
+    {
+      "cve_id": "CVE-2026-45216",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "8.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:storeapps:smart_manager:*:*:*:*:*:wordpress:*:*",
+      "product": "Smart Manager plugin for WordPress",
+      "vendor": "StoreApps",
+      "description": {
+        "en": "An authorization bypass vulnerability in StoreApps Smart Manager plugin <= 8.85.0 for WordPress allows low-privileged users to escalate their credentials to administrator level.",
+        "fr": "Une vulnérabilité de contournement des autorisations dans le plugin WordPress Smart Manager <= 8.85.0 de StoreApps permet à des utilisateurs à faibles privilèges d'élever leurs identifiants vers le rôle administrateur."
+      },
+      "mitre_ttps": ["T1068"],
+      "recommandations": [
+        {
+          "en": "Install the Smart Manager plugin security updates to versions above 8.85.0.",
+          "fr": "Installer la mise à jour de sécurité du plugin Smart Manager vers une version supérieure à 8.85.0."
+        },
+        {
+          "en": "Audit the user access database of the web store periodically for unrecognized admin privileges.",
+          "fr": "Auditer régulièrement la base des comptes utilisateurs de la boutique en ligne pour détecter des privilèges d'administration non autorisés."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Enforce multi-factor authentication for all WordPress administration privileges.", "Establish daily automated security scans targeting user accounts with administrative capabilities."],
+          "fr": ["Imposer l'authentification multifacteur pour tous les comptes d'administration de WordPress.", "Mettre en œuvre des analyses de sécurité quotidiennes ciblant les comptes d'utilisateurs disposant de droits d'administration."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor user registration logs for instances of new administrator roles created without supervisor approval.", "Detect changes in permission tables using integrity monitoring tools."],
+          "fr": ["Surveiller les logs d'enregistrement d'utilisateurs pour détecter de nouveaux rôles administrateurs créés sans validation préalable.", "Détecter les modifications des tables de permissions à l'aide d'outils de surveillance de l'intégrité."]
+        },
+        "phase3_containment": {
+          "en": ["Demote or lock accounts showing signs of unauthorized privilege escalation.", "Temporarily disable the Smart Manager plugin from the active extensions list."],
+          "fr": ["Rétrograder ou verrouiller les comptes montrant des signes d'élévation de privilèges non autorisée.", "Désactiver temporairement le plugin Smart Manager de la liste des extensions actives."]
+        },
+        "phase4_post_incident": {
+          "en": ["Apply the security updates and re-evaluate administrative account validation routines.", "Review access control policies and restrict the capabilities of e-commerce administrators."],
+          "fr": ["Appliquer les mises à jour de sécurité et réévaluer les routines de validation des comptes d'administration.", "Passer en revue les politiques de contrôle d'accès et restreindre les privilèges des gestionnaires de la boutique en ligne."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Hunt for admin user registration logs matching anomalous source IP addresses.", "Analyze database transaction logs for query sequences modifying user capabilities."],
+          "fr": ["Rechercher dans les journaux d'enregistrement des administrateurs des correspondances avec des adresses IP sources anormales.", "Analyser les logs de transactions de base de données pour détecter des séquences de requêtes modifiant les privilèges des utilisateurs."]
+        }
+      },
+      "tags": ["vulnerability", "wordpress", "privilege_escalation", "smart_manager"],
+      "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-45216"],
+      "date": "2026-05-25"
+    },
+    {
+      "cve_id": "CVE-2026-48837",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "7.5",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:unlimited-elements:unlimited_elements_for_elementor:*:*:*:*:*:wordpress:*:*",
+      "product": "Unlimited Elements for Elementor",
+      "vendor": "Unlimited Elements",
+      "description": {
+        "en": "An unauthenticated SQL injection vulnerability in the WordPress plugin Unlimited Elements for Elementor <= 2.0.8 enables attackers to manipulate database queries via unvalidated web parameters.",
+        "fr": "Une vulnérabilité d'injection SQL non authentifiée dans le plugin WordPress Unlimited Elements for Elementor <= 2.0.8 permet à des attaquants de manipuler des requêtes de base de données via des paramètres web non validés."
+      },
+      "mitre_ttps": ["T1190"],
+      "recommandations": [
+        {
+          "en": "Apply the security patch by upgrading Unlimited Elements for Elementor to a version higher than 2.0.8.",
+          "fr": "Appliquer le correctif de sécurité en mettant à niveau Unlimited Elements for Elementor vers une version supérieure à 2.0.8."
+        },
+        {
+          "en": "Employ input filtering on custom parameters mapped within Elementor extensions.",
+          "fr": "Mettre en œuvre un filtrage des entrées sur les paramètres personnalisés associés aux extensions d'Elementor."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Deploy a dedicated application-layer security filter to catch SQL escape strings.", "Maintain offsite replicas of database tables to simplify rapid recovery from database compromises."],
+          "fr": ["Déployer un filtre de sécurité au niveau applicatif pour intercepter les caractères d'échappement SQL.", "Maintenir des réplications hors ligne des tables de base de données pour simplifier la restauration rapide en cas de compromission."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor database queries for execution exceptions matching SQL injection signatures.", "Alert on abnormal data retrieval quantities originating from public web requests directed at Elementor resources."],
+          "fr": ["Surveiller les requêtes de base de données pour détecter des exceptions d'exécution correspondant à des signatures d'injection SQL.", "Alerter sur des volumes d'extraction de données anormaux issus de requêtes web publiques visant les ressources d'Elementor."]
+        },
+        "phase3_containment": {
+          "en": ["Deactivate the Elementor plugin in the database or dashboard interface.", "Block malicious source IP blocks from routing to the web infrastructure."],
+          "fr": ["Désactiver le plugin Elementor dans la base de données ou via la console d'administration.", "Bloquer les blocs d'adresses IP sources malveillantes au niveau du routage de l'infrastructure web."]
+        },
+        "phase4_post_incident": {
+          "en": ["Install verified security updates and perform database schema verification.", "Conduct code inspection on dynamic page rendering plugins deployed on critical web spaces."],
+          "fr": ["Installer les mises à jour de sécurité validées et réaliser une vérification du schéma de base de données.", "Mener une inspection du code des plugins de rendu de pages dynamiques déployés sur les espaces web critiques."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Query application access logs for SQL syntax markers such as UNION, SELECT, or SLEEP.", "Audit active administrator accounts to identify unauthorized registration occurrences."],
+          "fr": ["Rechercher dans les logs d'accès applicatifs des marqueurs de syntaxe SQL tels que UNION, SELECT ou SLEEP.", "Auditer les comptes d'administration actifs pour identifier des cas d'enregistrement non autorisés."]
+        }
+      },
+      "tags": ["vulnerability", "wordpress", "sql_injection", "elementor"],
+      "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-48837"],
+      "date": "2026-05-25"
+    },
+    {
+      "cve_id": "CVE-2026-48842",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "7.5",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:roundcube:webmail:*:*:*:*:*:*:*:*",
+      "product": "Roundcube Webmail",
+      "vendor": "Roundcube",
+      "description": {
+        "en": "A SQL injection vulnerability exists in Roundcube Webmail versions prior to 1.6.16 and 1.7.1, allowing remote attackers to run database queries via administrative interfaces.",
+        "fr": "Une vulnérabilité d'injection SQL existe dans les versions de Roundcube Webmail antérieures à la 1.6.16 et la 1.7.1, permettant à des attaquants distants d'exécuter des requêtes de base de données via les interfaces d'administration."
+      },
+      "mitre_ttps": ["T1190"],
+      "recommandations": [
+        {
+          "en": "Upgrade Roundcube Webmail installation immediately to safe versions 1.6.16 or 1.7.1.",
+          "fr": "Mettre à niveau immédiatement l'installation de Roundcube Webmail vers les versions de sécurité 1.6.16 ou 1.7.1."
+        },
+        {
+          "en": "Audit the webmail database for unauthorized administrative users or altered configuration parameters.",
+          "fr": "Auditer la base de données du webmail pour détecter des utilisateurs d'administration non autorisés ou des paramètres de configuration altérés."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Ensure secure, automated software distribution channels are in place for key internet-exposed applications like mail systems.", "Establish database access logs and restrict administrative API endpoints behind private network zones."],
+          "fr": ["S'assurer que des canaux de distribution logiciels sécurisés et automatisés sont en place pour les applications exposées à l'Internet comme les serveurs de messagerie.", "Mettre en œuvre la journalisation des accès à la base de données et restreindre les endpoints d'API d'administration aux réseaux privés."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor web server database request logs for syntax exceptions or database errors.", "Analyze web application logs for administrative sessions originating from anomalous geographic locations."],
+          "fr": ["Surveiller les journaux de requêtes de base de données du serveur web pour détecter des exceptions de syntaxe ou des erreurs SQL.", "Analyser les logs d'applications web pour détecter des sessions d'administration issues de localisations géographiques anormales."]
+        },
+        "phase3_containment": {
+          "en": ["Block external public network connections directed to the webmail administrative interface.", "Suspend unverified administrative credentials in the local database."],
+          "fr": ["Bloquer les connexions réseau publiques externes dirigées vers l'interface d'administration du webmail.", "Suspendre les identifiants d'administration non vérifiés dans la base de données locale."]
+        },
+        "phase4_post_incident": {
+          "en": ["Deploy patched Roundcube software packages.", "Rotate database application passwords and verify overall system file integrity."],
+          "fr": ["Déployer les packages logiciels de Roundcube corrigés.", "Effectuer une rotation des mots de passe d'accès à la base de données et vérifier l'intégrité globale des fichiers système."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Hunt for database errors indicating active SQLi attempts.", "Search for unrecognized web shell scripts dropped within the webmail public resource folders."],
+          "fr": ["Rechercher des erreurs de base de données indiquant des tentatives d'exploitation SQLi actives.", "Rechercher des scripts de web shell non reconnus déposés dans les répertoires de ressources publiques du webmail."]
+        }
+      },
+      "tags": ["vulnerability", "roundcube", "sql_injection", "webmail"],
+      "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-48842"],
+      "date": "2026-05-25"
+    },
+    {
+      "cve_id": "CVE-2018-25379",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "7.5",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:collectric:cmu:1.0:*:*:*:*:*:*:*",
+      "product": "Collectric CMU 1.0",
+      "vendor": "Collectric",
+      "description": {
+        "en": "A SQL injection vulnerability exists in Collectric CMU 1.0 via the 'lang' parameter during authentication processes, enabling remote attackers to extract sensitive database files.",
+        "fr": "Une vulnérabilité d'injection SQL existe dans Collectric CMU 1.0 via le paramètre 'lang' lors des processus d'authentification, permettant à des attaquants distants d'extraire des fichiers sensibles de la base de données."
+      },
+      "mitre_ttps": ["T1190"],
+      "recommandations": [
+        {
+          "en": "Retire and replace Collectric CMU 1.0 from production, as this application is legacy and unsupported.",
+          "fr": "Mettre hors service et remplacer Collectric CMU 1.0 de la production, car cette application est ancienne et n'est plus supportée."
+        },
+        {
+          "en": "Implement input sanitization rules on legacy web applications to drop unexpected URL characters.",
+          "fr": "Mettre en œuvre des règles d'assainissement des entrées sur les applications web héritées pour rejeter les caractères d'URL inattendus."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Isolate legacy software services within dedicated firewalled networks with no direct internet access.", "Implement virtual patching rules on perimeter firewalls to block SQL keywords in the 'lang' parameter."],
+          "fr": ["Isoler les services logiciels obsolètes dans des réseaux privés dédiés sans accès direct à Internet.", "Mettre en œuvre des règles de micro-correctif virtuel (virtual patching) sur les pare-feu de périmètre pour bloquer les mots-clés SQL dans le paramètre 'lang'."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor legacy application request traffic for parameter manipulations containing SQL syntax queries.", "Detect database communication spikes originating from obsolete application pools."],
+          "fr": ["Surveiller le trafic de requêtes de l'application obsolète pour détecter des manipulations de paramètres contenant des requêtes de syntaxe SQL.", "Détecter les pics de communication de base de données issus de pools d'applications obsolètes."]
+        },
+        "phase3_containment": {
+          "en": ["Remove legacy server instances from public-facing routing contexts.", "Restrict write permissions on SQL databases used by legacy products."],
+          "fr": ["Retirer les instances de serveurs obsolètes des contextes de routage publics.", "Restreindre les autorisations d'écriture sur les bases de données SQL utilisées par des produits anciens."]
+        },
+        "phase4_post_incident": {
+          "en": ["Decommission the application and migrate data to a secure database architecture.", "Conduct forensic reviews to determine if database schemas were exposed to unauthorized extractions."],
+          "fr": ["Mettre hors service l'application et faire migrer les données vers une architecture de base de données sécurisée.", "Réaliser des analyses forensiques pour déterminer si les schémas de base de données ont fait l'objet d'extractions non autorisées."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Query database audit tables for access trails indicating bulk table reads.", "Search for ancient database credentials exposed on online dark web leak marketplaces."],
+          "fr": ["Rechercher dans les tables d'audit de base de données des traces d'accès indiquant des lectures de tables en masse.", "Rechercher d'anciens identifiants de base de données exposés sur des marchés du dark web."]
+        }
+      },
+      "tags": ["vulnerability", "legacy", "sql_injection", "collectric"],
+      "sources": ["https://cvefeed.io/vuln/detail/CVE-2018-25379"],
+      "date": "2026-05-25"
+    },
+    {
+      "cve_id": "CVE-2018-25377",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "7.5",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:flash_slideshow_maker_professional:flash_slideshow_maker_professional:5.20:*:*:*:*:*:*:*",
+      "product": "Flash Slideshow Maker Professional",
+      "vendor": "Flash Slideshow Maker Professional",
+      "description": {
+        "en": "A buffer overflow vulnerability in Flash Slideshow Maker Professional 5.20 allows local attackers to execute arbitrary code via long registration inputs.",
+        "fr": "Une vulnérabilité de dépassement de tampon dans Flash Slideshow Maker Professional 5.20 permet à des attaquants locaux d'exécuter du code arbitraire via de longues chaînes d'enregistrement."
+      },
+      "mitre_ttps": ["T1204.002"],
+      "recommandations": [
+        {
+          "en": "Prohibit the execution of unsupported Flash software across all enterprise systems.",
+          "fr": "Interdire l'exécution de logiciels basés sur Flash obsolètes sur l'ensemble des systèmes de l'entreprise."
+        },
+        {
+          "en": "Uninstall Flash Slideshow Maker Professional 5.20 from workstations.",
+          "fr": "Désinstaller Flash Slideshow Maker Professional 5.20 des postes de travail."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Configure endpoint application blocklists to prevent installation of unrecognized legacy tools.", "Educate employees on the security risks associated with running legacy software components."],
+          "fr": ["Configurer des listes de blocage d'applications sur les terminaux pour empêcher l'installation d'outils obsolètes.", "Sensibiliser les collaborateurs aux risques de sécurité associés à l'exécution de composants logiciels obsolètes."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor endpoint events for unusual command shells spawned by legacy user applications.", "Analyze process crash logs for buffer exceptions associated with Flash tools."],
+          "fr": ["Surveiller les événements des terminaux pour détecter des fenêtres de commande inhabituelles générées par des applications obsolètes.", "Analyser les journaux de crash de processus à la recherche d'exceptions de tampon associées à des outils Flash."]
+        },
+        "phase3_containment": {
+          "en": ["Isolate affected user hosts from the corporate directory network.", "Kill suspicious process chains associated with application crashes."],
+          "fr": ["Isoler les hôtes utilisateurs affectés du réseau d'entreprise.", "Arrêter les chaînes de processus suspectes associées à des plantages d'applications."]
+        },
+        "phase4_post_incident": {
+          "en": ["Completely uninstall legacy Flash slideshow software components from the user system.", "Perform local antivirus scans to ensure no secondary malware executables were dropped."],
+          "fr": ["Désinstaller complètement les composants du logiciel d'affichage Flash obsolète du système utilisateur.", "Réaliser des analyses antivirus locales pour s'assurer qu'aucun exécutable malveillant secondaire n'a été déposé."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search client host file execution logs for legacy Adobe Flash execution occurrences.", "Hunt for unusual script executions within user download folders preceding system application crashes."],
+          "fr": ["Rechercher dans les logs d'exécution de fichiers des postes clients des traces d'exécutions d'Adobe Flash obsolètes.", "Rechercher des exécutions de scripts inhabituelles dans les répertoires de téléchargement précédant des plantages d'applications."]
+        }
+      },
+      "tags": ["vulnerability", "legacy", "buffer_overflow", "slideshow"],
+      "sources": ["https://cvefeed.io/vuln/detail/CVE-2018-25377"],
+      "date": "2026-05-25"
+    },
+    {
+      "cve_id": "CVE-2026-26980",
+      "euvd_id": "unknown",
+      "cisa_kev": "true",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:ghost:ghost:*:*:*:*:*:*:*:*",
+      "product": "Ghost CMS",
+      "vendor": "Ghost",
+      "description": {
+        "en": "A SQL injection vulnerability in Ghost CMS enabling unauthenticated remote attackers to extract administrative API keys, leading to complete website takeover and injection of malicious scripts.",
+        "fr": "Une vulnérabilité d'injection SQL dans Ghost CMS permettant à des attaquants distants non authentifiés d'extraire des clés d'API d'administration, menant à une prise de contrôle complète du site et à l'injection de scripts malveillants."
+      },
+      "mitre_ttps": ["T1190"],
+      "recommandations": [
+        {
+          "en": "Upgrade Ghost CMS instances to patched version 6.19.1 or higher immediately.",
+          "fr": "Mettre à niveau immédiatement les instances de Ghost CMS vers la version corrigée 6.19.1 ou supérieure."
+        },
+        {
+          "en": "Perform rotation of all configured administrative keys and database access credentials.",
+          "fr": "Procéder à la rotation de toutes les clés d'administration configurées et des identifiants d'accès à la base de données."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Implement a WAF rule blocking SQL injection payloads targeting CMS endpoints.", "Ensure database access privileges are strictly restricted to the minimal database surface needed by the application."],
+          "fr": ["Déployer une règle de WAF bloquant les charges utiles d'injection SQL ciblant les API du CMS.", "S'assurer que les privilèges d'accès à la base de données sont strictement limités au minimum requis par l'application."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor database queries for execution exceptions matching SQL injection signatures.", "Alert on unauthorized administrative actions or modifications to published posts."],
+          "fr": ["Surveiller les requêtes de base de données pour détecter des exceptions d'exécution correspondant à des signatures d'injection SQL.", "Alerter en cas d'actions d'administration non autorisées ou de modifications d'articles publiés."]
+        },
+        "phase3_containment": {
+          "en": ["Revoke the compromised administrative API keys immediately.", "Isolate the database server or switch the web application to offline maintenance mode."],
+          "fr": ["Révoquer immédiatement les clés d'API d'administration compromises.", "Isoler le serveur de base de données ou basculer l'application web en mode maintenance hors ligne."]
+        },
+        "phase4_post_incident": {
+          "en": ["Upgrade Ghost CMS software and verify overall system file integrity.", "Restore database tables from a clean offline backup and rotate database connection strings."],
+          "fr": ["Mettre à niveau Ghost CMS et vérifier l'intégrité globale des fichiers du système.", "Restaurer les tables de base de données depuis une sauvegarde hors ligne saine et procéder à la rotation des chaînes de connexion de la base de données."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Hunt for database errors indicating active SQLi attempts.", "Search for unrecognized web shell scripts dropped within the CMS file structure."],
+          "fr": ["Rechercher des erreurs de base de données indiquant des tentatives d'exploitation SQLi actives.", "Rechercher des scripts de web shell non reconnus déposés dans l'arborescence des fichiers du CMS."]
+        }
+      },
+      "tags": ["vulnerability", "sql_injection", "ghost", "compromise"],
+      "sources": ["https://thehackernews.com/2026/05/ghost-cms-cve-2026-26980-exploited-to.html"],
+      "date": "2026-05-25"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "ACR Stealer Campaign Impersonating Anthropic Claude Webpages",
+        "fr": "Campagne ACR Stealer usurpant l'identité de pages web Anthropic Claude"
+      },
+      "description": {
+        "en": "Malvertising campaigns redirect search engine users to rogue Google Sites hosting fake Claude AI applications. These sites deliver OS-specific infostealer payloads (ACR Stealer) targeting browser credentials and cryptocurrency wallets.",
+        "fr": "Des campagnes de malvertising redirigent les utilisateurs de moteurs de recherche vers de faux sites Google hébergeant de fausses applications d'IA Claude. Ces sites distribuent des infostealers spécifiques à l'OS (ACR Stealer) ciblant les identifiants de navigateurs et les portefeuilles de cryptomonnaies."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminalité",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Finance", "Technology_and_Telecom"],
+        "fr": ["Finance", "Technologie et télécommunications"]
+      },
+      "indicators": {
+        "URL": ["https://i.ibb.co/Xx16sbMz/init-block.jpg"],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": ["sites.google.com", "fairpoint29.com", "primemetricsa.com"],
+        "EMAIL": [],
+        "HASH_SHA256": [
+          "47fa746422f1bf6b7712dc6803378e6a995488007193a7441d790f70d204728f",
+          "70b5ecc110e074dbca92932c0e840ea3492ea0a43c3f215b71392c12b02213b2",
+          "a14c3ecf5eb3d2543358482e43dc765dbf9ee7a4bec7571f5ecb8829ca719692"
+        ],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": ["ACR Stealer"]
+      },
+      "mitre_ttps": ["T1566.002", "T1539", "T1583.008"],
+      "analyse": {
+        "en": "The threat relies on search engine manipulation and Google Sites hosting to establish credibility. The dynamic payloads evaluate client host details to run Windows or macOS compilers executing specialized data harvest sequences.",
+        "fr": "La menace s'appuie sur le détournement du référencement des moteurs de recherche et l'hébergement sur Google Sites pour asseoir sa crédibilité. Les charges utiles dynamiques évaluent les détails de l'hôte client pour exécuter des compilateurs Windows ou macOS afin de récolter les données ciblées."
+      },
+      "recommandations": [
+        {
+          "en": "Implement web browser policies to restrict executable downloads from free site builders such as Google Sites.",
+          "fr": "Mettre en œuvre des politiques de navigation pour restreindre le téléchargement d'exécutables depuis des hébergeurs gratuits comme Google Sites."
+        },
+        {
+          "en": "Deploy endpoint protection (EDR) agents to detect memory-based scripting executions in browser user spaces.",
+          "fr": "Déployer des agents EDR pour détecter les exécutions de scripts en mémoire au sein de l'espace utilisateur du navigateur."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Train employees against software downloads from non-corporate application distribution domains.", "Deploy secure web gateways to block access to unverified newly created web spaces."],
+          "fr": ["Sensibiliser les collaborateurs contre le téléchargement d'applications hors des portails officiels de l'entreprise.", "Déployer des passerelles web sécurisées pour bloquer l'accès aux nouveaux domaines non vérifiés."]
+        },
+        "phase2_detection": {
+          "en": ["Create custom detection rules for DNS queries matching fairpoint29.com and primemetricsa.com.", "Monitor local client folder paths for sudden modifications of browser profile access rights."],
+          "fr": ["Créer des règles de détection pour les requêtes DNS ciblant fairpoint29.com et primemetricsa.com.", "Surveiller les répertoires locaux des profils utilisateurs pour détecter des modifications suspectes de droits d'accès aux fichiers de profils."]
+        },
+        "phase3_containment": {
+          "en": ["Isolate the affected workstation from the local segment and active directory network.", "Terminate user active browser processes and revoke stored cookies immediately."],
+          "fr": ["Isoler le poste affecté du réseau de l'entreprise et de l'Active Directory.", "Arrêter les processus de navigation actifs de l'utilisateur et révoquer immédiatement l'ensemble des cookies stockés."]
+        },
+        "phase4_post_incident": {
+          "en": ["Enforce global password resets on user profiles exposed during the compromise.", "Re-image the local workstation completely to prevent residual malicious scripts persistence."],
+          "fr": ["Imposer une réinitialisation générale des mots de passe sur tous les profils utilisateurs exposés.", "Réinstaller entièrement le système d'exploitation du poste de travail pour éviter la persistance de résidus malveillants."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Query event logs for script-driven file extractions matching local browser profile directories.", "Hunt for unusual external network connections originating from user application execution folders."],
+          "fr": ["Rechercher dans les logs d'événements des extractions de fichiers de profils de navigateurs menées par des scripts.", "Rechercher des connexions réseau externes inhabituelles initiées depuis les répertoires de téléchargement des utilisateurs."]
+        }
+      },
+      "tags": ["stealer", "impersonation", "claude", "malware", "acr"],
+      "sources": ["https://isc.sans.edu/diary/rss/33018"],
+      "date": "2026-05-26"
+    },
+    {
+      "title": {
+        "en": "Kali365 Phishing-as-a-Service Targeting Microsoft 365 Accounts",
+        "fr": "Phishing-as-a-Service Kali365 ciblant les comptes Microsoft 365"
+      },
+      "description": {
+        "en": "The FBI warned of 'Kali365', a Phishing-as-a-Service platform. It enables cybercriminals to bypass multi-factor authentication (MFA) on Microsoft 365 accounts by abusing the OAuth Device Authorization Grant flow.",
+        "fr": "Le FBI a alerté sur la plateforme de Phishing-as-a-Service 'Kali365'. Elle permet à des cybercriminels de contourner l'authentification multifacteur (MFA) sur les comptes Microsoft 365 en détournant le flux d'autorisation OAuth Device Code."
+      },
+      "threat_actor": "Kali365",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminalité",
+      "threat_actor_aliases": ["Kali365 PhaaS"],
+      "sector": {
+        "en": ["Technology_and_Telecom", "Business_Services"],
+        "fr": ["Technologie et télécommunications", "Services aux entreprises"]
+      },
+      "indicators": {
+        "URL": ["http://microsoft.com/devicelogin"],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": ["Kali365"]
+      },
+      "mitre_ttps": ["T1528", "T1566.002", "T1556"],
+      "analyse": {
+        "en": "Kali365 relies on OAuth device code phishing. By tricking a victim into entering a code at the legitimate Microsoft device login page, the attacker intercepts the resulting access and refresh tokens, granting full cloud access without knowing the user's password.",
+        "fr": "Kali365 repose sur le hameçonnage par code d'appareil OAuth. En incitant la victime à saisir un code sur la page de connexion légitime de Microsoft, l'attaquant intercepte les jetons d'accès et de rafraîchissement générés, obtenant un accès cloud complet sans connaître le mot de passe."
+      },
+      "recommandations": [
+        {
+          "en": "Disable or restrict the Device Authorization Grant Flow within Entra ID conditional access policy.",
+          "fr": "Désactiver ou restreindre le protocole Device Authorization Grant au sein des règles d'accès conditionnel d'Entra ID."
+        },
+        {
+          "en": "Enforce phishing-resistant MFA methods such as FIDO2 security keys or certificate-based authentication.",
+          "fr": "Imposer des méthodes d'authentification multifacteur résistantes au phishing, comme les clés FIDO2 ou l'authentification par certificat."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Review Entra ID sign-in policies to identify allowed device login authentication flows.", "Educate users that corporate logins should never require entering random alphanumeric verification codes on external prompts."],
+          "fr": ["Passer en revue les règles de connexion Entra ID pour identifier les flux d'autorisation par code d'appareil autorisés.", "Sensibiliser les utilisateurs sur le fait que l'accès aux ressources professionnelles ne doit jamais nécessiter la saisie de codes d'authentification aléatoires sur des invites externes."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor Entra ID sign-in logs for authentication protocols labeled as 'DeviceCode'.", "Alert on administrative session creations originating from unfamiliar IP addresses immediately after a DeviceCode authentication event."],
+          "fr": ["Surveiller les logs de connexion d'Entra ID pour détecter les protocoles d'authentification marqués comme 'DeviceCode'.", "Alerter sur l'ouverture de sessions d'administration depuis des adresses IP inhabituelles immédiatement après un événement de connexion DeviceCode."]
+        },
+        "phase3_containment": {
+          "en": ["Revoke all active user tokens and sessions in the Microsoft 365 administrative center.", "Block unauthorized device registration entries in the tenant dashboard."],
+          "fr": ["Révoquer l'ensemble des sessions et jetons utilisateur actifs dans le portail d'administration de Microsoft 365.", "Bloquer les enregistrements de périphériques non autorisés dans le tableau de bord de l'organisation."]
+        },
+        "phase4_post_incident": {
+          "en": ["Audit file access and mailbox activity logs to trace potential data exfiltration during the compromise.", "Enable strict location-based conditional access restrictions to mitigate session hijack impacts."],
+          "fr": ["Auditer les logs d'accès aux fichiers et l'activité des boîtes mail pour détecter d'éventuelles exfiltrations de données.", "Activer des restrictions strictes d'accès conditionnel basées sur la localisation géographique pour limiter l'impact d'un vol de session."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Hunt for anomalies in OAuth application consent grants across corporate profiles.", "Search for mailbox rule modifications (e.g., auto-forwarding configuration) created shortly after suspicious logons."],
+          "fr": ["Rechercher des anomalies dans les consentements d'applications OAuth accordés sur les profils d'entreprise.", "Rechercher des modifications de règles de boîte aux lettres (par ex. transferts automatiques) configurées juste après des connexions suspectes."]
+        }
+      },
+      "tags": ["phishing", "phaas", "mfa_bypass", "oauth", "fbi"],
+      "sources": ["https://www.bleepingcomputer.com/news/security/fbi-warns-of-kali365-phishing-service-targeting-microsoft-365-accounts/"],
+      "date": "2026-05-25"
+    },
+    {
+      "title": {
+        "en": "Chinese Phishing-as-a-Service Ecosystems and YY Lai Yu Platform",
+        "fr": "Écosystèmes de Phishing-as-a-Service chinois et plateforme YY Lai Yu"
+      },
+      "description": {
+        "en": "Google Threat Intelligence detailed the expansion of sophisticated Chinese-language PhaaS platforms like YY Lai Yu. These platforms utilize SMS, iMessage, and RCS lures alongside real-time OTP interception to bypass MFA and provision rogue digital wallet tokens.",
+        "fr": "Google Threat Intelligence a détaillé l'expansion de plateformes de PhaaS sophistiquées en langue chinoise comme YY Lai Yu. Ces plateformes exploitent des leurres SMS, iMessage et RCS combinés à une interception en temps réel des codes OTP pour contourner le MFA et enregistrer des cartes bancaires frauduleuses."
+      },
+      "threat_actor": "YY Lai Yu",
+      "threat_actor_origin": "Chine",
+      "threat_actor_type": "Cybercriminalité",
+      "threat_actor_aliases": ["YY Lai Yu PhaaS"],
+      "sector": {
+        "en": ["Finance", "Retail_and_Consumer"],
+        "fr": ["Finance", "Vente au détail et biens de consommation"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": ["YY Lai Yu PhaaS"]
+      },
+      "mitre_ttps": ["T1566.002", "T1556", "T1539"],
+      "analyse": {
+        "en": "YY Lai Yu incorporates advanced anti-bot measures, dynamic forms, and real-time administrator interaction panels. Attackers intercept 2FA codes during checkout flows, allowing them to instantly link victim payment cards to Apple Pay or Google Pay wallets.",
+        "fr": "YY Lai Yu intègre des protections avancées contre les robots d'analyse, des formulaires dynamiques et des panneaux d'interaction administrateur en temps réel. Les attaquants interceptent les codes 2FA lors du paiement, leur permettant d'associer immédiatement les cartes bancaires des victimes à Apple Pay ou Google Pay."
+      },
+      "recommandations": [
+        {
+          "en": "Advise users to strictly authenticate digital wallets through direct, official application interfaces.",
+          "fr": "Conseiller aux utilisateurs de valider l'enregistrement de leurs portefeuilles numériques exclusivement depuis l'application officielle de leur banque."
+        },
+        {
+          "en": "Employ mobile device management (MDM) filtering policies to drop untrusted bulk iMessage or RCS communications containing high-risk links.",
+          "fr": "Déployer des politiques de filtrage MDM sur les téléphones professionnels pour rejeter les communications de masse iMessage ou RCS contenant des liens suspects."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Train financial application consumers against OTP codes delivery to unknown web pages.", "Configure continuous monitoring on banking authorization requests for wallet tokenization."],
+          "fr": ["Sensibiliser les clients des applications financières à ne jamais soumettre de codes OTP sur des pages web inconnues.", "Configurer une surveillance continue sur les demandes d'autorisation bancaire associées à l'enregistrement de portefeuilles de paiement."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor user reports for suspicious SMS, iMessage, or RCS messages mimicking official loyalty programs.", "Identify unusual transaction requests triggered immediately following card tokenization events."],
+          "fr": ["Surveiller les signalements d'utilisateurs concernant des SMS, iMessage ou RCS suspects imitant des programmes de fidélité officiels.", "Identifier des requêtes de transaction inhabituelles initiées immédiatement après un enregistrement de carte bancaire."]
+        },
+        "phase3_containment": {
+          "en": ["Deactivate compromised payment cards and block associated digital wallet tokens.", "Submit detected phishing domains to security hosting lists for fast shutdown."],
+          "fr": ["Désactiver les cartes de paiement compromises et bloquer les jetons de portefeuilles numériques associés.", "Soumettre les domaines de phishing détectés aux hébergeurs pour accélérer leur mise hors ligne."]
+        },
+        "phase4_post_incident": {
+          "en": ["Collaborate with card issuers to roll back unauthorized charges.", "Review identity verification steps on banking apps to strengthen device enrollment validation."],
+          "fr": ["Collaborer avec les banques émettrices pour annuler les débits non autorisés.", "Revoir les étapes de vérification d'identité sur les applications bancaires pour renforcer la validation d'enregistrement de nouveaux téléphones."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Hunt for pattern matches of Chinese PhaaS templates across external threat data feeds.", "Analyze telemetry for bulk registrations originating from known anti-bot proxy IP spaces."],
+          "fr": ["Rechercher des correspondances de modèles de PhaaS chinois au sein des flux de menaces externes.", "Analyser la télémétrie pour détecter des enregistrements massifs issus d'adresses IP de proxy connues pour contourner les protections."]
+        }
+      },
+      "tags": ["phishing", "phaas", "china", "mfa_bypass", "yy_lai_yu"],
+      "sources": ["https://cloud.google.com/blog/topics/threat-intelligence/chinese-language-phishing-services/"],
+      "date": "2026-05-25"
+    },
+    {
+      "title": {
+        "en": "SANS ISC daily Stormcast monitoring summary",
+        "fr": "Synthèse quotidienne de surveillance SANS ISC Stormcast"
+      },
+      "description": {
+        "en": "General overview of daily threat indicators and security posture developments compiled from SANS Internet Storm Center feeds.",
+        "fr": "Aperçu général des indicateurs de menaces quotidiens et de l'évolution de la posture de sécurité compilé à partir des flux de l'Internet Storm Center du SANS."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Security"],
+        "fr": ["Sécurité"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": ["isc.sans.edu"],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "Continuous security surveillance ensures rapid awareness of emerging attack vectors and vulnerability disclosures.",
+        "fr": "La surveillance continue de la sécurité garantit une prise de conscience rapide des vecteurs d'attaque émergents et des divulgations de vulnérabilités."
+      },
+      "recommandations": [
+        {
+          "en": "Configure security automation workflows to fetch and parse daily threat feeds.",
+          "fr": "Configurer des flux d'automatisation de sécurité pour collecter et analyser les indicateurs de menaces quotidiens."
+        },
+        {
+          "en": "Integrate community threat bulletins into internal security monitoring platforms.",
+          "fr": "Intégrer les bulletins de menaces de la communauté aux plateformes de surveillance de sécurité internes."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Establish daily monitoring routines for active security alerts and intelligence briefs.", "Configure automatic warning parameters for new vulnerability announcements."],
+          "fr": ["Établir des routines de surveillance quotidiennes pour les alertes de sécurité actives.", "Configurer des paramètres d'alerte automatique pour les nouvelles annonces de vulnérabilités."]
+        },
+        "phase2_detection": {
+          "en": ["Identify system matches against daily highlighted indicators of compromise.", "Analyze threat feeds to evaluate corporate infrastructure exposure to new active exploits."],
+          "fr": ["Identifier les correspondances du système avec les indicateurs de compromission quotidiens.", "Analyser les flux de menaces pour évaluer l'exposition de l'infrastructure de l'entreprise aux nouveaux exploits actifs."]
+        },
+        "phase3_containment": {
+          "en": ["Implement network filters blocking highlighted untrusted assets.", "Isolate systems with configurations matches to actively targeted application lists."],
+          "fr": ["Mettre en œuvre des filtres réseau bloquant les ressources non fiables signalées.", "Isoler les systèmes dont les configurations correspondent aux applications activement ciblées."]
+        },
+        "phase4_post_incident": {
+          "en": ["Review log sources to confirm no exploitation attempts were overlooked.", "Adjust firewall and email filtering policies to account for newly analyzed methods."],
+          "fr": ["Passer en revue les logs pour confirmer qu'aucune tentative d'exploitation n'a été manquée.", "Ajuster les règles de pare-feu et de messagerie pour intégrer les nouvelles méthodes analysées."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search historical logs for indicators highlighted in newly released stormcast briefings.", "Hunt for residual connections matching reported threat actor routing networks."],
+          "fr": ["Rechercher dans l'historique des logs des indicateurs signalés dans les récents briefings Stormcast.", "Rechercher d'anciennes connexions correspondant aux réseaux de routage signalés des attaquants."]
+        }
+      },
+      "tags": ["monitoring", "sans_isc", "intel", "daily_report"],
+      "sources": ["https://isc.sans.edu/diary/rss/33020"],
+      "date": "2026-05-26"
+    },
+    {
+      "title": {
+        "en": "Static Analysis Tools for ZLIB Compressed Microsoft Access VBA Macros",
+        "fr": "Outils d'analyse statique pour les macros VBA Microsoft Access compressées avec ZLIB"
+      },
+      "description": {
+        "en": "Didier Stevens updated his static analysis script tools to support search and decompression of ZLIB-compressed Visual Basic for Applications (VBA) code within Microsoft Access database files.",
+        "fr": "Didier Stevens a mis à jour ses scripts d'analyse statique pour prendre en charge la recherche et la décompression de code VBA (Visual Basic for Applications) compressé avec ZLIB au sein de bases de données Microsoft Access."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Technology_and_Telecom"],
+        "fr": ["Technologie et télécommunications"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": ["Didier Stevens Suite"]
+      },
+      "mitre_ttps": ["T1059.005"],
+      "analyse": {
+        "en": "Malicious code hiding inside Access DB components is often overlooked by standard script scanners. Tool updates allowing direct parsing of ZLIB streams enhance forensic visibility.",
+        "fr": "Le code malveillant dissimulé dans les composants de bases de données Access est souvent ignoré par les outils d'analyse de scripts classiques. La prise en charge de l'analyse des flux ZLIB améliore la visibilité forensique."
+      },
+      "recommandations": [
+        {
+          "en": "Integrate the updated analytical scripts into SOC static evaluation tools.",
+          "fr": "Intégrer les scripts d'analyse mis à jour aux outils d'évaluation statique du SOC."
+        },
+        {
+          "en": "Block Microsoft Access files (.accdb, .mdb) received from untrusted external sources at the email gateway.",
+          "fr": "Bloquer au niveau de la messagerie les fichiers de base de données Microsoft Access (.accdb, .mdb) reçus de sources externes non approuvées."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Provide training to forensic analysts regarding parsing and extract methodologies for embedded Office binaries.", "Implement registry configuration controls preventing execution of undocumented local VBA objects."],
+          "fr": ["Former les analystes forensiques aux méthodologies d'analyse et d'extraction de binaires Office intégrés.", "Mettre en œuvre des contrôles de registre empêchant l'exécution d'objets VBA locaux non répertoriés."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor host file operations for unrecognized Access DB executions.", "Alert on email messages containing Access attachments carrying embedded macro signs."],
+          "fr": ["Surveiller les opérations de fichiers des hôtes pour détecter des exécutions de bases de données Access non reconnues.", "Alerter sur les courriels contenant des pièces jointes Access contenant des signes de macros intégrées."]
+        },
+        "phase3_containment": {
+          "en": ["Isolate the local workstation where the user triggered the Access database execution.", "Disable administrative script runner capabilities on the user machine context."],
+          "fr": ["Isoler le poste de travail où l'utilisateur a déclenché l'exécution de la base de données Access.", "Désactiver les fonctionnalités d'exécution de scripts d'administration sur le poste concerné."]
+        },
+        "phase4_post_incident": {
+          "en": ["Update email filtering rules to prevent execution of unapproved VBA objects.", "Review system logs to identify if secondary executables were deployed via the Access macro payload."],
+          "fr": ["Mettre à jour les règles de filtrage de messagerie pour empêcher l'exécution d'objets VBA non approuvés.", "Passer en revue les logs système pour identifier si des exécutables secondaires ont été déployés via la macro Access."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search file servers for historical .accdb or .mdb files containing ZLIB compressed macros.", "Hunt for unusual process spawn patterns originating from MS Access binaries (msaccess.exe)."],
+          "fr": ["Rechercher sur les serveurs de fichiers d'anciennes bases de données .accdb ou .mdb contenant des macros compressées avec ZLIB.", "Rechercher des lancements de processus inhabituels initiés par l'exécutable MS Access (msaccess.exe)."]
+        }
+      },
+      "tags": ["vba", "analysis", "compression", "didier_stevens", "access"],
+      "sources": ["https://isc.sans.edu/diary/rss/33012"],
+      "date": "2026-05-25"
+    },
+    {
+      "title": {
+        "en": "Threat Intelligence Weekly Report on Critical CVEs and Campaigns",
+        "fr": "Rapport hebdomadaire de Threat Intelligence sur les CVE critiques et les campagnes"
+      },
+      "description": {
+        "en": "Check Point released its weekly Threat Intelligence report covering emerging global vulnerabilities, cyber campaigns, and active CVE exploitations.",
+        "fr": "Check Point a publié son rapport hebdomadaire de Threat Intelligence, couvrant les nouvelles vulnérabilités mondiales, les cyber-campagnes et les exploitations actives de CVE."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Security"],
+        "fr": ["Sécurité"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": ["T1190"],
+      "analyse": {
+        "en": "Weekly reports track global campaign targets and help organizations adjust firewalls and intrusion prevention system (IPS) signatures.",
+        "fr": "Les rapports hebdomadaires permettent de suivre les cibles des campagnes mondiales et d'aider les organisations à ajuster leurs pare-feu et signatures de prévention d'intrusions (IPS)."
+      },
+      "recommandations": [
+        {
+          "en": "Correlate weekly indicators with internal network activity and host logs.",
+          "fr": "Corréler les indicateurs hebdomadaires avec l'activité réseau interne et les journaux des serveurs."
+        },
+        {
+          "en": "Apply security patches targeting active vulnerabilities highlighted in vendor reports.",
+          "fr": "Appliquer les correctifs de sécurité ciblant les vulnérabilités actives signalées dans les rapports d'éditeurs."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Maintain subscription access to security feeds to ensure early coverage of critical vulnerabilities.", "Ensure rapid deploy paths are available for urgent firewall or IPS signature additions."],
+          "fr": ["Maintenir les abonnements aux flux de sécurité pour garantir une couverture rapide des vulnérabilités critiques.", "S'assurer que des processus de déploiement rapide sont disponibles pour l'ajout urgent de signatures de pare-feu ou d'IPS."]
+        },
+        "phase2_detection": {
+          "en": ["Scan enterprise systems for software products matching high-risk CVE lists.", "Detect abnormal system performance or crash reports that may indicate exploitation attempts."],
+          "fr": ["Analyser les systèmes de l'entreprise pour détecter les logiciels correspondant aux listes de CVE à haut risque.", "Détecter les baisses de performance ou les rapports de crash système pouvant indiquer des tentatives d'exploitation."]
+        },
+        "phase3_containment": {
+          "en": ["Isolate vulnerable systems until patching can be completed.", "Block connections from IP addresses linked to active exploitation campaigns."],
+          "fr": ["Isoler les systèmes vulnérables jusqu'à ce que les correctifs soient appliqués.", "Bloquer les connexions provenant des adresses IP liées aux campagnes d'exploitation actives."]
+        },
+        "phase4_post_incident": {
+          "en": ["Deploy correct software versions and re-test vulnerability levels.", "Document indicators and methods to update internal detection criteria."],
+          "fr": ["Déployer les versions logicielles corrigées et retester l'exposition aux vulnérabilités.", "Documenter les indicateurs et méthodes pour mettre à jour les critères de détection internes."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Hunt for connections to infrastructure referenced in security briefings.", "Analyze internal logs for historical evidence of scans preceding vulnerability disclosures."],
+          "fr": ["Rechercher d'éventuelles connexions vers des infrastructures signalées dans les bulletins de sécurité.", "Analyser les logs internes pour détecter d'anciennes traces de scans précédant les divulgations de vulnérabilités."]
+        }
+      },
+      "tags": ["monitoring", "weekly_report", "vulnerability", "checkpoint"],
+      "sources": ["https://research.checkpoint.com/2026/25th-may-threat-intelligence-report/"],
+      "date": "2026-05-25"
+    },
+    {
+      "title": {
+        "en": "Artificial Intelligence Tools as a New Corporate Attack Surface",
+        "fr": "Les outils d'intelligence artificielle comme nouvelle surface d'attaque d'entreprise"
+      },
+      "description": {
+        "en": "Field Effect analyzed security challenges introduced by corporate AI tool adoption. Connecting sensitive systems to AI assistants exposes organizations to prompt injection attacks and unauthorized data sharing.",
+        "fr": "Field Effect a analysé les défis de sécurité introduits par l'adoption d'outils d'IA en entreprise. Connecter des systèmes sensibles à des assistants d'IA expose les organisations à des attaques par injection de prompts et au partage de données non autorisé."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Technology_and_Telecom", "Business_Services"],
+        "fr": ["Technologie et télécommunications", "Services aux entreprises"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "AI tools create a dynamic attack surface. Lack of access controls and the emergence of 'Shadow AI' make it harder for administrators to protect intellectual property and customer information.",
+        "fr": "Les outils d'IA créent une surface d'attaque dynamique. L'absence de contrôle d'accès et l'essor du 'Shadow AI' compliquent la tâche des administrateurs pour protéger la propriété intellectuelle et les données clients."
+      },
+      "recommandations": [
+        {
+          "en": "Establish a governance policy restricting AI integrations to validated vendors and secure APIs.",
+          "fr": "Établir une politique de gouvernance limitant les intégrations d'IA à des fournisseurs validés et des API sécurisées."
+        },
+        {
+          "en": "Apply the principle of least privilege to data directories accessed by AI agents.",
+          "fr": "Appliquer le principe du moindre privilège aux répertoires de données accédés par des agents d'IA."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Conduct an audit of active AI services and integrations in use by staff.", "Develop user guidelines outlining restricted data types that must not be processed via external LLMs."],
+          "fr": ["Réaliser un audit des services d'IA actifs et des intégrations utilisées par le personnel.", "Développer des directives d'utilisation spécifiant les types de données sensibles qui ne doivent pas être traités par des LLM externes."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor outbound web logs for unauthorized connections to unknown AI domains.", "Alert on bulk database extractions or export activities initiated by AI service accounts."],
+          "fr": ["Surveiller les logs d'accès web sortants pour détecter des connexions vers des domaines d'IA non autorisés.", "Alerter sur des extractions massives de bases de données ou des activités d'export initiées par des comptes de services d'IA."]
+        },
+        "phase3_containment": {
+          "en": ["Block access to shadow AI platforms at the web gateway level.", "Disable compromised API keys or restrict access privileges of affected AI agents."],
+          "fr": ["Bloquer l'accès aux plateformes d'IA non approuvées au niveau de la passerelle web.", "Désactiver les clés d'API compromises ou restreindre les privilèges d'accès des agents d'IA concernés."]
+        },
+        "phase4_post_incident": {
+          "en": ["Identify and purge any sensitive corporate data stored in external AI provider platforms.", "Adjust authentication and data access rules for all dynamic AI software integrations."],
+          "fr": ["Identifier et purger toutes les données d'entreprise sensibles stockées sur des serveurs d'IA tiers.", "Ajuster les règles d'authentification et d'accès aux données pour toutes les intégrations logicielles d'IA dynamiques."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Hunt for unusual API payloads containing adversarial patterns directed at internal AI endpoints.", "Analyze user activity logs for unauthorized bulk exports of corporate files to AI service addresses."],
+          "fr": ["Rechercher des payloads d'API inhabituels contenant des requêtes adverses (prompt injection) ciblant les services d'IA internes.", "Analyser les logs d'activité pour détecter des exports massifs non autorisés de fichiers vers des services d'IA."]
+        }
+      },
+      "tags": ["artificial_intelligence", "attack_surface", "prompt_injection", "shadow_ai"],
+      "sources": ["https://fieldeffect.com/blog/ai-tools-new-attack-surface"],
+      "date": "2026-05-25"
+    },
+    {
+      "title": {
+        "en": "AI-Powered Reverse Engineering Tools and ida-pro-mcp Integration",
+        "fr": "Outils de reverse engineering basés sur l'IA et intégration ida-pro-mcp"
+      },
+      "description": {
+        "en": "A new open-source project, 'ida-pro-mcp', was published. It connects the IDA Pro disassembler to language models using the Model Context Protocol (MCP) to assist malware analysts and reverse engineers.",
+        "fr": "Un nouveau projet open source, 'ida-pro-mcp', a été publié. Il connecte le désassembleur IDA Pro à des modèles de langage via le protocole MCP (Model Context Protocol) pour assister les analystes de malwares."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Technology_and_Telecom"],
+        "fr": ["Technologie et télécommunications"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": ["github.com"],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": ["ida-pro-mcp"]
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "Dual-use tool. Integrating LLMs with reversing applications speeds up binary analysis and vulnerability discovery, but also presents risks if proprietary or sensitive code is uploaded to third-party models.",
+        "fr": "Outil à double usage. Intégrer des LLM aux outils de reverse engineering accélère l'analyse de binaires et la découverte de vulnérabilités, mais présente un risque si du code propriétaire ou sensible est envoyé vers des modèles tiers."
+      },
+      "recommandations": [
+        {
+          "en": "Audit the integration of external APIs within reverse engineering environments to prevent sensitive code leakage.",
+          "fr": "Auditer l'intégration d'API externes dans les environnements de reverse engineering pour empêcher les fuites de code sensible."
+        },
+        {
+          "en": "Configure AI reversing assistants to run within isolated sandboxes using local models.",
+          "fr": "Configurer les assistants de reverse engineering basés sur l'IA pour s'exécuter dans des bacs à sable isolés avec des modèles locaux."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Establish guidelines for code analysis using public language models.", "Verify security boundaries for analyst sandbox environments."],
+          "fr": ["Établir des directives pour l'analyse de code à l'aide de modèles de langage publics.", "Vérifier les limites de sécurité pour les environnements de bac à sable des analystes."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor API traffic from developer or analyst networks to AI endpoints.", "Identify potential data exports containing proprietary software structure patterns."],
+          "fr": ["Surveiller le trafic d'API des réseaux de développeurs ou d'analystes vers des endpoints d'IA.", "Identifier les exports de données contenant des structures de logiciels propriétaires."]
+        },
+        "phase3_containment": {
+          "en": ["Restrict developer workstations from connecting directly to unapproved external APIs.", "Revoke active developer keys used in compromised assistant integrations."],
+          "fr": ["Restreindre l'accès des postes de développement à des API externes non approuvées.", "Révoquer les clés de développeurs actives utilisées dans des intégrations compromises."]
+        },
+        "phase4_post_incident": {
+          "en": ["Conduct a data leakage assessment to identify what parts of code were exposed.", "Migrate critical analysis environments to offline systems utilizing local language models."],
+          "fr": ["Mener une évaluation des fuites de données pour identifier les parties de code exposées.", "Faire migrer les environnements d'analyse critiques vers des systèmes hors ligne utilisant des modèles de langage locaux."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search for unauthorized API endpoints configured within development IDEs.", "Audit network logs for bulk code submissions to external domains."],
+          "fr": ["Rechercher des endpoints d'API non autorisés configurés dans les environnements de développement.", "Auditer les logs réseau pour détecter des soumissions massives de code vers des domaines externes."]
+        }
+      },
+      "tags": ["ida_pro", "reverse_engineering", "mcp", "artificial_intelligence"],
+      "sources": ["https://www.reddit.com/r/blueteamsec/comments/1tnqzaz/github_mrexodiaidapromcp_aipowered_reverse/"],
+      "date": "2026-05-26"
+    },
+    {
+      "title": {
+        "en": "Cybersecurity Tool Silos and Alert Context Integration Issues",
+        "fr": "Silos d'outils de cybersécurité et problèmes d'intégration du contexte des alertes"
+      },
+      "description": {
+        "en": "A Mastodon discussion highlighted challenges of cybersecurity environments utilizing disconnected tools. Siloed platforms produce isolated alerts, increasing analysis time and leaving security operators with fractured context.",
+        "fr": "Une discussion sur Mastodon a souligné les défis des environnements utilisant des outils déconnectés. Les plateformes silotées produisent des alertes isolées, augmentant le temps d'analyse et limitant le contexte des analystes."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Security"],
+        "fr": ["Sécurité"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": ["mastodon.social"],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "Operating multiple disconnected defense applications results in alert fatigue and increases Mean Time to Repair (MTTR). Integrating SIEM, SOAR, and EDR systems is essential to provide actionable context.",
+        "fr": "L'exploitation d'outils défensifs déconnectés entraîne une fatigue des alertes et augmente le temps moyen de traitement (MTTR). L'intégration des systèmes SIEM, SOAR et EDR est essentielle pour fournir un contexte exploitable."
+      },
+      "recommandations": [
+        {
+          "en": "Prioritize security platforms that support open API integrations or unified XDR structures.",
+          "fr": "Prioriser les plateformes de sécurité prenant en charge les intégrations d'API ouvertes ou les architectures XDR unifiées."
+        },
+        {
+          "en": "Deploy automated playbook rules to correlate telemetry across network and host endpoints.",
+          "fr": "Déployer des playbooks automatisés pour corréler la télémétrie entre le réseau et les postes de travail."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Establish central data standards for security alerts to ensure seamless ingestion across tools.", "Conduct periodic testing of SIEM and SOAR automation logic to confirm correlation rules are working."],
+          "fr": ["Établir des normes de centralisation des données d'alertes pour garantir une intégration fluide entre les outils.", "Réaliser des tests réguliers de la logique d'automatisation SIEM et SOAR pour confirmer le fonctionnement des règles de corrélation."]
+        },
+        "phase2_detection": {
+          "en": ["Audit active rule configurations to identify disconnected security alerts.", "Detect indicators that trigger across different monitoring vectors to verify correlation flows."],
+          "fr": ["Auditer la configuration des règles actives pour identifier des alertes de sécurité isolées.", "Détecter les indicateurs qui se déclenchent sur plusieurs vecteurs de surveillance pour vérifier les flux de corrélation."]
+        },
+        "phase3_containment": {
+          "en": ["Implement unified blocking rules across firewalls, mail filters, and endpoints.", "Isolate systems exhibiting synchronized alert events from multiple platforms."],
+          "fr": ["Mettre en œuvre des règles de blocage unifiées sur les pare-feu, filtres de messagerie et terminaux.", "Isoler les systèmes présentant des alertes synchronisées issues de plusieurs plateformes."]
+        },
+        "phase4_post_incident": {
+          "en": ["Refine correlation parameters to eliminate persistent duplicate alerts.", "Develop updated playbook templates covering cross-platform analytical scenarios."],
+          "fr": ["Ajuster les critères de corrélation pour éliminer les alertes en doublon persistantes.", "Développer des modèles de playbooks mis à jour couvrant des scénarios d'analyse multi-plateformes."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Hunt for correlated threat activity by linking low-severity alerts from different tools.", "Analyze network traffic logs alongside endpoint events to reconstruct timeline flows."],
+          "fr": ["Rechercher des activités de menaces corrélées en liant des alertes de faible gravité issues de différents outils.", "Analyser les logs réseau parallèlement aux événements de terminaux pour reconstruire la chronologie des attaques."]
+        }
+      },
+      "tags": ["integration", "alert_fatigue", "soc_operations", "community_discussion"],
+      "sources": ["https://mastodon.social/@lbhuston/116638048331289113"],
+      "date": "2026-05-26"
+    },
+    {
+      "title": {
+        "en": "Best Practices for POSIX Access Control Lists (ACLs) Configuration",
+        "fr": "Bonnes pratiques pour la configuration des listes de contrôle d'accès POSIX (ACL)"
+      },
+      "description": {
+        "en": "A community discussion on Mastodon highlighted educational resources and mental models for configuring POSIX Access Control Lists (ACLs) on Linux filesystems.",
+        "fr": "Une discussion communautaire sur Mastodon a mis en avant des ressources pédagogiques et des modèles mentaux pour la configuration des listes de contrôle d'accès POSIX (ACL) sur les systèmes de fichiers Linux."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Security"],
+        "fr": ["Sécurité"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": ["ioc.exchange"],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": ["T1083"],
+      "analyse": {
+        "en": "Proper permission design prevents lateral movement and privilege escalation. Restricting access through getfacl/setfacl commands is key to maintaining system integrity on shared multi-user systems.",
+        "fr": "Une bonne conception des permissions empêche le mouvement latéral et l'élévation de privilèges. Restreindre les accès via les commandes getfacl/setfacl est essentiel pour maintenir l'intégrité du système sur les serveurs partagés."
+      },
+      "recommandations": [
+        {
+          "en": "Enforce the principle of least privilege on critical system files and directories.",
+          "fr": "Imposer le principe du moindre privilège sur les répertoires et fichiers système critiques."
+        },
+        {
+          "en": "Perform automated audits on server filesystems to identify directories with overly permissive ACL permissions.",
+          "fr": "Réaliser des audits automatisés sur les systèmes de fichiers des serveurs pour identifier les répertoires ayant des permissions ACL trop permissives."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Train system administrators on permissions modeling using POSIX ACL standards.", "Deploy automated audit tools to check directory permission settings daily."],
+          "fr": ["Former les administrateurs système à la modélisation des permissions selon les standards POSIX ACL.", "Déployer des outils d'audit automatisés pour vérifier quotidiennement la configuration des permissions des dossiers."]
+        },
+        "phase2_detection": {
+          "en": ["Detect unauthorized permission modifications on sensitive directories using integrity monitoring tools.", "Alert on abnormal file access logs indicating user attempts to read administrative paths."],
+          "fr": ["Détecter des modifications de permissions non autorisées sur les répertoires sensibles via des outils de surveillance de l'intégrité.", "Alerter sur des logs d'accès aux fichiers anomaux indiquant des tentatives de lecture de répertoires d'administration."]
+        },
+        "phase3_containment": {
+          "en": ["Revert permissions of directories to secure configurations using setfacl.", "Lock user accounts attempting unauthorized directory enumeration."],
+          "fr": ["Rétablir les permissions des répertoires à des configurations sécurisées à l'aide de setfacl.", "Verrouiller les comptes utilisateurs tentant des énumérations de répertoires non autorisées."]
+        },
+        "phase4_post_incident": {
+          "en": ["Conduct a thorough review of permission inheritance logic to prevent misconfigurations.", "Update system baseline configurations to enforce rigid user isolation rules."],
+          "fr": ["Mener une révision approfondie de la logique d'héritage des permissions pour éviter les erreurs de configuration.", "Mettre à jour les configurations système de base pour imposer des règles strictes d'isolation des utilisateurs."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search for directories with overly broad write or execute permissions.", "Hunt for system administration logs containing unusual setfacl execution arguments."],
+          "fr": ["Rechercher des répertoires disposant d'autorisations d'écriture ou d'exécution trop larges.", "Rechercher dans les logs d'administration système des arguments d'exécution de setfacl inhabituels."]
+        }
+      },
+      "tags": ["access_control", "linux", "permissions", "posix_acl"],
+      "sources": ["https://ioc.exchange/@rye/116637666545318624"],
+      "date": "2026-05-25"
+    },
+    {
+      "title": {
+        "en": "Phishing Campaign Targeting Yahoo and AT&T Credentials on Google Sites",
+        "fr": "Campagne de phishing ciblant les identifiants Yahoo et AT&T sur Google Sites"
+      },
+      "description": {
+        "en": "An active phishing campaign hosting rogue login panels on Google Sites targets Yahoo and AT&T mail credentials.",
+        "fr": "Une campagne de phishing active hébergeant de faux formulaires de connexion sur Google Sites cible les identifiants de messagerie Yahoo et AT&T."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminalité",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Retail_and_Consumer"],
+        "fr": ["Vente au détail et biens de consommation"]
+      },
+      "indicators": {
+        "URL": ["https://sites.google.com/view/yahooattmail0876tyjh/home"],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": ["sites.google.com"],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": ["T1566.002"],
+      "analyse": {
+        "en": "Attackers leverage trusted cloud infrastructure (Google Sites) to evade automated URL filtering tools and capture corporate or personal email credentials.",
+        "fr": "Les attaquants exploitent des infrastructures cloud de confiance (Google Sites) pour échapper aux outils de filtrage d'URL automatisés et capturer des identifiants de messagerie."
+      },
+      "recommandations": [
+        {
+          "en": "Configure web filters to block newly discovered subdomains on generic site builders.",
+          "fr": "Configurer les filtres web pour bloquer les sous-domaines nouvellement créés sur les outils d'hébergement gratuits."
+        },
+        {
+          "en": "Report malicious Google Sites URLs directly to Google Security for fast teardown.",
+          "fr": "Signaler les URL Google Sites malveillantes directement à la sécurité de Google pour accélérer leur suppression."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Train users to verify connection domains before submitting passwords.", "Implement dynamic password entry protections that alert users when they enter corporate keys on external web zones."],
+          "fr": ["Former les utilisateurs à vérifier les domaines de connexion avant de soumettre leurs mots de passe.", "Déployer des protections dynamiques de saisie de mot de passe alertant les utilisateurs s'ils saisissent des clés d'entreprise sur des sites externes."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor web gateway traffic logs for requests to the malicious Google Sites URL.", "Detect outbound access to unrecognized subfolders of free site builders."],
+          "fr": ["Surveiller les logs d'accès de la passerelle web pour détecter des requêtes vers l'URL Google Sites malveillante.", "Détecter l'accès sortant vers des sous-dossiers non reconnus d'outils d'hébergement gratuits."]
+        },
+        "phase3_containment": {
+          "en": ["Block the specific phishing URL at the gateway proxy level.", "Revoke active web sessions for any user who accessed the malicious webpage."],
+          "fr": ["Bloquer l'URL spécifique de phishing au niveau du proxy de la passerelle.", "Révoquer les sessions web actives de tout utilisateur ayant accédé à la page malveillante."]
+        },
+        "phase4_post_incident": {
+          "en": ["Enforce immediate password changes for affected mail profiles.", "Notify corporate security teams of potential compromised data leaks."],
+          "fr": ["Imposer des changements immédiats de mots de passe pour les profils de messagerie affectés.", "Notifier les équipes de sécurité d'éventuelles fuites de données compromises."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Hunt for web proxy log matches pointing to the rogue Google Sites subdirectory.", "Search email delivery logs for messages containing link directories redirecting to the target address."],
+          "fr": ["Rechercher des logs de proxy correspondant au sous-répertoire Google Sites frauduleux.", "Rechercher dans les journaux de messagerie des messages contenant des liens de redirection vers l'adresse ciblée."]
+        }
+      },
+      "tags": ["phishing", "yahoo", "att", "google_sites"],
+      "sources": ["https://infosec.exchange/@urldna/116637696685201454"],
+      "date": "2026-05-25"
+    },
+    {
+      "title": {
+        "en": "Automating Threat Containment with Legal, Public Relations, and Corporate Workflows",
+        "fr": "Automatisation du confinement des menaces avec les processus juridiques, RP et de direction"
+      },
+      "description": {
+        "en": "A post on Mastodon discussed the need to automate technical threat containment while maintaining alignment with legal, PR, and executive workflow timelines during active security incidents.",
+        "fr": "Un message sur Mastodon a traité du besoin d'automatiser le confinement technique des menaces tout en assurant l'alignement avec les exigences temporelles des processus juridiques, RP et de direction."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Security"],
+        "fr": ["Sécurité"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": ["mastodon.social"],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "Technical automated actions (such as isolating nodes or revoking API keys) must be coordinated with corporate communication and legal strategies to reduce business impact and manage liability.",
+        "fr": "Les actions techniques automatisées (comme l'isolation de postes ou la révocation de clés) doivent être coordonnées avec la communication d'entreprise et les stratégies juridiques pour réduire l'impact d'activité et gérer les responsabilités."
+      },
+      "recommandations": [
+        {
+          "en": "Integrate representatives from legal and public relations teams into incident response workflows.",
+          "fr": "Intégrer des représentants des équipes juridiques et des relations publiques au sein des processus de réponse à incident."
+        },
+        {
+          "en": "Deploy SOAR workflows that include manual approval steps for high-impact isolation decisions.",
+          "fr": "Déployer des playbooks SOAR intégrant des étapes de validation manuelle pour les décisions d'isolation à fort impact."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Develop a comprehensive crisis communication plan covering PR, legal, and operational responsibilities.", "Define high-impact isolation trigger scenarios that require executive approval before execution."],
+          "fr": ["Développer un plan de communication de crise complet couvrant les RP, le juridique et les opérations.", "Définir les scénarios d'isolation à fort impact qui nécessitent l'approbation de la direction avant exécution."]
+        },
+        "phase2_detection": {
+          "en": ["Establish incident severity metrics to trigger executive notification workflows automatically.", "Monitor security tracking dashboards to identify issues that require immediate legal review."],
+          "fr": ["Établir des métriques de gravité des incidents pour déclencher automatiquement les notifications à la direction.", "Surveiller les tableaux de bord pour identifier les incidents qui nécessitent une révision juridique immédiate."]
+        },
+        "phase3_containment": {
+          "en": ["Isolate targeted servers using automated playbooks, and update the legal advisory board immediately.", "Enforce pre-approved message guidelines to respond to user requests regarding offline services."],
+          "fr": ["Isoler les serveurs ciblés via des playbooks automatisés et informer immédiatement la direction juridique.", "Appliquer des modèles de messages pré-approuvés pour répondre aux requêtes des utilisateurs concernant l'indisponibilité des services."]
+        },
+        "phase4_post_incident": {
+          "en": ["Conduct a joint post-mortem review involving legal, PR, and technical incident response leads.", "Adjust response playbooks to balance speed of technical containment with legal compliance requirements."],
+          "fr": ["Mener un débriefing conjoint impliquant les responsables juridiques, RP et techniques de la réponse aux incidents.", "Ajuster les playbooks pour équilibrer la rapidité du confinement technique et les exigences réglementaires."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search for security events that escalated to critical levels without triggering appropriate alert paths.", "Analyze incident logs to identify bottlenecks in authorization processes during threat containment."],
+          "fr": ["Rechercher des incidents ayant atteint des niveaux critiques sans déclencher de parcours d'alerte appropriés.", "Analyser les logs d'incidents pour identifier les goulets d'étranglement dans les processus d'autorisation lors du confinement."]
+        }
+      },
+      "tags": ["incident_response", "crisis_management", "legal_compliance", "soar"],
+      "sources": ["https://mastodon.social/@lbhuston/116638264260640297"],
+      "date": "2026-05-26"
+    },
+    {
+      "title": {
+        "en": "TeamPCP Supply Chain Campaign Targeting Open-Source Repositories",
+        "fr": "Campagne de supply chain de TeamPCP ciblant les dépôts open source"
+      },
+      "description": {
+        "en": "Analytical summaries tracked the escalation of TeamPCP's software supply chain campaign. The attackers targeted developers on npm, PyPI, and GitHub by utilizing malicious VS Code extensions and forged Sigstore verification badges to exfiltrate secrets.",
+        "fr": "Des synthèses d'analyse ont suivi l'escalade de la campagne de supply chain logicielle de TeamPCP. Les attaquants ont ciblé les développeurs sur npm, PyPI et GitHub en exploitant de fausses extensions VS Code et des badges de vérification Sigstore contrefaits pour exfiltrer des secrets."
+      },
+      "threat_actor": "TeamPCP",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminalité / Espionnage",
+      "threat_actor_aliases": ["Mini Shai-Hulud Operator"],
+      "sector": {
+        "en": ["Technology_and_Telecom"],
+        "fr": ["Technologie et télécommunications"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": ["filev2.getsession.org", "seed1.getsession.org"],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": ["Mini Shai-Hulud"]
+      },
+      "mitre_ttps": ["T1195.002", "T1553.006", "T1539"],
+      "analyse": {
+        "en": "TeamPCP hijacked legitimate developer credentials to publish compromised versions of common packages. The malicious code exfiltrated environment variables and API keys used in CI/CD build runners.",
+        "fr": "TeamPCP a piraté des identifiants de développeurs légitimes pour publier des versions compromises de packages courants. Le code malveillant exfiltrait les variables d'environnement et les clés d'API configurées dans les serveurs de build CI/CD."
+      },
+      "recommandations": [
+        {
+          "en": "Require all developers to configure strict MFA and use cryptographically signed commits.",
+          "fr": "Exiger de tous les développeurs la configuration de MFA et l'utilisation de commits signés cryptographiquement."
+        },
+        {
+          "en": "Perform continuous security vetting on newly imported dependencies and lock versions to known clean hashes.",
+          "fr": "Réaliser des analyses de sécurité continues sur les nouvelles dépendances et verrouiller les versions sur des empreintes (hashes) saines connues."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Deploy automated scanners to monitor developer workstation extensions and packages.", "Establish strict policies prohibiting developer tools from automatic updates without peer-reviewed lockfiles."],
+          "fr": ["Déployer des outils automatisés pour surveiller les extensions et packages des postes de développement.", "Établir des politiques strictes interdisant les mises à jour automatiques des outils de développement sans revue des fichiers de verrouillage (lockfiles)."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor host filesystems for modifications within VS Code config directories.", "Detect unusual outbound network traffic directed to TeamPCP domains (getsession.org) from developer zones."],
+          "fr": ["Surveiller les systèmes de fichiers des hôtes pour détecter des modifications dans les répertoires de configuration de VS Code.", "Détecter le trafic réseau sortant inhabituel dirigé vers les domaines de TeamPCP (getsession.org) depuis les zones de développement."]
+        },
+        "phase3_containment": {
+          "en": ["Isolate developer hosts displaying active indicators of compromise.", "Force password rotations and revoke all active developer authentication sessions."],
+          "fr": ["Isoler les postes de développeurs présentant des indicateurs de compromission actifs.", "Imposer une rotation des mots de passe et révoquer toutes les sessions d'authentification des développeurs."]
+        },
+        "phase4_post_incident": {
+          "en": ["Perform thorough repository inspections to identify and delete any backdoored files.", "Verify the integrity of all software artifacts before shipping updates to customers."],
+          "fr": ["Réaliser une inspection approfondie des dépôts de code pour identifier et supprimer tout fichier modifié.", "Vérifier l'intégrité de tous les artefacts logiciels avant de livrer les mises à jour aux clients."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search CI/CD logs for unexplained access to cloud credential files.", "Hunt for execution of unrecognized binaries in build logs."],
+          "fr": ["Rechercher dans les journaux de CI/CD des accès inexpliqués aux fichiers d'identifiants cloud.", "Rechercher l'exécution de binaires non reconnus dans les rapports de build."]
+        }
+      },
+      "tags": ["supply_chain", "secrets_leak", "github", "npm", "teampcp"],
+      "sources": ["https://isc.sans.edu/diary/rss/33016", "https://isc.sans.edu/diary/rss/33014", "https://thehackernews.com/2026/05/weekly-recap-linux-flaws-defender-0.html"],
+      "date": "2026-05-25"
+    },
+    {
+      "title": {
+        "en": "Claude Mythos Vulnerability Assessment Capabilities Integration Planning",
+        "fr": "Planification de l'intégration des capacités d'évaluation des vulnérabilités de Claude Mythos"
+      },
+      "description": {
+        "en": "Anthropic is planning the integration of its powerful vulnerability discovery language model, Mythos, into the Claude Code developer platform, raising discussions regarding the implementation of safety alignment barriers to prevent offensive exploitation.",
+        "fr": "Anthropic prévoit l'intégration de son puissant modèle de langage spécialisé dans la découverte de vulnérabilités, Mythos, au sein de sa plateforme de développement Claude Code, soulevant des discussions sur la mise en œuvre de barrières de sécurité pour éviter une exploitation offensive."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Technology_and_Telecom", "Security"],
+        "fr": ["Technologie et télécommunications", "Sécurité"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": ["anthropic.com"],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": ["Claude Mythos"]
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "The potential release of automated software auditing models could significantly accelerate vulnerability remediation. However, without secure design barriers, such tools could easily be abused by attackers to discover zero-day exploits at scale.",
+        "fr": "La publication potentielle de modèles d'audit automatisés pourrait accélérer significativement la correction de vulnérabilités. Néanmoins, en l'absence de barrières de sécurité, ces outils pourraient être détournés par des attaquants pour découvrir des failles zero-day à grande échelle."
+      },
+      "recommandations": [
+        {
+          "en": "Audit corporate codebases using local, secure static analysis utilities while awaiting safety framework updates.",
+          "fr": "Auditer le code source de l'entreprise à l'aide d'outils d'analyse statique locaux et sécurisés en attendant les mises à jour des frameworks de sécurité des modèles."
+        },
+        {
+          "en": "Configure network rules to prevent automated exfiltration of proprietary code to unapproved external model endpoints.",
+          "fr": "Configurer des règles réseau pour empêcher l'exfiltration automatisée de code propriétaire vers des API de modèles externes non approuvées."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Review company policies on the use of dynamic AI writing assistants in software engineering roles.", "Verify the presence of data filters that scan external model queries for proprietary intellectual property indicators."],
+          "fr": ["Revoir les règles de l'entreprise sur l'usage des assistants d'IA dans les activités d'ingénierie logicielle.", "Vérifier la présence de filtres de données analysant les requêtes vers les modèles externes pour y détecter des indicateurs de propriété intellectuelle."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor proxy logs for bulk source code uploads directed at AI web services.", "Identify unauthorized usage of new code generation extensions inside development IDEs."],
+          "fr": ["Surveiller les logs de proxy pour détecter des téléversements de code source vers des services d'IA.", "Identifier l'usage non autorisé d'extensions de génération de code au sein des IDE de développement."]
+        },
+        "phase3_containment": {
+          "en": ["Block connections to unapproved AI coding portals at the perimeter gateway.", "Disable administrative access keys configured in compromised IDE integrations."],
+          "fr": ["Bloquer l'accès aux portails d'IA d'aide au code non approuvés au niveau de la passerelle.", "Désactiver les clés d'administration configurées au sein des intégrations d'IDE compromises."]
+        },
+        "phase4_post_incident": {
+          "en": ["Perform a data leakage assessment to document any proprietary code segments exposed to public model sets.", "Deploy local, offline analytical engines to manage sensitive code auditing operations safely."],
+          "fr": ["Mener une évaluation des fuites de données pour documenter les segments de code exposés à des modèles de langage publics.", "Déployer des moteurs d'analyse locaux et hors ligne pour gérer en toute sécurité les opérations d'audit de code sensible."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Hunt for unauthorized dynamic API connections originating from developer workstations.", "Audit build server telemetry for unrecognized code modification patterns initiated by AI assistants."],
+          "fr": ["Rechercher des connexions d'API dynamiques non autorisées initiées depuis les postes de travail des développeurs.", "Auditer la télémétrie des serveurs de build pour détecter des modifications de code non reconnues initiées par des assistants d'IA."]
+        }
+      },
+      "tags": ["anthropic", "claude_code", "mythos", "ai_vulnerability", "capabilities"],
+      "sources": ["https://www.bleepingcomputer.com/news/artificial-intelligence/anthropics-restricted-claude-mythos-model-may-be-coming-to-claude-code/"],
+      "date": "2026-05-25"
+    }
+  ]
+}
