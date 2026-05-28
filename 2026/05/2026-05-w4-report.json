@@ -6,11 +6,11 @@
       "fr": "Critique"
     },
     "justification": {
-      "en": "This period witnessed severe systemic risks including widespread software supply chain attacks by TeamPCP compromising major developer ecosystems (GitHub, OpenAI, Mistral AI) via poisoned VS Code extensions, coupled with active exploitation of maximum-severity vulnerabilities (Drupal CVE-2026-9082, Ghost CMS CVE-2026-26980) and massive data breaches exposing over 50 million records globally.",
-      "fr": "Cette période a été marquée par des risques systémiques majeurs, notamment des attaques massives contre la chaîne d'approvisionnement logicielle menées par TeamPCP ciblant les écosystèmes de développement (GitHub, OpenAI, Mistral AI) via des extensions VS Code corrompues, associées à l'exploitation active de vulnérabilités critiques (Drupal CVE-2026-9082, Ghost CMS CVE-2026-26980) et à des fuites de données massives exposant plus de 50 millions de dossiers dans le monde."
+      "en": "The threat landscape this week is marked by a critical convergence of software supply chain poisoning (TeamPCP targeting IDE extensions and Laravel-Lang tags), active exploitation of major CMS Zero-Days (Ghost CMS and Drupal), and the emergence of autonomous AI agents conducting rapid post-exploitation and database exfiltration.",
+      "fr": "Le paysage des menaces de cette semaine est marqué par une convergence critique de piratages de chaînes logicielles (TeamPCP ciblant les extensions d'IDE et les tags Laravel-Lang), l'exploitation active de Zero-Days de CMS majeurs (Ghost et Drupal) et l'émergence d'agents autonomes d'IA menant des activités de post-exploitation et d'exfiltration de bases de données."
     },
     "_triggers": [
-      "+6 — 3 CVE(s) CISA KEV",
+      "+4 — 2 CVE(s) CISA KEV",
       "+2 — 2 CVE(s) CVSS ≥ 9.0",
       "+2 — 1 acteur(s) étatique(s)",
       "+1 — ≥ 3 acteurs distincts actifs",
@@ -19,18 +19,18 @@
     ]
   },
   "executive_summary": {
-    "en": "Week 4 of May 2026 was characterized by a massive escalation in software supply chain compromises and developer-focused targeting. Cybercriminals and state-sponsored actors successfully bypassed traditional security controls and multi-factor authentication (MFA) mechanisms. Notable campaigns include TeamPCP's compromise of 3,800 GitHub repositories using poisoned VS Code extensions, and the rise of advanced Phishing-as-a-Service (PhaaS) platforms like Kali365 and Tycoon 2FA abusing OAuth Device Code flows. Concurrently, zero-day and active exploitation of public-facing applications (such as Drupal Core and Ghost CMS) systematically served malware to visitors. Organizations must pivot toward robust code-signing validation, strict OAuth policies, and phishing-resistant FIDO2 hardware authentication.",
-    "fr": "La quatrième semaine de mai 2026 a été caractérisée par une escalade massive des compromissions de la chaîne d'approvisionnement logicielle et des attaques ciblant les développeurs. Les cybercriminels et les acteurs étatiques ont contourné avec succès les contrôles de sécurité traditionnels et les mécanismes d'authentification multifacteur (MFA). Les campagnes notables incluent la compromission de 3 800 dépôts GitHub par TeamPCP via des extensions VS Code corrompues, et l'essor de plateformes de Phishing-as-a-Service (PhaaS) comme Kali365 et Tycoon 2FA exploitant les flux de codes d'appareils OAuth. Parallèlement, l'exploitation active et immédiate de failles applicatives (Drupal Core, Ghost CMS) a servi des malwares aux internautes. Les organisations doivent adopter une validation stricte des signatures de code, des politiques OAuth renforcées et une authentification matérielle FIDO2 résistante au phishing."
+    "en": "During the final week of May 2026, threat actors accelerated the use of software supply chain poisoning, notably compromise of VS Code extensions (Nx Console) and Git tags to steal cloud credentials from technology and AI organizations. Additionally, critical SQL injection vulnerabilities in Ghost CMS (CVE-2026-26980) and Drupal Core (CVE-2026-9082) are being actively exploited in large-scale malware distribution campaigns (ClickFix). Geopolitically, state-sponsored campaigns from Lazarus and Iranian actors (Nimbus Manticore, MuddyWater) show a shift toward fileless execution (RemotePE) and AI-assisted malware design, while international law enforcement successfully disrupted hosting infrastructures used for cyberattacks (MIRhosting/WorkTitans).",
+    "fr": "Durant la dernière semaine de mai 2026, les cyber-attaquants ont intensifié les compromissions de chaînes logicielles logicielles, notamment par le piratage d'extensions VS Code (Nx Console) et de tags Git afin de dérober des identifiants cloud d'entreprises technologiques et d'IA. De plus, des vulnérabilités d'injection SQL critiques dans Ghost CMS (CVE-2026-26980) et Drupal Core (CVE-2026-9082) sont activement exploitées pour distribuer des malwares (campagne ClickFix). Sur le plan géopolitique, les campagnes étatiques de Lazarus et d'acteurs iraniens (Nimbus Manticore, MuddyWater) se tournent vers l'exécution sans fichier (RemotePE) et l'usage de l'IA pour concevoir des logiciels malveillants, tandis que les forces de l'ordre ont neutralisé des infrastructures d'hébergement russes (MIRhosting/WorkTitans)."
   },
   "regulatory": {
     "analyse": {
-      "en": "The regulatory landscape is shifting toward extreme accountability for data custodian errors, third-party software risks, and child privacy. Significant class-action settlements (such as PowerSchool's $17.25M) and proposed US state laws restricting notification windows to 72 hours are forcing security teams to operationalize near-instant incident response. In Europe, the European Central Bank's opinion on the 'Digital Omnibus' signals a critical effort to consolidate reporting standards across overlapping frameworks like NIS2, DORA, and the GDPR.",
-      "fr": "Le paysage réglementaire évolue vers une responsabilité accrue concernant les erreurs de gestion des données, les risques logiciels tiers et la confidentialité des mineurs. Des accords de règlement de recours collectifs majeurs (comme PowerSchool pour 17,25 millions de dollars) et des propositions de lois étatiques américaines limitant le délai de notification à 72 heures obligent les équipes de sécurité à opérationnaliser une réponse aux incidents quasi immédiate. En Europe, l'avis de la BCE sur le 'Digital Omnibus' signale un effort crucial d'harmonisation des exigences de reporting entre les réglementations NIS2, DORA et le RGPD."
+      "en": "Regulatory focus is shifting toward streamlining compliance reporting across overlapping frameworks (GDPR, NIS2, DORA, CER) in Europe, while US courts and state legislatures are imposing heavier fines and shorter notification timelines for incidents involving student privacy and customer data protection.",
+      "fr": "L'attention réglementaire se tourne vers la simplification des rapports de conformité à travers l'harmonisation de NIS2, DORA, RGPD et CER en Europe, tandis que les tribunaux américains et les parlements étatiques durcissent les amendes et réduisent les délais de notification pour les fuites de données d'élèves ou d'abonnés."
     },
     "events": [
       {
         "title": {
-          "en": "BCE Digital Omnibus Opinion",
+          "en": "ECB Opinion on the Digital Omnibus Project",
           "fr": "Avis de la BCE sur le projet Digital Omnibus"
         },
         "issuing_body": "European Central Bank",
@@ -40,25 +40,26 @@
           "countries": [
             "FR",
             "DE",
-            "IT"
+            "NL"
           ]
         },
         "type": "Guidance",
-        "status": "Under_Review",
-        "reference": "CELEX:52026AB0009",
+        "status": "Active",
+        "reference": "CON/2026/9",
         "affected_sectors": [
-          "Finance"
+          "Finance",
+          "Technology_and_Telecom"
         ],
         "description": {
-          "en": "A formal proposal to harmonize and simplify cyber-resilience reporting standards for European financial institutions, reducing administrative friction between NIS2, DORA, GDPR, and the Data Act.",
-          "fr": "Une proposition formelle visant à harmoniser et simplifier les normes de reporting de cyber-résilience pour les institutions financières européennes, réduisant les frictions administratives entre NIS2, DORA, le RGPD et le Data Act."
+          "en": "The European Central Bank issued an opinion aiming to reduce administrative overlaps in cyber-resilience reporting under NIS2, DORA, GDPR, and the Data Act to establish a unified and standardized compliance framework.",
+          "fr": "La Banque Centrale Européenne a émis un avis visant à réduire les chevauchements administratifs des rapports de cyber-résilience financière au carrefour de NIS2, DORA, RGPD et du Data Act pour standardiser la conformité."
         },
-        "source_url": "https://eur-lex.europa.eu/legal-content/AUTO/?uri=CELEX:52026AB0009"
+        "source_url": "https://eur-lex.europa.eu/legal-content/AUTO/?uri=OJ:C_202602621"
       },
       {
         "title": {
-          "en": "PowerSchool Student Privacy Settlement",
-          "fr": "Règlement amiable de PowerSchool sur les données scolaires"
+          "en": "PowerSchool Student Data Privacy Settlement",
+          "fr": "Règlement PowerSchool sur la confidentialité des données des élèves"
         },
         "issuing_body": "U.S. Civil Courts",
         "date": "2026-05-25",
@@ -70,13 +71,13 @@
         },
         "type": "Court_Ruling",
         "status": "Active",
-        "reference": "US-ED-POWERSCHOOL-2026",
+        "reference": "PowerSchool Settlement 2026",
         "affected_sectors": [
           "Education_and_Research"
         ],
         "description": {
-          "en": "PowerSchool agreed to pay $17.25 million to resolve allegations regarding the non-consensual tracking and collection of children's and students' educational and personal data over several years.",
-          "fr": "PowerSchool a accepté de payer 17,25 millions de dollars pour clore les litiges relatifs au suivi et à la collecte non consentis de données personnelles et éducatives d'élèves mineurs sur plusieurs années."
+          "en": "PowerSchool agreed to a $17.25 million settlement to resolve class-action lawsuits accusing the company of tracking and collecting personal data of minor students without proper parental consent.",
+          "fr": "PowerSchool a accepté un règlement de 17,25 millions de dollars pour clore des plaintes collectives accusant l'entreprise de pister et de collecter des données personnelles d'élèves mineurs sans consentement parental."
         },
         "source_url": "https://databreaches.net/2026/05/25/powerschools-17-25-million-settlement-exposes-years-of-student-data-tracking/"
       }
@@ -86,12 +87,12 @@
     "geographic_analyse": [
       {
         "geographic_zone_name": {
-          "en": "Russia",
-          "fr": "Russie"
+          "en": "North Korea",
+          "fr": "Corée du Nord"
         },
         "geographic_zone_strategic_analyse": {
-          "en": "Russian state-sponsored actors and hacktivists (including APT28/Ghostwriter and NoName057(16)) have maintained a high-intensity offensive posture. Operations focus heavily on espionage targeting Ukrainian administrative infrastructure via custom implants (Oyster), while coordinating massive DDoS campaigns utilizing complex VPS hosting networks (such as the seized Mirhosting infrastructure in the Netherlands) to disrupt European allies.",
-          "fr": "Les acteurs étatiques et hacktivistes russes (notamment APT28/Ghostwriter et NoName057(16)) ont maintenu une posture offensive de haute intensité. Leurs opérations se concentrent sur l'espionnage des administrations ukrainiennes via des implants personnalisés (Oyster), tout en coordonnant des campagnes DDoS massives s'appuyant sur des réseaux de serveurs VPS (comme l'infrastructure Mirhosting saisie aux Pays-Bas) pour perturber les pays alliés européens."
+          "en": "North Korean state-sponsored groups, primarily Lazarus, continue to prioritize financial exfiltration in the decentralized finance (DeFi) sector. Their latest campaigns employ sophisticated memory-only implants (RemotePE) distributed through highly tailored social engineering on collaborative networks like Telegram.",
+          "fr": "Les groupes étatiques nord-coréens, principalement Lazarus, continuent de cibler prioritairement le secteur de la finance décentralisée (DeFi). Leurs dernières campagnes exploitent des implants furtifs en mémoire (RemotePE) via de l'ingénierie sociale ciblée sur Telegram."
         }
       },
       {
@@ -100,18 +101,18 @@
           "fr": "Iran"
         },
         "geographic_zone_strategic_analyse": {
-          "en": "Iranian offensive groups, such as Screening Serpens (Nimbus Manticore) and MuddyWater, are actively exploiting regional kinetic conflicts to wage cyber espionage campaigns. Recent tactics showcase a major technological leap, utilizing AI-assisted malware code generation and sophisticated AppDomainManager hijacking or DLL side-loading to target civil aviation, government, and telecommunications sectors globally.",
-          "fr": "Les groupes offensifs iraniens, tels que Screening Serpens (Nimbus Manticore) et MuddyWater, exploitent activement les conflits régionaux pour mener des campagnes de cyberespionnage. Leurs tactiques récentes révèlent un bond technologique majeur, avec l'utilisation de code malveillant généré par IA et des techniques sophistiquées d'AppDomainManager hijacking ou de DLL side-loading ciblant l'aviation civile, les administrations et les télécommunications."
+          "en": "Iranian offensive groups (such as Nimbus Manticore and MuddyWater) are heavily active in aviation and civil defense espionage. They have integrated AI-assisted techniques to construct malware and bypass local EDR solutions, using techniques like DLL side-loading and AppDomainManager hijacking.",
+          "fr": "Les groupes offensifs iraniens (comme Nimbus Manticore et MuddyWater) se montrent très actifs dans l'espionnage de l'aviation et de la défense civile. Ils intègrent l'IA pour générer du code malveillant et contourner les EDR via le DLL side-loading et le AppDomainManager hijacking."
         }
       },
       {
         "geographic_zone_name": {
-          "en": "North Korea",
-          "fr": "Corée du Nord"
+          "en": "Russia",
+          "fr": "Russie"
         },
         "geographic_zone_strategic_analyse": {
-          "en": "North Korean threat actors, preeminently Lazarus Group, continue to aggressively target the decentralized finance (DeFi) sector to fund state operations. The group has deployed highly sophisticated fileless implants (such as RemotePE) that execute exclusively in memory via process injection, neutralizing standard host-based forensic tools during targeted social engineering campaigns on platforms like Telegram.",
-          "fr": "Les acteurs étatiques nord-coréens, principalement Lazarus Group, continuent de cibler agressivement le secteur de la finance décentralisée (DeFi) pour financer les opérations de l'État. Le groupe déploie des implants sans fichier très complexes (comme RemotePE) s'exécutant exclusivement en mémoire vive, neutralisant ainsi les outils forensiques hôtes traditionnels lors de campagnes d'ingénierie sociale sur Telegram."
+          "en": "Russian nation-state actors and hacktivists (including Ghostwriter and NoName057) sustain aggressive cyber-espionnage and disruption operations in Ukraine and Europe, despite severe hosting infrastructure takedowns by Western police forces.",
+          "fr": "Les acteurs étatiques et hacktivistes russes (notamment Ghostwriter et NoName057) maintiennent une pression constante d'espionnage et de perturbation en Ukraine et en Europe, malgré d'importantes saisies d'infrastructures d'hébergement occidentales."
         }
       }
     ],
@@ -126,21 +127,25 @@
         "targeted_sectors": {
           "en": [
             "Technology_and_Telecom",
-            "Finance"
+            "Finance",
+            "Government_and_Defense"
           ],
           "fr": [
             "Technology_and_Telecom",
-            "Finance"
+            "Finance",
+            "Government_and_Defense"
           ]
         },
         "targeted_regions": {
           "en": [
-            "North America",
-            "Europe"
+            "United States",
+            "Europe",
+            "Global"
           ],
           "fr": [
-            "Amérique du Nord",
-            "Europe"
+            "États-Unis",
+            "Europe",
+            "Global"
           ]
         },
         "mitre_attack_ttps_id": [
@@ -150,49 +155,10 @@
         ],
         "campaign_or_operation": {
           "en": [
-            "Shai-Hulud Supply Chain Campaign",
-            "Nx Console VS Code Extension Poisoning"
+            "Mini Shai-Hulud VS Code extension compromise"
           ],
           "fr": [
-            "Campagne Shai-Hulud",
-            "Empoisonnement de l'extension VS Code Nx Console"
-          ]
-        }
-      },
-      {
-        "threat_actor_name": "Lazarus Group",
-        "origin_country": "North Korea",
-        "type": {
-          "en": "Nation-state",
-          "fr": "Étatique"
-        },
-        "targeted_sectors": {
-          "en": [
-            "Finance"
-          ],
-          "fr": [
-            "Finance"
-          ]
-        },
-        "targeted_regions": {
-          "en": [
-            "Global"
-          ],
-          "fr": [
-            "Global"
-          ]
-        },
-        "mitre_attack_ttps_id": [
-          "T1055",
-          "T1566.002",
-          "T1041"
-        ],
-        "campaign_or_operation": {
-          "en": [
-            "RemotePE Memory-Only DeFi Targeting"
-          ],
-          "fr": [
-            "Opération de ciblage DeFi RemotePE"
+            "Compromission d'extensions VS Code Mini Shai-Hulud"
           ]
         }
       },
@@ -205,41 +171,82 @@
         },
         "targeted_sectors": {
           "en": [
-            "Technology_and_Telecom",
             "Retail_and_Consumer",
-            "Finance",
-            "Healthcare_and_Life_Sciences"
+            "Technology_and_Telecom",
+            "Finance"
           ],
           "fr": [
-            "Technology_and_Telecom",
             "Retail_and_Consumer",
-            "Finance",
-            "Healthcare_and_Life_Sciences"
+            "Technology_and_Telecom",
+            "Finance"
           ]
         },
         "targeted_regions": {
           "en": [
-            "North America",
+            "United States",
             "Europe",
             "Asia-Pacific"
           ],
           "fr": [
-            "Amérique du Nord",
+            "États-Unis",
             "Europe",
             "Asie-Pacifique"
           ]
         },
         "mitre_attack_ttps_id": [
           "T1567",
-          "T1020",
-          "T1078.004"
+          "T1078",
+          "T1020"
         ],
         "campaign_or_operation": {
           "en": [
-            "Pure Extortion and SSO Account Compromise"
+            "SaaS and Single Sign-On data extortion campaign"
           ],
           "fr": [
-            "Extorsion pure et compromission de comptes SSO"
+            "Campagne d'extorsion SaaS et SSO"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "Lazarus Group",
+        "origin_country": "North Korea",
+        "type": {
+          "en": "Nation-state",
+          "fr": "Étatique"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Finance",
+            "Technology_and_Telecom"
+          ],
+          "fr": [
+            "Finance",
+            "Technology_and_Telecom"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Global",
+            "United States",
+            "Europe"
+          ],
+          "fr": [
+            "Global",
+            "États-Unis",
+            "Europe"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1055",
+          "T1566.002",
+          "T1041"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Fileless RemotePE DeFi targeting"
+          ],
+          "fr": [
+            "Ciblage DeFi via l'implant en mémoire RemotePE"
           ]
         }
       }
@@ -247,8 +254,8 @@
   },
   "mitre_attack_ttps": {
     "ttps_strategic_analyse": {
-      "en": "The strategic landscape of TTPs is dominated by supply chain tampering (T1195) and the exploitation of public-facing software vulnerabilities (T1190). Attackers are actively shifting away from traditional noisy local encryption (T1486) toward silent data harvesting (T1020) and MFA-bypassing credential theft via AiTM proxies and WebSocket hijacking (T1556), targeting developer environments and SaaS infrastructures to gain massive organizational access.",
-      "fr": "Le paysage stratégique des TTP est dominé par l'altération de la chaîne d'approvisionnement (T1195) et l'exploitation de vulnérabilités applicatives publiques (T1190). Les attaquants abandonnent progressivement le chiffrement local bruyant (T1486) au profit du vol silencieux de données (T1020) et du contournement du MFA par des mandataires AiTM et le détournement de WebSockets (T1556), ciblant les environnements de développement et les infrastructures SaaS."
+      "en": "Tactical analysis highlights a systemic pivot toward stealth and bypassing MFA. Supply chain compromise remains highly effective as an initial access vector. Adversary-in-the-Middle (AiTM) phishing and OAuth flow abuse are aggressively replacing password-based intrusions, while fileless memory injection and administrative utility hijacking (LOLBins) are used to maintain persistence and evade modern EDR solutions.",
+      "fr": "L'analyse tactique met en relief un pivot systémique vers la furtivité et le contournement du MFA. Le piratage de la chaîne logistique logicielle demeure redoutable. L'hameçonnage de l'homme du milieu (AiTM) et l'abus du protocole OAuth remplacent les attaques par mot de passe traditionnel, tandis que l'exécution mémoire sans fichier (fileless) et le détournement de processus système légitimes (LOLBins) permettent d'éviter les EDR."
     },
     "ttps_list": [
       {
@@ -258,18 +265,68 @@
           "fr": "Accès Initial"
         },
         "technique_name": "Supply Chain Compromise: Compromise Software Dependencies",
-        "frequency": 5,
+        "frequency": 6,
         "severity": "critical",
         "context": {
           "en": [
-            "TeamPCP compromised dependencies on npm/PyPI and popular VS Code extensions like Nx Console.",
-            "Attackers manipulated GitHub tags to inject malware into archived versions of Laravel-Lang PHP packages.",
-            "Watering-hole attacks compromised the popular 'art-template' JavaScript npm package to deliver WebKit exploits."
+            "Compromise of VS Code extensions (Nx Console v18.95.0) and git tags in npm/Composer packages by TeamPCP to exfiltrate active cloud and CI/CD session keys."
           ],
           "fr": [
-            "TeamPCP a compromis des dépendances sur npm/PyPI et des extensions populaires de VS Code comme Nx Console.",
-            "Des attaquants ont manipulé des étiquettes (tags) Git pour injecter des charges utiles dans des paquets PHP Laravel-Lang.",
-            "Des attaques par point d'eau ont compromis le paquet npm 'art-template' pour distribuer des exploits WebKit."
+            "Compromission d'extensions VS Code (Nx Console v18.95.0) et de tags Git dans des packages npm/Composer par TeamPCP pour dérober des clés cloud et CI/CD."
+          ]
+        }
+      },
+      {
+        "id": "T1566.002",
+        "tactic": {
+          "en": "Initial Access",
+          "fr": "Accès Initial"
+        },
+        "technique_name": "Phishing: Spearphishing Link",
+        "frequency": 6,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Distribution of malicious links leading to fake Claude AI landing pages, Web3 crypto drainer approvals, or AiTM proxies to capture multi-factor authentication (MFA) tokens."
+          ],
+          "fr": [
+            "Diffusion de liens d'hameçonnage menant à de fausses pages Claude AI, à des drainers de portefeuilles Web3 ou à des proxys AiTM pour intercepter le MFA."
+          ]
+        }
+      },
+      {
+        "id": "T1486",
+        "tactic": {
+          "en": "Impact",
+          "fr": "Impact"
+        },
+        "technique_name": "Data Encrypted for Impact",
+        "frequency": 6,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Execution of payloads by ransomware groups (Bravox, Play, Inc Ransom) to encrypt enterprise storage devices, forcing operations to halt while running double extortion."
+          ],
+          "fr": [
+            "Chiffrement d'actifs par des groupes de ransomware (Bravox, Play, Inc Ransom) pour bloquer les serveurs locaux d'entreprises sous double extorsion."
+          ]
+        }
+      },
+      {
+        "id": "T1078.004",
+        "tactic": {
+          "en": "Defense Evasion",
+          "fr": "Évasion des Défenses"
+        },
+        "technique_name": "Valid Accounts: Cloud Accounts",
+        "frequency": 5,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Abuse of stolen cloud sessions, OAuth tokens, and former employee credentials to bypass access controls and conduct silent database exfiltration."
+          ],
+          "fr": [
+            "Utilisation abusive de sessions cloud, de jetons OAuth volés ou d'accès d'anciens collaborateurs pour contourner la sécurité et exfiltrer silencieusement des données."
           ]
         }
       },
@@ -281,39 +338,13 @@
         },
         "technique_name": "Exploit Public-Facing Application",
         "frequency": 5,
-        "severity": "high",
+        "severity": "critical",
         "context": {
           "en": [
-            "Active exploitation of SQL injection vulnerabilities in Drupal Core (CVE-2026-9082) and Ghost CMS (CVE-2026-26980) to alter database tables and insert malicious scripts.",
-            "INJ3CTOR3 group targeted FreePBX VoIP servers using zero-days to deploy highly persistent JOMANGY webshells.",
-            "Marimo Python notebooks compromised via remote code execution vulnerabilities, subsequently automated by malicious AI agents."
+            "Active exploitation of critical vulnerabilities in web-exposed services, including Drupal Core SQL injection (CVE-2026-9082) and Ghost CMS SQL injection (CVE-2026-26980)."
           ],
           "fr": [
-            "Exploitation active de vulnérabilités d'injection SQL dans Drupal Core (CVE-2026-9082) et Ghost CMS (CVE-2026-26980) pour altérer les bases de données.",
-            "Le groupe INJ3CTOR3 a ciblé des serveurs VoIP FreePBX pour déployer des webshells JOMANGY persistants.",
-            "Des carnets de notes Python Marimo ont été compromis par RCE, puis exploités de manière autonome par des agents d'IA malveillants."
-          ]
-        }
-      },
-      {
-        "id": "T1556",
-        "tactic": {
-          "en": "Credential Access",
-          "fr": "Accès aux Identifiants"
-        },
-        "technique_name": "Modify Authentication Process",
-        "frequency": 4,
-        "severity": "high",
-        "context": {
-          "en": [
-            "PhaaS kits such as Tycoon 2FA and Kali365 utilized Adversary-in-the-Middle (AiTM) proxies and WebSocket tunnels to capture MFA tokens.",
-            "YY Lai Yu platform intercepted OTP codes in real-time to provision stolen payment cards on digital mobile wallets.",
-            "Abuse of the OAuth Device Code flow to gain permanent cloud access without knowing the victim's passwords."
-          ],
-          "fr": [
-            "Les kits de PhaaS comme Tycoon 2FA et Kali365 ont utilisé des proxies AiTM et des tunnels WebSocket pour intercepter le MFA.",
-            "La plateforme YY Lai Yu a intercepté des codes OTP en temps réel pour enregistrer des cartes de paiement sur des portefeuilles mobiles.",
-            "Abus du flux de code d'appareil OAuth (Device Code Flow) pour obtenir des jetons d'accès persistants sans mot de passe."
+            "Exploitation active de vulnérabilités critiques exposées sur Internet, notamment l'injection SQL de Drupal (CVE-2026-9082) et de Ghost CMS (CVE-2026-26980)."
           ]
         }
       }
@@ -321,14 +352,14 @@
   },
   "vulnerabilities": {
     "analyse": {
-      "en": "The period highlights critical flaws in web-facing applications and identity infrastructure. SQL injection vulnerabilities in widely used content management systems (Drupal Core CVE-2026-9082 and Ghost CMS CVE-2026-26980) are being aggressively exploited in automated campaigns to serve malware. Meanwhile, the emergence of advanced AI-driven security scanners like Anthropic's Glasswing project is radically accelerating the discovery of high-impact zero-days (such as WolfSSL CVE-2026-5194), worsening the asymmetric patching lag for enterprise defenders.",
-      "fr": "La période met en lumière des failles critiques dans les applications web exposées et les infrastructures d'identité. Les vulnérabilités d'injection SQL affectant des CMS largement répandus (Drupal Core CVE-2026-9082 et Ghost CMS CVE-2026-26980) font l'objet d'exploitations automatisées massives. Par ailleurs, l'essor de scanners de sécurité pilotés par IA (comme le projet Glasswing d'Anthropic) accélère radicalement la découverte de vulnérabilités critiques (telle que WolfSSL CVE-2026-5194), aggravant l'asymétrie de vitesse entre attaquants et défenseurs pour l'application des correctifs."
+      "en": "Vulnerability management was dominated by active exploitation of SQL injections in major Content Management Systems (CMS) like Drupal Core and Ghost CMS, utilized to distribute malware. Additionally, a critical flaw in Starlette/FastAPI (CVE-2026-48710) highlights growing exposure within modern Python-based AI application stacks.",
+      "fr": "La gestion des vulnérabilités a été dominée par l'exploitation active d'injections SQL sur des CMS majeurs (Drupal, Ghost CMS) servant de relais de distribution de malwares. En parallèle, une faille critique affectant Starlette/FastAPI (CVE-2026-48710) expose les environnements récents d'IA programmés en Python."
     },
     "list": [
       {
         "cve_id": "CVE-2026-9082",
-        "cvss_score": 9.8,
-        "epss_score": "N/A",
+        "cvss_score": "9.8",
+        "epss_score": "0.85%",
         "cisa_kev": true,
         "affected_product": "Drupal Core",
         "affected_product_vendor": "Drupal",
@@ -341,8 +372,8 @@
           ]
         },
         "vulnerability_description": {
-          "en": "A highly critical SQL injection vulnerability in Drupal Core, specifically affecting instances backed by PostgreSQL databases, allowing unauthenticated attackers to execute arbitrary SQL commands and achieve remote code execution.",
-          "fr": "Une vulnérabilité d'injection SQL hautement critique dans Drupal Core affectant les instances utilisant PostgreSQL, permettant à des attaquants non authentifiés d'exécuter des requêtes SQL arbitraires et d'obtenir une exécution de code à distance."
+          "en": "A highly critical SQL injection vulnerability in Drupal Core with a PostgreSQL database backend. Attackers are actively exploiting this vulnerability to compromise websites and execute remote code.",
+          "fr": "Une vulnérabilité d'injection SQL hautement critique affectant Drupal Core sous serveur de base de données PostgreSQL, activement exploitée pour compromettre des sites web et exécuter du code à distance."
         },
         "mitre_attack_ttps_id": [
           "T1190"
@@ -350,8 +381,8 @@
       },
       {
         "cve_id": "CVE-2026-26980",
-        "cvss_score": 9.8,
-        "epss_score": "N/A",
+        "cvss_score": "9.8",
+        "epss_score": "0.72%",
         "cisa_kev": true,
         "affected_product": "Ghost CMS",
         "affected_product_vendor": "Ghost Foundation",
@@ -364,42 +395,60 @@
           ]
         },
         "vulnerability_description": {
-          "en": "An SQL injection flaw within Ghost CMS that is actively exploited to alter database tables, inject malicious redirect scripts, and distribute the ClickFix fake browser update malware.",
-          "fr": "Une faille d'injection SQL dans Ghost CMS activement exploitée pour modifier les tables de base de données, injecter des scripts de redirection malveillants et distribuer le malware ClickFix (fausse mise à jour)."
+          "en": "A critical SQL injection vulnerability in Ghost CMS, exploited in large-scale ClickFix campaigns to inject malicious JavaScript and distribute information stealers.",
+          "fr": "Une vulnérabilité d'injection SQL critique dans Ghost CMS, exploitée au cours d'une campagne d'envergure nommée ClickFix pour injecter du code JavaScript et propager des infostealers."
         },
         "mitre_attack_ttps_id": [
-          "T1190",
-          "T1059.007"
+          "T1190"
         ]
       },
       {
-        "cve_id": "CVE-2026-48172",
-        "cvss_score": 8.8,
-        "epss_score": "N/A",
-        "cisa_kev": true,
-        "affected_product": "LiteSpeed cPanel Plugin",
-        "affected_product_vendor": "LiteSpeed Technologies",
+        "cve_id": "CVE-2026-48710",
+        "cvss_score": "7.0",
+        "epss_score": "0.12%",
+        "cisa_kev": false,
+        "affected_product": "Starlette",
+        "affected_product_vendor": "Starlette",
         "vulnerability_type": {
           "en": [
-            "Local Privilege Escalation",
-            "Improper Input Validation"
+            "Host Header Injection",
+            "Authentication Bypass"
           ],
           "fr": [
-            "Élévation Locale de Privilèges",
-            "Validation d'Entrée Incorrecte"
+            "Injection d'en-tête Host",
+            "Contournement d'authentification"
           ]
         },
         "vulnerability_description": {
-          "en": "An improper input validation vulnerability in the LiteSpeed cPanel/WHM plugin's Redis API handling, allowing local attackers to elevate privileges to root and take complete control of the web server hosting environment.",
-          "fr": "Une validation d'entrée défectueuse dans l'API Redis du plugin LiteSpeed pour cPanel/WHM, permettant à un utilisateur local d'élever ses privilèges au niveau root et de prendre le contrôle complet du serveur d'hébergement."
+          "en": "An open-source package vulnerability in Starlette (FastAPI core) allowing Host header injection. This flaw imperils modern AI agents and web frameworks, leading to authentication bypass or SSRF.",
+          "fr": "Une vulnérabilité dans la bibliothèque open-source Starlette (moteur de FastAPI) permettant l'injection d'en-têtes Host, menaçant la sécurité des agents d'IA par contournement d'accès ou SSRF."
         },
         "mitre_attack_ttps_id": [
-          "T1078.003"
+          "T1078"
         ]
       }
     ]
   },
   "data_breaches": [
+    {
+      "victim": "NYC Health + Hospitals",
+      "sector": "Healthcare_and_Life_Sciences",
+      "country": "United States",
+      "records_count": 1800000,
+      "data_types": {
+        "en": [
+          "Protected Health Information (PHI)",
+          "Personally Identifiable Information (PII)"
+        ],
+        "fr": [
+          "Informations de santé protégées (PHI)",
+          "Données d'identification personnelle (PII)"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://mastodon.social/@netsecio/116630692108198612"
+    },
     {
       "victim": "Charter Communications",
       "sector": "Technology_and_Telecom",
@@ -410,43 +459,20 @@
           "Names",
           "Email addresses",
           "Phone numbers",
-          "Customer support logs",
-          "Subscription details"
+          "Customer support history",
+          "Service package details"
         ],
         "fr": [
           "Noms",
           "Adresses e-mail",
           "Numéros de téléphone",
-          "Journaux de support client",
-          "Détails d'abonnement"
+          "Historique de support client",
+          "Détails de forfaits de services"
         ]
       },
       "threat_actor": "ShinyHunters",
       "financial_impact_usd": null,
-      "source_url": "https://www.bleepingcomputer.com/news/security/charter-confirms-data-breach-after-shinyhunters-extortion-threat/"
-    },
-    {
-      "victim": "NYC Health + Hospitals",
-      "sector": "Healthcare_and_Life_Sciences",
-      "country": "United States",
-      "records_count": 1800000,
-      "data_types": {
-        "en": [
-          "Protected Health Information (PHI)",
-          "Diagnostics",
-          "Social security numbers",
-          "Biometric data"
-        ],
-        "fr": [
-          "Données de santé protégées (PHI)",
-          "Diagnostics",
-          "Numéros de sécurité sociale",
-          "Données biométriques"
-        ]
-      },
-      "threat_actor": null,
-      "financial_impact_usd": null,
-      "source_url": "https://flare.io/learn/resources/blog/us-healthcare-sector-wide-external-attack-surface-analysis"
+      "source_url": "https://osintsights.com/charter-breach-exposes-millions-of-customer-records"
     },
     {
       "victim": "Ameriprise Financial",
@@ -458,18 +484,18 @@
           "Names",
           "Email addresses",
           "Physical addresses",
-          "Financial portfolio details",
-          "Employer files"
+          "Financial profiles",
+          "Employer details"
         ],
         "fr": [
           "Noms",
           "Adresses e-mail",
           "Adresses physiques",
-          "Détails de portefeuilles financiers",
-          "Dossiers d'employeurs"
+          "Profils financiers",
+          "Détails d'employeurs"
         ]
       },
-      "threat_actor": "ShinyHunters",
+      "threat_actor": null,
       "financial_impact_usd": null,
       "source_url": "https://haveibeenpwned.com/Breach/Ameriprise"
     }
@@ -482,8 +508,7 @@
         "Healthcare_and_Life_Sciences",
         "Finance",
         "Industry_and_Manufacturing",
-        "Retail_and_Consumer",
-        "Education_and_Research"
+        "Retail_and_Consumer"
       ],
       "fr": [
         "Government_and_Defense",
@@ -491,105 +516,100 @@
         "Healthcare_and_Life_Sciences",
         "Finance",
         "Industry_and_Manufacturing",
-        "Retail_and_Consumer",
-        "Education_and_Research"
+        "Retail_and_Consumer"
       ]
     },
     "countries": {
       "en": [
         "United States",
         "France",
-        "Ukraine",
-        "Germany",
-        "United Kingdom",
         "Turkey",
-        "Spain"
+        "Ukraine",
+        "United Kingdom",
+        "Vietnam"
       ],
       "fr": [
         "États-Unis",
         "France",
-        "Ukraine",
-        "Allemagne",
-        "Royaume-Uni",
         "Turquie",
-        "Espagne"
+        "Ukraine",
+        "Royaume-Uni",
+        "Viêt Nam"
       ]
     },
     "narrative": {
-      "en": "- **Public Sector & Govt:** ANTS France and France Travail suffered massive citizen data leaks (over 12M records) orchestrated by young French threat groups like HexDex. Simultaneously, the US CISA experienced a critical exposure of AWS GovCloud keys and GitHub organization secrets on a public repository.\n- **Technology & Telecom:** Charter Communications confirmed a catastrophic breach exposing 40M customer accounts following a ShinyHunters SSO extortion threat. OpenAI and Mistral AI source code repositories were targeted via TeamPCP's Nx Console VS Code extension compromise, leaking over 3,800 GitHub repositories.\n- **Healthcare:** NYC Health + Hospitals exposed 1.8M patient records (PHI and biometric data). Concurrently, the Oncology Institute suffered a third-party breach via its vendor TriZetto, while Radiology Associates of Richmond notified 266k patients of a second major data leak.\n- **Finance:** Ameriprise Financial had 502,597 customer accounts leaked (extracted from Salesforce and SharePoint). The Verus DeFi Bridge suffered an $8.5M exploit, although the funds were partially returned after a bounty settlement.\n- **Industry & Manufacturing:** Emek Elektrik Turkey lost proprietary engineering blueprints and industrial electrical infrastructure schematics to Bravox ransomware. Additionally, Piller Aimmco had critical manufacturing files and operational designs exfiltrated by Inc Ransom.\n- **Retail & Consumer:** 7-Eleven suffered a major breach exposing 185,256 franchisee and user accounts to ShinyHunters. Separately, MyPillow's internal financial databases and employee registries were encrypted and held for double-extortion by the Play ransomware group.\n- **Education & Research:** The University of Valencia's student registries and academic files were held hostage by the Nova ransomware group, while Canada's Northwest Territories Canvas LMS platform leaked emails and course structures of 1,700 users.\n- **Physical & Web3 Finance:** France emerged as a key geopolitical hotspot for physical-cyber extortion, seeing a surge in violent home invasions targeting individual cryptocurrency holders to extract private keys.",
-      "fr": "- **Secteur Public & Défense :** L'ANTS France et France Travail ont subi des fuites massives de données de citoyens (plus de 12M de dossiers) via le groupe HexDex. En parallèle, la CISA américaine a subi une exposition critique de clés AWS GovCloud et de secrets GitHub sur un dépôt public.\n- **Technologie & Télécoms :** Charter Communications a confirmé une violation catastrophique exposant 40M d'abonnés suite à un chantage d'extorsion SSO par ShinyHunters. OpenAI et Mistral AI ont vu leurs codes sources ciblés par la compromission de l'extension VS Code Nx Console par TeamPCP, entraînant le vol de 3 800 dépôts GitHub.\n- **Santé :** NYC Health + Hospitals a exposé les données médicales protégées de 1,8M de patients. L'Oncology Institute a subi une fuite indirecte via son sous-traitant TriZetto, tandis que Radiology Associates of Richmond a notifié 266k patients d'une seconde violation majeure.\n- **Finance :** Ameriprise Financial a vu les informations de 502 597 comptes clients exfiltrées depuis ses plateformes Salesforce et SharePoint par ShinyHunters. Le pont Verus DeFi a quant à lui fait l'objet d'un exploit à 8,5M de dollars.\n- **Industrie & Secteur manufacturier :** La société industrielle turque Emek Elektrik a perdu des plans de fabrication exclusifs d'équipements électriques suite à une attaque du ransomware Bravox. Piller Aimmco a été victime du rançongiciel Inc Ransom, entraînant la perte de fichiers d'ingénierie critiques.\n- **Distribution & Consommation :** La chaîne 7-Eleven a été victime d'une fuite de données compromettant 185 256 comptes de franchisés. Par ailleurs, les registres financiers et d'employés de MyPillow ont été chiffrés sous double extorsion par le groupe Play.\n- **Éducation & Recherche :** L'Université de Valence a vu ses fichiers d'étudiants pris en otage par le ransomware Nova, tandis que la plateforme Canvas LMS des Territoires du Nord-Ouest au Canada a exposé les adresses e-mail de 1 700 personnes.\n- **Finance Cyber-Physique :** La France est devenue le principal point chaud mondial pour les agressions physiques ciblées de type home-jacking visant à extorquer directement des clés privées à des détenteurs de cryptomonnaies."
+      "en": "- **Government & Defense:** U.S. CISA was investigated over a critical leak of AWS GovCloud master access keys; Vietnamese ministries suffered massive exposure of millions of citizens' PII records due to nationwide SOC failures.\n- **Technology & Telecom:** Charter Communications (US) was hit by ShinyHunters, compromising 40 million customer records; GitHub itself suffered the exfiltration of 3,800 internal code repositories through employee VS Code extension compromise.\n- **Healthcare & Life Sciences:** NYC Health + Hospitals was affected by a major breach involving 1.8 million patient records; The Oncology Institute (US) confirmed patient data exposure due to a cyberattack on its third-party billing provider TriZetto.\n- **Finance:** Ameriprise Financial experienced exposure of 502,597 client profiles from Salesforce and SharePoint; Verus DeFi Bridge suffered an exploit resulting in an $8.5 million theft, later resolved via a white-hat security agreement.\n- **Industry & Manufacturing:** Turkish energy infrastructure firm Emek Elektrik faced complete operational shutdown and double-extortion publication of proprietary transformer blueprints by the Bravox ransomware group.\n- **Retail & Consumer:** 7-Eleven franchise network was compromised with 185,256 accounts, exposing administrative files, physical addresses, and birth dates of regional operators on dark web boards.",
+      "fr": "- **Gouvernement & Défense :** La CISA (USA) a fait l'objet d'enquêtes suite à la fuite de clés d'accès AWS GovCloud ; plusieurs ministères vietnamiens ont vu les données personnelles de millions de citoyens exposées suite à des défaillances de SOC.\n- **Technologie & Télécoms :** Charter Communications a subi une intrusion massive revendiquée par ShinyHunters touchant 40 millions d'abonnés ; GitHub a subi le vol de code source sur 3 800 dépôts internes via une extension VS Code corrompue.\n- **Santé & Sciences de la vie :** L'organisation NYC Health + Hospitals a été compromise, impactant les données médicales de 1,8 million de patients ; The Oncology Institute a confirmé une fuite via son tiers de facturation TriZetto.\n- **Finance :** Ameriprise Financial a vu les profils financiers de 502 597 clients compromis via Salesforce et SharePoint ; le pont de finance décentralisée Verus DeFi a perdu 8,5 millions de dollars dans un hack résolu par accord à l'amiable.\n- **Industrie & Secteur manufacturier :** L'entreprise turque d'équipements électriques Emek Elektrik a été paralysée par le ransomware Bravox avec vol et publication de plans techniques exclusifs.\n- **Distribution & Consommation :** Le réseau de franchisés de 7-Eleven a été compromis à hauteur de 185 256 comptes, exposant des données d'identité et d'administration commerciale sur des forums clandestins."
     }
   },
   "trends": {
     "emerging_techniques": {
       "en": [
-        "Autonomous AI agents executing multi-step post-exploitation movements and SQL-to-database exfiltration in minutes.",
-        "Empoisonnement de tags Git in-place to subvert package managers (Composer/npm) without editing visible branch code.",
-        "Abusing the OAuth 2.0 Device Code flow (Device Authorization Grant) via AiTM kits to bypass FIDO2-less MFA."
+        "AI-driven autonomous post-exploitation (LLM agents mapping internal networks, querying cloud secrets, and automating database exfiltration).",
+        "Compromising development environments via IDE extensions (VS Code Nx Console) and embedding fake Sigstore verification provenance badges."
       ],
       "fr": [
-        "Agents d'IA autonomes exécutant des mouvements latéraux post-exploitation et de l'exfiltration de base de données en minutes.",
-        "Empoisonnement d'étiquettes Git (tags) in-place pour corrompre les paquets sans modifier le code apparent de la branche.",
-        "Abus du flux de code d'appareil OAuth 2.0 (Device Code Flow) pour contourner l'authentification MFA non-FIDO2."
+        "Post-exploitation autonome menée par des agents LLM (cartographie réseau, requêtes de secrets cloud, exfiltration automatique de bases de données).",
+        "Piratage des environnements de développement via l'empoisonnement d'extensions d'IDE (VS Code Nx Console) et faux badges de provenance Sigstore."
       ]
     },
     "declining_techniques": {
       "en": [
-        "Traditional local endpoint encryption (ransomware) is increasingly replaced by quiet, pure-extortion exfiltration campaigns.",
-        "Generic SMS/TOTP MFA is declining as a reliable defense due to the industrialization of WebSocket-based AiTM phishing kits."
+        "Traditional noisy ransomware encryption on production servers, being rapidly replaced by stealthy data extortion-only operations.",
+        "Simple password-based attacks without MFA bypass, as threat groups migrate heavily toward AiTM proxies and session hijacking."
       ],
       "fr": [
-        "Le chiffrement local traditionnel (ransomware) décline au profit de campagnes d'extorsion pure avec exfiltration silencieuse.",
-        "Le MFA classique par SMS/TOTP perd de son efficacité face à l'industrialisation des kits de phishing AiTM basés sur WebSocket."
+        "Chiffrement bruyant par ransomware traditionnel en production, au profit de l'extorsion pure et simple de données exfiltrées silencieusement.",
+        "Attaques par force brute de mots de passe sans contournement du MFA, délaissées au profit des proxys AiTM et du détournement de sessions."
       ]
     },
     "geopolitical_context": {
-      "en": "Cyber operations are highly synchronized with kinetic geopolitical frontlines. Iranian nation-state actors (Nimbus Manticore, MuddyWater) are accelerating AI-assisted cyber-espionnage targeting civil aviation and telecom networks in the Middle East and US. Concurrently, the European Union's regulatory push for strategic autonomy is tested by Dutch law enforcement seizures of hosting networks (Mirhosting) used to bypass sanctions and execute pro-Russian DDoS operations against European critical infrastructure.",
-      "fr": "Les cyber-opérations sont étroitement synchronisées avec les fronts géopolitiques physiques. Les groupes étatiques iraniens (Nimbus Manticore, MuddyWater) accélèrent l'utilisation d'IA pour l'espionnage ciblant l'aviation civile et les télécoms au Moyen-Orient et aux États-Unis. En parallèle, la quête d'autonomie stratégique de l'UE est illustrée par les saisies de serveurs (Mirhosting) aux Pays-Bas pour démanteler les réseaux russes contournant les sanctions financières."
+      "en": "Geopolitical friction in Eastern Europe and the Middle East continues to drive targeted cyber espionage. The dependence of European entities on foreign cloud and satellite intelligence providers (such as Planet Labs) highlights severe digital sovereignty issues under regulations like the US Cloud Act.",
+      "fr": "Les tensions géopolitiques en Europe de l'Est et au Moyen-Orient alimentent un espionnage cyber ciblé. La dépendance des pays européens envers des fournisseurs cloud et spatiaux tiers (comme Planet Labs) accentue les problématiques de souveraineté numérique face au Cloud Act américain."
     }
   },
   "recommendations": {
     "strategic": {
       "en": [
         {
-          "title": "Enforce FIDO2 Hardware MFA Everywhere",
-          "detail": "Traditional SMS/TOTP MFA and approval prompts are systematically bypassed by Tycoon 2FA and Kali365 Adversary-in-the-Middle (AiTM) phishing kits. Deploy phishing-resistant FIDO2 hardware security keys (such as YubiKey 5 or Google Titan) for all developer, administrative, and employee accounts. Revoke all active OAuth user sessions globally upon deployment."
+          "title": "Enforce FIDO2 Hardware MFA and Session Binding",
+          "detail": "Traditional SMS and TOTP-based authentication is systematically bypassed by sophisticated Adversary-in-the-Middle (AiTM) kits such as Tycoon 2FA and Kali365. Implement FIDO2/WebAuthn hardware tokens (such as YubiKey 5 Series) or Windows Hello for Business across all user profiles. Bind OAuth access tokens cryptographically to compliant machines to render stolen session cookies useless."
         },
         {
-          "title": "Isolate CI/CD Build Runners Strictly",
-          "detail": "Software supply chain campaigns by TeamPCP (targeting Nx Console) and Laravel-Lang prove that developers' environments and build agents are priority targets. Configure CI/CD runners (GitHub Actions, GitLab CI) within isolated network zones with zero outbound internet egress except to allowlisted package proxies. Mandate cryptographic signature verification (such as Sigstore) for all external software dependencies."
+          "title": "Implement Continuous Software Composition Analysis Gates",
+          "detail": "The rapid escalation of software supply chain campaigns by TeamPCP targeting developer ecosystems (e.g., Nx Console extension v18.95.0) demands automated defenses. Deploy static application security testing (SAST) and software composition analysis (SCA) scanners within GitLab/GitHub actions. Block compilation of dependencies that are unsigned or fail to match strict SHA-256 integrity hash verification."
         }
       ],
       "fr": [
         {
-          "title": "Imposer l'Authentification Matérielle FIDO2 Globalement",
-          "detail": "Les mécanismes MFA classiques par SMS/TOTP sont systématiquement contournés par les kits de phishing AiTM comme Tycoon 2FA et Kali365. Déployez des clés de sécurité physiques conformes à la norme FIDO2 (YubiKey 5, Google Titan) pour l'intégralité des comptes d'employés et de développeurs. Révoquez toutes les sessions actives d'identités cloud dès la mise en œuvre."
+          "title": "Forcer le MFA FIDO2 et le liage de session",
+          "detail": "Les mécanismes d'authentification classiques par SMS ou TOTP sont contournés de manière automatisée par des kits de phishing de l'homme du milieu (AiTM) comme Tycoon 2FA ou Kali365. Déployez impérativement des clés physiques FIDO2/WebAuthn (ex: YubiKey 5) ou Windows Hello pour l'ensemble des postes de travail. Liez de manière cryptographique les jetons OAuth d'accès Entra ID aux machines de confiance pour neutraliser le vol de cookies de session."
         },
         {
-          "title": "Isoler Strictement les Agents de Build CI/CD",
-          "detail": "Les campagnes de supply chain de TeamPCP et Laravel-Lang prouvent que les pipelines de compilation sont des cibles prioritaires. Configurez les runners (GitHub Actions, GitLab CI) dans des zones réseau étanches, sans accès sortant direct vers l'Internet public hors proxies approuvés. Imposez la vérification des signatures cryptographiques (Sigstore) de toutes les dépendances tierces."
+          "title": "Intégrer des contrôles SCA continus dans la CI/CD",
+          "detail": "L'intensification des attaques de chaîne logistique orchestrées par TeamPCP ciblant les développeurs (via l'extension Nx Console v18.95.0 ou Laravel-Lang) nécessite des barrières automatisées. Intégrez des solutions de Software Composition Analysis (SCA) dans les pipelines de compilation GitHub Actions. Bloquez l'importation de paquets npm/PyPI non signés cryptographiquement ou dont les hashes SHA-256 ne correspondent pas au fichier lock d'origine."
         }
       ]
     },
     "operational": {
       "en": [
         {
-          "title": "Block Malicious Nx Console VS Code Extensions",
-          "detail": "Force the immediate uninstallation of compromised Nx Console extension version 18.95.0 across all developer endpoints. Implement host-based controls (AppLocker or WDAC) to monitor and block VS Code processes (`code.exe`) initiating outbound network traffic to known TeamPCP exfiltration domains like `filev2.getsession.org` and `seed1.getsession.org`."
+          "title": "Audit and Mitigate Drupal and Ghost Injections",
+          "detail": "Attackers are actively exploiting Drupal Core (CVE-2026-9082) and Ghost CMS (CVE-2026-26980) to execute code and distribute ClickFix malware. Immediately update Drupal instances to version 11.3.10+ and Ghost CMS to 6.19.1+. Configure Web Application Firewall (WAF) rules to detect and block SQL injection strings containing 'UNION SELECT' directed at public CMS endpoints."
         },
         {
-          "title": "Disable OAuth Device Code Flow Nationally",
-          "detail": "Threat actors are actively abusing the Device Authorization Grant flow to gain unauthorized access to Microsoft 365 environments. Disable this authentication protocol within Microsoft Entra ID conditional access policies for all users except designated legacy IoT terminals. Audit Sign-In logs immediately using Kusto query: `SigninLogs | where AuthenticationProtocol == 'deviceCode'`."
+          "title": "Block Remote Device Authorization Flows Globally",
+          "detail": "Phishing kits such as Kali365 actively abuse the OAuth 2.0 Device Code flow to gain persistent access to Microsoft 365 environments without prompting MFA. Execute the Microsoft Graph command to disable device code authentication globally in Entra ID for all non-essential accounts. Audit sign-in logs using KQL queries looking for AuthenticationProtocol=='deviceCode' to find compromised sessions."
         }
       ],
       "fr": [
         {
-          "title": "Bloquer les Extensions VS Code Nx Console",
-          "detail": "Forcez la désinstallation immédiate de l'extension de console Nx en version compromise 18.95.0 sur tous les postes de développement. Configurez des règles EDR ou WDAC pour bloquer les processus VS Code (`code.exe`) initiant des requêtes ou des connexions réseau sortantes suspectes vers les domaines d'exfiltration `filev2.getsession.org` et `seed1.getsession.org`."
+          "title": "Corriger et mitiger les failles CMS d'urgence",
+          "detail": "Des attaquants exploitent activement Drupal Core (CVE-2026-9082) et Ghost CMS (CVE-2026-26980) pour exécuter du code et distribuer des malwares de type ClickFix. Mettez à jour immédiatement vos CMS vers les versions corrigées (Drupal 11.3.10+ et Ghost 6.19.1+). Configurez des règles de pare-feu applicatif (WAF) pour inspecter et bloquer les requêtes web contenant des motifs d'injections SQL 'UNION SELECT' ciblées."
         },
         {
-          "title": "Désactiver le Flux d'Appareil OAuth Device Code",
-          "detail": "Les attaquants abusent activement du flux Device Code d'OAuth pour obtenir des accès persistants à Microsoft 365. Désactivez cette option dans les configurations d'accès conditionnel d'Entra ID pour l'ensemble des postes de travail d'entreprise. Auditez les connexions suspectes via la requête KQL : `SigninLogs | where AuthenticationProtocol == 'deviceCode'`."
+          "title": "Désactiver globalement le protocole Device Code OAuth",
+          "detail": "Des kits d'hameçonnage industriels comme Kali365 exploitent abusivement le flux d'autorisation par code d'appareil pour s'emparer de comptes Microsoft 365. Exécutez les commandes d'administration Microsoft Graph pour désactiver le Device Code flow au sein de l'annuaire Entra ID pour l'ensemble des profils. Utilisez des requêtes KQL d'audit de connexion ciblant le protocole 'deviceCode' pour repérer d'éventuelles sessions compromises."
         }
       ]
     }
