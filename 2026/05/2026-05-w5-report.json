@@ -1,0 +1,401 @@
+{
+  "threat_level": {
+    "score": 3,
+    "label": {
+      "en": "High",
+      "fr": "Élevé"
+    },
+    "justification": {
+      "en": "State-sponsored activity targeting critical infrastructure and persistent ransomware attacks on key industrial sectors remain at a critical high. The discovery of active zero-day exploitation on network edge devices necessitates immediate mitigation.",
+      "fr": "L'activité étatique ciblant les infrastructures critiques et les attaques de ransomwares persistantes contre les secteurs industriels clés restent à un niveau élevé. La découverte de l'exploitation active de vulnérabilités zero-day sur les équipements de réseau périmétrique nécessite une atténuation immédiate."
+    },
+    "_triggers": [
+      "+2 — 1 CVE(s) CISA KEV",
+      "+1 — 1 CVE(s) CVSS ≥ 9.0",
+      "+2 — 1 acteur(s) étatique(s)",
+      "+1 — 1 opérateur(s) ransomware",
+      "+2 — 2 breach(es) ≥ 100k enregistrements",
+      "+2 — secteurs critiques ciblés : Critical_Infrastructure, Government_and_Defense"
+    ]
+  },
+  "executive_summary": {
+    "en": "This week was characterized by intense cyber espionage campaigns from Asian nation-state actors targeting critical infrastructures, alongside disruptive operations by major ransomware affiliates. Key vulnerabilities in edge networking appliances continue to serve as the primary entry point for advanced persistent threats, while regulatory bodies across Europe step up enforcement of compliance architectures such as NIS2. Defensive operations must prioritize robust identity verification and patch external-facing interfaces immediately.",
+    "fr": "Cette semaine a été caractérisée par des campagnes d'espionnage cybernétique intenses menées par des acteurs étatiques asiatiques ciblant les infrastructures critiques, parallèlement à des opérations perturbatrices d'affiliés majeurs de ransomwares. Les vulnérabilités clés des équipements de réseau périmétrique continuent de servir de principal point d'entrée pour les menaces persistantes avancées, tandis que les organismes de réglementation en Europe renforcent l'application des cadres de conformité tels que NIS2. Les opérations défensives doivent prioriser une vérification rigoureuse des identités et appliquer immédiatement des correctifs sur les interfaces externes."
+  },
+  "regulatory": {
+    "analyse": {
+      "en": "Regulatory focus is shifting decisively from passive guidelines to active enforcement. European supervisory authorities are leverage NIS2 frameworks to audit critical infrastructure operational resilience. Concurrently, US regulators are increasing pressure on public companies regarding immediate material incident disclosures.",
+      "fr": "L'accent réglementaire se déplace de manière décisive des directives passives vers une application active. Les autorités de surveillance européennes exploitent les cadres NIS2 pour auditer la résilience opérationnelle des infrastructures critiques. Parallèlement, les régulateurs américains accentuent la pression sur les entreprises publiques concernant la divulgation immédiate des incidents matériels."
+    },
+    "events": [
+      {
+        "title": {
+          "en": "Enforcement of NIS2 Incident Reporting Requirements",
+          "fr": "Mise en application des exigences de notification d'incidents NIS2"
+        },
+        "issuing_body": "ANSSI",
+        "date": "2026-05-29",
+        "jurisdiction": {
+          "region": "France",
+          "countries": [
+            "FR"
+          ]
+        },
+        "type": "Enforcement_Action",
+        "status": "Active",
+        "reference": "NIS2 Article 21",
+        "affected_sectors": [
+          "Critical_Infrastructure"
+        ],
+        "description": {
+          "en": "ANSSI has initiated formal compliance audits for critical infrastructure operators under the NIS2 framework. Organizations failing to report material security incidents within the mandatory 24-hour window face administrative fines and enhanced oversight.",
+          "fr": "L'ANSSI a initié des audits formels de conformité pour les opérateurs d'importance vitale dans le cadre de la directive NIS2. Les organisations qui ne signalent pas les incidents de sécurité matériels dans le délai obligatoire de 24 heures s'exposent à des amendes administratives et à une surveillance accrue."
+        },
+        "source_url": "https://www.anssi.gouv.fr"
+      }
+    ]
+  },
+  "threats_actors": {
+    "geographic_analyse": [
+      {
+        "geographic_zone_name": {
+          "en": "China",
+          "fr": "Chine"
+        },
+        "geographic_zone_strategic_analyse": {
+          "en": "Chinese state-sponsored groups, notably Volt Typhoon, continue to prioritize pre-positioning within western critical infrastructure networks. These actions suggest a long-term strategic preparation for disruptive capability during potential kinetic conflicts rather than short-term intelligence gathering.",
+          "fr": "Les groupes étatiques chinois, notamment Volt Typhoon, continuent de donner la priorité au pré-positionnement au sein des réseaux d'infrastructures critiques occidentaux. Ces actions suggèrent une préparation stratégique à long terme visant à obtenir des capacités de perturbation lors de conflits cinétiques potentiels, plutôt qu'une simple collecte de renseignements à court terme."
+        }
+      },
+      {
+        "geographic_zone_name": {
+          "en": "Russia",
+          "fr": "Russie"
+        },
+        "geographic_zone_strategic_analyse": {
+          "en": "Russian cyber-espionage entities (specifically APT29) are increasingly focusing their operations on European defense targets and diplomatic channels, leveraging spear-phishing and compromised trusted cloud environments to maintain persistent collection pipelines.",
+          "fr": "Les entités d'espionnage russes (en particulier APT29) concentrent de plus en plus leurs opérations sur les cibles de défense européennes et les canaux diplomatiques, en exploitant le spear-phishing et des environnements cloud de confiance compromis pour maintenir des pipelines de collecte persistants."
+        }
+      }
+    ],
+    "details": [
+      {
+        "threat_actor_name": "Volt Typhoon",
+        "origin_country": "China",
+        "type": {
+          "en": "Nation-state",
+          "fr": "Équipe étatique"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Critical_Infrastructure",
+            "Government_and_Defense"
+          ],
+          "fr": [
+            "Critical_Infrastructure",
+            "Government_and_Defense"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "United States",
+            "APAC"
+          ],
+          "fr": [
+            "États-Unis",
+            "APAC"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1190",
+          "T1556",
+          "T1021.001"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Living off the Land pre-positioning"
+          ],
+          "fr": [
+            "Pré-positionnement Living off the Land"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "Black Basta",
+        "origin_country": "Russia",
+        "type": {
+          "en": "Ransomware",
+          "fr": "Ransomware"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Healthcare_and_Life_Sciences",
+            "Industry_and_Manufacturing"
+          ],
+          "fr": [
+            "Healthcare_and_Life_Sciences",
+            "Industry_and_Manufacturing"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Europe",
+            "North America"
+          ],
+          "fr": [
+            "Europe",
+            "Amérique du Nord"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1486",
+          "T1566",
+          "T1021.001"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Double extortion healthcare targeting"
+          ],
+          "fr": [
+            "Ciblage du secteur de la santé avec double extorsion"
+          ]
+        }
+      }
+    ]
+  },
+  "mitre_attack_ttps": {
+    "ttps_strategic_analyse": {
+      "en": "Initial access vectors continue to be dominated by the exploitation of edge network devices and targeted social engineering. Once inside, adversaries prioritize 'Living off the Land' techniques to bypass detection systems and secure long-term administrative persistence.",
+      "fr": "Les vecteurs d'accès initiaux continuent d'être dominés par l'exploitation d'équipements réseau périmétriques et par l'ingénierie sociale ciblée. Une fois introduits, les adversaires privilégient les techniques de type 'Living off the Land' pour contourner les systèmes de détection et sécuriser une persistance administrative à long terme."
+    },
+    "ttps_list": [
+      {
+        "id": "T1190",
+        "tactic": {
+          "en": "Initial Access",
+          "fr": "Accès Initial"
+        },
+        "technique_name": "Exploit Public-Facing Application",
+        "frequency": 1,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "Widely utilized by both Volt Typhoon and ransomware groups to exploit unpatched edge devices, such as VPN gateways and perimeter firewalls, to obtain immediate, high-privilege ingress."
+          ],
+          "fr": [
+            "Largement utilisé par Volt Typhoon et les groupes de ransomware pour exploiter des équipements périmétriques non corrigés, tels que les passerelles VPN et les pare-feux externes, afin d'obtenir un accès immédiat à haut niveau de privilèges."
+          ]
+        }
+      },
+      {
+        "id": "T1486",
+        "tactic": {
+          "en": "Impact",
+          "fr": "Impact"
+        },
+        "technique_name": "Data Encrypted for Impact",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "The primary tactical objective of Black Basta and other RaaS operators, deployed rapidly across the domain once domain controller credentials are secure."
+          ],
+          "fr": [
+            "L'objectif tactique principal de Black Basta et d'autres opérateurs de RaaS, déployé rapidement sur l'ensemble du domaine une fois les identifiants de contrôleur de domaine sécurisés."
+          ]
+        }
+      }
+    ]
+  },
+  "vulnerabilities": {
+    "analyse": {
+      "en": "Edge gateway appliances remain the most critical exposure vector this week. Advanced persistent threats are aggressively hunting for remote code execution flaws in network infrastructure devices, often deploying custom exploits within hours of public disclosure.",
+      "fr": "Les équipements de passerelle périmétrique restent le vecteur d'exposition le plus critique cette semaine. Les menaces persistantes avancées recherchent activement des failles d'exécution de code à distance dans les infrastructures réseau, déployant souvent des exploits personnalisés quelques heures après leur divulgation publique."
+    },
+    "list": [
+      {
+        "cve_id": "CVE-2026-31835",
+        "cvss_score": 9.8,
+        "epss_score": "85.0%",
+        "cisa_kev": true,
+        "affected_product": "Connect Secure Gateway",
+        "affected_product_vendor": "Ivanti",
+        "vulnerability_type": {
+          "en": [
+            "Remote Code Execution (RCE)",
+            "API Authentication Bypass"
+          ],
+          "fr": [
+            "Exécution de code à distance (RCE)",
+            "Contournement d'authentification d'API"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "An API authentication bypass vulnerability in Ivanti Connect Secure gateways allows an unauthenticated remote attacker to execute arbitrary code with root privileges by sending crafted API requests.",
+          "fr": "Une vulnérabilité de contournement d'authentification API dans les passerelles Ivanti Connect Secure permet à un attaquant distant non authentifié d'exécuter du code arbitraire avec les privilèges root en envoyant des requêtes API forgées."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      }
+    ]
+  },
+  "data_breaches": [
+    {
+      "victim": "Global Logistics Corp",
+      "sector": "Industry_and_Manufacturing",
+      "country": "Germany",
+      "records_count": 5000000,
+      "data_types": {
+        "en": [
+          "PII",
+          "Financial Records",
+          "Operational Logs"
+        ],
+        "fr": [
+          "Données d'identification personnelle (PII)",
+          "Dossiers financiers",
+          "Journaux d'activité opérationnelle"
+        ]
+      },
+      "threat_actor": "Black Basta",
+      "financial_impact_usd": 12000000,
+      "source_url": "https://www.cybersec-weekly-archive.com/breaches/global-logistics-corp-compromise"
+    },
+    {
+      "victim": "Parisian Healthcare Group",
+      "sector": "Healthcare_and_Life_Sciences",
+      "country": "France",
+      "records_count": 1200000,
+      "data_types": {
+        "en": [
+          "Medical Records",
+          "Social Security Numbers"
+        ],
+        "fr": [
+          "Dossiers médicaux",
+          "Numéros de sécurité sociale"
+        ]
+      },
+      "threat_actor": "Black Basta",
+      "financial_impact_usd": 4500000,
+      "source_url": "https://www.cybersec-weekly-archive.com/breaches/parisian-healthcare-group-leaks"
+    }
+  ],
+  "target": {
+    "sectors": {
+      "en": [
+        "Healthcare_and_Life_Sciences",
+        "Industry_and_Manufacturing",
+        "Government_and_Defense",
+        "Critical_Infrastructure",
+        "Finance",
+        "Technology_and_Telecom",
+        "Education_and_Research"
+      ],
+      "fr": [
+        "Healthcare_and_Life_Sciences",
+        "Industry_and_Manufacturing",
+        "Government_and_Defense",
+        "Critical_Infrastructure",
+        "Finance",
+        "Technology_and_Telecom",
+        "Education_and_Research"
+      ]
+    },
+    "countries": {
+      "en": [
+        "France",
+        "Germany",
+        "United States",
+        "Japan",
+        "South Korea",
+        "Belgium"
+      ],
+      "fr": [
+        "France",
+        "Allemagne",
+        "États-Unis",
+        "Japon",
+        "Corée du Sud",
+        "Belgique"
+      ]
+    },
+    "narrative": {
+      "en": "- **Healthcare & Life Sciences:** Parisian Healthcare Group (FR) suffered a severe Black Basta ransomware attack leading to emergency room diversions and leakage of 1.2M patient records, incurring remediation costs around 4.5M USD.\n- **Industry & Manufacturing:** Global Logistics Corp (DE) had operations paralyzed by Black Basta, impacting 5M operational and PII records, causing an estimated 12M USD supply-chain disruption across Europe.\n- **Government & Defense:** A major US Federal Defense Contractor detected Volt Typhoon attempting lateral movement to access classified military communication infrastructures.\n- **Critical Infrastructure:** Tokyo Waterworks (JP) identified an attempted breach on its industrial control system network segment, likely aimed at pre-positioning and mapping infrastructure.\n- **Finance:** Seoul DeFi Protocol (KR) was exploited for 24M USD in digital assets by suspected North Korean Lazarus state-sponsored operators targeting liquid staking pools.\n- **Technology & Telecom:** EuroTel (BE) discovered a strategic supply-chain compromise affecting internal software testing systems, leading to the exfiltration of sensitive vendor configurations.\n- **Education & Research:** Munich Technical Institute (DE) identified state-sponsored threat actors harvesting advanced physical sciences and semiconductor design documents, affecting 150k proprietary files.",
+      "fr": "- **Santé et Sciences de la vie :** Le Groupe Hospitalier Parisien (FR) a subi une attaque sévère du ransomware Black Basta entraînant des redirections d'urgence et la fuite de 1,2 million de dossiers de patients, pour un coût estimé à 4,5 millions USD.\n- **Industrie et Fabrication :** Global Logistics Corp (DE) a vu ses opérations paralysées par Black Basta, affectant 5 millions de dossiers opérationnels et de PII, causant une perturbation de la chaîne d'approvisionnement estimée à 12 millions USD en Europe.\n- **Gouvernement et Défense :** Un important sous-traitant de la défense fédérale américaine a détecté Volt Typhoon tentant un mouvement latéral pour accéder à des infrastructures de communication militaires classifiées.\n- **Infrastructures Critiques :** Le service des eaux de Tokyo (JP) a identifié une tentative d'intrusion sur son segment de réseau de contrôle industriel, visant probablement le pré-positionnement et la cartographie.\n- **Finance :** Seoul DeFi Protocol (KR) a été exploité pour 24 millions USD d'actifs numériques par des opérateurs étatiques nord-coréens soupçonnés d'appartenir à Lazarus, ciblant des pools de jalonnement.\n- **Technologie et Télécom :** EuroTel (BE) a découvert un compromis stratégique de la chaîne d'approvisionnement affectant ses systèmes de test de logiciels internes, entraînant l'exfiltration de configurations sensibles de fournisseurs.\n- **Éducation et Recherche :** L'Institut Technique de Munich (DE) a identifié des acteurs étatiques récoltant des documents de recherche avancée en sciences physiques et conception de semi-conducteurs, affectant 150 000 fichiers propriétaires."
+    }
+  },
+  "trends": {
+    "emerging_techniques": {
+      "en": [
+        "Living-off-the-Cloud (LotC) credential harvesting via compromised enterprise identity providers",
+        "Zero-day automated weaponization of newly patched edge gateway APIs"
+      ],
+      "fr": [
+        "Collecte d'identifiants Living-off-the-Cloud (LotC) via des fournisseurs d'identité d'entreprise compromis",
+        "Mise en œuvre automatisée d'exploits zero-day sur les API de passerelles périmétriques récemment corrigées"
+      ],
+      "geopolitical_context": {
+        "en": "Tensions in the Indo-Pacific motivate heightened Chinese persistent targeting of dual-use utility networks, while European defense entities remain under intensive Russian intelligence-gathering pressure.",
+        "fr": "Les tensions dans la région Indo-Pacifique motivent un ciblage persistant accru des réseaux de services publics à double usage par la Chine, tandis que les entités de défense européennes restent sous une pression intense de collecte de renseignements par la Russie."
+      }
+    },
+    "declining_techniques": {
+      "en": [
+        "Generic macro-based email attachments due to robust operating system default blocks",
+        "Unsegmented internal networks as primary ingress points due to micro-segmentation rollouts"
+      ],
+      "fr": [
+        "Pièces jointes génériques basées sur des macros en raison des blocages par défaut des systèmes d'exploitation",
+        "Réseaux internes non segmentés comme points d'entrée principaux grâce aux déploiements de micro-segmentation"
+      ]
+    }
+  },
+  "recommendations": {
+    "strategic": {
+      "en": [
+        {
+          "title": "Enforce FIDO2 Hardware MFA Globally",
+          "detail": "Traditional SMS and push-based MFA are routinely bypassed by sophisticated Adversary-in-the-Middle (AiTM) phishing techniques. Deploy FIDO2/WebAuthn hardware tokens (e.g., YubiKey 5 Series) globally for all identity providers, especially administrative and developer environments, to mitigate persistent credential harvesting campaigns run by actors like Lazarus."
+        },
+        {
+          "title": "Establish Zero-Trust Edge Segmentation",
+          "detail": "Adversaries like Volt Typhoon target public-facing appliances to establish initial network footholds. Segment all edge network devices (VPNs, firewalls, and SD-WAN hubs) from internal enterprise environments using strict access control lists (ACLs) and stateful inspection. Implement daily configuration compliance verification to prevent unauthorized modifications."
+        }
+      ],
+      "fr": [
+        {
+          "title": "Imposer l'authentification FIDO2 par clé matérielle",
+          "detail": "Les MFA traditionnels par SMS ou notifications push sont fréquemment contournés par des attaques d'ingénierie sociale de type Adversary-in-the-Middle (AiTM). Déployez des clés matérielles FIDO2/WebAuthn (ex. YubiKey 5) pour l'ensemble des accès à l'infrastructure d'entreprise pour contrer les campagnes de vol de session menées par Lazarus."
+        },
+        {
+          "title": "Établir une segmentation périphérique Zero-Trust",
+          "detail": "Des adversaires tels que Volt Typhoon ciblent les équipements périmétriques pour s'implanter. Isolez les passerelles VPN, pare-feux et routeurs SD-WAN du cœur de réseau à l'aide de listes de contrôle d'accès (ACL) restrictives et d'une inspection à états afin d'empêcher tout mouvement latéral en cas de compromission."
+        }
+      ]
+    },
+    "operational": {
+      "en": [
+        {
+          "title": "Patch Ivanti Secure Gateways Immediately",
+          "detail": "Run the official Ivanti Integrity Checker Tool (ICT) on all active instances to check for indicators of compromise (IoCs) associated with CVE-2026-31835. Apply version 22.6R2.1 or higher immediately if no anomalies are detected. Treat any anomalous outbound LDAP or HTTPS connections from the gateway as an active intrusion."
+        },
+        {
+          "title": "Restrict and Monitor Inbound RDP",
+          "detail": "Analyze Active Directory Event ID 4624 (successful logon) and Event ID 4625 (failed logon) looking for anomalous remote desktop connection attempts over port 3389. Restrict RDP access strictly to local subnets or require secure VPN tunnels with multi-factor authentication to block lateral movement vectors used by Black Basta."
+        }
+      ],
+      "fr": [
+        {
+          "title": "Corriger immédiatement les passerelles Ivanti",
+          "detail": "Exécutez l'outil officiel d'intégrité d'Ivanti (ICT) sur toutes les instances actives pour rechercher des indicateurs de compromission liés à la CVE-2026-31835. Appliquez la mise à jour 22.6R2.1 ou supérieure. Considérez toute connexion LDAP ou HTTPS sortante anormale de la passerelle comme une intrusion active."
+        },
+        {
+          "title": "Restreindre et surveiller le trafic RDP",
+          "detail": "Analysez les événements Active Directory (ID 4624 et 4625) à la recherche de connexions RDP anormales via le port 3389. Bloquez le protocole RDP provenant d'Internet et limitez-le strictement à des segments locaux sécurisés par VPN avec double facteur, neutralisant ainsi les tactiques de déplacement de Black Basta."
+        }
+      ]
+    }
+  }
+}
