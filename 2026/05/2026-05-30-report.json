@@ -1,0 +1,2530 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The cyber landscape of late May 2026 highlights a strong convergence between physical geopolitics and cyber operations, illustrated by the campaigns of the Russian group GREYVIBE targeting Ukraine using AI to optimize its malicious code, and the activity of pro-Russian hacktivists (NoName057(16)) coordinating DDoS attacks with European electoral deadlines. In parallel, regulatory pressure is increasing with the compliance requirements of the European Cyber Resilience Act (CRA) and the American CMMC, prompting a transition to automated, machine-readable security signal streams rather than static paper attestations. Finally, the cybercrime market is heavily professionalizing with the rise of DDoS-as-a-Service, lowering barriers to entry with low-cost subscriptions backed by massive botnets like Aisuru and Asocks, the latter having been the subject of a major dismantling by the Dutch police.",
+      "fr": "Le paysage cyber de fin mai 2026 met en évidence une convergence forte entre la géopolitique physique et les opérations cyber, illustrée par les campagnes du groupe russe GREYVIBE ciblant l'Ukraine à l'aide de l'intelligence artificielle pour optimiser ses codes malveillants, et l'activité d'hacktivistes pro-russes (NoName057(16)) coordonnant des attaques DDoS avec des échéances électorales européennes. En parallèle, la pression réglementaire s'accentue avec les exigences de conformité du Cyber Resilience Act (CRA) européen et du CMMC américain, incitant à une transition vers des flux de signaux de sécurité automatisés et lisibles par machine plutôt que des attestations statiques sur papier. Enfin, le marché de la cybercriminalité se professionnalise fortement avec l'essor du DDoS-as-a-Service, abaissant les barrières à l'entrée avec des abonnements à bas coût soutenus par des botnets massifs comme Aisuru et Asocks, ce dernier ayant fait l'objet d'un démantèlement d'envergure par la police néerlandaise."
+    },
+    "date": "2026-05-30"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": ["Government_and_Defense"],
+        "fr": ["Gouvernement_et_Défense"]
+      },
+      "theme": {
+        "en": "Cyber-espionage and hybrid warfare",
+        "fr": "Cyber-espionnage et guerre hybride"
+      },
+      "description": {
+        "en": "The GREYVIBE group illustrates the transition of Russian cybercriminals to state-affiliated hybrid activities, characterized by the systematic use of artificial intelligence (ChatGPT, Gemini) to compensate for the lack of technical skills of their developers. Despite numerous OpSec errors and deploying cryptocurrency miners, the group maintains a strong nuisance capacity through its persistence and the variety of its lures against Ukrainian infrastructure.",
+        "fr": "Le groupe GREYVIBE illustre la transition des cybercriminels russes vers des activités hybrides affiliées à l'État, caractérisées par l'usage systématique de l'intelligence artificielle (ChatGPT, Gemini) pour combler le manque de compétences techniques de leurs développeurs. Le groupe commet de nombreuses erreurs d'OpSec et déploie même des mineurs de cryptomonnaie, mais maintient une forte capacité de nuisance par sa persistance et la variété de ses leurres contre les infrastructures ukrainiennes."
+      },
+      "recommandations": [
+        {
+          "en": "Implement strict email filtering and block non-professional sharing cloud services like Google Drive or 4sync.",
+          "fr": "Mettre en place un filtrage strict des emails et bloquer les partages de services de cloud comme Google Drive ou 4sync non professionnels."
+        },
+        {
+          "en": "Restrict access to the command and control API of Accessibility Services on corporate Android fleets.",
+          "fr": "Restreindre l'accès à l'API de commande et de contrôle d'Accessibility Services sur les flottes d'appareils Android professionnels."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Implement enhanced monitoring to identify fraudulent CAPTCHA domains or domains mimicking Zoom/LAPAS.",
+            "Train users to detect social engineering lures and fake charity platforms."
+          ],
+          "fr": [
+            "Mettre en place une surveillance renforcée pour identifier les domaines de type CAPTCHA frauduleux ou imitant Zoom/LAPAS.",
+            "Former les utilisateurs à la détection des leurres basés sur l'ingénierie sociale et les fausses plateformes caritatives."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect suspicious execution of PowerShell commands using EDR.",
+            "Monitor for suspicious use of WebRTC or unexpected audio/video stream recordings by unauthorized binaries."
+          ],
+          "fr": [
+            "Détecter l'exécution suspecte de commandes PowerShell à l'aide de l'EDR.",
+            "Surveiller l'utilisation suspecte de WebRTC ou l'enregistrement de flux audio/vidéo inattendus par des binaires non autorisés."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Immediately isolate compromised hosts and revoke user credentials.",
+            "Block access to malicious domains and C2 servers identified in the threat intelligence report."
+          ],
+          "fr": [
+            "Isoler immédiatement les hôtes compromis et révoquer les identifiants utilisateur.",
+            "Bloquer l'accès aux domaines malveillants et serveurs de C2 identifiés dans le rapport de WithSecure."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Perform a complete forensic analysis to identify all persistence artifacts installed by PhantomRelay or LegionRelay.",
+            "Update EDR detection rules and email filtering configurations."
+          ],
+          "fr": [
+            "Réaliser une analyse forensique complète pour identifier tous les artefacts de persistance installés par PhantomRelay ou LegionRelay.",
+            "Mettre à jour les règles de détection EDR et de filtrage de messagerie."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Query process creation events looking for encoded powershell commands or strings containing 'PhantomRelay'."
+          ],
+          "fr": [
+            "Recherche d'exécution d'implants d'accès distant PowerShell PhantomRelay dans l'environnement."
+          ]
+        }
+      },
+      "tags": ["APT", "Russia", "Ukraine", "AI", "Espionage"],
+      "sources": ["https://securityaffairs.com/192877/apt/meet-greyvibe-the-russian-linked-hacking-group-using-ai-to-target-ukraine-and-still-making-rookie-mistakes.html"],
+      "date": "2026-05-30"
+    },
+    {
+      "sector": {
+        "en": ["Government_and_Defense"],
+        "fr": ["Gouvernement_et_Défense"]
+      },
+      "theme": {
+        "en": "Cyber-physical synchronization",
+        "fr": "Synchronisation cyber-physique"
+      },
+      "description": {
+        "en": "The temporal and geographic correlation between international physical tensions and cyber attacks (NoName057(16) DDoS during the Italian Olympics and European elections, Lockheed Martin data leaks by Iranian groups during Middle East crises) demonstrates that cyberspace is used as a force multiplier and political influence tool in real time by states and their cyber militias.",
+        "fr": "La corrélation temporelle et géographique entre les tensions physiques internationales et les attaques cyber (DDoS de NoName057(16) lors des JO d'Italie et des élections européennes, fuites de données de Lockheed Martin par des groupes iraniens lors des crises au Proche-Orient) démontre que le cyberespace est utilisé comme un multiplicateur de force et un outil d'influence politique en temps réel par les États et leurs milices cybernétiques."
+      },
+      "recommandations": [
+        {
+          "en": "Integrate geopolitical context into operational threat models, especially for critical national infrastructure operators.",
+          "fr": "Intégrer le contexte géopolitique dans les modèles de menace opérationnels, en particulier pour les opérateurs d'importance vitale."
+        },
+        {
+          "en": "Reinforce the resilience of public information websites and voting systems.",
+          "fr": "Renforcer la résilience des sites web d'information publique et des systèmes de vote."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Subscribe to a robust DDoS mitigation service ahead of sensitive periods (elections, national sports events).",
+            "Perform external security surface audits on internet-facing assets."
+          ],
+          "fr": [
+            "Souscrire à un service de protection DDoS robuste à l'approche de périodes sensibles (élections, événements sportifs nationaux).",
+            "Effectuer des audits de sécurité de surface sur les actifs exposés sur Internet."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor abnormal network traffic spikes to government portals or registration sites.",
+            "Detect unauthorized publication of internal databases on underground forums."
+          ],
+          "fr": [
+            "Surveiller les pics anormaux de trafic réseau vers les portails gouvernementaux ou les sites d'accréditation.",
+            "Détecter la publication non autorisée de bases de données internes sur les places de marché clandestines."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Activate aggressive DDoS mitigation profiles and geo-blocking if necessary.",
+            "Coordinate with internet service providers to block attacking botnet networks."
+          ],
+          "fr": [
+            "Activer les profils de mitigation DDoS agressifs et le filtrage géographique du trafic si nécessaire.",
+            "Coordonner avec les fournisseurs d'accès pour bloquer les réseaux de botnets attaquants."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Analyze DDoS attack vectors to strengthen rate-limiting rules.",
+            "Restore normal access to services securely."
+          ],
+          "fr": [
+            "Analyser les vecteurs de l'attaque DDoS pour renforcer les règles de limitation de débit (rate limiting).",
+            "Rétablir l'accès normal aux services de manière sécurisée."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Identify volumetric DDoS attack sources targeting web servers by reviewing network connection rates."
+          ],
+          "fr": [
+            "Identification de sources d'attaques DDoS volumétriques ciblant les serveurs web de l'organisation."
+          ]
+        }
+      },
+      "tags": ["Geopolitics", "DDoS", "Hacktivism", "Espionage", "Extortion"],
+      "sources": ["https://securityaffairs.com/192870/security/dil-observatory-when-the-world-escalates-the-underground-responds.html"],
+      "date": "2026-05-30"
+    },
+    {
+      "sector": {
+        "en": ["Government_and_Defense"],
+        "fr": ["Gouvernement_et_Défense"]
+      },
+      "theme": {
+        "en": "Foreign Information Manipulation and Interference (FIMI)",
+        "fr": "Campagnes de manipulation de l'information (FIMI)"
+      },
+      "description": {
+        "en": "The Kremlin orchestrates coordinated information manipulation campaigns combining military and psychological pressure. These efforts aim to absolve Russia of responsibility for strikes on Kyiv, destabilize Moldova via the Transnistria region, and erode the Baltic States' confidence in NATO through false drone launch allegations.",
+        "fr": "Le Kremlin orchestre des campagnes coordonnées de manipulation informationnelle combinant pression militaire et psychologique. Ces efforts visent à décharger la Russie de sa responsabilité lors des frappes sur Kyiv, à déstabiliser la Moldavie via la région de Transnistrie et à éroder la confiance des pays Baltes envers l'OTAN à travers de fausses allégations de lancements de drones ukrainiens."
+      },
+      "recommandations": [
+        {
+          "en": "Support societal resilience and media literacy initiatives to counter Russian FIMI techniques.",
+          "fr": "Soutenir les initiatives de résilience sociétale et d'éducation aux médias face aux techniques FIMI russes."
+        },
+        {
+          "en": "Strengthen intelligence cooperation regarding informational threats among Eastern European allies.",
+          "fr": "Renforcer la coopération en matière de renseignement sur les menaces informationnelles entre les pays alliés de l'Est."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Establish information monitoring to quickly detect information manipulation campaigns (FIMI).",
+            "Establish verified, official crisis communication channels."
+          ],
+          "fr": [
+            "Mettre en place une veille informationnelle pour détecter rapidement les campagnes de manipulation de l'information (FIMI).",
+            "Établir des canaux de communication de crise officiels et vérifiés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor social media platforms and alternative networks to spot hostile Russian narratives.",
+            "Detect fake statements attributed to legitimate officials or media outlets."
+          ],
+          "fr": [
+            "Surveiller les plateformes de médias sociaux et les réseaux alternatifs pour repérer la propagation de narratifs russes hostiles.",
+            "Détecter les fausses déclarations attribuées à des officiels ou à des médias légitimes."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Publish rapid, transparent factual debunkings through official government or corporate channels.",
+            "Report fake accounts and coordinated influence networks to the distribution platforms."
+          ],
+          "fr": [
+            "Publier des démentis factuels rapides et transparents à travers les canaux officiels gouvernementaux ou d'entreprises.",
+            "Signaler les faux comptes et réseaux d'influence coordonnés aux plateformes de diffusion."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Analyze the impact of the disinformation campaign on public trust to adjust future communications.",
+            "Collaborate with fact-checking NGOs and international partners."
+          ],
+          "fr": [
+            "Analyser l'impact de la campagne de désinformation sur la confiance du public pour ajuster la communication future.",
+            "Collaborer avec les ONG de fact-checking et les partenaires internationaux."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for fake profiles and coordinated pro-Kremlin bots spreading destabilization narratives in Moldova and the Baltics."
+          ],
+          "fr": [
+            "Recherche de faux profils et bots coordonnés pro-Kremlin diffusant des narratifs de déstabilisation en Moldavie et dans les pays Baltes."
+          ]
+        }
+      },
+      "tags": ["FIMI", "Disinformation", "Ukraine", "Moldova", "Baltics"],
+      "sources": ["https://euvsdisinfo.eu/victim-blaming-kyiv-pressuring-moldova-and-drone-disinformation/"],
+      "date": "2026-05-30"
+    },
+    {
+      "sector": {
+        "en": ["Nonprofit_and_NGO"],
+        "fr": ["Nonprofit_et_ONG"]
+      },
+      "theme": {
+        "en": "Governance and reduction of public debate space",
+        "fr": "Gouvernance et réduction de l'espace de débat public"
+      },
+      "description": {
+        "en": "The controversy within WWF France following the resignation of Alexandra Palt illustrates the growing tension within major NGOs regarding the politicization of societal issues and the fear of alienating key donors. This demonstrates a narrowing of the public debate arena and increased control over the speech of civic leaders, even outside their official duties.",
+        "fr": "La controverse au sein du WWF France suite à la démission d'Alexandra Palt illustre la tension croissante au sein des grandes ONG face à la politisation des questions sociétales et la crainte d'aliéner des donateurs clés. Cela témoigne d'une réduction de l'espace de débat public et d'un contrôle accru de la parole des responsables citoyens, même en dehors de leurs fonctions officielles."
+      },
+      "recommandations": [
+        {
+          "en": "Define clear public expression charters to preserve the independence of the organization while respecting the civic commitment of its members.",
+          "fr": "Définir des chartes d'expression publique claires pour préserver l'indépendance de la structure tout en respectant l'engagement citoyen de ses membres."
+        },
+        {
+          "en": "Ensure impartial internal mediation processes in case of governance divergence.",
+          "fr": "Garantir des processus de médiation interne impartiaux en cas de divergence de gouvernance."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Establish clear internal policies distinguishing personal commitments of executives from organizational stances.",
+            "Train NGO managers on political instrumentalization risks of their declarations."
+          ],
+          "fr": [
+            "Établir des politiques internes claires concernant la distinction entre engagements personnels des dirigeants et prises de position de l'organisation.",
+            "Former les cadres des ONG sur les risques d'instrumentalisation politique de leurs déclarations."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor weak signals of ethical or political conflicts within governance.",
+            "Track reputational impact of internal controversies on social media."
+          ],
+          "fr": [
+            "Surveiller les signaux faibles de conflits éthiques ou politiques internes au sein de la gouvernance.",
+            "Suivre l'impact réputationnel des polémiques internes sur les réseaux sociaux."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Publish a rapid and neutral clarification reaffirming the personal nature of the affected employees' commitments.",
+            "Engage internal mediation to resolve tensions within the structure."
+          ],
+          "fr": [
+            "Publier une clarification neutre et rapide réaffirmant le caractère personnel de l'engagement des collaborateurs concernés.",
+            "Engager une médiation interne pour apaiser les tensions au sein de la structure."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Update the code of ethics and public conduct guides for administrators.",
+            "Restore relationships with donors and institutional partners."
+          ],
+          "fr": [
+            "Mettre à jour la charte d'éthique et les guides de conduite publique pour les administrateurs.",
+            "Restaurer les relations avec les donateurs et les partenaires institutionnels."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Identify brand damage or donor unsubscribes following governance controversies."
+          ],
+          "fr": [
+            "Détection d'une dégradation de l'image de marque ou de désabonnements de donateurs suite à des controverses de gouvernance."
+          ]
+        }
+      },
+      "tags": ["Geopolitics", "France", "NGO"],
+      "sources": ["https://www.iris-france.org/maccarthysme-et-antiracisme-a-wwf/"],
+      "date": "2026-05-30"
+    },
+    {
+      "sector": {
+        "en": ["Media_and_Communication"],
+        "fr": ["Médias_et_Communication"]
+      },
+      "theme": {
+        "en": "Geopolitical information processing by media",
+        "fr": "Traitement de l'information géopolitique par les médias"
+      },
+      "description": {
+        "en": "The critical analysis of the media treatment of the war against Iran in 2026 reveals deep ideological biases, homogenization of viewpoints to the detriment of realistic analyses, and a race for ratings favoring false experts or studio-filling. This impunity of lies and lack of historical perspective weakens the overall credibility of traditional media.",
+        "fr": "L'analyse critique du traitement médiatique de la guerre contre l'Iran en 2026 révèle de profonds biais idéologiques, une homogénéisation des points de vue au détriment des analyses réalistes, et une course à l'audimat favorisant les faux experts ou le remplissage de plateau. Cette impunité du mensonge et l'absence de recul historique affaiblissent la crédibilité globale des médias traditionnels."
+      },
+      "recommandations": [
+        {
+          "en": "Favor longer program formats with a restricted number of speakers possessing genuine field or academic expertise.",
+          "fr": "Privilégier les formats d'émissions plus longs avec un nombre restreint d'intervenants disposant d'une réelle expertise terrain ou universitaire."
+        },
+        {
+          "en": "Demand transparency regarding the affiliations and funding of invited expertise structures.",
+          "fr": "Exiger la transparence sur l'affiliation et les financements des structures d'expertise invitées."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Establish rigorous protocols to verify the qualifications of geopolitical commentators on television panels.",
+            "Make objective and sourced fact-sheets on complex conflicts available to the public."
+          ],
+          "fr": [
+            "Établir des protocoles rigoureux de vérification de la compétence des intervenants et experts géopolitiques sur les plateaux de télévision.",
+            "Mettre à disposition du public des fiches explicatives neutres et sourcées sur les conflits complexes."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Spot the dissemination of false assertions or biased analyses without contradiction on rolling news channels.",
+            "Analyze potential conflicts of interest of guests presented as neutral experts."
+          ],
+          "fr": [
+            "Repérer la diffusion de fausses affirmations ou d'analyses biaisées sans contradicteur sur les chaînes d'information continue.",
+            "Analyser les conflits d'intérêts potentiels des invités présentés comme experts neutres."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Allow the expression of qualified and rigorous opposing voices on TV sets.",
+            "Publish clear corrections when manifestly inaccurate information (fake news) is broadcast."
+          ],
+          "fr": [
+            "Permettre l'expression de voix contradictoires qualifiées et rigoureuses sur les plateaux.",
+            "Publier des rectificatifs clairs en cas de diffusion d'informations manifestement inexactes (fake news)."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Organize in-depth debates step back from the immediate news flow to correct simplistic narratives.",
+            "Implement stricter ethics committees on news channels."
+          ],
+          "fr": [
+            "Organiser des débats de fond prenant du recul par rapport au flux d'actualité immédiat pour corriger les narratifs simplistes.",
+            "Mettre en place des comités de déontologie plus stricts sur les chaînes d'information."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Identify simplistic or misleading narratives repeatedly peddled by recurrent commentator circles."
+          ],
+          "fr": [
+            "Identification de narratifs simplistes ou trompeurs colportés de manière répétée par des cercles de commentateurs récurrents."
+          ]
+        }
+      },
+      "tags": ["Geopolitics", "Media", "Iran", "Information War"],
+      "sources": ["https://www.iris-france.org/geopolitique-a-la-tele-quelques-aspects-problematiques/"],
+      "date": "2026-05-30"
+    },
+    {
+      "sector": {
+        "en": ["Government_and_Defense"],
+        "fr": ["Gouvernement_et_Défense"]
+      },
+      "theme": {
+        "en": "Political polarization and institutional instability",
+        "fr": "Polarisation politique et instabilité institutionnelle"
+      },
+      "description": {
+        "en": "Turkey is going through a deep governance crisis characterized by an 'unpredictable autocracy' (violent removal of opposition CHP party leadership, repeated jailings of mayors, sudden about-face on closing Bilgi University). These internal tensions are exacerbated by a struggling economy and regional instability related to the conflict with Iran, blocking any progress on the Kurdish question despite the self-dissolution of the PKK in 2025.",
+        "fr": "La Turquie traverse une crise de gouvernance profonde caractérisée par une 'autocratie aléatoire' (destitution violente de la direction du parti d'opposition CHP, emprisonnement répété de maires, volteface sur la fermeture de l'université de Bilgi). Ces tensions internes sont exacerbées par une économie en difficulté et par l'instabilité régionale liée au conflit contre l'Iran, bloquant toute avancée sur la question kurde malgré l'autodissolution du PKK en 2025."
+      },
+      "recommandations": [
+        {
+          "en": "Closely monitor institutional destabilization decrees for entities operating in Turkey.",
+          "fr": "Suivre de près les décrets de déstabilisation institutionnelle pour les entités opérant en Turquie."
+        },
+        {
+          "en": "Maintain discrete but functional communication channels with civil society and democratic opposition forces.",
+          "fr": "Maintenir des canaux de communication discrets mais fonctionnels avec la société civile et les forces d'opposition démocratiques."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Assess dependency of economic activities on Turkey's internal instabilities (university closures, political repression).",
+            "Establish resilient business continuity plans (BCP) in case of border closures or regional trade route disruptions."
+          ],
+          "fr": [
+            "Évaluer la dépendance des activités économiques par rapport aux instabilités internes de la Turquie (fermeture d'universités, répression politique).",
+            "Établir des plans de continuité d'activité (PCA) résilients face aux fermetures de frontières ou routes commerciales régionales."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Track arbitrary legislative updates and sudden decrees characterizing Turkish autocratic volatility.",
+            "Monitor regional economic impacts of tensions around the Strait of Hormuz."
+          ],
+          "fr": [
+            "Suivre les évolutions législatives arbitraires et les décrets soudains caractérisant l'autocratie aléatoire turque.",
+            "Surveiller l'impact économique régional des tensions autour du détroit d'Ormuz."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Diversify supply chains and secure alternative logistics routes avoiding tension zones.",
+            "Secure digital assets and communications of local branches against government shutdowns."
+          ],
+          "fr": [
+            "Diversifier les chaînes d'approvisionnement et sécuriser les voies logistiques alternatives évitant les zones de tension.",
+            "Sécuriser les actifs numériques et les communications des filiales locales face aux blocages gouvernementaux."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Review strategic and investment plans in Turkey integrating arbitrary judicial and political risks.",
+            "Maintain neutral but distant working relations with local authorities."
+          ],
+          "fr": [
+            "Réviser les plans stratégiques et d'investissement en Turquie en intégrant le risque d'arbitraire judiciaire et politique.",
+            "Maintenir des relations de travail neutres mais distantes avec les autorités locales."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Identify risk of expropriation or sudden ban on activities for foreign companies in Turkey."
+          ],
+          "fr": [
+            "Identification de risques d'expropriation ou d'interdiction soudaine d'activités pour les entreprises étrangères en Turquie."
+          ]
+        }
+      },
+      "tags": ["Turkey", "Autocracy", "PKK", "Geopolitics", "Human Rights"],
+      "sources": ["https://www.iris-france.org/tensions-crises-et-contradictions-en-turquie/"],
+      "date": "2026-05-30"
+    },
+    {
+      "sector": {
+        "en": ["Hospitality_and_Entertainment"],
+        "fr": ["Hospitalité_et_Divertissement"]
+      },
+      "theme": {
+        "en": "Securing major global sporting events",
+        "fr": "Sécurisation de grands événements sportifs mondiaux"
+      },
+      "description": {
+        "en": "As the 2026 World Cup approaches, security in Mexico raises serious concerns due to the endemic violence of drug cartels like the CJNG, revived by the recent death of Nemesio Oseguera 'El Mencho'. The country must reconcile protecting millions of international spectators with state capacities challenged by heavily armed criminal organizations.",
+        "fr": "À l'approche de la Coupe du Monde de football 2026, la sécurité au Mexique suscite d'importantes interrogations en raison de la violence endémique des cartels de la drogue, comme le CJNG, ravivée par la mort récente de Nemesio Oseguera 'El Mencho'. Le pays doit concilier la protection de millions de spectateurs internationaux avec des capacités étatiques contestées par des organisations criminelles lourdement armées."
+      },
+      "recommandations": [
+        {
+          "en": "Ensure a continuous and visible police and military presence around stadiums and key tourist areas.",
+          "fr": "Assurer une présence policière et militaire continue et visible autour des stades et des zones touristiques clés."
+        },
+        {
+          "en": "Establish real-time emergency communication links for the information of foreign nationals.",
+          "fr": "Établir des liaisons de communication d'urgence en temps réel pour l'information des ressortissants étrangers."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Coordinate global security plans between Mexican, US, and Canadian police forces for the 2026 World Cup.",
+            "Deploy smart surveillance systems for guest and delegation venues."
+          ],
+          "fr": [
+            "Coordonner des plans de sécurité globaux entre les forces de police mexicaines, américaines et canadiennes pour le Mondial 2026.",
+            "Déployer des systèmes de surveillance intellectuels pour les sites d'accueil des spectateurs et des délégations."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor retaliation or roadblock movements by cartels (especially CJNG).",
+            "Detect threat signals of violence targeting transport or leisure infrastructure during the event."
+          ],
+          "fr": [
+            "Surveiller les mouvements de représailles ou de blocage routier par les cartels (CJNG notamment).",
+            "Détecter les signaux de menaces de violences ciblant les infrastructures de transport ou de loisirs durant l'événement."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Set up highly controlled security perimeters around stadiums (Azteca, Monterrey, Guadalajara).",
+            "Deploy rapid reaction forces of the Mexican National Guard in case of public disturbance."
+          ],
+          "fr": [
+            "Mettre en place des périmètres de sécurité hautement contrôlés autour des stades (Azteca, Monterrey, Guadalajara).",
+            "Déployer des forces de réaction rapide de la Garde Nationale mexicaine en cas de trouble public."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Evaluate tourist flow securing effectiveness for future large-scale competitions.",
+            "Restore order and normal access to infrastructure after any cartel-related incident."
+          ],
+          "fr": [
+            "Évaluer l'efficacité de la sécurisation des flux de touristes pour les futures compétitions de grande envergure.",
+            "Restaurer l'ordre et l'accès normal aux infrastructures après tout incident lié aux cartels."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for signs of large-scale attack preparations or roadblocks by drug cartels as the opening match approaches."
+          ],
+          "fr": [
+            "Recherche de signaux de préparation d'attaques de grande envergure ou de blocages par les cartels de la drogue à l'approche du match d'ouverture."
+          ]
+        }
+      },
+      "tags": ["Mexico", "World Cup", "Cartels", "Physical Security", "Sports"],
+      "sources": ["https://www.iris-france.org/mexique-une-coupe-du-monde-sous-haute-securite/"],
+      "date": "2026-05-30"
+    }
+  ],
+  "regulatory_and_legal": [
+    {
+      "title": {
+        "en": "Draft Guidelines on Trusted Flaggers under the Digital Services Act (DSA)",
+        "fr": "Lignes directrices concernant les signaleurs de confiance sous l'égide du Digital Services Act (DSA)"
+      },
+      "description": {
+        "en": "Launch of a targeted consultation on draft guidelines concerning 'trusted flaggers' under the Digital Services Act (DSA). These specialized entities will help online platforms detect and remove illegal content faster. Platforms must prioritize the processing of their notifications.",
+        "fr": "Lancement d'une consultation ciblée sur les lignes directrices concernant les 'signaleurs de confiance' (trusted flaggers) sous l'égide du Digital Services Act (DSA). Ces entités spécialisées aideront les plateformes en ligne à repérer et supprimer plus rapidement les contenus illicites. Les plateformes devront prioriser le traitement de leurs notifications."
+      },
+      "organisation": {
+        "en": ["European Commission"],
+        "fr": ["Commission européenne"]
+      },
+      "jurisdiction": {
+        "en": ["European Union"],
+        "fr": ["Union européenne"]
+      },
+      "references": {
+        "en": ["Digital Services Act (DSA) - Draft Guidelines"],
+        "fr": ["Digital Services Act (DSA) - Draft Guidelines"]
+      },
+      "tags": ["Regulatory", "DSA", "EU", "Online Content"],
+      "sources": ["https://digital-strategy.ec.europa.eu/en/consultations/targeted-consultation-draft-guidelines-trusted-flaggers-under-digital-services-act-dsa"],
+      "date": "2026-05-30"
+    },
+    {
+      "title": {
+        "en": "Cyber Resilience Act (CRA) - Due Diligence and Machine-Readable Signals",
+        "fr": "Cyber Resilience Act (CRA) - Obligation de diligence raisonnable continue et signaux lisibles par machine"
+      },
+      "description": {
+        "en": "The Cyber Resilience Act (CRA) imposes continuous and risk-based due diligence obligations for manufacturers integrating third-party software (including open source). Given the complexity of modern dependencies, static paper attestations are ineffective. OpenSSF and ENISA promote automated and machine-readable security signals (SBOM, OpenSSF Scorecards, VEX, in-toto) as the baseline for compliance, ensuring transparency without shifting legal responsibility to volunteer maintainers.",
+        "fr": "Le Cyber Resilience Act (CRA) impose une obligation de diligence raisonnable continue et basée sur le risque pour les fabricants intégrant des logiciels tiers (y compris open source). Face à la complexité des dépendances modernes, les attestations statiques papier s'avèrent inefficaces et sources de risques juridiques. L'OpenSSF et l'ENISA promeuvent l'usage de signaux de sécurité automatisés et lisibles par machine (SBOM, OpenSSF Scorecards, VEX, in-toto) comme socle de conformité, garantissant la transparence sans transférer la responsabilité juridique ou la garantie aux mainteneurs open source bénévoles."
+      },
+      "organisation": {
+        "en": ["European Commission", "ENISA"],
+        "fr": ["Commission européenne", "ENISA"]
+      },
+      "jurisdiction": {
+        "en": ["European Union"],
+        "fr": ["Union européenne"]
+      },
+      "references": {
+        "en": ["Cyber Resilience Act (CRA)"],
+        "fr": ["Cyber Resilience Act (CRA)"]
+      },
+      "tags": ["Regulatory", "CRA", "Open Source", "Software Supply Chain", "Compliance"],
+      "sources": ["https://openssf.org/blog/2026/05/29/aligning-on-machine-readable-signals-as-the-foundation-for-due-diligence/"],
+      "date": "2026-05-30"
+    },
+    {
+      "title": {
+        "en": "CMMC Compliance Guidelines",
+        "fr": "Directives de conformité CMMC"
+      },
+      "description": {
+        "en": "Compliance with the Cybersecurity Maturity Model Certification (CMMC) becomes mandatory for sub-contractors and suppliers of the US Department of Defense (DoD) to preserve eligibility for federal markets. The process centers on scoping FCI/CUI data, gap analysis, and planned remediation for certification audits.",
+        "fr": "La conformité au Cybersecurity Maturity Model Certification (CMMC) devient incontournable pour les sous-traitants et fournisseurs du Ministère américain de la Défense (DoD) afin de préserver leur éligibilité aux marchés fédéraux. Le processus s'articule autour de trois étapes majeures : la définition précise du périmètre (scoping des données FCI/CUI), l'analyse des écarts (gap analysis) par rapport aux contrôles requis, et la remédiation planifiée pour préparer l'audit de certification."
+      },
+      "organisation": {
+        "en": ["US Department of Defense (DoD)"],
+        "fr": ["Ministère américain de la Défense (DoD)"]
+      },
+      "jurisdiction": {
+        "en": ["United States"],
+        "fr": ["États-Unis"]
+      },
+      "references": {
+        "en": ["CMMC Compliance Guidelines"],
+        "fr": ["Directives de conformité CMMC"]
+      },
+      "tags": ["Regulatory", "CMMC", "DoD", "USA", "Compliance"],
+      "sources": ["https://www.guidepointsecurity.com/blog/a-3-step-path-to-achieving-cmmc-compliance/"],
+      "date": "2026-05-30"
+    },
+    {
+      "title": {
+        "en": "UN Regulation No. 83 [2026/1086]",
+        "fr": "Règlement de l'ONU n°83 [2026/1086]"
+      },
+      "description": {
+        "en": "Publication of UN Regulation No. 83 defining technical prescriptions for approval of M1 and N1 category vehicles. Beyond environmental emissions, it integrates strict safety, cybersecurity, and anti-tampering requirements. Manufacturers must protect engine control units (ECU), OBD/OBM systems, and traction batteries against software attacks in line with UNECE R155 and R156.",
+        "fr": "Publication du règlement de l'ONU n°83 définissant les prescriptions techniques d'homologation des véhicules de catégories M1 et N1. Outre les aspects d'émissions polluantes, ce règlement intègre des exigences strictes en matière de sécurité, de cybersécurité et de mesures anti-tampering (anti-altération). Les constructeurs doivent garantir une protection adéquate des calculateurs moteurs (ECU), des systèmes OBD/OBM et des batteries de traction contre les attaques logicielles, en conformité avec les standards UNECE R155 et R156."
+      },
+      "organisation": {
+        "en": ["United Nations Economic Commission for Europe (UNECE)", "European Union"],
+        "fr": ["Commission économique pour l'Europe des Nations Unies (UNECE)", "Union européenne"]
+      },
+      "jurisdiction": {
+        "en": ["International", "European Union"],
+        "fr": ["International", "Union européenne"]
+      },
+      "references": {
+        "en": ["UN Regulation No. 83 [2026/1086]", "UNECE R155", "UNECE R156"],
+        "fr": ["Règlement de l'ONU n°83 [2026/1086]", "UNECE R155", "UNECE R156"]
+      },
+      "tags": ["Regulatory", "Automotive", "Cybersecurity", "Anti-tampering", "UNECE", "Euro 7"],
+      "sources": ["https://eur-lex.europa.eu/legal-content/AUTO/?uri=CELEX:42026X1086"],
+      "date": "2026-05-30"
+    },
+    {
+      "title": {
+        "en": "Devoir de vigilance - French Law & European CSDDD Directive",
+        "fr": "Devoir de vigilance - Loi française & Directive européenne CSDDD"
+      },
+      "description": {
+        "en": "The application of obligations under the French due diligence law and the upcoming European CSDDD directive (expected July 2028) forces a paradigm shift. Simple paper compliance is ineffective against field investigations (HUMINT) led by NGOs. French companies must adopt offensive human intelligence methodologies to map supply chains in gray zones (tier 3 suppliers, hidden sub-contracting, local corruption). Reaching to structured interviews and physical investigations, validated by PNF and AFA, becomes a key shield for French groups.",
+        "fr": "L'application des obligations liées au devoir de vigilance et à la future directive européenne CSDDD (prévue pour juillet 2028) impose un changement de paradigme. La simple conformité documentaire est inefficace face aux enquêtes de terrain (HUMINT) menées par les ONG. Les entreprises françaises doivent adopter une démarche de renseignement humain offensive pour cartographier les chaînes d'approvisionnement en zone grise (fournisseurs de rang 3, sous-traitance masquée, corruption locale). Le recours à l'entretien structuré et à l'investigation physique, validé par le PNF et l'AFA, devient l'arme clé de la défense des grands groupes français."
+      },
+      "organisation": {
+        "en": ["Parquet National Financier (PNF)", "Agence Française Anticorruption (AFA)"],
+        "fr": ["Parquet National Financier (PNF)", "Agence Française Anticorruption (AFA)"]
+      },
+      "jurisdiction": {
+        "en": ["France", "European Union"],
+        "fr": ["France", "Union européenne"]
+      },
+      "references": {
+        "en": ["Devoir de vigilance", "CSDDD"],
+        "fr": ["Devoir de vigilance", "CSDDD"]
+      },
+      "tags": ["Regulatory", "CSDDD", "Compliance", "HUMINT", "France", "Europe"],
+      "sources": ["https://www.portail-ie.fr/univers/2026/devoir-de-vigilance-le-renseignement-humain-au-service-de-la-conformite-partie-2-2/"],
+      "date": "2026-05-30"
+    },
+    {
+      "title": {
+        "en": "DOJ App Store Dragnet Subpoena",
+        "fr": "Citation à comparaître généralisée DOJ App Store"
+      },
+      "description": {
+        "en": "The US DOJ has issued a generalized subpoena to Apple, Google, Amazon, and Walmart to obtain the identities, addresses, and purchase histories of over 100,000 users who downloaded a vehicle diagnostic app. This action illustrates the use of app stores as de facto mass surveillance dragnets when direct targets (here a company in the Cayman Islands) are out of reach.",
+        "fr": "Le DOJ américain a émis une citation à comparaître généralisée (subpoena) auprès d'Apple, Google, Amazon et Walmart pour obtenir les identités, adresses et historiques d'achats de plus de 100 000 utilisateurs ayant téléchargé une application de diagnostic automobile. Cette action illustre l'usage des boutiques d'applications comme des filets de surveillance de masse de facto lorsque les cibles directes (ici une entreprise située aux îles Caïmans) sont hors d'atteinte."
+      },
+      "organisation": {
+        "en": ["US Department of Justice (DOJ)"],
+        "fr": ["Ministère américain de la Justice (DOJ)"]
+      },
+      "jurisdiction": {
+        "en": ["United States"],
+        "fr": ["États-Unis"]
+      },
+      "references": {
+        "en": ["DOJ App Store dragnet subpoena"],
+        "fr": ["DOJ App Store dragnet subpoena"]
+      },
+      "tags": ["Regulatory", "DOJ", "Privacy", "Surveillance", "App Store"],
+      "sources": ["https://ppb.social/@ppb1701/116660435675681194"],
+      "date": "2026-05-30"
+    },
+    {
+      "title": {
+        "en": "US Spagnuolo Insider Trading Charges",
+        "fr": "Inculpation de Spagnuolo pour délit d'initié"
+      },
+      "description": {
+        "en": "A Google security engineer, Spagnuolo (alias AlphaRaccoon), has been criminally indicted for insider trading and faces a CFTC complaint. He misappropriated confidential data from Google's internal 'Year in Search' tool to place perfectly accurate bets on the decentralized platform Polymarket, gaining over $1.2 million in USDC.",
+        "fr": "Un ingénieur en sécurité de Google, Spagnuolo (alias AlphaRaccoon), a été inculpé pénalement pour délit d'initié et fait l'objet d'une plainte de la CFTC. Il a détourné des données confidentielles de l'outil interne 'Year in Search' de Google pour placer des paris d'une précision parfaite sur la plateforme décentralisée Polymarket, engrangeant plus de 1,2 million de dollars de profits illicites en USDC."
+      },
+      "organisation": {
+        "en": ["US Attorney's Office (Southern District of New York)", "Commodity Futures Trading Commission (CFTC)"],
+        "fr": ["US Attorney's Office (Southern District of New York)", "Commodity Futures Trading Commission (CFTC)"]
+      },
+      "jurisdiction": {
+        "en": ["United States"],
+        "fr": ["États-Unis"]
+      },
+      "references": {
+        "en": ["US Spagnuolo Insider Trading Charges"],
+        "fr": ["Inculpations pénales Spagnuolo"]
+      },
+      "tags": ["Regulatory", "DOJ", "Insider Trading", "Google", "Polymarket", "Cryptocurrency"],
+      "sources": ["https://www.bleepingcomputer.com/news/security/us-charges-google-security-engineer-with-polymarket-insider-trading/"],
+      "date": "2026-05-30"
+    },
+    {
+      "title": {
+        "en": "Troy Murray / Steve Dixon Prosecution",
+        "fr": "Poursuite et condamnation de Troy Murray / Steve Dixon"
+      },
+      "description": {
+        "en": "Troy Murray (using the pseudonym Steve Dixon) has been sentenced to 121 months in prison and a $5.2 million fine for selling lists containing personal information of 7 million elderly Americans to fraud rings, facilitating large-scale lottery scams.",
+        "fr": "Troy Murray (utilisant le pseudonyme Steve Dixon) a été condamné à 121 mois de prison et à une amende de 5,2 millions de dollars pour avoir vendu des listes de données personnelles contenant les coordonnées de 7 millions de personnes âgées américaines à des réseaux de fraudeurs, facilitant des fraudes à la loterie à grande échelle."
+      },
+      "organisation": {
+        "en": ["US Department of Justice (DOJ)"],
+        "fr": ["Ministère américain de la Justice (DOJ)"]
+      },
+      "jurisdiction": {
+        "en": ["United States"],
+        "fr": ["États-Unis"]
+      },
+      "references": {
+        "en": ["Troy Murray / Steve Dixon Prosecution"],
+        "fr": ["Poursuite Troy Murray / Steve Dixon"]
+      },
+      "tags": ["Regulatory", "Fraud", "Elder Abuse", "DOJ", "Sentencing"],
+      "sources": ["https://www.bleepingcomputer.com/news/security/man-sent-to-prison-for-selling-data-of-7-millions-elderly-americans/"],
+      "date": "2026-05-30"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "23andMe (Chrome Holding Co.)",
+      "threat_actor": "Unknown (Credential Stuffing / API Error exploitation)",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Healthcare_and_Life_Sciences"],
+        "fr": ["Santé_et_Sciences_de_la_Vie"]
+      },
+      "description": {
+        "en": "California Attorney General R. Bonta is suing 23andMe (now Chrome Holding Co.) for its poor handling of the 2023 data breach. The complaint alleges the company failed to implement basic security measures against credential stuffing, missed multiple warning flags, and attempted to shift blame to users for reusing passwords. The fallout led to regulatory fines and the company's bankruptcy.",
+        "fr": "Le procureur général de Californie, R. Bonta, poursuit l'entreprise 23andMe (désormais Chrome Holding Co.) pour sa gestion désastreuse de la faille de 2023. Le dépôt de plainte allègue que l'entreprise n'a pas mis en place des mesures de sécurité de base contre les attaques par credential stuffing, a manqué de multiples signaux d'alerte et a tenté d'en minimiser la gravité en accusant ses clients pour leur réutilisation de mots de passe. L'affaire a mené à des amandes réglementaires et à la faillite de l'entreprise."
+      },
+      "mitre_ttps": ["T1110.004", "T1135"],
+      "recommandations": [
+        {
+          "en": "Implement a strict unique password policy and mandatory multi-factor authentication (MFA) for all sensitive data.",
+          "fr": "Mettre en œuvre une politique stricte de mot de passe unique et l'obligation de double facteur (MFA) pour toutes les données sensibles."
+        },
+        {
+          "en": "Conduct regular API audits to ensure interconnected user data cannot be abused via cascading requests.",
+          "fr": "Mener des audits d'API réguliers pour s'assurer que les données croisées d'utilisateurs ne peuvent être abusées de proche en proche."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Implement credential stuffing protection (rate limiting, proxy IP blocking).",
+            "Require MFA for all customer accounts by default."
+          ],
+          "fr": [
+            "Mettre en place une protection contre le credential stuffing (rate limiting, blocage d'IP de proxies).",
+            "Exiger l'authentification multifacteur (MFA) pour tous les comptes clients par défaut."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect unusual spikes in failed login attempts or sequential API calls on social features.",
+            "Monitor sudden relation creations or bulk genealogy profile downloads."
+          ],
+          "fr": [
+            "Détecter des pics inhabituels de tentatives de connexion échouées ou d'appels API successifs sur des fonctionnalités sociales.",
+            "Surveiller la création soudaine de relations ou le téléchargement massif de profils généalogiques."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Force reset passwords for suspicious or affected accounts.",
+            "Temporarily disable the faulty 'DNA Relatives' feature to stop cascading access."
+          ],
+          "fr": [
+            "Réinitialiser de force les mots de passe des comptes suspects ou touchés.",
+            "Désactiver temporairement la fonctionnalité défaillante 'DNA Relatives' pour stopper l'effet de cascade."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Inform regulatory authorities and affected users transparently without victim-blaming.",
+            "Fix the logic error in the shared profile management API."
+          ],
+          "fr": [
+            "Informer de manière transparente les autorités de régulation et les utilisateurs affectés en évitant le 'victim-blaming'.",
+            "Corriger l'erreur de code dans l'API de gestion des profils partagés."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Detect massive credential stuffing campaigns targeting user portals via authentication logs aggregation."
+          ],
+          "fr": [
+            "Identification de campagnes de credential stuffing massives ciblant les portails utilisateurs."
+          ]
+        }
+      },
+      "tags": ["Breach", "DNA", "Genetic Data", "Lawsuit", "Credential Stuffing", "Bankruptcy"],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/california-ag-sues-23andme-over-2023-breach-exposing-health-data/",
+        "https://databreaches.net/2026/05/29/california-ag-bonta-sues-chrome-holding-co-formerly-known-as-23andme-over-2023-data-breach/"
+      ],
+      "date": "2026-05-30"
+    },
+    {
+      "victim": "Carnival Corporation",
+      "threat_actor": "ShinyHunters",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Hospitality_and_Entertainment"],
+        "fr": ["Hospitalité_et_Divertissement"]
+      },
+      "description": {
+        "en": "Carnival Corporation, the world's largest cruise operator, has notified a major breach committed by ShinyHunters. The attacker accessed the company's network on April 10, 2026, via social engineering (phishing of an employee) and stole the personal data of 6 million customers.",
+        "fr": "Carnival Corporation, le plus grand opérateur de croisières au monde, a notifié une violation majeure commise par ShinyHunters. L'attaquant a accédé au réseau de l'entreprise le 10 avril 2026 par ingénierie sociale (hameçonnage d'un employé) et a dérobé les données personnelles de 6 millions de clients."
+      },
+      "mitre_ttps": ["T1566", "T1048"],
+      "recommandations": [
+        {
+          "en": "Implement zero-trust policies for accessing customer databases.",
+          "fr": "Mettre en place des politiques de zero-trust pour l'accès aux bases de données clients."
+        },
+        {
+          "en": "Provide continuous training against social engineering for all cruise and administrative staff.",
+          "fr": "Fournir une formation continue contre l'ingénierie sociale pour l'ensemble du personnel naviguant et administratif."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Deploy email security controls to block social engineering attempts.",
+            "Educate employees on identity verification to avoid credential abuse."
+          ],
+          "fr": [
+            "Déployer des contrôles de sécurité sur la messagerie pour bloquer les tentatives d'ingénierie sociale.",
+            "Sensibiliser les employés à la vérification d'identité pour éviter l'abus d'identifiants."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Search for employee network logins from unusual locations or at abnormal times.",
+            "Detect massive exfiltration or abnormal transfer of files to external services."
+          ],
+          "fr": [
+            "Rechercher les connexions réseau d'employés depuis des localisations inhabituelles ou sur des horaires anormaux.",
+            "Détecter l'exfiltration massive ou le transfert anormal de fichiers vers des services externes."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Immediately revoke the compromised employee's access and reset all their access secrets.",
+            "Block external IP addresses and isolate the server from which the files were copied."
+          ],
+          "fr": [
+            "Révoquer immédiatement l'accès de l'employé compromis et réinitialiser tous ses secrets d'accès.",
+            "Bloquer les adresses IP externes et isoler le serveur d'où les fichiers ont été copiés."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Declare the incident to State Attorneys General (including Maine) under legal deadlines.",
+            "Implement free 24-month credit monitoring for affected customers via TransUnion."
+          ],
+          "fr": [
+            "Déclarer l'incident auprès des procureurs généraux d'État (dont celui du Maine) sous les délais légaux.",
+            "Mettre en place une surveillance de crédit gratuite de 24 mois pour les clients lésés via TransUnion."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search email logs for phishing attempts aiming to collect access credentials."
+          ],
+          "fr": [
+            "Recherche de tentatives d'hameçonnage visant à collecter des identifiants d'accès chez Carnival."
+          ]
+        }
+      },
+      "tags": ["Breach", "ShinyHunters", "Social Engineering", "Cruises"],
+      "sources": ["https://lifehacker.com/tech/carnival-cruise-just-had-a-massive-data-breach?utm_medium=RSS"],
+      "date": "2026-05-30"
+    },
+    {
+      "victim": "Portraitbox",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Education_and_Research"],
+        "fr": ["Éducation_et_Recherche"]
+      },
+      "description": {
+        "en": "Paderborn-based school photography service Portraitbox, widely popular in German schools and daycares, suffered a major cyberattack. Large volumes of children's photos and family contact information were stolen, and attackers are threatening to publish them on the internet. Partner photographers have been asked to respond within 72 hours.",
+        "fr": "Le prestataire de services photographiques Portraitbox de Paderborn, très populaire dans les écoles et crèches allemandes, a subi une cyberattaque d'envergure. Des volumes importants de photos d'enfants et de coordonnées de familles ont été dérobés, et les attaquants menacent de publier ces clichés sur Internet. Les photographes partenaires sont sommés de réagir sous 72 heures."
+      },
+      "mitre_ttps": ["T1190"],
+      "recommandations": [
+        {
+          "en": "Verify GDPR compliance status of any subcontractor handling minors' photographs.",
+          "fr": "Vérifier l'état de conformité RGPD de tout sous-traitant manipulant des photos de mineurs."
+        },
+        {
+          "en": "Isolate and encrypt image databases stored in the cloud.",
+          "fr": "Isoler et chiffrer les bases de données d'images stockées sur le cloud."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Perform regular penetration tests on the school photo access platform.",
+            "Ensure stored photos have robust authentication access controls."
+          ],
+          "fr": [
+            "Effectuer des tests de pénétration réguliers sur la plateforme d'accès aux photos pour les écoles.",
+            "S'assurer que les photos stockées ont des identifiants d'accès d'authentification robuste."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect sequential downloading of images or zip archives of photos without proper authorization.",
+            "Monitor application error logs indicating attempts to bypass permissions."
+          ],
+          "fr": [
+            "Détecter le téléchargement séquentiel d'images ou d'archives zip de photos sans autorisation adéquate.",
+            "Surveiller les logs d'erreurs d'application indiquant des tentatives de contournement de droits."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Momentarily disconnect external access to the affected web application.",
+            "Close compromised image storage servers while repairing the flaw."
+          ],
+          "fr": [
+            "Couper momentanément l'accès externe à l'application web affectée.",
+            "Fermer les serveurs de stockage d'images compromis le temps de corriger la faille."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Report the data breach to the German data protection authority (LfD) within the legal 72-hour window.",
+            "Notify affected schools, daycares, and parents."
+          ],
+          "fr": [
+            "Déclarer la violation de données à la CNIL allemande (LfD) dans le délai légal de 72 heures sous peine de sanctions RGPD.",
+            "Notifier les écoles, les crèches et les parents d'élèves concernés."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Analyze web logs for unexpected downloads of massive archives containing student portraits."
+          ],
+          "fr": [
+            "Identification de téléchargements d'archives volumineuses ou inattendues contenant des portraits d'élèves."
+          ]
+        }
+      },
+      "tags": ["Breach", "Germany", "Photography", "Children", "GDPR"],
+      "sources": ["https://mastodon.de/@maniabel/116658787480777678"],
+      "date": "2026-05-30"
+    },
+    {
+      "victim": "French Health Payment Systems",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Healthcare_and_Life_Sciences"],
+        "fr": ["Santé_et_Sciences_de_la_Vie"]
+      },
+      "description": {
+        "en": "A major breach struck French health payment processing systems, exposing national identity data and triggering fears of a massive wave of identity thefts and targeted financial frauds.",
+        "fr": "Une violation importante a frappé les systèmes de traitement de paiements de santé en France, exposant des données d'identité nationale et faisant craindre une vague massive d'usurpations d'identité et de fraudes financières ciblées."
+      },
+      "mitre_ttps": [],
+      "recommandations": [
+        {
+          "en": "Warn policyholders against phishing campaigns mimicking the French National Health Insurance (Assurance Maladie) or mutual insurances.",
+          "fr": "Mettre en garde les assurés sociaux contre des campagnes d'hameçonnage imitant l'Assurance Maladie ou des mutuelles."
+        },
+        {
+          "en": "Set up a reinforced alert mechanism in case of attempts to modify bank details (RIB) for refunds.",
+          "fr": "Mettre en place un mécanisme d'alerte renforcé en cas de tentative de modification des coordonnées bancaires de remboursement (RIB)."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Implement transparent encryption for national health insurance identifiers (NIR).",
+            "Establish robust processes to monitor the fraudulent use of exfiltrated health data."
+          ],
+          "fr": [
+            "Mettre en œuvre des chiffrements transparents pour les données d'identification de santé (NIR).",
+            "Établir des processus robustes de surveillance de l'utilisation frauduleuse des données de santé exfiltrées."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect bulk anomalous queries on reimbursement and third-party payment platforms.",
+            "Monitor suspicious use of health APIs for extracting policyholder files."
+          ],
+          "fr": [
+            "Détecter les requêtes anormales en masse sur les plateformes de remboursement et de tiers-payant.",
+            "Surveiller l'usage suspect d'API de santé pour l'extraction de fiches d'assurés."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Disable third-party payment access tokens or credentials identified as compromised.",
+            "Restrict network access to isolate servers containing identity records."
+          ],
+          "fr": [
+            "Désactiver les jetons ou identifiants d'accès tiers-payant identifiés comme compromis.",
+            "Restreindre les accès réseau pour isoler les serveurs contenant les fiches d'identité."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Coordinate public information campaigns with the Assurance Maladie and CNIL.",
+            "Strengthen identity theft fraud detection among healthcare professionals."
+          ],
+          "fr": [
+            "Coordonner l'information du public avec l'Assurance Maladie et la CNIL.",
+            "Renforcer la détection des fraudes par usurpation d'identité auprès des professionnels de santé."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search API gateway logs for bulk extraction attempts of health insurance registries."
+          ],
+          "fr": [
+            "Recherche de tentatives d'exfiltration en masse de registres d'assurés de santé."
+          ]
+        }
+      },
+      "tags": ["Breach", "France", "Health Insurance", "GDPR", "Identity Theft"],
+      "sources": ["https://databreaches.net/2026/05/29/french-health-payments-breach-exposed-id-data-fuels-fraud-fears/?pk_campaign=feed&pk_kwd=french-health-payments-breach-exposed-id-data-fuels-fraud-fears"],
+      "date": "2026-05-30"
+    },
+    {
+      "victim": "Oregon Department of Corrections",
+      "threat_actor": "Internal Employee (Insider Threat)",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Government_and_Defense"],
+        "fr": ["Gouvernement_et_Défense"]
+      },
+      "description": {
+        "en": "An Oregon prison worker illegally accessed thousands of confidential prisoner files without any professional justification, illustrating the persistent risk posed by insider threats.",
+        "fr": "Un travailleur pénitentiaire de l'Oregon a accédé illégalement à des milliers de dossiers confidentiels de détenus sans aucune justification professionnelle, illustrant le risque persistant que représentent les menaces internes (insiders)."
+      },
+      "mitre_ttps": ["T1078"],
+      "recommandations": [
+        {
+          "en": "Implement periodic logical access reviews and restrict the mass download of administrative documents.",
+          "fr": "Mettre en place des revues d'accès logiques périodiques et restreindre le téléchargement en masse de documents administratifs."
+        },
+        {
+          "en": "Continuously audit access to shared network directories containing personal data.",
+          "fr": "Auditer de manière continue l'accès aux répertoires réseau partagés contenant des données à caractère personnel."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Implement a strict Role-Based Access Control (RBAC) policy prohibiting non-admin users from viewing massive file volumes.",
+            "Deploy User and Entity Behavior Analytics (UEBA) solutions to spot download anomalies."
+          ],
+          "fr": [
+            "Mettre en place une politique d'accès au moindre privilège (RBAC) interdisant aux utilisateurs non admin de consulter des volumes de dossiers massifs.",
+            "Déployer des solutions de surveillance du comportement des utilisateurs (UEBA) pour repérer les écarts de téléchargement."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect repeated access to sensitive files without correlation with current professional tasks.",
+            "Generate security alerts in case of directory exports of former inmates."
+          ],
+          "fr": [
+            "Détecter les accès répétés à des fichiers sensibles sans corrélation avec les tâches professionnelles courantes.",
+            "Générer des alertes de sécurité en cas d'exportation de répertoires entiers d'anciens détenus."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Immediately suspend network access and revoke the suspect employee's accounts.",
+            "Temporarily lock the affected shared directories."
+          ],
+          "fr": [
+            "Suspendre immédiatement les accès réseau et révoquer les comptes de l'employé suspect.",
+            "Verrouiller temporairement les répertoires partagés concernés."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Conduct an internal audit to determine the exact scope of files copied or viewed.",
+            "Take disciplinary actions and notify competent state judicial authorities."
+          ],
+          "fr": [
+            "Mener un audit interne pour déterminer l'étendue exacte des fichiers copiés ou consultés.",
+            "Prendre des sanctions disciplinaires et notifier les autorités judiciaires compétentes de l'État."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Monitor file access logs for bulk downloads of inmate files without professional reasons."
+          ],
+          "fr": [
+            "Détection d'une menace interne s'appropriant des milliers de dossiers de détenus sans motif professionnel."
+          ]
+        }
+      },
+      "tags": ["Breach", "Insider Threat", "Prison", "USA", "Data Theft"],
+      "sources": ["https://databreaches.net/2026/05/29/thousands-of-oregon-prison-files-accessed-by-prison-worker/?pk_campaign=feed&pk_kwd=thousands-of-oregon-prison-files-accessed-by-prison-worker"],
+      "date": "2026-05-30"
+    },
+    {
+      "victim": "Daegu University AI Department",
+      "threat_actor": "Nova Ransomware Group",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Education_and_Research"],
+        "fr": ["Éducation_et_Recherche"]
+      },
+      "description": {
+        "en": "The Artificial Intelligence Department of Daegu University in South Korea was victim of a ransomware attack claimed by the cybercriminal group Nova. Calculation servers or research data were exfiltrated and encrypted.",
+        "fr": "Le département d'Intelligence Artificielle de l'université de Daegu en Corée du Sud a été victime d'une attaque par rançongiciel revendiquée par le groupe cybercriminel Nova. Des serveurs de calcul ou des données de recherche ont été exfiltrés et chiffrés."
+      },
+      "mitre_ttps": ["T1486"],
+      "recommandations": [
+        {
+          "en": "Strengthen perimeter security of strategic technological research departments.",
+          "fr": "Renforcer la sécurité périmétrique des départements de recherche technologique stratégiques."
+        },
+        {
+          "en": "Implement 24/7 EDR monitoring across the entire university network.",
+          "fr": "Mettre en œuvre une surveillance EDR 24/7 sur l'ensemble du réseau de l'université."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Ensure regular offline and encrypted backups of all academic research servers.",
+            "Restrict direct exposure of infrastructure management ports to the internet."
+          ],
+          "fr": [
+            "Assurer des sauvegardes hors ligne régulières et chiffrées de tous les serveurs de recherche académique.",
+            "Restreindre l'exposition directe des ports de gestion d'infrastructure sur Internet."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Search for files with modified extensions in an unusual way on file servers.",
+            "Detect execution of credential extraction tools (e.g., Mimikatz) using EDR."
+          ],
+          "fr": [
+            "Rechercher les extensions de fichiers modifiées de manière inhabituelle sur les serveurs de fichiers.",
+            "Détecter le déploiement ou l'exécution d'outils d'extraction d'identifiants (ex: Mimikatz) par l'EDR."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Immediately isolate the university domain to prevent lateral spread of the ransomware.",
+            "Power down affected AI training servers."
+          ],
+          "fr": [
+            "Isoler immédiatement le domaine universitaire pour empêcher la propagation latérale du rançongiciel.",
+            "Mettre hors tension les serveurs d'apprentissage de l'IA affectés."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Restore systems from healthy backups after complete eradication of the malware.",
+            "Collaborate with South Korean local law enforcement to analyze the Nova group."
+          ],
+          "fr": [
+            "Restaurer les systèmes à partir de sauvegardes saines après éradication complète du malware.",
+            "Collaborer avec les autorités policières locales sud-coréennes pour analyser le groupe Nova."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search endpoint logs for file encryption behaviors or folders containing ransomware notes."
+          ],
+          "fr": [
+            "Détection de l'amorçage d'une phase de chiffrement de fichiers dans le réseau de l'université."
+          ]
+        }
+      },
+      "tags": ["Ransomware", "Ransomlook", "Korea", "Academic", "AI"],
+      "sources": ["https://www.ransomlook.io//group/nova"],
+      "date": "2026-05-30"
+    },
+    {
+      "victim": "VVO Finance",
+      "threat_actor": "Everest Ransomware Group",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Finance"],
+        "fr": ["Finance"]
+      },
+      "description": {
+        "en": "Ransomware actor 'Everest' claims to have carried out a cyberattack against VVO Finance. The validity of this extortion claim has not yet been fully verified at the time of the alert.",
+        "fr": "L'acteur de ransomware 'Everest' prétend avoir mené à bien une cyberattaque contre VVO Finance. La validité de cette allégation d'extorsion n'a pas encore été pleinement vérifiée au moment de l'alerte."
+      },
+      "mitre_ttps": [],
+      "recommandations": [
+        {
+          "en": "Conduct an intrusion audit to check for evidence of active compromise in the Active Directory.",
+          "fr": "Mener un audit d'intrusion pour vérifier s'il existe des preuves de compromission active dans l'annuaire Active Directory."
+        },
+        {
+          "en": "Deploy strengthened security controls on access to cloud administrative interfaces.",
+          "fr": "Déployer des contrôles de sécurité renforcés sur l'accès aux interfaces administratives cloud."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Implement strict network segregation between test and financial production environments.",
+            "Set up response plans in case of double-extortion ransomware attacks."
+          ],
+          "fr": [
+            "Réaliser une ségrégation réseau stricte entre les environnements de test et de production financière.",
+            "Mettre en place des plans d'intervention en cas d'attaque par ransomware par double extorsion."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect suspicious connections to unusual IP addresses or ports using the IDS.",
+            "Monitor the stopping of system services or backup agents."
+          ],
+          "fr": [
+            "Détecter des connexions suspectes vers des adresses IP ou ports inhabituels à l'aide de l'IDS.",
+            "Surveiller l'arrêt de services système ou d'agents de sauvegarde."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Revoke VPN access and block IP addresses related to the Everest group.",
+            "Isolate the affected financial application server."
+          ],
+          "fr": [
+            "Révoquer les accès VPN et bloquer les adresses IP liées au groupe Everest.",
+            "Isoler le serveur d'applications financières touché."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify financial accounting integrity from secured transaction logs.",
+            "Monitor ransomware forums to detect any effective leak."
+          ],
+          "fr": [
+            "Vérifier l'intégrité de la comptabilité financière à partir des journaux sécurisés de transactions.",
+            "Assurer une veille sur les forums de ransomware pour détecter toute fuite effective."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search firewall logs for active communications with the Everest group infrastructure."
+          ],
+          "fr": [
+            "Recherche de communications actives vers l'infrastructure du groupe Everest."
+          ]
+        }
+      },
+      "tags": ["Breach", "Ransomware", "Finance", "Everest"],
+      "sources": ["https://infosec.exchange/@Matchbook3469/116659299923011542"],
+      "date": "2026-05-30"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-48095",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "8.8",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "7-Zip",
+      "vendor": "7-Zip",
+      "description": {
+        "en": "A heap-based buffer overflow, caused by an integer overflow when calculating memory size to process maliciously modified archive files. Simply opening the archive (zip, 7z) can trigger memory corruption and lead to arbitrary code execution.",
+        "fr": "Un dépassement de tampon dans le tas, causé par un débordement d'entier lors du calcul de la taille de la mémoire pour traiter des fichiers archives malicieusement modifiés. L'ouverture simple de l'archive (zip, 7z) peut déclencher la corruption de mémoire et mener à l'exécution de code arbitraire."
+      },
+      "mitre_ttps": ["T1203"],
+      "recommandations": [
+        {
+          "en": "Update 7-Zip to version 26.01 or later.",
+          "fr": "Mettre à jour l'application 7-Zip vers la version corrigée 26.01 ou ultérieure."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Identify all installed instances of 7-Zip across the enterprise."],
+          "fr": ["Identifier toutes les instances de 7-Zip installées dans l'entreprise."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor for crashes in 7z.exe or other 7-Zip binaries associated with reading archived attachments."],
+          "fr": ["Surveiller les plantages de 7z.exe ou d'autres binaires de 7-Zip associés à la lecture d'archives jointes."]
+        },
+        "phase3_containment": {
+          "en": ["Block users from opening unverified external archive files."],
+          "fr": ["Bloquer l'ouverture d'archives externes non vérifiées par les utilisateurs."]
+        },
+        "phase4_post_incident": {
+          "en": ["Deploy the updated 7-Zip version via centralized software management tools."],
+          "fr": ["Déployer la version mise à jour de 7-Zip via les outils de gestion centralisée des applications."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search for suspicious processes spawned by 7z.exe or related archival utilities."],
+          "fr": ["Rechercher les processus suspects initiés par 7z.exe ou d'autres utilitaires d'archivage."]
+        }
+      },
+      "tags": ["vulnerability", "7-Zip", "Buffer Overflow", "PoC", "Code Execution"],
+      "sources": ["https://fieldeffect.com/blog/poc-7-zip-memory-corruption-flaw"],
+      "date": "2026-05-30"
+    },
+    {
+      "cve_id": "CVE-2026-35616",
+      "euvd_id": "unknown",
+      "cisa_kev": "true",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "Windows Defender, BitLocker, multiples composants Windows",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "A series of six unpatched zero-day vulnerabilities uncoordinatedly disclosed by researcher Chaotic Eclipse. Three of them (dubbed RedSun, UnDefend, and BlueHammer) are actively exploited in the wild to compromise Windows Defender and other key Windows components.",
+        "fr": "Une série de six vulnérabilités zero-day non divulguées de manière coordonnée par le chercheur Chaotic Eclipse. Trois d'entre elles (baptisées RedSun, UnDefend et BlueHammer) sont activement exploitées dans la nature pour compromettre Windows Defender et d'autres composants clés de Windows."
+      },
+      "mitre_ttps": ["T1068"],
+      "recommandations": [
+        {
+          "en": "Apply Microsoft emergency updates as soon as they are published, enable Edge and Defender Attack Surface Reduction (ASR) rules.",
+          "fr": "Mettre en œuvre les correctifs d'urgence de Microsoft dès leur publication, activer les règles de réduction de la surface d'attaque (ASR) d'Edge et Defender."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Enable aggressive Attack Surface Reduction (ASR) rules on all endpoints."],
+          "fr": ["Activer les règles de réduction de la surface d'attaque (ASR) agressives sur tous les points d'accès."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor Windows Defender service status changes and unauthorized stops."],
+          "fr": ["Surveiller les changements d'état ou l'arrêt non autorisé du service Windows Defender."]
+        },
+        "phase3_containment": {
+          "en": ["Isolate machines showing unexplained security software bypass behaviors."],
+          "fr": ["Isoler les machines présentant des comportements de contournement inexpliqués de l'antivirus."]
+        },
+        "phase4_post_incident": {
+          "en": ["Apply official emergency hotfixes and run complete offline malware scans."],
+          "fr": ["Appliquer les correctifs d'urgence officiels et exécuter des analyses complètes hors ligne."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Look for unexpected modifications to security registry keys and process injection in host processes."],
+          "fr": ["Rechercher des modifications inattendues de clés de registre de sécurité et des injections dans les processus hôtes."]
+        }
+      },
+      "tags": ["vulnerability", "Windows", "Zero-Day", "Active Exploitation", "Antivirus Bypass", "Microsoft"],
+      "sources": ["https://securityaffairs.com/192865/security/microsoft-calls-the-zero-day-dumps-irresponsible-the-researcher-says-microsoft-started-it.html"],
+      "date": "2026-05-30"
+    },
+    {
+      "cve_id": "CVE-2026-35617",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "7.2",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "Android OS",
+      "vendor": "Google",
+      "description": {
+        "en": "The BTMOB RAT remote access trojan (evolution of SpySolr) abuses Android accessibility features to silently grant itself elevated permissions after manual installation of a fraudulent application (APK outside Play Store).",
+        "fr": "Le cheval de Troie d'accès à distance BTMOB RAT (évolution de SpySolr) abuse des fonctionnalités d'accessibilité d'Android pour s'octroyer de manière furtive des permissions élevées après l'installation manuelle d'une application frauduleuse (APK hors Play Store)."
+      },
+      "mitre_ttps": ["T1546.015"],
+      "recommandations": [
+        {
+          "en": "Disable installation from unknown sources, forbid fraudulent use of accessibility, or block BTMOB processes (detected as Android/Spy.Agent.EIJ).",
+          "fr": "Désactiver l'installation à partir de sources inconnues, interdire l'utilisation frauduleuse de l'accessibilité ou bloquer les processus suspects de BTMOB (détectés comme Android/Spy.Agent.EIJ)."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Configure MDM policies to prevent sideloading of third-party APKs."],
+          "fr": ["Configurer les politiques MDM pour interdire le chargement latéral d'APKs tiers."]
+        },
+        "phase2_detection": {
+          "en": ["Detect mobile devices with unusual active accessibility services."],
+          "fr": ["Détecter les appareils mobiles affichant des services d'accessibilité actifs inhabituels."]
+        },
+        "phase3_containment": {
+          "en": ["Revoke device access to corporate networks and force system uninstallation."],
+          "fr": ["Révoquer l'accès des terminaux aux réseaux d'entreprise et forcer la désinstallation système."]
+        },
+        "phase4_post_incident": {
+          "en": ["Wipe affected mobile devices and change all credentials accessed via mobile."],
+          "fr": ["Réinitialiser les terminaux mobiles affectés et révoquer les secrets d'accès utilisés depuis le mobile."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search for patterns of SpySolr/BTMOB command communication in mobile network logs."],
+          "fr": ["Rechercher des traces de communication de commandes SpySolr/BTMOB dans les logs de réseaux mobiles."]
+        }
+      },
+      "tags": ["vulnerability", "Android", "Malware", "MaaS", "Accessibility", "Phishing"],
+      "sources": ["https://securityaffairs.com/192846/malware/btmob-rat-gives-criminals-a-point-and-click-kit-to-take-over-your-android-phone.html"],
+      "date": "2026-05-30"
+    },
+    {
+      "cve_id": "CVE-2024-8310",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "OPW Fuel Management SiteSentinel",
+      "vendor": "OPW Fuel Management",
+      "description": {
+        "en": "A critical authentication bypass on the OPW SiteSentinel industrial fuel management portal, allowing full administrative access without valid credentials. No official patch is available.",
+        "fr": "Un contournement critique de l'authentification sur le portail de gestion de carburant industriel SiteSentinel d'OPW, permettant un accès administrateur complet sans identifiant valide. Aucun correctif officiel n'est disponible."
+      },
+      "mitre_ttps": ["T1190"],
+      "recommandations": [
+        {
+          "en": "Immediately isolate SiteSentinel management consoles from the internet.",
+          "fr": "Isoler immédiatement de manière stricte les consoles de gestion SiteSentinel d'Internet."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Conduct scanning to identify exposed OPW SiteSentinel ports."],
+          "fr": ["Effectuer des scans pour identifier les ports OPW SiteSentinel exposés."]
+        },
+        "phase2_detection": {
+          "en": ["Log and alert on any connection to the SiteSentinel console from untrusted external IPs."],
+          "fr": ["Journaliser et alerter sur toute connexion à la console SiteSentinel depuis des adresses IP externes non approuvées."]
+        },
+        "phase3_containment": {
+          "en": ["Block external firewall traffic targeting the SiteSentinel web interfaces."],
+          "fr": ["Bloquer le trafic pare-feu externe ciblant les interfaces web de SiteSentinel."]
+        },
+        "phase4_post_incident": {
+          "en": ["Implement VPN and strict access controls for remote administrative actions on industrial sites."],
+          "fr": ["Mettre en œuvre des VPN et des contrôles d'accès stricts pour les actions administratives distantes sur les sites industriels."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search for default configuration access attempts or direct administrative actions bypass logs."],
+          "fr": ["Rechercher des tentatives d'accès par configuration par défaut ou des journaux de contournement d'actions administratives."]
+        }
+      },
+      "tags": ["vulnerability", "Industrial Control Systems", "Authentication Bypass", "OT Security", "Critical"],
+      "sources": ["https://mastodon.social/@hugovalters/116660384999471199"],
+      "date": "2026-05-30"
+    },
+    {
+      "cve_id": "CVE-2026-48557",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "8.5",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "Spatie Laravel Media Library",
+      "vendor": "Spatie",
+      "description": {
+        "en": "The defaultSanitizer() function only checks the last file suffix, enabling files with double extensions (like shell.php.jpg) to retain an executable segment (.php) when saved via pathinfo(). Additionally, executable extensions like .php6 or .htaccess are omitted from the default blocklist.",
+        "fr": "La fonction defaultSanitizer() vérifie uniquement le dernier suffixe de fichier, permettant l'envoi de fichiers à double extension (comme shell.php.jpg) qui conservent un segment executable (.php) lors de la sauvegarde du nom par pathinfo(). De plus, des extensions exécutables comme .php6 ou .htaccess sont omises de la liste de blocage par défaut."
+      },
+      "mitre_ttps": ["T1505.003"],
+      "recommandations": [
+        {
+          "en": "Update Spatie Laravel Media Library to version 11.23.0 or later.",
+          "fr": "Mettre à jour Spatie Laravel Media Library vers la version 11.23.0 ou ultérieure."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Audit Laravel dependencies across all corporate web servers."],
+          "fr": ["Auditer les dépendances Laravel sur l'ensemble des serveurs web de l'entreprise."]
+        },
+        "phase2_detection": {
+          "en": ["Detect file uploads containing double extensions (e.g., .php.jpg) in application logs."],
+          "fr": ["Détecter les téléversements de fichiers contenant des doubles extensions (ex: .php.jpg) dans les journaux applicatifs."]
+        },
+        "phase3_containment": {
+          "en": ["Disable execution of PHP files in user upload directories."],
+          "fr": ["Désactiver l'exécution des fichiers PHP dans les répertoires d'upload des utilisateurs."]
+        },
+        "phase4_post_incident": {
+          "en": ["Apply the updated library version and sanitize existing uploaded files."],
+          "fr": ["Appliquer la version mise à jour de la bibliothèque et assainir les fichiers déjà téléversés."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search upload directories for unexpected PHP web shell files or executable scripts."],
+          "fr": ["Rechercher dans les répertoires d'upload des fichiers de type web shell PHP ou scripts exécutables inattendus."]
+        }
+      },
+      "tags": ["vulnerability", "Laravel", "File Upload Bypass", "Web Shell", "PHP"],
+      "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-48557"],
+      "date": "2026-05-30"
+    },
+    {
+      "cve_id": "CVE-2026-47266",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "7.5",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "Formie Craft CMS plugin",
+      "vendor": "Verbb",
+      "description": {
+        "en": "Unauthenticated users can modify existing form submissions by posting a known or guessed submission ID to formie/submissions/save-submission.",
+        "fr": "Les utilisateurs non authentifiés peuvent modifier des soumissions existantes de formulaires en publiant un identifiant de soumission connu ou deviné vers formie/submissions/save-submission."
+      },
+      "mitre_ttps": [],
+      "recommandations": [
+        {
+          "en": "Update the Craft CMS Formie plugin to version 2.2.21 or 3.1.26.",
+          "fr": "Mettre à jour le plugin Formie de Craft CMS vers la version 2.2.21 ou 3.1.26."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Inventory all installations of the Craft CMS Formie plugin."],
+          "fr": ["Inventorier toutes les installations du plugin Formie de Craft CMS."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor HTTP POST requests to the save-submission endpoint originating from unauthenticated sessions."],
+          "fr": ["Surveiller les requêtes HTTP POST vers le point d'accès save-submission provenant de sessions non authentifiées."]
+        },
+        "phase3_containment": {
+          "en": ["Temporarily block access to the affected save-submission endpoint via Web Application Firewall (WAF) rules."],
+          "fr": ["Bloquer temporairement l'accès au point d'accès save-submission affecté via les règles de pare-feu applicatif (WAF)."]
+        },
+        "phase4_post_incident": {
+          "en": ["Apply the security updates provided by Verbb for Formie."],
+          "fr": ["Appliquer les mises à jour de sécurité fournies par Verbb pour Formie."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Look for unauthorized modifications of existing database records related to forms."],
+          "fr": ["Rechercher des modifications non autorisées de données enregistrées en base associées aux formulaires."]
+        }
+      },
+      "tags": ["vulnerability", "Craft CMS", "Formie", "Access Control Bypass", "Form Manipulation"],
+      "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-47266"],
+      "date": "2026-05-30"
+    },
+    {
+      "cve_id": "CVE-2026-46527",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "7.5",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "cpp-httplib",
+      "vendor": "yhirose",
+      "description": {
+        "en": "When set_trusted_proxies() is configured with a non-empty proxy list, an attacker sending an X-Forwarded-For header missing valid IP addresses triggers a front() call on an empty std::vector, causing an immediate server crash.",
+        "fr": "Lorsque set_trusted_proxies() est configurée avec une liste non vide de serveurs proxies, un attaquant transmettant un en-tête X-Forwarded-For dépourvu d'adresses IP valides provoque un appel front() sur un std::vector vide, générant un crash immédiat du serveur."
+      },
+      "mitre_ttps": ["T1499"],
+      "recommandations": [
+        {
+          "en": "Update cpp-httplib library to version 0.44.0 or later.",
+          "fr": "Mettre à jour la bibliothèque cpp-httplib vers la version 0.44.0 ou ultérieure."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["List all internal C++ web applications utilizing cpp-httplib."],
+          "fr": ["Lister toutes les applications web C++ internes exploitant la bibliothèque cpp-httplib."]
+        },
+        "phase2_detection": {
+          "en": ["Set alerts for recurrent crashes of applications running cpp-httplib."],
+          "fr": ["Paramétrer des alertes sur les plantages récurrents d'applications exécutant cpp-httplib."]
+        },
+        "phase3_containment": {
+          "en": ["Filter or strip out malformed X-Forwarded-For headers at the reverse proxy level."],
+          "fr": ["Filtrer ou supprimer les en-têtes X-Forwarded-For malformés au niveau du proxy inverse."]
+        },
+        "phase4_post_incident": {
+          "en": ["Recompile and deploy applications with the updated library version."],
+          "fr": ["Recompiler et déployer les applications avec la version mise à jour de la bibliothèque."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Analyze raw HTTP logs for requests with incomplete or malformed X-Forwarded-For contents preceding application crashes."],
+          "fr": ["Analyser les journaux HTTP bruts pour identifier des requêtes avec des en-têtes X-Forwarded-For vides ou malformés précédant les plantages."]
+        }
+      },
+      "tags": ["vulnerability", "cpp-httplib", "C++", "Denial of Service", "Null Vector"],
+      "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-46527"],
+      "date": "2026-05-30"
+    },
+    {
+      "cve_id": "CVE-2026-46385",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "7.5",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "iskorotkov/avro",
+      "vendor": "iskorotkov",
+      "description": {
+        "en": "Avro array and map decoders perform loops based on a block count controlled by the sender, without checking underlying read errors. An attacker can force up to 2^63 no-op loop iterations, causing CPU exhaustion.",
+        "fr": "Les décodeurs de tableaux et de tables Avro effectuent des boucles basées sur un nombre de blocs contrôlé par l'expéditeur, sans vérifier les erreurs de lecture sous-jacentes. Un attaquant peut ainsi forcer jusqu'à 2^63 itérations de boucle no-op, provoquant un blocage de CPU."
+      },
+      "mitre_ttps": ["T1499"],
+      "recommandations": [
+        {
+          "en": "Update iskorotkov/avro to version 2.33.0 or later.",
+          "fr": "Mettre à jour iskorotkov/avro vers la version 2.33.0 ou ultérieure."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Identify Go applications using the iskorotkov/avro package."],
+          "fr": ["Identifier les applications Go utilisant le paquet iskorotkov/avro."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor for sudden 100% CPU usage spikes on services parsing Avro streams."],
+          "fr": ["Surveiller les pics soudains de charge CPU à 100% sur les services de décodage de flux Avro."]
+        },
+        "phase3_containment": {
+          "en": ["Set rate limits or connection timeouts on data-ingesting endpoints handling Avro formats."],
+          "fr": ["Mettre en place des limites de débit ou des délais d'expiration sur les points d'entrée de données Avro."]
+        },
+        "phase4_post_incident": {
+          "en": ["Rebuild and roll out Go applications using the patched version of iskorotkov/avro."],
+          "fr": ["Recompiler et déployer les applications Go en intégrant la version corrigée de iskorotkov/avro."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search for abnormal payload sizes or malformed Avro formats within network traffic captures."],
+          "fr": ["Rechercher des anomalies de taille de charge ou des flux Avro tronqués dans les captures de trafic réseau."]
+        }
+      },
+      "tags": ["vulnerability", "Go", "Avro", "Denial of Service", "CPU Exhaustion"],
+      "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-46385"],
+      "date": "2026-05-30"
+    },
+    {
+      "cve_id": "CVE-2026-46384",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "7.5",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "iskorotkov/avro",
+      "vendor": "iskorotkov",
+      "description": {
+        "en": "Multiple Avro decoding paths read unchecked 64-bit values and perform truncation to platform-sized integers, bypassing boundary checks on 32-bit targets, or leading to signed integer overflows causing crashes (panics).",
+        "fr": "Plusieurs chemins de décodage Avro lisent des valeurs 64 bits non vérifiées et effectuent une troncation vers des entiers de taille plateforme, contournant les vérifications de limites sur les cibles 32 bits, ou menant à des dépassements d'entier signés provoquant un plantage (panic)."
+      },
+      "mitre_ttps": [],
+      "recommandations": [
+        {
+          "en": "Update iskorotkov/avro to version 2.33.0 or later.",
+          "fr": "Mettre à jour iskorotkov/avro vers la version 2.33.0 ou ultérieure."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Identify Go applications on 32-bit platforms utilizing iskorotkov/avro."],
+          "fr": ["Identifier les applications Go sur plateformes 32 bits utilisant iskorotkov/avro."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor application console outputs for Go runtime panics related to the Avro module."],
+          "fr": ["Surveiller les consoles d'erreurs d'applications pour détecter des paniques Go associées au décodage Avro."]
+        },
+        "phase3_containment": {
+          "en": ["Restrict input size accepted by the affected decoder endpoints."],
+          "fr": ["Restreindre la taille des requêtes entrantes acceptée par les décodeurs affectés."]
+        },
+        "phase4_post_incident": {
+          "en": ["Deploy the latest secure version of the package in all application pipelines."],
+          "fr": ["Déployer la dernière version sécurisée du paquet dans l'ensemble des pipelines applicatifs."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search for crash trace patterns associated with integer truncation or out-of-bounds exceptions."],
+          "fr": ["Rechercher des traces de plantages caractéristiques de troncations d'entiers ou de dépassement de limites."]
+        }
+      },
+      "tags": ["vulnerability", "Go", "Avro", "Integer Overflow", "Panic", "Denial of Service"],
+      "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-46384"],
+      "date": "2026-05-30"
+    },
+    {
+      "cve_id": "CVE-2026-45697",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "Formie Craft CMS plugin",
+      "vendor": "Verbb",
+      "description": {
+        "en": "Unauthenticated users can submit specially crafted values in hidden fields (with custom default values) which are subsequently evaluated as Twig templates during saving, leading to arbitrary code execution.",
+        "fr": "Les utilisateurs non authentifiés peuvent soumettre des valeurs spécialement conçues dans des champs cachés (avec des valeurs par défaut personnalisées) qui sont ensuite évaluées comme des modèles Twig lors de l'enregistrement, menant à une exécution de code arbitraire."
+      },
+      "mitre_ttps": ["T1505"],
+      "recommandations": [
+        {
+          "en": "Update the Craft CMS Formie plugin to version 2.2.20 or 3.1.24.",
+          "fr": "Mettre à jour le plugin Formie de Craft CMS vers la version 2.2.20 ou 3.1.24."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Ensure the template parsing sandbox mode is configured securely where applicable."],
+          "fr": ["S'assurer que le mode bac à sable pour l'évaluation des templates est activé quand c'est possible."]
+        },
+        "phase2_detection": {
+          "en": ["Detect Twig template tags (e.g., {{ ... }}) submitted in form hidden inputs."],
+          "fr": ["Détecter des balises de gabarit Twig (ex: {{ ... }}) soumises dans les champs cachés de formulaires."]
+        },
+        "phase3_containment": {
+          "en": ["Use WAF filters to intercept Twig syntax within public POST request bodies."],
+          "fr": ["Utiliser les filtres du WAF pour bloquer la syntaxe Twig dans les requêtes POST publiques."]
+        },
+        "phase4_post_incident": {
+          "en": ["Upgrade Formie plugin to the patched version immediately."],
+          "fr": ["Mettre à niveau le plugin Formie vers sa version corrigée immédiatement."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Check server command execution logs for processes spawned by PHP or web servers (e.g., www-data executing bash)."],
+          "fr": ["Rechercher dans les journaux système d'exécution de commandes des processus initiés par PHP ou le serveur web (ex: www-data lançant un shell)."]
+        }
+      },
+      "tags": ["vulnerability", "Craft CMS", "Formie", "Twig", "Server-Side Template Injection", "RCE"],
+      "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-45697"],
+      "date": "2026-05-30"
+    },
+    {
+      "cve_id": "CVE-2026-45372",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "7.5",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "cpp-httplib",
+      "vendor": "yhirose",
+      "description": {
+        "en": "The server performs percent-decoding of HTTP request header values after applying the is_field_value validation, permitting an injected header with %0D%0A to be interpreted as actual carriage return and line feed characters.",
+        "fr": "Le serveur décode en pourcentages (percent-decoding) les valeurs d'en-têtes HTTP de requêtes entrantes après l'application de la validation is_field_value, permettant à un en-tête injecté avec %0D%0A d'être interprété comme un retour à la ligne et un saut de ligne réels."
+      },
+      "mitre_ttps": [],
+      "recommandations": [
+        {
+          "en": "Update cpp-httplib library to version 0.44.0 or later.",
+          "fr": "Mettre à jour la bibliothèque cpp-httplib vers la version 0.44.0 ou ultérieure."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Identify internal services that parse custom headers using cpp-httplib."],
+          "fr": ["Identifier les services internes qui traitent des en-têtes personnalisés via cpp-httplib."]
+        },
+        "phase2_detection": {
+          "en": ["Detect percent-encoded control characters (%0D, %0A) in incoming HTTP request headers."],
+          "fr": ["Détecter les caractères de contrôle encodés (%0D, %0A) dans les en-têtes de requêtes HTTP entrantes."]
+        },
+        "phase3_containment": {
+          "en": ["Filter CRLF patterns or URL-encoded carriage returns at edge load balancers."],
+          "fr": ["Filtrer les motifs CRLF ou les encodages URL associés au retour chariot au niveau des répartiteurs de charge externes."]
+        },
+        "phase4_post_incident": {
+          "en": ["Roll out corrected software updates to resolve the CRLF risk."],
+          "fr": ["Déployer les mises à jour applicatives corrigées pour écarter le risque CRLF."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Look for response splitting or cache poisoning indicators in web server log patterns."],
+          "fr": ["Rechercher des traces d'empoisonnement de cache ou de découpage de réponse HTTP (response splitting) dans les journaux web."]
+        }
+      },
+      "tags": ["vulnerability", "cpp-httplib", "C++", "CRLF Injection", "HTTP Response Splitting"],
+      "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-45372"],
+      "date": "2026-05-30"
+    },
+    {
+      "cve_id": "CVE-2026-45585",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "Centreon Web",
+      "vendor": "Centreon",
+      "description": {
+        "en": "Multiple critical vulnerabilities in Centreon Web interface, allowing a remote attacker to execute arbitrary PHP code and bypass operational security restrictions of the monitoring console.",
+        "fr": "Multiples vulnérabilités critiques dans l'interface Centreon Web, permettant à un attaquant distant d'exécuter du code PHP arbitraire et de contourner les restrictions de sécurité opérationnelles de la console de supervision."
+      },
+      "mitre_ttps": ["T1190"],
+      "recommandations": [
+        {
+          "en": "Apply updates published in the Centreon security bulletin of May 2026 immediately.",
+          "fr": "Appliquer immédiatement les mises à jour publiées dans le bulletin mensuel de sécurité Centreon de mai 2026."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Map all exposed monitoring interfaces running Centreon."],
+          "fr": ["Cartographier toutes les interfaces de supervision Centreon exposées."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor web request logs targeting Centreon console for unusual paths or unauthorized API calls."],
+          "fr": ["Surveiller les journaux de requêtes web vers la console Centreon à la recherche de chemins inhabituels ou d'appels API non autorisés."]
+        },
+        "phase3_containment": {
+          "en": ["Restrict console access to authorized VPN ranges or dedicated administration networks."],
+          "fr": ["Restreindre l'accès à la console aux seuls segments VPN autorisés ou réseaux d'administration dédiés."]
+        },
+        "phase4_post_incident": {
+          "en": ["Deploy Centreon updates immediately and audit active user sessions."],
+          "fr": ["Déployer immédiatement les mises à jour Centreon et auditer les sessions utilisateurs actives."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search for unauthorized scripts or shell processes running in context of web-server (apache, nginx)."],
+          "fr": ["Rechercher des scripts non autorisés ou des processus shell s'exécutant sous le contexte du serveur web."]
+        }
+      },
+      "tags": ["vulnerability", "Centreon", "RCE", "Supervision", "Vulnerability", "CERT-FR"],
+      "sources": ["https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0659/"],
+      "date": "2026-05-30"
+    },
+    {
+      "cve_id": "CVE-2026-45586",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "7.5",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "Mattermost Platform",
+      "vendor": "Mattermost",
+      "description": {
+        "en": "Multiple security flaws in Mattermost products and dependencies, potentially leading to unauthorized access or information disclosure.",
+        "fr": "Multiples failles de sécurité non divulguées dans les produits et dépendances Mattermost, menant potentiellement à des accès non autorisés ou des divulgations d'informations."
+      },
+      "mitre_ttps": [],
+      "recommandations": [
+        {
+          "en": "Apply the latest security patches provided by Mattermost on their official site.",
+          "fr": "Appliquer les derniers correctifs de sécurité fournis par Mattermost sur leur site officiel."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Establish a routine update schedule for collaboration platforms."],
+          "fr": ["Mettre en place un calendrier de mise à jour régulier des plateformes collaboratives."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor access logs for unexpected external access attempts on non-public rooms."],
+          "fr": ["Surveiller les logs de connexion à la recherche d'accès inattendus à des salons privés."]
+        },
+        "phase3_containment": {
+          "en": ["Apply network segment restrictions to Mattermost service servers."],
+          "fr": ["Appliquer des restrictions d'accès réseau aux serveurs hébergeant Mattermost."]
+        },
+        "phase4_post_incident": {
+          "en": ["Deploy latest patches and reset credentials of sessions having shown unusual activities."],
+          "fr": ["Déployer les correctifs récents et réinitialiser les sessions ayant manifesté des activités suspectes."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search database records and server logs for unauthorized API activities or unexpected configurations."],
+          "fr": ["Rechercher dans la base de données et les logs serveur des configurations ou requêtes API anormales."]
+        }
+      },
+      "tags": ["vulnerability", "Mattermost", "Collaboration", "Security Update", "CERT-FR"],
+      "sources": ["https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0660/"],
+      "date": "2026-05-30"
+    },
+    {
+      "cve_id": "CVE-2026-33462",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "8.8",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "Elastic Kibana",
+      "vendor": "Elastic",
+      "description": {
+        "en": "Multiple combined vulnerabilities (including CVE-2026-33462, CVE-2026-33463, CVE-2026-33464, CVE-2026-42398, CVE-2026-42399, CVE-2026-42400, CVE-2026-42401, CVE-2026-49093, CVE-2026-49094, CVE-2026-49095) in Kibana and Kibana Fleet, facilitating local privilege escalation and remote denial of service.",
+        "fr": "Multiples vulnérabilités cumulées (comprenant CVE-2026-33462, CVE-2026-33463, CVE-2026-33464, CVE-2026-42398, CVE-2026-42399, CVE-2026-42400, CVE-2026-42401, CVE-2026-49093, CVE-2026-49094, CVE-2026-49095) dans Kibana et Kibana Fleet, facilitant l'élévation locale de privilèges et la provocation d'un déni de service à distance."
+      },
+      "mitre_ttps": ["T1068"],
+      "recommandations": [
+        {
+          "en": "Update Kibana to the patched versions listed by Elastic (8.19.16, 9.3.5 or later).",
+          "fr": "Mettre à jour Kibana vers les versions corrigées listées par Elastic (8.19.16, 9.3.5 ou ultérieures)."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Inventory all production Kibana and Kibana Fleet instances."],
+          "fr": ["Inventorier toutes les instances de Kibana et Kibana Fleet en production."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor for crash events in Kibana or Fleet processes."],
+          "fr": ["Surveiller les événements de plantage des processus Kibana ou Fleet."]
+        },
+        "phase3_containment": {
+          "en": ["Restrict access to the Kibana interface to authorized administration portals."],
+          "fr": ["Restreindre l'accès à l'interface Kibana aux seuls portails d'administration autorisés."]
+        },
+        "phase4_post_incident": {
+          "en": ["Deploy Elastic patch updates immediately across the deployment fleet."],
+          "fr": ["Déployer immédiatement les mises à jour correctives d'Elastic sur l'ensemble de la flotte de déploiement."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Look for privilege modification logs inside Elastic stack audit indexes."],
+          "fr": ["Rechercher des anomalies d'élévation de droits dans les index d'audit de la pile Elastic."]
+        }
+      },
+      "tags": ["vulnerability", "Elastic", "Kibana", "Kibana Fleet", "Privilege Escalation", "Denial of Service", "CERT-FR"],
+      "sources": ["https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0661/"],
+      "date": "2026-05-30"
+    },
+    {
+      "cve_id": "CVE-2026-46833",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "8.2",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "Oracle Database Server",
+      "vendor": "Oracle",
+      "description": {
+        "en": "Multiple flaws (including CVE-2026-46833, CVE-2026-46834, CVE-2026-46835) patched in the quarterly security advisory of May 2026 for Oracle Database Server, affecting authentication and storage components.",
+        "fr": "Multiples failles (incluant CVE-2026-46833, CVE-2026-46834, CVE-2026-46835) corrigées lors de l'alerte de sécurité trimestrielle de mai 2026 d'Oracle Database Server, touchant des composants d'authentification et de stockage."
+      },
+      "mitre_ttps": [],
+      "recommandations": [
+        {
+          "en": "Apply Oracle cumulative patches (CPU) of May 2026.",
+          "fr": "Appliquer les correctifs cumulatifs d'Oracle (CPU) de mai 2026."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Establish a routine database vulnerability management cycle."],
+          "fr": ["Mettre en place un cycle régulier de gestion des vulnérabilités de bases de données."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor database audit logs for unauthenticated access attempts or structural changes."],
+          "fr": ["Surveiller les journaux d'audit de base de données à la recherche de connexions non autorisées ou d'altérations de tables."]
+        },
+        "phase3_containment": {
+          "en": ["Isolate critical database servers from external network segments."],
+          "fr": ["Isoler les serveurs de bases de données critiques des segments réseau externes."]
+        },
+        "phase4_post_incident": {
+          "en": ["Apply the Oracle Critical Patch Update (CPU) in a controlled staging phase before production."],
+          "fr": ["Appliquer les correctifs cumulatifs Oracle (CPU) en environnement de pré-production avant déploiement."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search for indicators of suspicious direct SQL commands execution or unauthorized dump activities."],
+          "fr": ["Rechercher des traces d'exécution de requêtes SQL suspectes ou d'extractions de données de sauvegarde non autorisées."]
+        }
+      },
+      "tags": ["vulnerability", "Oracle", "Database", "Security Update", "CERT-FR"],
+      "sources": ["https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0662/"],
+      "date": "2026-05-30"
+    },
+    {
+      "cve_id": "CVE-2026-22976",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "8.8",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "Ubuntu Linux Kernel",
+      "vendor": "Ubuntu (Canonical)",
+      "description": {
+        "en": "A very large series of security patch advisories (including dozens of CVEs like CVE-2026-22976, CVE-2026-23112, etc.) resolving vulnerabilities within the Ubuntu Linux kernel leading to privilege escalation, memory spying, or DoS.",
+        "fr": "Une très importante série d'avis de correctifs de sécurité (incluant des dizaines de CVE comme CVE-2026-22976, CVE-2026-23112, etc.) résolvant des failles au sein du noyau Linux Ubuntu menant à une escalade de privilèges, de l'espionnage de mémoire ou des DoS."
+      },
+      "mitre_ttps": ["T1068"],
+      "recommandations": [
+        {
+          "en": "Update Linux kernel packages via 'apt-get upgrade' or 'unattended-upgrades' under the specified Ubuntu versions.",
+          "fr": "Mettre à jour les packages du noyau Linux via 'apt-get upgrade' ou 'unattended-upgrades' sous les versions d'Ubuntu spécifiées."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Configure automatic security updates on enterprise Ubuntu machines."],
+          "fr": ["Configurer les mises à jour de sécurité automatiques sur les parcs de serveurs Ubuntu."]
+        },
+        "phase2_detection": {
+          "en": ["Set alerts for local privilege escalation events or unexpected execution of administrative commands."],
+          "fr": ["Alerter sur les élévations locales de privilèges ou l'usage inattendu de commandes d'administration."]
+        },
+        "phase3_containment": {
+          "en": ["Deactivate untrusted local shell access on exposed Linux platforms."],
+          "fr": ["Désactiver les accès shell locaux non approuvés sur les plateformes Linux exposées."]
+        },
+        "phase4_post_incident": {
+          "en": ["Reboot systems to load corrected kernel and perform post-update functional validation."],
+          "fr": ["Redémarrer les systèmes pour charger le noyau corrigé et valider le fonctionnement applicatif."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Hunt for execution of local exploit binaries or exploitation artifacts in /tmp or /dev/shm."],
+          "fr": ["Rechercher des traces d'exécution de binaires d'exploitation locale ou d'artefacts d'attaques dans /tmp ou /dev/shm."]
+        }
+      },
+      "tags": ["vulnerability", "Ubuntu", "Linux Kernel", "Privilege Escalation", "CERT-FR"],
+      "sources": ["https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0663/"],
+      "date": "2026-05-30"
+    },
+    {
+      "cve_id": "CVE-2026-23193",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "8.8",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "SUSE Linux Kernel",
+      "vendor": "SUSE",
+      "description": {
+        "en": "Multiple security vulnerabilities fixed in the Linux kernel of SUSE distributions, allowing to obtain higher system privileges or corrupt OS memory files.",
+        "fr": "Multiples vulnérabilités de sécurité corrigées au sein du noyau Linux des distributions SUSE, permettant d'obtenir des privilèges système supérieurs ou de corrompre l'intégrité des fichiers mémoire de l'OS."
+      },
+      "mitre_ttps": ["T1068"],
+      "recommandations": [
+        {
+          "en": "Apply official SUSE Linux kernel updates using zypper.",
+          "fr": "Appliquer les paquets de mise à jour du noyau Linux officiels via Zypper pour SUSE Enterprise Linux."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Maintain current SUSE subscription channels to receive updates instantly."],
+          "fr": ["Maintenir les canaux d'abonnement SUSE actifs pour recevoir instantanément les mises à jour."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor for unexpected kernel panic logs or anomalous memory leaks."],
+          "fr": ["Surveiller les alertes de kernel panic inexpliquées ou les fuites de mémoire suspectes."]
+        },
+        "phase3_containment": {
+          "en": ["Suspend terminal or terminal proxy sessions of affected users."],
+          "fr": ["Suspendre les sessions d'accès console ou proxies des utilisateurs affectés."]
+        },
+        "phase4_post_incident": {
+          "en": ["Deploy the kernel update using Zypper and restart servers."],
+          "fr": ["Déployer la mise à jour noyau par Zypper et procéder au redémarrage des machines."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Look for signs of kernel-level hooking or unexpected loadable kernel module (LKM) insertions."],
+          "fr": ["Rechercher des traces d'accrochage (hooking) noyau ou des insertions non autorisées de modules kernel (LKM)."]
+        }
+      },
+      "tags": ["vulnerability", "SUSE", "Linux Kernel", "Privilege Escalation", "CERT-FR"],
+      "sources": ["https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0664/"],
+      "date": "2026-05-30"
+    },
+    {
+      "cve_id": "CVE-2025-21999",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "8.8",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "Red Hat Linux Kernel",
+      "vendor": "Red Hat",
+      "description": {
+        "en": "A vast set of vulnerabilities fixed in the Red Hat Enterprise Linux (RHEL) kernel, eliminating serious local privilege escalation and low-level information disclosure flaws.",
+        "fr": "Un vaste ensemble de failles corrigées dans le noyau des systèmes d'exploitation Red Hat (RHEL), éliminant de graves vulnérabilités d'escalade de privilèges locale et de fuite d'informations de bas niveau."
+      },
+      "mitre_ttps": ["T1068"],
+      "recommandations": [
+        {
+          "en": "Update Red Hat Linux kernel using 'yum update' or 'dnf update' to validated RHEL kernel versions.",
+          "fr": "Mettre à jour le noyau Linux Red Hat via la commande 'yum update' ou 'dnf update' vers les versions de noyaux RHEL validées."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Ensure central system configuration tools (Ansible, Satellite) are configured for rolling updates."],
+          "fr": ["S'assurer que les outils de configuration centralisés (Ansible, Satellite) sont paramétrés pour les correctifs."]
+        },
+        "phase2_detection": {
+          "en": ["Audit users executing commands with administrative capabilities (sudo logs)."],
+          "fr": ["Auditer les lancements de commandes avec des privilèges d'administration (journaux sudo)."]
+        },
+        "phase3_containment": {
+          "en": ["Restrain local session activity on shared environments or application containers."],
+          "fr": ["Restreindre l'activité des sessions locales sur les environnements partagés ou conteneurs d'applications."]
+        },
+        "phase4_post_incident": {
+          "en": ["Apply kernel dnf packages and schedule a reboot window during low activity hours."],
+          "fr": ["Appliquer les paquets dnf noyau et planifier une fenêtre de redémarrage pendant les heures creuses."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search for abnormal container escape techniques or kernel exploitation traces."],
+          "fr": ["Rechercher des traces d'évasion de conteneurs ou d'exploitations kernel de bas niveau."]
+        }
+      },
+      "tags": ["vulnerability", "Red Hat", "RHEL", "Linux Kernel", "Privilege Escalation", "CERT-FR"],
+      "sources": ["https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0665/"],
+      "date": "2026-05-30"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "ChatGPT share links abused to host fake outage pages to deliver malware",
+        "fr": "Les liens de partage ChatGPT détournés pour diffuser des malwares"
+      },
+      "description": {
+        "en": "The LLMShare campaign abuses sharing features of OpenAI (chatgpt.com/s/link) and Claude Artifacts to display fake outage messages and convince users to download malicious installers or execute ClickFix commands delivering infostealers.",
+        "fr": "La campagne LLMShare abuse des fonctionnalités de partage d'OpenAI (chatgpt.com/s/link) et de Claude Artifacts pour présenter de faux messages de panne d'application et convaincre les internautes de télécharger des logiciels malveillants ou d'exécuter des scripts ClickFix d'installation d'infostealers."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Technology_and_Telecom", "Finance"],
+        "fr": ["Technologie_et_Télécom", "Finance"]
+      },
+      "indicators": {
+        "URL": ["https://openew.app", "https://chatgpt.com"],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": ["openew.app", "chatgpt.com"],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": ["Lumma", "Rhadamanthys"]
+      },
+      "mitre_ttps": ["T1566", "T1203"],
+      "analyse": {
+        "en": "Attackers construct HTML/CSS pages hosted on the legitimate OpenAI platform, then route victims through Google Ads. The page generates a convincing error screen and prompts false installers for Windows and macOS.",
+        "fr": "Les attaquants rédigent du code HTML/CSS hébergé directement sur la plateforme légitime OpenAI, puis acheminent les victimes via des publicités Google. La page génère un écran d'erreur convaincant et propose de faux installateurs pour Windows et macOS."
+      },
+      "recommandations": [
+        {
+          "en": "Restrict the execution of command shells (PowerShell, CMD) initiated by web browsers.",
+          "fr": "Restreindre l'exécution automatique d'interpréteurs de commandes (PowerShell, CMD) initiés par des navigateurs web."
+        },
+        {
+          "en": "Train employees on detecting fake outage pages and ClickFix lures.",
+          "fr": "Former les employés sur la détection des fausses pages de dysfonctionnement (lures ClickFix)."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Block powershell execution from browser parents.",
+            "Deploy ad-blocking tools to prevent malicious ads redirects."
+          ],
+          "fr": [
+            "Restreindre l'exécution automatique d'interpréteurs de commandes (PowerShell, CMD) initiés par des navigateurs web.",
+            "Former les employés sur la détection des fausses pages de dysfonctionnement (lures ClickFix)."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Search for abnormal PowerShell executions following OpenAI or Anthropic domain interactions.",
+            "Monitor DNS resolution anomalies for openew.app."
+          ],
+          "fr": [
+            "Rechercher des lancements anormaux de scripts PowerShell à la suite d'une navigation vers des partages IA d'OpenAI ou d'Anthropic.",
+            "Surveiller les résolutions DNS suspectes vers des domaines de type 'openew.app'."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Block IP addresses and domains associated with ClickFix installations.",
+            "Isolate endpoints of users who ran malicious commands."
+          ],
+          "fr": [
+            "Bloquer immédiatement les adresses IP et domaines distribuant les faux exécutables ou commandes (ClickFix).",
+            "Isoler les terminaux touchés de l'utilisateur ayant tenté de déployer le binaire."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Scan and remove potential infostealers (Lumma, Rhadamanthys) from endpoints.",
+            "Update corporate DNS blocklists."
+          ],
+          "fr": [
+            "Vérifier la non-présence d'infostealers (Lumma, Rhadamanthys) sur le terminal.",
+            "Actualiser la liste noire des serveurs DNS d'entreprise."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for DNS request spikes involving 'openew' or 'artifact' alongside PowerShell logs."
+          ],
+          "fr": [
+            "Détection de requêtes DNS suspectes associées à des campagnes d'hameçonnage ClickFix exploitant l'IA."
+          ]
+        }
+      },
+      "tags": ["Phishing", "Malware", "ChatGPT", "Claude Artifacts", "ClickFix"],
+      "sources": ["https://www.bleepingcomputer.com/news/security/chatgpt-share-links-abused-to-host-fake-outage-pages-to-deliver-malware/"],
+      "date": "2026-05-30"
+    },
+    {
+      "title": {
+        "en": "Inside the DDoS-as-a-Service Market",
+        "fr": "Au cœur du marché du DDoS-as-a-Service"
+      },
+      "description": {
+        "en": "A comparative study by Flare shows an increased professionalization of the underground DDoS-as-a-Service market between 2023 and 2026. Payment automation, 24/7 customer service, and sub-$20 subscriptions facilitate massive volumetric attacks (like the 15.72 Tbps attack attributed to the Aisuru botnet).",
+        "fr": "Une étude comparative de Flare montre une professionnalisation accrue du marché clandestin du DDoS-as-a-Service entre 2023 et 2026. L'automatisation des paiements, le service client 24/7 et des abonnements à moins de 20 dollars facilitent les attaques volumétriques massives (comme celle de 15,72 Tbps attribuée au botnet Aisuru)."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Technology_and_Telecom", "Hospitality_and_Entertainment"],
+        "fr": ["Technologie_et_Télécom", "Hospitalité_et_Divertissement"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": ["Aisuru"]
+      },
+      "mitre_ttps": ["T1498"],
+      "analyse": {
+        "en": "Commercialization of DDoS-as-a-service booters through APIs and simplified web interfaces, leveraging L4/L7 botnets to bypass current protections.",
+        "fr": "Commercialisation de booters de DDoS-as-a-service par le biais d'APIs et d'interfaces web simplifiées, s'appuyant sur des réseaux de bots L4/L7 pour contourner les protections courantes."
+      },
+      "recommandations": [
+        {
+          "en": "Deploy enterprise DDoS protection capable of scrubbing high-volume L4/L7 attacks.",
+          "fr": "Déployer une protection DDoS d'entreprise capable de filtrer les attaques massives de niveau L4/L7."
+        },
+        {
+          "en": "Configure rate-limiting and connection throttling rules on critical APIs.",
+          "fr": "Configurer des règles de limitation de débit et de connexions sur les APIs critiques."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Partner with cloud-based DDoS scrubbing centers.",
+            "Establish thresholds for traffic alerts."
+          ],
+          "fr": [
+            "S'associer avec des centres de filtrage DDoS basés sur le cloud.",
+            "Définir des seuils pour les alertes de trafic."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor web server response times and connection error rates.",
+            "Detect unusual volumetric spikes in inbound traffic."
+          ],
+          "fr": [
+            "Surveiller les temps de réponse des serveurs web et les taux d'erreur de connexion.",
+            "Détecter des pics volumétriques inhabituels du trafic entrant."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Redirect target traffic to scrubbing centers.",
+            "Temporarily restrict access using geographic filters if necessary."
+          ],
+          "fr": [
+            "Rediriger le trafic ciblé vers les centres de filtrage.",
+            "Restreindre temporairement l'accès à l'aide de filtres géographiques si nécessaire."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Conduct traffic pattern analysis to fine-tune WAF rules.",
+            "Document lessons learned and adjust scrubbing thresholds."
+          ],
+          "fr": [
+            "Mener des analyses de profil de trafic pour affiner les règles WAF.",
+            "Documenter les leçons apprises et ajuster les seuils de filtrage."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search logs for coordinated connection bursts matching botnet request footprints."
+          ],
+          "fr": [
+            "Rechercher dans les logs des rafales de connexion coordonnées correspondant aux empreintes de requêtes de botnets."
+          ]
+        }
+      },
+      "tags": ["DDoS-as-a-Service", "Stressor", "Botnet", "Aisuru", "DarkWeb"],
+      "sources": ["https://www.bleepingcomputer.com/news/security/from-5-attacks-to-botnet-powered-platforms-inside-the-ddos-as-a-service-market/"],
+      "date": "2026-05-30"
+    },
+    {
+      "title": {
+        "en": "Dutch government disrupts malware botnet with 17 million infected devices",
+        "fr": "Le gouvernement néerlandais démantèle un botnet de 17 millions d'équipements compromis"
+      },
+      "description": {
+        "en": "Dutch police and NCSC disrupted a massive botnet of 17 million compromised devices, used to route criminal traffic under the cover of a commercial proxy service called Asocks.",
+        "fr": "La police et le NCSC néerlandais ont démantelé un botnet massif de 17 millions d'équipements compromis, utilisé pour acheminer du trafic criminel sous le couvert d'un service de proxy commercial nommé Asocks."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Technology_and_Telecom"],
+        "fr": ["Technologie_et_Télécom"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": ["Asocks"]
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "Judicial seizure of hosted botnet servers, taking down illicit proxies built on infected machines unbeknownst to their owners.",
+        "fr": "Saisie judiciaire de serveurs du botnet hébergé, provoquant la mise hors ligne de proxies illicites composés de machines infectées à l'insu de leurs propriétaires."
+      },
+      "recommandations": [
+        {
+          "en": "Review local network devices to ensure they are not part of commercial proxy networks like Asocks.",
+          "fr": "Vérifier les équipements réseaux locaux pour s'assurer qu'ils ne font pas partie de réseaux de proxies commerciaux comme Asocks."
+        },
+        {
+          "en": "Perform credential audits on IoT devices exposed to the internet.",
+          "fr": "Mener des audits d'identifiants sur les appareils IoT exposés sur internet."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain inventory of all internet-connected devices.",
+            "Enforce strict default password change policies."
+          ],
+          "fr": [
+            "Maintenir un inventaire de tous les appareils connectés à internet.",
+            "Appliquer des politiques strictes de changement de mot de passe par défaut."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Audit devices for unexplained outbound traffic to known proxy infrastructures.",
+            "Detect unauthorized command executions on IoT modules."
+          ],
+          "fr": [
+            "Auditer les appareils pour détecter des trafics sortants inexpliqués vers des infrastructures de proxy connues.",
+            "Détecter des exécutions de commandes non autorisées sur les modules IoT."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate compromised IoT or proxy devices from local subnets.",
+            "Block connections to identified Asocks IP addresses."
+          ],
+          "fr": [
+            "Isoler les IoT ou proxies compromis des sous-réseaux locaux.",
+            "Bloquer les connexions vers les adresses IP identifiées d'Asocks."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Format and flash firmware on compromised devices.",
+            "Implement strong access control lists (ACLs)."
+          ],
+          "fr": [
+            "Formater et flasher les microgiciels sur les appareils compromis.",
+            "Mettre en place des listes de contrôle d'accès (ACL) robustes."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Look for persistent configuration shifts or rogue services running on IoT platforms."
+          ],
+          "fr": [
+            "Rechercher des modifications de configuration persistantes ou des services illégitimes sur les plateformes IoT."
+          ]
+        }
+      },
+      "tags": ["Botnet", "Proxy Service", "Asocks", "Disruption", "Police"],
+      "sources": ["https://www.bleepingcomputer.com/news/security/dutch-govt-disrupts-malware-botnet-with-17-million-infected-devices/"],
+      "date": "2026-05-30"
+    },
+    {
+      "title": {
+        "en": "Google Chrome adds session cookie theft protection for all users",
+        "fr": "Google Chrome ajoute une protection contre le vol de cookies de session"
+      },
+      "description": {
+        "en": "Google deploys Device Bound Session Credentials (DBSC) protection for all Chrome users to counter session cookie theft by infostealers.",
+        "fr": "Google déploie la fonction de protection Device Bound Session Credentials (DBSC) pour l'ensemble des utilisateurs de Chrome afin de contrecarrer les vols de cookies de session par les infostealers."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Technology_and_Telecom"],
+        "fr": ["Technologie_et_Télécom"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "Cryptographic binding of session cookies to a hardware TPM module of the user's computer, preventing replay of stolen authentication cookies outside the original device.",
+        "fr": "Cryptographic binding (liaison cryptographique) des cookies de session à un module matériel TPM du poste utilisateur, empêchant le rejeu de cookies d'authentification volés hors de l'équipement d'origine."
+      },
+      "recommandations": [
+        {
+          "en": "Enable and enforce Chrome DBSC configuration in enterprise policy controllers.",
+          "fr": "Activer et imposer la configuration DBSC de Chrome dans les contrôleurs de stratégie d'entreprise."
+        },
+        {
+          "en": "Ensure systems have TPM modules activated and fully operational.",
+          "fr": "S'assurer que les parcs informatiques disposent de modules TPM activés et fonctionnels."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Verify TPM 2.0 deployment across the workstation fleet.",
+            "Update Chrome to the latest stable version enterprise-wide."
+          ],
+          "fr": [
+            "Vérifier le déploiement de TPM 2.0 sur l'ensemble du parc de postes de travail.",
+            "Mettre à jour Chrome vers la version stable la plus récente à l'échelle de l'entreprise."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor authentication alerts for anomalies indicating session usage attempts from new devices.",
+            "Detect failed session renewals on services supporting DBSC."
+          ],
+          "fr": [
+            "Surveiller les alertes d'authentification pour des anomalies d'utilisation de session depuis de nouveaux terminaux.",
+            "Détecter les échecs de renouvellement de session sur les services supportant DBSC."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Revoke active web session tokens on the server side.",
+            "Force multi-factor re-authentication for the suspected user."
+          ],
+          "fr": [
+            "Révoquer les jetons de session web actifs côté serveur.",
+            "Forcer une ré-authentification multifacteur pour l'utilisateur suspecté."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Audit endpoints for active infostealer malwares.",
+            "Update identity provider rules to require device verification."
+          ],
+          "fr": [
+            "Auditer les points d'accès pour identifier d'éventuels malwares de vol d'informations actifs.",
+            "Mettre à jour les règles du fournisseur d'identité pour exiger la vérification de l'appareil."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for processes attempting to dump browser profile directories or cookie databases."
+          ],
+          "fr": [
+            "Rechercher des processus tentant de dumper les répertoires de profils de navigateurs ou les bases de cookies."
+          ]
+        }
+      },
+      "tags": ["Google Chrome", "DBSC", "Cookie Theft", "Session Hijacking", "MFA Bypass"],
+      "sources": ["https://www.bleepingcomputer.com/news/security/google-chrome-adds-session-cookie-theft-protection-for-all-users/"],
+      "date": "2026-05-30"
+    }
+  ]
+}
