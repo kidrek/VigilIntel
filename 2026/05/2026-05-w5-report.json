@@ -6,87 +6,56 @@
       "fr": "Élevé"
     },
     "justification": {
-      "en": "This period witnessed critical escalations across multiple vectors, notably the mass exploitation of zero-day vulnerabilities in Windows (CVE-2026-35616), high-impact data breaches exposing over 12 million records (23andMe, Carnival), and the rise of highly automated 15+ Tbps botnets (Aisuru). Additionally, advanced social engineering campaigns (LLMShare) are actively leveraging generative AI share links to distribute infostealers.",
-      "fr": "Cette période est marquée par des escalations critiques sur plusieurs vecteurs, notamment l'exploitation de failles zero-day dans Windows (CVE-2026-35616), des fuites de données massives exposant plus de 12 millions de dossiers (23andMe, Carnival), et l'essor de botnets automatisés dépassant 15 Tbps (Aisuru). De plus, des campagnes sophistiquées (LLMShare) abusent des liens de partage d'IA générative pour diffuser des infostealers."
+      "en": "The convergence of active zero-day exploitation on perimeter assets (Palo Alto PAN-OS CVE-2026-0257), supply chain attacks targeting developer IDEs (TeamPCP VS Code campaign), and advanced AI-facilitated phishing (LLMShare) signals an elevated risk environment. Operational disruptions from ransomware and mass exfiltrations from cloud services are actively driving high threat levels across multiple critical sectors.",
+      "fr": "La convergence de l'exploitation active de failles zero-day sur les équipements de périmètre (Palo Alto PAN-OS CVE-2026-0257), d'attaques sur la chaîne d'approvisionnement ciblant les IDE des développeurs (campagne VS Code de TeamPCP) et du phishing avancé facilité par l'IA (LLMShare) signale un environnement de menace élevé. Les interruptions opérationnelles dues aux rançongiciels et les exfiltrations massives de services cloud maintiennent un niveau de menace élevé pour de nombreux secteurs critiques."
     },
     "_triggers": [
       "+2 — 1 CVE(s) CISA KEV",
-      "+1 — 1 CVE(s) CVSS ≥ 9.0",
       "+2 — 1 acteur(s) étatique(s)",
       "+1 — ≥ 3 acteurs distincts actifs",
-      "+2 — 2 breach(es) ≥ 100k enregistrements",
-      "+2 — secteurs critiques ciblés : Government_and_Defense"
+      "+3 — 3 breach(es) ≥ 100k enregistrements",
+      "+2 — secteurs critiques ciblés : Government_and_Defense, Critical_Infrastructure"
     ]
   },
   "executive_summary": {
-    "en": "The end of May 2026 highlights a highly professionalized cybercriminal ecosystem capitalizing on advanced automation, AI-driven social engineering, and critical supply-chain exposures. Russian-aligned state actors (GREYVIBE) and hacktivists (NoName057(16)) are actively utilizing generative LLMs and high-volume DDoS networks to target European infrastructure amidst critical political events. Concurrently, defensive paradigm shifts are emerging with the deployment of hardware-bound browser authentication (Chrome DBSC) to counter rampant infostealers, alongside a push for automated, machine-readable compliance architectures to satisfy tightening global regulations such as the Cyber Resilience Act (CRA).",
-    "fr": "La fin mai 2026 met en lumière un écosystème cybercriminel hautement professionnalisé, tirant parti de l'automatisation, de l'ingénierie sociale assistée par l'IA et de vulnérabilités logicielles majeures. Des acteurs étatiques russes (GREYVIBE) et des hacktivistes (NoName057(16)) exploitent les LLM et des réseaux DDoS massifs pour cibler les infrastructures européennes en période électorale. Parallèlement, des avancées défensives structurelles apparaissent avec le déploiement de liaisons cryptographiques matérielles (Chrome DBSC) pour contrer le vol de sessions, tandis que les régulations mondiales (CRA) imposent désormais des signaux de conformité automatisés et lisibles par machine."
+    "en": "This period is characterized by structural shifts in initial access strategies and defensive paradigms. Attackers are increasingly bypassing perimeter controls through zero-days (such as CVE-2026-0257 in PAN-OS) and targeting developers directly via malicious IDE extensions (TeamPCP GitHub breach) to exfiltrate critical source code. On the social engineering front, generative AI tools are actively abused to construct hyper-realistic lures (LLMShare), while massive residential proxy networks (ASOCKS) continue to shield malicious traffic, though police interventions have successfully disrupted major infrastructures. Defensively, a transition towards hardware-bound credentials (Chrome DBSC) and machine-readable compliance signals (SBOM, OpenSSF) is emerging to counter these advanced threats.",
+    "fr": "Cette période se caractérise par des changements structurels dans les stratégies d'accès initial et les paradigmes défensifs. Les attaquants contournent de plus en plus les contrôles périmétriques via des zero-days (tels que CVE-2026-0257 dans PAN-OS) et ciblent directement les développeurs via des extensions d'IDE malveillantes (intrusion GitHub par TeamPCP) pour exfiltrer du code source critique. Sur le front de l'ingénierie sociale, les outils d'IA générative sont activement détournés pour concevoir des leurres hyper-réalistes (LLMShare), tandis que les réseaux massifs de proxys résidentiels (ASOCKS) continuent de masquer le trafic malveillant malgré les démantèlements policiers. Côté défense, une transition vers les identifiants liés au matériel (Chrome DBSC) et les signaux de conformité lisibles par machine (SBOM, OpenSSF) émerge pour contrer ces menaces avancées."
   },
   "regulatory": {
     "analyse": {
-      "en": "Regulators are increasingly shifting away from static, paper-based compliance assessments toward dynamic, automated, and machine-readable signals. The alignment of OpenSSF and ENISA on machine-readable artifacts (SBOM, VEX, OpenSSF Scorecards) under the Cyber Resilience Act (CRA) marks a transition where security posture must be continuously verified. Simultaneously, sector-specific strictures, such as the UNECE automotive cybersecurity mandates and CMMC compliance checklists, are establishing rigorous frameworks that demand proactive supply-chain validation and physical field investigations (HUMINT) to counter sophisticated corporate compliance evasion.",
-      "fr": "Les régulateurs s'éloignent de plus en plus des évaluations de conformité statiques sur papier au profit de signaux dynamiques, automatisés et lisibles par machine. L'alignement de l'OpenSSF et de l'ENISA sur des artefacts exploitables automatiquement (SBOM, VEX, OpenSSF Scorecards) sous l'égide du Cyber Resilience Act (CRA) marque une transition vers une vérification continue de la posture de sécurité. En parallèle, les exigences sectorielles strictes, telles que les mandats de cybersécurité automobile de l'UNECE et les directives CMMC du DoD américain, imposent des cadres rigoureux nécessitant une validation proactive des tiers."
+      "en": "Key regulatory signals this period emphasize the death of paper-based compliance in favor of automated, verifiable security signals. Driven by the impending enforcement of the European Cyber Resilience Act (CRA) and CMMC in the US, compliance teams must pivot to machine-readable attestations (SBOM, OpenSSF Scorecards) to prove supply chain security. Concurrently, state prosecutors and international bodies are shifting towards aggressive enforcement actions, utilizing broad subnets of dragnet subpoenas and human intelligence (HUMINT) for supply-chain due diligence audits.",
+      "fr": "Les signaux réglementaires clés de cette période soulignent la fin de la conformité déclarative sur papier au profit de signaux de sécurité automatisés et vérifiables. Sous l'impulsion de la mise en application imminente du règlement européen sur la cyberrésilience (CRA) et du CMMC aux États-Unis, les équipes de conformité doivent s'orienter vers des attestations lisibles par machine (SBOM, OpenSSF Scorecards) pour prouver la sécurité de la chaîne d'approvisionnement. En parallèle, les procureurs et les organismes internationaux se tournent vers des mesures d'application agressives, recourant à des citations à comparaître de masse et au renseignement humain (HUMINT) pour les audits de diligence raisonnable."
     },
     "events": [
       {
         "title": {
-          "en": "Draft Guidelines on Trusted Flaggers under the Digital Services Act",
-          "fr": "Projet de lignes directrices sur les signaleurs de confiance du DSA"
+          "en": "CISA Added PAN-OS CVE-2026-0257 to KEV Catalog",
+          "fr": "La CISA ajoute PAN-OS CVE-2026-0257 au catalogue KEV"
         },
-        "issuing_body": "European Commission",
+        "issuing_body": "CISA",
         "date": "2026-05-30",
         "jurisdiction": {
-          "region": "EU",
+          "region": "US",
           "countries": [
-            "FR",
-            "DE",
-            "BE"
+            "US"
           ]
         },
-        "type": "Guidance",
-        "status": "Proposed",
-        "reference": "DSA Art. 22",
-        "affected_sectors": [
-          "Technology_and_Telecom",
-          "Media_and_Communication"
-        ],
-        "description": {
-          "en": "The European Commission launched targeted consultations on draft guidelines regarding the accreditation and prioritization of illegal content notices submitted by certified 'trusted flaggers' under the Digital Services Act.",
-          "fr": "La Commission européenne a lancé des consultations ciblées sur un projet de lignes directrices relatives à l'accréditation et au traitement prioritaire des signalements de contenus illicites par des entités labellisées sous le Digital Services Act."
-        },
-        "source_url": "https://digital-strategy.ec.europa.eu/en/consultations/targeted-consultation-draft-guidelines-trusted-flaggers-under-digital-services-act-dsa"
-      },
-      {
-        "title": {
-          "en": "CRA Machine-Readable Signals for Open-Source Due Diligence",
-          "fr": "Signaux lisibles par machine du CRA pour la diligence de l'open source"
-        },
-        "issuing_body": "OpenSSF / ENISA",
-        "date": "2026-05-30",
-        "jurisdiction": {
-          "region": "EU",
-          "countries": [
-            "FR",
-            "DE"
-          ]
-        },
-        "type": "Guidance",
+        "type": "Enforcement_Action",
         "status": "Active",
-        "reference": "Cyber Resilience Act (CRA)",
+        "reference": "BOD 22-01",
         "affected_sectors": [
-          "Technology_and_Telecom",
-          "Security"
+          "Government_and_Defense"
         ],
         "description": {
-          "en": "OpenSSF and ENISA promoted the adoption of automated, machine-readable security signals (SBOM, VEX, OpenSSF Scorecards) to fulfill the technical due diligence mandates on open-source software under the Cyber Resilience Act.",
-          "fr": "L'OpenSSF et l'ENISA encouragent l'adoption de signaux de sécurité automatisés et lisibles par machine (SBOM, VEX, OpenSSF Scorecards) pour matérialiser la diligence raisonnable requise par le CRA sur les composants open source."
+          "en": "The Cybersecurity and Infrastructure Security Agency (CISA) added the Palo Alto Networks PAN-OS authentication bypass vulnerability (CVE-2026-0257) to its Known Exploited Vulnerabilities (KEV) catalog. Federal agencies are mandated to patch this critical edge device vulnerability by June 19, 2026.",
+          "fr": "L'agence américaine de cybersécurité (CISA) a ajouté la vulnérabilité de contournement d'authentification Palo Alto Networks PAN-OS (CVE-2026-0257) à son catalogue de vulnérabilités connues pour être exploitées (KEV). Les agences fédérales doivent impérativement corriger cette faille d'ici le 19 juin 2026."
         },
-        "source_url": "https://openssf.org/blog/2026/05/29/aligning-on-machine-readable-signals-as-the-foundation-for-due-diligence/"
+        "source_url": "https://thecyberthrone.example.com/2026/05/30/cve-2026-0257-palo-alto-networks-pan-os-auth-bypass/"
       },
       {
         "title": {
           "en": "UN Regulation No. 83 for Automotive Cybersecurity Compliance",
-          "fr": "Règlement ONU n°83 pour la conformité de la cybersécurité automobile"
+          "fr": "Règlement de l'ONU n°83 pour la conformité de la cybersécurité automobile"
         },
         "issuing_body": "UNECE / European Commission",
         "date": "2026-05-30",
@@ -105,8 +74,8 @@
           "Industry_and_Manufacturing"
         ],
         "description": {
-          "en": "Publication of engine and battery management approval regulations imposing strict cybersecurity, software integrity, and anti-tampering measures (UNECE R155/156) for vehicle manufacturing.",
-          "fr": "Publication d'un règlement d'homologation imposant des exigences strictes en matière de cybersécurité et de dispositifs anti-altération (anti-tampering) pour les calculateurs moteurs et batteries de traction (UNECE R155/156)."
+          "en": "Publication of strict type-approval requirements enforcing cybersecurity controls and anti-tampering measures for engine ECUs and traction batteries under the UNECE R155/156 framework.",
+          "fr": "Publication d'exigences strictes d'homologation imposant des contrôles de cybersécurité et des dispositifs anti-altération pour les calculateurs moteurs et les batteries de traction dans le cadre d'UNECE R155/156."
         },
         "source_url": "https://eur-lex.europa.eu/legal-content/AUTO/?uri=CELEX:42026X1086"
       }
@@ -120,8 +89,8 @@
           "fr": "Russie"
         },
         "geographic_zone_strategic_analyse": {
-          "en": "Russian state-sponsored actors and hacktivist networks remain highly aggressive, increasingly integrating advanced AI LLM capabilities to draft believable multi-lingual lures and construct fake portals (e.g., GREYVIBE's PhantomClick/PrincessClub). Hacktivist groups like NoName057(16) strategically synchronize their high-volume DDoS operations with European geopolitical inflection points, such as democratic elections, to maximize disruption and socio-political pressure.",
-          "fr": "Les acteurs étatiques russes et les réseaux d'hacktivistes restent très agressifs, intégrant l'IA générative (LLM) pour concevoir des leurres de phishing crédibles et de faux portails d'erreur (ex. PhantomClick de GREYVIBE). Des groupes hacktivistes comme NoName057(16) synchronisent stratégiquement leurs attaques DDoS massives avec les échéances politiques européennes afin de maximiser l'impact médiatique."
+          "en": "Russian state-sponsored actors and pro-Russian hacktivists continue to align kinetic operations with targeted digital sabotage. Groups like GREYVIBE are increasingly integrating GenAI models to overcome linguistic and technical shortfalls, while NoName057(16) executes orchestrated DDoS floods synchronized with European democratic processes to destabilize regional trust.",
+          "fr": "Les acteurs étatiques et hacktivistes pro-russes continuent d'aligner leurs opérations cinétiques sur du sabotage numérique ciblé. Des groupes comme GREYVIBE intègrent de plus en plus de modèles d'IA générative pour compenser leurs lacunes techniques, tandis que NoName057(16) orchestre des attaques DDoS synchronisées avec les processus démocratiques européens pour déstabiliser la confiance régionale."
         }
       }
     ],
@@ -131,7 +100,7 @@
         "origin_country": "Russia",
         "type": {
           "en": "Nation-state",
-          "fr": "Étatique"
+          "fr": "Nation-state"
         },
         "targeted_sectors": {
           "en": [
@@ -176,86 +145,89 @@
         }
       },
       {
-        "threat_actor_name": "NoName057(16)",
-        "origin_country": "Russia",
-        "type": {
-          "en": "Hacktivist",
-          "fr": "Hacktiviste"
-        },
-        "targeted_sectors": {
-          "en": [
-            "Government_and_Defense",
-            "Finance",
-            "Critical_Infrastructure"
-          ],
-          "fr": [
-            "Government_and_Defense",
-            "Finance",
-            "Critical_Infrastructure"
-          ]
-        },
-        "targeted_regions": {
-          "en": [
-            "Europe",
-            "Ukraine"
-          ],
-          "fr": [
-            "Europe",
-            "Ukraine"
-          ]
-        },
-        "mitre_attack_ttps_id": [
-          "T1498"
-        ],
-        "campaign_or_operation": {
-          "en": [
-            "European Election Disruption Campaign"
-          ],
-          "fr": [
-            "Campagne de perturbation des élections européennes"
-          ]
-        }
-      },
-      {
         "threat_actor_name": "ShinyHunters",
         "origin_country": "Unknown",
         "type": {
           "en": "Cybercriminal",
-          "fr": "Cybercriminel"
+          "fr": "Cybercriminal"
         },
         "targeted_sectors": {
           "en": [
             "Hospitality_and_Entertainment",
             "Finance",
-            "Technology_and_Telecom"
+            "Technology_and_Telecom",
+            "Government_and_Defense"
           ],
           "fr": [
             "Hospitality_and_Entertainment",
             "Finance",
-            "Technology_and_Telecom"
+            "Technology_and_Telecom",
+            "Government_and_Defense"
           ]
         },
         "targeted_regions": {
           "en": [
-            "Global",
-            "United States"
+            "United States",
+            "Global"
           ],
           "fr": [
-            "Global",
-            "États-Unis"
+            "États-Unis",
+            "Global"
           ]
         },
         "mitre_attack_ttps_id": [
           "T1566",
           "T1078",
-          "T1048"
+          "T1048",
+          "T1566.004",
+          "T1586"
         ],
         "campaign_or_operation": {
           "en": [
-            "Carnival Corporation Extortion"
+            "Carnival Cruise Breach",
+            "Charter Communications Leaks"
           ],
           "fr": [
-            "Extorsion de Carnival Corporation"
+            "Carnival Cruise Breach",
+            "Charter Communications Leaks"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "TeamPCP",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Cybercriminal",
+          "fr": "Cybercriminal"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Technology_and_Telecom"
+          ],
+          "fr": [
+            "Technology_and_Telecom"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "United States",
+            "Global"
+          ],
+          "fr": [
+            "États-Unis",
+            "Global"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1195.001",
+          "T1078"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "GitHub VS Code Extension Breach"
+          ],
+          "fr": [
+            "GitHub VS Code Extension Breach"
           ]
         }
       }
@@ -263,8 +235,8 @@
   },
   "mitre_attack_ttps": {
     "ttps_strategic_analyse": {
-      "en": "The threat landscape shows significant evolution in execution and command-and-control TTPs. Attackers are increasingly leveraging trusted, high-reputation web infrastructures (such as ChatGPT share links and Claude Artifacts) to execute 'Living-off-the-Land Web' techniques, rendering traditional URL classification protections obsolete. Concurrently, session hijacking via automated cookie theft remains the premier objective of initial access brokers, driving critical defensive adaptations such as hardware-bound sessions (DBSC) to break the exfiltration-to-hijack chain.",
-      "fr": "Le paysage des menaces montre une évolution significative des TTP d'exécution et de contrôle. Les attaquants exploitent les infrastructures d'IA à haute réputation (liens de partage ChatGPT, Claude Artifacts) pour réaliser des attaques de type 'Living-off-the-Land Web', contournant les filtrages URL traditionnels. Parallèlement, le détournement de sessions par vol automatisé de cookies reste l'objectif prioritaire, poussant au déploiement de liaisons de session matérielles (DBSC) pour rompre cette chaîne d'attaque."
+      "en": "Analysis of TTPs this period shows an emphasis on subverting trusted delivery chains. Threat actors are turning away from classical binary execution and toward Living-off-the-Land Web techniques (abusing legitimate ChatGPT/Claude share links) and supply-chain vectors (corrupted VS Code extensions or npm dependencies). Furthermore, residential proxies (SOCKS5/HTTP networks) remain the critical operational baseline for evading perimeter access controls.",
+      "fr": "L'analyse des TTP de cette période montre un accent mis sur le détournement des chaînes de distribution légitimes. Les acteurs de menace délaissent l'exécution binaire classique au profit de techniques de Living-off-the-Land Web (abus de liens de partage légitimes ChatGPT/Claude) et de vecteurs de supply-chain (extensions VS Code corrompues ou dépendances npm). De plus, les proxys résidentiels (réseaux SOCKS5/HTTP) demeurent le socle opérationnel essentiel pour contourner les contrôles d'accès."
     },
     "ttps_list": [
       {
@@ -278,82 +250,48 @@
         "severity": "high",
         "context": {
           "en": [
-            "Extensively used by LLMShare campaigns through hijacked ChatGPT share links and by GREYVIBE utilizing generative AI to draft convincing social engineering lures."
+            "Exploited via legitimate ChatGPT share URLs to host fake error messages and distribute infostealers.",
+            "Used by GREYVIBE via themed social-engineering lures targeting Ukrainian organizations."
           ],
           "fr": [
-            "Largement exploité dans les campagnes LLMShare via des liens ChatGPT légitimes, et par GREYVIBE qui utilise des LLM pour rédiger des leurres de phishing crédibles."
+            "Exploité via des URL de partage légitimes ChatGPT pour héberger de faux messages d'erreur et distribuer des infostealers.",
+            "Utilisé par GREYVIBE via des leurres d'ingénierie sociale ciblant des organisations ukrainiennes."
           ]
         }
       },
       {
-        "id": "T1498",
+        "id": "T1195.001",
         "tactic": {
-          "en": "Impact",
-          "fr": "Impact"
+          "en": "Initial Access",
+          "fr": "Accès Initial"
         },
-        "technique_name": "Network Denial of Service",
-        "frequency": 2,
-        "severity": "high",
-        "context": {
-          "en": [
-            "Leveraged by NoName057(16) targeting European public systems and by commercial botnets like Aisuru reaching volumes up to 15.72 Tbps."
-          ],
-          "fr": [
-            "Utilisé par NoName057(16) pour saturer les systèmes publics européens et par des botnets marchands comme Aisuru atteignant des puissances de 15,72 Tbps."
-          ]
-        }
-      },
-      {
-        "id": "T1059.001",
-        "tactic": {
-          "en": "Execution",
-          "fr": "Exécution"
-        },
-        "technique_name": "Command and Scripting Interpreter: PowerShell",
-        "frequency": 2,
-        "severity": "high",
-        "context": {
-          "en": [
-            "Used in LLMShare ClickFix flow where victims copy-paste obfuscated PowerShell commands disguised as software fixes, installing infostealers."
-          ],
-          "fr": [
-            "Employé dans l'attaque ClickFix de LLMShare, poussant la victime à copier-coller des commandes PowerShell obfusquées pour installer des infostealers."
-          ]
-        }
-      },
-      {
-        "id": "T1090",
-        "tactic": {
-          "en": "Command and Control",
-          "fr": "Commandement et Contrôle"
-        },
-        "technique_name": "Proxy",
-        "frequency": 1,
-        "severity": "high",
-        "context": {
-          "en": [
-            "The Asocks botnet proxy network controlled 17 million compromised IoT devices to routing illicit traffic and anonymizing cybercriminal operations."
-          ],
-          "fr": [
-            "Le botnet résidentiel Asocks gérait 17 millions d'objets connectés compromis servant de proxys pour anonymiser les cybercriminels."
-          ]
-        }
-      },
-      {
-        "id": "T1539",
-        "tactic": {
-          "en": "Credential Access",
-          "fr": "Accès aux Identifiants"
-        },
-        "technique_name": "Steal Web Session Cookie",
+        "technique_name": "Supply Chain Compromise: Compromise Software Dependencies and Development Tools",
         "frequency": 1,
         "severity": "critical",
         "context": {
           "en": [
-            "Infostealers actively extract local SQLite databases and in-memory cookies to hijack enterprise cloud sessions; target of Chrome's new DBSC protection."
+            "Executed by TeamPCP through a rogue VS Code extension that compromised developer endpoints to clone internal GitHub repositories."
           ],
           "fr": [
-            "Les infostealers extraient les bases de données SQLite locales et les cookies en mémoire pour usurper des sessions Cloud ; ciblé par la protection DBSC de Chrome."
+            "Exécuté par TeamPCP via une extension VS Code malveillante pour compromettre des postes de développeurs et cloner des dépôts GitHub internes."
+          ]
+        }
+      },
+      {
+        "id": "T1090.003",
+        "tactic": {
+          "en": "Command and Control",
+          "fr": "Commandement et Contrôle"
+        },
+        "technique_name": "Proxy: Multi-hop Proxy",
+        "frequency": 2,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Leveraged by ASOCKS to sell egress through 17 million compromised residential and IoT devices worldwide to evade reputational IP blocklists."
+          ],
+          "fr": [
+            "Exploité par ASOCKS pour revendre des flux de sortie via 17 millions d'équipements résidentiels et IoT compromis dans le monde afin d'éviter le blocage par réputation IP."
           ]
         }
       }
@@ -361,67 +299,40 @@
   },
   "vulnerabilities": {
     "analyse": {
-      "en": "The discovery and public release of advanced exploits this period highlight serious concerns. Most notably, the zero-day dump of CVE-2026-35616 by researcher Chaotic Eclipse exposes Windows environments to immediate defense bypass and local privilege escalations. Additionally, critical RCE vectors in operational software (such as 7-Zip, Craft CMS, and Centreon Web) require immediate enterprise-wide patching as public PoCs emerge, alongside older unpatched industrial interface bypasses (CVE-2024-8310) which continue to pose operational technology (OT) sabotage risks.",
-      "fr": "La publication d'exploits avancés au cours de cette période suscite de vives inquiétudes. L'exposition sans coordination de la zero-day CVE-2026-35616 par le chercheur Chaotic Eclipse livre des outils d'élévation de privilèges (UnDefend, RedSun) prêts à l'emploi. Par ailleurs, des vulnérabilités RCE critiques affectant des utilitaires très répandus (7-Zip, Craft CMS, Centreon) exigent des correctifs immédiats, tandis que des failles OT non corrigées (CVE-2024-8310) menacent toujours les terminaux de contrôle industriels."
+      "en": "Edge gateway appliances and developer environments are the top targets. The exploitation of CVE-2026-0257 in PAN-OS indicates that remote-access infrastructure remains highly targeted for initial access. Concurrently, public disclosure of multiple Linux kernel privilege escalation vulnerabilities (CIFSwitch, SUSE/Ubuntu updates) and heap corruption issues in ubiquitous tools like 7-Zip (CVE-2026-48095) highlights the need for rigorous asset patch management.",
+      "fr": "Les passerelles d'accès et les environnements de développement sont les cibles prioritaires. L'exploitation de la CVE-2026-0257 dans PAN-OS indique que les infrastructures d'accès distant restent très ciblées pour l'accès initial. Parallèlement, la divulgation publique de plusieurs failles d'élévation de privilèges dans le noyau Linux (CIFSwitch, mises à jour SUSE/Ubuntu) et de corruptions de tas dans des outils ubiquitaires comme 7-Zip (CVE-2026-48095) souligne la nécessité d'une gestion rigoureuse des correctifs."
     },
     "list": [
       {
-        "cve_id": "CVE-2026-35616",
-        "cvss_score": 9.8,
+        "cve_id": "CVE-2026-0257",
+        "cvss_score": "7.8",
         "epss_score": "N/A",
         "cisa_kev": true,
-        "affected_product": "Windows (including Defender and BitLocker)",
-        "affected_product_vendor": "Microsoft",
+        "affected_product": "PAN-OS & Prisma Access",
+        "affected_product_vendor": "Palo Alto Networks",
         "vulnerability_type": {
           "en": [
-            "Privilege Escalation",
-            "Antivirus Bypass"
+            "Authentication Bypass"
           ],
           "fr": [
-            "Élévation de Privilèges",
-            "Contournement d'Antivirus"
+            "Contournement d'authentification"
           ]
         },
         "vulnerability_description": {
-          "en": "Uncoordinated public release of zero-day exploits (RedSun, UnDefend, BlueHammer) allowing local privilege escalation, RCE, and total bypass of Microsoft Defender protections.",
-          "fr": "Divulgation publique non coordonnée de zero-days (exploits RedSun, UnDefend, BlueHammer) permettant l'élévation locale de privilèges, de l'RCE et le contournement complet de Microsoft Defender."
+          "en": "An authentication bypass vulnerability (CWE-565) in Palo Alto Networks PAN-OS and Prisma Access allows unauthenticated remote threat actors to bypass security gateways and initiate unauthorized sessions.",
+          "fr": "Une vulnérabilité de contournement d'authentification (CWE-565) dans Palo Alto Networks PAN-OS et Prisma Access permet à des attaquants distants non authentifiés de contourner les passerelles de sécurité et d'ouvrir des sessions non autorisées."
         },
         "mitre_attack_ttps_id": [
-          "T1068",
-          "T1562.001"
-        ]
-      },
-      {
-        "cve_id": "CVE-2026-35617",
-        "cvss_score": 7.2,
-        "epss_score": "N/A",
-        "cisa_kev": false,
-        "affected_product": "Android OS",
-        "affected_product_vendor": "Google",
-        "vulnerability_type": {
-          "en": [
-            "Privilege Escalation",
-            "Input Evasion"
-          ],
-          "fr": [
-            "Élévation de Privilèges",
-            "Contournement d'Entrée"
-          ]
-        },
-        "vulnerability_description": {
-          "en": "Abuse of Accessibility Services by the BTMOB Android RAT allowing remote actors to intercept keystrokes, hijack screen inputs, and control devices.",
-          "fr": "Abus des fonctionnalités d'accessibilité par le RAT Android BTMOB permettant à des attaquants distants d'intercepter les saisies et de contrôler le téléphone."
-        },
-        "mitre_attack_ttps_id": [
-          "T1418"
+          "T1210",
+          "T1078"
         ]
       },
       {
         "cve_id": "CVE-2026-48095",
-        "cvss_score": 8.8,
+        "cvss_score": "8.8",
         "epss_score": "N/A",
         "cisa_kev": false,
-        "affected_product": "7-Zip (versions prior to 26.01)",
+        "affected_product": "7-Zip (versions < 26.01)",
         "affected_product_vendor": "Igor Pavlov",
         "vulnerability_type": {
           "en": [
@@ -429,13 +340,13 @@
             "Integer Overflow"
           ],
           "fr": [
-            "Dépassement de Tampon",
-            "Dépassement d'Entier"
+            "Dépassement de tampon dans le tas",
+            "Débordement d'entier"
           ]
         },
         "vulnerability_description": {
-          "en": "An integer overflow leading to a heap buffer overflow in 7-Zip during the extraction of specially crafted archives, potentially resulting in Remote Code Execution (RCE).",
-          "fr": "Un dépassement d'entier entraînant un débordement de tampon dans le tas lors de l'extraction d'archives malveillantes, pouvant mener à une exécution de code à distance (RCE)."
+          "en": "An integer overflow leading to a heap buffer overflow exists in 7-Zip versions prior to 26.01. An attacker can achieve remote code execution by tricking a user into opening a maliciously crafted archive.",
+          "fr": "Un débordement d'entier entraînant un dépassement de tampon dans le tas existe dans les versions de 7-Zip antérieures à 26.01. Un attaquant peut exécuter du code à distance en incitant un utilisateur à ouvrir une archive malveillante."
         },
         "mitre_attack_ttps_id": [
           "T1203"
@@ -453,23 +364,46 @@
         "en": [
           "Genetic profiles",
           "Health predispositions",
-          "Ancestry reports",
-          "DNA relative matches",
+          "DNA matches",
           "Names",
           "Email addresses"
         ],
         "fr": [
           "Profils génétiques",
           "Prédispositions de santé",
-          "Rapports d'ascendance",
-          "Correspondances ADN de proches",
+          "Correspondances ADN",
           "Noms",
-          "Adresses de courriel"
+          "Adresses e-mail"
         ]
       },
       "threat_actor": null,
       "financial_impact_usd": null,
       "source_url": "https://www.bleepingcomputer.com/news/security/california-ag-sues-23andme-over-2023-breach-exposing-health-data/"
+    },
+    {
+      "victim": "Charter Communications",
+      "sector": "Technology_and_Telecom",
+      "country": "United States",
+      "records_count": 5000000,
+      "data_types": {
+        "en": [
+          "Names",
+          "Phone numbers",
+          "Physical addresses",
+          "Email addresses",
+          "Employee directory (85,000 files)"
+        ],
+        "fr": [
+          "Noms",
+          "Numéros de téléphone",
+          "Adresses physiques",
+          "Adresses e-mail",
+          "Annuaire interne d'employés (85 000 dossiers)"
+        ]
+      },
+      "threat_actor": "ShinyHunters",
+      "financial_impact_usd": null,
+      "source_url": "https://securityaffairs.example.com/192907/uncategorized/shinyhunters-leaks-charter-communications-data-potentially-impacting-5-million-customers.html"
     },
     {
       "victim": "Carnival Corporation",
@@ -481,7 +415,7 @@
           "Names",
           "Dates of birth",
           "Email addresses",
-          "Geographical locations",
+          "Geolocation data",
           "Loyalty program details"
         ],
         "fr": [
@@ -495,50 +429,6 @@
       "threat_actor": "ShinyHunters",
       "financial_impact_usd": null,
       "source_url": "https://lifehacker.com/tech/carnival-cruise-just-had-a-massive-data-breach?utm_medium=RSS"
-    },
-    {
-      "victim": "Portraitbox",
-      "sector": "Education_and_Research",
-      "country": "Germany",
-      "records_count": null,
-      "data_types": {
-        "en": [
-          "Portraits of children/minors",
-          "Physical addresses of families",
-          "Phone numbers",
-          "Associated school and nursery metadata"
-        ],
-        "fr": [
-          "Portraits d'enfants (mineurs)",
-          "Coordonnées postales des familles",
-          "Numéros de téléphone",
-          "Métadonnées des écoles et crèches associées"
-        ]
-      },
-      "threat_actor": null,
-      "financial_impact_usd": null,
-      "source_url": "https://mastodon.de/@maniabel/116658787480777678"
-    },
-    {
-      "victim": "French Health Payment Systems (Tiers-Payant / Remboursements)",
-      "sector": "Healthcare_and_Life_Sciences",
-      "country": "France",
-      "records_count": null,
-      "data_types": {
-        "en": [
-          "National Directory Registration Numbers (NIR / Social Security)",
-          "National identity details",
-          "Health coverage payment routing parameters"
-        ],
-        "fr": [
-          "Numéros d'Inscription au Répertoire (NIR / Sécurité sociale)",
-          "Données d'identité nationale",
-          "Paramètres de paiement de santé"
-        ]
-      },
-      "threat_actor": null,
-      "financial_impact_usd": null,
-      "source_url": "https://databreaches.net/2026/05/29/french-health-payments-breach-exposed-id-data-fuels-fraud-fears/?pk_campaign=feed&pk_kwd=french-health-payments-breach-exposed-id-data-fuels-fraud-fears"
     }
   ],
   "target": {
@@ -546,113 +436,113 @@
       "en": [
         "Government_and_Defense",
         "Healthcare_and_Life_Sciences",
-        "Finance",
+        "Hospitality_and_Entertainment",
         "Technology_and_Telecom",
         "Education_and_Research",
-        "Hospitality_and_Entertainment",
-        "Industry_and_Manufacturing"
+        "Finance",
+        "Critical_Infrastructure"
       ],
       "fr": [
         "Government_and_Defense",
         "Healthcare_and_Life_Sciences",
-        "Finance",
+        "Hospitality_and_Entertainment",
         "Technology_and_Telecom",
         "Education_and_Research",
-        "Hospitality_and_Entertainment",
-        "Industry_and_Manufacturing"
+        "Finance",
+        "Critical_Infrastructure"
       ]
     },
     "countries": {
       "en": [
-        "Ukraine",
+        "United States",
         "France",
         "Germany",
-        "United States",
+        "Ukraine",
         "South Korea"
       ],
       "fr": [
-        "Ukraine",
+        "États-Unis",
         "France",
         "Allemagne",
-        "États-Unis",
+        "Ukraine",
         "Corée du Sud"
       ]
     },
     "narrative": {
-      "en": "- **Healthcare & Life Sciences:** California's AG initiated legal proceedings against Chrome Holding Co. (formerly 23andMe) for exposing extremely sensitive health data and genetic profiles of 6.9 million customers. Concurrently, French health payment providers experienced a massive breach compromising the National Directory Registration numbers (NIR) of millions of citizens.\n- **Hospitality & Entertainment:** Cruise giant Carnival Corporation suffered a significant exfiltration of personal records of over 6 million passengers, highly orchestrated by ShinyHunters for extortion and black-market monetization.\n- **Government & Defense:** The Oregon Department of Corrections suffered a massive internal breach when an authorized prison worker inappropriately accessed and leaked thousands of confidential inmate files, judicial records, and administrative documents.\n- **Education & Research:** South Korea's Daegu University AI Department had its proprietary academic research databases, AI source code, and researcher identities stolen and held hostage by the Nova ransomware group.\n- **Critical Infrastructure:** OPW Fuel Management SiteSentinel consoles exposed critical industrial controls to remote authentication bypass (CVE-2024-8310), allowing unauthorized external manipulation and potential physical sabotage of retail fuel networks.\n- **Education & Media:** Portraitbox, a prominent German school photography provider, suffered a data leak exposing thousands of private portraits of minor school children alongside parent contact details, raising serious child protection and compliance concerns.",
-      "fr": "- **Santé et Sciences de la vie :** Le procureur de Californie a poursuivi Chrome Holding Co. (ex-23andMe) suite à une fuite massive exposant les profils génétiques et prédispositions médicales de 6,9 millions de clients. En France, les réseaux de tiers-payant ont été compromis, exposant les numéros de Sécurité Sociale (NIR) de millions d'affiliés.\n- **Hôtellerie et Loisirs :** Le géant des croisières Carnival Corporation a subi une exfiltration de données majeures affectant 6 millions de clients, orchestrée par le groupe ShinyHunters à des fins d'extorsion financière.\n- **Gouvernement et Défense :** Le Département pénitentiaire de l'Oregon a subi une fuite interne critique lorsqu'un employé a accédé et diffusé illégalement des milliers de dossiers confidentiels de détenus et rapports d'incidents.\n- **Éducation et Recherche :** Le département d'intelligence artificielle de l'Université de Daegu en Corée du Sud a subi une attaque du rançongiciel Nova, entraînant le vol de codes sources de recherche exclusifs et d'identités d'étudiants.\n- **Infrastructures critiques :** Les consoles de gestion de carburant OPW SiteSentinel ont présenté une faille de contournement d'authentification critique (CVE-2024-8310), exposant les vannes de carburant physiques à un sabotage à distance.\n- **Éducation et Famille :** Le prestataire scolaire allemand Portraitbox a subi une fuite de données exposant des milliers de portraits d'élèves mineurs associés aux coordonnées téléphoniques et postales de leurs parents."
+      "en": "- **Healthcare & Life Sciences:** Chrome Holding Co. (formerly 23andMe) compromised exposing 6.9 million genetic and DNA profiles, alongside France's Tiers-Payant health payment system processing millions of French social security numbers (NIR).\n- **Hospitality & Entertainment:** Carnival Corporation cruise lines suffered a breach affecting 6 million customers' loyalty and geolocation data, while Atlas Menu gaming platform leaked 63,926 accounts with bcrypt-hashed passwords.\n- **Technology & Telecom:** Charter Communications was hit by ShinyHunters, leaking 5 million customer records and an internal directory of 85,000 employees. Additionally, GitHub's internal systems were breached by TeamPCP, resulting in the exfiltration of 3,800 source repositories.\n- **Government & Defense:** The Oregon Department of Corrections suffered an insider breach exposing thousands of sensitive prison files, while Ukrainian military and government offices were targeted by GREYVIBE using AI-augmented phishing lures.\n- **Education & Research:** Germany's Portraitbox school photography provider exposed a massive volume of children's portrait photos and family addresses, and South Korea's Daegu University AI Department had its AI research datasets and source codes locked by the Nova ransomware group.\n- **Finance:** VVO Finance databases were held for extortion by the Everest ransomware group, posing severe operational risks to its accounting clients.\n- **Critical Infrastructure:** OPW Fuel Management SiteSentinel systems running vulnerable firmware (CVE-2024-8310) exposed industrial control consoles, raising risks of physical fuel manipulation or sabotage.",
+      "fr": "- **Santé et sciences de la vie :** Compromission de Chrome Holding Co. (ex-23andMe) exposant 6,9 millions de profils génétiques et ADN, ainsi que le système français de Tiers-Payant exposant des numéros d'Inscription au Répertoire (NIR / Sécurité sociale).\n- **Hôtellerie et loisirs :** Carnival Corporation a subi une violation affectant 6 millions de clients (données de géolocalisation et fidélité), tandis que la plateforme de jeu Atlas Menu a vu fuiter 63 926 comptes avec mots de passe hachés.\n- **Technologie et télécommunications :** Charter Communications a été ciblé par ShinyHunters, entraînant la fuite de 5 millions de fiches clients et d'un annuaire interne de 85 000 employés. L'infrastructure interne de GitHub a été infiltrée par TeamPCP, entraînant l'exfiltration de 3 800 dépôts de code source.\n- **Gouvernement et défense :** L'Oregon Department of Corrections a subi une fuite interne compromettant des milliers de fichiers de détenus, tandis que les bureaux militaires et étatiques ukrainiens ont été ciblés par GREYVIBE via des leurres de phishing optimisés par IA.\n- **Éducation et recherche :** Le prestataire allemand Portraitbox a exposé de nombreux portraits d'écoliers mineurs et adresses familiales, et le département d'IA de l'Université de Daegu en Corée du Sud a vu ses jeux de données et codes sources verrouillés par le rançongiciel Nova.\n- **Finance :** Les bases de données comptables de VVO Finance ont été ciblées par le rançongiciel Everest pour extorsion financière.\n- **Infrastructures critiques :** Les consoles industrielles OPW Fuel Management SiteSentinel exposées à distance (CVE-2024-8310) ont présenté d'importants risques de manipulation physique de carburant ou de sabotage."
     }
   },
   "trends": {
     "emerging_techniques": {
       "en": [
-        "Malware delivery disguised as browser crash fixes utilizing legitimate generative AI share links (LLMShare/ClickFix)",
-        "Hardware-enforced browser credentials binding sessions to TPM chips (Device Bound Session Credentials) to block session-hijacking infostealers",
-        "Generative AI integrated by low-skilled state cyber-espionage units (such as GREYVIBE) to generate functional malware scripts and highly localized lures"
+        "AI-Generated Phishing & ClickFix (abusing ChatGPT/Claude share links)",
+        "Malicious IDE extensions (VS Code / .vsix payloads) for developer targeting",
+        "Device Bound Session Credentials (DBSC) to neutralize infostealers"
       ],
       "fr": [
-        "Distribution d'infostealers déguisés en correctifs système via l'abus de liens de partage légitimes d'IA (LLMShare/ClickFix)",
-        "Liaison cryptographique des cookies de session au TPM de la machine (Chrome DBSC) pour contrer le vol de sessions",
-        "Utilisation de modèles d'IA générative par des groupes étatiques de faible niveau technique (ex. GREYVIBE) pour concevoir des leurres de phishing locaux"
+        "Ingénierie sociale assistée par IA et ClickFix (abus de liens de partage ChatGPT/Claude)",
+        "Extensions d'IDE malveillantes (VS Code / charges utiles .vsix) ciblant les développeurs",
+        "Liaison cryptographique d'identifiants au matériel (Chrome DBSC) contre les infostealers"
       ]
     },
     "declining_techniques": {
       "en": [
-        "Static paper-based or declarative compliance audits, being rapidly superseded by continuous machine-readable security signals (SBOM/VEX)",
-        "Direct unencrypted session cookie exfiltration, as services adopt hardware-anchored device keys rendering offline cookies useless"
+        "Traditional SMS or TOTP MFA (highly bypassed by adversary-in-the-middle phishing)",
+        "Static and paper-based supply chain security compliance audits"
       ],
       "fr": [
-        "Audits de conformité tiers statiques ou déclaratifs sur papier, supplantés par des signaux de sécurité automatisés et lisibles par machine (SBOM/VEX)",
-        "Exfiltration passive de cookies de session au format brut, vouée à l'échec face à l'essor des clés de liaison matérielle"
+        "MFA traditionnel par SMS ou TOTP (facilement contourné par phishing de type reverse-proxy)",
+        "Audits de conformité de sécurité de la chaîne d'approvisionnement statiques ou sur papier"
       ]
     },
     "geopolitical_context": {
-      "en": "The correlation between kinetic and digital warfare remains intense in Eastern Europe and the Middle East, with Russian-linked units targeting civil infrastructure in Ukraine. Simultaneously, disinformation and Foreign Information Manipulation and Interference (FIMI) campaigns target Moldova and the Baltics, while hacktivists synchronize volumetric 15+ Tbps DDoS attacks with major democratic processes like European elections to destabilize public opinion.",
-      "fr": "La corrélation entre conflits cinétiques et cyber-offensives reste intense en Europe de l'Est et au Moyen-Orient, les unités russes ciblant les infrastructures civiles en Ukraine. En parallèle, des campagnes de manipulation d'information (FIMI) visent la Moldavie et les pays baltes, tandis que des hacktivistes synchronisent des attaques DDoS massives de plus de 15 Tbps avec les élections européennes pour déstabiliser l'opinion publique."
+      "en": "Cyberspace continues to reflect kinetic military conflicts. Russian-linked actors focus aggressively on Ukrainian civil and defense infrastructure with AI-assisted campaigns, while European critical targets face coordinated hacktivist DDoS waves from groups like NoName057(16) synchronized with electoral cycles. Concurrently, state-sponsored entities target diplomatic communications on Signal to extract backup recovery keys.",
+      "fr": "Le cyberespace reflète toujours les conflits militaires cinétiques. Les acteurs russes se concentrent sur l'Ukraine avec des campagnes aidées par l'IA, tandis que l'Europe subit des vagues d'attaques DDoS coordonnées par NoName057(16) synchronisées avec les échéances électorales. En parallèle, des entités étatiques ciblent les communications diplomatiques sur Signal pour voler des clés de secours."
     }
   },
   "recommendations": {
     "strategic": {
       "en": [
         {
-          "title": "Enforce Device Bound Session Credentials and TPM 2.0",
-          "detail": "Standard cookie-theft techniques used by infostealers like Lumma and Rhadamanthys allow adversaries to easily bypass MFA. Organizations must transition to Google Chrome's DBSC paired with active TPM 2.0 or Apple Secure Enclave hardware. This cryptographically binds active web sessions to physical endpoints, preventing exfiltrated session cookies from being successfully replayed on external attacker-controlled systems."
+          "title": "Enforce FIDO2 Hardware MFA on Developer Accounts",
+          "detail": "Traditional SMS/TOTP MFA is routinely bypassed by reverse-proxy phishing used by actors like ShinyHunters. Mandate FIDO2/WebAuthn hardware keys (such as YubiKey 5 Series or Google Titan) for all developer, DevOps, and cloud administrator accounts in Okta or Entra ID. Revoke all active sessions upon rollout."
         },
         {
-          "title": "Adopt Machine-Readable Software Bill of Materials",
-          "detail": "Standard manual vendor audits are insufficient under the newly emerging Cyber Resilience Act (CRA) and UNECE R155/156 regulations. Security teams should mandate machine-readable SBOMs, OpenSSF Scorecards, and VEX (Vulnerability Exploitability eXchange) signals. This automates the validation of open-source libraries and mitigates supply chain risks across active development pipelines."
+          "title": "Restrict IDE Extensions to Signed Approved Lists",
+          "detail": "As observed in TeamPCP's compromise of GitHub, malicious VS Code extensions are actively used to bypass endpoint security and exfiltrate credentials. Use enterprise-wide policy configurations via `extensions.json` or MDM to restrict extension installation to signed and internally approved lists. Block arbitrary internet access from IDE executables."
         }
       ],
       "fr": [
         {
-          "title": "Imposer les cookies de session liés au TPM (DBSC)",
-          "detail": "Le vol de cookies par des infostealers comme Lumma contourne la MFA traditionnelle. Les entreprises doivent imposer l'utilisation de Chrome DBSC associé au TPM 2.0 ou à la Secure Enclave d'Apple. Cela lie les sessions web au matériel physique de l'employé, bloquant la réutilisation externe des sessions dérobées par des pirates."
+          "title": "Imposer le MFA FIDO2 matériel pour les développeurs",
+          "detail": "Le MFA par SMS ou TOTP est contourné par le phishing de type reverse-proxy utilisé par ShinyHunters. Imposez des clés matérielles FIDO2/WebAuthn (comme YubiKey 5 ou Google Titan) pour tous les accès développeurs, DevOps et administrateurs cloud sur Okta ou Entra ID. Révoquez toutes les sessions actives lors du déploiement."
         },
         {
-          "title": "Déployer des SBOM au format lisible par machine",
-          "detail": "Les audits de conformité statiques ne suffisent plus face aux exigences du Cyber Resilience Act (CRA) et de l'UNECE R155/156. Les équipes de sécurité doivent exiger des SBOM, des Scorecards OpenSSF et des documents VEX lisibles par machine pour automatiser la détection des failles open source au sein de la chaîne d'approvisionnement."
+          "title": "Restreindre les extensions d'IDE aux listes approuvées",
+          "detail": "Comme observé lors de l'intrusion de TeamPCP chez GitHub, les extensions VS Code malveillantes sont utilisées pour exfiltrer des identifiants de développement. Utilisez des configurations de politiques d'entreprise via `extensions.json` ou MDM pour restreindre l'installation aux extensions approuvées et signées. Bloquez les accès internet arbitraires initiés par les IDE."
         }
       ]
     },
     "operational": {
       "en": [
         {
-          "title": "Restrict Generative AI Shared Links and ClickFix Phishing",
-          "detail": "The LLMShare campaign exploits legitimate ChatGPT and Claude share links to host deceptive ClickFix error pages that prompt users to run PowerShell commands. Implement Secure Web Gateway (SWG) rules to block or inspect anonymous shared links (`chatgpt.com/s/`). Ensure EDR policies restrict CMD or PowerShell execution when spawned directly by web browsers like Chrome or Edge."
+          "title": "Patch PAN-OS Firewalls for CVE-2026-0257 Immediately",
+          "detail": "Palo Alto Networks edge appliances running vulnerable PAN-OS are actively exploited in the wild (CISA KEV). Apply emergency security updates to versions 12.1.4-h6, 11.2.12, or 10.2.18-h6. If immediate patching is impossible, temporarily disable the authentication override features."
         },
         {
-          "title": "Audit and Enable Azure Storage Account Access Logs",
-          "detail": "Cloud adversaries exploit default logging omissions in Microsoft Azure Storage Accounts to exfiltrate data undetected. Leverage Azure Policy to automatically enforce the activation of `StorageRead`, `StorageWrite`, and `StorageDelete` diagnostic logs across all storage instances. Regularly ingest and parse `PT1H.json` access logs into your SIEM to detect abnormal mass data transfers via SAS tokens."
+          "title": "Enable Azure Storage Diagnostic Logs for Exfiltration Forensic",
+          "detail": "By default, Azure Storage does not log read/write operations, facilitating silent data exfiltration. Configure Azure Policy to deploy diagnostic settings across all storage accounts with 'StorageRead', 'StorageWrite', and 'StorageDelete' events directed to a central Log Analytics Workspace. Limit Shared Access Signature (SAS) token validity to maximum 24 hours."
         }
       ],
       "fr": [
         {
-          "title": "Bloquer les liens de partage d'IA et ClickFix",
-          "detail": "La campagne LLMShare abuse des liens de partage légitimes de ChatGPT et Claude pour héberger de faux messages d'erreur ClickFix incitant à exécuter du PowerShell. Configurez des règles de passerelle web (SWG) pour bloquer ou inspecter les partages anonymes (`chatgpt.com/s/`). Restreignez via l'EDR l'exécution de CMD/PowerShell initiée par les navigateurs."
+          "title": "Corriger d'urgence PAN-OS pour la CVE-2026-0257",
+          "detail": "Les équipements Palo Alto Networks sous PAN-OS vulnérables font l'objet d'exploitations actives (CISA KEV). Appliquez immédiatement les correctifs vers les versions 12.1.4-h6, 11.2.12 ou 10.2.18-h6. Si la mise à jour immédiate est impossible, désactivez temporairement les fonctions d'override d'authentification."
         },
         {
-          "title": "Activer l'audit de lecture sur Azure Storage",
-          "detail": "Par défaut, Azure n'enregistre pas les accès de lecture aux conteneurs de stockage, masquant les exfiltrations de données via SAS tokens. Déployez une règle Azure Policy pour forcer l'activation des journaux de diagnostic `StorageRead`, `StorageWrite` et `StorageDelete`. Centralisez et analysez les fichiers `PT1H.json` dans votre SIEM pour détecter tout transfert anormal."
+          "title": "Activer l'audit de lecture Azure Storage contre l'exfiltration",
+          "detail": "Par défaut, Azure n'enregistre pas les opérations de lecture de blobs, permettant des vols de données silencieux. Configurez une politique Azure pour imposer l'activation des diagnostics avec les événements 'StorageRead', 'StorageWrite' et 'StorageDelete' vers Log Analytics Workspace. Limitez la validité des signatures SAS à 24 heures maximum."
         }
       ]
     }
