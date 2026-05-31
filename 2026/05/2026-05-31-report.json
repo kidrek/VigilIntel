@@ -1,0 +1,1545 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The cyber threat landscape at the end of May 2026 is characterized by an upsurge in attacks targeting perimeter network technologies (Palo Alto GlobalProtect VPN) and the emergence of new critical vulnerabilities affecting Linux (CIFSwitch) and IoT environments. In parallel, highly targeted phishing campaigns are aiming at diplomats and activists on encrypted messaging services (Signal), while active extortion groups like ShinyHunters continue to exfiltrate massive volumes of data from major infrastructure operators.",
+      "fr": "L'état de la menace cyber à la fin du mois de mai 2026 se caractérise par une recrudescence des attaques ciblant les technologies de réseau périmétrique (VPN Palo Alto GlobalProtect) et l'émergence de nouvelles vulnérabilités critiques affectant les environnements Linux (CIFSwitch) et IoT. Parallèlement, des campagnes d'hameçonnage hautement ciblées visent des diplomates et activistes sur des messageries chiffrées (Signal), tandis que des groupes d'extortion actifs comme ShinyHunters continuent d'exfiltrer des volumes massifs de données d'opérateurs d'infrastructures d'envergure."
+    },
+    "date": "2026-05-31"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": ["Government_and_Defense", "Media_and_Communication"],
+        "fr": ["Gouvernement et Défense", "Médias et Communication"]
+      },
+      "theme": {
+        "en": "Targeted Espionage Campaign on Signal",
+        "fr": "Campagne d'espionnage ciblée sur Signal"
+      },
+      "description": {
+        "en": "State-sponsored actors are targeting diplomats and political activists via phishing campaigns to steal their Signal backup recovery keys and decode their complete encrypted chat histories.",
+        "fr": "Des acteurs étatiques ciblent des diplomates et activistes politiques par hameçonnage afin de voler leurs clés de récupération Signal pour décoder l'historique complet de leurs conversations sauvegardées."
+      },
+      "recommandations": [
+        {
+          "en": "Never share the 64-character Signal recovery key.",
+          "fr": "Ne jamais partager la clé de récupération Signal de 64 caractères."
+        },
+        {
+          "en": "Enable registration lock within the application to prevent phone number hijacking.",
+          "fr": "Activer le verrouillage de l'enregistrement de l'application pour empêcher le détournement de numéros."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Establish clear guidelines prohibiting the sharing of recovery keys on any communication channel.",
+            "Configure Signal registration lock to prevent phone number hijacking.",
+            "Educate high-risk users (journalists, officials) on the importance of keeping the Signal recovery key secret."
+          ],
+          "fr": [
+            "Établir des directives claires interdisant le partage de clés de récupération sur n'importe quel canal de communication.",
+            "Configurer le verrouillage de l'enregistrement de compte Signal pour empêcher le détournement de numéros.",
+            "Éduquer les utilisateurs à risque (journalistes, officiels) sur l'importance du secret de la clé de secours Signal."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for anomalous logins of new devices to key users' Signal accounts.",
+            "Analyze user reports regarding suspicious messages claiming to come from Signal support."
+          ],
+          "fr": [
+            "Surveiller les connexions anormales de nouveaux appareils aux comptes Signal des utilisateurs clés.",
+            "Analyser les signalements d'utilisateurs concernant des messages suspects prétendant provenir du support Signal."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Immediately revoke access for all devices linked to the compromised account.",
+            "Modify the Signal backup recovery key if exposed."
+          ],
+          "fr": [
+            "Révoquer immédiatement l'accès de tous les appareils liés au compte compromis.",
+            "Modifier la clé de récupération de sauvegarde Signal si elle a été exposée."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Conduct a security audit to assess potential exfiltration of chat history.",
+            "Raise awareness on enabling disappearing messages to limit historical exposure."
+          ],
+          "fr": [
+            "Réaliser un audit de sécurité pour évaluer l'exfiltration potentielle de l'historique des discussions.",
+            "Sensibiliser les utilisateurs à l'activation des messages éphémères pour limiter l'exposition historique."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for indicators of social engineering attempts based on impersonating Signal support.",
+            "Search for fraudulent SMS targeting mobile terminals of personnel."
+          ],
+          "fr": [
+            "Recherche d'indicateurs de tentatives d'ingénierie sociale basées sur l'usurpation de l'identité du support Signal.",
+            "Recherche de SMS frauduleux ciblant les terminaux mobiles du personnel."
+          ]
+        }
+      },
+      "tags": ["espionnage", "phishing", "signal"],
+      "sources": ["https://securityaffairs.example.com/192899/security/signal-phishing-campaign-targets-journalists-and-activists-to-steal-backup-recovery-keys.html"],
+      "date": "2026-05-30"
+    }
+  ],
+  "regulatory_and_legal": [
+    {
+      "title": {
+        "en": "CISA Adds PAN-OS Auth Bypass to KEV Catalog",
+        "fr": "La CISA ajoute le contournement d'authentification PAN-OS au catalogue KEV"
+      },
+      "description": {
+        "en": "CISA has added the Palo Alto authentication bypass vulnerability (CVE-2026-0257) to its Known Exploited Vulnerabilities (KEV) catalog, requiring federal agencies to apply patches by June 19, 2026.",
+        "fr": "La CISA a ajouté la vulnérabilité de contournement d'authentification Palo Alto (CVE-2026-0257) à son catalogue d'exploitations connues (KEV), obligeant les agences fédérales à appliquer les correctifs d'ici le 19 juin 2026 sous peine de sanctions."
+      },
+      "organisation": {
+        "en": ["Cybersecurity and Infrastructure Security Agency"],
+        "fr": ["Cybersecurity and Infrastructure Security Agency"]
+      },
+      "jurisdiction": {
+        "en": ["United States"],
+        "fr": ["États-Unis"]
+      },
+      "references": {
+        "en": ["BOD 22-01"],
+        "fr": ["BOD 22-01"]
+      },
+      "tags": ["directive", "conformité", "kev"],
+      "sources": ["https://thecyberthrone.example.com/2026/05/30/cve-2026-0257-palo-alto-networks-pan-os-auth-bypass/"],
+      "date": "2026-05-30"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Charter Communications",
+      "threat_actor": "ShinyHunters",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": ["ShinyHunters"],
+      "sector": {
+        "en": ["Technology_and_Telecom"],
+        "fr": ["Technologie et Télécom"]
+      },
+      "description": {
+        "en": "The data exfiltration targeted sales systems. The leaked database includes 4.9 million unique email addresses as well as associated personal information (names, phone numbers, physical addresses) and an internal employee directory of 85k records.",
+        "fr": "L'exfiltration de données a ciblé les systèmes de vente. La base divulguée comprend 4,9 millions d'adresses email uniques ainsi que des informations personnelles associées (noms, numéros de téléphone, adresses physiques, adresses email et annuaire interne d'employés de 85k enregistrements)."
+      },
+      "mitre_ttps": ["T1566", "T1566.004", "T1586", "T1078"],
+      "recommandations": [
+        {
+          "en": "Apply the principle of least privilege on CRM tools.",
+          "fr": "Appliquer le principe du moindre privilège sur les outils CRM."
+        },
+        {
+          "en": "Implement robust phishing-resistant MFA for all corporate SaaS applications.",
+          "fr": "Mettre en œuvre une MFA robuste résistante au phishing pour toutes les applications SaaS corporatives."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Set up monitoring for credential usage when accessing SaaS.",
+            "Train employees on the risks of voice phishing (vishing)."
+          ],
+          "fr": [
+            "Mettre en place une surveillance de l'utilisation des identifiants d'accès aux SaaS.",
+            "Former les employés aux risques d'ingénierie sociale par téléphone (vishing)."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect unusual connections to Salesforce or Okta from unregistered IP addresses.",
+            "Monitor bulk cloud data exfiltration tools."
+          ],
+          "fr": [
+            "Détecter des connexions inhabituelles à Salesforce ou Okta à partir d'adresses IP non répertoriées.",
+            "Surveiller les outils d'exfiltration de données cloud en masse."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Immediately disable compromised employee accounts.",
+            "Reset active sessions and API keys linked to sales systems."
+          ],
+          "fr": [
+            "Désactiver immédiatement les comptes d'employés compromis.",
+            "Réinitialiser les sessions actives et les clés d'API liées aux systèmes de vente."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Notify the 4.9 million users affected by the email leak.",
+            "Conduct a full forensic audit to identify potential attacker persistence."
+          ],
+          "fr": [
+            "Notifier les 4,9 millions d'utilisateurs affectés par la fuite de données d'adresses email.",
+            "Réaliser un audit forensique complet pour identifier la persistance possible de l'attaquant."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for suspicious IP addresses connecting sequentially to multiple distinct user accounts.",
+            "Identify phishing campaigns targeting company personnel by impersonating the brand."
+          ],
+          "fr": [
+            "Recherche d'adresses IP suspectes se connectant de manière séquentielle à plusieurs comptes d'utilisateurs distincts.",
+            "Identifier les campagnes d'hameçonnage ciblant le personnel de l'entreprise via l'usurpation de l'image de la marque."
+          ]
+        }
+      },
+      "tags": ["fuite de données", "télécom", "extorsion"],
+      "sources": ["https://securityaffairs.example.com/192907/uncategorized/shinyhunters-leaks-charter-communications-data-potentially-impacting-5-million-customers.html"],
+      "date": "2026-05-30"
+    },
+    {
+      "victim": "GitHub",
+      "threat_actor": "TeamPCP",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime / Espionnage",
+      "threat_actor_aliases": ["TeamPCP"],
+      "sector": {
+        "en": ["Technology_and_Telecom"],
+        "fr": ["Technologie et Télécom"]
+      },
+      "description": {
+        "en": "The threat actor TeamPCP compromised GitHub's internal systems by distributing a malicious VS Code extension on a developer's machine, leading to the cloning of approximately 3,800 internal repositories.",
+        "fr": "L'acteur malveillant TeamPCP a compromis les systèmes internes de GitHub en propageant une extension VS Code malveillante sur le poste d'un développeur, conduisant au clonage de près de 3 800 dépôts internes."
+      },
+      "mitre_ttps": ["T1195", "T1195.001"],
+      "recommandations": [
+        {
+          "en": "Audit and restrict extension installations in IDEs.",
+          "fr": "Auditer et restreindre l'installation d'extensions dans les IDE."
+        },
+        {
+          "en": "Monitor massive repository cloning by legitimate accounts.",
+          "fr": "Surveiller le clonage massif de dépôts par des comptes légitimes."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Implement a whitelist of authorized VS Code extensions in the corporate environment."
+          ],
+          "fr": [
+            "Implémenter une liste blanche des extensions VS Code autorisées dans l'environnement d'entreprise."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor outbound network traffic directly originating from developer IDEs."
+          ],
+          "fr": [
+            "Surveiller les flux sortants réseau provenant directement de l'IDE des développeurs."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Force deletion of the malicious extension across the fleet and block its C2 domain."
+          ],
+          "fr": [
+            "Forcer la suppression de l'extension malveillante sur l'ensemble du parc et bloquer son domaine de C2."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify the integrity of all cloned repositories and change all SSH access keys to repositories."
+          ],
+          "fr": [
+            "Vérifier l'intégrité de tous les dépôts clonés et modifier l'ensemble des clés SSH d'accès aux dépôts."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Identify unapproved extension installations in engineer IDEs."
+          ],
+          "fr": [
+            "Identifier les installations non approuvées d'extensions de l'éditeur sur les terminaux des ingénieurs."
+          ]
+        }
+      },
+      "tags": ["supply-chain", "github", "breach"],
+      "sources": ["https://mastodon.social.example.com/@denzuko/116666230259526857"],
+      "date": "2026-05-31"
+    },
+    {
+      "victim": "Atlas Menu",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Hospitality_and_Entertainment"],
+        "fr": ["Hôtellerie et Divertissement"]
+      },
+      "description": {
+        "en": "The database of GTA V and CS2 cheat service 'Atlas Menu' was leaked on a public GitHub repository, compromising 63,926 accounts including emails, IP addresses, support tickets, and bcrypt-hashed passwords.",
+        "fr": "La base de données du service de triche GTA V et CS2 'Atlas Menu' a été divulguée sur un dépôt GitHub public, compromettant 63 926 comptes avec emails, adresses IP, tickets de support et mots de passe hashés avec bcrypt."
+      },
+      "mitre_ttps": ["T1566"],
+      "recommandations": [
+        {
+          "en": "Change reused passwords immediately.",
+          "fr": "Changer immédiatement les mots de passe réutilisés."
+        },
+        {
+          "en": "Avoid using cheat services or unverified software sources.",
+          "fr": "Ne pas utiliser de services de triche ou de sources logicielles non vérifiées."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inform users about the importance of using unique passwords."
+          ],
+          "fr": [
+            "Informer les utilisateurs sur l'importance d'utiliser des mots de passe uniques."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect the presence of leaked corporate credentials within public breach databases."
+          ],
+          "fr": [
+            "Détecter la présence des identifiants d'entreprise divulgués au sein des bases de données de fuites publiques."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Force password resets for all client accounts."
+          ],
+          "fr": [
+            "Forcer le renouvellement des mots de passe pour tous les comptes clients."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Audit the overall security of the application databases."
+          ],
+          "fr": [
+            "Auditer la sécurité globale des bases de données de l'application."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Identify the exposure of employee or client credentials."
+          ],
+          "fr": [
+            "Identifier l'exposition des informations d'identification d'employés ou de clients."
+          ]
+        }
+      },
+      "tags": ["data-breach", "gaming", "cheat-service"],
+      "sources": ["https://haveibeenpwned.example.com/Breach/AtlasMenu"],
+      "date": "2026-05-30"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-0257",
+      "euvd_id": "unknown",
+      "cisa_kev": "true",
+      "cvss": "7.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:o:paloaltonetworks:pan-os:*:*:*:*:*:*:*:*",
+      "product": "PAN-OS & Prisma Access",
+      "vendor": "Palo Alto Networks",
+      "description": {
+        "en": "An authentication bypass vulnerability in Palo Alto Networks PAN-OS GlobalProtect allows a remote attacker to forge valid authentication cookies if the HTTPS and authentication override certificates are identical.",
+        "fr": "Une faille de contournement d'authentification dans Palo Alto Networks PAN-OS GlobalProtect permet à un attaquant distant de forger des cookies d'authentification valides si les certificats HTTPS et d'override d'authentification sont identiques."
+      },
+      "mitre_ttps": ["T1133"],
+      "recommandations": [
+        {
+          "en": "Upgrade immediately to the patched PAN-OS versions.",
+          "fr": "Mettre à niveau immédiatement vers les versions corrigées de PAN-OS."
+        },
+        {
+          "en": "Do not reuse HTTPS portal certificates for signing authentication cookies.",
+          "fr": "Ne pas réutiliser les certificats de portail HTTPS pour la signature de cookies d'authentification."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Identify all PAN-OS GlobalProtect gateways exposed to the Internet.",
+            "Ensure detailed logging of VPN sessions is enabled and centralized."
+          ],
+          "fr": [
+            "Identifier toutes les passerelles PAN-OS GlobalProtect exposées à Internet.",
+            "S'assurer que la journalisation détaillée des sessions VPN est activée et centralisée."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Search PAN-OS system logs for authentication cookie signature verification errors.",
+            "Detect successful VPN connections using cookies generated without prior valid authentication."
+          ],
+          "fr": [
+            "Rechercher dans les journaux système PAN-OS des erreurs de vérification de signature de cookie d'authentification.",
+            "Détecter des connexions VPN réussies utilisant des cookies générés sans authentification préalable valide."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Disable the optional authentication override cookie feature if possible.",
+            "Urgent application of vendor-provided patches."
+          ],
+          "fr": [
+            "Désactiver la fonctionnalité optionnelle d'authentification par cookies ('Authentication Override') si possible.",
+            "Appliquer d'urgence les correctifs fournis par le constructeur."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Reset all active VPN sessions and force users to re-authenticate.",
+            "Change the certificates used to encrypt authentication override cookies."
+          ],
+          "fr": [
+            "Réinitialiser toutes les sessions VPN actives et forcer les utilisateurs à s'authentifier à nouveau.",
+            "Changer les certificats utilisés pour chiffrer les cookies d'override d'authentification."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for remote IP addresses associated with multiple VPN session authentication bypass attempts.",
+            "Identify malicious connections and actions associated with the known attacking IP (146.19.216.119)."
+          ],
+          "fr": [
+            "Recherche d'adresses IP distantes associées à de multiples tentatives de contournement d'authentification de session VPN.",
+            "Identifier les connexions et actions malveillantes associées à l'IP d'attaque connue (146.19.216.119)."
+          ]
+        }
+      },
+      "tags": ["vpn", "bypass-auth", "pan-os"],
+      "sources": [
+        "https://bleepingcomputer.example.com/news/security/palo-alto-globalprotect-vpn-auth-bypass-flaw-now-exploited-in-attacks/",
+        "https://thecyberthrone.example.com/2026/05/30/cve-2026-0257-palo-alto-networks-pan-os-auth-bypass/",
+        "https://thehackernews.example.com/2026/05/pan-os-globalprotect-authentication.html",
+        "https://cybersecuritynews.example.com/palo-alto-vulnerability-exploited/"
+      ],
+      "date": "2026-05-30"
+    },
+    {
+      "cve_id": "unknown",
+      "euvd_id": "unknown",
+      "cisa_kev": "unknown",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+      "product": "Linux Kernel / cifs-utils",
+      "vendor": "Linux",
+      "description": {
+        "en": "A local namespace abuse or overflow vulnerability via cifs.spnego key requests allows local privilege escalation to root on multiple Linux distributions.",
+        "fr": "Une faille locale d'abus d'espace de noms ou de dépassement via les requêtes de clé de type cifs.spnego permet une élévation locale de privilèges root sur plusieurs distributions Linux."
+      },
+      "mitre_ttps": ["T1068"],
+      "recommandations": [
+        {
+          "en": "Enable SELinux or AppArmor to block exploitation.",
+          "fr": "Activer SELinux ou AppArmor pour bloquer l'exploitation."
+        },
+        {
+          "en": "Restrict local access and monitor processes launched by 'cifs.upcall'.",
+          "fr": "Restreindre l'accès local et surveiller les processus lancés par 'cifs.upcall'."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Deploy hardened security configurations based on AppArmor or SELinux across Linux fleets."
+          ],
+          "fr": [
+            "Déployer des configurations de sécurité durcies basées sur AppArmor ou SELinux sur l'ensemble des parcs Linux."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Audit abnormal usage of the 'cifs.upcall' binary by non-privileged users."
+          ],
+          "fr": [
+            "Auditer l'utilisation anormale du binaire 'cifs.upcall' par des utilisateurs non privilégiés."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Temporarily restrict the execution of 'cifs.upcall' by modifying its permissions."
+          ],
+          "fr": [
+            "Restreindre temporairement l'exécution de 'cifs.upcall' en modifiant ses permissions."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Update Linux kernel and 'cifs-utils' packages as soon as patches are available."
+          ],
+          "fr": [
+            "Mettre à jour les packages du noyau Linux et de 'cifs-utils' dès la mise à disposition des correctifs."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Identify unusual invocations of the Kerberos key resolution process for CIFS."
+          ],
+          "fr": [
+            "Identifier les invocations inhabituelles du processus de résolution de clés Kerberos pour CIFS."
+          ]
+        }
+      },
+      "tags": ["vulnerability", "linux", "privilege-escalation"],
+      "sources": ["https://bleepingcomputer.example.com/news/security/new-cifswitch-linux-flaw-gives-root-on-multiple-distributions/"],
+      "date": "2026-05-30"
+    },
+    {
+      "cve_id": "CVE-2026-10126",
+      "euvd_id": "unknown",
+      "cisa_kev": "unknown",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:h:edimax:br-6478ac:*:*:*:*:*:*:*:*",
+      "product": "BR-6478AC v1.23",
+      "vendor": "Edimax",
+      "description": {
+        "en": "A high severity buffer overflow in Edimax BR-6478AC router's 'formQoS' function in '/goform/formQoS' via a crafted 'selSSID' parameter allows remote code execution or denial of service.",
+        "fr": "Une vulnérabilité critique de débordement de tampon dans la fonction 'formQoS' du fichier '/goform/formQoS' des routeurs Edimax BR-6478AC via un paramètre 'selSSID' forgé permet l'exécution de code arbitraire à distance ou un déni de service."
+      },
+      "mitre_ttps": ["T1210"],
+      "recommandations": [
+        {
+          "en": "Restrict remote admin access to authorized IP addresses.",
+          "fr": "Restreindre les accès à l'administration d'administration à distance aux adresses IP autorisées."
+        },
+        {
+          "en": "Install the security update once available.",
+          "fr": "Installer la mise à jour dès sa sortie."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory all Edimax equipment connected to the network infrastructure.",
+            "Disable default remote administration on all Edimax corporate routers."
+          ],
+          "fr": [
+            "Inventorier l'ensemble des équipements Edimax connectés à l'infrastructure réseau.",
+            "Désactiver l'administration à distance par défaut sur tous les routeurs d'entreprise Edimax."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor network router logs for unusual HTTP POST requests to '/goform/formQoS'."
+          ],
+          "fr": [
+            "Surveiller les logs d'accès réseau des routeurs pour des requêtes HTTP POST inhabituelles vers '/goform/formQoS'."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate subnets hosting unpatched Edimax routers.",
+            "Restrict admin interface access to authorized IPs only."
+          ],
+          "fr": [
+            "Isoler les sous-réseaux hébergeant des équipements Edimax non mis à jour.",
+            "Restreindre l'accès à l'interface d'administration de ces routeurs aux seules adresses IP autorisées."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Apply recent security firmware updates provided by Edimax or replace EOL hardware."
+          ],
+          "fr": [
+            "Appliquer les micrologiciels de sécurité récents fournis par Edimax ou remplacer le matériel en fin de vie."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Identify request patterns characteristic of the Edimax QoS vulnerability exploitation."
+          ],
+          "fr": [
+            "Identifier les modèles de requêtes HTTP caractéristiques de l'exploitation de la faille de QoS d'Edimax."
+          ]
+        }
+      },
+      "tags": ["vulnerability", "edimax", "buffer-overflow"],
+      "sources": [
+        "https://infosec.exchange.example.com/@offseq/116666599037632806",
+        "https://cvefeed.example.com/vuln/detail/CVE-2026-10126"
+      ],
+      "date": "2026-05-31"
+    },
+    {
+      "cve_id": "CVE-2026-10125",
+      "euvd_id": "unknown",
+      "cisa_kev": "unknown",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:h:edimax:br-6478ac:*:*:*:*:*:*:*:*",
+      "product": "BR-6478AC",
+      "vendor": "Edimax",
+      "description": {
+        "en": "A stack-based overflow vulnerability in Edimax BR-6478AC router's '/goform/formPPPoESetup' page via the 'pppUserName' parameter allows remote root access.",
+        "fr": "Un débordement de pile dans la page '/goform/formPPPoESetup' du routeur Edimax BR-6478AC via le paramètre 'pppUserName' permet un accès root distant."
+      },
+      "mitre_ttps": ["T1210"],
+      "recommandations": [
+        {
+          "en": "Disable remote PPPoE setup if not required and close WAN management interfaces.",
+          "fr": "Désactiver la fonctionnalité PPPoE à distance si non requise et fermer les interfaces de gestion WAN."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Disable remote PPPoE functionality if not required."
+          ],
+          "fr": [
+            "Désactiver la fonctionnalité PPPoE à distance si non requise."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Search for HTTP web requests to '/goform/formPPPoESetup' containing abnormally long fields."
+          ],
+          "fr": [
+            "Rechercher des requêtes web HTTP vers '/goform/formPPPoESetup' contenant des champs anormalement longs."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Block network access to the PPPoE configuration page."
+          ],
+          "fr": [
+            "Bloquer l'accès réseau à la page de configuration PPPoE."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Install the latest firmware update or replace EOL models."
+          ],
+          "fr": [
+            "Installer la dernière mise à jour de firmware ou remplacer les modèles EOL."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Identify code execution attempts through corrupted PPPoE connection buffers."
+          ],
+          "fr": [
+            "Identifier les tentatives d'exécution de code à travers des buffers de connexion PPPoE corrompus."
+          ]
+        }
+      },
+      "tags": ["vulnerability", "edimax", "overflow"],
+      "sources": ["https://cvefeed.example.com/vuln/detail/CVE-2026-10125"],
+      "date": "2026-05-30"
+    },
+    {
+      "cve_id": "CVE-2026-10124",
+      "euvd_id": "unknown",
+      "cisa_kev": "unknown",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:o:shibby:tomato:*:*:*:*:*:*:*:*",
+      "product": "Shibby Tomato Firmware",
+      "vendor": "Shibby",
+      "description": {
+        "en": "A stack-based buffer overflow vulnerability in the 'rip_zebra_read_ipv4' function of the Zserv 'ripd' utility in Shibby Tomato firmware allows remote code execution or DoS.",
+        "fr": "Un débordement de pile dans la fonction 'rip_zebra_read_ipv4' de l'utilitaire 'ripd' de Zserv sur le micrologiciel Shibby Tomato permet l'exécution de code à distance ou un déni de service."
+      },
+      "mitre_ttps": ["T1210"],
+      "recommandations": [
+        {
+          "en": "Migrate urgently to FreshTomato to continue receiving security patches.",
+          "fr": "Migrer de manière urgente vers FreshTomato pour continuer à recevoir des correctifs."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Identify if obsolete routers are running the third-party Shibby Tomato firmware."
+          ],
+          "fr": [
+            "Identifier si des routeurs obsolètes exécutent le micrologiciel tiers Shibby Tomato."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Search for anomalies in IPv4 packets handled by the rip_zebra routing utility."
+          ],
+          "fr": [
+            "Rechercher des anomalies dans les paquets IPv4 gérés par l'utilitaire de routage rip_zebra."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Disable the dynamic RIP routing service."
+          ],
+          "fr": [
+            "Désactiver le service de routage dynamique RIP."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Migrate to the more modern FreshTomato firmware, as Shibby Tomato is obsolete."
+          ],
+          "fr": [
+            "Migrer vers le micrologiciel plus moderne FreshTomato, le projet Shibby Tomato étant obsolète."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Identify execution anomalies of the ripd daemon exploiting the address conversion vulnerability."
+          ],
+          "fr": [
+            "Identifier les anomalies d'exécution du démon ripd exploitant la vulnérabilité de conversion d'adresses."
+          ]
+        }
+      },
+      "tags": ["vulnerability", "tomato-firmware", "overflow"],
+      "sources": ["https://cvefeed.example.com/vuln/detail/CVE-2026-10124"],
+      "date": "2026-05-30"
+    },
+    {
+      "cve_id": "CVE-2026-10123",
+      "euvd_id": "unknown",
+      "cisa_kev": "unknown",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:h:trendnet:tew-432brp:*:*:*:*:*:*:*:*",
+      "product": "TEW-432BRP",
+      "vendor": "TRENDnet",
+      "description": {
+        "en": "A stack-based buffer overflow in the 'formSetDomainFilter' function of '/goform/formSetDomainFilter' on TRENDnet TEW-432BRP routers allows denial of service or remote control.",
+        "fr": "Un débordement de pile dans la fonction 'formSetDomainFilter' de '/goform/formSetDomainFilter' sur les routeurs TRENDnet TEW-432BRP permet un déni de service ou la prise de contrôle à distance."
+      },
+      "mitre_ttps": ["T1210"],
+      "recommandations": [
+        {
+          "en": "Replace the obsolete end-of-life device urgently.",
+          "fr": "Remplacer l'équipement obsolète en fin de vie de manière urgente."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Establish a replacement plan for all TRENDnet TEW-432BRP routers considered EOL since 2009."
+          ],
+          "fr": [
+            "Établir un plan de remplacement pour tous les routeurs TRENDnet TEW-432BRP considérés en fin de vie (EOL) depuis 2009."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect unusual POST requests to '/goform/formSetDomainFilter'."
+          ],
+          "fr": [
+            "Détecter des requêtes POST inhabituelles vers '/goform/formSetDomainFilter'."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Power down or isolate vulnerable devices from the network."
+          ],
+          "fr": [
+            "Mettre hors tension ou isoler du réseau les équipements vulnérables."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Install modern, vendor-supported network hardware."
+          ],
+          "fr": [
+            "Installer des équipements réseau modernes supportés par le constructeur."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for exploits targeting old routers via malicious domain filter injection."
+          ],
+          "fr": [
+            "Recherche d'exploitations visant les anciens routeurs via l'injection de filtres de domaine malicieux."
+          ]
+        }
+      },
+      "tags": ["vulnerability", "trendnet", "overflow"],
+      "sources": ["https://cvefeed.example.com/vuln/detail/CVE-2026-10123"],
+      "date": "2026-05-30"
+    },
+    {
+      "cve_id": "CVE-2026-10122",
+      "euvd_id": "unknown",
+      "cisa_kev": "unknown",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:h:trendnet:tew-432brp:*:*:*:*:*:*:*:*",
+      "product": "TEW-432BRP",
+      "vendor": "TRENDnet",
+      "description": {
+        "en": "A stack-based buffer overflow in the 'formSetProtocolFilter' function of '/goform/formSetProtocolFilter' on TRENDnet TEW-432BRP routers allows remote code execution.",
+        "fr": "Un débordement de pile dans la fonction 'formSetProtocolFilter' de '/goform/formSetProtocolFilter' sur les routeurs TRENDnet TEW-432BRP permet l'exécution de code arbitraire à distance."
+      },
+      "mitre_ttps": ["T1210"],
+      "recommandations": [
+        {
+          "en": "Abandon the use of unsupported devices that are over 15 years old.",
+          "fr": "Abandonner l'usage d'équipements non supportés de plus de 15 ans."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Raise administrator awareness of the risks of End of Life (EOL) hardware connected to local networks."
+          ],
+          "fr": [
+            "Sensibiliser les administrateurs aux risques des matériels en fin de vie (EOL) connectés aux réseaux locaux."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor HTTP filter configuration activities on old devices."
+          ],
+          "fr": [
+            "Surveiller les activités de configuration de filtres HTTP sur les anciens équipements."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Block all HTTP traffic to the administration portal of these obsolete routers."
+          ],
+          "fr": [
+            "Bloquer l'ensemble des flux HTTP vers le portail d'administration de ces routeurs obsolètes."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Immediately replace the unmaintained TRENDnet device with a supported network gateway."
+          ],
+          "fr": [
+            "Remplacer immédiatement le périphérique TRENDnet non maintenu par une passerelle réseau supportée."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Check for the presence of network filter bypass exploits on the gateways."
+          ],
+          "fr": [
+            "Vérifier la présence d'exploits de contournement de filtre réseau sur les passerelles."
+          ]
+        }
+      },
+      "tags": ["vulnerability", "trendnet", "overflow"],
+      "sources": ["https://cvefeed.example.com/vuln/detail/CVE-2026-10122"],
+      "date": "2026-05-30"
+    },
+    {
+      "cve_id": "CVE-2026-10121",
+      "euvd_id": "unknown",
+      "cisa_kev": "unknown",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:h:trendnet:tew-432brp:*:*:*:*:*:*:*:*",
+      "product": "TEW-432BRP",
+      "vendor": "TRENDnet",
+      "description": {
+        "en": "A stack-based buffer overflow in the 'formSetUrlFilter' function of '/goform/formSetUrlFilter' on TRENDnet TEW-432BRP routers via the 'keyword' parameter allows root access.",
+        "fr": "Un débordement de pile dans la fonction 'formSetUrlFilter' de '/goform/formSetUrlFilter' sur les routeurs TRENDnet TEW-432BRP via le paramètre 'keyword' permet d'obtenir un accès root."
+      },
+      "mitre_ttps": ["T1210"],
+      "recommandations": [
+        {
+          "en": "Decommission these TRENDnet routers.",
+          "fr": "Mettre hors service ces routeurs TRENDnet."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Launch regular vulnerability scans on external network devices."
+          ],
+          "fr": [
+            "Lancer un scan de vulnérabilités régulier sur les équipements réseau externes."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect HTTP requests containing long URL filtering parameters."
+          ],
+          "fr": [
+            "Détecter les requêtes HTTP contenant de longs paramètres de filtrage d'URL."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Turn off or immediately disable the equipment."
+          ],
+          "fr": [
+            "Éteindre l'équipement ou le désactiver immédiatement."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Replace EOL devices."
+          ],
+          "fr": [
+            "Remplacer les appareils EOL."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for remote exploitations by injection of excessive keywords."
+          ],
+          "fr": [
+            "Recherche d'exploitations à distance par injection de mots clés excessifs."
+          ]
+        }
+      },
+      "tags": ["vulnerability", "trendnet", "overflow"],
+      "sources": ["https://cvefeed.example.com/vuln/detail/CVE-2026-10121"],
+      "date": "2026-05-30"
+    },
+    {
+      "cve_id": "CVE-2026-40933",
+      "euvd_id": "unknown",
+      "cisa_kev": "unknown",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:flowiseai:flowise:*:*:*:*:*:*:*:*",
+      "product": "Flowise",
+      "vendor": "FlowiseAI",
+      "description": {
+        "en": "A critical remote code execution (RCE) vulnerability in Flowise allows command execution on AI integration servers following the import of malicious chatflows.",
+        "fr": "Une faille critique d'exécution de code à distance (RCE) sur Flowise permet l'exécution de commande sur les serveurs d'intégration d'IA suite à l'import de flux de chat malicieux."
+      },
+      "mitre_ttps": ["T1190"],
+      "recommandations": [
+        {
+          "en": "Restrict chatflow imports and modifications, and limit network exposure of AI development servers.",
+          "fr": "Restreindre les imports et modifications de flux de discussion, et limiter l'exposition réseau des serveurs de développement IA."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory all self-hosted Flowise instances."
+          ],
+          "fr": [
+            "Inventorier toutes les instances Flowise auto-hébergées."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Search for the import of unknown or malicious chatflow schemas by users."
+          ],
+          "fr": [
+            "Rechercher l'import de schémas de chatflows inconnus ou malicieux par les utilisateurs."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Temporarily disable chatflow import and editing features."
+          ],
+          "fr": [
+            "Désactiver temporairement les fonctions d'importation et d'édition de chatflows."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Update Flowise to a patched version and verify execution environment integrity."
+          ],
+          "fr": [
+            "Mettre à jour Flowise vers une version corrigée et vérifier l'intégrité de l'environnement d'exécution."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Detect API calls or import activities of files containing embedded malicious scripts."
+          ],
+          "fr": [
+            "Détection d'appels API ou d'activités d'importation de fichiers contenant des scripts intégrés malicieux."
+          ]
+        }
+      },
+      "tags": ["vulnerability", "flowise", "rce"],
+      "sources": ["https://infosec.exchange.example.com/@offseq/116666245643817162"],
+      "date": "2026-05-31"
+    },
+    {
+      "cve_id": "CVE-2024-3120",
+      "euvd_id": "unknown",
+      "cisa_kev": "unknown",
+      "cvss": "9.0",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:sngrep:sngrep:*:*:*:*:*:*:*:*",
+      "product": "Sngrep",
+      "vendor": "Sngrep",
+      "description": {
+        "en": "A critical buffer overflow vulnerability in Sngrep (v1.4.1+), a SIP IP telephony traffic analyzer, allows remote code execution or DoS via crafted SIP messages.",
+        "fr": "Une vulnérabilité critique de débordement de tampon affecte Sngrep (versions v1.4.1+), un analyseur de trafic SIP de téléphonie IP, permettant l'exécution de code à distance ou un DoS via des messages SIP forgés."
+      },
+      "mitre_ttps": ["T1210"],
+      "recommandations": [
+        {
+          "en": "Disable the tool or limit its usage, and restrict network access to VoIP services.",
+          "fr": "Désactiver l'outil ou limiter son usage, et restreindre l'accès réseau aux services VoIP."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Identify all installations of the Sngrep tool in the SIP telephony infrastructure."
+          ],
+          "fr": [
+            "Identifier toutes les installations de l'outil Sngrep dans l'infrastructure de téléphonie SIP."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Search for anomalies or regular crashes of the Sngrep tool during traffic analysis."
+          ],
+          "fr": [
+            "Rechercher des anomalies ou plantages réguliers de l'outil Sngrep lors de l'analyse du trafic."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Disable the Sngrep tool or restrict its access to trusted network interfaces only."
+          ],
+          "fr": [
+            "Désactiver l'outil Sngrep ou restreindre son accès aux interfaces réseau de confiance uniquement."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Update Sngrep as soon as a validated patch is available."
+          ],
+          "fr": [
+            "Mettre à jour Sngrep dès qu'un correctif validé est disponible."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for SIP packets of abnormal length designed to cause a buffer overflow."
+          ],
+          "fr": [
+            "Recherche de paquets SIP d'une longueur anormale destinés à provoquer un dépassement de tampon."
+          ]
+        }
+      },
+      "tags": ["vulnerability", "sip", "buffer-overflow"],
+      "sources": ["https://mastodon.social.example.com/@hugovalters/116666057862184860"],
+      "date": "2026-05-30"
+    },
+    {
+      "cve_id": "CVE-2018-25425",
+      "euvd_id": "unknown",
+      "cisa_kev": "unknown",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:yot_project:yot_cms:*:*:*:*:*:*:*:*",
+      "product": "Yot CMS 3.3.1",
+      "vendor": "Yot Project",
+      "description": {
+        "en": "A SQL injection vulnerability in Yot CMS 3.3.1 allows unauthenticated attackers to execute arbitrary SQL queries via the 'aid' and 'cid' parameters.",
+        "fr": "Une faille d'injection SQL dans Yot CMS 3.3.1 permet à des attaquants non authentifiés d'exécuter des requêtes SQL arbitraires via les paramètres 'aid' et 'cid'."
+      },
+      "mitre_ttps": ["T1190"],
+      "recommandations": [
+        {
+          "en": "Use prepared statements and deploy a WAF to filter fraudulent requests.",
+          "fr": "Utiliser des requêtes préparées et déployer un WAF pour filtrer les requêtes frauduleuses."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Identify if Yot CMS is present on web servers hosting content."
+          ],
+          "fr": [
+            "Identifier si Yot CMS est présent sur les serveurs web hébergeant du contenu."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Search database queries for malicious SQL characters in 'aid' or 'cid' parameters."
+          ],
+          "fr": [
+            "Rechercher dans les requêtes de base de données des caractères SQL malveillants dans les paramètres 'aid' ou 'cid'."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Disable or isolate the vulnerable Yot CMS instance."
+          ],
+          "fr": [
+            "Désactiver ou isoler l'instance Yot CMS vulnérable."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Apply web application firewall (WAF) rules to filter SQL injections."
+          ],
+          "fr": [
+            "Appliquer des règles de pare-feu applicatif (WAF) pour filtrer les injections SQL."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Identify SQL injection attempts targeting the web application."
+          ],
+          "fr": [
+            "Identify SQL injection attempts targeting the web application."
+          ]
+        }
+      },
+      "tags": ["vulnerability", "yot-cms", "sql-injection"],
+      "sources": ["https://cvefeed.example.com/vuln/detail/CVE-2018-25425"],
+      "date": "2026-05-30"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "Dutch Authorities Dismantle 17 Million Device Botnet",
+        "fr": "Démantèlement d'un botnet de 17 millions de machines aux Pays-Bas"
+      },
+      "description": {
+        "en": "The dismantling of a botnet of over 17 million infected devices linked to ASOCKS, a residential proxy vendor, used to hide malicious attack sources.",
+        "fr": "Le démantèlement par les autorités néerlandaises d'un réseau de plus de 17 millions de machines infectées liées à ASOCKS, un vendeur de proxies résidentiels, utilisé pour dissimuler l'origine d'attaques malveillantes."
+      },
+      "threat_actor": "ASOCKS",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Retail_and_Consumer"],
+        "fr": ["Commerce de détail et Consommation"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": ["ASOCKS"]
+      },
+      "mitre_ttps": ["T1090", "T1090.003"],
+      "analyse": {
+        "en": "The ASOCKS botnet recruited consumer devices to act as transit proxies. It enabled attackers to conduct DDoS, phishing, and scraping while appearing as legitimate residential traffic.",
+        "fr": "Le botnet ASOCKS a infecté des terminaux grand public pour s'en servir de relais proxy. Il permettait aux attaquants de mener des attaques DDoS, d'hameçonnage et de scraping sous couvert de trafic résidentiel légitime."
+      },
+      "recommandations": [
+        {
+          "en": "Avoid downloading unapproved third-party applications on Android devices.",
+          "fr": "Éviter de télécharger des applications tierces non approuvées sur Android."
+        },
+        {
+          "en": "Monitor abnormal bandwidth utilization on local networks.",
+          "fr": "Surveiller l'utilisation anormale de la bande passante sur les réseaux locaux."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Implement network behavior analysis solutions to detect residential proxy activity."
+          ],
+          "fr": [
+            "Mettre en œuvre des solutions d'analyse comportementale sur le trafic réseau pour détecter l'activité proxy résidentiel."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Identify connections to IP addresses associated with the ASOCKS proxy service."
+          ],
+          "fr": [
+            "Identifier les connexions vers les adresses IP associées au service de proxy ASOCKS."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Block network access for suspect devices redirecting traffic abnormally."
+          ],
+          "fr": [
+            "Bloquer l'accès réseau des périphériques suspects redirigeant le trafic de manière anormale."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Reinstall compromised systems and raise awareness among host customers."
+          ],
+          "fr": [
+            "Réinstaller les systèmes compromis et sensibiliser les clients de l'hébergeur."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Identify hosts acting as clandestine proxy relays within the network."
+          ],
+          "fr": [
+            "Identifier les hôtes se comportant comme des relais proxy clandestins au sein du réseau."
+          ]
+        }
+      },
+      "tags": ["botnet", "proxy", "malware"],
+      "sources": ["https://securityaffairs.example.com/192890/malware/botnet-of-17-million-devices-dismantled-in-the-netherlands.html"],
+      "date": "2026-05-30"
+    },
+    {
+      "title": {
+        "en": "JINX-0164 Campaign Targets Crypto Developers with macOS Malware",
+        "fr": "La campagne JINX-0164 cible les développeurs crypto avec un malware macOS"
+      },
+      "description": {
+        "en": "An active campaign distributes malware targeting macOS devices of cryptocurrency developers to steal secrets and infrastructure access.",
+        "fr": "Une campagne active distribue des malwares ciblant les postes macOS des développeurs de la sphère crypto pour voler des secrets et des accès d'infrastructure."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Finance", "Technology_and_Telecom"],
+        "fr": ["Finance", "Technologie et Télécom"]
+      },
+      "indicators": {
+        "URL": ["hxxps://otx[.]alienvault[.]com/pulse/6a1b8223ec51b13c613e101a"],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": ["JINX-0164"]
+      },
+      "mitre_ttps": ["T1204", "T1204.002"],
+      "analyse": {
+        "en": "Active campaign distributing macOS payloads designed to extract credentials and keys from cryptocurrency software developers.",
+        "fr": "Une campagne active distribue des charges utiles macOS conçues pour extraire des identifiants et des clés de développeurs de logiciels de cryptomonnaies."
+      },
+      "recommandations": [
+        {
+          "en": "Audit macOS developer endpoints regularly.",
+          "fr": "Auditer régulièrement les postes macOS des développeurs."
+        },
+        {
+          "en": "Restrict the execution of unverified binaries.",
+          "fr": "Restreindre l'exécution de binaires non vérifiés."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Deploy EDR tools on all macOS developer workstations."
+          ],
+          "fr": [
+            "Déployer des outils EDR sur l'ensemble des postes de travail macOS des développeurs."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Search for signs of downloading doubtful packages related to the JINX-0164 campaign."
+          ],
+          "fr": [
+            "Rechercher des traces de téléchargement de paquets douteux liés à la campagne JINX-0164."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Immediately isolate the compromised machine from the corporate network."
+          ],
+          "fr": [
+            "Isoler immédiatement la machine compromise du réseau d'entreprise."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Reset all access keys, APIs, and secrets of the affected developer."
+          ],
+          "fr": [
+            "Réinitialiser l'ensemble des clés d'accès, d'API et secrets du développeur affecté."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for execution of unsigned or suspicious macOS scripts targeting development tool containers."
+          ],
+          "fr": [
+            "Recherche d'exécution de scripts macOS non signés ou suspects ciblant les conteneurs d'outils de développement."
+          ]
+        }
+      },
+      "tags": ["malware", "macos", "cryptomonnaie"],
+      "sources": ["https://social.raytec.example.com/@techbot/116666488469902592"],
+      "date": "2026-05-31"
+    },
+    {
+      "title": {
+        "en": "Researchers Share Windows Zero-Days with NightmareEclipse Hacktivists",
+        "fr": "Des chercheurs partagent des zero-days Windows avec le groupe NightmareEclipse"
+      },
+      "description": {
+        "en": "Security researchers are allegedly sharing unpatched Windows zero-day vulnerabilities with the NightmareEclipse entity due to political solidarity or activism.",
+        "fr": "Des chercheurs en sécurité partageraient des vulnérabilités de type zero-day non corrigées sur Windows avec l'entité NightmareEclipse par solidarité politique ou activisme."
+      },
+      "threat_actor": "NightmareEclipse",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Hacktiviste",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Technology_and_Telecom"],
+        "fr": ["Technologie et Télécom"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": ["T1210"],
+      "analyse": {
+        "en": "The informal sharing of unpatched Windows exploits with hacktivists poses a significant threat to corporate environments, bypassing traditional patch management.",
+        "fr": "Le partage informel d'exploits Windows non corrigés avec des hacktivistes représente une menace importante pour les environnements d'entreprise, contournant la gestion classique des correctifs."
+      },
+      "recommandations": [
+        {
+          "en": "Ensure implementation of cutting-edge EDR solutions.",
+          "fr": "Assurer la mise en œuvre de solutions d'EDR de pointe."
+        },
+        {
+          "en": "Monitor activities and shares within the NightmareEclipse hacktivism ecosystem.",
+          "fr": "Surveiller les activités et partages de l'écosystème d'hacktivisme NightmareEclipse."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain an isolation and segmentation policy for Windows servers."
+          ],
+          "fr": [
+            "Maintenir une politique d'isolation et de segmentation des serveurs Windows."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Search for anomalies in the execution of sensitive Windows system processes."
+          ],
+          "fr": [
+            "Rechercher des anomalies d'exécution de processus système sensibles sur Windows."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Restrict network connectivity for critical machines running vulnerable or zero-day targeted services."
+          ],
+          "fr": [
+            "Restreindre la connectivité réseau des machines critiques exécutant des services vulnérables ou cibles de zéro-day."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Deploy comprehensive software restriction policies."
+          ],
+          "fr": [
+            "Déployer des politiques de restriction logicielle globales."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Identify abnormal child processes generated by highly privileged system services."
+          ],
+          "fr": [
+            "Identifier les processus enfants anormaux générés par des services système hautement privilégiés."
+          ]
+        }
+      },
+      "tags": ["zero-day", "activism", "windows"],
+      "sources": ["https://infosec.exchange.example.com/@AmmarSpaces/116666329430219358"],
+      "date": "2026-05-31"
+    },
+    {
+      "title": {
+        "en": "Shodan Alert Detects Exposure Changes in AS39603",
+        "fr": "Une alerte Shodan détecte des changements d'exposition sur l'AS39603"
+      },
+      "description": {
+        "en": "A Shodan monitoring alert detected changes in systems exposure within the infrastructure of Autonomous System AS39603 located in Warsaw, Poland.",
+        "fr": "Une alerte de surveillance Shodan a détecté des modifications d'exposition sur l'infrastructure du système autonome AS39603 localisé à Varsovie, en Pologne."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Technology_and_Telecom"],
+        "fr": ["Technologie et Télécom"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": ["Shodan"]
+      },
+      "mitre_ttps": ["T1595"],
+      "analyse": {
+        "en": "Continuous public scanning and mapping of network autonomous systems increase the visibility of potentially vulnerable services to attackers.",
+        "fr": "La cartographie et le scan public continu des systèmes autonomes augmentent la visibilité de services potentiellement vulnérables auprès des attaquants."
+      },
+      "recommandations": [
+        {
+          "en": "Close external exposure of administration services.",
+          "fr": "Fermer l'exposition externe des services d'administration."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Regularly monitor the external exposure of IP assets on Shodan."
+          ],
+          "fr": [
+            "Surveiller régulièrement l'exposition externe des actifs IP sur Shodan."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Search for unapproved open ports and protocols within the organization's ASN."
+          ],
+          "fr": [
+            "Rechercher les ports et protocoles ouverts non approuvés au sein de l'ASN de l'organisation."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Close misconfigured or non-essential ports exposed to the public Internet."
+          ],
+          "fr": [
+            "Fermer les ports mal configurés ou non essentiels exposés à l'Internet public."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Review the asset exposure policy of the network."
+          ],
+          "fr": [
+            "Revoir la politique d'exposition des actifs du réseau."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Identify proactive scans originating from public network mapping tools."
+          ],
+          "fr": [
+            "Identifier les scans proactifs provenant d'outils de cartographie réseau publics."
+          ]
+        }
+      },
+      "tags": ["shodan", "asn", "reconnaissance"],
+      "sources": ["https://infosec.exchange.example.com/@shodansafari/116666244105446093"],
+      "date": "2026-05-31"
+    },
+    {
+      "title": {
+        "en": "Researchers Give Failing Grade to Microsoft's Incident Response",
+        "fr": "Des chercheurs évaluent négativement la réponse aux incidents de Microsoft"
+      },
+      "description": {
+        "en": "Cybersecurity researchers express dissatisfaction and negatively rate Microsoft's transparency and speed in incident response.",
+        "fr": "Des chercheurs en cybersécurité expriment leur mécontentement et évaluent négativement la transparence et la rapidité de Microsoft en matière de réponse aux incidents."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Technology_and_Telecom"],
+        "fr": ["Technologie et Télécom"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": ["T1592"],
+      "analyse": {
+        "en": "Industry critique highlights tension between researchers and large software vendors regarding the promptness and clarity of vulnerability disclosure.",
+        "fr": "La critique de l'industrie met en lumière les tensions entre les chercheurs et les grands éditeurs de logiciels concernant la rapidité et la clarté de la divulgation de vulnérabilités."
+      },
+      "recommandations": [
+        {
+          "en": "Reinforce transparency on the vulnerability disclosure process.",
+          "fr": "Renforcer la transparence sur le processus de divulgation de vulnérabilités."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Review internal processes for handling third-party security reports."
+          ],
+          "fr": [
+            "Revoir les processus internes de traitement des rapports de sécurité tiers."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Assess the responsiveness of incident management teams."
+          ],
+          "fr": [
+            "Évaluer la réactivité des équipes de gestion des incidents."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Standardize crisis communication in case of major vulnerabilities."
+          ],
+          "fr": [
+            "Standardiser la communication de crise en cas de vulnérabilité majeure."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Improve public disclosure processes for security incidents."
+          ],
+          "fr": [
+            "Améliorer les processus de divulgation publique des incidents de sécurité."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for anomalies or delays in the lifecycle of reported vulnerabilities."
+          ],
+          "fr": [
+            "Rechercher des anomalies ou des retards dans le cycle de vie du traitement des failles signalées."
+          ]
+        }
+      },
+      "tags": ["criticism", "incident-response", "compliance"],
+      "sources": ["https://databreaches.example.com/2026/05/30/microsofts-incident-response-is-getting-a-failing-grade-from-researchers/"],
+      "date": "2026-05-30"
+    }
+  ]
+}
