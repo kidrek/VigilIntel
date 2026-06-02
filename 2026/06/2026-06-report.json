@@ -6,32 +6,33 @@
       "fr": "Élevé"
     },
     "justification": {
-      "en": "Active exploitation of a critical zero-day in Palo Alto GlobalProtect (CVE-2026-0257) alongside multiple SOHO router buffer overflows and ransomware campaigns targeting manufacturing and municipal entities.",
-      "fr": "Exploitation active d'une vulnérabilité critique de contournement d'authentification dans Palo Alto GlobalProtect (CVE-2026-0257) combinée à plusieurs vagues d'attaques sur routeurs SOHO et des campagnes de rançongiciels contre l'industrie."
+      "en": "The threat level is high due to the active, in-the-wild exploitation of a critical edge VPN vulnerability (CVE-2026-0257 in PAN-OS GlobalProtect) alongside a surge in double-extortion ransomware campaigns targeting critical manufacturing and healthcare sectors. Additionally, widespread opportunistic automated scanning and exploitation of legacy SOHO routers across the Asia-Pacific region indicates active botnet construction targeting remote corporate access points.",
+      "fr": "Le niveau de menace est élevé en raison de l'exploitation active d'une vulnérabilité critique de VPN de périmètre (CVE-2026-0257 dans PAN-OS GlobalProtect) combinée à une hausse des campagnes de ransomware à double extrusion ciblant les secteurs industriels et de la santé. De plus, le balayage opportuniste et l'exploitation à grande échelle des routeurs SOHO obsolètes en Asie-Pacifique indiquent la création active de botnets ciblant les télétravailleurs."
     },
     "_triggers": [
       "+2 — 1 CVE(s) CISA KEV",
       "+2 — 2 CVE(s) CVSS ≥ 9.0",
+      "+2 — 1 acteur(s) étatique(s)",
       "+2 — 2 opérateur(s) ransomware",
       "+1 — ≥ 3 acteurs distincts actifs",
       "+1 — 1 breach(es) ≥ 100k enregistrements",
-      "+2 — secteurs critiques ciblés : Government_and_Defense"
+      "+2 — secteurs critiques ciblés : Critical_Infrastructure, Government_and_Defense"
     ]
   },
   "executive_summary": {
-    "en": "During June 2026, the threat landscape was characterized by high-severity activity targeting network edge devices, notably Palo Alto Networks GlobalProtect (CVE-2026-0257) and multiple SOHO routers. Cybercriminal groups like Stormous and The Gentlemen continue to pressure manufacturing and public sectors globally, while modern social engineering tactics such as ClickFix (SmartApeSG) and SaaS-hosted phishing (Typedream) bypass traditional filters. Legal jurisdictions are responding aggressively, highlighted by the Bombay High Court's injunction against distributing leaked investor data.",
-    "fr": "En juin 2026, le paysage des menaces a été marqué par une activité intensive ciblant les équipements de périphérie de réseau, notamment Palo Alto Networks GlobalProtect (CVE-2026-0257) et plusieurs routeurs SOHO. Des groupes de cybercriminalité tels que Stormous et The Gentlemen maintiennent la pression sur les secteurs industriel et public, tandis que des tactiques d'ingénierie sociale modernes comme ClickFix (SmartApeSG) ou l'hameçonnage hébergé sur SaaS (Typedream) contournent les filtres classiques. Les autorités judiciaires réagissent avec force, comme l'illustre l'injonction de la Haute Cour de Bombay contre la diffusion de données d'investisseurs volées."
+    "en": "During June 2026, the global threat landscape was dominated by rapid exploitation of edge devices and critical software supply chain vulnerabilities. Nation-state and cybercriminal actors aggressively targeted VPN endpoints and legacy network routers to establish persistent access. Ransomware activity remained high, with groups like Stormous and 'The Gentlemen' disrupting industrial operations and threatening data leaks. Meanwhile, social engineering campaigns (ClickFix) and the abuse of modern web-building platforms (Typedream) continue to bypass traditional security filters.",
+    "fr": "Durant le mois de juin 2026, le paysage mondial des menaces a été dominé par l'exploitation rapide des équipements de périmètre et des vulnérabilités logicielles de la supply chain. Les acteurs étatiques et cybercriminels ont ciblé les VPN et les routeurs grand public pour établir des accès persistants. L'activité des rançongiciels est restée élevée, avec des groupes comme Stormous et 'The Gentlemen' perturbant les opérations industrielles. Par ailleurs, les campagnes d'ingénierie sociale (ClickFix) et l'abus de plateformes no-code (Typedream) continuent de contourner les filtres de sécurité traditionnels."
   },
   "regulatory": {
     "analyse": {
-      "en": "State jurisdictions are increasingly employing proactive legal and judicial measures to curb the impact of massive data leaks, aiming to penalize threat actors and distributors directly. Simultaneously, compliance pressure continues to mount regarding remote work security and supply chain risk management.",
-      "fr": "Les juridictions étatiques emploient de plus en plus de mesures judiciaires proactives pour limiter l'impact des fuites de données massives, visant à sanctionner directement les cybercriminels et les canaux de diffusion. En parallèle, la pression de conformité s'intensifie concernant la sécurité du travail à distance et la gestion des risques de la chaîne d'approvisionnement."
+      "en": "Regulatory and judicial authorities are increasingly employing active intervention tactics, such as court injunctions, to preemptively halt the sale and dissemination of stolen databases by cybercriminals, reflecting a shift towards legal coercion to protect financial consumers.",
+      "fr": "Les autorités réglementaires et judiciaires emploient de plus en plus de tactiques d'intervention active, telles que des injonctions de tribunaux, pour stopper préventivement la vente et la diffusion de bases de données volées par les cybercriminels, reflétant un virage vers la coercition légale pour protéger les consommateurs financiers."
     },
     "events": [
       {
         "title": {
-          "en": "Bombay High Court Injunction Against HDFC Data Disclosure",
-          "fr": "Injonction de la Haute Cour de Bombay contre la divulgation de données HDFC"
+          "en": "Bombay High Court Injunction Against HDFC Hacker Leak",
+          "fr": "Injonction de la Haute Cour de Bombay contre la fuite de données HDFC"
         },
         "issuing_body": "Bombay High Court",
         "date": "2026-05-31",
@@ -48,8 +49,8 @@
           "Finance"
         ],
         "description": {
-          "en": "A formal court ruling prohibiting any threat actor, platform, or individual from sharing, selling, or hosting personal information belonging to HDFC investors following a breach.",
-          "fr": "Une décision de justice formelle interdisant à tout cybercriminel, plateforme ou individu de partager, vendre ou héberger des informations personnelles appartenant aux investisseurs de HDFC suite à une violation de données."
+          "en": "The Bombay High Court issued a landmark injunction prohibiting threat actors and third parties from publishing, selling, or disseminating hacked investor databases from HDFC. This legal mechanism aims to restrict downstream fraud and hold distribution channels legally responsible.",
+          "fr": "La Haute Cour de Bombay a émis une injonction historique interdisant aux attaquants et aux tiers de publier, vendre ou diffuser les bases de données d'investisseurs piratées de HDFC. Ce mécanisme vise à limiter les fraudes en aval et à responsabiliser légalement les canaux de distribution."
         },
         "source_url": "https://databreaches.net/2026/05/31/bombay-high-court-issues-injunction-prohibiting-hackers-from-publishing-allegedly-hacked-hdfc-investor-data/"
       }
@@ -63,8 +64,8 @@
           "fr": "Autre"
         },
         "geographic_zone_strategic_analyse": {
-          "en": "Activity in the Asia-Pacific region highlights a targeted effort to compromise SOHO network routers and supply chains. This aims to create residential proxy networks or pivot points into corporately managed home offices, expanding the footprint for cyberespionage and ransomware actors.",
-          "fr": "L'activité dans la région Asie-Pacifique met en évidence un effort ciblé pour compromettre les routeurs réseau SOHO et les chaînes logicielles. L'objectif est de créer des réseaux de proxies résidentiels ou des points de pivot vers les réseaux d'entreprise via le télétravail."
+          "en": "The Asia-Pacific region is experiencing highly coordinated automated exploitation of consumer-grade SOHO router architectures, aimed at building high-capacity botnet infrastructure for covert lateral movement and initial access to corporate networks.",
+          "fr": "La région Asie-Pacifique subit des vagues d'exploitation automatisée hautement coordonnées ciblant les architectures de routeurs SOHO, visant à construire des infrastructures de botnets pour le déplacement latéral discret et l'accès initial aux réseaux d'entreprises."
         }
       }
     ],
@@ -79,11 +80,11 @@
         "targeted_sectors": {
           "en": [
             "Technology_and_Telecom",
-            "Retail_and_Consumer"
+            "Business_Services"
           ],
           "fr": [
             "Technology_and_Telecom",
-            "Retail_and_Consumer"
+            "Business_Services"
           ]
         },
         "targeted_regions": {
@@ -101,10 +102,10 @@
         ],
         "campaign_or_operation": {
           "en": [
-            "ClickFix NetSupport Campaign"
+            "ClickFix Campaign"
           ],
           "fr": [
-            "Campagne ClickFix NetSupport"
+            "Campagne ClickFix"
           ]
         }
       },
@@ -112,26 +113,26 @@
         "threat_actor_name": "Stormous",
         "origin_country": "Unknown",
         "type": {
-          "en": "RaaS",
-          "fr": "RaaS"
+          "en": "Ransomware",
+          "fr": "Ransomware"
         },
         "targeted_sectors": {
           "en": [
-            "Business_Services",
             "Healthcare_and_Life_Sciences",
-            "Retail_and_Consumer"
+            "Business_Services"
           ],
           "fr": [
-            "Business_Services",
             "Healthcare_and_Life_Sciences",
-            "Retail_and_Consumer"
+            "Business_Services"
           ]
         },
         "targeted_regions": {
           "en": [
+            "Australia",
             "Global"
           ],
           "fr": [
+            "Australie",
             "Global"
           ]
         },
@@ -141,10 +142,10 @@
         ],
         "campaign_or_operation": {
           "en": [
-            "Stormous Double Extortion"
+            "Double-extrusion Ransomware Campaigns"
           ],
           "fr": [
-            "Double Extorsion Stormous"
+            "Campagnes de Ransomware à double extrusion"
           ]
         }
       },
@@ -165,10 +166,10 @@
         },
         "targeted_regions": {
           "en": [
-            "Asia-Pacific"
+            "Japan"
           ],
           "fr": [
-            "Asie-Pacifique"
+            "Japon"
           ]
         },
         "mitre_attack_ttps_id": [
@@ -177,10 +178,48 @@
         ],
         "campaign_or_operation": {
           "en": [
-            "Koa Glass Attack"
+            "Japanese industrial targeting"
           ],
           "fr": [
-            "Attaque de Koa Glass"
+            "Ciblage industriel japonais"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "UNC-GP-CVE-2026-0257",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Nation-state",
+          "fr": "Nation-state"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Government_and_Defense",
+            "Critical_Infrastructure"
+          ],
+          "fr": [
+            "Government_and_Defense",
+            "Critical_Infrastructure"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Global"
+          ],
+          "fr": [
+            "Global"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1133",
+          "T1556"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "GlobalProtect CVE-2026-0257 exploitation"
+          ],
+          "fr": [
+            "Exploitation de GlobalProtect CVE-2026-0257"
           ]
         }
       }
@@ -188,8 +227,8 @@
   },
   "mitre_attack_ttps": {
     "ttps_strategic_analyse": {
-      "en": "Network edge device compromise combined with identity-centric social engineering vectors (such as ClickFix and SaaS phishing) represents the dominant initial access trend. Once inside, actors pivot to remote access tools (RATs) and double-extortion ransomware techniques.",
-      "fr": "La compromission d'équipements en périphérie de réseau alliée à des vecteurs d'ingénierie sociale axés sur l'identité (comme ClickFix et le phishing SaaS) représente la tendance dominante d'accès initial. Une fois infiltrés, les acteurs pivotent vers des outils d'accès à distance (RAT) et des techniques de ransomware à double extorsion."
+      "en": "Threat actors are demonstrating a sharp pivot towards bypassing edge authentication processes. This is accomplished either via VPN cookie forgery (T1556) or through evasive social engineering templates such as 'ClickFix' (T1566) that trick users into running local scripts to deploy legitimate remote administration tools (T1219) rather than standard compiled malware.",
+      "fr": "Les attaquants se tournent fortement vers le contournement de l'authentification réseau de périmètre, soit via la contrefaçon de cookies VPN (T1556), soit via des modèles d'ingénierie sociale évasifs comme 'ClickFix' (T1566) incitant les utilisateurs à exécuter des scripts locaux pour installer des outils d'administration à distance légitimes (T1219)."
     },
     "ttps_list": [
       {
@@ -203,10 +242,32 @@
         "severity": "high",
         "context": {
           "en": [
-            "Observed in SmartApeSG ClickFix browser update campaigns and the KuCoin phishing scheme hosted on the Typedream SaaS platform."
+            "Leveraged in the 'ClickFix' web update campaign deploying NetSupport RAT.",
+            "Utilized in the KuCoin phishing campaign hosted on the Typedream platform.",
+            "Noted in this period as a persistent vector for infostealer distribution."
           ],
           "fr": [
-            "Observé dans les campagnes de fausses mises à jour de navigateur ClickFix de SmartApeSG et l'hameçonnage KuCoin hébergé sur Typedream."
+            "Exploité dans la campagne de mise à jour web 'ClickFix' pour déployer NetSupport RAT.",
+            "Utilisé dans la campagne d'hameçonnage KuCoin hébergée sur la plateforme Typedream.",
+            "Noté dans cette période comme vecteur persistant pour la distribution d'infostealers."
+          ]
+        }
+      },
+      {
+        "id": "T1219",
+        "tactic": {
+          "en": "Command and Control",
+          "fr": "Commandement et Contrôle"
+        },
+        "technique_name": "Remote Access Software",
+        "frequency": 1,
+        "severity": "medium",
+        "context": {
+          "en": [
+            "Deployment of NetSupport Manager RAT in C:\\programdata\\updateinstaller to establish a persistent remote foothold."
+          ],
+          "fr": [
+            "Déploiement du RAT NetSupport Manager dans C:\\programdata\\updateinstaller pour établir un accès distant persistant."
           ]
         }
       },
@@ -221,10 +282,30 @@
         "severity": "critical",
         "context": {
           "en": [
-            "Deployed actively by Stormous and The Gentlemen ransomware syndicates targeting global manufacturing and corporate systems."
+            "Stormous ransomware operations affecting healthcare and enterprise networks.",
+            "The Gentlemen ransomware group encrypting critical industrial networks of Japanese targets."
           ],
           "fr": [
-            "Déployé activement par les syndicats de rançongiciels Stormous et The Gentlemen ciblant les systèmes industriels et d'entreprises."
+            "Opérations de rançongiciel Stormous affectant les réseaux de santé et d'entreprises.",
+            "Groupe de rançongiciel The Gentlemen chiffrant les réseaux industriels de cibles japonaises."
+          ]
+        }
+      },
+      {
+        "id": "T1556",
+        "tactic": {
+          "en": "Defense Evasion",
+          "fr": "Évasion Défensive"
+        },
+        "technique_name": "Modify Authentication Process",
+        "frequency": 1,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "Exploited in CVE-2026-0257 campaigns to forge active GlobalProtect VPN session cookies via administrative public keys."
+          ],
+          "fr": [
+            "Exploité dans les campagnes CVE-2026-0257 pour forger des cookies de session VPN GlobalProtect via des clés publiques d'administration."
           ]
         }
       }
@@ -232,13 +313,13 @@
   },
   "vulnerabilities": {
     "analyse": {
-      "en": "The disclosure of CVE-2026-0257 highlights a critical weakness in enterprise VPN architectures where session cookie forgery allows remote authentication bypass. SOHO router flaws continue to populate threat landscapes, posing significant risks to distributed and remote work environments.",
-      "fr": "La divulgation de la faille CVE-2026-0257 met en évidence une faiblesse critique dans les architectures VPN d'entreprise, où la contrefaçon de cookies de session permet de contourner l'authentification à distance. Les failles des routeurs SOHO continuent de menacer les environnements de télétravail."
+      "en": "Vulnerability management is heavily impacted by the active exploitation of CVE-2026-0257 affecting GlobalProtect VPN endpoints, which has been added to CISA's KEV. Simultaneously, a series of critical stack-based buffer overflows in legacy SOHO routers (Tenda, Totolink, TRENDnet) are being targeted in high volumes to construct botnets.",
+      "fr": "La gestion des vulnérabilités est fortement impactée par l'exploitation active de CVE-2026-0257 affectant les VPN GlobalProtect, ajoutée au KEV de la CISA. Simultanément, des débordements de tampon critiques sur des routeurs SOHO obsolètes (Tenda, Totolink, TRENDnet) sont activement ciblés pour construire des botnets."
     },
     "list": [
       {
         "cve_id": "CVE-2026-0257",
-        "cvss_score": "9.8",
+        "cvss_score": 9.8,
         "epss_score": "N/A",
         "cisa_kev": true,
         "affected_product": "PAN-OS GlobalProtect",
@@ -250,12 +331,12 @@
           ],
           "fr": [
             "Contournement d'authentification",
-            "Contrefaçon de cookies"
+            "Contrefaçon de cookie"
           ]
         },
         "vulnerability_description": {
-          "en": "An authentication bypass vulnerability in Palo Alto Networks GlobalProtect allows an unauthenticated remote attacker to forge session cookies and gain administrative access.",
-          "fr": "Une faille de contournement d'authentification dans Palo Alto Networks GlobalProtect permet à un attaquant distant non authentifié de forger des cookies de session pour obtenir un accès administrateur."
+          "en": "Allows unauthenticated remote actors to bypass security controls and achieve remote code execution on PAN-OS GlobalProtect VPN interfaces by forging session cookies using public administration certificates.",
+          "fr": "Permet à des acteurs distants non authentifiés de contourner les contrôles de sécurité et d'exécuter du code à distance sur les VPN PAN-OS GlobalProtect en forgeant des cookies de session via des certificats d'administration."
         },
         "mitre_attack_ttps_id": [
           "T1133",
@@ -264,60 +345,43 @@
       },
       {
         "cve_id": "CVE-2026-10187",
-        "cvss_score": "9.8",
+        "cvss_score": 9.8,
         "epss_score": "N/A",
         "cisa_kev": false,
         "affected_product": "Totolink N300RH (firmware 6.1c.1353)",
         "affected_product_vendor": "Totolink",
         "vulnerability_type": {
           "en": [
-            "Buffer Overflow"
+            "Stack-based Buffer Overflow"
           ],
           "fr": [
-            "Dépassement de tampon"
+            "Débordement de tampon sur la pile"
           ]
         },
         "vulnerability_description": {
-          "en": "A stack-based buffer overflow vulnerability in Totolink N300RH routers within the setWiFiBasicConfig component allows remote command execution.",
-          "fr": "Une faille de dépassement de tampon dans les routeurs Totolink N300RH au sein du composant setWiFiBasicConfig permet l'exécution de commandes à distance."
+          "en": "A stack-based buffer overflow vulnerability in the 'setWiFiBasicConfig' interface of Totolink N300RH routers allows remote attackers to execute arbitrary code.",
+          "fr": "Une vulnérabilité de débordement de tampon basée sur la pile dans l'interface 'setWiFiBasicConfig' des routeurs Totolink N300RH permet à des attaquants distants d'exécuter du code arbitraire."
         },
         "mitre_attack_ttps_id": [
-          "T1210"
+          "T1595"
         ]
       }
     ]
   },
   "data_breaches": [
     {
-      "victim": "VSP Solutions",
-      "sector": "Business_Services",
-      "country": "Australia",
-      "records_count": null,
-      "data_types": {
-        "en": [
-          "Customer information",
-          "Internal corporate files"
-        ],
-        "fr": [
-          "Informations clients",
-          "Fichiers internes d'entreprise"
-        ]
-      },
-      "threat_actor": "Stormous",
-      "financial_impact_usd": null,
-      "source_url": "https://mastodon.social/@David_Hollingworth/116672262003351423"
-    },
-    {
-      "victim": "City of Urasoe",
+      "victim": "Urasoe City",
       "sector": "Government_and_Defense",
       "country": "Japan",
       "records_count": 115526,
       "data_types": {
         "en": [
-          "Resident personal identity information"
+          "Personally Identifiable Information (PII)",
+          "Resident registration details"
         ],
         "fr": [
-          "Informations d'identité personnelle des résidents"
+          "Informations personnelles identifiables (PII)",
+          "Dossiers d'enregistrement des résidents"
         ]
       },
       "threat_actor": null,
@@ -342,6 +406,25 @@
       "threat_actor": "The Gentlemen",
       "financial_impact_usd": null,
       "source_url": "https://rocket-boys.co.jp/security-measures-lab/koa-glass-ransomware-attack-the-gentlemen/"
+    },
+    {
+      "victim": "VSP Solutions",
+      "sector": "Business_Services",
+      "country": "Australia",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "Client profiles",
+          "Internal corporate files"
+        ],
+        "fr": [
+          "Profils clients",
+          "Données internes d'entreprise"
+        ]
+      },
+      "threat_actor": "Stormous",
+      "financial_impact_usd": null,
+      "source_url": "https://mastodon.social/@David_Hollingworth/116672262003351423"
     }
   ],
   "target": {
@@ -349,107 +432,113 @@
       "en": [
         "Government_and_Defense",
         "Industry_and_Manufacturing",
-        "Business_Services",
         "Finance",
+        "Healthcare_and_Life_Sciences",
+        "Business_Services",
         "Technology_and_Telecom",
-        "Retail_and_Consumer"
+        "Critical_Infrastructure"
       ],
       "fr": [
         "Government_and_Defense",
         "Industry_and_Manufacturing",
-        "Business_Services",
         "Finance",
+        "Healthcare_and_Life_Sciences",
+        "Business_Services",
         "Technology_and_Telecom",
-        "Retail_and_Consumer"
+        "Critical_Infrastructure"
       ]
     },
     "countries": {
       "en": [
         "Japan",
-        "Australia",
         "India",
+        "Australia",
+        "United States",
         "Global"
       ],
       "fr": [
         "Japon",
-        "Australie",
         "Inde",
+        "Australie",
+        "États-Unis",
         "Global"
       ]
     },
     "narrative": {
-      "en": "- **Government & Defense:** City of Urasoe (Japan) suffered a data leak exposing 115,526 citizens' PII due to the physical theft of 83 laptops at a subcontractor's facility, illustrating the growing vulnerability of government outsourcing.\n- **Industry & Manufacturing:** Koa Glass (Japan) was targeted by 'The Gentlemen' ransomware, resulting in the exfiltration of confidential manufacturing designs and financial records, causing severe operational disruption.\n- **Business Services:** VSP Solutions (Australia) had internal corporate files and customer data compromised in a ransomware attack launched by Stormous, highlighting supply chain risks in business administration.\n- **Finance:** HDFC investors (India) were targeted in a major data exposure incident, triggering an injunction from the Bombay High Court to prohibit public distribution of the leaked dataset and protect financial markets.\n- **Technology & Telecom:** Consumer and corporate router environments (Totolink, Tenda, TRENDnet) across Asia-Pacific are targeted by automated exploitation of critical buffer overflows, allowing hackers to build rogue botnets.\n- **Retail & Consumer:** Global platforms including Zara, Carnival, Signal, and Trump Mobile faced massive user account, phone number, and purchase history disclosures, impacting millions of customers worldwide.",
-      "fr": "- **Gouvernement et Défense :** La ville d'Urasoe (Japon) a subi une fuite de données exposant les données personnelles de 115 526 citoyens suite au vol physique de 83 ordinateurs portables chez un sous-traitant, illustrant la vulnérabilité de la sous-traitance publique.\n- **Industrie et Fabrication :** Koa Glass (Japon) a été ciblée par le rançongiciel 'The Gentlemen', entraînant l'exfiltration de fichiers de fabrication confidentiels et de données financières, perturbant gravement les opérations.\n- **Services professionnels :** VSP Solutions (Australie) a vu ses fichiers internes et ses données clients compromis lors d'une attaque par rançongiciel menée par Stormous, soulignant les risques de la chaîne logistique.\n- **Finance :** Les investisseurs de HDFC (Inde) ont été visés par une fuite de données majeure, entraînant une injonction de la Haute Cour de Bombay pour interdire la vente et la diffusion publique du jeu de données.\n- **Technologie et Télécoms :** Les routeurs SOHO (Totolink, Tenda, TRENDnet) en Asie-Pacifique font l'objet d'exploitations automatisées de vulnérabilités critiques de dépassement de tampon, permettant de bâtir des réseaux botnets.\n- **Vente au détail et Consommation :** Des comptes d'utilisateurs de plateformes majeures telles que Zara, Carnival, Signal et Trump Mobile ont été exposés avec des numéros de téléphone et des historiques d'achat à l'échelle mondiale."
+      "en": "- **Government & Defense:** Urasoe City in Japan suffered a major breach exposing the PII of 115,526 citizens due to the physical theft of 83 municipal contractor laptops, highlighting supply chain physical security risks.\n- **Industry & Manufacturing:** Koa Glass (Japan) was severely impacted by 'The Gentlemen' ransomware group, resulting in the theft and encryption of sensitive manufacturing designs and financial blueprints.\n- **Finance:** HDFC investor data was leaked, prompting an extraordinary injunction from the Bombay High Court to prohibit hackers from disseminating or selling the compromised data cache.\n- **Healthcare & Life Sciences:** Stormous ransomware group targeted healthcare facilities and business networks globally, threatening double extrusion of patient records and internal business data.\n- **Business Services:** VSP Solutions in Australia was hit by Stormous, leading to the unauthorized exfiltration of corporate data and client profiles, showing high supply-chain risk.\n- **Technology & Telecom:** Massive multi-sector breaches compromised accounts across major platforms including Zara, Carnival, Signal, Trump Mobile, and Charter Communications, emphasizing global session hijacking trends.\n- **Critical Infrastructure:** SOHO router ecosystems (Tenda W12, Totolink N300RH, TRENDnet TEW-432BRP) in APAC were systematically targeted in a coordinated campaign to build botnet persistence near remote worker environments.",
+      "fr": "- **Gouvernement et Défense :** La ville d'Urasoe au Japon a subi une violation majeure exposant les PII de 115 526 citoyens en raison du vol physique de 83 ordinateurs portables de sous-traitants municipaux.\n- **Industrie et Fabrication :** Koa Glass (Japon) a été gravement touché par le groupe de ransomware 'The Gentlemen', entraînant le vol et le chiffrement de conceptions de fabrication sensibles.\n- **Finance :** Les données d'investisseurs de HDFC ont été divulguées, ce qui a déclenché une injonction exceptionnelle de la Haute Cour de Bombay pour interdire aux pirates de diffuser ou de vendre le cache de données compromis.\n- **Santé et Sciences de la vie :** Le groupe de ransomware Stormous a ciblé des établissements de santé et des réseaux d'entreprises à l'échelle mondiale, menaçant de double extrusion des dossiers de patients.\n- **Services aux entreprises :** VSP Solutions en Australie a été frappé par Stormous, entraînant l'exfiltration non autorisée de données d'entreprise et de profils clients.\n- **Technologie et Télécoms :** Des violations multisectorielles massives ont compromis des comptes sur des plateformes majeures telles que Zara, Carnival, Signal, Trump Mobile et Charter Communications.\n- **Infrastructures critiques :** Des écosystèmes de routeurs SOHO (Tenda W12, Totolink N300RH, TRENDnet TEW-432BRP) en APAC ont été systématiquement ciblés dans le cadre d'une campagne coordonnée de botnets."
     }
   },
   "trends": {
     "emerging_techniques": {
       "en": [
-        "Abusing no-code web builders (e.g. Typedream) for credential harvesting and phishing",
-        "Sophisticated cookie forgery attacks against VPN solutions",
-        "Exploitation of legacy SOHO devices to build covert pivot networks"
+        "Abusing legitimate web app builders like Typedream for evasive phishing hosting",
+        "Cookie forgery attacks targeting edge VPN gateways to bypass MFA completely",
+        "Prompt injection attacks and privilege escalation on enterprise AI agent systems"
       ],
       "fr": [
-        "Abus de créateurs de sites no-code (ex: Typedream) pour le vol d'identifiants et l'hameçonnage",
-        "Attaques sophistiquées de contrefaçon de cookies contre les solutions VPN",
-        "Exploitation d'équipements SOHO obsolètes pour construire des réseaux de rebond"
+        "Abus de constructeurs d'applications web légitimes comme Typedream pour l'hébergement de phishing",
+        "Attaques par contrefaçon de cookies ciblant les passerelles VPN de périmètre pour contourner le MFA",
+        "Attaques par injection de requêtes et élévation de privilèges sur les systèmes d'agents d'IA d'entreprise"
       ]
     },
     "declining_techniques": {
       "en": [
-        "Standard clear-text HTTP credential harvesting without legitimate hosting abuse"
+        "Standard SMS and basic TOTP MFA due to the rapid rise of session hijacking and cookie theft tools",
+        "Unmonitored, direct outgoing developer access to public package registries like NPM and PyPI"
       ],
       "fr": [
-        "Collecte d'identifiants en HTTP clair classique sans abus d'hébergement légitime"
+        "MFA SMS standard et TOTP de base en raison de la montée rapide des outils de vol de session et de cookies",
+        "Accès direct non surveillé des développeurs aux registres de packages publics comme NPM et PyPI"
       ]
     },
     "geopolitical_context": {
-      "en": "Cyber operations in the Indo-Pacific showcase a clear dual-focus: disrupting manufacturing supply chains via double-extortion ransomware and establishing access into residential network infrastructures (SOHO routers) to sustain secondary espionage or command-and-control operations.",
-      "fr": "Les cyber-opérations dans la zone Indo-Pacifique révèlent un double objectif : perturber les chaînes d'approvisionnement industrielles via des ransomwares à double extorsion et s'implanter dans les réseaux résidentiels (routeurs SOHO) pour appuyer des activités de C2 et d'espionnage."
+      "en": "The coordinated targeting of edge networking devices and SOHO routers in the Asia-Pacific region indicates a strategic push by nation-state and highly organized actors to build persistent botnet infrastructure. This network is designed to route malicious traffic and establish covert access to remote employees working for critical defense and commercial targets.",
+      "fr": "Le ciblage coordonné des équipements réseau de périmètre et des routeurs SOHO dans la région Asie-Pacifique indique un effort stratégique des acteurs étatiques et très organisés pour construire des infrastructures de botnets persistantes. Ce réseau vise à acheminer le trafic malveillant et à établir des accès discrets aux employés travaillant à distance."
     }
   },
   "recommendations": {
     "strategic": {
       "en": [
         {
-          "title": "Enforce FIDO2 Hardware MFA for Admin Accounts",
-          "detail": "Traditional SMS or TOTP MFA is bypassed by advanced cookie-theft and session-hijacking campaigns, such as the GlobalProtect session cookie forgery vulnerability CVE-2026-0257. Deploy FIDO2/WebAuthn hardware keys (such as YubiKey 5 or Google Titan) for all administrative and development accounts accessing cloud environments or perimeter networks. This completely eliminates the threat of man-in-the-middle session hijacking."
+          "title": "Enforce FIDO2 Hardware MFA for Developer Accounts",
+          "detail": "Traditional SMS or TOTP MFA is routinely bypassed by session hijacking and infostealers observed this period. Deploy FIDO2/WebAuthn hardware security keys (e.g., YubiKey 5, Google Titan) across all developer, administrator, and high-privilege sessions to eliminate phishing and session theft. This directly mitigates the risk of identity compromise seen in recent credential theft campaigns."
         },
         {
-          "title": "Secure DevSecOps Pipelines with Supply Chain Guards",
-          "detail": "Malicious supply chain packages and dependency attacks are rising. Integrate automated scanning utilities like Atomdrift into CI/CD pipelines to analyze incoming third-party packages before deployment. Implement strict dependency verification and enforce proxy caching rules for registries (NPM/PyPI) to prevent dependency confusion vulnerabilities from being exploited by threat actors."
+          "title": "Decommission Legacy SOHO Edge Devices Immediately",
+          "detail": "Multiple critical buffer overflows (CVE-2026-10187, CVE-2026-10183) are actively being targeted in Asia-Pacific to build botnet architectures. Audit all remote worker networks and replace EOL devices like TRENDnet TEW-432BRP or Totolink N300RH with centrally managed, secure routers. This action prevents attackers from establishing a persistent foothold on remote corporate entry points."
         }
       ],
       "fr": [
         {
-          "title": "Imposer le MFA matériel FIDO2 pour administrateurs",
-          "detail": "Le MFA traditionnel par SMS ou TOTP est contourné par des attaques avancées de vol de cookies et de détournement de session, telles que la faille de contrefaçon de cookies GlobalProtect CVE-2026-0257. Déployez des clés matérielles FIDO2/WebAuthn (comme les clés YubiKey 5) pour tous les comptes d'administration et de développement. Cela neutralise définitivement le risque de vol de session."
+          "title": "Exiger le MFA Matériel FIDO2 pour les Développeurs",
+          "detail": "Le MFA SMS ou TOTP traditionnel est systématiquement contourné par le vol de session et les infostealers observés cette période. Déployez des clés de sécurité matérielles FIDO2/WebAuthn (ex: YubiKey 5, Google Titan) sur tous les comptes d'administration et de développement pour éliminer le vol de session. Cela atténue directement le risque de compromission d'identité constaté récemment."
         },
         {
-          "title": "Sécuriser les pipelines avec des gardes logistiques",
-          "detail": "Les attaques de packages malveillants et d'empoisonnement de dépendances se multiplient. Intégrez des outils d'analyse automatisés comme Atomdrift dans vos pipelines de CI/CD pour auditer les dépendances tierces avant intégration. Mettez en œuvre une vérification stricte des signatures et un proxy de cache pour les registres NPM/PyPI afin de prévenir l'exécution de code malveillant."
+          "title": "Mettre hors service les routeurs SOHO obsolètes",
+          "detail": "Plusieurs débordements de tampon critiques (CVE-2026-10187, CVE-2026-10183) sont activement ciblés en Asie-Pacifique pour créer des botnets. Auditez les réseaux des télétravailleurs et remplacez les routeurs en fin de vie (ex: TRENDnet TEW-432BRP, Totolink N300RH) par des équipements sécurisés et gérés de manière centralisée."
         }
       ]
     },
     "operational": {
       "en": [
         {
-          "title": "Audit and Restrict Remote WAN Router Administration",
-          "detail": "Multiple stack-based buffer overflow vulnerabilities (CVE-2026-10187, CVE-2026-10191) are actively exploited in SOHO router brands like Totolink and Tenda. Instruct remote workers to disable HTTP/HTTPS public administration interfaces on their home gateways immediately. Ensure remote management is restricted to local LAN and mandate corporate VPN connections for all business activities."
+          "title": "Apply Urgent PAN-OS Hotfixes for CVE-2026-0257",
+          "detail": "The critical GlobalProtect vulnerability CVE-2026-0257 is under active exploitation for session cookie forgery. Immediately upgrade all PAN-OS firewall clusters to the latest patched versions recommended by Palo Alto Networks (e.g., PAN-OS 11.1.2-h3 or later). Configure the firewalls to reject shared certificate configurations for session encryption to prevent cookie replication."
         },
         {
-          "title": "Block Non-SSL Port 443 Encrypted Traffic",
-          "detail": "The SmartApeSG ClickFix campaign utilizes raw, unencrypted TCP streams encoded on port 443 to bypass traditional TLS inspection mechanisms. Configure firewall and proxy inspection systems to flag and block non-SSL/TLS traffic running over port 443. Add indicators of compromise (such as 89.110.110.119 and 178.156.165.82) to perimeter blocks immediately."
+          "title": "Audit Local Admin Accounts via EDR Queries",
+          "detail": "Threat actors like Stormous leverage compromised local accounts to move laterally and execute double-extrusion ransomware. Run the EDR query 'DeviceProcessEvents | where ProcessCommandLine contains \"net user\"' daily in Microsoft Defender or CrowdStrike Falcon to detect unauthorized credential creation. Isolate any host immediately if anomalous local accounts are detected."
         }
       ],
       "fr": [
         {
-          "title": "Restreindre l'administration WAN des routeurs SOHO",
-          "detail": "Plusieurs failles de dépassement de tampon (CVE-2026-10187, CVE-2026-10191) sont activement exploitées sur les routeurs Totolink et Tenda. Exigez de vos collaborateurs en télétravail qu'ils désactivent immédiatement les interfaces d'administration publique WAN de leurs passerelles personnelles. Limitez l'administration au LAN local et imposez l'usage du VPN d'entreprise."
+          "title": "Appliquer les correctifs PAN-OS pour la CVE-2026-0257",
+          "detail": "La vulnérabilité critique GlobalProtect CVE-2026-0257 fait l'objet d'une exploitation active pour la contrefaçon de cookies. Mettez immédiatement à niveau tous les clusters de pare-feu PAN-OS vers les dernières versions corrigées par Palo Alto (ex: PAN-OS 11.1.2-h3). Configurez les pare-feu pour rejeter les certificats partagés afin d'empêcher la réplication des cookies."
         },
         {
-          "title": "Bloquer le trafic non-SSL sur port 443",
-          "detail": "La campagne ClickFix de SmartApeSG utilise des flux TCP bruts non-SSL sur le port 443 pour contourner l'inspection réseau TLS standard. Configurez les proxys et pare-feux pour bloquer le trafic non conforme au protocole SSL/TLS transitant par le port 443. Intégrez immédiatement les adresses IP C2 (89.110.110.119 et 178.156.165.82) aux listes de blocage."
+          "title": "Auditer les comptes d'administration locaux via EDR",
+          "detail": "Les attaquants comme Stormous exploitent des comptes locaux compromis pour se déplacer latéralement et déployer des ransomwares. Exécutez quotidiennement la requête EDR 'DeviceProcessEvents | where ProcessCommandLine contains \"net user\"' dans Microsoft Defender ou CrowdStrike Falcon pour détecter toute création de compte non autorisée. Isolez immédiatement tout hôte suspect."
         }
       ]
     }
