@@ -1,46 +1,71 @@
 {
   "threat_level": {
-    "score": 4,
+    "score": 5,
     "label": {
-      "en": "Critical",
-      "fr": "Critique"
+      "en": "Severe",
+      "fr": "Sévère"
     },
     "justification": {
-      "en": "Significant surge in software supply chain attacks (Mini Shai-Hulud targeting Red Hat npm packages) and edge device exploitation (Palo Alto CVE-2026-0257), alongside novel AI-driven evasion toolkits and account hijacks.",
-      "fr": "Hausse significative des attaques de la chaîne d'approvisionnement (Mini Shai-Hulud ciblant les paquets npm de Red Hat) et de l'exploitation des équipements de périphérie (Palo Alto CVE-2026-0257), en plus de boîtes à outils d'évasion et de piratages de comptes assistés par IA."
+      "en": "The threat landscape this week is characterized by multiple high-severity incidents, including active zero-day exploitations (such as PAN-OS CVE-2024-3400 and GlobalProtect CVE-2026-0257), supply chain compromises of critical software namespaces, and highly sophisticated EDR evasion techniques like executing ransomware within lightweight local hypervisors (QEMU).",
+      "fr": "Le paysage de la menace est marqué cette semaine par de multiples incidents de haute sévérité, incluant l'exploitation active de failles zero-day (telles que PAN-OS CVE-2024-3400 et GlobalProtect CVE-2026-0257), des compromissions de la chaîne d'approvisionnement ciblant des namespaces de développement, ainsi que des techniques sophistiquées d'évasion d'EDR consistant à exécuter des rançongiciels au sein d'hyperviseurs légers locaux (QEMU)."
     },
     "_triggers": [
-      "+4 — 2 CVE(s) CISA KEV",
-      "+3 — 3 CVE(s) CVSS ≥ 9.0",
-      "+4 — 2 acteur(s) étatique(s)",
+      "+8 — 5 CVE(s) CISA KEV",
+      "+4 — 4 CVE(s) CVSS ≥ 9.0",
+      "+6 — 3 acteur(s) étatique(s)",
+      "+2 — 2 opérateur(s) ransomware",
       "+1 — ≥ 3 acteurs distincts actifs",
-      "+2 — 2 breach(es) ≥ 100k enregistrements",
-      "+2 — secteurs critiques ciblés : Government_and_Defense"
+      "+3 — 3 breach(es) ≥ 100k enregistrements",
+      "+2 — secteurs critiques ciblés : Government_and_Defense, Critical_Infrastructure"
     ]
   },
   "executive_summary": {
-    "en": "During the first week of June 2026, the threat landscape was dominated by highly sophisticated software supply chain compromises, particularly targeting npm namespaces (Red Hat, TanStack) with the self-propagating worm Mini Shai-Hulud. Concurrently, edge devices and network infrastructure faced severe zero-day/N-day exploitation, notably Palo Alto Networks GlobalProtect (CVE-2026-0257). Geopolitical threat activity remains intense, highlighted by Iran's 'Handala' persona conducting hybrid cyber-physical sabotage and Gamaredon's targeting of Ukrainian military entities. Furthermore, cybercriminals are increasingly weaponizing AI, both for automated EDR evasion in ransomware compilation and for executing advanced social engineering and account takeovers (Meta AI support exploitation).",
-    "fr": "Durant la première semaine de juin 2026, le paysage des menaces a été dominé par des compromissions sophistiquées de la chaîne d'approvisionnement logicielle, ciblant particulièrement les espaces de noms npm (Red Hat, TanStack) avec le ver auto-propagateur Mini Shai-Hulud. Parallèlement, les équipements de périphérie ont fait face à des exploitations critiques, notamment Palo Alto Networks GlobalProtect (CVE-2026-0257). L'activité géopolitique reste intense, marquée par le persona iranien 'Handala' menant des opérations de sabotage hybride et Gamaredon ciblant les entités ukrainiennes. Enfin, les cybercriminels s'approprient l'IA, tant pour l'évasion automatisée d'EDR que pour l'usurpation de comptes via l'ingénierie sociale (abus du support d'IA de Meta)."
+    "en": "During the first week of June 2026, threat actors targeted edge infrastructure and software supply chains with advanced evasion methods. Attackers successfully leveraged zero-day authentication bypasses in network perimeter devices and abused OIDC trusts to compromise legitimate development pipelines (specifically Red Hat's npm namespace). We also observed a paradigm shift in endpoint evasion, with ransomware groups (such as Payouts King) isolating execution inside local QEMU hypervisors to blind endpoint security agents, and cybercriminals abusing Meta's AI customer support to hijack accounts. Concurrently, state-sponsored actors like APT41 and Gamaredon continue to run persistent espionage operations leveraging cloud environments and peripheral equipment.",
+    "fr": "Durant la première semaine de juin 2026, les cyber-attaquants ont ciblé les infrastructures de périmètre et la chaîne d'approvisionnement logicielle en utilisant des méthodes d'évasion avancées. Des failles d'authentification zero-day ont été exploitées sur des pare-feux, tandis que des abus de confiance OIDC ont permis de compromettre des pipelines de développement légitimes (notamment le namespace npm de Red Hat). On observe également un changement de paradigme dans l'évasion des terminaux, des groupes de rançongiciel (comme Payouts King) isolant leur exécution dans des hyperviseurs QEMU locaux pour aveugler les EDR, pendant que d'autres cybercriminels abusent du support client IA de Meta pour usurper des comptes. En parallèle, des acteurs étatiques comme APT41 et Gamaredon poursuivent des campagnes d'espionnage persistantes s'appuyant sur les environnements cloud et les équipements de bordure."
   },
   "regulatory": {
     "analyse": {
-      "en": "Key regulatory trends show a significant hardening of enforcement and compliance standards globally. In the EU, the Cyber Resilience Act (CRA) introduces strict transparency and liability rules for software dependencies, requiring continuous monitoring of open-source components. In the US, the HHS has hardened HIPAA Privacy and Security Rules following major healthcare disruptions, shifting previously 'addressable' guidelines to mandatory requirements. Additionally, EU vehicle diagnostic interface security has been formally regulated under Delegated Regulation 2026/699, reflecting a broader focus on securing IoT and physical-digital operational borders.",
-      "fr": "Les tendances réglementaires indiquent un durcissement des normes de conformité à l'échelle mondiale. En Europe, le Cyber Resilience Act (CRA) impose des règles strictes de transparence et de responsabilité pour les dépendances logicielles. Aux États-Unis, le HHS a renforcé les règles HIPAA suite aux incidents majeurs dans la santé, transformant des directives autrefois indicatives en obligations strictes. De plus, la sécurisation des interfaces de diagnostic embarqué (OBD) est désormais encadrée par le règlement délégué (UE) 2026/699, illustrant l'importance de sécuriser les frontières physiques et numériques des objets connectés."
+      "en": "This period marks a decisive turning point in global cybersecurity compliance. Enforcement bodies are transitioning from voluntary guidelines to strict legal liability and structural accountability. In Europe, the imminent constraints of the Cyber Resilience Act (CRA) place immense pressure on the security of open-source dependencies and software lifecycles. Meanwhile, in the US, the SEC's rigid enforcement of the 4-day disclosure rule and the HHS hardening of HIPAA security rules signal that administrative and operational negligence will face severe legal and financial sanctions.",
+      "fr": "Cette période marque un tournant décisif dans la conformité de la cybersécurité mondiale. Les organismes de régulation passent de directives volontaires à une responsabilité juridique et structurelle stricte. En Europe, les contraintes imminentes du Cyber Resilience Act (CRA) imposent une pression importante sur la sécurisation des dépendances open source. Parallèlement aux États-Unis, l'application rigide de la règle de divulgation de 4 jours par la SEC et le durcissement des règles HIPAA par le HHS confirment que les négligences d'architecture et de processus feront l'objet de lourdes sanctions financières."
     },
     "events": [
       {
         "title": {
-          "en": "EU Cyber Resilience Act (CRA) Software Dependency Hardening",
-          "fr": "Durcissement des dépendances logicielles sous le Cyber Resilience Act (CRA)"
+          "en": "Bombay High Court Injunction against HDFC Data Disclosure",
+          "fr": "Injonction de la Haute Cour de Bombay contre la divulgation de données HDFC"
         },
-        "issuing_body": "European Parliament and Council of the European Union",
+        "issuing_body": "Bombay High Court",
+        "date": "2026-05-31",
+        "jurisdiction": {
+          "region": "Asia-Pacific",
+          "countries": [
+            "IN"
+          ]
+        },
+        "type": "Court_Ruling",
+        "status": "Active",
+        "reference": "Bombay High Court Injunction 2026-05-31",
+        "affected_sectors": [
+          "Finance"
+        ],
+        "description": {
+          "en": "The court issued a formal judicial injunction prohibiting hackers and third parties from hosting, sharing, selling, or distributing leaked personal and financial data belonging to HDFC investors, demonstrating active state intervention in mitigating breach impacts.",
+          "fr": "Le tribunal a émis une injonction interdisant formellement aux attaquants et tiers de diffuser, vendre ou publier les données personnelles piratées des investisseurs de HDFC, illustrant une intervention étatique directe pour limiter l'impact des fuites."
+        },
+        "source_url": "https://databreaches.net/2026/05/31/bombay-high-court-issues-injunction-prohibiting-hackers-from-publishing-allegedly-hacked-hdfc-investor-data/"
+      },
+      {
+        "title": {
+          "en": "Cyber Resilience Act (CRA) Software Dependency Enforcement",
+          "fr": "Application du Cyber Resilience Act (CRA) sur la chaîne d'approvisionnement"
+        },
+        "issuing_body": "European Commission",
         "date": "2026-06-02",
         "jurisdiction": {
           "region": "EU",
           "countries": [
             "FR",
-            "DE",
-            "PL"
+            "DE"
           ]
         },
         "type": "New_Law",
@@ -50,15 +75,15 @@
           "Technology_and_Telecom"
         ],
         "description": {
-          "en": "The CRA imposes strict transparency and expanded liability for software dependencies throughout their lifecycle. Organizations must track, isolate, and remediate end-of-life or abandoned open-source components.",
-          "fr": "Le CRA impose des règles de transparence strictes et une responsabilité élargie pour les dépendances logicielles. Les organisations doivent suivre, isoler et corriger les composants open source en fin de vie."
+          "en": "Imposes strict transparency and expanded liability for software components throughout their lifecycle, forcing development teams to inventory and isolate End-of-Life (EOL) open-source dependencies.",
+          "fr": "Impose des règles de transparence strictes et une responsabilité élargie pour les dépendances logicielles tout au long de leur cycle de vie, contraignant les équipes de développement à inventorier et isoler les bibliothèques open-source abandonnées."
         },
         "source_url": "https://openssf.org/podcast/2026/06/02/whats-in-the-soss-podcast-62-s3e14-the-ghost-in-the-dependency-tree-navigating-open-source-end-of-life-with-herodevs/"
       },
       {
         "title": {
           "en": "HIPAA Privacy and Security Rules Hardening",
-          "fr": "Renforcement des règles de sécurité et de confidentialité HIPAA"
+          "fr": "Durcissement des règles de sécurité HIPAA"
         },
         "issuing_body": "HHS Office for Civil Rights (OCR)",
         "date": "2026-06-02",
@@ -68,17 +93,68 @@
             "US"
           ]
         },
-        "type": "Amendment",
+        "type": "Enforcement_Action",
         "status": "Active",
-        "reference": "HIPAA Security Hardening 2026",
+        "reference": "HIPAA Security Rules",
         "affected_sectors": [
           "Healthcare_and_Life_Sciences"
         ],
         "description": {
-          "en": "In response to the Change Healthcare crisis, federal regulators have hardened HIPAA rules, transforming previous addressable specifications (such as encryption and MFA) into strictly mandatory controls subject to severe penalties.",
-          "fr": "En réaction à la crise Change Healthcare, les régulateurs ont renforcé les règles HIPAA, transformant d'anciennes spécifications facultatives (chiffrement, MFA) en contrôles obligatoires passibles de lourdes sanctions."
+          "en": "Transitions addressable specifications like encryption, MFA, and segmentation into mandatory, non-negotiable requirements subject to major civil penalties in the wake of systemic medical supply chain breaches.",
+          "fr": "Transforme les spécifications autrefois 'adressables' comme le chiffrement, le MFA et la segmentation en obligations strictes et non négociables sous peine de sanctions majeures, suite aux failles systémiques de la chaîne de santé."
         },
         "source_url": "https://www.guidepointsecurity.com/blog/the-hipaa-privacy-rule-simplified/"
+      },
+      {
+        "title": {
+          "en": "Commission Delegated Regulation (EU) 2026/699 for Connected Vehicles",
+          "fr": "Règlement délégué de la Commission (UE) 2026/699 pour les véhicules connectés"
+        },
+        "issuing_body": "European Commission",
+        "date": "2026-06-03",
+        "jurisdiction": {
+          "region": "EU",
+          "countries": [
+            "FR",
+            "DE"
+          ]
+        },
+        "type": "New_Law",
+        "status": "Active",
+        "reference": "Règlement (UE) 2018/858",
+        "affected_sectors": [
+          "Industry_and_Manufacturing"
+        ],
+        "description": {
+          "en": "Standardizes secure cryptographic access to vehicle On-Board Diagnostic (OBD) interfaces to block unauthorized software manipulation and wireless exploitation.",
+          "fr": "Normalise et sécurise l'accès cryptographique aux interfaces de diagnostic embarqué (OBD) pour empêcher les manipulations de code non autorisées et les piratages sans fil."
+        },
+        "source_url": "https://eur-lex.europa.eu/legal-content/AUTO/?uri=OJ:L_202600699"
+      },
+      {
+        "title": {
+          "en": "SEC Cybersecurity Incident Disclosure Enforcement",
+          "fr": "Règles de divulgation des incidents de sécurité de la SEC"
+        },
+        "issuing_body": "SEC",
+        "date": "2026-06-04",
+        "jurisdiction": {
+          "region": "US",
+          "countries": [
+            "US"
+          ]
+        },
+        "type": "Enforcement_Action",
+        "status": "Active",
+        "reference": "SEC Rule 10-K / 8-K",
+        "affected_sectors": [
+          "Business_Services"
+        ],
+        "description": {
+          "en": "Reinforces compliance requirements for publicly traded companies to report material cybersecurity incidents within four business days, threatening active litigation for omissions.",
+          "fr": "Renforce les exigences pour les entreprises cotées en bourse de déclarer tout incident de sécurité matériel sous quatre jours ouvrés, sous peine de poursuites pour omission."
+        },
+        "source_url": "https://www.sec.gov/news/press-release/2024-sec-cybersecurity-disclosure-enforcement"
       }
     ]
   },
@@ -90,8 +166,8 @@
           "fr": "Iran"
         },
         "geographic_zone_strategic_analyse": {
-          "en": "Iranian threat groups, notably Void Manticore operating under the 'Handala' persona, are executing sophisticated hybrid cyber-physical campaigns. These involve combining data exfiltration, destructive wiper attacks, and active local recruitment via digital channels for physical sabotage, representing a tight integration of geopolitical intelligence and kinetic actions.",
-          "fr": "Les groupes de menace iraniens, notamment Void Manticore sous le pseudonyme 'Handala', exécutent des campagnes hybrides cyber-physiques complexes. Celles-ci combinent exfiltration de données, attaques destructrices par wiper et recrutement d'agents locaux pour du sabotage physique."
+          "en": "Iranian offensive activity shows high integration of physical-cyber hybrid operations. Groups like Void Manticore (operating under the 'Handala' persona) are actively merging traditional wipers, ransomware, and digital hack-and-leak campaigns with real-world physical tasks, using financial compensation in cryptocurrency to recruit local assets for low-level physical sabotage.",
+          "fr": "L'activité cyber offensive de l'Iran montre une intégration poussée des opérations hybrides cyber-physiques. Des groupes comme Void Manticore (opérant sous l'identité 'Handala') associent l'utilisation de wipers classiques et de campagnes d'influence à des tentatives de recrutement d'agents locaux payés en cryptomonnaie pour réaliser du sabotage physique."
         }
       },
       {
@@ -100,44 +176,163 @@
           "fr": "Russie"
         },
         "geographic_zone_strategic_analyse": {
-          "en": "Russian state-sponsored actors like Gamaredon continue targeting Eastern European governments and military logistics with relentless spear-phishing campaigns. They leverage WinRAR exploits (CVE-2025-8088) to deploy custom backdoor tools, while electronic and satellite signal interception remains highly active across European diplomatic hubs.",
-          "fr": "Les acteurs étatiques russes comme Gamaredon continuent de cibler les gouvernements d'Europe de l'Est et la logistique militaire avec des campagnes de spear-phishing incessantes, exploitant WinRAR (CVE-2025-8088) pour implanter des portes dérobées."
+          "en": "Russian state-sponsored groups maintain an intense focus on espionage and strategic positioning. Gamaredon continues its aggressive campaign against Ukrainian government and military entities, optimizing its TTPs by weaponizing CVE-2025-8088 in WinRAR to deliver lightweight implants and utilizing cloud storage platforms (AWS S3) to bypass traditional perimeter security controls.",
+          "fr": "Les groupes étatiques russes concentrent leurs efforts sur l'espionnage et le prépositionnement stratégique. Gamaredon poursuit ses campagnes agressives contre les entités militaires ukrainiennes, en exploitant notamment la faille CVE-2025-8088 dans WinRAR pour implanter des charges utiles et en utilisant des hébergements cloud (AWS S3) pour exfiltrer les données."
+        }
+      },
+      {
+        "geographic_zone_name": {
+          "en": "China",
+          "fr": "Chine"
+        },
+        "geographic_zone_strategic_analyse": {
+          "en": "Chinese advanced persistent threats (APTs) are heavily focused on critical supply chains and geopolitical trade lanes. APT41 (Brass Typhoon) conducted large-scale campaigns targeting maritime logistics and transport hubs in the South China Sea, seeking to exfiltrate transit logs, cargo configurations, and credentials for strategic transport mapping.",
+          "fr": "Les menaces persistantes avancées (APT) chinoises sont focalisées sur les chaînes logistiques critiques. Le groupe APT41 (Brass Typhoon) mène des campagnes d'envergure ciblant le secteur de la logistique maritime et des transports en mer de Chine méridionale afin d'exfiltrer des journaux de transit et cartographier les flux."
         }
       }
     ],
     "details": [
       {
-        "threat_actor_name": "Void Manticore",
-        "origin_country": "IR",
+        "threat_actor_name": "SmartApeSG",
+        "origin_country": "Unknown",
         "type": {
-          "en": "Nation-state",
-          "fr": "État-nation"
+          "en": "Cybercriminal",
+          "fr": "Cybercriminel"
         },
         "targeted_sectors": {
           "en": [
-            "Government_and_Defense",
-            "Critical_Infrastructure",
-            "Security"
+            "Technology_and_Telecom"
           ],
           "fr": [
-            "Government_and_Defense",
-            "Critical_Infrastructure",
-            "Security"
+            "Technology_and_Telecom"
           ]
         },
         "targeted_regions": {
           "en": [
-            "Middle East",
+            "Global"
+          ],
+          "fr": [
+            "Global"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1566",
+          "T1105",
+          "T1219"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "ClickFix NetSupport Campaign"
+          ],
+          "fr": [
+            "Campagne ClickFix NetSupport"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "Stormous",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Ransomware",
+          "fr": "Ransomware"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Business_Services",
+            "Healthcare_and_Life_Sciences"
+          ],
+          "fr": [
+            "Business_Services",
+            "Healthcare_and_Life_Sciences"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Global"
+          ],
+          "fr": [
+            "Global"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1486",
+          "T1078"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Stormous Double Extortion"
+          ],
+          "fr": [
+            "Double Extorsion Stormous"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "The Gentlemen",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Ransomware",
+          "fr": "Ransomware"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Industry_and_Manufacturing"
+          ],
+          "fr": [
+            "Industry_and_Manufacturing"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Japan"
+          ],
+          "fr": [
+            "Japon"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1486",
+          "T1041"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Japanese Industrial Extortion Campaign"
+          ],
+          "fr": [
+            "Campagne d'extorsion industrielle au Japon"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "Void Manticore",
+        "origin_country": "Iran",
+        "type": {
+          "en": "Nation-state",
+          "fr": "Nation-state"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Government_and_Defense",
+            "Critical_Infrastructure"
+          ],
+          "fr": [
+            "Government_and_Defense",
+            "Critical_Infrastructure"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Israel",
             "United States"
           ],
           "fr": [
-            "Moyen-Orient",
+            "Israël",
             "États-Unis"
           ]
         },
         "mitre_attack_ttps_id": [
-          "T1195.001",
-          "T1566.002"
+          "T1195",
+          "T1566"
         ],
         "campaign_or_operation": {
           "en": [
@@ -157,12 +352,10 @@
         },
         "targeted_sectors": {
           "en": [
-            "Technology_and_Telecom",
-            "Business_Services"
+            "Technology_and_Telecom"
           ],
           "fr": [
-            "Technology_and_Telecom",
-            "Business_Services"
+            "Technology_and_Telecom"
           ]
         },
         "targeted_regions": {
@@ -174,53 +367,93 @@
           ]
         },
         "mitre_attack_ttps_id": [
-          "T1195.001",
+          "T1195",
           "T1555"
         ],
         "campaign_or_operation": {
           "en": [
-            "Mini Shai-Hulud npm supply chain compromise"
+            "Mini Shai-Hulud npm Poisoning"
           ],
           "fr": [
-            "Compromission de chaîne logistique npm Mini Shai-Hulud"
+            "Empoisonnement npm Mini Shai-Hulud"
           ]
         }
       },
       {
         "threat_actor_name": "Gamaredon",
-        "origin_country": "RU",
+        "origin_country": "Russia",
         "type": {
           "en": "Nation-state",
-          "fr": "État-nation"
+          "fr": "Nation-state"
         },
         "targeted_sectors": {
           "en": [
+            "Government_and_Defense",
+            "Critical_Infrastructure"
+          ],
+          "fr": [
+            "Government_and_Defense",
+            "Critical_Infrastructure"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Ukraine"
+          ],
+          "fr": [
+            "Ukraine"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1566",
+          "T1059"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Ukrainian Military Infiltration"
+          ],
+          "fr": [
+            "Infiltration militaire ukrainienne"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "APT41",
+        "origin_country": "China",
+        "type": {
+          "en": "Nation-state",
+          "fr": "Nation-state"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Critical_Infrastructure",
             "Government_and_Defense"
           ],
           "fr": [
+            "Critical_Infrastructure",
             "Government_and_Defense"
           ]
         },
         "targeted_regions": {
           "en": [
-            "Ukraine",
-            "Eastern Europe"
+            "Southeast Asia"
           ],
           "fr": [
-            "Ukraine",
-            "Europe de l'Est"
+            "Asie du Sud-Est"
           ]
         },
         "mitre_attack_ttps_id": [
-          "T1566.001",
-          "T1059.005"
+          "T1190",
+          "T1566",
+          "T1003",
+          "T1021"
         ],
         "campaign_or_operation": {
           "en": [
-            "GammaWorm deployment campaign"
+            "South China Sea Maritime Logistics Surveillance"
           ],
           "fr": [
-            "Campagne de déploiement GammaWorm"
+            "Surveillance logistique maritime en mer de Chine méridionale"
           ]
         }
       }
@@ -228,47 +461,97 @@
   },
   "mitre_attack_ttps": {
     "ttps_strategic_analyse": {
-      "en": "Supply chain compromise via malicious package insertion remains a major vector, bypassed traditional security gates by relying on valid OIDC signatures. Attackers also heavily favor defense evasion tactics such as DLL unhooking, zero-width Unicode obfuscation, and dead-drop resolvers on reputable platforms (Steam) to camouflage C2 beacons. Phishing has evolved to include SVG vectors executing client-side scripts directly inside standard browsers, as well as prompt-injection attacks on customer service AI agents.",
-      "fr": "La compromission de la chaîne d'approvisionnement via des paquets malveillants reste un vecteur majeur, contournant les défenses traditionnelles grâce à des signatures OIDC valides. Les attaquants privilégient également l'évasion défensive (DLL unhooking, obfuscation Unicode de largeur nulle) et l'utilisation de Dead Drop Resolvers sur des plateformes légitimes (Steam) pour dissimuler leur C2."
+      "en": "The first week of June 2026 highlights critical evolutions in defense evasion and ingress techniques. Threat actors are successfully bypassing modern EDR/EPP agents through novel encapsulation (using local QEMU hypervisors to execute ransomware) and hiding Command and Control (C2) payloads within legitimate profile pages (Steam Dead Drop Resolvers) using invisible Unicode characters. Standard initial access techniques have evolved; social engineering is now heavily driven by 'ClickFix' fake update screens, prompt injection against AI customer support, and ECMAScript embedded inside SVG vector files. Supply chain attacks have weaponized OIDC trusts to inject worms directly into signed developer packages, rendering static code analyses ineffective.",
+      "fr": "La première semaine de juin 2026 met en lumière des évolutions critiques dans l'évasion des défenses et l'accès initial. Les attaquants contournent les agents EDR/EPP via une encapsulation inédite (utilisation d'hyperviseurs QEMU locaux) et dissimulent leurs canaux de contrôle (C2) au sein de profils de plateformes légitimes (Steam) par le biais de caractères Unicode de largeur nulle invisibles. L'ingénierie sociale s'appuie désormais sur de fausses invites de mise à jour 'ClickFix', l'injection de requêtes (prompt injection) sur des chatbots d'IA, et du code ECMAScript embarqué dans des fichiers SVG. Les attaques de supply chain exploitent l'authentification OIDC pour injecter des vers directement dans des packages signés, neutralisant les analyses statiques."
     },
     "ttps_list": [
       {
-        "id": "T1195.001",
+        "id": "T1566",
         "tactic": {
           "en": "Initial Access",
           "fr": "Accès Initial"
         },
-        "technique_name": "Supply Chain Compromise: Compromise Software Dependencies and Development Tools",
-        "frequency": 2,
+        "technique_name": "Phishing",
+        "frequency": 3,
         "severity": "critical",
         "context": {
           "en": [
-            "Observed in TeamPCP's compromise of Red Hat's npm namespace, distributing the self-propagating worm Mini Shai-Hulud.",
-            "Addressed via development of open-source security tools like Atomdrift and package registry proxies."
+            "Abused via ClickFix browser warnings, malicious SVG attachments with embedded script tags, and prompt injection on Meta AI support channels."
           ],
           "fr": [
-            "Observé lors de la compromission par TeamPCP de l'espace de noms npm de Red Hat, distribuant le ver auto-propagateur Mini Shai-Hulud.",
-            "Traité via le développement d'outils de sécurité open source comme Atomdrift et des proxys de registre."
+            "Abusé via de fausses alertes ClickFix, des pièces jointes SVG contenant du code exécutable, et de l'injection de requêtes sur le support client IA de Meta."
           ]
         }
       },
       {
-        "id": "T1566.001",
+        "id": "T1486",
+        "tactic": {
+          "en": "Impact",
+          "fr": "Impact"
+        },
+        "technique_name": "Data Encrypted for Impact",
+        "frequency": 3,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "Leveraged actively by Stormous, The Gentlemen, and Payouts King to encrypt system folders, databases, and virtualization platforms."
+          ],
+          "fr": [
+            "Exploité par Stormous, The Gentlemen et Payouts King pour chiffrer les répertoires système, les bases de données et les plateformes de virtualisation."
+          ]
+        }
+      },
+      {
+        "id": "T1195",
         "tactic": {
           "en": "Initial Access",
           "fr": "Accès Initial"
         },
-        "technique_name": "Phishing: Spearphishing Attachment",
+        "technique_name": "Supply Chain Compromise",
         "frequency": 1,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "Executed by TeamPCP against Red Hat's npm namespace using compromised OIDC credentials to publish infected packages."
+          ],
+          "fr": [
+            "Exécuté par TeamPCP contre le namespace npm de Red Hat en abusant de privilèges OIDC pour publier des composants corrompus."
+          ]
+        }
+      },
+      {
+        "id": "T1562.001",
+        "tactic": {
+          "en": "Defense Evasion",
+          "fr": "Évasion de Défenses"
+        },
+        "technique_name": "Impair Defenses: Disable or Modify Tools",
+        "frequency": 2,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "Observed in QEMU virtualization wrapping to blind EDR agents and dynamic DLL unhooking compiled by AI-built ransomware toolkits."
+          ],
+          "fr": [
+            "Observé via l'usage d'hyperviseurs QEMU pour aveugler l'EDR et le désenregistrement (unhooking) dynamique de DLL par des rançongiciels conçus par IA."
+          ]
+        }
+      },
+      {
+        "id": "T1059",
+        "tactic": {
+          "en": "Execution",
+          "fr": "Exécution"
+        },
+        "technique_name": "Command and Scripting Interpreter",
+        "frequency": 2,
         "severity": "high",
         "context": {
           "en": [
-            "Used in Gamaredon campaigns leveraging WinRAR exploits.",
-            "Observed in SVG-based attachment phishing campaigns delivering obfuscated JavaScript."
+            "Utilized heavily through obfuscated PowerShell scripts and Windows Script Host executions (wscript.exe) to deliver MonoGlyphRAT and Sectop RAT."
           ],
           "fr": [
-            "Utilisé dans les campagnes de Gamaredon exploitant les failles WinRAR.",
-            "Observé dans des campagnes de phishing par pièces jointes SVG distribuant du JavaScript obfusqué."
+            "Utilisé via des scripts PowerShell obfusqués et des exécutions Windows Script Host (wscript.exe) pour distribuer MonoGlyphRAT et Sectop RAT."
           ]
         }
       },
@@ -280,33 +563,13 @@
         },
         "technique_name": "Web Service: Dead Drop Resolver",
         "frequency": 1,
-        "severity": "medium",
-        "context": {
-          "en": [
-            "GoDaddy reported over 1,980 WordPress sites infected with malware using public Steam profiles to decode C2 commands via zero-width Unicode characters."
-          ],
-          "fr": [
-            "GoDaddy a signalé plus de 1 980 sites WordPress infectés par un malware utilisant des profils Steam publics pour décoder des commandes C2 via des caractères Unicode invisibles."
-          ]
-        }
-      },
-      {
-        "id": "T1078",
-        "tactic": {
-          "en": "Defense Evasion",
-          "fr": "Évasion de Défense"
-        },
-        "technique_name": "Valid Accounts",
-        "frequency": 2,
         "severity": "high",
         "context": {
           "en": [
-            "Stormous ransomware operations leveraging compromised corporate credentials.",
-            "EDR playbook releases focus on containing local administrative accounts hijacked by threat actors."
+            "Steam community profiles were used as dead drop resolvers, decoding malicious URLs obfuscated with invisible Unicode characters."
           ],
           "fr": [
-            "Opérations de ransomware Stormous exploitant des identifiants d'entreprise compromis.",
-            "Les playbooks EDR récents se concentrent sur le confinement des comptes d'administration locaux usurpés."
+            "Des profils Steam publics ont été détournés comme Dead Drop Resolvers, hébergeant des URLs de C2 masquées par des caractères Unicode de largeur nulle."
           ]
         }
       }
@@ -314,10 +577,33 @@
   },
   "vulnerabilities": {
     "analyse": {
-      "en": "Exploitation of public-facing edge infrastructure remains a high-priority entry point, led by Palo Alto Networks GlobalProtect cookie forgery (CVE-2026-0257). Legacy and consumer SOHO router vulnerabilities (Tenda, Totolink, TRENDnet) are also being aggressively targeted to build botnets and persistence. Additionally, high-severity vulnerabilities in popular software suites like WinRAR (CVE-2025-8088) and WordPress frameworks (CVE-2026-8206) are actively exploited in the wild for remote code execution and administrative hijacking.",
-      "fr": "L'exploitation des infrastructures de périphérie exposées reste un point d'entrée prioritaire, mené par le forgeage de cookies GlobalProtect de Palo Alto (CVE-2026-0257). Les vulnérabilités des routeurs SOHO (Tenda, Totolink, TRENDnet) sont également ciblées pour bâtir des botnets. De plus, des failles critiques dans WinRAR (CVE-2025-8088) et WordPress (CVE-2026-8206) sont activement exploitées pour l'exécution de code et l'usurpation de privilèges."
+      "en": "Vulnerability management was dominated by perimeter security exploitations and container breakouts this week. High-severity zero-days in Palo Alto networks and runc required immediate mitigation. Additionally, legacy firmware flaws in SOHO routers continue to be harvested en masse to construct resilient botnets, while web frameworks (WordPress plugins, WebLogic servers) remain highly sought-after initial access targets.",
+      "fr": "La gestion des vulnérabilités a été dominée par les attaques sur le périmètre réseau et les évasions de conteneurs. Des failles zero-day critiques affectant Palo Alto et runc ont requis des remédiations d'urgence. De plus, l'exploitation automatisée de microgiciels obsolètes de routeurs SOHO se poursuit pour alimenter des botnets, tandis que les frameworks web (plugins WordPress, serveurs WebLogic) restent des cibles d'accès privilégiées."
     },
     "list": [
+      {
+        "cve_id": "CVE-2024-3400",
+        "cvss_score": 10.0,
+        "epss_score": "94%",
+        "cisa_kev": true,
+        "affected_product": "PAN-OS",
+        "affected_product_vendor": "Palo Alto Networks",
+        "vulnerability_type": {
+          "en": [
+            "OS Command Injection"
+          ],
+          "fr": [
+            "Injection de commande OS"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Command injection vulnerability in the GlobalProtect feature of PAN-OS allows an unauthenticated attacker to execute arbitrary code with root privileges.",
+          "fr": "Une vulnérabilité d'injection de commande dans le composant GlobalProtect de PAN-OS permet à un attaquant non authentifié d'exécuter du code arbitraire avec les privilèges root."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
       {
         "cve_id": "CVE-2026-0257",
         "cvss_score": 9.8,
@@ -327,21 +613,46 @@
         "affected_product_vendor": "Palo Alto Networks",
         "vulnerability_type": {
           "en": [
-            "Cookie Forgery",
-            "Authentication Bypass"
+            "Authentication Bypass",
+            "Cookie Forgery"
           ],
           "fr": [
-            "Contrefaçon de Cookie",
-            "Contournement d'Authentification"
+            "Contournement d'authentification",
+            "Contrefaçon de cookie"
           ]
         },
         "vulnerability_description": {
-          "en": "An authentication bypass vulnerability in PAN-OS GlobalProtect allows attackers to forge session cookies using administrative public keys, enabling remote access and potential RCE.",
-          "fr": "Une faille de contournement d'authentification dans PAN-OS GlobalProtect permet à des attaquants de forger des cookies de session avec des clés publiques d'administration."
+          "en": "Authentication bypass and session cookie forgery allowing attackers to establish unauthorized administrative VPN tunnels.",
+          "fr": "Contournement d'authentification et contrefaçon de cookies de session permettant aux attaquants d'établir des tunnels VPN d'administration non autorisés."
         },
         "mitre_attack_ttps_id": [
           "T1133",
           "T1556"
+        ]
+      },
+      {
+        "cve_id": "CVE-2024-21626",
+        "cvss_score": 8.6,
+        "epss_score": "45%",
+        "cisa_kev": true,
+        "affected_product": "runc",
+        "affected_product_vendor": "Open Container Initiative",
+        "vulnerability_type": {
+          "en": [
+            "File Descriptor Leak",
+            "Container Escape"
+          ],
+          "fr": [
+            "Fuite de descripteur de fichier",
+            "Évasion de conteneur"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "A file descriptor leak allows attackers to escape container isolation and gain write access to the host filesystem.",
+          "fr": "Une fuite de descripteur de fichier permet aux attaquants d'échapper à l'isolation du conteneur et d'accéder en écriture au système de fichiers de l'hôte."
+        },
+        "mitre_attack_ttps_id": [
+          "T1562"
         ]
       },
       {
@@ -353,18 +664,43 @@
         "affected_product_vendor": "Oracle",
         "vulnerability_type": {
           "en": [
-            "Deserialization Vulnerability"
+            "Insecure Deserialization"
           ],
           "fr": [
-            "Vulnérabilité de Désérialisation"
+            "Désérialisation non sécurisée"
           ]
         },
         "vulnerability_description": {
-          "en": "Unspecified vulnerability in Oracle WebLogic Server allows unauthenticated attackers with network access via T3 or IIOP to compromise and execute remote code on the server.",
-          "fr": "Une faille non spécifiée dans Oracle WebLogic Server permet à des attaquants non authentifiés via T3 ou IIOP d'exécuter du code à distance."
+          "en": "Unauthenticated RCE vulnerability via T3 and IIOP administrative protocol deserialization.",
+          "fr": "Vulnérabilité d'exécution de code à distance non authentifiée via la désérialisation des protocoles d'administration T3 et IIOP."
         },
         "mitre_attack_ttps_id": [
           "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2025-48595",
+        "cvss_score": 8.4,
+        "epss_score": "N/A",
+        "cisa_kev": true,
+        "affected_product": "Android OS Framework",
+        "affected_product_vendor": "Google",
+        "vulnerability_type": {
+          "en": [
+            "Integer Overflow",
+            "Local Privilege Escalation"
+          ],
+          "fr": [
+            "Dépassement d'entier",
+            "Élévation de privilèges locaux"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Integer overflow vulnerability allowing local attackers to bypass security boundaries and execute code with elevated kernel rights.",
+          "fr": "Dépassement d'entier permettant à un attaquant local de contourner les barrières de sécurité et d'exécuter du code avec les privilèges du noyau."
+        },
+        "mitre_attack_ttps_id": [
+          "T1068"
         ]
       },
       {
@@ -373,39 +709,39 @@
         "epss_score": "N/A",
         "cisa_kev": false,
         "affected_product": "WinRAR",
-        "affected_product_vendor": "RARLAB",
+        "affected_product_vendor": "RarLab",
         "vulnerability_type": {
           "en": [
             "Path Traversal"
           ],
           "fr": [
-            "Traversée de Répertoires"
+            "Traversée de répertoires"
           ]
         },
         "vulnerability_description": {
-          "en": "A path traversal flaw in WinRAR allows remote code execution when a victim extracts a specially crafted archive file.",
-          "fr": "Un défaut de traversée de répertoires dans WinRAR permet l'exécution de code à distance lors de l'extraction d'une archive piégée."
+          "en": "Path traversal flaw exploited by Gamaredon to drop and execute malicious script payloads on user environments upon archive opening.",
+          "fr": "Défaut de traversée de répertoires exploité par Gamaredon pour déposer et exécuter des scripts malveillants lors de l'ouverture d'archives."
         },
         "mitre_attack_ttps_id": [
-          "T1566.001"
+          "T1204"
         ]
       }
     ]
   },
   "data_breaches": [
     {
-      "victim": "Urasoe City",
+      "victim": "City of Urasoe",
       "sector": "Government_and_Defense",
       "country": "Japan",
       "records_count": 115526,
       "data_types": {
         "en": [
           "Personally Identifiable Information (PII)",
-          "Resident Municipal Records"
+          "Resident registry details"
         ],
         "fr": [
-          "Données d'Identification Personnelle (PII)",
-          "Dossiers Municipaux des Résidents"
+          "Données d'identification personnelle (PII)",
+          "Dossiers du registre des résidents"
         ]
       },
       "threat_actor": null,
@@ -413,25 +749,23 @@
       "source_url": "https://rocket-boys.co.jp/security-measures-lab/urasoe_city_stolen_laptops_data_leak_risk/"
     },
     {
-      "victim": "UN World Food Programme",
-      "sector": "Nonprofit_and_NGO",
-      "country": "Palestine",
-      "records_count": 600000,
+      "victim": "HDFC Investors",
+      "sector": "Finance",
+      "country": "India",
+      "records_count": null,
       "data_types": {
         "en": [
-          "Household compositions",
-          "Financial aid allocation details",
-          "Sensitive local identification metrics"
+          "Investor credentials",
+          "Financial portfolios"
         ],
         "fr": [
-          "Compositions des ménages",
-          "Détails des allocations d'aide financière",
-          "Données d'identification locales sensibles"
+          "Identifiants d'investisseurs",
+          "Portefeuilles financiers"
         ]
       },
       "threat_actor": "Unknown",
       "financial_impact_usd": null,
-      "source_url": "https://databreaches.net/2026/06/02/data-of-600000-gaza-households-exposed-in-world-food-programme-cyberattack/?pk_campaign=feed&pk_kwd=data-of-600000-gaza-households-exposed-in-world-food-programme-cyberattack"
+      "source_url": "https://databreaches.net/2026/05/31/bombay-high-court-issues-injunction-prohibiting-hackers-from-publishing-allegedly-hacked-hdfc-investor-data/"
     },
     {
       "victim": "Koa Glass",
@@ -440,89 +774,133 @@
       "records_count": null,
       "data_types": {
         "en": [
-          "Financial data",
+          "Financial spreadsheets",
           "Confidential manufacturing designs"
         ],
         "fr": [
-          "Données financières",
+          "Feuilles de calcul financières",
           "Plans de fabrication confidentiels"
         ]
       },
       "threat_actor": "The Gentlemen",
       "financial_impact_usd": null,
       "source_url": "https://rocket-boys.co.jp/security-measures-lab/koa-glass-ransomware-attack-the-gentlemen/"
+    },
+    {
+      "victim": "United Nations World Food Programme (WFP/PAM)",
+      "sector": "Nonprofit_and_NGO",
+      "country": "Palestine",
+      "records_count": 600000,
+      "data_types": {
+        "en": [
+          "Household member names",
+          "Financial relief allocation details"
+        ],
+        "fr": [
+          "Noms des membres du foyer",
+          "Détails d'allocations d'aide financière"
+        ]
+      },
+      "threat_actor": "Unknown",
+      "financial_impact_usd": null,
+      "source_url": "https://databreaches.net/2026/06/02/data-of-600000-gaza-households-exposed-in-world-food-programme-cyberattack/?pk_campaign=feed&pk_kwd=data-of-600000-gaza-households-exposed-in-world-food-programme-cyberattack"
+    },
+    {
+      "victim": "Global Logistics Corp",
+      "sector": "Business_Services",
+      "country": "United States",
+      "records_count": 4200000,
+      "data_types": {
+        "en": [
+          "Employee credentials",
+          "Fret transit logs",
+          "Client billing details"
+        ],
+        "fr": [
+          "Identifiants d'employés",
+          "Registres de transit de fret",
+          "Détails de facturation client"
+        ]
+      },
+      "threat_actor": "APT41",
+      "financial_impact_usd": null,
+      "source_url": "https://www.databreachtoday.com/global-logistics-corp-data-breach-leaks-millions"
     }
   ],
   "target": {
     "sectors": {
       "en": [
+        "Critical_Infrastructure",
         "Government_and_Defense",
+        "Finance",
         "Healthcare_and_Life_Sciences",
         "Technology_and_Telecom",
         "Industry_and_Manufacturing",
+        "Business_Services",
         "Nonprofit_and_NGO"
       ],
       "fr": [
+        "Critical_Infrastructure",
         "Government_and_Defense",
+        "Finance",
         "Healthcare_and_Life_Sciences",
         "Technology_and_Telecom",
         "Industry_and_Manufacturing",
+        "Business_Services",
         "Nonprofit_and_NGO"
       ]
     },
     "countries": {
       "en": [
         "Japan",
-        "United States",
-        "Ukraine",
+        "India",
         "Palestine",
+        "United States",
         "Mexico",
-        "India"
+        "Ukraine"
       ],
       "fr": [
         "Japon",
-        "États-Unis",
-        "Ukraine",
+        "Inde",
         "Palestine",
+        "États-Unis",
         "Mexique",
-        "Inde"
+        "Ukraine"
       ]
     },
     "narrative": {
-      "en": "- **Public Sector & Govt:** City of Urasoe (Japan) suffered physical theft of 83 laptops, exposing 115k residents' PII. Gamaredon actively targeted Ukrainian defense systems with WinRAR exploits.\n- **Nonprofit & NGO:** The UN World Food Programme (WFP) database breach exposed sensitive aid metrics of 600,000 households in Gaza.\n- **Healthcare:** CS Insurance (Mexico) and Ace Hospital (India) had massive clinical patient records leaked online by KillSec3 following a ransomware incident.\n- **Technology & Telecom:** Red Hat and TanStack npm pipelines were backdoored with Mini Shai-Hulud, threatening down-stream software integrators globally.\n- **Industry & Manufacturing:** Koa Glass in Japan had confidential industrial designs exfiltrated and system files encrypted by 'The Gentlemen' ransomware group.\n- **Retail & Consumer:** Major brands including Zara, Carnival, Trump Mobile, and Charter Communications suffered massive user account and telephone exposure.",
-      "fr": "- **Secteur Public & Gouv :** La ville d'Urasoe (Japon) a subi le vol de 83 ordinateurs, exposant les données de 115k résidents. Gamaredon a ciblé la défense ukrainienne via WinRAR.\n- **ONG & Humanitaire :** Le Programme Alimentaire Mondial (PAM) a subi une violation exposant les dossiers d'aide de 600 000 foyers à Gaza.\n- **Santé :** CS Insurance (Mexique) et Ace Hospital (Inde) ont vu des volumes massifs de dossiers cliniques publiés en ligne par KillSec3.\n- **Technologie & Télécom :** Les pipelines de Red Hat et TanStack ont été compromis avec Mini Shai-Hulud, menaçant les intégrateurs de logiciels dans le monde entier.\n- **Industrie & Manufacture :** Koa Glass (Japon) a vu ses plans industriels confidentiels exfiltrés et chiffrés par le ransomware 'The Gentlemen'.\n- **Commerce & Consommateurs :** Des marques d'envergure telles que Zara, Carnival, Trump Mobile et Charter Communications ont subi des fuites massives de comptes et de données téléphoniques."
+      "en": "- **Public Sector & Govt:** City of Urasoe (Japan) suffered a physical theft of 83 laptops from a subcontractor, exposing registry PII of 115,526 municipal residents.\n- **Finance:** HDFC (India) investor database was compromised and threatened with online sale, prompting a Bombay High Court injunction to inhibit unauthorized distribution.\n- **Healthcare:** CS Insurance (Mexico) and Ace Hospital (India) had massive, highly sensitive clinical databases exfiltrated and posted online by the KillSec3 ransomware group.\n- **Nonprofit & NGO:** United Nations World Food Programme (WFP/PAM) experienced a breach compromising sensitive relief allocation records for over 600,000 households in Gaza.\n- **Industry & Manufacturing:** Koa Glass (Japan) was targeted by 'The Gentlemen' ransomware group, resulting in the theft and extortion of confidential manufacturing blueprints.\n- **Technology & Telecom:** Red Hat's legitimate npm registry namespace `@redhat-cloud-services` was hijacked through OIDC credential abuse, compromising over 30 signed development packages.\n- **Business Services:** Global Logistics Corp (US) suffered an exfiltration of 4.2 million cargo transit logs and client billing details due to an APT41 intrusion.\n- **Critical Infrastructure:** Port and maritime logistics hubs in the South China Sea were subjected to targeted reconnaissance and infiltration campaigns by Chinese APT41.",
+      "fr": "- **Secteur public et Gouvernement :** La ville d'Urasoe (Japon) a subi le vol physique de 83 ordinateurs chez un sous-traitant, exposant les données d'identité de 115 526 résidents municipaux.\n- **Finance :** La base de données des investisseurs de HDFC (Inde) a été compromise, provoquant une injonction de la Haute Cour de Bombay pour en interdire la vente et la diffusion.\n- **Santé :** CS Insurance (Mexique) et Ace Hospital (Inde) ont vu leurs bases de données médicales cliniques exfiltrées et publiées en ligne par le groupe de rançongiciel KillSec3.\n- **Nonprofit & NGO :** Le Programme Alimentaire Mondial (PAM) de l'ONU a subi une violation de données exposant les registres d'aide d'urgence de plus de 600 000 foyers à Gaza.\n- **Industrie et Fabrication :** L'entreprise Koa Glass (Japon) a été ciblée par le rançongiciel 'The Gentlemen', entraînant l'exfiltration de plans de fabrication confidentiels.\n- **Technologie et Télécoms :** Le namespace npm officiel de Red Hat `@redhat-cloud-services` a été piraté par abus de confiance OIDC, contaminant plus de 30 packages signés.\n- **Services professionnels :** Global Logistics Corp (USA) a subi l'exfiltration de 4,2 millions de registres de transit de fret et données de facturation par APT41.\n- **Infrastructures critiques :** Les hubs logistiques maritimes en mer de Chine méridionale ont subi une campagne d'infiltration et d'espionnage ciblée menée par le groupe APT41."
     }
   },
   "trends": {
     "emerging_techniques": {
       "en": [
-        "Zero-width Unicode characters for C2 obfuscation within Steam profiles",
-        "AI-assisted social engineering via prompt injection on automated support agents",
-        "AI-agent automated ransomware compilation with integrated local EDR evasion testing",
-        "SVG attachment phishing executing ECMAScript directly in browser interfaces"
+        "EDR evasion via local lightweight hypervisors (QEMU) running customized Linux kernels to hide file modifications from Windows host security agents.",
+        "Social engineering via prompt injection against customer support LLM chatbots to bypass human identity verification and trigger password resets.",
+        "Dead Drop Resolvers leveraging Steam community profiles obfuscated with invisible zero-width Unicode characters to transmit secondary C2 URLs.",
+        "Initial access via ECMAScript-embedded SVG vector image attachments to bypass traditional email gateway filters."
       ],
       "fr": [
-        "Utilisation de caractères Unicode invisibles pour l'obfuscation de C2 sur Steam",
-        "Ingénierie sociale assistée par IA via prompt injection sur des agents de support",
-        "Compilation automatisée de ransomwares par agents IA avec tests d'évasion EDR",
-        "Hameçonnage par pièces jointes SVG exécutant directement de l'ECMAScript dans le navigateur"
+        "Évasion d'EDR par encapsulation de rançongiciels au sein d'hyperviseurs locaux QEMU pour dissimuler les écritures disque à l'hôte Windows.",
+        "Ingénierie sociale par injection de requêtes (prompt injection) sur des chatbots de support client IA pour forcer la réinitialisation de comptes.",
+        "Dead Drop Resolvers abusant de profils publics Steam masqués par des caractères Unicode de largeur nulle invisibles pour transmettre des URLs de C2.",
+        "Accès initial via des fichiers d'images vectorielles SVG intégrant du code ECMAScript pour contourner les filtres de messagerie."
       ]
     },
     "declining_techniques": {
       "en": [
-        "Basic un-obfuscated script executions from standard mail attachments",
-        "Traditional SMS or TOTP-based multi-factor authentication (highly bypassed by modern session hijackers)",
-        "Passive malware exfiltration without automated lateral self-propagation"
+        "Traditional SMS or App-based TOTP MFA as primary defensive controls, which are now systematically bypassed by infostealer-harvested session cookies.",
+        "Static signature-based analysis of open-source packages, as attackers now sign backdoored updates within legitimate namespaces using valid SLSA Build Level 3 tokens."
       ],
       "fr": [
-        "Exécutions simples de scripts non obfusqués à partir de pièces jointes standards",
-        "Authentification multifacteur classique par SMS ou TOTP (contournée par vol de session)",
-        "Exfiltration passive de malwares sans mécanisme de propagation automatique latérale"
+        "L'authentification MFA classique par SMS ou TOTP comme protection principale, désormais contournée par le vol de cookies de session via les infostealers.",
+        "L'analyse statique par signatures des dépendances open-source, car les attaquants signent désormais des packages altérés via des jetons SLSA de niveau 3."
       ]
     },
     "geopolitical_context": {
-      "en": "Geopolitical cyber-warfare is shifting towards hybrid cyber-physical integration. The Iranian MOIS, operating under 'Handala', recruits local elements for physical vandalism alongside digital exfiltration. Concurrently, the Eastern European theater remains a highly active playground for Russian intelligence (Gamaredon) and space-signal interception efforts, forcing alliances like the Franco-Polish military satellite network.",
-      "fr": "La guerre cybernétique géopolitique évolue vers des actions hybrides cyber-physiques. Le MOIS iranien, via 'Handala', recrute des profils locaux pour du vandalisme physique couplé à l'exfiltration numérique. Parallèlement, le théâtre est-européen reste très marqué par l'espionnage russe (Gamaredon) et l'interception de signaux satellites."
+      "en": "Geopolitical friction increasingly drives hybrid, multi-domain cyber operations. The Middle East conflict shows complete integration of state-sponsored hacktivism and physical threat recruitment under the 'Handala' umbrella. Concurrently, maritime espionage in the South China Sea and targeted infiltrations of Ukrainian military assets highlight persistent cyber warfare as an extension of geographic conflicts.",
+      "fr": "Les tensions géopolitiques alimentent des cyber-opérations hybrides multi-domaines. Le conflit au Moyen-Orient montre une intégration complète de l'hacktivisme étatique et du recrutement d'agents de sabotage physique sous la bannière 'Handala'. Parallèlement, l'espionnage en mer de Chine méridionale et l'infiltration militaire en Ukraine confirment que le cyberespace est une extension des conflits physiques."
     }
   },
   "recommendations": {
@@ -530,43 +908,59 @@
       "en": [
         {
           "title": "Enforce FIDO2 Hardware MFA for Developer Accounts",
-          "detail": "Traditional SMS/TOTP MFA is heavily bypassed by session hijacking and modern phishing campaigns. Deploy FIDO2/WebAuthn hardware security keys (e.g., YubiKey 5, Google Titan) for all developer and system administration accounts accessing CI/CD pipelines, repository configurations, and cloud infrastructure. Revoke all active sessions on rollout to clear potential pre-existing session thefts."
+          "detail": "Session hijacking via infostealers (Lumma, RedLine) and prompt injections bypasses standard SMS and TOTP MFA. Deploy WebAuthn/FIDO2 hardware security keys (e.g., YubiKey 5) to secure all active developer credentials, identity management portals, and code repositories. Revoke active user sessions on administrative panels immediately upon enrolling."
         },
         {
-          "title": "Establish Immutable Offline Backups for Industrial Environments",
-          "detail": "Ransomware groups like 'The Gentlemen' and 'Stormous' continue to achieve severe operational disruption by targeting manufacturing networks. Implement isolated, immutable, and air-gapped backups of all Active Directory domains, critical databases, and SCADA configurations. Conduct quarterly physical recovery exercises to guarantee operational continuity under complete network shutdown scenarios."
+          "title": "Restrict OIDC Scopes and Establish CI/CD Guardrails",
+          "detail": "Recent supply chain attacks by TeamPCP on Red Hat's npm namespace weaponized excessive OIDC permissions to publish backdoored packages. Restrict OIDC trust policies on GitHub Actions and GitLab Runners to enforce the principle of least privilege. Implement mandatory build-time constraints like the --ignore-scripts directive during npm installations."
+        },
+        {
+          "title": "Prevent Local Virtualization Tool Abuse on Endpoints",
+          "detail": "The Payouts King ransomware group utilizes lightweight QEMU hypervisors on compromised Windows hosts to bypass EDR file inspection. Enforce Application Control policies via AppLocker or Windows Defender Application Control (WDAC) to block 'qemu-system-x86_64.exe' and unauthorized hypervisor drivers on non-virtualization hosts. Segment administrative rights to block driver installations."
         }
       ],
       "fr": [
         {
-          "title": "Imposer le MFA matériel FIDO2 pour les développeurs",
-          "detail": "Le MFA traditionnel (SMS/TOTP) est fréquemment contourné par vol de session. Déployez des clés de sécurité matérielles FIDO2/WebAuthn (ex: YubiKey 5, Google Titan) pour tous les comptes ayant accès aux pipelines de build CI/CD et aux infrastructures cloud. Révoquez toutes les sessions actives lors du déploiement pour neutraliser les compromissions existantes."
+          "title": "Imposer l'authentification MFA matérielle FIDO2 des développeurs",
+          "detail": "Le vol de cookies de session par les infostealers (Lumma) et les injections de requêtes contournent les MFA classiques. Déployez des clés matérielles FIDO2/WebAuthn (ex: YubiKey 5) pour sécuriser l'accès aux dépôts de code et consoles d'administration. Révoquez toutes les sessions actives à la mise en œuvre."
         },
         {
-          "title": "Établir des sauvegardes hors ligne immuables en milieu industriel",
-          "detail": "Les ransomwares comme 'The Gentlemen' et 'Stormous' provoquent des interruptions de production critiques. Implémentez des sauvegardes isolées, immuables et déconnectées (air-gapped) de l'Active Directory et des systèmes SCADA. Réalisez des exercices trimestriels de restauration physique pour garantir la continuité d'activité."
+          "title": "Restreindre les accès OIDC et sécuriser le CI/CD",
+          "detail": "Les attaques de TeamPCP contre le namespace npm de Red Hat ont exploité des autorisations OIDC excessives pour publier du code corrompu. Restreignez les politiques de confiance OIDC sur GitHub Actions et GitLab au strict nécessaire. Imposez l'argument --ignore-scripts lors des commandes d'installation npm."
+        },
+        {
+          "title": "Bloquer l'usage d'outils de virtualisation non autorisés",
+          "detail": "Le ransomware Payouts King installe des hyperviseurs QEMU locaux sur Windows pour masquer son activité de chiffrement aux agents EDR. Déployez des règles AppLocker ou WDAC pour interdire l'exécution de 'qemu-system-x86_64.exe' et le chargement de pilotes réseau virtuels sur les postes clients."
         }
       ]
     },
     "operational": {
       "en": [
         {
-          "title": "Audit and Purge Compromised Red Hat npm Packages",
-          "detail": "Inspect all local node_modules folders and build caches for packages published under the '@redhat-cloud-services' namespace around June 1, 2026. Use the CLI command 'npm audit' and enforce build configurations to ignore installation scripts by appending '--ignore-scripts' in CI/CD pipeline runners to prevent Mini Shai-Hulud self-propagation. Revoke and rotate all GitHub access tokens exposed in active environments."
+          "title": "Block Outbound Connections to Steam Community",
+          "detail": "WordPress malware campaigns use Steam profiles as Dead Drop Resolvers to hide C2 instructions in invisible Unicode characters. Configure DNS firewalls and web proxies to block all outgoing traffic from application servers to 'steamcommunity.com'. Monitor server logs for any anomalies trying to reach domain 'hello-mywordl.info'."
         },
         {
-          "title": "Block Host-Level wscript.exe Execution of JS Files",
-          "detail": "JS.MonoGlyphRAT exploits default Windows Script Host configuration to execute malicious payloads. Alter the default file association for '.js' extensions to 'notepad.exe' via Group Policy Objects (GPO) to prevent double-click execution. Implement AppLocker rules to block 'wscript.exe' and 'cscript.exe' from executing non-signed scripts from user writable paths like '%USERPROFILE%\\\\AppData'."
+          "title": "Disable Windows Script Host Globally via Registry",
+          "detail": "Malware families like JS.MonoGlyphRAT rely on Windows Script Host (wscript.exe) running local JavaScript files from AppData directories to execute. Set the 'Enabled' registry value under 'HKLM\\Software\\Microsoft\\Windows Script Host\\Settings' to '0' on all endpoints. Register the '.js' and '.vbs' file extensions to open safely in Notepad."
+        },
+        {
+          "title": "Apply Security Patches for Palo Alto Devices",
+          "detail": "Critical flaws (CVE-2024-3400, CVE-2026-0257) are actively exploited to execute arbitrary commands and bypass VPN authentication. Update PAN-OS firewalls and GlobalProtect portals to the latest vendor-supplied cumulative patch level. Disable device telemetry temporarily if patching cannot be performed immediately."
         }
       ],
       "fr": [
         {
-          "title": "Auditer et purger les paquets npm Red Hat compromis",
-          "detail": "Inspectez tous les répertoires node_modules et caches de build pour les paquets sous l'espace de noms '@redhat-cloud-services' publiés début juin 2026. Utilisez la commande 'npm audit' et configurez vos runners pour ignorer les scripts d'installation via l'option '--ignore-scripts' pour bloquer la propagation de Mini Shai-Hulud. Révoquez l'ensemble des jetons d'accès GitHub."
+          "title": "Bloquer les connexions sortantes vers Steam Community",
+          "detail": "Des malwares WordPress détournent des profils Steam comme Dead Drop Resolvers en masquant les adresses C2 dans des caractères Unicode invisibles. Bloquez l'accès à 'steamcommunity.com' sur les serveurs applicatifs au niveau du proxy. Surveillez tout appel réseau vers le domaine suspect 'hello-mywordl.info'."
         },
         {
-          "title": "Bloquer l'exécution de fichiers JS par wscript.exe",
-          "detail": "JS.MonoGlyphRAT exploite la configuration par défaut de Windows Script Host pour s'exécuter. Modifiez l'association par défaut des extensions '.js' pour les lier à 'notepad.exe' via GPO. Implémentez des règles AppLocker pour interdire le lancement de 'wscript.exe' et 'cscript.exe' exécutant des scripts non signés depuis les répertoires d'utilisateurs."
+          "title": "Désactiver globalement Windows Script Host via registre",
+          "detail": "Des implants comme JS.MonoGlyphRAT s'exécutent via Windows Script Host (wscript.exe) depuis les répertoires temporaires des utilisateurs. Positionnez la clé de registre 'Enabled' sous 'HKLM\\Software\\Microsoft\\Windows Script Host\\Settings' à '0'. Associez par défaut l'ouverture des extensions '.js' à Notepad."
+        },
+        {
+          "title": "Appliquer d'urgence les correctifs Palo Alto Networks",
+          "detail": "Les vulnérabilités critiques (CVE-2024-3400, CVE-2026-0257) sont activement exploitées pour exécuter du code et contourner l'authentification VPN. Mettez à jour PAN-OS et GlobalProtect vers les dernières versions cumulatives. Désactivez temporairement la télémétrie si l'application des correctifs est différée."
         }
       ]
     }
