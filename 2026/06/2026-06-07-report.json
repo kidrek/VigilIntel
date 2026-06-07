@@ -1,0 +1,1386 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "This week's cyber analysis highlights an unprecedented acceleration in the integration of artificial intelligence into vulnerability research and cyber offensive engineering, illustrated by the deployment of Anthropic's Mythos solution by the NSA and the discovery of 21 zero-days in FFmpeg by an autonomous agent. In parallel, critical vulnerabilities are being actively exploited in strategic solutions for file exchange (SolarWinds Serv-U) and network management (Cisco SD-WAN). Finally, the massive compromise of 73 Microsoft GitHub repositories demonstrates the persistence and effectiveness of supply chain worms such as Miasma operated by the TeamPCP group.",
+      "fr": "L'analyse cyber de cette semaine met en relief une accélération sans précédent de l'intégration de l'intelligence artificielle dans la recherche de vulnérabilités et l'ingénierie cyber offensive, illustrée par le déploiement de la solution Mythos d'Anthropic par la NSA et la découverte de 21 zero-days dans FFmpeg par un agent autonome. En parallèle, des vulnérabilités critiques font l'objet d'exploitations actives majeures dans des solutions stratégiques d'échange de fichiers (SolarWinds Serv-U) et de gestion de réseaux (Cisco SD-WAN). Enfin, la compromission massive de 73 dépôts GitHub de Microsoft démontre la persistance et l'efficacité des vers de supply chain tels que Miasma opérés par le groupe TeamPCP."
+    },
+    "date": "2026-06-07"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": ["Government_and_Defense"],
+        "fr": ["Gouvernement_et_Defense"]
+      },
+      "theme": {
+        "en": "Integration of cutting-edge Artificial Intelligence into state offensive arsenals",
+        "fr": "Intégration de l'Intelligence Artificielle de pointe dans l'arsenal offensif étatique"
+      },
+      "description": {
+        "en": "The deployment of Anthropic engineers within the NSA to configure the high-performance 'Mythos' cyber-intelligence model demonstrates the institutionalization of generative AI as a primary cyber-offensive weapon. This model, capable of identifying and exploiting multiple complex vulnerabilities on modern operating systems in less than a day, provides a major asymmetrical advantage to US intelligence services against target nations like China or Iran.",
+        "fr": "Le déploiement d'ingénieurs d'Anthropic au sein de la NSA pour configurer le modèle de cyber-renseignement ultra-performant 'Mythos' démontre l'institutionnalisation de l'IA générative comme arme cyber-offensive de premier plan. Ce modèle, capable d'identifier et d'exploiter de multiples vulnérabilités complexes sur des systèmes d'exploitation modernes en moins d'une journée, fournit un avantage asymétrique majeur aux services de renseignement américains contre des pays cibles comme la Chine ou l'Iran."
+      },
+      "recommandations": [
+        {
+          "en": "Implement Zero-Trust defense architectures resilient to automated AI discovery attacks.",
+          "fr": "Mettre en œuvre des architectures de défense Zero-Trust résilientes aux attaques de découverte automatisée par IA."
+        },
+        {
+          "en": "Accelerate remediation and internal detection to counter the rapid exploitation capabilities of next-generation models.",
+          "fr": "Accélérer la remédiation et la détection interne pour contrer les capacités d'exploitation rapides des modèles de nouvelle génération."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Establish an ethical and secure usage charter for corporate LLMs.",
+            "Audit all code repositories against the exposure of secrets exploitable by automated AI tools."
+          ],
+          "fr": [
+            "Établir une charte d'utilisation éthique et sécurisée des LLM d'entreprise.",
+            "Auditer l'ensemble des dépôts de code contre l'exposition de secrets exploitables par des outils IA automatisés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Implement DLP (Data Loss Prevention) detection on prompts submitted to external generative AI models.",
+            "Monitor for anomalous or unauthorized use of Anthropic API keys or third-party services."
+          ],
+          "fr": [
+            "Mettre en place une détection DLP (Data Loss Prevention) sur les prompts soumis aux modèles d'IA générative externes.",
+            "Surveiller l'utilisation anormale ou non autorisée des clés d'API Anthropic ou de services tiers."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Block access to unapproved AI endpoints at the Secure Web Gateway level.",
+            "Immediately revoke access to AI models if exfiltration is detected."
+          ],
+          "fr": [
+            "Bloquer l'accès aux endpoints d'IA non approuvés au niveau de la passerelle Web (Secure Web Gateway).",
+            "Révoquer immédiatement les accès aux modèles IA en cas de détection d'exfiltration."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Assess the scope of confidential information or intellectual property shared with the AI model.",
+            "Raise awareness among development teams regarding risks associated with AI code assistants."
+          ],
+          "fr": [
+            "Évaluer l'étendue des informations confidentielles ou de propriété intellectuelle partagées avec le modèle d'IA.",
+            "Sensibiliser les équipes de développement aux risques liés aux assistants de code IA."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hypothesis: Detection of massive data transfers to generative AI platforms that could hide exfiltration. Query: index=proxy domain IN (*anthropic.com, *claude.ai) | stats sum(bytes_out) by src_ip"
+          ],
+          "fr": [
+            "Hypothèse : Détection de transferts massifs de données vers les plateformes d'IA génératives pouvant cacher une exfiltration. Requête : index=proxy domain IN (*anthropic.com, *claude.ai) | stats sum(bytes_out) by src_ip"
+          ]
+        }
+      },
+      "tags": ["IA", "NSA", "Cyber-Offensif", "Géopolitique", "Chine", "Iran"],
+      "sources": ["https://securityaffairs.com/193234/ai/report-anthropic-deploys-engineers-to-support-nsa-use-of-mythos.html"],
+      "date": "2026-06-06"
+    }
+  ],
+  "regulatory_and_legal": [],
+  "breach_analyse": [
+    {
+      "victim": "Microsoft",
+      "threat_actor": "TeamPCP",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": ["TeamPCP"],
+      "sector": {
+        "en": ["Technology_and_Telecom"],
+        "fr": ["Technologies_et_Telecoms"]
+      },
+      "description": {
+        "en": "An automated attack, attributed to TeamPCP's Miasma worm, resulted in the emergency deactivation of 73 official Microsoft GitHub repositories (including Azure Functions and Durable Task ecosystems) within 105 seconds by GitHub's protection mechanisms. The worm propagated by extracting Azure CLI access tokens and GCP credentials, then creating new public repositories in the victim's account to exfiltrate the collected secrets as JSON files.",
+        "fr": "Une attaque automatisée, attribuée au ver Miasma de TeamPCP, a entraîné la désactivation d'urgence de 73 dépôts GitHub officiels de Microsoft (incluant l'écosystème Azure Functions et Durable Task) en 105 secondes par les mécanismes de protection de GitHub. Le ver s'est propagé en extrayant les jetons d'accès Azure CLI et les identifiants GCP, puis en créant de nouveaux dépôts publics dans le compte de la victime pour exfiltrer les secrets collectés sous forme de fichiers JSON."
+      },
+      "mitre_ttps": ["T1195.002", "T1552.004"],
+      "recommandations": [
+        {
+          "en": "Implement ephemeral and stateless build environments with temporary minimal privileges (OIDC).",
+          "fr": "Mettre en œuvre des environnements de build éphémères et sans état dotés de privilèges minimaux temporaires (OIDC)."
+        },
+        {
+          "en": "Drastically restrict API key scopes and enforce IP whitelists for Cloud administration calls.",
+          "fr": "Restreindre drastiquement la portée des clés d'API et imposer des listes blanches d'adresses IP pour les appels d'administration Cloud."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Prohibit the use of floating version tags (e.g. @v1) and require pinning by unique SHA commit in CI/CD workflows.",
+            "Deploy automated secret scanners integrated directly into build pipelines."
+          ],
+          "fr": [
+            "Interdire l'usage de tags de version flottants (ex: @v1) et exiger l'épinglage par commit SHA unique dans les workflows CI/CD.",
+            "Déployer des scanners de secrets automatisés intégrés directement aux pipelines de build."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor GitHub security alerts for unexpected repository creation or injection of JSON files containing credentials.",
+            "Analyze access anomalies or rapid modifications within GitHub organization secrets."
+          ],
+          "fr": [
+            "Surveiller les alertes de sécurité GitHub de création de dépôts imprévus ou d'injection de fichiers JSON contenant des identifiants.",
+            "Analyser les anomalies d'accès ou les modifications rapides dans les secrets d'organisation GitHub."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Revoke all GitHub Actions credentials and secrets exposed in the incident window.",
+            "Rotate associated Azure CLI connection tokens and GCP service account credentials."
+          ],
+          "fr": [
+            "Révoquer l'ensemble des identifiants et des secrets GitHub Actions exposés dans la plage d'incident.",
+            "Faire pivoter les jetons de connexion Azure CLI et de comptes de service GCP associés."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Perform a full forensic analysis to confirm compromised repositories did not introduce backdoors into production builds.",
+            "Publish a transparency report and warn customers relying on deactivated GitHub Actions."
+          ],
+          "fr": [
+            "Effectuer une analyse forensique complète pour confirmer que les dépôts compromis n'ont pas introduit de backdoors dans les builds de production.",
+            "Publier un rapport de transparence et avertir les clients dépendant des GitHub Actions désactivées."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hypothesis: Searching for unauthorized access or malicious rotation of credentials following the GitHub secrets leak. Query: index=azure_activity CategoryValue=Administrative OperationNameValue=\"*Secrets*\" OR OperationNameValue=\"*Credentials*\""
+          ],
+          "fr": [
+            "Hypothèse : Recherche d'un accès non autorisé ou d'une rotation malveillante d'identifiants suite à la fuite des secrets GitHub. Requête : index=azure_activity CategoryValue=Administrative OperationNameValue=\"*Secrets*\" OR OperationNameValue=\"*Credentials*\""
+          ]
+        }
+      },
+      "tags": ["Supply Chain", "GitHub", "Azure", "Miasma", "TeamPCP"],
+      "sources": ["https://opensourcemalware.com/blog/miasma-reaches-azure"],
+      "date": "2026-06-05"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-28318",
+      "euvd_id": "unknown",
+      "cisa_kev": "TRUE",
+      "cvss": "7.5",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:solarwinds:serv-u:*:*:*:*:*:*:*:*",
+      "product": "Serv-U Managed File Transfer / Secure File Server",
+      "vendor": "SolarWinds",
+      "description": {
+        "en": "This critical vulnerability allows a remote unauthenticated attacker to cause a complete denial of service (application crash) of SolarWinds Serv-U by transmitting a specifically forged HTTP POST request containing the 'Content-Encoding: deflate' header.",
+        "fr": "Cette faille critique permet à un attaquant distant non authentifié de provoquer un déni de service complet (crash applicatif) de SolarWinds Serv-U en transmettant une requête HTTP POST spécifiquement forgée contenant l'en-tête 'Content-Encoding: deflate'."
+      },
+      "mitre_ttps": ["T1499", "T1499.004"],
+      "recommandations": [
+        {
+          "en": "Apply the fix available in SolarWinds Serv-U version 15.5.4 Hotfix 1 immediately.",
+          "fr": "Appliquer immédiatement le correctif disponible dans la version SolarWinds Serv-U 15.5.4 Hotfix 1."
+        },
+        {
+          "en": "Alternatively, block HTTP requests containing the 'content-encoding' header and restrict network exposure.",
+          "fr": "À défaut, bloquer les requêtes HTTP contenant l'en-tête 'content-encoding' et restreindre l'exposition réseau."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Identify all SolarWinds Serv-U instances accessible from the Internet.",
+            "Configure network exclusion rules to reduce the exposure of Serv-U services."
+          ],
+          "fr": [
+            "Identifier toutes les instances SolarWinds Serv-U accessibles depuis Internet.",
+            "Configurer des règles d'exclusion réseau pour réduire l'exposition des services Serv-U."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for untimely crashes of the Serv-U.exe process.",
+            "Detect incoming POST packets containing the Content-Encoding: deflate header."
+          ],
+          "fr": [
+            "Surveiller les plantages intempestifs du processus Serv-U.exe.",
+            "Détecter les paquets POST entrants contenant l'en-tête Content-Encoding: deflate."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Temporarily block requests containing the deflate header at the Web Application Firewall (WAF) level.",
+            "Limit allowed connections only to trusted partner IP addresses."
+          ],
+          "fr": [
+            "Bloquer temporairement au niveau du pare-feu applicatif (WAF) les requêtes contenant l'en-tête deflate.",
+            "Limiter les connexions autorisées uniquement à des adresses IP de partenaires fiables."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Deploy the SolarWinds Serv-U 15.5.4 HF1 update.",
+            "Validate the stability and proper recovery of the secure file transfer service."
+          ],
+          "fr": [
+            "Déployer la mise à jour SolarWinds Serv-U version 15.5.4 HF1.",
+            "Valider la stabilité et le bon rétablissement du service de transfert de fichiers."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hypothesis: Identification of service saturation attempts using malicious POST requests. Query: index=waf http_method=POST http_headers=\"*Content-Encoding: deflate*\""
+          ],
+          "fr": [
+            "Hypothèse : Identification de tentatives de saturation de service par des requêtes POST malveillantes. Requête : index=waf http_method=POST http_headers=\"*Content-Encoding: deflate*\""
+          ]
+        }
+      },
+      "tags": ["SolarWinds", "Serv-U", "DoS", "KEV"],
+      "sources": [
+        "https://securityaffairs.com/193245/security/u-s-cisa-adds-solarwinds-serv-u-flaw-to-its-known-exploited-vulnerabilities-catalog.html",
+        "https://thehackernews.com/2026/06/cisa-adds-actively-exploited-solarwinds.html",
+        "https://cybersecuritynews.com/cisa-solarwinds-serv-u-vulnerability/"
+      ],
+      "date": "2026-06-06"
+    },
+    {
+      "cve_id": "CVE-2026-3300",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:wpeverest:everest_forms:*:*:*:*:*:wordpress:*:*",
+      "product": "Everest Forms Pro",
+      "vendor": "WPEverest",
+      "description": {
+        "en": "The vulnerability lies in the Complex Calculation feature of the plugin, which uses the dangerous eval() method on un-sanitized inputs provided by Web forms. Attackers actively exploit this weakness to call the wp_insert_user() function and create unauthorized administrative accounts.",
+        "fr": "La vulnérabilité réside dans la fonction Complex Calculation du plugin, qui utilise la méthode dangereuse eval() sur des entrées non assainies fournies par les formulaires Web. Les attaquants exploitent activement cette faiblesse pour appeler la fonction wp_insert_user() et créer des comptes d'administration non autorisés (notamment sous le nom d'utilisateur 'diksimarina')."
+      },
+      "mitre_ttps": ["T1190"],
+      "recommandations": [
+        {
+          "en": "Update the Everest Forms Pro plugin to its most recent version.",
+          "fr": "Mettre à jour le plugin Everest Forms Pro vers sa version la plus récente."
+        },
+        {
+          "en": "Audit the WordPress user database to identify any suspicious privilege escalation.",
+          "fr": "Auditer la base d'utilisateurs WordPress pour identifier toute élévation de privilèges suspecte."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Regularly audit premium form plugins on production servers.",
+            "Set up a Web Application Firewall (WAF) to inspect incoming traffic."
+          ],
+          "fr": [
+            "Auditer régulièrement les plugins premium de formulaires sur les serveurs de production.",
+            "Mettre en place un pare-feu d'application Web (WAF) pour inspecter le trafic entrant."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor the creation of new users with administrator privileges (e.g., 'diksimarina').",
+            "Inspect unusual HTTP POST requests targeting Everest Forms calculation forms."
+          ],
+          "fr": [
+            "Surveiller la création de nouveaux utilisateurs avec des privilèges administrateur (ex: diksimarina).",
+            "Inspecter les requêtes HTTP POST inhabituelles ciblant les formulaires de calculs Everest Forms."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Temporarily disable the Everest Forms Pro plugin across the environment.",
+            "Immediately delete identified suspicious or unauthorized administrator accounts."
+          ],
+          "fr": [
+            "Désactiver temporairement le plugin Everest Forms Pro sur l'ensemble du parc.",
+            "Supprimer immédiatement les comptes administrateurs suspects ou non autorisés identifiés."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Conduct a full analysis to detect the possible installation of webshells.",
+            "Update the plugin to a corrected version provided by the publisher."
+          ],
+          "fr": [
+            "Mener une analyse complète pour détecter l'implantation éventuelle de webshells.",
+            "Mettre à jour le plugin vers une version corrigée fournie par l'éditeur."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hypothesis: Presence of illegitimate WordPress administrator accounts created after the vulnerability exploitation. Query: wp_users_creation_event WHERE username='diksimarina' OR role='administrator'"
+          ],
+          "fr": [
+            "Hypothèse : Présence de comptes d'administrateurs WordPress non légitimes créés à la suite de l'exploitation de la faille. Requête : wp_users_creation_event WHERE username='diksimarina' OR role='administrator'"
+          ]
+        }
+      },
+      "tags": ["WordPress", "Everest Forms Pro", "RCE", "Eval"],
+      "sources": ["https://www.bleepingcomputer.com/news/security/critical-everest-forms-pro-flaw-exploited-to-take-over-wordpress-sites/"],
+      "date": "2026-06-06"
+    },
+    {
+      "cve_id": "CVE-2026-20245",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "7.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:*:*:*:*:*:*:*:*",
+      "product": "Catalyst SD-WAN Manager",
+      "vendor": "Cisco",
+      "description": {
+        "en": "A vulnerability in the CLI of Cisco Catalyst SD-WAN Manager allows an authenticated local user with 'netadmin' privileges to execute arbitrary system commands with root privileges by uploading specifically crafted files.",
+        "fr": "Une vulnérabilité au sein de la CLI de Cisco Catalyst SD-WAN Manager permet à un utilisateur local authentifié disposant de privilèges 'netadmin' d'exécuter des commandes système arbitraires avec les privilèges root. L'accès peut être obtenu en chaînant cette faille avec les contournements d'authentification CVE-2026-20182 ou CVE-2026-20127."
+      },
+      "mitre_ttps": ["T1068"],
+      "recommandations": [
+        {
+          "en": "Apply Cisco updates to prevent the initial authentication bypass (e.g. CVE-2026-20182).",
+          "fr": "Appliquer les correctifs du 14 mai 2026 pour CVE-2026-20182 afin d'empêcher le contournement initial de l'authentification."
+        },
+        {
+          "en": "Monitor system log files, specifically /var/log/scripts.log, for anomalous scripts.",
+          "fr": "Surveiller en continu le fichier /var/log/scripts.log pour repérer tout script anormal."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Audit Cisco Catalyst SD-WAN Manager configurations immediately.",
+            "Verify the patch history of May 2026."
+          ],
+          "fr": [
+            "Auditer d'urgence les configurations réseau Cisco SD-WAN de l'entreprise.",
+            "Vérifier l'historique d'application des correctifs de mai 2026."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor the content of the trace file /var/log/scripts.log for abnormal scripts.",
+            "Detect configuration requests pushed to edge devices."
+          ],
+          "fr": [
+            "Surveiller le contenu du fichier de traces /var/log/scripts.log à la recherche de scripts anormaux.",
+            "Détecter les requêtes de configuration poussées vers des routeurs de bordure."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate the SD-WAN Manager interface from direct internet connections.",
+            "Limit or disable local CLI authentication pending an administrative patch."
+          ],
+          "fr": [
+            "Isoler l'interface SD-WAN Manager des connexions internet directes.",
+            "Limiter ou désactiver l'authentification CLI locale en attendant un correctif d'administration."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Install Cisco's upgraded firmware to close the attack chain.",
+            "Invalidate and renew encryption keys for the entire SD-WAN router cluster."
+          ],
+          "fr": [
+            "Installer les micrologiciels mis à niveau de Cisco pour fermer la chaîne d'attaque (CVE-2026-20182).",
+            "Invalider et renouveler les clés de chiffrement de l'ensemble de la grappe de routeurs SD-WAN."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hypothesis: Presence of root privilege injection script markers executed on the network management equipment. Query: index=cisco_sdwan file=\"/var/log/scripts.log\" log_entry=\"*injection*\" OR log_entry=\"*sudo*\""
+          ],
+          "fr": [
+            "Hypothèse : Présence de marqueurs d'activité de scripts d'injection de privilèges root exécutés sur l'équipement de gestion réseau. Requête : index=cisco_sdwan file=\"/var/log/scripts.log\" log_entry=\"*injection*\" OR log_entry=\"*sudo*\""
+          ]
+        }
+      },
+      "tags": ["Cisco", "SD-WAN", "Privilege Escalation", "Zero-Day"],
+      "sources": [
+        "https://thecyberthrone.in/2026/06/06/cve-2026-20245-cisco-catalyst-sd-wan-manager-privilege-escalation/",
+        "https://thehackernews.com/2026/06/cisco-catalyst-sd-wan-manager-cve-2026.html"
+      ],
+      "date": "2026-06-06"
+    },
+    {
+      "cve_id": "CVE-2026-4372",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:huggingface:transformers:*:*:*:*:*:*:*:*",
+      "product": "Transformers Library",
+      "vendor": "Hugging Face",
+      "description": {
+        "en": "This vulnerability allows remote code execution (RCE) through malicious model configurations. An attacker can upload a model containing a modified config.json file with the '_attn_implementation_internal' attribute. Upon loading, the library downloads and executes this external code without isolation.",
+        "fr": "Cette faille permet d'exécuter du code arbitraire à distance (RCE) via des configurations de modèles malicieuses. Un attaquant peut uploader un modèle contenant un fichier config.json altéré doté de l'attribut '_attn_implementation_internal'. Lors du chargement par la victime, la bibliothèque télécharge et exécute ce code externe sans isolation."
+      },
+      "mitre_ttps": ["T1195"],
+      "recommandations": [
+        {
+          "en": "Update the Transformers library to version 5.3.0 or later.",
+          "fr": "Mettre à jour la bibliothèque Transformers vers la version 5.3.0 ou ultérieure."
+        },
+        {
+          "en": "Ensure that the trust_remote_code parameter is configured to False by default.",
+          "fr": "S'assurer que le paramètre trust_remote_code est configuré sur False par défaut."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Restrict the use of external AI models from unknown sources by default.",
+            "Establish the rule 'trust_remote_code=False' by default in the development environment."
+          ],
+          "fr": [
+            "Restreindre par défaut l'utilisation de modèles IA externes de sources inconnues.",
+            "Établir la règle 'trust_remote_code=False' par défaut dans l'environnement de développement."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect the import of system libraries or remote scripts when loading HuggingFace models.",
+            "Monitor the writing of suspicious file extensions (.py, .so) during model loading."
+          ],
+          "fr": [
+            "Détecter l'importation de bibliothèques système ou de scripts distants lors du chargement des modèles HuggingFace.",
+            "Surveiller l'écriture de fichiers d'extension suspecte (.py, .so) lors des chargements de modèles."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Temporarily block API access and downloads to unverified HuggingFace addresses.",
+            "Isolate the Python execution environment in a hermetic sandbox."
+          ],
+          "fr": [
+            "Bloquer temporairement les accès d'API et téléchargements vers les adresses de HuggingFace non vérifiées.",
+            "Isoler l'environnement de calcul Python dans un bac à sable (sandbox) hermétique."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Upgrade the Transformers library to version 5.3.0 or higher.",
+            "Verify the integrity of AI development environments and servers."
+          ],
+          "fr": [
+            "Mettre à niveau la bibliothèque Transformers vers la version 5.3.0 ou supérieure.",
+            "Vérifier l'intégrité des environnements et des serveurs de développement IA."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hypothesis: Identification of command processes launched directly by the Python execution environment during model analysis. Query: index=sysmon parent_process=\"*python*\" AND (process=\"*curl*\" OR process=\"*wget*\" OR process=\"*sh*\")"
+          ],
+          "fr": [
+            "Hypothèse : Identification de processus de commande lancés directement par l'environnement d'exécution Python d'analyse de modèles. Requête : index=sysmon parent_process=\"*python*\" AND (process=\"*curl*\" OR process=\"*wget*\" OR process=\"*sh*\")"
+          ]
+        }
+      },
+      "tags": ["Hugging Face", "Transformers", "RCE", "AI Security"],
+      "sources": ["https://cybersecuritynews.com/hugging-face-rce-vulnerability/"],
+      "date": "2026-06-06"
+    },
+    {
+      "cve_id": "CVE-2026-26422",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "7.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:clash_verge_rev:clash_verge_service:*:*:*:*:*:*:*:*",
+      "product": "Clash Verge Service IPC",
+      "vendor": "Clash Verge Rev",
+      "description": {
+        "en": "A weakness in the inter-process communication (IPC) mechanism of Clash Verge Service allows local privilege escalation on the host device. Proof of concept (PoC) codes have begun to emerge on GitHub.",
+        "fr": "Une faiblesse dans le mécanisme de communication inter-processus (IPC) de Clash Verge Service permet une élévation de privilèges locale sur l'appareil hôte. Des codes de preuve de concept (PoC) ont commencé à émerger sur GitHub."
+      },
+      "mitre_ttps": ["T1068"],
+      "recommandations": [
+        {
+          "en": "Apply the corresponding update provided by the project maintainers in Clash Verge Service versions 2.3.0 or higher.",
+          "fr": "Appliquer la mise à jour correspondante fournie par les mainteneurs du projet dans les versions de Clash Verge Service supérieures ou égales à 2.3.0."
+        },
+        {
+          "en": "Monitor local processes for unauthorized named pipe communication.",
+          "fr": "Mettre sous surveillance l'accès de processus tiers aux canaux de communication locaux (named pipes)."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "List Clash Verge software installations within the organization.",
+            "Implement a centralized software installation policy limiting local privileges."
+          ],
+          "fr": [
+            "Répertorier les installations logicielles de Clash Verge au sein de l'organisation.",
+            "Mettre en place une politique d'installation logicielle centralisée limitant les privilèges locaux."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor suspicious activities or requests sent to the local Clash Verge IPC service.",
+            "Detect unsigned code execution originating from the client's installation folder."
+          ],
+          "fr": [
+            "Surveiller les activités ou requêtes suspectes envoyées au service IPC local de Clash Verge.",
+            "Détecter les exécutions de codes non signés issus du dossier d'installation du client."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Temporarily disable or stop the Clash Verge system service on affected workstations.",
+            "Restrict access to the local IPC service to trusted users only."
+          ],
+          "fr": [
+            "Désactiver ou stopper temporairement le service système Clash Verge sur les postes concernés.",
+            "Restreindre l'accès au service IPC local aux seuls utilisateurs de confiance."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Deploy the corrective update (v2.3.0) on all workstations.",
+            "Ensure the integrity of the registry and user privileges."
+          ],
+          "fr": [
+            "Déployer la mise à jour corrective (v2.3.0) sur l'ensemble des postes de travail.",
+            "S'assurer de l'intégrité de la base de registre et des privilèges utilisateurs."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hypothesis: Identification of unexpected privilege escalations generated by Clash Verge client processes. Query: index=endpoint event_id=4672 OR (process_name=\"*clash-verge*\" AND parent_process_name=\"*system*\")"
+          ],
+          "fr": [
+            "Hypothèse : Identification d'élévations de privilèges inattendues générées par les processus du client Clash Verge. Requête : index=endpoint event_id=4672 OR (process_name=\"*clash-verge*\" AND parent_process_name=\"*system*\")"
+          ]
+        }
+      },
+      "tags": ["Clash Verge", "IPC", "Privilege Escalation"],
+      "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-26422"],
+      "date": "2026-06-06"
+    },
+    {
+      "cve_id": "CVE-2026-11413",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:h:jingdong:jd_cloud_box_ax6600:*:*:*:*:*:*:*:*",
+      "product": "JD Cloud Box AX6600",
+      "vendor": "JingDong",
+      "description": {
+        "en": "The 'set_macfilter' component in the '/sbin/jdcweb_rpc' executable suffers from a stack buffer overflow. This weakness is remote exploitable without authentication to execute arbitrary system commands on the router.",
+        "fr": "Le composant 'set_macfilter' présent dans l'exécutable '/sbin/jdcweb_rpc' souffre d'un débordement de pile (stack buffer overflow). Cette faiblesse est exploitable à distance sans authentification par un attaquant réseau pour exécuter des commandes système arbitraires sur le routeur."
+      },
+      "mitre_ttps": ["T1210"],
+      "recommandations": [
+        {
+          "en": "Disable remote administration of the device and place the router behind a strict hardware firewall.",
+          "fr": "Désactiver l'administration à distance de l'appareil et placer le routeur derrière un pare-feu matériel strict."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Identify the usage of JingDong JD Cloud Box AX6600 devices in premises or telecommuting connections.",
+            "Isolate the router network administration interface from the Internet."
+          ],
+          "fr": [
+            "Identifier l'usage d'équipements JingDong JD Cloud Box AX6600 dans les locaux ou les connexions de télétravail.",
+            "Isoler l'interface d'administration réseau des routeurs d'Internet."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor unusual network requests on the router administration RPC protocol.",
+            "Look for unexplained restarts or connection drops of AX6600 boxes."
+          ],
+          "fr": [
+            "Surveiller les requêtes réseau inhabituelles sur le protocole RPC de l'administration du routeur.",
+            "Rechercher des redémarrages inexpliqués ou pertes de connexion des boîtiers AX6600."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Temporarily block remote access to the RPC portal using port filtering rules.",
+            "Disconnect the device from the network if abnormal behavior is observed."
+          ],
+          "fr": [
+            "Bloquer temporairement l'accès distant au portail RPC via des règles de filtrage de ports.",
+            "Remplacer ou déconnecter l'appareil du réseau si un comportement anormal est observé."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Install a secure alternative firmware or apply the manufacturer's patch if available.",
+            "Change all network keys and administration passwords of the device."
+          ],
+          "fr": [
+            "Mettre en place un microprogramme (firmware) alternatif sécurisé ou appliquer le correctif constructeur s'il est disponible.",
+            "Changer l'ensemble des clés réseau et mots de passe d'administration de l'appareil."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hypothesis: Presence of stack overflow exploitation attempts targeting the router's RPC executable. Query: index=ids signature_id=\"*jdcweb_rpc*\" OR payload=\"*set_macfilter*\""
+          ],
+          "fr": [
+            "Hypothèse : Présence de tentatives d'exploitation de débordement de pile visant l'exécutable RPC du routeur. Requête : index=ids signature_id=\"*jdcweb_rpc*\" OR payload=\"*set_macfilter*\""
+          ]
+        }
+      },
+      "tags": ["JingDong", "Cloud Box", "AX6600", "Buffer Overflow", "RCE"],
+      "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-11413"],
+      "date": "2026-06-06"
+    },
+    {
+      "cve_id": "CVE-2026-39210",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "8.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:ffmpeg:ffmpeg:*:*:*:*:*:*:*:*",
+      "product": "FFmpeg Media Library",
+      "vendor": "FFmpeg Project",
+      "description": {
+        "en": "An autonomous AI security agent operated by startup depthfirst identified 21 previously unknown zero-day vulnerabilities in the FFmpeg C media library (CVE-2026-39210 to CVE-2026-39218). Most are heap and stack overflows in parsers and demuxers (specifically VP9 and service description table decoders).",
+        "fr": "Un agent de sécurité d'IA autonome opéré par la startup depthfirst a identifié 21 vulnérabilités de type zero-day jusque-là inconnues dans la bibliothèque multimédia C de FFmpeg (CVE-2026-39210 à CVE-2026-39218). La plupart sont des dépassements de tas et de pile dans les parsers et demuxers (notamment les décodeurs VP9 et de table de description de services)."
+      },
+      "mitre_ttps": ["T1210"],
+      "recommandations": [
+        {
+          "en": "Apply upstream FFmpeg patches as soon as they are published by Linux distributions.",
+          "fr": "Appliquer les correctifs amonts d'FFmpeg dès leur publication par vos distributions Linux."
+        },
+        {
+          "en": "Verify embedded library copies in container images, Python scripts, and third-party firmwares.",
+          "fr": "Vérifier les copies de la bibliothèque incorporées dans les images de conteneurs, scripts Python et microprogrammes tiers."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Map all corporate systems and applications using FFmpeg instances.",
+            "Adjust the automatic update policy for open-source software libraries."
+          ],
+          "fr": [
+            "Cartographier tous les systèmes et applications d'entreprise utilisant des instances d'FFmpeg (lecteurs, outils d'encodage, services Web).",
+            "Ajuster la politique de mise à jour automatique des bibliothèques logicielles open-source."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor process crashes during the decoding of specific video formats.",
+            "Detect unexpected child command execution launched by FFmpeg."
+          ],
+          "fr": [
+            "Surveiller les plantages de processus ou les crashs lors du décodage de vidéos de formats spécifiques.",
+            "Détecter l'exécution inattendue de processus de commandes enfants lancés par FFmpeg."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Temporarily isolate servers ingesting third-party user multimedia content.",
+            "Disable or restrict automatic decoding of unnecessary video formats."
+          ],
+          "fr": [
+            "Isoler temporairement les serveurs ingérant des contenus multimédias d'utilisateurs tiers.",
+            "Désactiver ou restreindre le décodage automatique des formats vidéo non nécessaires."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Update all system distribution packages and embedded frameworks containing FFmpeg.",
+            "Review sandboxing rules for corporate multimedia applications."
+          ],
+          "fr": [
+            "Mettre à jour l'ensemble des paquets de distribution système et des frameworks embarqués contenant FFmpeg.",
+            "Revoir les règles de sandboxing des applications multimédias de l'organisation."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hypothesis: Identification of command execution via the exploitation of an FFmpeg processing flaw. Query: index=endpoint process_name=\"*ffmpeg*\" child_process_name=\"*cmd*\" OR child_process_name=\"*sh*\""
+          ],
+          "fr": [
+            "Hypothèse : Identification d'une exécution de commande via l'exploitation d'une faille de traitement d'FFmpeg. Requête : index=endpoint process_name=\"*ffmpeg*\" child_process_name=\"*cmd*\" OR child_process_name=\"*sh*\""
+          ]
+        }
+      },
+      "tags": ["FFmpeg", "AI-Discovery", "Zero-Day", "RCE"],
+      "sources": ["https://thehackernews.com/2026/06/ai-agent-uncovers-21-zero-days-in.html"],
+      "date": "2026-06-06"
+    },
+    {
+      "cve_id": "unknown",
+      "euvd_id": "unknown",
+      "cisa_kev": "FALSE",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "Orchard Privacy Pool",
+      "vendor": "Zcash",
+      "description": {
+        "en": "Using Claude Opus, a researcher identified within 24 hours a validation flaw within Zcash's Orchard privacy protocol, active since 2022. This flaw potentially allowed the creation of ZEC tokens out of nothing without being detected.",
+        "fr": "À l'aide de Claude Opus, un chercheur a identifié en moins de 24 heures une faille de validation au sein du protocole de confidentialité Orchard de Zcash, active depuis 2022. Celle-ci permettait potentiellement de créer des jetons ZEC à partir de rien sans être détecté."
+      },
+      "mitre_ttps": ["T1588"],
+      "recommandations": [
+        {
+          "en": "Upgrade the Zcash network protocol with the latest emergency patches.",
+          "fr": "Mettre à niveau le protocole réseau Zcash avec les derniers correctifs d'urgence."
+        },
+        {
+          "en": "Deploy 'turnstile' accounting controls preventatively to detect counterfeit coins.",
+          "fr": "Déployer des contrôles de comptabilité 'turnstile' de manière préventive."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Implement formal mathematical verification processes for cryptographic and smart contract circuits.",
+            "Audit existing source codes using latest generation AI models."
+          ],
+          "fr": [
+            "Mettre en œuvre des processus de vérification formelle mathématique pour les circuits de contrats intelligents et cryptographiques.",
+            "Auditer les codes sources existants en utilisant des modèles d'IA de dernière génération."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor accounting discrepancies on the blockchain.",
+            "Analyze cryptographic pool execution logs for out-of-norm inputs."
+          ],
+          "fr": [
+            "Surveiller les écarts de comptabilité sur la blockchain (discrepancies).",
+            "Analyser les logs d'exécution des pools cryptographiques pour y chercher des entrées hors normes."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Deploy emergency patches or transaction pauses (circuit breakers) if available.",
+            "Prepare an urgent network upgrade of the blockchain."
+          ],
+          "fr": [
+            "Déployer en urgence des correctifs ou des pauses de transactions (circuit breakers) si disponibles.",
+            "Préparer une mise à niveau réseau urgente de la blockchain."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Implement the 'turnstile accounting' mechanism to detect any counterfeit coins.",
+            "Publish a transparent security report to the community."
+          ],
+          "fr": [
+            "Implémenter le mécanisme 'turnstile accounting' pour détecter d'éventuelles pièces contrefaites.",
+            "Publier un rapport de sécurité transparent pour la communauté."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hypothesis: Detection of artificial token creation using invalid zero-knowledge proofs. Query: select * from zcash_transactions where pool_id='orchard' and status='anomalous'"
+          ],
+          "fr": [
+            "Hypothèse : Détection d'une création de jetons artificiels à l'aide de preuves de connaissance nulle invalides. Requête : select * from zcash_transactions where pool_id='orchard' and status='anomalous'"
+          ]
+        }
+      },
+      "tags": ["Zcash", "AI-Discovery", "Vulnerability", "Crypto"],
+      "sources": ["https://securityaffairs.com/193224/hacking/claude-opus-found-a-four-year-old-hole-in-zcashs-privacy-layer-nobody-knows-if-someone-already-used-it.html"],
+      "date": "2026-06-06"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "Shodan Scan Activity on South Korean ASN AS4766",
+        "fr": "Activité d'analyse Shodan sur l'ASN sud-coréen AS4766"
+      },
+      "description": {
+        "en": "A new Shodan entry reports notable network scanning activity on ASN AS4766 based in Incheon, South Korea, reflecting regular global attack surface mapping operations.",
+        "fr": "Une nouvelle entrée Shodan signale une activité réseau notable sur l'ASN AS4766 basé à Incheon, en Corée du Sud. Ce type de signalement s'inscrit dans les activités régulières de cartographie de la surface d'attaque globale."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Technology_and_Telecom"],
+        "fr": ["Technologies_et_Telecoms"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": ["AS4766"]
+      },
+      "mitre_ttps": ["T1595"],
+      "analyse": {
+        "en": "Identification of connected equipment on ASN AS4766 (South Korea) that could be subject to future exploitation waves.",
+        "fr": "Identification d'équipements connectés sur l'ASN AS4766 (Corée du Sud) pouvant faire l'objet de futures vagues d'exploitation."
+      },
+      "recommandations": [
+        {
+          "en": "Maintain monitoring of suspicious requests originating from this ASN.",
+          "fr": "Maintenir une surveillance des requêtes suspectes originaires de cet ASN."
+        },
+        {
+          "en": "Ensure proper isolation of internal infrastructure services.",
+          "fr": "Assurer l'étanchéité des services d'infrastructure internes."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Minimize the public exposure of administrative ports.",
+            "Set up regular Shodan audits on the public IP space of the organization."
+          ],
+          "fr": [
+            "Réduire au minimum l'exposition publique des ports d'administration.",
+            "Mettre en place des audits Shodan réguliers sur l'adresse réseau publique de l'organisation."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor IP scanning activities originating from South Korean networks or targeted ASNs.",
+            "Analyze network logs to detect automated IP sweeps."
+          ],
+          "fr": [
+            "Surveiller les activités d'analyse IP provenant de réseaux sud-coréens ou d'ASNs ciblés.",
+            "Analyser les logs réseau pour détecter les sondages d'adresses IP automatisés."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Block scans from IP addresses or ASNs listed as suspicious at the firewall level.",
+            "Filter incoming traffic using dynamic blacklists."
+          ],
+          "fr": [
+            "Bloquer au niveau du pare-feu les scans d'adresses ou les ASNs répertoriés comme suspects.",
+            "Filtrer le trafic entrant à l'aide de listes noires dynamiques."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Adjust port opening policies and disable listening on obsolete protocols.",
+            "Update the inventory of assets visible from the outside."
+          ],
+          "fr": [
+            "Ajuster les politiques d'ouverture de ports et désactiver l'écoute de protocoles obsolètes.",
+            "Mettre à jour l'inventaire des ressources visibles depuis l'extérieur."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hypothesis: Identification of administrative port scans/sweeps originating from ASN AS4766. Query: index=firewall src_asn=4766 | stats count by dest_port"
+          ],
+          "fr": [
+            "Hypothèse : Identification d'analyses ou balayages de ports d'administration émanant de l'ASN AS4766. Requête : index=firewall src_asn=4766 | stats count by dest_port"
+          ]
+        }
+      },
+      "tags": ["Reconnaissance", "ASN", "Korea"],
+      "sources": ["https://infosec.exchange/@shodansafari/116706116210601702"],
+      "date": "2026-06-07"
+    },
+    {
+      "title": {
+        "en": "Facebook Phishing Campaign via secure-datalink.org",
+        "fr": "Campagne de Phishing usurpant l'identité de Facebook via secure-datalink.org"
+      },
+      "description": {
+        "en": "A cyber security alert reports an active phishing page targeting Facebook credentials, hosted on the deceptive domain 'secure-datalink.org'.",
+        "fr": "Une alerte de cybersécurité signale la présence d'une page de phishing active ciblant les identifiants de connexion Facebook, hébergée sur un domaine trompeur 'secure-datalink.org'."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Retail_and_Consumer"],
+        "fr": ["Commerce_et_Biens_de_Consommation"]
+      },
+      "indicators": {
+        "URL": ["hxxps://facebook-authentication[.]secure-datalink[.]org/landing/form/01ad991e-9db5-4b16-ab36-ba5381bc5e32"],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": ["urldna[.]io", "facebook-authentication.secure-datalink.org"],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": ["T1566.002"],
+      "analyse": {
+        "en": "Implementation of a fake Web authentication form imitating Facebook to collect login information via a unique link structure.",
+        "fr": "Mise en œuvre d'un faux formulaire d'authentification Web imitant Facebook pour récolter les informations de connexion des victimes via une structure de lien unique."
+      },
+      "recommandations": [
+        {
+          "en": "Block the suspicious URL on mail servers and proxies.",
+          "fr": "Bloquer l'URL suspecte sur les serveurs de messagerie et proxies."
+        },
+        {
+          "en": "Use multi-factor authentication (MFA/2FA) on all corporate social media accounts.",
+          "fr": "Utiliser la double authentification (2FA) sur l'ensemble des réseaux sociaux d'entreprise."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Regularly train users against phishing attacks targeting digital identities.",
+            "Deploy effective DNS filtering and detection rules for typosquatting domains."
+          ],
+          "fr": [
+            "Sensibiliser régulièrement les utilisateurs contre les attaques de phishing ciblant l'identité numérique.",
+            "Déployer un filtrage DNS efficace et des règles de détection de faux domaines."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor outgoing network connections to the domain 'secure-datalink.org'.",
+            "Detect domain resolution requests imitating well-known brands."
+          ],
+          "fr": [
+            "Surveiller les connexions réseau sortantes vers le domaine 'secure-datalink.org'.",
+            "Détecter les requêtes de résolution de domaines imitant des marques connues."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Immediately block the DNS resolution of the phishing URL company-wide.",
+            "Force password resets for any employee who accessed the link."
+          ],
+          "fr": [
+            "Bloquer immédiatement la résolution DNS de l'URL de phishing à l'échelle de l'entreprise.",
+            "Forcer la réinitialisation des mots de passe pour tout employé ayant accédé au lien."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Report the fake site to security providers (Safe Browsing, Public DNS).",
+            "Analyze access logs to ensure no corporate accounts were exposed."
+          ],
+          "fr": [
+            "Signaler le faux site aux organismes de blocage (Safe Browsing, DNS public).",
+            "Analyser les logs d'accès pour s'assurer qu'aucun compte d'entreprise n'a été exposé."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hypothesis: Identification of internal users who attempted to connect to the phishing server. Query: index=dns query=\"*facebook-authentication*\""
+          ],
+          "fr": [
+            "Hypothèse : Identification d'utilisateurs internes ayant tenté de se connecter au serveur de phishing. Requête : index=dns query=\"*facebook-authentication*\""
+          ]
+        }
+      },
+      "tags": ["Phishing", "Social-Engineering", "Facebook"],
+      "sources": ["https://infosec.exchange/@urldna/116706116130680149"],
+      "date": "2026-06-07"
+    },
+    {
+      "title": {
+        "en": "Data Leakage Prevention to AI with DLPShield",
+        "fr": "Prévention de la fuite de données vers l'IA d'entreprise avec DLPShield"
+      },
+      "description": {
+        "en": "Discussion on the issue of accidental leaks of sensitive data via AI prompts, promoting DLPShield as a tool to inspect prompts before they reach external LLMs.",
+        "fr": "Cette publication met en avant la problématique de la fuite involontaire de données sensibles via les prompts d'IA et promeut DLPShield, un outil d'inspection avant transfert vers les LLMs."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Business_Services"],
+        "fr": ["Services_aux_Entreprises"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": ["sakerayman@mastodon[.]social"],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": ["DLPShield"]
+      },
+      "mitre_ttps": ["T1567"],
+      "analyse": {
+        "en": "Real-time analysis of clipboard and HTTP streams submitted to AI services to identify and block leaks of development secrets or strategic information.",
+        "fr": "Analyse en temps réel du presse-papiers et des flux HTTP soumis aux services d'IA pour identifier et bloquer la fuite de secrets de développement ou d'informations stratégiques."
+      },
+      "recommandations": [
+        {
+          "en": "Deploy a DLP system to inspect AI prompts.",
+          "fr": "Déployer un système DLP d'inspection des prompts d'IA."
+        },
+        {
+          "en": "Educate operational teams to systematically anonymize their AI queries.",
+          "fr": "Sensibiliser les équipes opérationnelles à l'anonymisation systématique de leurs requêtes d'IA."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Establish a clear security policy governing authorized AI tools.",
+            "Deploy proxy or CASB solutions integrating DLP capabilities for AI."
+          ],
+          "fr": [
+            "Établir une politique de sécurité claire encadrant les outils d'IA autorisés.",
+            "Déployer des solutions de proxy ou CASB intégrant des capacités DLP pour l'IA."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect the transmission of documents or large texts to external LLMs.",
+            "Analyze requests for access to AI agent interfaces such as ChatGPT or Claude."
+          ],
+          "fr": [
+            "Détecter l'envoi de documents ou de textes volumineux vers des LLM externes.",
+            "Analyser les requêtes d'accès aux interfaces d'agents d'IA de type ChatGPT ou Claude."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Restrict access to unauthorized or uncontracted AI model sites.",
+            "Alert users when copying and pasting forbidden keywords (e.g. 'confidential', 'secret')."
+          ],
+          "fr": [
+            "Restreindre l'accès aux sites de modèles d'IA non approuvés ou non sécurisés par contrat.",
+            "Alerter l'utilisateur lors du copier-coller de mots-clés interdits (ex: 'confidentiel', 'secret')."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Request deletion of prompts containing company data from the AI provider.",
+            "Re-educate the employee responsible for data exposure."
+          ],
+          "fr": [
+            "Demander la suppression des invites de commande (prompts) contenant des données d'entreprise auprès du fournisseur d'IA.",
+            "Sensibiliser l'employé à l'origine de l'exposition des données."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hypothesis: Searching for users transmitting large amounts of data to AI portals. Query: index=proxy url_domain IN (\"*openai.com*\",\"*anthropic.com*\",\"*cohere*\",\"*perplexity*\") | stats sum(bytes_out) by user"
+          ],
+          "fr": [
+            "Hypothèse : Recherche d'utilisateurs transmettant d'importantes quantités de données vers des portails d'IA. Requête : index=proxy url_domain IN (\"*openai.com*\",\"*anthropic.com*\",\"*cohere*\",\"*perplexity*\") | stats sum(bytes_out) by user"
+          ]
+        }
+      },
+      "tags": ["DLP", "AI-Security", "Data-Protection"],
+      "sources": ["https://mastodon.social/@sakerayman/116706090050755069"],
+      "date": "2026-06-07"
+    },
+    {
+      "title": {
+        "en": "Comeback of CWE-94 Weakness: Risks of Dynamic Code Generation",
+        "fr": "Retour en force de la faiblesse CWE-94 : Risques de la génération de code dynamique"
+      },
+      "description": {
+        "en": "Security reminder regarding CWE-94 (Improper Control of Generation of Code). The main recommendation is to refactor applications to eliminate evaluation or dynamic code generation from user inputs.",
+        "fr": "Rappel de sécurité concernant la faiblesse CWE-94 (Improper Control of Generation of Code). La recommandation principale est de refactoriser les applications afin d'éliminer l'évaluation ou la génération dynamique de code à partir d'entrées d'utilisateurs."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Technology_and_Telecom"],
+        "fr": ["Technologies_et_Telecoms"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": ["cwe[.]mitre[.]org"],
+        "EMAIL": ["silentexception@mastodon[.]social"],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": ["T1190"],
+      "analyse": {
+        "en": "The use of 'eval'-type functions to interpret user data creates remote-exploitable gaps leading to command injection.",
+        "fr": "L'usage de fonctions de type 'eval' pour interpréter des données utilisateur crée des failles exploitables à distance conduisant à de l'injection de commandes."
+      },
+      "recommandations": [
+        {
+          "en": "Systematically remove the use of eval() in production applications.",
+          "fr": "Supprimer systématiquement l'usage d'eval() dans les applications en production."
+        },
+        {
+          "en": "Prefer secure serialization (e.g. JSON.parse) and strict parsers.",
+          "fr": "Privilégier la sérialisation sécurisée (ex: JSON.parse) et des parseurs stricts."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Implement automated code reviews blocking the use of eval() or exec() functions.",
+            "Train developers on the risks of dynamic code injection."
+          ],
+          "fr": [
+            "Mettre en place des revues de code automatisées bloquant l'usage de fonctions de type eval() ou exec().",
+            "Former les développeurs aux risques d'injection de code dynamique."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Audit source code for dynamic execution patterns.",
+            "Detect unexpected process execution initiated by the main code interpreter."
+          ],
+          "fr": [
+            "Auditer le code source à la recherche de patrons d'exécution dynamique.",
+            "Détecter l'exécution de processus inattendus initiés par l'interpréteur de code principal."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Urgently refactor affected functions to remove dynamic interpretation.",
+            "Deploy WAF rules to reject strings containing system execution keywords."
+          ],
+          "fr": [
+            "Refactoriser d'urgence les fonctions concernées pour supprimer l'interprétation dynamique.",
+            "Déployer des règles WAF pour rejeter les chaînes contenant des mots-clés d'exécution système."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Conduct a post-incident audit to ensure no persistence of access.",
+            "Update corporate secure development guidelines."
+          ],
+          "fr": [
+            "Mener un audit post-incident pour s'assurer de l'absence de persistance d'accès.",
+            "Mettre à jour les référentiels de développement sécurisé de l'organisation."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hypothesis: Identifying vulnerable code fragments that could allow dynamic injection attacks. Query: find_pattern(\"eval(\") OR find_pattern(\"exec(\")"
+          ],
+          "fr": [
+            "Hypothèse : Identification de fragments de code vulnérables à des attaques par injection dynamique. Requête : find_pattern(\"eval(\") OR find_pattern(\"exec(\")"
+          ]
+        }
+      },
+      "tags": ["CWE-94", "Best-Practices", "Development"],
+      "sources": ["https://mastodon.social/@silentexception/116706071090680125"],
+      "date": "2026-06-07"
+    },
+    {
+      "title": {
+        "en": "IDLP Announces Launch of CoOI Platform",
+        "fr": "IDLP annonce le lancement de CoOI : une infrastructure sans log contre la corruption"
+      },
+      "description": {
+        "en": "The hacktivist collective IDLP announced the opening of its 'CoOI' (Critical Opinion of Informants) platform, designed for hosting and publishing information regarding corruption cases without storing any activity logs.",
+        "fr": "Le collectif hacktiviste IDLP annonce l'ouverture de sa plateforme 'CoOI', conçue pour l'hébergement et la publication d'informations relatives à des affaires de corruption sans conserver aucun journal d'activité."
+      },
+      "threat_actor": "IDLP",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Hacktiviste",
+      "threat_actor_aliases": ["IDLP"],
+      "sector": {
+        "en": ["Nonprofit_and_NGO"],
+        "fr": ["Associations_et_ONG"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": ["idlp[.]org"],
+        "EMAIL": ["idlp@mastodon[.]social"],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": ["T1567"],
+      "analyse": {
+        "en": "Creation of a decentralized and encrypted infrastructure protecting whistleblower identities by rejecting any connection logs from its users.",
+        "fr": "Création d'une infrastructure décentralisée et chiffrée protégeant l'identité des lanceurs d'alerte en rejetant tout enregistrement de connexion de ses utilisateurs."
+      },
+      "recommandations": [
+        {
+          "en": "Ensure transparent compliance management internally to prevent recourse to public whistleblowing.",
+          "fr": "Assurer une gestion transparente de la conformité en interne pour éviter le recours à des alertes publiques."
+        },
+        {
+          "en": "Monitor network queries towards the IDLP infrastructure.",
+          "fr": "Mettre sous surveillance les requêtes réseau vers l'infrastructure d'IDLP."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Implement internal data protection strategies against exfiltration.",
+            "Assess the presence of sensitive organization information on public leak channels."
+          ],
+          "fr": [
+            "Mettre en place des stratégies de protection des données internes contre l'exfiltration.",
+            "Évaluer la présence d'informations sensibles sur l'organisation sur les canaux publics de fuites."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Search for mentions of the organization or executives on whistleblowing platforms.",
+            "Analyze traffic anomalies to anonymization networks (Tor, I2P)."
+          ],
+          "fr": [
+            "Rechercher des mentions de l'organisation ou de dirigeants sur les plateformes de whistleblowing.",
+            "Analyser les anomalies de trafic vers les réseaux anonymes (Tor, I2P)."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "In case of a proven leak, isolate potential information sources internally.",
+            "Engage takedown procedures with the infrastructure hosting providers."
+          ],
+          "fr": [
+            "En cas de fuite avérée, isoler les sources d'informations potentielles en interne.",
+            "Engager des procédures de retrait de données auprès des hébergeurs de l'infrastructure."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Conduct a compliance and security audit on compromised data.",
+            "Strengthen the overall resilience of internal communication channels."
+          ],
+          "fr": [
+            "Conduire une enquête de conformité et de sécurité sur les données compromises.",
+            "Renforcer la résilience globale des canaux de communication interne."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hypothesis: Monitoring data transfers to Tor network gateways. Query: index=netflow dest_port=9001 OR dest_port=9050"
+          ],
+          "fr": [
+            "Hypothèse : Surveillance de transferts de données vers des passerelles du réseau d'anonymisation Tor. Requête : index=netflow dest_port=9001 OR dest_port=9050"
+          ]
+        }
+      },
+      "tags": ["Hacktivism", "Whistleblowing", "Corruption", "Transparency", "Privacy"],
+      "sources": [
+        "https://mastodon.social/@idlp/116705927819912715",
+        "https://mastodon.social/@idlp/116705834535579890"
+      ],
+      "date": "2026-06-07"
+    },
+    {
+      "title": {
+        "en": "Proven CrowdStrike LogScale Queries to Detect Malicious LOLBins Usage",
+        "fr": "Des requêtes CrowdStrike LogScale éprouvées pour détecter l'usage malveillant de LOLBins"
+      },
+      "description": {
+        "en": "Sharing of detection techniques to identify the malicious use of legitimate system binaries (LOLBins) in a SOC environment. Emphasis is placed on behavioral analysis of execution (parent/child) to avoid false positives.",
+        "fr": "Partage de techniques de détection pour identifier l'utilisation malveillant de binaires système légitimes (LOLBins) dans un environnement de SOC. L'accent est mis sur l'analyse comportementale de l'exécution (parent/enfant) pour éviter les faux positifs."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Security"],
+        "fr": ["Securite"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": ["certutil.exe", "CrowdStrike LogScale"]
+      },
+      "mitre_ttps": ["T1218", "T1218.011"],
+      "analyse": {
+        "en": "Correlation queries focused on the behavior of LOLBins child processes, targeting the first outbound connection and first writes to temporary user directories.",
+        "fr": "Requêtes de corrélation axées sur le comportement des processus enfants de LOLBins, ciblant la première connexion sortante et les premières écritures dans des répertoires temporaires utilisateurs."
+      },
+      "recommandations": [
+        {
+          "en": "Deploy correlation queries based on 30-day historical analysis to isolate false positives.",
+          "fr": "Déployer les requêtes de corrélation basées sur l'analyse historique des 30 derniers jours pour isoler les faux positifs."
+        },
+        {
+          "en": "Separate high-confidence alert rules (automatic isolation) from those requiring manual enrichment.",
+          "fr": "Séparer les règles d'alertes à haute confiance (isolement automatique) de celles requérant un enrichissement manuel."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Reference the list of commonly used LOLBins (e.g. certutil, mshta) and understand their legitimate use in the company.",
+            "Configure SIEM/EDR tools to log command lines of executed processes."
+          ],
+          "fr": [
+            "Référencer la liste des LOLBins couramment utilisés (ex: certutil, mshta) et comprendre leur usage légitime dans l'entreprise.",
+            "Configurer des outils SIEM/EDR pour enregistrer les lignes de commande de processus exécutés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor LOLBins calls initiated by unusual parent processes (browsers, Office suites).",
+            "Analyze network connection or file writing events following certutil.exe execution."
+          ],
+          "fr": [
+            "Surveiller les appels de LOLBins initiés par des processus parents inhabituels (navigateurs, suites Office).",
+            "Analyser les premiers accès réseau ou d'écriture de fichiers suite à l'exécution de certutil.exe."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Immediately isolate the host if a LOLBin is executed suspiciously from a web or office parent.",
+            "Suspend the user account involved in the anomaly."
+          ],
+          "fr": [
+            "Isoler immédiatement l'hôte si un LOLBin est exécuté de manière suspecte à partir d'un parent Web ou bureautique.",
+            "Suspendre le compte utilisateur impliqué dans l'anomalie."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Determine the initial access method that triggered the admin tool call.",
+            "Adjust exclusion lists in detection queries to eliminate false positives."
+          ],
+          "fr": [
+            "Déterminer la méthode d'accès initiale ayant déclenché l'appel de l'outil d'administration.",
+            "Ajuster les listes d'exclusions dans les requêtes de détection pour éliminer les faux positifs."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hypothesis: Detection of a payload download or execution attempt via certutil.exe initiated by an email client or browser. Query: index=crowdstrike ParentImage IN (\"*outlook.exe\",\"*chrome.exe\",\"*msedge.exe\") Image=\"*certutil.exe\""
+          ],
+          "fr": [
+            "Hypothèse : Détection d'une tentative de téléchargement ou d'exécution d'un payload via certutil.exe initié par un client mail ou un navigateur. Requête : index=crowdstrike ParentImage IN (\"*outlook.exe\",\"*chrome.exe\",\"*msedge.exe\") Image=\"*certutil.exe\""
+          ]
+        }
+      },
+      "tags": ["LOLBins", "Blue-Team", "Detection", "CrowdStrike"],
+      "sources": ["https://www.reddit.com/r/blueteamsec/comments/1tyvcz0/crowdstrike_logscale_queries_i_use_to_detect/"],
+      "date": "2026-06-06"
+    }
+  ]
+}
