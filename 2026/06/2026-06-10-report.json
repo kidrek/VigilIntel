@@ -1,0 +1,1708 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The threat landscape of June 2026 is heavily shaped by Microsoft's historic Patch Tuesday addressing over 200 vulnerabilities, against a backdrop of public disclosure conflicts with security researcher Nightmare Eclipse. Concurrently, the active exploitation of perimeter networking devices remains a critical concern, as highlighted by CISA and security vendors regarding Check Point VPN (CVE-2026-50751) abused by Qilin ransomware affiliates, and PAN-OS (CVE-2026-0257). Geopolitically, the militarization of the Russian economy escalates regional security risks, while the Trump administration uses the 2026 World Cup as a vehicle for political leverage and influence, causing significant diplomatic friction.",
+      "fr": "L'actualité de la cybersécurité en juin 2026 est fortement dominée par un Patch Tuesday de Microsoft historique avec plus de 200 vulnérabilités corrigées, sur fond de conflits de divulgation publique avec le chercheur Nightmare Eclipse. En parallèle, l'exploitation active d'équipements de périmètre réseau reste un sujet critique, mis en évidence par la CISA et plusieurs éditeurs concernant Check Point VPN (CVE-2026-50751) exploité par des affiliés du rançongiciel Qilin, et PAN-OS (CVE-2026-0257). Sur le plan géopolitique, la militarisation de l'économie russe accroît les risques de conflits régionaux, tandis que l'administration Trump utilise la Coupe du monde 2026 comme instrument de pression et d'influence politique, créant des frictions diplomatiques."
+    },
+    "date": "2026-06-10"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense",
+          "Critical_Infrastructure"
+        ],
+        "fr": [
+          "Gouvernement et défense",
+          "Infrastructures critiques"
+        ]
+      },
+      "theme": {
+        "en": "Militarization of the Russian economy and conflict risks",
+        "fr": "Militarisation de l'économie russe et risques de conflits"
+      },
+      "description": {
+        "en": "The growing dependence of the Russian regime on defense spending and military patronage creates a systemic incentive to sustain or initiate foreign armed conflicts (e.g., in Moldova) to secure financial flows for internal elites in the face of ongoing Western sanctions.",
+        "fr": "La dépendance croissante du régime de Vladimir Poutine vis-à-vis des dépenses de défense et du patronage militaire crée une incitation systémique à maintenir ou initier des conflits armés à l'étranger (notamment en Moldavie) pour pérenniser les flux financiers des élites internes face aux sanctions occidentales."
+      },
+      "recommandations": [
+        {
+          "en": "Strengthen regulatory enforcement against the evasion of sanctions by the Russian shadow fleet.",
+          "fr": "Renforcer la surveillance réglementaire sur le contournement des sanctions par la flotte fantôme russe."
+        },
+        {
+          "en": "Harden cybersecurity defenses for critical infrastructure in Eastern European nations.",
+          "fr": "Sécuriser et durcir la cybersécurité des infrastructures critiques dans les pays d'Europe de l'Est."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Establish contingency plans for European critical infrastructure near NATO borders.",
+            "Enhance real-time monitoring of physical and cyber threats from Russian state-sponsored actors."
+          ],
+          "fr": [
+            "Établir des plans d'urgence pour les infrastructures critiques européennes à proximité des frontières de l'OTAN.",
+            "Renforcer la surveillance en temps réel des menaces physiques et cyber d'origine étatique russe."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor abnormal Russian shadow fleet activities near subsea cables and wind farms.",
+            "Track cyber reconnaissance activities on Eastern European power grids."
+          ],
+          "fr": [
+            "Surveiller les activités anormales de la flotte fantôme russe à proximité des câbles sous-marins et parcs éoliens.",
+            "Détecter les activités de reconnaissance cybernétique sur les réseaux électriques d'Europe de l'Est."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Enforce strict regulatory compliance and block financial transactions tied to sanctions evasion.",
+            "Isolate compromised grid monitoring systems to prevent lateral movement."
+          ],
+          "fr": [
+            "Appliquer des restrictions de conformité strictes sur les transactions financières soupçonnées de contourner les sanctions.",
+            "Isoler les systèmes de surveillance réseau compromis pour empêcher le déplacement latéral."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Share actionable threat intelligence regarding Russian hybrid operations with NATO and EU partners.",
+            "Conduct forensic review of targeted perimeter devices to seal entry vectors."
+          ],
+          "fr": [
+            "Partager des renseignements opérationnels sur les attaques hybrides russes avec les partenaires de l'OTAN et de l'UE.",
+            "Mener une analyse forensique des équipements de périmètre ciblés pour bloquer les vecteurs d'entrée."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for unauthorized access credentials linked to Russian network proxies on strategic targets.",
+            "Verify the integrity of remote monitoring firmware against localized cyber tampering."
+          ],
+          "fr": [
+            "Rechercher des identifiants d'accès non autorisés liés à des proxies réseau russes sur des cibles stratégiques.",
+            "Vérifier l'intégrité des micrologiciels de télégestion contre les altérations cybernétiques localisées."
+          ]
+        }
+      },
+      "tags": [
+        "russia",
+        "war_economy",
+        "sanctions",
+        "moldova"
+      ],
+      "sources": [
+        "https://www.recordedfuture.com/research/russia-defense-base-economy-risks-wars"
+      ],
+      "date": "2026-06-09"
+    },
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense",
+          "Hospitality_and_Entertainment"
+        ],
+        "fr": [
+          "Gouvernement et défense",
+          "Hôtellerie et loisirs"
+        ]
+      },
+      "theme": {
+        "en": "Politicization and diplomatic tensions surrounding the 2026 World Cup",
+        "fr": "Politicisation et tensions diplomatiques autour de la Coupe du Monde 2026"
+      },
+      "description": {
+        "en": "The Trump administration actively uses the 2026 World Cup as a domestic propaganda tool and a platform for political influence, executing strict visa restrictions that impact foreign delegations (e.g., Iran) and causing controversies over the deportation of Somali referee Omar Artan, undermining FIFA's core principle of political neutrality.",
+        "fr": "L'administration Trump instrumentalise la Coupe du Monde 2026 comme vitrine de pouvoir politique et de propagande intérieure, appliquant des restrictions sévères de visas qui affectent les délégations étrangères (comme l'Iran) et créant la polémique suite à l'expulsion de l'arbitre somalien Omar Artan, au mépris du principe de neutralité de la FIFA."
+      },
+      "recommandations": [
+        {
+          "en": "Anticipate increased risks of civil unrest and political protests surrounding highly charged football matches.",
+          "fr": "Anticiper les risques accrus de troubles publics et de manifestations politiques autour des matchs à forte tension."
+        },
+        {
+          "en": "Prepare cyber defense frameworks against politically motivated hacktivism targeting ticketing and official web infrastructure.",
+          "fr": "Préparer des structures de cyberdéfense contre l'activisme informatique ciblant les systèmes de billetterie et les sites officiels."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Design contingency security protocols for foreign delegations during their stay in the US.",
+            "Establish media monitoring units to detect online disinformation and influence campaigns targeting the tournament."
+          ],
+          "fr": [
+            "Concevoir des protocoles de sécurité d'urgence pour les délégations étrangères durant leur séjour aux États-Unis.",
+            "Mettre en place des cellules de veille média pour détecter la désinformation en ligne et les campagnes d'influence visant le tournoi."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Identify phishing attempts exploiting visa issues or political friction between the US and foreign nations.",
+            "Detect DDoS patterns against World Cup accreditation and ticket sales platforms."
+          ],
+          "fr": [
+            "Identifier les tentatives d'hameçonnage exploitant les problèmes de visa ou les tensions politiques entre les États-Unis et d'autres nations.",
+            "Détecter les schémas d'attaques DDoS ciblant les plateformes d'accréditation et de vente de billets de la Coupe du monde."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Implement high-capacity CDN rules and DDoS scrubbing centers to protect web assets.",
+            "Isolate internal delegation databases to prevent targeted espionage attempts."
+          ],
+          "fr": [
+            "Déployer des règles CDN haute capacité et des centres de nettoyage DDoS pour protéger les sites web.",
+            "Isoler les bases de données des délégations pour bloquer les tentatives d'espionnage ciblé."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Perform post-event security audits on credential databases and registration logs.",
+            "Optimize communication playbooks between national law enforcement and FIFA security coordinators."
+          ],
+          "fr": [
+            "Réaliser des audits de sécurité post-événement sur les bases d'identifiants et de connexions.",
+            "Optimiser les protocoles de communication entre les forces de l'ordre nationales et les coordinateurs de sécurité de la FIFA."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for targeted spear-phishing campaigns targeting team managers and official sponsors using World Cup motifs.",
+            "Scan dark web forums for leaked administrative credentials of stadium operational staff."
+          ],
+          "fr": [
+            "Rechercher les campagnes de spear-phishing ciblant l'encadrement des équipes et les sponsors officiels avec des thèmes liés au Mondial.",
+            "Scanner les forums du dark web à la recherche d'identifiants d'administration volés appartenant au personnel opérationnel des stades."
+          ]
+        }
+      },
+      "tags": [
+        "usa",
+        "trump",
+        "world_cup",
+        "geopolitics",
+        "iran",
+        "somalia"
+      ],
+      "sources": [
+        "https://www.iris-france.org/pour-trump-la-coupe-du-monde-cest-bien-plus-que-du-sport/",
+        "https://www.iris-france.org/la-coupe-du-monde-2026-sera-t-elle-celle-de-donald-trump/",
+        "https://www.iris-france.org/infantino-passif-face-au-racisme-de-trump/"
+      ],
+      "date": "2026-06-09"
+    },
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense",
+          "Industry_and_Manufacturing"
+        ],
+        "fr": [
+          "Gouvernement et défense",
+          "Industrie et fabrication"
+        ]
+      },
+      "theme": {
+        "en": "Cancellation of the SCAF joint European fighter jet program",
+        "fr": "Abandon du programme de système de combat aérien futur (SCAF)"
+      },
+      "description": {
+        "en": "Germany unilaterally announced the cancellation of the SCAF (Future Combat Air System) program, resulting from the structural inability of Airbus and Dassault Aviation to agree on technological work-sharing. This failure marks a major setback for European defense autonomy.",
+        "fr": "L'Allemagne a unilatéralement annoncé l'abandon du programme SCAF, actant l'incapacité d'Airbus et de Dassault Aviation à s'entendre sur le partage technologique. Cet échec marque un coup d'arrêt majeur pour l'Europe de la défense."
+      },
+      "recommandations": [
+        {
+          "en": "Secure and isolate the intellectual property jointly developed during the program's lifecycle.",
+          "fr": "Sécuriser et isoler la propriété intellectuelle développée conjointement durant la vie du programme."
+        },
+        {
+          "en": "Re-evaluate independent national armament and cybersecurity engineering roadmaps.",
+          "fr": "Réévaluer les stratégies nationales d'armement et d'ingénierie en cybersécurité de manière indépendante."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Review corporate data sovereignty rules and security classifications for bilateral military projects.",
+            "Establish dedicated network access control lists (ACLs) to manage partner exit strategies."
+          ],
+          "fr": [
+            "Revoir les règles de souveraineté des données d'entreprise et les classifications de sécurité des projets militaires bilatéraux.",
+            "Établir des listes de contrôle d'accès réseau (ACL) dédiées pour gérer la sortie des partenaires."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor industrial espionage attempts targeting aeronautics engineering units of Dassault Aviation and Airbus.",
+            "Detect unauthorized data exfiltration trends on shared program networks."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'espionnage industriel ciblant les divisions d'ingénierie aéronautique de Dassault et d'Airbus.",
+            "Détecter les vagues d'exfiltration de données non autorisées sur les réseaux partagés du programme."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Segment and immediately revoke partner accounts from active aeronautics research repositories.",
+            "Block outbound connections attempting to transfer heavy CAD and blueprint files."
+          ],
+          "fr": [
+            "Segmenter et révoquer immédiatement les accès des partenaires sur les dépôts de recherche aéronautique actifs.",
+            "Bloquer les connexions sortantes essayant de transférer des fichiers CAO lourds ou des plans techniques."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Conduct full data audit to quantify any intellectual property leakage before network closure.",
+            "Rotate all administrative certificates and passwords associated with joint project environments."
+          ],
+          "fr": [
+            "Mener un audit complet des données pour quantifier toute fuite de propriété intellectuelle avant la fermeture du réseau.",
+            "Renouveler tous les certificats d'administration et mots de passe associés aux environnements du projet conjoint."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for unauthorized access attempts by former external partners using legacy or shadow accounts.",
+            "Scan endpoint file transfer logs for unauthorized offsite storage of joint development blueprints."
+          ],
+          "fr": [
+            "Rechercher des tentatives d'accès non autorisées de la part d'anciens partenaires utilisant des comptes obsolètes ou fantômes.",
+            "Scanner les logs de transfert de fichiers des postes de travail pour repérer le stockage externe non autorisé de plans de développement."
+          ]
+        }
+      },
+      "tags": [
+        "scaf",
+        "france",
+        "germany",
+        "defense_industry",
+        "airbus",
+        "dassault"
+      ],
+      "sources": [
+        "https://www.iris-france.org/scaf-un-echec-dommageable-pour-la-cooperation-industrielle-de-defense-et-pour-leurope/"
+      ],
+      "date": "2026-06-09"
+    },
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement et défense"
+        ]
+      },
+      "theme": {
+        "en": "Persistent Israeli military operations in Southern Lebanon despite ceasefire",
+        "fr": "Persistance des frappes israéliennes au Sud-Liban malgré l'accord de cessez-le-feu"
+      },
+      "description": {
+        "en": "The security and humanitarian situation in Lebanon continues to rapidly degrade due to ongoing Israeli bombardments in the South, despite the official ceasefire agreement signed on June 4.",
+        "fr": "La situation sécuritaire et humanitaire au Liban continue de se détériorer rapidement en raison de la poursuite des bombardements israéliens au Sud, en dépit de l'accord officiel de cessez-le-feu signé le 4 juin."
+      },
+      "recommandations": [
+        {
+          "en": "Deploy humanitarian aid and emergency communication tools to displaced populations.",
+          "fr": "Déployer de l'aide humanitaire et des outils de communication d'urgence pour les populations déplacées."
+        },
+        {
+          "en": "Maintain secure out-of-band communication pathways for diplomatic personnel in active conflict zones.",
+          "fr": "Maintenir des voies de communication sécurisées hors-bande pour le personnel diplomatique dans les zones de conflit actives."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Prepare physical evacuation plans for non-essential staff in Beirut and Southern Lebanon.",
+            "Verify the availability and charge level of emergency satellite communications."
+          ],
+          "fr": [
+            "Préparer des plans d'évacuation physique pour le personnel non essentiel à Beyrouth et au Sud-Liban.",
+            "Vérifier la disponibilité et le niveau de charge des communications satellites d'urgence."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor kinetic military updates and geolocalized blast warnings in real time.",
+            "Track localized internet blackout incidents caused by destroyed telecommunication infrastructure."
+          ],
+          "fr": [
+            "Suivre en temps réel les mises à jour militaires cinétiques et les alertes d'explosions géolocalisées.",
+            "Surveiller les pannes internet locales provoquées par la destruction des infrastructures de télécommunication."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Restrict transit of staff in highly targeted border regions.",
+            "Reroute emergency communications through backup cellular or satellite systems."
+          ],
+          "fr": [
+            "Restreindre les déplacements du personnel dans les régions frontalières ciblées.",
+            "Rediriger les communications d'urgence vers les réseaux cellulaires de secours ou satellites."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Perform damage assessments on local hardware, network points, and regional offices.",
+            "Re-establish physical access protocols once safe corridors are cleared."
+          ],
+          "fr": [
+            "Évaluer les dégâts matériels sur les équipements locaux, les points réseau et les bureaux régionaux.",
+            "Rétablir les protocoles d'accès physique dès la validation de corridors de sécurité."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Analyze online channels for state-sponsored influence campaigns manipulating ceasefire reporting.",
+            "Detect physical sabotage indicators targeting local diplomatic optical fibers."
+          ],
+          "fr": [
+            "Analyser les canaux en ligne pour déceler les campagnes d'influence étatiques manipulant les informations sur le cessez-le-feu.",
+            "Détecter les indices de sabotage physique ciblant les fibres optiques diplomatiques locales."
+          ]
+        }
+      },
+      "tags": [
+        "lebanon",
+        "israel",
+        "middle_east"
+      ],
+      "sources": [
+        "https://www.iris-france.org/liban-la-descente-aux-enfers-les-mardis-de-liris/"
+      ],
+      "date": "2026-06-09"
+    }
+  ],
+  "regulatory_and_legal": [
+    {
+      "title": {
+        "en": "Report on budgetary and financial management - Section I: European Parliament - Financial year 2025",
+        "fr": "Rapport sur la gestion budgétaire et financière - Section I : Parlement européen - Exercice financier 2025"
+      },
+      "description": {
+        "en": "Official annual publication in the Official Journal of the European Union detailing the financial oversight, expenditures, and budgetary management of the European Parliament for the fiscal year 2025.",
+        "fr": "Publication annuelle officielle au Journal officiel de l'Union européenne détaillant la surveillance financière, les dépenses et la gestion budgétaire du Parlement européen pour l'exercice 2025."
+      },
+      "organisation": {
+        "en": [
+          "European Parliament"
+        ],
+        "fr": [
+          "Parlement européen"
+        ]
+      },
+      "jurisdiction": {
+        "en": [
+          "European Union"
+        ],
+        "fr": [
+          "Union européenne"
+        ]
+      },
+      "references": {
+        "en": [
+          "OJ:C_202602821"
+        ],
+        "fr": [
+          "JO:C_202602821"
+        ]
+      },
+      "tags": [
+        "european_parliament",
+        "budget",
+        "finance",
+        "regulation"
+      ],
+      "sources": [
+        "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:C_202602821"
+      ],
+      "date": "2026-06-10"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "ServiceNow",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et télécommunications"
+        ]
+      },
+      "description": {
+        "en": "ServiceNow disclosed a security incident stemming from access to an unauthenticated REST API endpoint ('/api/now/related_list_edit/create'). This configuration allowed opportunistic attackers to harvest customer support tickets containing active API keys, session tokens, and sensitive infrastructure details.",
+        "fr": "ServiceNow a divulgué un incident de sécurité provenant de l'accès à un endpoint d'API REST non authentifié ('/api/now/related_list_edit/create'). Cette configuration a permis à des attaquants opportunistes de collecter des tickets de support client contenant des clés API actives, des jetons de session et des détails d'infrastructure sensibles."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Configure the parameter 'requires_authentication=true' on the vulnerable ServiceNow REST endpoint.",
+          "fr": "Configurer le paramètre 'requires_authentication=true' sur l'endpoint REST vulnérable de ServiceNow."
+        },
+        {
+          "en": "Rotate all API keys, database credentials, and session tokens shared in historic ServiceNow support tickets.",
+          "fr": "Renouveler toutes les clés API, identifiants de bases de données et jetons de session partagés dans l'historique des tickets de support ServiceNow."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Perform comprehensive validation of exposed REST and SOAP endpoints on ServiceNow instances.",
+            "Establish automated configuration checks to enforce API access restrictions."
+          ],
+          "fr": [
+            "Effectuer une validation complète des endpoints REST et SOAP exposés sur les instances ServiceNow.",
+            "Établir des contrôles de configuration automatisés pour imposer des restrictions d'accès aux API."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor server logs for large volumes of outbound queries on '/api/now/related_list_edit/create'.",
+            "Detect external requests targeting administrative API paths without valid session cookies."
+          ],
+          "fr": [
+            "Surveiller les journaux du serveur pour repérer de gros volumes de requêtes sortantes vers '/api/now/related_list_edit/create'.",
+            "Détecter les requêtes externes ciblant les chemins d'API d'administration sans cookie de session valide."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Apply the official security update to enforce API authentication globally.",
+            "Temporarily block external traffic to the vulnerable API endpoint using a Web Application Firewall (WAF)."
+          ],
+          "fr": [
+            "Appliquer la mise à jour de sécurité officielle pour imposer l'authentification d'API de manière globale.",
+            "Bloquer temporairement le trafic externe vers l'endpoint d'API vulnérable via un pare-feu applicatif (WAF)."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Analyze audit logs to identify which tickets and attachment metadata were harvested.",
+            "Notify affected corporate customers regarding potential secrets leaked in tickets."
+          ],
+          "fr": [
+            "Analyser les journaux d'audit pour identifier quels tickets et métadonnées de pièces jointes ont été collectés.",
+            "Notifier les clients entreprises affectés concernant les secrets potentiellement divulgués dans leurs tickets."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Query proxy and WAF logs for IP '51.159.98.241' and other known malicious hosts targeting API gateways.",
+            "Scan internal databases for signs of lateral movement initiated with keys leaked via tickets."
+          ],
+          "fr": [
+            "Rechercher dans les journaux de proxies et WAF l'IP '51.159.98.241' et d'autres hôtes malveillants ciblant les API.",
+            "Scanner les bases de données internes pour repérer des signes de déplacement latéral amorcés avec des clés fuitées via les tickets."
+          ]
+        }
+      },
+      "tags": [
+        "servicenow",
+        "api_leak",
+        "unauthenticated_access"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/servicenow-discloses-security-incident-exposing-customer-data/"
+      ],
+      "date": "2026-06-09"
+    },
+    {
+      "victim": "South African Police Service (SAPS)",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Government_and_Defense",
+          "Healthcare_and_Life_Sciences"
+        ],
+        "fr": [
+          "Gouvernement et défense",
+          "Santé et sciences de la vie"
+        ]
+      },
+      "description": {
+        "en": "Confidential medical records containing personal, occupational, and health information of 3,000 South African Police Service (SAPS) officers were leaked online, severely impacting personnel privacy and operational security.",
+        "fr": "Les dossiers médicaux confidentiels contenant des données personnelles, professionnelles et de santé de 3 000 officiers des forces de police sud-africaines (SAPS) ont été divulgués en ligne, affectant gravement la vie privée du personnel et la sécurité opérationnelle."
+      },
+      "mitre_ttps": [
+        "T1567"
+      ],
+      "recommandations": [
+        {
+          "en": "Isolate all medical database servers from the public internet and restrict database export functions.",
+          "fr": "Isoler tous les serveurs de bases de données médicales d'Internet et restreindre les fonctions d'exportation de données."
+        },
+        {
+          "en": "Implement strong multi-factor authentication (MFA) and data encryption-at-rest for police HR services.",
+          "fr": "Mettre en œuvre une authentification multifacteur (MFA) forte et le chiffrement des données au repos pour les services RH de la police."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Define classification standards and access limitations for government-stored healthcare records.",
+            "Train administrators on Zero Trust network concepts regarding HR software suites."
+          ],
+          "fr": [
+            "Définir des normes de classification et des limites d'accès pour les dossiers médicaux stockés par l'État.",
+            "Former les administrateurs sur les concepts de réseau Zero Trust appliqués aux suites logicielles RH."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Set alerts for large SQL dumps or file transfers originating from HR systems.",
+            "Monitor dark web monitoring feeds for any South African law enforcement references."
+          ],
+          "fr": [
+            "Configurer des alertes pour les exports SQL ou transferts de fichiers volumineux provenant des systèmes RH.",
+            "Surveiller les flux du dark web pour y détecter toute mention des forces de l'ordre sud-africaines."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Suspend compromised user credentials and block IP ranges associated with data extraction.",
+            "Restrict web access to the affected hosting server to internal VPN gateways only."
+          ],
+          "fr": [
+            "Suspendre les identifiants d'utilisateurs compromis et bloquer les plages d'IP associées à l'extraction de données.",
+            "Restreindre l'accès web au serveur d'hébergement concerné aux seules passerelles VPN internes."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Individually contact the 3,000 officers to alert them of identity theft and targeted social engineering risks.",
+            "Perform comprehensive forensic review to determine the exact vulnerability that allowed data harvesting."
+          ],
+          "fr": [
+            "Contacter individuellement les 3 000 officiers pour les alerter des risques d'usurpation d'identité et d'ingénierie sociale.",
+            "Mener une analyse forensique complète pour déterminer la vulnérabilité exacte ayant permis la collecte des données."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for unauthorized access attempts across related public sector health administrative systems.",
+            "Examine VPN session logs for suspicious off-hours administrator operations."
+          ],
+          "fr": [
+            "Rechercher des tentatives d'accès non autorisées sur les systèmes d'administration de santé connexes du secteur public.",
+            "Examiner les journaux de session VPN pour déceler des opérations d'administration suspectes en dehors des heures de bureau."
+          ]
+        }
+      },
+      "tags": [
+        "south_africa",
+        "saps",
+        "medical_records",
+        "leak",
+        "police"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/06/09/za-confidential-medical-records-of-3000-south-african-police-service-officers-leaked/?pk_campaign=feed&pk_kwd=za-confidential-medical-records-of-3000-south-african-police-service-officers-leaked"
+      ],
+      "date": "2026-06-09"
+    },
+    {
+      "victim": "Lösing Filtertechnik",
+      "threat_actor": "Space Bears",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [
+        "Space Bears"
+      ],
+      "sector": {
+        "en": [
+          "Industry_and_Manufacturing"
+        ],
+        "fr": [
+          "Industrie et fabrication"
+        ]
+      },
+      "description": {
+        "en": "Lösing Filtertechnik was added to the public leak site of the Space Bears ransomware group, implying an operational compromise resulting in data theft and file encryption.",
+        "fr": "La société Lösing Filtertechnik a été ajoutée sur le site public de fuites du groupe de rançongiciel Space Bears, impliquant une compromission opérationnelle avec vol de données et chiffrement de fichiers."
+      },
+      "mitre_ttps": [
+        "T1486"
+      ],
+      "recommandations": [
+        {
+          "en": "Audit firewall rules and deactivate unused legacy remote services (e.g., outdated VPNs or exposed RDP).",
+          "fr": "Auditer les règles de pare-feu et désactiver les anciens services d'accès distant inutilisés (VPN obsolètes ou RDP exposé)."
+        },
+        {
+          "en": "Enforce endpoint protection with EDR agents capable of blocking automated ransomware execution.",
+          "fr": "Déployer des agents EDR capables de bloquer l'exécution automatisée de rançongiciels sur les postes et serveurs."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain immutable, logically segmented offline backups.",
+            "Perform regular table-top exercises for system recovery and public relations under ransomware scenarios."
+          ],
+          "fr": [
+            "Maintenir des sauvegardes hors ligne immuables et logiquement segmentées.",
+            "Réaliser régulièrement des exercices théoriques de restauration système et de communication de crise."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Alert on bulk deletion of Volume Shadow Copies (VSS) on servers.",
+            "Identify anomalous high-frequency file modifications and unexpected encryption extensions."
+          ],
+          "fr": [
+            "Alerter en cas de suppression en masse des clichés instantanés de volume (VSS) sur les serveurs.",
+            "Identifier les modifications de fichiers anormalement fréquentes et les extensions de chiffrement inattendues."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Immediately disconnect impacted segments from the primary company network and block site-to-site VPNs.",
+            "Disable active Active Directory controllers in case of domain-wide encryption attempts."
+          ],
+          "fr": [
+            "Déconnecter immédiatement les segments impactés du réseau principal de l'entreprise et bloquer les VPN inter-sites.",
+            "Désactiver les contrôleurs de domaine Active Directory actifs en cas de tentative de chiffrement global."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Recover systems using clean offline backups only after thoroughly verifying that threat actor entry points are secured.",
+            "Conduct full root-cause analysis to detail how Space Bears breached the network boundary."
+          ],
+          "fr": [
+            "Restaurer les systèmes à partir de sauvegardes saines hors ligne uniquement après s'être assuré que les accès des attaquants ont été fermés.",
+            "Mener une analyse complète des causes profondes pour déterminer comment Space Bears a franchi le périmètre du réseau."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Scan remaining servers for dual-use administrative utilities (like Rclone or Mimikatz) left behind by attackers.",
+            "Audit remote desktop logs for unauthorized account creation during the incident window."
+          ],
+          "fr": [
+            "Scanner les serveurs restants pour déceler des utilitaires légitimes détournés (Rclone, Mimikatz) laissés par les attaquants.",
+            "Auditer les journaux de bureau à distance pour identifier des créations de comptes non autorisées pendant l'incident."
+          ]
+        }
+      },
+      "tags": [
+        "space_bears",
+        "ransomware",
+        "loesing",
+        "leak_site"
+      ],
+      "sources": [
+        "https://www.ransomlook.io//group/space%20bears"
+      ],
+      "date": "2026-06-10"
+    },
+    {
+      "victim": "Microsoft GitHub",
+      "threat_actor": "TeamPCP",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [
+        "TeamPCP"
+      ],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et télécommunications"
+        ]
+      },
+      "description": {
+        "en": "The Miasma worm (an evolution of Mini Shai-Hulud), operated by TeamPCP, successfully compromised 73 official Microsoft GitHub repositories. Attackers hijacked cloud developer OIDC tokens to deploy 32 compromised versions of npm packages, aiming to steal AWS/GCP secrets from developers.",
+        "fr": "Le ver Miasma (évolution de Mini Shai-Hulud), opéré par TeamPCP, a compromis 73 dépôts GitHub officiels de Microsoft. Les attaquants ont détourné des jetons OIDC de développeurs pour déployer 32 versions compromises de paquets npm, cherchant à voler des secrets AWS/GCP."
+      },
+      "mitre_ttps": [
+        "T1195",
+        "T1078"
+      ],
+      "recommandations": [
+        {
+          "en": "Enforce strict multi-factor authentication (MFA) on developer accounts and restrict OIDC token generation permissions.",
+          "fr": "Imposer une authentification multifacteur (MFA) stricte pour les comptes de développeurs et limiter les droits de génération de jetons OIDC."
+        },
+        {
+          "en": "Audit all npm and GitHub package dependencies to verify they resolve to untampered releases.",
+          "fr": "Auditer toutes les dépendances de paquets npm et GitHub pour vérifier qu'elles correspondent à des versions saines."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Establish continuous verification rules for external pipeline configurations (GitHub Actions).",
+            "Maintain an inventory of approved developer access tokens and validate their lifecycle."
+          ],
+          "fr": [
+            "Établir des règles de vérification continue pour les pipelines d'intégration (GitHub Actions).",
+            "Maintenir un inventaire des jetons d'accès développeurs autorisés et valider leur durée de vie."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Identify anomalous commit signatures or unscheduled releases across organization repositories.",
+            "Detect unusual OIDC token usage outside of designated CI/CD cloud environments."
+          ],
+          "fr": [
+            "Identifier les signatures de commit anormales ou les publications non planifiées sur les dépôts de l'organisation.",
+            "Détecter l'usage inhabituel de jetons OIDC en dehors des environnements cloud de CI/CD prévus."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Immediately revoke compromised OIDC tokens and temporarily block write access to the affected repositories.",
+            "Takedown poisoned npm packages from package registries to prevent further downloads."
+          ],
+          "fr": [
+            "Révoquer immédiatement les jetons OIDC compromis et bloquer temporairement les accès en écriture aux dépôts affectés.",
+            "Retirer les paquets npm empoisonnés des registres publics pour empêcher de nouveaux téléchargements."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Rotate all corporate cloud keys (AWS/GCP/Azure) accessible via developer environments during the compromise period.",
+            "Validate that compromised packages are deleted from all internal developer caches."
+          ],
+          "fr": [
+            "Renouveler toutes les clés cloud d'entreprise (AWS/GCP/Azure) accessibles via les environnements développeurs pendant la période de compromission.",
+            "Valider que les paquets compromis sont supprimés de tous les caches de développement internes."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for unauthorized micro-commits or backdoors inserted into codebasess during the worm activity.",
+            "Scan internal IDE systems (VS Code, Cursor) for rogue modules installed via supply chain dependencies."
+          ],
+          "fr": [
+            "Rechercher des micro-commits non autorisés ou des portes dérobées insérées dans le code pendant l'activité du ver.",
+            "Scanner les IDE internes (VS Code, Cursor) pour repérer des modules malveillants installés via des dépendances corrompues."
+          ]
+        }
+      },
+      "tags": [
+        "github",
+        "supply_chain",
+        "npm",
+        "malware",
+        "miasma"
+      ],
+      "sources": [
+        "https://securityaffairs.com/193367/malware/miasma-worm-compromises-73-microsoft-github-repositories.html"
+      ],
+      "date": "2026-06-09"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-50751",
+      "euvd_id": "unknown",
+      "cisa_kev": "true",
+      "cvss": "9.3",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:checkpoint:security_gateway:*:*:*:*:*:*:*:*",
+      "product": "VPN Remote Access, Mobile Access et passerelles pare-feu Spark",
+      "vendor": "Check Point",
+      "description": {
+        "en": "Authentication bypass vulnerability in Check Point security gateways via logic errors in certificate validation during deprecated IKEv1 negotiations. Active exploitation has been reported in the wild by Qilin ransomware affiliates to establish unauthorized remote connections.",
+        "fr": "Contournement d'authentification sur les passerelles de sécurité Check Point via des erreurs logiques de validation de certificats lors de négociations IKEv1 dépréciées. Une exploitation active par des affiliés du rançongiciel Qilin est rapportée pour établir des connexions à distance non autorisées."
+      },
+      "mitre_ttps": [
+        "T1133"
+      ],
+      "recommandations": [
+        {
+          "en": "Disable deprecated IKEv1 negotiations on Check Point gateway configurations and require machine certificates for all Remote Access users.",
+          "fr": "Désactiver les négociations IKEv1 dépréciées sur les passerelles Check Point et exiger un certificat de machine pour tous les utilisateurs d'accès distants."
+        },
+        {
+          "en": "Apply emergency hotfixes issued by Check Point to prevent unauthenticated gateway session establishment.",
+          "fr": "Appliquer les correctifs d'urgence publiés par Check Point pour bloquer l'établissement de sessions de passerelle non authentifiées."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Audit all Check Point gateways to confirm their operating firmware and deprecated IKEv1 settings.",
+            "Establish machine-based certificate authentication rules on VPN profiles."
+          ],
+          "fr": [
+            "Auditer toutes les passerelles Check Point pour confirmer la version du firmware et l'utilisation d'IKEv1.",
+            "Établir des règles d'authentification par certificat de machine sur les profils VPN."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Identify connection requests attempting IKEv1 negotiations when machine certificates are disabled.",
+            "Detect anomalies in remote login logs, such as unexpected logins from unusual geographic locations without password prompts."
+          ],
+          "fr": [
+            "Identifier les demandes de connexion tentant des négociations IKEv1 lorsque les certificats de machine sont absents.",
+            "Détecter les anomalies dans les journaux d'accès distant, comme des connexions géographiques inhabituelles sans invite de mot de passe."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Block targeted external IPs attempting unauthorized IKEv1 handshakes at the firewall layer.",
+            "Apply the Check Point hotfix immediately and reboot the gateway."
+          ],
+          "fr": [
+            "Bloquer les IP externes ciblant les échanges IKEv1 non autorisés au niveau du pare-feu périmétrique.",
+            "Appliquer immédiatement le correctif Check Point et redémarrer la passerelle."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Review session logs to identify any lateral movement or unauthorized internal resource access following VPN login.",
+            "Validate all active directory accounts associated with compromised connection intervals."
+          ],
+          "fr": [
+            "Passer en revue les logs de session pour repérer tout déplacement latéral ou accès à des ressources internes suite à une connexion VPN.",
+            "Valider tous les comptes Active Directory associés aux intervalles de connexion compromis."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for exfiltration behaviors (such as automated Rclone executions) following gateway login events.",
+            "Search for remnants of Tox communication tools or ransomware indicators of compromise (IoCs) on internal servers."
+          ],
+          "fr": [
+            "Rechercher des comportements d'exfiltration (comme l'exécution automatisée de Rclone) après des connexions de passerelle.",
+            "Rechercher des traces d'outils de communication Tox ou d'indicateurs de rançongiciels (IoC) sur les serveurs internes."
+          ]
+        }
+      },
+      "tags": [
+        "checkpoint",
+        "vpn",
+        "bypass",
+        "qilin"
+      ],
+      "sources": [
+        "https://fieldeffect.com/blog/ransomware-check-point-vpn-vulnerability",
+        "https://securityaffairs.com/193343/security/u-s-cisa-adds-berriai-litellm-and-check-point-security-gateway-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
+        "https://socprime.com/blog/cve-2026-50751-check-point-vpn-authentication-bypass-exploited-in-targeted-attacks/",
+        "https://www.cisecurity.org/advisory/multiple-vulnerabilities-in-check-point-products-could-allow-for-authentication-bypass_2026-055",
+        "https://databreaches.net/2026/06/09/cisa-gives-feds-3-days-to-patch-check-point-vpn-bug-exploited-as-zero-day/?pk_campaign=feed&pk_kwd=cisa-gives-feds-3-days-to-patch-check-point-vpn-bug-exploited-as-zero-day"
+      ],
+      "date": "2026-06-09"
+    },
+    {
+      "cve_id": "CVE-2026-11645",
+      "euvd_id": "unknown",
+      "cisa_kev": "true",
+      "cvss": "8.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*",
+      "product": "Chrome Desktop",
+      "vendor": "Google",
+      "description": {
+        "en": "An out-of-bounds read/write memory corruption vulnerability in the V8 JavaScript engine of Google Chrome. This is actively exploited in the wild, representing the fifth Chrome zero-day vulnerability used in attacks during 2026.",
+        "fr": "Vulnérabilité de corruption de mémoire (lecture/écriture hors-limites) dans le moteur JavaScript V8 de Google Chrome. Cette faille est activement exploitée dans la nature, constituant le cinquième zero-day de Chrome utilisé lors d'attaques en 2026."
+      },
+      "mitre_ttps": [
+        "T1203"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply the Google Chrome browser update immediately to stable versions 149.0.7827.102/103.",
+          "fr": "Appliquer immédiatement la mise à jour du navigateur Google Chrome vers les versions stables 149.0.7827.102/103."
+        },
+        {
+          "en": "Restrict users from running outdated browser versions using Group Policy Object (GPO) configuration rules.",
+          "fr": "Restreindre l'exécution de versions obsolètes du navigateur via des règles de stratégie de groupe (GPO)."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Configure automatic updates for Chrome installations across all end-user workstations.",
+            "Establish a central vulnerability scanner to check browser versions in real time."
+          ],
+          "fr": [
+            "Configurer les mises à jour automatiques de Chrome sur tous les postes de travail des utilisateurs.",
+            "Déployer un scanner de vulnérabilités centralisé pour valider les versions des navigateurs en temps réel."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Identify systems running Chrome builds prior to 149.0.7827.102.",
+            "Detect abnormal crash events in Chrome renderer processes that could indicate exploit attempts."
+          ],
+          "fr": [
+            "Identifier les systèmes exécutant des versions de Chrome antérieures à 149.0.7827.102.",
+            "Détecter les plantages anormaux des processus de rendu de Chrome qui pourraient indiquer des tentatives d'exploitation."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Force browser application closure on vulnerable workstations to apply pending updates.",
+            "Isolate untrusted corporate hosts from accessing external web portals until updated."
+          ],
+          "fr": [
+            "Forcer la fermeture de l'application sur les postes vulnérables afin d'appliquer les mises à jour en attente.",
+            "Isoler les postes non mis à jour de l'accès aux portails web externes jusqu'à leur correction."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Analyze local system files to ensure no persistent sandbox-escape payloads were installed on targeted hosts.",
+            "Verify complete deployment coverage of the security patch."
+          ],
+          "fr": [
+            "Analyser les fichiers système locaux pour s'assurer qu'aucune charge utile persistante d'évasion de sandbox n'a été installée.",
+            "Confirmer le déploiement complet du correctif de sécurité sur l'ensemble du parc."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search endpoint process trees for abnormal child processes spawned by Google Chrome (e.g., cmd.exe or powershell.exe).",
+            "Review firewall proxy logs for connections to unknown malicious command-and-control servers triggered from Chrome hosts."
+          ],
+          "fr": [
+            "Rechercher dans l'arborescence des processus des hôtes d'éventuels processus fils anormaux lancés par Google Chrome (ex: cmd.exe ou powershell.exe).",
+            "Passer en revue les logs de proxy pour détecter des connexions vers des serveurs de commande suspectes initiées par des postes sous Chrome."
+          ]
+        }
+      },
+      "tags": [
+        "chrome",
+        "google",
+        "zero-day",
+        "memory_corruption"
+      ],
+      "sources": [
+        "https://securityaffairs.com/193371/hacking/google-fixes-fifth-actively-exploited-chrome-zero-day-of-2026.html",
+        "https://socprime.com/blog/cve-2026-11645-chrome-zero-day-vulnerability-exploited-in-the-wild/",
+        "https://www.cisecurity.org/advisory/multiple-vulnerabilities-in-google-chrome-could-allow-for-arbitrary-code-execution_2026-054",
+        "https://infosec.exchange/@CyberSecurityNewsDaily/116723147607396902",
+        "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0708/"
+      ],
+      "date": "2026-06-09"
+    },
+    {
+      "cve_id": "CVE-2026-47291",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:o:microsoft:windows_server:*:*:*:*:*:*:*:*",
+      "product": "Windows HTTP Protocol Stack (http.sys)",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "An integer overflow vulnerability in the Windows HTTP Protocol Stack (http.sys). Unauthenticated remote attackers can exploit this flaw to execute arbitrary code at SYSTEM level on vulnerable servers by sending specifically crafted HTTP requests.",
+        "fr": "Dépassement d'entier dans la pile du protocole HTTP Windows (http.sys). Des attaquants distants non authentifiés peuvent exploiter cette faille pour exécuter du code arbitraire au niveau SYSTEM sur des serveurs vulnérables en envoyant des requêtes HTTP spécialement forgées."
+      },
+      "mitre_ttps": [
+        "T1210"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply the cumulative updates issued during the Microsoft June 2026 Patch Tuesday immediately.",
+          "fr": "Appliquer immédiatement les mises à jour cumulatives publiées lors du Patch Tuesday de Microsoft de juin 2026."
+        },
+        {
+          "en": "Temporarily limit the registry value 'MaxRequestBytes' to prevent processing of abnormally large HTTP requests on exposed web hosts.",
+          "fr": "Limiter temporairement la valeur de registre 'MaxRequestBytes' pour bloquer le traitement de requêtes HTTP anormalement grandes sur les serveurs web exposés."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain an active inventory of internal and public IIS servers utilizing the http.sys stack.",
+            "Establish strict change management workflows for monthly Patch Tuesday deployments."
+          ],
+          "fr": [
+            "Maintenir un inventaire actif des serveurs IIS internes et publics utilisant la pile http.sys.",
+            "Établir des flux de gestion du changement stricts pour les déploiements mensuels du Patch Tuesday."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Scan for CVE-2026-47291 exposure using vulnerability assessment tools.",
+            "Deploy network signatures looking for oversized or malformed HTTP packets."
+          ],
+          "fr": [
+            "Rechercher l'exposition à la faille CVE-2026-47291 à l'aide d'outils d'évaluation de vulnérabilités.",
+            "Déployer des signatures réseau recherchant des paquets HTTP surdimensionnés ou malformés."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate unpatched IIS servers behind a Web Application Firewall configured to drop large headers.",
+            "Apply the MS security update and reboot affected hosts."
+          ],
+          "fr": [
+            "Isoler les serveurs IIS non corrigés derrière un WAF configuré pour rejeter les en-têtes trop grands.",
+            "Appliquer la mise à jour de sécurité Microsoft et redémarrer les hôtes affectés."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Confirm successful KB deployment across targeted Windows Server installations.",
+            "Verify IIS service stability following server reboot."
+          ],
+          "fr": [
+            "Confirmer le déploiement réussi de la mise à jour KB sur l'ensemble des installations Windows Server ciblées.",
+            "Vérifier la stabilité du service IIS après le redémarrage des serveurs."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search IIS logs for incoming requests with exceptionally long headers or parameters that triggered HTTP 500 errors.",
+            "Audit server event logs for unexpected SYSTEM level crashes or LSASS access attempts shortly after HTTP crashes."
+          ],
+          "fr": [
+            "Rechercher dans les journaux IIS les requêtes entrantes avec des en-têtes ou des paramètres exceptionnellement longs ayant provoqué des erreurs HTTP 500.",
+            "Auditer les journaux d'événements des serveurs pour repérer des plantages SYSTEM inattendus ou des accès à LSASS juste après une défaillance HTTP."
+          ]
+        }
+      },
+      "tags": [
+        "microsoft",
+        "windows",
+        "http_sys",
+        "rce"
+      ],
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33064",
+        "https://securityaffairs.com/193417/security/microsoft-releases-record-breaking-patch-tuesday-with-208-cves.html"
+      ],
+      "date": "2026-06-09"
+    },
+    {
+      "cve_id": "CVE-2026-44963",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "9.4",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:veeam:backup_\\&_replication:*:*:*:*:*:*:*:*",
+      "product": "Veeam Backup & Replication",
+      "vendor": "Veeam",
+      "description": {
+        "en": "A critical remote code execution vulnerability in Veeam Backup & Replication. This flaw allows a low-privilege domain user to compromise and take control of the central backup server, presenting a major risk of backup sabotage in ransomware scenarios.",
+        "fr": "Vulnérabilité critique d'exécution de code à distance dans Veeam Backup & Replication. Cette faille permet à un utilisateur de domaine peu privilégié de compromettre et de prendre le contrôle du serveur de sauvegarde central, présentant un risque majeur de sabotage des sauvegardes en cas d'attaque par ransomware."
+      },
+      "mitre_ttps": [
+        "T1210"
+      ],
+      "recommandations": [
+        {
+          "en": "Upgrade Veeam Backup & Replication immediately to the latest patched version.",
+          "fr": "Mettre immédiatement à jour Veeam Backup & Replication vers la dernière version corrigée."
+        },
+        {
+          "en": "Restrict network access to Veeam management servers to dedicated, isolated administrative VLANs.",
+          "fr": "Restreindre l'accès réseau aux serveurs d'administration Veeam aux seuls VLAN administratifs isolés."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Verify all Veeam server accounts operate on the principle of least privilege.",
+            "Separate the backup infrastructure domain from the primary active directory forest."
+          ],
+          "fr": [
+            "Vérifier que tous les comptes des serveurs Veeam fonctionnent selon le principe du moindre privilège.",
+            "Séparer le domaine d'infrastructure de sauvegarde de la forêt active directory principale."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Scan for unpatched Veeam software installations.",
+            "Monitor Active Directory logins for unusual administrative queries originating from low-privilege service accounts towards Veeam servers."
+          ],
+          "fr": [
+            "Rechercher les installations du logiciel Veeam non corrigées.",
+            "Surveiller les connexions Active Directory pour repérer des requêtes d'administration inhabituelles provenant de comptes de service peu privilégiés vers les serveurs Veeam."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Temporarily isolate the Veeam server from primary corporate network segments.",
+            "Apply the official Veeam security patch and verify system services are secure."
+          ],
+          "fr": [
+            "Isoler temporairement le serveur Veeam des segments de réseau principaux de l'entreprise.",
+            "Appliquer le correctif de sécurité officiel de Veeam et vérifier que les services système sont sécurisés."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Validate that backup image stores are intact and have not been deleted or altered.",
+            "Audit all administrative user creations on the backup operating system."
+          ],
+          "fr": [
+            "Valider que les images de sauvegarde stockées sont intactes et n'ont pas été supprimées ou altérées.",
+            "Auditer toutes les créations d'utilisateurs d'administration sur le système d'exploitation de sauvegarde."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for scheduled tasks or persistent executables dropped in Veeam directories.",
+            "Verify firewall logs for outbound data exfiltration movements from the backup storage targets."
+          ],
+          "fr": [
+            "Rechercher des tâches planifiées ou des exécutables persistants déposés dans les répertoires Veeam.",
+            "Vérifier dans les journaux de pare-feu d'éventuels flux d'exfiltration de données sortant des cibles de stockage de sauvegarde."
+          ]
+        }
+      },
+      "tags": [
+        "veeam",
+        "rce",
+        "backup_security"
+      ],
+      "sources": [
+        "https://securityaffairs.com/193385/uncategorized/critical-veeam-rce-flaw-lets-low-privilege-users-take-over-backup-servers.html",
+        "https://thehackernews.com/2026/06/veeam-backup-replication-rce-flaw-lets.html",
+        "https://www.security.nl/posting/939943/Veeam-lek+maakt+remote+code+execution+op+back-upserver+mogelijk?channel=rss"
+      ],
+      "date": "2026-06-09"
+    },
+    {
+      "cve_id": "CVE-2026-23111",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "7.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+      "product": "Linux Kernel (nf_tables)",
+      "vendor": "Linux",
+      "description": {
+        "en": "A logical inversion vulnerability ('!') in the Linux kernel nf_tables firewall subsystem during transaction abort operations, which causes a Use-After-Free state. This flaw enables a local user with access to user namespaces to achieve reliable local privilege escalation (LPE) to root.",
+        "fr": "Vulnérabilité d'inversion logique ('!') dans le sous-système de pare-feu nf_tables du noyau Linux lors d'opérations d'annulation de transaction, ce qui provoque un état Use-After-Free. Cette faille permet à un utilisateur local ayant accès aux namespaces utilisateurs d'obtenir une élévation de privilèges locale (LPE) vers root."
+      },
+      "mitre_ttps": [
+        "T1068"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply the Linux kernel security updates provided by OS distributions immediately.",
+          "fr": "Appliquer immédiatement les mises à jour de sécurité du noyau Linux fournies par les distributions d'OS."
+        },
+        {
+          "en": "Disable unprivileged user namespaces ('CONFIG_USER_NS') or restrict them using kernel parameters if immediate patching is not possible.",
+          "fr": "Désactiver les namespaces utilisateurs non privilégiés ('CONFIG_USER_NS') ou les restreindre via des paramètres système si un correctif immédiat est impossible."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Identify all Linux hosts utilizing the nf_tables firewall subsystem.",
+            "Establish baseline configurations that restrict unprivileged user namespaces where possible."
+          ],
+          "fr": [
+            "Identifier tous les hôtes Linux utilisant le sous-système de pare-feu nf_tables.",
+            "Établir des configurations de référence limitant les namespaces utilisateurs non privilégiés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor endpoints for compilation or execution of known nf_tables UAF local exploits.",
+            "Detect unprivileged user namespace creation on production systems."
+          ],
+          "fr": [
+            "Surveiller les postes et serveurs pour détecter la compilation ou l'exécution d'exploits locaux nf_tables.",
+            "Détecter la création de namespaces utilisateurs non privilégiés sur les serveurs de production."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Temporarily restrict access to unprivileged namespaces via sysctl ('kernel.unprivileged_userns_clone=0').",
+            "Apply kernel updates and schedule system reboots."
+          ],
+          "fr": [
+            "Restreindre temporairement l'accès aux namespaces non privilégiés via sysctl ('kernel.unprivileged_userns_clone=0').",
+            "Appliquer les mises à jour du noyau et planifier le redémarrage des systèmes."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify system kernel versions across the environment to confirm patch application.",
+            "Ensure security baseline parameters remain active after system restart."
+          ],
+          "fr": [
+            "Vérifier les versions du noyau sur l'ensemble du parc pour confirmer l'application du correctif.",
+            "S'assurer que les paramètres de sécurité de référence restent actifs après le redémarrage."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for unauthorized local administrative actions initiated shortly after user namespace allocations.",
+            "Check auditd logs for write attempts to system administrative paths (e.g., '/etc/shadow' or '/etc/sudoers') by non-root accounts."
+          ],
+          "fr": [
+            "Rechercher des actions administratives locales non autorisées initiées peu après la création de namespaces utilisateurs.",
+            "Vérifier dans les logs auditd les tentatives d'écriture sur des fichiers système (ex: '/etc/shadow' ou '/etc/sudoers') par des comptes non root."
+          ]
+        }
+      },
+      "tags": [
+        "linux",
+        "kernel",
+        "nf_tables",
+        "lpe"
+      ],
+      "sources": [
+        "https://securityaffairs.com/193352/hacking/cve-2026-23111-linux-nf_tables-flaw-enables-root-exploits.html",
+        "https://arstechnica.com/security/2026/06/a-single-errant-character-in-the-linux-kernel-allows-attacker-to-gain-root/"
+      ],
+      "date": "2026-06-09"
+    },
+    {
+      "cve_id": "CVE-2026-0257",
+      "euvd_id": "unknown",
+      "cisa_kev": "true",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:o:paloaltonetworks:pan-os:*:*:*:*:*:*:*:*",
+      "product": "PAN-OS GlobalProtect",
+      "vendor": "Palo Alto Networks",
+      "description": {
+        "en": "Critical authentication bypass vulnerability in Palo Alto Networks PAN-OS GlobalProtect. Threat actors exploit this flaw in active campaigns to bypass security enforcement and establish rogue remote access VPN tunnels.",
+        "fr": "Contournement d'authentification critique dans Palo Alto Networks PAN-OS GlobalProtect. Des attaquants exploitent cette faille dans le cadre de campagnes actives pour contourner les contrôles de sécurité et établir des tunnels VPN d'accès distant malveillants."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply immediate hotfixes provided by Palo Alto Networks and review GlobalProtect activity logs.",
+          "fr": "Appliquer immédiatement les correctifs fournis par Palo Alto Networks et passer en revue les journaux d'activité de GlobalProtect."
+        },
+        {
+          "en": "Deploy indicators of compromise (IoCs) to block known attacking IPs targeting GlobalProtect portals.",
+          "fr": "Déployer les indicateurs de compromission (IoC) pour bloquer les IP d'attaque connues ciblant les portails GlobalProtect."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain an up-to-date registry of all PAN-OS edge gateway systems.",
+            "Configure real-time log ingestion for PAN-OS security events."
+          ],
+          "fr": [
+            "Maintenir un registre à jour de tous les équipements de périmètre PAN-OS.",
+            "Configurer l'ingestion en temps réel des logs d'événements de sécurité PAN-OS."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Alert on logins from blacklisted external IPs, including '146.19.216.119', '146.19.216.120', and others listed in Unit 42's threat brief.",
+            "Monitor for connection negotiations that bypass secondary authentication checks."
+          ],
+          "fr": [
+            "Alerter en cas de connexions d'IP externes sur liste noire, incluant '146.19.216.119', '146.19.216.120', et les autres IP de l'alerte d'Unit 42.",
+            "Surveiller les négociations de connexion contournant les validations d'authentification secondaires."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Block listed attacking IP ranges at perimeter firewalls.",
+            "Apply the required PAN-OS hotfix immediately and terminate suspect sessions."
+          ],
+          "fr": [
+            "Bloquer les plages d'IP d'attaque listées au niveau des pare-feu périmétriques.",
+            "Appliquer immédiatement le correctif PAN-OS requis et mettre fin aux sessions suspectes."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify that hotfixes are correctly applied on all gateways.",
+            "Examine active user session logs during the incident window to confirm no lingering unauthorized access is active."
+          ],
+          "fr": [
+            "Vérifier que les correctifs sont correctement appliqués sur toutes les passerelles.",
+            "Examiner les journaux de session utilisateur actifs pendant l'incident pour s'assurer qu'aucun accès non autorisé persistant n'est actif."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for post-exploitation lateral movement indicators on internal subnets linked to GlobalProtect hosts.",
+            "Scan internal systems for credential dumping activities after suspect VPN logins."
+          ],
+          "fr": [
+            "Rechercher des indicateurs de déplacement latéral post-exploitation sur les sous-réseaux connectés aux hôtes GlobalProtect.",
+            "Scanner les systèmes internes pour repérer des activités d'extraction d'identifiants après des connexions VPN suspectes."
+          ]
+        }
+      },
+      "tags": [
+        "paloalto",
+        "pan-os",
+        "globalprotect",
+        "bypass"
+      ],
+      "sources": [
+        "https://unit42.paloaltonetworks.com/active-exploitation-of-pan-os-cve-2026-0257/"
+      ],
+      "date": "2026-06-09"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "Widespread exposure of Model Context Protocol (MCP) servers connected to internal LLMs",
+        "fr": "Exposition massive de serveurs Model Context Protocol (MCP) connectés à des LLM internes"
+      },
+      "description": {
+        "en": "Over 2,000 Model Context Protocol (MCP) servers were discovered publicly exposed on the internet without authentication. These servers, designed to grant LLM agents access to corporate tools, expose critical API keys and enable unauthorized execution of commands against sensitive databases like Splunk, Jira, and ServiceNow.",
+        "fr": "Plus de 2 000 serveurs Model Context Protocol (MCP) ont été découverts exposés publiquement sur Internet sans authentification. Conçus pour donner aux agents LLM un accès aux outils internes, ces serveurs dévoilent des clés d'API et permettent l'exécution non autorisée de requêtes sur des bases sensibles (Splunk, Jira, ServiceNow)."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et télécommunications"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [
+          "7af2fbb1f51c923e05d890b009183e7ae8fb2a5569fb9b0665cd77b6425f7c7f"
+        ],
+        "HASH_SHA1": [],
+        "HASH_MD5": [
+          "65b3188a3b84497cad141bce331bc35d"
+        ],
+        "TOOLS": [
+          "Model Context Protocol (MCP)"
+        ]
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "analyse": {
+        "en": "As organizations rush to deploy AI integrations, developers utilize the open-source Model Context Protocol (MCP) to link generative AI systems with corporate backends. However, many host these MCP servers using uvicorn or fastapi without configuring basic authentication, creating an easily discoverable and highly privileged entry point for external attackers.",
+        "fr": "Alors que les entreprises déploient rapidement des intégrations d'IA, les développeurs utilisent le protocole open-source MCP pour lier les systèmes d'IA générative aux environnements internes. Cependant, beaucoup hébergent ces serveurs via uvicorn ou fastapi sans authentification, créant un point d'entrée facilement repérable pour des attaquants externes."
+      },
+      "recommandations": [
+        {
+          "en": "Enforce strict local loopback bindings for MCP daemons or implement mandatory API-key / token-based authentication.",
+          "fr": "Imposer des liaisons strictes sur l'interface locale loopback pour les daemons MCP ou configurer une authentification obligatoire par clé API."
+        },
+        {
+          "en": "Audit all enterprise AI deployments to identify shadow MCP servers exposed on corporate network perimeters.",
+          "fr": "Auditer tous les déploiements d'IA d'entreprise pour identifier les serveurs MCP fantômes exposés sur le périmètre du réseau."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Conduct inventory reviews of all AI framework libraries and MCP integrations within corporate development teams.",
+            "Establish secure-by-default configuration templates for FastAPI and Uvicorn deployment scripts."
+          ],
+          "fr": [
+            "Mener des revues d'inventaire de toutes les bibliothèques d'IA et intégrations MCP au sein des équipes de développement.",
+            "Établir des modèles de configuration sécurisés par défaut pour les scripts de déploiement FastAPI et Uvicorn."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Scan internal and external networks for exposed FastAPI/Uvicorn ports (e.g., port 8000, 8080) running without authentication prompts.",
+            "Detect anomalous administrative queries hitting API routing logs."
+          ],
+          "fr": [
+            "Scanner les réseaux internes et externes à la recherche de ports FastAPI/Uvicorn (ex: ports 8000, 8080) exposés sans invite d'authentification.",
+            "Détecter les requêtes d'administration anormales dans les logs de routage des API."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate exposed MCP servers immediately by terminating public internet routing rules.",
+            "Implement mandatory authentication controls on the affected APIs before restoration."
+          ],
+          "fr": [
+            "Isoler immédiatement les serveurs MCP exposés en supprimant les règles de routage vers Internet.",
+            "Mettre en œuvre des contrôles d'authentification obligatoires sur les API concernées avant leur remise en ligne."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Rotate all corporate integration keys (such as Splunk, Jira, or ServiceNow credentials) configured within exposed MCP environments.",
+            "Implement continuous compliance scanning on developer cloud assets."
+          ],
+          "fr": [
+            "Renouveler toutes les clés d'intégration d'entreprise (comme Splunk, Jira, ServiceNow) configurées au sein des environnements MCP exposés.",
+            "Mettre en place une surveillance de conformité continue sur les ressources cloud des développeurs."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search database audit logs for arbitrary queries executed via the exposed MCP server connections.",
+            "Audit security platform event logs to ensure no administrator credentials were stolen or abused."
+          ],
+          "fr": [
+            "Rechercher dans les journaux d'audit de bases de données d'éventuelles requêtes arbitraires exécutées via les connexions MCP exposées.",
+            "Auditer les journaux d'événements des plateformes de sécurité pour vérifier qu'aucun identifiant d'administrateur n'a été dérobé ou détourné."
+          ]
+        }
+      },
+      "tags": [
+        "mcp",
+        "ai_security",
+        "shadow_ai",
+        "exposure"
+      ],
+      "sources": [
+        "https://www.guidepointsecurity.com/blog/mcp-deployment-security-ai-ai-ai/"
+      ],
+      "date": "2026-06-09"
+    },
+    {
+      "title": {
+        "en": "Adversary techniques for Cloud Logging Evasion in AWS and GCP",
+        "fr": "Techniques d'adversaires pour contourner la journalisation cloud dans AWS et GCP"
+      },
+      "description": {
+        "en": "Unit 42 analyzed methods used by advanced threat actors to suppress, divert, or disable cloud logging configurations (such as AWS CloudTrail or GCP Logging sinks), blind security teams, and conduct stealth operations.",
+        "fr": "Unit 42 a analysé les méthodes utilisées par des attaquants avancés pour supprimer, détourner ou désactiver les configurations de journalisation cloud (comme AWS CloudTrail ou les sinks GCP), afin d'aveugler les équipes de sécurité et d'agir furtivement."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et télécommunications"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1562"
+      ],
+      "analyse": {
+        "en": "Threat actors targeting cloud environments prioritize 'blinding the watchmen' by utilizing hijacked administrative IAM credentials to modify telemetry routing policies, redirect logs to external rogue storage buckets, or filter critical alert strings from transmission streams.",
+        "fr": "Les attaquants ciblant les environnements cloud cherchent en priorité à aveugler la détection en utilisant des identifiants IAM d'administration volés pour modifier les règles de routage de télémétrie, rediriger les logs vers des buckets de stockage externes illégitimes ou filtrer les alertes critiques."
+      },
+      "recommandations": [
+        {
+          "en": "Implement write-once-read-many (WORM) storage configurations for cloud audit logs and restrict administrative logging modification privileges.",
+          "fr": "Mettre en œuvre des stockages WORM (écriture unique, lecture multiple) pour les logs d'audit cloud et restreindre les privilèges de modification de la journalisation."
+        },
+        {
+          "en": "Establish out-of-band alerts that trigger immediately upon any modification or deactivation of logging policies.",
+          "fr": "Établir des alertes hors-bande qui se déclenchent immédiatement en cas de modification ou de désactivation des politiques de journalisation."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Enforce strict multi-factor authentication (MFA) and lock administrative access to cloud audit trail settings.",
+            "Deploy independent log-forwarding configurations to an isolated security environment."
+          ],
+          "fr": [
+            "Imposer une authentification multifacteur (MFA) stricte et verrouiller l'accès administratif aux paramètres des journaux d'audit cloud.",
+            "Déployer des configurations de transfert de logs indépendantes vers un environnement de sécurité isolé."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Alert instantly on API calls that modify logging status (e.g., 'StopLogging', 'UpdateTrail' in AWS, or sink deletions in GCP).",
+            "Monitor for logins of administrative profiles from unusual locations or without prior session indicators."
+          ],
+          "fr": [
+            "Alerter instantanément sur les appels API modifiant le statut des journaux (ex: 'StopLogging', 'UpdateTrail' dans AWS ou suppression de sink dans GCP).",
+            "Surveiller les connexions de profils d'administration à partir d'emplacements inhabituels ou sans indicateur de session préalable."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Immediately suspend the administrative IAM profile triggered in the unauthorized configuration change.",
+            "Re-enable audit services and restore original log sink configurations using automated terraform scripts."
+          ],
+          "fr": [
+            "Suspendre immédiatement le profil IAM d'administration impliqué dans le changement de configuration non autorisé.",
+            "Réactiver les services d'audit et restaurer les configurations de sinks d'origine via des scripts terraform automatisés."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Review the immutable backup log repository to determine what events took place prior to telemetry deactivation.",
+            "Perform access audits on compromised cloud tenant interfaces."
+          ],
+          "fr": [
+            "Passer en revue le stockage de logs immuable de secours pour déterminer quels événements ont eu lieu avant la désactivation de la télémétrie.",
+            "Réaliser des audits d'accès sur les interfaces cloud compromises."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Scan cloud resources for newly created shadow API keys, rogue virtual machines, or unauthorized database exports generated during the blind interval.",
+            "Examine IAM roles for backdoored assume-role policies."
+          ],
+          "fr": [
+            "Scanner les ressources cloud à la recherche de clés d'API fantômes créées récemment, de machines virtuelles illégitimes ou d'exports de bases de données générés durant la période de panne.",
+            "Examiner les rôles IAM à la recherche de règles d'accès dérobées."
+          ]
+        }
+      },
+      "tags": [
+        "cloud",
+        "evasion",
+        "logging",
+        "aws",
+        "gcp"
+      ],
+      "sources": [
+        "https://unit42.paloaltonetworks.com/cloud-logging-defense-evasion/"
+      ],
+      "date": "2026-06-09"
+    },
+    {
+      "title": {
+        "en": "Google Docs Presentation phishing for credential harvesting",
+        "fr": "Hameçonnage via présentation Google Docs pour le vol d'identifiants"
+      },
+      "description": {
+        "en": "Active phishing campaigns abuse Google Docs presentation URLs to bypass traditional email gateway filters, hosting interactive presentations that direct users to fake credential harvesting portals.",
+        "fr": "Des campagnes d'hameçonnage actives abusent des URL de présentation Google Docs pour contourner les filtres de messagerie traditionnels, hébergeant des présentations interactives qui dirigent les utilisateurs vers de faux portails de connexion."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et télécommunications"
+        ]
+      },
+      "indicators": {
+        "URL": [
+          "https://docs.google.com/presentation/d/e/2PACX-1vT3DmTob3FqFxzmvYPpHT_hXVHF6AKcTnEvo45CoorVqPb_xpeHgXWvXp8kkOyNqyt7ZSGz-FopSshE/pub?start=false&loop=false&delayms=3000"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1566"
+      ],
+      "analyse": {
+        "en": "Attackers leverage trusted Google infrastructure to host phishing materials. This tactic ensures the mail message is trusted by Secure Email Gateways (SEGs). The slide acts as an intermediary redirect vector, protecting the landing page from early detection and crawlers.",
+        "fr": "Les attaquants exploitent l'infrastructure de confiance de Google pour héberger leurs contenus d'hameçonnage. Cette tactique permet au message d'être validé par les filtres de messagerie (SEG). La diapositive sert de vecteur de redirection intermédiaire, masquant la page de destination finale face aux robots de détection."
+      },
+      "recommandations": [
+        {
+          "en": "Train employees to recognize intermediary redirect techniques in public cloud documents.",
+          "fr": "Former les employés à reconnaître les techniques d'hameçonnage basées sur des redirections dans des documents cloud publics."
+        },
+        {
+          "en": "Deploy FIDO2-based multi-factor authentication (MFA) to prevent phishing-based session interception.",
+          "fr": "Déployer de l'authentification multifacteur (MFA) basée sur FIDO2 pour bloquer l'interception de session par hameçonnage."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Configure corporate web proxy systems to flag or isolate public, unauthenticated Google presentation URLs.",
+            "Establish automated reporting mechanisms for employee suspect email submissions."
+          ],
+          "fr": [
+            "Configurer les proxys web d'entreprise pour signaler ou isoler les URL de présentations Google publiques et non authentifiées.",
+            "Mettre en place des mécanismes automatisés permettant aux employés de signaler des courriels suspects."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Identify user web connection events targeting the blacklisted Google Docs link.",
+            "Detect credential entry patterns shortly after outbound cloud presentation redirection clicks."
+          ],
+          "fr": [
+            "Identifier les connexions web des utilisateurs ciblant le lien Google Docs mis sur liste noire.",
+            "Détecter les saisies d'identifiants survenant peu de temps après des clics de redirection vers des présentations cloud."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Block the identified malicious Google Docs URL on the corporate DNS and proxy level.",
+            "Immediately terminate user sessions that accessed the target link."
+          ],
+          "fr": [
+            "Bloquer l'URL Google Docs malveillante identifiée au niveau du DNS et du proxy de l'entreprise.",
+            "Mettre fin immédiatement aux sessions des utilisateurs ayant accédé au lien ciblé."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Force immediate password resets and session revocations for any employee that reached the credential landing page.",
+            "Submit abuse takedown requests directly to Google Security."
+          ],
+          "fr": [
+            "Forcer la réinitialisation immédiate du mot de passe et la révocation des sessions pour tout employé ayant accédé à la page de capture d'identifiants.",
+            "Soumettre des demandes de retrait pour abus directement à la sécurité de Google."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Query proxy logs for similar Google Docs, Sheets, or Slides publication links containing similar URI structures.",
+            "Check for unauthorized API access tokens generated under compromised employee privileges."
+          ],
+          "fr": [
+            "Rechercher dans les journaux de proxy des liens de publication Google Docs, Sheets ou Slides similaires présentant des structures d'URI analogues.",
+            "Vérifier la création d'éventuels jetons d'accès API non autorisés sous les privilèges d'employés compromis."
+          ]
+        }
+      },
+      "tags": [
+        "phishing",
+        "google_docs",
+        "credential_harvesting",
+        "urldna"
+      ],
+      "sources": [
+        "https://infosec.exchange/@urldna/116723221140776138"
+      ],
+      "date": "2026-06-10"
+    }
+  ]
+}
