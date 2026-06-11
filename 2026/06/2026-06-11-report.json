@@ -1,0 +1,982 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The global CTI analysis for this period highlights a marked intensification of cyberattacks targeting the software supply chain, rapid exploitation of newly disclosed vulnerabilities by state-sponsored botnets (such as JDY/Volt Typhoon), and increasingly aggressive ransomware (such as The Gentlemen or Qilin). We also observe the continuous professionalization of the Chinese cybercriminal ecosystem via guarantee marketplaces hosted on Telegram, while European regulations on AI and software security (like the application of the SLSA framework) attempt to formalize more resilient trust standards.",
+      "fr": "L'analyse CTI globale de cette période met en évidence une intensification marquée des cyberattaques ciblant la chaîne d'approvisionnement logicielle, l'exploitation rapide de vulnérabilités nouvellement divulguées par des botnets étatiques (comme JDY/Volt Typhoon) et des ransomwares de plus en plus agressifs (comme The Gentlemen ou Qilin). On observe également une professionnalisation continue de l'écosystème cybercriminel chinois via des marchés de garanties hébergés sur Telegram, tandis que la réglementation européenne sur l'IA et la sécurité logicielle (comme l'application du cadre SLSA) tente de formaliser des standards de confiance plus résilients."
+    },
+    "date": "2026-06-11"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": ["Government_and_Defense"],
+        "fr": ["Gouvernement et Défense"]
+      },
+      "theme": {
+        "en": "China Noncombatant Evacuation Operations (NEO) 2005-2025",
+        "fr": "Opérations d'Évacuation de Non-combattants (NEO) de la Chine 2005-2025"
+      },
+      "description": {
+        "en": "Analysis of two decades of operations shows China's growing use of civil assets and state-owned enterprises to protect its interests and citizens abroad during major crises.",
+        "fr": "L'analyse de deux décennies d'opérations démontre l'utilisation croissante de ressources civiles et d'entreprises d'État par la Chine pour protéger ses intérêts et ses citoyens à l'étranger lors de crises majeures."
+      },
+      "recommandations": [
+        {
+          "en": "Coordinate local security teams with consular representations.",
+          "fr": "Coordonner les équipes de sécurité locales avec les représentations consulaires."
+        },
+        {
+          "en": "Maintain out-of-band emergency communications.",
+          "fr": "Maintenir des communications d'urgence hors réseau traditionnel."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Establish a business continuity plan abroad.", "Monitor embassy consular alerts."],
+          "fr": ["Mettre en place un plan de continuité d'activité à l'étranger.", "Surveiller les alertes consulaires de l'ambassade."]
+        },
+        "phase2_detection": {
+          "en": ["Identify situations of local civil crisis or instability."],
+          "fr": ["Identifier les situations de crise ou d'instabilité civile locale."]
+        },
+        "phase3_containment": {
+          "en": ["Activate secure emergency evacuation channels."],
+          "fr": ["Activer les canaux d'évacuation d'urgence sécurisés."]
+        },
+        "phase4_post_incident": {
+          "en": ["Debrief repatriated teams and update crisis plans."],
+          "fr": ["Débriefer les équipes rapatriées et mettre à jour les plans de crise."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Active monitoring of physical local tensions affecting personnel."],
+          "fr": ["Surveillance active des tensions physiques locales affectant le personnel."]
+        }
+      },
+      "tags": ["NEO", "PLA", "China", "Military"],
+      "sources": ["https://www.recordedfuture.com/blog/china-noncombatant-evacuation-operations-2005-2025"],
+      "date": "2026-06-10"
+    },
+    {
+      "sector": {
+        "en": ["Hospitality_and_Entertainment"],
+        "fr": ["Hôtellerie et Divertissement"]
+      },
+      "theme": {
+        "en": "FIFA World Cup 2026 Security",
+        "fr": "Sécurité de la Coupe du Monde FIFA 2026"
+      },
+      "description": {
+        "en": "The event presents a hybrid cyber-physical risk, combining physical security threats with a surge in cybercriminal activities like scam domains, fake tickets, and DDoS.",
+        "fr": "L'événement présente un risque cyber-physique hybride, combinant des risques de sécurité physique (manifestations, extrémisme) avec une forte recrudescence d'activités cybercriminelles (domaines frauduleux, revente de faux billets, attaques DDoS)."
+      },
+      "recommandations": [
+        {
+          "en": "Implement strict DNS reputation checks for newly registered domains.",
+          "fr": "Mettre en œuvre des contrôles stricts de réputation DNS pour les nouveaux domaines créés."
+        },
+        {
+          "en": "Coordinate physical and cyber response teams.",
+          "fr": "Coordonner la réponse d'urgence entre les équipes physiques et cyber."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Deploy active monitoring for event-related domain names.", "Train employees on event-themed phishing."],
+          "fr": ["Déployer une veille active sur les noms de domaine liés à l'événement.", "Sensibiliser les employés aux campagnes de phishing thématiques."]
+        },
+        "phase2_detection": {
+          "en": ["Detect connection attempts to domains spoofing the event brand."],
+          "fr": ["Rechercher les tentatives de connexion vers des domaines usurpant la marque de l'événement."]
+        },
+        "phase3_containment": {
+          "en": ["Block fraudulent domains at DNS level.", "Report fake websites for takedown."],
+          "fr": ["Bloquer les domaines frauduleux au niveau DNS.", "Signaler les faux sites pour retrait."]
+        },
+        "phase4_post_incident": {
+          "en": ["Analyze compromise data to improve email filters."],
+          "fr": ["Analyser les données de compromission pour améliorer les filtres de messagerie."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search for phishing infrastructure targeting employees with World Cup themes."],
+          "fr": ["Détection d'infrastructure de phishing ciblant les employés via des thématiques Coupe du Monde."]
+        }
+      },
+      "tags": ["World Cup", "Cyber-Physical", "Scams", "Hacktivism"],
+      "sources": ["https://www.recordedfuture.com/blog/2026-fifa-world-cup-cyber-physical-threats-security-guide"],
+      "date": "2026-06-10"
+    },
+    {
+      "sector": {
+        "en": ["Government_and_Defense"],
+        "fr": ["Gouvernement et Défense"]
+      },
+      "theme": {
+        "en": "Middle East Geopolitical Tensions and Hacktivist Impact",
+        "fr": "Tensions géopolitiques au Moyen-Orient et impact hacktiviste"
+      },
+      "description": {
+        "en": "Continuous tensions in the Near East serve as vector for influence and disruptive cyberattacks (DDoS, defacement) by hacktivists.",
+        "fr": "Les tensions continues au Proche-Orient, notamment autour de la Palestine et du Liban, continuent de diviser l'opinion et de servir de vecteurs d'influence ainsi que d'attaques cyber perturbatrices d'hacktivistes (DDoS, défiguration)."
+      },
+      "recommandations": [
+        {
+          "en": "Ensure redundancy of critical infrastructure.",
+          "fr": "Garantir la redondance des infrastructures critiques."
+        },
+        {
+          "en": "Monitor hacktivist communication channels on Telegram.",
+          "fr": "Surveiller les canaux de communication hacktivistes sur Telegram."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Track geopolitical developments inducing hacktivism.", "Reinforce monitoring of public government portals."],
+          "fr": ["Suivre les développements géopolitiques pouvant induire de l'hacktivisme.", "Renforcer la surveillance des portails publics des entités gouvernementales."]
+        },
+        "phase2_detection": {
+          "en": ["Detect abnormal traffic spikes related to possible DDoS attacks."],
+          "fr": ["Détecter les pics de trafic anormaux liés à de possibles attaques DDoS."]
+        },
+        "phase3_containment": {
+          "en": ["Activate DDoS scrubbing protections.", "Block malicious requests."],
+          "fr": ["Activer les protections de scrubbing DDoS.", "Bloquer les requêtes malveillantes."]
+        },
+        "phase4_post_incident": {
+          "en": ["Evaluate external security posture of exposed public sites."],
+          "fr": ["Évaluer la posture de sécurité externe des sites publics exposés."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search for application flood traffic motivated by geopolitical tensions."],
+          "fr": ["Recherche de trafic de type flood applicatif motivé par des tensions géopolitiques."]
+        }
+      },
+      "tags": ["Geopolitics", "IRIS", "Middle East"],
+      "sources": ["https://www.iris-france.org/un-etat-palestinien-est-il-encore-possible-avec-rima-hassan/", "https://www.iris-france.org/la-fabrique-dun-cessez-le-feu-asymetrique-entre-israel-et-le-liban/"],
+      "date": "2026-06-10"
+    }
+  ],
+  "regulatory_and_legal": [
+    {
+      "title": {
+        "en": "Commission publishes Code of Practice on marking and labelling AI-generated content",
+        "fr": "La Commission publie un code de pratique sur le marquage et l'étiquetage des contenus générés par IA"
+      },
+      "description": {
+        "en": "Publication of the voluntary code of practice for labelling AI-generated content under the EU AI Act transparency obligations starting August 2, 2026.",
+        "fr": "Publication du code de pratique volontaire pour l'étiquetage et le marquage du contenu généré par IA, en vue de l'application des obligations de transparence de l'AI Act à compter du 2 août 2026."
+      },
+      "organisation": {
+        "en": ["European Commission"],
+        "fr": ["Commission Européenne"]
+      },
+      "jurisdiction": {
+        "en": ["European Union"],
+        "fr": ["Union Européenne"]
+      },
+      "references": {
+        "en": ["AI-ACT-2026-LABELLING"],
+        "fr": ["AI-ACT-2026-LABELLING"]
+      },
+      "tags": ["AI-Act", "Transparency", "AI", "EU"],
+      "sources": ["https://digital-strategy.ec.europa.eu/en/news/commission-publishes-code-practice-marking-and-labelling-ai-generated-content", "https://digital-strategy.ec.europa.eu/en/events/info-session-code-practice-transparency-ai-generated-content-signature-process"],
+      "date": "2026-06-10"
+    },
+    {
+      "title": {
+        "en": "European Parliament Financial Report",
+        "fr": "Rapport financier du Parlement Européen"
+      },
+      "description": {
+        "en": "Budgetary and financial report detailing the 2025 financial year, highlighting increases in IT spending for cybersecurity and AI capabilities.",
+        "fr": "Rapport budgétaire et financier détaillant l'exercice 2025, soulignant les augmentations de dépenses informatiques dédiées à la cybersécurité et aux capacités d'intelligence artificielle."
+      },
+      "organisation": {
+        "en": ["European Parliament"],
+        "fr": ["Parlement Européen"]
+      },
+      "jurisdiction": {
+        "en": ["European Union"],
+        "fr": ["Union Européenne"]
+      },
+      "references": {
+        "en": ["CELEX:52026XP02821"],
+        "fr": ["CELEX:52026XP02821"]
+      },
+      "tags": ["Finance", "Budget", "EP", "EU"],
+      "sources": ["https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:52026XP02821"],
+      "date": "2026-06-10"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "University of Nottingham",
+      "threat_actor": "ShinyHunters",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": ["ShinyHunters"],
+      "sector": {
+        "en": ["Education_and_Research"],
+        "fr": ["Éducation et Recherche"]
+      },
+      "description": {
+        "en": "Compromise of Oracle PeopleSoft servers by ShinyHunters leading to the exfiltration and publication of sensitive student and alumni data (approx. 455,000 records).",
+        "fr": "La compromission des serveurs Oracle PeopleSoft par ShinyHunters a entraîné l'exfiltration et la publication de données personnelles hautement sensibles d'étudiants et d'alumni (environ 455 000 enregistrements)."
+      },
+      "mitre_ttps": ["T1190", "T1020", "T1078"],
+      "recommandations": [
+        {
+          "en": "Perform a thorough audit of command history files on the servers.",
+          "fr": "Réaliser un audit approfondi des fichiers d'historique de commandes sur les serveurs."
+        },
+        {
+          "en": "Ensure default administrative accounts are not exposed remotely without strong MFA.",
+          "fr": "Vérifier que les comptes d'administration par défaut ne sont pas exposés à distance sans authentification forte."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Maintain offline tested backups.", "Restrict admin access to PeopleSoft servers."],
+          "fr": ["Maintenir des sauvegardes hors ligne testées régulièrement.", "Restreindre les accès administratifs aux serveurs Oracle PeopleSoft."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor abnormal SSH connections or new ransom notes."],
+          "fr": ["Surveiller les connexions SSH anormales ou de nouveaux scripts d'extorsion."]
+        },
+        "phase3_containment": {
+          "en": ["Isolate affected PeopleSoft servers.", "Rotate credentials for Oracle administrative accounts."],
+          "fr": ["Isoler immédiatement les serveurs PeopleSoft affectés.", "Changer tous les mots de passe des comptes administratifs Oracle."]
+        },
+        "phase4_post_incident": {
+          "en": ["Notify impacted users.", "Assess root cause of configuration flaw."],
+          "fr": ["Notifier les utilisateurs impactés.", "Évaluer l'origine de la faille de configuration initiale."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search for massive outbound data flows from application databases."],
+          "fr": ["Recherche de flux sortants massifs à partir des bases de données applicatives."]
+        }
+      },
+      "tags": ["extortion", "ransomware", "education", "shinyhunters"],
+      "sources": [
+        "https://haveibeenpwned.com/Breach/UniversityOfNottingham",
+        "https://www.bleepingcomputer.com/news/security/oracle-peoplesoft-servers-hacked-in-shinyhunters-data-theft-attacks/",
+        "https://techcrunch.com/2026/06/10/cybercriminals-claim-breach-of-oracle-peoplesoft-servers-at-100-plus-organizations/"
+      ],
+      "date": "2026-06-10"
+    },
+    {
+      "victim": "France (Tchap Application)",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Government_and_Defense"],
+        "fr": ["Gouvernement et Défense"]
+      },
+      "description": {
+        "en": "Compromise of a user account on the Tchap education instance allowing access to directory data and unencrypted public group chat metadata (73,000 accounts).",
+        "fr": "Compromission d'un compte utilisateur sur l'instance Tchap (éducation) permettant d'accéder aux données d'annuaire et aux conversations de groupes publics non chiffrées (73 000 comptes)."
+      },
+      "mitre_ttps": ["T1566"],
+      "recommandations": [
+        {
+          "en": "Avoid exchanging confidential information in public chat rooms.",
+          "fr": "Éviter absolument d'échanger des informations confidentielles au sein des salons de discussion publics."
+        },
+        {
+          "en": "Deploy behavioral detections against directory harvesting.",
+          "fr": "Mettre en œuvre des détections comportementales contre le moissonnage automatisé de l'annuaire."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Train employees on social engineering.", "Enforce MFA on all accounts."],
+          "fr": ["Sensibiliser l'ensemble des agents aux risques d'ingénierie sociale.", "Appliquer l'authentification multifacteur (MFA) stricte sur tous les comptes."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor for suspicious bulk directory queries from single accounts."],
+          "fr": ["Rechercher les requêtes de scraping suspectes à partir de comptes individuels."]
+        },
+        "phase3_containment": {
+          "en": ["Instantly disable compromised account initiating scraping."],
+          "fr": ["Bloquer immédiatement le compte usurpé à l'origine des requêtes malveillantes."]
+        },
+        "phase4_post_incident": {
+          "en": ["Launch investigation with law enforcement.", "Inform affected users."],
+          "fr": ["Ouvrir une enquête judiciaire avec l'OFAC.", "Informer les agents dont les informations d'annuaire ont été exposées."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search for abnormal logins and change of terminal fingerprint."],
+          "fr": ["Recherche d'activités anormales de connexion et de changement d'empreinte de terminal."]
+        }
+      },
+      "tags": ["messaging", "french-government", "compromise"],
+      "sources": [
+        "https://www.lemonde.fr/pixels/article/2026/06/10/la-messagerie-francaise-tchap-visee-par-une-cyberattaque-une-enquete-ouverte_6700451_4408996.html",
+        "https://securityaffairs.com/193393/security/frances-government-messaging-app-tchap-got-breached.html"
+      ],
+      "date": "2026-06-10"
+    },
+    {
+      "victim": "Miller & Zois",
+      "threat_actor": "Qilin",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": ["Qilin"],
+      "sector": {
+        "en": ["Business_Services"],
+        "fr": ["Services professionnels"]
+      },
+      "description": {
+        "en": "Law firm Miller & Zois compromised by Qilin ransomware, leading to exfiltration of personal injury litigation cases.",
+        "fr": "Le cabinet d'avocats Miller & Zois a été inscrit sur le blog d'extorsion de Qilin après exfiltration de dossiers de litiges d'accidents."
+      },
+      "mitre_ttps": ["T1486"],
+      "recommandations": [
+        {
+          "en": "Restrict access permissions to shared litigation folders.",
+          "fr": "Ajuster les privilèges d'accès aux dossiers partagés de stockage des litiges."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Maintain strict access controls on internal shares."],
+          "fr": ["Maintenir des contrôles d'accès stricts sur les partages internes."]
+        },
+        "phase2_detection": {
+          "en": ["Detect ransomware processes targeting file systems."],
+          "fr": ["Détecter les processus de ransomwares ciblant les systèmes de fichiers."]
+        },
+        "phase3_containment": {
+          "en": ["Isolate affected systems from active directory."],
+          "fr": ["Isoler les systèmes affectés d'active directory."]
+        },
+        "phase4_post_incident": {
+          "en": ["Restore clean backups.", "Patch vulnerabilities used for initial access."],
+          "fr": ["Restaurer des sauvegardes saines.", "Corriger les vulnérabilités utilisées pour l'accès initial."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Audit domain controller event logs for lateral movement."],
+          "fr": ["Auditer les journaux d'événements des contrôleurs de domaine pour le mouvement latéral."]
+        }
+      },
+      "tags": ["ransomware", "qilin", "data-leak"],
+      "sources": ["https://www.ransomlook.io//group/qilin"],
+      "date": "2026-06-10"
+    },
+    {
+      "victim": "Efficient Home",
+      "threat_actor": "Qilin",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": ["Qilin"],
+      "sector": {
+        "en": ["Retail_and_Consumer"],
+        "fr": ["Commerce de détail et Consommation"]
+      },
+      "description": {
+        "en": "Efficient Home was targeted by Qilin ransomware, compromising sales and supply chain management data.",
+        "fr": "La société Efficient Home a été ciblée par le ransomware Qilin, compromettant les données de vente et de gestion de chaîne logistique."
+      },
+      "mitre_ttps": ["T1486"],
+      "recommandations": [
+        {
+          "en": "Enforce MFA for all corporate VPN and remote access setups.",
+          "fr": "Forcer l'usage du MFA pour l'ensemble des accès distants et VPN de l'organisation."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Enforce multi-factor authentication on all remote access."],
+          "fr": ["Appliquer l'authentification multifacteur sur tous les accès distants."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor abnormal off-hour VPN usage."],
+          "fr": ["Surveiller l'utilisation anormale du VPN en dehors des heures de bureau."]
+        },
+        "phase3_containment": {
+          "en": ["Disable compromised VPN credentials immediately."],
+          "fr": ["Désactiver immédiatement les identifiants VPN compromis."]
+        },
+        "phase4_post_incident": {
+          "en": ["Review remote access logs and system configuration."],
+          "fr": ["Passer en revue les journaux d'accès distants et la configuration système."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search for unauthorized administrative remote logins."],
+          "fr": ["Rechercher des connexions distantes administratives non autorisées."]
+        }
+      },
+      "tags": ["ransomware", "qilin", "data-leak"],
+      "sources": ["https://www.ransomlook.io//group/qilin"],
+      "date": "2026-06-10"
+    },
+    {
+      "victim": "Bekman Marder Hopper Malarkey & Perlin",
+      "threat_actor": "Qilin",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": ["Qilin"],
+      "sector": {
+        "en": ["Business_Services"],
+        "fr": ["Services professionnels"]
+      },
+      "description": {
+        "en": "Bekman Marder Hopper Malarkey & Perlin law firm compromised by Qilin ransomware, leading to encryption of file servers.",
+        "fr": "Le cabinet juridique Bekman Marder Hopper Malarkey & Perlin a été compromis par l'opérateur de ransomware Qilin, entraînant le chiffrement de serveurs de fichiers."
+      },
+      "mitre_ttps": ["T1486"],
+      "recommandations": [
+        {
+          "en": "Segment shared network folders containing legal case files.",
+          "fr": "Segmenter le stockage des partages réseau des dossiers juridiques."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Implement network segmentation for sensitive legal data."],
+          "fr": ["Mettre en œuvre la segmentation réseau pour les données juridiques sensibles."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor for mass file modification signatures on file shares."],
+          "fr": ["Surveiller les signatures de modification de masse de fichiers sur les partages."]
+        },
+        "phase3_containment": {
+          "en": ["Revoke write permissions on impacted network shares."],
+          "fr": ["Révoquer les autorisations d'écriture sur les partages réseau impactés."]
+        },
+        "phase4_post_incident": {
+          "en": ["Restore cases files from offline backups."],
+          "fr": ["Restaurer les dossiers d'affaires à partir de sauvegardes hors ligne."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Check for shadow copy deletion events on file servers."],
+          "fr": ["Vérifier les événements de suppression de cliché instantané sur les serveurs de fichiers."]
+        }
+      },
+      "tags": ["ransomware", "qilin", "data-leak"],
+      "sources": ["https://www.ransomlook.io//group/qilin"],
+      "date": "2026-06-10"
+    },
+    {
+      "victim": "Dulany Leahy Curtis & Brophy",
+      "threat_actor": "Qilin",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": ["Qilin"],
+      "sector": {
+        "en": ["Business_Services"],
+        "fr": ["Services professionnels"]
+      },
+      "description": {
+        "en": "Law firm Dulany Leahy Curtis & Brophy posted on Qilin extortion blog, leading to major operational disruption.",
+        "fr": "Inscription du cabinet d'avocats Dulany Leahy Curtis & Brophy sur le site d'extorsion de Qilin, entraînant des perturbations opérationnelles."
+      },
+      "mitre_ttps": ["T1486"],
+      "recommandations": [
+        {
+          "en": "Perform a systemic rotation of all API keys and remote tokens.",
+          "fr": "Réaliser une rotation systématique des clés d'API et jetons distants."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Schedule routine rotation of API keys and remote credentials."],
+          "fr": ["Planifier une rotation régulière des clés d'API et des identifiants distants."]
+        },
+        "phase2_detection": {
+          "en": ["Audit suspicious creation of local administrator accounts."],
+          "fr": ["Auditer la création suspecte de comptes administrateurs locaux."]
+        },
+        "phase3_containment": {
+          "en": ["Disable compromised administrator accounts and active sessions."],
+          "fr": ["Désactiver les comptes administrateurs compromis et leurs sessions actives."]
+        },
+        "phase4_post_incident": {
+          "en": ["Reconfigure access control layers and evaluate compromise scope."],
+          "fr": ["Reconfigurer les couches de contrôle d'accès et évaluer la portée de la compromission."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Scan registry keys for persistent startup scripts."],
+          "fr": ["Analyser les clés de registre à la recherche de scripts de démarrage persistants."]
+        }
+      },
+      "tags": ["ransomware", "qilin", "data-leak"],
+      "sources": ["https://www.ransomlook.io//group/qilin"],
+      "date": "2026-06-10"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-10520",
+      "euvd_id": "unknown",
+      "cisa_kev": "true",
+      "cvss": "10.0",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:ivanti:sentry:*:*:*:*:*:*:*:*",
+      "product": "Ivanti Sentry",
+      "vendor": "Ivanti",
+      "description": {
+        "en": "OS Command Injection (CWE-78) vulnerability in Ivanti Sentry allowing an unauthenticated remote attacker to execute commands with root privileges.",
+        "fr": "Vulnérabilité critique d'injection de commande (CWE-78) dans Ivanti Sentry permettant à un attaquant distant non authentifié d'exécuter des commandes avec les privilèges root."
+      },
+      "mitre_ttps": ["T1190"],
+      "recommandations": [
+        {
+          "en": "Apply security patches released by the vendor immediately.",
+          "fr": "Appliquer d'urgence les correctifs fournis par l'éditeur."
+        },
+        {
+          "en": "Restrict administration interface exposure to internal networks only.",
+          "fr": "Restreindre l'exposition de l'interface d'administration aux réseaux internes."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Inventory all exposed Ivanti Sentry devices.", "Deploy network restriction rules."],
+          "fr": ["Inventorier tous les serveurs Ivanti Sentry exposés.", "Déployer des règles de restriction réseau."]
+        },
+        "phase2_detection": {
+          "en": ["Check web server logs for unauthorized API calls pointing to /mics/api/."],
+          "fr": ["Analyser les journaux web pour des requêtes non autorisées vers /mics/api/."]
+        },
+        "phase3_containment": {
+          "en": ["Isolate vulnerable Sentry servers from internal systems.", "Install security patches."],
+          "fr": ["Isoler les serveurs Sentry vulnérables des systèmes internes.", "Installer les correctifs de sécurité."]
+        },
+        "phase4_post_incident": {
+          "en": ["Reset all secrets and active sessions associated with the Sentry gateway."],
+          "fr": ["Réinitialiser tous les secrets et sessions actives associés à la passerelle Sentry."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search proxies for requests containing path injection patterns like '/mics/api/v2/sentry/*'."],
+          "fr": ["Rechercher dans les proxies les requêtes contenant des motifs d'injection comme '/mics/api/v2/sentry/*'."]
+        }
+      },
+      "tags": ["vulnerability", "rce", "ivanti", "critical"],
+      "sources": [
+        "https://cert.europa.eu/publications/security-advisories/2026-008/",
+        "https://thehackernews.com/2026/06/ivanti-fortinet-and-sap-release-patches.html"
+      ],
+      "date": "2026-06-10"
+    },
+    {
+      "cve_id": "CVE-2025-8088",
+      "euvd_id": "unknown",
+      "cisa_kev": "true",
+      "cvss": "8.4",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:rarlab:winrar:*:*:*:*:*:*:*:*",
+      "product": "WinRAR",
+      "vendor": "RARLAB",
+      "description": {
+        "en": "Path Traversal vulnerability via NTFS Alternate Data Streams in WinRAR, exploited by Russian state-sponsored actors to write malicious files silently into the Windows Startup folder.",
+        "fr": "Vulnérabilité de saut de répertoire (Path Traversal) via les flux de données alternatifs (NTFS ADS) dans WinRAR, exploitée par des groupes russes pour copier silencieusement des logiciels malveillants dans le dossier de démarrage de Windows."
+      },
+      "mitre_ttps": ["T1566.001", "T1204.002", "T1055"],
+      "recommandations": [
+        {
+          "en": "Upgrade WinRAR to version 7.13 or newer, or migrate to centrally managed archive utilities.",
+          "fr": "Mettre à jour WinRAR vers la version 7.13 ou ultérieure, ou migrer vers des utilitaires de décompression gérés de manière centralisée."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Identify and list outdated WinRAR versions across endpoints."],
+          "fr": ["Identifier et lister les versions de WinRAR obsolètes sur les postes de travail."]
+        },
+        "phase2_detection": {
+          "en": ["Detect creation of persistent scripts or .lnk files inside ProgramData and Startup directories."],
+          "fr": ["Détecter la création de scripts persistants ou de fichiers .lnk dans les répertoires ProgramData et de démarrage."]
+        },
+        "phase3_containment": {
+          "en": ["Block mshta.exe executions and enforce WinRAR upgrades.", "Isolate infected systems."],
+          "fr": ["Bloquer l'exécution de mshta.exe et forcer les mises à jour de WinRAR.", "Isoler les systèmes infectés."]
+        },
+        "phase4_post_incident": {
+          "en": ["Revoke session tokens of users who extracted unapproved archives."],
+          "fr": ["Révoquer les jetons de session des utilisateurs ayant extrait des archives suspectes."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search host logs for powershell injections using direct syscalls."],
+          "fr": ["Rechercher dans les journaux des hôtes les injections powershell utilisant des syscalls directs."]
+        }
+      },
+      "tags": ["vulnerability", "winrar", "path-traversal", "russian-apts"],
+      "sources": ["https://securityaffairs.com/193476/apt/russian-apts-still-exploiting-patched-winrar-flaw-cve-2025-8088.html"],
+      "date": "2026-06-10"
+    },
+    {
+      "cve_id": "CVE-2026-5027",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "7.5",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:langflow:langflow:*:*:*:*:*:*:*:*",
+      "product": "Langflow",
+      "vendor": "Langflow",
+      "description": {
+        "en": "Unauthenticated path traversal vulnerability in Langflow AI development platform allowing attackers to write arbitrary files and execute code via the POST /api/v2/files endpoint.",
+        "fr": "Vulnérabilité de saut de répertoire non authentifiée dans la plateforme d'IA Langflow permettant d'écrire des fichiers arbitraires et d'exécuter du code via l'endpoint POST /api/v2/files."
+      },
+      "mitre_ttps": ["T1190"],
+      "recommandations": [
+        {
+          "en": "Update langflow-base to version 0.8.3 and the main Langflow application to 1.9.0.",
+          "fr": "Mettre à jour langflow-base vers la version 0.8.3 et l'application principale Langflow vers la version 1.9.0."
+        },
+        {
+          "en": "Enforce mandatory authentication and disable auto-login configurations.",
+          "fr": "Activer l'authentification obligatoire et désactiver les configurations d'auto-login."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Ensure AI development instances are not exposed directly to the public web."],
+          "fr": ["S'assurer que les instances d'IA ne sont pas exposées directement sur le web public."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor web server logs for folder navigation traversal payloads on the /api/v2/files endpoint."],
+          "fr": ["Surveiller les journaux du serveur web à la recherche de payloads de navigation de dossiers sur l'endpoint /api/v2/files."]
+        },
+        "phase3_containment": {
+          "en": ["Isolate container hosts running Langflow instances.", "Restrict inbound web requests."],
+          "fr": ["Isoler les conteneurs exécutant des instances Langflow.", "Restreindre les requêtes web entrantes."]
+        },
+        "phase4_post_incident": {
+          "en": ["Upgrade the Langflow dependencies.", "Audit all files written during the exploitation window."],
+          "fr": ["Mettre à niveau les dépendances Langflow.", "Auditer tous les fichiers écrits pendant la fenêtre d'exploitation."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Query reverse proxies for POST queries containing traversal strings targeting Langflow endpoints."],
+          "fr": ["Rechercher dans les proxys inverses les requêtes POST contenant des séquences de traversée ciblant les endpoints Langflow."]
+        }
+      },
+      "tags": ["vulnerability", "langflow", "ai", "path-traversal"],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/path-traversal-flaw-in-ai-dev-platform-langflow-exploited-in-attacks/",
+        "https://thehackernews.com/2026/06/unpatched-langflow-flaw-cve-2026-5027.html"
+      ],
+      "date": "2026-06-10"
+    },
+    {
+      "cve_id": "CVE-2026-41089",
+      "euvd_id": "unknown",
+      "cisa_kev": "unknown",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:o:microsoft:windows_server:*:*:*:*:*:*:*:*",
+      "product": "Windows Server Netlogon",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "Critical Remote Code Execution (RCE) vulnerability in Windows Netlogon being actively exploited according to regional authorities.",
+        "fr": "Vulnérabilité critique d'exécution de code à distance (RCE) dans Windows Netlogon activement exploitée selon les autorités."
+      },
+      "mitre_ttps": ["T1210"],
+      "recommandations": [
+        {
+          "en": "Deploy Microsoft security updates targeting Netlogon immediately.",
+          "fr": "Déployer immédiatement les mises à jour de sécurité Microsoft ciblant Netlogon."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Ensure domain controllers are regularly included in patching workflows."],
+          "fr": ["S'assurer que les contrôleurs de domaine sont régulièrement inclus dans les flux de correctifs."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor for abnormal RPC traffic patterns pointing to domain controllers."],
+          "fr": ["Surveiller les anomalies de trafic RPC pointant vers les contrôleurs de domaine."]
+        },
+        "phase3_containment": {
+          "en": ["Isolate vulnerable domain controllers or restrict Netlogon RPC reachability."],
+          "fr": ["Isoler les contrôleurs de domaine vulnérables ou restreindre l'accès RPC Netlogon."]
+        },
+        "phase4_post_incident": {
+          "en": ["Audit Windows security events for Netlogon evasion patterns."],
+          "fr": ["Auditer les événements de sécurité Windows pour des signatures d'évasion Netlogon."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Query Event IDs 5805 or 5806 to identify suspect authentication attempts."],
+          "fr": ["Rechercher les Event ID 5805 ou 5806 pour identifier des tentatives d'authentification suspectes."]
+        }
+      },
+      "tags": ["vulnerability", "windows", "netlogon", "rce"],
+      "sources": ["https://cert.europa.eu/publications/security-advisories/2026-007/"],
+      "date": "2026-06-10"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "China-linked JDY Botnet Cyber Reconnaissance",
+        "fr": "Reconnaissance cyber du botnet JDY lié à la Chine"
+      },
+      "description": {
+        "en": "The JDY botnet, operated by threat actors linked to China, has scaled to over 1,500 compromised SOHO and IoT devices to perform massive reconnaissance targeting U.S. military and critical infrastructure networks.",
+        "fr": "Le botnet JDY, opéré par des acteurs liés à l'État chinois, a atteint plus de 1 500 objets SOHO et IoT compromis pour mener des activités de reconnaissance massive ciblant des réseaux militaires et d'infrastructures critiques aux États-Unis."
+      },
+      "threat_actor": "Volt Typhoon",
+      "threat_actor_origin": "China",
+      "threat_actor_type": "Nation-state",
+      "threat_actor_aliases": ["Volt Typhoon", "JDY Botnet Operators"],
+      "sector": {
+        "en": ["Government_and_Defense", "Critical_Infrastructure"],
+        "fr": ["Gouvernement et Défense", "Infrastructures critiques"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": ["JDY Botnet"]
+      },
+      "mitre_ttps": ["T1595", "T1071.004"],
+      "analyse": {
+        "en": "The botnet utilizes compromised consumer routers and smart devices as a residential proxy layer to hide scanning activities targeting strategic infrastructure.",
+        "fr": "Le botnet utilise des routeurs grand public et des appareils intelligents compromis comme couche de proxy résidentiel pour masquer les activités de scan ciblant des infrastructures stratégiques."
+      },
+      "recommandations": [
+        {
+          "en": "Ensure default credentials on SOHO devices and edge routers are changed.",
+          "fr": "S'assurer du changement des identifiants par défaut sur tous les équipements SOHO et routeurs de périmètre."
+        },
+        {
+          "en": "Disable administrative access via WAN interfaces.",
+          "fr": "Désactiver les accès administratifs à distance sur les interfaces WAN."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Deploy updated firmware to edge routers.", "Audit exposed ports."],
+          "fr": ["Déployer des firmwares à jour sur les routeurs de périmètre.", "Auditer les ports exposés."]
+        },
+        "phase2_detection": {
+          "en": ["Detect fast sequential TCP scans from US or Brazilian residential IPs."],
+          "fr": ["Détecter les scans TCP séquentiels rapides provenant d'adresses IP résidentielles américaines ou brésiliennes."]
+        },
+        "phase3_containment": {
+          "en": ["Block scanning IPs on edge firewalls.", "Disable insecure management interfaces."],
+          "fr": ["Bloquer les adresses IP de scan sur les pare-feu de périmètre.", "Désactiver les interfaces de gestion non sécurisées."]
+        },
+        "phase4_post_incident": {
+          "en": ["Replace compromised SOHO hardware.", "Perform forensic audits of targeted assets."],
+          "fr": ["Remplacer le matériel SOHO compromis.", "Mener des audits légistes sur les actifs ciblés."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search firewall logs for blocked scans on administration ports like WMI."],
+          "fr": ["Rechercher dans les pare-feu les scans bloqués sur des ports d'administration comme WMI."]
+        }
+      },
+      "tags": ["botnet", "jdy", "volt-typhoon", "reconnaissance"],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/china-linked-jdy-botnet-expands-targeting-of-us-military-networks/",
+        "https://thehackernews.com/2026/06/china-linked-jdy-botnet-expands-to-1500.html"
+      ],
+      "date": "2026-06-10"
+    },
+    {
+      "title": {
+        "en": "Deceptive Installers Targeting macOS via DMG Files",
+        "fr": "Installateurs trompeurs ciblant macOS via des fichiers DMG"
+      },
+      "description": {
+        "en": "Infostealers represent over 65% of recent macOS malicious payloads, heavily relying on fake application installers bundled in DMG files to bypass Gatekeeper and steal local secrets and browser data.",
+        "fr": "Les infostealers représentent plus de 65 % des charges malveillantes macOS récentes, s'appuyant sur de faux installateurs d'applications dans des fichiers DMG pour contourner Gatekeeper et voler des secrets locaux et données de navigation."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Technology_and_Telecom"],
+        "fr": ["Technologie et Télécommunications"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": ["door.in", "it.in"],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": ["T1566", "T1555"],
+      "analyse": {
+        "en": "Attackers focus on quick data theft (smash-and-grab) rather than maintaining persistent system access on macOS platforms.",
+        "fr": "Les attaquants privilégient un vol rapide de données (smash-and-grab) plutôt que de maintenir un accès persistant sur les plateformes macOS."
+      },
+      "recommandations": [
+        {
+          "en": "Enforce mobile device management (MDM) rules to block unapproved DMG mount attempts.",
+          "fr": "Appliquer des règles MDM pour bloquer le montage d'images DMG non approuvées."
+        },
+        {
+          "en": "Train employees to avoid cracked or unofficial software distributions.",
+          "fr": "Sensibiliser les employés à éviter les distributions de logiciels crackés ou non officiels."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Deploy endpoint security controls supporting macOS Endpoint Security API."],
+          "fr": ["Déployer des contrôles de sécurité supportant l'API Endpoint Security de macOS."]
+        },
+        "phase2_detection": {
+          "en": ["Identify mounting events of virtual disk images executing hidden terminal commands."],
+          "fr": ["Identifier les montages d'images disques virtuelles exécutant des commandes masquées."]
+        },
+        "phase3_containment": {
+          "en": ["Unmount suspicious virtual volumes.", "Terminate background malicious scripts."],
+          "fr": ["Démonter les volumes virtuels suspects.", "Arrêter les scripts malveillants en arrière-plan."]
+        },
+        "phase4_post_incident": {
+          "en": ["Rotate browser session tokens and passwords exposed on infected endpoints."],
+          "fr": ["Faire tourner les jetons de session et mots de passe exposés sur les postes infectés."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Query logs for hidden background folders containing Gatekeeper bypass files."],
+          "fr": ["Rechercher dans les journaux des dossiers d'arrière-plan masqués contenant des fichiers de contournement Gatekeeper."]
+        }
+      },
+      "tags": ["malware", "macos", "infostealer", "deceptive-installer"],
+      "sources": ["https://www.huntress.com/blog/deceptive-installers-macos-infostealers"],
+      "date": "2026-06-10"
+    },
+    {
+      "title": {
+        "en": "Mini Shai-Hulud Supply Chain Attack Analysis",
+        "fr": "Analyse de l'attaque de Supply Chain Mini Shai-Hulud"
+      },
+      "description": {
+        "en": "The Mini Shai-Hulud attack targeted @tanstack npm packages, demonstrating that SLSA level 2 compliance can be bypassed via OIDC token theft and cache poisoning.",
+        "fr": "L'attaque Mini Shai-Hulud a ciblé les paquets npm @tanstack, démontrant que la conformité SLSA niveau 2 peut être contournée via le vol de jetons OIDC et l'empoisonnement du cache."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Technology_and_Telecom"],
+        "fr": ["Technologie et Télécommunications"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": ["github.com", "slsa.dev"],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": ["T1195.002"],
+      "analyse": {
+        "en": "SLSA compliance of level 2 does not offer full isolation. Isolation of level 3 is required to counter OIDC token exposure.",
+        "fr": "La conformité SLSA de niveau 2 n'offre pas une isolation complète. Le niveau 3 est requis pour contrer l'exposition des jetons OIDC."
+      },
+      "recommandations": [
+        {
+          "en": "Isolate pipeline caches between different build runs.",
+          "fr": "Isoler les caches de pipeline entre les différentes exécutions de builds."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Restrict use of pull_request_target in workflow files."],
+          "fr": ["Restreindre l'utilisation de pull_request_target dans les fichiers de workflow."]
+        },
+        "phase2_detection": {
+          "en": ["Audit release workflows to identify silent publishing steps upon failed runs."],
+          "fr": ["Auditer les workflows de release pour identifier des publications silencieuses lors d'échecs."]
+        },
+        "phase3_containment": {
+          "en": ["Revoke compromised OIDC tokens.", "Purge infected caches."],
+          "fr": ["Révoquer les jetons OIDC compromis.", "Purger les caches infectés."]
+        },
+        "phase4_post_incident": {
+          "en": ["Enforce SLSA build level 3 requirements."],
+          "fr": ["Appliquer les exigences du niveau 3 de build SLSA."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search CI logs for write permissions associated with pull_request_target triggers."],
+          "fr": ["Rechercher dans les journaux CI les autorisations d'écriture associées aux déclencheurs pull_request_target."]
+        }
+      },
+      "tags": ["supply-chain", "npm", "github-actions", "slsa"],
+      "sources": ["https://openssf.org/blog/2026/06/10/mini-shai-hulud-where-slsas-boundaries-fall/"],
+      "date": "2026-06-10"
+    },
+    {
+      "title": {
+        "en": "Truncated Threat Intel Advisory",
+        "fr": "Avis de CTI tronqué"
+      },
+      "description": {
+        "en": "Default placeholder for truncated final raw article source (art_50).",
+        "fr": "Espace réservé par défaut pour la source du dernier article brut tronqué (art_50)."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Technology_and_Telecom"],
+        "fr": ["Technologie et Télécommunications"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "Due to truncation of source feed, details for art_50 are filled with placeholders.",
+        "fr": "En raison de la troncature du flux source, les détails d'art_50 sont renseignés avec des valeurs génériques."
+      },
+      "recommandations": [
+        {
+          "en": "Audit logs for incomplete data feeds.",
+          "fr": "Auditer les journaux à la recherche de flux de données incomplets."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Maintain logging architecture."],
+          "fr": ["Maintenir l'architecture de journalisation."]
+        },
+        "phase2_detection": {
+          "en": ["Identify incomplete feed inputs."],
+          "fr": ["Identifier les entrées de flux incomplètes."]
+        },
+        "phase3_containment": {
+          "en": ["Apply default restrictions on unknown feeds."],
+          "fr": ["Appliquer des restrictions par défaut sur les flux inconnus."]
+        },
+        "phase4_post_incident": {
+          "en": ["Review system inputs consistency."],
+          "fr": ["Passer en revue la cohérence des entrées du système."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search for anomalous data truncation logs."],
+          "fr": ["Rechercher des journaux de troncature de données anormaux."]
+        }
+      },
+      "tags": ["unknown"],
+      "sources": ["unknown"],
+      "date": "2026-06-11"
+    }
+  ]
+}
