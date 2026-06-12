@@ -1,63 +1,37 @@
 {
   "threat_level": {
-    "score": 3,
+    "score": 5,
     "label": {
-      "en": "High",
-      "fr": "Élevé"
+      "en": "Severe",
+      "fr": "Sévère"
     },
     "justification": {
-      "en": "The threat level is high due to active, critical supply chain attacks targeting NPM and PyPI, zero-day exploitation of perimeter defenses like Check Point VPN and Chrome V8, and highly aggressive vishing and double-extortion ransomware campaigns targeting multiple sectors.",
-      "fr": "Le niveau de menace est élevé en raison d'attaques actives et critiques contre la chaîne d'approvisionnement logistique (NPM, PyPI), de l'exploitation de failles zero-day sur des équipements périphériques (Check Point VPN) et Chrome V8, ainsi que de campagnes agressives d'extorsion et de ransomwares."
+      "en": "The threat landscape for this period is characterized by highly active nation-state cyber espionage, a resurgence in sophisticated software supply-chain compromises (targeting PyPI and NPM), and widespread opportunistic exploitation of edge network devices and VPN vulnerabilities. Rapid adoption of unhardened AI-integrated developer tools has also opened up a critical, highly-targeted attack surface.",
+      "fr": "Le paysage de la menace pour cette période se caractérise par un cyberespionnage étatique très actif, une recrudescence de compromissions sophistiquées de la chaîne d'approvisionnement logicielle (ciblant PyPI et NPM), et l'exploitation opportuniste généralisée de vulnérabilités d'appliances réseau et de passerelles VPN. L'adoption rapide d'outils de développement intégrés à l'IA non durcis a également ouvert une surface d'attaque critique et hautement ciblée."
     },
     "_triggers": [
-      "+4 — 2 CVE(s) CISA KEV",
+      "+8 — 4 CVE(s) CISA KEV",
       "+2 — 2 CVE(s) CVSS ≥ 9.0",
+      "+2 — 1 acteur(s) étatique(s)",
       "+1 — 1 opérateur(s) ransomware",
-      "+2 — 2 breach(es) ≥ 100k enregistrements",
+      "+1 — ≥ 3 acteurs distincts actifs",
+      "+3 — 3 breach(es) ≥ 100k enregistrements",
       "+2 — secteurs critiques ciblés : Government_and_Defense"
     ]
   },
   "executive_summary": {
-    "en": "During the second week of June 2026, the global threat landscape was dominated by highly sophisticated supply chain compromises, perimeter security exploitation, and social-engineering-driven initial access. Notable campaigns include the 'Mini Shai-Hulud' worm targeting Python (PyPI) and node package registries (NPM), active exploitation of a Check Point VPN logical authentication bypass zero-day (CVE-2026-50751) by Qilin ransomware affiliates, and sophisticated mobile espionage. Furthermore, emerging vectors like prompt injections in clinical AI healthcare models highlight an expanding attack surface, requiring immediate strategic containment and operational hardening.",
-    "fr": "Durant la deuxième semaine de juin 2026, le paysage mondial des cybermenaces a été dominé par des compromissions sophistiquées de la chaîne d'approvisionnement, l'exploitation d'équipements de périmètre et des accès initiaux via ingénierie sociale. Les faits marquants incluent le ver 'Mini Shai-Hulud' ciblant les registres Python (PyPI) et NPM, l'exploitation active d'un bypass d'authentification VPN Check Point (CVE-2026-50751) par des affiliés de Qilin, ainsi que de l'espionnage mobile d'État. L'émergence d'injections de prompt ciblant des modèles d'IA en santé montre une extension critique de la surface d'attaque."
+    "en": "During the second week of June 2026, the global cyber threat landscape experienced significant volatility. Major cybercriminal actors, including ShinyHunters and Silent Ransom Group, shifted operations towards pure data exfiltration and callback phishing (vishing), avoiding traditional ransomware encryption to evade immediate detection. Simultaneously, supply-chain attacks advanced dynamically with the Miasma and Shai-Hulud frameworks compromising NPM and PyPI ecosystems, bypassing SLSA level 2 protections via OIDC token theft and cache poisoning. Network edge security remains heavily targeted, emphasized by active exploits of Check Point VPN gateways (CVE-2026-50751) and Ivanti Sentry. Furthermore, the rapid integration of unauthenticated AI agents using the Model Context Protocol (MCP) has introduced severe prompt injection and data spill exposures.",
+    "fr": "Durant la deuxième semaine de juin 2026, le paysage mondial de la cybermenace a connu une volatilité significative. Des cybercriminels majeurs, notamment ShinyHunters et le Silent Ransom Group, ont orienté leurs opérations vers l'exfiltration pure de données et le callback phishing (vishing), évitant le chiffrement traditionnel par rançongiciel pour échapper à une détection immédiate. Parallèlement, les attaques de la chaîne d'approvisionnement ont progressé de manière dynamique avec les frameworks Miasma et Shai-Hulud compromettant les écosystèmes NPM et PyPI, contournant les protections SLSA de niveau 2 via le vol de jetons OIDC et l'empoisonnement du cache. La sécurité périphérique réseau reste fortement ciblée, illustrée par l'exploitation active des passerelles VPN Check Point (CVE-2026-50751) et d'Ivanti Sentry. De plus, l'intégration rapide d'agents d'IA non authentifiés utilisant le protocole MCP a introduit de graves vulnérabilités d'injection de prompts et de fuites de données."
   },
   "regulatory": {
     "analyse": {
-      "en": "Regulatory frameworks are shifting from retroactive fines to proactive code hardening and transparency rules. Key signals include the European Commission's release of the AI Act guidelines on labeling synthetic content, pushing organizations to adopt digital watermarking and provenance standards. In parallel, the US FTC and SEC continue to enforce strict post-incident disclosure rules, actively prosecuting entities attempting to cover up breaches.",
-      "fr": "Les cadres réglementaires évoluent vers des exigences accrues de durcissement du code et de transparence. La Commission européenne a publié les lignes directrices de l'AI Act relatives au marquage des contenus synthétiques, incitant à l'adoption de normes de traçabilité. Parallèlement, la FTC et la SEC américaines continuent d'appliquer des règles strictes de divulgation post-incident, poursuivant activement les entités dissimulant leurs brèches."
+      "en": "Key regulatory developments this period highlight a dramatic push towards accountability in corporate security disclosures and algorithmic transparency. The European Commission formalized compliance paths under the AI Act, enforcing strict guidelines for watermarking and labeling AI-generated content. Domestically, regulatory enforcement is tightening in the US, as evidenced by the FTC's final order against Illuminate Education for historical student data protection failures, and the SEC's investigation into corporate giants over alleged cover-ups of critical breaches. Security and compliance teams must prepare for immediate auditing of software dependencies and cryptographic verification of AI-driven systems to meet incoming compliance milestones.",
+      "fr": "Les développements réglementaires clés de cette période mettent en évidence un effort considérable en faveur de la responsabilité dans les divulgations de sécurité des entreprises et de la transparence algorithmique. La Commission européenne a formalisé les parcours de conformité dans le cadre de l'AI Act, imposant des directives strictes pour le marquage des contenus générés par l'IA. Aux États-Unis, l'application de la réglementation se durcit, comme en témoignent l'ordonnance finale de la FTC contre Illuminate Education pour des défaillances historiques dans la protection des données des étudiants, et l'enquête de la SEC sur des géants de l'industrie concernant des dissimulations présumées de violations de données critiques. Les équipes de sécurité et de conformité doivent se préparer à un audit immédiat des dépendances logicielles et à la vérification cryptographique des systèmes basés sur l'IA pour répondre aux prochaines échéances de conformité."
     },
     "events": [
       {
         "title": {
-          "en": "AI Act Synthetic Content Labeling Guidelines",
-          "fr": "Lignes directrices de l'AI Act sur le marquage des contenus"
-        },
-        "issuing_body": "European Commission",
-        "date": "2026-06-10",
-        "jurisdiction": {
-          "region": "EU",
-          "countries": [
-            "FR",
-            "DE",
-            "IE"
-          ]
-        },
-        "type": "Guidance",
-        "status": "Active",
-        "reference": "AI-ACT-2026-LABELLING",
-        "affected_sectors": [
-          "Technology_and_Telecom",
-          "Media_and_Communication"
-        ],
-        "description": {
-          "en": "The European Commission published its code of practice for marking and labeling AI-generated content ahead of the August 2026 AI Act enforcement, requiring watermarking for generative models.",
-          "fr": "La Commission européenne a publié son code de conduite sur le marquage et l'étiquetage des contenus générés par IA en vue de l'entrée en vigueur de l'AI Act en août 2026, imposant le tatouage numérique."
-        },
-        "source_url": "https://digital-strategy.ec.europa.eu/en/news/commission-publishes-code-practice-marking-and-labelling-ai-generated-content"
-      },
-      {
-        "title": {
-          "en": "FTC Final Order Against Illuminate Education",
+          "en": "FTC Final Order against Illuminate Education",
           "fr": "Ordonnance finale de la FTC contre Illuminate Education"
         },
         "issuing_body": "Federal Trade Commission (FTC)",
@@ -72,13 +46,39 @@
         "status": "Active",
         "reference": "FTC Order Illuminate Education",
         "affected_sectors": [
-          "Education_and_Research"
+          "Education_Research"
         ],
         "description": {
-          "en": "The FTC finalized its settlement with Illuminate Education for failing to secure personal data of millions of minor students, mandating a comprehensive information security program subject to third-party audits.",
-          "fr": "La FTC a finalisé son accord de règlement avec Illuminate Education pour défaut de protection des données personnelles de millions d'étudiants mineurs, imposant un programme complet de sécurité audité."
+          "en": "Final approval of a consent agreement penalizing Illuminate Education for failing to secure the personal data of millions of student minors. The order mandates the implementation of an independently-audited information security program.",
+          "fr": "Approbation finale d'un accord de règlement sanctionnant Illuminate Education pour ne pas avoir protégé les données personnelles de millions de mineurs. L'ordonnance impose la mise en œuvre d'un programme de sécurité audité de manière indépendante."
         },
         "source_url": "https://databreaches.net/2026/06/08/ftc-gives-final-approval-to-order-against-illuminate-settling-allegations-it-failed-to-secure-students-personal-data/"
+      },
+      {
+        "title": {
+          "en": "Code of Practice on AI-Generated Content Labeling",
+          "fr": "Code de conduite sur l'étiquetage des contenus générés par l'IA"
+        },
+        "issuing_body": "European Commission",
+        "date": "2026-06-10",
+        "jurisdiction": {
+          "region": "EU",
+          "countries": [
+            "FR",
+            "DE"
+          ]
+        },
+        "type": "Guidance",
+        "status": "Active",
+        "reference": "AI-ACT-2026-LABELLING",
+        "affected_sectors": [
+          "Technology_Telecom"
+        ],
+        "description": {
+          "en": "Publication of the official code of practice for the mandatory watermarking and detection labeling of AI-generated content ahead of the August 2026 AI Act enforcement milestones.",
+          "fr": "Publication du code de conduite officiel pour le marquage obligatoire et l'étiquetage de détection des contenus générés par l'IA, en amont des échéances d'application de l'AI Act d'août 2026."
+        },
+        "source_url": "https://digital-strategy.ec.europa.eu/en/news/commission-publishes-code-practice-marking-and-labelling-ai-generated-content"
       }
     ]
   },
@@ -86,22 +86,22 @@
     "geographic_analyse": [
       {
         "geographic_zone_name": {
-          "en": "China",
-          "fr": "Chine"
-        },
-        "geographic_zone_strategic_analyse": {
-          "en": "China-affiliated state actors like Volt Typhoon are heavily scaling their proxy infrastructures (e.g., the JDY SOHO botnet) to systematically scan and map Western government and military networks, indicating strategic pre-positioning for potential kinetic escalations.",
-          "fr": "Les acteurs étatiques affiliés à la Chine, comme Volt Typhoon, développent massivement leurs infrastructures de proxies résidentiels (botnet SOHO JDY) pour cartographier furtivement les réseaux militaires occidentaux en vue de pré-positionnements stratégiques."
-        }
-      },
-      {
-        "geographic_zone_name": {
           "en": "Russia",
           "fr": "Russie"
         },
         "geographic_zone_strategic_analyse": {
-          "en": "Russian nation-state actors (e.g., Gamaredon, SHADOW-EARTH-066) maintain active, persistent campaigns targeting Ukrainian government structures by taking advantage of unpatched local software vulnerabilities (such as WinRAR CVE-2025-8088). Additionally, state-backed entities focus on mobile espionage to track foreign diplomats and military movements.",
-          "fr": "Les acteurs étatiques russes (ex: Gamaredon, SHADOW-EARTH-066) maintiennent des campagnes persistantes ciblant l'administration ukrainienne en exploitant des failles applicatives locales non corrigées (WinRAR CVE-2025-8088). Ils se concentrent également sur l'espionnage mobile."
+          "en": "Russian state-sponsored actors (such as Earth Dahu/Gamaredon and UAC-0226) continue to focus heavily on geopolitical intelligence gathering. They exhibit a persistent reliance on unpatched software flaws, specifically WinRAR vulnerabilities, to execute command and scripting operations against Eastern European administrative and defense networks.",
+          "fr": "Les acteurs étatiques russes (tels que Earth Dahu/Gamaredon et UAC-0226) continuent de se concentrer sur la collecte de renseignements géopolitiques. Ils s'appuient de manière persistante sur des failles logicielles non corrigées, en particulier les vulnérabilités WinRAR, pour exécuter des scripts malveillants contre les réseaux administratifs et de défense d'Europe de l'Est."
+        }
+      },
+      {
+        "geographic_zone_name": {
+          "en": "China",
+          "fr": "Chine"
+        },
+        "geographic_zone_strategic_analyse": {
+          "en": "Chinese state-linked groups, notably Volt Typhoon, demonstrate long-term strategic positioning. By expanding and weaponizing SOHO and IoT-based botnets like JDY, they systematically map and conduct reconnaissance against Western critical infrastructure and military networks.",
+          "fr": "Les groupes cyber-étatiques chinois, notamment Volt Typhoon, font preuve d'un positionnement stratégique à long terme. En étendant et en instrumentalisant des botnets IoT/SOHO tels que JDY, ils cartographient et effectuent systématiquement des reconnaissances contre les infrastructures critiques et les réseaux militaires occidentaux."
         }
       }
     ],
@@ -116,12 +116,14 @@
         "targeted_sectors": {
           "en": [
             "Healthcare_and_Life_Sciences",
+            "Technology_and_Telecom",
             "Retail_and_Consumer",
             "Education_and_Research",
             "Government_and_Defense"
           ],
           "fr": [
             "Healthcare_and_Life_Sciences",
+            "Technology_and_Telecom",
             "Retail_and_Consumer",
             "Education_and_Research",
             "Government_and_Defense"
@@ -129,35 +131,36 @@
         },
         "targeted_regions": {
           "en": [
-            "United States",
-            "United Kingdom",
+            "North America",
+            "Europe",
             "Global"
           ],
           "fr": [
-            "États-Unis",
-            "Royaume-Uni",
+            "Amérique du Nord",
+            "Europe",
             "Global"
           ]
         },
         "mitre_attack_ttps_id": [
           "T1566",
+          "T1566.004",
           "T1078",
           "T1190",
           "T1203"
         ],
         "campaign_or_operation": {
           "en": [
-            "DentaQuest breach",
-            "Oracle PeopleSoft exploits"
+            "DentaQuest SaaS Extortion",
+            "Oracle PeopleSoft Database Harvesting"
           ],
           "fr": [
-            "Violation DentaQuest",
-            "Exploitation Oracle PeopleSoft"
+            "Extorsion SaaS DentaQuest",
+            "Pillage de bases de données Oracle PeopleSoft"
           ]
         }
       },
       {
-        "threat_actor_name": "Qilin",
+        "threat_actor_name": "Silent Ransom Group",
         "origin_country": "Russia",
         "type": {
           "en": "Ransomware",
@@ -165,46 +168,75 @@
         },
         "targeted_sectors": {
           "en": [
-            "Business_Services",
-            "Healthcare_and_Life_Sciences",
-            "Real_Estate_and_Construction",
-            "Government_and_Defense",
-            "Critical_Infrastructure"
+            "Finance",
+            "Business_Services"
           ],
           "fr": [
-            "Business_Services",
-            "Healthcare_and_Life_Sciences",
-            "Real_Estate_and_Construction",
-            "Government_and_Defense",
-            "Critical_Infrastructure"
+            "Finance",
+            "Business_Services"
           ]
         },
         "targeted_regions": {
           "en": [
-            "United States",
-            "Europe",
-            "Global"
+            "North America",
+            "Western Europe"
           ],
           "fr": [
-            "États-Unis",
-            "Europe",
-            "Global"
+            "Amérique du Nord",
+            "Europe de l'Ouest"
           ]
         },
         "mitre_attack_ttps_id": [
-          "T1133",
-          "T1048",
-          "T1486",
-          "T1020"
+          "T1566.004",
+          "T1219",
+          "T1568.003",
+          "T1048"
         ],
         "campaign_or_operation": {
           "en": [
-            "Check Point VPN targeting",
-            "Miller & Zois extortion"
+            "Callback Phishing Legal Services Campaign"
           ],
           "fr": [
-            "Ciblage VPN Check Point",
-            "Extorsion Miller & Zois"
+            "Campagne de Callback Phishing contre les services juridiques"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "Volt Typhoon",
+        "origin_country": "China",
+        "type": {
+          "en": "Nation-state",
+          "fr": "Nation-state"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Critical_Infrastructure",
+            "Government_and_Defense"
+          ],
+          "fr": [
+            "Critical_Infrastructure",
+            "Government_and_Defense"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "United States"
+          ],
+          "fr": [
+            "États-Unis"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1595",
+          "T1071",
+          "T1562.001"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "JDY Botnet Infrastructure Expansion"
+          ],
+          "fr": [
+            "Expansion de l'infrastructure du botnet JDY"
           ]
         }
       }
@@ -212,46 +244,10 @@
   },
   "mitre_attack_ttps": {
     "ttps_strategic_analyse": {
-      "en": "Threat actors are demonstrating a marked preference for evading traditional security tooling by shifting focus to the software supply chain (NPM/PyPI), exploiting perimeter access appliances via logical bypasses (VPNs), and abusing legitimate local developer components (OIDC/cache workflows) or using native system components (LOLBAS). Social engineering remains highly automated and convincing through vishing and prompt injections.",
-      "fr": "Les attaquants privilégient de plus en plus le contournement des défenses traditionnelles en ciblant la chaîne d'approvisionnement logicielle (NPM/PyPI), en exploitant des accès réseau via des vulnérabilités logiques (VPN Check Point) et en détournant des outils d'administration ou de développement (OIDC, LOLBAS). L'ingénierie sociale se professionnalise via le vishing et l'injection de prompt."
+      "en": "The analysis of MITRE ATT&CK techniques utilized this week demonstrates a clear pivot towards Living-off-the-Land (LotL) mechanisms and initial access via sophisticated trust-abuse channels. Attackers are increasingly bypassing security controls by using legitimate, commercial RMM tools (T1219) and OIDC configurations (T1078) instead of easily-flagged custom payloads. The heavy reliance on voice phishing (T1566.004) and supply chain attacks (T1195.002) highlights the exploitation of human vulnerabilities and developer trust relationships rather than basic perimeter flaws.",
+      "fr": "L'analyse des techniques MITRE ATT&CK utilisées cette semaine démontre un pivot clair vers les mécanismes de type Living-off-the-Land (LotL) et les accès initiaux via des canaux d'abus de confiance sophistiqués. Les attaquants contournent de plus en plus les contrôles de sécurité en utilisant des outils RMM commerciaux légitimes (T1219) et des configurations OIDC (T1078) plutôt que des charges utiles personnalisées facilement détectables. La forte dépendance à l'égard du phishing vocal (T1566.004) et des attaques de la chaîne d'approvisionnement (T1195.002) met en évidence l'exploitation des failles humaines et des relations de confiance entre développeurs."
     },
     "ttps_list": [
-      {
-        "id": "T1195.002",
-        "tactic": {
-          "en": "Initial Access",
-          "fr": "Accès Initial"
-        },
-        "technique_name": "Supply Chain Compromise: Compromise Software Dependencies",
-        "frequency": 2,
-        "severity": "critical",
-        "context": {
-          "en": [
-            "Observed in TeamPCP's Miasma worm campaign targeting VS Code/Cursor extensions, Python scientific PyPI packages, and automated NPM cache poisoning."
-          ],
-          "fr": [
-            "Observé dans la campagne du ver Miasma de TeamPCP ciblant les extensions VS Code/Cursor, les paquets PyPI scientifiques et l'empoisonnement de cache NPM."
-          ]
-        }
-      },
-      {
-        "id": "T1133",
-        "tactic": {
-          "en": "Initial Access",
-          "fr": "Accès Initial"
-        },
-        "technique_name": "External Remote Services",
-        "frequency": 2,
-        "severity": "critical",
-        "context": {
-          "en": [
-            "Exploited by Qilin Ransomware affiliates targeting Check Point VPN vulnerabilities (CVE-2026-50751) and PAN-OS vulnerabilities to bypass perimeter MFA."
-          ],
-          "fr": [
-            "Exploité par les affiliés du ransomware Qilin via des vulnérabilités VPN Check Point (CVE-2026-50751) et PAN-OS pour contourner l'authentification multifacteur de périmètre."
-          ]
-        }
-      },
       {
         "id": "T1566.004",
         "tactic": {
@@ -259,14 +255,76 @@
           "fr": "Accès Initial"
         },
         "technique_name": "Phishing: Voice",
-        "frequency": 2,
+        "frequency": 4,
         "severity": "high",
         "context": {
           "en": [
-            "Utilized heavily by Silent Ransom Group and UNC3753 as part of callback phishing campaigns, posing as IT support to force RMM installations."
+            "Extensively leveraged in callback phishing and vishing campaigns by Silent Ransom Group and UNC3753 to bypass standard secure email gateways.",
+            "Used to trick enterprise users into installing unauthorized commercial remote support utilities like AnyDesk, Zoho Assist, or Bomgar."
           ],
           "fr": [
-            "Utilisé intensivement par Silent Ransom Group et UNC3753 dans des campagnes d'hameçonnage vocal et callback, se faisant passer pour le support IT pour installer des outils RMM."
+            "Largement exploité dans les campagnes de callback phishing et de vishing par le Silent Ransom Group et UNC3753 pour contourner les passerelles de messagerie standard.",
+            "Utilisé pour inciter les utilisateurs à installer des utilitaires de support à distance commerciaux non autorisés tels que AnyDesk, Zoho Assist ou Bomgar."
+          ]
+        }
+      },
+      {
+        "id": "T1195.002",
+        "tactic": {
+          "en": "Initial Access",
+          "fr": "Accès Initial"
+        },
+        "technique_name": "Supply Chain Compromise: Compromise Software Dependencies",
+        "frequency": 3,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "Observed in TeamPCP's Miasma worm campaign targeting developer OIDC tokens and injecting malicious code into TanStack packages.",
+            "Utilized by Shai-Hulud operators to trojanize scientific and R&D-focused Python packages on the public PyPI repository."
+          ],
+          "fr": [
+            "Observé dans la campagne du ver Miasma de TeamPCP visant les jetons OIDC des développeurs et injectant du code malveillant dans les paquets TanStack.",
+            "Utilisé par les opérateurs de Shai-Hulud pour trojaniser des paquets Python scientifiques sur le dépôt public PyPI."
+          ]
+        }
+      },
+      {
+        "id": "T1219",
+        "tactic": {
+          "en": "Command and Control",
+          "fr": "Commande et Contrôle"
+        },
+        "technique_name": "Remote Access Software",
+        "frequency": 3,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Used by Silent Ransom Group and Qilin affiliates to establish persistent administrative access to compromised internal endpoints.",
+            "Bypasses traditional signature-based security detections by utilizing legitimate commercial remote monitoring and management (RMM) binaries."
+          ],
+          "fr": [
+            "Utilisé par Silent Ransom Group et les affiliés de Qilin pour établir un accès administratif persistant sur les terminaux internes compromis.",
+            "Contourne les détections de sécurité traditionnelles basées sur les signatures en utilisant des binaires RMM légitimes."
+          ]
+        }
+      },
+      {
+        "id": "T1078",
+        "tactic": {
+          "en": "Defense Evasion",
+          "fr": "Évasion de Défense"
+        },
+        "technique_name": "Valid Accounts",
+        "frequency": 4,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Abused in AWS/GCP cloud logging evasion where compromised administrative IAM roles were utilized to alter and delete logging trails.",
+            "Exploited in Git OIDC compromises where legitimate developer credentials were used to sign and publish compromised npm versions."
+          ],
+          "fr": [
+            "Abusé dans l'évasion de la journalisation cloud AWS/GCP, où des rôles IAM d'administration compromis ont été utilisés pour modifier et supprimer des traces de logs.",
+            "Exploité dans les compromissions Git OIDC où des identifiants légitimes de développeurs ont été utilisés pour signer et publier des versions npm compromises."
           ]
         }
       }
@@ -274,8 +332,8 @@
   },
   "vulnerabilities": {
     "analyse": {
-      "en": "This period was marked by critical, zero-day vulnerabilities in security boundaries, notably the Check Point VPN logic flaw (CVE-2026-50751) and the Chrome V8 memory safety issue (CVE-2026-11645). These vulnerabilities are actively exploited in the wild, enabling prompt network compromises or client-side sandbox escapes.",
-      "fr": "Cette période a été marquée par des failles critiques zero-day dans des équipements de sécurité réseau ou navigateurs, notamment la faille VPN Check Point (CVE-2026-50751) et Chrome V8 (CVE-2026-11645). Celles-ci font l'objet d'exploitations actives."
+      "en": "Vulnerability management this week was defined by high-impact disclosures targeting perimeter security, browser runtimes, and modern developer tooling. Active, targeted in-the-wild exploitation of Check Point VPN appliances (CVE-2026-50751) and Chrome V8 (CVE-2026-11645) demonstrated that threat actors continue to prioritize entry vectors with immediate administrative exposure. The discovery of architectural exposures in Model Context Protocol (MCP) servers and the unpatched Langflow flaw (CVE-2026-5027) indicates that rapid AI adoption is outpacing secure development lifecycles.",
+      "fr": "La gestion des vulnérabilités de cette semaine a été marquée par des divulgations à fort impact ciblant la sécurité périmétrique, les navigateurs et les outils de développement modernes. L'exploitation active dans la nature d'appliances VPN Check Point (CVE-2026-50751) et de Chrome V8 (CVE-2026-11645) démontre que les attaquants privilégient les vecteurs d'entrée avec exposition administrative immédiate. La découverte de failles architecturales dans les serveurs MCP et la faille Langflow non corrigée (CVE-2026-5027) indiquent que l'adoption rapide de l'IA dépasse les cycles de développement sécurisés."
     },
     "list": [
       {
@@ -287,21 +345,18 @@
         "affected_product_vendor": "Check Point",
         "vulnerability_type": {
           "en": [
-            "Authentication Bypass",
-            "Logic Flaw"
+            "Authentication Bypass"
           ],
           "fr": [
-            "Contournement d'authentification",
-            "Défaut logique"
+            "Contournement d'authentification"
           ]
         },
         "vulnerability_description": {
-          "en": "A logical vulnerability during IKEv1 certificate negotiation allows remote attackers to bypass authentication on Check Point security gateways when machine certificate validation is misconfigured.",
-          "fr": "Une vulnérabilité logique lors de la négociation de certificat IKEv1 permet à des attaquants distants de contourner l'authentification sur les passerelles Check Point en cas de mauvaise configuration."
+          "en": "A logical vulnerability during IKEv1 VPN protocol negotiation allows unauthenticated attackers to bypass initial identity verification and establish unauthorized tunnels when machine certificates are not strictly enforced.",
+          "fr": "Une vulnérabilité logique lors de la négociation du protocole VPN IKEv1 permet à des attaquants non authentifiés de contourner la vérification d'identité et d'établir des tunnels non autorisés lorsque les certificats machine ne sont pas strictement imposés."
         },
         "mitre_attack_ttps_id": [
-          "T1133",
-          "T1562"
+          "T1133"
         ]
       },
       {
@@ -309,24 +364,68 @@
         "cvss_score": "9.8",
         "epss_score": "N/A",
         "cisa_kev": true,
-        "affected_product": "Nx Console extension (v18.95.0) and NPM packages",
-        "affected_product_vendor": "Red Hat / Nrwl",
+        "affected_product": "Nx Console Extension (v18.95.0) and Nrwl/Red Hat NPM Packages",
+        "affected_product_vendor": "Microsoft / Red Hat",
         "vulnerability_type": {
           "en": [
-            "Supply Chain Compromise",
-            "Remote Code Execution"
+            "Supply Chain Code Injection"
           ],
           "fr": [
-            "Compromission de la chaîne d'approvisionnement",
-            "Exécution de code à distance"
+            "Injection de code dans la chaîne d'approvisionnement"
           ]
         },
         "vulnerability_description": {
-          "en": "Introduction of the Mini Shai-Hulud framework backdoor into development libraries and VS Code extension, allowing arbitrary remote command execution on developer systems.",
-          "fr": "Introduction d'une porte dérobée liée au framework Mini Shai-Hulud dans des bibliothèques de développement et l'extension VS Code, permettant l'exécution de code arbitraire sur les postes des développeurs."
+          "en": "A supply chain compromise targeting VS Code developer extensions. Attackers injected the Mini Shai-Hulud framework, enabling remote code execution (RCE) and developer credentials harvesting.",
+          "fr": "Compromission de la chaîne d'approvisionnement ciblant les extensions de développement VS Code. Des attaquants ont injecté le framework Mini Shai-Hulud, permettant l'exécution de code à distance (RCE) et le vol d'identifiants de développeurs."
         },
         "mitre_attack_ttps_id": [
           "T1195.002",
+          "T1059"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-11645",
+        "cvss_score": "8.8",
+        "epss_score": "N/A",
+        "cisa_kev": true,
+        "affected_product": "Chrome Desktop",
+        "affected_product_vendor": "Google",
+        "vulnerability_type": {
+          "en": [
+            "Out-of-Bounds Memory Read/Write"
+          ],
+          "fr": [
+            "Lecture/Écriture mémoire hors-limites"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "An out-of-bounds read/write condition within the V8 JavaScript engine allows remote attackers to execute arbitrary code or trigger sandbox escapes via malformed web content.",
+          "fr": "Une condition de lecture/écriture hors-limites dans le moteur JavaScript V8 permet à des attaquants distants d'exécuter du code arbitraire ou de déclencher des échappements de bac à sable via du contenu web malformé."
+        },
+        "mitre_attack_ttps_id": [
+          "T1203"
+        ]
+      },
+      {
+        "cve_id": "CVE-2025-8088",
+        "cvss_score": "8.4",
+        "epss_score": "N/A",
+        "cisa_kev": true,
+        "affected_product": "WinRAR",
+        "affected_product_vendor": "RARLAB",
+        "vulnerability_type": {
+          "en": [
+            "Path Traversal via NTFS Alternate Data Streams (ADS)"
+          ],
+          "fr": [
+            "Traversée de chemin via les flux de données alternatifs (ADS) NTFS"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Allows attackers to execute arbitrary commands by placing malicious archives containing specifically crafted NTFS alternate data stream folders on victim systems.",
+          "fr": "Permet à des attaquants d'exécuter des commandes arbitraires en plaçant sur les systèmes des victimes des archives malveillantes contenant des dossiers NTFS de flux de données alternatifs spécifiquement conçus."
+        },
+        "mitre_attack_ttps_id": [
           "T1204.002"
         ]
       }
@@ -340,19 +439,13 @@
       "records_count": 2600000,
       "data_types": {
         "en": [
-          "Emails",
-          "Names",
-          "Phone numbers",
-          "Postal addresses",
-          "Health records",
-          "Medicaid IDs"
+          "Personal Identifiable Information (PII)",
+          "Protected Health Information (PHI)",
+          "Medicaid Credentials"
         ],
         "fr": [
-          "E-mails",
-          "Noms",
-          "Numéros de téléphone",
-          "Adresses postales",
-          "Dossiers de santé",
+          "Informations personnelles identifiables (PII)",
+          "Données médicales protégées (PHI)",
           "Identifiants Medicaid"
         ]
       },
@@ -361,109 +454,145 @@
       "source_url": "https://securityaffairs.com/193274/data-breach/dentaquest-breach-shinyhunters-publish-data-impacting-2-6m-people.html"
     },
     {
+      "victim": "Baker Distributing Company",
+      "sector": "Retail_and_Consumer",
+      "country": "United States",
+      "records_count": 102935,
+      "data_types": {
+        "en": [
+          "Names",
+          "Email addresses",
+          "Physical addresses",
+          "Phone numbers",
+          "Support ticket details"
+        ],
+        "fr": [
+          "Noms",
+          "Adresses e-mail",
+          "Adresses physiques",
+          "Numéros de téléphone",
+          "Détails de tickets de support"
+        ]
+      },
+      "threat_actor": "ShinyHunters",
+      "financial_impact_usd": null,
+      "source_url": "https://haveibeenpwned.com/Breach/BakerDistributing"
+    },
+    {
       "victim": "University of Nottingham",
       "sector": "Education_and_Research",
       "country": "United Kingdom",
       "records_count": 454635,
       "data_types": {
         "en": [
-          "Names",
-          "Addresses",
-          "Emails",
-          "Phones",
-          "Passports",
-          "Financial details"
+          "Student names",
+          "Email addresses",
+          "Passport details",
+          "Financial records"
         ],
         "fr": [
-          "Noms",
-          "Adresses",
-          "E-mails",
-          "Téléphones",
-          "Passeports",
-          "Informations financières"
+          "Noms d'étudiants",
+          "Adresses e-mail",
+          "Détails de passeports",
+          "Données financières"
         ]
       },
       "threat_actor": "ShinyHunters",
       "financial_impact_usd": null,
       "source_url": "https://haveibeenpwned.com/Breach/UniversityOfNottingham"
+    },
+    {
+      "victim": "Tchap",
+      "sector": "Government_and_Defense",
+      "country": "France",
+      "records_count": 73000,
+      "data_types": {
+        "en": [
+          "Government agent names",
+          "Professional email addresses",
+          "Device metadata",
+          "Public chat room logs"
+        ],
+        "fr": [
+          "Noms d'agents publics",
+          "Adresses e-mail professionnelles",
+          "Métadonnées de terminaux",
+          "Contenus textuels de salons de discussion"
+        ]
+      },
+      "threat_actor": "Unknown",
+      "financial_impact_usd": null,
+      "source_url": "https://securityaffairs.com/193393/security/frances-government-messaging-app-tchap-got-breached.html"
     }
   ],
   "target": {
     "sectors": {
       "en": [
-        "Healthcare_and_Life_Sciences",
         "Government_and_Defense",
-        "Finance",
+        "Healthcare_and_Life_Sciences",
         "Technology_and_Telecom",
         "Education_and_Research",
-        "Business_Services"
+        "Finance"
       ],
       "fr": [
-        "Healthcare_and_Life_Sciences",
         "Government_and_Defense",
-        "Finance",
+        "Healthcare_and_Life_Sciences",
         "Technology_and_Telecom",
         "Education_and_Research",
-        "Business_Services"
+        "Finance"
       ]
     },
     "countries": {
       "en": [
         "United States",
-        "United Kingdom",
         "France",
-        "South Africa",
+        "United Kingdom",
         "Ukraine",
-        "Germany",
-        "China"
+        "South Africa"
       ],
       "fr": [
         "États-Unis",
-        "Royaume-Uni",
         "France",
-        "Afrique du Sud",
+        "Royaume-Uni",
         "Ukraine",
-        "Allemagne",
-        "Chine"
+        "Afrique du Sud"
       ]
     },
     "narrative": {
-      "en": "- **Healthcare & Health Insurance:** DentaQuest (US) suffered a massive breach impacting 2.6 million citizens, resulting in exfiltrated PHI, names, and Medicaid identifiers published by ShinyHunters.\n- **Education & Academia:** University of Nottingham (UK) was compromised via Oracle PeopleSoft exploits, leading to the theft and leak of 454,635 records including passport details, financial transcripts, and PII.\n- **Public Sector & Sovereign Entities:** French government messaging platform Tchap was breached, exposing 73,000 active civil servant identities, metadata, and non-encrypted public channel logs.\n- **National Security & Police:** South African Police Service (SAPS) suffered a critical operational leak with 3,000 active officers' physical identities and clinical health files disclosed publicly.\n- **Legal & Litigation:** Elite US litigation law firms Miller & Zois and Bekman Marder Hopper Malarkey & Perlin were compromised by Qilin, leading to full exfiltration of active court files and corporate accounts.\n- **Fintech & Brokerage:** SoFi Securities Hong Kong subsidiary experienced a third-party partner compromise, exposing transactional, client financial positions, and physical identities.\n- **Industrial Supply & Manufacturing:** German firm Lösing Filtertechnik was listed on Space Bears leak site, losing critical accounting databases, engineering files, and customer portfolios.\n- **Defense Infrastructure:** US Military networks targeted systematically via automated, multi-node SOHO router scanning campaigns driven by the state-linked Volt Typhoon JDY botnet.",
-      "fr": "- **Santé et Assurance:** DentaQuest (US) a subi une violation majeure impactant 2,6 millions de patients, avec exfiltration de PHI et d'identifiants Medicaid publiés par ShinyHunters.\n- **Éducation et Recherche:** L'Université de Nottingham (UK) a été compromise via des failles Oracle PeopleSoft, entraînant le vol de 454 635 dossiers contenant passeports et détails financiers.\n- **Secteur Public et Souverain:** La plateforme de messagerie de l'État français Tchap a été ciblée, compromettant l'identité et les métadonnées de 73 000 comptes d'agents publics.\n- **Police et Sécurité Nationale:** Les Services de Police Sud-Africains (SAPS) ont subi une fuite critique dévoilant l'identité physique et les dossiers médicaux de 3 000 officiers actifs.\n- **Services Juridiques et Avocats:** Les cabinets américains Miller & Zois et Bekman Marder ont été victimes du groupe Qilin, subissant l'exfiltration complète de pièces de litiges confidentielles.\n- **Fintech et Courtage:** La filiale de SoFi Securities à Hong Kong a subi une compromission via un tiers, exposant des données nominatives et des positions financières de clients.\n- **Industrie et Fabrication:** L'entreprise allemande Lösing Filtertechnik a été intégrée au site de fuite de Space Bears, perdant sa comptabilité et ses portefeuilles clients.\n- **Infrastructures de Défense:** Les réseaux du département de la Défense américain ont fait l'objet de scans systématiques par le botnet JDY lié à Volt Typhoon."
+      "en": "- **Healthcare & Life Sciences:** DentaQuest suffered a massive breach exposing 2.6 million PHI/PII records on ShinyHunters' leaks platform. Additionally, Sandhills Medical Foundation had to notify 169k patients regarding exfiltrated records.\n- **Government & Defense:** The French inter-ministerial secure messaging platform Tchap was breached, compromising 73,000 active government agent accounts, metadata, and public chat history. Concurrently, South African Police Service (SAPS) suffered a leaked database exposing confidential medical profiles of 3,000 active-duty officers.\n- **Education & Research:** University of Nottingham's Oracle PeopleSoft database was harvested by ShinyHunters, exfiltrating passport details and financial records of 454,635 students.\n- **Technology & Telecom:** Microsoft's software supply chain was actively disrupted with 73 official GitHub repositories compromised by TeamPCP, leading to infected dependencies impacting global developer networks.\n- **Finance:** SoFi Securities (Hong Kong) confirmed a third-party vendor data breach exposing sensitive client nominative and investment profiling data, forcing regulatory and crisis communications.",
+      "fr": "- **Healthcare & Life Sciences:** DentaQuest a subi une violation massive exposant 2,6 millions de dossiers PHI/PII sur la plateforme de ShinyHunters. De plus, Sandhills Medical Foundation a dû notifier 169 000 patients d'exfiltration de données.\n- **Government & Defense:** La messagerie sécurisée interministérielle française Tchap a été compromise, exposant 73 000 comptes d'agents publics, métadonnées et historiques de discussions. Parallèlement, la police sud-africaine (SAPS) a subi une fuite de base de données exposant les profils médicaux confidentiels de 3 000 officiers.\n- **Education & Research:** La base de données Oracle PeopleSoft de l'Université de Nottingham a été pillée par ShinyHunters, exfiltrant des données de passeports et des dossiers financiers de 454 635 étudiants.\n- **Technology & Telecom:** La chaîne d'approvisionnement logicielle de Microsoft a été perturbée avec 73 dépôts GitHub officiels compromis par TeamPCP, entraînant des dépendances infectées impactant les développeurs mondiaux.\n- **Finance:** SoFi Securities (Hong Kong) a confirmé une violation de données via un fournisseur tiers exposant des informations nominatives de clients et des profils d'investissement, imposant des communications réglementaires."
     }
   },
   "trends": {
     "emerging_techniques": {
       "en": [
-        "Prompt injection attacks bypass clinic AI safeguards",
-        "OAuth Device Code Flow hijacking for developer accounts",
-        "NFC Android API ISO-DEP abuse for EMV credit card cloning",
-        "Logical VPN auth bypass via misconfigured machine certificates",
-        "NPM cache poisoning utilizing privileged GitHub pull_request_target workflows"
+        "Unauthenticated Model Context Protocol (MCP) server scanning and API abuse",
+        "Compromising developer OIDC tokens for automated public npm repository publishing",
+        "Exploitation of alternate data paths and .pth configuration files in Python environments to run JavaScript runtimes (Bun)",
+        "NFC Android low-level API interaction for physical credit card cloning and PIN overlay hijacking"
       ],
       "fr": [
-        "Injection de prompt contournant les garde-fous d'IA cliniques",
-        "Détournement d'OAuth Device Code Flow pour les comptes développeurs",
-        "Abus de l'API NFC Android ISO-DEP pour le clonage de cartes EMV",
-        "Contournement logique de VPN via mauvaise configuration de certificat machine",
-        "Empoisonnement de cache NPM via les workflows privilégiés pull_request_target"
+        "Balayage et abus d'API de serveurs MCP (Model Context Protocol) non authentifiés",
+        "Compromission de jetons OIDC de développeurs pour la publication automatisée sur npm",
+        "Exploitation de chemins de données alternatifs et de fichiers .pth sous Python pour exécuter du JavaScript (Bun)",
+        "Détournement d'API NFC Android bas niveau pour le clonage de cartes physiques et vol de code PIN par superposition"
       ]
     },
     "declining_techniques": {
       "en": [
-        "Traditional SMS or voice-call-based MFA validation",
-        "Basic file-encrypting ransomware without data exfiltration components",
-        "Manual network credential harvesting using open SMB shares without automation"
+        "Symmetric, noisy broad-scale network ransomware encryption (shifting to silent pure-exfiltration)",
+        "Traditional SMS or email-based OTP MFA validation (rendered ineffective by Session Hijacking/EvilTokens)",
+        "Untargeted mass email attachment drops (largely superseded by interactive callback phishing and conversational vishing)"
       ],
       "fr": [
-        "Validation double facteur (MFA) par simple SMS ou appel vocal",
-        "Ransomwares basiques avec simple chiffrement sans exfiltration préalable",
-        "Vol manuel d'identifiants réseau via des partages SMB non automatisés"
+        "Chiffrement de masse bruyant par rançongiciel (remplacé par l'exfiltration silencieuse pure)",
+        "Validation MFA traditionnelle par SMS ou OTP par email (inefficace face au Session Hijacking/EvilTokens)",
+        "Campagnes de pièces jointes massives non ciblées (remplacées par le callback phishing et le vishing conversationnel)"
       ]
     },
     "geopolitical_context": {
-      "en": "Geopolitical dynamics are driving cyber operational convergence. State actors in Russia are translating military mobilization goals into aggressive local administration and regional infrastructure cyber-spying campaigns in Eastern Europe. Meanwhile, China-linked actors (Volt Typhoon) are strategically expanding IoT/SOHO proxy networks across critical targets, preparing long-term cyber pre-positioning assets.",
-      "fr": "Les dynamiques géopolitiques poussent à la convergence des opérations cyber. Les acteurs étatiques russes traduisent leur économie de guerre en campagnes d'espionnage administratif en Europe de l'Est, tandis que les acteurs chinois (Volt Typhoon) étendent des réseaux de proxies SOHO pour un pré-positionnement à long terme."
+      "en": "Geopolitical friction increasingly drives targeted cyber operations. Tensions between the US and China manifest through systemic SOHO botnet expansion (Volt Typhoon) designed for long-term critical infrastructure reconnaissance. Concurrently, Russia's transition to a militarized permanent war economy increases cyber espionage campaigns against Eastern European civil structures. Tensions around global major events like the upcoming World Cup 2026 also stimulate hacktivist and state-aligned preparation phases.",
+      "fr": "Les frictions géopolitiques alimentent de plus en plus les cyber-opérations ciblées. Les tensions entre les États-Unis et la Chine se manifestent par l'expansion systémique de botnets SOHO (Volt Typhoon) conçus pour la reconnaissance d'infrastructures critiques. Parallèlement, la transition de la Russie vers une économie de guerre permanente intensifie les campagnes d'espionnage cybernétique contre les structures civiles d'Europe de l'Est. Les tensions autour d'événements mondiaux majeurs comme la Coupe du Monde 2026 stimulent également des vagues d'activité d'hacktivistes."
     }
   },
   "recommendations": {
@@ -471,43 +600,59 @@
       "en": [
         {
           "title": "Enforce FIDO2 Hardware MFA for Developer Accounts",
-          "detail": "Traditional SMS/TOTP MFA is routinely bypassed by EvilTokens Device Code phishing (used by Lazarus and Scattered Spider this period). Deploy FIDO2/WebAuthn hardware keys (YubiKey 5, Google Titan) for all accounts with access to cloud infrastructure and CI/CD pipelines. Revoke all active sessions on rollout."
+          "detail": "Traditional SMS/TOTP MFA is routinely bypassed by EvilTokens Device Code phishing used by groups like Silent Ransom Group and ShinyHunters. Deploy FIDO2/WebAuthn hardware keys (e.g., YubiKey 5, Google Titan) for all developer and administrator accounts accessing cloud repositories, CI/CD pipelines, and identity providers. Ensure legacy authentication flows and active browser sessions are forcefully revoked during rollout."
         },
         {
-          "title": "Establish SLSA Level 3 Build Protections",
-          "detail": "The 'Mini Shai-Hulud' and 'Miasma' worm campaigns demonstrate that SLSA Level 2 fails to prevent build cache poisoning. Implement strict virtual isolation of runners, immutable build environments, and isolated execution pipelines to prevent cross-branch cache injection. Audit all OIDC trust mappings between GitHub Actions and AWS/Azure/GCP providers."
+          "title": "Establish Immutable Write-Once WORM Cloud Logging",
+          "detail": "Threat actors are actively executing 'Blinding the Watchmen' techniques by deleting or modifying AWS CloudTrail and GCP logging trails via compromised IAM roles (T1562). Segment and centralize all system logs into dedicated, isolated, and append-only secure storage buckets with WORM (Write Once Read Many) properties. Implement out-of-band alerts for any API calls attempting to alter logging infrastructure."
+        },
+        {
+          "title": "Segment and Isolate Smart TV and IoT Networks",
+          "detail": "Vulnerable IoT devices and Smart TVs are being leveraged as residential proxy nodes (T1090.003) via embedded monetization SDKs. Enforce strict network micro-segmentation by placing all corporate Smart TVs, presentation systems, and IoT assets into isolated guest VLANs. Implement firewall rules to deny any internal local network communication from these untrusted network segments."
         }
       ],
       "fr": [
         {
           "title": "Imposer le MFA matériel FIDO2 pour les développeurs",
-          "detail": "Les mécanismes traditionnels SMS/TOTP sont contournés par les attaques de phishing de type Device Code (Scattered Spider). Déployez des clés matérielles FIDO2/WebAuthn (YubiKey 5, Google Titan) pour tous les comptes accédant à l'infrastructure cloud et aux pipelines CI/CD. Révoquez toutes les sessions actives lors du déploiement."
+          "detail": "Le MFA traditionnel par SMS/TOTP est contourné par le phishing Device Code (EvilTokens) utilisé par des groupes comme Silent Ransom Group et ShinyHunters. Déployez des clés matérielles FIDO2/WebAuthn (YubiKey 5, Google Titan) pour tous les comptes de développeurs et d'administrateurs accédant aux dépôts cloud, aux pipelines CI/CD et aux fournisseurs d'identité."
         },
         {
-          "title": "Mettre en œuvre le niveau de protection SLSA 3",
-          "detail": "Les campagnes des vers 'Mini Shai-Hulud' et 'Miasma' prouvent que le niveau SLSA 2 ne bloque pas l'empoisonnement de cache. Mettez en œuvre une isolation stricte des exécuteurs de build, des environnements immuables et des pipelines hermétiques. Auditez l'ensemble des relations de confiance OIDC entre GitHub et vos clouds AWS/Azure/GCP."
+          "title": "Établir une journalisation cloud immuable WORM",
+          "detail": "Les attaquants désactivent ou modifient activement les traces de journalisation AWS CloudTrail et GCP via des rôles IAM compromis (T1562). Centralisez tous les logs système dans des compartiments de stockage isolés dotés de propriétés WORM (Write Once Read Many) et implémentez des alertes hors-bande lors de chaque appel d'API de modification de log."
+        },
+        {
+          "title": "Segmenter et isoler les réseaux IoT et Smart TV",
+          "detail": "Des téléviseurs connectés et équipements IoT sont détournés en proxies résidentiels via des SDK de monétisation dissimulés (T1090.003). Imposez une micro-segmentation réseau stricte en plaçant l'ensemble des Smart TVs et objets connectés dans des VLANs 'visiteurs' isolés sans accès au réseau d'entreprise."
         }
       ]
     },
     "operational": {
       "en": [
         {
-          "title": "Deactivate IKEv1 on Check Point VPNs",
-          "detail": "Exploitation of CVE-2026-50751 logical bypasses by Qilin ransomware allows full perimeter compromise. Immediately disable the outdated IKEv1 protocol on all Check Point firewalls and force VPN gateway connections to use IKEv2. Configure strict endpoint checking and enforce client machine certificate verification."
+          "title": "Disable Dynamic NPM and PyPI Installation Script Execution",
+          "detail": "To mitigate supply-chain code execution threats from Miasma and Shai-Hulud worms, configure internal environments to prevent automatic script execution. Run installations with the `--ignore-scripts` flag on NPM (`npm install --ignore-scripts`) and restrict .pth file creation. Implement private package proxies (e.g., Sonatype Nexus or JFrog Artifactory) to enforce allowlisted and statically-analyzed packages."
         },
         {
-          "title": "Audit NPM Packages and Ignore Scripts",
-          "detail": "Malicious postinstall hooks are actively used to execute backdoor loaders (Miasma worm). Configure the local development environment globally via `.npmrc` with `ignore-scripts=true`. Implement artifact repositories (Sonatype Nexus, JFrog Artifactory) to proxy and scan all external scientific Python (PyPI) and Javascript (NPM) dependencies."
+          "title": "Patch Check Point VPN CVE-2026-50751 Logical Vulnerability",
+          "detail": "Apply the vendor's emergency cumulative security patch for CVE-2026-50751 on all Check Point VPN appliances (Remote Access/Mobile Access). Immediately disable legacy, deprecated IKEv1 protocols on all internet-exposed portals. Force the use of cryptographic machine certificates for all active-duty remote VPN access validations."
+        },
+        {
+          "title": "Audit and Authenticate Model Context Protocol Endpoints",
+          "detail": "Conduct an urgent external port-scan of internet-facing assets for exposed Model Context Protocol (MCP) server endpoints on common Python/Uvicorn ports (e.g., 8000, 8080, 5000). Ensure uvicorn services are not listening on `0.0.0.0` and enforce strong API key or JWT validation. Restrict AI agent access to sensitive internal platforms (Splunk, CrowdStrike) to read-only permissions."
         }
       ],
       "fr": [
         {
-          "title": "Désactiver IKEv1 sur les VPN Check Point",
-          "detail": "L'exploitation de la faille logique CVE-2026-50751 par les affiliés Qilin permet d'outrepasser le périmètre d'accès. Désactivez immédiatement le protocole obsolète IKEv1 sur l'ensemble des pare-feux Check Point et forcez l'utilisation de IKEv2. Configurez une vérification stricte et obligatoire des certificats machine clients."
+          "title": "Désactiver l'exécution de scripts NPM et PyPI",
+          "detail": "Pour atténuer les menaces d'exécution de code lors de l'installation de dépendances (Miasma, Shai-Hulud), configurez vos environnements pour interdire l'exécution de scripts d'installation automatique. Exécutez `npm install --ignore-scripts` et bloquez l'usage de dépôts Git non signés en utilisant des proxys de paquets internes approuvés (Nexus, Artifactory)."
         },
         {
-          "title": "Auditer les packages NPM et ignorer les scripts",
-          "detail": "Des scripts post-install malveillants sont activement exploités pour exécuter des backdoors (ver Miasma). Configurez les environnements de développement locaux via le fichier `.npmrc` avec `ignore-scripts=true`. Utilisez des dépôts privés (Nexus, Artifactory) pour isoler et scanner les dépendances PyPI et NPM importées."
+          "title": "Corriger la faille de sécurité Check Point CVE-2026-50751",
+          "detail": "Appliquez le correctif de sécurité d'urgence de l'éditeur pour la vulnérabilité CVE-2026-50751 sur l'ensemble de vos passerelles VPN Check Point. Désactivez immédiatement le protocole obsolète IKEv1 sur tous vos pare-feux de périmètre et imposez l'authentification par certificat machine pour toute connexion distante."
+        },
+        {
+          "title": "Auditer et authentifier les serveurs MCP exposés",
+          "detail": "Menez un scan externe urgent de vos serveurs pour identifier les endpoints MCP exposés sur les ports uvicorn (8000, 8080, 5000). Assurez-vous que les services Python d'IA ne sont pas à l'écoute sur l'interface `0.0.0.0` et imposez une authentification forte par jetons d'accès JWT ou clés d'API."
         }
       ]
     }
