@@ -1,0 +1,973 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The mid-June 2026 cyber threat landscape highlights major regulatory tensions related to artificial intelligence and the active exploitation of critical zero-day vulnerabilities. The US-ordered ban on access to Anthropic's models (Fable 5, Mythos 5) illustrates the growing use of export controls as a tool for technological sovereignty, causing significant operational disruptions in Europe. On the cybercrime front, the ShinyHunters group (UNC6240) actively exploits a critical zero-day vulnerability in Oracle PeopleSoft (CVE-2026-35273) to heavily target academic institutions and conduct extortion campaigns. Finally, Velvet Ant's sophisticated cyberespionage campaign (Operation Highland) demonstrates the resilience of state-sponsored threats capable of persisting for over a decade within isolated networks by altering Linux authentication processes (PAM/OpenSSH).",
+      "fr": "L'environnement cyber de la mi-juin 2026 met en lumière des tensions réglementaires majeures liées à l'intelligence artificielle et l'exploitation de failles critiques de type zero-day. L'interdiction d'accès aux modèles d'Anthropic (Fable 5, Mythos 5) ordonnée par les États-Unis illustre l'usage croissant des contrôles à l'exportation comme arme de souveraineté technologique, provoquant d'importantes perturbations opérationnelles en Europe. Sur le plan cybercriminel, le groupe ShinyHunters (UNC6240) exploite activement une vulnérabilité critique zero-day dans Oracle PeopleSoft (CVE-2026-35273) pour cibler massivement les milieux académiques et mener des campagnes d'extorsion. Enfin, la campagne d'espionnage sophistiquée de Velvet Ant (Operation Highland) démontre la résilience de menaces étatiques capables de persister plus d'une décennie au sein de réseaux isolés en altérant les processus d'authentification Linux (PAM/OpenSSH)."
+    },
+    "date": "2026-06-14"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": ["Technology_and_Telecom", "Government_and_Defense"],
+        "fr": ["Technologie et Télécom", "Gouvernement et Défense"]
+      },
+      "theme": {
+        "en": "US Export Controls on Advanced AI Models",
+        "fr": "Contrôles à l'exportation américains sur les modèles d'IA avancés"
+      },
+      "description": {
+        "en": "The US administration ordered the suspension of access to Anthropic's Fable 5 and Mythos 5 models for foreign nationals due to jailbreak risks. Unable to perform real-time nationality filtering, Anthropic shut down global access to these models, causing significant disruptions to European partners (such as NATO and ENISA) who rely on these tools for cyber defense workflows.",
+        "fr": "L'administration américaine a exigé la suspension de l'accès aux modèles Fable 5 et Mythos 5 d'Anthropic pour les ressortissants étrangers. Face à l'impossibilité de filtrer la nationalité en temps réel, Anthropic a coupé l'accès mondial à ces modèles, pénalisant fortement les partenaires européens (OTAN, ENISA) qui les utilisaient pour leur cyberdéfense."
+      },
+      "recommandations": [
+        {
+          "en": "Diversify AI model providers and prioritize sovereign or self-hosted open-source models.",
+          "fr": "Diversifier les fournisseurs d'IA et privilégier des modèles souverains ou open-source auto-hébergés."
+        },
+        {
+          "en": "Establish a business continuity plan (BCP) addressing sudden third-party cloud service termination.",
+          "fr": "Établir un plan de continuité d'activité (PCA) axé sur la défaillance des services cloud tiers."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Map all integrations and dependencies on Anthropic AI models (Fable 5, Mythos 5).",
+            "Implement multi-provider redundancy strategies to maintain operational continuity."
+          ],
+          "fr": [
+            "Cartographier l'ensemble des intégrations et dépendances aux modèles d'IA d'Anthropic (Fable 5, Mythos 5).",
+            "Mettre en place des stratégies de redondance multi-fournisseurs d'IA pour assurer la continuité d'activité."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor API error logs and connection failures to Anthropic endpoints.",
+            "Detect failures in automated processes dependent on external AI models."
+          ],
+          "fr": [
+            "Surveiller les journaux d'erreurs d'API et les échecs de connexion aux modèles d'Anthropic.",
+            "Détecter les défaillances de processus automatisés basés sur l'IA."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Automatically redirect API calls to fallback models (e.g., Opus 4.8, GPT-5.5, or local European alternatives).",
+            "Notify development teams and end-users about the service cut to prevent insecure workarounds."
+          ],
+          "fr": [
+            "Bascule automatique des flux applicatifs vers des modèles de remplacement approuvés (ex. Opus 4.8, GPT-5.5 ou alternatives européennes).",
+            "Aviser les équipes de développement et les utilisateurs finaux de la coupure de service pour éviter les contournements non sécurisés."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Analyze the operational impact of the service interruption on security operations (SOAR, Threat Hunting).",
+            "Evaluate long-term technological sovereignty to reduce reliance on third-party geopolitical cloud providers."
+          ],
+          "fr": [
+            "Analyser l'impact de l'interruption de service sur l'efficacité des opérations de sécurité (SOAR, Threat Hunting).",
+            "Engager une réflexion sur la souveraineté technologique pour réduire la dépendance aux infrastructures cloud réglementées par des pays tiers."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Identify blocked AI API queries and request failures due to export directives."
+          ],
+          "fr": [
+            "Identifier les blocages de flux API d'IA et les requêtes en échec dues aux directives d'exportation."
+          ]
+        }
+      },
+      "tags": ["AI", "Anthropic", "Export Control", "National Security", "Geopolitics"],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/us-gov-asks-anthropic-to-ban-foreign-national-access-to-fable-mythos/",
+        "https://securityaffairs.com/193579/ai/washington-pulled-the-plug-on-anthropic-fable-5-and-mythos-5-models.html",
+        "https://infosec.exchange/@cyberseckyle/116745314655440340"
+      ],
+      "date": "2026-06-13"
+    }
+  ],
+  "regulatory_and_legal": [
+    {
+      "title": {
+        "en": "South Korea PIPA Record Fine Against Coupang",
+        "fr": "Amende record de la PIPA sud-coréenne contre Coupang"
+      },
+      "description": {
+        "en": "South Korea's Personal Information Protection Commission (PIPC) imposed a record-breaking $409 million fine on e-commerce giant Coupang for severe violations of user data privacy regulations under PIPA.",
+        "fr": "La Commission de protection des informations personnelles (PIPC) de Corée du Sud a infligé une amende historique de 409 millions de dollars au géant du commerce en ligne Coupang pour de graves violations de la confidentialité des données personnelles sous la loi PIPA."
+      },
+      "organisation": {
+        "en": ["Personal Information Protection Commission"],
+        "fr": ["Commission de protection des informations personnelles"]
+      },
+      "jurisdiction": {
+        "en": ["South Korea"],
+        "fr": ["Corée du Sud"]
+      },
+      "references": {
+        "en": ["Personal Information Protection Act"],
+        "fr": ["Loi PIPA de Corée du Sud"]
+      },
+      "tags": ["Regulatory", "Fine", "Privacy", "South Korea"],
+      "sources": [
+        "https://databreaches.net/2026/06/13/south-korea-hands-coupang-a-record-breaking-409-million-data-privacy-fine/?pk_campaign=feed&pk_kwd=south-korea-hands-coupang-a-record-breaking-409-million-data-privacy-fine"
+      ],
+      "date": "2026-06-13"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "University of Nottingham",
+      "threat_actor": "ShinyHunters",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime / Extortion",
+      "threat_actor_aliases": ["UNC6240"],
+      "sector": {
+        "en": ["Education_and_Research"],
+        "fr": ["Éducation et Recherche"]
+      },
+      "description": {
+        "en": "The University of Nottingham suffered a massive data breach orchestrated by ShinyHunters (UNC6240) exploiting a zero-day vulnerability in Oracle PeopleSoft (CVE-2026-35273). Over 455,000 unique student and alumni records, including names, passport numbers, medical records, ethnicity, and disability data, were exfiltrated.",
+        "fr": "L'Université de Nottingham a subi une fuite de données massive orchestrée par ShinyHunters (UNC6240) exploitant une faille zero-day dans Oracle PeopleSoft (CVE-2026-35273). Plus de 455 000 dossiers d'étudiants et diplômés, contenant des noms, numéros de passeports, dossiers médicaux, données d'ethnicité et de handicap, ont été exfiltrés."
+      },
+      "mitre_ttps": ["T1190", "T1021.004", "T1567.002"],
+      "recommandations": [
+        {
+          "en": "Apply emergency patches provided by Oracle for CVE-2026-35273.",
+          "fr": "Appliquer d'urgence les correctifs de sécurité fournis par Oracle pour CVE-2026-35273."
+        },
+        {
+          "en": "Force a password reset for all students and monitor for spear-phishing campaigns.",
+          "fr": "Forcer la réinitialisation globale des accès pour tous les comptes d'étudiants compromis et renforcer la surveillance des tentatives d'hameçonnage ciblé."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Establish regular, isolated (offline) backups of student and academic databases.",
+            "Limit and encrypt access to sensitive student files (passports, healthcare data, ethnicity)."
+          ],
+          "fr": [
+            "Établir des sauvegardes régulières et isolées (offline) des bases de données de scolarité.",
+            "Limiter et chiffrer l'accès aux données sensibles des étudiants et diplômés (passeports, données de santé, ethniques)."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for unusual SSH connections targeting servers hosting Oracle PeopleSoft.",
+            "Scan for extortion indicators like 'README-IF-YOU-SEE-THIS-YOUVE-BEEN-HACKED.TXT' inside WebLogic and Process Scheduler directories."
+          ],
+          "fr": [
+            "Surveiller les connexions SSH inhabituelles vers les serveurs hébergeant Oracle PeopleSoft.",
+            "Rechercher la présence du fichier d'extorsion 'README-IF-YOU-SEE-THIS-YOUVE-BEEN-HACKED.TXT' dans les répertoires de WebLogic et Process Scheduler."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Immediately isolate the compromised Oracle PeopleSoft servers.",
+            "Disable the Environment Management Hub (PSEMHUB) service or block outer firewall access to '/PSEMHUB/*' and '/PSIGW/HttpListeningConnector' paths."
+          ],
+          "fr": [
+            "Isoler immédiatement les serveurs Oracle PeopleSoft compromis.",
+            "Désactiver le service Environment Management Hub (PSEMHUB) ou bloquer l'accès périmétrique aux chemins '/PSEMHUB/*' et '/PSIGW/HttpListeningConnector'."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Conduct a full digital forensics investigation to determine the exact scope of data exfiltration.",
+            "Notify data protection authorities and the 455,000 identified victims in compliance with GDPR."
+          ],
+          "fr": [
+            "Mener une investigation numérique complète pour déterminer l'étendue de l'exfiltration.",
+            "Notifier les autorités de protection des données compétentes et les 455 000 victimes identifiées conformément au RGPD."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Identify lateral movement scripts and MeshCentral agents disguised as Azure processes (e.g., filepath '/tmp/*_fanout.sh' or processes 'meshagent32-azure-ops.exe')."
+          ],
+          "fr": [
+            "Identifier les scripts de propagation latérale et les agents MeshCentral déguisés en processus Azure (ex. chemin '/tmp/*_fanout.sh' ou processus 'meshagent32-azure-ops.exe')."
+          ]
+        }
+      },
+      "tags": ["Data Breach", "Extortion", "University", "Oracle PeopleSoft"],
+      "sources": [
+        "https://securityaffairs.com/193574/security/u-s-cisa-adds-oracle-peoplesoft-enterprise-peopletools-flaw-to-its-known-exploited-vulnerabilities-catalog.html"
+      ],
+      "date": "2026-06-13"
+    },
+    {
+      "victim": "Iowa School District",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Education_and_Research"],
+        "fr": ["Éducation et Recherche"]
+      },
+      "description": {
+        "en": "A former IT employee of an Iowa school district was sentenced to 21 months in prison for conducting persistent cyberattacks against his former employer. Using active administrative accounts, the attacker deleted school management profiles, disabled MacBook and iPad fleets, and deleted the school's official Facebook page, causing tens of thousands of dollars in damages.",
+        "fr": "Un ancien employé informatique d'un district scolaire de l'Iowa a été condamné à 21 mois de prison pour des cyberattaques persistantes contre son ancien employeur. Utilisant des comptes administrateurs restés actifs, il a supprimé des comptes éducatifs, bloqué des flottes de MacBooks et d'iPads, et supprimé la page Facebook officielle de l'école."
+      },
+      "mitre_ttps": ["T1078.003"],
+      "recommandations": [
+        {
+          "en": "Implement strict offboarding procedures to revoke all corporate and administrative credentials immediately upon employee departure.",
+          "fr": "Mettre en œuvre des procédures d'offboarding strictes pour révoquer immédiatement tous les accès lors du départ d'un collaborateur."
+        },
+        {
+          "en": "Enforce multi-factor authentication (MFA) across all administration systems.",
+          "fr": "Forcer l'authentification multifacteur (MFA) sur tous les systèmes d'administration."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Implement account lifecycle management policy to automatically disable departed employee accesses."
+          ],
+          "fr": [
+            "Implémenter une politique de gestion du cycle de vie des comptes pour désactiver immédiatement les accès lors du départ d'un collaborateur."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor connections originating from legacy or inactive administrative accounts."
+          ],
+          "fr": [
+            "Surveiller les connexions d'anciens comptes ou de comptes administrateurs inactifs."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Immediately suspend the compromised accounts and force a global password reset for administrative panels."
+          ],
+          "fr": [
+            "Suspendre immédiatement les comptes impliqués et forcer la réinitialisation des mots de passe de tous les comptes administratifs."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Conduct a full audit of rights and roles assigned to IT staff."
+          ],
+          "fr": [
+            "Mener un audit complet des droits et rôles assignés à l'ensemble du personnel IT."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for logins originating from former employees or disabled profiles."
+          ],
+          "fr": [
+            "Identifier les connexions frauduleuses provenant d'employés ayant quitté l'organisation."
+          ]
+        }
+      },
+      "tags": ["Insider Threat", "Hacking", "Justice", "School District"],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/ex-school-district-employee-jailed-for-hacks-on-former-employer/"
+      ],
+      "date": "2026-06-13"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-35273",
+      "euvd_id": "unknown",
+      "cisa_kev": "true",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:oracle:peoplesoft_enterprise_peopletools:*:*:*:*:*:*:*:*",
+      "product": "PeopleSoft Enterprise PeopleTools",
+      "vendor": "Oracle",
+      "description": {
+        "en": "An unauthenticated remote code execution vulnerability in the Environment Management Hub (PSEMHUB) component of Oracle PeopleSoft. Actively exploited as a zero-day by ShinyHunters.",
+        "fr": "Vulnérabilité critique d'exécution de code à distance sans authentification au sein du composant Environment Management Hub (PSEMHUB) d'Oracle PeopleSoft. Exploitée comme zero-day par ShinyHunters."
+      },
+      "mitre_ttps": ["T1190"],
+      "recommandations": [
+        {
+          "en": "Apply Oracle's security update from June 10, 2026.",
+          "fr": "Appliquer la mise à jour de sécurité d'Oracle du 10 juin 2026."
+        },
+        {
+          "en": "Disable the PSEMHUB service if not strictly required.",
+          "fr": "Désactiver le service PSEMHUB s'il n'est pas de rigueur."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Verify exposure of PSEMHUB endpoints at the perimeter."],
+          "fr": ["Vérifier l'existence et l'exposition des terminaux PSEMHUB au niveau périmétrique."]
+        },
+        "phase2_detection": {
+          "en": ["Search for abnormal PHP scripts or specific directories within WebLogic logs."],
+          "fr": ["Rechercher l'utilisation anormale de scripts PHP dans l'environnement de l'application."]
+        },
+        "phase3_containment": {
+          "en": ["Restrict inbound traffic to WebLogic ports at the firewall level."],
+          "fr": ["Restreindre ou bloquer les flux entrants vers le port WebLogic exposé si les correctifs ne sont pas appliqués."]
+        },
+        "phase4_post_incident": {
+          "en": ["Rebuild compromised systems and rotate all compromised keys/credentials."],
+          "fr": ["Réinstaller intégralement les machines infectées et changer tous les mots de passe de comptes SSH compromis."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Hunt for WebLogic access logs hitting PSEMHUB endpoints."],
+          "fr": ["Identifier les requêtes d'exploitation ciblant le point de terminaison PeopleSoft Environment Management."]
+        }
+      },
+      "tags": ["vulnerability", "RCE", "Oracle PeopleSoft", "Zero-day", "CISA KEV"],
+      "sources": [
+        "https://securityaffairs.com/193574/security/u-s-cisa-adds-oracle-peoplesoft-enterprise-peopletools-flaw-to-its-known-exploited-vulnerabilities-catalog.html"
+      ],
+      "date": "2026-06-13"
+    },
+    {
+      "cve_id": "CVE-2026-20253",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:splunk:splunk:*:*:*:*:enterprise:*:*:*",
+      "product": "Splunk Enterprise",
+      "vendor": "Splunk",
+      "description": {
+        "en": "A pre-authenticated remote code execution vulnerability in Splunk Enterprise due to internal PostgreSQL integration issues. Attackers can inject SQL via backup restoration endpoints to write and run malicious Python scripts.",
+        "fr": "Faille d'exécution de code à distance pré-authentifiée dans Splunk Enterprise en raison de vulnérabilités dans l'intégration PostgreSQL interne. Permet d'injecter du SQL pour forcer l'écriture de code Python."
+      },
+      "mitre_ttps": ["T1190", "T1059.006"],
+      "recommandations": [
+        {
+          "en": "Update Splunk Enterprise to version 10.2.4, 10.0.7 or later.",
+          "fr": "Mettre à jour Splunk Enterprise vers les versions 10.2.4, 10.0.7 ou supérieures."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Implement enhanced monitoring on Splunk system directories."],
+          "fr": ["Mettre en place une surveillance renforcée sur les chemins d'accès système de Splunk."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor for unexpected file write actions or Python script modifications inside Splunk apps."],
+          "fr": ["Surveiller les écritures de fichiers suspects ou d'altérations de fichiers Python au sein de l'arborescence Splunk."]
+        },
+        "phase3_containment": {
+          "en": ["Block external access to internal PostgreSQL database backup endpoints."],
+          "fr": ["Bloquer l'accès réseau externe aux endpoints de restauration et de base de données PostgreSQL internes."]
+        },
+        "phase4_post_incident": {
+          "en": ["Restore original binaries and update Splunk to the latest secure version."],
+          "fr": ["Restaurer les binaires modifiés ou réinstaller Splunk Enterprise sur une instance à jour."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Hunt for altered Python scripts inside 'splunk_secure_gateway' and related app folders."],
+          "fr": ["Identifier d'éventuels scripts de persistance écrits par l'exploitation de la vulnérabilité de Splunk."]
+        }
+      },
+      "tags": ["vulnerability", "Splunk Enterprise", "Arbitrary File Write", "RCE"],
+      "sources": [
+        "https://thehackernews.com/2026/06/critical-splunk-enterprise-flaw-lets.html"
+      ],
+      "date": "2026-06-13"
+    },
+    {
+      "cve_id": "CVE-2026-12183",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "9.3",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:nefteprodukttekhnika:buk_ts-g:*:*:*:*:*:*:*:*",
+      "product": "BUK TS-G Gas Station Automation",
+      "vendor": "Nefteprodukttekhnika",
+      "description": {
+        "en": "An improper authentication vulnerability in Nefteprodukttekhnika BUK TS-G Gas Station Automation. The login script returns an admin ID when receiving any invalid or random POST requests, bypassing session validation.",
+        "fr": "Vulnérabilité de contournement d'authentification critique dans Nefteprodukttekhnika BUK TS-G. Le script de connexion retourne un identifiant administrateur face à n'importe quelle requête POST invalide ou aléatoire."
+      },
+      "mitre_ttps": ["T287"],
+      "recommandations": [
+        {
+          "en": "Restrict remote web admin access and isolate the industrial controller from the internet.",
+          "fr": "Restreindre d'urgence l'accès à l'interface d'administration réseau et isoler l'automate industriel d'Internet."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Identify all BUK TS-G web consoles and verify they are not exposed online."],
+          "fr": ["Identifier toutes les consoles d'administration Web des stations d'automatisation BUK TS-G et interdire leur exposition sur Internet."]
+        },
+        "phase2_detection": {
+          "en": ["Scan server logs for access requests to '/php/ajax-login.php' with missing or anomalous arguments."],
+          "fr": ["Analyser les requêtes vers le point de terminaison /php/ajax-login.php pour détecter des demandes d'authentification sans identifiant légitime."]
+        },
+        "phase3_containment": {
+          "en": ["Isolate industrial controller subnets managing fuel dispensing flows."],
+          "fr": ["Isoler immédiatement les sous-réseaux hébergeant les automates industriels de distribution de carburant."]
+        },
+        "phase4_post_incident": {
+          "en": ["Apply vendor-issued fixes and implement strict IP Access Control Lists (ACLs)."],
+          "fr": ["Appliquer les correctifs du fabricant ou mettre en place des listes d'accès d'IP restreintes (ACL) pour verrouiller la page d'administration."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Hunt for administrative access logs indicating successful responses on unauthorized connections."],
+          "fr": ["Identifier d'éventuels accès administratifs frauduleux via le module de contournement d'authentification."]
+        }
+      },
+      "tags": ["vulnerability", "ICS", "Gas Station", "Nefteprodukttekhnika", "Bypass d'authentification"],
+      "sources": [
+        "https://infosec.exchange/@offseq/116745518086669006",
+        "https://cvefeed.io/vuln/detail/CVE-2026-12183"
+      ],
+      "date": "2026-06-14"
+    },
+    {
+      "cve_id": "CVE-2026-6961",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "7.6",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:mattermost:mattermost:*:*:*:*:*:*:*:*",
+      "product": "Mattermost",
+      "vendor": "Mattermost",
+      "description": {
+        "en": "Input validation flaw in Mattermost where the application fails to sanitize 'FileInfo.Name' parameters received from federated servers during shared channel sync.",
+        "fr": "Défaut de validation des entrées dans Mattermost qui n'assainit pas correctement le paramètre 'FileInfo.Name' reçu des serveurs fédérés lors de la synchronisation des fichiers."
+      },
+      "mitre_ttps": ["T1140"],
+      "recommandations": [
+        {
+          "en": "Upgrade Mattermost to versions 11.6.1, 11.5.4, 10.11.16 or higher.",
+          "fr": "Mettre à jour Mattermost vers les versions supérieures à 11.6.1, 11.5.4 ou 10.11.16."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Implement regular configuration reviews on corporate messaging tools."],
+          "fr": ["Mettre en œuvre des revues de configuration régulières sur les outils de messagerie d'entreprise."]
+        },
+        "phase2_detection": {
+          "en": ["Detect directory traversal characters within federated file-sharing logs."],
+          "fr": ["Détecter des caractères anormaux d'échappement de répertoires dans les journaux de transferts de fichiers des canaux partagés."]
+        },
+        "phase3_containment": {
+          "en": ["Temporarily disable shared channels federation features for unvalidated peers."],
+          "fr": ["Désactiver temporairement les fonctionnalités de fédération de canaux partagés (Shared Channels) avec des tiers non validés."]
+        },
+        "phase4_post_incident": {
+          "en": ["Deploy the latest security hotfix on Mattermost servers."],
+          "fr": ["Déployer la dernière mise à jour corrective de sécurité d'urgence sur les serveurs Mattermost."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search logs for anomalous input arguments in shared channel syncing transactions."],
+          "fr": ["Rechercher des anomalies ou des chaînes suspectes d'injection dans les transactions de synchronisation de canaux partagés."]
+        }
+      },
+      "tags": ["vulnerability", "Mattermost", "Sanitization Bypass", "Shared Channels"],
+      "sources": [
+        "https://mastodon.social/@thehackerwire/116745754674190570"
+      ],
+      "date": "2026-06-14"
+    },
+    {
+      "cve_id": "CVE-2026-12174",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "7.5",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:h:d-link:dcs-935l:*:*:*:*:*:*:*:*",
+      "product": "DCS-935L",
+      "vendor": "D-Link",
+      "description": {
+        "en": "Format string vulnerability in D-Link DCS-935L IP cameras' '/web/cgi-bin/greece/rhea' script via the snprintf function. Attackers can execute remote code or trigger a denial of service.",
+        "fr": "Vulnérabilité de chaîne de format affectant la fonction snprintf dans le script '/web/cgi-bin/greece/rhea' de la caméra IP DCS-935L."
+      },
+      "mitre_ttps": ["T1210"],
+      "recommandations": [
+        {
+          "en": "Disable remote administrative access over HTTP.",
+          "fr": "Désactiver l'exposition de l'interface HTTP d'administration des caméras."
+        },
+        {
+          "en": "Update the camera firmware to the latest available version.",
+          "fr": "Mettre à jour le micrologiciel vers la version la plus récente."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Inventory all DCS-935L IP cameras in use."],
+          "fr": ["Inventorier l'intégralité des caméras D-Link DCS-935L déployées."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor for unexplained service crashes or camera reboots."],
+          "fr": ["Surveiller les crashs inexpliqués des services HTTP des caméras concernées."]
+        },
+        "phase3_containment": {
+          "en": ["Restrict internet access to camera administrative ports using firewalls."],
+          "fr": ["Mettre en place des règles de pare-feu pour interdire l'exposition directe de l'interface d'administration de la caméra à Internet."]
+        },
+        "phase4_post_incident": {
+          "en": ["Apply firmware updates or move vulnerable cameras to isolated VLANs."],
+          "fr": ["Procéder à la mise à niveau logicielle ou isoler les périphériques vulnérables dans des VLAN dédiés."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search for anomalous argument strings within device management logs."],
+          "fr": ["Rechercher des requêtes de format string suspectes dans les logs d'accès réseau des caméras."]
+        }
+      },
+      "tags": ["vulnerability", "IoT", "D-Link", "Format String", "snprintf"],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-12174"
+      ],
+      "date": "2026-06-13"
+    },
+    {
+      "cve_id": "CVE-2026-11624",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "7.5",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:google:model_context_protocol_tooling:*:*:*:*:*:*:*:*",
+      "product": "Model Context Protocol Tooling",
+      "vendor": "Googleapis",
+      "description": {
+        "en": "DNS Rebinding vulnerability in Model Context Protocol (MCP) due to missing 'Origin' header validation on incoming requests.",
+        "fr": "Vulnérabilité de DNS Rebinding dans le protocole Model Context Protocol (MCP) en raison de l'absence de vérification de l'en-tête 'Origin' sur les requêtes entrantes."
+      },
+      "mitre_ttps": ["T1557"],
+      "recommandations": [
+        {
+          "en": "Upgrade MCP to version 0.25.0 or later and enforce '--allowed-hosts'.",
+          "fr": "Mettre à jour les outils MCP vers la version v0.25.0 ou ultérieure, et configurer les drapeaux '--allowed-hosts' et '--allowed-origins'."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Identify MCP servers running in development or local environments."],
+          "fr": ["Identifier les serveurs MCP en cours de développement ou d'exécution locale dans l'entreprise."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor local network interfaces for DNS rebinding signatures reaching loopback addresses."],
+          "fr": ["Surveiller les requêtes réseau issues des navigateurs vers des adresses de boucle locale sur des ports non standard."]
+        },
+        "phase3_containment": {
+          "en": ["Disable unconfigured local listener instances that lack origin verification."],
+          "fr": ["Désactiver les connexions locales non configurées avec l'en-tête origin restrictif."]
+        },
+        "phase4_post_incident": {
+          "en": ["Configure '--allowed-hosts' parameters globally across the environment."],
+          "fr": ["Appliquer le drapeau '--allowed-hosts' introduit dans la version v0.25.0 de MCP."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search for suspicious external domains resolving to local loopback addresses."],
+          "fr": ["Rechercher d'éventuels comportements de résolution DNS rebinding ciblant le localhost."]
+        }
+      },
+      "tags": ["vulnerability", "MCP", "DNS Rebinding", "Model Context Protocol"],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-11624"
+      ],
+      "date": "2026-06-13"
+    },
+    {
+      "cve_id": "CVE-2026-53608",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "8.7",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:apostrophecms:apostrophecms:*:*:*:*:*:*:*:*",
+      "product": "ApostropheCMS SEO package",
+      "vendor": "ApostropheCMS",
+      "description": {
+        "en": "Stored XSS vulnerability in ApostropheCMS SEO package. Editors can inject malicious scripts into Google Analytics ID or Tag Manager fields.",
+        "fr": "Vulnérabilité de XSS stocké dans le paquet SEO d'ApostropheCMS permettant à des éditeurs d'injecter des scripts malveillants via les champs d'ID Google Analytics ou Tag Manager."
+      },
+      "mitre_ttps": ["T1059.007"],
+      "recommandations": [
+        {
+          "en": "Restrict SEO edit permissions and apply a robust Content Security Policy (CSP).",
+          "fr": "Limiter drastiquement les permissions de mise à jour SEO des sites Internet et appliquer des filtres d'en-têtes Content Security Policy (CSP) robustes."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Map all ApostropheCMS instances active in the infrastructure."],
+          "fr": ["Identifier l'ensemble des instances ApostropheCMS déployées au sein de l'infrastructure web."]
+        },
+        "phase2_detection": {
+          "en": ["Audit modifications of Google Analytics fields inside the database."],
+          "fr": ["Surveiller les modifications suspectes apportées aux balises méta de référencement (SEO)."]
+        },
+        "phase3_containment": {
+          "en": ["Temporarily demote editor permissions to prevent configuration fields modification."],
+          "fr": ["Restreindre les privilèges d'édition pour les comptes non d'administration."]
+        },
+        "phase4_post_incident": {
+          "en": ["Clean database records containing unauthorized JavaScript code in SEO settings."],
+          "fr": ["Auditer l'intégrité de la base de données de contenu CMS pour déceler d'éventuels scripts JavaScript stockés."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Identify script-like characters in database configuration tables for SEO."],
+          "fr": ["Rechercher d'éventuels scripts malveillants stockés dans les tables de configuration SEO."]
+        }
+      },
+      "tags": ["vulnerability", "ApostropheCMS", "Stored XSS", "SEO Package"],
+      "sources": [
+        "https://mastodon.social/@hugovalters/116745320463569151"
+      ],
+      "date": "2026-06-13"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "Velvet Ant Chinese Espionage Campaign Hijacks Authentication",
+        "fr": "Campagne d'espionnage chinoise Velvet Ant via détournement d'authentification"
+      },
+      "description": {
+        "en": "Velvet Ant (Chinese state-sponsored actor) modified Linux Pluggable Authentication Modules (PAM) and Trojanized OpenSSH binaries to intercept administrator credentials and maintain a decade-long persistent presence inside air-gapped critical networks.",
+        "fr": "Le groupe étatique chinois Velvet Ant a modifié les modules PAM et troyanisé OpenSSH pour intercepter des identifiants et maintenir une présence de dix ans au sein de réseaux isolés."
+      },
+      "threat_actor": "Velvet Ant",
+      "threat_actor_origin": "China",
+      "threat_actor_type": "State-sponsored / Espionage",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Critical_Infrastructure"],
+        "fr": ["Infrastructures critiques"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": ["T1556", "T1021.004", "T1078"],
+      "analyse": {
+        "en": "A decade-long persistence campaign highlights the extreme stealth capabilities of Chinese APTs. By targeting authentication mechanisms (PAM/SSH) in highly secure or air-gapped environments, they maintain invisible control without generating noise.",
+        "fr": "Campagne de persistance sur une décennie démontrant la furtivité des APT chinoises. En ciblant directement les flux PAM/SSH dans des environnements isolés, l'attaquant garde un accès furtif sans bruit suspect."
+      },
+      "recommandations": [
+        {
+          "en": "Deploy File Integrity Monitoring (FIM) on system-critical Linux binaries.",
+          "fr": "Déployer un contrôle d'intégrité de fichiers (FIM) sur les binaires Linux critiques."
+        },
+        {
+          "en": "Isolate administrative endpoints and apply network segregation around critical infrastructures.",
+          "fr": "Isoler les accès d'administration et séparer les environnements critiques."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Deploy File Integrity Monitoring (FIM) and EDR agents on system-critical servers."],
+          "fr": ["Déployer des solutions d'EDR et de surveillance d'intégrité des fichiers système (FIM) sur les serveurs Linux."]
+        },
+        "phase2_detection": {
+          "en": ["Verify system binary hashes (ssh, sshd, scp) against baseline distributions."],
+          "fr": ["Vérifier régulièrement l'intégrité des hashs des binaires ssh, sshd et scp par rapport à la distribution d'origine."]
+        },
+        "phase3_containment": {
+          "en": ["Isolate Linux hosts showing modified PAM or SSH components before rebuilding."],
+          "fr": ["Isoler les serveurs Linux dont les composants PAM ou SSH ont été modifiés avant d'engager les procédures de réinstallation."]
+        },
+        "phase4_post_incident": {
+          "en": ["Rebuild systems entirely from clean backups instead of cleaning binary components manually."],
+          "fr": ["Reconstruire les environnements à partir de sauvegardes saines, ne pas tenter de nettoyer manuellement les binaires."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search for unauthorized files in system directories or modified PAM modules (e.g. pap.so)."],
+          "fr": ["Identifier les modifications illégitimes de bibliothèques système critiques comme pap.so."]
+        }
+      },
+      "tags": ["APT", "Espionnage", "Persistance", "PAM", "OpenSSH"],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/chinese-hackers-hijack-auth-flow-spy-on-isolated-network-for-a-decade/"
+      ],
+      "date": "2026-06-13"
+    },
+    {
+      "title": {
+        "en": "Security Alert on Over 400 Arch Linux AUR Packages",
+        "fr": "Alerte de sécurité sur plus de 400 paquets Arch Linux AUR"
+      },
+      "description": {
+        "en": "A security notification warned of a supply-chain threat targeting Arch Linux User Repository (AUR), indicating possible malicious code injection in over 400 third-party packages.",
+        "fr": "Une notification de sécurité signale une menace potentielle de compromission de la supply-chain touchant plus de 400 paquets tiers sur le dépôt AUR de Arch Linux."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Technology_and_Telecom"],
+        "fr": ["Technologie et Télécom"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "Supply chain attacks targeting package repositories like AUR remain highly effective against developers and cloud infrastructures using unofficial package managers.",
+        "fr": "Les attaques de supply-chain ciblant les dépôts de paquets tiers comme AUR restent très efficaces pour cibler les environnements de développement et les serveurs d'intégration."
+      },
+      "recommandations": [
+        {
+          "en": "Audit PKGBUILD scripts of AUR packages and migrate to official signed repositories.",
+          "fr": "Auditer les scripts PKGBUILD des paquets AUR et migrer vers des dépôts officiels signés."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Restrict AUR use and forbid unsigned third-party repositories on development machines."],
+          "fr": ["Restreindre l'utilisation de paquets non officiels ou AUR non signés sur les postes de travail Linux d'entreprise."]
+        },
+        "phase2_detection": {
+          "en": ["Scan for file modifications in PKGBUILD repositories and local dependencies."],
+          "fr": ["Rechercher des anomalies dans les dépôts de paquets locaux et vérifier l'intégrité des scripts PKGBUILD d'AUR."]
+        },
+        "phase3_containment": {
+          "en": ["Freeze access to untrusted repositories and isolate affected integration instances."],
+          "fr": ["Geler l'accès aux dépôts AUR suspects et isoler les environnements d'intégration continue compromis."]
+        },
+        "phase4_post_incident": {
+          "en": ["Rollback compromised dependencies to stable, trusted commits."],
+          "fr": ["Rétablir l'état des systèmes compromis par restauration depuis des commits de packages connus comme stables."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Hunt for script signatures matching anomalous AUR dependencies modifications."],
+          "fr": ["Rechercher des signatures de scripts malveillants injectés dans les processus d'intégration continue."]
+        }
+      },
+      "tags": ["Linux", "AUR", "Supply-Chain", "Packages"],
+      "sources": [
+        "https://social.epic-worlds.com/@ItWasntMe223/116745764299773534"
+      ],
+      "date": "2026-06-14"
+    },
+    {
+      "title": {
+        "en": "Summer Phishing Trend Using Fraudulent Booking WhatsApp Messages",
+        "fr": "Nouvelle arnaque estivale via de faux messages WhatsApp Booking"
+      },
+      "description": {
+        "en": "Cybercriminals steal hotel administrative access to Booking.com/Expedia extranets via infostealers, then leverage real customer reservation details to contact guests directly on WhatsApp with fake payment links, bypassing platform controls.",
+        "fr": "Des cybercriminels dérobent les accès extranet d'hôtels via des infostealers, puis exploitent les détails de réservation pour envoyer directement des faux liens de paiement aux clients sur WhatsApp."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Hospitality_and_Entertainment"],
+        "fr": ["Hôtellerie et Divertissement"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": ["T1566.002"],
+      "analyse": {
+        "en": "This summer booking scam demonstrates how attackers bypass platform-native payment security by using valid guest credentials and messaging outside the platform on WhatsApp, making the scam highly convincing.",
+        "fr": "Cette arnaque estivale montre comment les attaquants contournent la sécurité des plateformes en contactant les clients directement sur WhatsApp avec des données de réservation légitimes dérobées en amont."
+      },
+      "recommandations": [
+        {
+          "en": "Prohibit storing administrative passwords in browser autocomplete; enforce strong MFA.",
+          "fr": "Interdire la sauvegarde automatique des mots de passe admin dans le navigateur et forcer le MFA."
+        },
+        {
+          "en": "Never perform transactions or click payment links received outside the official application.",
+          "fr": "Ne jamais effectuer de transactions bancaires en dehors de l'application officielle de la plate-forme."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Inform guests of phishing risks via third-party channels.", "Train staff to recognize credential theft patterns."],
+          "fr": ["Informer les clients des risques d'hameçonnage par des messageries tierces.", "Former les équipes hôtelières aux risques liés aux infostealers."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor guest fraud reports and payment verification requests."],
+          "fr": ["Détecter les pics anormaux de rapports de fraude de la part de clients recevant des messages SMS ou WhatsApp."]
+        },
+        "phase3_containment": {
+          "en": ["Rotate credentials of compromised reservation management systems.", "Force-logout active administrative sessions."],
+          "fr": ["Changer d'urgence les identifiants d'accès aux consoles extranet hôtelières compromises.", "Forcer la déconnexion de toutes les sessions actives des consoles suspectes."]
+        },
+        "phase4_post_incident": {
+          "en": ["Run antivirus software on hotel management computers to clean potential stealer malware."],
+          "fr": ["Mener un nettoyage antivirus sur les postes de travail de gestion de l'hébergement pour éliminer les logiciels espions."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search for administrative logins from anomalous geolocations on hotel extranet portals."],
+          "fr": ["Rechercher des connexions d'administration anormales ou suspectes sur les comptes d'hébergement."]
+        }
+      },
+      "tags": ["Phishing", "WhatsApp", "Booking", "Credential Theft"],
+      "sources": [
+        "https://www.lemonde.fr/pixels/article/2026/06/13/sur-la-piste-des-faux-messages-whatsapp-de-booking-cette-nouvelle-arnaque-estivale-en-vogue_6701316_4408996.html"
+      ],
+      "date": "2026-06-13"
+    },
+    {
+      "title": {
+        "en": "Pentesting Methodology: PowerShell on Locked Down Windows Machines",
+        "fr": "Méthodologie de Pentest : utilisation de PowerShell sur machines Windows verrouillées"
+      },
+      "description": {
+        "en": "Practical demonstration of how attackers and pentesters use PowerShell for domain enumeration and port scanning on locked-down Windows systems without administrative rights.",
+        "fr": "Démonstration pratique de l'utilisation de PowerShell par les attaquants et auditeurs pour cartographier un domaine Windows sans privilèges administrateur."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Technology_and_Telecom"],
+        "fr": ["Technologie et Télécom"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": ["T1059.001"],
+      "analyse": {
+        "en": "PowerShell remains a primary vector for living-off-the-land techniques, enabling local network discovery even on standard non-admin accounts if not restricted by policy.",
+        "fr": "PowerShell reste un vecteur privilégié pour les techniques Living-off-the-Land, facilitant la découverte réseau même depuis des sessions utilisateur non-admin."
+      },
+      "recommandations": [
+        {
+          "en": "Enable PowerShell Constrained Language Mode and configure Script Block Logging.",
+          "fr": "Appliquer le mode de langage contraint (Constrained Language Mode) sur PowerShell."
+        },
+        {
+          "en": "Ensure PowerShell event logging (ID 4104) is activated.",
+          "fr": "Activer la journalisation d'événements PowerShell (ID 4104)."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Enforce PowerShell Constrained Language Mode policy globally."],
+          "fr": ["Mettre en œuvre des stratégies d'accès PowerShell restreintes (Constrained Language Mode)."]
+        },
+        "phase2_detection": {
+          "en": ["Enable Script Block Logging and monitor for anomalies or execution of network scans."],
+          "fr": ["Activer la journalisation complète des blocs de scripts PowerShell (Script Block Logging) et surveiller les signatures inhabituelles."]
+        },
+        "phase3_containment": {
+          "en": ["Block command execution pathways for users without verified administrative needs."],
+          "fr": ["Bloquer l'accès à PowerShell pour les utilisateurs n'en ayant pas un besoin d'administration avéré."]
+        },
+        "phase4_post_incident": {
+          "en": ["Review command histories of suspected user profiles."],
+          "fr": ["Vérifier l'historique de commandes PowerShell de la machine suspecte."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Hunt for local domain discovery commands run through PowerShell."],
+          "fr": ["Rechercher l'exécution d'outils ou de commandes d'énumération réseau via PowerShell."]
+        }
+      },
+      "tags": ["Pentest", "Windows", "PowerShell", "Methodology"],
+      "sources": [
+        "https://infosec.exchange/@SecureOwl/116745470134846729"
+      ],
+      "date": "2026-06-14"
+    },
+    {
+      "title": {
+        "en": "Community Debate: Responsible Disclosure vs Coordinated Vulnerability Disclosure",
+        "fr": "Débat communautaire : Responsible Disclosure vs Coordinated Vulnerability Disclosure"
+      },
+      "description": {
+        "en": "An industry debate regarding terminology standards, warning against the regressive use of 'responsible disclosure' over the standardized, collaborative term 'coordinated vulnerability disclosure' (CVD).",
+        "fr": "Un débat sectoriel concernant la terminologie, mettant en garde contre l'utilisation régressive du terme 'divulgation responsable' par rapport au terme normalisé 'divulgation coordonnée de vulnérabilités' (CVD)."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Technology_and_Telecom"],
+        "fr": ["Technologie et Télécom"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "Harmonizing security culture terminologies promotes healthier, non-adversarial relationships between security researchers and software vendors.",
+        "fr": "Harmoniser la terminologie favorise des relations saines et collaboratives entre les chercheurs en sécurité et les éditeurs de logiciels."
+      },
+      "recommandations": [
+        {
+          "en": "Adopt the Coordinated Vulnerability Disclosure (CVD) framework in corporate security policies.",
+          "fr": "Adopter le framework Coordinated Vulnerability Disclosure (CVD) dans les chartes de sécurité."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Review corporate vulnerability disclosure documentation to align with standards."],
+          "fr": ["Mettre à jour les politiques de divulgation de vulnérabilités de l'entreprise vers des standards modernes."]
+        },
+        "phase2_detection": {
+          "en": ["No technical detection actions required for this administrative debate."],
+          "fr": ["Aucune mesure de détection requise pour ce débat administratif."]
+        },
+        "phase3_containment": {
+          "en": ["No containment actions required."],
+          "fr": ["Aucune mesure de confinement requise."]
+        },
+        "phase4_post_incident": {
+          "en": ["No post-incident remediation required."],
+          "fr": ["Aucune action post-incident requise."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["No threat hunting scenarios apply."],
+          "fr": ["Aucun scénario de threat hunting applicable."]
+        }
+      },
+      "tags": ["Vulnerabilities", "Terminology", "Coordinated Disclosure"],
+      "sources": [
+        "https://mstdn.social/@msw/116745635745628354"
+      ],
+      "date": "2026-06-14"
+    }
+  ]
+}
