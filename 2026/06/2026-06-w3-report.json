@@ -1,83 +1,108 @@
 {
   "threat_level": {
-    "score": 2,
+    "score": 3,
     "label": {
-      "en": "Moderate",
-      "fr": "Modéré"
+      "en": "High",
+      "fr": "Élevé"
     },
     "justification": {
-      "en": "The threat landscape this week is characterized by highly sophisticated software supply chain attacks utilizing automated worms (TeamPCP's Shai-Hulud), advanced anti-EDR evasion techniques by infostealers (Lumma v17 direct syscalls), and destructive wiper operations that successfully compromise hypervisors and erase cloud backups. This is compounded by the exploitation of critical vulnerabilities in central logging platforms like Splunk Enterprise (CVE-2026-20253).",
-      "fr": "Le paysage des menaces cette semaine est marqué par des attaques sophistiquées contre la chaîne d'approvisionnement logicielle via des vers automatisés (Shai-Hulud de TeamPCP), des techniques avancées d'évasion anti-EDR par des infostealers (Lumma v17 via des syscalls directs), et des opérations destructrices de type wiper parvenant à compromettre les hyperviseurs et à effacer les sauvegardes cloud. À cela s'ajoute l'exploitation de vulnérabilités critiques dans les plateformes de centralisation de logs comme Splunk Enterprise (CVE-2026-20253)."
+      "en": "The threat landscape this week is characterized by highly sophisticated software supply chain attacks (such as the npm Mastra compromise and Uncanny Automator backdoor), active zero-day exploitations in critical enterprise tools (Splunk CVE-2026-20253, Microsoft Defender RoguePlanet CVE-2026-50656), and massive exfiltrations of remote access credentials (FortiBleed exposing 73k VPN devices globally).",
+      "fr": "Le paysage de la menace est marqué cette semaine par des attaques de chaîne d'approvisionnement extrêmement sophistiquées (compromission de npm Mastra, porte dérobée Uncanny Automator), l'exploitation active de failles zero-day critiques (Splunk CVE-2026-20253, Microsoft Defender RoguePlanet CVE-2026-50656) et l'exfiltration massive d'identifiants de connexion (FortiBleed compromettant plus de 73 000 VPN Fortinet)."
     },
     "_triggers": [
+      "+2 — 1 CVE(s) CISA KEV",
       "+2 — 2 CVE(s) CVSS ≥ 9.0",
+      "+1 — 1 opérateur(s) ransomware",
       "+1 — ≥ 3 acteurs distincts actifs",
-      "+2 — secteurs critiques ciblés : Government_and_Defense",
+      "+1 — 1 breach(es) ≥ 100k enregistrements",
+      "+2 — secteurs critiques ciblés : Critical_Infrastructure, Government_and_Defense",
       "+2 — TTP destructive (T1485 Wiper / T0814 ICS Control)"
     ]
   },
   "executive_summary": {
-    "en": "This week's threat intelligence highlights a sharp escalation in supply chain poisoning and defensive evasion. Cybercriminal group TeamPCP has weaponized the automated 'Shai-Hulud' worm to compromise developer credentials and poison GitHub and npm pipelines, exfiltrating proprietary code for monetization. Concurrently, Lumma Stealer v17 has evolved to bypass EDR agents entirely using direct kernel syscalls to steal browser session tokens and bypass MFA. On the offensive disruption side, the FBI successfully dismantled Outsider Enterprise, a massive AI-driven Phishing-as-a-Service infrastructure. Finally, enterprises face extreme risks from destructive wiper attacks targeting cloud hypervisors and online backups, making the deployment of immutable offline storage an urgent strategic priority.",
-    "fr": "Les rapports de cette semaine mettent en évidence une nette escalade des empoisonnements de chaînes d'approvisionnement et de l'évasion défensive. Le groupe cybercriminel TeamPCP a militarisé le ver automatisé 'Shai-Hulud' pour compromettre les identifiants de développeurs et empoisonner les pipelines GitHub et npm, exfiltrant du code propriétaire à des fins de monétisation. En parallèle, Lumma Stealer v17 a évolué pour contourner complètement les agents EDR en utilisant des syscalls directs vers le noyau afin de dérober les jetons de session et contourner le MFA. Du côté de la neutralisation des menaces, le FBI a démantelé Outsider Enterprise, une infrastructure massive de Phishing-as-a-Service propulsée par IA. Enfin, les entreprises font face à des risques extrêmes d'attaques destructrices de type wiper ciblant les hyperviseurs cloud et les sauvegardes en ligne, faisant du déploiement de stockages immuables hors ligne une priorité stratégique urgente."
+    "en": "Week 3 of June 2026 witnessed intense malicious activity crossing technical, financial, and geopolitical lines. Software supply chain poisoning has reached an industrial scale, with automated worms targeting developer pipelines and injecting malicious payloads into widely used packages. Concurrently, ransomware and extortion actors have focused heavily on sensitive targets in education and healthcare, while advanced phishing syndicates leverage artificial intelligence to execute massive smishing campaigns. Defensive teams face critical vulnerabilities in endpoint protection and security Information systems under active exploitation, requiring urgent patching and configuration hardening.",
+    "fr": "La troisième semaine de juin 2026 a été marquée par une activité cybercriminelle intense aux frontières de la technique, de la finance et de la géopolitique. L'empoisonnement de la chaîne d'approvisionnement logicielle atteint un stade industriel, avec des vers automatisés ciblant les pipelines de développement et injectant des charges utiles malveillantes. Parallèlement, les groupes de rançongiciels et d'extorsion ciblent lourdement l'éducation et la santé, tandis que les réseaux de phishing utilisent l'intelligence artificielle pour des campagnes de smishing massives. Les équipes défensives font face à des vulnérabilités critiques activement exploitées dans leurs outils d'administration et de sécurité, exigeant un durcissement immédiat."
   },
   "regulatory": {
     "analyse": {
-      "en": "Regulatory and enforcement actions this week signal aggressive cross-border collaboration and proactive civil-cyber interventions. The joint public-private takedown of Outsider Enterprise by the FBI and Google, combined with the successful extradition and guilty plea of a key Conti developer, demonstrates that law enforcement is increasingly targeting both the logistical infrastructures (PaaS) and the technical human capital behind major ransomware syndicates. Organizations must align with these hardening defense-in-depth requirements, particularly regarding the control of military and dual-use software technology exports in Europe.",
-      "fr": "Les actions réglementaires et d'application de la loi cette semaine signalent une collaboration transfrontalière agressive et des interventions cyber-civiles proactives. Le démantèlement conjoint public-privé d'Outsider Enterprise par le FBI et Google, combiné à l'extradition réussie et au plaidoyer de culpabilité d'un développeur clé de Conti, démontre que les forces de l'ordre ciblent de plus en plus les infrastructures logistiques (PaaS) et le capital humain technique derrière les grands syndicats de rançongiciels. Les organisations doivent s'aligner sur ces exigences de durcissement de la défense en profondeur, en particulier concernant le contrôle des exportations de technologies logicielles militaires et à double usage en Europe."
+      "en": "Regulatory bodies are drastically stepping up enforcement actions regarding personal data breaches under GDPR, as evidenced by Ireland's HSE fine, while state-level communication blockages highlight growing geopolitical fragmentation. Joint public-private operations continue to demonstrate success in physically and logically dismantling high-volume Phishing-as-a-Service (PaaS) networks.",
+      "fr": "Les autorités de régulation intensifient de manière drastique les sanctions financières liées aux violations de données personnelles sous l'égide du RGPD, à l'image de l'amende infligée à l'HSE en Irlande. En parallèle, les blocages de communications nationaux témoignent d'une fragmentation géopolitique croissante, tandis que les opérations mixtes public-privé confirment leur efficacité dans le démantèlement des plateformes de Phishing-as-a-Service."
     },
     "events": [
       {
         "title": {
-          "en": "Conti Ransomware Developer Guilty Plea",
-          "fr": "Plaidoyer de culpabilité d'un développeur du rançongiciel Conti"
+          "en": "Irish HSE Tullamore Hospital GDPR Fine",
+          "fr": "Amende RGPD infligée à l'HSE en Irlande pour l'hôpital de Tullamore"
         },
-        "issuing_body": "US Department of Justice / FBI",
-        "date": "2026-06-14",
+        "issuing_body": "Data Protection Commission (DPC)",
+        "date": "2026-06-17",
         "jurisdiction": {
-          "region": "US",
+          "region": "Europe",
           "countries": [
-            "US",
             "IE"
           ]
         },
-        "type": "Court_Ruling",
+        "type": "Fine",
         "status": "Active",
-        "reference": "US DoJ / Irish Court Order",
+        "reference": "GDPR Art. 83",
         "affected_sectors": [
-          "Healthcare_and_Life_Sciences",
-          "Government_and_Defense",
-          "Education_and_Research"
+          "Healthcare_and_Life_Sciences"
         ],
         "description": {
-          "en": "Ukrainian national Oleksii Lytvynenko pleaded guilty to wire fraud conspiracy for his role as a malware loader developer for the Conti ransomware group, following his extradition from Ireland.",
-          "fr": "Le ressortissant ukrainien Oleksii Lytvynenko a plaidé coupable de complot en vue de commettre une fraude électronique pour son rôle de développeur de chargeurs de malwares au sein du groupe Conti, suite à son extradition de l'Irlande."
+          "en": "The Irish Health Service Executive (HSE) was fined 300,000 EUR following a severe data breach at Tullamore Hospital. This enforcement action highlights the high cost of failing to protect patient records against unauthorized access and systemic internal leaks.",
+          "fr": "Le service de santé irlandais (HSE) a été condamné à une amende de 300 000 EUR suite à une fuite de données majeure à l'hôpital de Tullamore. Cette sanction rappelle l'obligation de protéger strictement les dossiers médicaux contre les accès non autorisés."
         },
-        "source_url": "https://securityaffairs.com/193590/uncategorized/ukrainian-extradited-from-ireland-pleads-guilty-over-role-in-conti-ransomware-scheme.html"
+        "source_url": "https://databreaches.net/2026/06/17/ie-hse-fined-e300000-after-tullamore-hospital-data-breach/"
       },
       {
         "title": {
-          "en": "Outsider Enterprise PaaS Takedown",
-          "fr": "Démantèlement de l'infrastructure PaaS Outsider Enterprise"
+          "en": "India National Telegram Ban Action",
+          "fr": "Interdiction nationale de Telegram en Inde"
         },
-        "issuing_body": "Federal Bureau of Investigation / Google",
-        "date": "2026-06-14",
+        "issuing_body": "Ministry of Electronics and Information Technology (MeitY)",
+        "date": "2026-06-17",
         "jurisdiction": {
-          "region": "US",
+          "region": "Asia-Pacific",
           "countries": [
-            "US",
-            "CN"
+            "IN"
           ]
         },
         "type": "Enforcement_Action",
         "status": "Active",
-        "reference": "FBI Civil Injunction",
+        "reference": "IT Act Section 69A",
+        "affected_sectors": [
+          "Technology_and_Telecom",
+          "Media_and_Communication"
+        ],
+        "description": {
+          "en": "The Indian government enforced a nationwide block on Telegram services due to cybercrime and hosting of illicit materials, resulting in BGP hijacking and regional collateral impact in the UAE.",
+          "fr": "Le gouvernement indien a imposé un blocage national de l'application Telegram pour des motifs de cybercriminalité et d'hébergement de contenus illicites, provoquant un détournement de trafic BGP affectant également les Émirats arabes unis."
+        },
+        "source_url": "https://www.bleepingcomputer.com/news/security/indias-telegram-ban-hit-the-uae-too-heres-how-to-get-around-it/"
+      },
+      {
+        "title": {
+          "en": "FBI Dismantling of Outsider Enterprise",
+          "fr": "Démantèlement d'Outsider Enterprise par le FBI"
+        },
+        "issuing_body": "Federal Bureau of Investigation",
+        "date": "2026-06-14",
+        "jurisdiction": {
+          "region": "US",
+          "countries": [
+            "US"
+          ]
+        },
+        "type": "Enforcement_Action",
+        "status": "Active",
+        "reference": "US DoJ Civil Action",
         "affected_sectors": [
           "Technology_and_Telecom",
           "Finance"
         ],
         "description": {
-          "en": "A joint public-private technical and legal operation successfully disrupted Outsider Enterprise, a major China-based automated smishing and AI-powered phishing-as-a-service provider.",
-          "fr": "Une opération conjointe publique-privée, technique et juridique, a permis de démanteler Outsider Enterprise, un important fournisseur de services d'hameçonnage par SMS (smishing) et d'hameçonnage par IA basé en Chine."
+          "en": "A coordinated public-private intervention led by the FBI and Google dismantled the massive AI-powered Phishing-as-a-Service infrastructure of Outsider Enterprise, which was hosted in China.",
+          "fr": "Une action publique-privée coordonnée par le FBI et Google a permis le démantèlement de l'infrastructure massive de Phishing-as-a-Service dopée à l'IA du groupe Outsider Enterprise, localisé en Chine."
         },
         "source_url": "https://www.bleepingcomputer.com/news/security/fbi-disrupts-massive-ai-powered-phishing-service-using-a-million-urls/"
       }
@@ -87,26 +112,67 @@
     "geographic_analyse": [
       {
         "geographic_zone_name": {
-          "en": "China",
-          "fr": "Chine"
-        },
-        "geographic_zone_strategic_analyse": {
-          "en": "Chinese-based cybercriminals are industrializing social engineering through automated Phishing-as-a-Service (PaaS) platforms. The use of generative AI to create over a million dynamic phishing URLs and orchestrate mass smishing campaigns via Telegram channels highlights a strategic pivot toward highly scalable, automated credential harvesting targeting global consumer and financial databases.",
-          "fr": "Les cybercriminels basés en Chine industrialisent l'ingénierie sociale grâce à des plateformes automatisées de Phishing-as-a-Service (PaaS). L'utilisation de l'IA générative pour créer plus d'un million d'URL d'hameçonnage dynamiques et orchestrer des campagnes de smishing de masse via Telegram met en évidence un pivot stratégique vers la collecte d'identifiants à grande échelle ciblant les bases de données financières mondiales."
-        }
-      },
-      {
-        "geographic_zone_name": {
           "en": "Russia",
           "fr": "Russie"
         },
         "geographic_zone_strategic_analyse": {
-          "en": "Russian-aligned and Russian-speaking threat actors continue to dominate the high-impact extortion and information-stealing landscape. Groups like Conti (and its legacy networks) remain a core focus for international prosecutions, while Russian-speaking developers continuously iterate sophisticated malware like Lumma Stealer to bypass Western-engineered EDR solutions using direct system calls.",
-          "fr": "Les acteurs de la menace alignés sur la Russie et russophones continuent de dominer le paysage de l'extorsion et du vol d'informations à fort impact. Des groupes comme Conti restent au cœur des poursuites internationales, tandis que les développeurs russophones améliorent continuellement des malwares sophistiqués comme Lumma Stealer pour contourner les solutions EDR occidentales en utilisant des appels système directs."
+          "en": "Russian-aligned actors and ransomware syndicates (like Qilin and Conti networks) continue to heavily target Western social structures, including education systems and healthcare entities, utilizing dual-extortion and network disruption techniques to pressure regional administrations.",
+          "fr": "Les cybercriminels et groupes de rançongiciels affiliés à la Russie (tels que Qilin et les réseaux Conti) continuent de cibler massivement les infrastructures sociales occidentales, notamment l'éducation et la santé, combinant chiffrement et double extorsion pour déstabiliser les organisations publiques."
+        }
+      },
+      {
+        "geographic_zone_name": {
+          "en": "China",
+          "fr": "Chine"
+        },
+        "geographic_zone_strategic_analyse": {
+          "en": "Chinese-hosted operations focus on highly automated credential harvesting services (such as Outsider Enterprise) and intelligence gathering campaigns targeting strategic Western cloud assets, taking advantage of local bulletproof hosting to evade international law enforcement.",
+          "fr": "Les opérations basées en Chine privilégient la collecte automatisée d'identifiants à grande échelle (à l'instar d'Outsider Enterprise) et l'espionnage d'infrastructures cloud occidentales, bénéficiant d'hébergements locaux pour échapper aux actions de justice internationales."
         }
       }
     ],
     "details": [
+      {
+        "threat_actor_name": "FortiBleed Russophone Group",
+        "origin_country": "Russia",
+        "type": {
+          "en": "Cybercriminal",
+          "fr": "Cybercriminel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Critical_Infrastructure",
+            "Government_and_Defense",
+            "Technology_and_Telecom"
+          ],
+          "fr": [
+            "Critical_Infrastructure",
+            "Government_and_Defense",
+            "Technology_and_Telecom"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Global"
+          ],
+          "fr": [
+            "Global"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1110.002",
+          "T1078.001",
+          "T1567"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "FortiBleed VPN Leak Campaign"
+          ],
+          "fr": [
+            "Campagne de fuite de VPN FortiBleed"
+          ]
+        }
+      },
       {
         "threat_actor_name": "TeamPCP",
         "origin_country": "Unknown",
@@ -126,107 +192,113 @@
         },
         "targeted_regions": {
           "en": [
-            "Global"
+            "North America",
+            "Europe"
           ],
           "fr": [
-            "Global"
+            "Amérique du Nord",
+            "Europe"
           ]
         },
         "mitre_attack_ttps_id": [
-          "T1078",
           "T1195.002",
-          "T1059.001",
-          "T1552.001",
+          "T1078",
           "T1567.002"
         ],
         "campaign_or_operation": {
           "en": [
-            "Shai-Hulud Software Supply Chain Compromise"
+            "Shai-Hulud Supply Chain Worm"
           ],
           "fr": [
-            "Compromission de la chaîne d'approvisionnement logicielle via le ver Shai-Hulud"
+            "Ver de chaîne d'approvisionnement Shai-Hulud"
           ]
         }
       },
       {
-        "threat_actor_name": "Lumma Stealer Operator",
+        "threat_actor_name": "Qilin",
         "origin_country": "Russia",
         "type": {
-          "en": "Cybercriminal",
-          "fr": "Cybercriminel"
+          "en": "Ransomware",
+          "fr": "Ransomware"
         },
         "targeted_sectors": {
           "en": [
-            "Finance",
-            "Technology_and_Telecom",
-            "Retail_and_Consumer"
+            "Education_and_Research",
+            "Healthcare_and_Life_Sciences"
           ],
           "fr": [
-            "Finance",
-            "Technology_and_Telecom",
-            "Retail_and_Consumer"
+            "Education_and_Research",
+            "Healthcare_and_Life_Sciences"
           ]
         },
         "targeted_regions": {
           "en": [
-            "Global"
+            "Australia",
+            "Europe",
+            "North America"
           ],
           "fr": [
-            "Global"
+            "Australie",
+            "Europe",
+            "Amérique du Nord"
           ]
         },
         "mitre_attack_ttps_id": [
-          "T1055.012",
-          "T1005",
-          "T1059.001"
+          "T1486",
+          "T1485",
+          "T1567"
         ],
         "campaign_or_operation": {
           "en": [
-            "Lumma Stealer v17 ClickFix Campaign"
+            "K-12 Education Extortion Campaign"
           ],
           "fr": [
-            "Campagne ClickFix Lumma Stealer v17"
+            "Campagne d'extorsion contre l'éducation K-12"
           ]
         }
       },
       {
-        "threat_actor_name": "Outsider Enterprise",
-        "origin_country": "China",
+        "threat_actor_name": "ShinyHunters",
+        "origin_country": "Unknown",
         "type": {
           "en": "Cybercriminal",
           "fr": "Cybercriminel"
         },
         "targeted_sectors": {
           "en": [
-            "Technology_and_Telecom",
             "Finance",
-            "Retail_and_Consumer"
+            "Business_Services",
+            "Government_and_Defense"
           ],
           "fr": [
-            "Technology_and_Telecom",
             "Finance",
-            "Retail_and_Consumer"
+            "Business_Services",
+            "Government_and_Defense"
           ]
         },
         "targeted_regions": {
           "en": [
-            "United States",
-            "Global"
+            "Europe",
+            "North America"
           ],
           "fr": [
-            "États-Unis",
-            "Global"
+            "Europe",
+            "Amérique du Nord"
           ]
         },
         "mitre_attack_ttps_id": [
-          "T1566.002"
+          "T1567.002",
+          "T1657",
+          "T1530"
         ],
         "campaign_or_operation": {
           "en": [
-            "AI-Powered Smishing Platform"
+            "CFGI Data Exfiltration",
+            "Council of Europe Extortion"
           ],
           "fr": [
-            "Plateforme de smishing propulsée par IA"
+            "Exfiltration de données de CFGI",
+            "Extorsion du Conseil de l'Europe"
           ]
         }
       }
@@ -234,8 +306,8 @@
   },
   "mitre_attack_ttps": {
     "ttps_strategic_analyse": {
-      "en": "Attackers are strategically pivoting towards bypassing host security agents (EDRs) and targeting non-traditional ingress points. Lumma Stealer v17's implementation of Direct Syscalls effectively blinds user-mode monitoring agents, allowing silent memory reading of sensitive browser processes. At the same time, the automation of workflow manipulation (exploiting GitHub Actions' pull_request_target) showcases how threats are moving upstream to compromise code integrity before compilation, ensuring subsequent persistence inside victim networks.",
-      "fr": "Les attaquants s'orientent stratégiquement vers le contournement des agents de sécurité des hôtes (EDR) et ciblent des points d'entrée non traditionnels. L'implémentation par Lumma Stealer v17 de Syscalls Directs aveugle efficacement les agents de surveillance en mode utilisateur, permettant une lecture silencieuse en mémoire des processus de navigation sensibles. Parallèlement, l'automatisation de la manipulation des workflows (exploitation de pull_request_target dans GitHub Actions) montre comment les menaces se déplacent en amont pour compromettre l'intégrité du code avant compilation."
+      "en": "This period marks a shift towards systemic software supply chain poisoning and automated credential reuse. Adversaries leverage compromised developer access tokens (PATs) and postinstall package hooks to establish deep lateral persistence within continuous integration pipelines, bypassing typical security controls.",
+      "fr": "Cette période montre une nette orientation vers l'empoisonnement systémique de la chaîne d'approvisionnement et la réutilisation automatisée d'identifiants de connexion. Les attaquants exploitent les jetons développeurs compromis (PAT) et les scripts postinstall pour établir une persistance profonde dans les pipelines CI/CD."
     },
     "ttps_list": [
       {
@@ -244,33 +316,33 @@
           "en": "Initial Access",
           "fr": "Accès Initial"
         },
-        "technique_name": "Supply Chain Compromise: Compromise Software Dependencies and Development Tools",
-        "frequency": 1,
+        "technique_name": "Supply Chain Compromise: Compromise Software Dependencies",
+        "frequency": 2,
         "severity": "critical",
         "context": {
           "en": [
-            "TeamPCP leveraged the automated Shai-Hulud worm to poison public npm and PyPI repositories and exploit insecure GitHub Actions workflows, compromising downstream customer builds."
+            "Used by TeamPCP (Shai-Hulud worm), the npm Mastra package compromises, and the Uncanny Automator Pro WordPress plugin backdoor to execute malicious code during installations."
           ],
           "fr": [
-            "TeamPCP a exploité le ver automatisé Shai-Hulud pour empoisonner les dépôts publics npm et PyPI et exploiter des workflows GitHub Actions non sécurisés."
+            "Utilisé par TeamPCP (ver Shai-Hulud), lors des compromissions du paquet npm Mastra, et via la porte dérobée de l'extension WordPress Uncanny Automator Pro."
           ]
         }
       },
       {
-        "id": "T1055.012",
+        "id": "T1078",
         "tactic": {
           "en": "Defense Evasion",
           "fr": "Évasion de Défense"
         },
-        "technique_name": "Process Injection: Process Hollowing",
-        "frequency": 1,
+        "technique_name": "Valid Accounts",
+        "frequency": 2,
         "severity": "high",
         "context": {
           "en": [
-            "Lumma Stealer v17 utilizes Direct Syscalls to perform process hollowing into svchost.exe, rendering user-mode API hooking from EDR agents ineffective."
+            "Systematically abused by TeamPCP using developer tokens, and by LLMjacking campaigns using stolen cloud credentials to spawn unauthorized GPU resources."
           ],
           "fr": [
-            "Lumma Stealer v17 utilise des Syscalls Directs pour effectuer du process hollowing dans svchost.exe, rendant inefficace le hooking d'API en mode utilisateur par les agents EDR."
+            "Abusé systématiquement par TeamPCP via des tokens de développeurs, et lors des campagnes de LLMjacking utilisant des identifiants cloud volés."
           ]
         }
       },
@@ -281,32 +353,32 @@
           "fr": "Impact"
         },
         "technique_name": "Data Destruction",
-        "frequency": 1,
+        "frequency": 2,
         "severity": "critical",
         "context": {
           "en": [
-            "Wiper operations targeted administrative hypervisor consoles to purge live virtual machines and systematically delete online backups, aiming for total operational erasure."
+            "Observed in destructive wiper attacks targeting network hypervisors and storage snapshots, as well as by Qilin ransomware to eliminate recovery paths."
           ],
           "fr": [
-            "Des opérations de wiper ont ciblé les consoles d'administration des hyperviseurs pour purger les machines virtuelles actives et supprimer systématiquement les sauvegardes en ligne."
+            "Observé lors d'attaques destructrices de type wiper ciblant les hyperviseurs et snapshots de stockage, ainsi que par le rançongiciel Qilin."
           ]
         }
       },
       {
-        "id": "T1566.002",
+        "id": "T1567.002",
         "tactic": {
-          "en": "Initial Access",
-          "fr": "Accès Initial"
+          "en": "Exfiltration",
+          "fr": "Exfiltration"
         },
-        "technique_name": "Phishing: Spearphishing Link",
-        "frequency": 1,
+        "technique_name": "Exfiltration Over Web Service: Exfiltration to Cloud Repository",
+        "frequency": 2,
         "severity": "high",
         "context": {
           "en": [
-            "Outsider Enterprise leveraged AI engines to generate over one million automated spearphishing URLs distributed via mass SMS campaigns (smishing)."
+            "Exploited by ShinyHunters and TeamPCP to leak large datasets of intellectual property and client documents to public and private web services."
           ],
           "fr": [
-            "Outsider Enterprise a exploité des moteurs d'IA pour générer plus d'un million d'URL de spearphishing distribuées via des campagnes massives de SMS (smishing)."
+            "Exploité par ShinyHunters et TeamPCP pour exfiltrer de larges volumes de propriété intellectuelle et de documents clients vers des stockages cloud."
           ]
         }
       }
@@ -314,59 +386,153 @@
   },
   "vulnerabilities": {
     "analyse": {
-      "en": "The vulnerability landscape is dominated by unauthenticated Remote Code Execution (RCE) flaws in edge routers, network proxies, and critical log management systems. The publication of CVE-2026-20253 in Splunk Enterprise represents an acute risk, as attackers can achieve unauthenticated RCE on logging servers. Since logging architectures contain extremely sensitive network configuration data, compromising Splunk servers could facilitate lateral movement and massive data exfiltration across isolated zones.",
-      "fr": "Le paysage des vulnérabilités est dominé par des failles d'exécution de code à distance (RCE) non authentifiées dans les routeurs d'accès, les proxys réseau et les systèmes de gestion de logs critiques. La publication de la CVE-2026-20253 dans Splunk Enterprise représente un risque aigu, car les attaquants peuvent obtenir une exécution de code à distance sans authentification sur les serveurs de logs."
+      "en": "Enterprise software interfaces and security products remain prime targets for threat actors seeking immediate unauthenticated RCE. The active exploitation of Splunk Enterprise and the Microsoft Defender privilege escalation flaw illustrates critical exposure gaps that demand urgent hotfixes.",
+      "fr": "Les interfaces logicielles d'entreprise et les produits de sécurité restent des cibles privilégiées pour obtenir une exécution de code à distance (RCE) sans authentification. L'exploitation active de Splunk Enterprise et de la faille Microsoft Defender met en évidence des faiblesses critiques exigeant des correctifs immédiats."
     },
     "list": [
       {
-        "cve_id": "CVE-2026-20253",
-        "cvss_score": 9.8,
-        "epss_score": "N/A",
-        "cisa_kev": false,
-        "affected_product": "Splunk Enterprise",
-        "affected_product_vendor": "Splunk",
+        "cve_id": "CVE-2026-48907",
+        "cvss_score": 10.0,
+        "epss_score": null,
+        "cisa_kev": true,
+        "affected_product": "Joomla Content Editor (JCE)",
+        "affected_product_vendor": "Widget Factory",
         "vulnerability_type": {
           "en": [
-            "Missing Authentication for Critical Function (CWE-306)"
+            "Command Injection",
+            "Remote Code Execution"
           ],
           "fr": [
-            "Absence d'authentification pour une fonction critique (CWE-306)"
+            "Injection de commande",
+            "Exécution de code à distance"
           ]
         },
         "vulnerability_description": {
-          "en": "A missing authentication flaw in the PostgreSQL sidecar component of Splunk Enterprise allows remote, unauthenticated attackers to execute arbitrary code on the target host.",
-          "fr": "Une faille d'absence d'authentification dans le composant sidecar PostgreSQL de Splunk Enterprise permet à des attaquants distants non authentifiés d'exécuter du code arbitraire sur l'hôte cible."
+          "en": "A critical command injection vulnerability in Joomla Content Editor (JCE) versions up to 2.9.99.4 allows remote unauthenticated attackers to execute arbitrary system commands on the hosting server.",
+          "fr": "Une faille d'injection de commande critique dans Joomla Content Editor (JCE) jusqu'à la version 2.9.99.4 permet à des attaquants distants non authentifiés d'exécuter des commandes système arbitraires."
         },
         "mitre_attack_ttps_id": [
           "T1190"
         ]
       },
       {
-        "cve_id": "CVE-2026-12197",
+        "cve_id": "CVE-2026-20253",
         "cvss_score": 9.8,
-        "epss_score": "N/A",
+        "epss_score": null,
         "cisa_kev": false,
-        "affected_product": "EG105G-P router",
-        "affected_product_vendor": "Ruijie",
+        "affected_product": "Splunk Enterprise",
+        "affected_product_vendor": "Splunk",
         "vulnerability_type": {
           "en": [
-            "Command Injection"
+            "Missing Authentication",
+            "Remote Code Execution"
           ],
           "fr": [
-            "Injection de commande"
+            "Absence d'authentification",
+            "Exécution de code à distance"
           ]
         },
         "vulnerability_description": {
-          "en": "A critical command injection vulnerability in Ruijie EG105G-P enterprise routers enables remote attackers to execute arbitrary commands with administrative privileges.",
-          "fr": "Une vulnérabilité critique d'injection de commandes dans les routeurs d'entreprise Ruijie EG105G-P permet à des attaquants distants d'exécuter des commandes arbitraires avec des privilèges d'administration."
+          "en": "An unauthenticated remote code execution flaw in Splunk Enterprise due to missing authentication in the sidecar PostgreSQL database channel.",
+          "fr": "Une faille d'exécution de code à distance non authentifiée dans Splunk Enterprise due à une absence d'authentification sur le canal de base de données PostgreSQL sidecar."
         },
         "mitre_attack_ttps_id": [
-          "T1203"
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-50656",
+        "cvss_score": 7.8,
+        "epss_score": null,
+        "cisa_kev": false,
+        "affected_product": "Microsoft Defender / MsMpEng",
+        "affected_product_vendor": "Microsoft",
+        "vulnerability_type": {
+          "en": [
+            "Privilege Escalation",
+            "Security Bypass"
+          ],
+          "fr": [
+            "Élévation de privilèges",
+            "Contournement de sécurité"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Dubbed RoguePlanet, this vulnerability allows local attackers to bypass security boundaries and escalate privileges by abusing the core MsMpEng engine of Microsoft Defender.",
+          "fr": "Surnommée RoguePlanet, cette faille permet à des attaquants locaux de contourner les barrières de sécurité et d'élever leurs privilèges en abusant du moteur MsMpEng de Microsoft Defender."
+        },
+        "mitre_attack_ttps_id": [
+          "T1562.001"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-12530",
+        "cvss_score": 8.4,
+        "epss_score": null,
+        "cisa_kev": false,
+        "affected_product": "AWS Bedrock AgentCore Python SDK",
+        "affected_product_vendor": "Amazon Web Services",
+        "vulnerability_type": {
+          "en": [
+            "Code Injection"
+          ],
+          "fr": [
+            "Injection de code"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "An injection vulnerability in the AWS Bedrock AgentCore Python SDK allows attackers to inject malicious commands, compromising the associated AI agent execution environment.",
+          "fr": "Une vulnérabilité d'injection dans le SDK Python AWS Bedrock AgentCore permet à des attaquants d'injecter des commandes malveillantes, compromettant l'environnement d'exécution de l'agent IA."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
         ]
       }
     ]
   },
   "data_breaches": [
+    {
+      "victim": "Fortinet VPN Users (FortiBleed Leak)",
+      "sector": "Critical_Infrastructure",
+      "country": "Global",
+      "records_count": 73932,
+      "data_types": {
+        "en": [
+          "VPN credentials",
+          "IP addresses",
+          "Device configuration files"
+        ],
+        "fr": [
+          "Identifiants VPN",
+          "Adresses IP",
+          "Fichiers de configuration réseau"
+        ]
+      },
+      "threat_actor": "FortiBleed Russophone Group",
+      "financial_impact_usd": null,
+      "source_url": "https://www.bleepingcomputer.com/news/security/fortibleed-leak-exposes-fortinet-vpn-credentials-for-73-000-devices/"
+    },
+    {
+      "victim": "CFGI (Financial Consulting Firm)",
+      "sector": "Finance",
+      "country": "United States",
+      "records_count": 248235,
+      "data_types": {
+        "en": [
+          "Names",
+          "Email addresses",
+          "Financial advisory documents"
+        ],
+        "fr": [
+          "Noms",
+          "Adresses e-mail",
+          "Documents de conseil financier"
+        ]
+      },
+      "threat_actor": "ShinyHunters",
+      "financial_impact_usd": null,
+      "source_url": "https://haveibeenpwned.com/Breach/CFGI"
+    },
     {
       "victim": "Council of Europe",
       "sector": "Government_and_Defense",
@@ -375,11 +541,13 @@
       "data_types": {
         "en": [
           "Internal working documents",
-          "Internal emails"
+          "Administrative emails",
+          "Diplomatic communications"
         ],
         "fr": [
           "Documents de travail internes",
-          "E-mails internes"
+          "E-mails administratifs",
+          "Communications diplomatiques"
         ]
       },
       "threat_actor": "ShinyHunters",
@@ -387,133 +555,149 @@
       "source_url": "https://databreaches.net/2026/06/14/shinyhunters-claims-theft-of-297gb-of-council-of-europe-data-claims-unconfirmed-as-yet/"
     },
     {
-      "victim": "Novo Nordisk",
-      "sector": "Healthcare_and_Life_Sciences",
-      "country": "Denmark",
+      "victim": "UK Major Hotel Chain",
+      "sector": "Hospitality_and_Entertainment",
+      "country": "United Kingdom",
       "records_count": null,
       "data_types": {
         "en": [
-          "Patient health records",
-          "Clinical trial participation data"
+          "Identity documents",
+          "Booking records",
+          "Credit card details"
         ],
         "fr": [
-          "Dossiers de santé des patients",
-          "Données de participation aux essais cliniques"
+          "Documents d'identité",
+          "Détails de réservations",
+          "Informations de cartes bancaires"
         ]
       },
       "threat_actor": null,
       "financial_impact_usd": null,
-      "source_url": "https://databreaches.net/2026/06/14/novo-nordisk-reports-data-breach-tells-clinical-trial-patients-to-remain-vigilant/"
+      "source_url": "https://databreaches.net/2026/06/14/uk-hotel-guests-issued-urgent-check-alert-as-personal-details-stolen-from-major-chain/"
     }
   ],
   "target": {
     "sectors": {
       "en": [
+        "Critical_Infrastructure",
         "Government_and_Defense",
-        "Technology_and_Telecom",
+        "Finance",
         "Healthcare_and_Life_Sciences",
-        "Hospitality_and_Entertainment",
-        "Finance"
+        "Technology_and_Telecom",
+        "Education_and_Research",
+        "Retail_and_Consumer",
+        "Hospitality_and_Entertainment"
       ],
       "fr": [
+        "Critical_Infrastructure",
         "Government_and_Defense",
-        "Technology_and_Telecom",
+        "Finance",
         "Healthcare_and_Life_Sciences",
-        "Hospitality_and_Entertainment",
-        "Finance"
+        "Technology_and_Telecom",
+        "Education_and_Research",
+        "Retail_and_Consumer",
+        "Hospitality_and_Entertainment"
       ]
     },
     "countries": {
       "en": [
         "United States",
-        "France",
         "United Kingdom",
-        "Denmark",
-        "Ireland"
+        "France",
+        "Ireland",
+        "Australia",
+        "India",
+        "Singapore"
       ],
       "fr": [
         "États-Unis",
-        "France",
         "Royaume-Uni",
-        "Danemark",
-        "Irlande"
+        "France",
+        "Irlande",
+        "Australie",
+        "Inde",
+        "Singapour"
       ]
     },
     "narrative": {
-      "en": "- **Government & Defense:** The Council of Europe in France was targeted by ShinyHunters, who exfiltrated 297GB of sensitive internal working documents and diplomatic emails, exposing international treaties and legislative preparations to extortion.\n- **Healthcare & Life Sciences:** Pharmaceutical giant Novo Nordisk in Denmark suffered a data breach compromising personal health records of patients participating in clinical trials, creating severe privacy risks.\n- **Technology & Telecom:** Developer platforms were hit by TeamPCP's Shai-Hulud worm, compromising GitHub and npm pipelines, resulting in the theft and subsequent $95,000 black-market sale of proprietary software code repositories.\n- **Hospitality & Entertainment:** A major UK hotel chain experienced a high-volume breach where guest identities, booking histories, and payment card details were exfiltrated by cybercriminals.\n- **Finance:** Millions of retail banking customers in the United States were targeted by Chinese-based smishing PaaS Outsider Enterprise, which utilized AI engines to send 2.5 million fraudulent SMS to harvest credit card and bank account access.\n- **Critical Infrastructure & Business Services:** Unnamed enterprise networks suffered total system wipes where attackers gained administrator console access, permanently deleting production virtual machines and targeting online storage to completely erase operational capabilities.",
-      "fr": "- **Gouvernement et Défense :** Le Conseil de l'Europe en France a été ciblé par ShinyHunters, qui a exfiltré 297 Go de documents de travail internes sensibles et d'e-mails diplomatiques, exposant des traités internationaux à l'extorsion.\n- **Santé et Sciences de la vie :** Le géant pharmaceutique Novo Nordisk au Danemark a subi une violation de données compromettant les dossiers de santé personnels de patients participant à des essais cliniques.\n- **Technologie et Télécom :** Les plateformes de développement ont été frappées par le ver Shai-Hulud de TeamPCP, compromettant les pipelines GitHub et npm, ce qui a entraîné le vol et la revente de code propriétaire pour 95 000 $.\n- **Hôtellerie et Divertissement :** Une grande chaîne hôtelière britannique a subi une violation massive au cours de laquelle l'identité des clients, l'historique des réservations et les détails des cartes de paiement ont été exfiltrés.\n- **Finance :** Des millions de clients bancaires aux États-Unis ont été ciblés par la plateforme chinoise de smishing Outsider Enterprise, qui a utilisé l'IA pour envoyer 2,5 millions de SMS frauduleux afin de dérober des coordonnées bancaires.\n- **Infrastructures critiques et Services aux entreprises :** Des réseaux d'entreprises non identifiés ont subi un effacement total de leurs systèmes, les attaquants ayant accédé aux consoles d'administration pour supprimer définitivement les machines virtuelles et les sauvegardes en ligne."
+      "en": "- **Critical Infrastructure & VPNs:** Over 73,932 Fortinet SSL VPN credentials from devices in 194 countries were exfiltrated and leaked online in the massive FortiBleed campaign, exposing OIVs globally.\n- **Government & Defense:** ShinyHunters compromised the Council of Europe, exfiltrating 297 GB of internal documents and communications, posing a massive geopolitical intelligence threat.\n- **Financial Services & Consulting:** CFGI, a prominent US financial advisory firm, suffered a breach exposing 248,235 records containing sensitive client business information, claimed by ShinyHunters.\n- **Healthcare & MedTech:** Ireland's Health Service Executive (HSE) was hit with a €300,000 fine following a data breach at Tullamore Hospital, while iRhythm Technologies suffered a major extortion-based intrusion compromising patient telemetry device logs.\n- **Education & Tutoring:** Qilin ransomware targeted an Australian K-12 tutoring provider, threatening to leak sensitive minor student records, highlighting the extreme vulnerability of the education sector.\n- **Technology & Open Source:** The developer community faced severe supply chain compromises with the poisoning of the npm Mastra package and a backdoor injected into Uncanny Automator Pro (v7.3.0.5) affecting thousands of WordPress sites.\n- **Hospitality & Retail:** A major UK hotel chain suffered a massive customer identity theft compromising bookings and credit cards, while Baker Distributing (HVAC) leaked 116,000 unique customer email records and support logs.\n- **Cloud & AI Infrastructure:** Attackers targeted AWS and Azure environments for \"LLMjacking\" operations, hijacking high-performance GPU instances to run offensive autonomous agentic scanning tools.",
+      "fr": "- **Infrastructures critiques et VPN :** Plus de 73 932 identifiants VPN SSL Fortinet d'appareils situés dans 194 pays ont été exfiltrés et publiés lors de la campagne massive FortiBleed, exposant des OIV mondiaux.\n- **Gouvernement et défense :** Le groupe ShinyHunters a compromis le Conseil de l'Europe, exfiltrant 297 Go de documents et de communications internes, ce qui représente une menace géopolitique majeure.\n- **Services financiers et conseil :** Le cabinet de conseil financier américain CFGI a subi une violation révélant 248 235 enregistrements contenant des données commerciales sensibles, revendiquée par ShinyHunters.\n- **Santé et MedTech :** Le service de santé irlandais (HSE) a écopé d'une amende de 300 000 € après une fuite de données à l'hôpital de Tullamore, tandis qu'iRhythm Technologies a subi une intrusion avec extorsion ciblant des données patients.\n- **Éducation et soutien scolaire :** Le rançongiciel Qilin a ciblé un fournisseur de soutien scolaire K-12 en Australie, menaçant de divulguer des dossiers d'élèves mineurs, illustrant la fragilité de ce secteur.\n- **Technologie et open source :** La communauté des développeurs a fait face à des attaques de chaîne d'approvisionnement majeures via l'empoisonnement du paquet npm Mastra et une porte dérobée sur Uncanny Automator Pro (v7.3.0.5).\n- **Hôtellerie et commerce :** Une grande chaîne hôtelière au Royaume-Uni a été victime d'un vol massif d'identités de clients (réservations et cartes de crédit), tandis que le distributeur CVC Baker Distributing a divulgué 116 000 e-mails clients.\n- **Infrastructures cloud et IA :** Les attaquants ont ciblé les environnements AWS et Azure lors d'opérations de 'LLMjacking', détournant des instances de GPU pour exécuter des outils d'analyse IA offensifs autonomes."
     }
   },
   "trends": {
     "emerging_techniques": {
       "en": [
-        "Direct Kernel Syscalls by infostealers to bypass user-mode EDR monitoring",
-        "AI-powered generation of dynamic phishing templates and domain generation algorithms (DGA)",
-        "Weaponization of automated worms (Shai-Hulud) targeting GitHub workflow pull_request_target configurations"
+        "LLMjacking for offensive AI agent workloads",
+        "Direct Syscalls to bypass user-mode EDR hooks",
+        "WebAssembly (WASM) virtualization for C2 payload execution",
+        "ClickFix social engineering deploying command-line pasting"
       ],
       "fr": [
-        "Utilisation de Syscalls Directs vers le noyau par les infostealers pour contourner la surveillance EDR en mode utilisateur",
-        "Génération de templates d'hameçonnage dynamique et d'algorithmes de génération de domaines (DGA) propulsés par IA",
-        "Militarisation de vers automatisés (Shai-Hulud) ciblant les configurations pull_request_target de GitHub"
+        "LLMjacking pour alimenter des agents IA offensifs",
+        "Appels système directs (Direct Syscalls) pour contourner les hooks EDR",
+        "Virtualisation WebAssembly (WASM) pour l'exécution furtive de charges utiles C2",
+        "Ingénierie sociale ClickFix incitant au copier-coller de commandes système"
       ]
     },
     "declining_techniques": {
       "en": [
-        "Manual script injection for dependency poisoning in favor of autonomous propagation worms",
-        "Traditional SMS-based two-factor authentication (MFA) as an effective security control"
+        "Plain-text API credential storage in unencrypted configuration files",
+        "Traditional SMS or App-based TOTP MFA as a reliable barrier",
+        "Standard user-mode API hooking for endpoint protection agent telemetry"
       ],
       "fr": [
-        "Injection manuelle de scripts pour l'empoisonnement de dépendances au profit de vers de propagation autonomes",
-        "L'authentification à deux facteurs traditionnelle par SMS (MFA) comme mesure de sécurité efficace"
+        "Stockage en clair d'identifiants API dans des fichiers de configuration non chiffrés",
+        "Double authentification classique par SMS ou application TOTP face aux proxys de phishing",
+        "Surveillance classique par hook d'API en mode utilisateur pour la télémétrie EDR"
       ]
     },
     "geopolitical_context": {
-      "en": "Cyber operations are increasingly aligning with technical and economic espionage, as shown by the targeting of European intergovernmental organizations (Council of Europe) and massive code repository theft targeting Western tech companies. Tensions remain high between Western law enforcement agencies (coordinating across US and EU lines) and Eastern European/Chinese cybercriminals operating with relative impunity in their home jurisdictions.",
-      "fr": "Les cyber-opérations s'alignent de plus en plus sur l'espionnage technique et économique, comme le montre le ciblage d'organisations intergouvernementales européennes (Conseil de l'Europe) et le vol massif de dépôts de code ciblant des entreprises technologiques occidentales. Les tensions restent vives entre les forces de l'ordre occidentales et les cybercriminels opérant en Europe de l'Est et en Chine."
+      "en": "Tensions in Eastern Europe and Asia-Pacific manifest in coordinated infrastructure compromise and communications censorship. Western intelligence continues to transition away from foreign-linked platforms while foreign-hosted platforms leverage non-extradition jurisdictions to support cyber-extortion operations targeting public-sector networks.",
+      "fr": "Les tensions en Europe de l'Est et en Asie-Pacifique se traduisent par des compromissions d'infrastructures coordonnées et la censure des communications. Les services de renseignement occidentaux s'éloignent des plateformes tierces, tandis que les pays d'accueil non coopératifs protègent les opérations d'extorsion ciblant le secteur public."
     }
   },
   "recommendations": {
     "strategic": {
       "en": [
         {
-          "title": "Enforce FIDO2 Hardware MFA for Developer Accounts",
-          "detail": "Traditional SMS or TOTP MFA is trivially bypassed by advanced infostealers like Lumma v17 and automated smishing infrastructures like Outsider Enterprise. Mandate the use of FIDO2/WebAuthn-compliant hardware security keys (e.g., YubiKey 5 Series) for all accounts with access to GitHub, AWS, and enterprise identity providers (Okta, Azure AD). Ensure session lifetime restrictions are strictly applied to mitigate the risk of stolen session cookies."
+          "title": "Enforce FIDO2 Hardware MFA Everywhere",
+          "detail": "Traditional SMS and TOTP MFA are easily bypassed by modern Phishing-as-a-Service platforms like Outsider Enterprise and Bluekit, which automate cookie hijacking. Organizations must deploy FIDO2/WebAuthn hardware keys (such as YubiKey 5 Series or Google Titan) for all identity providers like Okta and Entra ID. This entirely mitigates session hijacking and real-time reverse-proxy phishing risks."
         },
         {
-          "title": "Deploy Immutable Air-Gapped Cloud Backups",
-          "detail": "Recent wiper campaigns have proven that attackers who compromise cloud or hypervisor consoles systematically delete online and replication backups to enforce total network erasure. Implement write-once-read-many (WORM) immutable cloud storage policies combined with an air-gapped, physical backup architecture. Require multi-party approval (dual control) for any backup modification or deletion request."
+          "title": "Isolate and Protect Cloud Backups",
+          "detail": "Destructive wiper attacks increasingly target administrative hypervisor and cloud console accounts to delete backups and prevent recovery. Implement isolated, logical air-gapped backups with WORM (Write Once, Read Many) policies using AWS S3 Object Lock or Azure Immutable Blob Storage. Restrict deletion privileges using multi-party approval workflows to ensure resilience against compromised root credentials."
         }
       ],
       "fr": [
         {
-          "title": "Imposer l'authentification MFA matérielle FIDO2 pour les développeurs",
-          "detail": "Le MFA traditionnel par SMS ou TOTP est facilement contourné par des infostealers comme Lumma v17 et des infrastructures de smishing automatisées comme Outsider Enterprise. Imposez l'utilisation de clés de sécurité matérielles conformes à FIDO2/WebAuthn (ex: YubiKey série 5) pour tous les comptes ayant accès à GitHub, AWS et aux fournisseurs d'identité d'entreprise."
+          "title": "Imposer le MFA matériel FIDO2 partout",
+          "detail": "Les MFA traditionnels par SMS ou TOTP sont facilement contournés par des plateformes de Phishing-as-a-Service comme Outsider Enterprise ou Bluekit, qui automatisent le vol de cookies. Déployez des clés matérielles FIDO2/WebAuthn (YubiKey 5 ou Google Titan) pour tous les fournisseurs d'identité (Okta, Entra ID) afin de neutraliser le piratage de session."
         },
         {
-          "title": "Déployer des sauvegardes cloud immuables et isolées",
-          "detail": "Les récentes campagnes de wipers ont prouvé que les attaquants qui compromettent les hyperviseurs suppriment systématiquement les sauvegardes en ligne. Implémentez des politiques de stockage cloud immuable de type WORM (Write-Once-Read-Many) combinées à une architecture de sauvegarde isolée physiquement et logiquement (air-gapped)."
+          "title": "Isoler et protéger les sauvegardes cloud",
+          "detail": "Les attaques destructrices de type wiper ciblent les comptes d'administration des hyperviseurs et consoles cloud pour supprimer les sauvegardes. Implémentez des sauvegardes isolées physiquement (air-gap) et logiquement avec des politiques WORM (AWS S3 Object Lock ou Azure Immutable Blob). Restreignez les droits de suppression via des workflows de double contrôle."
         }
       ]
     },
     "operational": {
       "en": [
         {
-          "title": "Audit GitHub Actions Workflow Triggers immediately",
-          "detail": "The Shai-Hulud supply chain worm actively exploits misconfigured pull_request_target triggers. Scan all organization repositories using tools like Semgrep or static analysis configurations to identify workflows using pull_request_target combined with an explicit checkout of untrusted code. Restrict permissions to read-only for tokens generated by pull requests from forks."
+          "title": "Audit and Block Malicious npm Dependencies",
+          "detail": "Recent supply chain compromises like the Mastra NPM package and Uncanny Automator Pro (v7.3.0.5) highlight immediate execution risks. Run `npm audit` and utilize automated scanners like OSV-Scanner or Socket.dev to analyze dependencies for postinstall shell scripts. Implement `ignore-scripts=true` in `.npmrc` files across CI/CD runners to prevent arbitrary code execution during installation."
         },
         {
-          "title": "Block PostgreSQL Sidecar Ports on Splunk Enterprise",
-          "detail": "To mitigate the immediate risk of CVE-2026-20253 (CVSS 9.8 RCE) in Splunk Enterprise, isolate and restrict all network access to the internal PostgreSQL sidecar port (typically 5432 or adjacent custom ports). Apply the vendor-provided hotfix immediately. Limit network communication to Splunk management consoles to authorized administrator VLANs and VPN gateways only."
+          "title": "Apply Splunk PostgreSQL Sidecar Patch",
+          "detail": "Attackers are actively exploiting CVE-2026-20253, an unauthenticated remote code execution vulnerability in Splunk Enterprise. Immediately update Splunk Enterprise instances to patched versions (such as 10.0.7+ or 10.2.4+). In the interim, use local firewall rules (iptables or Windows Firewall) to block external access to the PostgreSQL sidecar ports."
         }
       ],
       "fr": [
         {
-          "title": "Auditer immédiatement les déclencheurs de workflows GitHub Actions",
-          "detail": "Le ver Shai-Hulud exploite les déclencheurs pull_request_target mal configurés. Scannez tous les dépôts de l'organisation à l'aide d'outils comme Semgrep pour identifier les workflows utilisant pull_request_target combiné avec un checkout de code non approuvé. Limitez les jetons générés par les pull requests externes en lecture seule."
+          "title": "Auditer et bloquer les dépendances npm",
+          "detail": "Les compromissions de chaînes d'approvisionnement récentes (Mastra, Uncanny Automator Pro) montrent des risques d'exécution immédiats. Lancez 'npm audit' et utilisez des scanners automatisés (OSV-Scanner, Socket.dev) pour analyser les dépendances. Configurez 'ignore-scripts=true' dans les fichiers '.npmrc' de vos runners CI/CD."
         },
         {
-          "title": "Bloquer les ports sidecar PostgreSQL de Splunk Enterprise",
-          "detail": "Pour atténuer le risque immédiat de la CVE-2026-20253 (RCE CVSS 9.8), isolez et restreignez l'accès réseau au port sidecar PostgreSQL interne de Splunk Enterprise (généralement 5432). Appliquez immédiatement le correctif fourni par l'éditeur et limitez l'accès d'administration aux seuls VLANs autorisés."
+          "title": "Appliquer le correctif PostgreSQL de Splunk",
+          "detail": "Les attaquants exploitent activement la faille d'exécution de code à distance CVE-2026-20253 dans Splunk Enterprise. Mettez immédiatement à jour vos instances Splunk (v10.0.7+ ou v10.2.4+). En attendant, utilisez des règles de pare-feu local (iptables) pour bloquer l'accès externe au port PostgreSQL sidecar."
         }
       ]
     }
