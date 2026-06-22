@@ -1,0 +1,2291 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "Today's CTI monitoring reveals sustained activity along two major axes. The significant volume of vulnerabilities (8) signals an intensification phase in the publication of exploitable flaws, requiring heightened vigilance regarding patch management and attack surface reduction. Concurrently, the data breaches (4) confirm the persistence of opportunistic compromises targeting exposed informational assets. The absence of threat actor and geopolitical elements should not be interpreted as a de-escalation, but rather as a tactical pause within a typical observation cycle. From a regulatory standpoint, the observed silence calls for proactive anticipation of forthcoming normative developments. In summary, the operational priority remains exposure reduction through patch management and the strengthening of exfiltration detection capabilities.",
+      "fr": "La veille CTI du jour révèle une activité soutenue sur deux axes majeurs. Le volume significatif de vulnérabilités (8) signale une phase d'intensification de la publication de failles exploitables, nécessitant une vigilance accrue en matière de correctifs et de gestion des surfaces d'attaque. Parallèlement, les fuites de données (4) confirment la persistance des compromissions opportunistes ciblant les actifs informationnels exposés. L'absence d'éléments liés aux acteurs de la menace et à la géopolitique ne doit pas être interprétée comme un apaisement, mais plutôt comme un répit tactique dans un cycle d'observation habituel. Sur le plan réglementaire, le silence observé appelle une anticipation proactive des évolutions normatives à venir. En synthèse, la priorité opérationnelle demeure la réduction d'exposition via le patch management et le renforcement des capacités de détection des exfiltrations."
+    },
+    "date": "2026-06-22"
+  },
+  "geopolitical_analyse": [],
+  "regulatory_and_legal": [],
+  "breach_analyse": [
+    {
+      "victim": "Klue (plateforme SaaS)",
+      "threat_actor": "Icarus",
+      "threat_actor_origin": "",
+      "threat_actor_type": "",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [],
+        "fr": []
+      },
+      "description": {
+        "en": "",
+        "fr": ""
+      },
+      "mitre_ttps": [
+        "T1078",
+        "TA0010"
+      ],
+      "recommandations": [],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory all third-party OAuth flows and applications connected to the IS",
+            "Set up monitoring of abnormal authentications",
+            "Segment access by SaaS provider and apply the principle of least privilege",
+            "Prepare a crisis communication channel with impacted customers"
+          ],
+          "fr": [
+            "Inventorier tous les flux OAuth tiers et applications connectées au SI",
+            "Mettre en place une surveillance des authentifications anormales",
+            "Segmenter les accès par fournisseur SaaS et appliquer le principe du moindre privilège",
+            "Préparer un canal de communication de crise avec les clients impactés"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Activate monitoring of OAuth logs (token issuance, refresh, unusual scopes)",
+            "Search for indicators of compromise published by Klue",
+            "Identify accounts that interacted with Klue infrastructure via OAuth",
+            "Correlate suspicious access with IdP alerts"
+          ],
+          "fr": [
+            "Activer le monitoring des logs OAuth (émissions de tokens, refresh, scopes inhabituels)",
+            "Rechercher des indicateurs de compromission publiés par Klue",
+            "Identifier les comptes ayant interagi avec l'infrastructure Klue via OAuth",
+            "Corréler les accès suspects avec les alertes de l'IdP"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Immediately revoke OAuth tokens issued for Klue",
+            "Disable compromised application integrations",
+            "Force rotation of related credentials and secrets",
+            "Isolate endpoints that received exfiltrated data"
+          ],
+          "fr": [
+            "Révoquer immédiatement les tokens OAuth émis pour Klue",
+            "Désactiver les intégrations applicatives compromises",
+            "Forcer la rotation des credentials et secrets liés",
+            "Isoler les postes ayant reçu des données exfiltrées"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Notify customers and data protection authorities (CNIL, etc.)",
+            "Perform forensic analysis of compromised tokens",
+            "Document the initial vector and time to detection",
+            "Strengthen periodic review policies for OAuth scopes"
+          ],
+          "fr": [
+            "Notifier les clients et autorités de protection des données (CNIL, etc.)",
+            "Réaliser une analyse forensique des jetons compromis",
+            "Documenter le vecteur initial et le délai de détection",
+            "Renforcer les politiques de revue périodique des scopes OAuth"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for other poorly monitored OAuth integrations",
+            "Hunt for abnormal refresh token usage",
+            "Identify Icarus IOCs (TTPs, infrastructure, aliases)",
+            "Audit IdP access logs over a rolling 90-day window"
+          ],
+          "fr": [
+            "Rechercher d'autres intégrations OAuth faiblement surveillées",
+            "Chasser les usages anormaux de refresh tokens",
+            "Identifier des IOC Icarus (TTPs, infrastructure, alias)",
+            "Auditer les journaux d'accès IdP sur 90 jours glissants"
+          ]
+        }
+      },
+      "tags": [
+        "saas",
+        "oauth",
+        "supply_chain",
+        "credential_abuse"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/06/21/klue-oauth-breach-victim-list-grows-as-icarus-hackers-claim-attack/",
+        "https://www.bleepingcomputer.com/news/security/klue-oauth-breach-victim-list-grows-as-icarus-hackers-claim-attack/"
+      ],
+      "date": "2026-06-21"
+    },
+    {
+      "victim": "Nippon Telenet (日本テレネット)",
+      "threat_actor": "Non attribué",
+      "threat_actor_origin": "",
+      "threat_actor_type": "",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Télécommunications / ISP"
+        ],
+        "fr": [
+          "Télécommunications / ISP"
+        ]
+      },
+      "description": {
+        "en": "Nippon Telenet suffered a ransomware attack resulting in a risk of personal information leakage potentially affecting up to 1.066 million people. At this stage, no secondary exploitation of the data is confirmed. The incident highlights the need to harden security postures for telecom operators hosting large volumes of PII.",
+        "fr": "Nippon Telenet a subi une attaque par ransomware entraînant un risque de fuite d'informations personnelles pouvant concerner jusqu'à 1,066 million de personnes. À ce stade, aucune exploitation secondaire des données n'est confirmée. L'incident souligne la nécessité de durcir les postures de sécurité pour les opérateurs télécoms hébergeant de larges volumes de PII."
+      },
+      "mitre_ttps": [
+        "T1486",
+        "TA0010"
+      ],
+      "recommandations": [
+        {
+          "en": "Strengthen network segmentation and EDR on data servers",
+          "fr": "Renforcer la segmentation réseau et l'EDR sur les serveurs de données"
+        },
+        {
+          "en": "Implement a robust DRP/BCP with isolated backups",
+          "fr": "Implémenter un PRA/PCA robuste avec sauvegardes isolées"
+        },
+        {
+          "en": "Audit third-party access and managed service providers",
+          "fr": "Auditer les accès tiers et fournisseurs managés"
+        },
+        {
+          "en": "Prepare notification templates compliant with the APPI",
+          "fr": "Préparer des templates de notification conformes à l'APPI"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain immutable and tested backups (3-2-1)",
+            "Define a communication and notification plan (Japanese APPI)",
+            "Map sensitive personal data (PII)",
+            "Raise employee awareness on phishing (frequent entry vector)"
+          ],
+          "fr": [
+            "Maintenir des sauvegardes immuables et testées (3-2-1)",
+            "Définir un plan de communication et de notification (APPI japonaise)",
+            "Cartographier les données personnelles sensibles (PII)",
+            "Sensibiliser les employés au phishing (vecteur d'entrée fréquent)"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor mass file creations/modifications",
+            "Detect encryption patterns (canary files, EDR)",
+            "Alert on abnormal outbound flows (pre-encryption exfiltration)",
+            "Correlate encryption alerts with RDP/VPN access"
+          ],
+          "fr": [
+            "Surveiller les créations/modifications massives de fichiers",
+            "Détecter les patterns de chiffrement (canary files, EDR)",
+            "Alerter sur les flux sortants anormaux (exfiltration pré-chiffrement)",
+            "Corréler les alertes de chiffrement avec les accès RDP/VPN"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate affected network segments to stop propagation",
+            "Disable compromised accounts and revoke active sessions",
+            "Preserve forensic evidence (disk images, memory)",
+            "Activate the business continuity plan"
+          ],
+          "fr": [
+            "Isoler les segments réseau touchés pour stopper la propagation",
+            "Désactiver les comptes compromis et révoquer les sessions actives",
+            "Préserver les preuves forensiques (images disques, mémoire)",
+            "Activer le plan de continuité d'activité"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Notify Japan's PPC (Personal Information Protection Commission)",
+            "Communicate with affected individuals (up to 1.066 million)",
+            "Assess the opportunity to pay the ransom in consultation with the authorities",
+            "Strengthen network segmentation and password policy"
+          ],
+          "fr": [
+            "Notifier la PPC (Personal Information Protection Commission) du Japon",
+            "Communiquer avec les personnes concernées (jusqu'à 1,066 million)",
+            "Évaluer l'opportunité de paiement de rançon en concertation avec les autorités",
+            "Renforcer la segmentation réseau et la politique de mots de passe"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for post-exploitation indicators (PsExec, Mimikatz, Cobalt Strike)",
+            "Audit remote access and administrator privileges",
+            "Identify active C2 channels (DNS tunneling, Tor)",
+            "Check persistence via scheduled tasks, services, Run keys"
+          ],
+          "fr": [
+            "Rechercher des indicateurs post-exploitation (PsExec, Mimikatz, Cobalt Strike)",
+            "Auditer les accès distants et privilèges administrateur",
+            "Identifier les canaux C2 actifs (DNS tunneling, Tor)",
+            "Vérifier la persistance via tâches planifiées, services, clés Run"
+          ]
+        }
+      },
+      "tags": [
+        "ransomware",
+        "japon",
+        "telecom",
+        "donnees_personnelles"
+      ],
+      "sources": [
+        "https://rocket-boys.co.jp/security-measures-lab/nippon-telenet-leak-risk-1-06m/"
+      ],
+      "date": "2026-06-22"
+    },
+    {
+      "victim": "Bureau fiscal régional d'Osaka (大阪国税局)",
+      "threat_actor": "Non attribué (acteur interne)",
+      "threat_actor_origin": "",
+      "threat_actor_type": "",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Administration publique / Fisc"
+        ],
+        "fr": [
+          "Administration publique / Fisc"
+        ]
+      },
+      "description": {
+        "en": "An agent of the Osaka regional tax office fell victim to a scam by police impersonation, leading to the leakage of tax information of 259 taxpayers. The agent received a 6-month suspension before resigning the same day. This incident illustrates the human vulnerability to social engineering attacks targeting tax administrations.",
+        "fr": "Un agent du bureau fiscal régional d'Osaka a été victime d'une arnaque par usurpation de policiers, conduisant à la fuite d'informations fiscales de 259 contribuables. L'agent a écopé d'une mise à pied de 6 mois avant de démissionner le même jour. Cet incident illustre la vulnérabilité humaine aux attaques d'ingénierie sociale ciblant les administrations fiscales."
+      },
+      "mitre_ttps": [
+        "T1656",
+        "T1052"
+      ],
+      "recommandations": [
+        {
+          "en": "Strengthen training of agents on social engineering",
+          "fr": "Renforcer la formation des agents à l'ingénierie sociale"
+        },
+        {
+          "en": "Implement a multi-channel identity verification procedure",
+          "fr": "Implémenter une procédure de vérification d'identité multi-canaux"
+        },
+        {
+          "en": "Restrict access to tax data via strict access control",
+          "fr": "Limiter l'accès aux données fiscales via contrôle d'accès strict"
+        },
+        {
+          "en": "Raise awareness of the disciplinary and criminal consequences of data leaks",
+          "fr": "Sensibiliser aux conséquences disciplinaires et pénales des fuites de données"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Train agents to detect impersonation attempts (police, banks, tax authorities)",
+            "Set up a dual validation procedure for any sensitive external request",
+            "Limit access to tax data to strict service need",
+            "Establish a reporting culture without blame"
+          ],
+          "fr": [
+            "Former les agents à la détection des tentatives d'usurpation (policiers, banques, impôts)",
+            "Mettre en place une procédure de double validation pour toute demande externe sensible",
+            "Limiter l'accès aux données fiscales au strict besoin de service",
+            "Instaurer une culture de signalement sans culpabilisation"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Investigate internally following the report of the targeted agent",
+            "Cross-check access to tax files during the attack period",
+            "Identify the channel used (phone, email, mail)",
+            "Assess the extent of data disclosed by the agent"
+          ],
+          "fr": [
+            "Enquêter en interne suite au signalement de l'agent ciblé",
+            "Recouper les accès aux dossiers fiscaux sur la période de l'attaque",
+            "Identifier le canal utilisé (téléphone, email, courrier)",
+            "Évaluer l'étendue des données communiquées par l'agent"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Temporarily suspend the agent's access to sensitive systems",
+            "Notify the hierarchy and the security unit",
+            "Secure potentially affected tax records",
+            "Cooperate with law enforcement to identify the scammers"
+          ],
+          "fr": [
+            "Suspendre temporairement l'accès de l'agent aux systèmes sensibles",
+            "Notifier la hiérarchie et la cellule de sécurité",
+            "Sécuriser les dossiers fiscaux potentiellement concernés",
+            "Coopérer avec les forces de l'ordre pour identifier les escrocs"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Disciplinary sanction and psychological support for the employee",
+            "Notification of impacted taxpayers (259 records)",
+            "Filing a complaint and cooperation with the police",
+            "Strengthen identity verification procedures for external requests"
+          ],
+          "fr": [
+            "Sanction disciplinaire et accompagnement psychologique de l'agent",
+            "Notification des contribuables impactés (259 dossiers)",
+            "Dépôt de plainte et coopération avec la police",
+            "Renforcement des procédures de vérification d'identité pour les demandes externes"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for other similar impersonation cases within the tax administration",
+            "Audit access to tax data over a rolling 12-month period",
+            "Identify recurring social engineering patterns targeting the administration",
+            "Map malicious actors (phone numbers, aliases, modus operandi)"
+          ],
+          "fr": [
+            "Rechercher d'autres cas d'usurpation similaires dans l'administration fiscale",
+            "Auditer les accès aux données fiscales sur 12 mois glissants",
+            "Identifier les schémas récurrents d'ingénierie sociale visant l'administration",
+            "Cartographier les acteurs malveillants (numéros, alias, modus operandi)"
+          ]
+        }
+      },
+      "tags": [
+        "ingenierie_sociale",
+        "acteur_interne",
+        "fuite_fiscale",
+        "japon",
+        "donnees_personnelles"
+      ],
+      "sources": [
+        "https://rocket-boys.co.jp/security-measures-lab/osaka-regional-taxation-bureau-data-leak-disciplinary/"
+      ],
+      "date": "2026-06-22"
+    },
+    {
+      "victim": "État du Texas (agence gouvernementale)",
+      "threat_actor": "Non attribué",
+      "threat_actor_origin": "",
+      "threat_actor_type": "",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Administration publique / État américain"
+        ],
+        "fr": [
+          "Administration publique / État américain"
+        ]
+      },
+      "description": {
+        "en": "A data breach within a Texas government agency allowed attackers to steal driver's license and passport numbers of more than 3 million people. This type of incident exposes victims to high risks of identity theft, financial fraud, and targeted attacks. The sensitivity of identity documents requires a large-scale crisis response.",
+        "fr": "Une brèche de données au sein d'une agence gouvernementale texane a permis à des attaquants de voler les numéros de permis de conduire et passeports de plus de 3 millions de personnes. Ce type d'incident expose les victimes à des risques élevés d'usurpation d'identité, de fraude financière et d'attaques ciblées. La sensibilité des documents d'identité impose une réponse de crise à grande échelle."
+      },
+      "mitre_ttps": [
+        "TA0010",
+        "T1530"
+      ],
+      "recommandations": [
+        {
+          "en": "Provide free credit monitoring and identity protection services",
+          "fr": "Offrir des services gratuits de monitoring de crédit et de protection d'identité"
+        },
+        {
+          "en": "Strengthen encryption and segmentation of identity databases",
+          "fr": "Renforcer le chiffrement et la segmentation des bases d'identité"
+        },
+        {
+          "en": "Audit third-party and contractor access to DMV databases",
+          "fr": "Auditer les accès tiers et contractors ayant accès aux bases DMV"
+        },
+        {
+          "en": "Implement strong authentication for all administrative access",
+          "fr": "Implémenter l'authentification forte pour tous les accès administratifs"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Segment identity databases from the rest of the information system",
+            "Encrypt identity documents at rest and in transit",
+            "Set up a SOC with monitoring of access to PII data",
+            "Prepare a mass notification plan (3M+ people)"
+          ],
+          "fr": [
+            "Segmenter les bases de données d'identité du reste du SI",
+            "Chiffrer les documents d'identité au repos et en transit",
+            "Mettre en place un SOC avec surveillance des accès aux données PII",
+            "Préparer un plan de notification massif (3M+ de personnes)"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect abnormal queries on identity databases",
+            "Monitor outgoing download volumes from DMV systems",
+            "Alert on access outside of business hours or from unusual locations",
+            "Correlate with public indicators of compromise (IOC)"
+          ],
+          "fr": [
+            "Détecter les requêtes anormales sur les bases de données d'identité",
+            "Surveiller les volumes de téléchargement sortants depuis les systèmes DMV",
+            "Alerter sur les accès hors heures ou depuis des localisations inhabituelles",
+            "Corréler avec les indicateurs de compromission publique (IOC)"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate compromised systems and revoke access",
+            "Preserve forensic evidence before remediation",
+            "Cut suspicious outgoing flows toward exfiltration",
+            "Activate the business continuity plan (PCA) for essential services (DMV)"
+          ],
+          "fr": [
+            "Isoler les systèmes compromis et révoquer les accès",
+            "Préserver les preuves forensiques avant remédiation",
+            "Couper les flux sortants suspects vers l'exfiltration",
+            "Activer le PCA pour les services essentiels (DMV)"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Notify the 3 million impacted people (letters, email)",
+            "Offer identity protection and credit monitoring services",
+            "Cooperate with the FBI and the Texas Attorney General",
+            "Publish a detailed post-incident report"
+          ],
+          "fr": [
+            "Notifier les 3 millions de personnes impactées (lettres, email)",
+            "Proposer des services de protection d'identité et de monitoring de crédit",
+            "Coopérer avec le FBI et le Texas Attorney General",
+            "Publier un rapport post-incident détaillé"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Investigate initial vulnerabilities (web, VPN, supply chain)",
+            "Audit all access to DMV databases over a rolling 12-month period",
+            "Identify suspicious clusters (time slots, IPs, accounts)",
+            "Map attacker infrastructure (C2, drop zones)"
+          ],
+          "fr": [
+            "Rechercher les vulnérabilités initiales (web, VPN, supply chain)",
+            "Auditer tous les accès aux bases DMV sur 12 mois glissants",
+            "Identifier les regroupements suspects (créneaux horaires, IPs, comptes)",
+            "Cartographier l'infrastructure attaquant (C2, drop zones)"
+          ]
+        }
+      },
+      "tags": [
+        "secteur_public",
+        "usa",
+        "identite",
+        "documents_officiels",
+        "donnees_personnelles"
+      ],
+      "sources": [
+        "https://techcrunch.com/2026/06/18/texas-government-data-breach-allowed-hackers-to-steal-3-million-drivers-licenses-and-passports/"
+      ],
+      "date": "2026-06-18"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-6645",
+      "euvd_id": "",
+      "cisa_kev": false,
+      "cvss": "7.3",
+      "epss": "",
+      "cpe": "cpe:2.3:a:papercut:print_deploy:*:*:*:*:*:windows:*:*",
+      "product": "Print Deploy",
+      "vendor": "PaperCut",
+      "description": {
+        "en": "The pc-printer-updater.exe helper of PaperCut Print Deploy runs with SYSTEM rights and loads dependencies following an unsafe search path (Uncontrolled Search Path). A local user able to write to a directory that takes priority in the PATH can drop a malicious binary (DLL or executable) there that will be loaded instead of the legitimate component, allowing arbitrary code execution as SYSTEM. The vulnerability is referenced CWE-427 and rated 7.3 (HIGH) by the vendor.",
+        "fr": "Le helper pc-printer-updater.exe de PaperCut Print Deploy s'exécute avec les droits SYSTEM et charge des dépendances en suivant un chemin de recherche non sécurisé (Uncontrolled Search Path). Un utilisateur local capable d'écrire dans un répertoire prioritaire du PATH peut y déposer un binaire malveillant (DLL ou exécutable) qui sera chargé à la place du composant légitime, permettant l'exécution de code arbitraire en tant que SYSTEM. La vulnérabilité est référencée CWE-427 et notée 7.3 (HIGH) par l'éditeur."
+      },
+      "mitre_ttps": [
+        "T1068",
+        "T1574.005"
+      ],
+      "recommandations": [
+        {
+          "en": "Update PaperCut Print Deploy to version 1.10.4178 or later. Restrict write permissions in the PATH directories used by the service. Monitor executions of pc-printer-updater.exe and audit loaded dependencies.",
+          "fr": "Mettre à jour PaperCut Print Deploy vers la version 1.10.4178 ou ultérieure. Restreindre les permissions d'écriture dans les répertoires du PATH utilisés par le service. Surveiller les exécutions de pc-printer-updater.exe et auditer les dépendances chargées."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Map PaperCut Print Deploy instances and identify installed versions on Windows hosts.",
+            "Segment privileged accounts used by print services and apply the principle of least privilege to the folders used by pc-printer-updater.exe.",
+            "Prepare an update procedure to 1.10.4178 and a remediation plan for compromised binaries.",
+            "Raise administrator awareness of the risk of file drops in unprotected search directories."
+          ],
+          "fr": [
+            "Cartographier les instances de PaperCut Print Deploy et identifier les versions installées sur les postes Windows.",
+            "Segmenter les comptes à privilèges utilisés par les services d'impression et appliquer le principe du moindre privilège sur les dossiers utilisés par pc-printer-updater.exe.",
+            "Préparer une procédure de mise à jour vers 1.10.4178 et un plan de retraitement des binaires compromis.",
+            "Sensibiliser les administrateurs au risque de drop de fichiers dans les répertoires de recherche non protégés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor executions of pc-printer-updater.exe launched as SYSTEM or NT AUTHORITY.",
+            "Detect the creation of suspicious files (DLL, EXE) in the program's priority search paths.",
+            "Implement EDR/SIEM rules on unexpected privilege elevations associated with the PaperCut client.",
+            "Regularly audit ACL permissions of folders containing PaperCut binaries."
+          ],
+          "fr": [
+            "Surveiller les exécutions de pc-printer-updater.exe lancées en tant que SYSTEM ou NT AUTHORITY.",
+            "Détecter la création de fichiers suspects (DLL, EXE) dans les chemins de recherche privilégiés du programme.",
+            "Mettre en place des règles EDR/SIEM sur les élévations de privilèges inattendues associées au client PaperCut.",
+            "Auditer régulièrement les permissions ACL des dossiers contenant les binaires PaperCut."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate affected hosts in case of suspected exploitation.",
+            "Suspend the PaperCut Print Deploy service until the patch is applied.",
+            "Revoke sessions and tokens of potentially abused SYSTEM accounts.",
+            "Block user write access in program search directories via restrictive GPO/ACL."
+          ],
+          "fr": [
+            "Isoler les postes concernés en cas de suspicion d'exploitation.",
+            "Suspendre le service PaperCut Print Deploy jusqu'à application du correctif.",
+            "Révoquer les sessions et jetons des comptes SYSTEM potentiellement abusés.",
+            "Bloquer l'écriture utilisateur dans les répertoires de recherche du programme via GPO/ACL restrictives."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Update PaperCut Print Deploy to version 1.10.4178 across the entire fleet.",
+            "Analyze Windows event logs and EDR data to identify the origin of the intrusion and the deployed malicious code.",
+            "Verify the integrity of PaperCut binaries and clean up artifacts left by the attacker.",
+            "Document the incident and share IOCs with threat intel teams."
+          ],
+          "fr": [
+            "Mettre à jour PaperCut Print Deploy vers la version 1.10.4178 sur l'ensemble du parc.",
+            "Analyser les journaux d'événements Windows et EDR pour identifier l'origine de l'intrusion et le code malveillant déployé.",
+            "Vérifier l'intégrité des binaires PaperCut et nettoyer les artefacts laissés par l'attaquant.",
+            "Documenter l'incident et partager les IOCs avec les équipes de threat intel."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for unsigned or unexpected binaries co-located with pc-printer-updater.exe.",
+            "Hunt for suspicious local privilege elevations on hosts running PaperCut.",
+            "Verify the absence of persistent services created following exploitation of the search path.",
+            "Correlate PaperCut alerts with other weak signals of abnormal local activity (PowerShell, WMI, scheduled tasks)."
+          ],
+          "fr": [
+            "Rechercher les binaires non signés ou inattendus co-localisés avec pc-printer-updater.exe.",
+            "Chasser les élévations de privilèges locales suspectes sur les hôtes exécutant PaperCut.",
+            "Vérifier l'absence de services persistants créés à la suite de l'exploitation du chemin de recherche.",
+            "Corréler les alertes PaperCut avec d'autres signaux faibles d'activité locale anormale (PowerShell, WMI, scheduled tasks)."
+          ]
+        }
+      },
+      "tags": [
+        "local-privilege-escalation",
+        "uncontrolled-search-path",
+        "CWE-427",
+        "windows",
+        "printer-software"
+      ],
+      "sources": [
+        "https://suriq.io/blog/papercut-print-deploy-local-takeover",
+        "https://radar.offseq.com/threat/cve-2026-6645-cwe-427-uncontrolled-search-path-ele-06fc150344a496a3"
+      ],
+      "date": "2026-06-22"
+    },
+    {
+      "cve_id": "CVE-2026-11746",
+      "euvd_id": "",
+      "cisa_kev": false,
+      "cvss": "9.4",
+      "epss": "",
+      "cpe": "cpe:2.3:a:line:centraldogma_server:*:*:*:*:*:*:*:*",
+      "product": "Central Dogma",
+      "vendor": "LY Corporation",
+      "description": {
+        "en": "When ZooKeeper replication is enabled without explicit configuration of replication.secret, centraldogma-server silently falls back to a hard-coded, publicly known secret. This secret authenticates the embedded ZooKeeper ensemble. An attacker with network access can then read the entire replication log, join the quorum, and execute arbitrary replicated commands across the cluster.",
+        "fr": "Lorsque la réplication ZooKeeper est activée sans configuration explicite de replication.secret, centraldogma-server retombe silencieusement sur un secret codé en dur et publiquement connu. Ce secret authentifie l'ensemble ZooKeeper embarqué. Un attaquant disposant d'un accès réseau peut alors lire le journal de réplication complet, rejoindre le quorum et exécuter des commandes répliquées arbitraires sur l'ensemble du cluster."
+      },
+      "mitre_ttps": [
+        "T1078",
+        "T1552"
+      ],
+      "recommandations": [
+        {
+          "en": "Update centraldogma-server to version 0.84.0 or later. Define a unique and robust replication.secret in the configuration. Restrict network access to embedded ZooKeeper ports. Restart servers after modification.",
+          "fr": "Mettre à jour centraldogma-server vers la version 0.84.0 ou ultérieure. Définir un replication.secret unique et robuste dans la configuration. Restreindre l'accès réseau aux ports ZooKeeper embarqués. Redémarrer les serveurs après modification."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory centraldogma-server instances and verify whether ZooKeeper replication is enabled.",
+            "Prepare an update procedure to version 0.84.0 and rotate the replication secrets.",
+            "Define a secrets management policy (vault, periodic rotation) for the replication.secret configuration.",
+            "Document the accounts and credentials used by the embedded ZooKeeper clusters."
+          ],
+          "fr": [
+            "Inventorier les instances de centraldogma-server et vérifier si la réplication ZooKeeper est activée.",
+            "Préparer une procédure de mise à jour vers la version 0.84.0 et de rotation des secrets de réplication.",
+            "Définir une politique de gestion des secrets (vault, rotation périodique) pour la configuration replication.secret.",
+            "Documenter les comptes et identifiants utilisés par les clusters ZooKeeper embarqués."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Audit centraldogma-server configurations to identify deployments where replication.secret is not defined.",
+            "Detect suspicious ZooKeeper authentications using the default public secret.",
+            "Monitor unauthorized incoming network connections to the ZooKeeper quorum ports.",
+            "Set up alerts on unusual replicated command writes."
+          ],
+          "fr": [
+            "Auditer les configurations centraldogma-server pour identifier les déploiements où replication.secret n'est pas défini.",
+            "Détecter les authentifications ZooKeeper suspectes utilisant le secret public par défaut.",
+            "Surveiller les connexions réseau entrantes non autorisées vers les ports du quorum ZooKeeper.",
+            "Mettre en place des alertes sur les écritures de commandes répliquées inhabituelles."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate exposed centraldogma clusters and cut network access to non-essential ZooKeeper ports.",
+            "Disable ZooKeeper replication while the patch is being applied.",
+            "Force the rotation of replication.secret across all nodes of the cluster.",
+            "Revoke any active ZooKeeper session in progress."
+          ],
+          "fr": [
+            "Isoler les clusters centraldogma exposés et couper l'accès réseau aux ports ZooKeeper non indispensables.",
+            "Désactiver la réplication ZooKeeper le temps d'appliquer le correctif.",
+            "Forcer la rotation de replication.secret sur l'ensemble des nœuds du cluster.",
+            "Révoquer toute session ZooKeeper active en cours."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Update centraldogma-server to version 0.84.0 or later.",
+            "Reconfigure a unique and robust replication secret for each cluster.",
+            "Analyze ZooKeeper and centraldogma logs to identify potential unauthorized reads/writes.",
+            "Verify the integrity of replicated data and rebuild the cluster from a trusted source if necessary."
+          ],
+          "fr": [
+            "Mettre à jour centraldogma-server vers la version 0.84.0 ou ultérieure.",
+            "Reconfigurer un secret de réplication unique et robuste pour chaque cluster.",
+            "Analyser les journaux ZooKeeper et centraldogma pour identifier d'éventuelles lectures/écritures non autorisées.",
+            "Vérifier l'intégrité des données répliquées et reconstruire le cluster à partir d'une source fiable si nécessaire."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for centraldogma deployments still using the default replication secret.",
+            "Hunt for abnormal network connections to embedded ZooKeeper ensembles.",
+            "Identify suspicious or undocumented replicated commands in the quorum history.",
+            "Verify the absence of new unauthorized nodes having joined the ZooKeeper quorum."
+          ],
+          "fr": [
+            "Rechercher les déploiements centraldogma utilisant encore le secret de réplication par défaut.",
+            "Chasser les connexions réseau anormales vers les ensembles ZooKeeper embarqués.",
+            "Identifier les commandes répliquées suspectes ou non documentées dans l'historique du quorum.",
+            "Vérifier l'absence de nouveaux nœuds non autorisés ayant rejoint le quorum ZooKeeper."
+          ]
+        }
+      },
+      "tags": [
+        "default-credentials",
+        "hard-coded-secret",
+        "zookeeper",
+        "replication",
+        "CWE-798",
+        "centraldogma"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-11746"
+      ],
+      "date": "2026-06-22"
+    },
+    {
+      "cve_id": "CVE-2026-11745",
+      "euvd_id": "",
+      "cisa_kev": false,
+      "cvss": "8.8",
+      "epss": "",
+      "cpe": "cpe:2.3:a:line:centraldogma_server_mirror_git:*:*:*:*:*:*:*:*",
+      "product": "Central Dogma",
+      "vendor": "LY Corporation",
+      "description": {
+        "en": "The CentralDogma Git mirror SSH client does not verify remote host keys for git+ssh:// connections. An on-path (MITM) attacker can intercept these streams, spoof the remote Git server, and compromise the content of mirrored repositories. The vulnerability is rated 8.8 (HIGH).",
+        "fr": "Le client SSH du miroir Git de CentralDogma ne vérifie pas les clés d'hôte distantes pour les connexions git+ssh://. Un attaquant en position d'on-path (MITM) peut intercepter ces flux, usurper le serveur Git distant et compromettre le contenu des dépôts miroirés. La vulnérabilité est notée 8.8 (HIGH)."
+      },
+      "mitre_ttps": [
+        "T1557",
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Update centraldogma-server-mirror-git to version 0.84.0 or later. Explicitly configure SSH host key verification (StrictHostKeyChecking, known_hosts). Restrict outbound network flows from mirrors.",
+          "fr": "Mettre à jour centraldogma-server-mirror-git vers la version 0.84.0 ou ultérieure. Configurer explicitement la vérification des clés d'hôtes SSH (StrictHostKeyChecking, known_hosts). Restreindre les flux réseau sortants des miroirs."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Map centraldogma-server-mirror-git Git mirrors and their remote sources.",
+            "Prepare an update plan to version 0.84.0 and SSH configuration hardening.",
+            "Document the fingerprints of legitimate remote Git hosts.",
+            "Define a strict SSH host key verification policy for mirrors."
+          ],
+          "fr": [
+            "Cartographier les miroirs Git centraldogma-server-mirror-git et leurs sources distantes.",
+            "Préparer un plan de mise à jour vers la version 0.84.0 et de durcissement des configurations SSH.",
+            "Documenter les empreintes (fingerprints) des hôtes Git distants légitimes.",
+            "Définir une politique de vérification stricte des clés d'hôtes SSH pour les miroirs."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect outgoing git+ssh:// connections from mirrors to uninventoried hosts.",
+            "Identify anomalies in the content of mirrored repositories (unexpected commits, tags, branches).",
+            "Monitor OpenSSH alerts related to the disabling of StrictHostKeyChecking verification.",
+            "Implement integrity checks (hash) on mirrored repositories."
+          ],
+          "fr": [
+            "Détecter les connexions git+ssh:// sortantes depuis les miroirs vers des hôtes non inventoriés.",
+            "Identifier les anomalies dans le contenu des dépôts miroirs (commits, tags, branches inattendues).",
+            "Surveiller les alertes OpenSSH relatives à la désactivation de la vérification StrictHostKeyChecking.",
+            "Mettre en place des contrôles d'intégrité (hash) sur les dépôts miroirés."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Suspend git+ssh:// synchronization of CentralDogma mirrors while the patch is being applied.",
+            "Block outbound SSH traffic from mirrors to unapproved destinations.",
+            "Isolate potentially compromised mirrors for forensic analysis.",
+            "Reconfigure SSH to require explicit host key verification (strict known_hosts)."
+          ],
+          "fr": [
+            "Suspendre la synchronisation git+ssh:// des miroirs CentralDogma le temps d'appliquer le correctif.",
+            "Bloquer le trafic SSH sortant depuis les miroirs vers des destinations non approuvées.",
+            "Isoler les miroirs potentiellement compromis pour analyse forensique.",
+            "Reconfigurer SSH pour exiger la vérification explicite des clés d'hôtes (known_hosts stricts)."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Update centraldogma-server-mirror-git to version 0.84.0 or later.",
+            "Reconfigure each mirror with the correct and verified SSH host keys.",
+            "Verify the integrity of all mirrored repositories and purge any malicious commits introduced.",
+            "Document the incident and share the compromised fingerprints with the relevant teams."
+          ],
+          "fr": [
+            "Mettre à jour centraldogma-server-mirror-git vers la version 0.84.0 ou ultérieure.",
+            "Reconfigurer chaque miroir avec les clés d'hôtes SSH correctes et vérifiées.",
+            "Vérifier l'intégrité de tous les dépôts miroirés et purger les commits malveillants introduits.",
+            "Documenter l'incident et transmettre les empreintes compromises aux équipes concernées."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for SSH configurations not enforcing host key verification on CentralDogma mirrors.",
+            "Hunt for mirrored repositories showing modifications uncorrelated with the source Git history.",
+            "Identify unknown SSH fingerprints contacted by the mirrors.",
+            "Correlate Git anomalies with other MITM attack indicators on the network."
+          ],
+          "fr": [
+            "Rechercher les configurations SSH n'imposant pas la vérification des clés d'hôtes sur les miroirs CentralDogma.",
+            "Chasser les dépôts miroirés présentant des modifications non corrélées à l'historique Git source.",
+            "Identifier les empreintes SSH inconnues ayant été contactées par les miroirs.",
+            "Corréler les anomalies Git avec d'autres indicateurs d'attaque MITM sur le réseau."
+          ]
+        }
+      },
+      "tags": [
+        "ssh",
+        "mitm",
+        "git-mirror",
+        "CWE-322",
+        "centraldogma"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-11745"
+      ],
+      "date": "2026-06-22"
+    },
+    {
+      "cve_id": "CVE-2026-12806",
+      "euvd_id": "",
+      "cisa_kev": false,
+      "cvss": "8.7",
+      "epss": "",
+      "cpe": "cpe:2.3:h:edimax:br-6478ac_v2:1.23:*:*:*:*:*:*:*",
+      "product": "BR-6478AC V2",
+      "vendor": "Edimax",
+      "description": {
+        "en": "A buffer overflow vulnerability was identified in the formWlSiteSurvey function of the Edimax BR-6478AC V2 router, triggered by manipulating the selSSID argument in a POST request. Exploitation is possible remotely and a PoC has been publicly disclosed, significantly increasing the risk of exploitation. The Edimax vendor has not responded to notifications.",
+        "fr": "Une vulnérabilité de débordement de tampon a été identifiée dans la fonction formWlSiteSurvey du routeur Edimax BR-6478AC V2, déclenchée par la manipulation de l'argument selSSID dans une requête POST. L'exploitation est possible à distance et un PoC a été divulgué publiquement, augmentant fortement le risque d'exploitation. Le fournisseur Edimax n'a pas répondu aux notifications."
+      },
+      "mitre_ttps": [
+        "T1190",
+        "T1059"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply the firmware patch as soon as it becomes available. In the absence of a patch, isolate the router from the network, disable remote administrative access, and replace the equipment. Block Internet access to administrative interfaces and monitor POST requests to /goform/formWlSiteSurvey.",
+          "fr": "Appliquer le correctif firmware dès sa disponibilité. En l'absence de correctif, isoler le routeur du réseau, désactiver l'accès d'administration distant et remplacer l'équipement. Bloquer l'accès Internet aux interfaces d'administration et surveiller les requêtes POST vers /goform/formWlSiteSurvey."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory Edimax BR-6478AC V2 routers and identify installed firmware versions.",
+            "Isolate IoT/consumer routers from critical networks through segmentation.",
+            "Prepare a firmware update and replacement procedure if no patch is available.",
+            "Document exposed administrative paths (web interface /goform/formWlSiteSurvey)."
+          ],
+          "fr": [
+            "Inventorier les routeurs Edimax BR-6478AC V2 et identifier les versions de firmware installées.",
+            "Isoler les routeurs IoT/grand public des réseaux critiques par segmentation.",
+            "Préparer une procédure de mise à jour du firmware et de remplacement si aucun correctif n'est disponible.",
+            "Documenter les chemins d'administration exposés (interface web /goform/formWlSiteSurvey)."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor abnormal HTTP POST requests to /goform/formWlSiteSurvey on Edimax routers.",
+            "Detect repeated crashes or restarts of the router's embedded HTTP service.",
+            "Set up IDS/IPS rules targeting overflow payloads on selSSID.",
+            "Audit network logs for known exploitations from public PoCs."
+          ],
+          "fr": [
+            "Surveiller les requêtes HTTP POST anormales vers /goform/formWlSiteSurvey sur les routeurs Edimax.",
+            "Détecter les crashs ou redémarrages répétés du service HTTP embarqué du routeur.",
+            "Mettre en place des règles IDS/IPS ciblant les payloads de débordement sur selSSID.",
+            "Auditer les journaux réseau à la recherche d'exploitations connues issues des PoC publics."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate or disconnect vulnerable Edimax BR-6478AC V2 routers.",
+            "Disable remote (WAN) administrative access on these devices.",
+            "Block firewall-level access to the administrative port from the Internet.",
+            "Replace unsupported devices with supported models."
+          ],
+          "fr": [
+            "Isoler ou déconnecter les routeurs Edimax BR-6478AC V2 vulnérables.",
+            "Désactiver l'accès d'administration distant (WAN) sur ces équipements.",
+            "Bloquer au niveau pare-feu l'accès au port d'administration depuis Internet.",
+            "Remplacer les équipements sans correctif par des modèles supportés."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Apply the firmware patch as soon as it is published by Edimax.",
+            "Reconfigure the router with strong credentials and disable non-essential services.",
+            "Search for indicators of persistent compromise (modified firmware, backdoors).",
+            "Verify suspicious outbound network flows from the router to known C2."
+          ],
+          "fr": [
+            "Appliquer le correctif firmware dès qu'il est publié par Edimax.",
+            "Reconfigurer le routeur avec des identifiants forts et désactiver les services non essentiels.",
+            "Rechercher des indicateurs de compromission persistante (firmware modifié, backdoors).",
+            "Vérifier les flux réseau sortants suspects depuis le routeur vers des C2 connus."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for Edimax devices still exposed to the Internet via Shodan/Censys.",
+            "Identify modified or unofficial firmware fingerprints on routers in the fleet.",
+            "Hunt for POST requests to formWlSiteSurvey from external sources.",
+            "Monitor abnormal network behaviors (DNS, Telnet) originating from Edimax routers."
+          ],
+          "fr": [
+            "Rechercher les équipements Edimax encore exposés à Internet via Shodan/Censys.",
+            "Identifier les empreintes de firmware modifiées ou non officielles sur les routeurs en parc.",
+            "Chasser les requêtes POST vers formWlSiteSurvey depuis des sources externes.",
+            "Surveiller les comportements réseau anormaux (DNS, Telnet) émanant des routeurs Edimax."
+          ]
+        }
+      },
+      "tags": [
+        "buffer-overflow",
+        "router",
+        "iot",
+        "public-exploit",
+        "CWE-120",
+        "edimax"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-12806"
+      ],
+      "date": "2026-06-21"
+    },
+    {
+      "cve_id": "CVE-2026-56397",
+      "euvd_id": "",
+      "cisa_kev": false,
+      "cvss": "9.4",
+      "epss": "",
+      "cpe": "cpe:2.3:a:b3log:siyuan:*:*:*:*:*:*:*:*",
+      "product": "SiYuan",
+      "vendor": "SiYuan",
+      "description": {
+        "en": "SiYuan does not properly sanitize metadata (displayName, description) nor the README content of packages published on the Bazaar. A malicious author can inject HTML/JavaScript into them, which will be executed when a user views the package. Combined with Electron's active nodeIntegration parameter, this allows arbitrary command execution at the operating system level. The vulnerability is rated 9.6 (CRITICAL).",
+        "fr": "SiYuan ne sanitise pas correctement les métadonnées (displayName, description) ni le contenu README des packages publiés sur le Bazaar. Un auteur malveillant peut y injecter du HTML/JavaScript qui sera exécuté lors de la consultation du package par un utilisateur. Combiné au paramètre nodeIntegration actif d'Electron, cela permet l'exécution de commandes arbitraires au niveau du système d'exploitation. La vulnérabilité est notée 9.6 (CRITICAL)."
+      },
+      "mitre_ttps": [
+        "T1189",
+        "T1059.007"
+      ],
+      "recommandations": [
+        {
+          "en": "Update SiYuan to version 3.6.1 or later. Avoid installing Bazaar packages from untrusted sources. Restrict Electron's nodeIntegration parameter and enable renderer process sandboxing.",
+          "fr": "Mettre à jour SiYuan vers la version 3.6.1 ou ultérieure. Éviter d'installer des packages Bazaar provenant de sources non fiables. Restreindre le paramètre nodeIntegration d'Electron et activer le sandboxing des processus renderer."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Map endpoints using SiYuan and identify the installed version.",
+            "Block access to ungoverned SiYuan Bazaar or apply an allow-list of packages.",
+            "Prepare an update procedure to version 3.6.1 and the disabling of nodeIntegration.",
+            "Raise user awareness about the risk associated with unverified third-party packages."
+          ],
+          "fr": [
+            "Cartographier les postes utilisant SiYuan et identifier la version installée.",
+            "Bloquer l'accès au Bazaar SiYuan non maîtrisé ou appliquer une allow-list de packages.",
+            "Préparer une procédure de mise à jour vers la version 3.6.1 et de désactivation de nodeIntegration.",
+            "Sensibiliser les utilisateurs au risque lié aux packages tiers non vérifiés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor suspicious child processes (cmd.exe, powershell.exe) spawned by SiYuan/Electron.",
+            "Detect unsanitized HTML/JavaScript rendering in the displayName, description, and README fields.",
+            "Implement EDR rules on code injection via Electron applications.",
+            "Audit installed Bazaar packages and their sources (author, fingerprint)."
+          ],
+          "fr": [
+            "Surveiller les processus enfants suspects (cmd.exe, powershell.exe) lancés par SiYuan/Electron.",
+            "Détecter les rendus HTML/JavaScript non sanitizés dans les champs displayName, description et README.",
+            "Mettre en place des règles EDR sur l'injection de code via les applications Electron.",
+            "Auditer les packages Bazaar installés et leurs sources (auteur, empreinte)."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate suspicious SiYuan endpoints from the network.",
+            "Disable nodeIntegration and sandbox SiYuan via advanced Electron settings.",
+            "Block access to the Bazaar or drastically restrict authorized packages.",
+            "Revoke any compromised session and isolate endpoints showing unexpected OS execution."
+          ],
+          "fr": [
+            "Isoler les postes SiYuan suspects du réseau.",
+            "Désactiver nodeIntegration et sandboxer SiYuan via les paramètres avancés Electron.",
+            "Bloquer l'accès au Bazaar ou restreindre drastiquement les packages autorisés.",
+            "Révoquer toute session compromise et isoler les postes présentant une exécution OS inattendue."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Update SiYuan to version 3.6.1 or later.",
+            "Reconfigure Electron to disable nodeIntegration and enable contextIsolation.",
+            "Search for compromise IOCs (created files, persistent services, outbound connections).",
+            "Document the incident and alert the community/open source."
+          ],
+          "fr": [
+            "Mettre à jour SiYuan vers la version 3.6.1 ou ultérieure.",
+            "Reconfigurer Electron pour désactiver nodeIntegration et activer contextIsolation.",
+            "Rechercher les IOCs de compromission (fichiers créés, services persistants, connexions sortantes).",
+            "Documenter l'incident et alerter la communauté/open source."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for Bazaar packages published by unverified or recently created authors.",
+            "Hunt for unexpected OS executions from SiYuan/Electron processes.",
+            "Identify known XSS payloads embedded in package metadata.",
+            "Correlate SiYuan alerts with other XSS/Electron compromise signals."
+          ],
+          "fr": [
+            "Rechercher les packages Bazaar publiés par des auteurs non vérifiés ou récemment créés.",
+            "Chasser les exécutions OS inattendues depuis les processus SiYuan/Electron.",
+            "Identifier les payloads XSS connus intégrés dans des métadonnées de packages.",
+            "Corréler les alertes SiYuan avec d'autres signaux de compromission par XSS/Electron."
+          ]
+        }
+      },
+      "tags": [
+        "rce",
+        "xss",
+        "electron",
+        "bazaar",
+        "CWE-79",
+        "siyuan"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-56397"
+      ],
+      "date": "2026-06-21"
+    },
+    {
+      "cve_id": "CVE-2026-56396",
+      "euvd_id": "",
+      "cisa_kev": false,
+      "cvss": "8.7",
+      "epss": "",
+      "cpe": "cpe:2.3:a:phpmyfaq:phpmyfaq:*:*:*:*:*:*:*:*",
+      "product": "phpMyFAQ",
+      "vendor": "phpMyFAQ",
+      "description": {
+        "en": "The editUser() and updateUserRights() endpoints of phpMyFAQ do not properly check permissions. A non-SuperAdmin user holding the edit_user permission can set the is_superadmin flag on their own account or grant themselves arbitrary rights, thereby reaching SuperAdmin level. The vulnerability is rated 8.8 (HIGH).",
+        "fr": "Les endpoints editUser() et updateUserRights() de phpMyFAQ ne vérifient pas correctement les autorisations. Un utilisateur non-SuperAdmin disposant de la permission edit_user peut positionner le flag is_superadmin sur son propre compte ou s'octroyer des droits arbitraires, atteignant ainsi le niveau SuperAdmin. La vulnérabilité est notée 8.8 (HIGH)."
+      },
+      "mitre_ttps": [
+        "T1078",
+        "T1098"
+      ],
+      "recommandations": [
+        {
+          "en": "Update phpMyFAQ to version 4.1.4 or later. Review roles and permissions, remove the edit_user permission from accounts that do not absolutely need it. Apply the principle of least privilege.",
+          "fr": "Mettre à jour phpMyFAQ vers la version 4.1.4 ou ultérieure. Réviser les rôles et permissions, retirer la permission edit_user aux comptes qui n'en ont pas l'absolue nécessité. Appliquer le principe du moindre privilège."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory phpMyFAQ instances and identify installed versions.",
+            "Map administrator accounts and their permissions (notably edit_user).",
+            "Prepare an update procedure to 4.1.4 and a role review plan.",
+            "Apply the principle of least privilege to phpMyFAQ administrator accounts."
+          ],
+          "fr": [
+            "Inventorier les instances phpMyFAQ et identifier les versions installées.",
+            "Cartographier les comptes administrateurs et leurs permissions (notamment edit_user).",
+            "Préparer une procédure de mise à jour vers 4.1.4 et un plan de revue des rôles.",
+            "Appliquer le principe du moindre privilège aux comptes administrateurs phpMyFAQ."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Audit phpMyFAQ logs for suspicious calls to editUser() and updateUserRights().",
+            "Detect abnormal role changes, in particular the assignment of the is_superadmin flag.",
+            "Implement SIEM alerts on rights modifications by non-SuperAdmin accounts.",
+            "Monitor the creation of new privileged accounts."
+          ],
+          "fr": [
+            "Auditer les journaux phpMyFAQ à la recherche d'appels suspects à editUser() et updateUserRights().",
+            "Détecter les changements anormaux de rôles, en particulier l'attribution du flag is_superadmin.",
+            "Mettre en place des alertes SIEM sur les modifications de droits par des comptes non-SuperAdmin.",
+            "Surveiller la création de nouveaux comptes à privilèges élevés."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Temporarily suspend non-SuperAdmin accounts holding the edit_user permission.",
+            "Block calls to vulnerable endpoints via WAF or application-level rules.",
+            "Restore roles to a known and trusted state.",
+            "Isolate compromised phpMyFAQ instances from the rest of the IS."
+          ],
+          "fr": [
+            "Suspendre temporairement les comptes non-SuperAdmin possédant la permission edit_user.",
+            "Bloquer les appels aux endpoints vulnérables via WAF ou règles applicatives.",
+            "Restaurer les rôles à un état connu et fiable.",
+            "Isoler les instances phpMyFAQ compromises du reste du SI."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Update phpMyFAQ to version 4.1.4 or later.",
+            "Review all accounts and rights, remove unnecessary edit_user permissions.",
+            "Verify the integrity of the knowledge base and administrator accounts.",
+            "Document the incident and the corrective actions applied."
+          ],
+          "fr": [
+            "Mettre à jour phpMyFAQ vers la version 4.1.4 ou ultérieure.",
+            "Réviser l'ensemble des comptes et droits, retirer les permissions edit_user non nécessaires.",
+            "Vérifier l'intégrité de la base de connaissances et des comptes administrateurs.",
+            "Documenter l'incident et les actions correctives appliquées."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for SuperAdmin accounts recently created or modified by lower-ranked administrators.",
+            "Hunt for repeated calls to the editUser/updateUserRights endpoints.",
+            "Identify phpMyFAQ instances still running versions prior to 4.1.4.",
+            "Correlate privilege anomalies with other internal compromise signals."
+          ],
+          "fr": [
+            "Rechercher les comptes SuperAdmin créés ou modifiés récemment par des administrateurs de moindre rang.",
+            "Chasser les appels répétés aux endpoints editUser/updateUserRights.",
+            "Identifier les instances phpMyFAQ encore en versions antérieures à 4.1.4.",
+            "Corréler les anomalies de privilèges avec d'autres signaux de compromission interne."
+          ]
+        }
+      },
+      "tags": [
+        "privilege-escalation",
+        "missing-authorization",
+        "CWE-862",
+        "phpmyfaq"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-56396"
+      ],
+      "date": "2026-06-21"
+    },
+    {
+      "cve_id": "CVE-2026-56395",
+      "euvd_id": "",
+      "cisa_kev": false,
+      "cvss": "9.4",
+      "epss": "",
+      "cpe": "cpe:2.3:a:b3log:siyuan:*:*:*:*:*:*:*:*",
+      "product": "SiYuan",
+      "vendor": "SiYuan",
+      "description": {
+        "en": "SiYuan does not properly sanitize metadata (displayName, description) nor the README content of Bazaar packages. An attacker can inject HTML/JavaScript triggered when the package is viewed, then exploit Electron's nodeIntegration parameter to execute arbitrary commands at the OS level. The vulnerability is rated 9.6 (CRITICAL) and is considered distinct from CVE-2026-56397 (separate attack vector / remediation context).",
+        "fr": "SiYuan ne sanitise pas correctement les métadonnées (displayName, description) ni le contenu README des packages du Bazaar. Un attaquant peut y injecter du HTML/JavaScript déclenché lors de la consultation du package, exploitant ensuite le paramètre nodeIntegration d'Electron pour exécuter des commandes arbitraires au niveau OS. La vulnérabilité est notée 9.6 (CRITICAL) et considérée comme distincte de CVE-2026-56397 (vecteur d'attaque / contexte de remédiation séparé)."
+      },
+      "mitre_ttps": [
+        "T1189",
+        "T1059.007"
+      ],
+      "recommandations": [
+        {
+          "en": "Update SiYuan to version 3.6.1 or later. Avoid installing Bazaar packages from untrusted sources. Carefully review package metadata and README. Restrict Electron's nodeIntegration and enable sandboxing.",
+          "fr": "Mettre à jour SiYuan vers la version 3.6.1 ou ultérieure. Éviter d'installer des packages Bazaar provenant de sources non fiables. Examiner attentivement les métadonnées et le README des packages. Restreindre nodeIntegration d'Electron et activer le sandboxing."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Map endpoints using SiYuan and identify the installed version.",
+            "Block access to ungoverned Bazaar and define an allow-list of trusted packages.",
+            "Prepare an update procedure to version 3.6.1 and Electron hardening.",
+            "Raise user awareness about the risk associated with unverified third-party packages."
+          ],
+          "fr": [
+            "Cartographier les postes utilisant SiYuan et identifier la version installée.",
+            "Bloquer l'accès au Bazaar non maîtrisé et définir une allow-list de packages de confiance.",
+            "Préparer une procédure de mise à jour vers la version 3.6.1 et de durcissement Electron.",
+            "Sensibiliser les utilisateurs au risque lié aux packages tiers non vérifiés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor suspicious child processes (cmd.exe, powershell.exe) spawned by SiYuan/Electron.",
+            "Detect unsanitized HTML/JavaScript rendering in package metadata and README.",
+            "Implement EDR rules on unexpected OS execution from Electron applications.",
+            "Audit installed Bazaar packages and their authors/fingerprints."
+          ],
+          "fr": [
+            "Surveiller les processus enfants suspects (cmd.exe, powershell.exe) lancés par SiYuan/Electron.",
+            "Détecter les rendus HTML/JavaScript non sanitizés dans les métadonnées et le README des packages.",
+            "Mettre en place des règles EDR sur l'exécution OS inattendue depuis les applications Electron.",
+            "Auditer les packages Bazaar installés et leurs auteurs/empreintes."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate suspicious SiYuan endpoints from the network.",
+            "Disable nodeIntegration and sandbox SiYuan via Electron settings.",
+            "Block access to the Bazaar or drastically restrict authorized packages.",
+            "Revoke any compromised sessions and isolate affected machines."
+          ],
+          "fr": [
+            "Isoler les postes SiYuan suspects du réseau.",
+            "Désactiver nodeIntegration et sandboxer SiYuan via les paramètres Electron.",
+            "Bloquer l'accès au Bazaar ou restreindre drastiquement les packages autorisés.",
+            "Révoquer toute session compromise et isoler les machines affectées."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Update SiYuan to version 3.6.1 or later.",
+            "Reconfigure Electron to disable nodeIntegration and enable contextIsolation.",
+            "Search for compromise IOCs (created files, services, outbound connections).",
+            "Document the incident and alert the community/open source."
+          ],
+          "fr": [
+            "Mettre à jour SiYuan vers la version 3.6.1 ou ultérieure.",
+            "Reconfigurer Electron pour désactiver nodeIntegration et activer contextIsolation.",
+            "Rechercher les IOCs de compromission (fichiers créés, services, connexions sortantes).",
+            "Documenter l'incident et alerter la communauté/open source."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for Bazaar packages published by unverified or recently created authors.",
+            "Hunt for unexpected OS executions from SiYuan/Electron processes.",
+            "Identify known XSS payloads embedded in package metadata.",
+            "Correlate SiYuan alerts with other XSS/Electron compromise signals."
+          ],
+          "fr": [
+            "Rechercher les packages Bazaar publiés par des auteurs non vérifiés ou récemment créés.",
+            "Chasser les exécutions OS inattendues depuis les processus SiYuan/Electron.",
+            "Identifier les payloads XSS connus intégrés dans des métadonnées de packages.",
+            "Corréler les alertes SiYuan avec d'autres signaux de compromission XSS/Electron."
+          ]
+        }
+      },
+      "tags": [
+        "rce",
+        "xss",
+        "electron",
+        "bazaar",
+        "CWE-79",
+        "siyuan"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-56395"
+      ],
+      "date": "2026-06-21"
+    },
+    {
+      "cve_id": "CVE-2013-3307",
+      "euvd_id": "",
+      "cisa_kev": false,
+      "cvss": "8.3",
+      "epss": "0.05618",
+      "cpe": "",
+      "product": "E1000, E1200, E3200",
+      "vendor": "Linksys",
+      "description": {
+        "en": "CVE-2013-3307 vulnerability is exploited by the AryStinger botnet to compromise thousands of end-of-life D-Link routers. Infected devices are turned into 'executors' capable of scanning, proxying, tunneling, and command execution. XLab telemetry reveals a significant concentration of infections in South Korea (48.5%) and China (31.8%). The malware also leverages CVE-2016-5681 and CVE-2025-11837 to expand its perimeter.",
+        "fr": "La vulnérabilité CVE-2013-3307 est exploitée par le botnet AryStinger pour compromettre des milliers de routeurs D-Link en fin de vie. Les équipements infectés sont transformés en 'executors' capables de扫描, proxy, tunneling et exécution de commandes. La télémétrie XLab révèle une concentration importante des infections en Corée du Sud (48,5%) et en Chine (31,8%). Le malware exploite également CVE-2016-5681 et CVE-2025-11837 pour élargir son périmètre."
+      },
+      "mitre_ttps": [
+        "T1190",
+        "T1059",
+        "T1090"
+      ],
+      "recommandations": [
+        {
+          "en": "Replace end-of-life routers with supported models, apply the latest available firmwares, change default administrator passwords, disable remote administration panels, and monitor DNS changes.",
+          "fr": "Remplacer les routeurs en fin de vie par des modèles supportés, appliquer les derniers firmwares disponibles, modifier les mots de passe administrateur par défaut, désactiver les panneaux d'administration à distance et surveiller les modifications DNS."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain an up-to-date inventory of network equipment (D-Link DIR-850L, DIR-818LW routers)",
+            "Monitor manufacturer end-of-life (EoL) notices and plan replacement of obsolete equipment",
+            "Back up network configurations before any intervention",
+            "Prepare signed and verified firmware images for restoration"
+          ],
+          "fr": [
+            "Maintenir un inventaire à jour des équipements réseau (routeurs D-Link DIR-850L, DIR-818LW)",
+            "Suivre les avis de fin de vie (EoL) des fabricants et planifier le remplacement des équipements obsolètes",
+            "Sauvegarder les configurations réseau avant toute intervention",
+            "Préparer des images firmwares signées et vérifiées pour restauration"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Search for signs of compromise by the AryStinger botnet on D-Link routers (altered DNS, abnormal outbound traffic)",
+            "Detect C2 communications to illegitimate domains/IPs from routers",
+            "Monitor port scans and unauthorized proxy traffic originating from network equipment",
+            "Correlate IDS/IPS logs with known XLab IOCs"
+          ],
+          "fr": [
+            "Rechercher des signes de compromission par le botnet AryStinger sur les routeurs D-Link (DNS altérés, trafic sortant anormal)",
+            "Détecter les communications C2 vers des domaines/IP non légitimes depuis les routeurs",
+            "Surveiller les scans de ports et le trafic proxy non autorisé émanant des équipements réseau",
+            "Mettre en corrélation les logs IDS/IPS avec les IOCs connus de XLab"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Immediately isolate D-Link routers identified as compromised from the production network",
+            "Disable remote administration and block WAN access to management interfaces",
+            "Change all default administrator credentials",
+            "Disable unused services (UPnP, remote access) on remaining routers"
+          ],
+          "fr": [
+            "Isoler immédiatement les routeurs D-Link identifiés comme compromis du réseau de production",
+            "Désactiver l'administration à distance et bloquer l'accès WAN aux interfaces de gestion",
+            "Changer tous les identifiants administrateur par défaut",
+            "Désactiver les services non utilisés (UPnP, accès distant) sur les routeurs résiduels"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Restore routers from clean and verified firmware or proceed with their replacement",
+            "Perform forensic analysis of compromised equipment (memory dump, configuration)",
+            "Document the compromise chain and share IOCs with the CTI community",
+            "Review the EoL equipment management policy and accelerate the replacement program"
+          ],
+          "fr": [
+            "Restaurer les routeurs à partir d'un firmware propre et vérifié ou procéder à leur remplacement",
+            "Effectuer une analyse forensique des équipements compromis (dump mémoire, configuration)",
+            "Documenter la chaîne de compromission et partager les IOCs avec la communauté CTI",
+            "Revoir la politique de gestion des équipements EoL et accélérer le programme de remplacement"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for C and Go variants of AryStinger across the entire network and NAS estate",
+            "Search for traces of DNS modification (DNS hijacking) on D-Link equipment",
+            "Identify distributed scanning and suspicious tunneling patterns from routers",
+            "Monitor the emergence of new C2 domains linked to AryStinger via threat intel feeds"
+          ],
+          "fr": [
+            "Chasser les variantes C et Go d'AryStinger sur l'ensemble du parc réseau et NAS",
+            "Rechercher des traces de modification DNS (DNS hijacking) sur les équipements D-Link",
+            "Identifier les schémas de scan distribué et de tunneling suspect depuis les routeurs",
+            "Surveiller l'apparition de nouveaux domaines C2 liés à AryStinger via threat intel feeds"
+          ]
+        }
+      },
+      "tags": [
+        "botnet",
+        "router",
+        "D-Link",
+        "AryStinger"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/arystinger-botnet-infected-thousands-of-d-link-routers-worldwide/"
+      ],
+      "date": "2026-06-21"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "ISC Stormcast of June 22, 2026 — Threat intelligence bulletin",
+        "fr": "ISC Stormcast du 22 juin 2026 — Bulletin de veille"
+      },
+      "description": {
+        "en": "The SANS Internet Storm Center feed publishes on June 22, 2026 a new episode of the Stormcast podcast containing a summary of recent threats and vulnerabilities. The detailed content of the episode was not retrieved in the RSS feed.",
+        "fr": "Le flux SANS Internet Storm Center publie le 22 juin 2026 un nouvel épisode du podcast Stormcast contenant un résumé des menaces et vulnérabilités récentes. Le contenu détaillé de l'épisode n'a pas été récupéré dans le flux RSS."
+      },
+      "resume": {
+        "en": "The SANS Internet Storm Center feed publishes on June 22, 2026 a new episode of the Stormcast podcast containing a summary of recent threats and vulnerabilities. The detailed content of the episode was not retrieved in the RSS feed.",
+        "fr": "Le flux SANS Internet Storm Center publie le 22 juin 2026 un nouvel épisode du podcast Stormcast contenant un résumé des menaces et vulnérabilités récentes. Le contenu détaillé de l'épisode n'a pas été récupéré dans le flux RSS."
+      },
+      "analyse_operationnelle": {
+        "en": "The SANS ISC podcast is a useful intelligence source for SOC teams: it provides a daily summary of indicators, vulnerabilities, and campaigns observed by the community. Since technical details are not available in the feed, a manual consultation of the site is required to leverage the IOCs shared.",
+        "fr": "Le podcast SANS ISC constitue une source de veille utile pour les équipes SOC : il résume quotidiennement les indicateurs, vulnérabilités et campagnes observés par la communauté. Les détails techniques n'étant pas disponibles dans le flux, une consultation manuelle du site est nécessaire pour exploiter les IOCs diffusés."
+      },
+      "implications_strategiques": {
+        "en": "Subscribing to these consolidated feeds helps reduce the time spent on raw intelligence gathering and quickly orient defense decisions toward the most critical threats of the moment.",
+        "fr": "S'abonner à ces flux consolidés permet de réduire le temps consacré à la veille brute et d'orienter rapidement les décisions de défense vers les menaces les plus critiques du moment."
+      },
+      "threat_actor": "",
+      "threat_actor_origin": "",
+      "threat_actor_type": "",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Médias",
+          "Cybersécurité"
+        ],
+        "fr": [
+          "Médias",
+          "Cybersécurité"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "Subscribing to these consolidated feeds helps reduce the time spent on raw intelligence gathering and quickly orient defense decisions toward the most critical threats of the moment.",
+        "fr": "S'abonner à ces flux consolidés permet de réduire le temps consacré à la veille brute et d'orienter rapidement les décisions de défense vers les menaces les plus critiques du moment."
+      },
+      "recommandations": [
+        {
+          "en": "Consult the full episode on the ISC website.",
+          "fr": "Consulter l'épisode complet sur le site de l'ISC."
+        },
+        {
+          "en": "Integrate published IOCs into detection tools (SIEM, EDR).",
+          "fr": "Intégrer les IOCs publiés dans les outils de détection (SIEM, EDR)."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Subscribe to SANS ISC feeds and Stormcast podcasts to stay informed of emerging threats.",
+            "Keep the internal CTI watch dashboard up to date with indicators shared by the ISC."
+          ],
+          "fr": [
+            "S'abonner aux flux SANS ISC et aux podcasts Stormcast pour rester informé des menaces émergentes.",
+            "Maintenir à jour le tableau de veille CTI interne avec les indicateurs partagés par l'ISC."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "phase3_containment\":[\""
+          ],
+          "fr": [
+            "phase3_containment\":[\""
+          ]
+        },
+        "phase3_containment": {
+          "en": [],
+          "fr": []
+        },
+        "phase4_post_incident": {
+          "en": [
+            "phase5_threat_hunting\":[\""
+          ],
+          "fr": [
+            "phase5_threat_hunting\":[\""
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [],
+          "fr": []
+        }
+      },
+      "tags": [
+        "threat-intelligence",
+        "podcast",
+        "isc",
+        "sans"
+      ],
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33092"
+      ],
+      "date": "2026-06-22"
+    },
+    {
+      "title": {
+        "en": "Performance of deepfake detectors against re-encoding by social networks",
+        "fr": "Performance des détecteurs de deepfakes face au ré-encodage par les réseaux sociaux"
+      },
+      "description": {
+        "en": "A post shared on Reddit (r/redteamsec) discusses a study examining how deepfake detectors perform when media is re-encoded by social platforms (compression, resizing, filters). The textual content could not be retrieved due to a network block.",
+        "fr": "Une publication partagée sur Reddit (r/redteamsec) traite d'une étude examinant comment les détecteurs de deepfakes se comportent lorsque les médias sont ré-encodés par les plateformes sociales (compression, redimensionnement, filtres). Le contenu textuel n'a pas pu être récupéré en raison d'un blocage réseau."
+      },
+      "resume": {
+        "en": "A post shared on Reddit (r/redteamsec) discusses a study examining how deepfake detectors perform when media is re-encoded by social platforms (compression, resizing, filters). The textual content could not be retrieved due to a network block.",
+        "fr": "Une publication partagée sur Reddit (r/redteamsec) traite d'une étude examinant comment les détecteurs de deepfakes se comportent lorsque les médias sont ré-encodés par les plateformes sociales (compression, redimensionnement, filtres). Le contenu textuel n'a pas pu être récupéré en raison d'un blocage réseau."
+      },
+      "analyse_operationnelle": {
+        "en": "Re-encoding by platforms degrades the artifacts that detectors rely on: anti-deepfake checks based solely on source file analysis are unreliable in real environments. Teams must rely on multi-model solutions and behavioral correlation (provenance, context, speech anomalies).",
+        "fr": "Le ré-encodage par les plateformes dégrade les artefacts que les détecteurs exploitent : les contrôles anti-deepfake basés uniquement sur l'analyse des fichiers sources sont peu fiables en environnement réel. Les équipes doivent s'appuyer sur des solutions multi-modèles et sur la corrélation comportementale (provenance, contexte, anomalies de prise de parole)."
+      },
+      "implications_strategiques": {
+        "en": "Companies exposed to identity impersonation risks of their executives (CEO fraud, disinformation, stock manipulation) must rethink their protection strategy: a single detector is not sufficient, and training target audiences becomes a key lever.",
+        "fr": "Les entreprises exposées à des risques d'usurpation d'identité de leurs dirigeants (fraude au président, désinformation, manipulations boursières) doivent repenser leur stratégie de protection : un détecteur unique n'est pas suffisant, et la formation des publics cibles devient un levier clé."
+      },
+      "threat_actor": "",
+      "threat_actor_origin": "",
+      "threat_actor_type": "",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Recherche",
+          "IA"
+        ],
+        "fr": [
+          "Recherche",
+          "IA"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1656"
+      ],
+      "analyse": {
+        "en": "Companies exposed to identity impersonation risks of their executives (CEO fraud, disinformation, stock manipulation) must rethink their protection strategy: a single detector is not sufficient, and training target audiences becomes a key lever.",
+        "fr": "Les entreprises exposées à des risques d'usurpation d'identité de leurs dirigeants (fraude au président, désinformation, manipulations boursières) doivent repenser leur stratégie de protection : un détecteur unique n'est pas suffisant, et la formation des publics cibles devient un levier clé."
+      },
+      "recommandations": [
+        {
+          "en": "Diversify detection mechanisms (AI models, watermarking, human verification).",
+          "fr": "Diversifier les mécanismes de détection (modèles IA, watermarking, vérification humaine)."
+        },
+        {
+          "en": "Deploy targeted awareness campaigns on video/voice deepfakes.",
+          "fr": "Déployer des campagnes de sensibilisation ciblées sur les deepfakes vidéo/voix."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Raise awareness among communications and legal teams about the limitations of deepfake detectors against re-encoding by social platforms.",
+            "Map exposure channels (public videos, executive communications)."
+          ],
+          "fr": [
+            "Sensibiliser les équipes communication et juridique aux limites des détecteurs de deepfakes face au ré-encodage par les plateformes sociales.",
+            "Cartographier les canaux d'exposition (vidéos publiques, communications exécutives)."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor the appearance of suspicious video or audio content impersonating executives on social platforms.",
+            "Compare metadata and re-encoding signatures to identify manipulations."
+          ],
+          "fr": [
+            "Surveiller l'apparition de contenus vidéo ou audio suspects imitant des dirigeants sur les plateformes sociales.",
+            "Comparer les métadonnées et signatures de ré-encodage pour identifier les manipulations."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Prepare a rapid denial and content takedown procedure (DMCA, platform reports)."
+          ],
+          "fr": [
+            "Préparer une procédure de démenti rapide et de retrait de contenu (DMCA, signalements plateformes)."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Document the incident, measure reputational impact, and adjust content validation processes."
+          ],
+          "fr": [
+            "Documenter l'incident, mesurer l'impact réputationnel et ajuster les processus de validation des contenus."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Proactively search for digital clones (voice, face) of executives on social networks and the dark web."
+          ],
+          "fr": [
+            "Rechercher proactivement des clones numériques (voix, visage) des dirigeants sur les réseaux sociaux et dark web."
+          ]
+        }
+      },
+      "tags": [
+        "deepfake",
+        "détection",
+        "social-media",
+        "encodage"
+      ],
+      "sources": [
+        "https://www.reddit.com/r/redteamsec/comments/1ubqomg/examining_deepfake_detector_performance_under/"
+      ],
+      "date": "2026-06-21"
+    },
+    {
+      "title": {
+        "en": "Cyber Weather 🇨🇭 — June 22, 2026: ransomware and QR phishing in Switzerland",
+        "fr": "Cyber Météo 🇨🇭 — 22 juin 2026 : ransomware et phishing QR en Suisse"
+      },
+      "description": {
+        "en": "On June 22, 2026, the bot \"Bobe_bot\" publishes a Swiss cyber weather report noting: 3 ransomware victims this week and 8 over the month in Switzerland; a phishing campaign using fake QR codes imitating official fines in the western Lausanne area; recommendation to verify the URL before scanning any QR received by mail. DEFCON level 4 (cloudy but stable).",
+        "fr": "Le 22 juin 2026, le bot « Bobe_bot » publie une météo cyber suisse signalant : 3 victimes ransomware cette semaine et 8 sur le mois en Suisse ; une campagne de phishing par faux QR codes imitant des amendes officielles dans l'Ouest lausannois ; recommandation de vérifier l'URL avant tout scan de QR reçu par courrier. Niveau DEFCON 4 (ciel chargé mais stable)."
+      },
+      "resume": {
+        "en": "On June 22, 2026, the bot \"Bobe_bot\" publishes a Swiss cyber weather report noting: 3 ransomware victims this week and 8 over the month in Switzerland; a phishing campaign using fake QR codes imitating official fines in the western Lausanne area; recommendation to verify the URL before scanning any QR received by mail. DEFCON level 4 (cloudy but stable).",
+        "fr": "Le 22 juin 2026, le bot « Bobe_bot » publie une météo cyber suisse signalant : 3 victimes ransomware cette semaine et 8 sur le mois en Suisse ; une campagne de phishing par faux QR codes imitant des amendes officielles dans l'Ouest lausannois ; recommandation de vérifier l'URL avant tout scan de QR reçu par courrier. Niveau DEFCON 4 (ciel chargé mais stable)."
+      },
+      "analyse_operationnelle": {
+        "en": "For Swiss SOCs, two active fronts: (1) ransomware on the rise — verify backup resilience, EDR status, and segmentation; (2) quishing (QR phishing) targeting received mail — few traditional controls (mail/web) cover this channel, hence a need for awareness and enterprise QR scanning tools. Physical mail imitating fines provides a credible initial entry vector.",
+        "fr": "Pour les SOC suisses, deux fronts actifs : (1) ransomware en hausse — vérifier la résilience des sauvegardes, l'état des EDR et la segmentation ; (2) quishing (phishing QR) ciblant des收到的 courriers — peu de contrôles traditionnels (mail/web) couvrent ce canal, d'où un besoin de sensibilisation et d'outils de scan QR d'entreprise. Les courriers physiques imitant des amendes offrent un vecteur d'entrée initial crédible."
+      },
+      "implications_strategiques": {
+        "en": "Switzerland remains an attractive target (banking, healthcare, research sectors). The convergence of ransomware + physical phishing reflects a diversification of TTPs by criminal actors. Boards of directors must integrate the \"malicious mail\" risk into their risk matrix.",
+        "fr": "La Suisse reste une cible attractive (secteurs bancaire, santé, recherche). La convergence ransomware + phishing physique témoigne d'une diversification des TTP par les acteurs criminels. Les conseils d'administration doivent intégrer le risque « courrier malveillant » dans leur matrice de risque."
+      },
+      "threat_actor": "",
+      "threat_actor_origin": "",
+      "threat_actor_type": "",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Administration publique",
+          "Santé",
+          "Éducation"
+        ],
+        "fr": [
+          "Administration publique",
+          "Santé",
+          "Éducation"
+        ]
+      },
+      "indicators": {
+        "URL": [
+          "QR codes imitant des amendes officielles (URL variable, à valider avant scan)"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1566",
+        "T1566.002",
+        "T1204",
+        "T1486"
+      ],
+      "analyse": {
+        "en": "Switzerland remains an attractive target (banking, healthcare, research sectors). The convergence of ransomware + physical phishing reflects a diversification of TTPs by criminal actors. Boards of directors must integrate the \"malicious mail\" risk into their risk matrix.",
+        "fr": "La Suisse reste une cible attractive (secteurs bancaire, santé, recherche). La convergence ransomware + phishing physique témoigne d'une diversification des TTP par les acteurs criminels. Les conseils d'administration doivent intégrer le risque « courrier malveillant » dans leur matrice de risque."
+      },
+      "recommandations": [
+        {
+          "en": "Disseminate a targeted internal alert on fine-related QR codes received by mail.",
+          "fr": "Diffuser une alerte interne ciblée sur les QR codes d'amendes reçus par courrier."
+        },
+        {
+          "en": "Activate a proactive blocking rule for newly registered domains linked to QRs.",
+          "fr": "Activer une règle de blocage proactive des domaines nouvellement enregistrés liés aux QR."
+        },
+        {
+          "en": "Audit the ransomware response plan and test backup restoration.",
+          "fr": "Auditer le plan de réponse ransomware et tester la restauration des sauvegardes."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Raise employee awareness of the risks of QR codes received by mail or email.",
+            "Systematically verify URLs before scanning and use an isolated browser or a QR scanner displaying the link preview.",
+            "Maintain immutable and tested backups to cope with a ransomware incident."
+          ],
+          "fr": [
+            "Sensibiliser les collaborateurs aux risques de QR codes reçus par courrier ou email.",
+            "Vérifier systématiquement les URL avant scan et utiliser un navigateur isolé ou un scanner QR affichant l'aperçu du lien.",
+            "Maintenir des sauvegardes immuables et testées pour faire face à un incident ransomware."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect QR scans generating traffic to uncategorized domains.",
+            "Monitor ransomware attack signals (deleted Volume Shadow Copies, stopped backup services, mass encryption).",
+            "Collect reports from users who have scanned a suspicious QR."
+          ],
+          "fr": [
+            "Détecter les scans de QR générant du trafic vers des domaines non catégorisés.",
+            "Surveiller les signaux d'attaque ransomware (Volume Shadow Copy supprimées, services de sauvegarde arrêtés, chiffrement massif).",
+            "Collecter les signalements d'utilisateurs ayant scanné un QR suspect."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate the affected workstations from the network.",
+            "Emergency-block the domains/IPs associated with the malicious QR code at the proxy and DNS level.",
+            "Suspend network shares and disable compromised accounts.",
+            "Activate the continuity plan (backups) in the event of encryption."
+          ],
+          "fr": [
+            "Isoler les postes concernés du réseau.",
+            "Bloquer en urgence les domaines/IP associés au QR code malveillant au niveau du proxy et du DNS.",
+            "Suspendre les partages réseau et désactiver les comptes compromis.",
+            "Activer le plan de continuité (sauvegardes) en cas de chiffrement."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Confirm the absence of persistence and lateral movement.",
+            "Notify authorities (Swiss NCSC, cantonal police) and, where applicable, the data protection officer.",
+            "Communicate with impacted partners and customers.",
+            "Review the mail handling procedure involving QR codes."
+          ],
+          "fr": [
+            "Confirmer l'absence de persistance et de mouvement latéral.",
+            "Notifier les autorités (NCSC suisse, polices cantonales) et, le cas échéant, le préposé à la protection des données.",
+            "Communiquer auprès des partenaires et clients impactés.",
+            "Revoir la procédure de gestion des courriers avec QR codes."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Research IOCs linked to active QR phishing campaigns in French-speaking Switzerland.",
+            "Hunt for prior compromises: suspicious outbound connections, disabled backup services, reactivated dormant accounts.",
+            "Analyze incoming emails with embedded QR images."
+          ],
+          "fr": [
+            "Rechercher les IOCs liés aux campagnes QR phishing actives en Suisse romande.",
+            "Chasser les compromissions antérieures : connexions sortantes suspectes, services de backup désactivés, comptes dormants réactivés.",
+            "Analyser les emails entrants avec images QR embarquées."
+          ]
+        }
+      },
+      "tags": [
+        "ransomware",
+        "phishing",
+        "qr-code",
+        "suisse"
+      ],
+      "sources": [
+        "https://mastobot.ping.moi/@Bobe_bot/116791994525398929"
+      ],
+      "date": "2026-06-22"
+    },
+    {
+      "title": {
+        "en": "OpSec discussion: use of Tails and Tor for sensitive communication",
+        "fr": "Discussion OpSec : usage de Tails et Tor pour la communication sensible"
+      },
+      "description": {
+        "en": "A Mastodon thread from June 22, 2026 recaps Lilith Wittmann's recommendations on OpSec best practices: communication in restricted groups with verified contacts, end-to-end encryption, short message retention (<72h), storage of exfiltrated data on encrypted external drives, use of VPN/Tor, and emergency procedure in case of a raid (immediately turn off devices, phone panic mode). A comment highlights the value of Tails as an amnesic, encrypted portable OS running over Tor, as opposed to Kali dedicated to hacking/forensics.",
+        "fr": "Un fil Mastodon du 22 juin 2026 reprend les recommandations de Lilith Wittmann sur les bonnes pratiques OpSec : communication en groupes restreints avec contacts vérifiés, chiffrement de bout en bout, rétention courte des messages (<72h), stockage des données exfiltrées sur disques externes chiffrés, usage de VPN/Tor, et procédure d'urgence en cas de perquisition (éteindre immédiatement les appareils, mode panique du téléphone). Un commentaire souligne l'intérêt de Tails comme OS portable amnésique chiffré fonctionnant via Tor, par opposition à Kali dédié au hacking/forensic."
+      },
+      "resume": {
+        "en": "A Mastodon thread from June 22, 2026 recaps Lilith Wittmann's recommendations on OpSec best practices: communication in restricted groups with verified contacts, end-to-end encryption, short message retention (<72h), storage of exfiltrated data on encrypted external drives, use of VPN/Tor, and emergency procedure in case of a raid (immediately turn off devices, phone panic mode). A comment highlights the value of Tails as an amnesic, encrypted portable OS running over Tor, as opposed to Kali dedicated to hacking/forensics.",
+        "fr": "Un fil Mastodon du 22 juin 2026 reprend les recommandations de Lilith Wittmann sur les bonnes pratiques OpSec : communication en groupes restreints avec contacts vérifiés, chiffrement de bout en bout, rétention courte des messages (<72h), stockage des données exfiltrées sur disques externes chiffrés, usage de VPN/Tor, et procédure d'urgence en cas de perquisition (éteindre immédiatement les appareils, mode panique du téléphone). Un commentaire souligne l'intérêt de Tails comme OS portable amnésique chiffré fonctionnant via Tor, par opposition à Kali dédié au hacking/forensic."
+      },
+      "analyse_operationnelle": {
+        "en": "Although aimed at whistleblowers and exposed professionals, the thread recalls several fundamentals useful to security teams: channel separation, backup hygiene, raid preparedness. Internal teams handling highly sensitive data (R&D, internal investigations, M&A) can draw on these reflexes for their internal protocols.",
+        "fr": "Bien que destiné à un public de lanceurs d'alerte et de professionnels exposés, le fil rappelle plusieurs fondamentaux utiles aux équipes sécurité : séparation des canaux, hygiène des sauvegardes, préparation à la perquisition. Les équipes internes manipulant des données très sensibles (R&D, enquêtes internes, M&A) peuvent s'inspirer de ces réflexes pour leurs protocoles internes."
+      },
+      "implications_strategiques": {
+        "en": "Organizations must recognize that their employees (internal journalists, lawyers, investigators) can be personally targeted. Providing suitable tools (Tails, Signal, encrypted storage) and clear procedures becomes an issue of protecting people and information.",
+        "fr": "Les organisations doivent reconnaître que leurs employés (journalistes internes, avocats, enquêteurs) peuvent être personnellement ciblés. Fournir des outils adaptés (Tails, Signal, stockage chiffré) et des procédures claires devient un enjeu de protection des personnes et de l'information."
+      },
+      "threat_actor": "",
+      "threat_actor_origin": "",
+      "threat_actor_type": "",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Sécurité de l'information"
+        ],
+        "fr": [
+          "Sécurité de l'information"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "Organizations must recognize that their employees (internal journalists, lawyers, investigators) can be personally targeted. Providing suitable tools (Tails, Signal, encrypted storage) and clear procedures becomes an issue of protecting people and information.",
+        "fr": "Les organisations doivent reconnaître que leurs employés (journalistes internes, avocats, enquêteurs) peuvent être personnellement ciblés. Fournir des outils adaptés (Tails, Signal, stockage chiffré) et des procédures claires devient un enjeu de protection des personnes et de l'information."
+      },
+      "recommandations": [
+        {
+          "en": "Assess the opportunity to provide encrypted amnesic solutions for sensitive use cases.",
+          "fr": "Évaluer l'opportunité de mettre à disposition des solutions amnésiques chiffrées pour les cas d'usage sensibles."
+        },
+        {
+          "en": "Formalize a \"raid / unannounced visit\" procedure with immediate equipment shutdown.",
+          "fr": "Formaliser une procédure « perquisition / visite inopinée » avec coupure immédiate des équipements."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Assess the use of Tails/Tor in sensitive workflows of journalists, lawyers, and activists linked to the organization.",
+            "Train exposed users in OpSec best practices (restricted groups, contact verification, backup encryption)."
+          ],
+          "fr": [
+            "Évaluer l'usage de Tails/Tor dans les workflows sensibles des journalistes, avocats et activistes en lien avec l'organisation.",
+            "Former les utilisateurs exposés aux bonnes pratiques d'OpSec (groupes restreints, vérification des contacts, chiffrement des backups)."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "phase3_containment\":[\""
+          ],
+          "fr": [
+            "phase3_containment\":[\""
+          ]
+        },
+        "phase3_containment": {
+          "en": [],
+          "fr": []
+        },
+        "phase4_post_incident": {
+          "en": [
+            "phase5_threat_hunting\":[\""
+          ],
+          "fr": [
+            "phase5_threat_hunting\":[\""
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [],
+          "fr": []
+        }
+      },
+      "tags": [
+        "opsec",
+        "comsec",
+        "tails",
+        "tor",
+        "bonnes-pratiques"
+      ],
+      "sources": [
+        "https://mastodon.social/@kkarhan/116791792502819300"
+      ],
+      "date": "2026-06-22"
+    },
+    {
+      "title": {
+        "en": "Why Southeast Asian CISOs must adopt Zero Trust as an AI control plan",
+        "fr": "Pourquoi les CISO d'Asie du Sud-Est doivent adopter le Zero Trust comme plan de contrôle IA"
+      },
+      "description": {
+        "en": "An article from CSO Online relayed on infosec.exchange explains that Southeast Asian CISOs must make Zero Trust the control plan for their AI deployments, due to the proliferation of AI agents, data borders specific to each country in the region, and the growing complexity of supply chains. Zero Trust becomes the framework for governing access, flows, and exchanges between models, data, and partners.",
+        "fr": "Un article de CSO Online relayé sur infosec.exchange explique que les CISO d'Asie du Sud-Est doivent faire du Zero Trust le plan de contrôle de leurs déploiements IA, en raison de la multiplication des agents IA, des frontières de données (data borders) propres à chaque pays de la région et de la complexité croissante des supply chains. Le Zero Trust devient le cadre permettant de gouverner les accès, les flux et les échanges entre modèles, données et partenaires."
+      },
+      "resume": {
+        "en": "An article from CSO Online relayed on infosec.exchange explains that Southeast Asian CISOs must make Zero Trust the control plan for their AI deployments, due to the proliferation of AI agents, data borders specific to each country in the region, and the growing complexity of supply chains. Zero Trust becomes the framework for governing access, flows, and exchanges between models, data, and partners.",
+        "fr": "Un article de CSO Online relayé sur infosec.exchange explique que les CISO d'Asie du Sud-Est doivent faire du Zero Trust le plan de contrôle de leurs déploiements IA, en raison de la multiplication des agents IA, des frontières de données (data borders) propres à chaque pays de la région et de la complexité croissante des supply chains. Le Zero Trust devient le cadre permettant de gouverner les accès, les flux et les échanges entre modèles, données et partenaires."
+      },
+      "analyse_operationnelle": {
+        "en": "AI agents add a new attack surface: non-human identities (service accounts, API keys, tokens) often granted extensive privileges. SOCs must extend their identity controls to agents, log their actions finely, and apply the principle of least privilege to every model call. SEA data borders impose residency rules that complicate multi-region deployments.",
+        "fr": "Les agents IA ajoutent une nouvelle surface d'attaque : identités non-humaines (comptes de service, clés API, jetons) dotées souvent de privilèges étendus. Les SOC doivent étendre leurs contrôles d'identité aux agents, journaliser finement leurs actions et appliquer le principe du moindre privilège à chaque appel de modèle. Les frontières de données SEA imposent des règles de residency qui compliquent le déploiement multi-régions."
+      },
+      "implications_strategiques": {
+        "en": "Southeast Asian executive management must arbitrate between AI adoption speed and compliance. Zero Trust becomes a governance argument and an accelerator: it enables AI deployment without losing control, and satisfies local regulators. Vendors unable to offer native AI Zero Trust architectures will lose market share.",
+        "fr": "Les directions générales d'Asie du Sud-Est doivent arbitrer entre rapidité d'adoption IA et conformité. Le Zero Trust devient un argument de gouvernance et un accélérateur : il permet de déployer l'IA sans perdre le contrôle, et de répondre aux régulateurs locaux. Les fournisseurs incapables de proposer des architectures Zero Trust natives IA perdront des parts de marché."
+      },
+      "threat_actor": "",
+      "threat_actor_origin": "",
+      "threat_actor_type": "",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technologie",
+          "IA",
+          "Finance"
+        ],
+        "fr": [
+          "Technologie",
+          "IA",
+          "Finance"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "Southeast Asian executive management must arbitrate between AI adoption speed and compliance. Zero Trust becomes a governance argument and an accelerator: it enables AI deployment without losing control, and satisfies local regulators. Vendors unable to offer native AI Zero Trust architectures will lose market share.",
+        "fr": "Les directions générales d'Asie du Sud-Est doivent arbitrer entre rapidité d'adoption IA et conformité. Le Zero Trust devient un argument de gouvernance et un accélérateur : il permet de déployer l'IA sans perdre le contrôle, et de répondre aux régulateurs locaux. Les fournisseurs incapables de proposer des architectures Zero Trust natives IA perdront des parts de marché."
+      },
+      "recommandations": [
+        {
+          "en": "Designate a person responsible for AI agent governance.",
+          "fr": "Désigner un responsable de la gouvernance des agents IA."
+        },
+        {
+          "en": "Mandate a Zero Trust framework (verified identity, micro-segmentation, encryption) before any production AI deployment.",
+          "fr": "Imposer un cadre Zero Trust (identité vérifiée, micro-segmentation, chiffrement) avant tout déploiement IA en production."
+        },
+        {
+          "en": "Audit the AI supply chain (model providers, integrators, data brokers).",
+          "fr": "Auditer la chaîne d'approvisionnement IA (fournisseurs de modèles, intégrateurs, data brokers)."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Map AI agent data flows (sources, destinations, models used).",
+            "Apply Zero Trust principles to every interaction of an AI agent with business data.",
+            "Integrate local regulatory constraints (SEA data residency) into cloud and AI vendor contracts."
+          ],
+          "fr": [
+            "Cartographier les flux de données des agents IA (sources, destinations, modèles utilisés).",
+            "Appliquer les principes Zero Trust à chaque interaction d'un agent IA avec les données métiers.",
+            "Intégrer les contraintes réglementaires locales (data residency SEA) dans les contrats cloud et fournisseurs IA."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect anomalous AI agent access to sensitive data (volume, frequency, destinations).",
+            "Monitor behavioral drift of autonomous agents (hallucinations, loops, privilege escalations)."
+          ],
+          "fr": [
+            "Détecter les accès anormaux des agents IA à des données sensibles (volume, fréquence, destinations).",
+            "Monitorer les dérives comportementales des agents autonomes (hallucinations, boucles, escalades de privilèges)."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            ","
+          ],
+          "fr": [
+            ","
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            ","
+          ],
+          "fr": [
+            ","
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            ","
+          ],
+          "fr": [
+            ","
+          ]
+        }
+      },
+      "tags": [
+        "zero-trust",
+        "ai-agents",
+        "sea",
+        "gouvernance"
+      ],
+      "sources": [
+        "https://www.csoonline.com/article/4187548/why-southeast-asia-cisos-need-zero-trust-as-their-ai-control-plane-ai-agents-data-borders-and-supply-chains.html"
+      ],
+      "date": "2026-06-22"
+    },
+    {
+      "title": {
+        "en": "Cyberattack against the Brazilian Civil Defense official alert network",
+        "fr": "Cyberattaque contre le réseau d'alerte officiel de la Défense civile brésilienne"
+      },
+      "description": {
+        "en": "On June 21, 2026, the site DataBreaches.net reports that Brazil's Civil Defense suffered a cyberattack targeting its official alert network. Technical details (vector, impact, attribution) are not specified in the feed. The alert network is used to broadcast instructions to the population in the event of a natural or industrial disaster.",
+        "fr": "Le 21 juin 2026, le site DataBreaches.net rapporte que la Défense civile du Brésil a subi une cyberattaque ciblant son réseau officiel d'alertes. Les détails techniques (vecteur, impact, attribution) ne sont pas précisés dans le flux. Le réseau d'alerte sert à diffuser des consignes à la population en cas de catastrophe naturelle ou industrielle."
+      },
+      "resume": {
+        "en": "On June 21, 2026, the site DataBreaches.net reports that Brazil's Civil Defense suffered a cyberattack targeting its official alert network. Technical details (vector, impact, attribution) are not specified in the feed. The alert network is used to broadcast instructions to the population in the event of a natural or industrial disaster.",
+        "fr": "Le 21 juin 2026, le site DataBreaches.net rapporte que la Défense civile du Brésil a subi une cyberattaque ciblant son réseau officiel d'alertes. Les détails techniques (vecteur, impact, attribution) ne sont pas précisés dans le flux. Le réseau d'alerte sert à diffuser des consignes à la population en cas de catastrophe naturelle ou industrielle."
+      },
+      "analyse_operationnelle": {
+        "en": "The compromise of an official alert network is a high operational impact incident: risk of disseminating false alerts, paralyzing the legitimate channel, and causing public panic. The teams in charge must immediately switch to a secondary channel, isolate the affected segments, and preserve evidence. The lack of technical details prevents a finer analysis; exploitation of an exposed application or credentials compromise is likely involved.",
+        "fr": "La compromission d'un réseau d'alerte officiel est un incident à fort impact opérationnel : risque de diffusion de fausses alertes, de paralysie du canal légitime, et de panique publique. Les équipes en charge doivent immédiatement basculer sur un canal secondaire, isoler les segments touchés et préserver les preuves. Le manque de détails techniques empêche une analyse plus fine ; il est probable qu'une exploitation d'application exposée ou une compromission de credentials soit en cause."
+      },
+      "implications_strategiques": {
+        "en": "This incident illustrates the vulnerability of non-energy critical infrastructure: alert networks are prime targets for state actors (destabilization, influence operations) or criminals (extortion). Governments must treat these networks with the same level of requirement as energy or transportation.",
+        "fr": "Cet incident illustre la vulnérabilité des infrastructures critiques non-énergétiques : les réseaux d'alerte sont des cibles de choix pour des acteurs étatiques (déstabilisation, opérations d'influence) ou criminels (rançonnage). Les gouvernements doivent traiter ces réseaux avec le même niveau d'exigence que l'énergie ou les transports."
+      },
+      "threat_actor": "",
+      "threat_actor_origin": "",
+      "threat_actor_type": "",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Administration publique",
+          "Défense civile"
+        ],
+        "fr": [
+          "Administration publique",
+          "Défense civile"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "analyse": {
+        "en": "This incident illustrates the vulnerability of non-energy critical infrastructure: alert networks are prime targets for state actors (destabilization, influence operations) or criminals (extortion). Governments must treat these networks with the same level of requirement as energy or transportation.",
+        "fr": "Cet incident illustre la vulnérabilité des infrastructures critiques non-énergétiques : les réseaux d'alerte sont des cibles de choix pour des acteurs étatiques (déstabilisation, opérations d'influence) ou criminels (rançonnage). Les gouvernements doivent traiter ces réseaux avec le même niveau d'exigence que l'énergie ou les transports."
+      },
+      "recommandations": [
+        {
+          "en": "Launch an investigation to identify the attack vector.",
+          "fr": "Lancer une investigation pour identifier le vecteur d'attaque."
+        },
+        {
+          "en": "Communicate quickly on the reliability of alternative channels.",
+          "fr": "Communiquer rapidement sur la fiabilité des canaux alternatifs."
+        },
+        {
+          "en": "Strengthen the supervision and authentication of the alert network.",
+          "fr": "Renforcer la supervision et l'authentification du réseau d'alerte."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain a crisis communication plan incorporating alternative channels (radio, SMS cell broadcast).",
+            "Map the exposed assets of the official alert network.",
+            "Regularly test failover procedures to a secondary channel."
+          ],
+          "fr": [
+            "Maintenir un plan de communication de crise intégrant des canaux alternatifs (radio, SMS cell broadcast).",
+            "Cartographier les actifs exposés du réseau d'alerte officiel.",
+            "Tester régulièrement les procédures de bascule sur canal secondaire."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Continuously monitor the entry points of the alert network (IDS/IPS, WAF).",
+            "Detect abnormal changes to alert message configuration or templates."
+          ],
+          "fr": [
+            "Surveiller en continu les points d'entrée du réseau d'alerte (IDS/IPS, WAF).",
+            "Détecter les modifications anormales de configuration ou de templates de messages d'alerte."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate compromised segments of the alert network while maintaining an operational emergency channel.",
+            "Activate the secondary communication channel (SMS, sirens, television).",
+            "Preserve forensic evidence (logs, disk images)."
+          ],
+          "fr": [
+            "Isoler les segments compromis du réseau d'alerte tout en maintenant un canal d'urgence opérationnel.",
+            "Activer le canal de communication secondaire (SMS, sirènes, télévision).",
+            "Conserver les preuves forensiques (logs, images disque)."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Coordinate with national authorities (ANATEL, GSI/PRE) and publish an official statement.",
+            "Conduct a post-mortem analysis and remediate the exploited vulnerabilities.",
+            "Strengthen the authentication and segmentation of the alert network."
+          ],
+          "fr": [
+            "Coordonner avec les autorités nationales (ANATEL, GSI/PRE) et publier un communiqué officiel.",
+            "Mener une analyse post-mortem et corriger les vulnérabilités exploitées.",
+            "Renforcer l'authentification et la segmentation du réseau d'alerte."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for signs of persistence (webshells, dormant accounts, scheduled tasks).",
+            "Analyze upstream logs to identify the initial entry point."
+          ],
+          "fr": [
+            "Rechercher des signes de persistance (webshells, comptes dormants, tâches planifiées).",
+            "Analyser les logs en amont pour identifier le point d'entrée initial."
+          ]
+        }
+      },
+      "tags": [
+        "cyberattaque",
+        "alerte",
+        "bresil"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/06/21/brazils-civil-defense-suffers-a-cyberattack-on-its-official-alert-network/?pk_campaign=feed&pk_kwd=brazils-civil-defense-suffers-a-cyberattack-on-its-official-alert-network"
+      ],
+      "date": "2026-06-21"
+    },
+    {
+      "title": {
+        "en": "Why two data breaches did not cause Novo Nordisk's stock to drop",
+        "fr": "Pourquoi deux violations de données n'ont pas fait chuter l'action Novo Nordisk"
+      },
+      "description": {
+        "en": "A June 21, 2026 article on DataBreaches.net analyzes why Novo Nordisk, a Danish pharmaceutical company, did not see its share price drop after two data breaches. The title suggests that markets downplayed the impact, possibly due to the nature of the exposed data, the weight of fundamentals (GLP-1, growth), or effective communication.",
+        "fr": "Un article du 21 juin 2026 sur DataBreaches.net analyse pourquoi Novo Nordisk, laboratoire pharmaceutique danois, n'a pas vu son cours de bourse chuter après deux violations de données. Le titre suggère que les marchés ont relativisé l'impact, possiblement en raison de la nature des données exposées, du poids des fondamentaux (GLP-1, croissance) ou d'une communication efficace."
+      },
+      "resume": {
+        "en": "A June 21, 2026 article on DataBreaches.net analyzes why Novo Nordisk, a Danish pharmaceutical company, did not see its share price drop after two data breaches. The title suggests that markets downplayed the impact, possibly due to the nature of the exposed data, the weight of fundamentals (GLP-1, growth), or effective communication.",
+        "fr": "Un article du 21 juin 2026 sur DataBreaches.net analyse pourquoi Novo Nordisk, laboratoire pharmaceutique danois, n'a pas vu son cours de bourse chuter après deux violations de données. Le titre suggère que les marchés ont relativisé l'impact, possiblement en raison de la nature des données exposées, du poids des fondamentaux (GLP-1, croissance) ou d'une communication efficace."
+      },
+      "analyse_operationnelle": {
+        "en": "For CISOs, the lesson is twofold: (1) not all breaches have the same business impact — the nature of the data (health, patents, patient data) determines the exposure; (2) the preparation of post-incident communication (transparency, remediation plan) strongly influences market perception and stock trajectory. Companies must therefore assess their cyber 'value at risk' by integrating the financial and reputational dimension.",
+        "fr": "Pour les RSSI, la leçon est double : (1) tous les breaches n'ont pas le même impact business — la nature des données (santé, brevets, données patients) détermine l'exposition ; (2) la préparation de la communication post-incident (transparence, plan de remédiation) influence fortement la perception marché et la trajectoire boursière. Les entreprises doivent donc évaluer leur « value at risk » cyber en intégrant la dimension financière et réputationnelle."
+      },
+      "implications_strategiques": {
+        "en": "The Novo Nordisk case demonstrates that a pharmaceutical giant can absorb two breaches without major stock damage, which can induce a dangerous sense of invulnerability. Regulators and boards of directors must not be satisfied with the market response alone: patient risk, GDPR sanctions, and loss of patents remain real threats.",
+        "fr": "Le cas Novo Nordisk démontre qu'un géant pharmaceutique peut absorber deux breaches sans dommage boursier majeur, ce qui peut induire un dangereux sentiment d'invulnérabilité. Les régulateurs et conseils d'administration ne doivent pas se satisfaire de la seule réponse des marchés : risque patient, sanctions RGPD, perte de brevets restent des menaces réelles."
+      },
+      "threat_actor": "",
+      "threat_actor_origin": "",
+      "threat_actor_type": "",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Pharmaceutique",
+          "Santé"
+        ],
+        "fr": [
+          "Pharmaceutique",
+          "Santé"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "The Novo Nordisk case demonstrates that a pharmaceutical giant can absorb two breaches without major stock damage, which can induce a dangerous sense of invulnerability. Regulators and boards of directors must not be satisfied with the market response alone: patient risk, GDPR sanctions, and loss of patents remain real threats.",
+        "fr": "Le cas Novo Nordisk démontre qu'un géant pharmaceutique peut absorber deux breaches sans dommage boursier majeur, ce qui peut induire un dangereux sentiment d'invulnérabilité. Les régulateurs et conseils d'administration ne doivent pas se satisfaire de la seule réponse des marchés : risque patient, sanctions RGPD, perte de brevets restent des menaces réelles."
+      },
+      "recommandations": [
+        {
+          "en": "Quantify the cyber impact in financial units (value of data, remediation costs, potential fines).",
+          "fr": "Quantifier l'impact cyber en unités financières (valeur des données, coûts de remédiation, amendes potentielles)."
+        },
+        {
+          "en": "Maintain a cyber crisis communication plan calibrated for investors and regulators.",
+          "fr": "Maintenir un plan de communication de crise cyber calibré pour les investisseurs et les régulateurs."
+        },
+        {
+          "en": "Do not underestimate 'minor' breaches: their accumulation erodes trust.",
+          "fr": "Ne pas sous-estimer les breaches « mineures » : leur accumulation érode la confiance."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Continuously assess the exposed attack surface (patient portals, APIs, subcontractors).",
+            "Prepare calibrated financial and legal communication in case of a breach (press kit, investor FAQ)."
+          ],
+          "fr": [
+            "Évaluer en continu la surface d'attaque exposée (portails patients, API, sous-traitants).",
+            "Préparer une communication financière et juridique calibrée en cas de breach (kit de presse, FAQ investisseurs)."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "phase3_containment\":[\""
+          ],
+          "fr": [
+            "phase3_containment\":[\""
+          ]
+        },
+        "phase3_containment": {
+          "en": [],
+          "fr": []
+        },
+        "phase4_post_incident": {
+          "en": [
+            ","
+          ],
+          "fr": [
+            ","
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            ","
+          ],
+          "fr": [
+            ","
+          ]
+        }
+      },
+      "tags": [
+        "data-breach",
+        "novo-nordisk",
+        "bourse",
+        "impact-financier"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/06/21/two-data-breaches-didnt-sink-novo-nordisks-stock-why-not/?pk_campaign=feed&pk_kwd=two-data-breaches-didnt-sink-novo-nordisks-stock-why-not"
+      ],
+      "date": "2026-06-21"
+    },
+    {
+      "title": {
+        "en": "Non-CTI publication on vx-underground",
+        "fr": "Publication non-CTI sur vx-underground"
+      },
+      "description": {
+        "en": "Humorous message posted on the vx-underground Telegram channel: the author indicates having bought several cargo shorts and button-down shirts that he plans to tuck into his pants, in connection with his recent parenthood. No content related to cybersecurity.",
+        "fr": "Message humoristique publié sur le canal Telegram vx-underground : l'auteur indique avoir acheté plusieurs shorts cargo et chemises à boutons qu'il prévoit de rentrer dans le pantalon, en lien avec sa parentalité récente. Aucun contenu lié à la cybersécurité."
+      },
+      "resume": {
+        "en": "Humorous message posted on the vx-underground Telegram channel: the author indicates having bought several cargo shorts and button-down shirts that he plans to tuck into his pants, in connection with his recent parenthood. No content related to cybersecurity.",
+        "fr": "Message humoristique publié sur le canal Telegram vx-underground : l'auteur indique avoir acheté plusieurs shorts cargo et chemises à boutons qu'il prévoit de rentrer dans le pantalon, en lien avec sa parentalité récente. Aucun contenu lié à la cybersécurité."
+      },
+      "analyse_operationnelle": {
+        "en": "None. The content is unrelated to IT security and provides no actionable indicators.",
+        "fr": "Aucune. Le contenu est sans rapport avec la sécurité informatique et ne fournit aucun indicateur exploitable."
+      },
+      "implications_strategiques": {
+        "en": "None. This publication illustrates the mixed nature of the vx-underground channel, which also disseminates non-technical content.",
+        "fr": "Aucune. Cette publication illustre la nature mixte du canal vx-underground qui diffuse aussi des contenus non techniques."
+      },
+      "threat_actor": "",
+      "threat_actor_origin": "",
+      "threat_actor_type": "",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [],
+        "fr": []
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "None. This publication illustrates the mixed nature of the vx-underground channel, which also disseminates non-technical content.",
+        "fr": "Aucune. Cette publication illustre la nature mixte du canal vx-underground qui diffuse aussi des contenus non techniques."
+      },
+      "recommandations": [],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [],
+          "fr": []
+        },
+        "phase2_detection": {
+          "en": [],
+          "fr": []
+        },
+        "phase3_containment": {
+          "en": [],
+          "fr": []
+        },
+        "phase4_post_incident": {
+          "en": [],
+          "fr": []
+        },
+        "phase5_threat_hunting": {
+          "en": [],
+          "fr": []
+        }
+      },
+      "tags": [
+        "humor",
+        "personal"
+      ],
+      "sources": [
+        "https://t.me/vxunderground/8991"
+      ],
+      "date": "2026-06-21"
+    }
+  ]
+}
