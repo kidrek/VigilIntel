@@ -6,54 +6,29 @@
       "fr": "Sévère"
     },
     "justification": {
-      "en": "The threat landscape for June 2026 reached a critical level due to the convergence of zero-day exploits in enterprise perimeters (Check Point, PAN-OS, Oracle PeopleSoft, Splunk), systematic software supply-chain compromises targeting developer environments (Miasma, Sapphire Sleet on Mastra AI), and highly advanced defense evasion techniques such as Bring Your Own Hypervisor (QEMU virtualization) and kernel-level security agent termination (GentleKiller BYOVD).",
-      "fr": "Le niveau de menace pour juin 2026 a atteint un seuil critique en raison de la convergence d'exploitations zero-day sur les périmètres d'entreprise (Check Point, PAN-OS, Oracle PeopleSoft, Splunk), de compromissions systématiques de la chaîne d'approvisionnement logicielle ciblant les développeurs (Miasma, Sapphire Sleet sur Mastra AI), et de techniques d'évasion très avancées comme le Bring Your Own Hypervisor (QEMU) et la neutralisation d'agents de sécurité au niveau du noyau (BYOVD GentleKiller)."
+      "en": "June 2026 was marked by a convergence of critical-severity threats: widespread zero-day exploitation of enterprise and perimeter infrastructure (Fortinet, Check Point, Cisco, Oracle PeopleSoft, Splunk), systematic software supply chain compromises targeting developers (Miasma, Sapphire Sleet, ShapedPlugin), and massive extortion campaigns causing severe disruptions to global organizations like Novo Nordisk ($25M ransom) and Transport for London (£39M impact).",
+      "fr": "Le mois de juin 2026 a été marqué par une convergence de menaces d'une gravité critique : l'exploitation généralisée de failles zero-day sur des infrastructures périmétriques d'entreprise (Fortinet, Check Point, Cisco, Oracle PeopleSoft, Splunk), des compromissions systématiques de la chaîne d'approvisionnement logicielle visant les développeurs (Miasma, Sapphire Sleet, ShapedPlugin), et des campagnes d'extorsion massives perturbant gravement des organisations mondiales telles que Novo Nordisk (rançon de 25M$) et Transport for London (impact de 39M£)."
     },
     "_triggers": [
       "+8 — 4 CVE(s) CISA KEV",
-      "+4 — 5 CVE(s) CVSS ≥ 9.0",
+      "+4 — 4 CVE(s) CVSS ≥ 9.0",
       "+4 — 2 acteur(s) étatique(s)",
       "+1 — 1 opérateur(s) ransomware",
       "+1 — ≥ 3 acteurs distincts actifs",
-      "+3 — 6 breach(es) ≥ 100k enregistrements",
+      "+3 — 5 breach(es) ≥ 100k enregistrements",
       "+2 — secteurs critiques ciblés : Critical_Infrastructure, Government_and_Defense"
     ]
   },
   "executive_summary": {
-    "en": "June 2026 was characterized by systemic and highly evasive campaigns targeting enterprise network perimeters, cloud-integrated software supply chains, and high-value intellectual property. Threat actors successfully capitalized on zero-day vulnerabilities in Check Point, Palo Alto Networks, Oracle, and Splunk to bypass traditional perimeter security. Concurrently, software supply chains faced structural compromises, from automated worms infiltrating Microsoft's developer environments to targeted poisoning of the Mastra AI ecosystem by North Korea's Sapphire Sleet. Ransomware and extortion operations scaled significantly, with groups deploying sophisticated kernel-killing drivers (GentleKiller) and localized virtual machines (QEMU BYOH) to blind host EDR systems, resulting in major financial and operational impacts for entities like Novo Nordisk, Tata Electronics, and Transport for London.",
-    "fr": "Le mois de juin 2026 a été caractérisé par des campagnes systémiques et hautement furtives ciblant les périmètres réseau des entreprises, les chaînes d'approvisionnement logicielles intégrées au cloud et la propriété intellectuelle à forte valeur. Les attaquants ont exploité avec succès des vulnérabilités zero-day chez Check Point, Palo Alto Networks, Oracle et Splunk pour contourner la sécurité périmétrique traditionnelle. En parallèle, les chaînes d'approvisionnement logicielles ont subi des compromissions structurelles, allant de vers automatisés infiltrant les environnements développeurs de Microsoft à l'empoisonnement ciblé de l'écosystème Mastra AI par le groupe nord-coréen Sapphire Sleet. Les opérations de rançongiciel et d'extorsion ont franchi un cap, les groupes déployant des pilotes de neutralisation du noyau (GentleKiller) et des machines virtuelles locales (QEMU BYOH) pour aveugler les EDR, entraînant des impacts financiers et opérationnels majeurs pour Novo Nordisk, Tata Electronics et Transport for London."
+    "en": "The threat landscape in June 2026 highlighted systemic vulnerabilities across perimeter defenses, software supply chains, and identity management. Advanced persistent threats and ransomware syndicates capitalized on major zero-day vulnerabilities in edge gateways and administrative software (CVE-2026-35273, CVE-2026-24858, CVE-2026-50751) to secure initial access. Simultaneously, software supply chain compromises reached an industrialized scale, targeting developer environments through malicious packages in the Mastra AI ecosystem and backdoored WordPress extensions. Defense evasion techniques grew increasingly aggressive, featuring BYOVD (Bring Your Own Vulnerable Driver) frameworks designed to disable kernel-level EDR agents, and EvilTokens browser hijackers to bypass hardware-less MFA. Regulators responded with aggressive enforcement, including historic data privacy fines and risk-based vulnerability disclosure mandates.",
+    "fr": "Le paysage des menaces de juin 2026 a mis en évidence des vulnérabilités systémiques au sein des défenses périmétriques, de la supply chain logicielle et de la gestion des identités. Des groupes d'espionnage étatique et des syndicats de rançongiciels ont exploité des failles zero-day majeures sur des passerelles d'accès et des logiciels d'administration (CVE-2026-35273, CVE-2026-24858, CVE-2026-50751) pour obtenir un accès initial. En parallèle, les compromissions de chaînes d'approvisionnement ont atteint une échelle industrielle, ciblant les développeurs via des paquets malveillants dans l'écosystème Mastra AI et des extensions WordPress compromises. Les techniques d'évasion défensive sont devenues plus agressives, avec l'utilisation de frameworks BYOVD (Bring Your Own Vulnerable Driver) pour neutraliser les EDR au niveau du noyau, et de pirates de session EvilTokens pour contourner la double authentification classique. Les régulateurs ont réagi par des sanctions historiques et des obligations de divulgation basées sur le risque réel."
   },
   "regulatory": {
     "analyse": {
-      "en": "Regulators during this period heavily pivoted from general guidelines to strict enforcement actions, with an emphasis on immediate disclosure transparency, supply chain dependency tracking, and digital sovereignty. This shift is highlighted by the US CISA's Binding Operational Directive 26-04, which mandates vulnerability remediation timelines based on real-world asset exposure and active exploitation rather than CVSS scores alone. Furthermore, European nations are accelerating transitions toward sovereign computing stacks (such as the DGSI's migration to ChapsVision Argonos) to mitigate the extraterritorial reach of foreign intelligence frameworks under the US Cloud Act and FISA 702.",
-      "fr": "Les régulateurs ont opéré un pivot décisif vers des mesures d'application strictes, mettant l'accent sur la transparence immédiate des divulgations d'incidents, le suivi des dépendances logicielles et la souveraineté numérique. Cette transition est illustrée par la directive opérationnelle BOD 26-04 de la CISA américaine, qui impose des délais de remédiation basés sur l'exposition réelle des actifs et leur exploitation active plutôt que sur le seul score CVSS. De plus, les nations européennes accélèrent leur transition vers des solutions technologiques souveraines (comme la migration de la DGSI vers ChapsVision Argonos) pour contrer la portée extraterritoriale de législations étrangères comme le Cloud Act et la section 702 de la FISA."
+      "en": "Regulatory frameworks globally are shifting toward strict enforcement and faster risk-based response timelines. CISA's Binding Operational Directive 26-04 marked a major policy evolution, abandoning rigid CVSS-only remediation windows in favor of risk-based prioritization linked to asset exposure and active exploitation. In parallel, judicial and financial enforcement intensified, as shown by South Korea's record PIPC fine against Coupang and swift guilty pleas in transatlantic trials against high-profile Scattered Spider members, underscoring that compliance failure and threat execution now carry immediate, severe financial and criminal consequences.",
+      "fr": "Les cadres réglementaires mondiaux évoluent vers une application stricte et des délais de réaction plus rapides basés sur le risque. La directive opérationnelle BOD 26-04 de la CISA marque une évolution politique majeure, abandonnant les délais rigides uniquement basés sur les scores CVSS au profit d'une priorisation fondée sur l'exposition réelle des actifs et leur exploitation active. En parallèle, l'application judiciaire et financière s'est intensifiée, comme en témoignent l'amende record de la PIPC sud-coréenne contre Coupang et les plaidoiries de culpabilité rapides lors de procès transatlantiques contre des membres de Scattered Spider, soulignant que les défauts de conformité et les cyberattaques entraînent désormais des sanctions financières et pénales immédiates."
     },
     "events": [
-      {
-        "title": {
-          "en": "Binding Operational Directive (BOD) 26-04",
-          "fr": "Directive Opérationnelle Contraignante (BOD) 26-04"
-        },
-        "issuing_body": "CISA",
-        "date": "2026-06-19",
-        "jurisdiction": {
-          "region": "US",
-          "countries": [
-            "US"
-          ]
-        },
-        "type": "Guidance",
-        "status": "Active",
-        "reference": "CISA BOD 26-04",
-        "affected_sectors": [
-          "Government_and_Defense"
-        ],
-        "description": {
-          "en": "Abrogates legacy directives BOD 19-02 and BOD 22-01 to establish a risk-based remediation timeline, forcing federal agencies to patch publicly exposed and actively exploited vulnerabilities within 3 days.",
-          "fr": "Abroge les anciennes directives BOD 19-02 et BOD 22-01 pour établir un calendrier de correction basé sur le risque réel, contraignant les agences à corriger sous 3 jours les failles exposées et activement exploitées."
-        },
-        "source_url": "https://www.guidepointsecurity.com/blog/bod-26-04-risk-based-prioritization-mandate/"
-      },
       {
         "title": {
           "en": "South Korea PIPA Record Fine against Coupang",
@@ -69,41 +44,66 @@
         },
         "type": "Fine",
         "status": "Active",
-        "reference": "South Korea PIPA Art. 75",
+        "reference": "South Korea PIPA Act",
         "affected_sectors": [
           "Retail_and_Consumer"
         ],
         "description": {
-          "en": "South Korea's PIPC issued a record-breaking $409 million fine against Coupang for severe failures in protecting customer privacy and database confidentiality, signaling strict enforcement of consumer data protection mandates.",
-          "fr": "La PIPC de Corée du Sud a infligé une amende historique de 409 millions de dollars à Coupang pour des manquements graves à la protection des données clients, signalant un durcissement drastique des sanctions."
+          "en": "The PIPC levied a historic $409 million fine against Coupang for critical failures in safeguarding customer databases, exposing massive amounts of personal customer telemetry. This signals that East Asian regulators will heavily penalize major tech firms for systematic data protection and access control failures.",
+          "fr": "La PIPC a infligé une amende historique de 409 millions de dollars à Coupang pour des manquements graves dans la sécurisation des bases de données clients, exposant de gros volumes de données personnelles. Cela indique que les régulateurs asiatiques sanctionneront lourdement les entreprises technologiques pour des failles d'accès."
         },
         "source_url": "https://databreaches.net/2026/06/13/south-korea-hands-coupang-a-record-breaking-409-million-data-privacy-fine/"
       },
       {
         "title": {
-          "en": "Sovereignty Transition: DGSI Replaces Palantir with ChapsVision Argonos",
-          "fr": "Transition de Souveraineté : La DGSI remplace Palantir par ChapsVision Argonos"
+          "en": "Binding Operational Directive (BOD) 26-04",
+          "fr": "Directive Opérationnelle Contraignante (BOD) 26-04"
         },
-        "issuing_body": "French domestic intelligence service (DGSI)",
-        "date": "2026-06-16",
+        "issuing_body": "CISA",
+        "date": "2026-06-19",
         "jurisdiction": {
-          "region": "France",
+          "region": "US",
           "countries": [
-            "FR"
+            "US"
           ]
         },
-        "type": "Enforcement_Action",
+        "type": "Guidance",
         "status": "Active",
-        "reference": "LPM Art. 34 / French National Sovereignty Directive",
+        "reference": "CISA BOD 26-04 Mandate",
         "affected_sectors": [
-          "Government_and_Defense",
-          "Security"
+          "Government_and_Defense"
         ],
         "description": {
-          "en": "The French domestic intelligence service announced the replacement of Palantir Technologies with the sovereign French platform Argonos by ChapsVision, aiming to remove operational dependencies on foreign technology providers subject to extraterritorial laws.",
-          "fr": "Le renseignement intérieur français a annoncé le remplacement de Palantir Technologies par la plateforme souveraine Argonos de ChapsVision, visant à éliminer la dépendance opérationnelle vis-à-vis d'éditeurs soumis à des lois extraterritorielles."
+          "en": "Abrogates legacy patching directives to establish a strict 3-day remediation window for vulnerabilities that are publicly exposed, automated, and actively exploited in the wild. This forces security teams to align patch management directly with continuous attack surface visibility.",
+          "fr": "Abroge les anciennes directives pour imposer un délai de correction strict de 3 jours pour les failles exposées publiquement, automatisables et exploitées activement. Cela contraint les équipes de sécurité à aligner la gestion des correctifs avec la visibilité de leur surface d'attaque."
         },
-        "source_url": "https://www.portail-ie.fr/univers/2026/chapsvision-choisi-par-la-dgsi-un-choix-souverain-important-pour-la-france/"
+        "source_url": "https://www.guidepointsecurity.com/blog/bod-26-04-risk-based-prioritization-mandate/"
+      },
+      {
+        "title": {
+          "en": "Scattered Spider TfL Trial Guilty Pleas",
+          "fr": "Plaidoiries de culpabilité du procès Scattered Spider TfL"
+        },
+        "issuing_body": "Woolwich Crown Court",
+        "date": "2026-06-23",
+        "jurisdiction": {
+          "region": "UK",
+          "countries": [
+            "GB",
+            "US"
+          ]
+        },
+        "type": "Court_Ruling",
+        "status": "Active",
+        "reference": "Woolwich Crown Court Case June 2026",
+        "affected_sectors": [
+          "Critical_Infrastructure"
+        ],
+        "description": {
+          "en": "Two prominent Scattered Spider members pleaded guilty to hacking Transport for London, resulting in approximately £39 million in damages. This milestone judgment highlights the growing effectiveness of joint international police action against ransomware actors.",
+          "fr": "Deux membres clés de Scattered Spider ont plaidé coupables pour le piratage de Transport for London, ayant causé environ 39 millions de livres sterling de dégâts. Ce jugement historique illustre l'efficacité renforcée de la coopération policière internationale contre le rançongiciel."
+        },
+        "source_url": "https://krebsonsecurity.com/2026/06/scattered-spider-hackers-plead-guilty-on-day-1-of-trial/"
       }
     ]
   },
@@ -115,18 +115,8 @@
           "fr": "Russie"
         },
         "geographic_zone_strategic_analyse": {
-          "en": "Russian state-sponsored actors maintain persistent cyber-espionage operations targeting European diplomats and Ukrainian military assets. Concurrently, highly sophisticated, financially motivated ransomware syndicates operating from safe-havens in Russia (e.g., Qilin, The Gentlemen, Prinz Eugen) have escalated double-extortion campaigns, deploying advanced EDR-evasion tools like local hypervisors and custom kernel drivers.",
-          "fr": "Les acteurs étatiques russes maintiennent des opérations d'espionnage persistantes ciblant la diplomatie européenne et les infrastructures ukrainiennes. En parallèle, les syndicats de rançongiciels opérant depuis des zones de refuge en Russie (ex. Qilin, The Gentlemen, Prinz Eugen) ont intensifié leurs campagnes de double extorsion en déployant des techniques d'évasion EDR avancées (hyperviseurs locaux, pilotes noyau)."
-        }
-      },
-      {
-        "geographic_zone_name": {
-          "en": "China",
-          "fr": "Chine"
-        },
-        "geographic_zone_strategic_analyse": {
-          "en": "China-linked threat actors (such as Velvet Ant and Volt Typhoon) focus on long-term pre-positioning and stealthy credential harvesting inside critical infrastructure and defense supply chains. Velvet Ant has demonstrated decade-long persistence using backdoored open-source modules, while transnational cybercrime networks are shifting geographic bases to South Asia to conduct high-tempo social engineering campaigns.",
-          "fr": "Les cyberadversaires affiliés à la Chine (comme Velvet Ant et Volt Typhoon) se concentrent sur le pré-positionnement à long terme et la collecte furtive d'identifiants au sein des infrastructures critiques et de la supply chain de défense. Velvet Ant a illustré une persistance de dix ans via des modules open-source modifiés, tandis que des syndicats criminels se délocalisent en Asie du Sud."
+          "en": "Russian-aligned actors and RaaS syndicates operate with a high degree of professionalization. While cybercriminals (The Gentlemen, Qilin, Prinz Eugen) execute high-impact double-extortion campaigns globally, state-sponsored groups deploy tailored phishing campaigns (APT29) and exploit legacy software flaws (CVE-2025-8088) to gather intelligence on European diplomatic entities and Ukrainian defense sectors.",
+          "fr": "Les acteurs étatiques et les syndicats RaaS alignés sur la Russie opèrent avec une grande professionnalisation. Tandis que les cybercriminels (The Gentlemen, Qilin, Prinz Eugen) mènent des campagnes de double extorsion à fort impact dans le monde, des groupes étatiques déploient du spearphishing (APT29) et exploitent des vulnérabilités historiques (CVE-2025-8088) pour espionner la diplomatie européenne et la défense ukrainienne."
         }
       },
       {
@@ -135,22 +125,68 @@
           "fr": "North Korea"
         },
         "geographic_zone_strategic_analyse": {
-          "en": "North Korean state-sponsored threat actors (such as Sapphire Sleet) have shifted towards highly automated software supply chain operations targeting developer environments. By compromising public repositories and developer packages, they capture cloud secrets, OIDC tokens, and cryptocurrency assets to bypass perimeter controls and fund military programs.",
-          "fr": "Les acteurs étatiques nord-coréens (comme Sapphire Sleet) se tournent massivement vers des attaques automatisées de la chaîne d'approvisionnement ciblant les développeurs. En compromettant des dépôts publics et des dépendances de code, ils dérobent des jetons cloud et des cryptomonnaies pour contourner les contrôles d'accès et financer le régime."
+          "en": "North Korean state-sponsored threat actors, particularly Sapphire Sleet, have pivoted heavily toward automated software supply chain operations. By targeting developer ecosystems (Mastra AI, public npm packages), these groups exfiltrate cloud credentials, access tokens, and cryptocurrency to fund state military programs and bypass traditional network perimeters.",
+          "fr": "Les acteurs étatiques nord-coréens, en particulier Sapphire Sleet, se sont fortement réorientés vers des opérations automatisées de compromission de la supply chain logicielle. En ciblant les développeurs (Mastra AI, paquets npm publics), ces groupes dérobent des identifiants cloud, des jetons d'accès et des cryptomonnaies pour financer les programmes militaires de l'État."
         }
       },
       {
         "geographic_zone_name": {
-          "en": "Iran",
-          "fr": "Iran"
+          "en": "China",
+          "fr": "Chine"
         },
         "geographic_zone_strategic_analyse": {
-          "en": "Iran-affiliated groups, acting under hacktivist personas like Handala, conduct destructive cyber-physical operations. Their campaigns target critical operational technology (OT) and municipal billing infrastructure in Western nations, using false claims of operational sabotage to amplify geopolitical messaging and generate panic.",
-          "fr": "Les groupes affiliés à l'Iran, agissant sous couvert d'hacktivistes comme Handala, mènent des opérations cyber-physiques destructrices. Leurs campagnes ciblent l'informatique industrielle (OT) et les infrastructures de facturation des services d'eau dans les pays occidentaux, exploitant de fausses revendications de sabotage physique pour amplifier la panique."
+          "en": "State-sponsored campaigns from China (Velvet Ant, Volt Typhoon, VerdantBamboo) focus on deep, persistent infrastructure access and stealthy pre-positioning. Velvet Ant demonstrated decades-long persistence in air-gapped networks using trojanized PAM/OpenSSH modules (Operation Highland), while Volt Typhoon continues active scanning of military and critical maritime logistics networks.",
+          "fr": "Les campagnes étatiques chinoises (Velvet Ant, Volt Typhoon, VerdantBamboo) se concentrent sur un accès persistant et discret aux infrastructures critiques d'importance vitale. Velvet Ant a fait preuve d'une persistance de dix ans sur des réseaux isolés via des modules PAM/OpenSSH modifiés (Operation Highland), tandis que Volt Typhoon poursuit l'analyse active des réseaux militaires et logistiques maritimes."
         }
       }
     ],
     "details": [
+      {
+        "threat_actor_name": "ShinyHunters",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Cybercriminal",
+          "fr": "Cybercriminal"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Education_and_Research",
+            "Healthcare_and_Life_Sciences",
+            "Retail_and_Consumer",
+            "Finance"
+          ],
+          "fr": [
+            "Education_and_Research",
+            "Healthcare_and_Life_Sciences",
+            "Retail_and_Consumer",
+            "Finance"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Global"
+          ],
+          "fr": [
+            "Global"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1190",
+          "T1566",
+          "T1078",
+          "T1567"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Oracle PeopleSoft Zero-Day Exploitation",
+            "CFGI and JCPenney Database Leaks"
+          ],
+          "fr": [
+            "Exploitation de la faille zero-day Oracle PeopleSoft",
+            "Fuites de bases de données de CFGI et JCPenney"
+          ]
+        }
+      },
       {
         "threat_actor_name": "Sapphire Sleet",
         "origin_country": "North Korea",
@@ -160,12 +196,12 @@
         },
         "targeted_sectors": {
           "en": [
-            "Finance",
-            "Technology_and_Telecom"
+            "Technology_and_Telecom",
+            "Finance"
           ],
           "fr": [
-            "Finance",
-            "Technology_and_Telecom"
+            "Technology_and_Telecom",
+            "Finance"
           ]
         },
         "targeted_regions": {
@@ -183,61 +219,10 @@
         ],
         "campaign_or_operation": {
           "en": [
-            "Mastra AI Supply Chain Attack"
+            "Mastra AI Supply Chain Poisoning"
           ],
           "fr": [
-            "Attaque de la chaîne d'approvisionnement Mastra AI"
-          ]
-        }
-      },
-      {
-        "threat_actor_name": "The Gentlemen",
-        "origin_country": "Russia",
-        "type": {
-          "en": "Ransomware",
-          "fr": "Ransomware"
-        },
-        "targeted_sectors": {
-          "en": [
-            "Critical_Infrastructure",
-            "Technology_and_Telecom",
-            "Finance",
-            "Healthcare_and_Life_Sciences",
-            "Industry_and_Manufacturing",
-            "Business_Services"
-          ],
-          "fr": [
-            "Critical_Infrastructure",
-            "Technology_and_Telecom",
-            "Finance",
-            "Healthcare_and_Life_Sciences",
-            "Industry_and_Manufacturing",
-            "Business_Services"
-          ]
-        },
-        "targeted_regions": {
-          "en": [
-            "North America",
-            "Europe"
-          ],
-          "fr": [
-            "Amérique du Nord",
-            "Europe"
-          ]
-        },
-        "mitre_attack_ttps_id": [
-          "T1068",
-          "T1562.001",
-          "T1486"
-        ],
-        "campaign_or_operation": {
-          "en": [
-            "GentleKiller EDR Evasion",
-            "Zeta88 Ransomware Operations"
-          ],
-          "fr": [
-            "Évasion EDR GentleKiller",
-            "Opérations du ransomware Zeta88"
+            "Empoisonnement de la chaîne d'approvisionnement Mastra AI"
           ]
         }
       },
@@ -261,13 +246,11 @@
         "targeted_regions": {
           "en": [
             "Global",
-            "North America",
-            "East Asia"
+            "North America"
           ],
           "fr": [
             "Global",
-            "Amérique du Nord",
-            "Asie de l'Est"
+            "Amérique du Nord"
           ]
         },
         "mitre_attack_ttps_id": [
@@ -285,103 +268,47 @@
         }
       },
       {
-        "threat_actor_name": "ShinyHunters",
-        "origin_country": "Unknown",
+        "threat_actor_name": "The Gentlemen",
+        "origin_country": "Russia",
         "type": {
-          "en": "Cybercriminal",
-          "fr": "Cybercriminal"
-        },
-        "targeted_sectors": {
-          "en": [
-            "Education_and_Research",
-            "Healthcare_and_Life_Sciences",
-            "Retail_and_Consumer",
-            "Finance",
-            "Government_and_Defense",
-            "Technology_and_Telecom"
-          ],
-          "fr": [
-            "Education_and_Research",
-            "Healthcare_and_Life_Sciences",
-            "Retail_and_Consumer",
-            "Finance",
-            "Government_and_Defense",
-            "Technology_and_Telecom"
-          ]
-        },
-        "targeted_regions": {
-          "en": [
-            "North America",
-            "Europe",
-            "Asia-Pacific"
-          ],
-          "fr": [
-            "Amérique du Nord",
-            "Europe",
-            "Asie-Pacifique"
-          ]
-        },
-        "mitre_attack_ttps_id": [
-          "T1190",
-          "T1566",
-          "T1021.004",
-          "T1486"
-        ],
-        "campaign_or_operation": {
-          "en": [
-            "Oracle PeopleSoft Zero-Day Exploitation",
-            "CFGI and JCPenney Database Extortion"
-          ],
-          "fr": [
-            "Exploitation du zero-day Oracle PeopleSoft",
-            "Extorsion des bases de données de CFGI et JCPenney"
-          ]
-        }
-      },
-      {
-        "threat_actor_name": "Scattered Spider",
-        "origin_country": "United States",
-        "type": {
-          "en": "Cybercriminal",
-          "fr": "Cybercriminal"
+          "en": "RaaS",
+          "fr": "RaaS"
         },
         "targeted_sectors": {
           "en": [
             "Critical_Infrastructure",
-            "Technology_and_Telecom",
-            "Retail_and_Consumer",
-            "Hospitality_and_Entertainment",
-            "Healthcare_and_Life_Sciences"
+            "Healthcare_and_Life_Sciences",
+            "Industry_and_Manufacturing",
+            "Business_Services"
           ],
           "fr": [
             "Critical_Infrastructure",
-            "Technology_and_Telecom",
-            "Retail_and_Consumer",
-            "Hospitality_and_Entertainment",
-            "Healthcare_and_Life_Sciences"
+            "Healthcare_and_Life_Sciences",
+            "Industry_and_Manufacturing",
+            "Business_Services"
           ]
         },
         "targeted_regions": {
           "en": [
-            "North America",
-            "Europe"
+            "Europe",
+            "North America"
           ],
           "fr": [
-            "Amérique du Nord",
-            "Europe"
+            "Europe",
+            "Amérique du Nord"
           ]
         },
         "mitre_attack_ttps_id": [
-          "T1566",
-          "T1078",
-          "T1486"
+          "T1486",
+          "T1562.001",
+          "T1068"
         ],
         "campaign_or_operation": {
           "en": [
-            "Transport for London Cyber-Attack"
+            "GentleKiller EDR Bypass Campaign"
           ],
           "fr": [
-            "Cyberattaque contre Transport for London"
+            "Campagne d'évasion EDR GentleKiller"
           ]
         }
       }
@@ -389,10 +316,28 @@
   },
   "mitre_attack_ttps": {
     "ttps_strategic_analyse": {
-      "en": "Adversaries during this period prioritized bypassing local endpoint security completely rather than attempting traditional network evasion. This was achieved via two distinct methodologies: compile-time software supply-chain compromises to inject malicious backdoors directly into authenticated developer repositories, and kernel-space defense evasion leveraging Bring Your Own Vulnerable Driver (BYOVD) frameworks or local nested virtual machines (BYOH) to blind active EDR systems.",
-      "fr": "Les cyberadversaires ont cette période privilégié le contournement complet de la sécurité de l'hôte plutôt que l'évasion réseau classique. Cela a été réalisé de deux manières : la compromission des chaînes d'approvisionnement logicielles lors de la compilation afin d'injecter des backdoors dans des dépôts d'authentification de confiance, et l'évasion de défense au niveau du noyau via des frameworks BYOVD ou de la virtualisation imbriquée locale (BYOH) pour aveugler les EDR."
+      "en": "Adversaries are actively shifting to identity-centric tactics and defense evasion directly within kernel and virtualization environments. Large-scale credential harvesting (FortiBleed) and session hijacking (EvilTokens) bypass traditional network perimeter controls entirely. Once inside, ransomware operators use highly specialized tools like BYOVD (Bring Your Own Vulnerable Driver) to disable endpoint monitoring processes in kernel space, ensuring complete, undetected execution of their payloads.",
+      "fr": "Les attaquants se tournent vers des tactiques centrées sur l'identité et l'évasion défensive directe au sein des noyaux de systèmes d'exploitation et des environnements de virtualisation. La collecte d'identifiants à grande échelle (FortiBleed) et le vol de session (EvilTokens) contournent les contrôles périmétriques. Une fois dans le réseau, les opérateurs de ransomware déploient des outils BYOVD pour couper les processus EDR dans l'espace noyau, assurant le chiffrement sans alerte."
     },
     "ttps_list": [
+      {
+        "id": "T1195.002",
+        "tactic": {
+          "en": "Initial Access",
+          "fr": "Accès Initial"
+        },
+        "technique_name": "Supply Chain Compromise: Compromise Software Dependencies",
+        "frequency": 4,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "Systematic poisoning of open-source libraries (Mastra AI, Arch Linux AUR, ShapedPlugin, Miasma) targeting developers to harvest cloud secrets and inject persistent backdoors."
+          ],
+          "fr": [
+            "Empoisonnement systématique de bibliothèques open-source (Mastra AI, Arch Linux AUR, ShapedPlugin, Miasma) visant les développeurs pour voler des secrets cloud et injecter des portes dérobées."
+          ]
+        }
+      },
       {
         "id": "T1190",
         "tactic": {
@@ -404,28 +349,28 @@
         "severity": "critical",
         "context": {
           "en": [
-            "Exploited via zero-day vulnerabilities in edge networking platforms and administrative dashboards, including PAN-OS GlobalProtect (CVE-2026-0257), Check Point VPN (CVE-2026-50751), and Oracle PeopleSoft (CVE-2026-35273)."
+            "Widespread exploit of edge network gateways and enterprise portals (Oracle PeopleSoft, Splunk, Check Point VPN, Fortinet FortiOS) to bypass external corporate network defenses."
           ],
           "fr": [
-            "Exploité via des vulnérabilités zero-day dans des passerelles réseau et des consoles d'administration, notamment PAN-OS GlobalProtect (CVE-2026-0257), Check Point VPN (CVE-2026-50751) et Oracle PeopleSoft (CVE-2026-35273)."
+            "Exploitation à grande échelle de passerelles réseau d'accès et de portails d'entreprise (Oracle PeopleSoft, Splunk, Check Point VPN, Fortinet FortiOS) pour contourner les défenses externes."
           ]
         }
       },
       {
-        "id": "T1195.002",
+        "id": "T1078",
         "tactic": {
-          "en": "Initial Access",
-          "fr": "Accès Initial"
+          "en": "Defense Evasion",
+          "fr": "Évasion de Défense"
         },
-        "technique_name": "Supply Chain Compromise: Compromise Software Dependencies",
-        "frequency": 3,
-        "severity": "critical",
+        "technique_name": "Valid Accounts",
+        "frequency": 2,
+        "severity": "high",
         "context": {
           "en": [
-            "Observed in structural poisoning campaigns targeting developer registries, including the Miasma worm in Azure-samples, over 400 Arch Linux AUR packages, and Sapphire Sleet hijacking Mastra AI modules."
+            "Abuse of compromised credentials and hijacked cloud session tokens (via EvilTokens or FortiBleed harvesting) to access OIDC/SaaS environments without triggering MFA."
           ],
           "fr": [
-            "Observé dans des campagnes d'empoisonnement de registres de développement, notamment le ver Miasma dans Azure-samples, plus de 400 paquets Arch Linux AUR et le détournement de modules Mastra AI par Sapphire Sleet."
+            "Abus de comptes d'administration et de jetons de session cloud volés (via EvilTokens ou FortiBleed) pour accéder aux environnements OIDC/SaaS sans déclencher de MFA."
           ]
         }
       },
@@ -440,82 +385,10 @@
         "severity": "critical",
         "context": {
           "en": [
-            "Weaponized by ransomware operators via local QEMU virtual machines on Windows hosts (BYOH) and the 'GentleKiller' BYOVD tool to force-terminate kernel-level endpoint detection agents."
+            "Weaponization of local virtualization (QEMU) and BYOVD tools (GentleKiller) by ransomware operators to force-terminate kernel-level endpoint protection agents."
           ],
           "fr": [
-            "Militarisé par les rançongiciels via des machines virtuelles locales QEMU sur hôtes Windows (BYOH) et l'outil BYOVD 'GentleKiller' pour forcer l'arrêt des agents de sécurité dans l'espace noyau."
-          ]
-        }
-      },
-      {
-        "id": "T1078",
-        "tactic": {
-          "en": "Defense Evasion",
-          "fr": "Évasion de Défense"
-        },
-        "technique_name": "Valid Accounts",
-        "frequency": 3,
-        "severity": "critical",
-        "context": {
-          "en": [
-            "Abused across multiple vectors, including the FortiBleed credential harvesting campaign (affecting 74,000 appliances) and the theft of OAuth/OIDC session tokens to pivot into cloud tenants."
-          ],
-          "fr": [
-            "Abusé sur plusieurs vecteurs, notamment la campagne de collecte d'identifiants FortiBleed (impactant 74 000 appliances) et le vol de jetons de session OAuth/OIDC pour rebondir sur les tenants cloud."
-          ]
-        }
-      },
-      {
-        "id": "T1566",
-        "tactic": {
-          "en": "Initial Access",
-          "fr": "Accès Initial"
-        },
-        "technique_name": "Phishing",
-        "frequency": 3,
-        "severity": "high",
-        "context": {
-          "en": [
-            "Leveraged via quishing (QR-code phishing utilizing legitimate Google forms), targeted helpdesk vishing campaigns by Scattered Spider, and AiTM proxy frameworks."
-          ],
-          "fr": [
-            "Exploité via du quishing (phishing par QR-code utilisant des formulaires Google légitimes), des campagnes de vishing ciblées de Scattered Spider et des serveurs mandataires d'AiTM."
-          ]
-        }
-      },
-      {
-        "id": "T1556",
-        "tactic": {
-          "en": "Credential Access",
-          "fr": "Accès aux Identifiants"
-        },
-        "technique_name": "Modify Authentication Process",
-        "frequency": 2,
-        "severity": "high",
-        "context": {
-          "en": [
-            "Utilized by state-sponsored actors like Velvet Ant to maintain decade-long persistence in isolated networks by trojanizing Linux PAM and OpenSSH modules."
-          ],
-          "fr": [
-            "Utilisé par des acteurs étatiques comme Velvet Ant pour maintenir une persistance de long terme dans les réseaux isolés en modifiant les modules Linux PAM et OpenSSH."
-          ]
-        }
-      },
-      {
-        "id": "T1486",
-        "tactic": {
-          "en": "Impact",
-          "fr": "Impact"
-        },
-        "technique_name": "Data Encrypted for Impact",
-        "frequency": 3,
-        "severity": "critical",
-        "context": {
-          "en": [
-            "Deployed across global sectors by prominent ransomware operations (including Qilin, LockBit, Nova, Prinz Eugen, and The Gentlemen) to force massive operational outages."
-          ],
-          "fr": [
-            "Déployé sur l'ensemble des secteurs mondiaux par des groupes de rançongiciels (dont Qilin, LockBit, Nova, Prinz Eugen et The Gentlemen) pour forcer des arrêts opérationnels."
+            "Militarisation de la virtualisation locale (QEMU) et d'outils BYOVD (GentleKiller) par des rançongiciels pour forcer l'arrêt des agents de sécurité système dans l'espace noyau."
           ]
         }
       }
@@ -523,56 +396,76 @@
   },
   "vulnerabilities": {
     "analyse": {
-      "en": "The vulnerability landscape this period was dominated by highly critical flaws in edge connectivity gateways and administrative backends. Active zero-day exploitation of Check Point VPN certificate validation flaws and PAN-OS GlobalProtect cookie forgery demonstrated that the boundary interface remains the highest leverage entry point for both ransomware operators and state-sponsored espionage actors.",
-      "fr": "Le paysage des vulnérabilités a été dominé par des failles hautement critiques dans les passerelles d'accès et les consoles d'administration. L'exploitation active en mode zero-day de failles d'authentification Check Point VPN et de falsification de cookies PAN-OS GlobalProtect confirme que la frontière réseau reste le point d'entrée privilégié des rançongiciels et de l'espionnage étatique."
+      "en": "The vulnerability landscape is dominated by critical edge gateway and core business portal exposures, with a high volume of CISA KEV listings this period. Zero-days in Oracle PeopleSoft EMHub, Check Point Remote Access VPNs, and FortiOS allow complete administrative bypass, serving as highly active entry points. Simultaneously, software supply chain flaws (ShapedPlugin, Uncanny Automator) represent a dangerous secondary vector, weaponizing legitimate application update mechanisms.",
+      "fr": "Le paysage des vulnérabilités est dominé par l'exposition de passerelles d'accès et de portails d'administration d'entreprise critiques, avec de nombreux ajouts au catalogue KEV de la CISA. Les failles zero-day dans Oracle PeopleSoft, Check Point VPN et FortiOS permettent un contournement d'authentification complet. En parallèle, les vulnérabilités de supply chain logicielle (ShapedPlugin, Uncanny Automator) constituent un vecteur secondaire dangereux."
     },
     "list": [
       {
-        "cve_id": "CVE-2026-0257",
-        "cvss_score": 9.8,
-        "epss_score": "N/A",
-        "cisa_kev": true,
-        "affected_product": "PAN-OS GlobalProtect",
-        "affected_product_vendor": "Palo Alto Networks",
-        "vulnerability_type": {
-          "en": [
-            "Authentication Bypass",
-            "Cookie Forgery"
-          ],
-          "fr": [
-            "Contournement d'authentification",
-            "Falsification de cookies"
-          ]
-        },
-        "vulnerability_description": {
-          "en": "Authentication bypass and session cookie forgery allowing unauthenticated remote attackers to gain full administrative control over VPN gateways.",
-          "fr": "Contournement d'authentification et falsification de cookies de session permettant à un attaquant distant d'obtenir un contrôle d'administration complet sur les passerelles VPN."
-        },
-        "mitre_attack_ttps_id": [
-          "T1133",
-          "T1556"
-        ]
-      },
-      {
         "cve_id": "CVE-2026-35273",
-        "cvss_score": 9.8,
+        "cvss_score": "9.8",
         "epss_score": "7.51%",
         "cisa_kev": true,
         "affected_product": "PeopleSoft Enterprise PeopleTools",
         "affected_product_vendor": "Oracle",
         "vulnerability_type": {
           "en": [
-            "Remote Code Execution (RCE)",
-            "Improper Access Control"
+            "Improper Access Control",
+            "Server-Side Request Forgery"
           ],
           "fr": [
-            "Exécution de code à distance (RCE)",
-            "Contrôle d'accès incorrect"
+            "Contrôle d'accès incorrect",
+            "Server-Side Request Forgery"
           ]
         },
         "vulnerability_description": {
-          "en": "A logical vulnerability in the EMHub/PSEMHUB administrative component allows unauthenticated network attackers to execute remote commands via HTTP and compromise host servers.",
-          "fr": "Une faille logique dans la console d'administration EMHub/PSEMHUB de PeopleSoft permet à des attaquants distants non authentifiés d'exécuter des commandes à distance via HTTP."
+          "en": "Logical bypass vulnerability in the EMHub/PSEMHUB component allowing remote unauthenticated attackers to hijack Oracle PeopleSoft portals. Heavily exploited by ShinyHunters.",
+          "fr": "Contournement logique dans le composant EMHub/PSEMHUB permettant à des attaquants distants de compromettre les portails Oracle PeopleSoft. Très exploité par ShinyHunters."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-24858",
+        "cvss_score": "9.4",
+        "epss_score": "85.84%",
+        "cisa_kev": true,
+        "affected_product": "FortiOS / FortiWeb / FortiNAC-F",
+        "affected_product_vendor": "Fortinet",
+        "vulnerability_type": {
+          "en": [
+            "CWE-288: Improper Authentication Bypass"
+          ],
+          "fr": [
+            "CWE-288 : Contournement d'authentification incorrect"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Critical authentication bypass and credential reuse in FortiWeb, FortiNAC-F, and FortiOS allowing remote administrative control.",
+          "fr": "Contournement d'authentification et réutilisation d'identifiants critiques dans FortiWeb, FortiNAC-F et FortiOS offrant un accès root."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-20253",
+        "cvss_score": "9.8",
+        "epss_score": "10.04%",
+        "cisa_kev": true,
+        "affected_product": "Splunk Enterprise",
+        "affected_product_vendor": "Splunk",
+        "vulnerability_type": {
+          "en": [
+            "CWE-306: Missing Authentication for Critical Function"
+          ],
+          "fr": [
+            "CWE-306 : Absence d'authentification pour une fonction critique"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Missing authentication in the PostgreSQL sidecar service in Splunk Enterprise allowing unauthenticated remote command execution.",
+          "fr": "Absence d'authentification dans le service PostgreSQL sidecar de Splunk Enterprise permettant l'exécution de code à distance."
         },
         "mitre_attack_ttps_id": [
           "T1190"
@@ -580,80 +473,49 @@
       },
       {
         "cve_id": "CVE-2026-50751",
-        "cvss_score": 9.3,
+        "cvss_score": "9.3",
         "epss_score": "N/A",
         "cisa_kev": true,
         "affected_product": "Check Point VPN (Remote Access/Mobile Access)",
         "affected_product_vendor": "Check Point",
         "vulnerability_type": {
           "en": [
-            "Authentication Bypass",
-            "Cryptographic Validation Failure"
+            "Authentication Bypass"
           ],
           "fr": [
-            "Contournement d'authentification",
-            "Défaut de validation cryptographique"
+            "Contournement d'authentification"
           ]
         },
         "vulnerability_description": {
-          "en": "Improper certificate validation during administrative IKEv1 negotiations, exploited actively in the wild by ransomware operators to establish persistence on enterprise perimeters.",
-          "fr": "Défaut de validation de certificat durant les phases de négociation IKEv1, exploité activement pour obtenir des accès VPN d'administration persistants."
+          "en": "Weak certificate validation during IKEv1 negotiations allowing administrative VPN session establishment. Exploited by Qilin ransomware affiliates.",
+          "fr": "Faiblesse de validation des certificats lors des négociations IKEv1 offrant un accès VPN d'administration. Exploité par des affiliés de Qilin."
         },
         "mitre_attack_ttps_id": [
           "T1133"
-        ]
-      },
-      {
-        "cve_id": "CVE-2026-20253",
-        "cvss_score": 9.8,
-        "epss_score": "10.04%",
-        "cisa_kev": true,
-        "affected_product": "Splunk Enterprise",
-        "affected_product_vendor": "Splunk",
-        "vulnerability_type": {
-          "en": [
-            "Missing Authentication for Critical Function"
-          ],
-          "fr": [
-            "Absence d'authentification pour une fonction critique"
-          ]
-        },
-        "vulnerability_description": {
-          "en": "Missing authentication in the PostgreSQL sidecar service in Splunk Enterprise allows unauthenticated remote code execution with elevated root privileges.",
-          "fr": "L'absence d'authentification dans le service PostgreSQL sidecar de Splunk Enterprise permet à un attaquant d'exécuter du code arbitraire avec les privilèges root."
-        },
-        "mitre_attack_ttps_id": [
-          "T1190"
-        ]
-      },
-      {
-        "cve_id": "CVE-2026-49777",
-        "cvss_score": 10.0,
-        "epss_score": "1.24%",
-        "cisa_kev": false,
-        "affected_product": "Product Slider Pro for WooCommerce",
-        "affected_product_vendor": "ShapedPlugin",
-        "vulnerability_type": {
-          "en": [
-            "Improper Input Validation",
-            "Command Injection"
-          ],
-          "fr": [
-            "Validation d'entrée incorrecte",
-            "Injection de commande"
-          ]
-        },
-        "vulnerability_description": {
-          "en": "Critical validation flaw in ShapedPlugin enabling full remote server takeover, database exfiltration, and persistent web shell injection via unauthenticated REST API commands.",
-          "fr": "Faille critique de validation dans ShapedPlugin permettant la prise de contrôle complète du serveur, l'exfiltration et l'injection de webshells via des commandes d'API REST."
-        },
-        "mitre_attack_ttps_id": [
-          "T1190"
         ]
       }
     ]
   },
   "data_breaches": [
+    {
+      "victim": "KDDI",
+      "sector": "Technology_and_Telecom",
+      "country": "Japan",
+      "records_count": 14200000,
+      "data_types": {
+        "en": [
+          "Email addresses",
+          "Passwords"
+        ],
+        "fr": [
+          "Adresses e-mail",
+          "Mots de passe"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://osintsights.com/kddi-breach-exposes-142-million-email-credentials"
+    },
     {
       "victim": "Conduent",
       "sector": "Healthcare_and_Life_Sciences",
@@ -663,12 +525,12 @@
         "en": [
           "Protected Health Information (PHI)",
           "Social Security Numbers (SSN)",
-          "Billing details"
+          "Billing records"
         ],
         "fr": [
-          "Dossiers médicaux cliniques",
-          "Numéros de sécurité sociale",
-          "Données de facturation médicale"
+          "Dossiers médicaux cliniques (PHI)",
+          "Numéros de sécurité sociale (SSN)",
+          "Données de facturation"
         ]
       },
       "threat_actor": null,
@@ -676,94 +538,50 @@
       "source_url": "https://www.healthcareinfosecurity.com/conduent-hack-victim-count-now-tops-622-million-a-31900"
     },
     {
-      "victim": "DentaQuest",
-      "sector": "Healthcare_and_Life_Sciences",
-      "country": "United States",
-      "records_count": 2600000,
-      "data_types": {
-        "en": [
-          "Personally Identifiable Information (PII)",
-          "Medicaid identifiers",
-          "Health records"
-        ],
-        "fr": [
-          "Noms et coordonnées",
-          "Identifiants de santé Medicaid",
-          "Dossiers médicaux"
-        ]
-      },
-      "threat_actor": "ShinyHunters",
-      "financial_impact_usd": null,
-      "source_url": "https://securityaffairs.com/193274/data-breach/dentaquest-breach-shinyhunters-publish-data-impacting-2-6m-people.html"
-    },
-    {
       "victim": "Texas Parks and Wildlife Department (TPWD)",
       "sector": "Government_and_Defense",
       "country": "United States",
-      "records_count": 3000000,
+      "records_count": 3087721,
       "data_types": {
         "en": [
           "Driver's license numbers",
           "Passport numbers",
-          "Postal addresses",
-          "Names"
+          "Names",
+          "Addresses"
         ],
         "fr": [
           "Numéros de permis de conduire",
           "Numéros de passeport",
           "Noms",
-          "Adresses postales"
+          "Adresses"
         ]
       },
       "threat_actor": null,
       "financial_impact_usd": null,
-      "source_url": "https://securityaffairs.com/194023/data-breach/texas-parks-wildlife-tpwd-data-breach-impacts-3-million-people.html"
+      "source_url": "https://www.bleepingcomputer.com/news/security/texas-govt-data-breach-exposes-over-3-million-drivers-licenses/"
     },
     {
-      "victim": "University of Nottingham",
-      "sector": "Education_and_Research",
-      "country": "United Kingdom",
-      "records_count": 454635,
-      "data_types": {
-        "en": [
-          "Passport numbers",
-          "Financial details",
-          "Academic profiles",
-          "Names"
-        ],
-        "fr": [
-          "Numéros de passeport",
-          "Détails financiers",
-          "Dossiers d'études",
-          "Noms"
-        ]
-      },
-      "threat_actor": "ShinyHunters",
-      "financial_impact_usd": null,
-      "source_url": "https://haveibeenpwned.com/Breach/UniversityOfNottingham"
-    },
-    {
-      "victim": "JCPenney",
-      "sector": "Retail_and_Consumer",
+      "victim": "Xsolis",
+      "sector": "Healthcare_and_Life_Sciences",
       "country": "United States",
-      "records_count": 368418,
+      "records_count": 1396519,
       "data_types": {
         "en": [
+          "Names",
           "Social Security Numbers (SSN)",
-          "Dates of birth",
-          "Corporate emails",
-          "Names"
+          "Health insurance cards",
+          "Medical history"
         ],
         "fr": [
-          "Numéros de sécurité sociale",
-          "Dates de naissance",
-          "Adresses e-mail professionnelles",
-          "Noms"
+          "Noms",
+          "Numéros de sécurité sociale (SSN)",
+          "Cartes d'assurance maladie",
+          "Historique médical"
         ]
       },
-      "threat_actor": "ShinyHunters",
+      "threat_actor": null,
       "financial_impact_usd": null,
-      "source_url": "https://haveibeenpwned.com/Breach/JCPenney"
+      "source_url": "https://securityaffairs.com/194067/cyber-crime/xsolis-data-breach-impacts-1-4-million-people.html"
     },
     {
       "victim": "Novo Nordisk",
@@ -772,14 +590,14 @@
       "records_count": null,
       "data_types": {
         "en": [
-          "Pharmaceutical R&D proprietary research",
-          "Clinical trial database records",
-          "Employee personally identifiable information"
+          "Pharmaceutical R&D details",
+          "Clinical trial profiles",
+          "Employee files"
         ],
         "fr": [
-          "Données de recherche R&D pharmaceutique",
-          "Bases de données d'essais cliniques",
-          "Données d'identité des salariés"
+          "Détails de R&D pharmaceutique",
+          "Données d'essais cliniques",
+          "Dossiers d'employés"
         ]
       },
       "threat_actor": "FulcrumSec",
@@ -787,75 +605,48 @@
       "source_url": "https://www.reuters.com/legal/government/hacking-group-claims-major-hack-novo-nordisk-attempted-25-million-extortion-2026-06-16/"
     },
     {
-      "victim": "Tata Electronics",
-      "sector": "Industry_and_Manufacturing",
-      "country": "India",
-      "records_count": null,
+      "victim": "University of Nottingham",
+      "sector": "Education_and_Research",
+      "country": "United Kingdom",
+      "records_count": 454635,
       "data_types": {
         "en": [
-          "Apple iPhone manufacturing specifications",
-          "Tesla trade secrets and blueprint drawings",
-          "Internal R&D files"
+          "Student details",
+          "Financial profiles",
+          "Health records"
         ],
         "fr": [
-          "Spécifications de fabrication de l'iPhone d'Apple",
-          "Secrets industriels et schémas techniques de Tesla",
-          "Fichiers internes de R&D"
-        ]
-      },
-      "threat_actor": "World Leaks",
-      "financial_impact_usd": null,
-      "source_url": "https://thecybersecguru.com/news/tata-electronics-confirms-cyberattack-as-world-leaks-posts-630gb-of-alleged-apple-and-tesla-trade-secrets/"
-    },
-    {
-      "victim": "CFGI",
-      "sector": "Finance",
-      "country": "United States",
-      "records_count": 248235,
-      "data_types": {
-        "en": [
-          "Financial advisory records",
-          "Email addresses",
-          "Names"
-        ],
-        "fr": [
-          "Dossiers de conseil financier",
-          "Adresses e-mail",
-          "Noms"
+          "Données d'étudiants",
+          "Profils financiers",
+          "Dossiers médicaux"
         ]
       },
       "threat_actor": "ShinyHunters",
       "financial_impact_usd": null,
-      "source_url": "https://haveibeenpwned.com/Breach/CFGI"
+      "source_url": "https://haveibeenpwned.com/Breach/UniversityOfNottingham"
     }
   ],
   "target": {
     "sectors": {
       "en": [
+        "Technology_and_Telecom",
+        "Healthcare_and_Life_Sciences",
+        "Industry_and_Manufacturing",
         "Critical_Infrastructure",
         "Government_and_Defense",
-        "Finance",
-        "Healthcare_and_Life_Sciences",
-        "Technology_and_Telecom",
-        "Industry_and_Manufacturing",
         "Retail_and_Consumer",
-        "Hospitality_and_Entertainment",
         "Education_and_Research",
-        "Business_Services",
-        "Security"
+        "Finance"
       ],
       "fr": [
+        "Technology_and_Telecom",
+        "Healthcare_and_Life_Sciences",
+        "Industry_and_Manufacturing",
         "Critical_Infrastructure",
         "Government_and_Defense",
-        "Finance",
-        "Healthcare_and_Life_Sciences",
-        "Technology_and_Telecom",
-        "Industry_and_Manufacturing",
         "Retail_and_Consumer",
-        "Hospitality_and_Entertainment",
         "Education_and_Research",
-        "Business_Services",
-        "Security"
+        "Finance"
       ]
     },
     "countries": {
@@ -863,122 +654,104 @@
         "United States",
         "United Kingdom",
         "France",
-        "South Korea",
-        "South Africa",
-        "Ukraine",
-        "Denmark",
-        "India",
         "Japan",
+        "South Korea",
+        "India",
+        "Denmark",
         "Brazil"
       ],
       "fr": [
         "États-Unis",
         "Royaume-Uni",
         "France",
-        "Corée du Sud",
-        "Afrique du Sud",
-        "Ukraine",
-        "Danemark",
-        "Inde",
         "Japon",
+        "Corée du Sud",
+        "Inde",
+        "Danemark",
         "Brésil"
       ]
     },
     "narrative": {
-      "en": "- **Healthcare & Life Sciences:** Conduent reported a massive exfiltration impacting 62.2 million patients with sensitive PHI; DentaQuest suffered a 2.6 million record leak published by ShinyHunters; Novo Nordisk faced a $25 million extortion attempt by FulcrumSec targeting over 1TB of proprietary pharmaceutical R&D data.\n- **Industry & Manufacturing:** Tata Electronics (India) suffered a major supply chain compromise leading to the leak of 630GB of Apple iPhone blueprints and Tesla trade secrets; Koa Glass (Japan) fell victim to 'The Gentlemen' ransomware, blocking manufacturing lines.\n- **Technology & Telecom:** Microsoft saw 73 Azure-Samples repositories compromised by the Miasma worm; SaaS provider Klue experienced LastPass vault exposures and OAuth token hijacking by the Icarus group; Sapphire Sleet hijacked 140+ Mastra AI packages.\n- **Government & Public Sector:** The Texas Parks and Wildlife Department (TPWD) suffered a breach exposing 3 million citizens' driver's licenses and passports; France's secure messaging app Tchap was breached, exposing 73,000 public agent accounts.\n- **Critical Infrastructure & Transports:** Transport for London (TfL) incurred £39 million in damages following a Scattered Spider helpdesk vishing exploit; California Water Service's IT billing systems were breached by Iranian hacktivist group Handala.\n- **Retail & Consumer:** Coupang in South Korea received a record $409 million data privacy fine due to systematic protection failures; JCPenney lost 368,418 current and former employee records to ShinyHunters.\n- **Finance & Professional Services:** CFGI financial advisory records (248,235 unique records) were compromised and published by ShinyHunters; multiple US legal and financial firms were targeted by UNC3753 with voice phishing campaigns.\n- **Education & Research:** The University of Nottingham was compromised via an Oracle PeopleSoft zero-day (CVE-2026-35273) leading to the exfiltration of 454,635 student records, while Global Schools Foundation lost 33,088 passport files.",
-      "fr": "- **Santé et Sciences de la vie :** Conduent a subi une violation de données massive exposant les dossiers médicaux de 62,2 millions de patients ; DentaQuest a enregistré une fuite de 2,6 millions de profils publiée par ShinyHunters ; Novo Nordisk a fait l'objet d'une tentative d'extorsion de 25 millions de dollars par FulcrumSec sur plus de 1 To de R&D propriétaire.\n- **Industrie et Secteur Manufacturier :** Tata Electronics (Inde) a été victime d'un piratage majeur de sa chaîne d'approvisionnement avec la fuite de 630 Go de secrets de fabrication d'Apple et de Tesla ; Koa Glass (Japon) a vu sa production paralysée par le rançongiciel 'The Gentlemen'.\n- **Technologie et Télécom :** Microsoft a vu 73 dépôts Azure-Samples compromis par le ver Miasma ; l'éditeur SaaS Klue a subi un vol de coffres LastPass et un détournement de jetons OAuth par le groupe Icarus ; Sapphire Sleet a compromis 140 paquets Mastra AI.\n- **Gouvernement et Secteur public :** Le Texas Parks and Wildlife Department (TPWD) a enregistré une fuite exposant les données d'identité de 3 millions de citoyens ; la messagerie sécurisée de l'État français Tchap a été piratée, compromettant 73 000 comptes d'agents publics.\n- **Infrastructures critiques et Transports :** Transport for London (TfL) a subi 39 millions de livres sterling de dommages à la suite d'une attaque par vishing de Scattered Spider ; California Water Service a été ciblé par le groupe iranien Handala.\n- **Distribution et Consommation :** Coupang en Corée du Sud a écopé d'une amende historique de 409 millions de dollars pour des failles de sécurité ; JCPenney a vu les dossiers de 368 418 employés actuels et anciens publiés par ShinyHunters.\n- **Finance et Services Professionnels :** Le cabinet CFGI a subi le vol et la publication de 248 235 dossiers de conseil financier par ShinyHunters ; plusieurs cabinets d'avocats américains ont été extorqués par le groupe UNC3753.\n- **Éducation et Recherche :** L'Université de Nottingham a été compromise via le zero-day Oracle PeopleSoft (CVE-2026-35273), entraînant l'exfiltration de 454 635 dossiers d'étudiants, tandis que la Global Schools Foundation a perdu 33 088 scans de passeports."
+      "en": "- **Healthcare & Life Sciences:** Novo Nordisk was extorted for 25 million USD by FulcrumSec, who exfiltrated 1 TB of critical pharmaceutical R&D, clinical trial records, and HR files, while Conduent leaked sensitive billing details of over 62 million patients.\n- **Technology & Cloud Services:** KDDI (Japan) suffered a major database leak exposing 14.2 million customer email credentials, and SaaS provider Klue experienced a dual compromise impacting LastPass vaults and active OAuth session tokens.\n- **Critical Infrastructure & Transports:** Transport for London (TfL) was severely disrupted by a Scattered Spider cyberattack, causing approximately £39 million (50 million USD) in system restoration costs and ticketing outages.\n- **Industry & Manufacturing:** Tata Electronics (India) was hit by World Leaks, which published 630 GB of intellectual property including confidential iPhone PCB designs and Tesla manufacturing blueprints.\n- **Government & Defense:** The Texas Parks and Wildlife Department (TPWD) suffered a massive vendor data leak exposing personal details and driver's licenses of over 3 million citizens, while Brazil's National Civil Defense alert network was hijacked.\n- **Education & Research:** The University of Nottingham was compromised by ShinyHunters via an Oracle PeopleSoft zero-day (CVE-2026-35273), exposing 454,635 student, financial, and clinical records.\n- **Finance & Banking:** Financial consulting firm CFGI suffered a database breach containing 248,235 unique records published on HaveIBeenPwned by ShinyHunters, and HDFC (India) faced major investor data exfiltration.\n- **Retail & Consumer:** Coupang (South Korea) received a historic $409 million privacy fine due to massive customer database access leaks, and ShapedPlugin Pro software updates distributed backdoors to 400,000 WooCommerce systems.",
+      "fr": "- **Santé et Sciences de la vie :** Novo Nordisk a subi une tentative d'extorsion de 25 millions USD par FulcrumSec après le vol de 1 To de R&D et d'essais cliniques, tandis que Conduent a exposé les données médicales et de facturation de 62 millions de patients.\n- **Technologie et Services Cloud :** KDDI (Japon) a été touché par la fuite de 14,2 millions d'identifiants de messagerie clients, et l'éditeur SaaS Klue a subi une compromission de jetons de session OAuth et de coffres LastPass.\n- **Infrastructures Critiques et Transports :** Transport for London (TfL) a fait face à un coût de remédiation et d'interruption opérationnelle de 39 millions de livres sterling suite à la cyberattaque menée par Scattered Spider.\n- **Industrie et Secteur Manufacturier :** Tata Electronics (Inde) a été victime du groupe World Leaks, qui a publié 630 Go de propriété intellectuelle sensible, incluant des schémas de PCB pour Apple et des plans de fabrication de Tesla.\n- **Gouvernement et Défense :** Le département TPWD au Texas a exposé les permis de conduire et les dossiers d'identité de plus de 3 millions de citoyens via un fournisseur, tandis que le réseau d'alerte de la Défense Civile brésilienne a été piraté.\n- **Éducation et Recherche :** L'Université de Nottingham a subi l'exfiltration de 454 635 dossiers d'étudiants par ShinyHunters à la suite de l'exploitation du zero-day Oracle PeopleSoft (CVE-2026-35273).\n- **Finance et Services Bancaires :** Le cabinet de conseil CFGI a été touché par une fuite de données de 248 235 enregistrements publiés par ShinyHunters, et la banque HDFC (Inde) a subi le vol de dossiers d'investisseurs d'envergure.\n- **Distribution et Consommation :** Coupang a écopé d'une amende historique de 409 millions de dollars de la part de la PIPC, et les extensions ShapedPlugin Pro ont été piratées pour installer des backdoors sur 400 000 sites d'e-commerce."
     }
   },
   "trends": {
     "emerging_techniques": {
       "en": [
-        "BYOVD (Bring Your Own Vulnerable Driver) weaponization (GentleKiller) to terminate EDR processes in kernel space.",
-        "Bring Your Own Hypervisor (BYOH) execution inside local nested QEMU virtual machines to blind host-based security controls.",
-        "Quishing (QR-code phishing) abusing official Google services to trigger automated mobile SMS generation.",
-        "Interactive hands-on-keyboard execution prioritizing encryption of recently modified files (Prinz Eugen) to maximize operational panic."
+        "SaaS Session Hijacking via Malicious Browser Extensions (EvilTokens)",
+        "Bring Your Own Hypervisor execution (BYOH) deploying Linux encryption daemons inside local QEMU virtual machines on Windows hosts",
+        "BYOVD (Bring Your Own Vulnerable Driver) kernel-level evasion frameworks (GentleKiller) to terminate security agents",
+        "Conditional SEO Cloaking hiding malicious web redirections and payment pages from automated crawlers",
+        "Physical mail phishing campaigns distributing localized fraudulent QR codes (Quishing)"
       ],
       "fr": [
-        "Militarisation du BYOVD (GentleKiller) pour tuer les processus d'agents de sécurité dans l'espace noyau.",
-        "Exécution Bring Your Own Hypervisor (BYOH) au sein de machines virtuelles locales QEMU pour contourner les contrôles de l'hôte.",
-        "Quishing (phishing par code QR) abusant des services officiels Google pour déclencher l'envoi automatisé de SMS.",
-        "Exécution interactive hands-on-keyboard priorisant le chiffrement des fichiers récemment modifiés (Prinz Eugen) pour maximiser la panique."
+        "Détournement de sessions SaaS via des extensions de navigateur malveillantes (EvilTokens)",
+        "Technique 'Bring Your Own Hypervisor' (BYOH) exécutant des chiffreurs Linux dans des machines virtuelles QEMU locales sous Windows",
+        "Frameworks d'évasion EDR par pilotes vulnérables (BYOVD - GentleKiller) opérant dans l'espace noyau",
+        "Cloaking SEO conditionnel masquant les redirections malveillantes aux crawlers automatisés de sécurité",
+        "Campagnes de phishing postal distribuant des codes QR contrefaits très ciblés (Quishing)"
       ]
     },
     "declining_techniques": {
       "en": [
-        "Traditional brute-force authentication attempts targeting web portals without leveraging helpdesk vishing or session token hijack.",
-        "SMS/TOTP multi-factor authentication without hardware verification, which is routinely bypassed by session hijacking.",
-        "Unobfuscated PowerShell download cradles on endpoints, which are easily blocked by modern EDR and AMSI integrations."
+        "SMS/TOTP-based Multi-Factor Authentication without hardware verification",
+        "Unobfuscated PowerShell command strings easily blocked by modern EDR/AMSI",
+        "Unstructured bulk email phishing campaigns without customization or AI tailoring"
       ],
       "fr": [
-        "Tentatives classiques d'authentification par brute-force sur portails web sans recours au vishing ou au vol de jetons de session.",
-        "Double authentification par SMS/TOTP sans clé matérielle de vérification, de plus en plus contournée par piratage de session.",
-        "Téléchargements PowerShell non obfusqués sur les postes de travail, facilement bloqués par l'AMSI et l'EDR."
+        "Authentification double facteur par SMS ou code d'application sans validation matérielle",
+        "Scripts PowerShell non obfusqués, désormais systématiquement bloqués par l'AMSI et l'EDR",
+        "Campagnes de phishing de masse non structurées et sans personnalisation préalable par IA"
       ]
     },
     "geopolitical_context": {
-      "en": "Strategic trade controls and technological sovereignty are driving nation-states to weaponize cyber capabilities. The US White House restricted export of Anthropic's vulnerability-detection models to prevent foreign adversaries from automating exploit generation. Concurrently, European intelligence services are aggressively replacing foreign data platforms with sovereign national alternatives to mitigate the extraterritorial reach of the US Cloud Act and FISA, while state-sponsored actors maintain high-pressure pre-positioning campaigns on Western critical utilities and defense supply chains.",
-      "fr": "Les contrôles d'exportation stratégiques et la souveraineté technologique poussent les États à militariser leurs capacités cyber. La Maison Blanche a restreint l'accès aux modèles d'IA d'analyse de failles d'Anthropic pour empêcher les adversaires d'automatiser la création d'exploits. En parallèle, les services de renseignement européens remplacent activement les plateformes de données étrangères par des solutions nationales souveraines pour contourner le Cloud Act américain, tandis que les acteurs étatiques intensifient leur pré-positionnement sur les infrastructures critiques occidentales."
+      "en": "Geopolitical friction is actively shaping security decisions. The French DGSI replaced US Palantir software with ChapsVision (Argonos) to bypass foreign surveillance frameworks (FISA 702/Cloud Act). At the same time, Estonia restructured its defense procurement to focus on rapid physical and cyber supply chain security under threat of Russian escalation. Meanwhile, US export controls on frontier AI safety models (Anthropic's Mythos) caused a freeze in global defense tool distribution, altering NATO allies' automated capabilities.",
+      "fr": "Les tensions géopolitiques dictent directement l'évolution des postures de sécurité. La DGSI française a remplacé le logiciel américain Palantir par la solution souveraine ChapsVision (Argonos) pour éviter les lois de surveillance extraterritoriales (FISA 702/Cloud Act). De son côté, l'Estonie a réorganisé ses cycles d'achat de défense pour accélérer la sécurisation de sa supply chain. En outre, les restrictions américaines sur l'exportation de modèles IA de sécurité (Mythos d'Anthropic) ont gelé la distribution d'outils automatiques d'analyse de failles au sein des alliés de l'OTAN."
     }
   },
   "recommendations": {
     "strategic": {
       "en": [
         {
-          "title": "Deploy Phishing-Resistant FIDO2 Hardware MFA",
-          "detail": "Traditional push or SMS-based MFA is systematically bypassed by advanced helpdesk social engineering (as seen with Scattered Spider targeting TfL) and automated session-hijacking frameworks. Organizations must transition all corporate identity providers (Entra ID, Okta) to FIDO2 WebAuthn hardware keys (such as YubiKey 5 series) for administrative, developer, and helpdesk accounts. Restrict MFA registration to managed devices only, eliminating unauthorized secondary MFA setups."
+          "title": "Transition to FIDO2 WebAuthn Hardware Keys",
+          "detail": "Standard SMS, email, and TOTP-based authentication methods are bypassed by modern session hijacking and cookie theft (such as the EvilTokens browser campaigns and Scattered Spider support-helpdesk compromises). Mandate and deploy FIDO2/WebAuthn hardware tokens (e.g., YubiKey 5 Series, Google Titan) for all developer, support administrator, and high-privilege administrative accounts. Ensure all OIDC/OAuth sessions are revoked during hardware deployment to remove active compromised tokens."
         },
         {
-          "title": "Enforce WDAC and Host Virtualization Controls",
-          "detail": "Ransomware operators and state-sponsored groups are actively utilizing local QEMU virtual machines (BYOH) and kernel-killing drivers (GentleKiller) to bypass host-based security controls. Deploy strict Windows Defender Application Control (WDAC) or AppLocker policies to block unauthorized virtualization binaries (such as qemu-system-x86_64.exe) on endpoints. Enable Hypervisor-Protected Code Integrity (HVCI) globally to prevent the loading of unsigned or known vulnerable drivers."
-        },
-        {
-          "title": "Govern SaaS Third-Party OAuth Integrations",
-          "detail": "Third-party platform compromises, such as the TinyPulse breach affecting Nintendo and the Klue OAuth token hijacking by Icarus, highlight critical supply chain vulnerabilities. Security teams must implement automated OAuth consent policies in Entra ID and Google Workspace, revoking unused integrations, restricting API scopes to the absolute minimum necessary, and performing continuous audits of tenant-to-tenant trust configurations."
+          "title": "Establish Comprehensive Third-Party Risk Management Frameworks",
+          "detail": "Recent platform breaches at ShapedPlugin, TinyPulse, and Xsolis highlight critical supply chain weaknesses. Implement a strict Third-Party Risk Management (TPRM) process requiring SOC 2 Type II or ISO 27001 certifications for any SaaS tool handling employee or customer data. Enforce contract clauses demanding incident notification within 24 hours and the capability to instantly revoke OAuth integrations and API keys."
         }
       ],
       "fr": [
         {
-          "title": "Imposer la MFA FIDO2 résistante au phishing",
-          "detail": "Les seconds facteurs par SMS ou push sont contournés par l'ingénierie sociale ciblant le helpdesk (comme observé avec Scattered Spider contre TfL) et les compromissions LastPass/Klue. Les organisations doivent migrer les fournisseurs d'identité d'entreprise (Entra ID, Okta) vers des clés matérielles FIDO2/WebAuthn (type YubiKey 5) pour les comptes administrateurs, développeurs et helpdesk. Restreignez l'enregistrement de MFA aux seuls terminaux managés."
+          "title": "Déployer des Clés Matérielles de Sécurité FIDO2",
+          "detail": "Les authentifications MFA classiques par SMS ou TOTP sont régulièrement contournées par le vol de session, comme l'ont montré les campagnes EvilTokens et les intrusions de Scattered Spider via support d'assistance. Déployez obligatoirement des clés de sécurité matérielles conformes à FIDO2 (telles que YubiKey 5 ou Google Titan) pour tous les comptes d'administration, d'assistance et de développement. Cela neutralise le risque de détournement de session et de vol de jetons OAuth."
         },
         {
-          "title": "Appliquer des règles WDAC et de virtualisation",
-          "detail": "Les rançongiciels et groupes étatiques exploitent des machines virtuelles QEMU locales (BYOH) et des pilotes de neutralisation noyau (GentleKiller) pour contourner la sécurité. Déployez des règles WDAC ou AppLocker strictes pour bloquer le lancement de binaires de virtualisation non autorisés (ex. qemu-system-x86_64.exe). Activez l'intégrité du code protégée par l'hyperviseur (HVCI) pour interdire le chargement de pilotes vulnérables."
-        },
-        {
-          "title": "Durcir la confiance SaaS et les privilèges API",
-          "detail": "Les compromissions de tiers, telles que TinyPulse pour Nintendo et le vol de jetons OAuth de Klue par Icarus, illustrent les vulnérabilités de la chaîne d'approvisionnement. Les équipes de sécurité doivent appliquer des politiques de consentement OAuth strictes dans Entra ID et Google Workspace, révoquer les intégrations inactives, restreindre les scopes d'API au strict minimum et auditer en continu les configurations de confiance inter-tenants."
+          "title": "Établir un Cadre Strict de Gestion du Risque Tiers",
+          "detail": "Les compromissions de tiers comme ShapedPlugin, TinyPulse et Xsolis soulignent des failles majeures dans la supply chain. Mettez en œuvre un processus strict de gestion du risque tiers (TPRM) exigeant des certifications SOC 2 Type II ou ISO 27001 pour tout outil SaaS hébergeant des données d'employés ou de clients, avec des clauses de notification d'incident sous 24h."
         }
       ]
     },
     "operational": {
       "en": [
         {
-          "title": "Patch Exposed Enterprise Edge Gateways Immediately",
-          "detail": "Active zero-day campaigns targeting administrative portals and VPN gateways require urgent patching. Prioritize and apply emergency updates for PAN-OS GlobalProtect (CVE-2026-0257), Check Point VPN (CVE-2026-50751), Oracle PeopleSoft (CVE-2026-35273), and Splunk Enterprise (CVE-2026-20253). For delayed patching, implement strict WAF blocking rules for administrative subdirectories like '/PSEMHUB/*' or isolate endpoints from external WAN routing."
+          "title": "Enable WHQL Vulnerable Driver Blocklists via GPO",
+          "detail": "EDR-killing frameworks like GentleKiller rely on the BYOVD (Bring Your Own Vulnerable Driver) technique to terminate security agents in kernel space. Enable Microsoft Recommended Driver Blocklist and Hypervisor-Protected Code Integrity (HVCI) via Group Policy. Monitor Sysmon Event ID 6 (Driver Loaded) for anomalous unsigned or known vulnerable kernel drivers."
         },
         {
-          "title": "Pin Build Dependencies to Static Commit SHAs",
-          "detail": "Supply chain compromises (such as Sapphire Sleet targeting Mastra AI and the Miasma worm) exploit unpinned public package registries to inject malicious code during build time. Force software development pipelines to pin dependencies to specific, immutable commit hashes (SHA-256) rather than mutable version tags in package.json/requirements.txt. Execute all npm installations with the '--ignore-scripts' command-line flag."
-        },
-        {
-          "title": "Audit Networks for Active AryStinger Botnet",
-          "detail": "The AryStinger botnet actively compromises legacy EoL edge routers and NAS devices using command injection and brute-force. Network administrators must scan internal and external segments using 'nmap -p 22,2332 --open' to identify rogue active services on port 2332. Immediately replace all hardware declared End-of-Life and disable remote WAN management access."
+          "title": "Apply Emergency Security Patches for FortiOS, Cisco, and Oracle",
+          "detail": "Actively exploited vulnerabilities such as Cisco Catalyst SD-WAN Path Traversal (CVE-2026-20262), Oracle PeopleSoft EMHub (CVE-2026-35273), and Fortinet Credential Reuse (CVE-2026-24858) pose critical threats to enterprise perimeters. Upgrade Cisco Catalyst SD-WAN Manager, Oracle EMHub, and FortiOS appliances immediately to the latest patched releases. Following the update, perform a full credential rotation of all admin accounts and audit firewall logs for anomalies."
         }
       ],
       "fr": [
         {
-          "title": "Corriger d'urgence les passerelles d'accès périmétriques",
-          "detail": "Les campagnes d'exploitation active des zero-days ciblant les VPN et consoles d'administration imposent des correctifs immédiats. Appliquez les mises à jour de PAN-OS GlobalProtect (CVE-2026-0257), Check Point VPN (CVE-2026-50751), Oracle PeopleSoft (CVE-2026-35273) et Splunk Enterprise (CVE-2026-20253). En cas d'impossibilité, bloquez l'accès aux URI comme '/PSEMHUB/*' via WAF ou restreignez les flux d'administration WAN."
+          "title": "Activer le Blocage des Pilotes Vulnérables via GPO",
+          "detail": "Les frameworks d'EDR-killing comme GentleKiller s'appuient sur la technique BYOVD pour arrêter les agents de sécurité dans l'espace noyau. Activez la liste de blocage des pilotes recommandée par Microsoft et l'intégrité du code protégée par hyperviseur (HVCI) via GPO. Surveillez l'Event ID 6 de Sysmon (Driver Loaded) pour repérer les pilotes anormaux."
         },
         {
-          "title": "Verrouiller les dépendances sur des commits SHA",
-          "detail": "Les compromissions de chaînes d'approvisionnement (Sapphire Sleet / Mastra AI) exploitent les versions flottantes pour injecter du code malveillant lors du build. Forcez les pipelines de développement à lier les dépendances à des hashs de commits SHA-256 spécifiques et immuables au lieu de tags de versions dans package.json. Exécutez systématiquement les installations npm avec l'option '--ignore-scripts'."
-        },
-        {
-          "title": "Détecter l'activité du botnet AryStinger sur le réseau",
-          "detail": "Le botnet AryStinger compromet les équipements réseau et NAS obsolètes (D-Link, Linksys, QNAP) via brute-force et injections. Les équipes doivent scanner les segments internes et externes avec 'nmap -p 22,2332 --open' pour repérer les services actifs suspects sur le port 2332. Remplacez immédiatement les matériels en fin de vie et désactivez l'administration WAN à distance."
+          "title": "Appliquer d'Urgence les Correctifs FortiOS, Cisco et Oracle",
+          "detail": "Les vulnérabilités activement exploitées telles que Cisco Catalyst SD-WAN Path Traversal (CVE-2026-20262), Oracle PeopleSoft (CVE-2026-35273) et Fortinet Credential Reuse (CVE-2026-24858) menacent les périmètres d'entreprise. Mettez à jour immédiatement les appliances vers les versions corrigées. Après application du patch, effectuez une rotation complète de tous les identifiants d'administration."
         }
       ]
     }
