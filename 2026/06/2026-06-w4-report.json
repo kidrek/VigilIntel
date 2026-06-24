@@ -1,58 +1,83 @@
 {
   "threat_level": {
-    "score": 3,
+    "score": 4,
     "label": {
-      "en": "High",
-      "fr": "Élevé"
+      "en": "Critical",
+      "fr": "Critique"
     },
     "justification": {
-      "en": "The threat landscape is characterized by critical zero-day supply-chain exploits (ShapedPlugin, WooCommerce), aggressive extortion campaigns targeting intellectual property (Tata Electronics, Novo Nordisk), and widespread automated compromises of legacy edge/NAS infrastructure via the AryStinger botnet.",
-      "fr": "L'état de la menace est marqué par des exploits critiques de type zero-day sur la chaîne d'approvisionnement (ShapedPlugin, WooCommerce), des campagnes d'extorsion agressives ciblant la propriété intellectuelle (Tata Electronics, Novo Nordisk) et des compromissions automatisées massives d'équipements réseau obsolètes via le botnet AryStinger."
+      "en": "Massive ransomware extortion waves (Novo Nordisk $25M ransom, TfL 39M GBP disruption), critical perimeter vulnerabilities actively exploited (Fortinet, Cisco Catalyst, Splunk), and highly sophisticated SaaS token compromises (EvilTokens, Klue, ShapedPlugin) represent a severe global threat level this week.",
+      "fr": "Des vagues massives d'extorsion par ransomware (Novo Nordisk 25M$, TfL 39M£), des vulnérabilités de périmètre critiques activement exploitées (Fortinet, Cisco Catalyst, Splunk) et des compromissions sophistiquées de jetons SaaS (EvilTokens, Klue, ShapedPlugin) représentent un niveau de menace mondial particulièrement élevé."
     },
     "_triggers": [
-      "+4 — 2 CVE(s) CISA KEV",
-      "+2 — 2 CVE(s) CVSS ≥ 9.0",
-      "+1 — 1 opérateur(s) ransomware",
+      "+8 — 4 CVE(s) CISA KEV",
+      "+4 — 4 CVE(s) CVSS ≥ 9.0",
       "+1 — ≥ 3 acteurs distincts actifs",
-      "+1 — 1 breach(es) ≥ 100k enregistrements",
+      "+2 — 2 breach(es) ≥ 100k enregistrements",
       "+2 — secteurs critiques ciblés : Critical_Infrastructure, Government_and_Defense"
     ]
   },
   "executive_summary": {
-    "en": "This week's intelligence reveals a sophisticated shift towards supply-chain exploitation, trust-relationship abuse, and high-value corporate extortion. Major events include the compromise of Tata Electronics, leading to the leak of 630 GB of Apple and Tesla trade secrets, and a $25M extortion attempt against Novo Nordisk by FulcrumSec. On the infrastructure side, the AryStinger botnet continues to mass-compromise legacy edge routers and NAS systems. Critical vulnerabilities in widely deployed plugins, such as ShapedPlugin for WooCommerce (CVE-2026-49777, CVSS 10.0), are being actively exploited in the wild to establish persistence via backdoors, prompting urgent defensive actions.",
-    "fr": "Cette semaine met en évidence un glissement stratégique vers l'exploitation de la chaîne d'approvisionnement, l'abus des relations de confiance et l'extorsion d'entreprises à forte valeur. Les événements majeurs incluent la compromission de Tata Electronics, entraînant la fuite de 630 Go de secrets industriels Apple et Tesla, ainsi qu'une tentative d'extorsion de 25 millions de dollars contre Novo Nordisk par FulcrumSec. Côté infrastructures, le botnet AryStinger poursuit ses compromissions de masse de routeurs et NAS obsolètes. Des vulnérabilités critiques dans des plugins très répandus, comme ShapedPlugin pour WooCommerce (CVE-2026-49777, CVSS 10.0), sont activement exploitées pour établir des accès persistants, exigeant des mesures défensives urgentes."
+    "en": "Week 4 of June 2026 was marked by an intense escalation in high-severity threats across the global landscape. Organizations faced massive extortion attempts, notably a 25 million USD ransom demand against Novo Nordisk by FulcrumSec and the leak of 630 GB of intellectual property from Tata Electronics, affecting Apple and Tesla designs. At the same time, threat actors leveraged advanced identity-theft techniques like EvilTokens to steal SaaS sessions, and bypassed email filters using physical QR codes (Lausanne) and SEO-cloaking redirect techniques. Furthermore, active exploitation of major edge infrastructure (Cisco, Fortinet) highlights an urgent need for swift vulnerability remediation and zero-trust identity architectures.",
+    "fr": "La semaine 4 de juin 2026 a été marquée par une intensification spectaculaire des menaces de haute sévérité au niveau mondial. Les organisations ont fait face à des tentatives d'extorsion massives, notamment une demande de rançon de 25 millions USD ciblant Novo Nordisk par FulcrumSec et la fuite de 630 Go de propriété intellectuelle chez Tata Electronics affectant Apple et Tesla. Parallèlement, les attaquants ont utilisé des techniques avancées d'usurpation d'identité comme EvilTokens pour dérober des sessions SaaS, tout en contournant les filtres d'emails classiques via des codes QR physiques (Lausanne) et du cloaking SEO. L'exploitation active d'infrastructures de périmètre critiques (Cisco, Fortinet) impose des remédiations d'urgence et une architecture d'identité Zero Trust."
   },
   "regulatory": {
     "analyse": {
-      "en": "Regulatory compliance is increasingly driven by digital sovereignty, cloud extraterritoriality concerns (spurred by the US Cloud Act and FISA 702), and strict third-party risk management mandates. This is illustrated by major European intelligence agencies migrating away from foreign platforms (e.g., France's DGSI replacing Palantir with ChapsVision Argonos) to retain national control over mass data exploitation systems.",
-      "fr": "La conformité réglementaire est de plus en plus dictée par la souveraineté numérique, les préoccupations d'extraterritorialité du cloud (alimentées par le Cloud Act américain et FISA 702) et des mandats stricts de gestion du risque tiers. Cela est illustré par la migration des services de renseignement européens hors des plateformes étrangères (ex: la DGSI remplaçant Palantir par ChapsVision Argonos) afin de conserver le contrôle national sur les systèmes d'exploitation de données de masse."
+      "en": "The regulatory landscape is characterized by major judicial milestones and growing compliance pressures on healthcare SaaS providers. Prompt guilty pleas in the TfL Scattered Spider trial highlight a strengthening transatlantic law enforcement response against financially motivated threat actors. In parallel, large-scale breaches at healthtech provider Xsolis trigger stringent HIPAA compliance procedures, raising awareness around third-party vendor risks. In Europe, civil society groups are strongly mobilizing against any potential watering down of digital privacy protections (GDPR, DSA, DMA) under the guise of simplification, indicating a strict future compliance environment.",
+      "fr": "Le paysage réglementaire est caractérisé par des avancées judiciaires majeures et une pression accrue sur la conformité des sous-traitants SaaS de santé. Les plaidoiries de culpabilité rapides dans le procès TfL contre Scattered Spider soulignent le renforcement de la réponse policière transatlantique contre les cybercriminels. En parallèle, les violations massives chez le fournisseur Xsolis déclenchent des obligations strictes sous HIPAA, rappelant le risque posé par la supply chain de santé. En Europe, la société civile se mobilise fortement contre tout affaiblissement des règles de protection (RGPD, DSA, DMA) sous prétexte de simplification."
     },
     "events": [
       {
         "title": {
-          "en": "Sovereignty Transition: DGSI Replaces Palantir with ChapsVision Argonos",
-          "fr": "Transition de Souveraineté : La DGSI remplace Palantir par ChapsVision Argonos"
+          "en": "Scattered Spider TfL Trial Guilty Pleas",
+          "fr": "Plaidoiries de culpabilité du procès Scattered Spider TfL"
         },
-        "issuing_body": "French Ministry of Armed Forces / DGSI",
-        "date": "2026-06-16",
+        "issuing_body": "Woolwich Crown Court",
+        "date": "2026-06-23",
         "jurisdiction": {
-          "region": "France",
+          "region": "UK",
           "countries": [
-            "FR"
+            "GB",
+            "US"
+          ]
+        },
+        "type": "Court_Ruling",
+        "status": "Active",
+        "reference": "Woolwich Crown Court Case June 2026",
+        "affected_sectors": [
+          "Critical_Infrastructure",
+          "Healthcare_and_Life_Sciences"
+        ],
+        "description": {
+          "en": "Two members of the Scattered Spider cybercrime group pleaded guilty to hacking Transport for London, causing approximately 39 million GBP in damages, alongside US healthcare network intrusions. Sentences are scheduled for July 2026.",
+          "fr": "Deux membres du groupe cybercriminel Scattered Spider ont plaidé coupables du piratage de Transport for London, causant environ 39 millions de GBP de dommages, ainsi que d'intrusions dans des réseaux de santé américains. Les peines seront prononcées en juillet 2026."
+        },
+        "source_url": "https://krebsonsecurity.com/2026/06/scattered-spider-hackers-plead-guilty-on-day-1-of-trial/"
+      },
+      {
+        "title": {
+          "en": "Xsolis Data Breach Notification under HIPAA",
+          "fr": "Notification de violation de données Xsolis sous HIPAA"
+        },
+        "issuing_body": "U.S. Department of Health and Human Services (HHS)",
+        "date": "2026-06-23",
+        "jurisdiction": {
+          "region": "US",
+          "countries": [
+            "US"
           ]
         },
         "type": "Enforcement_Action",
         "status": "Active",
-        "reference": "LPM Art. 34, French National Security Sovereignty Directive",
+        "reference": "HIPAA Breach Notification Rule",
         "affected_sectors": [
-          "Government_and_Defense",
-          "Security"
+          "Healthcare_and_Life_Sciences"
         ],
         "description": {
-          "en": "In a major strategic shift accelerated by debates on foreign data access under the US Cloud Act and FISA Section 702, the French domestic intelligence service (DGSI) announced the progressive replacement of Palantir Technologies with the sovereign French big-data platform Argonos by ChapsVision. This decision sets a precedent for government and defense entities in Europe to eliminate operational dependency on extraterritorial technology providers.",
-          "fr": "Dans un tournant stratégique majeur accéléré par les débats sur l'accès aux données par des puissances étrangères sous le Cloud Act et la section 702 de la FISA, le renseignement intérieur français (DGSI) a annoncé le remplacement de Palantir Technologies par la plateforme souveraine d'analyse de données Argonos de ChapsVision. Cette décision crée un précédent pour les entités étatiques et de défense en Europe visant à éliminer la dépendance opérationnelle vis-à-vis de fournisseurs soumis à des droits extraterritoriaux."
+          "en": "Xsolis officially reported a massive data breach affecting 1.39 million patients due to a targeted phishing attack. This triggers strict federal regulatory oversight and notification mandates under HIPAA.",
+          "fr": "Xsolis a officiellement notifié une violation de données massive affectant 1,39 million de patients suite à un phishing ciblé. Cela déclenche une surveillance réglementaire fédérale stricte et des obligations de notification sous HIPAA."
         },
-        "source_url": "https://www.portail-ie.fr/univers/2026/chapsvision-choisi-par-la-dgsi-un-choix-souverain-important-pour-la-france/"
+        "source_url": "https://www.bleepingcomputer.com/news/security/healthtech-firm-xolis-suffers-data-breach-impacting-14-million-people/"
       }
     ]
   },
@@ -64,53 +89,53 @@
           "fr": "Russie"
         },
         "geographic_zone_strategic_analyse": {
-          "en": "Russian-aligned actors and highly opportunistic ransomware syndicates continue to target key European and US Western infrastructure, emphasizing high-dollar financial extortion, critical infrastructure disruption, and espionage through trust networks.",
-          "fr": "Les acteurs alignés sur la Russie et les syndicats de ransomwares opportunistes continuent de cibler les infrastructures clés européennes et américaines, en mettant l'accent sur l'extorsion financière à grande échelle, la perturbation des infrastructures critiques et l'espionnage via des réseaux de confiance."
+          "en": "Russian state-sponsored and cybercriminal actors continue aggressive intelligence gathering and influence operations, targeting Ukraine's future integration within the European Union (EEAS FIMI report) and leveraging legacy exploits like WinRAR (CVE-2025-8088) to gain persistent access within administrative and critical infrastructure networks.",
+          "fr": "Les acteurs étatiques et cybercriminels russes poursuivent leurs campagnes d'espionnage et d'influence, ciblant l'intégration européenne de l'Ukraine (rapport FIMI du SEAE) et exploitant des vulnérabilités historiques comme WinRAR (CVE-2025-8088) pour s'infiltrer durablement dans les infrastructures critiques."
         }
       },
       {
         "geographic_zone_name": {
-          "en": "China",
-          "fr": "Chine"
+          "en": "Other",
+          "fr": "Autre"
         },
         "geographic_zone_strategic_analyse": {
-          "en": "China-linked syndicates continue to shift geographical hubs, establishing massive cyber-scam and pig-butchering operations in South Asian nations like Sri Lanka to target Western consumers and enterprises under the cover of vulnerable tourism sectors.",
-          "fr": "Les réseaux liés à la Chine continuent de diversifier leurs hubs géographiques, établissant de vastes opérations de cyber-escroquerie et de pig-butchering dans des pays d'Asie du Sud comme le Sri Lanka, ciblant les particuliers et entreprises occidentaux sous couvert de secteurs touristiques vulnérables."
+          "en": "Globally distributed cybercriminal networks are diversifying into low-friction jurisdictions. Sri Lanka has emerged as a major new hub for pig-butchering operations running from local hotels and targeting European and American victims. In Europe, Switzerland faces highly localized threats with physical mail phishing campaigns distributing fraudulent QR codes to Lausanne residents.",
+          "fr": "Les réseaux cybercriminels mondiaux se diversifient vers des juridictions à faible friction. Le Sri Lanka s'impose comme un nouveau hub majeur pour des arnaques au 'pig-butchering' opérées depuis des hôtels locaux ciblant des victimes européennes et américaines. En Europe, la Suisse subit des menaces locales par l'envoi de courriers postaux piégés par QR code à Lausanne."
         }
       }
     ],
     "details": [
       {
         "threat_actor_name": "Scattered Spider",
-        "origin_country": "US",
+        "origin_country": "Multi-national",
         "type": {
           "en": "Cybercriminal",
-          "fr": "Cybercriminel"
+          "fr": "Cybercriminal"
         },
         "targeted_sectors": {
           "en": [
-            "Critical_Infrastructure",
             "Technology_and_Telecom",
             "Retail_and_Consumer",
             "Hospitality_and_Entertainment",
-            "Healthcare_and_Life_Sciences"
+            "Healthcare_and_Life_Sciences",
+            "Critical_Infrastructure"
           ],
           "fr": [
-            "Critical_Infrastructure",
             "Technology_and_Telecom",
             "Retail_and_Consumer",
             "Hospitality_and_Entertainment",
-            "Healthcare_and_Life_Sciences"
+            "Healthcare_and_Life_Sciences",
+            "Critical_Infrastructure"
           ]
         },
         "targeted_regions": {
           "en": [
-            "North America",
-            "Europe"
+            "United Kingdom",
+            "United States"
           ],
           "fr": [
-            "Amérique du Nord",
-            "Europe"
+            "Royaume-Uni",
+            "États-Unis"
           ]
         },
         "mitre_attack_ttps_id": [
@@ -120,52 +145,12 @@
         ],
         "campaign_or_operation": {
           "en": [
-            "Transport for London Cyber-Attack"
+            "Transport for London Cyberattack",
+            "US Healthcare Intrusions"
           ],
           "fr": [
-            "Cyberattaque contre Transport for London"
-          ]
-        }
-      },
-      {
-        "threat_actor_name": "World Leaks",
-        "origin_country": "Unknown",
-        "type": {
-          "en": "Cybercriminal",
-          "fr": "Cybercriminel"
-        },
-        "targeted_sectors": {
-          "en": [
-            "Industry_and_Manufacturing",
-            "Technology_and_Telecom"
-          ],
-          "fr": [
-            "Industry_and_Manufacturing",
-            "Technology_and_Telecom"
-          ]
-        },
-        "targeted_regions": {
-          "en": [
-            "Asia",
-            "North America"
-          ],
-          "fr": [
-            "Asie",
-            "Amérique du Nord"
-          ]
-        },
-        "mitre_attack_ttps_id": [
-          "T1566",
-          "T1078",
-          "T1041",
-          "T1657"
-        ],
-        "campaign_or_operation": {
-          "en": [
-            "Tata Electronics Trade Secrets Extortion"
-          ],
-          "fr": [
-            "Extorsion des secrets commerciaux de Tata Electronics"
+            "Cyberattaque de Transport for London",
+            "Intrusions dans le secteur de la santé aux États-Unis"
           ]
         }
       },
@@ -173,8 +158,8 @@
         "threat_actor_name": "FulcrumSec",
         "origin_country": "Unknown",
         "type": {
-          "en": "Ransomware",
-          "fr": "Ransomware"
+          "en": "Cybercriminal",
+          "fr": "Cybercriminal"
         },
         "targeted_sectors": {
           "en": [
@@ -186,11 +171,9 @@
         },
         "targeted_regions": {
           "en": [
-            "Europe",
             "Global"
           ],
           "fr": [
-            "Europe",
             "Global"
           ]
         },
@@ -202,10 +185,50 @@
         ],
         "campaign_or_operation": {
           "en": [
-            "Novo Nordisk $25M Clinical Research Extortion"
+            "Novo Nordisk 25 Million Extortion"
           ],
           "fr": [
-            "Extorsion de Novo Nordisk de 25M$ sur la recherche clinique"
+            "Extorsion de 25 millions de dollars contre Novo Nordisk"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "World Leaks",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Cybercriminal",
+          "fr": "Cybercriminal"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Technology_and_Telecom",
+            "Industry_and_Manufacturing"
+          ],
+          "fr": [
+            "Technology_and_Telecom",
+            "Industry_and_Manufacturing"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "India"
+          ],
+          "fr": [
+            "Inde"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1566",
+          "T1078",
+          "T1041",
+          "T1657"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Tata Electronics Intellectual Property Extortion"
+          ],
+          "fr": [
+            "Extorsion de propriété intellectuelle contre Tata Electronics"
           ]
         }
       }
@@ -213,27 +236,73 @@
   },
   "mitre_attack_ttps": {
     "ttps_strategic_analyse": {
-      "en": "Threat actors are demonstrating a strong preference for out-of-band social engineering (vishing helpdesks, quishing via mobile QR codes) and trust subversion (abusing OAuth tokens and compromising centralized password vaults). Once inside, attackers leverage robust, multi-architecture payloads in Go and C (AryStinger) or native C2 channels disguised as gaming protocols (Counter Strike UDP streams) to evade legacy Deep Packet Inspection (DPI) web filtering.",
-      "fr": "Les cyberadversaires affichent une nette préférence pour l'ingénierie sociale hors canal (vishing de helpdesk, quishing par codes QR mobiles) et la subversion des relations de confiance (abus de jetons OAuth, compromission de coffres LastPass). Une fois infiltrés, les attaquants s'appuient sur des charges utiles multi-architectures robustes en Go et C (AryStinger) ou des canaux C2 détournant des protocoles de jeux (flux UDP de Counter Strike) pour contourner le filtrage web DPI traditionnel."
+      "en": "Attack methodologies this week show a notable shift towards identity-centric operations, trust relationship abuse, and sophisticated evasion techniques. Classic network boundaries are bypassed through direct session hijacking via malicious browser extensions (EvilTokens) and session-token theft. In addition, attackers are exploiting trusted software update chains (ShapedPlugin) to execute backdoors. Social engineering techniques have evolved with highly localized physical vectors, such as QR-code letters in Switzerland, and conditional SEO redirection (cloaking) to hide malicious payment sites from automated crawlers.",
+      "fr": "Les méthodologies d'attaque montrent une évolution vers la compromission d'identité, l'abus de relations de confiance et des techniques d'évasion sophistiquées. Les frontières réseau classiques sont contournées par le vol direct de sessions via des extensions malveillantes (EvilTokens). De plus, les attaquants compromettent les chaînes de mise à jour logicielles de confiance (ShapedPlugin) pour déployer des backdoors. L'ingénierie sociale évolue vers des vecteurs physiques très ciblés, comme l'envoi postal de codes QR en Suisse, ou l'utilisation de redirections SEO conditionnelles (cloaking) pour masquer les sites malveillants."
     },
     "ttps_list": [
       {
-        "id": "T1046",
+        "id": "T1566",
         "tactic": {
-          "en": "Discovery",
-          "fr": "Découverte"
+          "en": "Initial Access",
+          "fr": "Accès Initial"
         },
-        "technique_name": "Network Service Discovery",
-        "frequency": 2,
-        "severity": "medium",
+        "technique_name": "Phishing",
+        "frequency": 3,
+        "severity": "critical",
         "context": {
           "en": [
-            "Used extensively by the AryStinger botnet and active SSH honeypot scanners to discover open management ports on SOHO routers and NAS units.",
-            "Utilisé intensivement par le botnet AryStinger et les scanners SSH pour découvrir les ports de gestion ouverts sur les routeurs SOHO et NAS."
+            "Used to deliver malicious QR codes physically in Lausanne and digitally via Google service redirects.",
+            "Utilized by Scattered Spider to target healthcare enterprise personnel.",
+            "Primary compromise vector for Xsolis resulting in 1.39M patients compromised."
           ],
           "fr": [
-            "Utilisé de manière intensive par le botnet AryStinger et les scanners de pots de miel SSH pour découvrir les ports d'administration ouverts sur les routeurs SOHO et NAS.",
-            "Utilisé par les attaquants pour cartographier les services exposés dès l'accès initial."
+            "Utilisé pour distribuer des codes QR malveillants par courrier physique à Lausanne et via des redirections Google.",
+            "Exploité par Scattered Spider pour cibler les employés des réseaux de santé.",
+            "Vecteur principal de compromission pour Xsolis, affectant 1,39M de patients."
+          ]
+        }
+      },
+      {
+        "id": "T1190",
+        "tactic": {
+          "en": "Initial Access",
+          "fr": "Accès Initial"
+        },
+        "technique_name": "Exploit Public-Facing Application",
+        "frequency": 2,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "Observed in active scans against unpatched AWS configurations containing 55 open CVEs.",
+            "Exploited to infect D-Link legacy routers and CMS systems.",
+            "Leveraged through critical exploits in Joomla JCE and Cisco Catalyst SD-WAN."
+          ],
+          "fr": [
+            "Observé lors de scans actifs d'infrastructures AWS présentant 55 vulnérabilités non corrigées.",
+            "Exploité pour infecter les routeurs D-Link obsolètes et les plateformes CMS.",
+            "Utilisé via l'exploitation de failles critiques dans Joomla JCE et Cisco Catalyst SD-WAN."
+          ]
+        }
+      },
+      {
+        "id": "T1078",
+        "tactic": {
+          "en": "Defense Evasion",
+          "fr": "Évasion de Défense"
+        },
+        "technique_name": "Valid Accounts",
+        "frequency": 2,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Scattered Spider leveraged compromised helpdesk credentials to bypass MFA protocols.",
+            "Used by insiders in Hakodate to log into administrative endpoints.",
+            "Exploited to access Exchange Online environments and corporate SaaS folders."
+          ],
+          "fr": [
+            "Scattered Spider a utilisé des comptes d'assistance compromis pour contourner la MFA.",
+            "Utilisé en interne à Hakodate pour se connecter de manière illicite à des postes administratifs.",
+            "Exploité pour accéder à des environnements Exchange Online et des espaces SaaS d'entreprise."
           ]
         }
       },
@@ -245,35 +314,35 @@
         },
         "technique_name": "Ingress Tool Transfer",
         "frequency": 2,
-        "severity": "high",
+        "severity": "medium",
         "context": {
           "en": [
-            "Observed in ZypeerShell's GSocket-based deployment and in Counter-Strike engine C2 redirection schemes to fetch malicious payloads.",
-            "Observé dans le déploiement GSocket de ZypeerShell et les redirections de serveurs de jeu Counter-Strike pour télécharger des binaires malveillants."
+            "Abused in gaming engine protocols (Counter-Strike) to stealthily download malicious payloads.",
+            "Utilized by ZypeerShell to execute curl-to-bash operations deploying GSocket binary agents."
           ],
           "fr": [
-            "Observé dans le déploiement de ZypeerShell s'appuyant sur GSocket et dans les redirections C2 de Counter-Strike pour importer des charges utiles.",
-            "Exploitation de canaux de téléchargement non conventionnels (UDP, GSocket) pour contourner les proxys de sécurité."
+            "Détourné dans des protocoles de jeux (Counter-Strike) pour télécharger discrètement des charges utiles.",
+            "Utilisé par ZypeerShell pour exécuter des scripts de déploiement d'agents binaires GSocket."
           ]
         }
       },
       {
-        "id": "T1566",
+        "id": "T1071.001",
         "tactic": {
-          "en": "Initial Access",
-          "fr": "Accès Initial"
+          "en": "Command and Control",
+          "fr": "Commande et Contrôle"
         },
-        "technique_name": "Phishing",
+        "technique_name": "Application Layer Protocol: Web Protocols",
         "frequency": 2,
         "severity": "high",
         "context": {
           "en": [
-            "Leveraged through Google-themed QR codes (quishing) to force SMS dispatch and helpdesk social engineering (vishing) by Scattered Spider.",
-            "Exploité via des codes QR maquillés aux couleurs de Google (quishing) pour forcer des envois de SMS, et l'ingénierie sociale helpdesk par Scattered Spider."
+            "Leveraged by EvilTokens browser extensions to exfiltrate active session tokens to external web locations.",
+            "Used as the default communication channel for GSocket-deployed ZypeerShell webshells."
           ],
           "fr": [
-            "Exploité via des codes QR abusant des services Google (quishing) pour forcer l'envoi de SMS et via l'ingénierie sociale par vishing de Scattered Spider.",
-            "Le phishing moderne contourne les filtres email en utilisant des supports visuels (QR codes) ou des attaques hors bande (téléphonie)."
+            "Exploité par l'extension EvilTokens pour exfiltrer des jetons de session vers des serveurs externes.",
+            "Utilisé comme protocole de communication par défaut pour les webshells ZypeerShell via GSocket."
           ]
         }
       }
@@ -281,30 +350,28 @@
   },
   "vulnerabilities": {
     "analyse": {
-      "en": "Vulnerability management was dominated by severe zero-days and critical flaws in web-facing applications, specifically content management system add-ons (WooCommerce ShapedPlugin CVSS 10.0) and network management appliances (Cisco Catalyst SD-WAN Manager, Splunk Enterprise). Attackers are quickly mobilizing public PoCs to turn unpatched, exposed internet services into persistence points or botnet relays.",
-      "fr": "La gestion des vulnérabilités a été dominée par de graves zero-days et failles critiques dans les applications web exposées, en particulier des extensions de CMS (WooCommerce ShapedPlugin CVSS 10.0) et des équipements de gestion réseau (Cisco Catalyst SD-WAN Manager, Splunk Enterprise). Les attaquants mobilisent rapidement des PoC publics pour transformer les services non corrigés en points de persistance ou en relais de botnets."
+      "en": "The vulnerability landscape this week shows intense pressure on network perimeters and software supply chains. Active exploitation of edge technologies like Cisco Catalyst SD-WAN (CVE-2026-20262) and FortiOS (CVE-2026-24858) threatens entire corporate networks. Concurrently, supply chain compromise of trusted developer portals (such as ShapedPlugin, affecting over 400,000 WordPress sites under CVE-2026-10735) demonstrates a systemic vulnerability where trusted updates deliver active backdoors. Legacy CVEs in Joomla JCE and WinRAR are heavily exploited by threat groups to establish easy beachheads.",
+      "fr": "Le paysage des vulnérabilités montre une forte pression sur les périmètres réseau et la chaîne d'approvisionnement logicielle. L'exploitation active d'équipements de périphérie comme Cisco Catalyst SD-WAN (CVE-2026-20262) et FortiOS (CVE-2026-24858) menace des réseaux d'entreprise entiers. Parallèlement, la compromission de la supply chain de développeurs de confiance (telle que ShapedPlugin, affectant 400 000 sites WordPress sous la CVE-2026-10735) montre une faille systémique où les mises à jour légitimes servent de backdoors. L'exploitation de failles historiques dans Joomla JCE et WinRAR reste élevée."
     },
     "list": [
       {
-        "cve_id": "CVE-2026-49777",
-        "cvss_score": 10.0,
-        "epss_score": "1.24%",
-        "cisa_kev": false,
-        "affected_product": "Product Slider Pro for WooCommerce",
-        "affected_product_vendor": "ShapedPlugin",
+        "cve_id": "CVE-2026-24858",
+        "cvss_score": "9.4",
+        "epss_score": "85.84%",
+        "cisa_kev": true,
+        "affected_product": "FortiOS / FortiWeb / FortiNAC-F",
+        "affected_product_vendor": "Fortinet",
         "vulnerability_type": {
           "en": [
-            "Improper Input Validation",
-            "Command Injection"
+            "CWE-288: Improper access control"
           ],
           "fr": [
-            "Validation d'entrée incorrecte",
-            "Injection de commande"
+            "CWE-288 : Contrôle d'accès incorrect"
           ]
         },
         "vulnerability_description": {
-          "en": "A critical vulnerability affecting Product Slider Pro for WooCommerce enables full remote site compromise, database and credential theft (SMTP, WordPress salts), and persistent backdoor installation via unauthorized custom REST API commands.",
-          "fr": "Une vulnérabilité critique affectant Product Slider Pro pour WooCommerce permet le compromis total de sites distants, le vol de base de données et d'identifiants (SMTP, clés WP) et l'installation d'une persistance via des commandes d'API REST non autorisées."
+          "en": "Critical authentication bypass and credential reuse in FortiWeb, FortiNAC-F, and FortiOS. It allows remote attackers to obtain full administrator control, facilitating internal network pivot.",
+          "fr": "Contournement d'authentification et réutilisation d'identifiants critiques dans FortiWeb, FortiNAC-F et FortiOS, permettant à un attaquant distant d'obtenir un contrôle administrateur complet et de pivoter sur le réseau."
         },
         "mitre_attack_ttps_id": [
           "T1190"
@@ -312,22 +379,22 @@
       },
       {
         "cve_id": "CVE-2026-20262",
-        "cvss_score": 6.5,
+        "cvss_score": "6.5",
         "epss_score": "1.15%",
         "cisa_kev": true,
         "affected_product": "Catalyst SD-WAN Manager",
         "affected_product_vendor": "Cisco",
         "vulnerability_type": {
           "en": [
-            "Path Traversal"
+            "CWE-22: Path Traversal"
           ],
           "fr": [
-            "Traversée de chemin"
+            "CWE-22 : Traversée de chemin"
           ]
         },
         "vulnerability_description": {
-          "en": "Improper limitation of a pathname to a restricted directory allows remote attackers to overwrite critical system files, leading to root privilege escalation and full control over the SD-WAN orchestration plane.",
-          "fr": "Une limitation incorrecte du chemin d'accès à un répertoire restreint permet à des attaquants distants d'écraser des fichiers système critiques, conduisant à une élévation de privilèges root et au contrôle complet de l'orchestration SD-WAN."
+          "en": "Improper limitation of a pathname to a restricted directory in Cisco Catalyst SD-WAN Manager. It allows authenticated, remote attackers to write arbitrary files to the system, leading to privilege escalation.",
+          "fr": "Limitation incorrecte d'un chemin d'accès dans Cisco Catalyst SD-WAN Manager. Permet à un attaquant distant authentifié d'écrire des fichiers système arbitraires pour élever ses privilèges root."
         },
         "mitre_attack_ttps_id": [
           "T1190"
@@ -335,22 +402,71 @@
       },
       {
         "cve_id": "CVE-2026-20253",
-        "cvss_score": 9.8,
+        "cvss_score": "9.8",
         "epss_score": "10.04%",
         "cisa_kev": true,
         "affected_product": "Splunk Enterprise",
         "affected_product_vendor": "Splunk",
         "vulnerability_type": {
           "en": [
-            "Missing Authentication"
+            "CWE-306: Missing Authentication"
           ],
           "fr": [
-            "Absence d'authentification"
+            "CWE-306 : Absence d'authentification pour une fonction critique"
           ]
         },
         "vulnerability_description": {
-          "en": "A missing authentication check for critical functionality enables unauthenticated remote code execution on affected Splunk Enterprise instances, exposing sensitive log configurations and credentials.",
-          "fr": "L'absence de vérification d'authentification pour une fonctionnalité critique permet l'exécution de code à distance non authentifiée sur les instances Splunk Enterprise affectées, exposant des configurations de logs et identifiants sensibles."
+          "en": "Missing authentication for critical functionality in Splunk Enterprise. Allows unauthenticated remote attackers to execute arbitrary code or access sensitive log indexing configurations.",
+          "fr": "Absence d'authentification pour une fonctionnalité critique dans Splunk Enterprise. Permet à un attaquant distant non authentifié d'exécuter du code arbitraire ou d'accéder aux configurations d'indexation de logs."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-10735",
+        "cvss_score": "9.8",
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "ShapedPlugin Pro Plugins",
+        "affected_product_vendor": "ShapedPlugin",
+        "vulnerability_type": {
+          "en": [
+            "Supply Chain Compromise",
+            "Improper Input Validation"
+          ],
+          "fr": [
+            "Compromission de la Supply Chain",
+            "Validation d'entrée incorrecte"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Supply chain compromise of ShapedPlugin developer updates delivering backdoors to major WooCommerce and WordPress Pro extensions, stealing admin credentials and SMTP secrets.",
+          "fr": "Compromission de la chaîne d'approvisionnement des mises à jour de ShapedPlugin, introduisant des backdoors dans les extensions WordPress Pro, volant les identifiants d'administration et les secrets SMTP."
+        },
+        "mitre_attack_ttps_id": [
+          "T1195.002",
+          "T1505.003"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-48907",
+        "cvss_score": "10.0",
+        "epss_score": "80.42%",
+        "cisa_kev": true,
+        "affected_product": "Joomla Content Editor (JCE)",
+        "affected_product_vendor": "Joomla",
+        "vulnerability_type": {
+          "en": [
+            "CWE-284: Improper Access Control"
+          ],
+          "fr": [
+            "CWE-284 : Contrôle d'accès inapproprié"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Improper access control in Joomla Content Editor (JCE) allows remote attackers to execute arbitrary code, compromising thousands of Joomla web environments.",
+          "fr": "Contrôle d'accès incorrect dans Joomla Content Editor (JCE) permettant à un attaquant distant d'exécuter du code arbitraire et de compromettre des milliers de sites Joomla."
         },
         "mitre_attack_ttps_id": [
           "T1190"
@@ -360,20 +476,43 @@
   },
   "data_breaches": [
     {
+      "victim": "Tata Electronics",
+      "sector": "Industry_and_Manufacturing",
+      "country": "India",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "PCB designs",
+          "iPhone component blueprints",
+          "Tesla trade secrets",
+          "Manufacturing specifications"
+        ],
+        "fr": [
+          "Designs de PCB",
+          "Schémas de composants d'iPhone",
+          "Secrets industriels Tesla",
+          "Spécifications de fabrication"
+        ]
+      },
+      "threat_actor": "World Leaks",
+      "financial_impact_usd": null,
+      "source_url": "https://www.bleepingcomputer.com/news/security/tata-electronics-confirms-cyberattack-as-hackers-leak-data/"
+    },
+    {
       "victim": "Novo Nordisk",
       "sector": "Healthcare_and_Life_Sciences",
       "country": "Denmark",
       "records_count": null,
       "data_types": {
         "en": [
-          "Pharmaceutical R&D proprietary research",
-          "Clinical trial database records",
-          "Employee personally identifiable information"
+          "Pharmaceutical research",
+          "Clinical trial results",
+          "Employee records"
         ],
         "fr": [
-          "Recherche R&D pharmaceutique propriétaire",
-          "Données de bases d'essais cliniques",
-          "Données personnelles d'employés"
+          "Recherche pharmaceutique",
+          "Résultats d'essais cliniques",
+          "Dossiers d'employés"
         ]
       },
       "threat_actor": "FulcrumSec",
@@ -381,166 +520,170 @@
       "source_url": "https://www.reuters.com/legal/government/hacking-group-claims-major-hack-novo-nordisk-attempted-25-million-extortion-2026-06-16/"
     },
     {
-      "victim": "Tata Electronics",
-      "sector": "Industry_and_Manufacturing",
-      "country": "India",
-      "records_count": null,
+      "victim": "Xsolis",
+      "sector": "Healthcare_and_Life_Sciences",
+      "country": "United States",
+      "records_count": 1396519,
       "data_types": {
         "en": [
-          "Apple iPhone manufacturing specifications",
-          "Tesla trade secrets and blueprint drawings",
-          "Internal R&D files"
+          "Names and addresses",
+          "Social Security Numbers",
+          "Health insurance info",
+          "Medical treatment records"
         ],
         "fr": [
-          "Spécifications de fabrication de l'iPhone d'Apple",
-          "Secrets industriels et schémas techniques de Tesla",
-          "Fichiers internes de R&D"
+          "Noms et adresses",
+          "Numéros de sécurité sociale",
+          "Informations d'assurance maladie",
+          "Dossiers de traitement médical"
         ]
       },
-      "threat_actor": "World Leaks",
+      "threat_actor": null,
       "financial_impact_usd": null,
-      "source_url": "https://thecybersecguru.com/news/tata-electronics-confirms-cyberattack-as-world-leaks-posts-630gb-of-alleged-apple-and-tesla-trade-secrets/"
+      "source_url": "https://securityaffairs.com/194067/cyber-crime/xsolis-data-breach-impacts-1-4-million-people.html"
     },
     {
-      "victim": "Texas Parks and Wildlife Department (TPWD)",
-      "sector": "Government_and_Defense",
-      "country": "United States",
-      "records_count": 3000000,
+      "victim": "KDDI",
+      "sector": "Technology_and_Telecom",
+      "country": "Japan",
+      "records_count": 14200000,
       "data_types": {
         "en": [
           "Email addresses",
-          "Home postal addresses",
-          "Phone numbers",
-          "Driver's license numbers",
-          "Passport numbers"
+          "Associated passwords"
         ],
         "fr": [
           "Adresses e-mail",
-          "Adresses postales",
-          "Numéros de téléphone",
-          "Numéros de permis de conduire",
-          "Numéros de passeport"
+          "Mots de passe associés"
         ]
       },
-      "threat_actor": "Unknown",
+      "threat_actor": null,
       "financial_impact_usd": null,
-      "source_url": "https://securityaffairs.com/194023/data-breach/texas-parks-wildlife-tpwd-data-breach-impacts-3-million-people.html"
+      "source_url": "https://osintsights.com/kddi-breach-exposes-142-million-email-credentials"
     }
   ],
   "target": {
     "sectors": {
       "en": [
+        "Technology_and_Telecom",
+        "Healthcare_and_Life_Sciences",
+        "Industry_and_Manufacturing",
         "Critical_Infrastructure",
         "Government_and_Defense",
-        "Healthcare_and_Life_Sciences",
-        "Technology_and_Telecom",
-        "Industry_and_Manufacturing",
         "Retail_and_Consumer"
       ],
       "fr": [
+        "Technology_and_Telecom",
+        "Healthcare_and_Life_Sciences",
+        "Industry_and_Manufacturing",
         "Critical_Infrastructure",
         "Government_and_Defense",
-        "Healthcare_and_Life_Sciences",
-        "Technology_and_Telecom",
-        "Industry_and_Manufacturing",
         "Retail_and_Consumer"
       ]
     },
     "countries": {
       "en": [
         "United States",
+        "United Kingdom",
         "France",
+        "Switzerland",
+        "Japan",
         "Brazil",
         "India",
-        "United Kingdom",
-        "Japan"
+        "Denmark"
       ],
       "fr": [
         "États-Unis",
+        "Royaume-Uni",
         "France",
+        "Suisse",
+        "Japon",
         "Brésil",
         "Inde",
-        "Royaume-Uni",
-        "Japon"
+        "Danemark"
       ]
     },
     "narrative": {
-      "en": "- **Healthcare & Life Sciences**: Novo Nordisk was targeted by the extortion group FulcrumSec, demanding a massive $25,000,000 ransom after allegedly exfiltrating over 1 Terabyte of proprietary pharmaceutical research, clinical trials, and employee files.\n- **Industry & Manufacturing**: Tata Electronics (India) suffered a major supply chain compromise where extortion gang World Leaks published 630 Gigabytes of data containing confidential Apple iPhone specifications and Tesla trade secrets.\n- **Critical Infrastructure & Transports**: Transport for London (TfL) incurred £39,000,000 in direct remediation and operational damages following a Scattered Spider social engineering/vishing attack.\n- **Government & Public Sector**: The Texas Parks and Wildlife Department (TPWD) suffered a major data breach exposing the personal information, driver's licenses, and passports of over 3,000,000 individuals.\n- **Government & Emergency Services**: Brazil's national Civil Defense emergency alert network was compromised and disabled in an attempt to sabotage regional and national public broadcasting alert capabilities.\n- **Government & Municipalities**: The Hakodate Municipality in Japan suffered an insider threat incident where a municipal worker illicitly abused a colleague's workstation credentials to steal personal citizen data.\n- **Retail & Consumer (Gaming)**: Nintendo of America suffered a supply chain breach via their third-party HR survey platform TinyPulse (a WebMD subsidiary), resulting in the leak of internal employee survey responses.\n- **Technology & Telecom**: SaaS provider Klue experienced a multi-staged breach involving LastPass vault exposures and OAuth token hijacking by the Icarus hacker group, compromising downstream customer integrations.",
-      "fr": "- **Santé et Sciences de la vie** : Novo Nordisk a été ciblé par le groupe d'extorsion FulcrumSec, exigeant une rançon massive de 25 000 000 $ après l'exfiltration d'un Terabyte de recherche pharmaceutique propriétaire, d'essais cliniques et de dossiers RH.\n- **Industrie et Fabrication** : Tata Electronics (Inde) a subi une compromission d'envergure de sa chaîne d'approvisionnement, le groupe d'extorsion World Leaks ayant publié 630 Gigabytes de données contenant des spécifications d'iPhone d'Apple et des secrets industriels de Tesla.\n- **Infrastructures critiques et Transports** : Transport for London (TfL) a subi 39 000 000 de livres sterling de dommages opérationnels et de reconstruction suite à une attaque par vishing de Scattered Spider.\n- **Gouvernement et Secteur public** : Le Texas Parks and Wildlife Department (TPWD) a enregistré une violation de données massive exposant les adresses, numéros de permis de conduire et de passeport de plus de 3 000 000 de citoyens.\n- **Gouvernement et Secours** : Le réseau d'alerte d'urgence de la Défense Civile brésilienne a été piraté et paralysé afin de saboter les capacités de diffusion d'alertes publiques.\n- **Gouvernement et Collectivités** : La municipalité de Hakodate au Japon a subi une menace interne majeure, un agent ayant usurpé les accès d'un collègue sur son poste de travail pour voler des données personnelles.\n- **Commerce et Grand Public (Jeux Vidéo)** : Nintendo of America a subi une fuite de données de sa chaîne d'approvisionnement via son prestataire RH TinyPulse (filiale de WebMD), exposant des réponses d'enquêtes de salariés.\n- **Technologie et Télécom** : L'éditeur SaaS Klue a été touché par une attaque en cascade combinant des vols de coffres LastPass et des détournements de jetons OAuth revendiqués par le groupe de hackers Icarus."
+      "en": "- **Healthcare & Life Sciences:** Novo Nordisk was targeted by extortion group FulcrumSec, who stole over 1 TB of pharmaceutical R&D, clinical trial records, and HR files, demanding a ransom of 25 million USD; healthtech provider Xsolis notified 1.39 million patients of a massive breach involving highly sensitive SSNs and medical history.\n- **Industry & Manufacturing:** Tata Electronics (India) suffered a major supply chain security compromise, resulting in extortion group World Leaks publishing 630 GB of proprietary data, including iPhone PCB designs and Tesla trade secrets; Fujikura Composites experienced an unauthorized Exchange Online intrusion.\n- **Critical Infrastructure & Transports:** Transport for London (TfL) was severely disrupted by Scattered Spider, leading to 39 million GBP (approximately 50 million USD) in recovery costs and operational outages across passenger ticketing services.\n- **Technology & Telecom:** KDDI (Japan) had 14.2 million customer email credentials leaked on underground forums, while SaaS provider Klue suffered dual exposures involving LastPass credential vault subversion and OAuth session compromises.\n- **Government & Defense:** Brazil Civil Defense suffered a deep tactical compromise of its national emergency alert network, resulting in temporary service hijacking; the Texas Parks and Wildlife Department (TPWD) confirmed a massive leak exposing personal PII and driver's licenses of 3 million citizens.\n- **Retail, SOHO & Consumers:** ShapedPlugin Pro suffered a devastating software supply chain backdoor affecting 400,000 active WordPress and WooCommerce installations, resulting in stolen admin databases and SMTP server keys; the AryStinger botnet compromised over 4,300 Linksys and D-Link devices globally.",
+      "fr": "- **Santé et Sciences de la vie :** Novo Nordisk a subi une tentative d'extorsion de 25 millions USD par FulcrumSec après le vol de 1 To de R&D pharmaceutique et d'essais cliniques ; l'éditeur de santé Xsolis a notifié 1,39 million de patients suite à un vol massif d'historiques médicaux et de numéros de Sécurité sociale.\n- **Industrie et Fabrication :** Tata Electronics (Inde) a subi une fuite de 630 Go de données de CAO gérées pour le compte d'Apple (plans d'iPhone) et de Tesla par World Leaks ; Fujikura Composites a détecté des accès non autorisés sur Exchange Online ; ALS Global a vu ses données publiées sur le dark web.\n- **Infrastructures critiques et Transports :** Transport for London (TfL) a fait face à un coût de remédiation et d'interruption opérationnelle de 39 millions de GBP (environ 50 millions USD) suite à l'attaque menée par Scattered Spider.\n- **Technologie et Télécom :** KDDI (Japon) a été touché par la fuite de 14,2 millions d'identifiants emails, tandis que l'éditeur SaaS Klue a été compromis via des accès OAuth frauduleux et la faille de coffre LastPass.\n- **Gouvernement et Défense :** La Défense Civile brésilienne a subi le sabotage de son réseau national d'alerte publique ; le Texas Parks and Wildlife Department (TPWD) a exposé les données personnelles et permis de conduire de 3 millions d'utilisateurs.\n- **Commerce et Grand Public :** Les versions Pro de ShapedPlugin ont subi une compromission de supply chain introduisant une backdoor sur 400 000 sites WordPress/WooCommerce pour voler les accès d'administration ; le botnet AryStinger a infecté plus de 4 300 routeurs Linksys et D-Link."
     }
   },
   "trends": {
     "emerging_techniques": {
       "en": [
-        "Quishing (QR-code phishing) abusing official Google services to trigger automated mobile SMS generation",
-        "Covert Command and Control (C2) channeling masquerading within UDP gaming protocols (e.g., Counter-Strike server query modification)",
-        "Automated deployment of GSocket agent tunnels (gs-netcat) integrated into commercial webshell loaders",
-        "Supply chain attacks targeting AI pipeline integrations and dynamic index environments (vLLM, Crawl4AI)"
+        "SaaS Session Hijacking via Malicious Browser Extensions (EvilTokens)",
+        "Conditional SEO Cloaking hiding malicious payment links from automated crawlers",
+        "Abusing Online Gaming UDP protocols (Counter-Strike) for covert C2 communication",
+        "Physical mail phishing campaigns distributing localized malicious QR codes (Quishing)",
+        "Leveraging AI-assisted models for hyper-personalized spear-phishing campaigns"
       ],
       "fr": [
-        "Quishing (phishing par code QR) abusant des services officiels Google pour déclencher l'envoi automatisé de SMS",
-        "Canaux de Commande et Contrôle (C2) furtifs dissimulés dans les flux UDP de serveurs de jeux vidéo (moteur Counter-Strike)",
-        "Déploiement automatisé de tunnels GSocket (gs-netcat) intégrés directement dans des chargeurs de webshells commerciaux",
-        "Attaques sur la chaîne d'approvisionnement ciblant les frameworks IA et environnements d'indexation (vLLM, Crawl4AI)"
+        "Détournement de sessions SaaS via des extensions de navigateur malveillantes (EvilTokens)",
+        "Cloaking SEO conditionnel masquant les pages de paiement frauduleuses aux scanners de sécurité",
+        "Abus de protocoles UDP de jeux en ligne (Counter-Strike) pour des canaux de commande C2 furtifs",
+        "Campagnes de phishing par code QR physique (Quishing) distribuées par voie postale",
+        "Utilisation de modèles d'IA pour concevoir des campagnes de spear-phishing hyper-personnalisées"
       ]
     },
     "declining_techniques": {
       "en": [
-        "Traditional brute-force authentication attempts targeting web portals without leveraging helpdesk vishing or session token hijack",
-        "Simple untrusted attachment phishing emails, which are increasingly blocked by modern ML-driven Secure Email Gateways (SEGs)"
+        "Unstructured bulk-phishing emails targeting corporate groups without customization",
+        "Non-obfuscated PHP webshell deployments easily detected by basic host antivirurs",
+        "Direct brute-force logins on cloud platforms lacking session persistent token hijacking"
       ],
       "fr": [
-        "Tentatives classiques d'authentification par brute-force sur portails web sans recours au vishing ou au vol de jetons de session",
-        "Phishing simple par pièces jointes non fiables, de plus en plus intercepté par les passerelles de messagerie modernes (SEG) basées sur l'apprentissage automatique"
+        "Campagnes de phishing de masse non ciblées sans personnalisation",
+        "Déploiement de webshells PHP simples et non obfusqués, facilement détectés par les antivirus",
+        "Tentatives de connexion par brute-force directe sur le cloud sans capture de jetons de session"
       ]
     },
     "geopolitical_context": {
-      "en": "Tensions surrounding European digital autonomy are causing national intelligence services to accelerate the eviction of foreign platforms (e.g., US Palantir) in favor of sovereign technology stack replacements (ChapsVision Argonos). Simultaneously, South Asia, specifically Sri Lanka, is rapidly morphing into a geographic hub for pig-butchering and lottery scam operations orchestrated by transnational cybercrime syndicates exploiting vulnerable post-crisis local economies.",
-      "fr": "Les tensions sur la souveraineté numérique européenne poussent les services de renseignement à accélérer l'éviction de plateformes étrangères (ex: Palantir) au profit d'alternatives technologiques nationales (ChapsVision Argonos). Parallèlement, l'Asie du Sud, en particulier le Sri Lanka, devient un hub pour les réseaux de pig-butchering et d'escroqueries en ligne, gérés par des syndicats cybercriminels transnationaux qui exploitent l'économie locale fragilisée."
+      "en": "Geopolitical friction is heavily driving cyber posture changes. In Europe, the French intelligence service DGSI has officially replaced US Palantir software with sovereign ChapsVision (Argonos) to avoid extraterritorial surveillance laws (FISA 702/Cloud Act). Concurrently, Estonia is dramatically shifting its defense procurement processes and timelines due to Russia's ongoing threat in Ukraine, prioritizing immediate physical and cyber supply chain security. Meanwhile, Russian state-sponsored actors deploy FIMI campaigns to disrupt Ukraine's alignment with European institutions.",
+      "fr": "Les tensions géopolitiques dictent l'évolution des postures cyber. En Europe, la DGSI remplace le logiciel américain Palantir par la solution souveraine ChapsVision (Argonos) afin de contourner les lois de surveillance extraterritoriales (FISA 702/Cloud Act). Parallèlement, l'Estonie accélère et modifie ses cycles d'acquisition de défense face à la menace russe en Ukraine, privilégiant la sécurité immédiate de ses chaînes d'approvisionnement physiques et cyber."
     }
   },
   "recommendations": {
     "strategic": {
       "en": [
         {
-          "title": "Deploy Phishing-Resistant FIDO2 Multi-Factor Authentication",
-          "detail": "Traditional push-based or SMS-based MFA is systematically bypassed by advanced helpdesk social engineering (as seen with Scattered Spider targeting TfL) and LastPass/Klue compromises. Organizations must transition all corporate identity providers (Entra ID, Okta) to FIDO2 WebAuthn hardware keys (such as YubiKey 5 series) for administrative, developer, and helpdesk accounts. Restrict MFA registration to managed devices only, eliminating unauthorized secondary MFA setups."
+          "title": "Transition to FIDO2 WebAuthn Hardware Keys",
+          "detail": "Standard SMS and TOTP-based multi-factor authentication methods are regularly bypassed by session-hijacking tools, as seen in recent EvilTokens, Scattered Spider, and Klue campaigns. Force-deploy FIDO2 and WebAuthn compatible hardware tokens (such as YubiKey 5 Series or Google Titan keys) for all high-privilege administrative accounts, customer service helpdesks, and developer profiles. This completely mitigates the risk of OAuth token theft and session replication on primary identity providers like Entra ID."
         },
         {
-          "title": "Enforce Strict SaaS Trust and API Least-Privilege",
-          "detail": "Third-party platform compromises, such as the TinyPulse breach affecting Nintendo and the Klue OAuth token hijacking by Icarus, highlight critical supply chain vulnerabilities. Security teams must implement automated OAuth consent policies in Entra ID and Google Workspace, revoking unused integrations, restricting API scopes to the absolute minimum necessary, and performing continuous audits of tenant-to-tenant trust configurations."
+          "title": "Establish Comprehensive Third-Party Risk Management Frameworks",
+          "detail": "Third-party platform compromises at TinyPulse (affecting Nintendo), ShapedPlugin, and Xsolis highlight systemic supply chain vulnerabilities. Implement a strict Third-Party Risk Management (TPRM) process requiring SOC 2 Type II or ISO 27001 certifications for any SaaS tool handling employee or customer data. Enforce contract clauses demanding incident notification within 24 hours and the capability to instantly revoke OAuth integrations and API keys."
         }
       ],
       "fr": [
         {
-          "title": "Imposer la MFA FIDO2 résistante au phishing",
-          "detail": "Les seconds facteurs par SMS ou push sont contournés par l'ingénierie sociale ciblant le helpdesk (comme observé avec Scattered Spider contre TfL) et les compromissions LastPass/Klue. Les organisations doivent migrer les fournisseurs d'identité d'entreprise (Entra ID, Okta) vers des clés matérielles FIDO2/WebAuthn (type YubiKey 5) pour les comptes administrateurs, développeurs et helpdesk. Restreignez l'enregistrement de MFA aux seuls terminaux managés."
+          "title": "Déployer des Clés Matérielles de Sécurité FIDO2",
+          "detail": "Les authentifications MFA classiques par SMS ou TOTP sont régulièrement contournées par le vol de session, comme l'ont montré les campagnes EvilTokens, Scattered Spider et Klue. Déployez obligatoirement des clés de sécurité matérielles conformes à FIDO2 (telles que YubiKey 5 ou Google Titan) pour tous les comptes d'administration, d'assistance et de développement. Cela neutralise le risque de détournement de session et de vol de jetons OAuth sur Entra ID."
         },
         {
-          "title": "Durcir la confiance SaaS et les privilèges API",
-          "detail": "Les compromissions de tiers, telles que TinyPulse pour Nintendo et le vol de jetons OAuth de Klue par Icarus, illustrent les vulnérabilités de la chaîne d'approvisionnement. Les équipes de sécurité doivent appliquer des politiques de consentement OAuth strictes dans Entra ID et Google Workspace, révoquer les intégrations inactives, restreindre les scopes d'API au strict minimum et auditer en continu les configurations de confiance inter-tenants."
+          "title": "Établir un Cadre Strict de Gestion du Risque Tiers",
+          "detail": "Les compromissions de plateformes tierces chez TinyPulse (Nintendo), ShapedPlugin et Xsolis soulignent les failles de la supply chain. Implémentez un processus de gestion du risque tiers (TPRM) exigeant des certifications SOC 2 Type II ou ISO 27001 pour tout outil SaaS hébergeant des données d'employés ou de clients. Imposez des clauses de notification d'incident sous 24h et la capacité de suspendre immédiatement les connecteurs API."
         }
       ]
     },
     "operational": {
       "en": [
         {
-          "title": "Decommission EoL Edge Hardware and Audit SSH Access",
-          "detail": "The AryStinger botnet actively compromises legacy EoL edge routers and NAS devices (D-Link DIR-850L, Linksys E1000/E1200, QNAP) using command injection and brute-force. Network administrators must scan internal and external segments using 'nmap -p 22,2332 --open' to identify rogue active services on port 2332. Immediately replace all hardware declared End-of-Life and disable remote WAN management access."
+          "title": "Audit and Restrict Remote Management Interfaces",
+          "detail": "The AryStinger botnet has actively hijacked over 4,300 legacy Linksys and D-Link devices by targeting open WAN management interfaces. Immediately block public WAN-side access (ports 80, 443, 22, 23, 2332) across all corporate and remote worker edge devices. Deploy automated external vulnerability scanning tools (such as Shodan API or local Nmap scripts) to identify and alert on accidental perimeter exposures."
         },
         {
-          "title": "Deploy Custom WAF Rules for WooCommerce Exploitations",
-          "detail": "The active exploitation of CVE-2026-49777 (WooCommerce Product Slider Pro) and CVE-2026-10735 permits remote command execution and credential theft. Web administrators must urgently update ShapedPlugin Pro add-ons to their patched versions. Concurrently, deploy custom ModSecurity or AWS WAF signatures to inspect and block unauthorized REST API calls (specifically targeting '/wp-json/') trying to query credentials or upload unauthorized PHP web shells."
+          "title": "Apply Emergency Security Patches for FortiOS and Cisco",
+          "detail": "Actively exploited vulnerabilities such as Cisco Catalyst SD-WAN Path Traversal (CVE-2026-20262) and Fortinet Credential Reuse (CVE-2026-24858) pose critical threats to enterprise perimeters. Upgrade Cisco Catalyst SD-WAN Manager and FortiOS appliances immediately to the latest patched releases. Following the update, perform a full credential rotation of all admin accounts and audit firewall logs for anomalies."
         }
       ],
       "fr": [
         {
-          "title": "Décommissionner les équipements obsolètes et auditer SSH",
-          "detail": "Le botnet AryStinger compromet activement les routeurs et NAS obsolètes (D-Link DIR-850L, Linksys E1000, QNAP) via des injections de commandes et du brute-force. Les administrateurs doivent scanner les segments réseau avec 'nmap -p 22,2332 --open' pour repérer les services actifs suspects sur le port 2332. Remplacez immédiatement les matériels en fin de vie et désactivez l'administration WAN à distance."
+          "title": "Auditer et Restreindre les Interfaces de Gestion Distante",
+          "detail": "Le botnet AryStinger a piraté plus de 4 300 équipements Linksys et D-Link obsolètes en ciblant les interfaces de gestion WAN ouvertes. Bloquez immédiatement l'accès WAN public (ports 80, 443, 22, 23, 2332) sur tous les routeurs d'entreprise et de télétravailleurs. Déployez des outils de scan externe (API Shodan, scripts Nmap) pour détecter et alerter sur toute exposition accidentelle de périmètre."
         },
         {
-          "title": "Déployer des règles WAF pour WooCommerce",
-          "detail": "L'exploitation active de la CVE-2026-49777 (WooCommerce Product Slider Pro) et de la CVE-2026-10735 permet l'exécution de commandes et le vol de secrets. Les administrateurs doivent mettre à jour en urgence les add-ons ShapedPlugin Pro. En parallèle, déployez des signatures ModSecurity ou AWS WAF personnalisées pour inspecter et bloquer les requêtes REST API non autorisées (notamment vers '/wp-json/') visant à exfiltrer des identifiants ou charger des webshells PHP."
+          "title": "Appliquer d'Urgence les Correctifs FortiOS et Cisco",
+          "detail": "Les vulnérabilités activement exploitées telles que Cisco Catalyst SD-WAN Path Traversal (CVE-2026-20262) et Fortinet Credential Reuse (CVE-2026-24858) menacent les périmètres d'entreprise. Mettez à jour immédiatement les appliances vers les versions corrigées. Après application du patch, effectuez une rotation complète de tous les identifiants d'administration."
         }
       ]
     }
