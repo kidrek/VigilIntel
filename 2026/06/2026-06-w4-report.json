@@ -6,32 +6,33 @@
       "fr": "Critique"
     },
     "justification": {
-      "en": "The threat level is rated as critical due to the convergence of active max-severity zero-day exploitations in critical networking appliances (Cisco Catalyst SD-WAN, Fortinet FortiGate, SonicWall), the emergence of critical local privilege escalations in the Linux Kernel (DirtyClone, DirtyFrag), and high-impact extortion campaigns targeting clinical pharmaceutical R&D (Novo Nordisk $25M extortion) and massive customer databases (KDDI, Digit RE, Madison Square Garden).",
-      "fr": "Le niveau de menace est qualifié de critique en raison de l'exploitation active de failles zero-day de sévérité maximale dans des équipements d'infrastructure critiques (Cisco Catalyst SD-WAN, Fortinet FortiGate, SonicWall), de l'apparition d'élévations de privilèges critiques dans le noyau Linux (DirtyClone, DirtyFrag) et de campagnes d'extorsion majeures ciblant la R&D pharmaceutique (Novo Nordisk) et d'immenses bases de données clients (KDDI, Digit RE, Madison Square Garden)."
+      "en": "The period witnessed high-impact ransomware disruptions (TfL, Ukrposhta), massive industrial-scale brute-force campaigns compromising over 73,000 edge gateways (FortiBleed), several critical vulnerabilities added to the CISA KEV (PTC Windchill, Cisco UC, Ubiquiti UniFi, FortiOS), and active local privilege escalations in the Linux kernel (DirtyClone). This combination of active supply chain infiltration, Edge exposure, and advanced endpoint bypass represents an elevated operational risk.",
+      "fr": "La période a été marquée par des perturbations de ransomwares à fort impact (TfL, Ukrposhta), des campagnes industrielles de force brute compromettant plus de 73 000 passerelles d'accès (FortiBleed), plusieurs vulnérabilités critiques ajoutées au catalogue CISA KEV (PTC Windchill, Cisco UC, Ubiquiti UniFi, FortiOS) et des élévations de privilèges locales actives dans le noyau Linux (DirtyClone). Cette combinaison d'infiltration de la chaîne d'approvisionnement, d'exposition du périmètre réseau et de contournement des défenses représente un risque opérationnel élevé."
     },
     "_triggers": [
-      "+8 — 4 CVE(s) CISA KEV",
+      "+6 — 3 CVE(s) CISA KEV",
       "+3 — 3 CVE(s) CVSS ≥ 9.0",
       "+3 — 4 breach(es) ≥ 100k enregistrements",
-      "+2 — secteurs critiques ciblés : Government_and_Defense"
+      "+2 — secteurs critiques ciblés : Critical_Infrastructure, Government_and_Defense",
+      "+1 — 10 TTPs distinctes"
     ]
   },
   "executive_summary": {
-    "en": "Week 4 of June 2026 was marked by an exceptionally high volume of critical exposures and sophisticated threat actions. The primary highlight is the 'FortiBleed' campaign, which compromised and leaked the administrative credentials of over 73,000 FortiGate firewalls globally, enabling threat actors to bypass edge protections and pivot directly into internal Active Directory domains. Simultaneously, researchers and attackers actively exploited the 'DirtyClone' and 'DirtyFrag' family of Linux Kernel LPEs (CVE-2026-43503, CVE-2026-43284), which bypass traditional file-integrity monitoring systems via page-cache manipulation. In the extortion landscape, Novo Nordisk fell victim to a 1TB data theft and $25M ransom demand from FulcrumSec, while ShinyHunters targeted Madison Square Garden, compromising millions of customer records. Additionally, the supply chain was heavily impacted by backdoors injected into WordPress ShapedPlugin Pro updates and the compromise of Polymarket's frontend network, leading to direct financial losses of $3M.",
-    "fr": "La quatrième semaine de juin 2026 a été marquée par un volume exceptionnellement élevé d'expositions critiques et d'actions malveillantes sophistiquées. L'événement majeur réside dans la campagne 'FortiBleed', qui a compromis et divulgué les identifiants d'administration de plus de 73 000 pare-feu FortiGate à l'échelle mondiale, permettant à des attaquants de contourner les protections périmétriques et de s'infiltrer directement dans les domaines Active Directory internes. En parallèle, les attaquants ont activement exploité la famille d'élévations de privilèges locaux du noyau Linux 'DirtyClone' et 'DirtyFrag' (CVE-2026-43503, CVE-2026-43284), qui contournent les outils classiques d'intégrité de fichiers via la manipulation de la mémoire cache. Dans le domaine de l'extorsion, Novo Nordisk a subi un vol de données d'un téraoctet et une demande de rançon de 25 millions de dollars de la part de FulcrumSec, tandis que ShinyHunters a ciblé Madison Square Garden, compromettant des millions de fiches clients. Enfin, la chaîne d'approvisionnement a été fortement touchée par des portes dérobées injectées dans les extensions WordPress ShapedPlugin Pro et par la compromission du réseau frontal de Polymarket, entraînant des pertes financières de 3 millions de dollars."
+    "en": "Week 4 of June 2026 was characterized by a massive offensive focus on the external edge of corporate networks and third-party SaaS environments. The 'FortiBleed' campaign successfully harvested and cracked credentials of over 73,000 FortiGate firewalls globally, enabling subsequent Active Directory pivots. Concurrently, supply chain attacks through backdoored WordPress plugins (ShapedPlugin) and third-party SaaS vendors (TinyPulse, LastPass) impacted major brands like Nintendo and Apple suppliers (Tata Electronics). On the vulnerability front, a surge of Linux kernel privilege escalations (DirtyClone) and the active exploitation of PTC Windchill PLM software (CVE-2026-12569) highlighted severe risks to manufacturing and infrastructure networks. Security teams must prioritize immediate credential rotations on edge devices, enforce phishing-resistant MFA, and patch critical Linux and PLM deployments.",
+    "fr": "La quatrième semaine de juin 2026 a été caractérisée par une focalisation offensive massive sur le périmètre externe des réseaux d'entreprise et les environnements SaaS tiers. La campagne 'FortiBleed' a réussi à collecter et à casser les identifiants de plus de 73 000 pare-feu FortiGate à l'échelle mondiale, permettant des pivots Active Directory ultérieurs. Parallèlement, des attaques de chaîne d'approvisionnement via des plugins WordPress piégés (ShapedPlugin) et des fournisseurs SaaS tiers (TinyPulse, LastPass) ont touché des marques majeures comme Nintendo et des sous-traitants d'Apple (Tata Electronics). Sur le front des vulnérabilités, une vague d'élévations de privilèges du noyau Linux (DirtyClone) et l'exploitation active de PTC Windchill (CVE-2026-12569) ont mis en évidence des risques graves pour les réseaux industriels et d'infrastructure. Les équipes de sécurité doivent prioriser la rotation immédiate des identifiants des passerelles d'accès, imposer l'authentification forte et corriger d'urgence Linux et Windchill."
   },
   "regulatory": {
     "analyse": {
-      "en": "During this period, European regulators significantly tightened controls over foreign investments in critical infrastructure, telecommunications, and advanced artificial intelligence technologies. The publishing of EU Regulation 2026/1386 signals a clear defensive posture to protect Europe's digital and economic sovereignty. Meanwhile, debates around the 'Chat Control' regulation indicate a critical tipping point in the legal requirements for end-to-end encryption, creating compliance friction for technology providers between privacy mandates and child protection enforcement. Security teams must prepare for continuous, automated GRC compliance models to cope with these fluid regulatory requirements.",
-      "fr": "Durant cette période, les régulateurs européens ont considérablement durci le contrôle des investissements étrangers dans les infrastructures critiques, les télécommunications et l'intelligence artificielle avancée. La publication du Règlement (UE) 2026/1386 témoigne d'une posture défensive visant à protéger la souveraineté numérique et économique de l'Europe. En parallèle, les débats autour de la réglementation 'Chat Control' indiquent un point de bascule critique concernant le chiffrement de bout en bout, créant des frictions de conformité pour les fournisseurs de technologies entre respect de la vie privée et obligations de modération."
+      "en": "This period marks a shift towards continuous GRC engineering and proactive sovereign technology controls in Europe, exemplified by the formal adoption of EU Regulation 2026/1386 for FDI screening. Regulators are increasingly scrutinizing the supply chain and critical infrastructures under NIS2 and DORA guidelines, forcing organizations to transition from point-in-time compliance audits to automated evidence-gathering using agentic AI. Furthermore, the debate surrounding the 'Chat Control' regulation highlights ongoing tension between encryption-based privacy standards and law enforcement requirements within the EU.",
+      "fr": "Cette période marque un tournant vers l'ingénierie GRC continue et le contrôle des technologies souveraines en Europe, illustré par l'adoption formelle du Règlement (UE) 2026/1386 sur le filtrage des investissements. Les régulateurs renforcent la surveillance de la chaîne d'approvisionnement et des infrastructures critiques sous l'impulsion de NIS2 et DORA, obligeant les organisations à passer d'audits de conformité ponctuels à une collecte automatisée de preuves via des agents IA. De plus, les débats autour du règlement 'Chat Control' mettent en lumière la tension persistante au sein de l'UE entre le respect de la vie privée via le chiffrement et les exigences de sécurité publique."
     },
     "events": [
       {
         "title": {
-          "en": "EU FDI Screening Regulation (Regulation 2026/1386)",
-          "fr": "Règlement européen sur le filtrage des IDE (Règlement 2026/1386)"
+          "en": "EU Regulation 2026/1386 on Foreign Direct Investments (FDI)",
+          "fr": "Règlement (UE) 2026/1386 sur le filtrage des investissements directs étrangers (IDE)"
         },
-        "issuing_body": "European Commission",
+        "issuing_body": "European Parliament and Council of the European Union",
         "date": "2026-06-26",
         "jurisdiction": {
           "region": "EU",
@@ -43,18 +44,18 @@
         },
         "type": "New_Law",
         "status": "Active",
-        "reference": "CELEX:32026R1386",
+        "reference": "Regulation (UE) 2026/1386",
         "affected_sectors": [
           "Critical_Infrastructure",
           "Technology_and_Telecom",
-          "Government_and_Defense",
-          "Healthcare_and_Life_Sciences"
+          "Security",
+          "Government_and_Defense"
         ],
         "description": {
-          "en": "Replaces Regulation 2019/452, broadening critical sectors subject to investment screening to include AI, quantum computing, and semiconductors. It tightens coordination across EU Member States to detect and mitigate covert acquisitions and foreign state-backed takeovers. Compliance and M&A security teams must account for extended operational delays and rigorous pre-notification requirements in the covered high-tech and energy sectors.",
-          "fr": "Remplace le Règlement 2019/452 en élargissant les secteurs critiques soumis au filtrage des investissements aux technologies de l'IA, du quantique et des semi-conducteurs. Il renforce la coordination entre États membres pour détecter et atténuer les acquisitions dissimulées d'acteurs étatiques étrangers. Les équipes de conformité doivent anticiper des délais opérationnels accrus et des notifications préalables strictes dans les secteurs de pointe et de l'énergie."
+          "en": "Abrogating and replacing Regulation 2019/452, this new framework harmonizes and strengthens national screening mechanisms for foreign investments in sensitive EU sectors, including artificial intelligence, semiconductors, biotechnology, and critical data structures.",
+          "fr": "Abrogeant et remplaçant le Règlement 2019/452, ce nouveau cadre harmonise et renforce les mécanismes nationaux de contrôle des investissements étrangers dans les secteurs sensibles de l'UE, notamment l'intelligence artificielle, les semi-conducteurs, les biotechnologies et les structures de données critiques."
         },
-        "source_url": "https://eur-lex.europa.eu/legal-content/AUTO/?uri=CELEX:32026R1386"
+        "source_url": "https://eur-lex.europa.eu/eli/reg/2026/1386/oj"
       }
     ]
   },
@@ -66,18 +67,18 @@
           "fr": "Russie"
         },
         "geographic_zone_strategic_analyse": {
-          "en": "Russian-speaking cybercriminal and nation-state threat groups have transitioned toward massive, industrialized credential exploitation (such as the FortiBleed campaign and signal backup recovery key thefts) to circumvent edge defenses and secure direct footholds inside European and North American networks.",
-          "fr": "Les cybercriminels et groupes étatiques russophones ont transitionné vers des campagnes d'exploitation d'identifiants à l'échelle industrielle (telles que FortiBleed et le vol de clés Signal) pour contourner les défenses périmétriques et s'établir de manière persistante au sein des réseaux européens et nord-américains."
+          "en": "Russophone cybercriminals and state-sponsored groups remain highly active, focusing on deep network access through edge vulnerability exploitation (FortiBleed) and running aggressive FIMI campaigns to obscure battlefield setbacks in Ukraine.",
+          "fr": "Les cybercriminels russophones et les groupes étatiques restent extrêmement actifs, se concentrant sur l'accès réseau profond via l'exploitation des équipements périmétriques (FortiBleed) et menant des campagnes agressives de manipulation de l'information (FIMI) pour masquer leurs revers militaires en Ukraine."
         }
       },
       {
         "geographic_zone_name": {
-          "en": "China",
-          "fr": "Chine"
+          "en": "Other",
+          "fr": "Autre"
         },
         "geographic_zone_strategic_analyse": {
-          "en": "Chinese state-sponsored threat groups have focused on silent, long-term pre-positioning campaigns on industrial supply chains and telecom carriers (like KDDI). Concurrently, Chinese money laundering networks (CMLNs) are increasingly supporting regional drug trafficking organizations in Latin America via cyber-enabled financial fraud.",
-          "fr": "Les groupes étatiques chinois se sont concentrés sur des campagnes silencieuses de pré-positionnement à long terme sur les chaînes d'approvisionnement industrielles et les opérateurs télécoms (comme KDDI). En parallèle, les réseaux chinois de blanchiment d'argent (CMLN) soutiennent de plus en plus les cartels d'Amérique latine via de la fraude financière cyber-activée."
+          "en": "In Latin America, Mexico released its National Cybersecurity Plan 2025-2030 to counter rising ransomware threats and drug cartel money laundering networks utilizing cryptocurrency, while Colombia underwent a significant geopolitical shift to the radical right.",
+          "fr": "En Amérique latine, le Mexique a publié son Plan national de cybersécurité 2025-2030 pour contrer la hausse des rançongiciels et le blanchiment d'argent des cartels via les cryptomonnaies, tandis que la Colombie a connu un virage géopolitique majeur vers la droite radicale."
         }
       }
     ],
@@ -91,45 +92,44 @@
         },
         "targeted_sectors": {
           "en": [
+            "Critical_Infrastructure",
             "Technology_and_Telecom",
-            "Hospitality_and_Entertainment",
             "Retail_and_Consumer",
+            "Hospitality_and_Entertainment",
             "Healthcare_and_Life_Sciences"
           ],
           "fr": [
+            "Critical_Infrastructure",
             "Technology_and_Telecom",
-            "Hospitality_and_Entertainment",
             "Retail_and_Consumer",
+            "Hospitality_and_Entertainment",
             "Healthcare_and_Life_Sciences"
           ]
         },
         "targeted_regions": {
           "en": [
             "North America",
-            "Western Europe"
+            "Europe"
           ],
           "fr": [
             "Amérique du Nord",
-            "Europe de l'Ouest"
+            "Europe"
           ]
         },
         "mitre_attack_ttps_id": [
           "T1566",
           "T1078",
           "T1486",
-          "T1110",
-          "T1071.001"
+          "T1110"
         ],
         "campaign_or_operation": {
           "en": [
-            "Transport for London Cyberattack",
-            "SSM Health Intrusion",
-            "Sutter Health Compromise"
+            "Transport for London (TfL) Cyberattack",
+            "US Healthcare Intrusions (SSM Health, Sutter Health)"
           ],
           "fr": [
-            "Cyberattaque de Transport for London",
-            "Intrusion de SSM Health",
-            "Compromission de Sutter Health"
+            "Cyberattaque contre Transport for London (TfL)",
+            "Intrusions dans le secteur de la santé aux États-Unis (SSM Health, Sutter Health)"
           ]
         }
       },
@@ -142,16 +142,16 @@
         },
         "targeted_sectors": {
           "en": [
-            "Hospitality_and_Entertainment",
             "Retail_and_Consumer",
+            "Hospitality_and_Entertainment",
             "Technology_and_Telecom",
-            "Real_Estate_and_Construction"
+            "Security"
           ],
           "fr": [
-            "Hospitality_and_Entertainment",
             "Retail_and_Consumer",
+            "Hospitality_and_Entertainment",
             "Technology_and_Telecom",
-            "Real_Estate_and_Construction"
+            "Security"
           ]
         },
         "targeted_regions": {
@@ -165,17 +165,19 @@
         "mitre_attack_ttps_id": [
           "T1530",
           "T1657",
-          "T1078",
-          "T1567"
+          "TA0011",
+          "T1078"
         ],
         "campaign_or_operation": {
           "en": [
-            "Madison Square Garden Database Breach",
-            "American Tower Leak"
+            "Madison Square Garden Sports Data Leak",
+            "American Tower Breach",
+            "BreachForums Dominance and Clone Takedowns"
           ],
           "fr": [
-            "Violation de la base de données de Madison Square Garden",
-            "Fuite de données d'American Tower"
+            "Fuite de données de Madison Square Garden Sports",
+            "Compromission d'American Tower",
+            "Dominance de BreachForums et fermeture des clones"
           ]
         }
       }
@@ -183,10 +185,64 @@
   },
   "mitre_attack_ttps": {
     "ttps_strategic_analyse": {
-      "en": "Attackers this period moved heavily away from noisy brute-force and direct network intrusion toward identity subversion (OAuth token hijacking, helpdesk social engineering) and edge device credential reuse (FortiBleed). On the execution front, there is a prominent shift towards highly sophisticated local privilege escalations in the Linux Kernel, abusing virtual memory page-cache writing to overwrite read-only binaries dynamically without triggering classic FIM write audits.",
-      "fr": "Durant cette période, les attaquants ont délaissé les attaques par force brute bruyantes et les intrusions réseau directes au profit de la subversion des identités (usurpation de jetons OAuth, ingénierie sociale de helpdesks) et du recyclage d'identifiants périmétriques (FortiBleed). Sur le plan de l'exécution, on note un glissement majeur vers des élévations de privilèges locaux complexes dans le noyau Linux, abusant de l'écriture en cache mémoire pour remplacer dynamiquement des binaires normalement en lecture seule sans déclencher d'alertes FIM."
+      "en": "The threat landscape this week heavily features the exploitation of public-facing applications (T1190) and the subversion of trust relationships (T1195.002). Attackers systematically bypass traditional endpoint and perimeter defenses by using valid accounts (T1078) harvested from massive edge leaks, alongside advanced obfuscation (T1027) such as Prometheus Lua packaging and call-stack evasion (LACUNA Chain 'Ghost Frames').",
+      "fr": "Le paysage des menaces cette semaine met fortement l'accent sur l'exploitation d'applications publiques (T1190) et le détournement des relations de confiance (T1195.002). Les attaquants contournent systématiquement les défenses traditionnelles en utilisant des comptes valides (T1078) issus de fuites massives, couplés à de l'obfuscation avancée (T1027) comme l'obfuscateur Prometheus Lua et l'évasion de pile d'appels (LACUNA Chain 'Ghost Frames')."
     },
     "ttps_list": [
+      {
+        "id": "T1190",
+        "tactic": {
+          "en": "Initial Access",
+          "fr": "Accès Initial"
+        },
+        "technique_name": "Exploit Public-Facing Application",
+        "frequency": 7,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "Exploitation of vulnerabilities in edge routers, Firewalls, PLM applications (PTC Windchill), and CMS platforms (WordPress/Joomla) to establish initial footholds."
+          ],
+          "fr": [
+            "Exploitation de vulnérabilités dans les routeurs de périmètre, pare-feu, applications PLM (PTC Windchill) et plateformes CMS (WordPress/Joomla) pour établir un accès initial."
+          ]
+        }
+      },
+      {
+        "id": "T1195.002",
+        "tactic": {
+          "en": "Initial Access",
+          "fr": "Accès Initial"
+        },
+        "technique_name": "Supply Chain Compromise: Compromise Software Supply Chain",
+        "frequency": 7,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "Infiltration of software updates for popular WordPress plugins (ShapedPlugin Pro), third-party SaaS vendors (TinyPulse), and hardware suppliers (Tata Electronics)."
+          ],
+          "fr": [
+            "Infiltration des mises à jour de plugins WordPress populaires (ShapedPlugin Pro), de fournisseurs SaaS tiers (TinyPulse) et de sous-traitants matériels (Tata Electronics)."
+          ]
+        }
+      },
+      {
+        "id": "T1078",
+        "tactic": {
+          "en": "Defense Evasion",
+          "fr": "Évasion des Défenses"
+        },
+        "technique_name": "Valid Accounts",
+        "frequency": 7,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Abuse of compromised credentials and hijacked OAuth tokens (EvilTokens, FortiBleed, LastPass) to log into cloud instances and enterprise SaaS platforms."
+          ],
+          "fr": [
+            "Abus d'identifiants compromis et de jetons OAuth détournés (EvilTokens, FortiBleed, LastPass) pour se connecter aux instances cloud et aux plateformes SaaS."
+          ]
+        }
+      },
       {
         "id": "T1566",
         "tactic": {
@@ -195,49 +251,13 @@
         },
         "technique_name": "Phishing",
         "frequency": 6,
-        "severity": "critical",
-        "context": {
-          "en": [
-            "Abused across all daily reports via Google-redirecting QR codes (quishing) forcing SMS, Microsoft Sway hosting, and fake AI tools masquerading as Claude and OpenClaw targeting SMB helpdesks."
-          ],
-          "fr": [
-            "Abusé dans tous les rapports quotidiens via des codes QR (quishing) forçant l'envoi de SMS, l'hébergement Microsoft Sway et des faux outils d'IA (Claude, OpenClaw) ciblant les services d'assistance de PME."
-          ]
-        }
-      },
-      {
-        "id": "T1078",
-        "tactic": {
-          "en": "Defense Evasion",
-          "fr": "Évasion de Défense"
-        },
-        "technique_name": "Valid Accounts",
-        "frequency": 5,
-        "severity": "critical",
-        "context": {
-          "en": [
-            "Widely leveraged by Scattered Spider for Helpdesk social engineering, and highlighted by the global FortiBleed dataset release compromising 73,000 FortiGate admin/VPN credentials."
-          ],
-          "fr": [
-            "Largement exploité par Scattered Spider pour l'ingénierie sociale de helpdesks, et mis en évidence par la fuite mondiale de 73 000 identifiants d'administration et VPN FortiGate (FortiBleed)."
-          ]
-        }
-      },
-      {
-        "id": "T1110",
-        "tactic": {
-          "en": "Credential Access",
-          "fr": "Accès aux Identifiants"
-        },
-        "technique_name": "Brute Force",
-        "frequency": 5,
         "severity": "high",
         "context": {
           "en": [
-            "Observed in the massive automated scanning networks targeting SSH honeypots, and highlighted by the 1.16B brute force logins against FortiGate and 2.1B logins against MSSQL."
+            "Aggressive phishing utilizing trusted vectors (Microsoft Sway), physical QR codes (Lausanne quishing), and social engineering targeting helpdesks (Scattered Spider)."
           ],
           "fr": [
-            "Observé dans les réseaux de scan automatisés massifs ciblant les pots de miel SSH, et illustré par 1,16 milliard de tentatives de connexion contre FortiGate et 2,1 milliards contre MSSQL."
+            "Campagnes agressives de phishing exploitant des plateformes de confiance (Microsoft Sway), des codes QR physiques (quishing à Lausanne) et de l'ingénierie sociale ciblant le helpdesk (Scattered Spider)."
           ]
         }
       },
@@ -248,32 +268,68 @@
           "fr": "Impact"
         },
         "technique_name": "Data Encrypted for Impact",
-        "frequency": 5,
+        "frequency": 6,
         "severity": "critical",
         "context": {
           "en": [
-            "Deployed in ransomware attacks by Scattered Spider (TfL), Qilin campaigns on healthcare/life sciences, and the ransomware outage at Ukrposhta."
+            "Encryption of enterprise data and critical systems by ransomware operators (Qilin, Akira, Booba, Scattered Spider) following massive exfiltrations."
           ],
           "fr": [
-            "Déployé lors d'attaques de ransomware par Scattered Spider (TfL), de campagnes Qilin sur la santé et de la paralysie par ransomware d'Ukrposhta."
+            "Chiffrement des données de l'entreprise et des systèmes critiques par des opérateurs de ransomwares (Qilin, Akira, Booba, Scattered Spider) après des exfiltrations massives."
           ]
         }
       },
       {
-        "id": "T1190",
+        "id": "T1567",
         "tactic": {
-          "en": "Initial Access",
-          "fr": "Accès Initial"
+          "en": "Exfiltration",
+          "fr": "Exfiltration"
         },
-        "technique_name": "Exploit Public-Facing Application",
-        "frequency": 5,
-        "severity": "critical",
+        "technique_name": "Exfiltration Over Web Service",
+        "frequency": 6,
+        "severity": "high",
         "context": {
           "en": [
-            "Active exploitation of unpatched vulnerabilities in internet-facing applications, including SonicWall SonicOS, Cisco Unified CM, Ubiquiti UniFi, and Langflow RAG endpoints."
+            "Massive data transfers (up to 1 TB) from compromised environments to public cloud storage and hacker-controlled leak platforms (World Leaks, FulcrumSec)."
           ],
           "fr": [
-            "Exploitation active de vulnérabilités non corrigées dans des applications exposées, notamment SonicWall SonicOS, Cisco Unified CM, Ubiquiti UniFi et les points d'accès RAG de Langflow."
+            "Transferts massifs de données (jusqu'à 1 To) depuis des environnements compromis vers des stockages cloud publics et des plateformes de fuite contrôlées par des attaquants (World Leaks, FulcrumSec)."
+          ]
+        }
+      },
+      {
+        "id": "T1110",
+        "tactic": {
+          "en": "Credential Access",
+          "fr": "Accès aux Identifiants"
+        },
+        "technique_name": "Brute Force",
+        "frequency": 6,
+        "severity": "medium",
+        "context": {
+          "en": [
+            "Large-scale scanning and automated password spraying on exposed interfaces (FortiBleed, SSH honeypot targets)."
+          ],
+          "fr": [
+            "Balayages à grande échelle et password spraying automatisé sur les interfaces d'administration exposées (FortiBleed, cibles de pots de miel SSH)."
+          ]
+        }
+      },
+      {
+        "id": "T1046",
+        "tactic": {
+          "en": "Discovery",
+          "fr": "Découverte"
+        },
+        "technique_name": "Network Service Discovery",
+        "frequency": 6,
+        "severity": "medium",
+        "context": {
+          "en": [
+            "Automated active scanning and probing of specific endpoints (Terrabot GPON probes, WordPress scans)."
+          ],
+          "fr": [
+            "Balayages actifs automatisés et sondages d'endpoints spécifiques (sondes Terrabot GPON, scans WordPress)."
           ]
         }
       },
@@ -284,14 +340,14 @@
           "fr": "Collecte"
         },
         "technique_name": "Data from Cloud Storage Object",
-        "frequency": 4,
+        "frequency": 6,
         "severity": "high",
         "context": {
           "en": [
-            "Abused in large-scale cloud exfiltrations by ShinyHunters (MSG Sports) and through misconfigured SMB/SaaS shares exposing corporate data."
+            "Exfiltration of sensitive corporate configurations, databases, and customer records directly from cloud repositories and misconfigured storage buckets."
           ],
           "fr": [
-            "Abusé dans le cadre d'exfiltrations cloud massives par ShinyHunters (MSG Sports) et via des mauvaises configurations de partages SMB/SaaS exposant des données."
+            "Exfiltration de configurations d'entreprise sensibles, de bases de données et d'enregistrements clients directement depuis des référentiels cloud et des compartiments de stockage mal configurés."
           ]
         }
       },
@@ -299,17 +355,17 @@
         "id": "T1027",
         "tactic": {
           "en": "Defense Evasion",
-          "fr": "Évasion de Défense"
+          "fr": "Évasion des Défenses"
         },
         "technique_name": "Obfuscated Files or Information",
-        "frequency": 4,
-        "severity": "high",
+        "frequency": 6,
+        "severity": "medium",
         "context": {
           "en": [
-            "Observed in multi-stage loaders like SmartLoader using Prometheus Obfuscator, and the deployment of ZypeerShell with the Fortress Layer obfuscator."
+            "Evasion of traditional antivirus scanners through Prometheus Lua obfuscators, Ghost packers, and file-inflation techniques."
           ],
           "fr": [
-            "Observé dans des loaders multi-étapes comme SmartLoader utilisant Prometheus Obfuscator, et le déploiement de ZypeerShell obfusqué avec Fortress Layer."
+            "Contournement des scanners antivirus traditionnels via des obfuscateurs Prometheus Lua, des packers Ghost et des techniques de gonflement artificiel de fichiers."
           ]
         }
       }
@@ -317,142 +373,113 @@
   },
   "vulnerabilities": {
     "analyse": {
-      "en": "The vulnerability landscape this week was characterized by maximum-severity flaws in management and network virtualization servers (Ubiquiti UniFi OS, Cisco SD-WAN Manager, Cisco Unified CM) and the active exploitation of the 'DirtyClone' and 'DirtyFrag' families of Linux Kernel local privilege escalation exploits. Active threat actors also targeted legacy unpatched edge routing equipment and exposed development/AI orchestration services (Langflow, Dify), turning rapid API integration into a severe lateral pivot risk.",
-      "fr": "Le paysage des vulnérabilités cette semaine a été marqué par des failles de sévérité maximale dans des serveurs d'administration réseau (Ubiquiti UniFi OS, Cisco SD-WAN Manager, Cisco Unified CM) et par l'exploitation active d'élévations de privilèges du noyau Linux (DirtyClone, DirtyFrag). Les attaquants ont également ciblé des routeurs obsolètes non corrigés et des plateformes d'orchestration d'IA (Langflow, Dify)."
+      "en": "This period was marked by a highly critical surge in Linux kernel vulnerability disclosures, notably the 'DirtyClone' and 'DirtyFrag' LPE families which bypass file-integrity monitors and facilitate stealthy root escalations. In parallel, the immediate addition of PTC Windchill PLM vulnerabilities (CVE-2026-12569) to the CISA KEV highlights a severe and active threat against intellectual property and manufacturing networks. Security teams must accelerate patching for Linux, Ubiquiti, and Cisco Unified CM infrastructure.",
+      "fr": "Cette période a été marquée par une vague très critique de divulgations de vulnérabilités du noyau Linux, notamment les familles LPE 'DirtyClone' et 'DirtyFrag' qui contournent les contrôleurs d'intégrité de fichiers et facilitent des élévations root furtives. En parallèle, l'ajout immédiat des failles PTC Windchill (CVE-2026-12569) au catalogue KEV du CISA souligne une menace active et sévère contre la propriété intellectuelle et les réseaux industriels. Les équipes de sécurité doivent accélérer les correctifs pour les infrastructures Linux, Ubiquiti et Cisco Unified CM."
     },
     "list": [
       {
+        "cve_id": "CVE-2026-43503",
+        "cvss_score": 8.8,
+        "epss_score": "1.3%",
+        "cisa_kev": false,
+        "affected_product": "Linux Kernel",
+        "affected_product_vendor": "Linux Foundation",
+        "vulnerability_type": {
+          "en": [
+            "Local Privilege Escalation (LPE)"
+          ],
+          "fr": [
+            "Élévation de Privilèges Locale (LPE)"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "The 'DirtyClone' vulnerability allows a local unprivileged user to exploit a page-cache corruption bug via cloned network packets, gaining full root privileges on affected Linux systems.",
+          "fr": "La vulnérabilité 'DirtyClone' permet à un utilisateur local non privilégié d'exploiter un bug de corruption du cache de pages via des paquets réseau clonés, obtenant ainsi les privilèges root sur les systèmes Linux affectés."
+        },
+        "mitre_attack_ttps_id": [
+          "T1068"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-24858",
+        "cvss_score": 9.4,
+        "epss_score": "85.84%",
+        "cisa_kev": true,
+        "affected_product": "FortiOS / FortiWeb / FortiNAC-F",
+        "affected_product_vendor": "Fortinet",
+        "vulnerability_type": {
+          "en": [
+            "Improper Access Control",
+            "Credential Reuse"
+          ],
+          "fr": [
+            "Contrôle d'Accès Inapproprié",
+            "Réutilisation d'Identifiants"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Part of the FortiBleed campaign, this vulnerability allows unauthorized access to administrative credentials and active VPN session tokens, leading to full appliance compromise and subsequent internal network pivots.",
+          "fr": "Faisant partie de la campagne FortiBleed, cette vulnérabilité permet un accès non autorisé aux identifiants d'administration et aux jetons de session VPN actifs, menant à une compromission complète de l'équipement et à des pivots réseau internes."
+        },
+        "mitre_attack_ttps_id": [
+          "T1078",
+          "T1110"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-12569",
+        "cvss_score": 9.3,
+        "epss_score": "1.11%",
+        "cisa_kev": true,
+        "affected_product": "Windchill PDMLink / FlexPLM",
+        "affected_product_vendor": "PTC",
+        "vulnerability_type": {
+          "en": [
+            "Improper Input Validation"
+          ],
+          "fr": [
+            "Validation d'Entrée Inappropriée"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "An improper input validation vulnerability allowing full compromise of PLM systems hosting CAD designs, BOMs, and manufacturing intellectual property. Actively exploited in the wild.",
+          "fr": "Une vulnérabilité de validation d'entrée inappropriée permettant une compromission complète des systèmes PLM hébergeant des fichiers de CAO, des nomenclatures et de la propriété intellectuelle industrielle. Activement exploitée."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
         "cve_id": "CVE-2026-34908",
-        "cvss_score": "10.0",
+        "cvss_score": 10.0,
         "epss_score": "2.45%",
         "cisa_kev": true,
-        "affected_product": "UniFi OS Server",
+        "affected_product": "UniFi OS Server / UDM / UDM-Pro",
         "affected_product_vendor": "Ubiquiti",
         "vulnerability_type": {
           "en": [
             "Improper Access Control"
           ],
           "fr": [
-            "Contrôle d'accès incorrect"
+            "Contrôle d'Accès Inapproprié"
           ]
         },
         "vulnerability_description": {
-          "en": "A critical improper access control vulnerability in Ubiquiti UniFi OS Server, UDM, and UDM-Pro allowing unauthenticated remote attackers to execute arbitrary commands with root privileges. Actively exploited in the wild.",
-          "fr": "Une vulnérabilité critique de contrôle d'accès dans Ubiquiti UniFi OS Server, UDM et UDM-Pro permettant à des attaquants distants non authentifiés d'exécuter des commandes arbitraires avec les privilèges root. Exploitée activement."
+          "en": "Allows remote, unauthenticated command injection and execution on UniFi OS devices, leading to complete control of the network management console.",
+          "fr": "Permet une injection et une exécution de commandes à distance non authentifiées sur les équipements UniFi OS, menant au contrôle complet de la console de gestion réseau."
         },
         "mitre_attack_ttps_id": [
-          "T1190",
-          "T1068"
-        ]
-      },
-      {
-        "cve_id": "CVE-2026-43503",
-        "cvss_score": "8.8",
-        "epss_score": "0.13%",
-        "cisa_kev": false,
-        "affected_product": "Linux Kernel",
-        "affected_product_vendor": "Linux",
-        "vulnerability_type": {
-          "en": [
-            "Local Privilege Escalation",
-            "Page Cache Poisoning (DirtyClone)"
-          ],
-          "fr": [
-            "Élévation de privilèges locaux",
-            "Empoisonnement du Page Cache (DirtyClone)"
-          ]
-        },
-        "vulnerability_description": {
-          "en": "Part of the 'DirtyClone' vulnerability family. Exploits a loss of the shared-frag flag in page cache handling within the Linux kernel (v7.1-rc5 and backports). Allows a local non-privileged user to write directly to read-only files (such as /etc/passwd or SUID binaries) to escalate privileges to root without triggering file-integrity monitoring audits.",
-          "fr": "Fait partie de la famille de vulnérabilités 'DirtyClone'. Exploite la perte du drapeau 'shared-frag' lors de la gestion du cache de page dans le noyau Linux. Permet à un utilisateur local non privilégié d'écrire directement dans des fichiers en lecture seule (comme /etc/passwd ou des binaires SUID) pour obtenir les droits root."
-        },
-        "mitre_attack_ttps_id": [
-          "T1068",
-          "T1548"
-        ]
-      },
-      {
-        "cve_id": "CVE-2026-24858",
-        "cvss_score": "9.4",
-        "epss_score": "85.84%",
-        "cisa_kev": true,
-        "affected_product": "FortiGate (FortiOS)",
-        "affected_product_vendor": "Fortinet",
-        "vulnerability_type": {
-          "en": [
-            "Improper Access Control",
-            "Credential Reuse (FortiBleed)"
-          ],
-          "fr": [
-            "Contrôle d'accès incorrect",
-            "Réutilisation d'identifiants (FortiBleed)"
-          ]
-        },
-        "vulnerability_description": {
-          "en": "Dubbed the 'FortiBleed' campaign. Improper access control in FortiGate SSL-VPN and administrative management interfaces allowed attackers to extract and reuse administrative credentials to gain lateral access inside target Active Directory environments. Associated with massive credential datasets leaked on cybercriminal forums.",
-          "fr": "Surnommée la campagne 'FortiBleed'. Un contrôle d'accès incorrect dans l'interface SSL-VPN et d'administration de FortiGate permet aux attaquants d'extraire et réutiliser des identifiants d'administration pour s'infiltrer dans les environnements Active Directory. Associé à une fuite massive d'identifiants sur les forums cybercriminels."
-        },
-        "mitre_attack_ttps_id": [
-          "T1190",
-          "T1078"
-        ]
-      },
-      {
-        "cve_id": "CVE-2024-40766",
-        "cvss_score": "9.3",
-        "epss_score": "15.69%",
-        "cisa_kev": true,
-        "affected_product": "SonicOS",
-        "affected_product_vendor": "SonicWall",
-        "vulnerability_type": {
-          "en": [
-            "Improper Access Control"
-          ],
-          "fr": [
-            "Contrôle d'accès incorrect"
-          ]
-        },
-        "vulnerability_description": {
-          "en": "An improper access control vulnerability in SonicWall SonicOS allows remote unauthenticated attackers to gain unauthorized access to firewall resources or cause SSLVPN service disruption. Actively exploited by Akira and Fog ransomware groups.",
-          "fr": "Une vulnérabilité de contrôle d'accès incorrect dans SonicWall SonicOS permet à des attaquants distants non authentifiés d'accéder aux ressources du pare-feu ou de perturber le service SSLVPN. Exploitée par les ransomwares Akira et Fog."
-        },
-        "mitre_attack_ttps_id": [
-          "T1190",
-          "T1486"
-        ]
-      },
-      {
-        "cve_id": "CVE-2026-20230",
-        "cvss_score": "8.6",
-        "epss_score": "34.16%",
-        "cisa_kev": true,
-        "affected_product": "Unified Communications Manager",
-        "affected_product_vendor": "Cisco",
-        "vulnerability_type": {
-          "en": [
-            "Server-Side Request Forgery (SSRF)"
-          ],
-          "fr": [
-            "Server-Side Request Forgery (SSRF)"
-          ]
-        },
-        "vulnerability_description": {
-          "en": "A server-side request forgery vulnerability in Cisco Unified Communications Manager allows remote attackers to write arbitrary files on the underlying operating system and gain root execution, leading to complete VoIP system compromise.",
-          "fr": "Une vulnérabilité de type Server-Side Request Forgery dans Cisco Unified Communications Manager permet à des attaquants distants d'écrire des fichiers arbitraires sur le système d'exploitation et d'obtenir les droits root, compromettant le système de téléphonie VoIP."
-        },
-        "mitre_attack_ttps_id": [
-          "T1190",
-          "T1068"
+          "T1190"
         ]
       }
     ]
   },
   "data_breaches": [
     {
-      "victim": "Madison Square Garden",
+      "victim": "Madison Square Garden Sports",
       "sector": "Hospitality_and_Entertainment",
       "country": "United States",
-      "records_count": 26000000,
+      "records_count": 9796738,
       "data_types": {
         "en": [
           "Names",
@@ -460,20 +487,45 @@
           "Phone numbers",
           "Physical addresses",
           "Customer service logs",
-          "Purchase histories"
+          "Billing metadata"
         ],
         "fr": [
           "Noms",
-          "Adresses email",
+          "Adresses e-mail",
           "Numéros de téléphone",
           "Adresses physiques",
-          "Logs du service client",
-          "Historique d'achats"
+          "Journaux du service client",
+          "Métadonnées de facturation"
         ]
       },
       "threat_actor": "ShinyHunters",
       "financial_impact_usd": null,
-      "source_url": "https://osintsights.com/shinyhunters-breach-exposes-madison-square-garden-data"
+      "source_url": "https://www.redpacketsecurity.com/madison-square-garden-sports-9-796-738-breached-accounts/"
+    },
+    {
+      "victim": "Xsolis",
+      "sector": "Healthcare_and_Life_Sciences",
+      "country": "United States",
+      "records_count": 1396519,
+      "data_types": {
+        "en": [
+          "Names",
+          "Social Security Numbers (SSN)",
+          "Dates of birth (DOB)",
+          "Health insurance info",
+          "Medical treatment data"
+        ],
+        "fr": [
+          "Noms",
+          "Numéros de Sécurité Sociale (SSN)",
+          "Dates de naissance (DOB)",
+          "Informations d'assurance maladie",
+          "Données de traitement médical"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://securityaffairs.com/194067/cyber-crime/xsolis-data-breach-impacts-1-4-million-people.html"
     },
     {
       "victim": "KDDI",
@@ -483,11 +535,11 @@
       "data_types": {
         "en": [
           "Email addresses",
-          "Passwords"
+          "Associated passwords"
         ],
         "fr": [
-          "Adresses email",
-          "Mots de passe"
+          "Adresses e-mail",
+          "Mots de passe associés"
         ]
       },
       "threat_actor": null,
@@ -501,199 +553,167 @@
       "records_count": 3459394,
       "data_types": {
         "en": [
-          "Identities",
-          "Phone numbers",
-          "Email addresses",
-          "Real estate properties details",
-          "Electronic signature metadata",
-          "Commercial sourcing data"
-        ],
-        "fr": [
-          "Identités",
-          "Numéros de téléphone",
-          "Adresses email",
-          "Détails de biens immobiliers",
-          "Métadonnées de signatures électroniques",
-          "Données de sourcing commercial"
-        ]
-      },
-      "threat_actor": "Unknown",
-      "financial_impact_usd": null,
-      "source_url": "https://mastox.eu/@Ced_haurus/116807023557322921"
-    },
-    {
-      "victim": "Novo Nordisk",
-      "sector": "Healthcare_and_Life_Sciences",
-      "country": "Denmark",
-      "records_count": null,
-      "data_types": {
-        "en": [
-          "Pharmaceutical R&D files",
-          "Clinical trials data",
-          "Employee records"
-        ],
-        "fr": [
-          "Fichiers de R&D pharmaceutique",
-          "Données d'essais cliniques",
-          "Dossiers d'employés"
-        ]
-      },
-      "threat_actor": "FulcrumSec",
-      "financial_impact_usd": 25000000,
-      "source_url": "https://www.reuters.com/legal/government/hacking-group-claims-major-hack-novo-nordisk-attempted-25-million-extortion-2026-06-16/"
-    },
-    {
-      "victim": "Xsolis",
-      "sector": "Healthcare_and_Life_Sciences",
-      "country": "United States",
-      "records_count": 1396519,
-      "data_types": {
-        "en": [
           "Names",
-          "Social Security Numbers (SSN)",
-          "Dates of birth (DOB)",
-          "Health insurance details",
-          "Medical history",
-          "Contact details"
+          "Contact details",
+          "Professional status (agent, candidate, partner)",
+          "Commercial source data",
+          "Electronic signatures"
         ],
         "fr": [
           "Noms",
-          "Numéros de Sécurité sociale (SSN)",
-          "Dates de naissance (DOB)",
-          "Détails d'assurance maladie",
-          "Antécédents médicaux",
-          "Coordonnées"
+          "Coordonnées",
+          "Statuts professionnels (agent, candidat, partenaire)",
+          "Données de sources commerciales",
+          "Signatures électroniques"
         ]
       },
-      "threat_actor": "Unknown",
+      "threat_actor": null,
       "financial_impact_usd": null,
-      "source_url": "https://securityaffairs.com/194067/cyber-crime/xsolis-data-breach-impacts-1-4-million-people.html"
+      "source_url": "https://digit-re.group/"
     }
   ],
   "target": {
     "sectors": {
       "en": [
+        "Critical_Infrastructure",
         "Healthcare_and_Life_Sciences",
-        "Technology_and_Telecom",
-        "Hospitality_and_Entertainment",
+        "Industry_and_Manufacturing",
+        "Retail_and_Consumer",
         "Government_and_Defense",
-        "Real_Estate_and_Construction",
-        "Industry_and_Manufacturing"
+        "Hospitality_and_Entertainment",
+        "Finance",
+        "Technology_and_Telecom",
+        "Real_Estate_and_Construction"
       ],
       "fr": [
+        "Critical_Infrastructure",
         "Healthcare_and_Life_Sciences",
-        "Technology_and_Telecom",
-        "Hospitality_and_Entertainment",
+        "Industry_and_Manufacturing",
+        "Retail_and_Consumer",
         "Government_and_Defense",
-        "Real_Estate_and_Construction",
-        "Industry_and_Manufacturing"
+        "Hospitality_and_Entertainment",
+        "Finance",
+        "Technology_and_Telecom",
+        "Real_Estate_and_Construction"
       ]
     },
     "countries": {
       "en": [
         "United States",
+        "United Kingdom",
+        "Germany",
         "France",
         "Japan",
-        "United Kingdom",
-        "Denmark",
         "Brazil",
-        "Ukraine"
+        "India",
+        "Mexico",
+        "Spain"
       ],
       "fr": [
         "États-Unis",
+        "Royaume-Uni",
+        "Allemagne",
         "France",
         "Japon",
-        "Royaume-Uni",
-        "Danemark",
         "Brésil",
-        "Ukraine"
+        "Inde",
+        "Mexique",
+        "Espagne"
       ]
     },
     "narrative": {
-      "en": "- **Healthcare & Life Sciences:** Novo Nordisk was targeted by FulcrumSec, who exfiltrated 1TB+ of clinical trials and R&D data demanding a $25M ransom. Healthcare tech provider Xsolis disclosed a breach impacting 1.39M patients, exposing SSNs and treatment data. Scattered Spider compromised SSM Health and Sutter Health.\n- **Technology & Telecom:** Japanese carrier KDDI suffered a data breach exposing 14.2M email credentials. American Tower had 216k accounts compromised by ShinyHunters. The FortiBleed dataset compromised 73k FortiGate edge appliances globally.\n- **Hospitality & Entertainment:** Madison Square Garden Sports had 26M customer records exposed by ShinyHunters. DraftKings customer accounts were hijacked by a group including the sentenced hacker 'Snoopy'.\n- **Government & Defense:** Brazil Civil Defense was targeted, compromising the national alert network. The US Texas Parks and Wildlife Department (TPWD) had 3M records leaked, exposing driver's licenses and passports. Ukraine's national post Ukrposhta suffered a major operational disruption from ransomware. France's FSPN (Police Sports) leaked 180k medical certificates.\n- **Real_Estate_and_Construction:** Digit RE Group had 3.4M records leaked, exposing Optimhome, Capifrance, and Meilleurtaux customers.\n- **Industry & Manufacturing:** Tata Electronics (India) had 630GB of Apple PCB layouts and Tesla trade secrets leaked by the 'World Leaks' group.",
-      "fr": "- **Santé et Sciences de la vie :** Novo Nordisk a été ciblé par FulcrumSec (vol de 1 To de R&D, rançon de 25 millions de dollars). Xsolis a révélé une fuite de 1,39M de fiches patients (SSN, diagnostics). Scattered Spider a infiltré Sutter Health et SSM Health.\n- **Technologie et Télécommunications :** L'opérateur japonais KDDI a subi une fuite de 14,2M d'identifiants. American Tower a vu 216k fiches clients compromises par ShinyHunters. La campagne FortiBleed a touché 73 000 pare-feu FortiGate.\n- **Hôtellerie et Divertissement :** Madison Square Garden Sports a vu 26M de dossiers clients dérobés par ShinyHunters. DraftKings a subi le piratage de comptes clients liés au hackeur 'Snoopy'.\n- **Gouvernement et Défense :** Le réseau d'alerte de la Défense Civile brésilienne a été saboté. Le TPWD (Texas) a subi une fuite de 3M de dossiers (permis de conduire, passeports). Le service postal ukrainien Ukrposhta a été paralysé par un ransomware. La FSPN (Police française) a vu fuiter 180k certificats médicaux.\n- **Immobilier et Construction :** Digit RE Group a subi le vol de 3,4M de lignes clients (Optimhome, Capifrance, Meilleurtaux).\n- **Industrie et Fabrication :** Tata Electronics a subi le vol de 630 Go de schémas de PCB Apple et de secrets industriels Tesla par World Leaks."
+      "en": "- **Critical Infrastructure:** Transport for London (TfL) was severely disrupted by a Scattered Spider cyberattack, causing approximately £39 million ($50 million) in damages, freezing customer refunds, and forcing 28,000 employees to manually reset passwords.\n- **Healthcare:** Xsolis, a healthcare AI coordination provider in the US, disclosed a major data breach stemming from a phishing attack that compromised the Protected Health Information (PHI) and Social Security Numbers (SSNs) of 1.4 million patients.\n- **Industry & Manufacturing:** Tata Electronics, a key supplier of Apple iPhone components, was compromised by the World Leaks group, leading to the public leak of 630 GB of internal designs, PCB schematics, and Apple intellectual property.\n- **Retail & Security:** Fortinet FortiGate firewalls across 194 countries were targeted in a massive 'FortiBleed' brute-force campaign, yielding valid VPN and administrative credentials for 73,932 devices, which were later put up for auction by SantaAd on Exploit forums.\n- **Government & Defense:** The Brazil Civil Defense agency suffered a disruptive cyberattack on its national emergency alert network, temporarily hijacking public warning gateways and highlighting vulnerabilities in critical crisis communication systems.\n- **Hospitality & Entertainment:** Madison Square Garden (MSG) Sports had its customer database breached by ShinyHunters, exposing nearly 9.8 million unique customer accounts containing personal details, customer service logs, and billing metadata.\n- **Finance:** Polymarket suffered a supply chain attack on its frontend domain resulting in $3 million in direct theft from customer cryptocurrency wallets through compromised redirection mechanisms.\n- **Technology & Telecom:** KDDI Japan was severely affected by a massive leak containing 14.2 million user credentials (emails and passwords), creating a major identity threat vector across the Asia-Pacific region.\n- **Real Estate:** Digit RE Group, a prominent French real estate conglomerate, suffered a massive data breach containing nearly 3.5 million records, exposing electronic signatures and agent metadata.",
+      "fr": "- **Critical Infrastructure:** Transport for London (TfL) a été paralysé par une cyberattaque de Scattered Spider, occasionnant des pertes estimées à 39 millions de livres sterling (50 millions de dollars), bloquant le système de remboursement et obligeant 28 000 employés à réinitialiser manuellement leurs identifiants.\n- **Healthcare:** Xsolis, fournisseur d'IA appliquée à la santé aux États-Unis, a révélé une violation majeure de données suite à un phishing, exposant les informations médicales et les numéros de Sécurité sociale de 1,4 million de patients.\n- **Industry & Manufacturing:** Tata Electronics, sous-traitant clé pour la fabrication d'iPhones, a vu ses données de CAO, schémas de PCB et secrets de fabrication Apple (environ 630 Go) exfiltrés et publiés par le groupe d'extorsion World Leaks.\n- **Retail & Security:** Les pare-feu FortiGate de Fortinet ont fait l'objet d'une campagne industrielle de force brute nommée 'FortiBleed', compromettant les identifiants administratifs et de session de 73 932 terminaux dans 194 pays, revendus ensuite sur les forums criminels par SantaAd.\n- **Government & Defense:** Le réseau national d'alerte de la Défense Civile du Brésil a été compromis par des attaquants ayant temporairement bloqué les consoles de gestion d'urgence, illustrant la fragilité des infrastructures de télécommunication critiques en temps de crise.\n- **Hospitality & Entertainment:** Madison Square Garden (MSG) Sports a été victime d'une exfiltration massive de sa base de données de billetterie par ShinyHunters, exposant près de 9,8 millions de comptes clients contenant des données d'identité et d'achat.\n- **Finance:** Polymarket a subi une attaque de chaîne d'approvisionnement sur son domaine frontal, entraînant le vol direct de 3 millions de dollars dans les portefeuilles de ses utilisateurs via des redirections malveillantes.\n- **Technology & Telecom:** L'opérateur japonais KDDI a enregistré une fuite colossale de 14,2 millions d'identifiants (adresses emails et mots de passe), augmentant drastiquement le risque d'attaques par credential stuffing dans la zone Asie-Pacifique.\n- **Real Estate:** Digit RE Group, un groupe immobilier français d'envergure, a fait l'objet d'une revendication de fuite de 3,5 millions de dossiers JSON, compromettant des signatures électroniques et des données d'agents."
     }
   },
   "trends": {
     "emerging_techniques": {
       "en": [
-        "Agentic AI GRC Auditing",
-        "Agentic Pentesting with LLMs",
-        "C2 Communication via Video Game Network Protocols",
-        "DDoS Detection via Wavelet Transforms",
-        "Smart Contract RPC Queries for C2 Recovery",
-        "Pseudo-Polymorphism through Dynamic File Inflation"
+        "Ghost code execution via browser extensions (EvilTokens) bypassing MFA",
+        "Webshell injection paired with GSocket deployments (gs-netcat) for stealthy C2 tunnels",
+        "Short-pulse, intermittent DDoS attacks designed to poison moving-average mitigation systems",
+        "AI agentic GRC and pentesting workflows automating rapid vulnerability discovery and remediation at scale"
       ],
       "fr": [
-        "Audit GRC par IA agentique",
-        "Pentest par agents d'IA autonomes",
-        "Canal C2 via protocoles réseau de jeux vidéo (Counter-Strike)",
-        "Détection DDoS par transformée en ondelettes",
-        "Requêtes de contrats intelligents sur la blockchain Polygon pour récupérer les C2",
-        "Pseudo-polymorphisme par gonflement dynamique des fichiers"
+        "Exécution de code 'fantôme' via des extensions de navigateur (EvilTokens) contournant la MFA",
+        "Injection de webshells couplée à des déploiements GSocket (gs-netcat) pour des tunnels C2 furtifs",
+        "Attaques DDoS à impulsions courtes conçues pour empoisonner les systèmes de mitigation à moyenne glissante",
+        "Flux de travail de GRC et de pentesting basés sur des agents IA automatisant la découverte rapide des failles à l'échelle"
       ]
     },
     "declining_techniques": {
       "en": [
-        "Traditional Static Password Rules",
-        "Unencrypted S3 Buckets Exposure",
-        "Simple SMS-based MFA",
-        "Single-tenant Cloud Segmentation"
+        "Traditional SMS and OTP MFA, rapidly bypassed by automated proxy and token-theft extensions",
+        "Static signature-based call-stack analysis in EDRs, successfully evaded by call-stack spoofing (LACUNA Chain 'Ghost Frames')"
       ],
       "fr": [
-        "Règles de complexité de mots de passe statiques obsolètes",
-        "Exposition de buckets S3 sans chiffrement",
-        "MFA simple par SMS/TOTP",
-        "Segmentation cloud mono-tenant"
+        "MFA par SMS et OTP traditionnels, rapidement contournés par des proxies automatisés et des extensions de vol de jetons",
+        "Analyse de pile d'appels statique basée sur des signatures dans les EDR, contournée par la falsification de pile (LACUNA Chain 'Ghost Frames')"
       ]
     },
     "geopolitical_context": {
-      "en": "The geopolitical spectrum is driven by the proxy consolidation of power. In Europe, states are enforcing strict digital sovereignty rules (FDI screening, replacing Palantir with ChapsVision) to decouple from extraterritorial US and Chinese tech reliance. Meanwhile, Russian state-backed and hybrid actors are weaponizing information manipulation (FIMI) to mask front-line failures in Ukraine and target Western transport, communications, and critical healthcare infrastructures.",
-      "fr": "Le contexte géopolitique est dicté par une consolidation de souveraineté. En Europe, les États durcissent les règles numériques (filtrage des IDE, remplacement de Palantir par ChapsVision) pour s'affranchir des dépendances technologiques américaines et chinoises. En parallèle, les acteurs hybrides russes militarisent les manipulations d'information (FIMI) pour masquer les revers militaires en Ukraine et cibler les transports et la santé en Occident."
+      "en": "Geopolitical friction continues to dictate cyber targeting. State-sponsored elements deploy advanced information manipulation (FIMI) to suppress battlefield realities, and critical industrial supply chains are targeted (Atlas Elektronik, Tata Electronics) to siphon IP and compromise defense logistics across Europe and the Indo-Pacific.",
+      "fr": "Les frictions géopolitiques continuent de dicter le ciblage cyber. Des éléments étatiques déploient des manipulations de l'information (FIMI) pour masquer les réalités du champ de bataille, et les chaînes d'approvisionnement industrielles clés sont visées (Atlas Elektronik, Tata Electronics) pour siphonner la propriété intellectuelle et compromettre la logistique de défense en Europe et en Indo-Pacifique."
     }
   },
   "recommendations": {
     "strategic": {
       "en": [
         {
-          "title": "Deploy FIDO2 Hardware Keys for Federated IdPs",
-          "detail": "Threat actors like Scattered Spider and ShinyHunters continuously bypass SMS/TOTP-based MFA via social engineering, SIM-swapping, and session hijacking (as seen in the Klue and LastPass breaches). Mandate FIDO2/WebAuthn-compliant hardware security keys (e.g., YubiKey 5, Google Titan) for all federated Identity Providers (Okta, Entra ID). This eliminates credential harvesting, phishing, and session theft risks by validating domain-bound cryptographic credentials."
+          "title": "Enforce mTLS and FIDO2 for SaaS Portals",
+          "detail": "Traditional SMS or TOTP MFA has proven vulnerable to advanced session hijacking and token theft from browser extension campaigns like EvilTokens and helpdesk compromises by Scattered Spider. Organizations must enforce phishing-resistant FIDO2 hardware keys and mutual TLS (mTLS) for all corporate SaaS applications and Cloud administration portals. This directly mitigates token hijacking and administrative session hijacking."
         },
         {
-          "title": "Implement Continuous Identity Security Posture Management (ISPM)",
-          "detail": "The global FortiBleed dataset release compromising 73,000 FortiGate admin/VPN credentials highlights how static administrative credentials represent single points of failure. Deploy ISPM platforms to discover orphaned accounts, track privilege creep (especially with machine/AI identities), and continuously audit trust relationships. This framework provides CISOs with measurable metrics of identity exposure across cloud, SaaS, and on-premises environments."
+          "title": "Implement Identity Security Posture Management (ISPM)",
+          "detail": "With the exponential growth of non-human identity accounts, machine integration tokens, and agentic AI workloads (as observed in Grab's security architectures), traditional IAM solutions leave critical visibility gaps. CISOs should deploy specialized ISPM platforms to continuously discover and audit orphaned service accounts and over-privileged roles. This reduces the risk of lateral movement and credential reuse highlighted by the massive FortiBleed campaign."
+        },
+        {
+          "title": "Enforce Continuous Cloud Security Configuration Auditing",
+          "detail": "The recent data exposure at Dialog and the credential extraction in the FortiBleed campaign demonstrate that misconfigured cloud storage and unhardened edge appliances represent immediate targets. Implement automated Cloud Security Posture Management (CSPM) and File Integrity Monitoring (FIM) tools to block anonymous access to SMB/S3 shares and alert on configuration drift. This prevents opportunistic exfiltration of critical databases and structural files."
         }
       ],
       "fr": [
         {
-          "title": "Déployer des clés matérielles FIDO2 pour l'identité fédérée",
-          "detail": "Des groupes comme Scattered Spider et ShinyHunters contournent le MFA par SMS/TOTP via de l'ingénierie sociale ou le vol de session (comme dans les failles de Klue et LastPass). Imposez des clés de sécurité matérielles conformes FIDO2/WebAuthn (ex: YubiKey série 5) pour l'accès à tous les IdP d'entreprise (Entra ID, Okta). Cela neutralise le vol de session, la fatigue MFA et le phishing de jetons OAuth."
+          "title": "Imposer mTLS et FIDO2 pour les Portails SaaS",
+          "detail": "Le MFA traditionnel (SMS/TOTP) s'est avéré vulnérable face aux campagnes de vol de jetons d'EvilTokens et aux compromissions de Scattered Spider ciblant le helpdesk. Les organisations doivent imposer des clés matérielles FIDO2 résistantes au phishing et du TLS mutuel (mTLS) pour l'accès aux applications SaaS et aux consoles cloud. Cela atténue directement le piratage de jetons et de sessions administratives."
         },
         {
-          "title": "Implémenter une gestion continue de la posture d'identité (ISPM)",
-          "detail": "La fuite de 73 000 identifiants d'administration FortiGate (FortiBleed) montre que les accès permanents constituent un risque systémique. Déployez des solutions ISPM pour inventorier les comptes orphelins, surveiller l'accumulation de privilèges (notamment pour les comptes de service et agents IA) et auditer les permissions. Ce cadre offre une visibilité et des KPI continus pour l'administration."
+          "title": "Déployer une Gestion de Posture de Sécurité Identitaire",
+          "detail": "Avec l'explosion des comptes non-humains, des jetons machine et des charges d'IA agentique (comme vu chez Grab), les solutions IAM traditionnelles laissent des lacunes. Les RSSI doivent déployer des plateformes ISPM (Identity Security Posture Management) pour découvrir et auditer en continu les comptes de service orphelins et les rôles sur-privilégiés. Cela réduit le risque de mouvement latéral mis en évidence par la campagne FortiBleed."
+        },
+        {
+          "title": "Auditer en Continu les Configurations SMB et Cloud",
+          "detail": "L'exposition accidentelle de Dialog et l'extraction d'identifiants dans la campagne FortiBleed démontrent que les stockages cloud mal configurés et les équipements de périmètre sont des cibles immédiates. Implémentez des outils automatisés de CSPM (Cloud Security Posture Management) et de FIM (File Integrity Monitoring) pour bloquer les accès anonymes aux partages SMB/S3 et alerter sur les dérives. Cela empêche l'exfiltration de bases de données."
         }
       ]
     },
     "operational": {
       "en": [
         {
-          "title": "Update Linux Kernels to Mitigate DirtyClone LPE",
-          "detail": "Active exploitation of 'DirtyClone' (CVE-2026-43503) and 'DirtyFrag' (CVE-2026-43284) vulnerabilities allows local users to escalate privileges to root via page-cache poisoning. Immediately update all Linux systems (especially multi-tenant containers and CI/CD runners) to Linux kernel v7.1-rc5 or the latest stable/LTS backport. As a temporary mitigation, disable user namespaces by executing `sysctl -w kernel.unprivileged_userns_clone=0`."
+          "title": "Deploy eBPF Monitoring for Linux DirtyClone Exploit",
+          "detail": "The disclosure of the high-severity Linux kernel 'DirtyClone' vulnerability (CVE-2026-43503) allows local unprivileged users to escalate to root via page-cache corruption. Blue teams must immediately deploy eBPF-based runtime security agents (like Cilium Tetragon or Aqua Tracee) to monitor write operations on the page cache of SUID binaries. Temporary mitigation should include disabling unprivileged user namespaces via 'sysctl -w kernel.unprivileged_userns_clone=0' on multi-tenant environments."
         },
         {
-          "title": "Isolate FortiGate Edge Interfaces and Rotate Credentials",
-          "detail": "The 'FortiBleed' campaign exposed VPN and management credentials for 73k FortiGate devices worldwide (exploiting CVE-2026-24858). Immediately disable WAN-facing administrative management access on all FortiGate firewalls and force a complete rotation of all administrative and SSL-VPN user passwords. Invalidate all active SSL-VPN sessions, deploy geo-blocking, and audit logs for unauthorized configuration exports."
+          "title": "Perform Mass Rotation of FortiOS Administrative Credentials",
+          "detail": "The FortiBleed campaign has exposed valid admin and SSL VPN credentials for over 73,932 FortiGate firewalls globally, with threat groups conducting offline cracking via Hashtopolis GPU clusters. SOC teams must immediately rotate all local administrator passwords on FortiGate appliances and revoke active SSL VPN sessions. Furthermore, restrict WAN access to the administrative interfaces using Local-In policies or access control lists (ACLs)."
+        },
+        {
+          "title": "Scan All Development Workspaces for Amazon Q Flaws",
+          "detail": "The newly disclosed vulnerabilities CVE-2026-12957 and CVE-2026-12958 in Language Servers for AWS/Amazon Q Developer can lead to local code execution on developer machines. IT administrators must force-update all IDE plugins (VS Code to version 2.20+, JetBrains to 4.3+, and Visual Studio to 1.94.0.0+). Regularly scan developer endpoints for unauthorized Model Context Protocol (MCP) server executions and symbolic link creation."
         }
       ],
       "fr": [
         {
-          "title": "Mettre à jour les noyaux Linux contre DirtyClone",
-          "detail": "L'exploitation active des vulnérabilités 'DirtyClone' (CVE-2026-43503) et 'DirtyFrag' (CVE-2026-43284) permet à des utilisateurs locaux d'obtenir les privilèges root via le page-cache. Mettez à jour immédiatement tous les serveurs Linux (notamment les conteneurs partagés et runners CI/CD) vers le noyau v7.1-rc5 ou le dernier correctif LTS. En contournement, désactivez les namespaces utilisateur non privilégiés via `sysctl -w kernel.unprivileged_userns_clone=0`."
+          "title": "Surveiller par eBPF la Vulnérabilité Noyau DirtyClone",
+          "detail": "La divulgation de la faille critique du noyau Linux 'DirtyClone' (CVE-2026-43503) permet à tout utilisateur local non privilégié de s'élever root via la corruption du cache de pages. Les équipes de défense doivent immédiatement déployer des agents d'exécution basés sur eBPF (tels que Cilium Tetragon ou Aqua Tracee) pour surveiller les écritures sur le cache des binaires SUID. Désactivez temporairement les namespaces utilisateur non privilégiés via 'sysctl -w kernel.unprivileged_userns_clone=0' dans les environnements multi-locataires."
         },
         {
-          "title": "Sécuriser les pare-feux FortiGate et renouveler les identifiants",
-          "detail": "La campagne FortiBleed a compromis les identifiants d'administration de plus de 73 000 pare-feu FortiGate (CVE-2026-24858). Désactivez immédiatement l'accès d'administration depuis le WAN sur l'ensemble de vos boîtiers et forcez un renouvellement complet des mots de passe admin et VPN. Révoquez toutes les sessions VPN SSL actives et auditez les logs à la recherche d'exports anormaux."
+          "title": "Forcer la Rotation Massive des Identifiants FortiOS",
+          "detail": "La campagne FortiBleed a exposé les identifiants d'administration et de VPN SSL de plus de 73 932 pare-feu FortiGate, les attaquants cassant les empreintes hors-ligne via des clusters de GPU Hashtopolis. Les équipes SOC doivent immédiatement renouveler tous les mots de passe d'administration sur les pare-feu FortiGate et invalider les sessions VPN SSL actives. Restreignez également l'accès WAN aux interfaces d'administration via des politiques Local-In ou des listes d'accès (ACL)."
+        },
+        {
+          "title": "Mettre à Jour d'Urgence les Plugins Amazon Q",
+          "detail": "Les vulnérabilités récemment divulguées CVE-2026-12957 et CVE-2026-12958 dans Language Servers for AWS/Amazon Q Developer peuvent mener à une exécution de code locale sur les postes de développement. Les administrateurs doivent forcer la mise à jour des extensions IDE (VS Code en version 2.20+, JetBrains en 4.3+, et Visual Studio en 1.94.0.0+). Analysez régulièrement les postes de travail pour détecter les exécutions non autorisées de serveurs MCP (Model Context Protocol)."
         }
       ]
     }
