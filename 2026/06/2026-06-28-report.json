@@ -1,1 +1,1749 @@
-{"strategic_analysis": {"analyse": {"en": "The analysis of the period highlights significant targeted threats, including advanced phishing campaigns against the hospitality sector (TonRAT) and state-sponsored espionage operations by Russian actors (UNC5792, UNC4221) aiming to hijack Signal accounts. Additionally, several critical vulnerabilities (DirtyClone in Linux and numerous WordPress plugins vulnerable to injection or privilege escalation) emphasize the urgent need to maintain active monitoring and rapidly deploy corresponding security patches.", "fr": "L'analyse de la période met en évidence d'importantes menaces ciblées, notamment des campagnes de phishing avancées contre l'hôtellerie (TonRAT) et des opérations d'espionnage d'acteurs étatiques russes (UNC5792, UNC4221) visant le détournement de comptes Signal. De plus, plusieurs failles critiques (DirtyClone dans Linux et de nombreux plugins WordPress vulnérables à l'injection ou à l'escalade de privilèges) accentuent le besoin de maintenir une veille active et de déployer rapidement les correctifs de sécurité correspondants."}, "date": "2026-06-28"}, "geopolitical_analyse": [{"sector": {"en": ["Government_and_Defense", "Media_and_Communication"], "fr": ["Gouvernement et défense", "Médias et communication"]}, "theme": {"en": "Russian espionage campaign targeting Signal recovery keys", "fr": "Campagne d'espionnage russe ciblant les clés de secours Signal"}, "description": {"en": "Russian phishing campaigns have shifted from simple SMS verification capture to the direct exfiltration of Signal Backup Recovery Keys, exploiting human psychology to access full encrypted history.", "fr": "Les campagnes de phishing russes ont évolué de la simple capture de codes de validation SMS vers l'exfiltration directe des clés de secours Signal (Backup Recovery Keys). Cette méthode s'appuie sur une manipulation psychologique pour accéder à l'intégralité de l'historique chiffré des victimes."}, "recommandations": [{"en": "Train users to reject any in-app support assistance claiming to come from Signal support.", "fr": "Sensibiliser les utilisateurs à refuser toute assistance in-app émanant de prétendus supports Signal."}, {"en": "Proactively regenerate recovery keys in case of suspected compromise.", "fr": "En cas de compromission suspectée, révoquer immédiatement la clé de secours actuelle et en régénérer une nouvelle."}], "incident_response_playbook": {"phase1_preparation": {"en": ["Establish strict guidelines prohibiting the sharing of messaging app credentials or recovery keys.", "Train VIP users (executives, journalists, diplomats) on in-app phishing and support account spoofing."], "fr": ["Établir des consignes strictes interdisant le partage d'identifiants ou de clés de secours d'applications de messagerie.", "Sensibiliser les utilisateurs VIP (cadres, journalistes, diplomates) au phishing in-app et à l'usurpation des comptes de support."]}, "phase2_detection": {"en": ["Regularly audit connected devices registered on sensitive corporate or personal messaging accounts.", "Monitor unexpected connections of new messaging clients at unusual hours."], "fr": ["Auditer régulièrement les appareils connectés enregistrés sur les comptes de messagerie professionnels ou personnels sensibles.", "Surveiller les connexions inattendues de nouveaux clients de messagerie à des heures inhabituelles."]}, "phase3_containment": {"en": ["Immediately disconnect any unidentified linked device in application settings.", "Generate a new backup recovery key to invalidate the compromised one."], "fr": ["Déconnecter immédiatement tout appareil lié non identifié dans les paramètres de l'application (Linked Devices).", "Générer une nouvelle clé de secours de sauvegarde (Backup Recovery Key) pour invalider l'ancienne clé compromise."]}, "phase4_post_incident": {"en": ["Consider any chat history backed up before key rotation as compromised.", "Notify partners and regular contacts of potential data leak."], "fr": ["Considérer tout historique de discussion sauvegardé avant la rotation de la clé de secours comme compromis.", "Notifier les partenaires et les contacts réguliers de la fuite de données potentielle."]}, "phase5_threat_hunting": {"en": ["Search for suspicious or repeated access to the recovery key interface or pairing of third-party devices."], "fr": ["Recherche d'accès suspects ou répétés à l'interface de récupération des clés ou d'appairage d'appareils tiers."]}}, "tags": ["Chiffrement", "Signal", "Russie", "Espionnage"], "sources": ["hxxps://securityaffairs[.]com/194360/intelligence/new-fbi-alert-russian-intelligence-uses-signal-recovery-keys-to-access-messages.html"], "date": "2026-06-27"}], "regulatory_and_legal": [], "breach_analyse": [{"victim": "NAIC (National Association of Insurance Commissioners)", "threat_actor": "unknown", "threat_actor_origin": "unknown", "threat_actor_type": "unknown", "threat_actor_aliases": [], "sector": {"en": ["Finance"], "fr": ["Finance"]}, "description": {"en": "The NAIC suspended the allocation of its investment risk designations following a cyberattack. This preventive measure aims to protect financial evaluation integrity.", "fr": "La NAIC a suspendu l'attribution de ses désignations de risque d'investissement à la suite d'une cyberattaque. Cette mesure préventive vise à protéger l'intégrité de l'évaluation financière et à endiguer la propagation d'une possible compromission."}, "mitre_ttps": [], "recommandations": [{"en": "Closely follow official NAIC announcements regarding secure service resumption.", "fr": "Suivre de près les annonces officielles de la NAIC concernant la reprise sécurisée du service."}, {"en": "Manually verify investment designations received just before the outage.", "fr": "Vérifier manuellement la validité des désignations d'investissement reçues juste avant la panne."}], "incident_response_playbook": {"phase1_preparation": {"en": ["Set up regular offline backups of financial assessment data.", "Define a business continuity plan in case of risk assessment partner failure."], "fr": ["Mettre en place des sauvegardes régulières et hors ligne des données d'évaluation financière.", "Définir un plan de continuité d'activité (PCA) en cas de défaillance des partenaires d'évaluation des risques."]}, "phase2_detection": {"en": ["Monitor traffic or access anomalies on partner portals connected to NAIC.", "Analyze network security alerts for potential financial data exfiltration attempts."], "fr": ["Surveiller les anomalies de trafic ou d'accès sur les portails partenaires connectés à la NAIC.", "Analyser les alertes de sécurité réseau pour détecter des tentatives d'exfiltration de données financières."]}, "phase3_containment": {"en": ["Temporarily suspend integrated external risk designation feeds.", "Isolate internal networks connected to NAIC APIs."], "fr": ["Suspendre temporairement l'intégration automatisée des flux de désignation de risques externes.", "Isoler les réseaux internes connectés aux API de la NAIC."]}, "phase4_post_incident": {"en": ["Assess the loss of financial risk designation data integrity.", "Restore services after audit and confirmation of NAIC infrastructure security."], "fr": ["Évaluer la perte de intégrité des données d'évaluation des risques financières.", "Rétablir les services après audit et confirmation de la sécurisation de l'infrastructure de la NAIC."]}, "phase5_threat_hunting": {"en": ["Search for anomalous calls or malicious API requests directed to or from NAIC infrastructure."], "fr": ["Recherche d'appels anormaux ou de requêtes API malveillantes dirigées vers ou depuis l'infrastructure de la NAIC."]}}, "tags": ["Finance", "Assurance", "Suspension", "Cyberattaque"], "sources": ["hxxps://databreaches[.]net/2026/06/27/naic-suspends-investment-risk-designations-after-cyber-attack/?pk_campaign=feed&pk_kwd=naic-suspends-investment-risk-designations-after-cyber-attack"], "date": "2026-06-27"}], "vulnerabilities_analyse": [{"cve_id": "CVE-2026-43503", "euvd_id": "unknown", "cisa_kev": "false", "cvss": "8.8", "epss": "unknown", "cpe": "cpe:2.3:o:linux:linux_kernel:-:*:*:*:*:*:*:*", "product": "Linux Kernel", "vendor": "Linux Foundation", "description": {"en": "DirtyClone (CVE-2026-43503) allows local non-privileged users to silently escalate privileges to root by exploiting the kernel page cache via local loopback IPsec network operations.", "fr": "La faille DirtyClone (CVE-2026-43503) fait partie de la famille 'DirtyFrag'. Elle permet à un utilisateur local non privilégié d'élever ses privilèges vers root de manière silencieuse et invisible en exploitant le cache de pages mémoire du noyau via des opérations de réseau en boucle locale (loopback IPsec)."}, "mitre_ttps": ["T1068"], "recommandations": [{"en": "Update kernel to Linux v7.1-rc5 or apply 'sysctl -w kernel.unprivileged_userns_clone=0' to restrict namespaces.", "fr": "Mettre à jour le noyau vers Linux v7.1-rc5 ou appliquer la commande 'sysctl -w kernel.unprivileged_userns_clone=0' pour réduire la surface d'attaque en interdisant les namespaces non privilégiés."}], "incident_response_playbook": {"phase1_preparation": {"en": ["Identify critical Linux servers running unpatched kernels.", "Restrict the use of unprivileged user namespaces."], "fr": ["Identifier les serveurs Linux critiques exécutant des noyaux non corrigés.", "Restreindre l'utilisation des namespaces d'utilisateurs non privilégiés."]}, "phase2_detection": {"en": ["Monitor suspicious CAP_NET_ADMIN usage within unprivileged user namespaces.", "Inspect unexpected execution of su or other setuid binaries by low-level system accounts."], "fr": ["Surveiller l'utilisation suspecte de CAP_NET_ADMIN au sein de namespaces d'utilisateurs non privilégiés.", "Inspecter l'exécution inattendue du binaire /usr/bin/su ou d'autres fichiers setuid par des comptes système de bas niveau."]}, "phase3_containment": {"en": ["Disable user namespaces immediately: sysctl -w kernel.unprivileged_userns_clone=0.", "Blacklist kernel modules esp4, esp6, and rxrpc if not needed."], "fr": ["Désactiver immédiatement les namespaces d'utilisateurs : sysctl -w kernel.unprivileged_userns_clone=0.", "Blacklister les modules kernel esp4, esp6 et rxrpc s'ils ne sont pas indispensables."]}, "phase4_post_incident": {"en": ["Update kernel packages to stable patched versions.", "Perform post-incident audits for persistent SSH keys."], "fr": ["Mettre à jour les packages du noyau vers la version stable corrigée.", "Effectuer un audit post-incident pour rechercher d'éventuelles clés SSH installées de manière persistante."]}, "phase5_threat_hunting": {"en": ["Search for privilege escalation attempts via unprivileged user namespace creation followed by setuid execution."], "fr": ["Recherche d'exploitations de privilèges par création de namespace d'utilisateur non privilégié suivi immédiatement de l'exécution d'un binaire setuid."]}}, "tags": ["Linux", "DirtyClone", "LPE", "DirtyFrag", "Kernel"], "sources": ["hxxps://securityaffairs[.]com/194338/uncategorized/dirtyclone-fourth-linux-kernel-flaw-in-six-weeks-escalates-to-root.html"], "date": "2026-06-27"}, {"cve_id": "CVE-2026-10643", "euvd_id": "unknown", "cisa_kev": "false", "cvss": "7.5", "epss": "unknown", "cpe": "cpe:2.3:o:zephyrproject:zephyr:-:*:*:*:*:*:*:*", "product": "Zephyr OS", "vendor": "Zephyr Project", "description": {"en": "Insufficient validation of the control buffer size in insert_pktinfo() within recvmsg() causes a 12-byte heap overflow when receiving a malicious UDP packet.", "fr": "Une validation insuffisante de la taille de la mémoire tampon de contrôle dans insert_pktinfo() au sein de recvmsg() provoque un débordement de tas (Heap Overflow) d'environ 12 octets lors de la réception d'un paquet UDP malveillant."}, "mitre_ttps": ["T1210"], "recommandations": [{"en": "Apply the fix using the NET_CMSG_SPACE() function to ensure complete validation.", "fr": "Appliquer la correction utilisant la fonction NET_CMSG_SPACE() pour assurer une validation complète."}, {"en": "Segment IoT networks to prevent unfiltered UDP access.", "fr": "Segmenter le réseau pour empêcher tout accès externe non filtré en UDP vers les équipements IoT."}], "incident_response_playbook": {"phase1_preparation": {"en": ["Identify microcontrollers running Zephyr RTOS (v3.6.0 to v4.4.0).", "Apply network configs limiting arbitrary UDP requests on these devices."], "fr": ["Identifier les microcontrôleurs et objets connectés fonctionnant sous l'OS temps réel Zephyr (versions v3.6.0 à v4.4.0).", "Appliquer des configurations réseau limitant les requêtes UDP arbitraires sur les ports de ces équipements."]}, "phase2_detection": {"en": ["Monitor unexplained crashes or frequent restarts of Zephyr OS IoT devices.", "Detect UDP packet streams causing network communication failures."], "fr": ["Surveiller les crashs inexpliqués ou redémarrages fréquents d'appareils IoT fonctionnant sous Zephyr OS.", "Détecter des flux de paquets UDP dont les payloads provoquent une défaillance de la communication réseau."]}, "phase3_containment": {"en": ["Isolate vulnerable network devices via strict segmentation.", "Disable IP_PKTINFO feature if not required."], "fr": ["Isoler les périphériques réseau vulnérables ou limiter leur visibilité via une segmentation stricte.", "Désactiver la fonctionnalité IP_PKTINFO si elle n'est pas requise par les applications."]}, "phase4_post_incident": {"en": ["Update device firmware with a Zephyr version containing the buffer check fix.", "Validate absence of other residual memory anomalies on the device."], "fr": ["Mettre à jour le micrologiciel de l'appareil avec une version de Zephyr intégrant le correctif de la capacité de contrôle de buffer.", "Valider l'absence d'autres anomalies mémoires résiduelles sur l'équipement."]}, "phase5_threat_hunting": {"en": ["Analyze UDP payloads and search for undersized control buffers aiming to cause heap overflows."], "fr": ["Recherche de requêtes UDP contenant des structures de contrôle corrompues cherchant à provoquer un débordement de tas."]}}, "tags": ["Zephyr", "Heap Overflow", "IoT", "Embedded"], "sources": ["hxxps://cvefeed[.]io/vuln/detail/CVE-2026-10643"], "date": "2026-06-27"}, {"cve_id": "CVE-2026-8095", "euvd_id": "unknown", "cisa_kev": "false", "cvss": "8.1", "epss": "unknown", "cpe": "cpe:2.3:a:nmedia:frontend_file_manager:-:*:*:*:*:wordpress:*:*", "product": "Frontend File Manager Plugin", "vendor": "nmedia", "description": {"en": "Allows authenticated 'Subscriber+' users to arbitrarily delete files on the server via a poorly controlled filename parameter.", "fr": "Permet à des utilisateurs authentifiés de type 'Subscriber+' de supprimer arbitrairement des fichiers sur le serveur par le biais d'un paramètre de nom de fichier mal contrôlé."}, "mitre_ttps": ["T1190"], "recommandations": [{"en": "Apply the security update recommended by OffSeq.", "fr": "Appliquer immédiatement la mise à jour corrective recommandée par OffSeq."}, {"en": "Monitor logs for unexpected file deletions by non-admin users.", "fr": "Surveiller les logs pour détecter d'éventuelles suppressions inattendues de fichiers par des comptes non-administrateurs."}], "incident_response_playbook": {"phase1_preparation": {"en": ["Maintain a registry of all installed plugins on the WordPress instance.", "Configure a file integrity monitoring tool on the host server."], "fr": ["Tenir à jour un registre de tous les plugins installés sur l'instance WordPress.", "Configurer un outil d'intégrité de fichiers système sur le serveur d'hébergement."]}, "phase2_detection": {"en": ["Monitor suspicious HTTP POST requests to nmedia Frontend File Manager requesting deletions.", "Detect file integrity alerts (suddenly deleted system files)."], "fr": ["Surveiller les requêtes HTTP POST suspectes vers nmedia Frontend File Manager demandant des suppressions.", "Détecter les alertes d'intégrité de fichiers (fichiers système soudainement supprimés)."]}, "phase3_containment": {"en": ["Immediately disable nmedia Frontend File Manager plugin.", "Temporarily restrict WordPress user registration privileges."], "fr": ["Désactiver immédiatement le plugin nmedia Frontend File Manager.", "Restreindre temporairement les privilèges de création de compte utilisateur WordPress."]}, "phase4_post_incident": {"en": ["Restore deleted files from backups.", "Update the plugin to the corrected version."], "fr": ["Restaurer les fichiers supprimés depuis les sauvegardes réseau.", "Mettre à jour le plugin vers sa version corrigée."]}, "phase5_threat_hunting": {"en": ["Detect path traversal attempts targeting the file manager plugin in web server logs."], "fr": ["Détection d'exploitation par saut de répertoire (Path Traversal) ciblant l'outil d'édition de fichiers."]}}, "tags": ["WordPress", "Plugin", "File Deletion", "nmedia"], "sources": ["hxxps://radar[.]offseq[.]com/threat/cve-2026-8095-cwe-73-external-control-of-file-name-2b96707b1c289da8"], "date": "2026-06-28"}, {"cve_id": "CVE-2026-54825", "euvd_id": "unknown", "cisa_kev": "false", "cvss": "9.3", "epss": "unknown", "cpe": "cpe:2.3:a:wpdatatables:wpdatatables:*:*:*:*:*:wordpress:*:*", "product": "wpDataTables", "vendor": "wpDataTables", "description": {"en": "Unauthenticated critical SQL injection vulnerability affecting versions <= 7.4. No patch is available at publication time.", "fr": "Vulnérabilité d'injection SQL non authentifiée critique affectant les versions inférieures ou égales à 7.4. Aucun correctif n'est disponible au moment de la publication."}, "mitre_ttps": ["T1190"], "recommandations": [{"en": "Disable the affected plugin or restrict admin access at the network level.", "fr": "Désactiver le plugin affecté ou restreindre l'accès à l'administration au niveau réseau."}, {"en": "Add WAF rules to filter SQLi attempts targeting wpDataTables.", "fr": "Ajouter des règles spécifiques sur le WAF pour filtrer les tentatives d'exploitation SQLi ciblant wpDataTables."}], "incident_response_playbook": {"phase1_preparation": {"en": ["Verify running versions of wpDataTables plugin.", "Ensure WordPress database accounts use limited privileges."], "fr": ["Vérifier les versions du plugin wpDataTables en cours d'exécution.", "S'assurer que la base de données WordPress utilise des comptes aux privilèges limités."]}, "phase2_detection": {"en": ["Search for suspect queries in web server logs containing UNION or SELECT payloads targeting wpDataTables.", "Analyze database error logs for abnormal SQL query errors."], "fr": ["Rechercher des requêtes suspectes dans les journaux d'accès du serveur web contenant des requêtes UNION ou SELECT malveillantes ciblant wpDataTables.", "Analyser l'apparition d'erreurs de requêtes SQL anormales dans les logs d'erreurs de la base de données."]}, "phase3_containment": {"en": ["Disable the wpDataTables plugin immediately from the active environment.", "Block public access to the plugin action URL."], "fr": ["Désactiver immédiatement le plugin wpDataTables de l'environnement actif.", "Bloquer l'accès public à l'URL d'action du plugin."]}, "phase4_post_incident": {"en": ["Check for admin account compromises following potential user database exfiltration.", "Install updated version or patch once released by vendor."], "fr": ["Rechercher toute compromission de compte admin après l'exfiltration potentielle de la base d'utilisateurs.", "Installer une version mise à jour ou un patch dès la disponibilité du correctif par le fournisseur."]}, "phase5_threat_hunting": {"en": ["Search database query logs for SELECT or UNION statements triggered by unauthenticated clients targeting wpDataTables API."], "fr": ["Recherche d'exfiltrations de données via injection SQL au niveau de la base de données."]}}, "tags": ["WordPress", "SQLi", "wpDataTables", "Unauthenticated"], "sources": ["hxxps://www[.]valtersit[.]com/cve/CVE-2026-54825/"], "date": "2026-06-27"}, {"cve_id": "CVE-2026-12415", "euvd_id": "unknown", "cisa_kev": "false", "cvss": "8.5", "epss": "unknown", "cpe": "cpe:2.3:a:pravel_invoice:invoice_generator:*:*:*:*:*:wordpress:*:*", "product": "Invoice Generator Plugin", "vendor": "Invoice Generator (Pravel)", "description": {"en": "A missing capability check or nonce validation on the 'pravel_invoice_edit_account' AJAX action allows unauthenticated users to modify any account's email (including admin) via user_id.", "fr": "Une absence de contrôle d'autorisation ou de nonce sur l'action AJAX 'pravel_invoice_edit_account' permet à un utilisateur non authentifié de modifier l'e-mail de n'importe quel compte utilisateur (dont administrateur) en lui passant son user_id par POST."}, "mitre_ttps": ["T1068"], "recommandations": [{"en": "Temporarily disable the plugin and monitor suspicious email modifications.", "fr": "Désactiver temporairement le plugin et surveiller les changements suspects d'adresses e-mail d'utilisateurs."}, {"en": "Check for compromised admin accounts in recent resets.", "fr": "Vérifier si un compte administrateur a été compromis en inspectant les réinitialisations de mot de passe récentes."}], "incident_response_playbook": {"phase1_preparation": {"en": ["Ensure tracking of connections and config changes on WordPress sites is active.", "Audit the presence of Invoice Generator plugin across organization CMS."], "fr": ["S'assurer que la surveillance des connexions et des changements de configuration sur les sites WordPress est effective.", "Auditer la présence du plugin Invoice Generator sur l'ensemble des CMS de l'organisation."]}, "phase2_detection": {"en": ["Detect suspect HTTP calls to AJAX action wp_ajax_nopriv_pravel_invoice_edit_account.", "Alert on immediate modifications of email addresses associated with admin roles."], "fr": ["Détecter les appels suspects HTTP vers l'action AJAX wp_ajax_nopriv_pravel_invoice_edit_account.", "Alerter en cas de modification immédiate des e-mails associés aux rôles d'administrateurs."]}, "phase3_containment": {"en": ["Immediately disable the Invoice Generator plugin across the site.", "Restrict access to the WordPress admin login page (wp-admin / wp-login.php)."], "fr": ["Désactiver immédiatement le plugin Invoice Generator sur l'ensemble du site.", "Restreindre l'accès à la page de connexion admin de WordPress (wp-admin / wp-login.php)."]}, "phase4_post_incident": {"en": ["Verify if an admin account was compromised by auditing password resets.", "Reset the email address and password of any affected user."], "fr": ["Vérifier si un compte administrateur a été compromis en inspectant les réinitialisations de mot de passe récentes.", "Réinitialiser l'adresse e-mail et le mot de passe de tout utilisateur affecté."]}, "phase5_threat_hunting": {"en": ["Search web access logs for specific AJAX calls hijacking accounts."], "fr": ["Recherche d'appels d'actions AJAX spécifiques pour l'usurpation de comptes d'administration."]}}, "tags": ["WordPress", "Plugin", "Invoice Generator", "Account Takeover", "Privilege Escalation"], "sources": ["hxxps://cvefeed[.]io/vuln/detail/CVE-2026-12415"], "date": "2026-06-27"}], "threats_analyse": [{"title": {"en": "Clean GitHub repository tricks AI coding agents into running malware", "fr": "Un dépôt GitHub propre trompe les agents IA pour exécuter un malware"}, "description": {"en": "A concept attack proving that an AI coding agent (like Claude Code) can be manipulated during configuration. A dependency error triggers an initialization routine executing a reverse shell.", "fr": "Des chercheurs ont conçu un exploit conceptuel prouvant qu'un agent IA de codage (tel que Claude Code) peut être manipulé lors de la configuration d'un dépôt GitHub légitime. Une erreur de dépendance générée intentionnellement pousse l'IA à lancer un outil de résolution dont le script interroge un enregistrement DNS TXT externe, exécutant ainsi un reverse shell invisible aux outils d'analyse statique."}, "threat_actor": "unknown", "threat_actor_origin": "unknown", "threat_actor_type": "unknown", "threat_actor_aliases": [], "sector": {"en": ["Technology_and_Telecom"], "fr": ["Technologie et télécommunications"]}, "indicators": {"URL": [], "IPv4": [], "IPv6": [], "DOMAIN": [], "EMAIL": [], "HASH_SHA256": [], "HASH_SHA1": [], "HASH_MD5": [], "TOOLS": []}, "mitre_ttps": ["T1204.002"], "analyse": {"en": "The attack relies on a three-step indirection: a compilation error causes the execution of a diagnostic script 'axiom init', which resolves a malicious DNS TXT record containing a reverse shell command executed by the machine.", "fr": "L'attaque s'appuie sur une indirection en trois étapes : une erreur de compilation provoque l'exécution d'un script de diagnostic 'axiom init', qui résout un enregistrement TXT DNS malveillant contenant la commande de reverse shell exécutée par la machine."}, "recommandations": [{"en": "Do not allow AI agents to run system or compilation commands fully autonomously.", "fr": "Ne pas autoriser les agents IA à exécuter des commandes système ou de compilation de manière totalement autonome."}, {"en": "Audit DNS traffic coming from build or application diagnostic scripts.", "fr": "Auditer les flux DNS émanant des scripts de build ou de diagnostic d'applications."}], "incident_response_playbook": {"phase1_preparation": {"en": ["Implement sandboxing policies for autonomous AI tools executing code.", "Limit API keys and network permissions of AI agents on dev endpoints."], "fr": ["Implémenter une politique de sandboxing pour les outils d'IA autonomes exécutant du code.", "Limiter les autorisations et l'accès réseau des agents IA sur les terminaux de développement."]}, "phase2_detection": {"en": ["Monitor unauthorized outgoing network connections emitted by AI tools.", "Analyze unexpected shell execution from development processes."], "fr": ["Surveiller les connexions réseau sortantes non autorisées émises par des outils d'IA (ex: Claude Code).", "Analyser l'exécution de processus shell inattendus issus de processus de développement."]}, "phase3_containment": {"en": ["Immediately revoke all API keys and environment variables exposed on the dev machine.", "Isolate the suspect dev environment from the corporate network."], "fr": ["Révoquer immédiatement toutes les clés API et les variables d'environnement exposées sur l'ordinateur de développement.", "Isoler l'environnement de développement suspect du réseau d'entreprise."]}, "phase4_post_incident": {"en": ["Analyze execution history of the AI agent to identify clone origin.", "Review trust policy regarding third-party repositories cloned by AI."], "fr": ["Analyser l'historique d'exécution des tâches de l'agent IA pour identifier l'origine du clonage.", "Réviser la politique de confiance vis-à-vis des dépôts tiers clonés par l'IA."]}, "phase5_threat_hunting": {"en": ["Search for shell interpreters unexpectedly executed by AI agent processes."], "fr": ["Recherche d'interpréteurs de commande exécutés de manière inattendue par des processus d'agents IA."]}}, "tags": ["AI Agents", "Claude Code", "GitHub", "Reverse Shell"], "sources": ["hxxps://www[.]bleepingcomputer[.]com/news/security/clean-github-repo-tricks-ai-coding-agents-into-running-malware/"], "date": "2026-06-27"}, {"title": {"en": "Hospitality sector hit by phishing campaign using fake guest complaint emails (TonRAT)", "fr": "Le secteur hôtelier frappé par du phishing usurpant des plaintes clients (TonRAT)"}, "description": {"en": "Phishing campaign targeting hotels using fake booking/cleanliness complaints routed through Calendly and Google redirects to deliver TonRAT.", "fr": "Depuis avril 2026, des établissements hôteliers sont ciblés par une campagne de phishing ingénieuse utilisant de fausses réclamations. L'attaque exploite les filtres SPF/DKIM en transitant par le système de notification de Calendly."}, "threat_actor": "unknown", "threat_actor_origin": "unknown", "threat_actor_type": "unknown", "threat_actor_aliases": [], "sector": {"en": ["Hospitality_and_Entertainment"], "fr": ["Hôtellerie et divertissement"]}, "indicators": {"URL": ["hxxp://www[.]google[.]com"], "IPv4": [], "IPv6": [], "DOMAIN": ["google[.]com", "ip-api[.]com", "nodejs[.]org"], "EMAIL": [], "HASH_SHA256": [], "HASH_SHA1": [], "HASH_MD5": [], "TOOLS": ["csc[.]exe", "cvtres[.]exe", "xmnrwv9l[.]exe"]}, "mitre_ttps": ["T1547.001", "T1566.002"], "analyse": {"en": "The infection chain includes a malicious LNK download, obfuscated PowerShell script execution, DLL compilation via csc.exe, silent installation of Node.js, and execution of TonRAT JavaScript malware.", "fr": "La chaîne d'infection comprend le téléchargement d'un raccourci LNK malveillant dissimulé, le lancement d'un script PowerShell obfusqué, la compilation d'une DLL via csc.exe, l'installation silencieuse d'un binaire Node.js légitime et l'exécution du malware JavaScript TonRAT."}, "recommandations": [{"en": "Monitor abnormal Node.js installations in user space.", "fr": "Surveiller les installations anormales de Node.js dans l'espace utilisateur (AppData\\Local)."}, {"en": "Block outgoing connections to non-standard ports on front-desk computers.", "fr": "Bloquer les connexions sortantes vers les ports non standard (ex: 56001 à 56003, 8443, etc.) sur les postes d'accueil."}], "incident_response_playbook": {"phase1_preparation": {"en": ["Implement restrictions prohibiting execution of unsigned binaries or runtimes like Node.js from AppData.", "Restrict access to Calendly or other meeting schedulers if unnecessary."], "fr": ["Implémenter des restrictions interdisant l'exécution d'exécutables ou de runtimes non signés (comme Node.js) depuis l'espace utilisateur (AppData).", "Restreindre l'accès à Calendly ou aux services de planification de réunions si non nécessaires."]}, "phase2_detection": {"en": ["Detect suspect registry modifications pointing HKCU Run keys to temp folders.", "Analyze dynamic compilation activity from csc.exe or cvtres.exe in user space."], "fr": ["Mettre en place des détections de modifications de registre suspectes touchant HKCU\\Run ou HKCU\\RunOnce pointant vers %TEMP% ou AppData.", "Analyser l'activité de compilation dynamique liée à csc.exe ou cvtres.exe dans l'espace utilisateur."]}, "phase3_containment": {"en": ["Simultaneously delete registry run keys to stop persistence loops.", "Block observed non-standard C2 ports."], "fr": ["Supprimer simultanément la clé HKCU\\RunOnce (ProgramData) et la clé HKCU\\Run (Node.js) pour stopper la persistance auto-générée.", "Bloquer les ports C2 non standards observés."]}, "phase4_post_incident": {"en": ["Clean malicious JavaScript files stored in local AppData.", "Verify if other network devices were impacted by headless browser activity."], "fr": ["Nettoyer les fichiers JavaScript (.js) malveillants stockés sous AppData\\Local\\Nodejs\\.", "Vérifier si d'autres composants réseau ont été affectés par l'activité automatisée du navigateur headless."]}, "phase5_threat_hunting": {"en": ["Search for persistent run keys pointing to ProgramData or Temp folders."], "fr": ["Recherche de mécanismes de persistance persistante rafraîchis en boucle via RunOnce pointant vers ProgramData."]}}, "tags": ["Phishing", "TonRAT", "Calendly", "Nodejs", "Persistence"], "sources": ["hxxps://securityaffairs[.]com/194349/uncategorized/hospitality-sector-hit-by-phishing-campaign-using-fake-guest-complaint-emails.html"], "date": "2026-06-27"}, {"title": {"en": "Vendor Alert: Campcodes accumulates 536 CVEs, 99% unpatched", "fr": "Alerte fournisseur : Campcodes cumule 536 CVE dont 99% non corrigées"}, "description": {"en": "Software vendor Campcodes presents massive security risks due to numerous active injection and XSS vulnerabilities left unpatched.", "fr": "Le fournisseur de logiciels et templates web Campcodes présente un risque de sécurité majeur, avec de très nombreuses failles actives de type Injection (CWE-74) et Cross-Site Scripting (CWE-79)."}, "threat_actor": "unknown", "threat_actor_origin": "unknown", "threat_actor_type": "unknown", "threat_actor_aliases": [], "sector": {"en": ["Technology_and_Telecom"], "fr": ["Technologie et télécommunications"]}, "indicators": {"URL": [], "IPv4": [], "IPv6": [], "DOMAIN": ["valtersit[.]com"], "EMAIL": [], "HASH_SHA256": [], "HASH_SHA1": [], "HASH_MD5": [], "TOOLS": []}, "mitre_ttps": ["T1190"], "analyse": {"en": "A large number of Campcodes applications suffer from fundamental architectural flaws, exposing databases to unauthenticated injections.", "fr": "Un grand nombre d'applications fournies par Campcodes souffrent de défauts fondamentaux d'architecture, exposant les données à des injections non authentifiées."}, "recommandations": [{"en": "Avoid exposing Campcodes software in production.", "fr": "Éviter absolument d'exposer en production des logiciels issus de Campcodes."}, {"en": "Replace Campcodes applications with secure alternatives.", "fr": "Remplacer les applications Campcodes par des technologies dotées de meilleurs processus de suivi de vulnérables."}], "incident_response_playbook": {"phase1_preparation": {"en": ["Establish an inventory of applications using Campcodes templates.", "Deploy a WAF in front of these solutions."], "fr": ["Établir un inventaire des applications internes utilisant du code provenant du fournisseur Campcodes.", "Déployer un pare-feu applicatif (WAF) devant ces solutions."]}, "phase2_detection": {"en": ["Monitor SQL injection and XSS attempts on web endpoints.", "Configure HTTP logging to capture unusual request parameters."], "fr": ["Surveiller les tentatives d'injections SQL (CWE-74) et de Cross-Site Scripting (CWE-79) sur les endpoints web.", "Configurer la journalisation HTTP pour capturer les paramètres de requêtes inhabituels."]}, "phase3_containment": {"en": ["Temporarily disable public access to suspect Campcodes apps.", "Block attacker IPs targeting injection endpoints."], "fr": ["Désactiver temporairement l'accès public aux applications Campcodes suspectes.", "Bloquer les adresses IP à l'origine d'attaques par injection."]}, "phase4_post_incident": {"en": ["Plan migration or replacement of unmaintained Campcodes software.", "Perform penetration tests on exposed applications."], "fr": ["Planifier la migration ou le remplacement des logiciels Campcodes non maintenus par des alternatives sécurisées.", "Réaliser un test de pénétration complet des applications exposées."]}, "phase5_threat_hunting": {"en": ["Search for script tags or SQL injection signatures in WAF logs targeting Campcodes endpoints."], "fr": ["Recherche de signatures d'injections et d'attaques par script sur les applications Campcodes."]}}, "tags": ["Campcodes", "Vulnerabilities", "Vendor Risk"], "sources": ["hxxps://mastodon[.]social/@hugovalters/116824796670114763"], "date": "2026-06-28"}, {"title": {"en": "Expert Debate: The false promise of commercial VPNs for privacy", "fr": "Débat d'experts : La fausse promesse des VPN grand public pour la vie privée"}, "description": {"en": "Discussion around blind trust in commercial VPNs claiming privacy benefits without independent audits.", "fr": "Discussion au sujet de la confiance accordée de manière inconsidérée aux fournisseurs de VPN commerciaux grand public qui prétendent préserver la vie privée des utilisateurs."}, "threat_actor": "unknown", "threat_actor_origin": "unknown", "threat_actor_type": "unknown", "threat_actor_aliases": [], "sector": {"en": ["Technology_and_Telecom"], "fr": ["Technologie et télécommunications"]}, "indicators": {"URL": [], "IPv4": [], "IPv6": [], "DOMAIN": [], "EMAIL": [], "HASH_SHA256": [], "HASH_SHA1": [], "HASH_MD5": [], "TOOLS": []}, "mitre_ttps": [], "analyse": {"en": "Using third-party VPN apps can bypass IP protections by directly sharing device geolocation data.", "fr": "L'utilisation d'applications tierces peut contourner les protections IP en partageant directement les données de géolocalisation de l'appareil."}, "recommandations": [{"en": "Use internally administered corporate VPN gateways.", "fr": "Utiliser des VPN administrés en interne dont l'organisation contrôle les passerelles de sortie."}, {"en": "Regularly check location access permissions given to mobile apps.", "fr": "Vérifier régulièrement les autorisations d'accès à la localisation accordées aux applications mobiles."}], "incident_response_playbook": {"phase1_preparation": {"en": ["Establish clear guidelines for managed corporate VPN usage.", "Educate users to scrutinize third-party VPN privacy terms."], "fr": ["Établir des directives claires d'utilisation de VPN d'entreprise contrôlés de bout en bout.", "Sensibiliser à l'analyse critique des conditions générales d'utilisation (CGU) des fournisseurs de VPN tiers."]}, "phase2_detection": {"en": ["Audit non-approved consumer VPN apps on corporate endpoints."], "fr": ["Auditer la présence d'applications VPN grand public non approuvées sur les terminaux de l'organisation."]}, "phase3_containment": {"en": ["Uninstall non-approved consumer VPNs from work devices."], "fr": ["Désinstaller les VPN personnels non approuvés des postes professionnels."]}, "phase4_post_incident": {"en": ["Recommend secure browsers and coordinate geolocation access checks."], "fr": ["Recommander des navigateurs sécurisés et le contrôle de l'exposition des permissions de géolocalisation des applications."]}, "phase5_threat_hunting": {"en": ["Identify connections to external VPN service providers from corporate devices."], "fr": ["Identification de l'usage de VPN grand public non autorisés au sein de la flotte d'équipements."]}}, "tags": ["VPN", "Privacy", "Discussion"], "sources": ["hxxps://toad[.]social/@grumpybozo/116824503829416641"], "date": "2026-06-27"}, {"title": {"en": "Security advice: Integrating container image scanning in CI/CD", "fr": "Conseils de sécurité : Intégration de l'analyse d'images de conteneurs dans le CI/CD"}, "description": {"en": "Methodology recommendations regarding the continuous scanning of container images to eliminate vulnerability risks in build layers.", "fr": "Recommandations méthodologiques concernant le besoin d'analyser les images de conteneurs en continu pour éliminer les vulnérabilités de bibliothèque enfouies dans les couches de build."}, "threat_actor": "unknown", "threat_actor_origin": "unknown", "threat_actor_type": "unknown", "threat_actor_aliases": [], "sector": {"en": ["Technology_and_Telecom"], "fr": ["Technologie et télécommunications"]}, "indicators": {"URL": [], "IPv4": [], "IPv6": [], "DOMAIN": ["cvedatabase[.]com"], "EMAIL": [], "HASH_SHA256": [], "HASH_SHA1": [], "HASH_MD5": [], "TOOLS": []}, "mitre_ttps": [], "analyse": {"en": "Integrating vulnerability scanners like Trivy or Clair to block container deployment if critical CVEs are present.", "fr": "Intégration d'analyseurs de vulnérabilités (Trivy, Clair) pour identifier et bloquer l'usage d'images contenant des vulnérabilités connues (CVE) avant la phase de mise en production."}, "recommandations": [{"en": "Automate build blocks if critical/high CVEs are detected.", "fr": "Mettre en place un outil de blocage automatique des builds si l'image présente des vulnérabilités critiques."}, {"en": "Keep container libraries up to date.", "fr": "Maintenir à jour l'ensemble des bibliothèques de conteneurs."}], "incident_response_playbook": {"phase1_preparation": {"en": ["Integrate container scanning tools in CI/CD pipelines.", "Prefer minimal, hardened base images."], "fr": ["Intégrer systématiquement des outils d'analyse d'images de conteneurs dans les pipelines de déploiement CI/CD.", "Privilégier l'usage d'images de base minimales et durcies."]}, "phase2_detection": {"en": ["Configure pipeline alerts on critical vulnerability detections."], "fr": ["Configurer les alertes de pipeline en cas de détection de vulnérabilités d'une sévérité critique."]}, "phase3_containment": {"en": ["Block deployment of container images with unpatched critical CVEs."], "fr": ["Bloquer le déploiement de conteneurs dont les images contiennent des vulnérabilités critiques non corrigées."]}, "phase4_post_incident": {"en": ["Regularly update base images and re-scan active containers."], "fr": ["Mettre à jour régulièrement les images de base et re-scanner les conteneurs déjà actifs."]}, "phase5_threat_hunting": {"en": ["Search for active production containers containing critical/high package vulnerabilities."], "fr": ["Recherche de packages vulnérables non mis à jour et déployés au sein d'images de conteneurs en production."]}}, "tags": ["DevSecOps", "Docker", "Container Security", "CI/CD"], "sources": ["hxxps://techhub[.]social/@cvedatabase/116824434409741907"], "date": "2026-06-27"}, {"title": {"en": "CTI Humor: Packet Sniffer's truth on software persistence", "fr": "Humour CTI : Vérité du Packet Sniffer sur la persistance logicielle"}, "description": {"en": "Satirical aphorism noting that the distinction between legitimate software and malware is often just paying for a commercial license.", "fr": "Aphorisme satirique rappelant que la distinction entre un processus légitime et un outil espion (malware) réside souvent uniquement dans le fait d'avoir payé une licence commerciale."}, "threat_actor": "unknown", "threat_actor_origin": "unknown", "threat_actor_type": "unknown", "threat_actor_aliases": [], "sector": {"en": ["Technology_and_Telecom"], "fr": ["Technologie et télécommunications"]}, "indicators": {"URL": [], "IPv4": [], "IPv6": [], "DOMAIN": [], "EMAIL": [], "HASH_SHA256": [], "HASH_SHA1": [], "HASH_MD5": [], "TOOLS": []}, "mitre_ttps": [], "analyse": {"en": "A simple observation of the fine regulatory and technical line of background execution.", "fr": "Un constat simple de la fine frontière réglementaire et technique de l'exécution en arrière-plan."}, "recommandations": [{"en": "Keep monitoring software legitimacy on the company network.", "fr": "Continuer de veiller sur la légitimité des applications installées sur le parc informatique."}], "incident_response_playbook": {"phase1_preparation": {"en": ["Educate users on legitimate vs. non-legitimate background software."], "fr": ["Sensibiliser les utilisateurs à l'existence de logiciels d'arrière-plan légitimes versus non légitimes."]}, "phase2_detection": {"en": ["Detect unusual executions of background utilities."], "fr": ["Détecter les exécutions inhabituelles d'outils d'arrière-plan."]}, "phase3_containment": {"en": ["Disable any suspicious background process."], "fr": ["Désactiver tout processus d'arrière-plan suspect."]}, "phase4_post_incident": {"en": ["Update inventory of allowed licenses."], "fr": ["Mettre à jour l'inventaire des licences autorisées."]}, "phase5_threat_hunting": {"en": ["Search for unregistered programs running persistently in background without a visible window."], "fr": ["Recherche d'exécutions de programmes non déclarés s'exécutant de manière permanente."]}}, "tags": ["Humour", "Aphorisme", "Malware"], "sources": ["hxxps://mastobot[.]ping[.]moi/@Bobe_bot/116824316787381603"], "date": "2026-06-27"}, {"title": {"en": "CTI Humor: The amusing names of threat actors", "fr": "Humour CTI : Les dénominations amusantes des acteurs de menaces"}, "description": {"en": "Humorous sharing in the CTI community about the funny names given to APTs and cybercriminals by security firms.", "fr": "Partage humoristique de la communauté CTI au sujet des noms attribués aux groupes APT et criminels par les entreprises de sécurité."}, "threat_actor": "unknown", "threat_actor_origin": "unknown", "threat_actor_type": "unknown", "threat_actor_aliases": [], "sector": {"en": ["Technology_and_Telecom"], "fr": ["Technologie et télécommunications"]}, "indicators": {"URL": [], "IPv4": [], "IPv6": [], "DOMAIN": [], "EMAIL": [], "HASH_SHA256": [], "HASH_SHA1": [], "HASH_MD5": [], "TOOLS": []}, "mitre_ttps": [], "analyse": {"en": "Reflections on the branding and identification nomenclature of APT actors.", "fr": "Réflexions sur le branding et la nomenclature d'identification des acteurs APT."}, "recommandations": [{"en": "Continue following cyber threat intelligence updates with enthusiasm.", "fr": "Continuer de suivre l'actualité cyber avec enthousiasme."}], "incident_response_playbook": {"phase1_preparation": {"en": ["None required."], "fr": ["Aucune action requise."]}, "phase2_detection": {"en": ["None required."], "fr": ["Aucune action requise."]}, "phase3_containment": {"en": ["None required."], "fr": ["Aucune action requise."]}, "phase4_post_incident": {"en": ["None required."], "fr": ["Aucune action requise."]}, "phase5_threat_hunting": {"en": ["None."], "fr": ["Aucune hypothèse."]}}, "tags": ["Humour", "Threat Actors", "APT"], "sources": ["hxxps://infosec[.]exchange/@sharkfie/116824062333905813"], "date": "2026-06-27"}]}
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "Today's cyber landscape is heavily dominated by vulnerability disclosures (9), signaling significant pressure on patch management teams, likely linked to recent CVE releases or critical vendor advisories. The three reported data breaches confirm a surge in exfiltration incidents, often correlated with the exploitation of unpatched flaws, reinforcing the operational priority around threat hunting and monitoring for exposed credentials. The single geopolitical contribution provides useful contextual insight to anticipate sectoral targeting, particularly if it involves diplomatically tense regions or regulated industries. Meanwhile, the absence of notable activity in threat actors and regulatory categories reflects a relative lull that should not obscure dormant APT capabilities. Today's CTI priority should focus on correlating disclosed vulnerabilities with compromised data sets to assess short-term opportunistic exploitation risk.",
+      "fr": "Le volume de vulnérabilités (9) domine largement le paysage cyber de la journée, signalant une pression importante sur les équipes de gestion de patchs, probablement liée à des divulgations CVE récentes ou à des correctifs éditeurs critiques. Les trois fuites de données recensées confirment une recrudescence des incidents d'exfiltration, souvent corrélée à l'exploitation de failles non corrigées, ce qui renforce la priorité opérationnelle autour du threat hunting et de la surveillance des identifiants exposés. L'unique contribution géopolitique apporte un éclairage contextuel utile pour anticiper les cibles sectorielles, notamment si elle concerne des zones sous tension diplomatique ou des secteurs régulés. En revanche, l'absence d'activité notable sur les catégories threat actors et regulatory traduit un répit relatif qui ne doit pas masquer les capacités dormantes des groupes APT. La priorité CTI du jour doit se concentrer sur la corrélation entre vulnérabilités divulguées et bases de données compromises, afin d'évaluer un risque d'exploitation opportuniste à court terme."
+    },
+    "date": "2026-06-28"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": [
+          "Defense / Industrie militaire"
+        ],
+        "fr": [
+          "Defense / Industrie militaire"
+        ]
+      },
+      "theme": {
+        "en": "Cyberattack against a strategic German naval defense subcontractor",
+        "fr": "Cyberattaque contre un sous-traitant stratégique de la défense navale allemande"
+      },
+      "description": {
+        "en": "The German naval defense subcontractor Atlas Elektronik was compromised by the cybercrime group \"TheGentlemen\". This intrusion raises major concerns regarding the protection of sensitive military data, particularly in a context of heightened geopolitical tensions in Europe. Defense providers represent a prime target for APT groups and state-sponsored actors seeking to exfiltrate sensitive technologies, technical plans, and classified data. The attack illustrates the fragilization of the defense sector supply chain, where a single compromised link can lead to the exposure of information critical to national sovereignty.",
+        "fr": "Le sous-traitant allemand de défense navale Atlas Elektronik a été compromis par le groupe cybercriminel « TheGentlemen ». Cette intrusion soulève des inquiétudes majeures quant à la protection de données militaires sensibles, notamment dans un contexte de tensions géopolitiques accrues en Europe. Les prestataires de la défense représentent une cible de choix pour les groupes APT et les acteurs étatiques cherchant à exfiltrer des technologies sensibles, des plans techniques et des données classifiées. L'attaque illustre la fragilisation de la supply chain du secteur de la défense, où un seul maillon compromis peut entraîner l'exposition d'informations critiques pour la souveraineté nationale."
+      },
+      "recommandations": [
+        {
+          "en": "Immediately strengthen security audits and penetration tests across the entire German defense subcontracting ecosystem",
+          "fr": "Renforcer immédiatement les audits de sécurité et les tests d'intrusion sur l'ensemble de l'écosystème de sous-traitance de la défense allemande"
+        },
+        {
+          "en": "Check the potential compromise of other partners sharing data flows with Atlas Elektronik",
+          "fr": "Vérifier la compromission potentielle d'autres partenaires partageant des flux de données avec Atlas Elektronik"
+        },
+        {
+          "en": "Monitor dark web and underground markets to detect any resale or leak of exfiltrated data",
+          "fr": "Surveiller les marchés dark web et underground pour détecter toute revente ou fuite de données exfiltrées"
+        },
+        {
+          "en": "Apply network segmentation and zero trust principles on the information systems of defense industrial players",
+          "fr": "Appliquer les principes de segmentation réseau et de zero trust sur les SI des industriels de défense"
+        },
+        {
+          "en": "Coordinate with the BSI and German intelligence services (BfV) to qualify the threat and identify attribution",
+          "fr": "Coordonner avec le BSI et les services de renseignement allemands (BfV) pour qualifier la menace et identifier l'attribution"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [],
+          "fr": []
+        },
+        "phase2_detection": {
+          "en": [],
+          "fr": []
+        },
+        "phase3_containment": {
+          "en": [],
+          "fr": []
+        },
+        "phase4_post_incident": {
+          "en": [],
+          "fr": []
+        },
+        "phase5_threat_hunting": {
+          "en": [],
+          "fr": []
+        }
+      },
+      "tags": [
+        "cyberattaque",
+        "fuite-de-donnees",
+        "defense",
+        "Allemagne"
+      ],
+      "sources": [
+        "https://cyber.netsecops.io/articles/defense-tech-firm-atlas-elektronik-breached-by-thegentlemen-group/"
+      ],
+      "date": "2026-06-27"
+    }
+  ],
+  "regulatory_and_legal": [],
+  "breach_analyse": [
+    {
+      "victim": "Tower Administrative Services Inc",
+      "threat_actor": "Non identifié",
+      "threat_actor_origin": "",
+      "threat_actor_type": "",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Assurance / Services financiers"
+        ],
+        "fr": [
+          "Assurance / Services financiers"
+        ]
+      },
+      "description": {
+        "en": "Tower Administrative Services Inc, a Pennsylvania-based insurance administrator, detected on February 4, 2026 that a malicious actor had accessed its internal systems the day before (February 3, 2026). The incident exposes highly sensitive data including names, Social Security numbers (SSN), postal addresses, and financial information (bank accounts and cards). This type of compromise strongly facilitates identity theft, financial fraud, and targeted phishing. The lack of details on the initial attack vector (ransomware, vulnerability exploitation, phishing) requires a thorough forensic investigation. Insurers and third-party administrators remain prime targets due to the richness of the PII/PCI data they hold.",
+        "fr": "Tower Administrative Services Inc, administrateur d'assurance basé en Pennsylvanie, a détecté le 4 février 2026 qu'un acteur malveillant avait accédé à ses systèmes internes la veille (3 février 2026). L'incident expose des données hautement sensibles incluant noms, numéros de Sécurité Sociale (SSN), adresses postales et informations financières (comptes bancaires et cartes). Ce type de compromission facilite fortement l'usurpation d'identité, la fraude financière et le phishing ciblé. L'absence de détails sur le vecteur d'attaque initial (ransomware, exploitation de vulnérabilité, phishing) nécessite une investigation forensique approfondie. Les assureurs et administrateurs tiers restent des cibles privilégiées en raison de la richesse des données PII/PCI qu'ils détiennent."
+      },
+      "mitre_ttps": [
+        "TA0001",
+        "T1078"
+      ],
+      "recommandations": [
+        {
+          "en": "Immediately activate an identity protection service for all victims",
+          "fr": "Activer immédiatement un service de protection d'identité pour toutes les victimes"
+        },
+        {
+          "en": "Strengthen multi-factor authentication on all administrative access",
+          "fr": "Renforcer l'authentification multifacteur sur tous les accès administratifs"
+        },
+        {
+          "en": "Audit all access controls to systems containing PII",
+          "fr": "Auditer l'ensemble des contrôles d'accès aux systèmes contenant des PII"
+        },
+        {
+          "en": "Review network segmentation between business environments",
+          "fr": "Revoir la segmentation réseau entre les environnements métiers"
+        },
+        {
+          "en": "Monitor the dark web to detect the sale or sharing of exfiltrated data",
+          "fr": "Surveiller le dark web pour détecter la vente ou le partage des données exfiltrées"
+        },
+        {
+          "en": "Implement behavioral anomaly detection (UEBA) on privileged accounts",
+          "fr": "Mettre en place une détection d'anomalies comportementale (UEBA) sur les comptes privilégiés"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain an up-to-date inventory of assets containing sensitive personal and financial data",
+            "Implement network segmentation between administrative systems and sensitive databases",
+            "Set up centralized logging (SIEM) with HIPAA/GLBA-compliant retention",
+            "Raise staff awareness on detecting access anomalies to files",
+            "Prepare a notification plan compliant with US state regulations on data breaches"
+          ],
+          "fr": [
+            "Maintenir un inventaire à jour des actifs contenant des données personnelles et financières sensibles",
+            "Implémenter une segmentation réseau entre les systèmes administratifs et les bases de données sensibles",
+            "Mettre en place une journalisation centralisée (SIEM) avec rétention conforme HIPAA/GLBA",
+            "Sensibiliser le personnel à la détection d'anomalies d'accès aux dossiers",
+            "Préparer un plan de notification conforme aux réglementations étatiques américaines sur les brèches de données"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor unusual authentications on internal systems (times, geolocation)",
+            "Detect mass queries to databases containing SSNs and financial data",
+            "Set up alerts on abnormal exports of files containing PII",
+            "Analyze access logs to administrative systems between February 3 and 4, 2026",
+            "Correlate events with threat intelligence databases to identify the attacker"
+          ],
+          "fr": [
+            "Surveiller les authentifications inhabituelles sur les systèmes internes (heures, géolocalisation)",
+            "Détecter les requêtes massives vers les bases de données contenant des SSN et données financières",
+            "Mettre en place des alertes sur les exports anormaux de fichiers contenant des PII",
+            "Analyser les logs d'accès aux systèmes administratifs entre le 3 et le 4 février 2026",
+            "Corréler les événements avec les bases de threat intelligence pour identifier l'attaquant"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate compromised systems from the rest of the network",
+            "Immediately revoke all active sessions and credentials",
+            "Disable accounts potentially used by the attacker",
+            "Preserve forensic evidence before any remediation",
+            "Notify competent authorities (US-Secret Service, FBI IC3) and cyber insurers"
+          ],
+          "fr": [
+            "Isoler les systèmes compromis du reste du réseau",
+            "Révoquer immédiatement toutes les sessions et credentials actifs",
+            "Désactiver les comptes potentiellement utilisés par l'attaquant",
+            "Préserver les preuves forensiques avant toute remediation",
+            "Notifier les autorités compétentes (US-Secret Service, FBI IC3) et les assureurs cyber"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Notify all impacted individuals in accordance with legal obligations",
+            "Offer a credit monitoring and identity theft protection service",
+            "Conduct a full forensic analysis to determine the initial entry vector",
+            "Update security policies and access procedures",
+            "Document lessons learned and share with the sector"
+          ],
+          "fr": [
+            "Notifier tous les individus impactés conformément aux obligations légales",
+            "Offrir un service de monitoring de crédit et de protection contre l'usurpation d'identité",
+            "Réaliser une analyse forensique complète pour déterminer le vecteur d'entrée initial",
+            "Mettre à jour les politiques de sécurité et procédures d'accès",
+            "Documenter les leçons apprises et partager avec le secteur"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for indicators of persistent presence in internal systems",
+            "Hunt for lateral movement via SMB/RDP/WMI protocols",
+            "Identify potential backdoors or web shells",
+            "Verify the absence of active C2 channels via analysis of outbound network flows",
+            "Look for signs of data exfiltration prior to the date of detection"
+          ],
+          "fr": [
+            "Rechercher des indicateurs de présence persistante dans les systèmes internes",
+            "Chasser les mouvements latéraux via les protocoles SMB/RDP/WMI",
+            "Identifier d'éventuelles portes dérobées ou web shells",
+            "Vérifier l'absence de canaux C2 actifs via analyse des flux réseau sortants",
+            "Rechercher des signes d'exfiltration de données antérieure à la date de détection"
+          ]
+        }
+      },
+      "tags": [
+        "data_breach",
+        "financial",
+        "PII",
+        "insurance",
+        "usa"
+      ],
+      "sources": [
+        "https://beyondmachines.net/event_details/tower-administrative-services-reports-breach-impacting-financial-data-and-ssns-r-c-z-u-3/gD2P6Ple2L",
+        "https://infosec.exchange/@beyondmachines1/116826681113187831"
+      ],
+      "date": "2026-02-03"
+    },
+    {
+      "victim": "Karawang School System",
+      "threat_actor": "KARAWANG ERROR SYSTEM",
+      "threat_actor_origin": "",
+      "threat_actor_type": "",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Éducation"
+        ],
+        "fr": [
+          "Éducation"
+        ]
+      },
+      "description": {
+        "en": "The group KARAWANG ERROR SYSTEM claims a data breach concerning Karawang School System, an Indonesian educational institution. The dump reportedly contains student records including names, national identification numbers, phone numbers, and postal codes. The group has already published 6 listings over the past 30 days, indicating sustained activity and potentially targeting multiple institutions. Indonesian national identification numbers (NIK) are particularly sensitive as they can be used for fraudulent account openings and malicious administrative procedures. The lack of information on the intrusion vector and the actual date of compromise suggests a possibly already old breach detected late.",
+        "fr": "Le groupe KARAWANG ERROR SYSTEM revendique une fuite de données concernant Karawang School System, un établissement éducatif indonésien. Le dump contiendrait des dossiers d'élèves incluant noms, numéros d'identification nationaux, numéros de téléphone et codes postaux. Le groupe a déjà publié 6 listings au cours des 30 derniers jours, indiquant une activité soutenue et ciblant potentiellement plusieurs institutions. Les numéros d'identification nationaux indonésiens (NIK) sont particulièrement sensibles car ils peuvent être utilisés pour des ouvertures de comptes frauduleux et des démarches administratives malveillantes. L'absence d'informations sur le vecteur d'intrusion et la date réelle de la compromission suggère une fuite déjà ancienne possiblement détectée tardivement."
+      },
+      "mitre_ttps": [
+        "TA0010",
+        "T1567"
+      ],
+      "recommandations": [
+        {
+          "en": "Activate an identity monitoring service for affected students and parents",
+          "fr": "Activer un service de surveillance d'identité pour les élèves et parents affectés"
+        },
+        {
+          "en": "Strengthen the security of school portals and databases",
+          "fr": "Renforcer la sécurité des portails scolaires et bases de données"
+        },
+        {
+          "en": "Set up continuous leak detection on the dark web and forums",
+          "fr": "Mettre en place une détection continue des fuites sur darkweb et forums"
+        },
+        {
+          "en": "Audit third-party access and vendors with access to student data",
+          "fr": "Auditer les accès tiers et fournisseurs ayant accès aux données élèves"
+        },
+        {
+          "en": "Raise families' awareness of the risks of phishing and identity theft",
+          "fr": "Sensibiliser les familles aux risques de phishing et d'usurpation d'identité"
+        },
+        {
+          "en": "Collaborate with the Indonesian BSSN for investigation and remediation",
+          "fr": "Collaborer avec le BSSN indonésien pour investigation et remediation"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Map the digital assets of the school system (portals, student databases)",
+            "Implement strong authentication for administrative accounts",
+            "Encrypt student databases with strict access controls",
+            "Prepare parent/student notification protocols compliant with local regulations (Indonesian UU PDP)",
+            "Train staff on weak signals of intrusion"
+          ],
+          "fr": [
+            "Cartographier les actifs numériques du système scolaire (portails, bases de données étudiants)",
+            "Mettre en place une authentification forte pour les comptes administratifs",
+            "Chiffrer les bases de données d'élèves avec contrôles d'accès stricts",
+            "Préparer des protocoles de notification parents/élèves conformes aux réglementations locales (UU PDP Indonésie)",
+            "Former le personnel aux signaux faibles d'intrusion"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor dark web forums and marketplaces to detect mentions of the institution",
+            "Set up alerts on leaks of administrative credentials",
+            "Detect abnormal access to student databases",
+            "Monitor Telegram/Discord channels associated with the group KARAWANG ERROR SYSTEM",
+            "Analyze published digital fingerprints (formats, metadata)"
+          ],
+          "fr": [
+            "Surveiller les forums darkweb et marketplaces pour détecter les mentions de l'établissement",
+            "Mettre en place des alertes sur les fuites d'identifiants administratifs",
+            "Détecter les accès anormaux aux bases de données élèves",
+            "Surveiller les canaux Telegram/Discord associés au groupe KARAWANG ERROR SYSTEM",
+            "Analyser les empreintes numériques publiées (formats, métadonnées)"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Immediately isolate affected systems and cut off external access",
+            "Revoke all credentials of administrators and teachers",
+            "Change all passwords and enable MFA",
+            "Preserve evidence (logs, dumps) for forensic analysis",
+            "Notify the Indonesian authorities (BSSN, Kominfo) and pursue legal action if possible"
+          ],
+          "fr": [
+            "Isoler immédiatement les systèmes affectés et couper les accès externes",
+            "Révoquer tous les credentials des administrateurs et enseignants",
+            "Changer l'ensemble des mots de passe et activer MFA",
+            "Préserver les preuves (logs, dumps) pour analyse forensique",
+            "Notifier les autorités indonésiennes (BSSN, Kominfo) et engager des poursuites si possible"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Inform affected parents and students with clear instructions",
+            "Notify the data protection authorities in accordance with Indonesian law",
+            "Conduct a full security audit of the infrastructure",
+            "Strengthen access controls and password policies",
+            "Document the incident and share the IoCs with the CTI community"
+          ],
+          "fr": [
+            "Informer les parents et élèves affectés avec des consignes claires",
+            "Notifier les autorités de protection des données conformément à la loi indonésienne",
+            "Réaliser un audit de sécurité complet de l'infrastructure",
+            "Renforcer les contrôles d'accès et politiques de mots de passe",
+            "Documenter l'incident et partager les IoC avec la communauté CTI"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for any signs of prior undetected compromise",
+            "Hunt for persistent implants in web servers and databases",
+            "Verify the absence of hidden communication channels",
+            "Analyze logs to identify the likely initial vector",
+            "Monitor the other KARAWANG ERROR SYSTEM listings to anticipate further attacks"
+          ],
+          "fr": [
+            "Rechercher d'éventuels signes de compromission antérieure non détectée",
+            "Chasser les implants persistants dans les serveurs web et bases de données",
+            "Vérifier l'absence de canaux de communication cachés",
+            "Analyser les logs pour identifier le vecteur initial probable",
+            "Suivre les autres listings KARAWANG ERROR SYSTEM pour anticiper d'autres attaques"
+          ]
+        }
+      },
+      "tags": [
+        "data_breach",
+        "education",
+        "indonesia",
+        "darkweb",
+        "threat_actor"
+      ],
+      "sources": [
+        "https://infosec.exchange/@darkwebsonar/116825784963281048"
+      ],
+      "date": "2026-06-28"
+    },
+    {
+      "victim": "Tata Electronics (fournisseur Apple)",
+      "threat_actor": "Non identifié",
+      "threat_actor_origin": "",
+      "threat_actor_type": "",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Semi-conducteurs / Électronique / Supply Chain"
+        ],
+        "fr": [
+          "Semi-conducteurs / Électronique / Supply Chain"
+        ]
+      },
+      "description": {
+        "en": "Tata Electronics, a key Apple supplier in India for component manufacturing and assembly, suffered a massive leak of more than 200,000 internal files according to Reuters. The incident exposes confidential data related to the production chain and potentially to Apple's intellectual property. This type of supply chain attack is particularly critical because it affects not only the direct victim but also its customers and partners. Apple immediately triggered corrective measures to limit the impact on its own operations. The leaked files could include technical schematics, production data, product specifications, and sensitive business information. The exact nature of the compromised data remains to be clarified, but the reputational and competitive impact is considerable.",
+        "fr": "Tata Electronics, fournisseur clé d'Apple en Inde pour la fabrication et l'assemblage de composants, a subi une fuite massive de plus de 200 000 fichiers internes selon Reuters. L'incident expose des données confidentielles liées à la chaîne de production et potentiellement à la propriété industrielle d'Apple. Ce type d'attaque par supply chain est particulièrement critique car il affecte non seulement la victime directe mais aussi ses clients et partenaires. Apple a immédiatement déclenché des mesures correctives pour limiter l'impact sur ses propres opérations. Les fichiers leakés pourraient inclure des schémas techniques, des données de production, des spécifications produits et des informations commerciales sensibles. La nature exacte des données compromises reste à clarifier mais l'impact réputationnel et concurrentiel est considérable."
+      },
+      "mitre_ttps": [
+        "TA0010",
+        "TA0009",
+        "T1567"
+      ],
+      "recommandations": [
+        {
+          "en": "Immediately audit all Tata Electronics access to Apple systems",
+          "fr": "Auditer immédiatement tous les accès Tata Electronics aux systèmes Apple"
+        },
+        {
+          "en": "Implement enhanced DLP on outbound flows",
+          "fr": "Mettre en place une DLP renforcée sur les flux sortants"
+        },
+        {
+          "en": "Review segmentation and access controls at Tata",
+          "fr": "Revoir la segmentation et les contrôles d'accès chez Tata"
+        },
+        {
+          "en": "Assess the impact on intellectual property and consider legal action",
+          "fr": "Évaluer l'impact sur la propriété intellectuelle et envisager des mesures juridiques"
+        },
+        {
+          "en": "Strengthen cybersecurity requirements in supplier contracts",
+          "fr": "Renforcer les exigences de cybersécurité dans les contrats fournisseurs"
+        },
+        {
+          "en": "Communicate transparently with investors and partners",
+          "fr": "Communiquer de manière transparente avec les investisseurs et partenaires"
+        },
+        {
+          "en": "Monitor the dark web and industrial property resale channels",
+          "fr": "Surveiller le dark web et les canaux de revente de propriété industrielle"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Map the supply chain and data flows with third-party partners",
+            "Implement strict contractual security clauses with all suppliers",
+            "Implement continuous monitoring of third-party access to internal systems",
+            "Segment data according to its sensitivity (Apple proprietary vs. Tata internal)",
+            "Prepare a coordinated response plan with affected partners"
+          ],
+          "fr": [
+            "Cartographier la chaîne d'approvisionnement et les flux de données avec les partenaires tiers",
+            "Mettre en place des clauses contractuelles de sécurité strictes avec tous les fournisseurs",
+            "Implémenter une surveillance continue des accès tiers aux systèmes internes",
+            "Segmenter les données selon leur sensibilité (propriétaires Apple vs internes Tata)",
+            "Préparer un plan de réponse coordonné avec les partenaires affectés"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor abnormal access to file servers and shared storage",
+            "Detect abnormal exfiltration volumes (>200,000 files) via DLP",
+            "Set up alerts for access outside business hours",
+            "Analyze logs of supplier and partner accounts",
+            "Correlate IoCs with threat intel databases in the semiconductor sector"
+          ],
+          "fr": [
+            "Surveiller les accès anormaux aux serveurs de fichiers et stockage partagé",
+            "Détecter les volumes d'exfiltration anormaux (>200 000 fichiers) via DLP",
+            "Mettre en place des alertes sur les accès hors heures ouvrées",
+            "Analyser les logs des comptes fournisseurs et partenaires",
+            "Corréler les IoC avec les bases threat intel du secteur semi-conducteurs"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Immediately isolate compromised systems",
+            "Revoke all supplier access to the Apple environment",
+            "Preserve forensic evidence for further analysis",
+            "Notify Apple and coordinate the joint response",
+            "Activate the crisis management protocol with controlled communication"
+          ],
+          "fr": [
+            "Isoler immédiatement les systèmes compromis",
+            "Révoquer tous les accès du fournisseur à l'environnement Apple",
+            "Préserver les preuves forensiques pour analyse ultérieure",
+            "Notifier Apple et coordonner la réponse conjointe",
+            "Activer le protocole de gestion de crise avec communication contrôlée"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Assess the impact on intellectual property and trade secrets",
+            "Strengthen security audits at critical suppliers",
+            "Review supply chain cybersecurity contractual clauses",
+            "Notify Indian regulators (MeitY) and international ones if applicable",
+            "Document lessons learned and update procedures"
+          ],
+          "fr": [
+            "Évaluer l'impact sur la propriété intellectuelle et les secrets industriels",
+            "Renforcer les audits de sécurité chez les fournisseurs critiques",
+            "Revoir les clauses contractuelles de cybersécurité supply chain",
+            "Notifier les régulateurs indiens (MeitY) et internationaux si applicable",
+            "Documenter les leçons apprises et mettre à jour les procédures"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for persistent implants in file servers",
+            "Identify the entry vector (phishing, vulnerability, third-party compromise)",
+            "Hunt for lateral movements from file servers to other systems",
+            "Verify the absence of C2 channels and residual exfiltration mechanisms",
+            "Monitor the dark web for the sale or publication of the 200,000 files"
+          ],
+          "fr": [
+            "Rechercher des implants persistants dans les serveurs de fichiers",
+            "Identifier le vecteur d'entrée (phishing, vulnérabilité, compromission tierce)",
+            "Chasser les mouvements latéraux depuis les serveurs fichiers vers d'autres systèmes",
+            "Vérifier l'absence de canaux C2 et de mécanismes d'exfiltration résiduels",
+            "Surveiller le dark web pour la vente ou la publication des 200 000 fichiers"
+          ]
+        }
+      },
+      "tags": [
+        "data_breach",
+        "supply_chain",
+        "industrial",
+        "semiconductor",
+        "india",
+        "apple"
+      ],
+      "sources": [
+        "https://meteoraweb.com/news/fuga-di-dati-da-tata-electronics-apple-corre-ai-ripari-dopo-il-leak-di-200000-file-riservati",
+        "https://mastodon.social/@meteoraweb/116823653854239264",
+        "https://reuters.com"
+      ],
+      "date": "2026-06-27"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-43503",
+      "euvd_id": "",
+      "cisa_kev": false,
+      "cvss": "8.8",
+      "epss": "0.0013",
+      "cpe": "",
+      "product": "Linux",
+      "vendor": "Linux",
+      "description": {
+        "en": "CVE-2026-43503 (alias DirtyClone) is the fourth vulnerability in the DirtyFrag family in six weeks. It results from incorrect handling of file-backed memory as network packet data. An unprivileged local user can load a privileged binary (e.g., /usr/bin/su) into memory, map its pages into a network packet, and then force the kernel to clone it via a controlled loopback IPsec tunnel. The decryption step overwrites the binary's authentication logic with attacker-chosen bytes, allowing root to be obtained on the next launch. The capability required (CAP_NET_ADMIN) is reachable by any local user on Debian and Fedora via unprivileged user namespaces enabled by default. The attack is silent: no kernel logs, no audit trail, no disk artifact. CVSS 8.8.",
+        "fr": "CVE-2026-43503 (alias DirtyClone) est la quatrième vulnérabilité de la famille DirtyFrag en six semaines. Elle résulte d'un traitement erroné de la mémoire soutenue par fichier comme données de paquet réseau. Un utilisateur local non privilégié peut charger un binaire privilégié (ex : /usr/bin/su) en mémoire, mapper ses pages dans un paquet réseau, puis forcer le noyau à le cloner via un tunnel IPsec loopback contrôlé. L'étape de déchiffrement écrase la logique d'authentification du binaire avec des octets choisis par l'attaquant, permettant d'obtenir root au prochain lancement. La capacité requise (CAP_NET_ADMIN) est atteignable par tout utilisateur local sur Debian et Fedora via les user namespaces non privilégiés activés par défaut. L'attaque est silencieuse : aucun log noyau, aucune trace d'audit, aucun artefact disque. CVSS 8.8."
+      },
+      "mitre_ttps": [
+        "T1068",
+        "T1003",
+        "T1611"
+      ],
+      "recommandations": [
+        {
+          "en": "Immediately apply the mainline Linux kernel patch from May 21, 2026 (or later). Disable unprivileged user namespaces if not required (kernel.unprivileged_userns_clone=0). Restrict CAP_NET_ADMIN to administrators only via polkit, systemd, or sudo. Strengthen monitoring of loopback IPsec tunnel creation. Deploy in-memory integrity tools (YARA runtime) on critical hosts.",
+          "fr": "Appliquer immédiatement le correctif mainline du noyau Linux du 21 mai 2026 (ou版本 ultérieur). Désactiver les user namespaces non privilégiés si non requis (kernel.unprivileged_userns_clone=0). Restreindre CAP_NET_ADMIN aux seuls administrateurs via polkit, systemd ou sudo. Renforcer la surveillance de la création de tunnels IPsec en loopback. Déployer des outils d'intégrité en mémoire (YARA runtime) sur les hôtes critiques."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain an up-to-date inventory of Linux kernel versions deployed across the entire estate (Debian, Fedora, RHEL, Ubuntu).",
+            "Verify application of the May 21, 2026 mainline patch on all systems.",
+            "Disable unprivileged user namespaces (kernel.unprivileged_userns_clone=0) if not required.",
+            "Document the procedure for local root escalation and associated compromise indicators (absence of logs/audit).",
+            "Segment critical hosts and limit console/SSH access to trusted administrators."
+          ],
+          "fr": [
+            "Maintenir un inventaire à jour des versions du noyau Linux déployées sur l'ensemble du parc (Debian, Fedora, RHEL, Ubuntu).",
+            "Vérifier l'application du correctif mainline du 21 mai 2026 sur tous les systèmes.",
+            "Désactiver les user namespaces non privilégiés (kernel.unprivileged_userns_clone=0) si non requis.",
+            "Documenter la procédure d'escalade vers root local et les indicateurs de compromission associés (absence de logs/audit).",
+            "Segmenter les hôtes critiques et limiter l'accès console/SSH aux administrateurs de confiance."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor processes requesting CAP_NET_ADMIN (e.g., via auditd and execve arguments such as 'unshare -Urn').",
+            "Detect abnormal creation of loopback IPsec tunnels (ip xfrm policy/state) by unprivileged users.",
+            "Search for memory integrity anomalies of setuid/setcap binaries (e.g., /usr/bin/su, sudo, ping) via memory hash comparison against a baseline (YARA, with Volatility assistance).",
+            "Enable and centralize auditd traces (execve, user_namespace, xfrm) on sensitive servers.",
+            "Correlate IDS/IPS network alerts on unusual internal IPsec traffic."
+          ],
+          "fr": [
+            "Surveiller les processus sollicitant CAP_NET_ADMIN (ex : via auditd et execve arguments comme 'unshare -Urn').",
+            "Détecter la création anormale de tunnels IPsec en loopback (ip xfrm policy/state) par des utilisateurs non privilégiés.",
+            "Rechercher des anomalies d'intégrité mémoire des binaires setuid/Setcap (ex : /usr/bin/su, sudo, ping) via comparaison de hash en mémoire avec une baseline (YARA, aide de Volatility).",
+            "Activer et centraliser les traces auditd (execve, user_namespace, xfrm) sur les serveurs sensibles.",
+            "Corréler les alertes IDS/IPS réseau sur trafic IPsec inhabituel en interne."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Immediately isolate the suspected compromised workstation/server from the network (VLAN quarantine).",
+            "Suspend potentially compromised local user accounts and revoke their SSH keys.",
+            "Temporarily disable unprivileged user namespaces on exposed hosts.",
+            "Capture a volatile memory image (LiME, AVML) and a disk image before any remediation.",
+            "Reboot on a patched kernel in single-user mode to avoid persistence via module/socket."
+          ],
+          "fr": [
+            "Isoler immédiatement le poste/serveur suspecté compromis du réseau (quarantaine VLAN).",
+            "Suspendre les comptes utilisateurs locaux potentiellement compromis et révoquer leurs clés SSH.",
+            "Désactiver temporairement les user namespaces non privilégiés sur les hôtes exposés.",
+            "Capturer une image mémoire volatile (LiME, AVML) et une image disque avant toute remédiation.",
+            "Rebooter sur un noyau patché en mode single-user pour éviter la persistance via module/socket."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Restore the affected hosts from a trusted master/image and apply the kernel patch.",
+            "Rebuild any infrastructure that ran potentially memory-altered setuid binaries.",
+            "Conduct a review of local administrator accounts, rotate passwords and SSH keys.",
+            "Write an incident report detailing the timeline, initial vector, and detection gaps.",
+            "Communicate to stakeholders (CISO, DPO, management) and update internal procedures."
+          ],
+          "fr": [
+            "Restaurer les hôtes concernés à partir d'un master/image intègre et appliquer le correctif noyau.",
+            "Reconstruire toute infrastructure ayant exécuté des binaires setuid potentiellement altérés en mémoire.",
+            "Mener une revue des comptes administrateurs locaux, rotation des mots de passe et clés SSH.",
+            "Rédiger un rapport d'incident détaillant la timeline, le vecteur initial et les lacunes de détection.",
+            "Communiquer vers les parties prenantes (RSSI, DPO, direction) et mettre à jour les procédures internes."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for DirtyFrag family IOCs: use of 'unshare -Urn', configuration of loopback IPsec tunnels by non-admin accounts.",
+            "Search shell histories (bash_history, zsh_history) for unusual 'ip xfrm' or 'ip link add' commands.",
+            "Analyze historical memory images (if retained) for hooks/overwrites of authentication functions (PAM, su, sudo).",
+            "Track related CVEs in the DirtyFrag family to identify undetected prior compromises.",
+            "Proactive monitoring of JFrog, NVD, and kernel.org publications related to the network/XFRM subsystem."
+          ],
+          "fr": [
+            "Chasser les IOC de la famille DirtyFrag : utilisation de 'unshare -Urn', configuration de tunnels IPsec loopback par des comptes non-admin.",
+            "Rechercher dans l'historique des shells (bash_history, zsh_history) les commandes 'ip xfrm' ou 'ip link add' inhabituelles.",
+            "Analyser les images mémoire historiques (si conservées) pour des hooks/écrasements de fonctions d'authentification (PAM, su, sudo).",
+            "Traquer les CVE connexes de la famille DirtyFrag pour identifier des compromissions antérieures non détectées.",
+            "Veille proactive sur les publications JFrog, NVD et kernel.org relatives au sous-système network/XFRM."
+          ]
+        }
+      },
+      "tags": [
+        "linux-kernel",
+        "privilege-escalation",
+        "lpe",
+        "root",
+        "ipsec",
+        "page-cache",
+        "dirtyfrag",
+        "memory-corruption"
+      ],
+      "sources": [
+        "https://securityaffairs.com/194338/uncategorized/dirtyclone-fourth-linux-kernel-flaw-in-six-weeks-escalates-to-root.html"
+      ],
+      "date": "2026-06-27"
+    },
+    {
+      "cve_id": "CVE-2026-58054",
+      "euvd_id": "",
+      "cisa_kev": false,
+      "cvss": "8.6",
+      "epss": "",
+      "cpe": "",
+      "product": "MyBB",
+      "vendor": "MyBB",
+      "description": {
+        "en": "MyBB 1.8.40 does not restrict usergroup assignment in the ACP users module: the verify_usergroup() function in the datahandler unconditionally returns true for the 'Administrators' group (gid 4). An administrator holding only the delegated user management permission can thus create or modify an account by assigning it to the Administrators group, granting them full administrative permissions. CVSS 4.0: 8.6 (High) / CVSS 3.1: 7.2 (High). Remote exploitation is possible via the admin web interface.",
+        "fr": "MyBB 1.8.40 ne restreint pas l'attribution de usergroup dans le module utilisateurs de l'ACP : la fonction verify_usergroup() du datahandler renvoie inconditionnellement true pour le groupe 'Administrators' (gid 4). Un administrateur détenant uniquement la permission déléguée de gestion des utilisateurs peut ainsi créer ou modifier un compte en lui assignant le groupe Administrators, ce qui lui confère l'ensemble des permissions d'administration complètes. CVSS 4.0 : 8.6 (High) / CVSS 3.1 : 7.2 (High). Exploitation à distance possible via l'interface web d'administration."
+      },
+      "mitre_ttps": [
+        "T1078",
+        "T1098",
+        "T1078.002"
+      ],
+      "recommandations": [
+        {
+          "en": "Update MyBB to a patched version. Restrict at the code level the ability to assign the Administrators group from the user management module. Systematically verify usergroups when creating/editing users. Audit existing accounts and their groups.",
+          "fr": "Mettre à jour MyBB vers une version corrigée. Restreindre au niveau du code la capacité d'assigner le groupe Administrators depuis le module de gestion des utilisateurs. Vérifier systématiquement les usergroups lors de la création/édition d'utilisateurs. Auditer les comptes existants et leurs groupes."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain an accurate inventory of MyBB instances and their version.",
+            "Map ACP (Admin Control Panel) users and their delegated permissions.",
+            "Document the least privilege policy for forum administration roles.",
+            "Prepare an administrator credential rotation procedure.",
+            "Enable detailed logging of usergroup changes."
+          ],
+          "fr": [
+            "Maintenir un inventaire précis des instances MyBB et de leur version.",
+            "Cartographier les utilisateurs ACP (Admin Control Panel) et leurs permissions déléguées.",
+            "Documenter la politique du moindre privilège pour les rôles d'administration de forum.",
+            "Préparer une procédure de rotation des identifiants administrateurs.",
+            "Activer la journalisation détaillée des changements de usergroup."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor user create/modify events and any assignment to the 'Administrators' group (gid 4).",
+            "Detect assignment of the Administrators group by an account holding only the 'user management' permission.",
+            "Audit MyBB logs (admin logs) for user management actions performed by limited-privilege accounts.",
+            "Set up SIEM alerts on sensitive role changes.",
+            "Correlate with network activity of suspicious administrator accounts."
+          ],
+          "fr": [
+            "Surveiller les événements de création/modification d'utilisateur et tout assignement au groupe 'Administrators' (gid 4).",
+            "Détecter l'attribution du groupe Administrators par un compte ne détenant que la permission 'user management'.",
+            "Auditer les logs MyBB (admin logs) à la recherche d'actions de user management par des comptes à privilèges limités.",
+            "Mettre en place des alertes SIEM sur les changements de rôle sensibles.",
+            "Corréler avec l'activité réseau des comptes administrateurs suspects."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Immediately revoke ACP rights of the account that performed the escalation.",
+            "Restore the prior state of usergroups from MyBB backups.",
+            "Force logout of compromised administrator sessions and rotate passwords.",
+            "Temporarily restrict ACP access to trusted super-administrators only.",
+            "Isolate the MyBB instance from the network if the escalation is confirmed."
+          ],
+          "fr": [
+            "Révoquer immédiatement les droits ACP du compte ayant effectué l'escalade.",
+            "Restaurer l'état antérieur des usergroups depuis les sauvegardes MyBB.",
+            "Forcer la déconnexion des sessions administrateur compromises et rotation des mots de passe.",
+            "Restreindre temporairement l'accès ACP aux seuls super-administrateurs de confiance.",
+            "Isoler l'instance MyBB du réseau si l'escalade est confirmée."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Update MyBB to the patched version.",
+            "Revise the ACP permissions model and explicitly limit assignment of the Administrators group.",
+            "Perform a full audit of accounts and their membership in sensitive groups.",
+            "Communicate to the community/teams using the platform about the incident.",
+            "Capitalize via a feedback review (REX) on the access control flaw."
+          ],
+          "fr": [
+            "Mettre à jour MyBB vers la version corrigée.",
+            "Réviser le modèle de permissions ACP et limiter explicitement l'assignement du groupe Administrators.",
+            "Effectuer un audit complet des comptes et de leur appartenance aux groupes sensibles.",
+            "Communiquer auprès de la communauté/équipes utilisant la plateforme sur l'incident.",
+            "Capitaliser via un retour d'expérience (REX) sur le défaut de contrôle d'accès."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search history for Administrators group assignments made by limited-privilege accounts.",
+            "Identify dormant or recently created accounts that received elevated rights.",
+            "Monitor VulnCheck, MyBB publications, and CVE databases for related privilege escalation CVEs.",
+            "Continuously test delegated permissions via simulated attack scenarios.",
+            "Monitor parallel forums / mentions of MyBB on the darkweb."
+          ],
+          "fr": [
+            "Rechercher dans l'historique les assignations au groupe Administrators par des comptes à privilèges limités.",
+            "Identifier les comptes dormant ou récemment créés ayant reçu des droits élevés.",
+            "Veille sur les publications VulnCheck, MyBB et bases CVE pour CVE connexes d'élévation de privilèges.",
+            "Tester en continu les permissions déléguées via des scénarios d'attaque simulés.",
+            "Surveiller les forums parallèles / mentions de MyBB dans le darkweb."
+          ]
+        }
+      },
+      "tags": [
+        "mybb",
+        "forum",
+        "cms",
+        "privilege-escalation",
+        "access-control",
+        "authorization"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-58054"
+      ],
+      "date": "2026-06-28"
+    },
+    {
+      "cve_id": "CVE-2026-58053",
+      "euvd_id": "",
+      "cisa_kev": false,
+      "cvss": "9.4",
+      "epss": "",
+      "cpe": "",
+      "product": "act_runner",
+      "vendor": "Gitea",
+      "description": {
+        "en": "CVE-2026-58053 affects Gitea act_runner when it uses the Docker backend via 'act' up to 0.262.0. The 'container.options' string from the workflow is passed to the HostConfig of the job's Docker container. When the runner is configured with privileged:false, the code only forces the Privileged flag to false while merging options such as --pid=host, --cap-add, --security-opt unchanged. A user authorized to run a workflow on a Docker runner can therefore create a job container with host namespaces and extended capabilities, and escape to the host as root despite the privileged mode being disabled. CVSS 3.1: 9.9 (Critical) / CVSS 4.0: 9.4 (Critical).",
+        "fr": "CVE-2026-58053 affecte Gitea act_runner lorsqu'il utilise le backend Docker via 'act' jusqu'à 0.262.0. La chaîne 'container.options' du workflow est transmise au HostConfig du conteneur Docker du job. Lorsque le runner est configuré avec privileged:false, le code force uniquement le drapeau Privileged à false tout en fusionnant inchangées les options telles que --pid=host, --cap-add, --security-opt. Un utilisateur autorisé à exécuter un workflow sur un runner Docker peut donc créer un conteneur de job avec des namespaces hôte et des capabilities étendues, et s'évader vers l'hôte en root malgré le mode privilégié désactivé. CVSS 3.1 : 9.9 (Critical) / CVSS 4.0 : 9.4 (Critical)."
+      },
+      "mitre_ttps": [
+        "T1611",
+        "T1610",
+        "T1059"
+      ],
+      "recommandations": [
+        {
+          "en": "Update act_runner and 'act' to a patched version. Restrict at the runner level the allowed Docker options (strict allow-list). Disable the Docker backend for unapproved workflows. Regularly audit runner configurations and job logs.",
+          "fr": "Mettre à jour act_runner et 'act' vers une version corrigée. Restreindre au niveau du runner les options Docker autorisées (allow-list stricte). Désactiver le backend Docker pour les workflows non approuvés. Auditer régulièrement les configurations des runners et les logs de jobs."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain an inventory of Gitea act_runner instances and their backend (Docker).",
+            "Document and harden allowed Docker options in workflows (forbid --pid=host, --cap-add, dangerous --security-opt).",
+            "Segment CI/CD runners from the production network and limit access to the Docker daemon.",
+            "Enable job execution logging (runner logs) and centralize via SIEM.",
+            "Establish a code review procedure for .github/workflows files and Gitea equivalents."
+          ],
+          "fr": [
+            "Maintenir un inventaire des runners Gitea act_runner et de leur backend (Docker).",
+            "Documenter et durcir les options Docker autorisées dans les workflows (interdire --pid=host, --cap-add, --security-opt dangereux).",
+            "Segmenter les runners CI/CD du réseau de production et limiter l'accès au daemon Docker.",
+            "Activer la journalisation des exécutions de jobs (logs runner) et centraliser via SIEM.",
+            "Établir une procédure de revue de code pour les fichiers .github/workflows et équivalents Gitea."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor Docker container startups by act_runner with host-namespace options or extended capabilities.",
+            "Detect use of sensitive Docker flags (--pid=host, --cap-add=ALL, --security-opt apparmor=unconfined) in runner logs.",
+            "Audit workflows used by unapproved users.",
+            "Detect any suspicious post-execution activity at the Docker daemon or socket level.",
+            "Correlate Falco / Sysdig alerts on container_escape."
+          ],
+          "fr": [
+            "Surveiller les démarrages de conteneurs Docker par act_runner avec options host-namespace ou capabilities étendues.",
+            "Détecter l'utilisation de flags Docker sensibles (--pid=host, --cap-add=ALL, --security-opt apparmor=unconfined) dans les logs du runner.",
+            "Auditer les workflows utilisés par les utilisateurs non approuvés.",
+            "Détecter toute activité post-exécution suspecte au niveau du daemon Docker ou du socket.",
+            "Corréler les alertes Falco / Sysdig sur container_escape."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Immediately suspend the affected runner and disable in-progress workflows.",
+            "Revoke credentials used by the runner (Gitea tokens, SSH keys, registries).",
+            "Isolate hosts hosting the Docker daemon from the production network.",
+            "Restore the runner from a trusted image with hardened configuration.",
+            "Back up workflow artifacts and logs for forensic analysis."
+          ],
+          "fr": [
+            "Suspendre immédiatement le runner affecté et désactiver les workflows en cours.",
+            "Révoquer les credentials utilisés par le runner (tokens Gitea, clés SSH, registries).",
+            "Isoler les hôtes hébergeant le daemon Docker du réseau de production.",
+            "Restaurer le runner à partir d'une image intègre avec configuration durcie.",
+            "Sauvegarder les artefacts et logs de workflow pour analyse forensique."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Update act_runner and the underlying 'act' version to a patch.",
+            "Review the configuration of all runners to neutralize privileged flag bypasses.",
+            "Strengthen the workflow code review policy and enforce an options allow-list.",
+            "Communicate the new CI/CD restrictions to dev teams.",
+            "REX: integrate the container escape scenario into red/purple team exercises."
+          ],
+          "fr": [
+            "Mettre à jour act_runner et la version de 'act' sous-jacente vers un correctif.",
+            "Réviser la configuration de tous les runners pour neutraliser les contournements du flag privileged.",
+            "Renforcer la politique de revue de code des workflows et imposer un allow-list d'options.",
+            "Communiquer aux équipes dev les nouvelles restrictions CI/CD.",
+            "REX : intégrer le scénario de fuite de conteneur dans les exercices red/purple team."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for IOCs: containers with shared host namespaces created by act_runner.",
+            "Look for CI workloads that have executed Docker commands with extended capabilities.",
+            "Monitor publications related to 'act' and to Gitea/GitHub CI pipelines.",
+            "Regularly test hardening options via audit tools (Docker Bench, kube-bench equivalent).",
+            "Analyze Git repositories for suspicious workflows added without review."
+          ],
+          "fr": [
+            "Chasser les IOC : conteneurs avec namespaces host partagés créés par act_runner.",
+            "Rechercher les workloads CI ayant exécuté des commandes Docker avec capabilities étendues.",
+            "Veille sur les publications relatives à 'act' et aux pipelines CI Gitea/GitHub.",
+            "Tester régulièrement les options de hardening via outils d'audit (Docker Bench, kube-bench équivalent).",
+            "Analyser les référentiels Git pour des workflows suspects ajoutés sans revue."
+          ]
+        }
+      },
+      "tags": [
+        "gitea",
+        "act_runner",
+        "ci-cd",
+        "docker",
+        "container-escape",
+        "misconfiguration",
+        "privilege-escalation",
+        "host-namespace"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-58053"
+      ],
+      "date": "2026-06-28"
+    },
+    {
+      "cve_id": "CVE-2026-58051",
+      "euvd_id": "",
+      "cisa_kev": false,
+      "cvss": "8.3",
+      "epss": "",
+      "cpe": "",
+      "product": "libssh2",
+      "vendor": "libssh2",
+      "description": {
+        "en": "libssh2 up to version 1.11.1 grows its 'publickey' list with SSH2_REALLOC without zero-initializing the new entries before parsing. If parsing fails, the cleanup path libssh2_publickey_list_free operates on an uninitialized entry. A malicious SSH server offering the publickey subsystem can use a malformed response to cause the cleanup to free an attacker-influenceable uninitialized 'attrs' pointer in the connecting libssh2 client. CVSS 4.0: 8.3 (High) / CVSS 3.1: 6.5 (Medium).",
+        "fr": "libssh2 jusqu'à la version 1.11.1 agrandit sa liste 'publickey' avec SSH2_REALLOC sans zéro-initialiser les nouvelles entrées avant le parsing. En cas d'échec de parsing, le chemin de nettoyage libssh2_publickey_list_free opère sur une entrée non initialisée. Un serveur SSH malveillant offrant le sous-système publickey peut utiliser une réponse malformée pour faire en sorte que le nettoyage libère un pointeur 'attrs' non initialisé et influençable par l'attaquant dans le client libssh2 qui se connecte. CVSS 4.0 : 8.3 (High) / CVSS 3.1 : 6.5 (Medium)."
+      },
+      "mitre_ttps": [
+        "T1190",
+        "T1203"
+      ],
+      "recommandations": [
+        {
+          "en": "Update libssh2 to a patched version. Ensure that new entries in the publickey list are zero-initialized (SSH2_REALLOC + memset). Validate cleanup paths for memory safety. Avoid using the publickey subsystem against untrusted servers.",
+          "fr": "Mettre à jour libssh2 vers une version corrigée. S'assurer que les nouvelles entrées de la liste publickey sont zéro-initialisées (SSH2_REALLOC + memset). Valider les chemins de nettoyage pour la sécurité mémoire. Éviter d'utiliser le sous-système publickey sur des serveurs non approuvés."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain an inventory of applications and dependencies using libssh2 (SSH clients, transfer tools, etc.).",
+            "Track deployed libssh2 versions and monitor upstream publications.",
+            "Document the procedure for updating cryptographic libraries.",
+            "Enable memory error logging (ASan, valgrind) in pre-prod.",
+            "Segment outbound SSH flows from user workstations and sensitive servers."
+          ],
+          "fr": [
+            "Maintenir un inventaire des applications et dépendances utilisant libssh2 (clients SSH, outils de transfert, etc.).",
+            "Suivre les versions de libssh2 déployées et surveiller les publications upstream.",
+            "Documenter la procédure de mise à jour des bibliothèques cryptographiques.",
+            "Activer la journalisation des erreurs mémoire (ASan, valgrind) en pré-prod.",
+            "Segmenter les flux sortants SSH des postes utilisateurs et serveurs sensibles."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect abnormal crashes of SSH client processes using libssh2.",
+            "Monitor SSH connections to untrusted or newly registered servers.",
+            "Enable memory captures (core dumps) on critical SSH clients for analysis.",
+            "Correlate with network IDS/IPS on malformed SSH responses.",
+            "Audit application logs of tools using libssh2 (publickey parsing errors)."
+          ],
+          "fr": [
+            "Détecter les plantages anormaux de processus clients SSH utilisant libssh2.",
+            "Surveiller les connexions SSH vers des serveurs non approuvés ou nouvellement enregistrés.",
+            "Activer les captures mémoire (core dumps) sur les clients SSH critiques pour analyse.",
+            "Corréler avec les IDS/IPS réseau sur les réponses SSH malformées.",
+            "Auditer les logs applicatifs des outils utilisant libssh2 (erreurs de parsing publickey)."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Block suspicious identified SSH servers outbound.",
+            "Force the update of libssh2 on affected hosts via the package manager.",
+            "Temporarily disable the use of the publickey subsystem if not required.",
+            "Isolate compromised applications and collect memory artifacts.",
+            "Revoke potentially exposed SSH keys on destination servers."
+          ],
+          "fr": [
+            "Bloquer en sortie les serveurs SSH suspects identifiés.",
+            "Forcer la mise à jour de libssh2 sur les hôtes concernés via le gestionnaire de paquets.",
+            "Désactiver temporairement l'usage du sous-système publickey si non requis.",
+            "Isoler les applications compromises et collecter les artefacts mémoire.",
+            "Révoquer les clés SSH potentiellement exposées sur les serveurs de destination."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Update libssh2 to the patched version across the entire estate.",
+            "Rebuild client applications and redeploy.",
+            "Conduct a forensic review of SSH servers contacted during the exploitation window.",
+            "Capitalize via an REX on the security of third-party SSH libraries.",
+            "Communicate to dev teams the importance of rapidly updating crypto dependencies."
+          ],
+          "fr": [
+            "Mettre à jour libssh2 vers la version corrigée sur l'ensemble du parc.",
+            "Reconstruire les applications clientes et redéployer.",
+            "Mener une revue forensique des serveurs SSH contactés pendant la fenêtre d'exploitation.",
+            "Capitaliser via un REX sur la sécurité des bibliothèques SSH tierces.",
+            "Communiquer aux équipes dev l'importance de la mise à jour rapide des dépendances crypto."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Identify all binaries integrating libssh2 (strings, dynamic dependencies).",
+            "Look for behavioral anomalies on internal SSH clients (crashes, failures).",
+            "Monitor future libssh2 CVEs and the vendor's roadmap.",
+            "Test resilience via public SSH fuzzers.",
+            "Monitor IOCs of malicious SSH servers in outbound flows."
+          ],
+          "fr": [
+            "Identifier tous les binaires intégrant libssh2 (strings, dépendances dynamiques).",
+            "Rechercher des anomalies de comportement sur les clients SSH internes (plantages, échecs).",
+            "Veille sur les futures CVE libssh2 et la roadmap de l'éditeur.",
+            "Tester la résilience via des fuzzers SSH publics.",
+            "Surveiller les IOC de serveurs SSH malveillants dans les flux sortants."
+          ]
+        }
+      },
+      "tags": [
+        "libssh2",
+        "ssh",
+        "memory-corruption",
+        "use-of-uninitialized-pointer",
+        "client"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-58051"
+      ],
+      "date": "2026-06-28"
+    },
+    {
+      "cve_id": "CVE-2026-58050",
+      "euvd_id": "",
+      "cisa_kev": false,
+      "cvss": "8.3",
+      "epss": "",
+      "cpe": "",
+      "product": "libssh2",
+      "vendor": "libssh2",
+      "description": {
+        "en": "libssh2 up to version 1.11.1 reads a 32-bit attacker-controlled attribute count from a publickey subsystem response and uses it in the num_attrs * sizeof(libssh2_publickey_attribute) allocation without bounds checking. On 32-bit platforms, the multiplication overflows into a too-small buffer. A malicious SSH server can then steer the attribute parsing loop to write beyond the allocation, causing a heap overflow in the connecting libssh2 client. CVSS 4.0: 8.3 (High) / CVSS 3.1: 7.0 (High).",
+        "fr": "libssh2 jusqu'à la version 1.11.1 lit un compte d'attributs 32 bits contrôlé par l'attaquant depuis une réponse du sous-système publickey et l'utilise dans l'allocation num_attrs * sizeof(libssh2_publickey_attribute) sans vérification de bornes. Sur les plateformes 32 bits, la multiplication déborde vers un buffer trop petit. Un serveur SSH malveillant peut alors piloter la boucle de parsing d'attributs pour écrire au-delà de l'allocation, provoquant un dépassement de tas dans le client libssh2 qui se connecte. CVSS 4.0 : 8.3 (High) / CVSS 3.1 : 7.0 (High)."
+      },
+      "mitre_ttps": [
+        "T1190",
+        "T1203"
+      ],
+      "recommandations": [
+        {
+          "en": "Update libssh2 to a patched version including a bounds check on the attribute count. Verify the allocation size calculation. Add bounds checks in attribute parsing. Avoid using the publickey subsystem against untrusted servers.",
+          "fr": "Mettre à jour libssh2 vers une version corrigée incluant un contrôle de bornes sur le compte d'attributs. Vérifier le calcul de la taille d'allocation. Ajouter des contrôles de bornes dans le parsing d'attributs. Éviter d'utiliser le sous-système publickey sur des serveurs non approuvés."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain an inventory of applications and dependencies using libssh2.",
+            "Track deployed libssh2 versions and monitor upstream publications.",
+            "Document the procedure for updating cryptographic libraries.",
+            "Enable memory error logging (ASan, valgrind) in pre-prod.",
+            "Segment outbound SSH flows from sensitive workstations and servers."
+          ],
+          "fr": [
+            "Maintenir un inventaire des applications et dépendances utilisant libssh2.",
+            "Suivre les versions de libssh2 déployées et surveiller les publications upstream.",
+            "Documenter la procédure de mise à jour des bibliothèques cryptographiques.",
+            "Activer la journalisation des erreurs mémoire (ASan, valgrind) en pré-prod.",
+            "Segmenter les flux sortants SSH des postes et serveurs sensibles."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect abnormal crashes of SSH client processes using libssh2.",
+            "Monitor SSH connections to untrusted or newly registered servers.",
+            "Enable memory captures (core dumps) on critical SSH clients for analysis.",
+            "Correlate with network IDS/IPS on malformed SSH responses.",
+            "Audit application logs of tools using libssh2 (publickey parsing errors)."
+          ],
+          "fr": [
+            "Détecter les plantages anormaux de processus clients SSH utilisant libssh2.",
+            "Surveiller les connexions SSH vers des serveurs non approuvés ou nouvellement enregistrés.",
+            "Activer les captures mémoire (core dumps) sur les clients SSH critiques pour analyse.",
+            "Corréler avec les IDS/IPS réseau sur les réponses SSH malformées.",
+            "Auditer les logs applicatifs des outils utilisant libssh2 (erreurs de parsing publickey)."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Block suspicious identified SSH servers outbound.",
+            "Force the update of libssh2 on affected hosts via the package manager.",
+            "Temporarily disable the use of the publickey subsystem if not required.",
+            "Isolate compromised applications and collect memory artifacts.",
+            "Revoke potentially exposed SSH keys on destination servers."
+          ],
+          "fr": [
+            "Bloquer en sortie les serveurs SSH suspects identifiés.",
+            "Forcer la mise à jour de libssh2 sur les hôtes concernés via le gestionnaire de paquets.",
+            "Désactiver temporairement l'usage du sous-système publickey si non requis.",
+            "Isoler les applications compromises et collecter les artefacts mémoire.",
+            "Révoquer les clés SSH potentiellement exposées sur les serveurs de destination."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Update libssh2 to the patched version across the entire estate.",
+            "Rebuild client applications and redeploy.",
+            "Conduct a forensic review of SSH servers contacted during the exploitation window.",
+            "Capitalize via an REX on the security of third-party SSH libraries.",
+            "Communicate to dev teams the importance of rapidly updating crypto dependencies."
+          ],
+          "fr": [
+            "Mettre à jour libssh2 vers la version corrigée sur l'ensemble du parc.",
+            "Reconstruire les applications clientes et redéployer.",
+            "Mener une revue forensique des serveurs SSH contactés pendant la fenêtre d'exploitation.",
+            "Capitaliser via un REX sur la sécurité des bibliothèques SSH tierces.",
+            "Communiquer aux équipes dev l'importance de la mise à jour rapide des dépendances crypto."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Identify all binaries integrating libssh2 (strings, dynamic dependencies).",
+            "Look for behavioral anomalies on internal SSH clients (crashes, failures).",
+            "Monitor future libssh2 CVEs and the vendor's roadmap.",
+            "Test resilience via public SSH fuzzers.",
+            "Monitor IOCs of malicious SSH servers in outbound flows."
+          ],
+          "fr": [
+            "Identifier tous les binaires intégrant libssh2 (strings, dépendances dynamiques).",
+            "Rechercher des anomalies de comportement sur les clients SSH internes (plantages, échecs).",
+            "Veille sur les futures CVE libssh2 et la roadmap de l'éditeur.",
+            "Tester la résilience via des fuzzers SSH publics.",
+            "Surveiller les IOC de serveurs SSH malveillants dans les flux sortants."
+          ]
+        }
+      },
+      "tags": [
+        "libssh2",
+        "ssh",
+        "integer-overflow",
+        "heap-overflow",
+        "memory-corruption",
+        "client"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-58050"
+      ],
+      "date": "2026-06-28"
+    },
+    {
+      "cve_id": "CVE-2026-58049",
+      "euvd_id": "",
+      "cisa_kev": false,
+      "cvss": "8.8",
+      "epss": "",
+      "cpe": "",
+      "product": "FFmpeg",
+      "vendor": "FFmpeg",
+      "description": {
+        "en": "CVE-2026-58049 affects the FFmpeg RASC video decoder (decode_dlta function in libavcodec/rasc.c). The decoder performs 32-bit reads and writes at the line cursor before the NEXT_LINE bound check, and validates the DLTA region in pixel units rather than bytes. A DLTA execution on a PAL8 frame can thus access multiple bytes beyond the line allocation. A malicious media stream using the RASC FourCC triggers a bitstream-controlled out-of-bounds write on the heap, along with an adjacent out-of-bounds read, resulting in memory corruption. CVSS 4.0: 8.8 (High) / CVSS 3.1: 8.6 (High).",
+        "fr": "CVE-2026-58049 affecte le décodeur vidéo RASC de FFmpeg (fonction decode_dlta dans libavcodec/rasc.c). Le décodeur effectue des lectures et écritures 32 bits au curseur de ligne avant la vérification de borne NEXT_LINE, et valide la région DLTA en unités de pixels plutôt qu'en octets. Une exécution DLTA sur une trame PAL8 peut ainsi accéder à plusieurs octets au-delà de l'allocation de ligne. Un flux média malveillant utilisant le FourCC RASC déclenche une écriture hors limites sur le tas contrôlée par le bitstream, ainsi qu'une lecture hors limites adjacente, entraînant une corruption mémoire. CVSS 4.0 : 8.8 (High) / CVSS 3.1 : 8.6 (High)."
+      },
+      "mitre_ttps": [
+        "T1203",
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Update FFmpeg to the latest patched version. Apply RASC decoder patches. Validate the integrity of media streams before processing. Restrict usage of the RASC decoder to trusted sources.",
+          "fr": "Mettre à jour FFmpeg vers la dernière version corrigée. Appliquer les correctifs du décodeur RASC. Valider l'intégrité des flux média avant traitement. Restreindre l'usage du décodeur RASC aux sources de confiance."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain an inventory of applications using FFmpeg/libavcodec (players, transcoders, media processing services).",
+            "Track deployed FFmpeg versions and monitor upstream publications.",
+            "Document the library update procedure across all services.",
+            "Enable fuzzing tests on media processing pipelines in pre-prod.",
+            "Segment transcoding servers from the production network and limit inbound streams."
+          ],
+          "fr": [
+            "Maintenir un inventaire des applications utilisant FFmpeg/libavcodec (lecteurs, transcoders, services de traitement média).",
+            "Suivre les versions de FFmpeg déployées et surveiller les publications upstream.",
+            "Documenter la procédure de mise à jour de la bibliothèque sur l'ensemble des services.",
+            "Activer les tests de fuzzing sur les pipelines de traitement média en pré-prod.",
+            "Segmenter les serveurs de transcodage du réseau de production et limiter les flux entrants."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect abnormal crashes of FFmpeg/libavcodec processes.",
+            "Monitor segmentation faults and core dumps on media services.",
+            "Enable detailed logging of decodings (codec, format, options) on critical servers.",
+            "Deploy IDS/IPS signatures on malicious media file headers (FourCC RASC).",
+            "Correlate EDR alerts on ffmpeg processes having handled external files."
+          ],
+          "fr": [
+            "Détecter les plantages anormaux des processus FFmpeg/libavcodec.",
+            "Surveiller les erreurs de segmentation et core dumps sur les services média.",
+            "Activer la journalisation détaillée des décodages (codec, format, options) sur les serveurs critiques.",
+            "Déployer des signatures IDS/IPS sur les en-têtes de fichiers média malveillants (FourCC RASC).",
+            "Corréler les alertes EDR sur les processus ffmpeg ayant manipulé des fichiers externes."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Block media streams from unapproved sources.",
+            "Isolate affected transcoding servers and collect memory artifacts.",
+            "Temporarily disable RASC decoding if not required.",
+            "Reboot FFmpeg services on patched binaries after forensic analysis.",
+            "Revoke any keys or tokens used by compromised services."
+          ],
+          "fr": [
+            "Bloquer les flux médias en provenance de sources non approuvées.",
+            "Isoler les serveurs de transcodage affectés et collecter les artefacts mémoire.",
+            "Désactiver temporairement le décodage RASC si non requis.",
+            "Rebooter les services FFmpeg sur des binaires patchés après analyse forensique.",
+            "Révoquer toute clé ou token utilisé par les services compromis."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Update FFmpeg to the latest patched version.",
+            "Apply RASC decoder patches.",
+            "Restore corrupted files/data from intact backups.",
+            "Conduct a review of the inventory of source and destination media files.",
+            "Capitalize via a feedback loop (REX) on media pipeline security."
+          ],
+          "fr": [
+            "Mettre à jour FFmpeg vers la dernière version corrigée.",
+            "Appliquer les correctifs du décodeur RASC.",
+            "Restaurer les fichiers/données corrompus à partir de sauvegardes intègres.",
+            "Mener une revue de l'inventaire des fichiers média sources et destinations.",
+            "Capitaliser via un REX sur la sécurité du pipeline média."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Identify all services integrating FFmpeg/libavcodec (strings, dependencies).",
+            "Search for histories of crashes or core dumps related to RASC decoding.",
+            "Monitor future FFmpeg CVEs, particularly the RASC family.",
+            "Test resilience via fuzzers on decoders.",
+            "Monitor IOCs of malicious media files in inbound streams."
+          ],
+          "fr": [
+            "Identifier tous les services intégrant FFmpeg/libavcodec (strings, dépendances).",
+            "Rechercher des historiques de plantages ou core dumps liés au décodage RASC.",
+            "Veille sur les futures CVE FFmpeg et notamment la famille RASC.",
+            "Tester la résilience via des fuzzers sur les décodeurs.",
+            "Surveiller les IOC de fichiers média malveillants dans les flux entrants."
+          ]
+        }
+      },
+      "tags": [
+        "ffmpeg",
+        "libavcodec",
+        "rasc",
+        "decoder",
+        "heap-overflow",
+        "memory-corruption",
+        "media",
+        "video"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-58049"
+      ],
+      "date": "2026-06-28"
+    },
+    {
+      "cve_id": "CVE-2026-8095",
+      "euvd_id": "",
+      "cisa_kev": false,
+      "cvss": "8.1",
+      "epss": "",
+      "cpe": "",
+      "product": "Frontend File Manager Plugin",
+      "vendor": "nmedia",
+      "description": {
+        "en": "The vulnerability resides in the AJAX handler wpfm_file_meta_update. The unset() check on the wpfm_dir_path parameter can be bypassed by supplying the uppercase version WPFM_DIR_PATH. The subsequent call to sanitize_key() normalizes the key, which allows overwriting the stored file path via update_post_meta(). The new arbitrary path is then passed directly to unlink() in delete_file_locally() without any directory containment validation. An authenticated attacker with a Subscriber role can thus delete any file from the server, including wp-config[.]php, paving the way for full site takeover.",
+        "fr": "La vulnérabilité réside dans le handler AJAX wpfm_file_meta_update. La vérification d'unset() sur le paramètre wpfm_dir_path peut être contournée en fournissant la version majuscule WPFM_DIR_PATH. L'appel ultérieur à sanitize_key() normalise la clé, ce qui permet d'écraser le chemin de fichier stocké via update_post_meta(). Le nouveau chemin arbitraire est ensuite passé directement à unlink() dans delete_file_locally() sans aucune validation de confinement de répertoire. Un attaquant authentifié avec un rôle Subscriber peut ainsi supprimer n'importe quel fichier du serveur, y compris wp-config[.]php, ouvrant la voie à une prise de contrôle totale du site."
+      },
+      "mitre_ttps": [
+        "T1539",
+        "T1087",
+        "T1078.004"
+      ],
+      "recommandations": [
+        {
+          "en": "Immediately update the Frontend File Manager plugin to a version >23.6. Otherwise, disable the plugin. Enable WAF rules blocking requests containing WPFM_DIR_PATH (uppercase) targeting the plugin's endpoints. Restrict roles to minimal privileges, monitor the integrity of critical files, and maintain tested offline backups.",
+          "fr": "Mettre à jour immédiatement le plugin Frontend File Manager vers une version >23.6. À défaut, désactiver le plugin. Activer des règles WAF bloquant les requêtes contenant WPFM_DIR_PATH (majuscule) ciblant les endpoints du plugin. Restreindre les rôles à privilèges minimaux, surveiller l'intégrité des fichiers critiques et maintenir des sauvegardes hors ligne testées."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Map all WordPress sites running the Frontend File Manager plugin (<= 23.6) using asset management tools.",
+            "Isolate instances reachable from the Internet and identify accounts with minimal privileges.",
+            "Prepare a rapid plugin deactivation procedure and a set of blocking WAF rules (pattern on uppercase wpfm_dir_path, sanitize_key bypass).",
+            "Maintain regularly tested offline backups (files + database)."
+          ],
+          "fr": [
+            "Cartographier l'ensemble des sites WordPress exploitant le plugin Frontend File Manager (<= 23.6) via les outils de gestion d'actifs.",
+            "Isoler les instances accessibles depuis Internet et identifier les comptes à privilèges minimaux.",
+            "Préparer une procédure de désactivation rapide du plugin et un jeu de règles WAF de blocage (pattern sur wpfm_dir_path majuscule, sanitize_key bypass).",
+            "Maintenir des sauvegardes hors ligne testées régulièrement (fichiers + base de données)."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor suspicious AJAX requests to wpfm_file_meta_update with an uppercase WPFM_DIR_PATH parameter.",
+            "Detect deletions of critical files (wp-config[.]php, .htaccess) via integrity auditing (AIDE, Tripwire, inotify).",
+            "Collect WordPress, PHP-FPM, and Web Server logs to identify actions triggered by Subscriber accounts.",
+            "Correlate with authentication logs to identify compromised accounts.",
+            "Monitor the publication or update of a public PoC on GitHub and adapt monitoring accordingly."
+          ],
+          "fr": [
+            "Surveiller les requêtes AJAX suspectes vers wpfm_file_meta_update avec un paramètre WPFM_DIR_PATH en majuscule.",
+            "Détecter les suppressions de fichiers critiques (wp-config[.]php, .htaccess) via audit d'intégrité (AIDE, Tripwire, inotify).",
+            "Collecter les logs WordPress, PHP-FPM et Web Server pour identifier les actions déclenchées par des comptes Subscriber.",
+            "Corréler avec les logs d'authentification afin d'identifier les comptes compromis.",
+            "Surveiller la publication ou mise à jour d'un PoC public sur GitHub et adapter la surveillance en conséquence."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Immediately update the Frontend File Manager plugin to a patched version (>23.6).",
+            "If no patch is available: disable/remove the plugin in the meantime.",
+            "Block via WAF/IDS requests containing the WPFM_DIR_PATH pattern targeting the plugin's endpoints.",
+            "Revoke and reissue potentially abused Subscriber accounts.",
+            "Restore deleted files from an intact backup and verify the integrity of wp-config[.]php."
+          ],
+          "fr": [
+            "Mettre à jour immédiatement le plugin Frontend File Manager vers une version corrigée (>23.6).",
+            "Si aucun patch n'est disponible : désactiver/supprimer le plugin en attendant.",
+            "Bloquer via WAF/IDS les requêtes contenant le pattern WPFM_DIR_PATH ciblant les endpoints du plugin.",
+            "Révoquer et réémettre les comptes Subscriber potentiellement abusés.",
+            "Restaurer les fichiers supprimés depuis une sauvegarde intègre et vérifier l'intégrité de wp-config[.]php."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Perform a full audit of the file system and database to verify the absence of backdoors introduced following the compromise.",
+            "Change all secrets (WordPress salt keys, admin accounts, API keys, DB credentials).",
+            "Rebuild the WordPress instance from a trusted source if full compromise is suspected.",
+            "Document the incident timeline, actual impact (deleted files, exfiltrated data) and share with stakeholders.",
+            "Update the privileged account management policy and reinforce the principle of least privilege for Subscriber+ roles."
+          ],
+          "fr": [
+            "Réaliser un audit complet du système de fichiers et de la base de données pour vérifier l'absence de backdoors introduites suite à la compromission.",
+            "Changer l'ensemble des secrets (clés salées WordPress, comptes admin, clés API, identifiants BDD).",
+            "Reconstruire l'instance WordPress depuis une source fiable si une compromission complète est suspectée.",
+            "Documenter la timeline d'incident, l'impact réel (fichiers supprimés, données exfiltrées) et partager avec les parties prenantes.",
+            "Mettre à jour la politique de gestion des comptes à privilèges et renforcer le principe du moindre privilège pour les rôles Subscriber+."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for evidence of past exploitation via log histories (unusual uppercase parameters).",
+            "Hunt for post-exploitation artifacts (web shells, new admin accounts, scheduled tasks).",
+            "Identify vulnerable plugins/themes across the entire estate (continuous mapping).",
+            "Monitor discussions on underground forums and GitHub regarding CVE-2026-8095 and sanitize_key bypass techniques."
+          ],
+          "fr": [
+            "Rechercher les indices d'exploitation passés via les historiques de logs (paramètres en majuscule inhabituels).",
+            "Chasser les artefacts de post-exploitation (web shells, nouveaux comptes admin, scheduled tasks).",
+            "Identifier les plugins/thèmes vulnérables sur l'ensemble du parc (cartographie continue).",
+            "Surveiller les discussions sur forums underground et GitHub autour de CVE-2026-8095 et des techniques de bypass sanitize_key."
+          ]
+        }
+      },
+      "tags": [
+        "WordPress",
+        "Arbitrary File Deletion",
+        "Path Traversal",
+        "Authenticated",
+        "Subscriber"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-8095"
+      ],
+      "date": "2026-06-27"
+    },
+    {
+      "cve_id": "CVE-2026-12569",
+      "euvd_id": "",
+      "cisa_kev": true,
+      "cvss": "9.3",
+      "epss": "0.01106",
+      "cpe": "",
+      "product": "Windchill PDMLink, FlexPLM",
+      "vendor": "PTC",
+      "description": {
+        "en": "CVE-2026-12569 is an unsafe deserialization flaw enabling remote code execution without prior authentication. Simple network reachability of a PTC Windchill/FlexPLM/Creo Parametric instance is sufficient to compromise the system. CISA has added this vulnerability to the KEV catalog, confirming active exploitation in the wild. Researchers have observed the deployment of JSP web shells, persistence mechanisms within application directories, abuse of Tomcat services, and unauthorized outbound traffic to malicious infrastructure. The observed intrusion chain corresponds to: Initial Access → Persistence → Exfiltration → Lateral Movement.",
+        "fr": "CVE-2026-12569 est une faille de désérialisation non sécurisée permettant une exécution de code à distance sans authentification préalable. La simple accessibilité réseau à une instance PTC Windchill/FlexPLM/Creo Parametric suffit pour compromettre le système. CISA a inscrit cette vulnérabilité au catalogue KEV, confirmant une exploitation active dans la nature. Les chercheurs ont observé le déploiement de web shells JSP, des mécanismes de persistance dans les répertoires applicatifs, l'abus de services Tomcat et du trafic sortant non autorisé vers des infrastructures malveillantes. La chaîne d'intrusion observée correspond à : Accès initial → Persistance → Exfiltration → Mouvement latéral."
+      },
+      "mitre_ttps": [
+        "T1190",
+        "T1059.004",
+        "T1505.003",
+        "T1505",
+        "T1041",
+        "T1071"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply PTC patches immediately as top priority (KEV). Identify and isolate all Windchill/FlexPLM instances exposed to the Internet, disable access via non-essential supplier portals. Strictly segment PLM from the rest of the IS (DC, ERP, OT, development repositories). Implement enhanced monitoring (JSP web shells, abnormal Tomcat activities, suspicious admin sessions). Conduct proactive hunting on indicators of compromise and engage an incident response plan.",
+          "fr": "Appliquer immédiatement les correctifs PTC en priorité absolue (KEV). Identifier et isoler toutes les instances Windchill/FlexPLM exposées sur Internet, désactiver l'accès via portails fournisseurs non essentiels. Segmenter strictement les PLM du reste du SI (DC, ERP, OT, repos de développement). Mettre en place une surveillance renforcée (web shells JSP, activités Tomcat anormales, sessions admin suspectes). Mener une chasse proactive sur les indicateurs de compromission et engager un plan de réponse à incident."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Map all PTC Windchill, FlexPLM, and Creo Parametric instances reachable from the Internet and via supplier portals.",
+            "Identify network segments hosting PLM and prepare an emergency segmentation plan.",
+            "Prepare response and escalation playbooks in coordination with engineering and manufacturing teams.",
+            "Maintain an inventory of Windchill backups (database, files, configurations) tested offline."
+          ],
+          "fr": [
+            "Cartographier toutes les instances PTC Windchill, FlexPLM et Creo Parametric accessibles depuis Internet et via les portails fournisseurs.",
+            "Identifier les segments réseau hébergeant les PLM et préparer un plan de segmentation d'urgence.",
+            "Préparer les playbooks de réponse et d'escalade en coordination avec les équipes d'ingénierie et de fabrication.",
+            "Maintenir un inventaire des sauvegardes Windchill (base, fichiers, configurations) testées hors ligne."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Search for suspicious deployments of .jsp files and unauthorized WAR packages within Windchill application directories.",
+            "Detect Tomcat execution anomalies (unusual processes, launched scripts).",
+            "Identify unscheduled new administrator sessions and account modifications.",
+            "Monitor outgoing traffic to known malicious destinations.",
+            "Enable and tune IDS/IPS rules for signatures associated with CVE-2026-12569 and Java deserializations."
+          ],
+          "fr": [
+            "Rechercher les déploiements suspects de fichiers .jsp et de packages WAR non autorisés dans les répertoires d'application Windchill.",
+            "Détecter les anomalies d'exécution Tomcat (processus inhabituels, scripts lancés).",
+            "Identifier les nouvelles sessions administrateur non planifiées et les modifications de comptes.",
+            "Surveiller les flux sortants vers des destinations malveillantes connues.",
+            "Activer et affiner les règles IDS/IPS pour les signatures associées à CVE-2026-12569 et aux désérialisations Java."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Apply patches provided by PTC immediately, outside any regular maintenance window (KEV status).",
+            "Network-isolate compromised Windchill instances from the rest of the infrastructure (DC, ERP, OT, development repositories).",
+            "Temporarily disable non-essential Windchill supplier portals.",
+            "Revoke all active sessions and reset privileged accounts.",
+            "Block outgoing traffic to identified IOCs until full cleanup."
+          ],
+          "fr": [
+            "Appliquer immédiatement les correctifs fournis par PTC, en dehors de toute fenêtre de maintenance habituelle (statut KEV).",
+            "Isoler au niveau réseau les instances Windchill compromises du reste de l'infrastructure (DC, ERP, OT, repositories de développement).",
+            "Désactiver temporairement les portails fournisseurs Windchill non essentiels.",
+            "Révoquer toutes les sessions actives et réinitialiser les comptes à privilèges.",
+            "Bloquer le trafic sortant vers les IOC identifiés jusqu'à nettoyage complet."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Conduct a full forensic investigation (memory, disks, Tomcat and application logs) to validate eradication of web shells and persistence.",
+            "Assess the impact on intellectual property: blueprints, BOM, ECOs potentially exfiltrated.",
+            "Restore from verified clean backups if necessary.",
+            "Strengthen the PLM / ERP / OT segmentation policy.",
+            "Notify partners and suppliers in case of propagation risk via PLM integrations.",
+            "Document the incident and share lessons learned with business and IT management."
+          ],
+          "fr": [
+            "Mener une investigation forensic complète (mémoire, disques, journaux Tomcat et applicatifs) pour valider l'éradication des web shells et de la persistance.",
+            "Évaluer l'impact sur la propriété intellectuelle : blueprints, BOM, ECOs potentiellement exfiltrés.",
+            "Restaurer depuis des sauvegardes saines vérifiées si nécessaire.",
+            "Renforcer la politique de segmentation PLM / ERP / OT.",
+            "Notifier les partenaires et fournisseurs en cas de risque de propagation via les intégrations PLM.",
+            "Documenter l'incident et partager les leçons apprises avec les directions métiers et IT."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Proactively search for Java deserialization artifacts and JSP web shells across all Windchill/FlexPLM instances.",
+            "Identify old exploitation traces (Tomcat logs, hidden files, Tomcat cron).",
+            "Map potential attack paths (exposed Tomcat services, open management ports).",
+            "Monitor availability of public PoCs on GitHub, ExploitDB, and specialized forums.",
+            "Incorporate CVE-2026-12569 into the ongoing Threat Hunting program focused on PLM/OT platforms."
+          ],
+          "fr": [
+            "Rechercher proactivement des artefacts de désérialisation Java et des web shells JSP dans l'ensemble des instances Windchill/FlexPLM.",
+            "Identifier d'anciennes traces d'exploitation (logs Tomcat, fichiers cachés, cron Tomcat).",
+            "Cartographier les chemins d'attaque potentiels (services Tomcat exposés, ports de gestion ouverts).",
+            "Surveiller la disponibilité de PoC publics sur GitHub, ExploitDB et forums spécialisés.",
+            "Intégrer CVE-2026-12569 dans le programme continu de Threat Hunting axé sur les plateformes PLM/OT."
+          ]
+        }
+      },
+      "tags": [
+        "PTC Windchill",
+        "FlexPLM",
+        "Creo Parametric",
+        "Unsafe Deserialization",
+        "RCE",
+        "KEV",
+        "PLM",
+        "Manufacturing"
+      ],
+      "sources": [
+        "https://thecyberthrone.in/2026/06/28/when-plm-becomes-a-threat-surface-kev-entry-matters-beyond-it/"
+      ],
+      "date": "2026-06-28"
+    },
+    {
+      "cve_id": "CVE-2026-54352",
+      "euvd_id": "",
+      "cisa_kev": false,
+      "cvss": "9.6",
+      "epss": "0.00468",
+      "cpe": "",
+      "product": "budibase",
+      "vendor": "Budibase",
+      "description": {
+        "en": "Budibase is an open-source low-code platform. The /api/pwa/process-zip endpoint accepts a ZIP archive uploaded by a builder user. Due to a validation flaw, the archive extraction does not protect against malicious symlinks: an attacker can include a symlink in the ZIP pointing to an arbitrary file on the server filesystem. Upon extraction, the server follows the symlink and allows reading sensitive files outside the expected scope (e.g., secrets, configuration). The CVSS 9.6 reflects the critical impact. The vulnerability is currently unpatched.",
+        "fr": "Budibase est une plateforme open-source low-code. L'endpoint /api/pwa/process-zip accepte une archive ZIP téléversée par un utilisateur builder. En raison d'un défaut de validation, l'extraction de l'archive ne protège pas contre les symlinks malveillants : un attaquant peut inclure un symlink dans le ZIP pointant vers un fichier arbitraire du système de fichiers du serveur. Lors de l'extraction, le serveur suit le symlink et permet la lecture de fichiers sensibles hors du périmètre attendu (ex. secrets, configuration). Le CVSS 9.6 reflète l'impact critique. La vulnérabilité n'est pour l'instant pas patchée."
+      },
+      "mitre_ttps": [
+        "T1190",
+        "T1083",
+        "T1565.001"
+      ],
+      "recommandations": [
+        {
+          "en": "Immediately restrict Budibase builder access to trusted administrators only, ideally by limiting access to the local network. Block or filter ZIP uploads to the /api/pwa/process-zip endpoint at the reverse proxy/WAF level. Monitor abnormal builder behavior. Apply Budibase update 3.39.9 (or higher) as soon as it becomes available. Audit the server to detect any past exploitation traces.",
+          "fr": "Limiter immédiatement l'accès builder Budibase aux seuls administrateurs de confiance, idéalement en restreignant l'accès au réseau local. Bloquer ou filtrer les uploads ZIP vers l'endpoint /api/pwa/process-zip au niveau reverse proxy/WAF. Surveiller les comportements anormaux du builder. Appliquer la mise à jour Budibase 3.39.9 (ou supérieure) dès sa disponibilité. Auditer le serveur pour détecter d'éventuelles traces d'exploitation passées."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Map all Budibase deployments (versions <3.39.9) accessible from the Internet and from the internal network.",
+            "Strictly restrict builder access to trusted administrators only.",
+            "Prepare an emergency procedure to limit builder access and disable the /api/pwa/process-zip endpoint.",
+            "Maintain clean backups of Budibase configuration files and data sources."
+          ],
+          "fr": [
+            "Cartographier tous les déploiements Budibase (versions <3.39.9) accessibles depuis Internet et depuis l'interne.",
+            "Restreindre strictement l'accès builder aux administrateurs de confiance.",
+            "Préparer une procédure d'urgence de limitation d'accès au builder et de désactivation de l'endpoint /api/pwa/process-zip.",
+            "Conserver des sauvegardes saines des fichiers de configuration Budibase et des sources de données."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor suspicious calls to POST /api/pwa/process-zip, particularly ZIP file uploads containing symlinks.",
+            "Detect unusual builder behavior (reading files outside scope, accessing /etc/passwd, application secrets).",
+            "Enable detailed logging of uploads and server-side processing on Budibase.",
+            "Correlate builder requests with user accounts to identify potential abuse."
+          ],
+          "fr": [
+            "Surveiller les appels suspects à POST /api/pwa/process-zip, en particulier les uploads de fichiers ZIP contenant des symlinks.",
+            "Détecter les comportements inhabituels du builder (lecture de fichiers hors périmètre, accès /etc/passwd, secrets applicatifs).",
+            "Activer la journalisation détaillée des uploads et du traitement côté serveur Budibase.",
+            "Corréler les requêtes builder avec les comptes utilisateurs pour identifier d'éventuels abus."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Immediately limit builder access to the bare minimum, ideally locally only.",
+            "If possible, block or restrict the /api/pwa/process-zip endpoint via reverse proxy.",
+            "Monitor and block uploads of manipulated ZIP archives (containing symlinks) at the WAF level.",
+            "Anticipate the release of a Budibase patch >=3.39.9 and plan immediate application upon availability.",
+            "Revoke potentially abused builder sessions."
+          ],
+          "fr": [
+            "Limiter immédiatement l'accès builder au minimum vital, idéalement en local uniquement.",
+            "Si possible, bloquer ou restreindre l'endpoint /api/pwa/process-zip via reverse proxy.",
+            "Surveiller et bloquer l'upload d'archives ZIP manipulées (contenant des symlinks) au niveau du WAF.",
+            "Anticiper la publication d'un correctif Budibase >=3.39.9 et planifier l'application immédiate dès disponibilité.",
+            "Révoquer les sessions builder potentiellement abusées."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify the absence of exfiltration of sensitive files (secrets, configuration, source code) following exploitation.",
+            "Full audit of the Budibase server filesystem and rotation of potentially exposed secrets.",
+            "Restore from clean backup if necessary.",
+            "Document the timeline and impact, notify Budibase application owners.",
+            "Strengthen builder access control and ZIP upload validation."
+          ],
+          "fr": [
+            "Vérifier l'absence d'exfiltration de fichiers sensibles (secrets, configuration, code source) suite à l'exploitation.",
+            "Audit complet du système de fichiers du serveur Budibase et rotation des secrets potentiellement exposés.",
+            "Restaurer depuis sauvegarde saine si nécessaire.",
+            "Documenter la timeline et l'impact, notifier les propriétaires d'applications Budibase.",
+            "Renforcer le contrôle d'accès au builder et la validation des uploads ZIP."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for past exploitation traces in server logs (unusual process-zip requests).",
+            "Identify any residual symlinks or files created via ZIP manipulation.",
+            "Monitor GitHub/ExploitDB publications concerning CVE-2026-54352.",
+            "Continuously assess other Budibase endpoints for similar vulnerabilities."
+          ],
+          "fr": [
+            "Chasser les traces d'exploitation passées dans les logs serveur (requêtes process-zip inhabituelles).",
+            "Identifier les éventuels symlinks résiduels ou fichiers créés via manipulation ZIP.",
+            "Surveiller les publications sur GitHub/ExploitDB concernant CVE-2026-54352.",
+            "Évaluer en continu les autres endpoints Budibase pour des vulnérabilités similaires."
+          ]
+        }
+      },
+      "tags": [
+        "Budibase",
+        "Path Traversal",
+        "Symlink",
+        "Arbitrary File Read",
+        "Unpatched",
+        "Low-Code"
+      ],
+      "sources": [
+        "https://www.valtersit.com/cve/CVE-2026-54352/"
+      ],
+      "date": "2026-06-28"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "The \"Booba\" group claims a cyberattack against the Spanish construction giant Grupo Fonsán",
+        "fr": "Le groupe « Booba » revendique une cyberattaque contre le géant espagnol du BTP Grupo Fonsán"
+      },
+      "description": {
+        "en": "The threat group \"Booba\" has compromised Grupo Fonsán, a large Spanish company in the construction and civil engineering sector. The attack exposes sensitive project plans and financial data, creating a risk of extortion and industrial espionage.",
+        "fr": "Le groupe de menace « Booba » a compromis Grupo Fonsán, une grande entreprise espagnole du secteur de la construction et du génie civil. L'attaque expose des plans de projets sensibles et des données financières, créant un risque d'extorsion et d'espionnage industriel."
+      },
+      "resume": {
+        "en": "The threat group \"Booba\" has compromised Grupo Fonsán, a large Spanish company in the construction and civil engineering sector. The attack exposes sensitive project plans and financial data, creating a risk of extortion and industrial espionage.",
+        "fr": "Le groupe de menace « Booba » a compromis Grupo Fonsán, une grande entreprise espagnole du secteur de la construction et du génie civil. L'attaque expose des plans de projets sensibles et des données financières, créant un risque d'extorsion et d'espionnage industriel."
+      },
+      "analyse_operationnelle": {
+        "en": "SOC teams must monitor data exfiltration from technical document servers (BIM, CAD) and strengthen detection of abnormal access to project repositories. It is crucial to verify backup integrity and further segment networks handling intellectual property. Construction suppliers and subcontractors, often the weak link, must undergo enhanced security audits.",
+        "fr": "Les équipes SOC doivent surveiller les exfiltrations de données depuis les serveurs de documents techniques (BIM, CAO/DAO) et renforcer la détection des accès anormaux aux référentiels de projets. Il est crucial de vérifier l'intégrité des sauvegardes et de segmenter davantage les réseaux gérant la propriété intellectuelle. Les fournisseurs et sous-traitants du BTP, souvent chaînon faible, doivent faire l'objet d'audits de sécurité renforcés."
+      },
+      "implications_strategiques": {
+        "en": "This attack highlights the growing vulnerability of the construction sector, traditionally less mature in cybersecurity than other industries. The loss of project plans and financial data can lead to loss of competitive advantage, contractual disputes, and reputational damage. The risk of industrial espionage by state or criminal actors motivates urgent investment in intellectual property protection and GDPR compliance.",
+        "fr": "Cette attaque souligne la vulnérabilité croissante du secteur de la construction, traditionnellement moins matures en cybersécurité que d'autres industries. La perte de plans de projets et de données financières peut entraîner une perte d'avantage concurrentiel, des litiges contractuels et une atteinte à la réputation. Le risque d'espionnage industriel par des acteurs étatiques ou criminels motive un investissement urgent dans la protection de la propriété intellectuelle et la conformité RGPD."
+      },
+      "threat_actor": "Booba",
+      "threat_actor_origin": "",
+      "threat_actor_type": "",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Construction",
+          "Engineering"
+        ],
+        "fr": [
+          "Construction",
+          "Engineering"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "cyber[.]netsecops[.]io"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1567",
+        "T1657"
+      ],
+      "analyse": {
+        "en": "This attack highlights the growing vulnerability of the construction sector, traditionally less mature in cybersecurity than other industries. The loss of project plans and financial data can lead to loss of competitive advantage, contractual disputes, and reputational damage. The risk of industrial espionage by state or criminal actors motivates urgent investment in intellectual property protection and GDPR compliance.",
+        "fr": "Cette attaque souligne la vulnérabilité croissante du secteur de la construction, traditionnellement moins matures en cybersécurité que d'autres industries. La perte de plans de projets et de données financières peut entraîner une perte d'avantage concurrentiel, des litiges contractuels et une atteinte à la réputation. Le risque d'espionnage industriel par des acteurs étatiques ou criminels motive un investissement urgent dans la protection de la propriété intellectuelle et la conformité RGPD."
+      },
+      "recommandations": [
+        {
+          "en": "Urgently audit the security of plan and financial data servers",
+          "fr": "Auditer en urgence la sécurité des serveurs de plans et données financières"
+        },
+        {
+          "en": "Implement a DLP solution suited to technical files (DWG, RVT, IFC)",
+          "fr": "Implémenter une solution DLP adaptée aux fichiers techniques (DWG, RVT, IFC)"
+        },
+        {
+          "en": "Strengthen the least privilege policy on project access",
+          "fr": "Renforcer la politique de moindre privilège sur les accès aux projets"
+        },
+        {
+          "en": "Prepare a cyber crisis management and communication plan",
+          "fr": "Préparer un plan de gestion de crise cyber et de communication对外"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain an exhaustive inventory of the company's plans, financial data, and intellectual property",
+            "Segment OT/IT networks and isolate technical document management systems",
+            "Implement immutable (air-gapped) backups for critical project files",
+            "Raise awareness among design office employees about phishing and social engineering"
+          ],
+          "fr": [
+            "Maintenir un inventaire exhaustif des plans, données financières et propriété intellectuelle de l'entreprise",
+            "Segmenter les réseaux OT/IT et isoler les systèmes de gestion de documents techniques",
+            "Mettre en place des sauvegardes immuables (air-gapped) pour les fichiers de projet critiques",
+            "Sensibiliser les employés des bureaux d'études au phishing et à l'ingénierie sociale"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Deploy EDR monitoring on engineers' and architects' workstations",
+            "Detect data exfiltration patterns (abnormal outbound volumes to third-party clouds)",
+            "Implement SIEM correlation rules on suspicious access to plan servers (BIM, CAD)",
+            "Audit access to document repositories and alert on unusual mass reads"
+          ],
+          "fr": [
+            "Déployer une surveillance EDR sur les postes des ingénieurs et architectes",
+            "Détecter les schémas d'exfiltration de données (volumes sortants anormaux vers cloud tiers)",
+            "Mettre en place des règles de corrélation SIEM sur les accès suspects aux serveurs de plans (BIM, CAO/DAO)",
+            "Auditer les accès aux référentiels documentaires et alertes sur les lectures massives inhabituelles"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Immediately isolate compromised machines from the network",
+            "Revoke credentials of suspicious accounts and force rotation of privileged passwords",
+            "Block identified C2 communications at the firewall and proxy level",
+            "Engage the legal team and management before any external communication, particularly in case of extortion threat"
+          ],
+          "fr": [
+            "Isoler immédiatement les machines compromises du réseau",
+            "Révoquer les identifiants des comptes suspects et forcer la rotation des mots de passe privilégiés",
+            "Bloquer les communications C2 identifiées au niveau du pare-feu et proxy",
+            "Engager l'équipe juridique et la direction avant toute communication externe, notamment en cas de menace d'extorsion"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Conduct a full forensic analysis to identify the initial intrusion vector",
+            "Document the extent of the compromise: plans, financial data, exposed industrial secrets",
+            "Notify stakeholders, clients and regulatory authorities (GDPR, AEPD) if personal data is compromised",
+            "Strengthen third-party access security (service providers, BTP subcontractors)"
+          ],
+          "fr": [
+            "Mener une analyse forensique complète pour identifier le vecteur d'intrusion initial",
+            "Documenter l'étendue de la compromission : plans, données financières, secrets industriels exposés",
+            "Notifier les parties prenantes, clients et autorités de régulation (RGPD, AEPD) si données personnelles compromises",
+            "Renforcer la sécurité des accès tiers (prestataires, sous-traitants du BTP)"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for IoCs linked to the Booba group in historical logs (DNS, proxy, EDR)",
+            "Hunt for signs of lateral reconnaissance toward CAD/BIM servers",
+            "Identify persistent implants via analysis of scheduled tasks and Windows/Linux services",
+            "Monitor potential leaks on the dark web and industrial plan resale forums"
+          ],
+          "fr": [
+            "Rechercher des IoCs liés au groupe Booba dans les journaux historiques (DNS, proxy, EDR)",
+            "Chasser les signes de reconnaissance latérale vers les serveurs de CAO/BIM",
+            "Identifier des implants persistants via l'analyse des tâches planifiées et services Windows/Linux",
+            "Surveiller les fuites potentielles sur le dark web et forums de revente de plans industriels"
+          ]
+        }
+      },
+      "tags": [
+        "data_breach",
+        "extortion",
+        "industrial_espionage",
+        "threat_group"
+      ],
+      "sources": [
+        "https://cyber.netsecops.io/articles/spanish-construction-giant-grupo-fonsan-attacked-by-booba-group/"
+      ],
+      "date": "2026-06-27"
+    }
+  ]
+}
