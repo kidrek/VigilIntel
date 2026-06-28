@@ -1,1 +1,813 @@
-[{'title': 'Clean GitHub repo tricks AI coding agents into running malware', 'publication_date': 'Sat, 27 Jun 2026 10:22:36 -0400', 'source': 'https://www.bleepingcomputer.com/news/security/clean-github-repo-tricks-ai-coding-agents-into-running-malware/', 'source_type': "['operational', 'vulnerabilities']", 'source_level': 2, 'text': ['An agentic coding tool tasked with cloning and setting up a seemingly benign GitHub repository could execute a malicious payload that remains invisible to security scanners, AI agents, and human reviewers.', 'If successful, the attacker would obtain a shell running with the developer’s privileges, giving them access to environment variables, API keys, local configuration files, and the opportunity to establish persistence.', '“Claude Code never decided to open a shell. It decided to fix an error. The reverse shell is three indirection steps away from anything Claude Code actually evaluated: an error message it trusted, a script that fetched a value, and a DNS record it never saw,”0DIN researchers say.', 'While the attack method is currently just a concept, 0DIN warns that threat actors could easily distribute such GitHub repositories through fake job postings, tutorials, blog posts, or direct messages.', '> Executing python3 -m axiom init calls a shell script that retrieves the configuration value stored in a DNS TXT record ... and is executed as a commandI strongly disagree with the assertion that this represents no threat and raises no suspicion.'], 'observables': {}}, {'title': 'New FBI Alert: Russian Intelligence Uses Signal Recovery Keys to Access Messages', 'publication_date': 'Sat, 27 Jun 2026 16:08:57 +0000', 'source': 'https://securityaffairs.com/194360/intelligence/new-fbi-alert-russian-intelligence-uses-signal-recovery-keys-to-access-messages.html', 'source_type': "['']", 'source_level': 2, 'text': ['The FBI and CISA updated theirMarch 2026 warningabout Russian intelligence phishing campaigns, and the new advisory adds a detail that wasn’t in the original: the operators have shifted their primary objective from stealing verification codes to stealingSignal Backup Recovery Keys.', 'The March warning covered FSB-linked groups targeting government officials, military personnel, journalists, and Ukrainian officials through fake Signal support messages. The June update gives those groups public tracking names:UNC5792andUNC4221, both linked to Russian Federal Security Service officers including those embedded with FSB Border Guards and others working on behalf of Russian military services.', '“RIS cyber threat actors have compromised individual CMA accounts, but not the CMA’s encryption or the application itself. To date, this activity has been publicly tracked as UNC5792 and UNC4221.” reads thePSA alertpublished by the FBI.. “RIS cyber threat actors continue to masquerade as automated CMA support accounts in updated phishing messages but have evolved their tactics to attempt to elicit victims’ Backup Recovery Keys.”', 'The earlier version of this campaign asked targets for SMS verification codes, account PINs, or tricked them into clicking doctored group invite links that silently linked an attacker’s device to the account. The new version is more damaging. The phishing message walks the target step by step through enabling Signal backups, navigating to the Recovery Key, and pasting it into the chat. Two sample messages are printed in the advisory: one dressed as a mandatory two-factor rollout announcement, the other as an urgent data recovery warning claiming messages are at risk of permanent loss.', '“RIS cyber threat actors continue to elicit victims’ verification codes and account PINs (seeFigure 1). If a targeted user backs up their CMA messages as directed in Figure 1 and later provides their Backup Recovery Key (seeFigure 2), RIS cyber threat actors can view the account’s historical messages, private and group messages, and take over the victim’s account.” continues the alert.', '“If a victim inadvertently shares their Backup Recovery Key, that same key remains valid even if they create a new account following the compromise using the same phone number.” continues the report. “Consequently, the actor could potentially use the compromised key to take over the new account in the future as well.”', 'Making a new account doesn’t help if the old key still works against it. The only fix is generating a new key through Settings, which invalidates the old one for future backup downloads. That doesn’t recover anything the attacker already pulled, and the advisory is clear about that.', 'The FBI and CISA are unambiguous on one point that tends to get lost in coverage of these incidents: none of this breaks Signal’s encryption or the application itself. The attackers aren’t cracking anything. They’re walking through a legitimate feature with a key the user handed them, which is a completely different problem with a completely different solution.', 'Alongside the advisory, the State Department’s Rewards for Justice program announced it’s offering up to $10 million for information on UNC5792. The activity overlaps with warnings issued earlier this year byDutch intelligence,Germany’s BfV and BSI, and France’s ANSSI, and it builds on Google Threat Intelligence Group’s documentation of UNC5792 abusing Signal’s linked-device feature in early 2025. The same tradecraft has since been observed against WhatsApp and Telegram.', 'For anyone using Signal who works in government, security, journalism, or military-adjacent roles, the advisory’s guidance is direct. Treat any in-app message claiming to be Signal support as hostile: real support doesn’t contact users inside the app to ask for codes, PINs, or Recovery Keys.', 'Open Settings, check Linked Devices, remove anything unrecognized. If you think you handed over your Recovery Key at any point, generate a new one now and assume anything backed up before that moment is already in someone else’s possession.', '“To mitigate this risk, the user must generate a new Backup Recovery Key within the Settings control; this action will invalidate the previous key for all future backup downloads. However, please note that this does not prevent the actor from having already downloaded a backup of the original account.” concludes the alert.'], 'observables': {'email-addr': ['pierluigi.paganini@securityaffairs.co'], 'vulnerability': ['CVE-2026-20245', 'CVE-2026-20230']}}, {'title': 'Hospitality Sector Hit by Phishing Campaign Using Fake Guest Complaint Emails', 'publication_date': 'Sat, 27 Jun 2026 15:20:56 +0000', 'source': 'https://securityaffairs.com/194349/uncategorized/hospitality-sector-hit-by-phishing-campaign-using-fake-guest-complaint-emails.html', 'source_type': "['']", 'source_level': 2, 'text': ['Microsoft Threat Intelligence published a detailed analysis on an ongoing hacking campaign against hospitality organizations that has been running since April 2026. The targets are specific: device names observed across compromised environments include strings like “reception,” “frontdesk,” “reservations,” “accueil,” “recepcja,” and “recepce” in English, French, Polish, Czech, and Spanish. The attacker knows exactly who opens guest-related emails without thinking twice about it.', '“The threat actor uses Calendly’s email notification system and Google’s URL redirect functionality to construct a multi-hop delivery chain in which the direct Calendly path passes Sender Policy Framework (SPF), DomainKeys Identified Mail (DKIM), and Domain-based Message Authentication, Reporting, and Conformance (DMARC) checks.” reads thereportpublished by Microsoft.', 'The emails arrive with the display name “Booking Manager (via Calendly)” and carry lures about bedbug infestations, health inspections, guest complaints, final warnings, and threatened suspensions. They came in Japanese, Danish, and Dutch, with Japanese the most common. The researchers observed that the messages have no recipient name, no property name which suggests this is high-volume list-driven sending, not tailored spearphishing.', 'Upon clicking the embedded link, the victim is routed through four hops: a Calendly redirect to share.google, then to www.google.com, then to a freshly registered Cloudflare-fronted .cfd domain sitting behind a Turnstile challenge. That challenge serves double duty as an anti-analysis gate and a geolocation filter before the payload lands. The downloaded archive contains a shortcut file namedIMG-.png.lnkin Wave 1 orPHOTO-.png.lnkin Wave 2, both sized consistently between 1,989 and 2,079 bytes, suggesting the same builder tool across the campaign.', '“A defining characteristic of this campaign is its steady but disciplined obfuscation evolution. Microsoft observed seven PowerShell obfuscation phases over the course of the campaign, but the underlying logic remained consistent: decode embedded data through arithmetic operations, recover the next-stage content, and retrieve a PowerShell script that runs from the %TEMP% folder.” continues the report. “This pattern suggests that the threat actor is iterating for durability against static detections rather than experimenting with entirely new tradecraft. “', 'The decoded script downloads a legitimate Node.js v24.13.0 runtime from nodejs.org into user space, then runs a JavaScript implant tracked as TonRAT fromAppData\\Local\\Nodejs\\\\. No system-wide Node installation is needed. Wave 2 added an intermediate stage: the downloaded PowerShell script triggers dynamic .NET DLL compilation throughcsc.exeandcvtres.exe, producing small 3,072-byte DLLs with random names before reaching Node.js. Microsoft assesses this step is preparatory or conditional, as the compiled DLL wasn’t observed being explicitly loaded in available telemetry.', '“The persistence design itself is a meaningful post-compromise observation. The combination of a durable Node.js launch point in HKCU\\Run and a repeatedly refreshed ProgramData payload through HKCU\\RunOnce suggests an effort to maintain execution options across user sign-ins while also preserving a secondary recovery path.” states Microsoft. “This RunOnce loop is unusual enough that it might provide defenders with a strong hunting pivot even when file names, domains, or script syntax change.”', 'The RunOnce entry doesn’t fire once and disappear: the payload refreshes its own persistence after each execution, creating a loop. Microsoft observed this in practice: Defender blocked the PE payloadxmnrwv9l.exeon a confirmed compromised device, but the Node.js Run key survived. Two days later, the implant reactivated, reconnected to new C2 domains, and resumed pushing additional payloads. Blocking one path left the other alive.', 'Post-compromise activity on a subset of devices included C2 beaconing to fixed IPs over non-standard ports including 56001, 56002, 56003, 8443, 8445, 8453, and 5555. Some hosts showed headless browser automation with--headless --no-sandboxflags, a geolocation check via ip-api.com, and a forced shutdown throughcmd /c shutdown -s -t 0.', 'The forced shutdown may have served to interrupt user activity, reduce defender response time at a specific stage, or conceal visible symptoms after automated browser tasks completed. Microsoft has not confirmed data theft, ransomware deployment, or named any victims. The campaign’s ultimate objective remains unclear, which is itself a useful piece of information: whoever built this invested heavily in persistence and evasion for something they haven’t shown yet.', 'Complete remediation requires removing both persistence mechanisms simultaneously: theHKCU\\RunOnceentry pointing intoProgramData, theHKCU\\Runkey pointing to the Node.js component, the Node.js runtime itself, and all associated.jsfiles underAppData\\Local\\Nodejs\\\\. Start with reception, reservations, and front office systems, and treat any device where Node.js appears in user-space paths as potentially compromised until proven otherwise.'], 'observables': {'domain-name': ['google.com', 'ip-api.com', 'nodejs.org'], 'email-addr': ['pierluigi.paganini@securityaffairs.co'], 'process': ['csc.exe', 'cvtres.exe', 'xmnrwv9l.exe'], 'url': ['http://www.google.com'], 'windows-registry-key': ['HKCU\\RunOnce entry pointing into ProgramData, the HKCU\\Run key pointing to the Node.js component, the Node.js runtime itself, and all associated .js files under AppData\\Local\\Nodejs\\. Start with reception', 'HKCU\\Run\xa0and a repeatedly refreshed\xa0ProgramData\xa0payload through\xa0HKCU\\RunOnce\xa0suggests an effort to maintain execution options across user sign-ins while also preserving a secondary recovery path.” states M'], 'vulnerability': ['CVE-2026-20245', 'CVE-2026-20230']}}, {'title': 'DirtyClone: Fourth Linux Kernel Flaw in Six Weeks Escalates to Root', 'publication_date': 'Sat, 27 Jun 2026 09:12:26 +0000', 'source': 'https://securityaffairs.com/194338/uncategorized/dirtyclone-fourth-linux-kernel-flaw-in-six-weeks-escalates-to-root.html', 'source_type': "['']", 'source_level': 2, 'text': ['JFrog Security Research published a working exploit walkthrough on June 25 for CVE-2026-43503 (CVSS score of 8.8), a Linux kernel privilege escalation they call DirtyClone. It’s the fourth vulnerability in theDirtyFragfamily, all sharing the same root failure: file-backed memory gets treated as packet data, and an in-place network operation writes where it should have copied. CVSSIf your kernel doesn’t have the May 21 mainline patch, update now.', '“The severity of this issue is significant because it allows any unprivileged local user to gainroot access(LPE) by manipulating the Linux page cache.” reads thereportpublished by JFrog. “The attack is silent, leaves no kernel logs or audit traces, and bypasses common on-disk integrity monitoring tools.”', 'The attacker loads a privileged binary like /usr/bin/su into memory, wires those pages into a network packet, and forces the kernel to clone it through a loopback IPsec tunnel they control. The decryption step overwrites the binary’s authentication logic with attacker-chosen bytes, and the next run of su hands over root — while the file on disk stays untouched.', 'The exploit requires CAP_NET_ADMIN to configure the IPsec environment. On Debian and Fedora that capability is reachable by any local user through unprivileged user namespaces, which are enabled by default.', 'This provides network administrative capabilities inside the namespace.” continues the report. “While capabilities are namespaced, page cache is shared at the host level, so if file-backed pages are modified through shared mappings, the effects may propagate to other processes using those pages.”', 'The DirtyFrag family now has four members.Copy Fail(CVE-2026-31431) arrived in late April.DirtyFrag(CVE-2026-43284andCVE-2026-43500) followed on May 7.Fragnesia(CVE-2026-46300) appeared on May 13, bypassing the DirtyFrag patch through a flag-dropping bug in skb_try_coalesce().', '“DirtyFrag is a family of Linux kernel memory corruption vulnerabilities in the core networking stack affecting how socket buffers (skb) reference shared page-cache memory, which are subsequently weaponized through in-place cryptographic transformations in subsystems like XFRM/IPsec or RxRPC.” continues the report. “Despite targeting different packet cloning or forwarding paths, variants like DirtyFrag, Fragnesia, and DirtyClone all rely on a shared technique: tricking the kernel into treating read-only, file-backed page cache memory as writable network buffers.”', 'Each patch closed one code path and left others open. The underlying contract, that every function moving socket buffer fragments must preserve the shared-frag flag, every time, was never fully enforced across the codebase.', 'The original DirtyFrag researcher Hyunwoo Kim submitted a broader multi-site patch on May 16 covering the remaining fragment-transfer helpers. JFrog independently rediscovered one of the affected functions on May 19, built a working exploit, and reported it. The combined fix merged on May 21, CVE-2026-43503 was published on May 23, and Linux v7.1-rc5 shipped on May 24 as the first fixed release. Ubuntu, Debian, and SUSE have published advisories; Red Hat has a Bugzilla tracking entry.', 'If patching today isn’t an option, two workarounds reduce the attack surface. Setting kernel.unprivileged_userns_clone=0 on Debian and Ubuntu blocks the namespace-based path to CAP_NET_ADMIN. Blacklisting the esp4, esp6, and rxrpc kernel modules removes the in-place decryption primitives the exploit needs, though that breaks IPsec and AFS. Neither is a fix. The DirtyFrag class probably isn’t finished: any fragment-transfer function that drops the shared-frag flag along the way is a potential new variant, and auditing every such path in the kernel networking stack is a large and unfinished job.'], 'observables': {'directory': ['/usr/bin/su'], 'email-addr': ['pierluigi.paganini@securityaffairs.co'], 'vulnerability': ['CVE-2026-20245', 'CVE-2026-20230', 'CVE-2026-43503', 'CVE-2026-31431', 'CVE-2026-43284', 'CVE-2026-43500', 'CVE-2026-46300']}}, {'title': 'Campcodes: 536 CVEs, 99% unpatched. Trust Score: C. Top flaws: Injection (CWE-74) & XSS (CWE-79). Small vendor, big risk. #Campcodes #infosec #cybersecurityhttps://www.valtersit.com/vendors/campcodes/', 'publication_date': 'Sun, 28 Jun 2026 00:23:31 +0000', 'source': 'https://mastodon.social/@hugovalters/116824796670114763', 'source_type': "['']", 'source_level': 2, 'text': [], 'observables': {'domain-name': ['valtersit.com'], 'email-addr': ['hugovalters@mastodon.social'], 'url': ['http://www.valtersit.com']}}, {'title': 'CVE-2026-8095: nmedia Frontend File Manager Plugin (WordPress) HIGH severity vuln (CVSS 8.1) allows Subscriber+ users to delete arbitrary files 🛡️. Patch ASAP and monitor for unauthorized deletions. https://radar.offseq.com/threat/cve-2026-8095-cwe-73-external-control-of-file-name-2b96707b1c289da8 #OffSeq #WordPress #Vuln #Infosec', 'publication_date': 'Sun, 28 Jun 2026 00:23:31 +0000', 'source': 'https://infosec.exchange/@offseq/116824790517394632', 'source_type': "['']", 'source_level': 2, 'text': ['CVE-2026-8095: nmedia Frontend File Manager Plugin (WordPress) HIGH severity vuln (CVSS 8.1) allows Subscriber+ users to delete arbitrary files. Patch ASAP and monitor for unauthorized deletions.https://radar.offseq.com/threat/cve-2026-8095-cwe-73-external-control-of-file-name-2b96707b1c289da8#OffSeq#WordPress#Vuln#Infosec'], 'observables': {'domain-name': ['radar.offseq.com'], 'vulnerability': ['CVE-2026-8095']}}, {'title': 'CVE-2026-54825 - SQL Injection in wpDataTables <=7.4. Unauthenticated exploit. CVSS 9.3. No patch yet. Disable plugin or restrict access immediately. #CVE #WordPress #infosechttps://www.valtersit.com/cve/CVE-2026-54825/', 'publication_date': 'Sat, 27 Jun 2026 23:23:29 +0000', 'source': 'https://mastodon.social/@hugovalters/116824562074429772', 'source_type': "['']", 'source_level': 2, 'text': [], 'observables': {'domain-name': ['valtersit.com'], 'email-addr': ['hugovalters@mastodon.social'], 'vulnerability': ['CVE-2026-54825']}}, {'title': 'I am a big fan of VPNs for what they are good for.  I am gobsmacked by the existence of mass-market consumer VPNs being sold as generic privacy/security measures. A VPN provides a private point-to-point link over an untrusted network. This is only useful for privacy if you can trust both endpoints to be private. The 27 VPNs I have configs for on my work machine all terminate on devices that I have administrative control of.  #InfoSec', 'publication_date': 'Sat, 27 Jun 2026 23:23:29 +0000', 'source': 'https://toad.social/@grumpybozo/116824503829416641', 'source_type': "['']", 'source_level': 2, 'text': ['@SomeVeganCheeseIsOkThat presumes 2 things:1. Your VPN provider isn’t collecting and selling that information. ToS and Privacy Policy documents may disclose OR obfuscate such activities.2. The only way to get location information is via IP->location mapping with the IP obtained from transport-layer information. Nothing stops an app from sending the IP or simply the true location in the data it sends to the far end.', "@grumpybozoI removed most apps and use the browser instead. I also do not grant location rights to many apps, and review permissions regularly. It's not perfect but I refuse to just call it a lost cause and roll over on this."], 'observables': {'email-addr': ['days.@SomeVeganCheeseIsOkcoveryourtracks.eff.orgCover', 'grumpybozo@toad.socialI', 'sab38@infosec.exchange', 'SomeVeganCheeseIsOk@mastodon.social'], 'url': ['https://coveryourtracks.eff.org']}}, {'title': 'Security Tip: Integrate container image scanning into your CI/CD pipeline. 🛡️ Vulnerabilities often hide in base images or outdated libraries within your layers. Using scanners like Trivy or Clair helps you catch known CVEs before they are deployed. A secure container starts with a clean image. For technical deep dives and vulnerability intelligence, visit https://cvedatabase.com #ContainerSecurity #CyberSecurity #InfoSec #DevSecOps', 'publication_date': 'Sat, 27 Jun 2026 23:23:29 +0000', 'source': 'https://techhub.social/@cvedatabase/116824434409741907', 'source_type': "['']", 'source_level': 2, 'text': [], 'observables': {'domain-name': ['cvedatabase.com'], 'email-addr': ['cvedatabase@techhub.social']}}, {'title': "🧩 Vérité du Packet Sniffer𝘜𝘯 𝘢𝘨𝘦𝘯𝘵 𝘲𝘶𝘪 𝘵𝘰𝘶𝘳𝘯𝘦 𝘦𝘯 𝘢𝘳𝘳𝘪è𝘳𝘦-𝘱𝘭𝘢𝘯 𝘴𝘢𝘯𝘴 𝘲𝘶𝘦 𝘷𝘰𝘶𝘴 𝘭𝘦 𝘴𝘢𝘤𝘩𝘪𝘦𝘻… 𝘤'𝘦𝘴𝘵 𝘴𝘰𝘪𝘵 𝘶𝘯𝘦 𝘧𝘦𝘢𝘵𝘶𝘳𝘦, 𝘴𝘰𝘪𝘵 𝘶𝘯 𝘮𝘢𝘭𝘸𝘢𝘳𝘦. 𝘓𝘢 𝘥𝘪𝘧𝘧é𝘳𝘦𝘯𝘤𝘦 ? 𝘓𝘦 𝘱𝘳𝘪𝘹 𝘥𝘦 𝘭𝘢 𝘭𝘪𝘤𝘦𝘯𝘤𝘦.#infosec #cybersecurity #aphorisme", 'publication_date': 'Sat, 27 Jun 2026 22:24:27 +0000', 'source': 'https://mastobot.ping.moi/@Bobe_bot/116824316787381603', 'source_type': "['']", 'source_level': 2, 'text': [], 'observables': {'email-addr': ['Bobe_bot@mastobot.ping.moi', 'decio@infosec.exchange']}}, {'title': 'Tag yourself.#infosec #wastingtimeondumbthingsTIRED PANDA TIRAMISU SPIDER GLORIOUS KITTEN COZY PANDA OBLIVIOUS WASP ROGUE KITTEN OUTGOING JACKAL INSANE OWL SORRY OWL', 'publication_date': 'Sat, 27 Jun 2026 21:23:27 +0000', 'source': 'https://infosec.exchange/@sharkfie/116824062333905813', 'source_type': "['']", 'source_level': 2, 'text': [], 'observables': {}}, {'title': 'CVE-2026-10643 - Out-of-bounds heap write in Zephyr `recvmsg()` ancillary-data path (`insert_pktinfo` undersizes the control-buffer capacity check)', 'publication_date': 'Sat, 27 Jun 2026 22:59:22 +0000', 'source': 'https://cvefeed.io/vuln/detail/CVE-2026-10643', 'source_type': "['']", 'source_level': 2, 'text': ["Zephyr's IP socket recvmsg() implementation (subsys/net/lib/sockets/sockets_inet.c, insert_pktinfo()) validated the user-supplied ancillary (msg_control) buffer using only the payload length (msg-msg_controllen < pktinfo_len) before writing a full control message consisting of an aligned cmsg header plus the payload. Because the check omitted the cmsg header size, a control buffer whose length falls in the under-checked window (e.g. 16-27 bytes for IPv4 IP_PKTINFO on a 64-bit target, where a single element actually occupies 28 bytes) passes the guard yet causes a fixed-size out-of-bounds write of up to one cmsg header (~12 bytes) past the end of the buffer. Under CONFIG_USERSPACE the recvmsg verifier allocates a kernel-heap copy of the control buffer sized to msg_controllen and runs the implementation against it, so the overflow corrupts kernel heap memory and is triggerable from an unprivileged userspace thread; in supervisor mode it corrupts the caller's buffer. The path is reachable on a UDP/IP socket with IP_PKTINFO/IPV6_RECVPKTINFO (or hoplimit/timestamping) enabled when the application calls recvmsg() with an undersized control buffer and a datagram is received; part of the overwritten bytes (the destination IP in ipi_addr) is influenced by the received packet. The fix makes the capacity check use NET_CMSG_SPACE(pktinfo_len) (aligned header + aligned data) and returns -ENOMEM when the buffer is too small. Affected: v3.6.0 through v4.4.0.", 'The following products are affected byCVE-2026-10643vulnerability. Even ifcvefeed.iois aware of the exact versions of the products that are affected, the information is not represented in the table below.', 'We scan GitHub repositories to detect new proof-of-concept exploits. Following list is a collection of public exploits and proof-of-concepts, which have been published on GitHub (sorted by the most recently updated).'], 'observables': {'domain-name': ['cvefeed.io'], 'vulnerability': ['CVE-2026-10643']}}, {'title': "CVE-2026-12415 - Invoice Generator <= 1.0.0 - Unauthenticated Privilege Escalation via Account Takeover via 'user_id' Parameter", 'publication_date': 'Sat, 27 Jun 2026 04:30:30 +0000', 'source': 'https://cvefeed.io/vuln/detail/CVE-2026-12415', 'source_type': "['']", 'source_level': 2, 'text': ["The Invoice Generator plugin for WordPress is vulnerable to privilege escalation due to a missing capability check on the pravel_invoice_edit_account() AJAX action in versions up to, and including, 1.0.0. The handler is exposed via wp_ajax_nopriv_pravel_invoice_edit_account, accepts an attacker-controlled user_id and user_email from POST data, and calls wp_update_user() without verifying authentication, ownership, or a nonce. This makes it possible for unauthenticated attackers to change the email address of any user, including administrators, and then trigger WordPress's password reset flow to gain access to the targeted account.", 'The following products are affected byCVE-2026-12415vulnerability. Even ifcvefeed.iois aware of the exact versions of the products that are affected, the information is not represented in the table below.', 'We scan GitHub repositories to detect new proof-of-concept exploits. Following list is a collection of public exploits and proof-of-concepts, which have been published on GitHub (sorted by the most recently updated).'], 'observables': {'domain-name': ['cvefeed.io'], 'email-addr': ['security@wordfence.com'], 'vulnerability': ['CVE-2026-12415', 'CVE-2026-12416']}}, {'title': 'NAIC suspends investment risk designations after cyber attack', 'publication_date': 'Sat, 27 Jun 2026 11:53:56 +0000', 'source': 'https://databreaches.net/2026/06/27/naic-suspends-investment-risk-designations-after-cyber-attack/?pk_campaign=feed&pk_kwd=naic-suspends-investment-risk-designations-after-cyber-attack', 'source_type': "['']", 'source_level': 2, 'text': [], 'observables': {'domain-name': ['databreaches.net']}}]
+[
+  {
+    "title": "CVE-2026-58054 - MyBB - Privilege Escalation from Limited ACP User Management to Administrator",
+    "publication_date": "Sun, 28 Jun 2026 01:32:56 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-58054",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "8.6\n\nHIGH\nCVSS 4.0\n\nCVE-2026-58054\nMyBB - Privilege Escalation from Limited ACP User Management to Administrator\n\nMyBB 1.8.40 does not restrict which usergroup a limited Admin Control Panel user may assign when creating or editing users; the user module offers the Administrators group (gid 4) and its datahandler's verify_usergroup() unconditionally returns true. An admin holding only the delegated user-management permission can assign the Administrators group to an account and escalate to the full Administrator permission set.\n\nPublished Date :\nJune 28, 2026, 1:32 a.m.\n\nLast Modified :\nJune 28, 2026, 1:32 a.m.\n\nRemotely Exploit :\nYes !\n\nSource :\nVulnCheck\n\nImpact\nAffected Products\n\nThe following products are affected by CVE-2026-58054\nvulnerability.\nEven if cvefeed.io is aware of the exact versions of the\nproducts\nthat\nare\naffected, the information is not represented in the table below.\n\nNo affected product recoded yet\n\nThe Common Vulnerability Scoring System is a standardized framework\nfor assessing the severity of vulnerabilities in software and systems.\nWe collect and displays CVSS scores from various sources for each CVE.\n\nScore\nVersion\nSeverity\nVector\nExploitability Score\nImpact Score\nSource\n\n7.2\n\nCVSS 3.1\n\nHIGH\n\n83251b91-4cc7-4094-a5c7-464a1b83ea10\n\n7.2\n\nCVSS 3.1\n\nHIGH\n\n1.2\n\n5.9\n\ndisclosure@vulncheck.com\n\n8.6\n\nCVSS 4.0\n\nHIGH\n\n83251b91-4cc7-4094-a5c7-464a1b83ea10\n\n8.6\n\nCVSS 4.0\n\nHIGH\n\ndisclosure@vulncheck.com\n\nRestrict usergroup assignment in the Admin Control Panel to prevent privilege escalation.\n\nUpdate MyBB to patch the usergroup assignment vulnerability.\n\nVerify usergroup assignments during user creation/editing.\n\nRestrict 'Administrators' group assignment privileges.\n\nWe scan GitHub repositories to detect new proof-of-concept exploits. Following list is a collection\nof public exploits and proof-of-concepts, which have been published on GitHub (sorted by the most recently\nupdated).\n\nResults are limited to the first 15 repositories due to potential performance issues.\n\nThe following list is the news that have been mention\nCVE-2026-58054 vulnerability anywhere in the article.\n\nEPSS is a daily estimate of the probability of exploitation activity\nbeing observed over the next 30 days. Following chart shows the EPSS\nscore history of the vulnerability.\n\nvar linechartBasicColors = getChartColorsArray(\"exploitability_history_line_column_chart\");\nif (linechartBasicColors) {\nvar options = {\nseries: [{\nname: \"EPSS Score\",\ndata: []\n}],\nchart: {\nheight: 350,\ntype: 'line',\nzoom: {\nenabled: false\n},\ntoolbar: {\nshow: false\n}\n},\nmarkers: {\nsize: 4,\n},\ndataLabels: {\nenabled: false\n},\nstroke: {\ncurve: 'straight'\n},\ncolors: linechartBasicColors,\n\nlabels: [],\n\nyaxis: {\nmin: 0,\nmax: 100,\nlabels: {\nformatter: function (val) {\nreturn val.toFixed(0);\n}\n},\n},\n};\nvar chart = new ApexCharts(document.querySelector(\"#exploitability_history_line_column_chart\"), options);\nchart.render();\n}\n\nAuthorization",
+    "word_count": 403,
+    "observables": {
+      "domain-name": [
+        "cvefeed.io"
+      ],
+      "email-addr": [
+        "disclosure@vulncheck.com"
+      ],
+      "vulnerability": [
+        "CVE-2026-58054"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "CVE-2026-58053 - Gitea act_runner - Container Hardening Bypass via Workflow Container Options",
+    "publication_date": "Sun, 28 Jun 2026 01:32:55 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-58053",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "9.9\n\nCRITICAL\nCVSS 3.1\n\nCVE-2026-58053\nGitea act_runner - Container Hardening Bypass via Workflow Container Options\n\nGitea act_runner with the Docker backend (through act 0.262.0) passes a workflow's container.options string to the Docker job container's HostConfig and, when configured with privileged: false, forces only the Privileged flag off while merging options such as --pid=host, --cap-add, and --security-opt unchanged. A user who can run a workflow on a Docker-backed runner can create a job container with host namespaces and broad capabilities and escape to the host as root despite privileged mode being disabled.\n\nPublished Date :\nJune 28, 2026, 1:32 a.m.\n\nLast Modified :\nJune 28, 2026, 1:32 a.m.\n\nRemotely Exploit :\nYes !\n\nSource :\nVulnCheck\n\nImpact\nAffected Products\n\nThe following products are affected by CVE-2026-58053\nvulnerability.\nEven if cvefeed.io is aware of the exact versions of the\nproducts\nthat\nare\naffected, the information is not represented in the table below.\n\nNo affected product recoded yet\n\nThe Common Vulnerability Scoring System is a standardized framework\nfor assessing the severity of vulnerabilities in software and systems.\nWe collect and displays CVSS scores from various sources for each CVE.\n\nScore\nVersion\nSeverity\nVector\nExploitability Score\nImpact Score\nSource\n\n9.9\n\nCVSS 3.1\n\nCRITICAL\n\n83251b91-4cc7-4094-a5c7-464a1b83ea10\n\n9.9\n\nCVSS 3.1\n\nCRITICAL\n\n3.1\n\n6\n\ndisclosure@vulncheck.com\n\n9.4\n\nCVSS 4.0\n\nCRITICAL\n\n83251b91-4cc7-4094-a5c7-464a1b83ea10\n\n9.4\n\nCVSS 4.0\n\nCRITICAL\n\ndisclosure@vulncheck.com\n\nUpdate act_runner and runner configurations to properly sanitize Docker job container options.\n\nUpdate Gitea act_runner to a version that addresses this issue.\n\nReview and restrict Docker container options allowed in workflows.\n\nConfigure runners to disallow dangerous Docker flags.\n\nAvoid running untrusted workflows on Docker-backed runners.\n\nWe scan GitHub repositories to detect new proof-of-concept exploits. Following list is a collection\nof public exploits and proof-of-concepts, which have been published on GitHub (sorted by the most recently\nupdated).\n\nResults are limited to the first 15 repositories due to potential performance issues.\n\nThe following list is the news that have been mention\nCVE-2026-58053 vulnerability anywhere in the article.\n\nEPSS is a daily estimate of the probability of exploitation activity\nbeing observed over the next 30 days. Following chart shows the EPSS\nscore history of the vulnerability.\n\nvar linechartBasicColors = getChartColorsArray(\"exploitability_history_line_column_chart\");\nif (linechartBasicColors) {\nvar options = {\nseries: [{\nname: \"EPSS Score\",\ndata: []\n}],\nchart: {\nheight: 350,\ntype: 'line',\nzoom: {\nenabled: false\n},\ntoolbar: {\nshow: false\n}\n},\nmarkers: {\nsize: 4,\n},\ndataLabels: {\nenabled: false\n},\nstroke: {\ncurve: 'straight'\n},\ncolors: linechartBasicColors,\n\nlabels: [],\n\nyaxis: {\nmin: 0,\nmax: 100,\nlabels: {\nformatter: function (val) {\nreturn val.toFixed(0);\n}\n},\n},\n};\nvar chart = new ApexCharts(document.querySelector(\"#exploitability_history_line_column_chart\"), options);\nchart.render();\n}\n\nMisconfiguration",
+    "word_count": 432,
+    "observables": {
+      "domain-name": [
+        "cvefeed.io"
+      ],
+      "email-addr": [
+        "disclosure@vulncheck.com"
+      ],
+      "vulnerability": [
+        "CVE-2026-58053"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "CVE-2026-58051 - libssh2 - Free of Uninitialized Pointer in publickey List Cleanup",
+    "publication_date": "Sun, 28 Jun 2026 01:32:54 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-58051",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "8.3\n\nHIGH\nCVSS 4.0\n\nCVE-2026-58051\nlibssh2 - Free of Uninitialized Pointer in publickey List Cleanup\n\nlibssh2 through 1.11.1 grows its publickey list with SSH2_REALLOC but does not zero-initialize new entries before parsing populates them, so a parse failure reaching the cleanup path leaves libssh2_publickey_list_free operating on an uninitialized entry. A malicious SSH server offering the publickey subsystem can use a malformed response to make cleanup free an uninitialized, attacker-influenceable attrs pointer in a connecting libssh2 client.\n\nPublished Date :\nJune 28, 2026, 1:32 a.m.\n\nLast Modified :\nJune 28, 2026, 1:32 a.m.\n\nRemotely Exploit :\nYes !\n\nSource :\nVulnCheck\n\nImpact\nAffected Products\n\nThe following products are affected by CVE-2026-58051\nvulnerability.\nEven if cvefeed.io is aware of the exact versions of the\nproducts\nthat\nare\naffected, the information is not represented in the table below.\n\nNo affected product recoded yet\n\nThe Common Vulnerability Scoring System is a standardized framework\nfor assessing the severity of vulnerabilities in software and systems.\nWe collect and displays CVSS scores from various sources for each CVE.\n\nScore\nVersion\nSeverity\nVector\nExploitability Score\nImpact Score\nSource\n\n6.5\n\nCVSS 3.1\n\nMEDIUM\n\n83251b91-4cc7-4094-a5c7-464a1b83ea10\n\n6.5\n\nCVSS 3.1\n\nMEDIUM\n\n2.2\n\n4.2\n\ndisclosure@vulncheck.com\n\n8.3\n\nCVSS 4.0\n\nHIGH\n\n83251b91-4cc7-4094-a5c7-464a1b83ea10\n\n8.3\n\nCVSS 4.0\n\nHIGH\n\ndisclosure@vulncheck.com\n\nUpdate libssh2 to a version that initializes new entries in publickey lists.\n\nUpdate libssh2 to a fixed version.\n\nEnsure all new entries are zero-initialized.\n\nValidate cleanup paths for memory safety.\n\nWe scan GitHub repositories to detect new proof-of-concept exploits. Following list is a collection\nof public exploits and proof-of-concepts, which have been published on GitHub (sorted by the most recently\nupdated).\n\nResults are limited to the first 15 repositories due to potential performance issues.\n\nThe following list is the news that have been mention\nCVE-2026-58051 vulnerability anywhere in the article.\n\nEPSS is a daily estimate of the probability of exploitation activity\nbeing observed over the next 30 days. Following chart shows the EPSS\nscore history of the vulnerability.\n\nvar linechartBasicColors = getChartColorsArray(\"exploitability_history_line_column_chart\");\nif (linechartBasicColors) {\nvar options = {\nseries: [{\nname: \"EPSS Score\",\ndata: []\n}],\nchart: {\nheight: 350,\ntype: 'line',\nzoom: {\nenabled: false\n},\ntoolbar: {\nshow: false\n}\n},\nmarkers: {\nsize: 4,\n},\ndataLabels: {\nenabled: false\n},\nstroke: {\ncurve: 'straight'\n},\ncolors: linechartBasicColors,\n\nlabels: [],\n\nyaxis: {\nmin: 0,\nmax: 100,\nlabels: {\nformatter: function (val) {\nreturn val.toFixed(0);\n}\n},\n},\n};\nvar chart = new ApexCharts(document.querySelector(\"#exploitability_history_line_column_chart\"), options);\nchart.render();\n}\n\nMemory Corruption",
+    "word_count": 403,
+    "observables": {
+      "domain-name": [
+        "cvefeed.io"
+      ],
+      "email-addr": [
+        "disclosure@vulncheck.com"
+      ],
+      "vulnerability": [
+        "CVE-2026-58051"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "CVE-2026-58050 - libssh2 - Integer Overflow in publickey Subsystem Attribute Allocation",
+    "publication_date": "Sun, 28 Jun 2026 01:32:53 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-58050",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "8.3\n\nHIGH\nCVSS 4.0\n\nCVE-2026-58050\nlibssh2 - Integer Overflow in publickey Subsystem Attribute Allocation\n\nlibssh2 through 1.11.1 reads an attacker-controlled 32-bit attribute count from a publickey-subsystem response and uses it in the allocation num_attrs * sizeof(libssh2_publickey_attribute) without bounds checking, so on 32-bit platforms the multiplication overflows to an undersized buffer. A malicious SSH server can then drive the attribute-parsing loop to write past the allocation, causing a heap buffer overflow in a connecting libssh2 client.\n\nPublished Date :\nJune 28, 2026, 1:32 a.m.\n\nLast Modified :\nJune 28, 2026, 1:32 a.m.\n\nRemotely Exploit :\nYes !\n\nSource :\nVulnCheck\n\nImpact\nAffected Products\n\nThe following products are affected by CVE-2026-58050\nvulnerability.\nEven if cvefeed.io is aware of the exact versions of the\nproducts\nthat\nare\naffected, the information is not represented in the table below.\n\nNo affected product recoded yet\n\nThe Common Vulnerability Scoring System is a standardized framework\nfor assessing the severity of vulnerabilities in software and systems.\nWe collect and displays CVSS scores from various sources for each CVE.\n\nScore\nVersion\nSeverity\nVector\nExploitability Score\nImpact Score\nSource\n\n7\n\nCVSS 3.1\n\nHIGH\n\n83251b91-4cc7-4094-a5c7-464a1b83ea10\n\n7\n\nCVSS 3.1\n\nHIGH\n\n2.2\n\n4.7\n\ndisclosure@vulncheck.com\n\n8.3\n\nCVSS 4.0\n\nHIGH\n\n83251b91-4cc7-4094-a5c7-464a1b83ea10\n\n8.3\n\nCVSS 4.0\n\nHIGH\n\ndisclosure@vulncheck.com\n\nUpdate libssh2 to a version that includes bounds checking for attribute counts.\n\nUpdate libssh2 to a patched version.\n\nVerify correct allocation size calculation.\n\nEnsure attribute parsing includes bounds checks.\n\nWe scan GitHub repositories to detect new proof-of-concept exploits. Following list is a collection\nof public exploits and proof-of-concepts, which have been published on GitHub (sorted by the most recently\nupdated).\n\nResults are limited to the first 15 repositories due to potential performance issues.\n\nThe following list is the news that have been mention\nCVE-2026-58050 vulnerability anywhere in the article.\n\nEPSS is a daily estimate of the probability of exploitation activity\nbeing observed over the next 30 days. Following chart shows the EPSS\nscore history of the vulnerability.\n\nvar linechartBasicColors = getChartColorsArray(\"exploitability_history_line_column_chart\");\nif (linechartBasicColors) {\nvar options = {\nseries: [{\nname: \"EPSS Score\",\ndata: []\n}],\nchart: {\nheight: 350,\ntype: 'line',\nzoom: {\nenabled: false\n},\ntoolbar: {\nshow: false\n}\n},\nmarkers: {\nsize: 4,\n},\ndataLabels: {\nenabled: false\n},\nstroke: {\ncurve: 'straight'\n},\ncolors: linechartBasicColors,\n\nlabels: [],\n\nyaxis: {\nmin: 0,\nmax: 100,\nlabels: {\nformatter: function (val) {\nreturn val.toFixed(0);\n}\n},\n},\n};\nvar chart = new ApexCharts(document.querySelector(\"#exploitability_history_line_column_chart\"), options);\nchart.render();\n}\n\nMemory Corruption",
+    "word_count": 401,
+    "observables": {
+      "domain-name": [
+        "cvefeed.io"
+      ],
+      "email-addr": [
+        "disclosure@vulncheck.com"
+      ],
+      "vulnerability": [
+        "CVE-2026-58050"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "CVE-2026-58049 - FFmpeg - Out-of-Bounds Write in RASC Decoder decode_dlta()",
+    "publication_date": "Sun, 28 Jun 2026 01:32:52 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-58049",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "8.8\n\nHIGH\nCVSS 4.0\n\nCVE-2026-58049\nFFmpeg - Out-of-Bounds Write in RASC Decoder decode_dlta()\n\nFFmpeg's RASC video decoder (decode_dlta in libavcodec/rasc.c) performs 32-bit reads and writes at the row cursor before the NEXT_LINE row-boundary check and validates the DLTA region in pixel rather than byte units, so a DLTA run on a PAL8 frame can access several bytes past the row allocation. A crafted media stream using the RASC FourCC, decoded by libavcodec, triggers a bitstream-controlled out-of-bounds heap write and adjacent out-of-bounds read, leading to memory corruption.\n\nPublished Date :\nJune 28, 2026, 1:32 a.m.\n\nLast Modified :\nJune 28, 2026, 1:32 a.m.\n\nRemotely Exploit :\nYes !\n\nSource :\nVulnCheck\n\nImpact\nAffected Products\n\nThe following products are affected by CVE-2026-58049\nvulnerability.\nEven if cvefeed.io is aware of the exact versions of the\nproducts\nthat\nare\naffected, the information is not represented in the table below.\n\nNo affected product recoded yet\n\nThe Common Vulnerability Scoring System is a standardized framework\nfor assessing the severity of vulnerabilities in software and systems.\nWe collect and displays CVSS scores from various sources for each CVE.\n\nScore\nVersion\nSeverity\nVector\nExploitability Score\nImpact Score\nSource\n\n8.6\n\nCVSS 3.1\n\nHIGH\n\n83251b91-4cc7-4094-a5c7-464a1b83ea10\n\n8.6\n\nCVSS 3.1\n\nHIGH\n\n3.9\n\n4.7\n\ndisclosure@vulncheck.com\n\n8.8\n\nCVSS 4.0\n\nHIGH\n\n83251b91-4cc7-4094-a5c7-464a1b83ea10\n\n8.8\n\nCVSS 4.0\n\nHIGH\n\ndisclosure@vulncheck.com\n\nAddress heap out-of-bounds write and read in the RASC decoder.\n\nUpdate FFmpeg to the latest version.\n\nApply vendor patches for RASC decoder.\n\nValidate media stream data integrity.\n\nWe scan GitHub repositories to detect new proof-of-concept exploits. Following list is a collection\nof public exploits and proof-of-concepts, which have been published on GitHub (sorted by the most recently\nupdated).\n\nResults are limited to the first 15 repositories due to potential performance issues.\n\nThe following list is the news that have been mention\nCVE-2026-58049 vulnerability anywhere in the article.\n\nEPSS is a daily estimate of the probability of exploitation activity\nbeing observed over the next 30 days. Following chart shows the EPSS\nscore history of the vulnerability.\n\nvar linechartBasicColors = getChartColorsArray(\"exploitability_history_line_column_chart\");\nif (linechartBasicColors) {\nvar options = {\nseries: [{\nname: \"EPSS Score\",\ndata: []\n}],\nchart: {\nheight: 350,\ntype: 'line',\nzoom: {\nenabled: false\n},\ntoolbar: {\nshow: false\n}\n},\nmarkers: {\nsize: 4,\n},\ndataLabels: {\nenabled: false\n},\nstroke: {\ncurve: 'straight'\n},\ncolors: linechartBasicColors,\n\nlabels: [],\n\nyaxis: {\nmin: 0,\nmax: 100,\nlabels: {\nformatter: function (val) {\nreturn val.toFixed(0);\n}\n},\n},\n};\nvar chart = new ApexCharts(document.querySelector(\"#exploitability_history_line_column_chart\"), options);\nchart.render();\n}\n\nMemory Corruption",
+    "word_count": 410,
+    "observables": {
+      "domain-name": [
+        "cvefeed.io"
+      ],
+      "email-addr": [
+        "disclosure@vulncheck.com"
+      ],
+      "vulnerability": [
+        "CVE-2026-58049"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "CVE-2026-8095 - Frontend File Manager Plugin <= 23.6 - Authenticated (Subscriber+) Arbitrary File Deletion",
+    "publication_date": "Sat, 27 Jun 2026 23:28:36 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-8095",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "8.1\n\nHIGH\nCVSS 3.1\n\nCVE-2026-8095\nFrontend File Manager Plugin <= 23.6 - Authenticated (Subscriber+) Arbitrary File Deletion\n\nThe Frontend File Manager Plugin plugin for WordPress is vulnerable to Authenticated Arbitrary File Deletion in versions up to and including 23.6. This is due to a case-sensitive bypass of the wpfm_dir_path parameter sanitization in the wpfm_file_meta_update AJAX handler, where supplying WPFM_DIR_PATH in uppercase evades the unset check and is normalized to wpfm_dir_path by sanitize_key() during update_post_meta(), allowing an attacker to overwrite the stored file path with an arbitrary filesystem path that is then passed directly to unlink() in delete_file_locally() without any directory containment validation. This makes it possible for authenticated attackers with Subscriber-level access to delete arbitrary files on the server, including sensitive files such as wp-config.php, potentially leading to full site takeover.\n\nPublished Date :\nJune 27, 2026, 11:28 p.m.\n\nLast Modified :\nJune 27, 2026, 11:28 p.m.\n\nRemotely Exploit :\nYes !\n\nSource :\nWordfence\n\nImpact\nAffected Products\n\nThe following products are affected by CVE-2026-8095\nvulnerability.\nEven if cvefeed.io is aware of the exact versions of the\nproducts\nthat\nare\naffected, the information is not represented in the table below.\n\nID\nVendor\nProduct\nAction\n\n1\nNajeebmedia\nfrontend_file_manager_plugin\n\nThe Common Vulnerability Scoring System is a standardized framework\nfor assessing the severity of vulnerabilities in software and systems.\nWe collect and displays CVSS scores from various sources for each CVE.\n\nScore\nVersion\nSeverity\nVector\nExploitability Score\nImpact Score\nSource\n\n8.1\n\nCVSS 3.1\n\nHIGH\n\n2.8\n\n5.2\n\nsecurity@wordfence.com\n\nUpdate the Frontend File Manager Plugin to a version that addresses arbitrary file deletion vulnerabilities.\n\nUpdate the Frontend File Manager Plugin immediately.\n\nApply any available security patches or updates.\n\nVerify file deletion restrictions are enforced.\n\nCVE-2026-8095 has a 1 public\nPoC/Exploit available at Github.\nGo to the Public Exploits tab to see the list.\n\nWe scan GitHub repositories to detect new proof-of-concept exploits. Following list is a collection\nof public exploits and proof-of-concepts, which have been published on GitHub (sorted by the most recently\nupdated).\n\nConfig files for my GitHub profile.\n\nconfig\n\ngithub-config\n\nUpdated: 22 hours, 22 minutes ago\n\n1 stars\n0 fork\n0 watcher\n\nBorn at : Aug. 27, 2024, 12:38 a.m.\nThis repo has been linked 2 different CVEs too.\n\nResults are limited to the first 15 repositories due to potential performance issues.\n\nThe following list is the news that have been mention\nCVE-2026-8095 vulnerability anywhere in the article.\n\nEPSS is a daily estimate of the probability of exploitation activity\nbeing observed over the next 30 days. Following chart shows the EPSS\nscore history of the vulnerability.\n\nvar linechartBasicColors = getChartColorsArray(\"exploitability_history_line_column_chart\");\nif (linechartBasicColors) {\nvar options = {\nseries: [{\nname: \"EPSS Score\",\ndata: []\n}],\nchart: {\nheight: 350,\ntype: 'line',\nzoom: {\nenabled: false\n},\ntoolbar: {\nshow: false\n}\n},\nmarkers: {\nsize: 4,\n},\ndataLabels: {\nenabled: false\n},\nstroke: {\ncurve: 'straight'\n},\ncolors: linechartBasicColors,\n\nlabels: [],\n\nyaxis: {\nmin: 0,\nmax: 100,\nlabels: {\nformatter: function (val) {\nreturn val.toFixed(0);\n}\n},\n},\n};\nvar chart = new ApexCharts(document.querySelector(\"#exploitability_history_line_column_chart\"), options);\nchart.render();\n}\n\nPath Traversal",
+    "word_count": 506,
+    "observables": {
+      "domain-name": [
+        "cvefeed.io"
+      ],
+      "email-addr": [
+        "security@wordfence.com"
+      ],
+      "vulnerability": [
+        "CVE-2026-8095"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "When PLM Becomes a Threat Surface: KEV Entry Matters Beyond IT",
+    "publication_date": "Sun, 28 Jun 2026 06:33:55 +0000",
+    "source": "https://thecyberthrone.in/2026/06/28/when-plm-becomes-a-threat-surface-kev-entry-matters-beyond-it/",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "Posted by\n\nPravinKarthik\n\nJune 28, 2026No CommentsFor years, Product Lifecycle Management (PLM) platforms have quietly sat at the heart of manufacturing ecosystems — managing designs, engineering workflows, product data, and supplier collaboration.They were never treated like high-priority cyber battlegrounds.That assumption just changed.CISA has now added PTC Windchill to its Known Exploited Vulnerabilities (KEV) catalog following active exploitation of CVE-2026-12569, a critical remote code execution flaw affecting Windchill and associated product suites.And this is bigger than just another software vulnerability.This is a warning.The Vulnerability at the CenterThe vulnerability, CVE-2026-12569, is an unsafe deserialization flaw that allows unauthenticated remote code execution.Affected platforms include:PTC WindchillPTC FlexPLMCreo Parametric ServerThe danger here is straightforward:An attacker doesn’t need credentials.No insider access.No stolen session.Just network reachability.That alone can be enough to compromise the system.CISA adding it to KEV means one thing:This is not theoretical anymore. It is being exploited in the wild.That changes everything.Why Windchill Matters More Than Typical Enterprise SoftwareMost security teams look at PLM platforms through an operational lens.But attackers look at them through a strategic lens.Windchill often stores:Product blueprintsCAD filesBill of Materials (BOMs)Engineering change ordersSupplier integrationsPrototype documentationIntellectual property archivesThis is not just data.This is the business itself.If an ERP compromise affects operations, a PLM compromise affects innovation.And in sectors like aerospace, automotive, industrial manufacturing, and defense, that can be devastating.Why Attackers Want PLM PlatformsThere are three reasons:1. Intellectual Property TheftBlueprints and design repositories are high-value espionage targets.Stealing a design can mean bypassing years of R&D.2. Supply Chain ManipulationCompromised engineering workflows can introduce malicious design changes or unauthorized modifications.This creates downstream trust failures.3. Operational LeveragePLM platforms connect deeply into manufacturing pipelines.Compromise can disrupt production timelines and create business pressure.This makes them prime ransomware leverage points.What We’re Seeing in Active ExploitationThreat researchers have observed:Deployment of JSP web shellsPersistence mechanisms inside application directoriesAbuse of Tomcat-based servicesUnauthorized outbound traffic to known malicious infrastructureThis tells us attackers are not just “testing” access.They are operationalizing it.That means: Initial Access → Persistence → Data Theft → Lateral MovementClassic intrusion chain.What Security Teams Should Do Immediately1. Identify ExposureFind every:Internet-facing Windchill instanceSupplier portal integrationLegacy PLM connectorsFlexPLM environmentsMany organizations forget about supplier-accessible PLM endpoints.Attackers do not.2. Patch ImmediatelyThis should bypass normal maintenance windows.KEV status means active exploitation is confirmed.This moves it into emergency remediation.3. Hunt for IndicatorsCheck for:Unexpected .jsp filesUnknown WAR deploymentsTomcat execution anomaliesNew admin sessionsSuspicious outbound connectionsTreat this as an incident response exercise, not just patching.4. Segment the AssetPLM should not have unrestricted access to:Domain ControllersERP backendsOT management layersDeveloper repositoriesIf it does, your blast radius is too large.The Bigger Pattern: Business-Critical Systems Are Becoming Prime TargetsLook at recent KEV trends:Cisco CUCM → Communication backboneUbiquiti UniFi OS → Network control planePTC Windchill → Innovation backboneDifferent technologies.Same attacker logic.Target systems where downtime hurts the most.Because those systems force urgency.And urgency forces payment.Final ThoughtsWindchill’s addition to KEV is not just another […]",
+    "word_count": 466,
+    "observables": {
+      "domain-name": [
+        "access.no",
+        "credentials.no"
+      ],
+      "vulnerability": [
+        "CVE-2026-12569"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "YARA-X 1.18.0 and 1.19.0 Release, (Sun, Jun 28th)",
+    "publication_date": "Sun, 28 Jun 2026 07:56:44 GMT",
+    "source": "https://isc.sans.edu/diary/rss/33106",
+    "source_categories": [
+      "operational",
+      "strategic"
+    ],
+    "source_level": 2,
+    "text": "Handler on Duty: Didier Stevens\n\nThreat Level: green\n\npreviousClick HERE to learn more about classes Didier is teaching for SANS\n\nfunction maxarticle() {\nvar article=document.getElementsByTagName('article');\nvar cn=article[0].className;\nif ( article[0].className=='fullscreen' ) {\narticle[0].className='normal';\n} else {\narticle[0].className='fullscreen';\n}\n}\n\nYARA-X 1.18.0 and 1.19.0 Release\n\n0 comment(s)\n\nYARA-X's 1.18.0 release brings 3 improvements and 2 bugfixes.\n\nOne of the improvements is a new command-line option, --cpu-limit, allowing one to limit the amount of CPU YARA requires.\n\nYARA-X's 1.19.0 release brings 4 improvements and 2 bugfixes.\n\nDidier Stevens\nSenior handler\nblog.DidierStevens.com\n\nKeywords:\n0 comment(s)\n\nClick HERE to learn more about classes Didier is teaching for SANSprevious\n\nComments\n\nLogin here to join the discussion.\n\nTop of page\n\n×\n\nDiary Archives\n\n'use strict';\nhljs.initHighlightingOnLoad();\nvar block = $('.diary-body pre code');\nif (block.length > 0) {\nblock.parent().wrap('<div class=\"code-wrapper\"></div>')\n}",
+    "word_count": 134,
+    "observables": {
+      "domain-name": [
+        "blog.didierstevens.com"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Clean GitHub repo tricks AI coding agents into running malware",
+    "publication_date": "Sat, 27 Jun 2026 10:22:36 -0400",
+    "source": "https://www.bleepingcomputer.com/news/security/clean-github-repo-tricks-ai-coding-agents-into-running-malware/",
+    "source_categories": [
+      "operational",
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "Clean GitHub repo tricks AI coding agents into running malware\n\nBy Bill Toulas\n\nJune 27, 2026\n10:22 AM\n\n1\n\nAn agentic coding tool tasked with cloning and setting up a seemingly benign GitHub repository could execute a malicious payload that remains invisible to security scanners, AI agents, and human reviewers.\n\nResearchers at Mozilla's Zero Day Investigative Network (0DIN) AI security platform say that the compromise happens with \"no exploit code, no warning, no suspicious command anyone had to approve.\"\n\nThey demonstrated how an attacker could plant an interactive shell on a developer's device by using Claude Code to run a cloned project without malicious code in the repository.\n\nThe new attack method relies on three components, which separately represent no threat and raise no suspicion:\n\nA clean-looking GitHub repository with standard setup instructions, such as installing dependencies and initializing the project (e.g., pip3 install -r requirements.txt, python3 -m axiom init)\nthe Python package is intentionally designed to refuse execution until it has been initialized; it generates an error instructing the user to execute python3 -m axiom init. Claude Code treats this as a normal setup issue and automatically runs the suggested command while attempting to recover from the error\nExecuting python3 -m axiom init calls a shell script that retrieves the configuration value stored in a DNS TXT record controlled by the attacker, and is executed as a command\n0DIN researchers explain that this approach requires no malicious component in the cloned repository, and the agent automates the entire attack chain, including a step that mimics a common user error.\n\nIf successful, the attacker would obtain a shell running with the developer’s privileges, giving them access to environment variables, API keys, local configuration files, and the opportunity to establish persistence.\n\n“Claude Code never decided to open a shell. It decided to fix an error. The reverse shell is three indirection steps away from anything Claude Code actually evaluated: an error message it trusted, a script that fetched a value, and a DNS record it never saw,” 0DIN researchers say.\n\n“The attacker now has an interactive shell running as the developer's own user.”\n\nWhile the attack method is currently just a concept, 0DIN warns that threat actors could easily distribute such GitHub repositories through fake job postings, tutorials, blog posts, or direct messages.\n\nTo prevent such exploitation, 0DIN suggests that AI agents should disclose the full execution chain of setup commands, including scripts and code fetched dynamically at runtime.\n\n.article-callout {\nbackground-color: #f0f6ff;\nwidth: 95%;\nmax-width: 800px;\nmargin: 15px auto;\nborder-radius: 8px;\nborder: 1px solid #d6ddee;\ndisplay: flex;\nalign-items: stretch;\noverflow: hidden;\n}\n\n.article-media {\nflex: 1;\nmax-width: 220px;\ndisplay: flex;\n}\n\n.article-media a {\ndisplay: flex;\nwidth: 100%;\nheight: 100%;\n}\n\n.article-media img {\nwidth: 100%;\nheight: 100%;\n\nborder-radius: 8px 0 0 8px;\ndisplay: block;\n}\n\n.article-callout .article-media img {\nmargin-top: 0 !important;\nheight: 100% !important;\n}\n\n.article-body {\nflex: 2;\npadding: 10px;\ndisplay: flex;\nflex-direction: column;\njustify-content: center;\n}\n\n.article-body h2 {\nfont-size: 17px !important;\nfont-weight: 700;\ncolor: #333;\nline-height: 1.4;\nfont-family: Georgia, \"Times New Roman\", Times, serif;\nmargin: 0 0 14px 0;\n}\n\n.article-body p {\nfont-weight: bold;\nfont-size: 14px;\nmargin: 0 0 clamp(6px, 2vw, 14px) 0;\n}\n\n.article-link {\nbackground-color: #fff;\nborder: 1px solid #3b59aa;\ncolor: black;\ntext-align: center;\ntext-decoration: none;\nborder-radius: 8px;\ndisplay: inline-block;\nfont-size: 16px;\nfont-weight: bold;\npadding: 10px 20px;\nwidth: fit-content;\n}\n\n@media (max-width: 600px) {\n.article-callout {\nflex-direction: column;\nalign-items: center;\n}\n\n.article-media {\nmax-width: 100%;\n}\n\n.article-media img {\nborder-radius: 8px 8px 0 0;\n}\n\n.article-body {\npadding: […]",
+    "word_count": 587,
+    "observables": {},
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "New FBI Alert: Russian Intelligence Uses Signal Recovery Keys to Access Messages",
+    "publication_date": "Sat, 27 Jun 2026 16:08:57 +0000",
+    "source": "https://securityaffairs.com/194360/intelligence/new-fbi-alert-russian-intelligence-uses-signal-recovery-keys-to-access-messages.html",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "HOME\nCYBER CRIME\nCYBER WARFARE\nAPT\nDATA BREACH\nDEEP WEB\nHACKING\nHACKTIVISM\nINTELLIGENCE\nMUST READ\n\nNew FBI Alert: Russian Intelligence Uses Signal Recovery Keys to Access Messages\n\n|\n\nHospitality Sector Hit by Phishing Campaign Using Fake Guest Complaint Emails\n\n|\n\nDirtyClone: Fourth Linux Kernel Flaw in Six Weeks Escalates to Root\n\n|\n\nChinese APT CL-STA-1062 Expands Attacks on Southeast Asian Critical Infrastructure With Custom Malware\n\n|\n\nActivist Phone Hacked With Cellebrite After Russia Contract Cancellation\n\n|\n\nU.S. CISA adds Cisco and PTC Windchill and FlexPLM flaws to its Known Exploited Vulnerabilities catalog\n\n|\n\nThird-Party Breach at Polymarket Leads to $2.94M Crypto Theft\n\n|\n\nmacOS.Gaslight: North Korea-Linked Malware That Tries to Gaslight the Analyst\n\n|\n\nTata Electronics Confirms Data Breach After 630GB Leak Claim Targets Apple and Tesla\n\n|\n\nCurl Fixes a 25-Year-Old Bug in Its Largest CVE Release Yet\n\n|\n\nInside Mistic, the New Stealth Backdoor in Ransomware Intrusions\n\n|\n\nCisco Catalyst SD-WAN Zero-Day CVE-2026-20245 Exploited Months Before Disclosure\n\n|\n\nNathan Austad Pleads Guilty in DraftKings Hacking Scheme, Gets 18 Months\n\n|\n\nEuropol Disrupts StealC and Amadey Malware Infrastructure in Operation Endgame\n\n|\n\nWhy Frontier AI makes prioritization the most important part of your CTEM program\n\n|\n\nCisco Unified CM Flaw CVE-2026-20230 Actively Exploited in the Wild\n\n|\n\nU.S. CISA adds Ubiquiti UniFi OS and Lantronix EDS5000 plugin flaws to its Known Exploited Vulnerabilities catalog\n\n|\n\nFortiBleed: The Broker Who Turned 73,000 Firewalls Into a Product Catalog\n\n|\n\nOne Railway Radio Outage Stopped Trains Across Germany and Nobody Knew Why\n\n|\n\nSamsung KNOX Kernel UAF Exposes Millions of Galaxy Devices\n\n| \nHOME\nCYBER CRIME\nCYBER WARFARE\nAPT\nDATA BREACH\nDEEP WEB\nHACKING\nHACKTIVISM\nINTELLIGENCE\nARTIFICIAL INTELLIGENCE\nINTERNET OF THINGS\nLAWS AND REGULATIONS\nMALWARE\nMOBILE\nREPORTS\nSECURITY\nSOCIAL NETWORKS\nTERRORISM\nICS-SCADA\nCRYPTO\nPOLICIES\nCONTACT ME\nHome Breaking News Intelligence New FBI Alert: Russian Intelligence Uses Signal Recovery Keys to Access Messages\nNEW FBI ALERT: RUSSIAN INTELLIGENCE USES SIGNAL RECOVERY KEYS TO ACCESS MESSAGES\nPierluigi Paganini\n\nJune 27, 2026\nFBI warns Russian spies now target Signal Backup Recovery Keys, enabling access to message history and long-term account takeover.\n\nThe FBI and CISA updated their March 2026 warning about Russian intelligence phishing campaigns, and the new advisory adds a detail that wasn’t in the original: the operators have shifted their primary objective from stealing verification codes to stealing Signal Backup Recovery Keys.\n\nThe March warning covered FSB-linked groups targeting government officials, military personnel, journalists, and Ukrainian officials through fake Signal support messages. The June update gives those groups public tracking names: UNC5792 and UNC4221, both linked to Russian Federal Security Service officers including those embedded with FSB Border Guards and others working on behalf of Russian military services.\n\n“RIS cyber threat actors have compromised individual CMA accounts, but not the CMA’s encryption or the application itself. To date, this activity has been publicly tracked as UNC5792 and UNC4221.” reads the PSA alert published by the FBI.. “RIS cyber threat actors continue to masquerade as automated CMA support accounts in updated phishing messages but have evolved their tactics to attempt to elicit victims’ Backup Recovery Keys.”\n\nThe earlier version of this campaign asked targets for SMS verification codes, account PINs, or tricked them into clicking doctored group invite links that silently linked an attacker’s device to the account. The new version is more damaging. The phishing message walks the target step by step through enabling Signal backups, navigating to the Recovery Key, and pasting it into the chat. Two sample messages are printed in the advisory: one dressed as a mandatory two-factor rollout announcement, the other as […]",
+    "word_count": 594,
+    "observables": {
+      "vulnerability": [
+        "CVE-2026-20245",
+        "CVE-2026-20230"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Hospitality Sector Hit by Phishing Campaign Using Fake Guest Complaint Emails",
+    "publication_date": "Sat, 27 Jun 2026 15:20:56 +0000",
+    "source": "https://securityaffairs.com/194349/uncategorized/hospitality-sector-hit-by-phishing-campaign-using-fake-guest-complaint-emails.html",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "HOME\nCYBER CRIME\nCYBER WARFARE\nAPT\nDATA BREACH\nDEEP WEB\nHACKING\nHACKTIVISM\nINTELLIGENCE\nMUST READ\n\nNew FBI Alert: Russian Intelligence Uses Signal Recovery Keys to Access Messages\n\n|\n\nHospitality Sector Hit by Phishing Campaign Using Fake Guest Complaint Emails\n\n|\n\nDirtyClone: Fourth Linux Kernel Flaw in Six Weeks Escalates to Root\n\n|\n\nChinese APT CL-STA-1062 Expands Attacks on Southeast Asian Critical Infrastructure With Custom Malware\n\n|\n\nActivist Phone Hacked With Cellebrite After Russia Contract Cancellation\n\n|\n\nU.S. CISA adds Cisco and PTC Windchill and FlexPLM flaws to its Known Exploited Vulnerabilities catalog\n\n|\n\nThird-Party Breach at Polymarket Leads to $2.94M Crypto Theft\n\n|\n\nmacOS.Gaslight: North Korea-Linked Malware That Tries to Gaslight the Analyst\n\n|\n\nTata Electronics Confirms Data Breach After 630GB Leak Claim Targets Apple and Tesla\n\n|\n\nCurl Fixes a 25-Year-Old Bug in Its Largest CVE Release Yet\n\n|\n\nInside Mistic, the New Stealth Backdoor in Ransomware Intrusions\n\n|\n\nCisco Catalyst SD-WAN Zero-Day CVE-2026-20245 Exploited Months Before Disclosure\n\n|\n\nNathan Austad Pleads Guilty in DraftKings Hacking Scheme, Gets 18 Months\n\n|\n\nEuropol Disrupts StealC and Amadey Malware Infrastructure in Operation Endgame\n\n|\n\nWhy Frontier AI makes prioritization the most important part of your CTEM program\n\n|\n\nCisco Unified CM Flaw CVE-2026-20230 Actively Exploited in the Wild\n\n|\n\nU.S. CISA adds Ubiquiti UniFi OS and Lantronix EDS5000 plugin flaws to its Known Exploited Vulnerabilities catalog\n\n|\n\nFortiBleed: The Broker Who Turned 73,000 Firewalls Into a Product Catalog\n\n|\n\nOne Railway Radio Outage Stopped Trains Across Germany and Nobody Knew Why\n\n|\n\nSamsung KNOX Kernel UAF Exposes Millions of Galaxy Devices\n\n| \nHOME\nCYBER CRIME\nCYBER WARFARE\nAPT\nDATA BREACH\nDEEP WEB\nHACKING\nHACKTIVISM\nINTELLIGENCE\nARTIFICIAL INTELLIGENCE\nINTERNET OF THINGS\nLAWS AND REGULATIONS\nMALWARE\nMOBILE\nREPORTS\nSECURITY\nSOCIAL NETWORKS\nTERRORISM\nICS-SCADA\nCRYPTO\nPOLICIES\nCONTACT ME\nHome Uncategorized Hospitality Sector Hit by Phishing Campaign Using Fake Guest Complaint Emails\nHOSPITALITY SECTOR HIT BY PHISHING CAMPAIGN USING FAKE GUEST COMPLAINT EMAILS\nPierluigi Paganini\n\nJune 27, 2026\nMicrosoft warns of a phishing campaign targeting the hospitality sector with fake guest emails that install TonRAT using resilient persistence.\n\nMicrosoft Threat Intelligence published a detailed analysis on an ongoing hacking campaign against hospitality organizations that has been running since April 2026. The targets are specific: device names observed across compromised environments include strings like “reception,” “frontdesk,” “reservations,” “accueil,” “recepcja,” and “recepce” in English, French, Polish, Czech, and Spanish. The attacker knows exactly who opens guest-related emails without thinking twice about it.\n\nThe delivery mechanism is what Microsoft calls authentication laundering.\n\n“The threat actor uses Calendly’s email notification system and Google’s URL redirect functionality to construct a multi-hop delivery chain in which the direct Calendly path passes Sender Policy Framework (SPF), DomainKeys Identified Mail (DKIM), and Domain-based Message Authentication, Reporting, and Conformance (DMARC) checks.” reads the report published by Microsoft.\n\nThe emails arrive with the display name “Booking Manager (via Calendly)” and carry lures about bedbug infestations, health inspections, guest complaints, final warnings, and threatened suspensions. They came in Japanese, Danish, and Dutch, with Japanese the most common. The researchers observed that the messages have no recipient name, no property name which suggests this is high-volume list-driven sending, not tailored spearphishing.\n\nUpon clicking the embedded link, the victim is routed through four hops: a Calendly redirect to share.google, then to www.google.com, then to a freshly registered Cloudflare-fronted .cfd domain sitting behind a Turnstile challenge. That challenge serves double duty as an […]",
+    "word_count": 565,
+    "observables": {
+      "domain-name": [
+        "google.com"
+      ],
+      "url": [
+        "http://www.google.com"
+      ],
+      "vulnerability": [
+        "CVE-2026-20245",
+        "CVE-2026-20230"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "DirtyClone: Fourth Linux Kernel Flaw in Six Weeks Escalates to Root",
+    "publication_date": "Sat, 27 Jun 2026 09:12:26 +0000",
+    "source": "https://securityaffairs.com/194338/uncategorized/dirtyclone-fourth-linux-kernel-flaw-in-six-weeks-escalates-to-root.html",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "HOME\nCYBER CRIME\nCYBER WARFARE\nAPT\nDATA BREACH\nDEEP WEB\nHACKING\nHACKTIVISM\nINTELLIGENCE\nMUST READ\n\nNew FBI Alert: Russian Intelligence Uses Signal Recovery Keys to Access Messages\n\n|\n\nHospitality Sector Hit by Phishing Campaign Using Fake Guest Complaint Emails\n\n|\n\nDirtyClone: Fourth Linux Kernel Flaw in Six Weeks Escalates to Root\n\n|\n\nChinese APT CL-STA-1062 Expands Attacks on Southeast Asian Critical Infrastructure With Custom Malware\n\n|\n\nActivist Phone Hacked With Cellebrite After Russia Contract Cancellation\n\n|\n\nU.S. CISA adds Cisco and PTC Windchill and FlexPLM flaws to its Known Exploited Vulnerabilities catalog\n\n|\n\nThird-Party Breach at Polymarket Leads to $2.94M Crypto Theft\n\n|\n\nmacOS.Gaslight: North Korea-Linked Malware That Tries to Gaslight the Analyst\n\n|\n\nTata Electronics Confirms Data Breach After 630GB Leak Claim Targets Apple and Tesla\n\n|\n\nCurl Fixes a 25-Year-Old Bug in Its Largest CVE Release Yet\n\n|\n\nInside Mistic, the New Stealth Backdoor in Ransomware Intrusions\n\n|\n\nCisco Catalyst SD-WAN Zero-Day CVE-2026-20245 Exploited Months Before Disclosure\n\n|\n\nNathan Austad Pleads Guilty in DraftKings Hacking Scheme, Gets 18 Months\n\n|\n\nEuropol Disrupts StealC and Amadey Malware Infrastructure in Operation Endgame\n\n|\n\nWhy Frontier AI makes prioritization the most important part of your CTEM program\n\n|\n\nCisco Unified CM Flaw CVE-2026-20230 Actively Exploited in the Wild\n\n|\n\nU.S. CISA adds Ubiquiti UniFi OS and Lantronix EDS5000 plugin flaws to its Known Exploited Vulnerabilities catalog\n\n|\n\nFortiBleed: The Broker Who Turned 73,000 Firewalls Into a Product Catalog\n\n|\n\nOne Railway Radio Outage Stopped Trains Across Germany and Nobody Knew Why\n\n|\n\nSamsung KNOX Kernel UAF Exposes Millions of Galaxy Devices\n\n| \nHOME\nCYBER CRIME\nCYBER WARFARE\nAPT\nDATA BREACH\nDEEP WEB\nHACKING\nHACKTIVISM\nINTELLIGENCE\nARTIFICIAL INTELLIGENCE\nINTERNET OF THINGS\nLAWS AND REGULATIONS\nMALWARE\nMOBILE\nREPORTS\nSECURITY\nSOCIAL NETWORKS\nTERRORISM\nICS-SCADA\nCRYPTO\nPOLICIES\nCONTACT ME\nHome Uncategorized DirtyClone: Fourth Linux Kernel Flaw in Six Weeks Escalates to Root\nDIRTYCLONE: FOURTH LINUX KERNEL FLAW IN SIX WEEKS ESCALATES TO ROOT\nPierluigi Paganini\n\nJune 27, 2026\nDirtyClone: a Linux kernel privilege escalation that silently rewrites executables in memory, leaving no disk trace. Patch now.\n\nJFrog Security Research published a working exploit walkthrough on June 25 for CVE-2026-43503 (CVSS score of 8.8), a Linux kernel privilege escalation they call DirtyClone. It’s the fourth vulnerability in the DirtyFrag family, all sharing the same root failure: file-backed memory gets treated as packet data, and an in-place network operation writes where it should have copied. CVSSIf your kernel doesn’t have the May 21 mainline patch, update now.\n\n“The severity of this issue is significant because it allows any unprivileged local user to gain root access (LPE) by manipulating the Linux page cache.” reads the report published by JFrog. “The attack is silent, leaves no kernel logs or audit traces, and bypasses common on-disk integrity monitoring tools.”\n\nThe attacker loads a privileged binary like /usr/bin/su into memory, wires those pages into a network packet, and forces the kernel to clone it through a loopback IPsec tunnel they control. The decryption step overwrites the binary’s authentication logic with attacker-chosen bytes, and the next run of su hands over root — while the file on disk stays untouched.\n\nThe exploit requires CAP_NET_ADMIN to configure the IPsec environment. On Debian and Fedora that capability is reachable by any local user through unprivileged user namespaces, which are enabled by default.\n\n“The attacker begins by creating a fresh network namespace:\n\nunshare -Urn\n\nThis provides network administrative capabilities inside the namespace.” continues the report. “While capabilities are namespaced, page cache is shared at the host level, so if file-backed pages are modified through shared mappings, the effects may propagate to other processes […]",
+    "word_count": 599,
+    "observables": {
+      "directory": [
+        "/usr/bin/su"
+      ],
+      "vulnerability": [
+        "CVE-2026-20245",
+        "CVE-2026-20230",
+        "CVE-2026-43503"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "CVE-2026-54352 - Critical Path Traversal in Budibase. Symlink extraction allows reading arbitrary files. CVSS 9.6. Unpatched - limit builder access immediately. #CVE #Budibase #infosechttps://www.valtersit.com/cve/CVE-2026-54352/",
+    "publication_date": "Sun, 28 Jun 2026 09:20:04 +0000",
+    "source": "https://mastodon.social/@hugovalters/116826939551376573",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.social is one of the many independent Mastodon servers you can use to participate in the fediverse.\nThe original server of Mastodon, operated by Mastodon GmbH for the common good.\nADMINISTERED BY:\nMastodon\n@Mastodon\nSERVER STATS:\n269K\nactive users\nmastodon.social:About\nmastodon.social\nStatusProfiles directoryPrivacy policy\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.2\nBack\nHugo | DevOps | Cybersecurity\n@hugovalters@mastodon.social\n\nCVE-2026-54352 - Critical Path Traversal in Budibase. Symlink extraction allows reading arbitrary files. CVSS 9.6. Unpatched - limit builder access immediately. #CVE #Budibase #infosec\n\nhttps://www.\nvaltersit.com/cve/CVE-2026-543\n52/\n\nValters IT Hub · 2d\nCVE-2026-54352 | Budibase | Valters IT Hub\nBudibase is an open-source low-code platform. Prior to 3.39.9, `POST /api/pwa/process-zip` at packages/server/src/api/routes/static.ts:24 accepts a builder...\nJun 28, 2026, 11:07 AM\n·\n·\nValtersIT_Com\n0\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 175,
+    "observables": {
+      "domain-name": [
+        "valtersit.com"
+      ],
+      "email-addr": [
+        "hugovalters@mastodon.social"
+      ],
+      "vulnerability": [
+        "CVE-2026-54352"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Latest Linux vulnerability allows attacker to gain root access via typing in your password! /silly#infosec #linux #security",
+    "publication_date": "Sun, 28 Jun 2026 09:20:04 +0000",
+    "source": "https://mastodon.catgirl.cloud/@tragivictoria/116826912154580390",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {},
+    "extractor": "none"
+  },
+  {
+    "title": "🧠 Quiz Infosec — Sunday 28 JunDans un réseau local, quelle attaque permet à un pirate de se faire passer pour la passerelle par défaut en falsifiant les réponses ARP ?Résultats + explication demain ! #quiz #infosec #CyberQuizARP Spoofing DNS Poisoning IP Hijacking BGP Hijacking",
+    "publication_date": "Sun, 28 Jun 2026 09:20:04 +0000",
+    "source": "https://mastobot.ping.moi/@Bobe_bot/116826912070225716",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastobot.ping.moi is one of the many independent Mastodon servers you can use to participate in the fediverse.\nServeur Mastodon dédié à l'hébergement de bots d'intérêt public. 🇨🇭 Serveur personnel, non commercial. (administré par @decio@infosec.exchange) Contenu automatisé — pas d'inscriptions publiques.\nADMINISTERED BY:\nBobe'bot on security\n@Bobe_bot\nSERVER STATS:\n6\nactive users\nmastobot.ping.moi:About\nmastobot.ping.moi\nProfiles directoryPrivacy policy\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.2\nBack\nBobe'bot on security\n@Bobe_bot@mastobot.ping.moi\n\n🧠 Quiz Infosec — Sunday 28 Jun\n\nDans un réseau local, quelle attaque permet à un pirate de se faire passer pour la passerelle par défaut en falsifiant les réponses ARP ?\n\nRésultats + explication demain ! #quiz #infosec #CyberQuiz\n\nARP Spoofing\nDNS Poisoning\nIP Hijacking\nBGP Hijacking\nVoteSee results · 1 person · 23 hours left\nJun 28, 2026, 11:00 AM\n·\n·\ntooting_bot\n0\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\nLive feeds\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 189,
+    "observables": {
+      "email-addr": [
+        "Bobe_bot@mastobot.ping.moi",
+        "decio@infosec.exchange"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "⋅ Le FBI alerte sur un nouvelle campagne de phishing qui cible les sauvegardes Signal− https://www.clubic.com/actualite-618898-le-fbi-alerte-sur-un-nouvelle-campagne-de-phishing-qui-cible-les-sauvegardes-signal.html#InfoSec #Phishing #Signal",
+    "publication_date": "Sun, 28 Jun 2026 09:20:04 +0000",
+    "source": "https://mamot.fr/@Steve12L/116826853935508163",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "Tower Administrative Services Reports Breach Impacting Financial Data and SSNsTower Administrative Services Inc, a Pennsylvania insurance administrator, reports a data breach (detected February 4, 2026, after attackers accessed internal systems on February 3) that exposed names, Social Security numbers, addresses, and financial account/card information.**** #cybersecurity #infosec #incident #databreach https://beyondmachines.net/event_details/tower-administrative-services-reports-breach-impacting-financial-data-and-ssns-r-c-z-u-3/gD2P6Ple2L",
+    "publication_date": "Sun, 28 Jun 2026 08:20:55 +0000",
+    "source": "https://infosec.exchange/@beyondmachines1/116826681113187831",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "ASN: AS8151 Location: Mexico City, MX Added: 2026-06-21T23:05#shodansafari #infosec",
+    "publication_date": "Sun, 28 Jun 2026 08:20:55 +0000",
+    "source": "https://infosec.exchange/@shodansafari/116826676069622002",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "NAIC suspends investment risk designations after cyber attack",
+    "publication_date": "Sat, 27 Jun 2026 11:53:56 +0000",
+    "source": "https://databreaches.net/2026/06/27/naic-suspends-investment-risk-designations-after-cyber-attack/?pk_campaign=feed&pk_kwd=naic-suspends-investment-risk-designations-after-cyber-attack",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "databreaches.net",
+    "word_count": 1,
+    "observables": {
+      "domain-name": [
+        "databreaches.net"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "original payload:  \n  \nhttps://gist.github.com/vxunderground/91da9c50e400a6742bbacd1548a255d8",
+    "publication_date": "Sun, 28 Jun 2026 04:33:35 +0000",
+    "source": "https://t.me/vxunderground/9032",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {},
+    "extractor": "none"
+  },
+  {
+    "title": "> be SmartLoader  \n> big ass fuck off malware campaign  \n> tracked by dozens of anti malware companies  \n> heavily obfuscated lua  \n> bamboozles everyone  \n> me jimmies rustled  \n> team up with roblox cheater nerd  \n> reverse engineer it back to src  \n> (almost done)  \n  \nhttps://gist.github.com/vxunderground/aaa6a88823afc83b4f8a73366694966d   GistSmartLoader de-obfuscated and cleaned up (almost done) SmartLoader de-obfuscated and cleaned up (almost done) - gist:aaa6a88823afc83b4f8a73366694966d",
+    "publication_date": "Sun, 28 Jun 2026 04:33:35 +0000",
+    "source": "https://t.me/vxunderground/9031",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {},
+    "extractor": "none"
+  },
+  {
+    "title": "🇮🇩 We tracked a data breach claim by KARAWANG ERROR SYSTEM listing Karawang School System, an education institution in Indonesia. The claimed dump contains student and school records including names, national IDs, phone numbers, and postal codes. We've logged 6 KARAWANG ERROR SYSTEM listings in the past 30 days across our monitoring. #DataBreach #Education #ThreatIntel",
+    "publication_date": "Sun, 28 Jun 2026 04:24:20 +0000",
+    "source": "https://infosec.exchange/@darkwebsonar/116825784963281048",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "My deepest condolences to my colleagues in Venezuela and those impacted by the recent earthquakes.  \n  \nI wish I had more to offer other than words. I hope you're all doing well and I hope you're all safe.",
+    "publication_date": "Sun, 28 Jun 2026 02:32:55 +0000",
+    "source": "https://t.me/vxunderground/9030",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {},
+    "extractor": "none"
+  },
+  {
+    "title": "",
+    "publication_date": "Sun, 28 Jun 2026 02:32:55 +0000",
+    "source": "https://t.me/vxunderground/9029",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {},
+    "extractor": "none"
+  },
+  {
+    "title": "I'm sorry, SmartLoader malware campaign, I shouldn't have called you a little bitch. That is very rude of me.  \n  \nI am just passionate and have spent some time working on it, so my emotions are high.  \n  \nI love you.",
+    "publication_date": "Sat, 27 Jun 2026 21:31:47 +0000",
+    "source": "https://t.me/vxunderground/9028",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {},
+    "extractor": "none"
+  },
+  {
+    "title": "",
+    "publication_date": "Sat, 27 Jun 2026 19:11:31 +0000",
+    "source": "https://mastodon.social/@meteoraweb/116823653854239264",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.social is one of the many independent Mastodon servers you can use to participate in the fediverse.\nThe original server of Mastodon, operated by Mastodon GmbH for the common good.\nADMINISTERED BY:\nMastodon\n@Mastodon\nSERVER STATS:\n269K\nactive users\nmastodon.social:About\nmastodon.social\nStatusProfiles directoryPrivacy policy\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.2\nBack\nMeteora Web\n@meteoraweb@mastodon.social\n\n🚨 NEWS: Fuga di dati da Tata Electronics: Apple corre ai ripari dopo il leak di 200.000 file riservati\n\nEcco i punti chiave in breve:\n💡 Un grave incidente di sicurezza informatica ha colpito Tata Electronics, fornitore chiave di Apple in India. Secondo un rapporto di Reuters, oltre 200.000 file riservati, per un to...\n\n🚀 LINK:\nhttps://\nmeteoraweb.com/news/fuga-di-da\nti-da-tata-electronics-apple-corre-ai-ripari-dopo-il-leak-di-200000-file-riservati?utm_source=mastodon&utm_medium=social&utm_campaign=auto_share\n\nHide\n#\napple\n#\ncybersecurity\n#\ndataBreach\n…and 2 more\nJun 27, 2026, 09:11 PM\n·\n·\nMeteora-Zenith\n1\nboost\n·\n0\nquotes\n·\n0\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 186,
+    "observables": {
+      "domain-name": [
+        "meteoraweb.com"
+      ],
+      "email-addr": [
+        "meteoraweb@mastodon.social"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "",
+    "publication_date": "Sat, 27 Jun 2026 17:12:56 +0000",
+    "source": "https://infosec.exchange/@cloud/116823187586701836",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "",
+    "publication_date": "Sat, 27 Jun 2026 17:02:30 +0000",
+    "source": "https://infosec.exchange/@darkwebsonar/116823146501002195",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "",
+    "publication_date": "Sat, 27 Jun 2026 16:41:38 +0000",
+    "source": "https://mastodon.social/@netsecio/116823064473403900",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.social is one of the many independent Mastodon servers you can use to participate in the fediverse.\nThe original server of Mastodon, operated by Mastodon GmbH for the common good.\nADMINISTERED BY:\nMastodon\n@Mastodon\nSERVER STATS:\n269K\nactive users\nmastodon.social:About\nmastodon.social\nStatusProfiles directoryPrivacy policy\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.2\nBack\nCyberNetsecIO\n@netsecio@mastodon.social\n\n📰 Spanish Construction Giant Grupo Fonsán Hit by 'Booba' Threat Group\n\n🇪🇸 Spanish construction giant Grupo Fonsán breached by the 'Booba' threat group. The attack on the engineering firm puts sensitive project blueprints and financial data at risk of extortion and industrial espionage. 🏗️ #DataBreach #CyberAttack\n\n🌐 cyber[.]netsecops[.]io\n\n🔗\nhttps://\ncyber.netsecops.io/articles/sp\nanish-construction-giant-grupo-fonsan-attacked-by-booba-group/?utm_source=mastodon&utm_m…\n\nHide\nJun 27, 2026, 06:41 PM\n·\n·\nCyberNetSec.o\n0\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 169,
+    "observables": {
+      "domain-name": [
+        "cyber.netsecops.io"
+      ],
+      "email-addr": [
+        "netsecio@mastodon.social"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "",
+    "publication_date": "Sat, 27 Jun 2026 16:41:35 +0000",
+    "source": "https://mastodon.social/@netsecio/116823064294380899",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.social is one of the many independent Mastodon servers you can use to participate in the fediverse.\nThe original server of Mastodon, operated by Mastodon GmbH for the common good.\nADMINISTERED BY:\nMastodon\n@Mastodon\nSERVER STATS:\n269K\nactive users\nmastodon.social:About\nmastodon.social\nStatusProfiles directoryPrivacy policy\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.2\nBack\nCyberNetsecIO\n@netsecio@mastodon.social\n\n📰 INC_RANSOM Hits Indian Agro-Tech Firm GSP Crop Science in Ransomware Attack\n\n🇮🇳 Indian agro-tech firm GSP Crop Science hit by INC_RANSOM. The ransomware group is using double-extortion tactics, stealing data before encryption. The attack highlights the growing threat to the agricultural sector. 🌾 #Ransomware #DataBreach\n\n🌐 cyber[.]netsecops[.]io\n\n🔗\nhttps://\ncyber.netsecops.io/articles/in\ndian-agro-tech-firm-gsp-crop-science-hit-by-inc-ransom/?utm_source=mastodon&utm…\n\nHide\nJun 27, 2026, 06:41 PM\n·\n·\nCyberNetSec.o\n0\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 169,
+    "observables": {
+      "domain-name": [
+        "cyber.netsecops.io"
+      ],
+      "email-addr": [
+        "netsecio@mastodon.social"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "",
+    "publication_date": "Sat, 27 Jun 2026 16:41:33 +0000",
+    "source": "https://mastodon.social/@netsecio/116823064119949932",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.social is one of the many independent Mastodon servers you can use to participate in the fediverse.\nThe original server of Mastodon, operated by Mastodon GmbH for the common good.\nADMINISTERED BY:\nMastodon\n@Mastodon\nSERVER STATS:\n269K\nactive users\nmastodon.social:About\nmastodon.social\nStatusProfiles directoryPrivacy policy\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.2\nBack\nCyberNetsecIO\n@netsecio@mastodon.social\n\n📰 German Defense Firm Atlas Elektronik Breached by 'TheGentlemen' Group\n\n🇩🇪 German defense contractor Atlas Elektronik, a maker of naval tech, has been breached by the 'TheGentlemen' threat group. The attack raises alarms about the security of sensitive military data. 🛡️ #DataBreach #CyberAttack #Defense #Germany\n\n🌐 cyber[.]netsecops[.]io\n\n🔗\nhttps://\ncyber.netsecops.io/articles/de\nfense-tech-firm-atlas-elektronik-breached-by-thegentlemen-group/?utm_source=mastodon&utm…\n\nHide\nJun 27, 2026, 06:41 PM\n·\n·\nCyberNetSec.o\n0\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 168,
+    "observables": {
+      "domain-name": [
+        "cyber.netsecops.io"
+      ],
+      "email-addr": [
+        "netsecio@mastodon.social"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "",
+    "publication_date": "Sat, 27 Jun 2026 21:23:37 +0000",
+    "source": "https://infosec.exchange/@edwardk/116824173289899906",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "",
+    "publication_date": "Sat, 27 Jun 2026 21:22:32 +0000",
+    "source": "https://infosec.exchange/@edwardk/116824169034118766",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "",
+    "publication_date": "Sat, 27 Jun 2026 21:21:24 +0000",
+    "source": "https://infosec.exchange/@edwardk/116824164586133977",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "",
+    "publication_date": "Sat, 27 Jun 2026 02:06:19 +0000",
+    "source": "https://infosec.exchange/@edwardk/116819622574761328",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  }
+]
