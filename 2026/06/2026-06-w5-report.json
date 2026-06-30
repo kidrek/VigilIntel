@@ -1,0 +1,892 @@
+{
+  "threat_level": {
+    "score": 5,
+    "label": {
+      "en": "Severe",
+      "fr": "Sévère"
+    },
+    "justification": {
+      "en": "The final week of June 2026 experienced an intense surge in high-impact cyber operations. This threat landscape is characterized by complex SaaS and telecommunications supply-chain attacks (KDDI, Klue/Salesforce), aggressive extortion campaigns by actors like ShinyHunters, Silent Ransom Group, and Icarus, and the active exploitation of highly critical vulnerabilities across enterprise network orchestrators (Cisco Catalyst SD-WAN, Ubiquiti UniFi OS) and automation systems (Langflow, Lantronix).",
+      "fr": "La dernière semaine de juin 2026 a été marquée par une recrudescence intense d'opérations cyber à fort impact. Ce paysage de menaces se caractérise par des attaques complexes de la chaîne d'approvisionnement SaaS et télécoms (KDDI, Klue/Salesforce), des campagnes d'extorsion agressives menées par des acteurs comme ShinyHunters, Silent Ransom Group et Icarus, ainsi que l'exploitation active de vulnérabilités très critiques sur des orchestrateurs réseau (Cisco Catalyst SD-WAN, Ubiquiti UniFi OS) et des systèmes d'automatisation (Langflow, Lantronix)."
+    },
+    "_triggers": [
+      "+8 — 6 CVE(s) CISA KEV",
+      "+4 — 5 CVE(s) CVSS ≥ 9.0",
+      "+2 — 1 acteur(s) étatique(s)",
+      "+2 — 2 opérateur(s) ransomware",
+      "+1 — ≥ 3 acteurs distincts actifs",
+      "+3 — 7 breach(es) ≥ 100k enregistrements",
+      "+2 — secteurs critiques ciblés : Government_and_Defense, Critical_Infrastructure"
+    ]
+  },
+  "executive_summary": {
+    "en": "Week 5 of June 2026 was defined by systemic supply-chain vulnerabilities, where threat groups successfully targeted third-party integration vectors (such as Klue's connector to Salesforce) and major regional telecommunications backbones (KDDI Japan, exposing over 14 million email accounts). e-Crime groups like Icarus, Silent Ransom Group, and ShinyHunters continue to refine their extortion tactics, increasingly bypassing traditional MFA protocols through specialized session hijacking and OAuth consent-abuse mechanisms (ConsentFix). Geopolitically, Chinese APT groups, notably Mustang Panda, targeted national critical infrastructure and government administrative bodies in India using customized ZOHOMURK and MINIRECON malware. Concurrently, defensive teams face an overwhelming wave of critical vulnerabilities in widely deployed enterprise infrastructure, cloud orchestration, and AI-pipeline frameworks, demanding immediate out-of-band patching and segmented security architectures.",
+    "fr": "La cinquième semaine de juin 2026 a été caractérisée par des vulnérabilités systémiques de la chaîne d'approvisionnement, où des groupes de menaces ont ciblé avec succès des vecteurs d'intégration tiers (comme le connecteur de Klue vers Salesforce) et de grands réseaux régionaux de télécommunications (KDDI Japon, exposant plus de 14 millions de comptes). Des groupes cybercriminels comme Icarus, Silent Ransom Group et ShinyHunters continuent d'affiner leurs tactiques d'extorsion, contournant de plus en plus les protocoles MFA traditionnels via le vol de session et l'abus de consentement OAuth (ConsentFix). Sur le plan géopolitique, les groupes APT chinois, notamment Mustang Panda, ont ciblé les infrastructures critiques et les administrations d'État en Inde avec les malwares ZOHOMURK et MINIRECON. En parallèle, les équipes de défense font face à une vague massive de vulnérabilités critiques dans les infrastructures d'entreprise, l'orchestration cloud et les frameworks d'IA, exigeant des correctifs immédiats et des architectures réseau segmentées."
+  },
+  "regulatory": {
+    "analyse": {
+      "en": "The regulatory landscape is marked by a tightening of data protection jurisprudence worldwide and persistent advocacy from digital rights coalitions against mass surveillance and the erosion of encryption standards. Key developments include European civil rights movements (EDRi) actively litigating against social media platforms (Meta, X) to uphold Digital Services Act (DSA) mandates and pushing back on controversial chat-control and biometric surveillance proposals. Furthermore, local jurisdictions are shifting liability directly to organizations for administrative negligence; for instance, South Africa's POPIA guidelines have formally established that copying the wrong recipient on an email containing personal data constitutes an actionable data breach.",
+      "fr": "Le paysage réglementaire est marqué par un durcissement de la jurisprudence sur la protection des données dans le monde et par le plaidoyer persistant des coalitions pour les droits numériques contre la surveillance de masse et l'érosion des standards de chiffrement. Les développements clés incluent les mouvements européens (EDRi) poursuivant activement les plateformes de médias sociaux (Meta, X) pour faire respecter les mandats du DSA et s'opposant aux propositions controversées de contrôle des messageries et de surveillance biométrique. De plus, les juridictions locales transfèrent la responsabilité directement aux organisations pour négligence administrative ; par exemple, les directives de la loi POPIA en Afrique du Sud stipulent désormais formellement que la mise en copie d'un mauvais destinataire dans un e-mail contenant des données personnelles constitue une violation de données passible de poursuites."
+    },
+    "events": [
+      {
+        "title": {
+          "en": "EDRi Annual Report 2025 Release and Regulatory Advocacy",
+          "fr": "Publication du rapport annuel EDRi 2025 et plaidoyer réglementaire"
+        },
+        "issuing_body": "European Digital Rights (EDRi)",
+        "date": "2026-06-29",
+        "jurisdiction": {
+          "region": "EU",
+          "countries": [
+            "FR",
+            "DE",
+            "BE",
+            "NL"
+          ]
+        },
+        "type": "Guidance",
+        "status": "Active",
+        "reference": "DSA Art.28, AI Act Guidelines, CSA Regulation",
+        "affected_sectors": [
+          "Technology_and_Telecom",
+          "Business_Services"
+        ],
+        "description": {
+          "en": "A comprehensive review highlighting civil society's pushback against digital deregulation, the controversial 'Digital Omnibus', and illegal biometric surveillance in the EU. It documents landmark litigation in the Netherlands confirming user sovereignty over platform data-monetization practices.",
+          "fr": "Un examen complet soulignant l'opposition de la société civile à la déréglementation numérique, au controversé 'Digital Omnibus' et à la surveillance biométrique de masse dans l'UE. Il documente des litiges historiques aux Pays-Bas confirmant la souveraineté de l'utilisateur face aux pratiques de monétisation des plateformes."
+        },
+        "source_url": "https://edri.org/our-work/edri-annual-report-2025-championing-digital-rights-in-the-eu-deregulation-era/"
+      },
+      {
+        "title": {
+          "en": "South African Misdirected Email Data Breach Jurisprudence",
+          "fr": "Jurisprudence sud-africaine sur les fuites de données par e-mails mal adressés"
+        },
+        "issuing_body": "Information Regulator (South Africa)",
+        "date": "2026-06-29",
+        "jurisdiction": {
+          "region": "Africa",
+          "countries": [
+            "ZA"
+          ]
+        },
+        "type": "Court_Ruling",
+        "status": "Active",
+        "reference": "POPIA Section 22",
+        "affected_sectors": [
+          "Business_Services",
+          "Finance",
+          "Healthcare_and_Life_Sciences",
+          "Government_and_Defense"
+        ],
+        "description": {
+          "en": "A legal determination in South Africa establishing that copying the wrong person on an email transmission containing personal information is officially classified as a data breach, triggering mandatory notification and potential administrative fines.",
+          "fr": "Une décision juridique en Afrique du Sud établissant que la mise en copie d'un mauvais destinataire dans un e-mail contenant des informations personnelles est officiellement classée comme une violation de données, déclenchant des notifications obligatoires et de potentielles amendes administratives."
+        },
+        "source_url": "https://databreaches.net/2026/06/29/za-copying-the-wrong-person-on-an-email-could-be-considered-a-data-breach-in-south-africa/"
+      }
+    ]
+  },
+  "threats_actors": {
+    "geographic_analyse": [
+      {
+        "geographic_zone_name": {
+          "en": "China",
+          "fr": "Chine"
+        },
+        "geographic_zone_strategic_analyse": {
+          "en": "Chinese state-sponsored APT groups (e.g., Mustang Panda) are actively pursuing regional dominance and physical infrastructure intelligence gathering in South Asia. Their operations demonstrate a targeted focus on Indian public administrative bodies and electricity transmission infrastructure, utilizing specialized implants to establish persistent access and facilitate industrial espionage.",
+          "fr": "Les groupes APT étatiques chinois (par exemple, Mustang Panda) poursuivent activement des objectifs de domination régionale et de collecte de renseignements sur les infrastructures physiques en Asie du Sud. Leurs opérations démontrent un ciblage précis des administrations publiques indiennes et des infrastructures de transport d'électricité, utilisant des implants spécialisés pour établir un accès persistant et faciliter l'espionnage industriel."
+        }
+      },
+      {
+        "geographic_zone_name": {
+          "en": "Russia",
+          "fr": "Russie"
+        },
+        "geographic_zone_strategic_analyse": {
+          "en": "Russian cyber and influence operations continue to refine their tactical integration on the Ukrainian frontlines and global messaging theatres. The ecosystem integrates state actors, hacktivists, and independent operators leveraging advanced generative AI to coordinate psychological operations, while front-line military units deploy dual-use FPV drones as physical weapon vectors and localized digital propaganda broadcasters in contested areas like Kherson.",
+          "fr": "Les cyber-opérations et les campagnes d'influence russes continuent d'affiner leur intégration tactique sur les lignes de front ukrainiennes et les théâtres de désinformation mondiaux. L'écosystème intègre des acteurs étatiques, des hacktivistes et des opérateurs indépendants s'appuyant sur l'IA générative avancée pour coordonner des opérations psychologiques, tandis que les unités militaires déploient des drones FPV comme vecteurs d'armes et de propagande numérique localisée dans les zones disputées de Kherson."
+        }
+      },
+      {
+        "geographic_zone_name": {
+          "en": "United States",
+          "fr": "États-Unis"
+        },
+        "geographic_zone_strategic_analyse": {
+          "en": "The United States is implementing a highly militarized, unilateral security posture in the Caribbean and Latin America under the 'Trump 2' revised Monroe doctrine. Cyber defense and intelligence coordination in this zone are heavily driven by migration control, anti-narcotics enforcement, and actively blocking geopolitical adversaries (primarily China) from acquiring or controlling regional telecommunications and supply chain hubs.",
+          "fr": "Les États-Unis mettent en œuvre une posture de sécurité hautement militarisée et unilatérale dans les Caraïbes et en Amérique latine sous la doctrine Monroe révisée 'Trump 2'. La coordination de la cyberdéfense et du renseignement dans cette zone est fortement axée sur le contrôle des migrations, la lutte contre le narcotrafic et l'interdiction systématique faite aux adversaires géopolitiques (principalement la Chine) d'acquérir ou de contrôler des hubs de télécommunications et de chaînes d'approvisionnement régionaux."
+        }
+      }
+    ],
+    "details": [
+      {
+        "threat_actor_name": "MUSTANG PANDA",
+        "origin_country": "China",
+        "type": {
+          "en": "Nation-state",
+          "fr": "État-nation"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Government_and_Defense",
+            "Critical_Infrastructure"
+          ],
+          "fr": [
+            "Gouvernement et Défense",
+            "Infrastructures critiques"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "India",
+            "South Asia"
+          ],
+          "fr": [
+            "Inde",
+            "Asie du Sud"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1566.001",
+          "T1059.003",
+          "T1083",
+          "T1027",
+          "T1071.001"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "ZOHOMURK and MINIRECON Indian Grid Operations"
+          ],
+          "fr": [
+            "Opérations ZOHOMURK et MINIRECON contre le réseau indien"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "The Gentlemen",
+        "origin_country": "Russia",
+        "type": {
+          "en": "RaaS",
+          "fr": "RaaS"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Critical_Infrastructure",
+            "Industry_and_Manufacturing",
+            "Healthcare_and_Life_Sciences"
+          ],
+          "fr": [
+            "Infrastructures critiques",
+            "Industrie et Fabrication",
+            "Santé et Sciences de la vie"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Europe",
+            "Global"
+          ],
+          "fr": [
+            "Europe",
+            "Global"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1190",
+          "T1078",
+          "T1018",
+          "T1016",
+          "T1087",
+          "T1040",
+          "T1021.002",
+          "T1486"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "The Gentlemen RaaS Domain Takeover Campaigns"
+          ],
+          "fr": [
+            "Campagnes de prise de contrôle de domaine par le RaaS The Gentlemen"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "Icarus",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Ransomware",
+          "fr": "Ransomware"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Technology_and_Telecom",
+            "Business_Services"
+          ],
+          "fr": [
+            "Technologie et Télécoms",
+            "Services aux entreprises"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "North America"
+          ],
+          "fr": [
+            "Amérique du Nord"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1528",
+          "T1556",
+          "T1190",
+          "T1567"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Klue-Salesforce Connected CRM Supply Chain Attack"
+          ],
+          "fr": [
+            "Attaque de la chaîne d'approvisionnement CRM connecté Klue-Salesforce"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "ShinyHunters",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Cybercriminal",
+          "fr": "Cybercriminel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Agriculture_and_Environment",
+            "Retail_and_Consumer",
+            "Technology_and_Telecom"
+          ],
+          "fr": [
+            "Agriculture et Environnement",
+            "Vente au détail et Consommateurs",
+            "Technologie et Télécoms"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "North America"
+          ],
+          "fr": [
+            "Amérique du Nord"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1567",
+          "T1657"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Sysco Food Distributor Bulk Data Extortion"
+          ],
+          "fr": [
+            "Extorsion de données massives du distributeur alimentaire Sysco"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "Silent Ransom Group",
+        "origin_country": "Russia",
+        "type": {
+          "en": "Cybercriminal",
+          "fr": "Cybercriminel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Business_Services"
+          ],
+          "fr": [
+            "Services aux entreprises"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "North America"
+          ],
+          "fr": [
+            "Amérique du Nord"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1567"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Fox Rothschild Law Firm Hack-and-Leak"
+          ],
+          "fr": [
+            "Opération de Hack-and-Leak contre le cabinet d'avocats Fox Rothschild"
+          ]
+        }
+      }
+    ]
+  },
+  "mitre_attack_ttps": {
+    "ttps_strategic_analyse": {
+      "en": "Tactical trends during this period reveal a critical pivot toward session validation and authentication subversion rather than brute credential theft. As organizations mandate MFA, advanced threat actors are exploiting the underlying trust frameworks of modern web architectures. This is demonstrated by the high prevalence of OAuth access token harvesting (e.g., ConsentFix, Icarus), which bypasses identity provider prompts entirely. Additionally, adversaries are increasingly operating at low-level hardware or hypervisor layers (EPT/NPT memory split views) to completely evade agent-based detection engines.",
+      "fr": "Les tendances tactiques de cette période révèlent un pivot critique vers la subversion de l'authentification et de la validation de session plutôt que le simple vol d'identifiants. Alors que les organisations imposent le MFA, les acteurs avancés exploitent les cadres de confiance des architectures web modernes. Cela se traduit par la forte prévalence du vol de jetons d'accès OAuth (ex: ConsentFix, Icarus), contournant entièrement les invites du fournisseur d'identité. De plus, les adversaires opèrent de plus en plus au niveau de l'hyperviseur (vues de mémoire fractionnées EPT/NPT) pour échapper aux agents de détection."
+    },
+    "ttps_list": [
+      {
+        "id": "T1528",
+        "tactic": {
+          "en": "Credential Access",
+          "fr": "Accès aux identifiants"
+        },
+        "technique_name": "Steal Application Access Token",
+        "frequency": 2,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "Exploited in 'ConsentFix' operations mimicking standard Microsoft 365 workflows and localhost redirects.",
+            "Abused by Icarus during the Salesforce/Klue supply chain breach to siphon off CRM databases without triggering MFA."
+          ],
+          "fr": [
+            "Exploité dans les opérations 'ConsentFix' imitant les flux Microsoft 365 et les redirections localhost.",
+            "Abusé par Icarus lors de l'intrusion de la chaîne d'approvisionnement Salesforce/Klue pour siphonner les bases de données CRM sans déclencher de MFA."
+          ]
+        }
+      },
+      {
+        "id": "T1486",
+        "tactic": {
+          "en": "Impact",
+          "fr": "Impact"
+        },
+        "technique_name": "Data Encrypted for Impact",
+        "frequency": 2,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "Deployed by Prinz Eugen ransomware targeting specialized driving school software and logistics operators in the UK.",
+            "Leveraged by The Gentlemen RaaS during deep Active Directory network compromises targeting energy and critical infrastructure.",
+            "Observed in Swiss cyber weather reports with persistent moderate-level ransomware incidents targeting SMEs."
+          ],
+          "fr": [
+            "Déployé par le ransomware Prinz Eugen ciblant des logiciels spécialisés d'auto-écoles et des opérateurs logistiques au Royaume-Uni.",
+            "Exploité par le RaaS The Gentlemen lors de compromissions réseau Active Directory ciblant l'énergie et les infrastructures critiques.",
+            "Observé dans les rapports de la cyber-météo suisse avec des incidents modérés mais persistants de ransomwares ciblant les PME."
+          ]
+        }
+      },
+      {
+        "id": "T1567",
+        "tactic": {
+          "en": "Exfiltration",
+          "fr": "Exfiltration"
+        },
+        "technique_name": "Exfiltration Over Web Service",
+        "frequency": 2,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Utilized by ShinyHunters to exfiltrate over 2.6M customer and employee records from Sysco.",
+            "Deployed by Silent Ransom Group against Fox Rothschild legal databases using direct web services.",
+            "Utilized by Edric to export 1.2M Belgian registry records to public dark web repositories."
+          ],
+          "fr": [
+            "Utilisé par ShinyHunters pour exfiltrer plus de 2,6 millions de dossiers de clients et d'employés de Sysco.",
+            "Déployé par Silent Ransom Group contre les bases de données juridiques de Fox Rothschild à l'aide de services web directs.",
+            "Utilisé par Edric pour exporter 1,2 million de dossiers du registre civil belge vers des référentiels publics du dark web."
+          ]
+        }
+      },
+      {
+        "id": "T1190",
+        "tactic": {
+          "en": "Initial Access",
+          "fr": "Accès Initial"
+        },
+        "technique_name": "Exploit Public-Facing Application",
+        "frequency": 1,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "Observed in active exploitations of Daktronics VFC-DMP-5000 highway display controllers exposing traffic signs.",
+            "Abused to compromise Oracle Payments ERP modules and Windchill PDMLink systems.",
+            "Utilized as primary vector in Lantronix EDS5000 gateway attacks to bridge external networks with OT segments."
+          ],
+          "fr": [
+            "Observé dans les exploitations actives de contrôleurs d'affichage routier Daktronics VFC-DMP-5000 exposant la signalisation.",
+            "Abusé pour compromettre les modules ERP d'Oracle Payments et les systèmes Windchill PDMLink.",
+            "Utilisé comme vecteur principal dans les attaques de passerelles Lantronix EDS5000 pour relier les réseaux externes aux segments OT."
+          ]
+        }
+      },
+      {
+        "id": "T1062",
+        "tactic": {
+          "en": "Defense Evasion",
+          "fr": "Évasion de défense"
+        },
+        "technique_name": "Hypervisor / Virtualization Abuse",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Technical deep-dive on Ring -1 rootkits using hardware virtualization features (Intel EPT/AMD NPT) to create stealthy split memory views and evade host operating system analysis tools."
+          ],
+          "fr": [
+            "Analyse technique approfondie des rootkits Ring -1 utilisant les fonctionnalités de virtualisation matérielle (Intel EPT/AMD NPT) pour créer des vues de mémoire fractionnées furtives et échapper aux outils d'analyse du système d'exploitation hôte."
+          ]
+        }
+      }
+    ]
+  },
+  "vulnerabilities": {
+    "analyse": {
+      "en": "The reporting period was marked by a heavy influx of critical, actively exploited vulnerabilities. Most notable are remote code execution flaws within industrial edge gateways (Lantronix EDS5000), cloud orchestration and workflow platforms (Langflow, Dify, Coolify), and core enterprise networking orchestrators (Cisco Catalyst SD-WAN, Ubiquiti UniFi OS). A massive update of nearly 60 Linux Kernel vulnerabilities affecting Azure Linux environments highlights a sustained requirement for kernel-level updates on hybrid cloud workloads.",
+      "fr": "La période de rapport a été marquée par un flux massif de vulnérabilités critiques activement exploitées. Les plus notables sont les failles d'exécution de code à distance au sein des passerelles industrielles (Lantronix EDS5000), des plateformes d'orchestration cloud (Langflow, Dify, Coolify) et des orchestrateurs réseau d'entreprise (Cisco Catalyst SD-WAN, Ubiquiti UniFi OS). Une mise à jour massive de près de 60 vulnérabilités du noyau Linux affectant les environnements Azure Linux souligne la nécessité d'appliquer des correctifs au niveau du noyau sur les charges de travail cloud hybrides."
+    },
+    "list": [
+      {
+        "cve_id": "CVE-2026-20245",
+        "cvss_score": 7.8,
+        "epss_score": "9.92%",
+        "cisa_kev": true,
+        "affected_product": "Catalyst SD-WAN Manager",
+        "affected_product_vendor": "Cisco",
+        "vulnerability_type": {
+          "en": [
+            "Improper Encoding or Escaping of Output",
+            "Remote Code Execution"
+          ],
+          "fr": [
+            "Encodage ou échappement incorrect de la sortie",
+            "Exécution de code à distance"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Allows unauthenticated remote attackers to execute arbitrary commands with root privileges on the Cisco Catalyst SD-WAN Manager platform, potentially compromising the entire network orchestration layer.",
+          "fr": "Permet à des attaquants distants non authentifiés d'exécuter des commandes arbitraires avec les privilèges root sur la plateforme Cisco Catalyst SD-WAN Manager, compromettant potentiellement l'ensemble de la couche d'orchestration réseau."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-34910",
+        "cvss_score": 10.0,
+        "epss_score": "78.55%",
+        "cisa_kev": true,
+        "affected_product": "UniFi OS Server / UDM / UDM-Pro",
+        "affected_product_vendor": "Ubiquiti",
+        "vulnerability_type": {
+          "en": [
+            "Improper Input Validation",
+            "Remote Code Execution"
+          ],
+          "fr": [
+            "Validation incorrecte des entrées",
+            "Exécution de code à distance"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Critical input validation flaw in UniFi OS Server that enables remote unauthenticated attackers to execute arbitrary code with elevated privileges, actively abused in the wild to recruit devices into Mirai DDoS botnets.",
+          "fr": "Faille critique de validation des entrées dans UniFi OS Server qui permet à des attaquants distants non authentifiés d'exécuter du code arbitraire avec des privilèges élevés, activement exploitée pour recruter des appareils dans des botnets DDoS Mirai."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-33017",
+        "cvss_score": 9.3,
+        "epss_score": "98.41%",
+        "cisa_kev": true,
+        "affected_product": "Langflow",
+        "affected_product_vendor": "Langflow",
+        "vulnerability_type": {
+          "en": [
+            "Improper Control of Generation of Code ('Code Injection')",
+            "Remote Code Execution"
+          ],
+          "fr": [
+            "Contrôle incorrect de la génération de code ('Injection de code')",
+            "Exécution de code à distance"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Critical code injection vulnerability in the Langflow AI pipeline orchestrator allowing remote attackers to run unauthorized commands, leading to complete workflow takeover and exposure of API keys and LLM prompts.",
+          "fr": "Vulnérabilité critique d'injection de code dans l'orchestrateur de pipeline d'IA Langflow permettant à des attaquants distants d'exécuter des commandes non autorisées, entraînant la prise de contrôle complète du workflow et l'exposition des clés API."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-46817",
+        "cvss_score": 9.8,
+        "epss_score": "0.42%",
+        "cisa_kev": true,
+        "affected_product": "Oracle Payments (Oracle E-Business Suite)",
+        "affected_product_vendor": "Oracle",
+        "vulnerability_type": {
+          "en": [
+            "Improper Access Control",
+            "Unauthenticated Takeover"
+          ],
+          "fr": [
+            "Contrôle d'accès incorrect",
+            "Prise de contrôle non authentifiée"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Easily exploitable vulnerability allows unauthenticated attackers with network access via HTTP to compromise and take over Oracle Payments, exposing financial and payment processing systems within the ERP.",
+          "fr": "Une vulnérabilité facilement exploitable permet à des attaquants distants non authentifiés d'accéder via HTTP à Oracle Payments, de le compromettre et d'en prendre le contrôle, exposant les systèmes financiers de l'ERP."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2025-67038",
+        "cvss_score": 9.8,
+        "epss_score": "1.13%",
+        "cisa_kev": true,
+        "affected_product": "EDS5000 (OpenWrt-modified firmware)",
+        "affected_product_vendor": "Lantronix",
+        "vulnerability_type": {
+          "en": [
+            "Improper Access Control",
+            "Remote Code Execution"
+          ],
+          "fr": [
+            "Contrôle d'accès incorrect",
+            "Exécution de code à distance"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Critical unauthenticated remote root code execution vulnerability in the HTTP JSON-RPC LuCI module of modified OpenWrt firmware. Actively leveraged to bridge and compromise operational technology (OT) networks via the edge gateway.",
+          "fr": "Vulnérabilité critique d'exécution de code root à distance sans authentification dans le module LuCI HTTP JSON-RPC du firmware OpenWrt modifié. Activement exploitée pour infiltrer les réseaux OT via la passerelle d'accès."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-ZIMBRA-47",
+        "cvss_score": 10.0,
+        "epss_score": "N/A",
+        "cisa_kev": true,
+        "affected_product": "Collaboration Suite",
+        "affected_product_vendor": "Zimbra",
+        "vulnerability_type": {
+          "en": [
+            "Authentication Bypass",
+            "Remote Code Execution"
+          ],
+          "fr": [
+            "Contournement d'authentification",
+            "Exécution de code à distance"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Unpatched critical vulnerability chain allowing direct authentication bypass and subsequent remote code execution on the mail collaboration server.",
+          "fr": "Chaîne de vulnérabilités critiques non corrigées permettant un contournement d'authentification direct et une exécution de code à distance ultérieure sur le serveur de messagerie collaboratif."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      }
+    ]
+  },
+  "data_breaches": [
+    {
+      "victim": "KDDI Corporation",
+      "sector": "Technology_and_Telecom",
+      "country": "Japan",
+      "records_count": 14200000,
+      "data_types": {
+        "en": [
+          "Email addresses",
+          "Hashed and encrypted passwords"
+        ],
+        "fr": [
+          "Adresses e-mail",
+          "Mots de passe hachés et chiffrés"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://www.bleepingcomputer.com/news/security/data-breach-exposes-up-to-142-million-email-logins-at-six-isps/"
+    },
+    {
+      "victim": "Sysco",
+      "sector": "Agriculture_and_Environment",
+      "country": "United States",
+      "records_count": 2691852,
+      "data_types": {
+        "en": [
+          "Names",
+          "Phone numbers",
+          "Physical addresses",
+          "Email addresses",
+          "Internal job titles",
+          "Customer feedback"
+        ],
+        "fr": [
+          "Noms",
+          "Numéros de téléphone",
+          "Adresses physiques",
+          "Adresses e-mail",
+          "Intitulés de postes internes",
+          "Retours d'expérience clients"
+        ]
+      },
+      "threat_actor": "ShinyHunters",
+      "financial_impact_usd": null,
+      "source_url": "https://haveibeenpwned.com/Breach/Sysco"
+    },
+    {
+      "victim": "Aflac Life Insurance (アフラック生命保険)",
+      "sector": "Finance",
+      "country": "Japan",
+      "records_count": 4380000,
+      "data_types": {
+        "en": [
+          "Names",
+          "Addresses",
+          "Dates of birth",
+          "Policy numbers",
+          "Direct debit bank routing details"
+        ],
+        "fr": [
+          "Noms",
+          "Adresses",
+          "Dates de naissance",
+          "Numéros de police",
+          "Coordonnées de prélèvement bancaire (RIB)"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://rocket-boys.co.jp/security-measures-lab/aflac-unauthorized-access-customer-data-leak/"
+    },
+    {
+      "victim": "Belgian Civil Registry (Etudebordet.com)",
+      "sector": "Government_and_Defense",
+      "country": "Belgium",
+      "records_count": 1200000,
+      "data_types": {
+        "en": [
+          "Full names",
+          "Dates and places of birth",
+          "National Identity Numbers (NID)"
+        ],
+        "fr": [
+          "Noms complets",
+          "Dates et lieux de naissance",
+          "Numéros d'identité nationale (NID)"
+        ]
+      },
+      "threat_actor": "Edric",
+      "financial_impact_usd": null,
+      "source_url": "https://infosec.exchange/@darkwebsonar/11682848135667958"
+    },
+    {
+      "victim": "Nefos / PuffPal Spanish Cannabis Clubs",
+      "sector": "Retail_and_Consumer",
+      "country": "Spain",
+      "records_count": 985000,
+      "data_types": {
+        "en": [
+          "Passports",
+          "Driver licenses",
+          "Identification photos",
+          "Phone numbers",
+          "Addresses",
+          "Cannabis consumption preferences"
+        ],
+        "fr": [
+          "Passeports",
+          "Permis de conduire",
+          "Photos d'identité",
+          "Numéros de téléphone",
+          "Adresses",
+          "Habitudes de consommation de cannabis"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://www.theverge.com/tech/947157/passports-data-breach-cannabis-club-systems-nefos-puffpal"
+    },
+    {
+      "victim": "AssuranceAmerica",
+      "sector": "Finance",
+      "country": "United States",
+      "records_count": 1100000,
+      "data_types": {
+        "en": [
+          "Personally Identifiable Information (PII)",
+          "Social Security Numbers",
+          "Policy details"
+        ],
+        "fr": [
+          "Informations personnelles identifiables (PII)",
+          "Numéros de sécurité sociale",
+          "Détails de police d'assurance"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://databreaches.net/2026/06/28/assuranceamerica-breach-may-have-affected-more-than-1-1-million-people-in-seven-states/"
+    },
+    {
+      "victim": "Softsu (ソフツー)",
+      "sector": "Technology_and_Telecom",
+      "country": "Japan",
+      "records_count": 159850,
+      "data_types": {
+        "en": [
+          "Phone numbers",
+          "Call recording audio and metadata"
+        ],
+        "fr": [
+          "Numéros de téléphone",
+          "Enregistrements audio et métadonnées d'appels"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://rocket-boys.co.jp/security-measures-lab/softsu-call-records-leak-150k-numbers/"
+    }
+  ],
+  "target": {
+    "sectors": {
+      "en": [
+        "Technology_and_Telecom",
+        "Government_and_Defense",
+        "Finance",
+        "Healthcare_and_Life_Sciences",
+        "Agriculture_and_Environment",
+        "Retail_and_Consumer",
+        "Critical_Infrastructure",
+        "Industry_and_Manufacturing"
+      ],
+      "fr": [
+        "Technology_and_Telecom",
+        "Government_and_Defense",
+        "Finance",
+        "Healthcare_and_Life_Sciences",
+        "Agriculture_and_Environment",
+        "Retail_and_Consumer",
+        "Critical_Infrastructure",
+        "Industry_and_Manufacturing"
+      ]
+    },
+    "countries": {
+      "en": [
+        "United States",
+        "Japan",
+        "Belgium",
+        "India",
+        "Australia",
+        "Spain",
+        "Switzerland",
+        "Libya"
+      ],
+      "fr": [
+        "États-Unis",
+        "Japon",
+        "Belgique",
+        "Inde",
+        "Australie",
+        "Espagne",
+        "Suisse",
+        "Libye"
+      ]
+    },
+    "narrative": {
+      "en": "- **Technology & Telecom:** KDDI Corporation (Japan) suffered a catastrophic compromise, exposing 14.2M email and hashed password records of abonnees across six major partner ISPs (STNet, JCOM, BIGLOBE, Nifty, Chubu, KDDI Web). Softsu (Japan) also leaked 159k call metadata records from an exposed test server.\n- **Government & Defense:** The Belgian Civil Registry (Etudebordet.com) leaked 1.2M national identity records (NIDs, dates and locations of birth) attributed to actor Edric. Concurrently, Indian government departments were targeted by Chinese APT Mustang Panda using ZOHOMURK malware, and Australia's NSW Rural Fire Service was targeted by the Nova group.\n- **Finance & Insurance:** Aflac Life Insurance in Japan suffered a major breach exposing personal and bank routing details of over 4.38M customers. AssuranceAmerica (US) leaked sensitive PII for 1.1M policyholders across seven states, while the Central Bank of Libya initiated active investigations into an administrative breach.\n- **Agriculture & Food:** Major US food distributor Sysco was breached by ShinyHunters, leading to the exfiltration and sale of 2.69M employee and customer records.\n- **Retail & Consumer:** Spanish cannabis clubs managed by Nefos/PuffPal suffered a leak of 985k highly sensitive records including passports, driver licenses, photos, and consumption tracking.\n- **Critical Infrastructure & OT:** Daktronics VFC-DMP-5000 highway display controllers were found to be exposed to remote takeover, and Lantronix EDS5000 gateway devices were actively compromised to pivot into physical OT networks.",
+      "fr": "- **Technologie et Télécoms :** KDDI Corporation (Japon) a subi une compromission catastrophique, exposant 14,2 millions de comptes de messagerie et mots de passe hachés d'abonnés de six FAI partenaires (STNet, JCOM, BIGLOBE, Nifty, Chubu, KDDI Web). Softsu (Japon) a également divulgué 159 000 métadonnées d'appels à partir d'un serveur de test.\n- **Gouvernement et Défense :** Le Registre Civil Belge (Etudebordet.com) a vu la fuite de 1,2 million de dossiers d'identité nationale (NID, dates et lieux de naissance) attribuée à l'acteur Edric. Parallèlement, des ministères indiens ont été ciblés par l'APT chinois Mustang Panda via ZOHOMURK, et le NSW Rural Fire Service d'Australie a été visé par le groupe Nova.\n- **Finance et Assurances :** Aflac Life Insurance au Japon a subi une fuite majeure exposant les coordonnées personnelles et bancaires de plus de 4,38 millions de clients. AssuranceAmerica (USA) a divulgué les PII d'un million d'assurés, tandis que la Banque Centrale de Libye a ouvert une enquête sur une compromission administrative.\n- **Agriculture et Alimentation :** Le distributeur alimentaire américain Sysco a été compromis par ShinyHunters, conduisant à l'exfiltration et à la mise en vente de 2,69 millions de fiches employés et clients.\n- **Vente au détail et Consommateurs :** Les clubs de cannabis espagnols gérés par Nefos/PuffPal ont subi une fuite de 985 000 dossiers hautement sensibles contenant passeports, permis de conduire et suivis de consommation.\n- **Infrastructures critiques et OT :** Les contrôleurs d'affichage d'autoroute Daktronics VFC-DMP-5000 ont été déclarés vulnérables à des piratages à distance, tandis que les passerelles Lantronix EDS5000 ont été compromises pour s'infiltrer dans les réseaux OT."
+    }
+  },
+  "trends": {
+    "emerging_techniques": {
+      "en": [
+        "ConsentFix: OAuth flow hijacking bypassing MFA via localhost redirection lures",
+        "Ring -1 hypervisor kernel rootkits creating memory split views (EPT/NPT)",
+        "Double-hop SaaS supply chain pivoting via CRM integrations (Salesforce apps)",
+        "Favicon MMH3 hash automated discovery and internet-facing asset mapping"
+      ],
+      "fr": [
+        "ConsentFix : détournement de flux OAuth contournant le MFA via des redirections localhost",
+        "Rootkits noyau d'hyperviseur Ring -1 créant des vues de mémoire fractionnées (EPT/NPT)",
+        "Pivot de chaîne d'approvisionnement SaaS à double saut via des applications intégrées CRM",
+        "Découverte automatisée de favicons via hash MMH3 et cartographie d'actifs exposés"
+      ]
+    },
+    "declining_techniques": {
+      "en": [
+        "Traditional SMS and push-based MFA protections due to systemic bypasses",
+        "Local unencrypted session-token persistence easily swept by modern stealers",
+        "Exclusively direct public RDP exposure, shifting towards VPN and valid SaaS credential abuse"
+      ],
+      "fr": [
+        "Protections MFA traditionnelles par SMS et push en raison de contournements systémiques",
+        "Persistance locale des jetons de session non chiffrés facilement balayée par les stealers",
+        "Exposition publique directe RDP, se déplaçant vers l'abus de VPN et d'identifiants SaaS valides"
+      ]
+    },
+    "geopolitical_context": {
+      "en": "Sino-Indian strategic competition has heavily manifested in localized cyber campaigns targeting Indian government offices and power grids. In Eastern Europe, Russian influence ecosystems continue to aggressively merge cyber sabotage, generative AI disinformation campaigns, and battlefield dual-use drone actions to challenge NATO-EU strategic resilience.",
+      "fr": "La rivalité stratégique sino-indienne s'est fortement manifestée par des campagnes cyber localisées ciblant les administrations indiennes et les réseaux électriques. En Europe de l'Est, les écosystèmes d'influence russes continuent de fusionner agressivement sabotage cyber, désinformation par IA générative et actions de drones à double usage pour contester la résilience de l'OTAN-UE."
+    }
+  },
+  "recommendations": {
+    "strategic": {
+      "en": [
+        {
+          "title": "Enforce FIDO2 Hardware MFA for Directory Accounts",
+          "detail": "Standard SMS, TOTP, and push notification MFA are completely bypassed by ConsentFix and Icarus campaigns harvesting valid session tokens via localhost redirect loops. Mandate FIDO2/WebAuthn hardware security keys (e.g., YubiKey 5 Series) for all administrative and high-privilege cloud directory accounts. Revoke and force re-authentication for all Active Directory and Microsoft Entra ID sessions upon implementation."
+        },
+        {
+          "title": "Implement SaaS and OAuth Integration Governance",
+          "detail": "The supply chain compromise of Salesforce via Klue's connected application shows that third-party integrations bypass perimeter defenses. Configure Microsoft Entra ID and Salesforce to block users from consenting to multi-tenant OAuth applications without explicitly documented administrator review. Implement automated daily audits of active OAuth tokens and disconnect stale integrations."
+        }
+      ],
+      "fr": [
+        {
+          "title": "Imposer le MFA matériel FIDO2",
+          "detail": "Les MFA classiques par SMS, TOTP et push sont entièrement contournés par les campagnes ConsentFix et Icarus qui récoltent des jetons de session valides. Imposez des clés de sécurité matérielles conformes à FIDO2/WebAuthn (ex: YubiKey série 5) pour tous les comptes d'administration cloud. Révoquez toutes les sessions actives d'Active Directory et Microsoft Entra ID lors du déploiement."
+        },
+        {
+          "title": "Gouverner les intégrations SaaS et OAuth",
+          "detail": "La compromission de la chaîne d'approvisionnement de Salesforce via Klue montre que les intégrations tierces contournent les défenses périmétriques. Configurez Microsoft Entra ID et Salesforce pour empêcher les utilisateurs de valider des applications OAuth sans revue explicite par l'administrateur. Auditez quotidiennement les jetons actifs."
+        }
+      ]
+    },
+    "operational": {
+      "en": [
+        {
+          "title": "Apply Cisco Catalyst SD-WAN Manager Patches",
+          "detail": "CVE-2026-20245 is a critical, actively exploited out-of-bounds command execution vulnerability that yields root access. Immediately deploy Cisco's official software patches on all Catalyst SD-WAN Manager and Controller instances. Ensure all management web interfaces are strictly restricted to isolated administrative VLANs protected by access control lists (ACLs)."
+        },
+        {
+          "title": "Audit and Upgrade Ubiquiti UniFi Appliances",
+          "detail": "The vulnerability triad CVE-2026-34908, CVE-2026-34909, and CVE-2026-34910 allows complete takeover of UniFi OS Servers, actively fueling Mirai DDoS botnets. Run internal discovery scans for UDM, UDM-Pro, and Express models. Apply the latest firmware immediately, disable WAN-side administrative access, and deploy corresponding IDS/IPS signatures."
+        }
+      ],
+      "fr": [
+        {
+          "title": "Corriger Cisco Catalyst SD-WAN Manager",
+          "detail": "La CVE-2026-20245 est une vulnérabilité critique d'exécution de commande activement exploitée qui donne un accès root. Déployez immédiatement les correctifs logiciels de Cisco sur toutes les instances Catalyst SD-WAN Manager. Assurez-vous que les interfaces d'administration sont limitées à des VLAN administratifs protégés par ACL."
+        },
+        {
+          "title": "Auditer et mettre à jour UniFi OS",
+          "detail": "La triade de vulnérabilités CVE-2026-34908, CVE-2026-34909 et CVE-2026-34910 permet la prise de contrôle complète des serveurs UniFi OS par des botnets Mirai. Lancez des scans de détection pour les modèles UDM, UDM-Pro et Express. Appliquez le dernier firmware et désactivez l'administration côté WAN."
+        }
+      ]
+    }
+  }
+}
