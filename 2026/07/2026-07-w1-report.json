@@ -1,0 +1,598 @@
+{
+  "threat_level": {
+    "score": 3,
+    "label": {
+      "en": "High",
+      "fr": "Élevé"
+    },
+    "justification": {
+      "en": "Active zero-day exploitation of critical ERP platforms (Oracle PeopleSoft/EBS) combined with rapid cloud identity escalation techniques (M365 Global Admin bypasses, OAuth pivoting) and state-sponsored/ransomware activity presents an immediate risk to corporate infrastructure and sensitive databases.",
+      "fr": "L'exploitation active de vulnérabilités zero-day sur des ERP critiques (Oracle PeopleSoft/EBS), combinée à des techniques d'escalade rapide d'identité cloud (contournement M365 Global Admin, pivots OAuth) et à l'activité de ransomwares et d'acteurs étatiques, présente un risque immédiat pour les infrastructures d'entreprise et les bases de données."
+    },
+    "_triggers": [
+      "+6 — 3 CVE(s) CISA KEV",
+      "+3 — 3 CVE(s) CVSS ≥ 9.0",
+      "+1 — 1 opérateur(s) ransomware",
+      "+1 — 1 breach(es) ≥ 100k enregistrements",
+      "+2 — secteurs critiques ciblés : Government_and_Defense, Critical_Infrastructure"
+    ]
+  },
+  "executive_summary": {
+    "en": "Week 1 of July 2026 is characterized by a significant surge in identity-based compromises and zero-day exploitation of critical business platforms. Attackers are prioritizing the acquisition of initial access and privilege escalation in cloud environments (such as Microsoft 365) by targeting over-privileged enterprise applications and service accounts. Concurrently, ransomware groups like Stormous and threat actors like ShinyHunters are actively exploiting high-severity vulnerabilities to exfiltrate massive datasets from industrial suppliers (Nissan, Higuchi Shokai) and academic institutions (University of Nottingham). Organizations must urgently transition to phishing-resistant MFA, enforce strict patching SLAs on external-facing gateways, and audit third-party API integrations.",
+    "fr": "La première semaine de juillet 2026 se caractérise par une augmentation significative des compromissions d'identité et de l'exploitation de failles zero-day sur des plateformes métiers critiques. Les attaquants privilégient l'accès initial et l'escalade de privilèges dans le cloud (comme Microsoft 365) en ciblant des applications d'entreprise et des comptes de service sur-privilégiés. En parallèle, des groupes de ransomware comme Stormous et des acteurs de menace comme ShinyHunters exploitent activement des vulnérabilités critiques pour exfiltrer des volumes massifs de données chez des fournisseurs industriels (Nissan, Higuchi Shokai) et des institutions académiques (Université de Nottingham). Les organisations doivent d'urgence passer au MFA résistant au phishing, appliquer des correctifs stricts sur les passerelles exposées et auditer les intégrations API tierces."
+  },
+  "regulatory": {
+    "analyse": {
+      "en": "Regulatory focus is intensifying around identity assurance, sovereignty of critical infrastructures, and strict prosecution of state-backed espionage. The NIST guidance on Verifiable Digital Credentials signals a strong international push toward secure, minimal-disclosure identity verification frameworks. Meanwhile, the UK National Security Bill highlights a hardening stance against foreign interference, with severe penal consequences that may complicate operations for international NGOs and journalists. Organizations must align with strict national sovereignty requirements in payments and cloud infrastructure while maintaining rigorous post-employment access revocation processes.",
+      "fr": "L'accent réglementaire se renforce autour de la vérification d'identité, de la souveraineté des infrastructures critiques et de la poursuite pénale de l'espionnage soutenu par des États. Les recommandations du NIST sur les Verifiable Digital Credentials marquent une forte impulsion internationale vers des cadres d'identité sécurisés et à divulgation minimale. Parallèlement, le projet de loi britannique sur la sécurité nationale montre un durcissement face aux ingérences étrangères, avec de lourdes sanctions pénales pouvant impacter les ONG internationales et les journalistes. Les organisations doivent s'aligner sur des exigences de souveraineté accrues (paiements, cloud) tout en maintenant des processus rigoureux de révocation des accès lors du départ des collaborateurs."
+    },
+    "events": [
+      {
+        "title": {
+          "en": "NIST Verifiable Digital Credential Presentment Guidance",
+          "fr": "Guide du NIST sur la présentation des justificatifs d'identité numériques vérifiables"
+        },
+        "issuing_body": "NIST",
+        "date": "2026-06-30",
+        "jurisdiction": {
+          "region": "US",
+          "countries": [
+            "US"
+          ]
+        },
+        "type": "Guidance",
+        "status": "Active",
+        "reference": "ISO/IEC 18013-5, ISO/IEC 18013-7",
+        "affected_sectors": [
+          "Technology_and_Telecom",
+          "Finance",
+          "Government_and_Defense"
+        ],
+        "description": {
+          "en": "Detailed technical standards for mobile driver's licenses (mDL) and digital wallets, separating in-person presentation (NFC, BLE) and remote verification (QR code scanning) with minimal attribute disclosure principles.",
+          "fr": "Normes techniques détaillées pour les permis de conduire mobiles (mDL) et portefeuilles numériques, distinguant la présentation physique (NFC, BLE) et la vérification à distance (QR code) selon des principes de divulgation minimale."
+        },
+        "source_url": "https://www.nist.gov/blogs/cybersecurity-insights/verifiable-digital-credential-presentment"
+      },
+      {
+        "title": {
+          "en": "National Security (State Threats) Bill",
+          "fr": "Projet de loi sur la sécurité nationale (menaces étatiques)"
+        },
+        "issuing_body": "UK Parliament",
+        "date": "2026-06-30",
+        "jurisdiction": {
+          "region": "UK",
+          "countries": [
+            "GB"
+          ]
+        },
+        "type": "New_Law",
+        "status": "Under_Review",
+        "reference": "National Security (State Threats) Bill",
+        "affected_sectors": [
+          "Nonprofit_and_NGO",
+          "Media_and_Communication"
+        ],
+        "description": {
+          "en": "Grants the Home Secretary powers to designate state-backed organizations as threats, criminalizing the possession and retention of unauthorized foreign state-linked benefits with up to 14 years of imprisonment.",
+          "fr": "Confère au secrétaire d'État à l'Intérieur le pouvoir de désigner des organisations étatiques étrangères comme menaces, pénalisant l'obtention ou la conservation d'avantages liés à ces entités de peines allant jusqu'à 14 ans de prison."
+        },
+        "source_url": "https://databreaches.net/2026/06/30/uk-journalists-and-ngos-risk-terrorism-prosecutions-under-new-security-bill/"
+      },
+      {
+        "title": {
+          "en": "Washington DSHS Data Breach Disclosure",
+          "fr": "Notification de violation de données par le Washington DSHS"
+        },
+        "issuing_body": "Washington Department of Social and Health Services",
+        "date": "2026-06-30",
+        "jurisdiction": {
+          "region": "US",
+          "countries": [
+            "US"
+          ]
+        },
+        "type": "Enforcement_Action",
+        "status": "Active",
+        "reference": "State of Washington Breach Notification Law",
+        "affected_sectors": [
+          "Government_and_Defense",
+          "Healthcare_and_Life_Sciences"
+        ],
+        "description": {
+          "en": "Official breach disclosure affecting 8,600 clients caused by an ex-employee's unauthorized access post-termination, highlighting severe identity lifecycle management issues.",
+          "fr": "Notification officielle de violation affectant 8 600 clients, causée par l'accès non autorisé d'un ancien employé après son départ, soulignant des défaillances de gestion du cycle de vie des identités."
+        },
+        "source_url": "https://infosec.exchange/@beyondmachines1/116840600817685484"
+      }
+    ]
+  },
+  "threats_actors": {
+    "geographic_analyse": [
+      {
+        "geographic_zone_name": {
+          "en": "North Korea",
+          "fr": "Corée du Nord"
+        },
+        "geographic_zone_strategic_analyse": {
+          "en": "DPRK-linked threat actors are actively leveraging employment fraud. Using fake identities and specialized remote-work proxies, they infiltrate global organizations to gain persistent network access, steal source code, and bypass OFAC sanctions.",
+          "fr": "Les acteurs liés à la Corée du Nord (RPDC) exploitent activement la fraude à l'emploi. Via de fausses identités et des intermédiaires, ils infiltrent des organisations internationales pour obtenir des accès réseau persistants, voler du code source et contourner les sanctions de l'OFAC."
+        }
+      },
+      {
+        "geographic_zone_name": {
+          "en": "Other",
+          "fr": "Autre"
+        },
+        "geographic_zone_strategic_analyse": {
+          "en": "Highly capable cybercriminal syndicates (such as ShinyHunters and Stormous) are exploiting localized corporate assets, particularly in Europe and the Asia-Pacific region, through systemic vulnerabilities and double-extortion ransomware techniques.",
+          "fr": "Des syndicats cybercriminels très actifs (tels que ShinyHunters et Stormous) exploitent des actifs d'entreprise localisés, notamment en Europe et dans la région Asie-Pacifique, via des vulnérabilités systémiques et des techniques de double extorsion."
+        }
+      }
+    ],
+    "details": [
+      {
+        "threat_actor_name": "ShinyHunters",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Cybercriminal",
+          "fr": "Cybercriminel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Education_and_Research"
+          ],
+          "fr": [
+            "Education_and_Research"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "United Kingdom",
+            "Europe"
+          ],
+          "fr": [
+            "Royaume-Uni",
+            "Europe"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1590",
+          "TA0010",
+          "T1657"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "University of Nottingham Extortion Campaign"
+          ],
+          "fr": [
+            "Campagne d'extorsion de l'Université de Nottingham"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "Stormous",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Ransomware",
+          "fr": "Ransomware"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Industry_and_Manufacturing"
+          ],
+          "fr": [
+            "Industry_and_Manufacturing"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Japan",
+            "Asia-Pacific"
+          ],
+          "fr": [
+            "Japon",
+            "Asie-Pacifique"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1486",
+          "T1567",
+          "T1078",
+          "T1021"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Higuchi Shokai Ransomware Attack"
+          ],
+          "fr": [
+            "Attaque par ransomware contre Higuchi Shokai"
+          ]
+        }
+      }
+    ]
+  },
+  "mitre_attack_ttps": {
+    "ttps_strategic_analyse": {
+      "en": "Attackers are optimizing access paths by abusing trust mechanisms. Highly-pervasive tactics include exploiting over-privileged OAuth consents in cloud applications, manipulating service principal credentials to gain administrative rights (Global Admin), and abusing legitimate external redirectors like Google Maps to bypass web reputation filters in phishing operations.",
+      "fr": "Les attaquants optimisent leurs chemins d'accès en détournant les mécanismes de confiance. Les tactiques les plus courantes incluent l'abus de consentements OAuth sur-privilégiés dans le cloud, la manipulation des identifiants d'applications d'entreprise pour obtenir des droits d'administration (Global Admin) et le détournement de redirections légitimes comme Google Maps pour contourner les filtres de réputation."
+    },
+    "ttps_list": [
+      {
+        "id": "T1078.004",
+        "tactic": {
+          "en": "Defense Evasion",
+          "fr": "Évasion de défense"
+        },
+        "technique_name": "Valid Accounts: Cloud Accounts",
+        "frequency": 1,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "Exploited in the Microsoft 365 Global Admin escalation path and used by covert DPRK employees utilizing compromised credentials for network persistence."
+          ],
+          "fr": [
+            "Exploité dans le chemin d'escalade Microsoft 365 Global Admin et utilisé par des travailleurs infiltrés de la RPDC pour maintenir une persistance réseau."
+          ]
+        }
+      },
+      {
+        "id": "T1098",
+        "tactic": {
+          "en": "Credential Access",
+          "fr": "Accès aux identifiants"
+        },
+        "technique_name": "Account Manipulation",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Used to add malicious credentials (certificates/secrets) to Microsoft 365 Enterprise Applications, allowing permanent stealth API access."
+          ],
+          "fr": [
+            "Utilisé pour ajouter des secrets ou certificats à des applications d'entreprise Microsoft 365 afin d'obtenir un accès permanent aux API."
+          ]
+        }
+      },
+      {
+        "id": "T1190",
+        "tactic": {
+          "en": "Initial Access",
+          "fr": "Accès initial"
+        },
+        "technique_name": "Exploit Public-Facing Application",
+        "frequency": 1,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "Observed in active zero-day attacks against Oracle PeopleSoft and PeopleTools components, and Citrix Gateway appliances."
+          ],
+          "fr": [
+            "Observé dans des attaques zero-day actives ciblant des composants Oracle PeopleSoft et PeopleTools, ainsi que des appliances Citrix Gateway."
+          ]
+        }
+      },
+      {
+        "id": "T1036",
+        "tactic": {
+          "en": "Defense Evasion",
+          "fr": "Évasion de défense"
+        },
+        "technique_name": "Masquerading",
+        "frequency": 1,
+        "severity": "medium",
+        "context": {
+          "en": [
+            "Leveraged via trusted subdomains (e.g., maps.google.co.kr) to obscure final credential harvesting landing pages."
+          ],
+          "fr": [
+            "Exploité via des sous-domaines de confiance (ex. maps.google.co.kr) pour masquer les pages de destination de vol d'identifiants."
+          ]
+        }
+      },
+      {
+        "id": "T1486",
+        "tactic": {
+          "en": "Impact",
+          "fr": "Impact"
+        },
+        "technique_name": "Data Encrypted for Impact",
+        "frequency": 1,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "Stormous ransomware deployment observed against industrial trading targets, disabling core business operations."
+          ],
+          "fr": [
+            "Déploiement du ransomware Stormous observé contre des cibles industrielles, paralysant les opérations métiers."
+          ]
+        }
+      }
+    ]
+  },
+  "vulnerabilities": {
+    "analyse": {
+      "en": "Vulnerability management programs face severe strain with critical security flaws under active exploitation. Prominent CVEs targeting core authentication logic (SimpleHelp OIDC signature bypass CVE-2026-48558) and critical ERP systems (Oracle PeopleSoft CVE-2026-35273) have entered CISA's KEV catalog, demanding emergency patching. Additionally, multiple zero-days and critical remote code execution vulnerabilities in AI orchestration frameworks (Langflow CVE-2026-33017) and IT storage infrastructure (StoneFly, Synology MailPlus Server) demonstrate a highly aggressive posture from threat actors capitalizing on modern network services.",
+      "fr": "Les programmes de gestion des vulnérabilités font face à une forte pression avec des failles critiques sous exploitation active. Des CVE majeures ciblant la logique d'authentification (SimpleHelp OIDC CVE-2026-48558) et les ERP critiques (Oracle PeopleSoft CVE-2026-35273) ont rejoint le catalogue KEV du CISA, imposant des correctifs d'urgence. Par ailleurs, des zero-days et RCE critiques dans des frameworks d'IA (Langflow CVE-2026-33017) et de stockage (StoneFly, Synology) démontrent une agressivité accrue des attaquants."
+    },
+    "list": [
+      {
+        "cve_id": "CVE-2026-48558",
+        "cvss_score": 9.5,
+        "epss_score": 0.0122,
+        "cisa_kev": true,
+        "affected_product": "SimpleHelp",
+        "affected_product_vendor": "SimpleHelp",
+        "vulnerability_type": {
+          "en": [
+            "Improper Verification of Cryptographic Signature (CWE-347)"
+          ],
+          "fr": [
+            "Vérification incorrecte de la signature cryptographique (CWE-347)"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "An OIDC flaw allows unauthenticated remote attackers to bypass token signature verification, hijacking technician sessions to deploy malware and move laterally.",
+          "fr": "Une faille OIDC permet à des attaquants distants non authentifiés de contourner la vérification de signature des jetons, piratant des sessions techniciens pour déployer des malwares."
+        },
+        "mitre_attack_ttps_id": [
+          "T1556",
+          "T1078"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-35273",
+        "cvss_score": 9.8,
+        "epss_score": 0.9233,
+        "cisa_kev": true,
+        "affected_product": "PeopleSoft Enterprise PeopleTools",
+        "affected_product_vendor": "Oracle",
+        "vulnerability_type": {
+          "en": [
+            "Improper Restriction of Excess Privileges"
+          ],
+          "fr": [
+            "Restriction insuffisante des privilèges excessifs"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Easily exploitable vulnerability in Environment Management component allows unauthenticated network access via HTTP, resulting in a complete takeover of PeopleSoft Enterprise PeopleTools.",
+          "fr": "Faille facilement exploitable dans le composant Environment Management permettant un accès réseau non authentifié via HTTP, entraînant une prise de contrôle totale de PeopleSoft Enterprise PeopleTools."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-33017",
+        "cvss_score": 9.3,
+        "epss_score": 0.9841,
+        "cisa_kev": true,
+        "affected_product": "langflow",
+        "affected_product_vendor": "langflow",
+        "vulnerability_type": {
+          "en": [
+            "Improper Control of Generation of Code ('Code Injection') (CWE-94)"
+          ],
+          "fr": [
+            "Contrôle inadéquat de la génération de code ('Injection de code') (CWE-94)"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Code injection flaw exploited actively in the wild to execute arbitrary OS commands, leading to Monero cryptomining, log deletion, and host compromise.",
+          "fr": "Faille d'injection de code exploitée activement pour exécuter des commandes OS arbitraires, menant au minage de Monero, à la suppression de logs et à la compromission d'hôtes."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190",
+          "T1059"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-8451",
+        "cvss_score": 8.8,
+        "epss_score": null,
+        "cisa_kev": false,
+        "affected_product": "ADC / Gateway",
+        "affected_product_vendor": "Citrix",
+        "vulnerability_type": {
+          "en": [
+            "Out-of-bounds Read (CWE-125)"
+          ],
+          "fr": [
+            "Lecture hors limites (CWE-125)"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Unauthenticated session hijacking vulnerability allowing complete bypass of multi-factor authentication (CitrixBleed variant).",
+          "fr": "Vulnérabilité de piratage de session non authentifiée permettant de contourner totalement l'authentification multifacteur (variante CitrixBleed)."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190",
+          "T1078"
+        ]
+      }
+    ]
+  },
+  "data_breaches": [
+    {
+      "victim": "Aflac Japan",
+      "sector": "Finance",
+      "country": "JP",
+      "records_count": 4380000,
+      "data_types": {
+        "en": [
+          "Customer names",
+          "Addresses",
+          "Insurance policy numbers",
+          "Bank account numbers"
+        ],
+        "fr": [
+          "Noms de clients",
+          "Adresses",
+          "Numéros de polices d'assurance",
+          "Numéros de comptes bancaires"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://databreaches.net/2026/06/30/insurance-giant-aflac-discloses-data-breach-at-japan-subsidiary/"
+    },
+    {
+      "victim": "Nissan North America",
+      "sector": "Industry_and_Manufacturing",
+      "country": "US",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "Employee personally identifiable information (PII)",
+          "Human Resources data"
+        ],
+        "fr": [
+          "Données d'identification des employés (PII)",
+          "Données de ressources humaines"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://www.bleepingcomputer.com/news/security/nissan-discloses-employee-data-breach-linked-to-oracle-zero-day-attacks/"
+    },
+    {
+      "victim": "University of Nottingham",
+      "sector": "Education_and_Research",
+      "country": "GB",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "Emails",
+          "Phone numbers",
+          "Billing records",
+          "Financial student data"
+        ],
+        "fr": [
+          "E-mails",
+          "Numéros de téléphone",
+          "Dossiers de facturation",
+          "Données financières des étudiants"
+        ]
+      },
+      "threat_actor": "ShinyHunters",
+      "financial_impact_usd": null,
+      "source_url": "https://www.yazoul.net/intel/claim/2026-06-10-university-of-nottingham-hit-by-shinyhunters-june-2026"
+    }
+  ],
+  "target": {
+    "sectors": {
+      "en": [
+        "Education_and_Research",
+        "Industry_and_Manufacturing",
+        "Finance",
+        "Technology_and_Telecom",
+        "Government_and_Defense",
+        "Critical_Infrastructure"
+      ],
+      "fr": [
+        "Education_and_Research",
+        "Industry_and_Manufacturing",
+        "Finance",
+        "Technology_and_Telecom",
+        "Government_and_Defense",
+        "Critical_Infrastructure"
+      ]
+    },
+    "countries": {
+      "en": [
+        "United States",
+        "Japan",
+        "United Kingdom",
+        "Germany",
+        "France"
+      ],
+      "fr": [
+        "États-Unis",
+        "Japon",
+        "Royaume-Uni",
+        "Allemagne",
+        "France"
+      ]
+    },
+    "narrative": {
+      "en": "Targeting activity this week focuses heavily on critical infrastructure endpoints and highly sensitive personal databases:\n- **Education & Research:** The University of Nottingham (UK) was compromised by ShinyHunters, claiming the theft of over 40 GB of records, exposing thousands of student emails, billing details, and personal contact vectors.\n- **Industry & Manufacturing (Chemicals):** Japanese chemical merchant Higuchi Shokai fell victim to a Stormous ransomware intrusion, affecting business partner transactions and sensitive financial ledgers.\n- **Industry & Manufacturing (Automotive):** Nissan North America suffered a significant breach of employee HR databases through the zero-day exploitation of Oracle PeopleSoft.\n- **Industry & Manufacturing (Electronics Supply Chain):** Apple supplier Tata Electronics faced severe intellectual property exposure after drop-test videos of the unreleased iPhone 18 Pro were stolen and leaked on public channels.\n- **Finance (Insurance):** Aflac Japan suffered a high-impact breach, exposing the personal details and bank account numbers of approximately 4.38 million insurance clients.\n- **Technology & Telecom (SaaS):** Over 200 enterprises using Klue software had their environments breached as attackers hijacked OAuth tokens to laterally pivot directly into Salesforce data stores.\n- **Government & Defense:** Washington State Department of Social and Health Services (DSHS) fell victim to an insider threat when a former staff member illicitly obtained and exfiltrated sensitive client records belonging to 8,600 citizens.\n- **Critical Infrastructure:** Organizations globally employing Citrix ADC gateways and StoneFly Storage Concentrators suffered from structural exploitation of high-CVSS flaws, compromising authentication controls and core storage fabric networks.",
+      "fr": "Les ciblage observés cette semaine se concentrent fortement sur les infrastructures d'identité et les bases de données personnelles sensibles :\n- **Éducation et Recherche :** L'Université de Nottingham (RU) a été compromise par ShinyHunters, qui revendique le vol de plus de 40 Go de données, exposant des milliers d'emails, de détails de facturation et de contacts étudiants.\n- **Industrie et Chimie :** Le négociant japonais en produits chimiques Higuchi Shokai a été victime du ransomware Stormous, affectant les transactions de partenaires commerciaux et des grands livres financiers.\n- **Industrie et Automobile :** Nissan Amérique du Nord a subi une brèche majeure de sa base RH d'employés via l'exploitation d'une zero-day Oracle PeopleSoft.\n- **Industrie et Électronique :** Le fournisseur d'Apple Tata Electronics a été confronté au vol et à la fuite de vidéos confidentielles de tests du futur iPhone 18 Pro sur des réseaux publics.\n- **Finance (Assurance) :** Aflac Japon a subi une fuite de données d'impact critique, exposant les identités et numéros de comptes bancaires de plus de 4,38 millions d'assurés.\n- **Technologie et Télécom (SaaS) :** Plus de 200 entreprises clientes de la plateforme Klue ont vu leur tenant compromis par des attaquants détournant des jetons OAuth pour pivoter latéralement dans Salesforce.\n- **Gouvernement et Défense :** Le Washington State Department of Social and Health Services (DSHS) a été victime d'une menace interne lorsqu'un ancien employé a extrait illicitement les dossiers sensibles de 8 600 bénéficiaires d'aides.\n- **Infrastructures Critiques :** Des exploitants d'appliances Citrix ADC et StoneFly Storage Concentrator ont fait l'objet d'exploitations ciblées de vulnérabilités critiques, compromettant le contrôle d'accès et la couche de stockage."
+    }
+  },
+  "trends": {
+    "emerging_techniques": {
+      "en": [
+        "AI-Agentic runtime threats utilizing LLMs like Claude for automated command execution and prompt-driven exfiltration.",
+        "EvilTokens and Device Code phishing to bypass multi-factor authentication (MFA) and claim long-lived cloud session tokens.",
+        "Leveraging trusted redirection services such as Google Maps API parameters (maps.google.co.kr) to defeat secure web gateways."
+      ],
+      "fr": [
+        "Menaces sur les agents d'IA (ex. Claude) au niveau de l'exécution pour automatiser l'exécution de commandes et l'exfiltration.",
+        "Phishing via Device Code (EvilTokens) pour contourner le MFA et détourner des sessions cloud à longue durée de vie.",
+        "Détournement de redirections légitimes comme les paramètres API de Google Maps (maps.google.co.kr) pour tromper les proxys."
+      ]
+    },
+    "declining_techniques": {
+      "en": [
+        "Simple SMS-based OTP configurations, heavily abandoned by administrators in favor of application-based MFA due to rapid SIM-swapping.",
+        "Pure file-based malware droppers, being replaced by API-based post-exploitation and living-off-the-cloud techniques."
+      ],
+      "fr": [
+        "Configurations OTP par SMS simple, progressivement abandonnées par les administrateurs au profit du MFA applicatif face au SIM-swapping.",
+        "Droppers de malwares purement basés sur des fichiers, remplacés par de la post-exploitation via API et des techniques 'living-off-the-cloud'."
+      ]
+    },
+    "geopolitical_context": {
+      "en": "Strong focus on European technological sovereignty. Regulatory and analytical reports emphasize the EU's dangerous structural reliance (90% Retail Card Payment reliance on US duopoly and 70% cloud dominance by US hyperscalers), heightening systemic exposure to extraterritorial laws and state-level cyber threats. Concurrently, state-sponsored North Korean actors continue to execute sophisticated job recruitment campaigns, generating covert hard currency for the DPRK regime while embedding persistent access vectors inside western technology and defense firms.",
+      "fr": "Forte focalisation sur la souveraineté technologique européenne. Les analyses soulignent la dépendance structurelle de l'UE (90 % de dépendance pour les paiements par carte au duopole américain et 70 % du cloud contrôlé par les hyperscalers US), accentuant l'exposition systémique aux lois extraterritoriales. En parallèle, des acteurs étatiques nord-coréens poursuivent de complexes fraudes au recrutement pour financer le régime de la RPDC tout en implantant des accès persistants dans des entreprises occidentales."
+    }
+  },
+  "recommendations": {
+    "strategic": {
+      "en": [
+        {
+          "title": "Enforce Phishing-Resistant FIDO2 Hardware MFA",
+          "detail": "Traditional push-based and SMS MFA are easily bypassed by EvilTokens Device Code phishing attacks, as demonstrated by groups like Scattered Spider and ShinyHunters. Deploy FIDO2/WebAuthn hardware tokens (e.g., YubiKey 5 Series) specifically targeting all administrative cloud endpoints (Entra ID, Okta) and engineering teams. Enforce physical keys as the sole authentication method for high-risk profiles and revoke all concurrent sessions upon rollout."
+        },
+        {
+          "title": "Establish emergency ERP and Gateway SLA",
+          "detail": "Zero-day attacks on Oracle PeopleSoft (CVE-2026-35273) and remote OIDC validation failures (CVE-2026-48558) represent immediate entry points for ransomware operators like Stormous. Define a mandatory 24-hour patching SLA for CISA KEV catalog vulnerabilities on external-facing environments. Systematically segment internal ERP and HCM structures into isolated networks, inaccessible from the public web without dedicated VPN tunnels."
+        }
+      ],
+      "fr": [
+        {
+          "title": "Déployer l'authentification FIDO2 résistante au phishing",
+          "detail": "Les méthodes MFA traditionnelles par push et SMS sont de plus en plus contournées par les attaques de type EvilTokens/Device Code, comme l'illustrent ShinyHunters et d'autres acteurs. Déployez des clés matérielles FIDO2/WebAuthn (ex. YubiKey 5) pour les administrateurs cloud (Entra ID, Okta) et équipes techniques. Imposez ces clés physiques comme seule méthode de validation et révoquez toutes les sessions actives lors du déploiement."
+        },
+        {
+          "title": "Imposer un SLA d'urgence ERP et passerelles",
+          "detail": "Les zero-days sur Oracle PeopleSoft (CVE-2026-35273) et les défauts de validation OIDC (CVE-2026-48558) sont activement exploités par des rançonneurs comme Stormous. Instaurez un SLA de correction de 24h pour les failles du catalogue KEV du CISA sur le périmètre externe. Segmentez rigoureusement les instances ERP et RH dans des réseaux isolés, invisibles depuis Internet sans tunnel VPN dédié."
+        }
+      ]
+    },
+    "operational": {
+      "en": [
+        {
+          "title": "Audit M365 Service Principal privileges",
+          "detail": "To prevent standard accounts from elevating to Global Admin within minutes, immediately audit all Enterprise Application credential changes. Execute `Get-MgServicePrincipal` via PowerShell to identify newly added secrets or certificates. Restrict and alert on highly dangerous API permissions such as RoleManagement.ReadWrite.Directory and Directory.ReadWrite.All, ensuring no standard user holds ownership of critical Service Principals."
+        },
+        {
+          "title": "Harden Oracle PeopleSoft web application servers",
+          "detail": "Isolate all instances of PeopleSoft HCM/FSCM and inspect reverse-proxy logs for unusual SOAP/JSP requests targeting `/psc/*` or `/signon/`. Execute automated integrity checks across the `PS_HOME` directory structure to hunt for newly spawned Java web shells. Rotate all service account credentials associated with database connections and verify Oracle's latest CPU patch level."
+        }
+      ],
+      "fr": [
+        {
+          "title": "Auditer les privilèges des Service Principals M365",
+          "detail": "Pour empêcher un compte standard de devenir Global Admin en quelques minutes, auditez immédiatement les modifications de credentials d'applications. Lancez `Get-MgServicePrincipal` en PowerShell pour détecter de nouveaux secrets ou certificats. Restreignez et alertez sur les permissions API critiques telles que RoleManagement.ReadWrite.Directory et Directory.ReadWrite.All."
+        },
+        {
+          "title": "Sécuriser les serveurs d'applications Oracle PeopleSoft",
+          "detail": "Isolez toutes les instances PeopleSoft HCM/FSCM et inspectez les logs des proxys à la recherche de requêtes SOAP/JSP suspectes vers `/psc/*` ou `/signon/`. Lancez des contrôles d'intégrité sur l'arborescence `PS_HOME` pour chasser d'éventuels web shells Java. Renouvelez tous les mots de passe des comptes de service liés à la base de données."
+        }
+      ]
+    }
+  }
+}
