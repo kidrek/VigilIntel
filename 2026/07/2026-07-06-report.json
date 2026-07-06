@@ -1,306 +1,834 @@
 {
   "strategic_analysis": {
     "analyse": {
-      "en": "No cybersecurity reports or updates were provided for analysis on this date.",
-      "fr": "Aucun rapport ou mise à jour de cybersécurité n'a été fourni pour analyse à cette date."
+      "en": "Vulnerability volume (5) remains the primary focus today, indicating sustained disclosure activity that demands active monitoring and accelerated patch triage by SOC teams. Data breaches (1) and threat actor activity (1) stay at nominal levels but should be qualified against exposed sectors. On the regulatory side (2), expected publications on compliance and sanctions may short-term influence notification obligations and compliance postures. The absence of notable geopolitical signals temporarily reduces the state-sponsored risk component, without warranting any relaxation of surveillance. Operational priority remains CVE–exposure correlation and anticipating exploitation windows, to be arbitrated according to business criticality.",
+      "fr": "Le volume de vulnérabilités (5) demeure le principal centre de gravité du jour, signalant une activité de divulgation soutenue qui impose une veille active et un triage accéléré des correctifs par les équipes SOC. Les brèches de données (1) et l'activité de threat actors (1) restent à un niveau nominal mais doivent être qualifiées au regard des secteurs exposés. Côté réglementaire (2), les publications attendues en matière de conformité et de sanctions sont susceptibles d'influencer les obligations de notification et les postures de conformité à court terme. L'absence de signal géopolitique notable réduit temporairement la composante étatique du risque, sans pour autant justifier un relâchement de la surveillance. La priorité opérationnelle demeure la corrélation CVE–exposition et l'anticipation des fenêtres d'exploitation, à arbitrer selon la criticité métier."
     },
     "date": "2026-07-06"
   },
-  "geopolitical_analyse": [
-    {
-      "sector": {
-        "en": [
-          "Government_and_Defense"
-        ],
-        "fr": [
-          "Gouvernement et Défense"
-        ]
-      },
-      "theme": {
-        "en": "unknown",
-        "fr": "inconnu"
-      },
-      "description": {
-        "en": "unknown",
-        "fr": "inconnu"
-      },
-      "recommandations": [
-        {
-          "en": "unknown",
-          "fr": "inconnu"
-        }
-      ],
-      "incident_response_playbook": {
-        "phase1_preparation": {
-          "en": [
-            "unknown"
-          ],
-          "fr": [
-            "inconnu"
-          ]
-        },
-        "phase2_detection": {
-          "en": [
-            "unknown"
-          ],
-          "fr": [
-            "inconnu"
-          ]
-        },
-        "phase3_containment": {
-          "en": [
-            "unknown"
-          ],
-          "fr": [
-            "inconnu"
-          ]
-        },
-        "phase4_post_incident": {
-          "en": [
-            "unknown"
-          ],
-          "fr": [
-            "inconnu"
-          ]
-        },
-        "phase5_threat_hunting": {
-          "en": [
-            "unknown"
-          ],
-          "fr": [
-            "inconnu"
-          ]
-        }
-      },
-      "tags": [
-        "unknown"
-      ],
-      "sources": [
-        "unknown"
-      ],
-      "date": "2026-07-06"
-    }
-  ],
+  "geopolitical_analyse": [],
   "regulatory_and_legal": [
     {
       "title": {
-        "en": "unknown",
-        "fr": "inconnu"
+        "en": "S1",
+        "fr": "S1"
       },
       "description": {
-        "en": "unknown",
-        "fr": "inconnu"
+        "en": "Medtronic, a global medical device giant (90,000 employees, revenue of USD 33.5 billion), confirmed in April 2026 a cyberattack claimed by the extortion group ShinyHunters, which stated it had stolen more than 9 million records. The company indicated that an unauthorized actor had accessed certain data from its corporate IT systems. No impact has been identified on products, patient safety, manufacturing and distribution operations, financial systems, or the ability to meet patient needs, as corporate, product, and industrial networks are segmented. Medtronic contained the incident, engaged external cybersecurity experts, and notified 3,834,294 natural persons whose personal and medical data were exposed. Support offerings to affected individuals are planned. This notification falls within a personal data protection regulatory framework (GDPR for the EU, HIPAA and potential U.S. state laws) imposing strict notification deadlines and transparent communication with regulators and victims. The medical nature of the exposed data gives this incident a high level of sensitivity and an increased risk to the rights of the data subjects.",
+        "fr": "Medtronic, géant mondial des dispositifs médicaux (90 000 employés, CA 33,5 Md USD), a confirmé en avril 2026 une cyberattaque revendiquée par le groupe d'extorsion ShinyHunters, qui affirmait avoir dérobé plus de 9 millions d'enregistrements. L'entreprise a indiqué qu'un acteur non autorisé avait accédé à certaines données de ses systèmes IT corporate. Aucune incidence n'a été identifiée sur les produits, la sécurité des patients, les opérations de fabrication et distribution, les systèmes financiers ou la capacité à répondre aux besoins des patients, les réseaux corporate, produits et industriels étant segmentés. Medtronic a contenu l'incident, fait appel à des experts externes en cybersécurité et a notifié 3 834 294 personnes physiques dont les données personnelles et médicales ont été exposées. Des offres de soutien aux personnes concernées sont prévues. Cette notification s'inscrit dans un cadre réglementaire de protection des données personnelles (RGPD pour l'UE, HIPAA et lois étatiques américaines potentielles) imposant des délais stricts de notification et une communication transparente avec les régulateurs et les victimes. La nature médicale des données exposées confère à cet incident un niveau de sensibilité élevé et un risque accru pour les droits des personnes concernées."
       },
       "organisation": {
         "en": [
-          "unknown"
+          "Medtronic (entreprise notificatrice) / ShinyHunters (groupe d'extorsion)"
         ],
         "fr": [
-          "inconnu"
+          "Medtronic (entreprise notificatrice) / ShinyHunters (groupe d'extorsion)"
         ]
       },
       "jurisdiction": {
         "en": [
-          "unknown"
+          "États-Unis (notification principale) ; impact multinational (150 pays)"
         ],
         "fr": [
-          "inconnu"
+          "États-Unis (notification principale) ; impact multinational (150 pays)"
         ]
       },
       "references": {
         "en": [
-          "unknown"
+          "S1"
         ],
         "fr": [
-          "inconnu"
+          "S1"
         ]
       },
       "tags": [
-        "unknown"
+        "data-breach",
+        "healthcare",
+        "notification",
+        "ShinyHunters"
       ],
       "sources": [
-        "unknown"
+        "https://securityaffairs.com/194788/cyber-crime/medtronic-notifies-3-8-million-after-shinyhunters-data-breach.html"
       ],
-      "date": "2026-07-06"
+      "date": "2026-07-05"
+    },
+    {
+      "title": {
+        "en": "S2",
+        "fr": "S2"
+      },
+      "description": {
+        "en": "The article provides an analysis of the legal and ethical obligations related to the notification of personal data breaches under the GDPR, specifically targeting small and medium-sized enterprises (SMEs). It details the key steps: identification of the incident (compromised server, loss of a laptop containing customer data, ransomware attack with database encryption), activation of the incident response, and notification to supervisory authorities and data subjects according to the deadlines imposed by the GDPR (in particular Article 33: notification to the supervisory authority within 72 hours, and Article 34: communication to data subjects in case of high risk). An operational checklist is provided to support SMEs in their compliance. This article falls within a context of increased awareness among European SMEs of GDPR obligations, often overlooked by modest-sized structures with limited cybersecurity and legal compliance resources.",
+        "fr": "L'article propose une analyse des obligations légales et éthiques liées à la notification de violations de données personnelles dans le cadre du RGPD, ciblant spécifiquement les petites et moyennes entreprises (PME). Il détaille les étapes clés : identification de l'incident (serveur compromis, perte de laptop contenant des données clients, attaque ransomware avec chiffrement de base de données), activation de la réponse à incident, et notification aux autorités de contrôle et aux personnes concernées selon les délais imposés par le RGPD (notamment l'article 33 : notification à l'autorité de contrôle dans les 72 heures, et l'article 34 : communication aux personnes concernées en cas de risque élevé). Une checklist opérationnelle est fournie pour accompagner les PME dans leur mise en conformité. Cet article s'inscrit dans un contexte de sensibilisation accrue des PME européennes aux obligations RGPD, souvent négligées par les structures de taille modeste disposant de ressources limitées en cybersécurité et en conformité juridique."
+      },
+      "organisation": {
+        "en": [
+          "Règlement Général sur la Protection des Données (RGPD)"
+        ],
+        "fr": [
+          "Règlement Général sur la Protection des Données (RGPD)"
+        ]
+      },
+      "jurisdiction": {
+        "en": [
+          "Union européenne (cadre général) ; référence spécifique aux PME"
+        ],
+        "fr": [
+          "Union européenne (cadre général) ; référence spécifique aux PME"
+        ]
+      },
+      "references": {
+        "en": [
+          "S2"
+        ],
+        "fr": [
+          "S2"
+        ]
+      },
+      "tags": [
+        "GDPR",
+        "data-breach",
+        "notification",
+        "compliance",
+        "SME"
+      ],
+      "sources": [
+        "https://meteoraweb.com/considerazioni-legali-ed-etiche/data-breach-e-notifica-gdpr-tempistiche-procedure-e-checklist-operativa-per-pmi?utm_source=mastodon&utm_medium=social&utm_campaign=auto_share"
+      ],
+      "date": "2026-07-05"
     }
   ],
   "breach_analyse": [
     {
-      "victim": "unknown",
-      "threat_actor": "unknown",
-      "threat_actor_origin": "unknown",
-      "threat_actor_type": "unknown",
-      "threat_actor_aliases": [
-        "unknown"
-      ],
+      "victim": "dba-intern.de",
+      "threat_actor": "DBHunter",
+      "threat_actor_origin": "",
+      "threat_actor_type": "",
+      "threat_actor_aliases": [],
       "sector": {
         "en": [
-          "Technology_and_Telecom"
+          "Éducation et recherche (Allemagne)"
         ],
         "fr": [
-          "Technologies et Télécommunications"
+          "Éducation et recherche (Allemagne)"
         ]
       },
       "description": {
-        "en": "unknown",
-        "fr": "inconnu"
+        "en": "DBHunter, an actor already active with 35 listings recorded in one week by DarkWebSonar, claims to have posted a SQL dump of approximately 180 MB from dba-intern.de, a German player in the education/research sector. The dump is distributed via a gated forum, which limits initial dissemination but remains a strong signal of compromise. The organization must presume the breach until authenticity is refuted and must immediately engage its incident response chain while notifying the German regulator (BfDI). The lack of detailed technical TTPs in the claim must not prevent the investigation: a network mapping and a review of DB logs must be launched in parallel. The recent nature and high volume of DBHunter listings suggest sustained activity, possibly automated or relying on a reusable initial access.",
+        "fr": "DBHunter, acteur déjà actif avec 35 listings recensés en une semaine par DarkWebSonar, revendique la mise en ligne d'un dump SQL d'environ 180 Mo provenant de dba-intern.de, un acteur allemand du secteur éducation/recherche. Le dump est diffusé via un forum gated, ce qui limite la diffusion initiale mais reste un signal fort de compromission. L'organisation doit présumer la fuite tant que l'authenticité n'est pas réfutée et doit engager immédiatement sa chaîne de réponse à incident tout en notifiant le régulateur allemand (BfDI). L'absence de TTPs techniques détaillés dans la revendication ne doit pas empêcher l'investigation : une cartographie réseau et une revue des journaux DB doivent être lancées en parallèle. La récence et le volume élevé des listings DBHunter suggèrent une activité soutenue, possiblement automatisée ou s'appuyant sur un accès initial réutilisable."
       },
       "mitre_ttps": [
-        "unknown"
+        "T1567",
+        "T1486"
       ],
       "recommandations": [
         {
-          "en": "unknown",
-          "fr": "inconnu"
+          "en": "Formally verify the authenticity of the claimed dump before any external public communication.",
+          "fr": "Vérifier formellement l'authenticité du dump revendiqué avant toute communication publique externe."
+        },
+        {
+          "en": "Activate a crisis cell (DPO, CISO, legal, management) and suspend services until the investigation is finalized.",
+          "fr": "Activer une cellule de crise (DPO, RSSI, juridique, direction) et suspendre les services tant que l'investigation n'est pas finalisée."
+        },
+        {
+          "en": "Notify the BfDI within 72 hours and prepare individual notifications to data subjects if personal data is confirmed.",
+          "fr": "Notifier le BfDI sous 72 h et préparer les notifications individuelles des personnes concernées en cas de données personnelles confirmées."
+        },
+        {
+          "en": "Mandate password rotation, enable MFA on all accounts, and apply the principle of least privilege on DB accounts.",
+          "fr": "Imposer la rotation des mots de passe, activer la MFA sur tous les comptes et appliquer le principe de moindre privilège sur les comptes DB."
+        },
+        {
+          "en": "Audit and harden external exposure: disable phpMyAdmin and exposed administration tools, restrict outbound traffic, log all sensitive SQL queries.",
+          "fr": "Auditer et durcir l'exposition externe : désactiver phpMyAdmin et outils d'administration exposés, restreindre les flux sortants, journaliser toutes les requêtes SQL sensibles."
+        },
+        {
+          "en": "Monitor credential reuse on other services (credential stuffing) and set up continuous dark web monitoring for DBHunter.",
+          "fr": "Surveiller la réutilisation des identifiants sur d'autres services (credential stuffing) et mettre en place une surveillance darkweb continue pour DBHunter."
         }
       ],
       "incident_response_playbook": {
         "phase1_preparation": {
           "en": [
-            "unknown"
+            "Verify that dba-intern.de is registered in the breach monitoring registry and that its domains/subdomains are catalogued.",
+            "Map exposed assets (web servers, MySQL/MariaDB/PostgreSQL databases, administration interfaces) and identify business owners.",
+            "Prepare notification templates for CNIL (Germany: BfDI) and academic partners/research federations.",
+            "Back up and seal offline the logs (DB servers, reverse-proxy, WAF, IDS/IPS) covering at least 90 days.",
+            "Define a crisis communication channel (mailing list, conf-call bridge) including DPO, CISO, management, and legal cell.",
+            "Pre-test access to the gated forum (via hxxps://go[.]darkwebsonar[.]io/dbhunter-mastodon) using a masked identity, without downloading."
           ],
           "fr": [
-            "inconnu"
+            "Vérifier que dba-intern.de est inscrit dans le registre de surveillance des fuites et que ses domaines/sous-domaines sont catalogués.",
+            "Cartographier les actifs exposés (serveurs web, bases MySQL/MariaDB/PostgreSQL, interfaces d'administration) et identifier les propriétaires métiers.",
+            "Préparer les modèles de notification vers la CNIL (Allemagne : BfDI) et les partenaires académiques/fédérations de recherche.",
+            "Sauvegarder et sceller hors-ligne les journaux (serveurs DB, reverse-proxy, WAF, IDS/IPS) couvrant au minimum 90 jours.",
+            "Définir un canal de communication de crise (liste de diffusion, bridge conf-call) incluant DPO, RSSI, direction et cellule juridique.",
+            "Tester en avance l'accès au forum gated (via hxxps://go[.]darkwebsonar[.]io/dbhunter-mastodon) au travers d'une identité masquée, sans téléchargement."
           ]
         },
         "phase2_detection": {
           "en": [
-            "unknown"
+            "Collect and authenticate the sample offered by DBHunter (SHA-256/MD5 hashes, SQL schema metadata).",
+            "Compare schemas, identifier ranges, and email fingerprints with internal databases to validate the authenticity of the dump.",
+            "Search SIEM/EDR for any abnormal connection to the database (account creation, mysqldump exports, unauthorized access).",
+            "Set up a correlation rule on massive SQL queries (SELECT * FROM utilisateurs, EXFIL via INTO OUTFILE).",
+            "Enable monitoring of DB admin accounts (creation, elevation, deactivation) and of network outputs to dark web forum hosts.",
+            "Notify academic partners and verify whether their network connectivity with dba-intern.de has been compromised."
           ],
           "fr": [
-            "inconnu"
+            "Collecter et authentifier l'échantillon proposé par DBHunter (hachages SHA-256/MD5, métadonnées schéma SQL).",
+            "Comparer schémas, plages d'identifiants, empreintes e-mail avec les bases internes pour valider l'authenticité du dump.",
+            "Rechercher dans les SIEM/EDR toute connexion anormale vers la base (création de comptes, exports mysqldump, accès non autorisés).",
+            "Mettre en place une règle de corrélation sur les requêtes SQL massives (SELECT * FROM utilisateurs, EXFIL via INTO OUTFILE).",
+            "Activer la supervision des comptes admins DB (création, élévation, désactivation) et des sorties réseau vers hébergeurs de forums darkweb.",
+            "Notifier les partenaires académiques et vérifier si leur connectivité réseau avec dba-intern.de a été compromise."
           ]
         },
         "phase3_containment": {
           "en": [
-            "unknown"
+            "Immediately revoke all application and DB accounts, force rotation of passwords and secrets (salted hash on the application side).",
+            "Isolate the server hosting dba-intern.de from the rest of the network (quarantine VLAN) while preserving the chain of evidence.",
+            "Temporarily disable exposed accounts (students, researchers, admins) and issue reset links.",
+            "Apply an outbound network block (proxy, NDR) to prevent any residual exfiltration.",
+            "Engage a legal firm to request the takedown of the DBHunter thread via the forum's legal services.",
+            "Communicate internally (without causing panic) on the estimated scope and the ongoing conservative measures."
           ],
           "fr": [
-            "inconnu"
+            "Révoquer immédiatement tous les comptes applicatifs et DB, forcer la rotation des mots de passe et secrets (hash salé côté appli).",
+            "Isoler le serveur hébergeant dba-intern.de du reste du réseau (VLAN quarantaine) tout en préservant la chaîne de preuves.",
+            "Désactiver temporairement les comptes exposés (étudiants, chercheurs, admins) et émettre des liens de réinitialisation.",
+            "Appliquer un blocage réseau sortant (proxy, NDR) pour empêcher toute exfiltration résiduelle.",
+            "Engager un cabinet judiciaire pour demander la mise hors-ligne du thread DBHunter via les services juridiques du forum.",
+            "Communiquer en interne (sans paniquer) sur le périmètre estimé et les mesures conservatoires en cours."
           ]
         },
         "phase4_post_incident": {
           "en": [
-            "unknown"
+            "Notify the BfDI (BfDI Bundesbeauftragte für den Datenschutz und die Informationsfreiheit) within 72 hours if personal data is confirmed.",
+            "Inform affected individuals by name (students, staff, researchers) with vigilance instructions (phishing, credential stuffing).",
+            "Conduct a full forensic audit (timeline, initial vector, exact scope, data actually exposed).",
+            "Document gaps (missing MFA, public exposure of phpMyAdmin, unencrypted backups) and publish a corrective action plan with milestones.",
+            "Strengthen authentication (mandatory MFA, separation of personal/service accounts), encrypt backups at rest and in transit.",
+            "Update the risk mapping (DPIA) and present a report to the institution's ethics committee."
           ],
           "fr": [
-            "inconnu"
+            "Notifier le BfDI (BfDI Bundesbeauftragte für den Datenschutz und die Informationsfreiheit) sous 72 h si des données personnelles sont confirmées.",
+            "Informer nominativement les personnes concernées (étudiants, personnels, chercheurs) avec des consignes de vigilance (phishing, credential stuffing).",
+            "Réaliser un audit forensique complet (timeline, vector initial, périmètre exact, données réellement exposées).",
+            "Documenter les écarts (manque MFA, exposition publique de phpMyAdmin, sauvegardes non chiffrées) et publier un plan d'action correctif avec jalons.",
+            "Renforcer l'authentification (MFA obligatoire, séparation comptes personnels/comptes de service), chiffrer les sauvegardes au repos et en transit.",
+            "Mettre à jour la cartographie des risques (DPIA) et présenter un rapport au comité d'éthique de l'établissement."
           ]
         },
         "phase5_threat_hunting": {
           "en": [
-            "unknown"
+            "Search dark web and gated forums (Tor, I2P, Telegram) for any additional reference to dba-intern.de or to the DBHunter brand.",
+            "Hunt related IOCs: dump hash, leaked emails, password hashes (PwnedPasswords / HIBP) and use Have I Been Pwned monitoring.",
+            "Set up YARA rules on dumps claimed by DBHunter to identify overlaps with other victims (35 listings in 1 week).",
+            "Monitor honeytokens planted in the database to detect any reuse outside the scope.",
+            "Audit the external attack surface: exposed services, ports, recent CVE vulnerabilities affecting the middlewares used.",
+            "Assess the DBHunter threat: actor IOCs (handles, PGP, crypto wallets) and enrich the internal TIP with observed TTPs."
           ],
           "fr": [
-            "inconnu"
+            "Rechercher sur les forums darkweb et gated (Tor, I2P, Telegram) toute référence supplémentaire à dba-intern.de ou à la marque DBHunter.",
+            "Chasser les IOCs liés : hash du dump, e-mails泄漏, hachages de mots de passe (PwnedPasswords / HIBP) et utiliser la surveillance Have I Been Pwned.",
+            "Mettre en place des règles YARA sur les dumps revendiqués par DBHunter pour identifier des recoupements avec d'autres victimes (35 listings en 1 semaine).",
+            "Surveiller les honeytokens plantés dans la base pour détecter toute réutilisation en dehors du périmètre.",
+            "Auditer la surface d'attaque externe : services exposés, ports, vulnérabilités CVE récentes affectant les middlewares utilisés.",
+            "Évaluer la menace DBHunter : IOCs de l'acteur (handles, PGP, wallets crypto) et enrichir le TIP interne avec la TTPs observées."
           ]
         }
       },
       "tags": [
-        "unknown"
+        "data_breach",
+        "leak_forum",
+        "education_sector",
+        "germany",
+        "sql_dump",
+        "DBHunter"
       ],
       "sources": [
-        "unknown"
+        "https://infosec.exchange/@darkwebsonar/116871122360173197"
       ],
       "date": "2026-07-06"
     }
   ],
   "vulnerabilities_analyse": [
     {
-      "cve_id": "CVE-unknown",
-      "euvd_id": "unknown",
-      "cisa_kev": "unknown",
-      "cvss": "unknown",
-      "epss": "unknown",
-      "cpe": "unknown",
-      "product": "unknown",
-      "vendor": "unknown",
+      "cve_id": "CVE-2026-9085",
+      "euvd_id": "",
+      "cisa_kev": false,
+      "cvss": "8.8",
+      "epss": "",
+      "cpe": "",
+      "product": "Pardus-Parental-Control",
+      "vendor": "TUBITAK BILGEM Software Technologies Research Institute",
       "description": {
-        "en": "unknown",
-        "fr": "inconnu"
+        "en": "A misconfigured permission on a critical resource combined with a lack of access control allows an attacker to alter the DNS settings of TUBITAK BILGEM's Pardus parental control, on versions 0.5.1 and earlier. Exploitation allows redirecting users' DNS queries to attacker-controlled servers, opening the way to phishing attacks, traffic interception, and credential theft. Criticality is deemed high (CVSS 3.1 = 8.8), exploitation not being remote but requiring local access.",
+        "fr": "Une mauvaise attribution de permissions sur une ressource critique combinée à un défaut de contrôle d'accès permet à un attaquant d'altérer les paramètres DNS du contrôle parental Pardus de TUBITAK BILGEM, sur les versions 0.5.1 et antérieures. L'exploitation permet de rediriger les requêtes DNS des utilisateurs vers des serveurs contrôlés par l'attaquant, ouvrant la voie à des attaques de phishing, à l'interception de trafic et à du vol de credentials. La criticité est jugée élevée (CVSS 3.1 = 8.8), l'exploitation n'étant pas distante mais requérant un accès local."
       },
       "mitre_ttps": [
-        "unknown"
+        "T1566",
+        "T1071.004"
       ],
       "recommandations": [
         {
-          "en": "unknown",
-          "fr": "inconnu"
+          "en": "Update Pardus-Parental-Control to version 0.7.0 or later. Restrict access to DNS configuration files. Monitor unauthorized DNS changes on endpoints.",
+          "fr": "Mettre à jour Pardus-Parental-Control vers la version 0.7.0 ou supérieure. Restreindre l'accès aux fichiers de configuration DNS. Surveiller les modifications DNS non autorisées sur les endpoints."
         }
       ],
       "incident_response_playbook": {
         "phase1_preparation": {
           "en": [
-            "unknown"
+            "Map Pardus-Parental-Control instances (versions <=0.5.1) deployed in the environment.",
+            "Check the permissions granted to the component and limit privileges to the strict minimum.",
+            "Document network dependencies (configured DNS servers, network access)."
           ],
           "fr": [
-            "inconnu"
+            "Cartographier les instances de Pardus-Parental-Control (versions <=0.5.1) déployées dans l'environnement.",
+            "Vérifier les permissions accordées au composant et limiter les privilèges au strict nécessaire.",
+            "Documenter les dépendances réseau (serveurs DNS configurés, accès réseau)."
           ]
         },
         "phase2_detection": {
           "en": [
-            "unknown"
+            "Monitor unusual modifications to DNS configurations on affected Linux endpoints.",
+            "Detect DNS queries pointing to unauthorized or recent servers.",
+            "Correlate IDS/IPS alerts related to DNS spoofing.",
+            "Audit Pardus-Parental-Control system logs to detect unauthorized access."
           ],
           "fr": [
-            "inconnu"
+            "Surveiller les modifications inhabituelles des configurations DNS sur les endpoints Linux concernés.",
+            "Détecter les requêtes DNS pointant vers des serveurs non autorisés ou récents.",
+            "Corréler les alertes IDS/IPS liées au DNS spoofing.",
+            "Auditer les logs système de Pardus-Parental-Control pour détecter des accès non autorisés."
           ]
         },
         "phase3_containment": {
           "en": [
-            "unknown"
+            "Isolate affected systems from the network.",
+            "Update Pardus-Parental-Control to version 0.7.0 or later.",
+            "Restore original DNS configurations (DHCP or legitimate DNS).",
+            "Block identified malicious DNS servers at the firewall level."
           ],
           "fr": [
-            "inconnu"
+            "Isoler les systèmes affectés du réseau.",
+            "Mettre à jour Pardus-Parental-Control vers la version 0.7.0 ou supérieure.",
+            "Restaurer les configurations DNS d'origine (DHCP ou DNS légitime).",
+            "Bloquer les serveurs DNS malveillants identifiés au niveau du pare-feu."
           ]
         },
         "phase4_post_incident": {
           "en": [
-            "unknown"
+            "Document the incident: attack vector, exposure duration, data potentially exfiltrated.",
+            "Assess the actual impact related to a DNS redirection (phishing, credential theft).",
+            "Strengthen access controls around parental control tools.",
+            "Communicate with stakeholders and apply the continuous improvement cycle."
           ],
           "fr": [
-            "inconnu"
+            "Documenter l'incident : vecteur d'attaque, durée d'exposition, données éventuellement exfiltrées.",
+            "Évaluer l'impact réel lié à une redirection DNS (phishing, vol de credentials).",
+            "Renforcer les contrôles d'accès autour des outils de contrôle parental.",
+            "Communiquer avec les parties prenantes et appliquer le cycle d'amélioration continue."
           ]
         },
         "phase5_threat_hunting": {
           "en": [
-            "unknown"
+            "Search for DNS spoofing artifacts (suspicious DNS entries in /etc/resolv.conf).",
+            "Search for unauthorized processes or services running with elevated privileges.",
+            "Track file hashes or altered configurations of Pardus-Parental-Control.",
+            "Identify other hosts running vulnerable versions via internal scans."
           ],
           "fr": [
-            "inconnu"
+            "Rechercher des artefacts de DNS spoofing (entries DNS suspectes dans /etc/resolv.conf).",
+            "Rechercher des processus ou services non autorisés exécutés avec privilèges élevés.",
+            "Pister les hashes de fichiers ou configurations altérées de Pardus-Parental-Control.",
+            "Identifier d'autres hôtes utilisant des versions vulnérables via scans internes."
           ]
         }
       },
       "tags": [
-        "vulnerability"
+        "DNS-hijacking",
+        "access-control",
+        "parental-control",
+        "Pardus",
+        "TUBITAK-BILGEM"
       ],
       "sources": [
-        "unknown"
+        "https://cvefeed.io/vuln/detail/CVE-2026-9085"
       ],
-      "date": "2026-07-06"
+      "date": "2026-07-05"
+    },
+    {
+      "cve_id": "CVE-2026-59509",
+      "euvd_id": "",
+      "cisa_kev": false,
+      "cvss": "9.2",
+      "epss": "",
+      "cpe": "",
+      "product": "cve-search",
+      "vendor": "cve-search",
+      "description": {
+        "en": "The /fetch_cve_data API endpoint of cve-search suffers from insufficient input validation, allowing a remote unauthenticated attacker to manipulate parameters controlling the target MongoDB collection, projected fields, and regular expression filters. Exploitation enables extraction of arbitrary data, notably administrative usernames and password hashes from the mgmt_users collection, paving the way for offline password cracking and compromise of administrative accounts. CVSS 4.0 = 9.2 (Critical), exploitation possible remotely over the Internet.",
+        "fr": "Le point d'API /fetch_cve_data de cve-search souffre d'une validation d'entrée insuffisante permettant à un attaquant distant non authentifié de manipuler les paramètres contrôlant la collection MongoDB cible, les champs projetés et les filtres par expressions régulières. L'exploitation permet l'extraction de données arbitraires, notamment des noms d'utilisateurs administratifs et des hashes de mots de passe depuis la collection mgmt_users, ouvrant la voie à du cassage de mots de passe hors ligne et à la compromission des comptes d'administration. CVSS 4.0 = 9.2 (Critique), exploitation possible à distance via Internet."
+      },
+      "mitre_ttps": [
+        "T1190",
+        "T1078",
+        "T1552.001"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply vendor patches as soon as published. Disable public exposure of /fetch_cve_data or require strong authentication. Restrict network access to the service and immediately rotate all mgmt_users credentials. Log and audit requests to this endpoint.",
+          "fr": "Appliquer les correctifs éditeurs dès publication. Désactiver l'exposition publique de /fetch_cve_data ou exiger une authentification forte. Restreindre l'accès réseau au service et faire tourner immédiatement tous les crédentiels de mgmt_users. Journaliser et auditer les requêtes sur cet endpoint."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain an up-to-date inventory of cve-search instances (development, pre-production, production).",
+            "Segment cve-search instances reachable from the Internet and harden the configuration.",
+            "Regularly back up the MongoDB databases related to cve-search.",
+            "Document the role matrix (mgmt_users) and enforce the principle of least privilege."
+          ],
+          "fr": [
+            "Maintenir un inventaire à jour des instances cve-search (développement, pré-production, production).",
+            "Segmenter les instances cve-search accessibles depuis Internet et durcir la configuration.",
+            "Sauvegarder régulièrement les bases MongoDB liées à cve-search.",
+            "Documenter la matrice des rôles (mgmt_users) et appliquer le principe du moindre privilège."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Enable full logging of incoming requests to the /fetch_cve_data endpoint.",
+            "Detect abnormal requests manipulating collection, fields, or regexp on MongoDB.",
+            "Monitor unauthenticated access to the cve-search interface.",
+            "Deploy SIEM rules correlating unusual requests and sensitive data exposure."
+          ],
+          "fr": [
+            "Activer la journalisation complète des requêtes entrantes sur l'endpoint /fetch_cve_data.",
+            "Détecter les requêtes anormales manipulant collection, fields ou regexp sur MongoDB.",
+            "Monitorer les accès non authentifiés à l'interface cve-search.",
+            "Déployer des règles SIEM corrélant requêtes inhabituelles et exposition de données sensibles."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Restrict or even block access to the /fetch_cve_data endpoint pending the patch.",
+            "Force immediate rotation of identifiers and hashes present in mgmt_users.",
+            "Disable unused accounts and block suspicious IPs at the WAF/Reverse-proxy level.",
+            "Isolate publicly reachable cve-search instances behind an administration VPN."
+          ],
+          "fr": [
+            "Restreindre voire bloquer l'accès à l'endpoint /fetch_cve_data en attendant le correctif.",
+            "Forcer la rotation immédiate des identifiants et hashes présents dans mgmt_users.",
+            "Désactiver les comptes non utilisés et bloquer les IP suspectes au niveau du WAF/Reverse-proxy.",
+            "Isoler les instances cve-search accessibles publiquement derrière un VPN d'administration."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Analyze malicious requests that targeted /fetch_cve_data (timestamps, IPs, payloads).",
+            "Assess the extent of the disclosure (administrative accounts and hashes exposed).",
+            "Strengthen server-side input validation (allowlist, strict schemas).",
+            "Communicate with impacted users and apply the continuous improvement cycle."
+          ],
+          "fr": [
+            "Analyser les requêtes malveillantes ayant ciblé /fetch_cve_data (timestamps, IPs, payloads).",
+            "Évaluer l'étendue de la divulgation (comptes administratifs et hashes exposés).",
+            "Renforcer la validation des entrées côté serveur (allowlist, schémas stricts).",
+            "Communiquer auprès des utilisateurs impactés et appliquer le cycle d'amélioration continue."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for past unauthorized access via /fetch_cve_data in application logs.",
+            "Identify any presence of password hashes or usernames published elsewhere (GitHub, Pastebin).",
+            "Monitor internal servers' MongoDB databases for similarly misconfigured collections.",
+            "Scan public exposure of cve-search via Shodan/Censys and cross-reference with internal inventory."
+          ],
+          "fr": [
+            "Chasser les accès non autorisés passés via /fetch_cve_data dans les logs applicatifs.",
+            "Identifier toute présence de hashes de mots de passe ou usernames publiés ailleurs (GitHub, Pastebin).",
+            "Surveiller les bases MongoDB des serveurs internes pour des collections analogues mal configurées.",
+            "Scanner l'exposition publique de cve-search via Shodan/Censys et recouper avec l'inventaire interne."
+          ]
+        }
+      },
+      "tags": [
+        "cve-search",
+        "MongoDB",
+        "information-disclosure",
+        "improper-input-validation",
+        "authentication-bypass"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-59509"
+      ],
+      "date": "2026-07-05"
+    },
+    {
+      "cve_id": "CVE-2026-14721",
+      "euvd_id": "",
+      "cisa_kev": false,
+      "cvss": "8.7",
+      "epss": "0.00447",
+      "cpe": "",
+      "product": "HiPER 1250GW",
+      "vendor": "UTT",
+      "description": {
+        "en": "A stack-based buffer overflow vulnerability was identified on UTT HiPER 1250GW routers up to version 3.2.7-210907-180535, in the affected function of the /goform/ConfigWirelessBase_5g file of the Web Endpoint component. Malicious manipulation of the ssid parameter enables a buffer overflow and may lead to arbitrary code execution. Exploitation is remote, a public PoC is distributed (GitHub J-CLOWN-TAROT/UTT) and the exploit is likely to be reused at scale. CVSS 2.0 = 9.0 (HIGH).",
+        "fr": "Une vulnérabilité de type dépassement de pile (stack-based overflow) a été identifiée sur les routeurs UTT HiPER 1250GW jusqu'à la version 3.2.7-210907-180535, dans la fonction affectée du fichier /goform/ConfigWirelessBase_5g du composant Web Endpoint. La manipulation malveillante du paramètre ssid permet un débordement de buffer et peut déboucher sur l'exécution de code arbitraire. L'exploitation est distante, un PoC public est diffusé (GitHub J-CLOWN-TAROT/UTT) et l'exploit est susceptible d'être réutilisé à grande échelle. CVSS 2.0 = 9.0 (HIGH)."
+      },
+      "mitre_ttps": [
+        "T1190",
+        "T1059",
+        "T1203"
+      ],
+      "recommandations": [
+        {
+          "en": "Update the UTT firmware with the vendor-released patch. Restrict access to the administration interface (segmentation, ACL, no Internet exposure). Monitor logs for exploitation attempts. Consider taking non-patchable devices offline.",
+          "fr": "Mettre à jour le firmware UTT avec le correctif publié par l'éditeur. Restreindre l'accès à l'interface d'administration (segmentation, ACL, non-exposition Internet). Surveiller les logs pour tentatives d'exploitation. Envisager la mise hors-ligne des équipements non patchables."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain an accurate inventory of UTT HiPER 1250GW routers (versions <=3.2.7-210907-180535).",
+            "Avoid exposing router web administration interfaces to the Internet.",
+            "Back up reference firmwares and configurations.",
+            "Document the network trust zones where these devices are deployed."
+          ],
+          "fr": [
+            "Maintenir un inventaire précis des routeurs UTT HiPER 1250GW (versions <=3.2.7-210907-180535).",
+            "Éviter d'exposer les interfaces d'administration web de routeurs sur Internet.",
+            "Sauvegarder les firmwares et configurations de référence.",
+            "Documenter les zones de confiance réseau où ces équipements sont déployés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Enable access logging for /goform/ConfigWirelessBase_5g.",
+            "Detect abnormal HTTP requests (ssid arguments, excessive size) from the IDS/IPS.",
+            "Monitor abnormal restarts or crashes of the router's web interface.",
+            "Search for indicators of compromise (modified firmware, reverse shells, beacons)."
+          ],
+          "fr": [
+            "Activer la journalisation des accès à /goform/ConfigWirelessBase_5g.",
+            "Détecter les requêtes HTTP anormales (arguments ssid, taille excessive) depuis l'IDS/IPS.",
+            "Surveiller les redémarrages anormaux ou crashs de l'interface web du routeur.",
+            "Rechercher des indicateurs de compromission (firmware modifié, shells inverses, beacons)."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate vulnerable routers or place their administration behind a dedicated management network.",
+            "Temporarily disable the affected Web endpoint or block the /goform/ConfigWirelessBase_5g path.",
+            "Apply the firmware patch as soon as published by UTT.",
+            "Force rotation of administrator credentials and associated Wi-Fi keys.",
+            "Scan devices for illegitimate configuration changes."
+          ],
+          "fr": [
+            "Isoler les routeurs vulnérables ou placer leur administration derrière un réseau de gestion dédié.",
+            "Désactiver temporairement l'endpoint Web affecté ou bloquer le chemin /goform/ConfigWirelessBase_5g.",
+            "Appliquer le correctif firmware dès publication par UTT.",
+            "Forcer la rotation des identifiants administrateur et clés Wi-Fi associées.",
+            "Scanner les équipements à la recherche de modifications de configuration non légitimes."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Perform a forensic analysis of the router (configuration, firmware dump) if compromise is suspected.",
+            "Identify the impacted perimeter (internal hosts, exfiltrated data).",
+            "Document indicators and share them with threat intelligence services.",
+            "Review the policy for exposing network administration interfaces."
+          ],
+          "fr": [
+            "Réaliser une analyse forensique du routeur (configuration, firmware dump) si compromise suspectée.",
+            "Identifier le périmètre impacté (hôtes internes, données exfiltrées).",
+            "Documenter les indicateurs et partager avec les services de threat intelligence.",
+            "Revoir la politique d'exposition des interfaces d'administration réseau."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for suspicious outbound HTTPS/HTTP connections from UTT routers to C2 infrastructure.",
+            "Identify Internet access to the /goform/ConfigWirelessBase_5g endpoint on the exposed surface via Shodan/Censys.",
+            "Look for modified firmwares or altered signatures on devices.",
+            "Monitor the GitHub PoC repository (J-CLOWN-TAROT/UTT) for tooling activity and reuse."
+          ],
+          "fr": [
+            "Chasser les connexions HTTPS/HTTP sortantes suspectes depuis les routeurs UTT vers infrastructures C2.",
+            "Identifier les accès Internet à l'endpoint /goform/ConfigWirelessBase_5g sur la surface exposée via Shodan/Censys.",
+            "Chercher des firmwares modifiés ou signatures altérées sur les équipements.",
+            "Surveiller le dépôt PoC GitHub (J-CLOWN-TAROT/UTT) pour activité d'outillage et réutilisation."
+          ]
+        }
+      },
+      "tags": [
+        "UTT",
+        "HiPER-1250GW",
+        "stack-overflow",
+        "router",
+        "CWE-119",
+        "CWE-121",
+        "PoC-public"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-14721",
+        "https://github.com/J-CLOWN-TAROT/UTT",
+        "https://vuldb.com/vuln/376308"
+      ],
+      "date": "2026-07-05"
+    },
+    {
+      "cve_id": "CVE-2026-33017",
+      "euvd_id": "",
+      "cisa_kev": true,
+      "cvss": "9.3",
+      "epss": "0.98412",
+      "cpe": "",
+      "product": "langflow",
+      "vendor": "langflow-ai",
+      "description": {
+        "en": "An article from Security Affairs Malware Newsletter 104 details a compromise exploiting CVE-2026-33017 on Langflow to install a cryptominer targeting the Monero cryptocurrency. The Langflow vulnerability serves as the entry point; the attacker then drops its payload (miner), demonstrating server resource hijacking and operational impact (saturated CPU, latency). Exploitation is described as active according to the article, warranting proactive detection and hunting for miner indicators.",
+        "fr": "Un article du Security Affairs Malware Newsletter 104 détaille une compromission exploitant CVE-2026-33017 sur Langflow pour installer un cryptomineur ciblant la cryptomonnaie Monero. La vulnérabilité Langflow sert de point d'entrée, l'attaquant y dépose ensuite sa charge utile (miner), démontrant un détournement de ressources serveur et un impact opérationnel (CPU saturée, latence). L'exploitation est qualifiée d'active selon l'article, ce qui justifie une détection proactive et une chasse aux indicateurs du miner."
+      },
+      "mitre_ttps": [
+        "T1190",
+        "T1053",
+        "T1486"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply Langflow patches, isolate exposed instances (segmentation), monitor suspicious processes and outbound flows to Monero pools, harden authentication, verify filesystem integrity following remediation.",
+          "fr": "Appliquer les correctifs Langflow, isoler les instances exposées (segmentation), surveiller les processus suspects et flux sortants vers des pools Monero, durcir l'authentification, vérifier l'intégrité du système de fichiers suite à la neutralisation."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Map internal Langflow deployments (versions and exposures).",
+            "Back up Langflow configurations and define a baseline.",
+            "Implement network monitoring of outbound flows to mining pools.",
+            "Document key contacts and escalation processes (SOC, TI)."
+          ],
+          "fr": [
+            "Cartographier les déploiements Langflow en interne (versions et expositions).",
+            "Sauvegarder les configurations Langflow et définir une base de référence.",
+            "Mettre en place une surveillance réseau des flux sortants vers pools de minage.",
+            "Documenter les contacts clés et processus d'escalade (SOC, TI)."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor Langflow logs for unusual post-exploitation activity.",
+            "Detect miner-type system processes (xmrig, minerd) on hosts running Langflow.",
+            "Alert on outbound connections to known Monero pools.",
+            "Detect newly created scheduled tasks or services on affected servers."
+          ],
+          "fr": [
+            "Surveiller les logs Langflow pour activités post-exploitation inhabituelles.",
+            "Détecter les processus système de type miner (xmrig, minerd) sur les hôtes exécutant Langflow.",
+            "Alerter sur les connexions sortantes vers pools Monero connus.",
+            "Détecter les tâches planifiées ou services nouvellement créés sur les serveurs affectés."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate or take compromised Langflow instances offline.",
+            "Kill cryptomining processes and remove associated binaries.",
+            "Remove persistence (cron, services, SSH keys) and block the PoC/loader hash.",
+            "Restore Langflow configuration files to a known trusted state."
+          ],
+          "fr": [
+            "Isoler ou mettre hors-ligne les instances Langflow compromises.",
+            "Tuer les processus de cryptominage et supprimer les binaires associés.",
+            "Supprimer la persistance (cron, services, clés SSH) et bloquer le hash du PoC/loader.",
+            "Restaurer les fichiers de configuration Langflow à un état de confiance connue."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Assess the exposure duration and induced CPU consumption (performance impact).",
+            "Search for any secondary compromises (credentials, cloud access).",
+            "Document the incident scope and share the IOCs with the community.",
+            "Strengthen the hardened configuration (authentication, isolation, update)."
+          ],
+          "fr": [
+            "Évaluer la durée d'exposition et la consommation CPU induite (impact performance).",
+            "Rechercher d'éventuelles compromissions secondaires (credentials, accès cloud).",
+            "Documenter le périmètre de l'incident et partager les IOC avec la communauté.",
+            "Renforcer la configuration durcie (authentification, isolation, mise à jour)."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for Monero mining artifacts across the estate (wallet files, configurations).",
+            "Search for outgoing communications to unusual Monero pools (network engines).",
+            "Identify other related products/languages (Node.js, AI) configured weakly.",
+            "Monitor public developments on CVE-2026-33017 and associated PoCs."
+          ],
+          "fr": [
+            "Chasser les artefacts de minage Monero sur le parc (fichiers wallet, configurations).",
+            "Rechercher les communications sortantes vers pools Monero inhabituels (moteurs réseau).",
+            "Identifier d'autres produits/langages apparentés (Node.js, IA) configurés de manière faible.",
+            "Suivre les développements publics sur CVE-2026-33017 et les PoC associés."
+          ]
+        }
+      },
+      "tags": [
+        "Langflow",
+        "cryptominer",
+        "Monero",
+        "supply-chain",
+        "python-rce"
+      ],
+      "sources": [
+        "https://securityaffairs.com/194785/uncategorized/security-affairs-malware-newsletter-round-104.html"
+      ],
+      "date": "2026-07-05"
+    },
+    {
+      "cve_id": "CVE-2026-46817",
+      "euvd_id": "",
+      "cisa_kev": false,
+      "cvss": "9.8",
+      "epss": "0.00677",
+      "cpe": "",
+      "product": "Oracle Payments",
+      "vendor": "Oracle Corporation",
+      "description": {
+        "en": "The international newsletter Security Affairs 584 reports active exploitation of vulnerability CVE-2026-46817 on Oracle E-Business Suite, affecting more than 950 exposed systems according to the associated title. The article relayed in the newsletter clearly indicates that attackers are actively exploiting this flaw, making it a priority target for patching and SIEM monitoring. With no public technical detail in the newsletter, the analysis is limited to confirming active exploitation and operational criticality.",
+        "fr": "La newsletter internationale Security Affairs 584 signale une exploitation active de la vulnérabilité CVE-2026-46817 sur Oracle E-Business Suite, affectant plus de 950 systèmes exposés selon le titre associé. L'article relayé en newsletter indique clairement que des attaquants exploitent activement cette faille, ce qui en fait une cible prioritaire pour application du correctif et surveillance SIEM. Sans détail technique public dans la newsletter, l'analyse se limite à confirmer l'exploitation active et la criticité opérationnelle."
+      },
+      "mitre_ttps": [
+        "T1190",
+        "T1059",
+        "T1133"
+      ],
+      "recommandations": [
+        {
+          "en": "Immediately apply the Oracle patch, restrict network exposure of EBS instances, audit access events and suspicious activity, isolate compromised hosts if indicators are present.",
+          "fr": "Appliquer immédiatement le correctif Oracle publié, limiter l'exposition réseau des instances EBS, auditer les événements d'accès et activité suspecte, isoler les hôtes compromis en cas d'indicateurs."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain an exhaustive inventory of Oracle E-Business Suite components (modules and versions).",
+            "Strictly segment Oracle servers accessible from the Internet.",
+            "Map functional accounts and their privileges.",
+            "Maintain tested backups of EBS instances and audit logs."
+          ],
+          "fr": [
+            "Disposer d'un inventaire exhaustif des composants Oracle E-Business Suite (modules et versions).",
+            "Segmenter strictement les serveurs Oracle accessibles depuis Internet.",
+            "Cartographier les comptes fonctionnels et leurs privilèges.",
+            "Maintenir des sauvegardes testées des instances EBS et journaux d'audit."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Enable and centralize Oracle auditing (audit_sys_operations, audit SYSLOG).",
+            "Detect suspicious access to the /OA_HTML URL or other classic EBS entry points.",
+            "Search for abnormal connections and sessions on the Oracle server.",
+            "Use the SIEM to correlate public exploitation of CVE-2026-46817 with application events."
+          ],
+          "fr": [
+            "Activer et centraliser l'audit Oracle (audit_sys_operations, SYSLOG d'audit).",
+            "Détecter des accès suspects sur l'URL /OA_HTML ou autres points d'entrée classiques EBS.",
+            "Rechercher les connexions et sessions anormales sur le serveur Oracle.",
+            "Utiliser le SIEM pour corréler l'exploitation publique de CVE-2026-46817 avec les événements applicatifs."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate vulnerable Oracle EBS instances as soon as exploitation is confirmed.",
+            "Apply the Oracle patch as soon as it is published and restart the necessary services.",
+            "Revoke/invalidate suspicious active sessions and reset sensitive accounts.",
+            "Restrict access to the Oracle subnet via network ACLs and firewall."
+          ],
+          "fr": [
+            "Isoler les instances Oracle EBS vulnérables dès exploitation confirmée.",
+            "Appliquer le patch Oracle dès publication et redémarrer les services nécessaires.",
+            "Révoquer/invalider les sessions actives suspectes et réinitialiser les comptes sensibles.",
+            "Restreindre l'accès au sous-réseau Oracle via ACL réseau et pare-feu."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Conduct a forensic investigation (DB logs, OS logs, EBS snapshots) to qualify the compromise.",
+            "Assess whether persistence (account, job, webservice) has been installed.",
+            "Notify business stakeholders (finance, HR, etc.) and competent authorities.",
+            "Review the exposure architecture and update cycle rules."
+          ],
+          "fr": [
+            "Mener une investigation forensique (logs BD, logs OS, snapshots EBS) pour qualifier l'atteinte.",
+            "Évaluer si une persistance (compte, job, webservice) a été installée.",
+            "Notifier les parties prenantes métier (finance, RH, etc.) et autorités compétentes.",
+            "Revoir l'architecture d'exposition et les règles du cycle de mise à jour."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for IOCs associated with CVE-2026-46817 in HTTP, reverse-proxy, and ASO logs.",
+            "Identify any other unpatched Oracle vulnerabilities (internal scans).",
+            "Hunt for dormant administrator accounts and unusual privileges.",
+            "Monitor the public appearance of PoCs dedicated to CVE-2026-46817."
+          ],
+          "fr": [
+            "Rechercher les IOC associés à CVE-2026-46817 dans les journaux HTTP, Reverse-proxy et ASO.",
+            "Identifier d'éventuelles autres vulnérabilités Oracle non patchées (scans internes).",
+            "Chasser les comptes administrateurs dormants et privilèges inhabituels.",
+            "Surveiller l'apparition publique de PoC dédiés à CVE-2026-46817."
+          ]
+        }
+      },
+      "tags": [
+        "Oracle",
+        "E-Business-Suite",
+        "active-exploitation",
+        "weekly-newsletter"
+      ],
+      "sources": [
+        "https://securityaffairs.com/194772/security/security-affairs-newsletter-round-584-by-pierluigi-paganini-international-edition.html"
+      ],
+      "date": "2026-07-05"
     }
   ],
   "threats_analyse": [
     {
       "title": {
-        "en": "unknown",
-        "fr": "inconnu"
+        "en": "Malware detections on USB drives from Mie Prefecture (Japan) – fleet estimated at more than 6,000 units",
+        "fr": "Détections de malware sur des clés USB de la préfecture de Mie (Japon) – parc estimé à plus de 6 000 unités"
       },
       "description": {
-        "en": "unknown",
-        "fr": "inconnu"
+        "en": "Mie Prefecture (三重県庁) in Japan has successively detected malware on several USB drives circulating in its services. The total fleet of removable media for the administration is estimated at more than 6,000 units, raising the question of the potential extent of exposure and cross-contamination between workstations and services. The incident is reported in early July 2026 and no specific impact on data or services has yet been published.",
+        "fr": "La préfecture de Mie (三重県庁) au Japon a détecté successivement des malwares sur plusieurs clés USB en circulation dans ses services. Le parc total de supports amovibles de l'administration est estimé à plus de 6 000 unités, ce qui soulève la question de l'étendue potentielle de l'exposition et de la contamination croisée entre postes et services. L'incident est rapporté début juillet 2026 et aucun impact précis sur les données ou les services n'a encore été publié."
       },
-      "threat_actor": "unknown",
-      "threat_actor_origin": "unknown",
-      "threat_actor_type": "unknown",
-      "threat_actor_aliases": [
-        "unknown"
-      ],
+      "resume": {
+        "en": "Mie Prefecture (三重県庁) in Japan has successively detected malware on several USB drives circulating in its services. The total fleet of removable media for the administration is estimated at more than 6,000 units, raising the question of the potential extent of exposure and cross-contamination between workstations and services. The incident is reported in early July 2026 and no specific impact on data or services has yet been published.",
+        "fr": "La préfecture de Mie (三重県庁) au Japon a détecté successivement des malwares sur plusieurs clés USB en circulation dans ses services. Le parc total de supports amovibles de l'administration est estimé à plus de 6 000 unités, ce qui soulève la question de l'étendue potentielle de l'exposition et de la contamination croisée entre postes et services. L'incident est rapporté début juillet 2026 et aucun impact précis sur les données ou les services n'a encore été publié."
+      },
+      "analyse_operationnelle": {
+        "en": "For SOC/IT teams, this incident demonstrates that an unmanaged removable media fleet constitutes a major attack surface: a single compromised drive can contaminate several endpoints and facilitate discrete lateral movement, difficult to detect via network signatures alone. Priority actions consist of enabling USB auditing (Sysmon Event ID 11/13), blocking autorun via GPO, deploying an executable allow-list on administrative workstations, setting up a mandatory scanning kiosk for any new drive introduced, and correlating EDR alerts related to removable media in order to quickly identify waves of contamination. The response must include a forensic investigation phase for each seized drive.",
+        "fr": "Pour les équipes SOC/IT, cet incident démontre qu'un parc de supports amovibles non maîtrisé constitue une surface d'attaque majeure : un seul support compromis peut contaminer plusieurs endpoints et faciliter un mouvement latéral discret, difficile à détecter via les seules signatures réseau. Les actions prioritaires consistent à activer l'audit USB (Sysmon Event ID 11/13), bloquer l'autorun via GPO, déployer une allow-list d'exécutables sur les postes administratifs, mettre en place un kiosque de scan obligatoire pour toute nouvelle clé introduite, et corréler les alertes EDR liées aux médias amovibles afin d'identifier rapidement des vagues de contamination. La réponse doit inclure une phase d'investigation forensique de chaque support saisi."
+      },
+      "implications_strategiques": {
+        "en": "The incident highlights the systemic risk weighing on Japanese local administrations and, by extension, on any public or private organization with active paper-based bureaucratic processes. It brings to light a governance issue: the management of removable media remains a blind spot in many Zero Trust policies. From a decision-making standpoint, this event should accelerate the migration to encrypted digital workflows, the gradual elimination of USB drives, and the hardening of procurement policies. It also argues for a comprehensive and continuous inventory of physical information-processing assets.",
+        "fr": "L'incident souligne le risque systémique pesant sur les administrations locales japonaises et, par extension, sur toute organisation publique ou privée disposant de processus bureaucratiques papier encore actifs. Il met en lumière un enjeu de gouvernance : la gestion des supports amovibles reste un angle mort dans de nombreuses politiques Zero Trust. Sur le plan décisionnel, cet événement devrait accélérer la migration vers des workflows numériques chiffrés, la suppression progressive des clés USB et le durcissement des politiques d'approvisionnement. Il plaide également pour un inventaire exhaustif et continu des actifs physiques de traitement de l'information."
+      },
+      "threat_actor": "",
+      "threat_actor_origin": "",
+      "threat_actor_type": "",
+      "threat_actor_aliases": [],
       "sector": {
         "en": [
-          "Critical_Infrastructure"
+          "Administration publique / Gouvernement"
         ],
         "fr": [
-          "Infrastructures critiques"
+          "Administration publique / Gouvernement"
         ]
       },
       "indicators": {
@@ -315,67 +843,874 @@
         "TOOLS": []
       },
       "mitre_ttps": [
-        "unknown"
+        "T1091"
       ],
       "analyse": {
-        "en": "unknown",
-        "fr": "inconnu"
+        "en": "The incident highlights the systemic risk weighing on Japanese local administrations and, by extension, on any public or private organization with active paper-based bureaucratic processes. It brings to light a governance issue: the management of removable media remains a blind spot in many Zero Trust policies. From a decision-making standpoint, this event should accelerate the migration to encrypted digital workflows, the gradual elimination of USB drives, and the hardening of procurement policies. It also argues for a comprehensive and continuous inventory of physical information-processing assets.",
+        "fr": "L'incident souligne le risque systémique pesant sur les administrations locales japonaises et, par extension, sur toute organisation publique ou privée disposant de processus bureaucratiques papier encore actifs. Il met en lumière un enjeu de gouvernance : la gestion des supports amovibles reste un angle mort dans de nombreuses politiques Zero Trust. Sur le plan décisionnel, cet événement devrait accélérer la migration vers des workflows numériques chiffrés, la suppression progressive des clés USB et le durcissement des politiques d'approvisionnement. Il plaide également pour un inventaire exhaustif et continu des actifs physiques de traitement de l'information."
       },
       "recommandations": [
         {
-          "en": "unknown",
-          "fr": "inconnu"
+          "en": "Establish an exhaustive and encrypted inventory of the removable media fleet.",
+          "fr": "Établir un inventaire exhaustif et chiffré du parc de supports amovibles."
+        },
+        {
+          "en": "Mandate certified encrypted USB drives and block unapproved media via GPO/EDR.",
+          "fr": "Imposer des clés USB chiffrées certifiées et bloquer les supports non approuvés via GPO/EDR."
+        },
+        {
+          "en": "Set up a mandatory scanning station for any incoming or outgoing drive.",
+          "fr": "Mettre en place une station de scan obligatoire pour toute clé entrante ou sortante."
+        },
+        {
+          "en": "Strengthen logging and alerting on USB events (Sysmon, EDR).",
+          "fr": "Renforcer la journalisation et l'alerte sur événements USB (Sysmon, EDR)."
+        },
+        {
+          "en": "Retrospectively audit all endpoints that received a removable medium.",
+          "fr": "Auditer rétrospectivement tous les endpoints ayant reçu un support amovible."
         }
       ],
       "incident_response_playbook": {
         "phase1_preparation": {
           "en": [
-            "unknown"
+            "Inventory and centralize the management of all removable media (single registry, physical marking).",
+            "Harden the USB drive usage policy: ban personal drives, exclusively provide certified encrypted drives.",
+            "Configure endpoints to block automatic execution on removable media (DisableAutoPlay, AppLocker/Windows Defender Application Control).",
+            "Train staff on the procedure for reporting any drive found or received.",
+            "Set up a dedicated EDR/AV quarantine station to analyze media before any reuse."
           ],
           "fr": [
-            "inconnu"
+            "Inventorier et centraliser la gestion de tous les supports amovibles (registre unique, marquage physique).",
+            "Durcir la politique d'utilisation des clés USB : interdiction des supports personnels, fourniture exclusive de clés chiffrées certifiées.",
+            "Configurer les endpoints pour bloquer l'exécution automatique sur média amovible (DisableAutoPlay, AppLocker/Windows Defender Application Control).",
+            "Former les agents à la procédure de déclaration de tout support trouvé ou reçu.",
+            "Mettre en place une station de quarantaine EDR/av dédiée à l'analyse des supports avant toute réutilisation."
           ]
         },
         "phase2_detection": {
           "en": [
-            "unknown"
+            "Monitor EDR/antivirus alerts on USB insertion and autorun events.",
+            "Detect malicious processes launched from a removable drive letter.",
+            "Correlate multiple detections to identify a coordinated campaign.",
+            "Enable detailed logging of USB access (Sysmon Event ID 11/13/15)."
           ],
           "fr": [
-            "inconnu"
+            "Surveiller les alertes EDR/antivirus sur insertion USB et événements d'autorun.",
+            "Détecter les processus malveillants lancés depuis une lettre de lecteur amovible.",
+            "Corréler les détections multiples pour identifier une campagne coordonnée.",
+            "Activer la journalisation détaillée des accès USB (Sysmon Event ID 11/13/15)."
           ]
         },
         "phase3_containment": {
           "en": [
-            "unknown"
+            "Immediately isolate the affected workstations from the network.",
+            "Seize and place under seal all potentially infected removable media.",
+            "Temporarily disable all non-essential USB ports via GPO.",
+            "Reconnect drives only after a complete scan in an isolated environment."
           ],
           "fr": [
-            "inconnu"
+            "Isoler immédiatement les postes concernés du réseau.",
+            "Saisir et mettre sous scellés tous les supports amovibles potentiellement infectés.",
+            "Désactiver temporairement tous les ports USB non essentiels via GPO.",
+            "Rebrancher les supports uniquement après scan complet en environnement isolé."
           ]
         },
         "phase4_post_incident": {
           "en": [
-            "unknown"
+            "Perform a forensic analysis of each affected drive (disk image, YARA, triage).",
+            "Map the contamination chain (who gave what to whom, dates, context).",
+            "Assess the scope of data potentially exfiltrated or corrupted.",
+            "Communicate to internal stakeholders and, if necessary, to authorities (CERT, 警务).",
+            "Update the removable media policy and associated controls."
           ],
           "fr": [
-            "inconnu"
+            "Réaliser une analyse forensique de chaque clé affectée (image disque, YARA, triage).",
+            "Cartographier la chaîne de contamination (qui a remis quoi à qui, dates, contexte).",
+            "Évaluer le périmètre des données potentiellement exfiltrées ou corrompues.",
+            "Communiquer aux parties prenantes internes et, si nécessaire, aux autorités (CERT,警务).",
+            "Mettre à jour la politique de supports amovibles et les contrôles associés."
           ]
         },
         "phase5_threat_hunting": {
           "en": [
-            "unknown"
+            "Search the EDR history for all executions from removable paths over a rolling 12-month period.",
+            "Identify signatures of known malware and stealthy behaviors (LOLBins).",
+            "Audit the workstations of staff handling sensitive data.",
+            "Hunt for unusual outbound communications correlated with USB sessions."
           ],
           "fr": [
-            "inconnu"
+            "Rechercher dans l'historique EDR toutes les exécutions depuis chemins amovibles sur 12 mois glissants.",
+            "Identifier des signatures de malwares connus et de comportements furtifs (LOLBins).",
+            "Auditer les postes d'agents manipulant des données sensibles.",
+            "Chasser les communications sortantes inhabituelles corrélées à des sessions USB."
           ]
         }
       },
       "tags": [
-        "unknown"
+        "USB",
+        "Malware",
+        "Sécurité physique",
+        "Gestion des supports amovibles"
       ],
       "sources": [
-        "unknown"
+        "https://rocket-boys.co.jp/security-measures-lab/mie-prefecture-usb-malware-detection/"
       ],
       "date": "2026-07-06"
+    },
+    {
+      "title": {
+        "en": "Summary of cyberattacks in June 2026 in Japan and internationally",
+        "fr": "Récapitulatif des cyberattaques de juin 2026 au Japon et à l'international"
+      },
+      "description": {
+        "en": "The summary published at the beginning of July 2026 brings together the main cybersecurity incidents observed during June 2026: compromises, data leaks, ransomware attacks and phishing campaigns that hit public and private organizations in Japan and abroad. It is a watch compilation without in-depth technical detail but useful for tracking major monthly trends.",
+        "fr": "Le récapitulatif publié début juillet 2026 rassemble les principaux incidents de cybersécurité observés au cours du mois de juin 2026 : compromissions, fuites de données, attaques par ransomware et campagnes de phishing ayant touché des organisations publiques et privées au Japon et à l'étranger. Il s'agit d'une compilation de veille sans détail technique approfondi mais utile pour suivre les grandes tendances mensuelles."
+      },
+      "resume": {
+        "en": "The summary published at the beginning of July 2026 brings together the main cybersecurity incidents observed during June 2026: compromises, data leaks, ransomware attacks and phishing campaigns that hit public and private organizations in Japan and abroad. It is a watch compilation without in-depth technical detail but useful for tracking major monthly trends.",
+        "fr": "Le récapitulatif publié début juillet 2026 rassemble les principaux incidents de cybersécurité observés au cours du mois de juin 2026 : compromissions, fuites de données, attaques par ransomware et campagnes de phishing ayant touché des organisations publiques et privées au Japon et à l'étranger. Il s'agit d'une compilation de veille sans détail technique approfondi mais utile pour suivre les grandes tendances mensuelles."
+      },
+      "analyse_operationnelle": {
+        "en": "This synthesis serves as a tactical barometer: it enables SOCs to adjust their detection and hunting rules on the most active vectors and sectors. Teams must extract the mentioned IOCs and TTPs, ingest them into the SIEM/EDR, and verify their past exposure (retro-hunt). The lack of detailed technical details requires cross-referencing this source with CERT advisories and EDR vendor publications.",
+        "fr": "Cette synthèse sert de baromètre tactique : elle permet aux SOC d'ajuster leurs règles de détection et de hunting sur les vecteurs et secteurs les plus actifs. Les équipes doivent extraire les IOCs et TTP mentionnés, les ingérer dans le SIEM/EDR et vérifier leur exposition passée (rétro-hunt). L'absence de détails techniques détaillés impose de croiser cette source avec les advisories des CERT et des éditeurs EDR."
+      },
+      "implications_strategiques": {
+        "en": "The recurrence of such summaries confirms that the pace of incidents remains high and cross-sector. From a decision-making standpoint, this justifies continuous investment in CTI watch, training and incident response capabilities. Organizations must also prepare for a foreseeable intensification of campaigns during the summer period, a time historically conducive to attacks.",
+        "fr": "La récurrence de tels récapitulatifs confirme que la cadence des incidents reste élevée et multi-sectorielle. Décisionnellement, cela justifie un investissement continu dans la veille CTI, la formation et les capacités de réponse à incident. Les organisations doivent également se préparer à une intensification prévisible des campagnes en période estivale, période historiquement propice aux attaques."
+      },
+      "threat_actor": "",
+      "threat_actor_origin": "",
+      "threat_actor_type": "",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Multi-secteurs"
+        ],
+        "fr": [
+          "Multi-secteurs"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "The recurrence of such summaries confirms that the pace of incidents remains high and cross-sector. From a decision-making standpoint, this justifies continuous investment in CTI watch, training and incident response capabilities. Organizations must also prepare for a foreseeable intensification of campaigns during the summer period, a time historically conducive to attacks.",
+        "fr": "La récurrence de tels récapitulatifs confirme que la cadence des incidents reste élevée et multi-sectorielle. Décisionnellement, cela justifie un investissement continu dans la veille CTI, la formation et les capacités de réponse à incident. Les organisations doivent également se préparer à une intensification prévisible des campagnes en période estivale, période historiquement propice aux attaques."
+      },
+      "recommandations": [
+        {
+          "en": "Integrate this type of summary into the monthly CTI watch cycle.",
+          "fr": "Intégrer ce type de récapitulatif dans le cycle de veille CTI mensuel."
+        },
+        {
+          "en": "Map the affected sectors and verify internal exposure.",
+          "fr": "Cartographier les secteurs touchés et vérifier l'exposition interne."
+        },
+        {
+          "en": "Adjust security controls according to observed trends.",
+          "fr": "Ajuster les contrôles de sécurité en fonction des tendances observées."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain up-to-date CTI watch on active campaigns in Japan and Asia.",
+            "Raise employee awareness of common indicators of compromise.",
+            "Prepare specific playbooks for major threat families (ransomware, BEC, supply chain)."
+          ],
+          "fr": [
+            "Maintenir une veille CTI actualisée sur les campagnes actives au Japon et en Asie.",
+            "Sensibiliser les collaborateurs aux indicateurs de compromission courants.",
+            "Préparer des playbooks spécifiques aux grandes familles de menaces (ransomware, BEC, supply chain)."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Activate monitoring of the IOCs published in the monthly summary.",
+            "Verify the absence of known TTPs in SIEM/EDR logs.",
+            "Strengthen detection of unusual activity on exposed services."
+          ],
+          "fr": [
+            "Activer la surveillance des IOCs publiés dans le récapitulatif mensuel.",
+            "Vérifier l'absence de TTP connues dans les journaux SIEM/EDR.",
+            "Renforcer la détection des activités inhabituelles sur les services exposés."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate potentially compromised hosts according to identified TTPs.",
+            "Revoke suspicious access and suspend exposed privileged accounts."
+          ],
+          "fr": [
+            "Isoler les hôtes potentiellement compromis selon les TTP identifiés.",
+            "Révoquer les accès suspects et suspendre les comptes à privilèges exposés."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Capitalize on lessons learned from published incidents to adjust security policies.",
+            "Document the gaps detected during controls."
+          ],
+          "fr": [
+            "Capitaliser sur les enseignements des incidents publiés pour ajuster les politiques de sécurité.",
+            "Documenter les écarts détectés lors des contrôles."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for indicators related to the campaigns mentioned in the summary.",
+            "Review historical logs over the period covered (June 2026)."
+          ],
+          "fr": [
+            "Chasser les indicateurs liés aux campagnes évoquées dans le récapitulatif.",
+            "Revoir les journaux historiques sur la période couverte (juin 2026)."
+          ]
+        }
+      },
+      "tags": [
+        "Synthèse mensuelle",
+        "Ransomware",
+        "Phishing",
+        "Fuite de données"
+      ],
+      "sources": [
+        "https://rocket-boys.co.jp/security-measures-lab/2026-06-latest-cyber-attack-cases/"
+      ],
+      "date": "2026-07-06"
+    },
+    {
+      "title": {
+        "en": "Weekly review of breaches (June 29 – July 5, 2026): Sapporo, Ford, Nissan, Aflac and the U.S. DHS hit",
+        "fr": "Revue hebdomadaire des brèches (29 juin – 5 juillet 2026) : Sapporo, Ford, Nissan, Aflac et le DHS américains touchés"
+      },
+      "description": {
+        "en": "The weekly review published by Nick Espinosa lists several notable incidents between June 29 and July 5, 2026: compromises affecting the Sapporo brewery, automakers Ford and Nissan, insurer Aflac, as well as the U.S. Department of Homeland Security. The vectors mentioned include data leak, ransomware, phishing and privacy breaches. The episode is available as video (YouTube) and podcast (SoundCloud).",
+        "fr": "La revue hebdomadaire publiée par Nick Espinosa recense plusieurs incidents notables entre le 29 juin et le 5 juillet 2026 : compromissions affectant la brasserie Sapporo, les constructeurs automobiles Ford et Nissan, l'assureur Aflac ainsi que le Department of Homeland Security américain. Les vecteurs évoqués incluent fuite de données, ransomware, phishing et compromissions de la vie privée. L'épisode existe sous forme vidéo (YouTube) et podcast (SoundCloud)."
+      },
+      "resume": {
+        "en": "The weekly review published by Nick Espinosa lists several notable incidents between June 29 and July 5, 2026: compromises affecting the Sapporo brewery, automakers Ford and Nissan, insurer Aflac, as well as the U.S. Department of Homeland Security. The vectors mentioned include data leak, ransomware, phishing and privacy breaches. The episode is available as video (YouTube) and podcast (SoundCloud).",
+        "fr": "La revue hebdomadaire publiée par Nick Espinosa recense plusieurs incidents notables entre le 29 juin et le 5 juillet 2026 : compromissions affectant la brasserie Sapporo, les constructeurs automobiles Ford et Nissan, l'assureur Aflac ainsi que le Department of Homeland Security américain. Les vecteurs évoqués incluent fuite de données, ransomware, phishing et compromissions de la vie privée. L'épisode existe sous forme vidéo (YouTube) et podcast (SoundCloud)."
+      },
+      "analyse_operationnelle": {
+        "en": "SOC teams must immediately verify whether their organization, its subsidiaries or partners are among the victims and whether data flows or third-party credentials may have transited through these entities. The possible published IOCs must be ingested, detection of phishing campaigns impersonating these brands must be strengthened (domain typosquatting, support impersonation) and monitoring of third-party access (SSO, VPN, API) from these organizations must be hardened. The fact that the DHS is mentioned indicates increased attacker sophistication or persistence and should prompt a review of network segmentation and privileged account management.",
+        "fr": "Les équipes SOC doivent immédiatement vérifier si leur organisation, ses filiales ou partenaires figurent parmi les victimes et si des flux de données ou identifiants tiers ont pu transiter via ces entités. Il faut ingérer les IOCs éventuels publiés, renforcer la détection des campagnes de phishing imitant ces marques (typosquatting de domaines, usurpation de supports) et durcir la surveillance des accès tiers (SSO, VPN, API) en provenance de ces organisations. Le fait que le DHS soit mentionné indique une sophistication ou une persistance accrue des attaquants et doit inciter à revoir la segmentation réseau et la gestion des comptes à privilèges."
+      },
+      "implications_strategiques": {
+        "en": "The simultaneous compromise of organizations from critical sectors (agri-food, automotive, insurance, government) underscores the diversification of targets and operational resilience as a strategic issue. The disclosure concerning the DHS has strong geopolitical resonance and can erode trust in institutions. For boards of directors, this justifies accelerating investments in cyber resilience, particularly in third-party risk management, continuity plans and crisis communication. The concentration of incidents over a week also indicates a potential intensification of ransomware group activity and opportunistic campaigns.",
+        "fr": "L'atteinte simultanée d'organisations issues de secteurs critiques (agroalimentaire, automobile, assurance, État) souligne la diversification des cibles et la résilience opérationnelle comme enjeu stratégique. La divulgation concernant le DHS a une résonance géopolitique forte et peut éroder la confiance dans les institutions. Pour les conseils d'administration, cela justifie l'accélération des investissements en cyber-résilience, en particulier dans la gestion du risque tiers, les plans de continuité et la communication de crise. La concentration d'incidents sur une semaine indique aussi une intensification potentielle de l'activité des groupes ransomware et des campagnes opportunistes."
+      },
+      "threat_actor": "",
+      "threat_actor_origin": "",
+      "threat_actor_type": "",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Agroalimentaire",
+          "Automobile",
+          "Assurance",
+          "Secteur public"
+        ],
+        "fr": [
+          "Agroalimentaire",
+          "Automobile",
+          "Assurance",
+          "Secteur public"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "The simultaneous compromise of organizations from critical sectors (agri-food, automotive, insurance, government) underscores the diversification of targets and operational resilience as a strategic issue. The disclosure concerning the DHS has strong geopolitical resonance and can erode trust in institutions. For boards of directors, this justifies accelerating investments in cyber resilience, particularly in third-party risk management, continuity plans and crisis communication. The concentration of incidents over a week also indicates a potential intensification of ransomware group activity and opportunistic campaigns.",
+        "fr": "L'atteinte simultanée d'organisations issues de secteurs critiques (agroalimentaire, automobile, assurance, État) souligne la diversification des cibles et la résilience opérationnelle comme enjeu stratégique. La divulgation concernant le DHS a une résonance géopolitique forte et peut éroder la confiance dans les institutions. Pour les conseils d'administration, cela justifie l'accélération des investissements en cyber-résilience, en particulier dans la gestion du risque tiers, les plans de continuité et la communication de crise. La concentration d'incidents sur une semaine indique aussi une intensification potentielle de l'activité des groupes ransomware et des campagnes opportunistes."
+      },
+      "recommandations": [
+        {
+          "en": "Verify direct and indirect exposure to the cited entities.",
+          "fr": "Vérifier l'exposition directe et indirecte aux entités citées."
+        },
+        {
+          "en": "Ingest the published IOCs and hunt retrospectively.",
+          "fr": "Ingérer les IOCs publiés et chasser rétrospectivement."
+        },
+        {
+          "en": "Harden third-party access management (strong MFA, key rotation, monitoring).",
+          "fr": "Durcir la gestion des accès tiers (MFA forte, rotation des clés, monitoring)."
+        },
+        {
+          "en": "Strengthen detection of phishing impersonating the compromised brands.",
+          "fr": "Renforcer la détection du phishing imitant les marques compromises."
+        },
+        {
+          "en": "Test business continuity plans incorporating the scenario of a compromised critical supplier.",
+          "fr": "Tester les plans de continuité d'activité intégrant le scénario d'un fournisseur critique compromis."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Identify whether the organization or its partners appear in the list of cited victims (Sapporo, Ford, Nissan, Aflac, DHS).",
+            "Have pre-established communication channels with critical suppliers in the automotive, brewery and insurance sectors.",
+            "Keep the mapping of third parties and their exposure up to date.",
+            "Test business continuity plans related to supply chain disruptions."
+          ],
+          "fr": [
+            "Identifier si l'organisation ou ses partenaires figurent dans la liste des victimes citées (Sapporo, Ford, Nissan, Aflac, DHS).",
+            "Disposer de canaux de communication pré-établis avec les fournisseurs critiques des secteurs automobile, brasserie et assurance.",
+            "Maintenir à jour la cartographie des tiers et de leur exposition.",
+            "Tester les plans de continuité d'activité liés aux perturbations des chaînes d'approvisionnement."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Search for any compromise of supplier accounts (SSO, VPN, third-party access).",
+            "Activate enhanced monitoring on inbound/outbound communications related to the cited entities.",
+            "Detect phishing activities targeting employees in connection with these brands."
+          ],
+          "fr": [
+            "Rechercher toute compromission de comptes fournisseurs (SSO, VPN, accès tiers).",
+            "Activer la surveillance renforcée sur les communications entrantes/sortantes liées aux entités citées.",
+            "Détecter des activités de phishing ciblant les employés en lien avec ces marques."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Suspend or restrict third-party access in the event of confirmed supplier compromise.",
+            "Isolate potentially impacted segments."
+          ],
+          "fr": [
+            "Suspendre ou restreindre les accès tiers en cas de compromission confirmée d'un fournisseur.",
+            "Isoler les segments potentiellement impactés."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Assess impacts on partners and customers in the event of a domino effect.",
+            "Communicate with stakeholders and competent authorities.",
+            "Capitalize on lessons learned to strengthen third-party risk management."
+          ],
+          "fr": [
+            "Évaluer les impacts sur les partenaires et clients en cas d'effet domino.",
+            "Communiquer avec les parties prenantes et autorités compétentes.",
+            "Capitaliser sur les enseignements pour renforcer la gestion du risque tiers."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for IOCs or TTPs specific to the campaigns that targeted these organizations.",
+            "Hunt for lateral movements stemming from compromised third-party credentials."
+          ],
+          "fr": [
+            "Rechercher des IOCs ou TTP spécifiques aux campagnes ayant visé ces organisations.",
+            "Chasser les mouvements latéraux issus d'identifiants tiers compromis."
+          ]
+        }
+      },
+      "tags": [
+        "Fuite de données",
+        "Ransomware",
+        "Phishing",
+        "Synthèse hebdomadaire"
+      ],
+      "sources": [
+        "https://youtu.be/npA7mM94jOc",
+        "https://soundcloud.com/nickaesp/b2026-07-05"
+      ],
+      "date": "2026-07-06"
+    },
+    {
+      "title": {
+        "en": "Massive data leak via the .bank.in registration portal in India (IDRBT)",
+        "fr": "Fuite de données massives via le portail d'enregistrement .bank.in en Inde (IDRBT)"
+      },
+      "description": {
+        "en": "The IDRBT Domain Registration portal (registrar[.]idrbt[.]ac[.]in), the exclusive registrar for the .bank.in namespace imposed by the Reserve Bank of India, reportedly exposed its entire REST API via more than 33 unauthenticated endpoints. According to the relayed alert, any actor with a simple curl could have retrieved bcrypt password hashes, phone numbers, email addresses, login IPs and workstation fingerprints of the 5,576 bank employees authorized to manage Indian banking domains.",
+        "fr": "Le portail IDRBT Domain Registration (registrar[.]idrbt[.]ac[.]in), registrar exclusif pour l'espace de noms .bank.in imposé par la Reserve Bank of India, aurait exposé l'intégralité de son API REST via plus de 33 endpoints non authentifiés. Selon l'alerte relayée, n'importe quel acteur disposant d'un simple curl aurait pu récupérer les hachages bcrypt des mots de passe, numéros de téléphone, adresses e-mail, IP de connexion et empreintes de poste des 5 576 employés de banque habilités à gérer les domaines bancaires indiens."
+      },
+      "resume": {
+        "en": "The IDRBT Domain Registration portal (registrar[.]idrbt[.]ac[.]in), the exclusive registrar for the .bank.in namespace imposed by the Reserve Bank of India, reportedly exposed its entire REST API via more than 33 unauthenticated endpoints. According to the relayed alert, any actor with a simple curl could have retrieved bcrypt password hashes, phone numbers, email addresses, login IPs and workstation fingerprints of the 5,576 bank employees authorized to manage Indian banking domains.",
+        "fr": "Le portail IDRBT Domain Registration (registrar[.]idrbt[.]ac[.]in), registrar exclusif pour l'espace de noms .bank.in imposé par la Reserve Bank of India, aurait exposé l'intégralité de son API REST via plus de 33 endpoints non authentifiés. Selon l'alerte relayée, n'importe quel acteur disposant d'un simple curl aurait pu récupérer les hachages bcrypt des mots de passe, numéros de téléphone, adresses e-mail, IP de connexion et empreintes de poste des 5 576 employés de banque habilités à gérer les domaines bancaires indiens."
+      },
+      "analyse_operationnelle": {
+        "en": "SOC and AppSec teams must prioritize a comprehensive authentication audit on all exposed REST APIs and third-party administration portals. On the detection side, monitoring of suspicious requests on sensitive endpoints must be instrumented and an alert must be set up for volumetric extraction. The response must include the immediate rotation of credentials, the implementation of strong authentication (OAuth2/mTLS), an API WAF and detailed access logging. Client banking organizations must assess their indirect exposure.",
+        "fr": "Les équipes SOC et AppSec doivent prioriser un audit d'authentification exhaustif sur toutes les API REST exposées et les portails d'administration tiers. Côté détection, il faut instrumenter la surveillance des requêtes suspectes sur les endpoints sensibles et mettre en place une alerte en cas d'extraction volumique. La réponse doit comprendre la rotation immédiate des identifiants, la mise en place d'un authentification forte (OAuth2/mTLS), un WAF API et la journalisation détaillée des accès. Les organisations bancaires clientes doivent évaluer leur exposition indirecte."
+      },
+      "implications_strategiques": {
+        "en": "This leak undermines trust in the .bank.in infrastructure, designed precisely to strengthen the security of the Indian banking sector. It illustrates the persistence of gaping flaws (unauthenticated APIs) at the heart of infrastructures supposed to be critical and the risk linked to the concentration of identity data in a single point. From a decision-making standpoint, this requires banks and regulators to rethink the governance of the registrar, to require independent security audits and to strengthen regulatory oversight of DNS identity providers. From a geopolitical and sectoral standpoint, a state or criminal actor targeting India would have a precise map of the people managing banking digital trust.",
+        "fr": "Cette fuite fragilise la confiance dans l'infrastructure .bank.in, conçue précisément pour renforcer la sécurité du secteur bancaire indien. Elle illustre la persistance de failles béantes (API non authentifiées) au cœur d'infrastructures censées être critiques et le risque lié à la concentration des données d'identité dans un point unique. Décisionnellement, cela impose aux banques et régulateurs de repenser la gouvernance du registrar, d'exiger des audits de sécurité indépendants et de renforcer la supervision réglementaire des prestataires d'identité DNS. Sur le plan géopolitique et sectoriel, un acteur étatique ou criminel ciblant l'Inde disposerait d'une cartographie précise des personnes gérant la confiance numérique bancaire."
+      },
+      "threat_actor": "",
+      "threat_actor_origin": "",
+      "threat_actor_type": "",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Bancaire / Services financiers",
+          "Infrastructure DNS"
+        ],
+        "fr": [
+          "Bancaire / Services financiers",
+          "Infrastructure DNS"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "registrar[.]idrbt[.]ac[.]in"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1078",
+        "T1552.001"
+      ],
+      "analyse": {
+        "en": "This leak undermines trust in the .bank.in infrastructure, designed precisely to strengthen the security of the Indian banking sector. It illustrates the persistence of gaping flaws (unauthenticated APIs) at the heart of infrastructures supposed to be critical and the risk linked to the concentration of identity data in a single point. From a decision-making standpoint, this requires banks and regulators to rethink the governance of the registrar, to require independent security audits and to strengthen regulatory oversight of DNS identity providers. From a geopolitical and sectoral standpoint, a state or criminal actor targeting India would have a precise map of the people managing banking digital trust.",
+        "fr": "Cette fuite fragilise la confiance dans l'infrastructure .bank.in, conçue précisément pour renforcer la sécurité du secteur bancaire indien. Elle illustre la persistance de failles béantes (API non authentifiées) au cœur d'infrastructures censées être critiques et le risque lié à la concentration des données d'identité dans un point unique. Décisionnellement, cela impose aux banques et régulateurs de repenser la gouvernance du registrar, d'exiger des audits de sécurité indépendants et de renforcer la supervision réglementaire des prestataires d'identité DNS. Sur le plan géopolitique et sectoriel, un acteur étatique ou criminel ciblant l'Inde disposerait d'une cartographie précise des personnes gérant la confiance numérique bancaire."
+      },
+      "recommandations": [
+        {
+          "en": "Immediately authenticate all endpoints of the IDRBT portal.",
+          "fr": "Authentifier immédiatement tous les endpoints du portail IDRBT."
+        },
+        {
+          "en": "Revoke and regenerate the passwords of the 5,576 affected employees.",
+          "fr": "Révoquer et régénérer les mots de passe des 5 576 employés concernés."
+        },
+        {
+          "en": "Notify the RBI and the banks using .bank.in.",
+          "fr": "Notifier la RBI et les banques utilisatrices du .bank.in."
+        },
+        {
+          "en": "Conduct a forensic audit of past access.",
+          "fr": "Mener un audit forensique des accès passés."
+        },
+        {
+          "en": "Deploy an API WAF and enforce OAuth2/mTLS for all sensitive endpoints.",
+          "fr": "Déployer un WAF API et imposer OAuth2/mTLS pour tous les endpoints sensibles."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Map all internal and external business APIs, particularly those of the DNS identity registry.",
+            "Systematically audit the authentication of each endpoint (authn/authz).",
+            "Strengthen password hashing policies (bcrypt with high cost) and salting.",
+            "Prepare a notification plan compliant with Indian regulations and the contractual commitments of the banks."
+          ],
+          "fr": [
+            "Cartographier toutes les API métiers internes et externes, en particulier celles du registre d'identités DNS.",
+            "Auditer systématiquement l'authentification de chaque endpoint (authn/authz).",
+            "Renforcer les politiques de hachage (bcrypt avec coût élevé) et salage des mots de passe.",
+            "Préparer un plan de notification conforme à la réglementation indienne et aux engagements contractuels des banques."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Continuously scan exposed endpoints (Burp, OWASP ZAP) to detect unauthenticated APIs.",
+            "Monitor abnormal requests on registration portal endpoints.",
+            "Detect any massive or automated extraction of user data."
+          ],
+          "fr": [
+            "Scanner en continu les endpoints exposés (Burp, OWASP ZAP) pour détecter les API non authentifiées.",
+            "Surveiller les requêtes anormales sur les endpoints du portail d'enregistrement.",
+            "Détecter toute extraction massive ou automatisée de données utilisateurs."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Immediately authenticate all exposed endpoints.",
+            "Revoke and regenerate potentially exposed hashed passwords.",
+            "Notify the 5,576 affected employees and mandate a password reset.",
+            "Strengthen logging and deploy a WAF/API gateway."
+          ],
+          "fr": [
+            "Authentifier immédiatement tous les endpoints exposés.",
+            "Révoquer et régénérer les mots de passe hachés potentiellement exposés.",
+            "Notifier les 5 576 employés concernés et imposer une réinitialisation.",
+            "Renforcer la journalisation et mettre en place un WAF/API gateway."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Conduct a forensic audit of past accesses and identify any malicious extractions.",
+            "Communicate with the Reserve Bank of India and the banks using the .bank.in space.",
+            "Strengthen the API security policy (OAuth2, mTLS, rate limiting).",
+            "Publish a detailed security advisory."
+          ],
+          "fr": [
+            "Conduire un audit forensique des accès passés et identifier d'éventuelles extractions malveillantes.",
+            "Communiquer avec la Reserve Bank of India et les banques utilisatrices de l'espace .bank.in.",
+            "Renforcer la politique de sécurité API (OAuth2, mTLS, rate limiting).",
+            "Publier un avis de sécurité détaillé."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for evidence of prior exploitation by state-sponsored or criminal actors targeting the Indian banking sector.",
+            "Analyze access logs to identify enumeration patterns.",
+            "Cross-reference with CTI databases on DNS registry compromises."
+          ],
+          "fr": [
+            "Rechercher des preuves d'exploitation antérieure par des acteurs étatiques ou criminels ciblant le secteur bancaire indien.",
+            "Analyser les journaux d'accès pour identifier des patterns d'énumération.",
+            "Croiser avec les bases CTI sur les compromissions de registres DNS."
+          ]
+        }
+      },
+      "tags": [
+        "Fuite de données",
+        "API non authentifiée",
+        "Gestion d'identifiants",
+        "DNS"
+      ],
+      "sources": [
+        "https://www.theregister.com/security/2026/06/30/indias-central-bank-mandated-use-of-bank-domains-to-enhance-trust-but-its-registry-leaked-sensitive-info/5264152"
+      ],
+      "date": "2026-06-30"
+    },
+    {
+      "title": {
+        "en": "ShinyHunters claim: theft of 40 GB of data from the University of Nottingham",
+        "fr": "Revendication de ShinyHunters : vol de 40 Go de données à l'Université de Nottingham"
+      },
+      "description": {
+        "en": "The cybercrime group ShinyHunters claims to have stolen over 40 GB of data from the University of Nottingham (United Kingdom), including, according to the claim, billing records, student financial data, email addresses, phone numbers, and postal addresses. The claim, dated June 2026, remains unverified at the time of publication and is being analyzed by CTI teams.",
+        "fr": "Le groupe cybercriminel ShinyHunters revendique le vol de plus de 40 Go de données auprès de l'Université de Nottingham (Royaume-Uni), incluant selon la revendication des dossiers de facturation, des données financières étudiantes, des adresses e-mail, numéros de téléphone et adresses postales. La revendication, datée de juin 2026, reste non vérifiée au moment de la publication et est analysée par les équipes CTI."
+      },
+      "resume": {
+        "en": "The cybercrime group ShinyHunters claims to have stolen over 40 GB of data from the University of Nottingham (United Kingdom), including, according to the claim, billing records, student financial data, email addresses, phone numbers, and postal addresses. The claim, dated June 2026, remains unverified at the time of publication and is being analyzed by CTI teams.",
+        "fr": "Le groupe cybercriminel ShinyHunters revendique le vol de plus de 40 Go de données auprès de l'Université de Nottingham (Royaume-Uni), incluant selon la revendication des dossiers de facturation, des données financières étudiantes, des adresses e-mail, numéros de téléphone et adresses postales. La revendication, datée de juin 2026, reste non vérifiée au moment de la publication et est analysée par les équipes CTI."
+      },
+      "analyse_operationnelle": {
+        "en": "Higher education institutions must treat this alert with priority attention given ShinyHunters' profile (history of data resale, dump publication). SOCs must hunt for signs of compromise (creation of abnormal admin accounts, exfiltration via cloud services, abnormal database snapshots). It is essential to audit access to student financial systems, monitor publications on dark web markets, and prepare crisis communication for the academic community and the UK regulator (ICO).",
+        "fr": "Les établissements d'enseignement supérieur doivent traiter cette alerte avec une attention prioritaire compte tenu du profil de ShinyHunters (historique de revente de données, publication de dumps). Les SOC doivent chasser les signes de compromission (création de comptes admins anormaux, exfiltration via services cloud, snapshots anormaux de bases de données). Il est essentiel d'auditer les accès aux systèmes financiers étudiants, de surveiller les publications sur les marchés darkweb et de préparer une communication de crise vers la communauté universitaire et le régulateur britannique (ICO)."
+      },
+      "implications_strategiques": {
+        "en": "The UK academic sector remains a prime target due to the richness of its personal data and the heterogeneous maturity of its defenses. A confirmed breach would have major GDPR consequences (ICO fine, public notification) and lasting damage to the institution's reputation. Strategically, this incident confirms ShinyHunters' trend of targeting institutional victims and justifies strengthening bug bounty programs, MFA on all academic accounts, and student data governance.",
+        "fr": "Le secteur académique britannique reste une cible privilégiée du fait de la richesse de ses données personnelles et de la maturité hétérogène de ses défenses. Une fuite confirmée aurait des conséquences RGPD majeures (amende ICO, notification publique) et une atteinte durable à la réputation de l'établissement. Stratégiquement, cet incident confirme la tendance de ShinyHunters à viser des cibles institutionnelles et justifie un renforcement des programmes de bug bounty, du MFA sur tous les comptes académiques et de la gouvernance des données étudiantes."
+      },
+      "threat_actor": "ShinyHunters",
+      "threat_actor_origin": "",
+      "threat_actor_type": "Groupe cybercriminel",
+      "threat_actor_aliases": [
+        "DBHunter"
+      ],
+      "sector": {
+        "en": [
+          "Enseignement supérieur / Recherche"
+        ],
+        "fr": [
+          "Enseignement supérieur / Recherche"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "nottingham[.]ac[.]uk"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1657"
+      ],
+      "analyse": {
+        "en": "The UK academic sector remains a prime target due to the richness of its personal data and the heterogeneous maturity of its defenses. A confirmed breach would have major GDPR consequences (ICO fine, public notification) and lasting damage to the institution's reputation. Strategically, this incident confirms ShinyHunters' trend of targeting institutional victims and justifies strengthening bug bounty programs, MFA on all academic accounts, and student data governance.",
+        "fr": "Le secteur académique britannique reste une cible privilégiée du fait de la richesse de ses données personnelles et de la maturité hétérogène de ses défenses. Une fuite confirmée aurait des conséquences RGPD majeures (amende ICO, notification publique) et une atteinte durable à la réputation de l'établissement. Stratégiquement, cet incident confirme la tendance de ShinyHunters à viser des cibles institutionnelles et justifie un renforcement des programmes de bug bounty, du MFA sur tous les comptes académiques et de la gouvernance des données étudiantes."
+      },
+      "recommandations": [
+        {
+          "en": "Verify the authenticity of the breach via HIBP and CTI sources.",
+          "fr": "Vérifier l'authenticité de la fuite via HIBP et sources CTI."
+        },
+        {
+          "en": "Monitor dark web markets for publications.",
+          "fr": "Surveiller les marchés darkweb pour publications."
+        },
+        {
+          "en": "Strengthen the security of financial and enrollment systems.",
+          "fr": "Renforcer la sécurité des systèmes financiers et de scolarité."
+        },
+        {
+          "en": "Prepare GDPR notification and crisis communication.",
+          "fr": "Préparer la notification RGPD et la communication de crise."
+        },
+        {
+          "en": "Enforce MFA on all university accounts.",
+          "fr": "Imposer le MFA sur tous les comptes universitaires."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Map sensitive data hosted by partner higher education institutions.",
+            "Prepare notification templates compliant with GDPR and ICO (UK) requirements.",
+            "Maintain dedicated monitoring of cybercrime group claims (Telegram, forums)."
+          ],
+          "fr": [
+            "Cartographier les données sensibles hébergées par les établissements d'enseignement supérieur partenaires.",
+            "Préparer des modèles de notification conformes au RGPD et aux exigences de l'ICO (UK).",
+            "Maintenir une veille dédiée aux revendications des groupes cybercriminels (Telegram, forums)."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor data leaks published or claimed by ShinyHunters.",
+            "Detect any abnormal activity on university information systems (leak, exfiltration).",
+            "Detect unusual connections from student or administrative accounts."
+          ],
+          "fr": [
+            "Surveiller les fuites de données publiées ou revendiquées par ShinyHunters.",
+            "Détecter toute activité anormale sur les systèmes d'information universitaires (fuite, exfiltration).",
+            "Détecter les connexions inhabituelles depuis des comptes étudiants ou administratifs."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate impacted systems and suspend exposed accounts.",
+            "Disable non-essential remote access.",
+            "Block communications to the actor's infrastructure if identified."
+          ],
+          "fr": [
+            "Isoler les systèmes impactés et suspendre les comptes exposés.",
+            "Désactiver les accès à distance non essentiels.",
+            "Bloquer les communications vers les infrastructures de l'acteur si identifiées."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify the veracity of the breach via HIBP databases and other sources.",
+            "Notify students, staff, and authorities (ICO, NCSC).",
+            "Strengthen network segmentation and encryption of student data."
+          ],
+          "fr": [
+            "Vérifier la véracité de la fuite via les bases de données HIBP et autres sources.",
+            "Notifier les étudiants, personnels et autorités (ICO, NCSC).",
+            "Renforcer la segmentation réseau et le chiffrement des données étudiantes."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Look for ShinyHunters signatures (exfiltration tools, extraction methods).",
+            "Analyze access logs to financial and enrollment databases."
+          ],
+          "fr": [
+            "Chercher des signatures de ShinyHunters (outils d'exfiltration, méthodes d'extraction).",
+            "Analyser les journaux d'accès aux bases de données financières et de scolarité."
+          ]
+        }
+      },
+      "tags": [
+        "Fuite de données",
+        "Groupe cybercriminel",
+        "Revendication non vérifiée"
+      ],
+      "sources": [
+        "https://www.yazoul.net/intel/claim/2026-06-10-university-of-nottingham-hit-by-shinyhunters-june-2026"
+      ],
+      "date": "2026-06-10"
+    },
+    {
+      "title": {
+        "en": "Medtronic alerts on a possible health data breach linked to its pacemakers",
+        "fr": "Medtronic alerte sur une possible fuite de données de santé liée à ses stimulateurs cardiaques"
+      },
+      "description": {
+        "en": "Pacemaker manufacturer Medtronic has informed patients that cybercriminals may have accessed health data concerning them. The article, published by The Register and relayed on Mastodon on July 5, 2026, references a cybersecurity incident resulting in potential exposure of information related to implantable medical devices. The hashtags associated by the post's author confirm the nature of the incident (cyberattack, databreach, cybersecurity).",
+        "fr": "Le fabricant de stimulateurs cardiaques Medtronic a informé des patients que des cybercriminels ont pu accéder à des données de santé les concernant. L’article, publié par The Register et relayé sur Mastodon le 5 juillet 2026, évoque un incident de cybersécurité entraînant une exposition potentielle d’informations liées à des dispositifs médicaux implantables. Les hashtags associés par l’auteur du post confirment la nature de l’incident (cyberattack, databreach, cybersecurity)."
+      },
+      "resume": {
+        "en": "Pacemaker manufacturer Medtronic has informed patients that cybercriminals may have accessed health data concerning them. The article, published by The Register and relayed on Mastodon on July 5, 2026, references a cybersecurity incident resulting in potential exposure of information related to implantable medical devices. The hashtags associated by the post's author confirm the nature of the incident (cyberattack, databreach, cybersecurity).",
+        "fr": "Le fabricant de stimulateurs cardiaques Medtronic a informé des patients que des cybercriminels ont pu accéder à des données de santé les concernant. L’article, publié par The Register et relayé sur Mastodon le 5 juillet 2026, évoque un incident de cybersécurité entraînant une exposition potentielle d’informations liées à des dispositifs médicaux implantables. Les hashtags associés par l’auteur du post confirment la nature de l’incident (cyberattack, databreach, cybersecurity)."
+      },
+      "analyse_operationnelle": {
+        "en": "For SOC/IT teams in healthcare facilities and DPOs, this requires an immediate verification of the extent of the exposure (exact fields, volumes, affected patients) via Medtronic and an audit of access logs to remote monitoring portals (CareLink). On the attack surface side, the priority is to segment traffic between programmers/patient transmitters and the Medtronic infrastructure, revalidate API tokens, and apply patches released by the manufacturer. Teams must also set up monitoring of dark web markets targeting Medtronic medical data dumps and alerts on the abusive use of platform credentials.",
+        "fr": "Pour les équipes SOC/IT des établissements de santé et des DPO, cela impose une vérification immédiate de l’étendue de l’exposition (champs exacts, volumes, patients concernés) via Medtronic et un audit des journaux d’accès aux portails de suivi à distance (CareLink). Côté surface d’attaque, la priorité est de segmenter les flux entre programmateurs/émetteurs patients et l’infrastructure Medtronic, de revalider les jetons API et d’appliquer les correctifs diffusés par l’industriel. Les équipes doivent aussi mettre en place une surveillance des marchés dark web ciblant les dumps de données médicales Medtronic et des alertes sur l’usage abusif d’identifiants de la plateforme."
+      },
+      "implications_strategiques": {
+        "en": "The incident confirms the strong trend of attacks on the supply chain of connected medical devices (IoMT), with a hybrid risk: personal data leak AND potential impact on patient physical safety if the implants were remotely programmable. From a regulatory standpoint, the exposure triggers HIPAA obligations on the US side and GDPR on the European side (CNIL notification within 72 hours), with a major reputational risk for Medtronic and prescribing hospitals. Decision-wise, management must accelerate security-by-design programs in implantable equipment calls for tender and integrate an immediate notification clause in contracts with manufacturers.",
+        "fr": "L’incident confirme la tendance lourde d’attaques sur la chaîne d’approvisionnement des dispositifs médicaux connectés (IoMT), avec un risque hybride : fuite de données personnelles ET impact potentiel sur la sécurité physique des patients si les implants étaient téléprogrammables. Sur le plan réglementaire, l’exposition déclenche des obligations HIPAA côté US et RGPD côté européen (notification CNIL sous 72h), avec un risque réputationnel majeur pour Medtronic et les hôpitaux prescripteurs. Décisionnellement, les directions doivent accélérer les programmes de sécurité-by-design dans les appels d’offres d’équipements implantables et intégrer une clause de notification immédiate dans les contrats avec les fabricants."
+      },
+      "threat_actor": "",
+      "threat_actor_origin": "",
+      "threat_actor_type": "",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Santé",
+          "Dispositifs médicaux implantables"
+        ],
+        "fr": [
+          "Santé",
+          "Dispositifs médicaux implantables"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "TA0040",
+        "T1530"
+      ],
+      "analyse": {
+        "en": "The incident confirms the strong trend of attacks on the supply chain of connected medical devices (IoMT), with a hybrid risk: personal data leak AND potential impact on patient physical safety if the implants were remotely programmable. From a regulatory standpoint, the exposure triggers HIPAA obligations on the US side and GDPR on the European side (CNIL notification within 72 hours), with a major reputational risk for Medtronic and prescribing hospitals. Decision-wise, management must accelerate security-by-design programs in implantable equipment calls for tender and integrate an immediate notification clause in contracts with manufacturers.",
+        "fr": "L’incident confirme la tendance lourde d’attaques sur la chaîne d’approvisionnement des dispositifs médicaux connectés (IoMT), avec un risque hybride : fuite de données personnelles ET impact potentiel sur la sécurité physique des patients si les implants étaient téléprogrammables. Sur le plan réglementaire, l’exposition déclenche des obligations HIPAA côté US et RGPD côté européen (notification CNIL sous 72h), avec un risque réputationnel majeur pour Medtronic et les hôpitaux prescripteurs. Décisionnellement, les directions doivent accélérer les programmes de sécurité-by-design dans les appels d’offres d’équipements implantables et intégrer une clause de notification immédiate dans les contrats avec les fabricants."
+      },
+      "recommandations": [
+        {
+          "en": "Formally request from Medtronic the exact nature of the compromised data and the list of affected entities.",
+          "fr": "Demander formellement à Medtronic la nature exacte des données compromises et la liste des entités affectées."
+        },
+        {
+          "en": "Segment and monitor all network traffic linked to Medtronic platforms (CareLink, MyCareLink).",
+          "fr": "Segmenter et monitorer tous les flux réseau liés aux plateformes Medtronic (CareLink, MyCareLink)."
+        },
+        {
+          "en": "Activate the CNIL notification procedure if European patients are concerned.",
+          "fr": "Activer la procédure de notification CNIL si des patients européens sont concernés."
+        },
+        {
+          "en": "Strengthen monitoring of illicit markets surveilling Medtronic dumps.",
+          "fr": "Renforcer la veille sur les marchés illicit·e·s surveillant les dumps Medtronic."
+        },
+        {
+          "en": "Audit contracts and DPAs with Medtronic subcontractors in each facility.",
+          "fr": "Auditer les contrats et DPA avec les sous-traitants Medtronic dans chaque établissement."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Map all patient data flows between Medtronic, IT/cloud providers, and healthcare facilities (targeted BIA on implants: pacemakers, defibrillators, pumps).",
+            "Pre-contract a notification channel with health authorities (HHS/OCR in the US, CNIL in Europe, ANSM in France) and with the DPOs of the concerned facilities.",
+            "Raise hospital management's awareness of the communication procedure towards patients in the event of a health data breach (channels, scripts, local obligations).",
+            "Prepare multilingual crisis communication templates (patients, clinicians, regulators).",
+            "Establish or verify DPA/GDPR contracts with Medtronic subcontractors handling patient data."
+          ],
+          "fr": [
+            "Cartographier tous les flux de données patients entre Medtronic, les prestataires IT/cloud et les établissements de santé (BIA ciblé sur les implants : pacemakers, défibrillateurs, pompes).",
+            "Pré-contractualiser un canal de notification avec les autorités sanitaires (HHS/OCR aux US, CNIL en Europe, ANSM en France) et avec les DPO des établissements concernés.",
+            "Sensibiliser les directions hospitalières à la procédure de communication vers les patients en cas de fuite de données de santé (canaux, scripts, obligations locales).",
+            "Préparer des modèles de communication de crise (patients, cliniciens, régulateurs) multilingues.",
+            "Mettre en place ou vérifier les contrats DPA/RGPD avec les sous-traitants Medtronic manipulant les données patients."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Ingest into the SIEM the IOCs published by Medtronic/CISA related to the incident (hashes, domains, C2 IPs).",
+            "Audit the application access logs to Medtronic portals (remote implant monitoring program, e.g., CareLink).",
+            "Detect abnormal requests to patient data APIs/exports from partner accounts.",
+            "Monitor the reuse of Medtronic credentials (credential stuffing) on third-party portals.",
+            "Trigger alerts on the publication of dumps containing the pattern « patient_id + device_serial + implant_data »."
+          ],
+          "fr": [
+            "Ingérer dans le SIEM les IOC publiés par Medtronic/CISA relatifs à l’incident (hash, domaines, IPs C2).",
+            "Auditer les journaux d’accès applicatifs aux portails Medtronic (programme de suivi à distance des implants, ex : CareLink).",
+            "Détecter les requêtes anormales vers les API/exports de données patients depuis les comptes partenaires.",
+            "Surveiller la réutilisation d’identifiants Medtronic (credential stuffing) sur les portails tiers.",
+            "Émettre des alertes sur la publication de dumps contenant le pattern « patient_id + device_serial + implant_data »."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Temporarily suspend the affected Medtronic/pilot accounts and invalidate active sessions.",
+            "Cut off the synchronization flows between patient programmers/transmitters and Medtronic clouds until the breach is contained.",
+            "Isolate the network segments exposing the CareLink/MyCareLink portals by bypassing the clinical VPN.",
+            "Request from Medtronic the rotation of API keys and the regeneration of remote monitoring tokens.",
+            "Activate the patient notification cell (call center, mail) in coordination with the ARS/ANSM."
+          ],
+          "fr": [
+            "Suspendre temporairement les comptes Medtronic/pilotes concernés et invalider les sessions actives.",
+            "Couper les flux de synchronisation entre les programmateurs/émetteurs patients et les clouds Medtronic tant que la brèche n’est pas colmatée.",
+            "Isoler les segments réseau exposant les portails CareLink/MyCareLink en bypassant le VPN clinique.",
+            "Demander à Medtronic la rotation des clés API et la régénération des jetons de suivi à distance.",
+            "Activer la cellule de notification patients (call center, courrier) en coordination avec l’ARS/ANSM."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Collect the precise list of exposed patient fields (name, DOB, implant data, serial numbers) and assess the HIPAA/GDPR impact.",
+            "Document the supply chain that led to the leak (cloud provider, third-party vendor).",
+            "Coordinate with Medtronic the publication of an 8-K notice/press release and prepare a CNIL notification within 72 hours if European residents are involved.",
+            "Integrate the Medtronic mapping into the facility's critical asset registry.",
+            "Open a feedback review (REX) on the management of connected medical devices and the associated regulatory obligations."
+          ],
+          "fr": [
+            "Recueillir la liste précise des champs patients exposés (nom, DOB, données implant, numéros de série) et évaluer l’impact HIPAA/RGPD.",
+            "Documenter la chaîne d’approvisionnement ayant conduit à la fuite (fournisseur cloud, prestataire).",
+            "Coordonner avec Medtronic la publication d’un avis 8-K/communiqué et préparer une notification CNIL sous 72h si des résidents européens sont concernés.",
+            "Intégrer la cartographie Medtronic dans le registre des actifs critiques de l’établissement.",
+            "Ouvrir un retour d’expérience (REX) sur la gestion des dispositifs médicaux connectés et les obligations réglementaires associées."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for traces of access to Medtronic CareLink APIs from unusual ASNs (TOR, commercial VPNs).",
+            "Search darkweb dumps for the presence of patient credentials or Medtronic implant serial numbers.",
+            "Identify misuse patterns of patient ports (unauthorized programmers).",
+            "Track the reuse of stolen credentials on other Medtronic partner portals (attack replay).",
+            "Monitor any appearance of databases resold as « Medtronic patient dataset » on French-speaking markets."
+          ],
+          "fr": [
+            "Chasser les traces d’accès aux API Medtronic CareLink depuis des ASNs inhabituels (TOR, VPN commerciaux).",
+            "Rechercher dans les dumps darkweb la présence d’identifiants patients ou numéros de série d’implants Medtronic.",
+            "Identifier les schémas d’utilisation abusive des ports patients (programmateurs non autorisés).",
+            "Pister la réutilisation d’identifiants volés sur d’autres portails partenaires de Medtronic (replay des attaques).",
+            "Surveiller toute apparition de bases de données revendues comme « Medtronic patient dataset » sur les marchés francophones."
+          ]
+        }
+      },
+      "tags": [
+        "data_breach",
+        "healthcare",
+        "medtronic",
+        "pacemaker",
+        "patient_data",
+        "supply_chain"
+      ],
+      "sources": [
+        "https://www.theregister.com/security/2026/07/02/pacemaker-manufacturer-medtronic-warns-patients-cybercrooks-may-have-swiped-health-data/5265768"
+      ],
+      "date": "2026-07-05"
     }
   ]
 }
