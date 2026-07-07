@@ -1,0 +1,2745 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "Daily volumetrics reveal critical exposure on the vulnerabilities segment (17 occurrences), signaling a likely intensification of CVE disclosures or zero-day exploitation campaigns requiring immediate patch prioritization. Data breaches (4) confirm persistent pressure on information asset confidentiality, while geopolitical items (4) suggest a threat environment correlated with state or regional tensions. Regulatory volume (3) indicates sustained normative activity, imposing active compliance monitoring. The absence of dedicated threat actor reporting does not reflect a retreat but rather their activity being absorbed into observed breaches and vulnerabilities. The CTI center of gravity remains technical, with a high short-term exploitation risk and reinforced duty of vigilance on exposed infrastructure.",
+      "fr": "La volumétrie quotidienne révèle une exposition critique sur le segment vulnérabilités (17 occurrences), signalant une intensification probable des divulgations CVE ou de campagnes d'exploitation zero-day nécessitant une priorisation immédiate des correctifs. Les brèches de données (4) confirment une pression persistante sur la confidentialité des actifs informationnels, tandis que les actualités géopolitiques (4) suggèrent un environnement de menace corrélé à des tensions étatiques ou régionales. Le volume réglementaire (3) indique une activité normative soutenue, imposant une veille de conformité active. L'absence de signalements dédiés aux acteurs de menace ne constitue pas un repli mais reflète probablement une intégration de leur activité dans les brèches et vulnérabilités observées. Le centre de gravité CTI demeure technique, avec un risque d'exploitation à court terme élevé et un devoir de vigilance renforcé sur les infrastructures exposées."
+    },
+    "date": "2026-07-07"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": [
+          "Défense et sécurité"
+        ],
+        "fr": [
+          "Défense et sécurité"
+        ]
+      },
+      "theme": {
+        "en": "European strategic autonomy and evolution of the transatlantic link",
+        "fr": "Autonomie stratégique européenne et évolution du lien transatlantique"
+      },
+      "description": {
+        "en": "The instability of the international system and uncertainty over American strategic priorities are reviving the debate on European responsibility for defence. The EU remains militarily dependent on external guarantees and the unanimity rule hinders progress toward a common defence. Three axes are emerging: strengthening capabilities and the EU defence industrial base, consolidation of a credible European pillar within NATO, and the development of a European Defence Union. The ambiguity of American nuclear deterrence paves the way for an increased role for French and British forces as a limited but potentially devastating alternative against Russia. Close EU-NATO coordination remains essential to avoid duplication and maximise synergies. Flexible initiatives (including the United Kingdom, Norway, Ukraine, Turkey) are envisaged to circumvent blockages.",
+        "fr": "L'instabilité du système international et l'incertitude sur les priorités stratégiques américaines ravivent le débat sur la responsabilité européenne en matière de défense. L'UE reste militairement dépendante de garanties extérieures et la règle de l'unanimité freine les progrès vers une défense commune. Trois axes se dessinent : renforcement des capacités et de la base industrielle de défense au sein de l'UE, consolidation d'un pilier européen crédible au sein de l'OTAN, et développement d'une Union européenne de défense. L'ambiguïté de la dissuasion nucléaire américaine ouvre la voie à un rôle accru des forces françaises et britanniques comme alternative limitée mais potentiellement dévastatrice contre la Russie. Une coordination étroite UE-OTAN demeure indispensable pour éviter les doublons et maximiser les synergies. Des initiatives flexibles (incluant Royaume-Uni, Norvège, Ukraine, Turquie) sont envisagées pour contourner les blocages."
+      },
+      "recommandations": [
+        {
+          "en": "Accelerate the capability and industrial integration of European defence by relying on existing structures (CSDP).",
+          "fr": "Accélérer l'intégration capacitaire et industrielle de la défense européenne en s'appuyant sur les structures existantes (PSDC)."
+        },
+        {
+          "en": "Define a clear burden-sharing doctrine with the United States to preserve transatlantic cohesion while reducing dependence.",
+          "fr": "Définir une doctrine claire de partage du fardeau avec les États-Unis pour préserver la cohésion transatlantique tout en réduisant la dépendance."
+        },
+        {
+          "en": "Assess the operational role of Franco-British deterrence in a European defence strategy.",
+          "fr": "Évaluer le rôle opérationnel de la dissuasion franco-britannique dans une stratégie européenne de défense."
+        },
+        {
+          "en": "Promote intergovernmental cooperation formats (coalitions of the willing) with European partners and like-minded countries (United Kingdom, Norway, Ukraine, Turkey) to circumvent unanimity.",
+          "fr": "Promouvoir des formats de coopération intergouvernementale (coalitions de volontaires) avec partenaires européens et pays partageant les mêmes idées (Royaume-Uni, Norvège, Ukraine, Turquie) pour contourner l'unanimité."
+        },
+        {
+          "en": "Strengthen EU-NATO coordination mechanisms to avoid duplication and optimise operational synergies.",
+          "fr": "Renforcer les mécanismes UE-OTAN de coordination afin d'éviter les doublons et d'optimiser les synergies opérationnelles."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [],
+          "fr": []
+        },
+        "phase2_detection": {
+          "en": [],
+          "fr": []
+        },
+        "phase3_containment": {
+          "en": [],
+          "fr": []
+        },
+        "phase4_post_incident": {
+          "en": [],
+          "fr": []
+        },
+        "phase5_threat_hunting": {
+          "en": [],
+          "fr": []
+        }
+      },
+      "tags": [
+        "OTAN",
+        "UE",
+        "défense européenne",
+        "dissuasion nucléaire",
+        "transatlantisme"
+      ],
+      "sources": [
+        "https://www.iris-france.org/defense-europeenne-le-cadre-du-traite-de-latlantique-nord-et-son-interaction-avec-lunion-europeenne/"
+      ],
+      "date": "2026-07-07"
+    },
+    {
+      "sector": {
+        "en": [
+          "Économie et finance / secteurs stratégiques (semi-conducteurs, IA, quantique, minerais critiques, pharmacie)"
+        ],
+        "fr": [
+          "Économie et finance / secteurs stratégiques (semi-conducteurs, IA, quantique, minerais critiques, pharmacie)"
+        ]
+      },
+      "theme": {
+        "en": "Formalisation of an American doctrine of economic warfare",
+        "fr": "Formalisation d'une doctrine américaine de guerre économique"
+      },
+      "description": {
+        "en": "Treasury Secretary Scott Bessent's speech marks the shift from a neutral globalisation to a managed globalisation as a battlefield. The United States is not breaking with globalisation but reorganising its extractivism along a national logic: control of decisive points (technologies, payments, standards, patents). Economic intelligence becomes an instrument of sovereignty: identifying vulnerabilities, dependencies, critical sectors and strategic competitors. Conditional reciprocity transforms law, taxation, data protection and technological standards into instruments of pressure. In light of the French school of economic warfare, this speech constitutes a strategic intelligence document made public, redefining international economic power dynamics.",
+        "fr": "Le discours du secrétaire au Trésor Scott Bessent marque le passage d'une mondialisation neutre à une mondialisation administrée comme champ de bataille. Les États-Unis ne rompent pas avec la mondialisation mais en réorganisent l'extractivisme dans une logique nationale : contrôle des points décisifs (technologies, paiements, normes, brevets). L'intelligence économique y devient un instrument de souveraineté : identifier vulnérabilités, dépendances, secteurs critiques et concurrents stratégiques. La réciprocité conditionnelle transforme le droit, la fiscalité, la protection des données et les normes technologiques en armes de pression. À la lumière de l'école française de guerre économique, ce discours constitue un document d'intelligence stratégique rendu public, redéfinissant les rapports de force économiques internationaux."
+      },
+      "recommandations": [
+        {
+          "en": "Map French and European dependencies on American value chains (semiconductors, AI, quantum, critical minerals, pharmaceuticals) and define sectoral resilience plans.",
+          "fr": "Cartographier les dépendances françaises et européennes aux chaînes de valeur américaines (semi-conducteurs, IA, quantique, minerais critiques, pharmacie) et définir des plans de résilience sectoriels."
+        },
+        {
+          "en": "Strengthen national economic intelligence capabilities (vulnerability detection, strategic watch, protection of critical assets) in coherence with private operators.",
+          "fr": "Renforcer les capacités nationales d'intelligence économique (détection des vulnérabilités, veille stratégique, protection des actifs critiques) en cohérence avec les opérateurs privés."
+        },
+        {
+          "en": "Anticipate the extraterritorial use of American conditional reciprocity (standards, data, taxation) and prepare legal and industrial countermeasures.",
+          "fr": "Anticiper l'usage extraterritorial de la réciprocité conditionnelle américaine (normes, données, fiscalité) et préparer des contre-mesures juridiques et industrielles."
+        },
+        {
+          "en": "Secure French and European positions in dual-use technologies and international standards to preserve normative sovereignty.",
+          "fr": "Sécuriser les positions françaises et européennes dans les technologies duales et les standards internationaux pour préserver la souveraineté normative."
+        },
+        {
+          "en": "Diversify commercial and technological partnerships outside the American perimeter to reduce Washington's leverage.",
+          "fr": "Diversifier les partenariats commerciaux et technologiques hors du périmètre américain pour réduire le levier de pression de Washington."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [],
+          "fr": []
+        },
+        "phase2_detection": {
+          "en": [],
+          "fr": []
+        },
+        "phase3_containment": {
+          "en": [],
+          "fr": []
+        },
+        "phase4_post_incident": {
+          "en": [],
+          "fr": []
+        },
+        "phase5_threat_hunting": {
+          "en": [],
+          "fr": []
+        }
+      },
+      "tags": [
+        "guerre économique",
+        "doctrine Bessent",
+        "souveraineté industrielle",
+        "extractivisme",
+        "intelligence économique"
+      ],
+      "sources": [
+        "https://www.epge.fr/la-doctrine-bessent-comme-guerre-economique-declaree/"
+      ],
+      "date": "2026-07-07"
+    },
+    {
+      "sector": {
+        "en": [
+          "Sécurité, humanitaire et stabilité régionale"
+        ],
+        "fr": [
+          "Sécurité, humanitaire et stabilité régionale"
+        ]
+      },
+      "theme": {
+        "en": "Sudanese civil war: 2026 turning point, major humanitarian crisis and risk of state fragmentation",
+        "fr": "Guerre civile soudanaise : tournant de 2026, crise humanitaire majeure et risque de fragmentation étatique"
+      },
+      "description": {
+        "en": "The conflict launched in April 2023 between the Sudanese Armed Forces (SAF) of General Abdel Fattah al-Burhan and the Rapid Support Forces (RSF) of General Mohammed Hamdan Dagalo \"Hemedti\" is entering a phase of de facto partition in 2026. Drones are becoming the central weapon, increasing civilian casualties and the vulnerability of besieged cities. The geography of the conflict is stabilising into two blocs: SAF in the east around Port Sudan, RSF in Darfur, South Kordofan and part of North Kordofan. Internationalisation is progressing (American sanctions on arms networks, accusations of foreign support for the RSF, humanitarian collapse). According to the UN, more than 30 million people are in need of assistance, making Sudan the worst humanitarian crisis in the world. More than 2.5 million refugees have fled to neighbouring countries, particularly Chad (more than one million), South Sudan, Ethiopia and Egypt, generating ethnic tensions, transborder risks and regional pressure.",
+        "fr": "Le conflit déclenché en avril 2023 entre les Forces armées soudanaises (SAF) du général Abdel Fattah al-Burhan et les Forces de soutien rapide (RSF) du général Mohammed Hamdan Dagalo « Hemedti » entre dans une phase de partition de facto en 2026. Les drones deviennent l'arme centrale, accentuant les pertes civiles et la vulnérabilité des villes assiégées. La géographie du conflit se stabilise en deux blocs : SAF à l'est autour de Port-Soudan, RSF au Darfour, Kordofan du Sud et partie du Kordofan du Nord. L'internationalisation progresse (sanctions américaines sur les réseaux d'armement, accusations de soutien étranger aux RSF, effondrement humanitaire). Selon l'ONU, plus de 30 millions de personnes ont besoin d'aide, faisant du Soudan la pire crise humanitaire au monde. Plus de 2,5 millions de réfugiés ont fui vers les pays voisins, en particulier le Tchad (plus d'un million), le Soudan du Sud, l'Éthiopie et l'Égypte, générant tensions ethniques, risques transfrontaliers et pression régionale."
+      },
+      "recommandations": [
+        {
+          "en": "Mobilise a coordinated international humanitarian response for the more than 30 million people in need and guarantee access to areas cut off from aid.",
+          "fr": "Mobiliser une réponse humanitaire internationale coordonnée pour les plus de 30 millions de personnes dans le besoin et garantir l'accès aux zones privées d'aide."
+        },
+        {
+          "en": "Support the reception and stabilisation capacities of neighbouring countries (Chad, South Sudan, Ethiopia, Egypt) to limit regional contagion effects.",
+          "fr": "Soutenir les capacités d'accueil et de stabilisation des pays voisins (Tchad, Soudan du Sud, Éthiopie, Égypte) pour limiter les effets de contagion régionale."
+        },
+        {
+          "en": "Strengthen monitoring of arms flows and enforcement of sanctions against networks supplying the SAF and the RSF, including their growing use of drones.",
+          "fr": "Renforcer le suivi des flux d'armement et l'application des sanctions contre les réseaux alimentant les SAF et les RSF, dont l'usage croissant de drones."
+        },
+        {
+          "en": "Encourage credible regional and international mediation, while ensuring avoidance of any instrumentalisation by foreign supporters of either camp.",
+          "fr": "Encourager une médiation régionale et internationale crédible, en veillant à éviter toute instrumentalisation par les soutiens étrangers aux deux camps."
+        },
+        {
+          "en": "Anticipate the security consequences of the risk of state fragmentation (Darfur, Kordofan) on the Sahel, the Horn of Africa and migration routes.",
+          "fr": "Anticiper les conséquences sécuritaires du risque de fragmentation étatique (Darfour, Kordofan) sur le Sahel, la Corne de l'Afrique et les routes migratoires."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [],
+          "fr": []
+        },
+        "phase2_detection": {
+          "en": [],
+          "fr": []
+        },
+        "phase3_containment": {
+          "en": [],
+          "fr": []
+        },
+        "phase4_post_incident": {
+          "en": [],
+          "fr": []
+        },
+        "phase5_threat_hunting": {
+          "en": [],
+          "fr": []
+        }
+      },
+      "tags": [
+        "Soudan",
+        "guerre civile",
+        "crise humanitaire",
+        "fragmentation territoriale",
+        "SAF",
+        "RSF",
+        "drones"
+      ],
+      "sources": [
+        "https://www.iris-france.org/soudan-urgence-humanitaire-et-risque-de-fragmentation/"
+      ],
+      "date": "2026-07-07"
+    },
+    {
+      "sector": {
+        "en": [
+          "Sport / relations internationales"
+        ],
+        "fr": [
+          "Sport / relations internationales"
+        ]
+      },
+      "theme": {
+        "en": "Politicisation of global football and instrumentalisation of the 2026 World Cup",
+        "fr": "Politisation du football mondial et instrumentalisation de la Coupe du monde 2026"
+      },
+      "description": {
+        "en": "As the 2026 World Cup takes place in the United States, Donald Trump, who had made it a symbol of the return of American power, is avoiding the stadiums to preserve an image of victory and control his public appearances. Despite this absence, his influence is manifest: FIFA lifted the suspension of Folarin Balogun, an American striker expelled during the match against Bosnia and Herzegovina, on the eve of the round of 16, a decision publicly welcomed by the President. Revelations evoke behind-the-scenes pressure, recalling the 1934 edition organised by fascist Italy under Mussolini. This episode raises questions about the growing politicisation of global football and the instrumentalisation of a sporting event for purposes of power.",
+        "fr": "Alors que la Coupe du monde 2026 se déroule aux États-Unis, Donald Trump, qui en avait fait un symbole du retour de la puissance américaine, évite les stades pour préserver une image de victoire et maîtriser ses apparitions publiques. Malgré cette absence, son influence se manifeste : la FIFA a levé la suspension de Folarin Balogun, attaquant américain expulsé lors du match contre la Bosnie-Herzégovine, à la veille des huitièmes de finale, décision saluée publiquement par le président. Des révélations évoquent des pressions en coulisses, rappelant l'édition de 1934 organisée par l'Italie fasciste de Mussolini. Cet épisode interroge la politisation croissante du football mondial et l'instrumentalisation d'un événement sportif à des fins de pouvoir."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor political interventions in the decisions of international sports organisations and their effects on the fairness of competitions.",
+          "fr": "Suivre les interventions politiques dans les décisions des organisations sportives internationales et leurs effets sur l'équité des compétitions."
+        },
+        {
+          "en": "Document historical precedents of political instrumentalisation of sport (1934, 1978, etc.) to feed comparative analysis.",
+          "fr": "Documenter les précédents historiques d'instrumentalisation politique du sport (1934, 1978, etc.) pour alimenter l'analyse comparée."
+        },
+        {
+          "en": "Integrate the geopolitical dimension of sport (World Cup, Olympics) into CTI analyses on state influence.",
+          "fr": "Intégrer la dimension géopolitique du sport (Coupe du monde, JO) dans les analyses CTI sur l'influence étatique."
+        },
+        {
+          "en": "Assess the reputational and soft power consequences for the United States in the event of suspicions of interference in FIFA decisions.",
+          "fr": "Évaluer les conséquences réputationnelles et de soft power pour les États-Unis en cas de soupçons d'ingérence dans les décisions de la FIFA."
+        },
+        {
+          "en": "Strengthen monitoring of the risks of foreign political pressure targeting major sporting competitions hosted by Western countries.",
+          "fr": "Renforcer la veille sur les risques de pression politique étrangère ciblant les grandes compétitions sportives accueillies par des pays occidentaux."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [],
+          "fr": []
+        },
+        "phase2_detection": {
+          "en": [],
+          "fr": []
+        },
+        "phase3_containment": {
+          "en": [],
+          "fr": []
+        },
+        "phase4_post_incident": {
+          "en": [],
+          "fr": []
+        },
+        "phase5_threat_hunting": {
+          "en": [],
+          "fr": []
+        }
+      },
+      "tags": [
+        "Coupe du monde 2026",
+        "Trump",
+        "FIFA",
+        "sport et politique",
+        "instrumentalisation politique"
+      ],
+      "sources": [
+        "https://www.iris-france.org/trump-absent-des-stades-omnipresent-dans-la-coupe-du-monde/"
+      ],
+      "date": "2026-07-07"
+    }
+  ],
+  "regulatory_and_legal": [
+    {
+      "title": {
+        "en": "EDRi joint statement on Pegasus targeting of MEP / PEGA Committee",
+        "fr": "EDRi joint statement on Pegasus targeting of MEP / PEGA Committee"
+      },
+      "description": {
+        "en": "A forensic analysis by Citizen Lab, dated 3 July 2026, reveals that Stelios Kouloglou, former Member of the European Parliament and investigative journalist, substitute member of the PEGA inquiry committee, was targeted and infected by the Pegasus spyware (NSO Group) around 21 October 2022, then on 6 and 7 March 2023. Citizen Lab has not formally attributed the attack but notes that a known Pegasus client (involved in the hacking of exiled activists from Russia and Belarus) is suspected. No indication implicates Greece, already linked to the Predator spyware. Nearly three years after the recommendations of the PEGA committee, the EU has still not provided a structured response: repeated scandals in Latvia, Lithuania, Poland, targeting of the President of the European Parliament via Predator, use of Graphite in Italy against humanitarian workers and journalists, European public funding benefiting spyware companies, and failure to enforce the dual-use goods regulation. The targeting of a Member of Parliament tasked with oversight of spyware constitutes an emergency for the rule of law and calls into question the integrity of parliamentary surveillance.",
+        "fr": "Une analyse médico-légale du Citizen Lab, datée du 3 juillet 2026, révèle que Stelios Kouloglou, ancien député européen et journaliste d'investigation, membre suppléant de la commission d'enquête PEGA, a été ciblé et infecté par le spyware Pegasus (NSO Group) vers le 21 octobre 2022, puis les 6 et 7 mars 2023. Le Citizen Lab n'a pas formellement attribué l'attaque mais signale qu'un client connu de Pegasus (impliqué dans le piratage d'activistes exilés de Russie et de Biélorussie) est suspecté. Aucune indication n'implique la Grèce, déjà liée au spyware Predator. Près de trois ans après les recommandations de la commission PEGA, l'UE n'a toujours pas apporté de réponse structurée : scandales répétés en Lettonie, Lituanie, Pologne, ciblage du Président du Parlement européen via Predator, usage de Graphite en Italie contre des travailleurs humanitaires et journalistes, financements publics européens profitant à des entreprises de spyware, et absence d'application du règlement sur les biens à double usage. Le ciblage d'un député chargé du contrôle du spyware constitue une urgence pour l'État de droit et remet en cause l'intégrité de la surveillance parlementaire."
+      },
+      "organisation": {
+        "en": [
+          "Union européenne (DG ITEC, Commission européenne, Parlement européen) et États membres"
+        ],
+        "fr": [
+          "Union européenne (DG ITEC, Commission européenne, Parlement européen) et États membres"
+        ]
+      },
+      "jurisdiction": {
+        "en": [
+          "Union européenne"
+        ],
+        "fr": [
+          "Union européenne"
+        ]
+      },
+      "references": {
+        "en": [
+          "EDRi joint statement on Pegasus targeting of MEP / PEGA Committee"
+        ],
+        "fr": [
+          "EDRi joint statement on Pegasus targeting of MEP / PEGA Committee"
+        ]
+      },
+      "tags": [
+        "spyware",
+        "pegasus",
+        "EU",
+        "parliament",
+        "human rights",
+        "dual-use regulation",
+        "PEGA Committee"
+      ],
+      "sources": [
+        "https://edri.org/our-work/joint-statement-pegasus-in-the-european-parliament-the-eu-must-act-now/"
+      ],
+      "date": "2026-07-06"
+    },
+    {
+      "title": {
+        "en": "Navigate360 / P3 Campus anonymous tip line breach - failure to disclose",
+        "fr": "Navigate360 / P3 Campus anonymous tip line breach - failure to disclose"
+      },
+      "description": {
+        "en": "On 18 March 2026, DDoSecrets and Straight Arrow News revealed a data leak (nicknamed \"Blue Leaks 2.0\") provided by the hacktivist \"InternetYiffMachine\", containing approximately 8.3 million tip-line reports intended for anonymous reporting programmes (Crime Stoppers, Safe2SayPA, Safe2Tell, SandyHookPromise), hosted on the servers of P3 Campus, P3 Global Intel and their parent company Navigate360. However, contrary to the anonymity guarantees displayed, the reports contained information allowing their authors to be identified. The most frequent themes concerned suicide threats, harassment and drugs in schools. More than three months after the leak, Navigate360 and its clients have made no public disclosure or notification to the persons concerned, which K12 SIX describes as a \"conspiracy of silence\" and the largest breach of sensitive data concerning pupils ever recorded in the United States. On 24 April 2026, Senators Maggie Hassan and Jim Banks (HELP Committee) sent written questions to Navigate360 with a response expected by 8 May; no public response has been published. No third-party security audit, no federal agency or state attorney general investigation has been announced, while the tip-lines continue to be used.",
+        "fr": "Le 18 mars 2026, DDoSecrets et Straight Arrow News ont révélé une fuite de données (surnommée « Blue Leaks 2.0 ») fournie par le hacktiviste « InternetYiffMachine », contenant environ 8,3 millions de signalements destinés à des programmes de signalement anonyme (Crime Stoppers, Safe2SayPA, Safe2Tell, SandyHookPromise), hébergés sur les serveurs de P3 Campus, P3 Global Intel et leur maison-mère Navigate360. Or, contrairement aux garanties d'anonymat affichées, les signalements contenaient des informations permettant d'identifier les auteurs. Les thèmes les plus fréquents concernaient des menaces de suicide, du harcèlement et de la drogue en milieu scolaire. Plus de trois mois après la fuite, Navigate360 et ses clients n'ont procédé à aucune divulgation publique ni notification des personnes concernées, ce que le K12 SIX qualifie de « conspiration du silence » et de plus grande violation de données sensibles concernant des élèves jamais constatée aux États-Unis. Le 24 avril 2026, les sénateurs Maggie Hassan et Jim Banks (commission HELP) ont adressé à Navigate360 des questions écrites avec réponse attendue au 8 mai ; aucune réponse publique n'a été publiée. Aucun audit de sécurité tiers, aucune enquête d'agences fédérales ou de procureurs généraux d'État n'a été annoncé, alors que les tip-lines continuent d'être utilisées."
+      },
+      "organisation": {
+        "en": [
+          "Navigate360 / P3 Campus (et clients : Safe2SayPA, Safe2Tell, SandyHookPromise), Sénat américain (Sénateurs Maggie Hassan et Jim Banks), K12 SIX"
+        ],
+        "fr": [
+          "Navigate360 / P3 Campus (et clients : Safe2SayPA, Safe2Tell, SandyHookPromise), Sénat américain (Sénateurs Maggie Hassan et Jim Banks), K12 SIX"
+        ]
+      },
+      "jurisdiction": {
+        "en": [
+          "États-Unis (fédéral et étatique)"
+        ],
+        "fr": [
+          "États-Unis (fédéral et étatique)"
+        ]
+      },
+      "references": {
+        "en": [
+          "Navigate360 / P3 Campus anonymous tip line breach - failure to disclose"
+        ],
+        "fr": [
+          "Navigate360 / P3 Campus anonymous tip line breach - failure to disclose"
+        ]
+      },
+      "tags": [
+        "data breach",
+        "disclosure",
+        "education",
+        "students",
+        "PII",
+        "regulatory compliance",
+        "K-12",
+        "US"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/07/06/the-anonymous-tip-system-that-wasnt-three-months-later-why-hasnt-navigate360-notified-anyone/",
+        "https://databreaches.net/2026/07/06/the-anonymous-tip-system-that-wasnt-three-months-later-why-hasnt-navigate360-notified-anyone/?pk_campaign=feed&pk_kwd=the-anonymous-tip-system-that-wasnt-three-months-later-why-hasnt-navigate360-notified-anyone"
+      ],
+      "date": "2026-07-06"
+    },
+    {
+      "title": {
+        "en": "Flare - 15,000+ Leaked Healthcare Secrets",
+        "fr": "Flare - 15,000+ Leaked Healthcare Secrets"
+      },
+      "description": {
+        "en": "The Flare study of July 2026 identifies more than 15,000 healthcare-related secrets exposed on public code repositories and container registries, including 231 cases deemed critical: production credentials, cloud administration keys, database access, payment platform secrets and AI provider tokens. The primary vector is not hospital infrastructure itself but service providers, subcontractors and third-party software publishers (e.g. AI scheduling tool) who build solutions for healthcare facilities and leave secrets leaking outside monitored environments. Traditional security tools do not provide sufficient visibility into these external exposures (public repositories, registries, infostealer compromises). The healthcare sector, already heavily targeted by cybercrime (ransomware, fraud, medical identity theft, compromise of medical devices), thus sees its attack surface expanded via the software supply chain, potentially exposing facilities to violations of their regulatory obligations (HIPAA in the United States, GDPR in Europe, medical device laws).",
+        "fr": "L'étude Flare de juillet 2026 identifie plus de 15 000 secrets liés au secteur de la santé exposés sur des dépôts de code publics et registres de conteneurs, dont 231 cas jugés critiques : identifiants de production, clés d'administration cloud, accès à des bases de données, secrets de plateformes de paiement et jetons de fournisseurs d'IA. Le vecteur principal n'est pas l'infrastructure hospitalière elle-même mais les prestataires, sous-traitants et éditeurs de logiciels tiers (ex. outil de planification IA) qui construisent des solutions pour les établissements de santé et laissent fuiter des secrets hors des environnements surveillés. Les outils de sécurité traditionnels n'offrent pas une visibilité suffisante sur ces expositions externes (dépôts publics, registres, compromissions par infostealers). Le secteur de la santé, déjà très ciblé par la cybercriminalité (ransomware, fraude, vol d'identité médicale, compromission de dispositifs médicaux), voit ainsi sa surface d'attaque élargie via la chaîne d'approvisionnement logicielle, exposant potentiellement les établissements à des violations de leurs obligations réglementaires (HIPAA aux États-Unis, RGPD en Europe, lois sur les dispositifs médicaux)."
+      },
+      "organisation": {
+        "en": [
+          "Flare (recherche privée), utilisée comme source par les acteurs de la conformité et régulateurs sectoriels (HHS/OCR aux États-Unis, CNIL/CER en Europe, ANSSI si infrastructures critiques)"
+        ],
+        "fr": [
+          "Flare (recherche privée), utilisée comme source par les acteurs de la conformité et régulateurs sectoriels (HHS/OCR aux États-Unis, CNIL/CER en Europe, ANSSI si infrastructures critiques)"
+        ]
+      },
+      "jurisdiction": {
+        "en": [
+          "Mondial (États-Unis, Europe et autres juridictions où opèrent les prestataires)"
+        ],
+        "fr": [
+          "Mondial (États-Unis, Europe et autres juridictions où opèrent les prestataires)"
+        ]
+      },
+      "references": {
+        "en": [
+          "Flare - 15,000+ Leaked Healthcare Secrets"
+        ],
+        "fr": [
+          "Flare - 15,000+ Leaked Healthcare Secrets"
+        ]
+      },
+      "tags": [
+        "secrets exposure",
+        "healthcare",
+        "third-party risk",
+        "credentials",
+        "cloud security",
+        "AI tokens",
+        "compliance"
+      ],
+      "sources": [
+        "https://flare.io/learn/resources/blog/15000-leaked-healthcare-secrets"
+      ],
+      "date": "2026-07-06"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Alberta (projet Centurion) - électeurs de l'Alberta",
+      "threat_actor": "Non identifié",
+      "threat_actor_origin": "",
+      "threat_actor_type": "",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Secteur public / Administration électorale"
+        ],
+        "fr": [
+          "Secteur public / Administration électorale"
+        ]
+      },
+      "description": {
+        "en": "Class action lawsuit filed against Alberta and the Centurion project following an alleged data breach affecting millions of voters. The incident raises critical questions about the security of electoral registers and the governance of citizens' personal data. The technical details of the compromise have not been disclosed; the investigation will need to determine the initial attack vector and the actual extent of the exposure.",
+        "fr": "Poursuite collective (class action) engagée contre l'Alberta et le projet Centurion à la suite d'une violation de données alléguée ayant touché des millions d'électeurs. L'incident soulève des questions critiques sur la sécurité des registres électoraux et la gouvernance des données personnelles des citoyens. Les détails techniques de la compromission n'ont pas été divulgués ; l'enquête devra déterminer le vecteur d'attaque initial et l'étendue réelle de l'exposition."
+      },
+      "mitre_ttps": [
+        "TA0010"
+      ],
+      "recommandations": [
+        {
+          "en": "Conduct an independent forensic audit of the systems involved",
+          "fr": "Procéder à un audit forensique indépendant des systèmes impliqués"
+        },
+        {
+          "en": "Individually notify the persons concerned in accordance with legal obligations",
+          "fr": "Notifier individuellement les personnes concernées conformément aux obligations légales"
+        },
+        {
+          "en": "Strengthen security measures around electoral databases",
+          "fr": "Renforcer les mesures de sécurité autour des bases de données électorales"
+        },
+        {
+          "en": "Review contracts with third-party providers (Centurion) including security and audit clauses",
+          "fr": "Revoir les contrats avec les prestataires tiers (Centurion) incluant des clauses de sécurité et d'audit"
+        },
+        {
+          "en": "Implement continuous monitoring of access to sensitive data",
+          "fr": "Mettre en place une surveillance continue des accès aux données sensibles"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Map stored electoral data (registers, Centurion files)",
+            "Assess legal obligations related to the protection of electoral data (PIPEDA, provincial laws)",
+            "Prepare a crisis communication plan for electoral authorities and the public",
+            "Identify external forensic and legal partners",
+            "Set up a crisis management unit (legal, communications, IT, compliance)"
+          ],
+          "fr": [
+            "Cartographier les données électorales stockées (registres, fichiers Centurion)",
+            "Évaluer les obligations juridiques liées à la protection des données électorales (LPRPDE, lois provinciales)",
+            "Préparer un plan de communication de crise pour les autorités électorales et le public",
+            "Identifier les partenaires forensiques et juridiques externes",
+            "Constituer une cellule de gestion de crise (juridique, communication, IT, conformité)"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Confirm the extent of the compromise via forensic audit of Centurion systems",
+            "Verify unauthorised access paths and activity logs",
+            "Identify the exact scope of exposed voter data",
+            "Cross-reference with reports from other jurisdictions using similar solutions"
+          ],
+          "fr": [
+            "Confirmer l'étendue de la compromission via audit forensique des systèmes Centurion",
+            "Vérifier les pistes d'accès non autorisé et les journaux d'activité",
+            "Identifier le périmètre exact des données électeurs exposées",
+            "Recouper avec les signalements d'autres juridictions utilisant des solutions similaires"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate compromised systems from the rest of the network",
+            "Revoke administrator credentials and sessions",
+            "Preserve digital evidence (disk images, logs) before any return to service",
+            "Notify data protection authorities and competent prosecutors",
+            "Communicate with stakeholders (voters, media, regulators)"
+          ],
+          "fr": [
+            "Isoler les systèmes compromis du reste du réseau",
+            "Révoquer les identifiants et sessions des administrateurs",
+            "Préserver les preuves numériques (images disque, journaux) avant toute remise en service",
+            "Notifier les autorités de protection des données et les procureurs compétents",
+            "Communiquer avec les parties prenantes (électeurs, médias, régulateurs)"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Document the entire chain of compromise and decisions taken",
+            "Cooperate fully with ongoing judicial proceedings",
+            "Strengthen access controls and logging on electoral platforms",
+            "Conduct a post-incident review with lessons learned",
+            "Assess reputational damage and adjust communication strategy"
+          ],
+          "fr": [
+            "Documenter l'ensemble de la chaîne de compromission et des décisions prises",
+            "Coopérer pleinement avec les procédures judiciaires en cours",
+            "Renforcer les contrôles d'accès et la journalisation sur les plateformes électorales",
+            "Mener une revue post-incident avec retour d'expérience",
+            "Évaluer les dommages réputationnels et ajuster la stratégie de communication"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for signs of persistence or backdoors in electoral infrastructures",
+            "Hunt for IOCs related to the incident in other client jurisdictions",
+            "Monitor the dark web for any resale of Canadian voter data",
+            "Periodically audit third-party providers handling electoral data",
+            "Maintain threat intelligence on disinformation campaigns exploiting the breach"
+          ],
+          "fr": [
+            "Rechercher des signes de persistance ou de portes dérobées dans les infrastructures électorales",
+            "Chasser les IOC liés à l'incident dans les autres juridictions clientes",
+            "Surveiller le dark web pour toute revente de données électeurs canadiennes",
+            "Auditer périodiquement les prestataires tiers manipulant des données électorales",
+            "Maintenir une veille sur les campagnes de désinformation exploitant la brèche"
+          ]
+        }
+      },
+      "tags": [
+        "data_breach",
+        "election",
+        "public_sector",
+        "canada"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/07/06/alberta-centurion-project-sued-over-alleged-data-breach-that-affected-millions-of-voters/"
+      ],
+      "date": "2026-07-06"
+    },
+    {
+      "victim": "Moody Bible Institute",
+      "threat_actor": "Non identifié",
+      "threat_actor_origin": "",
+      "threat_actor_type": "",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Éducation / Institution religieuse"
+        ],
+        "fr": [
+          "Éducation / Institution religieuse"
+        ]
+      },
+      "description": {
+        "en": "Massive data breach affecting approximately 2.3 million accounts within the Moody Bible Institute, an American religious educational institution. The cyber experts cited underscore the exceptional scale of the leak. The incident highlights the vulnerabilities of educational and religious institutions that hold large personal databases without always having proportionate security measures in place.",
+        "fr": "Violation de données massive touchant environ 2,3 millions de comptes au sein du Moody Bible Institute, une institution éducative religieuse américaine. Les experts cyber cités soulignent l'ampleur exceptionnelle de la fuite. L'incident met en lumière les vulnérabilités des institutions éducatives et religieuses qui détiennent d'importantes bases de données personnelles sans toujours disposer des moyens de sécurité proportionnés."
+      },
+      "mitre_ttps": [
+        "TA0010"
+      ],
+      "recommandations": [
+        {
+          "en": "Immediately notify all affected individuals",
+          "fr": "Notifier immédiatement l'ensemble des personnes concernées"
+        },
+        {
+          "en": "Deploy identity and dark web monitoring for exposed accounts",
+          "fr": "Déployer une surveillance de l'identité et du dark web pour les comptes exposés"
+        },
+        {
+          "en": "Enforce password resets and enable MFA",
+          "fr": "Imposer la réinitialisation des mots de passe et activer la MFA"
+        },
+        {
+          "en": "Conduct a full security audit of the infrastructure",
+          "fr": "Réaliser un audit de sécurité complet de l'infrastructure"
+        },
+        {
+          "en": "Review data retention policies to limit future exposure",
+          "fr": "Revoir les politiques de rétention des données pour limiter l'exposition future"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Map user databases (students, donors, staff, alumni)",
+            "Verify encryption at rest for account data",
+            "Prepare notification templates compliant with US laws (GDPR-equivalent, CCPA, state laws)",
+            "Assess contractual obligations with academic partners",
+            "Set up a response team (IT, legal, communications)"
+          ],
+          "fr": [
+            "Cartographier les bases de données utilisateurs (étudiants, donateurs, personnel, alumni)",
+            "Vérifier le chiffrement au repos des données de comptes",
+            "Préparer les modèles de notification conformes aux lois US (RGPD-équivalent, CCPA, lois étatiques)",
+            "Évaluer les obligations contractuelles avec les partenaires académiques",
+            "Constituer une équipe de réponse (IT, juridique, communication)"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Confirm the timeline and exposure window",
+            "Analyze account database access logs",
+            "Identify the types of compromised accounts (active students, alumni, donors, staff)",
+            "Check whether credentials provide access to other systems (SSO, VPN)"
+          ],
+          "fr": [
+            "Confirmer la chronologie et la fenêtre d'exposition",
+            "Analyser les journaux d'accès aux bases de comptes",
+            "Identifier les types de comptes compromis (étudiants actifs, anciens, donateurs, staff)",
+            "Vérifier si des credentials permettent un accès à d'autres systèmes (SSO, VPN)"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate compromised systems and revoke all active sessions",
+            "Force password resets for affected accounts",
+            "Disable third-party integrations until security is restored",
+            "Preserve forensic evidence before any remediation",
+            "Notify competent authorities and affected parties"
+          ],
+          "fr": [
+            "Isoler les systèmes compromis et révoquer toutes les sessions actives",
+            "Forcer la réinitialisation des mots de passe des comptes concernés",
+            "Désactiver les intégrations tierces tant que la sécurité n'est pas rétablie",
+            "Préserver les preuves forensiques avant toute remédiation",
+            "Notifier les autorités compétentes et les parties affectées"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Communicate publicly about the incident with transparency",
+            "Offer identity monitoring protection to affected individuals",
+            "Strengthen password hashing/salting (e.g., bcrypt, Argon2)",
+            "Implement multi-factor authentication (MFA) on all accounts",
+            "Conduct a post-incident review and update security policies"
+          ],
+          "fr": [
+            "Communiquer publiquement sur l'incident avec transparence",
+            "Offrir une protection identity monitoring aux personnes affectées",
+            "Renforcer le hachage/salage des mots de passe (ex: bcrypt, Argon2)",
+            "Implémenter l'authentification multi-facteurs (MFA) sur tous les comptes",
+            "Mener une revue post-incident et mettre à jour les politiques de sécurité"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Look for evidence of credential reuse on other educational platforms",
+            "Monitor dark web marketplaces for the resale of Moody accounts",
+            "Audit other religious/educational institutions sharing similar infrastructure",
+            "Strengthen detection of anomalous behavior on user portals",
+            "Maintain threat intelligence on associated leaks (combo lists)"
+          ],
+          "fr": [
+            "Chercher des indices de réutilisation de credentials sur d'autres plateformes éducatives",
+            "Surveiller les marchés dark web pour la revente des comptes Moody",
+            "Auditer les autres institutions religieuses/éducatives partageant des infrastructures similaires",
+            "Renforcer la détection des comportements anormaux sur les portails utilisateurs",
+            "Maintenir une veille sur les fuites associées (combo lists)"
+          ]
+        }
+      },
+      "tags": [
+        "data_breach",
+        "education",
+        "religious_organization",
+        "usa"
+      ],
+      "sources": [
+        "https://www.theregister.com/security/2026/07/06/moody-bible-institute-breach-leaves-23m-accounts-needing-salvation-says-cyber-expert/"
+      ],
+      "date": "2026-07-07"
+    },
+    {
+      "victim": "Navigate360 (P3Campus / P3Global)",
+      "threat_actor": "Non identifié",
+      "threat_actor_origin": "",
+      "threat_actor_type": "",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Éducation / Sécurité scolaire (K-12)"
+        ],
+        "fr": [
+          "Éducation / Sécurité scolaire (K-12)"
+        ]
+      },
+      "description": {
+        "en": "Breach described as the \"worst breach ever\" in terms of the sensitivity of personal information concerning students, their peers, and their families, via a tipline system presented as anonymous. Three months after the incident, Navigate360 reportedly still had not notified affected individuals, significantly aggravating the impact. The nature of the data (submitted within an absolute trust context of pseudonymization) makes this breach particularly devastating from a human and legal standpoint.",
+        "fr": "Brèche qualifiée de « pire brèche jamais survenue » en termes de sensibilité des informations personnelles concernant des étudiants, leurs pairs et leurs familles, via un système de tiplines présenté comme anonyme. Trois mois après l'incident, Navigate360 n'aurait toujours pas notifié les personnes affectées, ce qui aggrave considérablement l'impact. La nature des données (soumises dans un contexte de confiance absolue de pseudonymisation) rend cette brèche particulièrement dévastatrice sur le plan humain et juridique."
+      },
+      "mitre_ttps": [
+        "TA0010",
+        "TA0009"
+      ],
+      "recommandations": [
+        {
+          "en": "Notify all affected individuals and establishments without delay",
+          "fr": "Notifier sans délai toutes les personnes et établissements affectés"
+        },
+        {
+          "en": "Deploy a psychological and legal assistance unit for victims",
+          "fr": "Déployer une cellule d'assistance psychologique et juridique pour les victimes"
+        },
+        {
+          "en": "Conduct an independent audit of the pseudonymization architecture",
+          "fr": "Mener un audit indépendant de l'architecture de pseudonymisation"
+        },
+        {
+          "en": "Drastically strengthen security measures for minors' data",
+          "fr": "Renforcer drastiquement les mesures de sécurité pour les données de mineurs"
+        },
+        {
+          "en": "Fully cooperate with child protection authorities and regulators",
+          "fr": "Coopérer pleinement avec les autorités de protection de l'enfance et les régulateurs"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Urgently map tipline data flows and their storage points",
+            "Assess legal obligations related to minors' data protection (COPPA, FERPA, state laws)",
+            "Prepare a specific notification protocol tailored to schools",
+            "Identify legal partners specialized in school data",
+            "Set up a dedicated crisis unit (IT, legal, communications, psychological support)"
+          ],
+          "fr": [
+            "Cartographier en urgence les flux de données des tiplines et leurs points de stockage",
+            "Évaluer les obligations légales liées à la protection des données de mineurs (COPPA, FERPA, lois étatiques)",
+            "Préparer un protocole de notification spécifique adapté aux établissements scolaires",
+            "Identifier les partenaires juridiques spécialisés en données scolaires",
+            "Constituer une cellule de crise dédiée (IT, juridique, communication, accompagnement psychologique)"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Identify the exact timeline of the breach and the exposure window",
+            "Analyze tipline databases to determine the compromised scope",
+            "Cross-reference reports with any prior compromises",
+            "Assess whether the announced pseudonymization was actually effective",
+            "Identify the types of exposed submissions (threats, harassment reports, mental health data, etc.)"
+          ],
+          "fr": [
+            "Identifier la chronologie exacte de la brèche et la fenêtre d'exposition",
+            "Analyser les bases de données des tiplines pour déterminer le périmètre compromis",
+            "Recouper les signalements avec les éventuelles compromissions antérieures",
+            "Évaluer si la pseudonymisation annoncée était réellement effective",
+            "Identifier les types de soumissions exposées (menaces, signalements de harcèlements, données de santé mentale, etc.)"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Immediately isolate tipline systems and stop inbound flows",
+            "Preserve forensic evidence with chain of custody",
+            "Notify school districts, parents, and child protection authorities",
+            "Offer psychological support to affected individuals",
+            "Coordinate with law enforcement if illegal content is involved"
+          ],
+          "fr": [
+            "Isoler immédiatement les systèmes de tiplines et arrêter les flux entrants",
+            "Préserver les preuves forensiques avec chaîne de custody",
+            "Notifier les districts scolaires, parents et autorités de protection de l'enfance",
+            "Offrir un accompagnement psychologique aux personnes affectées",
+            "Coordonner avec les forces de l'ordre si des contenus illégaux sont impliqués"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Communicate publicly and transparently about the nature of the breach",
+            "Conduct a full review of the pseudonymization architecture",
+            "Strengthen end-to-end encryption of sensitive submissions",
+            "Audit all providers handling minors' data",
+            "Conduct an in-depth post-incident review with public lessons learned"
+          ],
+          "fr": [
+            "Communiquer publiquement et de manière transparente sur la nature de la brèche",
+            "Procéder à une revue complète de l'architecture de pseudonymisation",
+            "Renforcer le chiffrement de bout en bout des soumissions sensibles",
+            "Auditer tous les prestataires manipulant des données de mineurs",
+            "Mener une revue post-incident approfondie avec retour d'expérience public"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for any subsequent persistence or exfiltration not detected",
+            "Monitor the dark web for the dissemination of tipline data",
+            "Audit other similar school reporting platforms",
+            "Maintain monitoring on malicious uses of the exposed data",
+            "Continuously assess the risks of blackmail, harassment, or post-breach targeting"
+          ],
+          "fr": [
+            "Rechercher toute persistance ou exfiltration ultérieure non détectée",
+            "Surveiller le dark web pour la diffusion de données de tiplines",
+            "Auditer les autres plateformes similaires de signalement scolaire",
+            "Maintenir une veille sur les usages malveillants des données exposées",
+            "Évaluer en continu les risques de chantage, harcèlement ou ciblage post-brèche"
+          ]
+        }
+      },
+      "tags": [
+        "data_breach",
+        "education",
+        "sensitive_data",
+        "privacy",
+        "minors",
+        "usa"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/07/06/the-anonymous-tip-system-that-wasnt-three-months-later-why-hasnt-navigate360-notified-anyone/"
+      ],
+      "date": "2026-07-07"
+    },
+    {
+      "victim": "Asuka Pharmaceutical (あすか製薬)",
+      "threat_actor": "Ancien employé (menace interne)",
+      "threat_actor_origin": "",
+      "threat_actor_type": "",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Pharmaceutique"
+        ],
+        "fr": [
+          "Pharmaceutique"
+        ]
+      },
+      "description": {
+        "en": "Data breach at Asuka Pharmaceutical (あすか製薬) involving a list of employees that a former collaborator allegedly took upon his departure. The breach was discovered following an unauthorized access to the new employer's PC, suggesting that the former employee reused or transferred sensitive data from Asuka to his new position. This incident illustrates the persistent risk of insider threat during professional transitions.",
+        "fr": "Fuite de données chez Asuka Pharmaceutical (あすか製薬) impliquant une liste d'employés qu'un ancien collaborateur aurait emportée lors de son départ. La brèche a été découverte suite à un accès non autorisé au PC du nouvel employeur, suggérant que l'ancien employé a réutilisé ou transféré des données sensibles d'Asuka vers son nouveau poste. Cet incident illustre le risque persistant de menace interne (insider threat) lors des transitions professionnelles."
+      },
+      "mitre_ttps": [
+        "T1530",
+        "T1078"
+      ],
+      "recommandations": [
+        {
+          "en": "Strengthen offboarding procedures with immediate revocation of all access",
+          "fr": "Renforcer les procédures offboarding avec révocation immédiate de tous les accès"
+        },
+        {
+          "en": "Deploy DLP solutions to monitor sensitive data movements",
+          "fr": "Déployer des solutions DLP pour surveiller les mouvements de données sensibles"
+        },
+        {
+          "en": "Train HR and IT teams in detecting risky behaviors",
+          "fr": "Former les équipes RH et IT à la détection des comportements à risque"
+        },
+        {
+          "en": "Initiate legal proceedings if evidence permits",
+          "fr": "Engager des poursuites judiciaires si les preuves le permettent"
+        },
+        {
+          "en": "Cooperate with the new employer to clarify the extent of the incident",
+          "fr": "Coopérer avec le nouvel employeur pour clarifier l'étendue de l'incident"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Implement a strict departure management policy (access review, asset recovery, NDA)",
+            "Raise managers' awareness in detecting risky behaviors",
+            "Map the sensitive data accessible to employees (internal lists, HR data)",
+            "Assess notification obligations in accordance with the APPI (Japanese data protection law)",
+            "Prepare an insider threat response plan"
+          ],
+          "fr": [
+            "Mettre en place une politique stricte de gestion des départs (revue des accès, récupération des assets, NDA)",
+            "Sensibiliser les managers à la détection des comportements à risque",
+            "Cartographier les données sensibles accessibles aux employés (listes internes, données RH)",
+            "Évaluer les obligations de notification conformément à la APPI (loi japonaise sur la protection des données)",
+            "Préparer un plan de réponse aux menaces internes (insider threat)"
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Audit the access history to employee list files",
+            "Identify the exfiltration channel used (cloud, USB, email)",
+            "Confirm the timeline: employee departure → access to new employer's PC → breach",
+            "Check digital traces (endpoint logs, cloud logs)",
+            "Assess whether other data may have been exfiltrated"
+          ],
+          "fr": [
+            "Auditer l'historique d'accès aux fichiers de la liste employés",
+            "Identifier le canal d'exfiltration utilisé (cloud, USB, email)",
+            "Confirmer la chronologie : départ de l'employé → accès au PC du nouvel employeur → fuite",
+            "Vérifier les traces numériques (logs endpoint, logs cloud)",
+            "Évaluer si d'autres données ont pu être exfiltrées"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Notify the new employer to stop the unauthorized PC access",
+            "Initiate legal procedures against the former employee",
+            "Preserve digital evidence (logs, endpoints) for prosecution purposes",
+            "Strengthen monitoring of dormant or recently revoked accounts",
+            "Communicate internally without compromising the investigation"
+          ],
+          "fr": [
+            "Notifier le nouvel employeur pour stopper l'accès non autorisé au PC",
+            "Engager les procédures légales contre l'ancien employé",
+            "Préserver les preuves numériques (logs, endpoints) en vue de poursuites",
+            "Renforcer la surveillance des comptes dormants ou récemment révoqués",
+            "Communiquer en interne sans compromettre l'enquête"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Strengthen offboarding processes (immediate access revocation, post-departure monitoring)",
+            "Implement DLP (Data Loss Prevention) on sensitive HR data",
+            "Audit former employee access over the last 12 months",
+            "Train HR and IT teams in departure best practices",
+            "Assess reputational damage and collaborate with authorities"
+          ],
+          "fr": [
+            "Renforcer les processus offboarding (révocation immédiate des accès, surveillance post-départ)",
+            "Implémenter le DLP (Data Loss Prevention) sur les données RH sensibles",
+            "Auditer les accès des anciens employés sur les 12 derniers mois",
+            "Former les équipes RH et IT aux bonnes pratiques de départ",
+            "Évaluer les dommages réputationnels et collaborer avec les autorités"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Look for other suspicious departures that may have preceded a similar breach",
+            "Identify exfiltration patterns via cloud storage on endpoints",
+            "Audit access to sensitive data files by insiders",
+            "Maintain monitoring on at-risk employee movements (departures to competitors)",
+            "Strengthen correlation between HR events and security events"
+          ],
+          "fr": [
+            "Rechercher d'autres départs suspects ayant pu précéder une fuite similaire",
+            "Identifier des patterns d'exfiltration via cloud storage sur les endpoints",
+            "Auditer les accès aux fichiers de données sensibles par les insiders",
+            "Maintenir une veille sur les mouvements d'employés à risque (départs vers concurrents)",
+            "Renforcer la corrélation entre événements RH et événements de sécurité"
+          ]
+        }
+      },
+      "tags": [
+        "data_breach",
+        "insider_threat",
+        "pharmaceutical",
+        "japan",
+        "employee_data"
+      ],
+      "sources": [
+        "https://rocket-boys.co.jp/security-measures-lab/aska-pharma-ex-employee-data-leak/"
+      ],
+      "date": "2026-07-07"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-54291",
+      "euvd_id": "",
+      "cisa_kev": false,
+      "cvss": "8.2",
+      "epss": "",
+      "cpe": "",
+      "product": "pgjdbc",
+      "vendor": "pgjdbc",
+      "description": {
+        "en": "CVE-2026-54291 vulnerability affects the PostgreSQL JDBC driver. It allows an attacker to bypass the driver's security policy, with a risk of unauthorized access or data leakage. Version 42.7.12 fixes the flaw.",
+        "fr": "La vulnérabilité CVE-2026-54291 affecte le pilote PostgreSQL JDBC. Elle permet à un attaquant de contourner la politique de sécurité du pilote, avec un risque d'accès non autorisé ou de fuite de données. La version 42.7.12 corrige le défaut."
+      },
+      "mitre_ttps": [
+        "T1552"
+      ],
+      "recommandations": [
+        {
+          "en": "Update PostgreSQL JDBC to version 42.7.12. Apply the principle of least privilege on application accounts. Segment application flows to databases and monitor abnormal access.",
+          "fr": "Mettre à jour PostgreSQL JDBC vers la version 42.7.12. Appliquer le principe de moindre privilège sur les comptes applicatifs. Segmenter les flux applicatifs vers les bases de données et surveiller les accès anormaux."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "List all Java applications using the PostgreSQL JDBC driver versions ≥ 42.7.4 and < 42.7.12.",
+            "Identify connection strings, application accounts, and secrets stored on the client/server side.",
+            "Prepare Maven/Gradle dependencies for update to 42.7.12.",
+            "Document functional non-regression tests of database access."
+          ],
+          "fr": [
+            "Recenser toutes les applications Java utilisant le pilote PostgreSQL JDBC versions ≥ 42.7.4 et < 42.7.12.",
+            "Identifier les chaînes de connexion, comptes applicatifs et secrets stockés côté client/serveur.",
+            "Préparer les dépendances Maven/Gradle pour mise à jour vers 42.7.12.",
+            "Documenter les tests de non-régression fonctionnelle des accès base de données."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Audit application and JDBC logs to identify abnormal or unauthorized queries.",
+            "Monitor suspicious PostgreSQL connections from client applications (unusual origins, abnormal volumes).",
+            "Detect potential data leaks resulting from the security policy bypass.",
+            "Set up SIEM alerts on abnormal access to sensitive schemas."
+          ],
+          "fr": [
+            "Auditer les logs applicatifs et JDBC pour repérer des requêtes anormales ou non autorisées.",
+            "Surveiller les connexions PostgreSQL suspectes depuis des applications clientes (origines inhabituelles, volumes anormaux).",
+            "Détecter d'éventuelles fuites de données issues du contournement de politique de sécurité.",
+            "Mettre en place des alertes SIEM sur les accès anormaux aux schémas sensibles."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Update the PostgreSQL JDBC driver to version 42.7.12 on all impacted applications.",
+            "Restrict application account privileges to the strict minimum.",
+            "Segment network access between application servers and PostgreSQL databases.",
+            "Disable non-patchable applications and switch to a fixed driver."
+          ],
+          "fr": [
+            "Mettre à jour le pilote PostgreSQL JDBC vers la version 42.7.12 sur l'ensemble des applications impactées.",
+            "Restreindre les privilèges des comptes applicatifs au strict minimum.",
+            "Segmenter les accès réseau entre les serveurs applicatifs et les bases PostgreSQL.",
+            "Désactiver les applications non patchables et basculer sur un pilote corrigé."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify the absence of persistent unauthorized access to PostgreSQL databases.",
+            "Revoke and regenerate application secrets/credentials if exploitation is suspected.",
+            "Confirm application stability after driver update.",
+            "Document the update chain and impacted dependencies."
+          ],
+          "fr": [
+            "Vérifier l'absence d'accès non autorisé persistants aux bases PostgreSQL.",
+            "Révoquer et régénérer les secrets/identifiants applicatifs si une exploitation est suspectée.",
+            "Confirmer la stabilité applicative après mise à jour du pilote.",
+            "Documenter la chaîne de mise à jour et les dépendances impactées."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for data exfiltration indicators via PostgreSQL logs (pg_stat_statements).",
+            "Identify unusual access patterns from old or uninventoried JDBC clients.",
+            "Hunt for the presence of vulnerable drivers in Docker images and CI/CD artifacts.",
+            "Track public disclosure of potential PoCs targeting CVE-2026-54291."
+          ],
+          "fr": [
+            "Rechercher des indicateurs d'exfiltration de données via les logs PostgreSQL (pg_stat_statements).",
+            "Identifier des schémas d'accès inhabituels en provenance de clients JDBC anciens ou non inventoriés.",
+            "Chasser la présence de pilotes vulnérables dans les images Docker et artefacts CI/CD.",
+            "Suivre la divulgation publique d'éventuels PoC ciblant CVE-2026-54291."
+          ]
+        }
+      },
+      "tags": [
+        "PostgreSQL JDBC",
+        "contournement de politique de sécurité",
+        "CVE-2026-54291"
+      ],
+      "sources": [
+        "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0837/",
+        "https://www.postgresql.org/about/news/postgresql-jdbc-42712-security-release-3340/",
+        "https://www.cve.org/CVERecord?id=CVE-2026-54291"
+      ],
+      "date": "2026-07-06"
+    },
+    {
+      "cve_id": "CVE-2026-11405",
+      "euvd_id": "",
+      "cisa_kev": false,
+      "cvss": "",
+      "epss": "",
+      "cpe": "",
+      "product": "firmware",
+      "vendor": "Tenda",
+      "description": {
+        "en": "CVE-2026-11405 vulnerability reveals an undocumented backdoor in the /bin/httpd binary of several Tenda firmwares. A plaintext comparison via strcmp() between the supplied password and the sys.rzadmin.password value allows obtaining administrator access (role=2) without username validation. The vendor has not responded to CERT/CC requests.",
+        "fr": "La vulnérabilité CVE-2026-11405 révèle une porte dérobée non documentée dans le binaire /bin/httpd de plusieurs firmwares Tenda. Une comparaison en clair via strcmp() entre le mot de passe fourni et la valeur sys.rzadmin.password permet d'obtenir un accès administrateur (role=2) sans validation du nom d'utilisateur. L'éditeur n'a pas répondu aux sollicitations du CERT/CC."
+      },
+      "mitre_ttps": [
+        "T1078",
+        "T1133"
+      ],
+      "recommandations": [
+        {
+          "en": "In the absence of a vendor patch: disable remote administration, restrict exposure to the local network, change the default LAN IP address, isolate or replace the affected equipment, monitor unauthorized administrative access.",
+          "fr": "En l'absence de correctif éditeur : désactiver l'administration distante, restreindre l'exposition au réseau local, modifier l'adresse IP LAN par défaut, isoler ou remplacer les équipements concernés, surveiller les accès administratifs non autorisés."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory all Tenda equipment in professional and home environments (FH1201, W15E, AC10, AC5, AC6 routers).",
+            "Document firmware versions in production.",
+            "Identify exposed administration interfaces (LAN, WAN, Wi-Fi).",
+            "Prepare a plan for replacement or decommissioning of unpatched equipment.",
+            "Raise user awareness on disabling remote administration."
+          ],
+          "fr": [
+            "Recenser tous les équipements Tenda en environnement professionnel et domestique (routeurs FH1201, W15E, AC10, AC5, AC6).",
+            "Documenter les versions firmware en production.",
+            "Identifier les interfaces d'administration exposées (LAN, WAN, Wi-Fi).",
+            "Préparer un plan de remplacement ou de mise hors service des équipements non corrigés.",
+            "Sensibiliser les utilisateurs à la désactivation de l'administration distante."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Analyze logs from Tenda equipment to detect illegitimate administrator connections.",
+            "Monitor unusual network configuration changes (DNS, routing, firewall).",
+            "Detect admin sessions from external sources if the WAN interface is enabled.",
+            "Look for signs of local network compromise downstream of the equipment."
+          ],
+          "fr": [
+            "Analyser les logs des équipements Tenda pour détecter des connexions administrateur non légitimes.",
+            "Surveiller les modifications de configuration réseau (DNS, routage, pare-feu) inhabituelles.",
+            "Détecter les sessions admin depuis des sources externes si l'interface WAN est activée.",
+            "Rechercher des signes de compromission du réseau local en aval de l'équipement."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Immediately disable remote administration on affected Tenda equipment.",
+            "Restrict LAN access to the administration interface to trusted management IPs only.",
+            "Change the default LAN IP address to limit exposure to opportunistic scanners.",
+            "Isolate or decommission equipment that cannot be updated.",
+            "Segment the network to limit the impact of a compromised router."
+          ],
+          "fr": [
+            "Désactiver immédiatement l'administration distante sur les équipements Tenda affectés.",
+            "Restreindre l'accès LAN à l'interface d'administration aux seules IP de gestion de confiance.",
+            "Changer l'adresse IP LAN par défaut pour limiter l'exposition aux scanners opportunistes.",
+            "Isoler ou mettre hors service les équipements ne pouvant pas être mis à jour.",
+            "Segmenter le réseau pour limiter l'impact d'un routeur compromis."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify the integrity of the network configuration after incident (DNS, DHCP, routes).",
+            "Audit downstream equipment to detect secondary compromises.",
+            "Document the vulnerabilities and the mitigation procedure applied.",
+            "Initiate a replacement procedure with vendor-supported equipment."
+          ],
+          "fr": [
+            "Vérifier l'intégrité de la configuration réseau après incident (DNS, DHCP, routes).",
+            "Auditer les équipements en aval pour détecter des compromissions secondaires.",
+            "Documenter les vulnérabilités et la procédure de mitigation appliquée.",
+            "Engager une procédure de remplacement par un équipement maintenu par l'éditeur."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search the network for Tenda equipment running the referenced vulnerable firmwares.",
+            "Hunt for backdoor indicators (requests to /bin/httpd with sys.rzadmin.password parameters).",
+            "Identify abnormal network behaviors (DNS exfiltration, outbound scans) from IoT equipment.",
+            "Monitor exploit and PoC publications targeting CVE-2026-11405."
+          ],
+          "fr": [
+            "Rechercher sur le réseau des équipements Tenda avec les firmwares vulnérables référencés.",
+            "Chasser des indicateurs de backdoor (requêtes vers /bin/httpd avec paramètres sys.rzadmin.password).",
+            "Identifier des comportements réseau anormaux (DNS exfiltration, scans sortants) depuis les équipements IoT.",
+            "Surveiller les publications d'exploits et PoC ciblant CVE-2026-11405."
+          ]
+        }
+      },
+      "tags": [
+        "Tenda",
+        "backdoor",
+        "authentification cachée",
+        "IoT"
+      ],
+      "sources": [
+        "https://kb.cert.org/vuls/id/213560",
+        "https://www.tendacn.com/download/"
+      ],
+      "date": "2026-07-06"
+    },
+    {
+      "cve_id": "CVE-2026-13753",
+      "euvd_id": "",
+      "cisa_kev": false,
+      "cvss": "7.5",
+      "epss": "",
+      "cpe": "",
+      "product": "HP 2800 Printer Series",
+      "vendor": "HP Inc.",
+      "description": {
+        "en": "CVE-2026-13753 affects the webservers of HP Deskjet 2800 printers running firmware ≤ TBP1CN2612AR. Unauthenticated direct GET requests to backend API endpoints allow bypassing the web interface authentication and expose administrative data: SSID and Wi-Fi Direct password in cleartext, serial numbers, service identifiers, SNMP configuration, and administrator password status.",
+        "fr": "La vulnérabilité CVE-2026-13753 affecte les webservers des imprimantes HP Deskjet 2800 sous firmware ≤ TBP1CN2612AR. Des requêtes GET directes non authentifiées vers des endpoints API backend permettent de contourner l'authentification de l'interface web et d'exposer des données administratives : SSID et mot de passe Wi-Fi Direct en clair, numéros de série, identifiants de service, configuration SNMP et état du mot de passe administrateur."
+      },
+      "mitre_ttps": [
+        "T1213",
+        "T1040"
+      ],
+      "recommandations": [
+        {
+          "en": "Restrict network access to the printer to a trusted/isolated segment, disable Wi-Fi Direct if unused, limit or disable SNMP, apply ACLs/firewall rules on management ports, disable unnecessary discovery and cloud features. No firmware patch is currently available.",
+          "fr": "Restreindre l'accès réseau à l'imprimante à un segment de confiance/isolé, désactiver Wi-Fi Direct si inutile, limiter ou désactiver SNMP, appliquer des ACL/pare-feu sur les ports de gestion, désactiver les fonctions de découverte et cloud non nécessaires. Aucun correctif firmware n'est actuellement disponible."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory HP Deskjet 2800 printers and identify firmware versions (≤ TBP1CN2612AR).",
+            "Map the network exposure of printers (management ports, web services).",
+            "Prepare a network segmentation plan to isolate sensitive printers.",
+            "Document the Wi-Fi Direct and SNMP configuration of equipment.",
+            "Back up current configurations before any modification."
+          ],
+          "fr": [
+            "Recenser les imprimantes HP Deskjet 2800 et identifier les versions firmware (≤ TBP1CN2612AR).",
+            "Cartographier l'exposition réseau des imprimantes (ports de gestion, services web).",
+            "Préparer un plan de segmentation réseau pour isoler les imprimantes sensibles.",
+            "Documenter la configuration Wi-Fi Direct et SNMP des équipements.",
+            "Sauvegarder les configurations actuelles avant toute modification."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Audit web and SNMP access logs of printers for unauthenticated GET requests to API endpoints.",
+            "Detect abnormal retrievals of Wi-Fi Direct credentials, SSIDs, or passphrases.",
+            "Monitor unusual network activity from or to printers (snmpwalk, direct HTTP requests).",
+            "Deploy IDS/IPS rules on print segments to detect these requests."
+          ],
+          "fr": [
+            "Auditer les logs d'accès web et SNMP des imprimantes à la recherche de requêtes GET non authentifiées vers les endpoints API.",
+            "Détecter des récupérations anormales d'identifiants Wi-Fi Direct, SSID ou passphrases.",
+            "Surveiller les activités réseau inhabituelles depuis ou vers les imprimantes (snmpwalk, requêtes HTTP directes).",
+            "Mettre en place des règles IDS/IPS sur les segments d'impression pour repérer ces requêtes."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Place affected printers on a dedicated VLAN isolated from the rest of the network.",
+            "Disable Wi-Fi Direct if not required.",
+            "Restrict or disable SNMP access to trusted systems only.",
+            "Apply firewall/ACL rules to block unauthorized access to management ports (80, 443, 161/162 SNMP).",
+            "Disable unnecessary discovery features and cloud services.",
+            "Decommission or disconnect unpatchable printers."
+          ],
+          "fr": [
+            "Placer les imprimantes affectées sur un VLAN dédié et isolé du reste du réseau.",
+            "Désactiver Wi-Fi Direct si non requis.",
+            "Restreindre ou désactiver l'accès SNMP aux seuls systèmes de confiance.",
+            "Appliquer des règles de pare-feu/ACL pour bloquer l'accès non autorisé aux ports de gestion (80, 443, 161/162 SNMP).",
+            "Désactiver les fonctions de découverte et services cloud non nécessaires.",
+            "Mettre hors service ou déconnecter les imprimantes non corrigibles."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify that no Wi-Fi Direct credentials have been compromised and regenerate secrets if needed.",
+            "Audit the device inventory and network segmentation post-incident.",
+            "Document the mitigation procedure applied.",
+            "Plan replacement with a model that has a vendor patch."
+          ],
+          "fr": [
+            "Vérifier qu'aucune information d'identification Wi-Fi Direct n'a été compromise et régénérer les secrets le cas échéant.",
+            "Auditer l'annuaire des appareils et la segmentation réseau post-incident.",
+            "Documenter la procédure de mitigation appliquée.",
+            "Planifier le remplacement par un modèle avec correctif éditeur."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Identify HP Deskjet 2800 printers on the network running vulnerable firmware.",
+            "Hunt for direct GET requests to API endpoints without an authenticated session.",
+            "Look for indicators of unauthorized SNMP or Wi-Fi Direct exploitation.",
+            "Track public disclosure of PoCs or exploits targeting CVE-2026-13753."
+          ],
+          "fr": [
+            "Identifier sur le réseau des imprimantes HP Deskjet 2800 avec firmware vulnérable.",
+            "Chasser des requêtes GET directes vers les endpoints d'API sans session authentifiée.",
+            "Rechercher des indicateurs d'exploitation SNMP ou Wi-Fi Direct non autorisés.",
+            "Suivre la divulgation publique de PoC ou exploits ciblant CVE-2026-13753."
+          ]
+        }
+      },
+      "tags": [
+        "HP",
+        "Deskjet 2800",
+        "missing authorization",
+        "credentials disclosure"
+      ],
+      "sources": [
+        "https://kb.cert.org/vuls/id/828543"
+      ],
+      "date": "2026-07-06"
+    },
+    {
+      "cve_id": "CVE-2026-53645",
+      "euvd_id": "",
+      "cisa_kev": false,
+      "cvss": "8.5",
+      "epss": "",
+      "cpe": "",
+      "product": "FOSSBilling (versions < 0.8.0)",
+      "vendor": "FOSSBilling",
+      "description": {
+        "en": "CVE-2026-53645: a low-privileged staff account holding only staff.create_and_edit_staff can, via /api/admin/staff/permissions_update, grant itself any permission on its own account, bypassing role-based access control. Version 0.8.0 fixes the flaw.",
+        "fr": "CVE-2026-53645 : un compte staff faiblement privilégié disposant uniquement de staff.create_and_edit_staff peut, via /api/admin/staff/permissions_update, s'octroyer n'importe quelle permission sur son propre compte, contournant le contrôle d'accès basé sur les rôles. La version 0.8.0 corrige le défaut."
+      },
+      "mitre_ttps": [
+        "T1078",
+        "T1098"
+      ],
+      "recommandations": [
+        {
+          "en": "Update to FOSSBilling 0.8.0 or later. Restrict the staff.create_and_edit_staff permission to a minimal number of trusted administrators. Restrict access to the /api/admin/staff/permissions_update endpoint via reverse proxy/WAF.",
+          "fr": "Mettre à jour vers FOSSBilling 0.8.0 ou ultérieur. Restreindre la permission staff.create_and_edit_staff à un nombre minimal d'administrateurs de confiance. Limiter l'accès à l'endpoint /api/admin/staff/permissions_update via reverse proxy/WAF."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory FOSSBilling deployments (versions < 0.8.0).",
+            "Map staff accounts and their current permissions, notably staff.create_and_edit_staff.",
+            "Back up the database and configuration before updating.",
+            "Restrict the staff.create_and_edit_staff permission to trusted accounts.",
+            "Schedule an update window with regression testing."
+          ],
+          "fr": [
+            "Recenser les déploiements FOSSBilling (versions < 0.8.0).",
+            "Cartographier les comptes staff et leurs permissions actuelles, notamment staff.create_and_edit_staff.",
+            "Sauvegarder la base de données et la configuration avant mise à jour.",
+            "Restreindre la permission staff.create_and_edit_staff aux comptes de confiance.",
+            "Planifier un créneau de mise à jour avec test de non-régression."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Audit access logs to /api/admin/staff/permissions_update.",
+            "Detect unusual or self-targeting staff permission changes.",
+            "Monitor abnormal staff account creation or role elevation.",
+            "Set up a SIEM alert on staff permission writes."
+          ],
+          "fr": [
+            "Auditer les logs d'accès à /api/admin/staff/permissions_update.",
+            "Détecter des modifications de permissions staff inhabituelles ou self-targeting.",
+            "Surveiller la création de comptes staff ou l'élévation de rôles anormaux.",
+            "Mettre en place une alerte SIEM sur les écritures de permissions staff."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Update FOSSBilling to version 0.8.0 or later.",
+            "Restrict access to the /api/admin/staff/permissions_update endpoint via reverse proxy or WAF to trusted IPs only.",
+            "Restrict the staff.create_and_edit_staff permission to trusted administrators.",
+            "Isolate or disable non-patchable FOSSBilling instances."
+          ],
+          "fr": [
+            "Mettre à jour FOSSBilling vers la version 0.8.0 ou ultérieure.",
+            "Restreindre l'accès à l'endpoint /api/admin/staff/permissions_update via reverse proxy ou WAF aux seules IP de confiance.",
+            "Restreindre la permission staff.create_and_edit_staff aux administrateurs de confiance.",
+            "Isoler ou désactiver les instances FOSSBilling non patchables."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify the absence of staff accounts with abnormal permissions post-incident.",
+            "Revoke suspicious active staff sessions and force password rotation.",
+            "Audit the permission modification history to identify potential exploitation.",
+            "Document the update procedure and the compensatory controls applied."
+          ],
+          "fr": [
+            "Vérifier l'absence de comptes staff avec permissions anormales post-incident.",
+            "Révoquer les sessions staff actives suspectes et forcer la rotation des mots de passe.",
+            "Auditer l'historique des modifications de permissions pour identifier une exploitation éventuelle.",
+            "Documenter la procédure de mise à jour et les contrôles compensatoires appliqués."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for unauthenticated or unusual API calls to /api/admin/staff/permissions_update.",
+            "Identify staff accounts that have granted permissions to themselves (self-edit).",
+            "Hunt for privilege escalation patterns via FOSSBilling role manipulation.",
+            "Monitor the public disclosure of any PoC targeting CVE-2026-53645."
+          ],
+          "fr": [
+            "Rechercher des appels API non authentifiés ou inhabituels vers /api/admin/staff/permissions_update.",
+            "Identifier des comptes staff ayant accordé des permissions à eux-mêmes (self-edit).",
+            "Chasser des patterns d'escalade de privilèges via manipulation de rôles FOSSBilling.",
+            "Suivre la divulgation publique d'éventuels PoC ciblant CVE-2026-53645."
+          ]
+        }
+      },
+      "tags": [
+        "FOSSBilling",
+        "CWE-269",
+        "privilege escalation",
+        "API admin"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-53645",
+        "https://github.com/FOSSBilling/FOSSBilling/security/advisories/GHSA-4hf7-xxxw-64rm"
+      ],
+      "date": "2026-07-06"
+    },
+    {
+      "cve_id": "CVE-2026-53644",
+      "euvd_id": "",
+      "cisa_kev": false,
+      "cvss": "8.6",
+      "epss": "",
+      "cpe": "",
+      "product": "FOSSBilling (versions 0.5.3 à 0.7.2)",
+      "vendor": "FOSSBilling",
+      "description": {
+        "en": "CVE-2026-53644: due to missing order status validation, authenticated clients can read and reset service API secrets for non-active orders (suspended, canceled), while the frontend UI correctly restricts access. Version 0.8.0 fixes the flaw.",
+        "fr": "CVE-2026-53644 : en raison d'une validation manquante de l'état de la commande, des clients authentifiés peuvent lire et réinitialiser les secrets d'API de service pour des commandes non actives (suspendues, annulées), alors que l'UI frontend restreint correctement l'accès. La version 0.8.0 corrige la faille."
+      },
+      "mitre_ttps": [
+        "T1078",
+        "T1552"
+      ],
+      "recommandations": [
+        {
+          "en": "Update to FOSSBilling 0.8.0 or later. Uninstall the Serviceapikey module if not required. Restrict access to the /api/client/order/service and /api/client/serviceapikey/reset endpoints via reverse proxy/WAF. Rotate API keys after correction.",
+          "fr": "Mettre à jour vers FOSSBilling 0.8.0 ou ultérieur. Désinstaller le module Serviceapikey si non requis. Restreindre via reverse proxy/WAF l'accès aux endpoints /api/client/order/service et /api/client/serviceapikey/reset. Rotation des clés API après correction."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "List FOSSBilling instances versions 0.5.3 to 0.7.2.",
+            "Identify clients and orders associated with the Serviceapikey module.",
+            "List API secrets exposed via the /api/client/order/service and /api/client/serviceapikey/reset endpoints.",
+            "Plan the update to 0.8.0 or the uninstallation of the Serviceapikey module if not required."
+          ],
+          "fr": [
+            "Recenser les instances FOSSBilling versions 0.5.3 à 0.7.2.",
+            "Identifier les clients et commandes associées au module Serviceapikey.",
+            "Lister les secrets d'API exposés via les endpoints /api/client/order/service et /api/client/serviceapikey/reset.",
+            "Planifier la mise à jour vers 0.8.0 ou la désinstallation du module Serviceapikey si non requis."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Audit access logs to client endpoints for API key management.",
+            "Detect read/reset operations on API keys on non-active orders (suspended, canceled).",
+            "Monitor anomalies in service API key usage (origins, volumes).",
+            "Set up SIEM alerts on sensitive operations on Serviceapikey."
+          ],
+          "fr": [
+            "Auditer les logs d'accès aux endpoints client de gestion des clés API.",
+            "Détecter des opérations de lecture/reset de clés API sur des commandes non actives (suspendues, annulées).",
+            "Surveiller les anomalies d'utilisation des clés API service (origines, volumes).",
+            "Mettre en place des alertes SIEM sur les opérations sensibles sur Serviceapikey."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Update FOSSBilling to 0.8.0 or apply available patches.",
+            "If Serviceapikey is not required, uninstall the module to neutralize the vulnerable endpoints.",
+            "Restrict access to /api/client/order/service and /api/client/serviceapikey/reset via reverse proxy/WAF.",
+            "Force rotation of API secrets after applying patches.",
+            "Isolate non-patchable instances."
+          ],
+          "fr": [
+            "Mettre à jour FOSSBilling vers 0.8.0 ou appliquer les correctifs disponibles.",
+            "Si Serviceapikey n'est pas requis, désinstaller le module pour neutraliser les endpoints vulnérables.",
+            "Restreindre via reverse proxy/WAF l'accès à /api/client/order/service et /api/client/serviceapikey/reset.",
+            "Forcer la rotation des secrets d'API après application des correctifs.",
+            "Isoler les instances non corrigibles."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Review API key access history to identify prior exploitation.",
+            "Revoke and regenerate all potentially exposed API keys.",
+            "Confirm the compliance of order statuses (active, suspended, canceled) in the database.",
+            "Document the hardening procedure implemented."
+          ],
+          "fr": [
+            "Vérifier l'historique d'accès aux clés API pour identifier une exploitation antérieure.",
+            "Révoquer et régénérer toutes les clés API potentiellement exposées.",
+            "Confirmer la conformité des états de commandes (active, suspended, canceled) dans la base.",
+            "Documenter la procédure de durcissement mise en place."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for client calls to the vulnerable endpoints outside the 'active' status.",
+            "Identify massive rotations or reads of API keys in a short time.",
+            "Hunt for indicators of API secret leakage on SIEM and threat intel platforms.",
+            "Monitor the public disclosure of PoC targeting CVE-2026-53644."
+          ],
+          "fr": [
+            "Rechercher des appels clients vers les endpoints vulnérables en dehors de l'état 'active'.",
+            "Identifier des rotations ou lectures massives de clés API en peu de temps.",
+            "Chasser des indices de fuite de secrets API sur les SIEM et plateformes de threat intel.",
+            "Suivre la divulgation publique de PoC ciblant CVE-2026-53644."
+          ]
+        }
+      },
+      "tags": [
+        "FOSSBilling",
+        "CWE-639",
+        "authorization bypass",
+        "API key"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-53644",
+        "https://github.com/FOSSBilling/FOSSBilling/security/advisories/GHSA-qf6j-vq68-qmfh"
+      ],
+      "date": "2026-07-06"
+    },
+    {
+      "cve_id": "CVE-2026-53643",
+      "euvd_id": "",
+      "cisa_kev": false,
+      "cvss": "8.7",
+      "epss": "",
+      "cpe": "",
+      "product": "FOSSBilling (versions < 0.8.0)",
+      "vendor": "FOSSBilling",
+      "description": {
+        "en": "CVE-2026-53643: the combination of the can_always_access flag (which grants access to certain modules) and insufficient permission checks or insecure parameter handling allows low-privileged staff accounts to perform unauthorized actions on admin API endpoints. Version 0.8.0 fixes the vulnerability.",
+        "fr": "CVE-2026-53643 : la combinaison du flag can_always_access (qui octroie l'accès à certains modules) et de contrôles de permissions insuffisants ou d'une gestion non sécurisée des paramètres permet à des comptes staff faiblement privilégiés d'effectuer des actions non autorisées sur des endpoints admin API. La version 0.8.0 corrige la vulnérabilité."
+      },
+      "mitre_ttps": [
+        "T1078",
+        "T1098"
+      ],
+      "recommandations": [
+        {
+          "en": "Update FOSSBilling to version 0.8.0 or later. Restrict staff accounts to the roles they actually need. Filter access to admin API endpoints via reverse proxy/WAF. Regularly audit staff permissions and module parameters.",
+          "fr": "Mettre à jour FOSSBilling vers la version 0.8.0 ou ultérieure. Restreindre les comptes staff aux rôles réellement nécessaires. Filtrer l'accès aux endpoints admin API via reverse proxy/WAF. Auditer régulièrement les permissions staff et les paramètres de modules."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "List FOSSBilling instances versions < 0.8.0.",
+            "Identify all staff accounts and their granted sensitive permissions.",
+            "Document the modules exposed via the admin API.",
+            "Restrict staff accounts to strict operational necessity.",
+            "Plan the update to 0.8.0 and test for non-regression."
+          ],
+          "fr": [
+            "Recenser les instances FOSSBilling versions < 0.8.0.",
+            "Identifier tous les comptes staff et leurs permissions sensibles accordées.",
+            "Documenter les modules exposés via l'API admin.",
+            "Restreindre les comptes staff aux strictes nécessités opérationnelles.",
+            "Planifier la mise à jour vers 0.8.0 et tester la non-régression."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Audit admin API endpoint logs for unauthorized actions by low-privilege accounts.",
+            "Detect access to sensitive modules by unauthorized roles.",
+            "Set up SIEM monitoring on unusual admin API calls.",
+            "Search for untracked configuration changes (parameters, module flags)."
+          ],
+          "fr": [
+            "Auditer les logs des endpoints admin API pour des actions non autorisées par des comptes faible privilège.",
+            "Détecter des accès à des modules sensibles par des rôles non habilités.",
+            "Mettre en place une surveillance SIEM sur les appels admin API inhabituels.",
+            "Rechercher des modifications de configuration non tracées (paramètres, flags de modules)."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Update FOSSBilling to 0.8.0 or later.",
+            "Restrict staff accounts to those requiring actual access to sensitive modules.",
+            "Set up a reverse proxy/WAF to filter access to admin API endpoints.",
+            "Disable or restrict affected modules if not required.",
+            "Isolate non-patchable instances."
+          ],
+          "fr": [
+            "Mettre à jour FOSSBilling vers 0.8.0 ou ultérieur.",
+            "Restreindre les comptes staff à ceux nécessitant un accès réel aux modules sensibles.",
+            "Mettre en place un reverse proxy/WAF pour filtrer l'accès aux endpoints admin API.",
+            "Désactiver ou restreindre les modules affectés si non requis.",
+            "Isoler les instances non corrigibles."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify the integrity of module parameters and permissions post-incident.",
+            "Revoke suspicious staff sessions and mandate credential rotation.",
+            "Audit the history of admin actions to identify potential abuse.",
+            "Document the hardening procedure applied."
+          ],
+          "fr": [
+            "Vérifier l'intégrité des paramètres de modules et permissions post-incident.",
+            "Révoquer les sessions staff suspectes et imposer une rotation des identifiants.",
+            "Auditer l'historique des actions admin pour identifier des abus éventuels.",
+            "Documenter la procédure de durcissement appliquée."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Identify admin API calls made by low-privilege roles on sensitive modules.",
+            "Hunt for exploitation patterns related to the can_always_access flag or insufficient checks.",
+            "Search for evidence of parameter manipulation via the admin API.",
+            "Monitor the public disclosure of PoC targeting CVE-2026-53643."
+          ],
+          "fr": [
+            "Identifier des appels admin API effectués par des rôles faibles sur des modules sensibles.",
+            "Chasser des patterns d'exploitation liés au flag can_always_access ou à des contrôles insuffisants.",
+            "Rechercher des preuves de manipulation de paramètres via l'API admin.",
+            "Suivre la divulgation publique de PoC ciblant CVE-2026-53643."
+          ]
+        }
+      },
+      "tags": [
+        "FOSSBilling",
+        "missing authorization",
+        "admin API",
+        "faible privilège"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-53643"
+      ],
+      "date": "2026-07-06"
+    },
+    {
+      "cve_id": "CVE-2026-43921",
+      "euvd_id": "",
+      "cisa_kev": false,
+      "cvss": "8.9",
+      "epss": "",
+      "cpe": "",
+      "product": "FOSSBilling (versions 0.6.10 à <0.8.0)",
+      "vendor": "FOSSBilling (open source)",
+      "description": {
+        "en": "The Config::prettyPrintArrayToPHP() method of FOSSBilling writes string values to config.php without escaping single quotes. Since config.php is re-included via a raw include on every HTTP request, an attacker with administrator privileges can inject PHP code that will be executed on all subsequent requests. The vulnerability requires admin access and is fixed in version 0.8.0.",
+        "fr": "La méthode Config::prettyPrintArrayToPHP() de FOSSBilling écrit les valeurs de chaîne dans config.php sans échapper les apostrophes simples. Comme config.php est ré-inclu via un include brut à chaque requête HTTP, un attaquant disposant de privilèges administrateur peut injecter du code PHP qui sera exécuté sur l'ensemble des requêtes suivantes. La vulnérabilité nécessite un accès admin et est corrigée en version 0.8.0."
+      },
+      "mitre_ttps": [
+        "T1190",
+        "T1059.006",
+        "T1505.003"
+      ],
+      "recommandations": [
+        {
+          "en": "Update FOSSBilling to version 0.8.0 or later. Restrict administrator access to trusted personnel only. Audit config.php to detect any unexpected PHP code. Configure the WAF or reverse proxy to restrict access to configuration administration endpoints. Enable integrity monitoring on config.php.",
+          "fr": "Mettre à jour FOSSBilling vers la version 0.8.0 ou ultérieure. Restreindre l'accès administrateur aux seuls personnels de confiance. Auditer config.php pour détecter tout code PHP inattendu. Configurer le WAF ou reverse proxy pour restreindre l'accès aux endpoints d'administration de configuration. Activer le monitoring d'intégrité sur config.php."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Map all FOSSBilling instances and identify deployed versions (0.6.10 to 0.7.2).",
+            "Restrict access to administration consoles to trusted personnel only via VPN or IP allowlist.",
+            "Implement an integrity alert (file integrity monitoring) on the config.php file.",
+            "Configure a WAF/reverse proxy to block unauthenticated requests to the settings administration endpoints.",
+            "Document the update procedure to 0.8.0 and test in pre-production."
+          ],
+          "fr": [
+            "Cartographier toutes les instances FOSSBilling et identifier les versions déployées (0.6.10 à 0.7.2).",
+            "Restreindre l'accès aux consoles d'administration aux seuls personnels de confiance via VPN ou IP allowlist.",
+            "Mettre en place une alerte d'intégrité (file integrity monitoring) sur le fichier config.php.",
+            "Configurer un WAF/reverse proxy pour bloquer les requêtes non authentifiées vers les endpoints d'administration des paramètres.",
+            "Documenter la procédure de mise à jour vers 0.8.0 et tester en pré-production."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor abnormal modifications of the config.php file (appearance of PHP fragments, unexpected single quotes, eval, system, exec, passthru).",
+            "Detect suspicious requests to configuration modification endpoints from unusual admin accounts or from external IPs.",
+            "Alert on the presence of base64-encoded strings, obfuscation, or eval() in config.php.",
+            "Review access logs to /admin endpoints and FOSSBilling application logs looking for injection payloads.",
+            "Compare the hash of config.php to a known baseline."
+          ],
+          "fr": [
+            "Surveiller les modifications anormales du fichier config.php (apparition de fragments PHP, single quotes inattendues, eval, system, exec, passthru).",
+            "Détecter les requêtes suspectes vers les endpoints de modification de configuration par des comptes admin inhabituels ou depuis des IP externes.",
+            "Alerter sur la présence de chaînes encodées en base64, obfuscation ou eval() dans config.php.",
+            "Revue des logs d'accès aux endpoints /admin et des logs applicatifs FOSSBilling à la recherche de payloads d'injection.",
+            "Comparer le hash de config.php à une baseline connue."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate or disconnect compromised FOSSBilling instances from the network to stop the execution of the injected code.",
+            "Immediately restrict administrator access and revoke all ongoing admin sessions.",
+            "Switch the reverse proxy to deny-by-default mode for configuration endpoints and restore config.php from a clean backup.",
+            "Force the reset of administrator credentials and associated API keys.",
+            "Schedule the update to version 0.8.0 in a controlled environment."
+          ],
+          "fr": [
+            "Isoler ou déconnecter du réseau les instances FOSSBilling compromises pour stopper l'exécution du code injecté.",
+            "Restreindre immédiatement l'accès administrateur et révoquer toutes les sessions admin en cours.",
+            "Basculer le reverse proxy en mode deny-by-default pour les endpoints de configuration et restaurer config.php depuis une sauvegarde intègre.",
+            "Forcer la réinitialisation des identifiants administrateur et des clés API associées.",
+            "Planifier la mise à jour vers la version 0.8.0 en environnement maîtrisé."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Apply the FOSSBilling update to 0.8.0 on all affected instances.",
+            "Restore config.php from a validated backup and verify the absence of malicious PHP code.",
+            "Audit the history of configuration modifications to identify the author, date, and scope of the injection.",
+            "Analyze access logs and admin history to determine whether unauthorized access or lateral movement occurred.",
+            "Strengthen role separation, the principle of least privilege, and logging of configuration modifications.",
+            "Document the IOCs and share the information with the threat intelligence team."
+          ],
+          "fr": [
+            "Appliquer la mise à jour FOSSBilling vers 0.8.0 sur toutes les instances affectées.",
+            "Restaurer config.php à partir d'une sauvegarde validée et vérifier l'absence de code PHP malveillant.",
+            "Auditer l'historique des modifications de configuration pour identifier l'auteur, la date et la portée de l'injection.",
+            "Analyser les logs d'accès et l'historique admin pour déterminer si un accès non autorisé ou un mouvement latéral a eu lieu.",
+            "Renforcer la séparation des rôles, le principe du moindre privilège et la journalisation des modifications de configuration.",
+            "Documenter les IOC et partager l'information avec l'équipe de threat intelligence."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search across the entire estate for any exposed FOSSBilling instance (portals, APIs) and check the version.",
+            "Hunt for persistent PHP execution artifacts (webshells, scheduled scripts, cron, systemd services created following the injection).",
+            "Look for unusual outbound connections initiated from the FOSSBilling web server.",
+            "Correlate FOSSBilling admin accesses with other suspicious events on the infrastructure (SSO, AD, bastion).",
+            "Retrospectively audit config.php backups to identify the compromise time window."
+          ],
+          "fr": [
+            "Rechercher sur l'ensemble du parc toute instance FOSSBilling exposée (portails, API) et vérifier la version.",
+            "Chasser les artefacts d'exécution PHP persistante (webshells, scripts planifiés, cron, services systemd créés suite à l'injection).",
+            "Rechercher des connexions sortantes inhabituelles initiées depuis le serveur web FOSSBilling.",
+            "Corréler les accès admin FOSSBilling avec d'autres événements suspects sur l'infrastructure (SSO, AD, bastion).",
+            "Auditer rétrospectivement les sauvegardes de config.php pour identifier la fenêtre temporelle de compromission."
+          ]
+        }
+      },
+      "tags": [
+        "code-injection",
+        "php",
+        "fossbilling",
+        "billing",
+        "admin-required",
+        "config-tampering"
+      ],
+      "sources": [
+        "https://github.com/FOSSBilling/FOSSBilling/security/advisories/GHSA-v4j9-w6pj-38w5",
+        "https://cvefeed.io/vuln/detail/CVE-2026-43921"
+      ],
+      "date": "2026-07-06"
+    },
+    {
+      "cve_id": "CVE-2026-43918",
+      "euvd_id": "",
+      "cisa_kev": false,
+      "cvss": "8.7",
+      "epss": "",
+      "cpe": "",
+      "product": "FOSSBilling",
+      "vendor": "FOSSBilling",
+      "description": {
+        "en": "The session identity loaders in src/di.php (loggedin_client and loggedin_admin) only check for the existence of the associated account in the database, without taking its status (suspended/inactive) into account. A suspended or disabled account therefore retains its sessions, API tokens, and can go through the password reset flow, until natural session expiration.",
+        "fr": "Les chargeurs d'identité de session dans src/di.php (loggedin_client et loggedin_admin) ne vérifient que l'existence du compte associé en base, sans tenir compte de son statut (suspendu/inactif). Un compte suspendu ou désactivé conserve donc ses sessions, tokens API et peut passer par le flux de réinitialisation de mot de passe, jusqu'à expiration naturelle de la session."
+      },
+      "mitre_ttps": [
+        "T1078.003",
+        "T1539",
+        "T1110"
+      ],
+      "recommandations": [
+        {
+          "en": "Update FOSSBilling to version 0.8.0 or later. Verify that suspended or inactive accounts no longer have any active sessions or valid API tokens. Implement explicit session invalidation upon account status change. Strengthen logging of suspension events and session reuse attempts.",
+          "fr": "Mettre à jour FOSSBilling vers la version 0.8.0 ou ultérieure. Vérifier que les comptes suspendus ou inactifs n'ont plus aucune session active ni token API valide. Implémenter une invalidation explicite des sessions lors du changement de statut d'un compte. Renforcer la journalisation des événements de suspension et de tentative de réutilisation de sessions."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Map all FOSSBilling instances and identify the exact version (vulnerable if <0.8.0).",
+            "Document the standard procedure for suspending/inactivating accounts (staff and clients).",
+            "Define a session duration policy and explicit invalidation upon account status change.",
+            "Prepare a script for mass invalidation of sessions and API tokens in case of an incident.",
+            "Restrict access to administration endpoints to trusted IPs."
+          ],
+          "fr": [
+            "Cartographier toutes les instances FOSSBilling et identifier la version exacte (vulnérable si <0.8.0).",
+            "Documenter la procédure standard de suspension/inactivation de comptes (personnel et clients).",
+            "Définir une politique de durée de session et d'invalidation explicite lors du changement de statut d'un compte.",
+            "Préparer un script d'invalidation massive des sessions et tokens API en cas d'incident.",
+            "Restreindre l'accès aux endpoints d'administration aux IP de confiance."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Audit active sessions and API tokens associated with recently suspended or disabled accounts.",
+            "Detect successful authentications for accounts whose status has been changed to 'suspended' or 'inactive'.",
+            "Monitor password reset flows for suspended accounts (implicit reactivation).",
+            "Alert on abnormal extension of privileged sessions after suspension.",
+            "Check FOSSBilling application logs (loggedin_client, loggedin_admin) to validate the account status."
+          ],
+          "fr": [
+            "Auditer les sessions actives et tokens API associés à des comptes récemment suspendus ou désactivés.",
+            "Détecter les authentifications réussies pour des comptes dont le statut a été modifié vers 'suspendu' ou 'inactif'.",
+            "Surveiller les flux de réinitialisation de mot de passe pour des comptes suspendus (réactivation implicite).",
+            "Alerter sur la prolongation anormale de sessions privilégiées après suspension.",
+            "Vérifier les logs applicatifs FOSSBilling (loggedin_client, loggedin_admin) pour valider le statut du compte."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Manually invalidate all sessions and revoke all API tokens for suspended or inactive accounts.",
+            "Block access for the affected accounts at the application and network level.",
+            "Temporarily suspend password reset and self-registration features during the update.",
+            "Force rotation of session secrets and cookies if necessary.",
+            "Schedule the update to 0.8.0 within a maintenance window."
+          ],
+          "fr": [
+            "Invalider manuellement toutes les sessions et révoquer tous les tokens API des comptes suspendus ou inactifs.",
+            "Bloquer au niveau applicatif et réseau l'accès des comptes concernés.",
+            "Suspendre temporairement les fonctionnalités de réinitialisation de mot de passe et d'auto-enregistrement le temps de la mise à jour.",
+            "Forcer la rotation des secrets de session et des cookies si nécessaire.",
+            "Planifier la mise à jour vers 0.8.0 sur une fenêtre de maintenance."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Apply the FOSSBilling 0.8.0 update on all affected instances.",
+            "Verify that suspending an account immediately invalidates all associated sessions and tokens.",
+            "Perform a forensic audit of the activity of suspended accounts during the vulnerability window.",
+            "Identify sensitive actions performed while the account should have been blocked (configuration changes, exports, payments).",
+            "Strengthen correlation between account management (IAM) and application session policy.",
+            "Communicate with affected customers if data was unduly accessed/modified."
+          ],
+          "fr": [
+            "Appliquer la mise à jour FOSSBilling 0.8.0 sur toutes les instances affectées.",
+            "Vérifier que la suspension d'un compte invalide bien immédiatement toutes les sessions et tokens associés.",
+            "Effectuer un audit forensique de l'activité des comptes suspendus durant la fenêtre de vulnérabilité.",
+            "Identifier les actions sensibles effectuées alors que le compte aurait dû être bloqué (changements de configuration, exports, paiements).",
+            "Renforcer la corrélation entre la gestion des comptes (IAM) et la politique de session applicative.",
+            "Communiquer auprès des clients affectés si des données ont été consultées/modifiées indûment."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search FOSSBilling logs for any abnormally long active sessions for accounts in 'suspended' status.",
+            "Identify the IPs and user-agents that accessed the API with old tokens after suspension.",
+            "Hunt for evidence of bypass of the suspension flow (password reset, reactivation).",
+            "Correlate account suspensions with other SIEM events to detect internal abuse.",
+            "Audit privileged staff/admin accounts and their persistent sessions."
+          ],
+          "fr": [
+            "Rechercher dans les logs FOSSBilling toute session active anormalement longue pour des comptes en statut 'suspendu'.",
+            "Identifier les IP et user-agents ayant accédé à l'API avec d'anciens tokens après suspension.",
+            "Chasser les indices de contournement du flux de suspension (réinitialisation de mot de passe, ré-activation).",
+            "Corréler les suspensions de comptes avec d'autres événements SIEM pour détecter des abus internes.",
+            "Auditer les comptes staff/admin privilégiés et leurs sessions persistantes."
+          ]
+        }
+      },
+      "tags": [
+        "session-management",
+        "auth-bypass",
+        "account-status",
+        "fossbilling",
+        "billing",
+        "insufficient-session-expiration"
+      ],
+      "sources": [
+        "https://github.com/FOSSBilling/FOSSBilling/security/advisories/GHSA-qv6c-v49w-8g2j",
+        "https://cvefeed.io/vuln/detail/CVE-2026-43918"
+      ],
+      "date": "2026-07-06"
+    },
+    {
+      "cve_id": "CVE-2026-42204",
+      "euvd_id": "",
+      "cisa_kev": false,
+      "cvss": "8.8",
+      "epss": "",
+      "cpe": "",
+      "product": "Coolify (versions 4.0.0-beta.471 à <4.0.0-beta.474)",
+      "vendor": "coollabsio",
+      "description": {
+        "en": "A regression in the SHELL_SAFE_COMMAND_PATTERN variable between versions 4.0.0-beta.471 and 4.0.0-beta.473 allowed the use of the '&' character in Docker Compose command fields (build, start, pre/post-deployment). An authenticated team member can thus inject shell commands that execute on the Coolify host with the service's rights, generally root.",
+        "fr": "Une régression dans la variable SHELL_SAFE_COMMAND_PATTERN entre les versions 4.0.0-beta.471 et 4.0.0-beta.473 a permis l'usage du caractère '&' dans les champs de commande Docker Compose (build, start, pre/post-deployment). Un membre d'équipe authentifié peut ainsi injecter des commandes shell qui s'exécutent sur l'hôte Coolify avec les droits du service, généralement root."
+      },
+      "mitre_ttps": [
+        "T1190",
+        "T1059.004",
+        "T1078.004"
+      ],
+      "recommandations": [
+        {
+          "en": "Update Coolify to version 4.0.0-beta.474 or later. Restrict access to the Coolify interface to trusted administrators. Audit build and deployment configurations to identify any suspicious command. Enable strict input validation in custom fields. Monitor the integrity of managed files and containers.",
+          "fr": "Mettre à jour Coolify vers la version 4.0.0-beta.474 ou ultérieure. Restreindre l'accès à l'interface Coolify aux administrateurs de confiance. Auditer les configurations de build et de déploiement pour repérer toute commande suspecte. Activer la validation stricte des entrées dans les champs personnalisés. Surveiller l'intégrité des fichiers et des containers gérés."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Identify all deployed Coolify instances and their exact version (vulnerable if 4.0.0-beta.471 to <4.0.0-beta.474).",
+            "Restrict access to the Coolify interface to trusted administrators via VPN/bastion.",
+            "Segment the network of Coolify hosts and limit inbound/outbound SSH flows.",
+            "Prepare snapshots/images of hosts before updating for later forensic analysis.",
+            "Document the update procedure to 4.0.0-beta.474 or a corrected stable version."
+          ],
+          "fr": [
+            "Identifier toutes les instances Coolify déployées et leur version exacte (vulnérables si 4.0.0-beta.471 à <4.0.0-beta.474).",
+            "Restreindre l'accès à l'interface Coolify aux administrateurs de confiance via VPN/bastion.",
+            "Segmenter le réseau des hôtes Coolify et limiter les flux SSH entrants/sortants.",
+            "Préparer des snapshots/images des hôtes avant mise à jour pour analyse forensique ultérieure.",
+            "Documenter la procédure de mise à jour vers 4.0.0-beta.474 ou version stable corrigée."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Search Coolify and Docker Compose logs for command executions containing '&', '&&', '|', ';' in the build/start/pre/post-deploy fields.",
+            "Audit the history of builds and deployments to identify suspicious custom command fields.",
+            "Detect member accounts that have made unusual configuration changes.",
+            "Monitor the appearance of unexpected processes, files, or services on the Coolify host.",
+            "Alert on outbound connections initiated from the Coolify host to non-legitimate destinations."
+          ],
+          "fr": [
+            "Rechercher dans les logs Coolify et Docker Compose des exécutions de commandes contenant des '&', '&&', '|', ';' dans les champs build/start/pre/post-deploy.",
+            "Auditer l'historique des builds et déploiements pour identifier des champs de commande personnalisés suspects.",
+            "Détecter des comptes membres ayant réalisé des modifications de configuration inhabituelles.",
+            "Surveiller l'apparition de processus, fichiers ou services inattendus sur l'hôte Coolify.",
+            "Alerter sur les connexions sortantes initiées depuis l'hôte Coolify vers des destinations non légitimes."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate compromised Coolify instances from the network while preserving artifacts.",
+            "Disable or suspend suspicious member accounts and revoke their team tokens.",
+            "Block access at the reverse proxy/WAF level to the Docker Compose command editing endpoints.",
+            "Freeze deployment pipelines for the duration of the analysis.",
+            "Schedule the application of the 4.0.0-beta.474 patch within a controlled window."
+          ],
+          "fr": [
+            "Isoler du réseau les instances Coolify compromises tout en préservant les artefacts.",
+            "Désactiver ou suspendre les comptes membres suspects et révoquer leurs tokens de team.",
+            "Bloquer au niveau reverse proxy/WAF l'accès aux endpoints d'édition des commandes Docker Compose.",
+            "Geler les pipelines de déploiement le temps de l'analyse.",
+            "Planifier l'application du correctif 4.0.0-beta.474 dans une fenêtre maîtrisée."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Update Coolify to 4.0.0-beta.474 or a later corrected version.",
+            "Review all registered build/start/pre/post-deploy commands to remove any injection.",
+            "Restore hosts from clean sources if there is any doubt about system integrity.",
+            "Audit the other applications/containers deployed via Coolify to identify possible lateral propagation.",
+            "Strengthen input validation in custom fields and role separation on Coolify.",
+            "Document the IOCs and lessons learned."
+          ],
+          "fr": [
+            "Mettre à jour Coolify vers 4.0.0-beta.474 ou version corrigée ultérieure.",
+            "Réviser toutes les commandes build/start/pre/post-deploy enregistrées pour supprimer toute injection.",
+            "Restaurer les hôtes à partir de sources propres en cas de doute sur l'intégrité du système.",
+            "Auditer les autres applications/containers déployés via Coolify pour identifier une possible propagation latérale.",
+            "Renforcer la validation des entrées dans les champs personnalisés et la séparation des rôles sur Coolify.",
+            "Documenter les IOC et leçons apprises."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for possible webshells, cron jobs, or suspicious binaries on hosts managed by Coolify.",
+            "Identify containers or services created/modified without operational legitimacy.",
+            "Hunt for indicators of unexpected shell execution at the host level (bash history, auditd, sysmon-like).",
+            "Correlate Coolify changes with other SIEM events (auth, EDR, network flows).",
+            "Verify the integrity of Docker Compose files and configurations across the entire estate."
+          ],
+          "fr": [
+            "Rechercher d'éventuels webshells, cron jobs ou binaires suspects sur les hôtes gérés par Coolify.",
+            "Identifier des containers ou services créés/modifiés sans légitimité opérationnelle.",
+            "Chasser des indicateurs d'exécution de shell inattendue au niveau de l'hôte (bash history, auditd, sysmon-like).",
+            "Corréler les changements Coolify avec d'autres événements SIEM (auth, EDR, flux réseau).",
+            "Vérifier l'intégrité des fichiers et configurations Docker Compose sur l'ensemble du parc."
+          ]
+        }
+      },
+      "tags": [
+        "rce",
+        "command-injection",
+        "docker",
+        "coolify",
+        "self-hosted",
+        "regression",
+        "authenticated"
+      ],
+      "sources": [
+        "https://github.com/coollabsio/coolify/security/advisories/GHSA-chg4-63hm-xv9x",
+        "https://cvefeed.io/vuln/detail/CVE-2026-42204",
+        "https://github.com/coollabsio/coolify/commit/e1aac50b745cf499e710b7e35cd2a9d6a1538dd9",
+        "https://github.com/coollabsio/coolify/releases/tag/v4.0.0-beta.474"
+      ],
+      "date": "2026-07-06"
+    },
+    {
+      "cve_id": "CVE-2026-53359",
+      "euvd_id": "",
+      "cisa_kev": false,
+      "cvss": "",
+      "epss": "0.00176",
+      "cpe": "",
+      "product": "Linux",
+      "vendor": "Linux",
+      "description": {
+        "en": "The 'Januscape' bug (CVE-2026-53359) resides in the KVM shadow MMU code. When a tracking page is needed, KVM reuses an existing one considering only its memory address, without checking its type. Two different types can share the same address but perform very different operations, allowing a malicious guest to corrupt KVM's internal state. Present since commit 2032a93d66fa from August 2010, the bug affects both Intel and AMD. A public PoC triggers a host kernel panic, and the researcher indicates that an unpublished exploit enables arbitrary code execution on the host.",
+        "fr": "Le bug 'Januscape' (CVE-2026-53359) réside dans le code shadow MMU de KVM. Lorsqu'une page de tracking est nécessaire, KVM en réutilise une existante en ne tenant compte que de son adresse mémoire, sans vérifier son type. Deux types différents peuvent partager la même adresse mais effectuer des opérations très différentes, ce qui permet à un invité malveillant de corrompre l'état interne de KVM. Présent depuis le commit 2032a93d66fa d'août 2010, le bug affecte à la fois Intel et AMD. Un PoC public provoque un panic du noyau hôte, et le chercheur indique qu'un exploit non publié permet une exécution de code arbitraire sur l'hôte."
+      },
+      "mitre_ttps": [
+        "T1068",
+        "T1611",
+        "T1499",
+        "T1059"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply the kernel patch containing commit 81ccda30b4e8 (merged upstream on June 19, 2026) on all Linux hypervisors. Disable nested virtualization on hosts hosting untrusted guests until the patch is applied. Restrict permissions on /dev/kvm (for example root:kvm 0660) on the affected distributions. Implement monitoring for KVM panics and hypervisor restarts.",
+          "fr": "Appliquer le correctif noyau contenant le commit 81ccda30b4e8 (intégré au mainline le 19 juin 2026) sur tous les hyperviseurs Linux. Désactiver la virtualisation imbriquée sur les hôtes accueillant des invités non fiables tant que le correctif n'est pas appliqué. Restreindre les permissions de /dev/kvm (par exemple root:kvm 0660) sur les distributions concernées. Mettre en place une surveillance des panics KVM et des redémarrages d'hyperviseurs."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Map the KVM hypervisors and identify the Linux kernel versions in production.",
+            "Identify environments exposing nested virtualization and hosting untrusted guests.",
+            "Review the permissions of /dev/kvm across all hosts (RHEL and other distributions).",
+            "Document the procedure for applying kernel patches and restarting hypervisors.",
+            "Raise cloud teams' awareness not to unnecessarily expose nested virtualization.",
+            "Prepare snapshots/guest EDR agents for post-incident analysis."
+          ],
+          "fr": [
+            "Cartographier les hyperviseurs KVM et identifier les versions de noyau Linux en production.",
+            "Identifier les environnements exposant la virtualisation imbriquée (nested virtualization) et hébergeant des invités non fiables.",
+            "Revoir les permissions de /dev/kvm sur l'ensemble des hôtes (RHEL et autres distributions).",
+            "Documenter la procédure d'application des correctifs noyau et de redémarrage des hyperviseurs.",
+            "Sensibiliser les équipes cloud à ne pas exposer la virtualisation imbriquée inutilement.",
+            "Préparer des snapshots/agents EDR invités pour analyse post-incident."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor kernel panics (oops, BUG, kernel panic) related to KVM shadow MMU on hosts.",
+            "Detect unexplained hypervisor restarts and correlate with guest activity.",
+            "Audit KVM/dmesg logs for traces of abnormal use of shadow paging.",
+            "Monitor the creation or modification of suspicious shadow MMU pages (kvm_mmu, sp->role).",
+            "Detect on RHEL hosts a /dev/kvm set to 0666 and alert on accesses by non-privileged accounts."
+          ],
+          "fr": [
+            "Surveiller les panics noyau (oops, BUG, kernel panic) liés à KVM shadow MMU sur les hôtes.",
+            "Détecter les redémarrages inexpliqués d'hyperviseurs et corrélations avec l'activité d'invités.",
+            "Auditer les logs KVM/dmesg pour traces d'utilisation anormale de shadow paging.",
+            "Surveiller la création ou modification de pages shadow MMU suspectes (kvm_mmu, sp->role).",
+            "Détecter sur les hôtes RHEL un /dev/kvm en 0666 et alerter sur les accès par des comptes non privilégiés."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate or shut down suspicious guests identified as the source of KVM panics.",
+            "Disable nested virtualization on hypervisors hosting untrusted guests.",
+            "Restrict access to /dev/kvm to trusted users only and adjust permissions (root:kvm 0660).",
+            "Schedule the restart of hypervisors on a patched kernel (commit 81ccda30b4e8, merged June 19, 2026).",
+            "Freeze VM migrations and sensitive snapshots for the duration of remediation."
+          ],
+          "fr": [
+            "Isoler ou éteindre les invités suspects identifiés comme à l'origine des panics KVM.",
+            "Désactiver la virtualisation imbriquée sur les hyperviseurs hébergeant des invités non fiables.",
+            "Restreindre l'accès à /dev/kvm aux seuls utilisateurs de confiance et ajuster les permissions (root:kvm 0660).",
+            "Planifier le redémarrage des hyperviseurs sur un noyau corrigé (commit 81ccda30b4e8, intégré le 19 juin 2026).",
+            "Geler les migrations de VMs et snapshots sensibles le temps de la remédiation."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Apply the Linux kernel patch containing commit 81ccda30b4e8 on all affected hypervisors.",
+            "Restart hypervisors and verify the absence of new shadow MMU panics.",
+            "Conduct a forensic analysis of compromised guests to assess the scope of potential arbitrary code on the host.",
+            "Review guest segmentation policies and /dev/kvm permissions.",
+            "Document lessons learned and integrate the VM escape scenario into the risk register.",
+            "Communicate with clients/business teams about potential disruptions."
+          ],
+          "fr": [
+            "Appliquer le correctif noyau Linux contenant le commit 81ccda30b4e8 sur tous les hyperviseurs affectés.",
+            "Redémarrer les hyperviseurs et vérifier l'absence de nouvelles panics shadow MMU.",
+            "Mener une analyse forensique des invités compromis pour évaluer la portée d'un éventuel code arbitraire sur l'hôte.",
+            "Réviser les politiques de segmentation des invités et des permissions /dev/kvm.",
+            "Documenter les leçons apprises et intégrer le scénario VM escape au registre de risques.",
+            "Communiquer avec les clients/équipes métier sur les interruptions potentielles."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for traces of use-after-free exploitation in the KVM shadow MMU across the entire estate (logs, audit, kprobes).",
+            "Identify cloud or private environments where nested-virt is enabled jointly with untrusted guests.",
+            "Search for accounts that have accessed /dev/kvm abnormally (potential local privesc).",
+            "Monitor unusual code executions on the host in correlation with the activity of a specific guest.",
+            "Audit custom kernel binaries or non-standard KVM modules that could conceal exploitation."
+          ],
+          "fr": [
+            "Chasser les traces d'exploitation use-after-free dans la shadow MMU KVM sur l'ensemble du parc (logs, audit, kprobes).",
+            "Identifier les environnements cloud ou privés où nested-virt est activé conjointement avec des invités non fiables.",
+            "Rechercher les comptes ayant accédé à /dev/kvm de manière anormale (privesc local potentiel).",
+            "Surveiller les exécutions de code inhabituelles sur l'hôte en corrélation avec l'activité d'un invité spécifique.",
+            "Auditer les binaires noyau personnalisés ou modules KVM non standards qui pourraient occulter l'exploitation."
+          ]
+        }
+      },
+      "tags": [
+        "linux-kernel",
+        "kvm",
+        "hypervisor",
+        "use-after-free",
+        "vm-escape",
+        "januscape",
+        "intel",
+        "amd",
+        "nested-virtualization",
+        "local-privesc"
+      ],
+      "sources": [
+        "https://thehackernews.com/2026/07/16-year-old-linux-kvm-flaw-lets-guest.html"
+      ],
+      "date": "2026-07-06"
+    },
+    {
+      "cve_id": "CVE-2026-20896",
+      "euvd_id": "",
+      "cisa_kev": false,
+      "cvss": "9.8",
+      "epss": "0.00783",
+      "cpe": "",
+      "product": "Gitea Docker images (versions <=1.26.2)",
+      "vendor": "Gitea (open source)",
+      "description": {
+        "en": "The official Gitea Docker images ship an app.ini that forces REVERSE_PROXY_TRUSTED_PROXIES to '*', trusting any source IP. When ENABLE_REVERSE_PROXY_AUTHENTICATION is enabled, any client able to reach the HTTP port can send an X-WEBAUTH-USER header and be authenticated as any user, without password or token. Combined with self-registration, an attacker can obtain administrator privileges. The vulnerability is fixed in 1.26.3 (the wildcard is removed and reverse proxy authentication becomes opt-in).",
+        "fr": "Les images Docker officielles de Gitea embarquent un app.ini qui force REVERSE_PROXY_TRUSTED_PROXIES à '*', faisant confiance à n'importe quelle IP source. Lorsque ENABLE_REVERSE_PROXY_AUTHENTICATION est activé, tout client capable d'atteindre le port HTTP peut envoyer un header X-WEBAUTH-USER et être authentifié comme n'importe quel utilisateur, sans mot de passe ni token. Combiné à l'auto-enregistrement, un attaquant peut obtenir les droits administrateur. La vulnérabilité est corrigée en 1.26.3 (le wildcard est supprimé et l'authentification par reverse proxy devient opt-in)."
+      },
+      "mitre_ttps": [
+        "T1190",
+        "T1078",
+        "T1071.001"
+      ],
+      "recommandations": [
+        {
+          "en": "Update Gitea Docker images to 1.26.3 or later. Do not enable ENABLE_REVERSE_PROXY_AUTHENTICATION without explicitly setting REVERSE_PROXY_TRUSTED_PROXIES to the list of trusted IPs. Restrict network access to Gitea instances. Monitor requests containing the X-WEBAUTH-USER header coming from illegitimate IPs.",
+          "fr": "Mettre à jour les images Docker Gitea vers 1.26.3 ou ultérieure. Ne pas activer ENABLE_REVERSE_PROXY_AUTHENTICATION sans définir explicitement REVERSE_PROXY_TRUSTED_PROXIES sur la liste d'IP de confiance. Restreindre l'accès réseau aux instances Gitea. Surveiller les requêtes contenant le header X-WEBAUTH-USER en provenance d'IP non légitimes."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Map all Gitea instances (Docker or other) and identify the exact version (vulnerable if Docker <=1.26.2).",
+            "Document the configuration of REVERSE_PROXY_TRUSTED_PROXIES and ENABLE_REVERSE_PROXY_AUTHENTICATION.",
+            "Restrict network access to Gitea instances via authenticating reverse proxy, IP allowlist, or VPN.",
+            "Enable detailed logging of HTTP requests and authentications.",
+            "Prepare the procedure for updating to 1.26.3 or a later corrected version."
+          ],
+          "fr": [
+            "Cartographier toutes les instances Gitea (Docker ou autre) et identifier la version exacte (vulnérables si Docker <=1.26.2).",
+            "Documenter la configuration de REVERSE_PROXY_TRUSTED_PROXIES et ENABLE_REVERSE_PROXY_AUTHENTICATION.",
+            "Restreindre l'accès réseau aux instances Gitea via reverse proxy authentifiant, IP allowlist ou VPN.",
+            "Activer la journalisation détaillée des requêtes HTTP et des authentifications.",
+            "Préparer la procédure de mise à jour vers 1.26.3 ou version corrigée ultérieure."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect HTTP requests containing an X-WEBAUTH-USER header coming from sources other than the trusted reverse proxy.",
+            "Alert on successful authentications without password or token for existing or administrative accounts.",
+            "Monitor Gitea logs for user logins from IPs inconsistent with the expected reverse proxy.",
+            "Identify abnormal post-authentication activities (repository creation, permission modifications, exfiltration).",
+            "Monitor traffic from IPs associated with ProtonVPN and other anonymizing services destined for Gitea."
+          ],
+          "fr": [
+            "Détecter les requêtes HTTP contenant un header X-WEBAUTH-USER provenant de sources autres que le reverse proxy de confiance.",
+            "Alerter sur les authentifications réussies sans mot de passe ni token pour des comptes existants ou administratifs.",
+            "Surveiller les logs Gitea pour connexions d'utilisateurs depuis des IP incohérentes avec le reverse proxy attendu.",
+            "Identifier les activités post-authentification anormales (création de dépôts, modification de permissions, exfiltration).",
+            "Surveiller le trafic issu d'IP associées à ProtonVPN et d'autres services anonymisants à destination de Gitea."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate or cut off Internet access to compromised Gitea instances while preserving artifacts.",
+            "Immediately disable ENABLE_REVERSE_PROXY_AUTHENTICATION if it was enabled with a wildcard.",
+            "Restore a strict value for REVERSE_PROXY_TRUSTED_PROXIES (for example 127.0.0.0/8,::1/128).",
+            "Revoke all active sessions and API tokens, especially for admin accounts.",
+            "Schedule the update to Docker image 1.26.3 or later in a controlled environment."
+          ],
+          "fr": [
+            "Isoler ou couper l'accès Internet aux instances Gitea compromises en préservant les artefacts.",
+            "Désactiver immédiatement ENABLE_REVERSE_PROXY_AUTHENTICATION si elle était activée avec un wildcard.",
+            "Restaurer une valeur stricte pour REVERSE_PROXY_TRUSTED_PROXIES (par exemple 127.0.0.0/8,::1/128).",
+            "Révoquer toutes les sessions actives et tokens API, en particulier pour les comptes admin.",
+            "Planifier la mise à jour vers l'image Docker 1.26.3 ou ultérieure en environnement maîtrisé."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Update all Gitea Docker images to 1.26.3 or a fixed version.",
+            "Restore an app.ini configuration compliant with Gitea recommendations (trusted proxies as explicit list).",
+            "Audit the history of accounts, repositories, SSH keys, and webhooks to identify unauthorized modifications.",
+            "Notify affected users in case of account compromise or suspicious actions.",
+            "Strengthen the separation between the authenticating reverse proxy and the Gitea instance, and implement outbound access controls.",
+            "Document the IOCs (IPs, headers, User-Agents) and share with CTI."
+          ],
+          "fr": [
+            "Mettre à jour toutes les images Docker Gitea vers 1.26.3 ou version corrigée.",
+            "Restaurer une configuration app.ini conforme aux recommandations de Gitea (trusted proxies en liste explicite).",
+            "Auditer l'historique des comptes, dépôts, clés SSH et webhooks pour identifier des modifications non autorisées.",
+            "Notifier les utilisateurs concernés en cas de compromission de compte ou d'actions suspectes.",
+            "Renforcer la séparation entre reverse proxy authentifiant et instance Gitea, et mettre en place un contrôle d'accès sortant.",
+            "Documenter les IOC (IP, en-têtes, User-Agents) et partager avec la CTI."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search the logs of all reverse proxies and Gitea instances for requests containing X-WEBAUTH-USER originating from external IPs.",
+            "Identify admin sessions, Git pushes, or repository creations performed from illegitimate IPs.",
+            "Hunt for indicators of exfiltration (massive repository downloads, unusual SSH access).",
+            "Check for other applications using a similar trusted header authentication mechanism.",
+            "Correlate observed indicators with other recent DevOps compromises (supply chains, exposed secrets)."
+          ],
+          "fr": [
+            "Rechercher dans les logs de tous les reverse proxies et instances Gitea des requêtes contenant X-WEBAUTH-USER en provenance d'IP externes.",
+            "Identifier les sessions admin, pushs Git ou créations de dépôts effectuées depuis des IP non légitimes.",
+            "Chasser les indices d'exfiltration (téléchargements massifs de dépôts, accès SSH inhabituels).",
+            "Vérifier la présence d'autres applications utilisant un mécanisme similaire d'authentification par header de confiance.",
+            "Corréler les indicateurs observés avec d'autres compromissions DevOps récentes (chaînes d'approvisionnement, secrets exposés)."
+          ]
+        }
+      },
+      "tags": [
+        "gitea",
+        "docker",
+        "auth-bypass",
+        "reverse-proxy",
+        "header-trust",
+        "internet-facing",
+        "in-the-wild"
+      ],
+      "sources": [
+        "https://thehackernews.com/2026/07/threat-actors-probe-gitea-docker-flaw.html"
+      ],
+      "date": "2026-07-06"
+    },
+    {
+      "cve_id": "CVE-2026-14471",
+      "euvd_id": "",
+      "cisa_kev": false,
+      "cvss": "8.6",
+      "epss": "",
+      "cpe": "",
+      "product": "MCP Gateway & Registry",
+      "vendor": "AWS",
+      "description": {
+        "en": "In the metrics-service component of mcp-gateway-registry, the table_name value supplied by the caller is interpolated into SQL statements as an identifier without sanitization. An authenticated remote user can thus execute arbitrary SQL queries against the metrics database, allowing the reading (notably of API keys), deletion, or alteration of stored data. The vulnerability is fixed in version 1.0.13.",
+        "fr": "Dans le composant metrics-service de mcp-gateway-registry, la valeur table_name fournie par l'appelant est interpolée dans des instructions SQL en position d'identifiant sans neutralisation. Un utilisateur distant authentifié peut ainsi exécuter des requêtes SQL arbitraires contre la base de métriques, permettant la lecture (notamment de clés API), la suppression ou l'altération de données stockées. La vulnérabilité est corrigée en version 1.0.13."
+      },
+      "mitre_ttps": [
+        "T1190",
+        "T1078",
+        "T1552.001",
+        "T1565.001"
+      ],
+      "recommandations": [
+        {
+          "en": "Update mcp-gateway-registry to version 1.0.13 or later. Restrict API access to trusted users only. Audit the database to identify any reads of API keys. Rotate all potentially exposed API keys. Strengthen validation of table names (allowlist) and use parameterized queries.",
+          "fr": "Mettre à jour mcp-gateway-registry vers la version 1.0.13 ou ultérieure. Restreindre l'accès à l'API aux seuls utilisateurs de confiance. Auditer la base de données pour identifier d'éventuelles lectures de clés API. Faire tourner toutes les clés API potentiellement exposées. Renforcer la validation des noms de tables (allowlist) et utiliser des requêtes paramétrées."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Map Amazon mcp-gateway-registry deployments and identify versions (vulnerable if >=1.0.3 and <=1.0.12).",
+            "Restrict network access to the metrics-service API to trusted users only.",
+            "Document the standard upgrade procedure to 1.0.13 and the non-regression tests.",
+            "Segment the metrics database and isolate the API keys stored in a dedicated logical compartment.",
+            "Raise developer awareness on the use of parameterized queries and on the sanitization of SQL identifiers."
+          ],
+          "fr": [
+            "Cartographier les déploiements d'Amazon mcp-gateway-registry et identifier les versions (vulnérables si >=1.0.3 et <=1.0.12).",
+            "Restreindre l'accès réseau à l'API metrics-service aux seuls utilisateurs de confiance.",
+            "Documenter la procédure standard de mise à jour vers 1.0.13 et les tests de non-régression.",
+            "Segmenter la base de données de métriques et isoler les clés API stockées dans un compartiment logique dédié.",
+            "Sensibiliser les développeurs à l'usage de requêtes paramétrées et à la neutralisation des identifiants SQL."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor SQL queries executed by the metrics-service layer to detect unusual patterns (UNION SELECT, DROP, DELETE, etc.).",
+            "Alert on calls to the retention policy subsystem with an abnormally long table_name parameter or one containing special characters.",
+            "Detect massive access or reads to API key tables by unexpected accounts.",
+            "Audit authentication logs to identify the accounts at the origin of suspicious requests.",
+            "Monitor any abnormal deletion or modification of metrics data."
+          ],
+          "fr": [
+            "Surveiller les requêtes SQL exécutées par la couche metrics-service pour détecter des motifs inhabituels (UNION SELECT, DROP, DELETE, etc.).",
+            "Alerter sur les appels au sous-système de politique de rétention avec un paramètre table_name anormalement long ou contenant des caractères spéciaux.",
+            "Détecter des accès ou lectures massives aux tables de clés API par des comptes non prévus.",
+            "Auditer les logs d'authentification pour identifier les comptes à l'origine des requêtes suspectes.",
+            "Surveiller toute suppression ou modification anormale de données de métriques."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate or cut off access to the compromised mcp-gateway-registry instance.",
+            "Disable or suspend suspicious authenticated accounts and revoke their tokens.",
+            "Restore the metrics database from a trusted backup.",
+            "Force rotation of potentially exposed API keys.",
+            "Schedule the application of version 1.0.13 during a maintenance window."
+          ],
+          "fr": [
+            "Isoler ou couper l'accès à l'instance mcp-gateway-registry compromise.",
+            "Désactiver ou suspendre les comptes authentifiés suspects et révoquer leurs jetons.",
+            "Restaurer la base de données de métriques à partir d'une sauvegarde intègre.",
+            "Forcer la rotation des clés API potentiellement exposées.",
+            "Planifier l'application de la version 1.0.13 sur une fenêtre de maintenance."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Update mcp-gateway-registry to version 1.0.13 or later.",
+            "Verify that all derived instances (forks, internal deployments) properly include the fix.",
+            "Audit the access history of API keys and identify any leaks or abusive uses.",
+            "Notify the owners of compromised API keys and mandate their rotation.",
+            "Strengthen SQL identifier validation (allowlist of table names) and penetration testing.",
+            "Document the IOCs and lessons learned."
+          ],
+          "fr": [
+            "Mettre à jour mcp-gateway-registry vers la version 1.0.13 ou ultérieure.",
+            "Vérifier que toutes les instances dérivées (forks, déploiements internes) intègrent bien le correctif.",
+            "Auditer l'historique d'accès aux clés API et identifier d'éventuelles fuites ou usages abusifs.",
+            "Notifier les propriétaires des clés API compromises et imposer leur rotation.",
+            "Renforcer la validation des identifiants SQL (allowlist de noms de tables) et les tests d'intrusion.",
+            "Documenter les IOC et leçons apprises."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search the entire estate of mcp-gateway-registry deployments still on a vulnerable version.",
+            "Hunt for traces of read or write access to API key tables by unauthorized accounts.",
+            "Analyze the metrics databases for retrospective suspicious modifications.",
+            "Correlate access to mcp-gateway-registry with other SIEM events (auth, EDR, network flows).",
+            "Verify that other services or microservices from the same vendor do not use the same SQL concatenation pattern."
+          ],
+          "fr": [
+            "Rechercher dans l'ensemble du parc des déploiements mcp-gateway-registry encore en version vulnérable.",
+            "Chasser les traces d'accès en lecture ou écriture aux tables de clés API par des comptes non autorisés.",
+            "Analyser les bases de données de métriques à la recherche de modifications suspectes rétrospectives.",
+            "Corréler les accès à mcp-gateway-registry avec d'autres événements SIEM (auth, EDR, flux réseau).",
+            "Vérifier que d'autres services ou microservices du même éditeur n'utilisent pas le même pattern de concaténation SQL."
+          ]
+        }
+      },
+      "tags": [
+        "sql-injection",
+        "aws",
+        "mcp-gateway-registry",
+        "metrics-service",
+        "authenticated",
+        "api-key-exposure"
+      ],
+      "sources": [
+        "https://aws.amazon.com/security/security-bulletins/rss/2026-052-aws/"
+      ],
+      "date": "2026-07-06"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "Device Code Phishing campaign exploiting the legitimate microsoft[.]com/devicelogin page",
+        "fr": "Campagne de Device Code Phishing exploitant la page légitime microsoft[.]com/devicelogin"
+      },
+      "description": {
+        "en": "Securelist (Kaspersky) reports a phishing campaign in which attackers lure victims into entering an authorization code directly on the official microsoft[.]com/devicelogin page (Microsoft Identity Platform). The abused mechanism is the Device Authorization Grant (OAuth 2.0), designed for devices without a keyboard (TV, IoT, printers). The attacker initiates a /oauth2/v2.0/devicecode request with a malicious client_id, retrieves a user_code, and pushes the victim to enter it on the trusted Microsoft page. Once the code is validated by the victim, the attacker obtains an access token to the Entra ID tenant and therefore to the victim's Microsoft 365 resources (mail, files, Teams, OneDrive). The attack bypasses classic anti-phishing advice since the URL entered by the victim is legitimate.",
+        "fr": "Securelist (Kaspersky) rapporte une campagne de phishing où les attaquants incitent les victimes à saisir un code d'autorisation directement sur la page officielle microsoft[.]com/devicelogin (Microsoft Identity Platform). Le mécanisme abusé est le Device Authorization Grant (OAuth 2.0), conçu pour les appareils sans clavier (TV, IoT, imprimantes). L'attaquant initie une requête /oauth2/v2.0/devicecode avec un client_id malveillant, récupère un user_code, et pousse la victime à l'entrer sur la page Microsoft de confiance. Une fois le code validé par la victime, l'attaquant obtient un jeton d'accès au tenant Entra ID et donc aux ressources Microsoft 365 de la victime (mail, fichiers, Teams, OneDrive). L'attaque contourne les conseils classiques anti-phishing puisque l'URL saisie par la victime est légitime."
+      },
+      "resume": {
+        "en": "Securelist (Kaspersky) reports a phishing campaign in which attackers lure victims into entering an authorization code directly on the official microsoft[.]com/devicelogin page (Microsoft Identity Platform). The abused mechanism is the Device Authorization Grant (OAuth 2.0), designed for devices without a keyboard (TV, IoT, printers). The attacker initiates a /oauth2/v2.0/devicecode request with a malicious client_id, retrieves a user_code, and pushes the victim to enter it on the trusted Microsoft page. Once the code is validated by the victim, the attacker obtains an access token to the Entra ID tenant and therefore to the victim's Microsoft 365 resources (mail, files, Teams, OneDrive). The attack bypasses classic anti-phishing advice since the URL entered by the victim is legitimate.",
+        "fr": "Securelist (Kaspersky) rapporte une campagne de phishing où les attaquants incitent les victimes à saisir un code d'autorisation directement sur la page officielle microsoft[.]com/devicelogin (Microsoft Identity Platform). Le mécanisme abusé est le Device Authorization Grant (OAuth 2.0), conçu pour les appareils sans clavier (TV, IoT, imprimantes). L'attaquant initie une requête /oauth2/v2.0/devicecode avec un client_id malveillant, récupère un user_code, et pousse la victime à l'entrer sur la page Microsoft de confiance. Une fois le code validé par la victime, l'attaquant obtient un jeton d'accès au tenant Entra ID et donc aux ressources Microsoft 365 de la victime (mail, fichiers, Teams, OneDrive). L'attaque contourne les conseils classiques anti-phishing puisque l'URL saisie par la victime est légitime."
+      },
+      "analyse_operationnelle": {
+        "en": "For SOC/IT teams, the major impact is that traditional URL/web filtering solutions detect nothing because the victim interacts with an official Microsoft domain. Detection must rely on: (1) Entra ID logging with correlation of /devicecode requests, client_id, and unusual IPs/sources, (2) monitoring of app consents and grant_type=urn:ietf:params:oauth:grant-type:device_code, (3) detection of sessions where the IP that entered the code differs from the one that initiated the devicecode (geo-anomaly). Priority technical actions: restrict or disable the Device Code Flow via Conditional Access, enforce phishing-resistant MFA (FIDO2), audit client_ids registered in the tenant, enable automatic token revocation, and monitor Outlook inbox/forwarder rules created post-compromise.",
+        "fr": "Pour les équipes SOC/IT, l'impact majeur est que les solutions traditionnelles de filtrage URL/web ne détectent rien car la victime interagit avec un domaine Microsoft officiel. La détection doit reposer sur : (1) la journalisation Entra ID avec corrélation des requêtes /devicecode, du client_id et des IP/source inhabituelles, (2) la surveillance des app consentements et des grant_type=urn:ietf:params:oauth:grant-type:device_code, (3) la détection de sessions où l'IP ayant saisi le code diffère de celle ayant initié le devicecode (géo-anomalie). Les actions techniques prioritaires : restreindre ou désactiver le Device Code Flow via Conditional Access, imposer la MFA résistante au phishing (FIDO2), auditer les client_id enregistrés dans le tenant, activer la révocation automatique des jetons et surveiller les règles inbox/redirecteurs Outlook créés post-compromission."
+      },
+      "implications_strategiques": {
+        "en": "This technique illustrates the evolution of phishing toward the abuse of legitimate identity protocols (OAuth Device Code, Consent Phishing, Illicit Consent Grant), making the sole verification of URLs obsolete. The decision-making consequence is the need to rethink the Microsoft IAM strategy: prohibit the Device Code Flow if not required, harden Conditional Access, govern third-party OAuth applications, and train users beyond the simple \"verify the URL\". Sector-wise, any organization dependent on Microsoft 365 (practically universal in the enterprise) is exposed, with a high risk of data leakage, BEC (Business Email Compromise), and mailbox exfiltration. The GDPR regulatory risk is significant in case of access to personal data via mail or SharePoint.",
+        "fr": "Cette technique illustre l'évolution du phishing vers l'abus de protocoles d'identité légitimes (OAuth Device Code, Consent Phishing, Illicit Consent Grant), rendant obsolète la seule vérification d'URL. La conséquence décisionnelle est la nécessité de repenser la stratégie IAM Microsoft : interdiction du Device Code Flow si non requis, durcissement des Conditional Access, gouvernance des applications OAuth tierces, et formation des utilisateurs au-delà du simple « vérifier l'URL ». Sectoriellement, toute organisation dépendante de Microsoft 365 (pratiquement universelle en entreprise) est exposée, avec un risque élevé de fuite de données, d'BEC (Business Email Compromise) et d'exfiltration de boîtes mail. Le risque réglementaire RGPD est significatif en cas d'accès à des données personnelles via mail ou SharePoint."
+      },
+      "threat_actor": "Inconnu (campagne Device Code Phishing)",
+      "threat_actor_origin": "",
+      "threat_actor_type": "",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "IT/Cloud",
+          "Finance",
+          "Tous secteurs utilisant Microsoft Entra ID"
+        ],
+        "fr": [
+          "IT/Cloud",
+          "Finance",
+          "Tous secteurs utilisant Microsoft Entra ID"
+        ]
+      },
+      "indicators": {
+        "URL": [
+          "hxxps://login.microsoftonline[.]com/{tenant}/oauth2/v2.0/devicecode",
+          "hxxps://login[.]microsoftonline[.]com/{tenant}/oauth2/v2.0/token",
+          "hxxps://microsoft[.]com/devicelogin"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1566.002",
+        "T1078.004",
+        "T1528",
+        "T1550.001"
+      ],
+      "analyse": {
+        "en": "This technique illustrates the evolution of phishing toward the abuse of legitimate identity protocols (OAuth Device Code, Consent Phishing, Illicit Consent Grant), making the sole verification of URLs obsolete. The decision-making consequence is the need to rethink the Microsoft IAM strategy: prohibit the Device Code Flow if not required, harden Conditional Access, govern third-party OAuth applications, and train users beyond the simple \"verify the URL\". Sector-wise, any organization dependent on Microsoft 365 (practically universal in the enterprise) is exposed, with a high risk of data leakage, BEC (Business Email Compromise), and mailbox exfiltration. The GDPR regulatory risk is significant in case of access to personal data via mail or SharePoint.",
+        "fr": "Cette technique illustre l'évolution du phishing vers l'abus de protocoles d'identité légitimes (OAuth Device Code, Consent Phishing, Illicit Consent Grant), rendant obsolète la seule vérification d'URL. La conséquence décisionnelle est la nécessité de repenser la stratégie IAM Microsoft : interdiction du Device Code Flow si non requis, durcissement des Conditional Access, gouvernance des applications OAuth tierces, et formation des utilisateurs au-delà du simple « vérifier l'URL ». Sectoriellement, toute organisation dépendante de Microsoft 365 (pratiquement universelle en entreprise) est exposée, avec un risque élevé de fuite de données, d'BEC (Business Email Compromise) et d'exfiltration de boîtes mail. Le risque réglementaire RGPD est significatif en cas d'accès à des données personnelles via mail ou SharePoint."
+      },
+      "recommandations": [
+        {
+          "en": "Restrict the Device Code Flow to managed devices via Conditional Access, or disable it globally.",
+          "fr": "Restreindre le Device Code Flow aux appareils managés via Conditional Access, ou le désactiver globalement."
+        },
+        {
+          "en": "Enforce phishing-resistant MFA (FIDO2 / Windows Hello) for any Entra ID sign-in.",
+          "fr": "Imposer la MFA résistante au phishing (FIDO2 / Windows Hello) pour toute connexion Entra ID."
+        },
+        {
+          "en": "Audit and inventory all client_ids and OAuth applications registered in the tenant.",
+          "fr": "Auditer et inventorier tous les client_id et applications OAuth enregistrés dans le tenant."
+        },
+        {
+          "en": "Train users to never enter a microsoft[.]com/devicelogin code without an expected context (smart TV, IoT).",
+          "fr": "Former les utilisateurs à ne jamais saisir de code microsoft[.]com/devicelogin sans contexte attendu (smart TV, IoT)."
+        },
+        {
+          "en": "Centralize Entra logs in the SIEM and create Sigma detections on the device_code grant_type.",
+          "fr": "Centraliser les logs Entra dans le SIEM et créer des détections Sigma sur le grant_type device_code."
+        },
+        {
+          "en": "Regularly revoke refresh tokens and monitor the creation of Outlook rules post sign-in.",
+          "fr": "Révoquer régulièrement les refresh tokens et surveiller la création de règles Outlook post-connexion."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Map all OAuth applications registered in Microsoft Entra ID and list the authorized redirect_uri, scopes, and client_id.",
+            "Enable and enforce phishing-resistant multi-factor authentication (MFA) (FIDO2, Windows Hello, Certificate-based) for all users.",
+            "Configure Conditional Access policies to restrict the Device Code Flow to managed devices (compliant/hybrid joined) or disable the flow if unused.",
+            "Train users and the helpdesk to recognize unexpected device code prompts and to report connections initiated from microsoft[.]com/devicelogin without context.",
+            "Deploy centralized logging of Entra ID logs (Sign-in logs, Audit logs) to the SIEM with retention ≥ 90 days."
+          ],
+          "fr": [
+            "Cartographier toutes les applications OAuth enregistrées dans Microsoft Entra ID et lister les redirect_uri, scopes et client_id autorisés.",
+            "Activer et imposer l'authentification multifacteur (MFA) résistante au phishing (FIDO2, Windows Hello, Certificate-based) pour tous les utilisateurs.",
+            "Configurer les Conditional Access policies pour restreindre le Device Code Flow aux appareils managés (compliant/hybrid joined) ou désactiver le flux si non utilisé.",
+            "Former les utilisateurs et le helpdesk à reconnaître les demandes de code d'appareil inattendues et à signaler les connexions initiées depuis microsoft[.]com/devicelogin sans contexte.",
+            "Déployer une journalisation centralisée des logs Entra ID (Sign-in logs, Audit logs) vers le SIEM avec rétention ≥ 90 jours."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect POST requests to /oauth2/v2.0/devicecode coming from unusual IPs (Tor, residential VPNs, abnormal geolocation).",
+            "Alert on Device Code Flows initiated by unapproved applications or by unknown client_id (correlation with the Entra inventory).",
+            "Detect Microsoft Entra sessions where the user_code is entered from an IP distinct from the one that initiated the /devicecode request (geo-anomaly).",
+            "Monitor polling spikes to /oauth2/v2.0/token and successful sign-ins immediately followed by unusual activity (mailbox exfiltration, inbox rule creation).",
+            "Implement Sigma/UEBA rules on new app consents and sessions involving the devicecode grant_type."
+          ],
+          "fr": [
+            "Détecter les requêtes POST vers /oauth2/v2.0/devicecode provenant d'IP inhabituelles (Tor, VPN résidentiels, géolocalisation anormale).",
+            "Alerter sur les Device Code Flows initiés par des applications non approuvées ou par des client_id inconnus (corrélation avec l'inventaire Entra).",
+            "Détecter les sessions Microsoft Entra où le user_code est saisi depuis une IP distincte de celle ayant initié la requête /devicecode (géo-anomalie).",
+            "Surveiller les pics de polling vers /oauth2/v2.0/token et les succès de connexion immédiatement suivis d'activités inhabituelles (exfiltration mailbox, création de règles inbox).",
+            "Miser en place de règles Sigma/UEBA sur les nouveaux app consentements et les sessions impliquant le devicecode grant_type."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Immediately revoke the targeted user's tokens (refresh tokens) and sessions via Microsoft Entra ID (Revoke-AzureADUserAllRefreshToken / Graph API).",
+            "Temporarily disable the Device Code Flow via Conditional Access for suspected compromised legitimate applications.",
+            "Block the malicious client_id in Entra ID and remove any associated application consent.",
+            "Isolate the endpoint of the user who entered the code (EDR, AD account disablement) for forensic analysis.",
+            "Search for and remove malicious Outlook rules, redirectors, and OAuth applications consented by the victim."
+          ],
+          "fr": [
+            "Révoquer immédiatement les jetons (refresh tokens) et sessions de l'utilisateur ciblé via Microsoft Entra ID (Revoke-AzureADUserAllRefreshToken / Graph API).",
+            "Désactiver temporairement le Device Code Flow via Conditional Access pour les applications légitimes suspectées compromises.",
+            "Bloquer le client_id malveillant dans Entra ID et retirer tout consentement applicatif associé.",
+            "Isoler le poste de l'utilisateur ayant saisi le code (EDR, désactivation compte AD) pour analyse forensique.",
+            "Rechercher et supprimer les règles Outlook malveillantes, redirecteurs et applications OAuth consenties par la victime."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Analyze the full compromise chain: initial vector (phishing, social engineering), exposure duration, accessible data (mail, files, Teams).",
+            "Verify the Entra application inventory and remove any illegitimate or orphaned consent.",
+            "Communicate to stakeholders and, if required, notify authorities (CNIL, ANSSI) and impacted customers within 72 hours (GDPR Art. 33).",
+            "Produce a lessons learned report and update playbooks, Conditional Access policies, and awareness modules.",
+            "Verify the absence of lateral pivot: review of M365 logs, SharePoint/OneDrive activity, Teams access, establishment of a forensic timeline."
+          ],
+          "fr": [
+            "Analyser la chaîne de compromission complète : vecteur initial (phishing, social engineering), durée d'exposition, données accessibles (mail, fichiers, Teams).",
+            "Vérifier l'inventaire des applications Entra et retirer tout consentement non légitime ou orphelin.",
+            "Communiquer aux parties prenantes et, si requis, notifier les autorités (CNIL, ANSSI) et les clientsimpactés sous 72h (RGPD Art. 33).",
+            "Produire un rapport de lessons learned et mettre à jour les playbooks, les politiques Conditional Access et les modules de sensibilisation.",
+            "Vérifier l'absence de pivot latéral : revue des logs M365, activité SharePoint/OneDrive, accès Teams, etablissement d'un timeline forensique."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Proactively hunt Entra sign-ins using the grant_type 'urn:ietf:params:oauth:grant-type:device_code' over the last 90 days.",
+            "Search for unusual app consents and client_id never seen before in the tenant.",
+            "Correlate /token polling logs with network logs (proxy, DNS) to identify attack infrastructures.",
+            "Hunt for associated IOCs: phishing domains, infrastructures that initiated /devicecode requests, atypical User-Agents.",
+            "Regularly test simulated Device Code Phishing attacks (purple team) and measure SOC detection/response."
+          ],
+          "fr": [
+            "Chasser proactivement les connexions Entra utilisant le grant_type 'urn:ietf:params:oauth:grant-type:device_code' sur les 90 derniers jours.",
+            "Rechercher les app consentments inhabituels et les client_id jamais vus dans le tenant.",
+            "Corréler les logs de polling /token avec les logs réseau (proxy, DNS) pour identifier les infrastructures d'attaque.",
+            "Chasser les IOC associés : domaines de phishing, infrastructures ayant initié les requêtes /devicecode, User-Agents atypiques.",
+            "Tester régulièrement des attaques simulées de Device Code Phishing (purple team) et mesurer la détection/réponse SOC."
+          ]
+        }
+      },
+      "tags": [
+        "phishing",
+        "oauth",
+        "device-code-flow",
+        "microsoft-entra-id",
+        "identity-attack",
+        "credential-theft"
+      ],
+      "sources": [
+        "https://securelist.com/microsoft-device-code-phishing-attack/120350/"
+      ],
+      "date": "2026-07-07"
+    },
+    {
+      "title": {
+        "en": "Ransomware becomes the leading cause of data breaches in retail (Verizon DBIR 2026)",
+        "fr": "Le ransomware devient la première cause de fuites de données dans le retail (Verizon DBIR 2026)"
+      },
+      "description": {
+        "en": "According to the Verizon 2026 study relayed by Indigo Privacy, ransomware now accounts for 32% of data breach disclosures among retailers and concentrates 61% of the associated financial losses. Each point of sale stores payment and personal data, which constitute the attackers' preferred target.",
+        "fr": "Selon l'étude Verizon 2026 relayée par Indigo Privacy, le ransomware représente désormais 32 % des déclarations de fuites de données chez les détaillants et concentre 61 % des pertes financières associées. Chaque point de vente stocke des données de paiement et personnelles, qui constituent la cible privilégiée des attaquants."
+      },
+      "resume": {
+        "en": "According to the Verizon 2026 study relayed by Indigo Privacy, ransomware now accounts for 32% of data breach disclosures among retailers and concentrates 61% of the associated financial losses. Each point of sale stores payment and personal data, which constitute the attackers' preferred target.",
+        "fr": "Selon l'étude Verizon 2026 relayée par Indigo Privacy, le ransomware représente désormais 32 % des déclarations de fuites de données chez les détaillants et concentre 61 % des pertes financières associées. Chaque point de vente stocke des données de paiement et personnelles, qui constituent la cible privilégiée des attaquants."
+      },
+      "analyse_operationnelle": {
+        "en": "Retail SOC teams must prioritize monitoring of attack paths leading to customer databases and POS systems, as well as ransomware early warning signs (backup disabling, account creation, lateral movement). POS/back-office network segmentation, EDR on endpoints, and strong authentication on remote administrative access become critical. Backups must be tested regularly and isolated to withstand double extortion.",
+        "fr": "Les équipes SOC retail doivent prioriser la surveillance des chemins d'attaque menant aux bases clients et aux systèmes POS, ainsi que des signes précurseurs ransomware (désactivation de sauvegardes, création de comptes, déplacement latéral). La segmentation réseau POS/back-office, l'EDR sur les terminaux et l'authentification forte sur les accès d'administration distants deviennent critiques. Les sauvegardes doivent être testées régulièrement et isolées pour résister à la double extorsion."
+      },
+      "implications_strategiques": {
+        "en": "The retail sector, historically exposed by its heterogeneous in-store estate and subcontractors, becomes the most financially profitable target for ransomware operators. The concentration of losses (61%) on 32% of incidents reflects a systemic risk: a single incident can compromise millions of customers and lead to major regulatory (GDPR), contractual (PCI DSS), and reputational costs. Retail management must integrate this risk into their cyber governance and insurance strategy.",
+        "fr": "Le secteur retail, historiquement exposé par son parc hétérogène en magasin et ses sous-traitants, devient la cible financière la plus rentable pour les opérateurs de ransomware. La concentration des pertes (61 %) sur 32 % des incidents traduit un risque systémique : un seul incident peut compromettre des millions de clients et entraîner des coûts réglementaires (RGPD), contractuels (PCI DSS) et réputationnels majeurs. Les directions retail doivent intégrer ce risque dans leur gouvernance cyber et leur stratégie d'assurance."
+      },
+      "threat_actor": "Non attribué",
+      "threat_actor_origin": "",
+      "threat_actor_type": "",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Retail / Commerce"
+        ],
+        "fr": [
+          "Retail / Commerce"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1486"
+      ],
+      "analyse": {
+        "en": "The retail sector, historically exposed by its heterogeneous in-store estate and subcontractors, becomes the most financially profitable target for ransomware operators. The concentration of losses (61%) on 32% of incidents reflects a systemic risk: a single incident can compromise millions of customers and lead to major regulatory (GDPR), contractual (PCI DSS), and reputational costs. Retail management must integrate this risk into their cyber governance and insurance strategy.",
+        "fr": "Le secteur retail, historiquement exposé par son parc hétérogène en magasin et ses sous-traitants, devient la cible financière la plus rentable pour les opérateurs de ransomware. La concentration des pertes (61 %) sur 32 % des incidents traduit un risque systémique : un seul incident peut compromettre des millions de clients et entraîner des coûts réglementaires (RGPD), contractuels (PCI DSS) et réputationnels majeurs. Les directions retail doivent intégrer ce risque dans leur gouvernance cyber et leur stratégie d'assurance."
+      },
+      "recommandations": [
+        {
+          "en": "Audit POS/back-office network segmentation and remediate lateral movement paths.",
+          "fr": "Auditer la segmentation réseau POS/back-office et corriger les chemins de mouvement latéral."
+        },
+        {
+          "en": "Test backup restoration in an isolated environment and time the RTO/RPO.",
+          "fr": "Tester la restauration des sauvegardes dans un environnement isolé et chronométrer le RTO/RPO."
+        },
+        {
+          "en": "Deploy phishing-resistant strong authentication for all retail administrative access.",
+          "fr": "Déployer une authentification forte résistante au phishing pour tous les accès d'administration retail."
+        },
+        {
+          "en": "Map personal data held by each brand and apply minimization.",
+          "fr": "Cartographier les données personnelles détenues par chaque enseigne et appliquer la minimisation."
+        },
+        {
+          "en": "Strengthen security clauses with POS integrators and suppliers.",
+          "fr": "Renforcer les clauses de sécurité avec les intégrateurs et fournisseurs POS."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain an exhaustive inventory of payment systems (POS, e-commerce, gateways) and personal data stored (PCI DSS scope).",
+            "Strictly segment the retail network (POS/logistics/office) and isolated backups (air-gapped or immutable).",
+            "Prepare customer notification and compliance playbooks (GDPR, CCPA) in the event of payment data compromise.",
+            "Raise store team awareness on phishing and physical security of terminals.",
+            "Deploy EDR on hosts handling payment flows and back-office."
+          ],
+          "fr": [
+            "Maintenir un inventaire exhaustif des systèmes de paiement (POS, e-commerce, passerelles) et des données personnelles stockées (PCI DSS scope).",
+            "Segmenter strictement le réseau retail (POS/logistique/bureau) et sauvegardes isolées (air-gapped ou immuables).",
+            "Préparer des playbooks de notification clients et de conformité (RGPD, CCPA) en cas de compromission de données de paiement.",
+            "Sensibiliser les équipes magasin à l'hameçonnage et à la sécurité physique des terminaux.",
+            "Déployer EDR sur les hôtes gérant les flux de paiement et le back-office."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor exfiltration patterns from customer/CRM databases and unusual volumes from POS.",
+            "Detect ransomware compromise indicators (deleted shadow copies, stopped backup services, ransom notes).",
+            "Correlate alerts on headquarters privileged accounts with access to retail datastores.",
+            "Integrate Verizon DBIR 2026 IOCs into threat intel platforms and SIEM."
+          ],
+          "fr": [
+            "Surveiller les schémas d'exfiltration depuis les bases clients/CRM et les volumes inhabituels depuis les POS.",
+            "Détecter les indicateurs de compromission ransomware (shadow copies supprimées, services de sauvegarde arrêtés, notes de rançon).",
+            "Corréler les alertes sur les comptes à privilèges du siège avec les accès aux datastores retail.",
+            "Intégrer les IOC de la Verizon DBIR 2026 dans les plateformes de threat intel et SIEM."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Immediately isolate impacted stores/POS environments from the rest of the network.",
+            "Suspend flows to payment processors during the investigation.",
+            "Revoke administrator credentials and API keys used by the impacted systems.",
+            "Activate the communication plan (customers, acquiring banks, data protection authorities).",
+            "Preserve evidence (forensic images) before any remediation."
+          ],
+          "fr": [
+            "Isoler immédiatement les magasins/environments POS impactés du reste du réseau.",
+            "Suspendre les flux vers les processeurs de paiement le temps de l'investigation.",
+            "Révoker les identifiants administrateur et clés d'API utilisés par les systèmes touchés.",
+            "Activer le plan de communication (clients, banques acquéreurs, autorités de protection des données).",
+            "Préserver les preuves (images forensiques) avant toute remédiation."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Assess the proportion of compromised customer data and issue regulatory notifications.",
+            "Conduct a targeted post-incident review on initial attack paths (phishing, exposed RDP, supply chain).",
+            "Strengthen MFA, patching, and POS segmentation.",
+            "Update cyber-insurance contracts in light of retail ransomware exposure.",
+            "Participate in sectoral communities (RH-ISAC) to share IOCs and TTPs."
+          ],
+          "fr": [
+            "Évaluer la proportion de données clients compromises et publier les notifications réglementaires.",
+            "Mener une revue post-incident ciblée sur les chemins d'attaque initiaux (phishing, RDP exposé,供应链).",
+            "Renforcer le MFA, le patching et la segmentation POS.",
+            "Mettre à jour les contrats cyber-assurance au regard de l'exposition ransomware retail.",
+            "Participer aux communautés sectorielles (RH-ISAC) pour partager les IOC et TTP."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Look for signs of long dwell time (reactivated dormant accounts, unauthorized services) in retail environments.",
+            "Hunt for double extortion tools (Cobalt Strike, SystemBC, BazarLoader) on store subnets.",
+            "Audit third-party access (POS vendors, integrators) and persistence (scheduled tasks, services).",
+            "Test resilience via ransomware simulations targeting retail backups."
+          ],
+          "fr": [
+            "Rechercher des signes de dwell time long (comptes dormants réactivés, services non autorisés) dans les environnements retail.",
+            "Chasser les outils de double extorsion (Cobalt Strike, SystemBC, BazarLoader) sur les sous-réseaux magasin.",
+            "Auditer les accès tiers (fournisseurs POS, intégrateurs) et la persistance (tâches planifiées, services).",
+            "Tester la résilience via simulations de ransomwares ciblant les sauvegardes retail."
+          ]
+        }
+      },
+      "tags": [
+        "ransomware",
+        "data_breach",
+        "retail",
+        "payment-data",
+        "Verizon-DBIR-2026"
+      ],
+      "sources": [
+        "https://mastodon.social/@indigoprivacy/116875006076309488"
+      ],
+      "date": "2026-07-06"
+    }
+  ]
+}
