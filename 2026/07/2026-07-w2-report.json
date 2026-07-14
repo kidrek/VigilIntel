@@ -1,86 +1,57 @@
 {
   "threat_level": {
-    "score": 4,
+    "score": 2,
     "label": {
-      "en": "Critical",
-      "fr": "Critique"
+      "en": "Moderate",
+      "fr": "Modéré"
     },
     "justification": {
-      "en": "The threat level is evaluated at 85/100 due to active exploitation of critical zero-day vulnerabilities in security engines like Microsoft Windows Defender (CVE-2026-50656) and Citrix ShareFile, coupled with aggressive double-extortion campaigns from ransomware syndicates (Anubis, Ryuk, BlackCat) and sophisticated SaaS integration abuse.",
-      "fr": "Le niveau de menace est évalué à 85/100 en raison de l'exploitation active de vulnérabilités critiques de type zero-day dans des moteurs de sécurité comme Microsoft Windows Defender (CVE-2026-50656) et Citrix ShareFile, couplée à des campagnes agressives de double extorsion par rançongiciels (Anubis, Ryuk, BlackCat) et le détournement sophistiqué d'intégrations SaaS."
+      "en": "The period was characterized by critical zero-day vulnerabilities in security products like Microsoft Defender, emergency warnings to shut down Progress ShareFile servers, and supply-chain compromises in developer tools (Jscrambler). Strategic actors including Turla and GRU Unit 29155 remain highly active with coordinated geopolitical sabotage.",
+      "fr": "La période a été marquée par des vulnérabilités zero-day critiques dans des produits de sécurité comme Microsoft Defender, des ordres d'arrêt d'urgence pour les serveurs Progress ShareFile, et des compromissions de la supply chain logicielle (Jscrambler). Les acteurs étatiques comme Turla et l'Unité 29155 du GRU restent très actifs."
     },
     "_triggers": [
-      "+4 — 2 CVE(s) CISA KEV",
-      "+2 — 2 CVE(s) CVSS ≥ 9.0",
+      "+2 — 1 CVE(s) CISA KEV",
       "+2 — 1 acteur(s) étatique(s)",
-      "+1 — 1 opérateur(s) ransomware",
-      "+1 — ≥ 3 acteurs distincts actifs",
-      "+3 — 4 breach(es) ≥ 100k enregistrements",
-      "+2 — secteurs critiques ciblés : Critical_Infrastructure, Government_and_Defense"
+      "+2 — 2 breach(es) ≥ 100k enregistrements",
+      "+2 — secteurs critiques ciblés : Government_and_Defense"
     ]
   },
   "executive_summary": {
-    "en": "Week 2 of July 2026 is characterized by a significant surge in perimeter and supply-chain threats. Attackers are aggressively targeting unpatched software architectures including Adobe ColdFusion and Citrix ShareFile, forcing vendors to mandate complete server shutdowns. Concurrently, the threat landscape shifts toward the abuse of trusted third-party integrations (OAuth tokens in Klue/Salesforce) and the commercialization of AI-driven botnets like Mycelium. Geopolitically, Russian state-backed actors continue targeting Western critical infrastructures, prompting the European Union to mobilize defensive cyber reserves.",
-    "fr": "La deuxième semaine de juillet 2026 est caractérisée par une augmentation significative des menaces sur le périmètre et la supply-chain. Les attaquants ciblent agressivement les architectures logicielles non corrigées, notamment Adobe ColdFusion et Citrix ShareFile, forçant les éditeurs à ordonner des arrêts complets de serveurs. En parallèle, le paysage des menaces évolue vers l'abus d'intégrations tierces de confiance (jetons OAuth dans Klue/Salesforce) et la commercialisation de botnets pilotés par l'IA comme Mycelium. Sur le plan géopolitique, les acteurs étatiques russes continuent de cibler les infrastructures critiques occidentales, poussant l'Union européenne à mobiliser ses réserves de cyberdéfense."
+    "en": "Week 2 of July 2026 was marked by an escalation in supply chain attacks targeting development environments, notably through backdoored npm packages (Jscrambler) and scans for Model Context Protocol (MCP) servers. The critical warning to decommission local Progress ShareFile controllers underlines a heightened systemic risk of hybrid cloud compromises. In parallel, coordinated European and UK sanctions against Russian intelligence units (Turla and GRU Unit 29155) emphasize the persistent geopolitical threat to critical infrastructure, while ransomware actors like Anubis and Ryuk continue to weaponize double-extortion tactics against healthcare and municipal services.",
+    "fr": "La deuxième semaine de juillet 2026 a été marquée par une escalade des attaques sur la supply chain ciblant les environnements de développement, notamment via des paquets npm empoisonnés (Jscrambler) et des scans de serveurs Model Context Protocol (MCP). L'alerte de sécurité critique imposant la mise hors ligne des contrôleurs locaux Progress ShareFile souligne un risque systémique élevé de compromission du cloud hybride. En parallèle, des sanctions coordonnées de l'UE et du Royaume-Uni contre les unités de renseignement russes (Turla et l'Unité 29155 du GRU) mettent en évidence la menace géopolitique persistante sur les infrastructures critiques, alors que les groupes de ransomware comme Anubis et Ryuk continuent d'exploiter la double extorsion contre la santé et les services publics."
   },
   "regulatory": {
     "analyse": {
-      "en": "Regulatory focus this period centers heavily on digital and data sovereignty within the European Union, alongside active enforcement under the Digital Services Act (DSA). Authorities are increasing scrutiny on algorithmic systems, targeting addictive designs of major social platforms (Meta's Facebook and Instagram) and opening targeted sovereignty consultations to protect sensitive data flows from extraterritorial reach.",
-      "fr": "L'accent réglementaire de cette période se concentre fortement sur la souveraineté numérique et des données au sein de l'Union européenne, parallèlement à une application active du Digital Services Act (DSA). Les autorités renforcent la surveillance des systèmes algorithmiques, ciblant les designs addictifs des grandes plateformes sociales (Facebook et Instagram de Meta) et ouvrant des consultations ciblées sur la souveraineté pour protéger les flux de données sensibles contre l'accès de pays tiers."
+      "en": "Regulatory agencies are shifting from passive guidelines to aggressive enforcement actions, as demonstrated by the EU's preliminary findings under the Digital Services Act (DSA) against Meta and coordinated economic sanctions by the EU and UK targeting state-backed threat actors and their supporting front companies. The enforcement of the Critical Entities Resilience (CER) Directive continues to demand strict compliance regarding business continuity and physical security of vital installations, framing cyber resilience as a core component of national and regional security.",
+      "fr": "Les agences réglementaires passent de directives passives à des actions répressives agressives, comme le montrent les conclusions préliminaires de l'UE au titre du Digital Services Act (DSA) contre Meta et les sanctions économiques coordonnées de l'UE et du Royaume-Uni ciblant les acteurs étatiques et leurs entreprises écrans. L'application de la directive sur la résilience des entités critiques (REC / CER) continue d'exiger une conformité stricte en matière de continuité d'activité et de sécurité physique des installations vitales."
     },
     "events": [
       {
         "title": {
-          "en": "Targeted consultation on safeguarding the EU's data sovereignty",
-          "fr": "Consultation ciblée sur la sauvegarde de la souveraineté des données de l'UE"
-        },
-        "issuing_body": "European Commission",
-        "date": "2026-07-08",
-        "jurisdiction": {
-          "region": "EU",
-          "countries": [
-            "FR",
-            "DE",
-            "BE"
-          ]
-        },
-        "type": "Proposal",
-        "status": "Under_Review",
-        "reference": "European Tech Sovereignty Package",
-        "affected_sectors": [
-          "Technology_and_Telecom",
-          "Critical_Infrastructure"
-        ],
-        "description": {
-          "en": "The European Commission launched a targeted consultation focusing on identifying and mitigating dependencies on third-party data infrastructures that threaten the EU's strategic autonomy. Security teams must prepare to document data transmission flows and evaluate alternative European-based hosting solutions to maintain compliance with upcoming sovereignty rules.",
-          "fr": "La Commission européenne a lancé une consultation ciblée visant à identifier et atténuer les dépendances vis-à-vis d'infrastructures de données tierces menaçant l'autonomie stratégique de l'UE. Les équipes de sécurité doivent se préparer à documenter leurs flux de transmission de données et à évaluer des alternatives d'hébergement basées en Europe pour rester en conformité."
-        },
-        "source_url": "https://digital-strategy.ec.europa.eu/en/consultations/targeted-consultation-safeguarding-eus-data-sovereignty"
-      },
-      {
-        "title": {
-          "en": "DSA Preliminary Findings against Meta over Addictive Design",
-          "fr": "Conclusions préliminaires du DSA contre Meta pour design addictif"
+          "en": "Digital Services Act Preliminary Findings against Meta",
+          "fr": "Conclusions préliminaires du Digital Services Act contre Meta"
         },
         "issuing_body": "European Commission",
         "date": "2026-07-11",
         "jurisdiction": {
           "region": "EU",
           "countries": [
-            "IE",
             "FR",
-            "DE"
+            "DE",
+            "BE",
+            "NL"
           ]
         },
         "type": "Enforcement_Action",
         "status": "Active",
         "reference": "DSA Art.28",
         "affected_sectors": [
+          "Technology_and_Telecom",
           "Media_and_Communication"
         ],
         "description": {
-          "en": "The European Commission issued preliminary findings stating that Meta's Instagram and Facebook interface designs breach the Digital Services Act (DSA) by fostering addictive behavior, particularly among minors. Non-compliance could result in fines of up to 6% of Meta's global annual turnover, emphasizing the need for privacy-by-design and rigorous behavioral impact assessments.",
-          "fr": "La Commission européenne a rendu des conclusions préliminaires indiquant que la conception des interfaces d'Instagram et de Facebook de Meta viole le DSA en favorisant des comportements addictifs, en particulier chez les mineurs. Un non-respect peut entraîner des amendes allant jusqu'à 6 % du chiffre d'affaires mondial annuel de Meta, soulignant l'importance du concept de privacy-by-design."
+          "en": "The European Commission issued preliminary findings stating that Meta's addictive designs on Instagram and Facebook, such as infinite scroll and autoplay, violate the DSA. Meta faces potential fines of up to 6% of its global annual turnover for failing to mitigate risks to minor mental health.",
+          "fr": "La Commission européenne a publié des conclusions préliminaires indiquant que la conception addictive de Meta sur Instagram et Facebook viole le DSA. Meta risque une amende allant jusqu'à 6 % de son chiffre d'affaires mondial pour manquement à l'atténuation des risques sur la santé mentale des mineurs."
         },
         "source_url": "https://digital-strategy.ec.europa.eu/en/news/commission-preliminarily-finds-addictive-design-instagram-and-facebook-breach-digital-services-act"
       }
@@ -94,151 +65,52 @@
           "fr": "Russie"
         },
         "geographic_zone_strategic_analyse": {
-          "en": "Russian state-sponsored actors and cybercriminals remain extremely active, focusing hybrid campaigns on regional geopolitical rivals (such as Moldova) and launching critical espionage operations against Western European targets, including IoT perimeter exploits in the Netherlands.",
-          "fr": "Les acteurs étatiques russes et les cybercriminels restent extrêmement actifs, concentrant des campagnes hybrides sur des rivaux géopolitiques régionaux (comme la Moldavie) et lançant des opérations d'espionnage critiques contre des cibles d'Europe occidentale, incluant des exploits d'équipements IoT aux Pays-Bas."
-        }
-      },
-      {
-        "geographic_zone_name": {
-          "en": "China",
-          "fr": "Chine"
-        },
-        "geographic_zone_strategic_analyse": {
-          "en": "Chinese nation-state intelligence syndicates continue to build and expand highly resilient Operational Relay Box (ORB) networks, compromising edge devices (ASUS, Ruckus routers) globally to anonymize high-value espionage traffic targeting Western telecom and government targets.",
-          "fr": "Les syndicats d'espionnage étatiques chinois continuent de développer et d'étendre des réseaux d'Operational Relay Box (ORB) hautement résilients, compromettant des équipements réseau de bord (routeurs ASUS, Ruckus) à l'échelle mondiale pour anonymiser leur trafic d'espionnage ciblant les télécoms et administrations occidentales."
+          "en": "Russian state-sponsored groups (Turla, GRU Unit 29155) have intensified campaigns aimed at geopolitical sabotage and espionage across Europe. These campaigns target critical infrastructure, including transportation and energy, while local cybercriminals are granted domestic impunity as long as they target Western interests, driving the development of highly specialized bulletproof services and advanced ransomware operations.",
+          "fr": "Les groupes étatiques russes (Turla, Unité 29155 du GRU) ont intensifié leurs campagnes de sabotage et d'espionnage en Europe, ciblant les infrastructures critiques comme les transports et l'énergie, tandis que les cybercriminels locaux bénéficient d'une impunité intérieure s'ils attaquent l'Occident."
         }
       }
     ],
     "details": [
       {
-        "threat_actor_name": "UAT-7810",
-        "origin_country": "China",
+        "threat_actor_name": "Turla",
+        "origin_country": "Russia",
         "type": {
           "en": "Nation-state",
-          "fr": "Étatique"
+          "fr": "État-nation"
         },
         "targeted_sectors": {
           "en": [
-            "Technology_and_Telecom",
             "Government_and_Defense",
-            "Critical_Infrastructure"
+            "Education_and_Research",
+            "Technology_and_Telecom"
           ],
           "fr": [
-            "Technology_and_Telecom",
             "Government_and_Defense",
-            "Critical_Infrastructure"
+            "Education_and_Research",
+            "Technology_and_Telecom"
           ]
         },
         "targeted_regions": {
           "en": [
-            "North America",
             "Europe",
-            "Asia-Pacific"
+            "North America"
           ],
           "fr": [
-            "Amérique du Nord",
             "Europe",
-            "Asie-Pacifique"
+            "Amérique du Nord"
           ]
         },
         "mitre_attack_ttps_id": [
+          "T1190",
           "T1071",
-          "T1090",
-          "T1584"
+          "T1078"
         ],
         "campaign_or_operation": {
           "en": [
-            "Operational Relay Box Network Expansion"
+            "French Ministry Intrusions"
           ],
           "fr": [
-            "Expansion de réseaux Operational Relay Box"
-          ]
-        }
-      },
-      {
-        "threat_actor_name": "Anubis",
-        "origin_country": "Unknown",
-        "type": {
-          "en": "Ransomware",
-          "fr": "Ransomware"
-        },
-        "targeted_sectors": {
-          "en": [
-            "Healthcare_and_Life_Sciences",
-            "Retail_and_Consumer",
-            "Nonprofit_and_NGO",
-            "Finance"
-          ],
-          "fr": [
-            "Healthcare_and_Life_Sciences",
-            "Retail_and_Consumer",
-            "Nonprofit_and_NGO",
-            "Finance"
-          ]
-        },
-        "targeted_regions": {
-          "en": [
-            "Global"
-          ],
-          "fr": [
-            "Global"
-          ]
-        },
-        "mitre_attack_ttps_id": [
-          "T1486",
-          "T1078",
-          "T1048"
-        ],
-        "campaign_or_operation": {
-          "en": [
-            "Anubis Ransomware Campaign"
-          ],
-          "fr": [
-            "Campagne Ransomware Anubis"
-          ]
-        }
-      },
-      {
-        "threat_actor_name": "LAPSUS",
-        "origin_country": "Unknown",
-        "type": {
-          "en": "Cybercriminal",
-          "fr": "Cybercriminel"
-        },
-        "targeted_sectors": {
-          "en": [
-            "Hospitality_and_Entertainment",
-            "Technology_and_Telecom",
-            "Retail_and_Consumer"
-          ],
-          "fr": [
-            "Hospitality_and_Entertainment",
-            "Technology_and_Telecom",
-            "Retail_and_Consumer"
-          ]
-        },
-        "targeted_regions": {
-          "en": [
-            "North America",
-            "Europe"
-          ],
-          "fr": [
-            "Amérique du Nord",
-            "Europe"
-          ]
-        },
-        "mitre_attack_ttps_id": [
-          "T1078",
-          "T1566"
-        ],
-        "campaign_or_operation": {
-          "en": [
-            "Rockstar Games Breach",
-            "Grand Theft Auto VI Leak"
-          ],
-          "fr": [
-            "Piratage de Rockstar Games",
-            "Fuite de Grand Theft Auto VI"
+            "Intrusions des ministères français"
           ]
         }
       }
@@ -246,8 +118,8 @@
   },
   "mitre_attack_ttps": {
     "ttps_strategic_analyse": {
-      "en": "Tactics this period demonstrate a high-precision shift towards utilizing living-off-the-cloud techniques and exploiting unmonitored hardware segments. The massive exploitation of public-facing software (T1190) remains the dominant initial entry vector, followed by persistent valid account hijacking (T1078), including OAuth tokens, and network obfuscation through automated proxy relays (T1090) and state-backed ORB infrastructures.",
-      "fr": "Les tactiques de cette période démontrent une transition de haute précision vers l'utilisation de techniques de type living-off-the-cloud et l'exploitation de segments matériels non supervisés. L'exploitation massive d'applications exposées sur Internet (T1190) reste le vecteur d'entrée initial dominant, suivi du détournement persistant de comptes valides (T1078), y compris via jetons OAuth, et de l'obfuscation réseau via des relais proxy automatisés (T1090) et des infrastructures ORB étatiques."
+      "en": "Threat actors this period favored software supply chain injection (T1195) and the exploitation of public-facing services (T1190) as high-yield vectors for initial compromise. For persistence and evasion, techniques like process injection (T1055) via specialized loaders and the installation of hidden server extension modules (T1505) remain prominent. Resource hijacking (T1496) on high-performance GPU instances for AI model inference or password cracking highlights an evolution in post-compromise monetization.",
+      "fr": "Les attaquants ont privilégié l'injection dans la supply chain (T1195) et l'exploitation d'applications publiques (T1190) comme vecteurs initiaux. Pour la persistance, des techniques d'injection de processus (T1055) et l'installation d'extensions de serveurs cachées (T1505) restent dominantes. Le détournement de ressources GPU (T1496) marque une évolution vers l'utilisation offensive de l'IA."
     },
     "ttps_list": [
       {
@@ -257,68 +129,14 @@
           "fr": "Accès Initial"
         },
         "technique_name": "Exploit Public-Facing Application",
-        "frequency": 6,
+        "frequency": 7,
         "severity": "critical",
         "context": {
           "en": [
-            "Active exploitation of CVE-2026-48282 in Adobe ColdFusion, zero-day CVE-2026-50656 in Windows Defender, and automated exploitation campaigns against vulnerable CMS extensions (iCagenda and Balbooa Forms)."
+            "Exploitation of vulnerabilities in CMS extensions, Adobe ColdFusion (CVE-2026-48282), and local Progress ShareFile controllers to gain unauthorized access."
           ],
           "fr": [
-            "Exploitation active de CVE-2026-48282 dans Adobe ColdFusion, faille de type zero-day CVE-2026-50656 dans Windows Defender, et campagnes automatisées contre des extensions CMS vulnérables (iCagenda et Balbooa Forms)."
-          ]
-        }
-      },
-      {
-        "id": "T1078",
-        "tactic": {
-          "en": "Defense Evasion",
-          "fr": "Évasion de Défense"
-        },
-        "technique_name": "Valid Accounts",
-        "frequency": 5,
-        "severity": "high",
-        "context": {
-          "en": [
-            "Abuse of compromised OAuth tokens in Klue/Salesforce CRM data exfiltration campaigns, and credentials stuffing/brute force on exposed SSH and RDP management endpoints."
-          ],
-          "fr": [
-            "Abus de jetons OAuth compromis lors de campagnes d'exfiltration de données CRM dans Klue/Salesforce, et credential stuffing/brute force sur des interfaces de gestion SSH et RDP exposées."
-          ]
-        }
-      },
-      {
-        "id": "T1486",
-        "tactic": {
-          "en": "Impact",
-          "fr": "Impact"
-        },
-        "technique_name": "Data Encrypted for Impact",
-        "frequency": 3,
-        "severity": "critical",
-        "context": {
-          "en": [
-            "Anubis and Ryuk ransomware strains aggressively deploying powerful symmetric encryption models targeting Active Directory controllers to lock core infrastructure files."
-          ],
-          "fr": [
-            "Souches de rançongiciels Anubis et Ryuk déployant agressivement des modèles de chiffrement symétrique puissants ciblant les contrôleurs Active Directory pour verrouiller les fichiers critiques."
-          ]
-        }
-      },
-      {
-        "id": "T1090",
-        "tactic": {
-          "en": "Command and Control",
-          "fr": "Commande et Contrôle"
-        },
-        "technique_name": "Proxy",
-        "frequency": 2,
-        "severity": "high",
-        "context": {
-          "en": [
-            "UAT-7810 deploying compromised consumer routers (ASUS, Ruckus) as Operational Relay Box nodes to build transient C2 channels and anonymize espionage traffic."
-          ],
-          "fr": [
-            "UAT-7810 déployant des routeurs grand public compromis (ASUS, Ruckus) en tant que nœuds Operational Relay Box pour construire des canaux C2 éphémères et anonymiser le trafic d'espionnage."
+            "Exploitation de vulnérabilités dans les extensions de CMS, Adobe ColdFusion (CVE-2026-48282) et les contrôleurs Progress ShareFile locaux pour obtenir un accès non autorisé."
           ]
         }
       }
@@ -326,175 +144,37 @@
   },
   "vulnerabilities": {
     "analyse": {
-      "en": "The vulnerability landscape this week features hyper-critical zero-days and active exploitation pathways. Prominently, CVE-2026-50656 in Windows Defender introduces systemic elevation of privilege vectors. Hypervisor breakouts (CVE-2026-53359 in Linux KVM) and edge/perimeter appliance criticalities in Citrix ShareFile (CVE-2023-24489) demand immediate out-of-band updates or hard-isolation strategies.",
-      "fr": "Le paysage des vulnérabilités de cette semaine présente des zero-days hyper-critiques et des chemins d'exploitation actifs. Notamment, CVE-2026-50656 dans Windows Defender introduit des vecteurs d'élévation de privilèges systémiques. Les évasions d'hyperviseur (CVE-2026-53359 dans Linux KVM) et les failles périmétriques critiques dans Citrix ShareFile (CVE-2023-24489) exigent des correctifs immédiats hors calendrier ou des stratégies d'isolation stricte."
+      "en": "The patch landscape in July 2026 is overwhelmed by high-severity flaws in foundational system layers, including VM escape vulnerabilities in KVM hypervisors (CVE-2026-53359), and critical flaws in widely deployed security suites (Microsoft Malware Protection Engine CVE-2026-50656). Active exploitation of legacy vulnerabilities and zero-day components on edge devices and CMS extensions demonstrates the speed at which threat actors operationalize newly published proof-of-concepts.",
+      "fr": "Le paysage des correctifs en juillet 2026 est saturé par des failles de haute sévérité dans les couches fondamentales des systèmes, notamment des évasions de VM dans KVM (CVE-2026-53359) et des failles dans les moteurs de sécurité (Microsoft Malware Protection Engine CVE-2026-50656). L'exploitation active de failles legacy sur les équipements de périmètre souligne la rapidité d'armement des attaquants."
     },
     "list": [
       {
         "cve_id": "CVE-2026-50656",
         "cvss_score": "7.8",
         "epss_score": "3.39%",
-        "cisa_kev": false,
-        "affected_product": "Microsoft Malware Protection Engine",
+        "cisa_kev": true,
+        "affected_product": "Malware Protection Engine",
         "affected_product_vendor": "Microsoft",
         "vulnerability_type": {
           "en": [
-            "Improper Link Resolution Before File Access ('Link Following')"
+            "Improper Link Resolution Before File Access ('Link Following') (CWE-59)"
           ],
           "fr": [
-            "Résolution incorrecte de lien avant l'accès au fichier ('Link Following')"
+            "Résolution de lien incorrecte avant l'accès au fichier ('Link Following') (CWE-59)"
           ]
         },
         "vulnerability_description": {
-          "en": "A zero-day local elevation of privilege vulnerability in Microsoft Windows Defender allowing a low-privileged local attacker to run arbitrary code under the SYSTEM context, disable security monitoring, or cause disk exhaustion through rogue SMB server interactions.",
-          "fr": "Une vulnérabilité zero-day d'élévation locale de privilèges dans Microsoft Windows Defender permettant à un attaquant local peu privilégié d'exécuter du code arbitraire sous le contexte SYSTEM, de désactiver la surveillance ou de provoquer la saturation du disque via un serveur SMB malveillant."
+          "en": "A local privilege escalation vulnerability in Microsoft Malware Protection Engine (Defender) allowing low-privilege users to obtain SYSTEM execution privileges and potentially fill host disks to trigger system instability.",
+          "fr": "Une vulnérabilité d'élévation de privilèges locaux dans le moteur de protection contre les logiciels malveillants de Microsoft permettant à des utilisateurs d'obtenir des privilèges SYSTEM."
         },
         "mitre_attack_ttps_id": [
-          "T1190",
-          "T1562.001"
-        ]
-      },
-      {
-        "cve_id": "CVE-2026-53359",
-        "cvss_score": "8.8",
-        "epss_score": "0.18%",
-        "cisa_kev": false,
-        "affected_product": "Linux Kernel (KVM module)",
-        "affected_product_vendor": "Linux",
-        "vulnerability_type": {
-          "en": [
-            "Use-After-Free"
-          ],
-          "fr": [
-            "Utilisation après libération mémoire ('Use-After-Free')"
-          ]
-        },
-        "vulnerability_description": {
-          "en": "A use-after-free vulnerability in the Linux Kernel KVM module allowing virtual machine escape (guest-to-host) and arbitrary code execution with root privileges on the physical host hypervisor.",
-          "fr": "Une vulnérabilité use-after-free dans le module KVM du noyau Linux permettant une évasion de machine virtuelle (invité à hôte) et l'exécution de code arbitraire avec les privilèges root sur l'hyperviseur physique."
-        },
-        "mitre_attack_ttps_id": [
-          "T1190"
-        ]
-      },
-      {
-        "cve_id": "CVE-2026-48282",
-        "cvss_score": "10.0",
-        "epss_score": "3.20%",
-        "cisa_kev": true,
-        "affected_product": "ColdFusion",
-        "affected_product_vendor": "Adobe",
-        "vulnerability_type": {
-          "en": [
-            "Path Traversal"
-          ],
-          "fr": [
-            "Traversée de répertoire ('Path Traversal')"
-          ]
-        },
-        "vulnerability_description": {
-          "en": "A critical Path Traversal flaw in Adobe ColdFusion enabling unauthenticated remote code execution and complete application compromise under active exploitation.",
-          "fr": "Une faille critique de traversée de répertoire dans Adobe ColdFusion permettant l'exécution de code à distance non authentifiée et la compromission complète de l'application sous exploitation active."
-        },
-        "mitre_attack_ttps_id": [
-          "T1190"
-        ]
-      },
-      {
-        "cve_id": "CVE-2023-24489",
-        "cvss_score": "9.8",
-        "epss_score": "1.20%",
-        "cisa_kev": true,
-        "affected_product": "ShareFile Storage Zones Controller",
-        "affected_product_vendor": "Citrix / Progress",
-        "vulnerability_type": {
-          "en": [
-            "Improper Authentication"
-          ],
-          "fr": [
-            "Authentification incorrecte"
-          ]
-        },
-        "vulnerability_description": {
-          "en": "Critical authentication bypass in Citrix ShareFile Storage Zones Controller permitting unauthenticated attackers to access storage structures, compromising all files and backends.",
-          "fr": "Contournement d'authentification critique dans Citrix ShareFile Storage Zones Controller permettant à des attaquants non authentifiés d'accéder aux structures de stockage et compromettre tous les fichiers."
-        },
-        "mitre_attack_ttps_id": [
-          "T1190"
+          "T1562.001",
+          "T1106"
         ]
       }
     ]
   },
   "data_breaches": [
-    {
-      "victim": "23andMe (Chrome Holding Co.)",
-      "sector": "Healthcare_and_Life_Sciences",
-      "country": "United States",
-      "records_count": 7000000,
-      "data_types": {
-        "en": [
-          "DNA profiles",
-          "Genetic data",
-          "Family trees",
-          "Names",
-          "Dates of birth"
-        ],
-        "fr": [
-          "Profils ADN",
-          "Données génétiques",
-          "Arbres généalogiques",
-          "Noms",
-          "Dates de naissance"
-        ]
-      },
-      "threat_actor": null,
-      "financial_impact_usd": 46000000,
-      "source_url": "https://gizmodo.com/court-approves-46-million-23andme-settlement-for-2023-data-breach-victims-2000782508"
-    },
-    {
-      "victim": "KDDI Corporation",
-      "sector": "Technology_and_Telecom",
-      "country": "Japan",
-      "records_count": 12200000,
-      "data_types": {
-        "en": [
-          "Customer emails",
-          "Customer passwords (weak hashes/plaintext)"
-        ],
-        "fr": [
-          "Emails de clients",
-          "Mots de passe clients (hash faibles/en clair)"
-        ]
-      },
-      "threat_actor": null,
-      "financial_impact_usd": null,
-      "source_url": "https://osintsights.com/kddi-breach-exposes-122m-customer-emails"
-    },
-    {
-      "victim": "AssuranceAmerica",
-      "sector": "Finance",
-      "country": "United States",
-      "records_count": 7000000,
-      "data_types": {
-        "en": [
-          "Driver's license numbers",
-          "Insurance policy details",
-          "Vehicle data",
-          "Claims information",
-          "Names"
-        ],
-        "fr": [
-          "Numéros de permis de conduire",
-          "Détails de polices d'assurance",
-          "Données de véhicules",
-          "Informations de sinistres",
-          "Noms"
-        ]
-      },
-      "threat_actor": null,
-      "financial_impact_usd": null,
-      "source_url": "https://techcrunch.com/2026/07/08/another-massive-data-breach-exposed-millions-of-drivers-license-numbers/"
-    },
     {
       "victim": "TikTok",
       "sector": "Media_and_Communication",
@@ -502,143 +182,152 @@
       "records_count": 2400000000,
       "data_types": {
         "en": [
-          "User personal data",
-          "Account identifiers",
-          "Metadata"
+          "PII",
+          "credentials",
+          "account metadata"
         ],
         "fr": [
-          "Données personnelles d'utilisateurs",
-          "Identifiants de compte",
-          "Métadonnées"
+          "Données personnelles",
+          "identifiants",
+          "métadonnées de compte"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://databreaches.net/2026/07/11/tiktok-class-action-alleges-data-breach-affected-2-4b-users/"
+    },
+    {
+      "victim": "Odido Netherlands",
+      "sector": "Technology_and_Telecom",
+      "country": "Netherlands",
+      "records_count": 6200000,
+      "data_types": {
+        "en": [
+          "PII",
+          "bank details",
+          "identity documents"
+        ],
+        "fr": [
+          "Données personnelles",
+          "coordonnées bancaires",
+          "documents d'identité"
         ]
       },
       "threat_actor": "ShinyHunters",
       "financial_impact_usd": null,
-      "source_url": "https://databreaches.net/2026/07/11/tiktok-class-action-alleges-data-breach-affected-2-4b-users/?pk_campaign=feed&pk_kwd=tiktok-class-action-alleges-data-breach-affected-2-4b-users"
+      "source_url": "https://securityaffairs.com/195235/cyber-crime/dutch-nationals-suspected-in-odido-hack-that-exposed-six-million-customers.html"
     }
   ],
   "target": {
     "sectors": {
       "en": [
-        "Healthcare_and_Life_Sciences",
         "Technology_and_Telecom",
-        "Finance",
-        "Government_and_Defense",
         "Media_and_Communication",
-        "Retail_and_Consumer",
+        "Healthcare_and_Life_Sciences",
         "Education_and_Research",
-        "Critical_Infrastructure"
+        "Government_and_Defense",
+        "Retail_and_Consumer"
       ],
       "fr": [
-        "Healthcare_and_Life_Sciences",
         "Technology_and_Telecom",
-        "Finance",
-        "Government_and_Defense",
         "Media_and_Communication",
-        "Retail_and_Consumer",
+        "Healthcare_and_Life_Sciences",
         "Education_and_Research",
-        "Critical_Infrastructure"
+        "Government_and_Defense",
+        "Retail_and_Consumer"
       ]
     },
     "countries": {
       "en": [
-        "United States",
-        "Canada",
         "Netherlands",
-        "France",
-        "South Korea",
-        "Japan",
-        "Ukraine",
-        "Austria"
+        "United States",
+        "Moldova",
+        "Germany",
+        "Canada"
       ],
       "fr": [
-        "États-Unis",
-        "Canada",
         "Pays-Bas",
-        "France",
-        "Corée du Sud",
-        "Japon",
-        "Ukraine",
-        "Autriche"
+        "États-Unis",
+        "Moldavie",
+        "Allemagne",
+        "Canada"
       ]
     },
     "narrative": {
-      "en": "- **Healthcare & Life Sciences:** Casper Orthopedics suffered complete clinical disruption and data theft under Anubis Ransomware's double-extortion campaign. Concurrently, 23andMe finalized a $46M legal settlement following a massive breach exposing genetic profiles of 7M customers.\n- **Technology & Telecom:** KDDI Corporation in Japan exposed 12.2M customer emails and 7.6M weak passwords. Separately, Dutch telco Odido was hit by a targeted attack aided by a suspected local accomplice to exfiltrate call records.\n- **Finance:** AssuranceAmerica exposed driver's license numbers and insurance policies of 7M drivers, amplifying identity theft risks.\n- **Government & Defense:** South Korean military servers sustained over 19,000 state-sponsored network compromise attempts in a single year, while the Canadian Armed Forces and the government networks of Moldova faced persistent hybrid cyber-espionage.\n- **Media & Communication:** TikTok faced a class-action lawsuit alleging a critical data breach affecting personal information of 2.4B users.\n- **Business Services:** Accenture was targeted by hackers selling 35GB of source code and internal proprietary database secrets on underground forums.\n- **Education & Research:** Glendale Community College exposed personal information, credentials, and SSNs of 793,925 students and staff members in a massive breach claimed by ShinyHunters.\n- **Critical Infrastructure:** The Dutch government investigated Russian state-sponsored cyber espionage targeting municipal network perimeters through vulnerable IP-security cameras.",
-      "fr": "- **Santé & Sciences de la vie :** Casper Orthopedics a subi une interruption clinique complète et un vol de données sous la campagne de double extorsion d'Anubis. En parallèle, 23andMe a finalisé un règlement de 46 millions de dollars suite à une fuite exposant les profils génétiques de 7 millions de clients.\n- **Technologie & Télécoms :** KDDI Corporation au Japon a exposé 12,2 millions d'emails clients et 7,6 millions de mots de passe. De son côté, l'opérateur néerlandais Odido a été frappé par une attaque ciblée avec l'aide d'un complice local pour exfiltrer des enregistrements d'appels.\n- **Finance :** AssuranceAmerica a exposé les numéros de permis de conduire et les polices d'assurance de 7 millions de conducteurs, amplifiant les risques d'usurpation d'identité.\n- **Gouvernement & Défense :** Les serveurs militaires sud-coréens ont subi plus de 19 000 tentatives de compromission d'origine étatique en un an, tandis que les Forces armées canadiennes et les réseaux gouvernementaux de Moldavie ont fait face à un cyber-espionnage hybride persistant.\n- **Médias & Communication :** TikTok fait face à un recours collectif alléguant une violation critique de données affectant les informations personnelles de 2,4 milliards d'utilisateurs.\n- **Services aux entreprises :** Accenture a été ciblé par des hackers vendant 35 Go de code source et de secrets de bases de données internes sur des forums souterrains.\n- **Éducation & Recherche :** Le Glendale Community College a exposé les données personnelles, les identifiants et les SSN de 793 925 étudiants et membres du personnel lors d'une fuite revendiquée par ShinyHunters.\n- **Infrastructures critiques :** Le gouvernement néerlandais a enquêté sur un espionnage étatique russe ciblant des caméras IP municipales vulnérables."
+      "en": "- **Telecommunications:** Odido Netherlands suffered a massive data breach exposing the personal and banking data of 6.2 million customers, orchestrated via a suspected internal accomplice and linked to ShinyHunters.\n- **Social Media & Tech:** A class-action lawsuit against TikTok alleged a catastrophic data breach affecting up to 2.4 billion users globally, emphasizing the critical risk of personal data aggregation on modern platforms.\n- **Healthcare & Life Sciences:** Casper Orthopedics was hit by a major Anubis double-extortion ransomware campaign, halting clinical workflows, while 23andMe finalized a court-approved $46 million settlement for a legacy data breach that exposed the DNA profiles and genetic lineages of 7 million clients.\n- **Education & Research:** Glendale Community College was targeted by ShinyHunters, resulting in the theft and exfiltration of sensitive educational files and SSNs belonging to 793,925 students and staff.\n- **Government & Defense:** South Korea's military networks recorded nearly 19,000 state-sponsored cyberattack attempts over a year, prompting defensive reorganizations, while the European Union mobilized its Cybersecurity Reserve to defend Moldovan government networks from aggressive Russian hybrid campaigns.\n- **Retail & Consumer Goods:** Lidl disclosed a security breach affecting online shoppers in Germany, Belgium, and the Netherlands after a third-party service provider's infrastructure was compromised, illustrating the severe risk of third-party supply-chain dependencies.",
+      "fr": "- **Télécommunications :** Odido Pays-Bas a subi une violation de données massive exposant les informations personnelles et bancaires de 6,2 millions de clients, orchestrée avec un complice interne présumé et liée aux ShinyHunters.\n- **Réseaux sociaux et Tech :** Un recours collectif contre TikTok a révélé une compromission majeure touchant jusqu'à 2,4 milliards d'utilisateurs à l'échelle mondiale, soulignant le risque de concentration des données personnelles.\n- **Santé et Sciences de la vie :** Casper Orthopedics a été ciblé par une campagne d'extorsion agressive menée par le rançongiciel Anubis, paralysant les flux cliniques, tandis que 23andMe a validé un accord amiable de 46 millions de dollars suite à une fuite historique exposant les profils ADN et arbres généalogiques de 7 millions de clients.\n- **Éducation et Recherche :** Le Glendale Community College a été ciblé par ShinyHunters, entraînant l'exfiltration de fichiers sensibles et de numéros de sécurité sociale appartenant à 793 925 étudiants et membres du personnel.\n- **Gouvernement et Défense :** Les réseaux militaires sud-coréens ont enregistré près de 19 000 tentatives d'attaques étatiques sur un an, tandis que l'Union européenne a mobilisé sa réserve de cybersécurité pour soutenir les institutions moldaves face aux opérations hybrides russes.\n- **Grande distribution et e-commerce :** Lidl a déclaré une fuite de données touchant ses clients en Allemagne, Belgique et Pays-Bas après la compromission d'un prestataire de services tiers, illustrant les risques inhérents à la chaîne d'approvisionnement tierce."
     }
   },
   "trends": {
     "emerging_techniques": {
       "en": [
-        "Ghostcommit: Steganographic prompt injection dissimulated in images targeting multimodal LLM agents",
-        "SaaS Integration Abuse: Exfiltration of CRM databases via stolen OAuth integration tokens",
-        "Nim-based Shellcode Loaders: Bypass of Windows Defender hooks via indirect syscalls and memory-patched AMSI",
-        "Wireless ADB Hijacking: RedHook Android malware using port 5555 to establish shell access bypassing Google controls"
+        "Visual prompt injection via steganographic images (Ghostcommit)",
+        "Abuse of Model Context Protocol (MCP) servers for autonomous AI tool hijacking",
+        "Stethoscope and AI-based bypass of anti-malware hook engines"
       ],
       "fr": [
-        "Ghostcommit : Injection stéganographique de prompts dissimulés dans des images ciblant les agents LLM multimodaux",
-        "Détournement d'intégrations SaaS : Exfiltration de bases de données CRM via des jetons d'intégration OAuth volés",
-        "Loaders de shellcode en langage Nim : Contournement des hooks Windows Defender via indirect syscalls et patch d'AMSI en mémoire",
-        "Détournement de Wireless ADB : Le malware Android RedHook exploitant le port 5555 pour établir un accès shell direct"
+        "Injection de prompt visuelle via des images stéganographiques (Ghostcommit)",
+        "Abus de serveurs Model Context Protocol (MCP) pour le piratage d'outils IA autonomes",
+        "Contournement par IA des moteurs de détection de hooks antivirus"
       ]
     },
     "declining_techniques": {
       "en": [
-        "Traditional unencrypted static reverse shells lacking TTY emulation",
-        "Cleartext credential storage in database structures without multi-factor authentication mandates"
+        "Standard unencrypted command-and-control beacons",
+        "Traditional SMS-based multi-factor authentication without FIDO2 hardware binding"
       ],
       "fr": [
-        "Reverse shells statiques traditionnels non chiffrés et dépourvus d'émulation TTY",
-        "Stockage en clair d'identifiants dans les bases de données sans obligation d'authentification multifacteur"
+        "Balises de commande et contrôle standard non chiffrées",
+        "Authentification multifacteur par SMS traditionnelle sans liaison matérielle FIDO2"
       ]
     },
     "geopolitical_context": {
-      "en": "State-sponsored cyber-espionage is converging with military and critical infrastructure targeting. Russian hybrid warfare tactics in Eastern Europe, combined with edge device network-relay infrastructure hijacking (UAT-7810), represent systemic risks. Western nations are accelerating defense-alignment strategies, as demonstrated by the European Union mobilizing its Cyberspace Reserve to shield Moldova.",
-      "fr": "Le cyber-espionnage étatique converge avec le ciblage des infrastructures critiques et militaires. Les tactiques de guerre hybride russes en Europe de l'Est, combinées au piratage d'équipements réseaux de bord (UAT-7810), représentent des risques systémiques. Les nations occidentales accélèrent leurs stratégies de défense, comme le démontre l'UE en mobilisant sa Réserve de cybersécurité pour protéger la Moldavie."
+      "en": "Russian hybrid warfare and state-sponsored operations (Turla and GRU Unit 29155) continue to focus on critical infrastructure and European institutions. This has provoked a strong unified regulatory and economic counter-response, resulting in joint EU-UK asset freeze sanctions and direct cyber support from the EU Cybersecurity Reserve to target countries like Moldova.",
+      "fr": "La guerre hybride russe et les opérations parrainées par l'État (Turla et GRU Unité 29155) continuent de cibler les infrastructures critiques et les institutions européennes, provoquant des sanctions économiques conjointes de l'UE et du Royaume-Uni."
     }
   },
   "recommendations": {
     "strategic": {
       "en": [
         {
-          "title": "Enforce FIDO2 Hardware MFA for Developer Accounts",
-          "detail": "Traditional SMS/TOTP MFA is routinely bypassed by OAuth token theft and session hijack techniques observed in the Klue and Salesforce CRM breaches. Implement FIDO2/WebAuthn hardware keys (e.g., YubiKey 5, Google Titan) across all development environments, code repositories, and cloud identity providers. Revoke all active sessions upon deployment and enforce IP-based conditional access restrictions."
+          "title": "Deploy FIDO2 Hardware Keys for Code Repositories",
+          "detail": "Recent software supply-chain attacks, notably the compromise of the Jscrambler npm package and the CISA GitHub leakage, show that threat actors are aggressively targeting developer environments. Organizations must transition from traditional SMS or software-based MFA to FIDO2/WebAuthn hardware tokens (e.g., YubiKey 5 Series) to secure developer accounts and CI/CD pipelines. This direct control prevents credential harvesting by infostealers like LummaC2 and protects access to proprietary source code."
         },
         {
-          "title": "Decommission Legacy Hybrid Storage Zone Controllers",
-          "detail": "Following urgent warnings from Progress Software and Citrix regarding CVE-2023-24489, hybrid on-premises controllers represent extreme operational risk. Decommission legacy Citrix/Progress ShareFile Storage Zone Controllers on local Windows Servers and migrate securely to fully isolated cloud-native directory solutions. Enforce complete network isolation and verify file integrity on existing storage volumes."
+          "title": "Enforce Host-Only Network Binding for AI Middleware",
+          "detail": "With the emergence of scanning campaigns targeting Model Context Protocol (MCP) servers and Cursor/Claude credentials, exposing AI orchestration layers on public IP addresses presents a critical backdoor. Force all local MCP instances and AI agent endpoints to bind exclusively to the loopback interface (127.0.0.1) or restrict traffic through authenticated reverse proxies with mTLS enabled. This mitigation completely blocks unauthorized remote JSON-RPC execution and prompt injections like Ghostcommit."
         }
       ],
       "fr": [
         {
-          "title": "Imposer le MFA matériel FIDO2 pour les développeurs",
-          "detail": "Le MFA traditionnel par SMS/TOTP est régulièrement contourné par le vol de jetons OAuth et le détournement de session observés lors des fuites CRM de Klue et Salesforce. Déployez des clés matérielles FIDO2/WebAuthn (ex. YubiKey 5, Google Titan) sur tous les environnements de dev, dépôts de code et IdP cloud. Révoquez toutes les sessions actives au déploiement et imposez des restrictions d'accès conditionnel basées sur l'IP."
+          "title": "Déployer des clés matérielles FIDO2 pour les dépôts",
+          "detail": "Les récentes attaques contre la chaîne d'approvisionnement logicielle, comme le compromis du paquet npm Jscrambler et la fuite GitHub de la CISA, démontrent que les attaquants ciblent activement les environnements de développement. Les organisations doivent abandonner le MFA par SMS ou application au profit de clés matérielles FIDO2/WebAuthn (ex: YubiKey 5) pour sécuriser les comptes de développeurs et les pipelines CI/CD. Ce contrôle direct empêche le vol d'identifiants par des infostealers comme LummaC2 et protège le code source."
         },
         {
-          "title": "Décommissionner les contrôleurs de stockage hybrides legacy",
-          "detail": "Suite aux alertes urgentes de Progress Software et Citrix concernant la faille CVE-2023-24489, les contrôleurs hybrides sur site représentent un risque opérationnel extrême. Décommissionnez les anciens Citrix/Progress ShareFile Storage Zone Controllers sur les serveurs Windows locaux et migrez vers des solutions cloud natives isolées. Imposez une isolation réseau complète et vérifiez l'intégrité des fichiers."
+          "title": "Restreindre le middleware d'IA à l'hôte local",
+          "detail": "Avec l'émergence de campagnes de scan ciblant les serveurs Model Context Protocol (MCP) et les secrets Cursor/Claude, l'exposition publique des couches d'orchestration IA représente une faille critique. Forcez toutes les instances locales de serveurs MCP et d'agents IA à écouter exclusivement sur l'interface locale (127.0.0.1) ou restreignez l'accès via des reverse proxies authentifiés utilisant le mTLS. Cette mesure bloque les exécutions JSON-RPC à distance non autorisées et les injections de prompt de type Ghostcommit."
         }
       ]
     },
     "operational": {
       "en": [
         {
-          "title": "Disable Wireless ADB and Push restrictive MDM Profiles",
-          "detail": "The RedHook Android malware actively exploits open Wireless ADB ports (port 5555) to acquire elevated shell access and bypass native OS sandbox limitations. Deploy updated Mobile Device Management (MDM) configuration profiles to disable developer options and Wireless ADB across all corporate-owned and BYOD assets. Audit local networks for endpoints listening on port 5555 and block inbound and outbound ADB connections."
+          "title": "Audit and Terminate Vulnerable Progress ShareFile Controllers",
+          "detail": "Following the urgent directive from Progress Software regarding an active threat targeting Storage Zone Controllers (associated with CVE-2023-24489 and CVE-2026-50656), administrators must immediately power down affected Windows servers. Execute the PowerShell command `Stop-Service -Name 'CitrixShareFileStorageZones'` to safely halt the service and isolate the servers at the firewall level. Do not restart the instances until the official vendor patches are deployed and the underlying IIS directory has been audited for `/cifs/` and `/sp/` exploit strings."
         },
         {
-          "title": "Deploy Sigma Rules for TanStack NPM Supply Chain Campaign",
-          "detail": "Active supply-chain compromises in popular NPM registries (such as the TanStack ecosystem) exploit post-install script hooks to execute malicious code. Implement SigmaHQ rule PR #6008 in your SIEM to monitor node_modules folders for unexpected executable creations and flag outbound network telemetry from CI/CD runners. Force 'npm config set audit-signatures true' and audit lockfiles."
+          "title": "Detect Hidden IIS Backdoors via BadIIS Modules",
+          "detail": "Active campaigns exploiting SQL injection are utilizing the 'BadIIS' module for stealthy persistence on Microsoft IIS web servers. Run the command `appcmd.exe list modules` on all IIS web hosts to inventory active server extensions and flag any unsigned, non-standard DLLs. Correlate this audit with system event logs to detect Windows Defender exclusions configured by attackers to hide high-privilege cryptomining tools and exfiltration scripts."
         }
       ],
       "fr": [
         {
-          "title": "Désactiver le Wireless ADB via des profils MDM restrictifs",
-          "detail": "Le malware Android RedHook exploite activement les ports Wireless ADB ouverts (port 5555) pour acquérir un accès shell élevé et contourner le sandboxing natif de l'OS. Déployez des profils de configuration MDM mis à jour pour désactiver les options de développement et le Wireless ADB sur tous les terminaux d'entreprise et BYOD. Auditez les réseaux locaux pour les hôtes écoutant sur le port 5555."
+          "title": "Auditer et éteindre les contrôleurs Progress ShareFile",
+          "detail": "Suite à la directive urgente de Progress Software concernant une menace active ciblant les contrôleurs de zone de stockage (liée aux CVE-2023-24489 et CVE-2026-50656), les administrateurs doivent éteindre immédiatement les serveurs Windows concernés. Exécutez la commande PowerShell `Stop-Service -Name 'CitrixShareFileStorageZones'` pour arrêter le service de manière sécurisée et isoler les serveurs au niveau du pare-feu. Ne redémarrez pas les instances avant d'avoir appliqué les correctifs officiels et inspecté les journaux IIS à la recherche de requêtes d'exploitation."
         },
         {
-          "title": "Déployer les règles Sigma pour la campagne NPM TanStack",
-          "detail": "Des compromissions de supply-chain dans les registres NPM populaires (comme l'écosystème TanStack) exploitent les scripts de post-installation pour exécuter du code malveillant. Implémentez la règle SigmaHQ PR #6008 dans votre SIEM pour surveiller les dossiers node_modules et détecter les créations inattendues d'exécutables. Imposez 'npm config set audit-signatures true' et auditez les lockfiles."
+          "title": "Détecter les portes dérobées IIS via BadIIS",
+          "detail": "Des campagnes actives exploitant des injections SQL installent le module malveillant 'BadIIS' pour maintenir une persistance discrète sur les serveurs web Microsoft IIS. Exécutez la commande `appcmd.exe list modules` sur l'ensemble de vos serveurs IIS pour inventorier les extensions actives et signaler toute DLL non signée ou anormale. Corrélez cet audit avec les journaux d'événements système pour détecter d'éventuelles règles d'exclusion ajoutées dans Windows Defender par les attaquants."
         }
       ]
     }
