@@ -1,0 +1,1569 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The cyber landscape of July 2026 is characterized by an unprecedented acceleration driven by state-of-the-art AI models (Frontier AI Models). This technological disruption results in record volumes of vulnerabilities discovered during Patch Tuesdays and a drastic reduction in exploitation timelines by attackers (sometimes less than 4 hours between disclosure and exploitation). Geopolitically, Iran heavily integrates generative AI into its asymmetric cyberwarfare and influence propaganda arsenal, while Chinese state-sponsored espionage campaigns leverage agentic tools such as Claude Code to automate large-scale intrusions. Meanwhile, cybercriminal groups like Scattered Spider face major judicial sentences in the UK, illustrating a tightening of state regulatory and penal responses to ransomware and critical infrastructure attacks.",
+      "fr": "Le paysage cyber de juillet 2026 est caractérisé par une accélération sans précédent induite par les modèles d'intelligence artificielle de pointe (Frontier AI Models). Cette rupture technologique se traduit par un volume record de vulnérabilités découvertes lors des Patch Tuesdays et une réduction drastique des délais d'exploitation par les attaquants (parfois moins de 4 heures entre la publication et l'exploitation). Sur le plan géopolitique, l'Iran intègre massivement l'IA générative dans son arsenal de cyberguerre asymétrique et de propagande d'influence, tandis que des campagnes d'espionnage d'origine étatique chinoise tirent profit d'outils agentiques comme Claude Code pour automatiser des intrusions d'envergure. Parallèlement, des groupes cybercriminels comme Scattered Spider subissent d'importantes condamnations judiciaires au Royaume-Uni, illustrant un durcissement des réponses régaliennes face aux rançongiciels et aux attaques d'infrastructure d'envergure."
+    },
+    "date": "2026-07-17"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": ["Critical_Infrastructure", "Government_and_Defense"],
+        "fr": ["Infrastructures_Critiques", "Gouvernement_et_Defense"]
+      },
+      "theme": {
+        "en": "Strategic use of asymmetric AI in state-sponsored conflicts",
+        "fr": "Usage stratégique de l'IA asymétrique dans les conflits étatiques"
+      },
+      "description": {
+        "en": "Iran has compensated for its conventional military and economic weaknesses by exploiting generative AI as a force multiplier. The integration of models like Gemini and ChatGPT has allowed the industrialization of influence operations (visual disinformation campaigns by Cyabra, Lego propaganda videos) and automated vulnerability research and malware development (CHAR and GhostFetch malware) targeting critical environments.",
+        "fr": "L'Iran a compensé ses faiblesses militaires et économiques conventionnelles en exploitant l'IA générative comme force multiplicatrice. L'intégration de modèles comme Gemini et ChatGPT a permis d'industrialiser les opérations d'influence (campagnes de désinformation visuelle de Cyabra, vidéos de propagande Lego) et d'automatiser la recherche de vulnérabilités ICS et le développement de code malveillant (malwares CHAR et GhostFetch)."
+      },
+      "recommandations": [
+        {
+          "en": "Replace legacy MFA methods (SMS/Voice) with physical FIDO2/Passkeys resistant to phishing.",
+          "fr": "Remplacer les méthodes MFA traditionnelles (SMS/Voix) par des passkeys physiques résistantes au phishing."
+        },
+        {
+          "en": "Strengthen network partitioning (micro-segmentation) of industrial control systems (ICS).",
+          "fr": "Renforcer le cloisonnement réseau (micro-segmentation) des environnements industriels."
+        },
+        {
+          "en": "Implement a digital information manipulation and disinformation monitoring cell.",
+          "fr": "Mettre en œuvre une cellule d'analyse et de détection de la manipulation d'informations numériques (disinformation monitoring)."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Establish detection policies for AI-driven influence and impersonation (voice, deepfakes).",
+            "Raise awareness among executives and high-value targets regarding rapport-building phishing attacks.",
+            "Audit exposed ICS/SCADA equipment and enforce robust multi-factor authentication (FIDO2/Passkeys)."
+          ],
+          "fr": [
+            "Établir des politiques de détection d'influence et d'usurpation d'identité basées sur l'IA (voix, deepfakes).",
+            "Sensibiliser les cadres et les cibles VIP aux attaques de harcèlement et de 'rapport-building phishing'.",
+            "Auditer les équipements ICS/SCADA exposés sur Internet et imposer des authentifications multifacteurs robustes (FIDO2/Passkeys)."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Analyze unusual behavioral patterns in accesses to industrial control infrastructures.",
+            "Detect typosquatting domains and inauthentic accounts amplifying hostile military narratives.",
+            "Search for C# and VBA implants containing signatures or patterns typical of synthetic code generation."
+          ],
+          "fr": [
+            "Analyser les modèles comportementaux inhabituels d'accès aux infrastructures industrielles.",
+            "Détecter les domaines typosquatting et les comptes inauthentiques amplifiant des récits hostiles ou militaires falsifiés.",
+            "Rechercher les implants C# et VBA contenant des signatures ou commentaires d'origine IA (comme les emojis ou patterns de code synthétique)."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Immediately isolate network segments hosting targeted ICS components.",
+            "Revoke active sessions for accounts compromised by high-persuasion phishing campaigns.",
+            "Report and request takedowns of influence profiles and malicious alert application servers."
+          ],
+          "fr": [
+            "Isoler immédiatement les segments réseau hébergeant des équipements ICS ciblés.",
+            "Révoquer les sessions des comptes compromis par des campagnes de phishing à fort pouvoir de persuasion.",
+            "Signaler et faire supprimer les profils d'influence et serveurs de distribution de faux applications d'alerte."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Rebuild systems compromised by wipers and disinfect Active Directory domain configurations.",
+            "Communicate transparently to counter disinformation and reassure partners.",
+            "Update social engineering detection models to account for LLM-assisted spearphishing."
+          ],
+          "fr": [
+            "Reconstruct les systèmes d'exploitation compromis par les wipers et désinfecter les configurations de domaine Active Directory.",
+            "Communiquer de manière transparente pour contrer la désinformation et rassurer les partenaires.",
+            "Mettre à jour les modèles de détection d'ingénierie sociale assistée par LLM."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Detect spearphishing campaigns from actors like APT34 or Dust Specter mimicking military alerts or regional news."
+          ],
+          "fr": [
+            "Détection de campagnes de spearphishing de l'acteur APT34 ou Dust Specter imitant des prétextes militaires et d'actualité régionale."
+          ]
+        }
+      },
+      "tags": ["Iran", "Guerre Asymétrique", "Intelligence Artificielle", "Influence Operations"],
+      "sources": ["https://www.recordedfuture.com/research/iran-ai-asymmetric-playbook"],
+      "date": "2026-07-17"
+    },
+    {
+      "sector": {
+        "en": ["Government_and_Defense", "Technology_and_Telecom", "Finance"],
+        "fr": ["Gouvernement_et_Defense", "Technologie_et_Telecom", "Finance"]
+      },
+      "theme": {
+        "en": "Large-scale espionage campaigns assisted by AI agents",
+        "fr": "Campagnes d'espionnage d'envergure assistées par agents d'IA"
+      },
+      "description": {
+        "en": "An espionage campaign attributed to a Chinese state actor has exploited the combined capabilities of Claude Code (command execution, concurrent session management) and DeepSeek-v4-pro (tactical planning, defense evasion) to compromise public administrations and defense-adjacent suppliers.",
+        "fr": "Une campagne d'espionnage attribuée à un acteur étatique chinois a exploité la puissance combinée de Claude Code (exécution de commandes, gestion de sessions parallèles) et de DeepSeek-v4-pro (planification tactique, contournement de défenses) pour compromettre des administrations publiques et des fournisseurs de défense."
+      },
+      "recommandations": [
+        {
+          "en": "Enforce strict Zero Trust policies restricting exposed applications' access to internal databases.",
+          "fr": "Mettre en œuvre des politiques de Zero Trust strictes limitant l'accès des applications exposées aux bases de données internes."
+        },
+        {
+          "en": "Audit public code repositories to ensure no API keys or cloud secrets (Supabase, Azure) are exposed.",
+          "fr": "Auditer les dépôts de code publics pour s'assurer de l'absence de clés d'API ou d'identifiants de plateformes cloud (Supabase, Azure)."
+        },
+        {
+          "en": "Monitor the integration of generative AI APIs within corporate software development environments.",
+          "fr": "Surveiller l'intégration des API d'IA générative dans les environnements de développement d'entreprise."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain a strict inventory of Laravel web applications and access gateways (VPN, GitLab, Jira).",
+            "Restrict unauthorized AI agent and development assistant execution (Claude Code, MCP servers) within the enterprise environment.",
+            "Monitor outbound connections to external LLM API gateways from sensitive segments."
+          ],
+          "fr": [
+            "Établir un inventaire rigoureux des applications Web Laravel et des passerelles d'accès (VPN, GitLab, Jira).",
+            "Restreindre l'exécution d'outils de codage et d'agents IA (Claude Code, serveurs MCP) non autorisés au sein de l'entreprise.",
+            "Superviser les connexions sortantes vers les passerelles d'API LLM tierces depuis des zones sensibles."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor unauthorized access by service accounts to government databases via SQL injections.",
+            "Identify unusual self-signed TLS certificates declared as 'Gshell C2' or 'ARL'.",
+            "Detect abnormal WebSocket traffic from Linux/ARM 32-bit hosts to Hong Kong-based destinations."
+          ],
+          "fr": [
+            "Surveiller l'accès de comptes de services non autorisés ou d'administrateurs à des bases de données gouvernementales via SQL injection.",
+            "Identifier les certificats TLS inattendus auto-déclarés comme 'Gshell C2' ou 'ARL'.",
+            "Détecter le trafic WebSocket anormal émanant de serveurs Linux/ARM 32-bit vers des hôtes basés à Hong Kong."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Immediately block server IP addresses associated with TencShell infrastructure.",
+            "Deactivate compromised Azure Logic App and Supabase access keys detected in public leaks.",
+            "Revoke administrative accounts on content management platforms such as WordPress."
+          ],
+          "fr": [
+            "Bloquer immédiatement les adresses de l'infrastructure de serveurs TencShell.",
+            "Désactiver les clés Azure Logic App et Supabase compromises détectées publiquement.",
+            "Révoquer l'accès aux comptes administrateurs de plateformes de publication de contenus (WordPress)."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Apply emergency patches to outdated Laravel frameworks and disable insecure serialization options.",
+            "Rotate all cryptographic keys, application secrets, and administrative passwords.",
+            "Review Azure ACLs and CORS configurations on exposed corporate platforms."
+          ],
+          "fr": [
+            "Appliquer des correctifs urgents sur les frameworks Laravel obsolètes et désactiver les options de sérialisation non sécurisées.",
+            "Changer l'ensemble des clés cryptographiques, secrets applicatifs et mots de passe d'administration.",
+            "Revoir les ACL d'Azure et les liaisons CORS de vos plateformes exposées."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for Chinese web shells masquerading as active GIF images in web server logs."
+          ],
+          "fr": [
+            "Recherche de web shells d'origine chinoise dissimulés sous forme d'images GIF actives."
+          ]
+        }
+      },
+      "tags": ["Chine", "Claude Code", "DeepSeek", "Espionage", "Secteur Public"],
+      "sources": ["https://securityaffairs.com/195474/ai/claude-code-and-deepseek-powered-chinese-cyber-espionage-campaign.html"],
+      "date": "2026-07-17"
+    },
+    {
+      "sector": {
+        "en": ["Government_and_Defense"],
+        "fr": ["Gouvernement_et_Defense"]
+      },
+      "theme": {
+        "en": "Targeted state surveillance and reliance on cyber mercenaries",
+        "fr": "Surveillance étatique ciblée et recours aux mercenaires cyber"
+      },
+      "description": {
+        "en": "New technical evidence corroborated by ANSSI confirms Morocco's persistent use of Pegasus spyware to target civil society members, diplomats, and foreign political figures, reviving tensions regarding spyware regulations.",
+        "fr": "De nouvelles preuves techniques étayées par l'Anssi confirment l'utilisation persistante du logiciel espion Pegasus par le Maroc pour cibler des membres de la société civile, des diplomates et des responsables politiques étrangers, dont le président français Emmanuel Macron. Cet événement ravive la tension sur la réglementation mondiale des logiciels espions dits de mercenaires."
+      },
+      "recommandations": [
+        {
+          "en": "Enforce the use of dedicated secure mobile phones for exchange of classified or diplomatic information.",
+          "fr": "Imposer l'utilisation de téléphones mobiles dédiés sécurisés et distincts pour l'échange d'informations classifiées ou diplomatiques."
+        },
+        {
+          "en": "Systematically activate iOS Lockdown Mode on decision makers' and executives' terminals.",
+          "fr": "Activer systématiquement le mode de protection maximale (Lockdown Mode) sur les terminaux iOS des décideurs stratégiques."
+        },
+        {
+          "en": "Deploy a quarterly mobile device audit program across government branches.",
+          "fr": "Mettre en place un programme d'audit trimestriel des appareils mobiles gouvernementaux."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Deploy strict security profiles on enterprise mobile endpoints (e.g., Apple Lockdown Mode).",
+            "Establish a regular diagnostics log collection process (Sysdiagnose) for high-risk targets.",
+            "Train high-profile users on zero-click exploit delivery vectors (iMessage, WhatsApp)."
+          ],
+          "fr": [
+            "Déployer des profils de sécurité stricts sur les téléphones mobiles d'entreprise (Apple Lockdown Mode, etc.).",
+            "Mettre en place un processus régulier de collecte des logs de diagnostics mobiles (Sysdiagnose) pour les cibles prioritaires.",
+            "Former les utilisateurs à haut risque aux risques liés aux exploits zero-click (iMessage, WhatsApp)."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Analyze network logs for outbound connections to known NSO Group domains.",
+            "Utilize forensic tools like Mobile Verification Toolkit (MVT) to audit iMessage databases and mobile processes.",
+            "Look for background data transmission anomalies or battery drainage patterns."
+          ],
+          "fr": [
+            "Analyser les journaux réseau à la recherche de connexions vers des domaines d'infrastructure connus de NSO Group.",
+            "Utiliser l'outil MVT (Mobile Verification Toolkit) pour auditer les bases de données iMessage et les processus système mobiles à la recherche d'indicateurs de compromission Pegasus.",
+            "Rechercher des anomalies d'utilisation de la batterie ou de transferts de données en arrière-plan inexpliqués."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate compromised mobile terminals from enterprise networks immediately.",
+            "Power off the device or place it in a Faraday bag to halt real-time data exfiltration.",
+            "Revoke active cloud sessions and credentials accessed from the infected endpoint."
+          ],
+          "fr": [
+            "Isoler immédiatement le téléphone mobile suspecté du réseau d'entreprise.",
+            "Éteindre l'appareil ou le placer dans une cage de Faraday pour stopper l'exfiltration de données en temps réel.",
+            "Révoquer l'ensemble des clés d'authentification et sessions cloud actives accessibles depuis le terminal."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Provide a clean hardware replacement with distinct system settings and phone numbers.",
+            "Force reset personal and corporate accounts synced to the affected mobile terminal.",
+            "Collaborate with specialized national bodies (ANSSI) to document the infection timeline."
+          ],
+          "fr": [
+            "Fournir un nouvel appareil physique doté d'une configuration système et de numéros d'appel distincts.",
+            "Réinitialiser les comptes personnels et professionnels synchronisés sur l'appareil infecté.",
+            "Collaborer avec l'ANSSI ou des organismes d'audit spécialisés pour documenter la chronologie de l'intrusion."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for resolution queries to NSO Group command and control domains in DNS server logs."
+          ],
+          "fr": [
+            "Recherche de requêtes de serveurs DNS pointant vers l'infrastructure d'exploitation ou d'exfiltration mobile du groupe NSO."
+          ]
+        }
+      },
+      "tags": ["Maroc", "Pegasus", "NSO Group", "Espionnage Étatique"],
+      "sources": ["https://www.lemonde.fr/pixels/article/2026/07/16/de-nouvelles-preuves-demontrent-que-le-maroc-a-utilise-le-logiciel-espion-pegasus_6723736_4408996.html"],
+      "date": "2026-07-17"
+    }
+  ],
+  "regulatory_and_legal": [
+    {
+      "title": {
+        "en": "European Commission Accepts X's Action Plan Under Digital Services Act",
+        "fr": "La Commission européenne accepte le plan d'action de X dans le cadre du DSA"
+      },
+      "description": {
+        "en": "The European Commission accepted X's action plan to comply with the Digital Services Act (DSA). X has committed to improving its advertisement registry search capabilities, facilitating free access to public data for academic researchers, and allowing web scraping for scientific research.",
+        "fr": "La Commission européenne a validé le plan d'action d'X pour se conformer au Règlement sur les services numériques (DSA). À la suite d'une amende infligée fin 2025 pour infractions systémiques, X s'est engagé à améliorer son registre publicitaire avec de meilleures fonctionnalités de recherche, à faciliter l'accès gratuit des chercheurs éligibles aux données publiques et à autoriser contractuellement le scraping à but de recherche scientifique."
+      },
+      "organisation": {
+        "en": ["European Commission"],
+        "fr": ["Commission européenne"]
+      },
+      "jurisdiction": {
+        "en": ["European Union"],
+        "fr": ["Union européenne"]
+      },
+      "references": {
+        "en": ["Digital Services Act (DSA) Compliance"],
+        "fr": ["Conformité au Règlement sur les services numériques (DSA)"]
+      },
+      "tags": ["DSA", "X", "European Commission", "Social Media Regulation"],
+      "sources": ["https://digital-strategy.ec.europa.eu/en/news/commission-accepts-xs-action-plan-comply-digital-services-act"],
+      "date": "2026-07-16"
+    },
+    {
+      "title": {
+        "en": "Implementing Regulation (EU) 2026/1778 on Digital Product Passport",
+        "fr": "Règlement d'exécution (UE) 2026/1778 sur le Passeport Numérique des Produits"
+      },
+      "description": {
+        "en": "Publication of the implementing regulation defining technical and security modalities for the European Digital Product Passport (DPP) registry by February 2027. It enforces eIDAS-compliant electronic signatures and stamps for secure operator identification, log preservation, and secure access.",
+        "fr": "Publication du règlement d'exécution définissant les modalités techniques et de sécurité pour la mise en œuvre du registre européen du passeport numérique des produits (DPP) d'ici février 2027. Le texte impose des mécanismes de vérification d'identité des opérateurs économiques via des signatures et des cachets électroniques qualifiés (norme eIDAS)."
+      },
+      "organisation": {
+        "en": ["European Commission"],
+        "fr": ["Commission européenne"]
+      },
+      "jurisdiction": {
+        "en": ["European Union"],
+        "fr": ["Union européenne"]
+      },
+      "references": {
+        "en": ["Implementing Regulation (EU) 2026/1778"],
+        "fr": ["Règlement d'exécution (UE) 2026/1778"]
+      },
+      "tags": ["Digital Product Passport", "Ecodesign", "Registry", "European Commission"],
+      "sources": ["https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202601778"],
+      "date": "2026-07-16"
+    },
+    {
+      "title": {
+        "en": "ESRB Warning on Systemic Cyber Risks from Frontier AI Models",
+        "fr": "Avertissement de l'ESRB sur les risques cyber systémiques liés aux modèles d'IA de pointe"
+      },
+      "description": {
+        "en": "The European Systemic Risk Board (ESRB) issued a formal warning regarding systemic cyber risks driven by Frontier AI Models (FAIMs). It outlines their capability to automate vulnerability discovery and exploit generation, which threatens the operational resilience of critical financial structures.",
+        "fr": "L'ESRB a émis un avertissement formel concernant les risques systémiques cyber induits par le développement rapide des modèles d'IA de pointe (Frontier AI Models - FAIMs). L'organisme souligne que ces modèles permettent d'automatiser entièrement la découverte de vulnérabilités et la génération d'exploits de haut niveau, menaçant la résilience opérationnelle des infrastructures financières critiques."
+      },
+      "organisation": {
+        "en": ["European Systemic Risk Board (ESRB)"],
+        "fr": ["Comité européen du risque systématique (ESRB)"]
+      },
+      "jurisdiction": {
+        "en": ["European Union"],
+        "fr": ["Union européenne"]
+      },
+      "references": {
+        "en": ["ESRB Opinion/2026/3"],
+        "fr": ["Avis ESRB/2026/3"]
+      },
+      "tags": ["Systemic Cyber Risk", "Frontier AI Models", "Financial Stability", "Operational Resilience"],
+      "sources": ["https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026Y03795"],
+      "date": "2026-07-16"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Coca-Cola (Fairlife dairy production)",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Industry_and_Manufacturing", "Agriculture_and_Environment"],
+        "fr": ["Industrie_et_Manufacture", "Agriculture_et_Environnement"]
+      },
+      "description": {
+        "en": "A ransomware attack struck Coca-Cola's subsidiary Fairlife, forcing a complete halt of dairy production across several US facilities and demonstrating supply chain vulnerability.",
+        "fr": "Une cyberattaque par rançongiciel a frappé la filiale Fairlife de Coca-Cola, forçant l'arrêt complet de la production laitière dans plusieurs usines aux États-Unis. Cet incident illustre la vulnérabilité persistante des chaînes d'approvisionnement agroalimentaires critiques et l'impact immédiat des rançongiciels sur les opérations physiques."
+      },
+      "mitre_ttps": ["T1486", "T1566"],
+      "recommandations": [
+        {
+          "en": "Enforce strict network isolation between administrative IT and operational technology (OT) / production environments.",
+          "fr": "Séparer de manière étanche les réseaux informatiques administratifs (IT) des réseaux de contrôle industriel et de production (OT)."
+        },
+        {
+          "en": "Deploy firewalls limiting administrative and remote management protocols (SMB/PsExec) across workstation segments.",
+          "fr": "Mettre en œuvre des plans de filtrage de ports stricts limitant l'usage de protocoles de gestion à distance (SMB/PsExec) entre postes de travail."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain offline, air-gapped backups of production schedule configurations.",
+            "Establish factory operations business continuity plans (BCP) in manual degraded mode.",
+            "Perform regular restore exercises for the entire factory infrastructure."
+          ],
+          "fr": [
+            "Disposer de sauvegardes hors ligne et déconnectées (air-gapped) des systèmes d'ordonnancement de la production.",
+            "Établir un plan de continuité d'activité (PCA) en mode dégradé manuel pour les usines de production laitière.",
+            "Réaliser des exercices réguliers de restauration de l'infrastructure d'usine complète."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor abnormal privilege escalation attempts on domain controllers linked to OT networks.",
+            "Detect deployment of remote administration utilities (PsExec, Cobalt Strike) on application hosts.",
+            "Monitor endpoint security agent deactivation events."
+          ],
+          "fr": [
+            "Surveiller les activités anormales d'escalade de privilèges sur les contrôleurs de domaine connectés aux réseaux industriels (OT).",
+            "Détecter le déploiement soudain d'outils d'administration à distance (PsExec, Cobalt Strike) sur les serveurs applicatifs.",
+            "Rechercher la désactivation massive des agents de sécurité d'extrémité."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate the affected Fairlife factory network logically and physically from the corporate enterprise.",
+            "Suspend corporate VPN links and mail routing for partner access to halt propagation.",
+            "Capture system snapshots of encrypted servers prior to power downs."
+          ],
+          "fr": [
+            "Isoler physiquement et logiquement le réseau de l'usine Fairlife du réseau d'entreprise général.",
+            "Suspendre temporairement les liaisons de messagerie et de VPN d'accès partenaires pour stopper la propagation.",
+            "Prendre des instantanés (snapshots) des serveurs chiffrés avant d'initier la mise hors tension."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Validate industrial scheduler data integrity from validated offline backups.",
+            "Remediate initial entry points (VPN credentials or email gateways).",
+            "Review technology dependencies between the parent company's IT and subsidiary operations systems."
+          ],
+          "fr": [
+            "Vérifier l'intégrité des données restaurées à partir de sauvegardes saines de l'ordonnancement industriel.",
+            "Remédier au point d'entrée initial (identifiants d'accès VPN ou passerelles d'accès e-mail).",
+            "Revoir les dépendances technologiques entre les systèmes IT de la maison mère Coca-Cola et les systèmes d'exploitation des filiales."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for volume shadow copy deletion attempts (vssadmin) in Windows endpoints security logs."
+          ],
+          "fr": [
+            "Détection d'efforts d'acteurs de rançongiciel visant à détruire les clichés instantanés de volume sous Windows avant chiffrement."
+          ]
+        }
+      },
+      "tags": ["Ransomware", "Logistique", "Secteur Agroalimentaire", "États-Unis"],
+      "sources": ["https://www.bleepingcomputer.com/news/security/coca-cola-says-fairlife-ransomware-attack-halts-us-dairy-production/"],
+      "date": "2026-07-16"
+    },
+    {
+      "victim": "23andMe",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Healthcare_and_Life_Sciences"],
+        "fr": ["Sante_et_Sciences_de_la_vie"]
+      },
+      "description": {
+        "en": "23andMe agreed to pay $18 million to settle lawsuits relating to a massive genetic data breach. The compromise resulted from a credential stuffing campaign targeting accounts, which was further abused to extract ancestral databases.",
+        "fr": "23andMe a accepté de verser 18 millions de dollars pour clore les poursuites liées à la fuite massive de données génétiques survenue à la suite d'une attaque de credential stuffing. Cette fuite avait ciblé des informations de profils généalogiques sensibles. L'incident met en évidence la lourde responsabilité financière et de réputation inhérente au stockage de données biométriques et génétiques."
+      },
+      "mitre_ttps": ["T1110.001", "T1212"],
+      "recommandations": [
+        {
+          "en": "Prohibit login mechanisms relying solely on password combinations for medical-related databases.",
+          "fr": "Interdire les fonctionnalités d'authentification reposant uniquement sur un couple identifiant / mot de passe pour les bases de données à caractère médical."
+        },
+        {
+          "en": "Deploy a Web Application Firewall (WAF) with behavioral analysis capabilities to identify scraping behavior.",
+          "fr": "Mettre en place un pare-feu applicatif (WAF) doté de capacités d'analyse comportementale avancée pour détecter les comportements d'utilisateurs anormaux."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Implement account lockout and anti-bot defense policies on all authentication interfaces.",
+            "Enforce multi-factor authentication (MFA) on all user accounts containing health or genetic data.",
+            "Encrypt at rest and partition highly sensitive relational profile tables."
+          ],
+          "fr": [
+            "Mettre en place des politiques strictes de verrouillage de comptes et d'analyse de comportement (anti-bot) sur les formulaires d'authentification.",
+            "Rendre obligatoire l'authentification multifacteur (MFA) pour tous les comptes utilisateurs accédant à des données de santé ou génétiques.",
+            "Crypter au repos et partitionner les tables contenant des données hautement sensibles."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor authentication failures spikes indicative of credential stuffing or automated brute force.",
+            "Detect massive API requests for genealogical profiles extraction originating from individual client tokens.",
+            "Analyze incoming traffic patterns originating from residential VPN or proxy endpoints."
+          ],
+          "fr": [
+            "Surveiller les pics anormaux de tentatives d'authentification infructueuses (brute-force ou credential stuffing).",
+            "Détecter les requêtes massives d'extraction de données de profils et d'arbres généalogiques d'utilisateurs par un seul compte de service ou client.",
+            "Analyser le trafic provenant d'adresses IP ou de nœuds VPN résidentiels inhabituels."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Block suspect API tokens and prompt for step-up multi-factor authentication.",
+            "Trigger a forced password reset across all impacted or suspected profiles.",
+            "Temporarily restrict and isolate inter-profile data linking capabilities."
+          ],
+          "fr": [
+            "Bloquer temporairement les requêtes d'extraction d'API suspectes et imposer un re-challenge d'authentification fort.",
+            "Forcer la réinitialisation des mots de passe pour tous les comptes d'utilisateurs affectés ou suspectés d'être la cible de l'attaque.",
+            "Restreindre ou suspendre la fonctionnalité de liaison des données génétiques inter-profils."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Notify data protection regulators (CNIL, FTC) and victims regarding the scope of the leak.",
+            "Apply rate limiting and threshold controls on authentication API components.",
+            "Setup compensation processes and identity monitoring assistance programs."
+          ],
+          "fr": [
+            "Notifier de manière transparente les autorités de régulation (CNIL, FTC) et les victimes de la fuite de données.",
+            "Remédier aux mécanismes de limitation du débit (rate limiting) de l'API de connexion.",
+            "Provisionner les fonds d'indemnisation et collaborer avec les services de surveillance d'identité."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Query WAF logs to isolate automated bulk login attempts from individual IP addresses."
+          ],
+          "fr": [
+            "Identification de tentatives automatisées de connexion en masse provenant d'adresses IP uniques, indicatrices de credential stuffing."
+          ]
+        }
+      },
+      "tags": ["Data Breach", "Settlement", "Genetics", "Credential Stuffing"],
+      "sources": ["https://www.bleepingcomputer.com/news/security/23andme-to-pay-18-million-in-new-genetics-data-breach-settlement/"],
+      "date": "2026-07-16"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-15409",
+      "euvd_id": "unknown",
+      "cisa_kev": "true",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:h:sonicwall:sma1000:*:*:*:*:*:*:*:*",
+      "product": "SMA1000 Series (6210, 7210, 8200v)",
+      "vendor": "SonicWall",
+      "description": {
+        "en": "A critical Server-Side Request Forgery (SSRF) vulnerability in the Appliance Work Place interface of SonicWall SMA1000 accessible via HTTPS (port 443). Located within the /wsproxy functionality, it allows unauthenticated remote attackers to force the device to issue requests to arbitrary internal resources, actively exploited to compromise Active Directory.",
+        "fr": "Une faille critique de type SSRF dans l'interface Appliance Work Place de SonicWall SMA1000 accessible via HTTPS (port 443 par défaut). L'exploitation réside dans la fonctionnalité /wsproxy, qui permet à un attaquant distant non authentifié de forcer l'appareil à émettre des requêtes vers des destinations arbitraires et internes. Cette faille est activement enchaînée avec d'autres vulnérabilités par des cybercriminels pour compromettre totalement la passerelle comme backdoor vers l'Active Directory."
+      },
+      "mitre_ttps": ["T1190", "T1556"],
+      "recommandations": [
+        {
+          "en": "Apply emergency hotfixes provided by SonicWall for platforms 12.4.3 and 12.5.0.",
+          "fr": "Appliquer les correctifs d'urgence fournis par SonicWall pour les versions de plateforme-hotfix 12.4.3 et 12.5.0."
+        },
+        {
+          "en": "Restrict public network exposure of administration interfaces.",
+          "fr": "Restreindre l'exposition externe des interfaces d'administration."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Document exposed VPN appliances interfaces and enforce network segmentations.",
+            "Verify presence of continuous backups of VPN configurations."
+          ],
+          "fr": [
+            "Documenter les interfaces des appliances VPN exposées et appliquer une segmentation réseau.",
+            "Vérifier la présence de sauvegardes régulières des configurations VPN."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor web logs for unexpected '/wsproxy' paths requests.",
+            "Analyze anomalous outbound requests originating from the VPN appliance."
+          ],
+          "fr": [
+            "Surveiller les journaux web pour détecter les requêtes suspectes sur le chemin '/wsproxy'.",
+            "Analyser les requêtes sortantes anormales émises par l'appareil VPN."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Temporarily isolate or restrict internet access to the compromised SMA1000 appliance.",
+            "Revoke sessions and keys associated with compromised admin interfaces."
+          ],
+          "fr": [
+            "Isoler temporairement ou restreindre l'accès internet de l'appliance SMA1000 compromise.",
+            "Révoquer les sessions et clés d'administration associées aux interfaces compromises."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Update firmware to hotfixed versions and audit Active Directory accounts created during exposure.",
+            "Conduct full credential rotation for admin accounts."
+          ],
+          "fr": [
+            "Mettre à jour le micrologiciel vers les versions corrigées et auditer les comptes AD créés durant l'exposition.",
+            "Effectuer une rotation complète des identifiants d'administration."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Query proxy logs for directory traversal and SSRF payload attempts over port 443."
+          ],
+          "fr": [
+            "Rechercher dans les logs de proxy les tentatives de traversée de répertoire et d'injection SSRF sur le port 443."
+          ]
+        }
+      },
+      "tags": ["SonicWall", "VPN", "Zero-day", "SSRF", "CISA KEV"],
+      "sources": [
+        "https://fieldeffect.com/blog/sonicwall-sma1000-zero-days-exploited-targeted-attacks",
+        "https://socprime.com/blog/cve-2026-15410-and-cve-2026-15409-analysis/"
+      ],
+      "date": "2026-07-16"
+    },
+    {
+      "cve_id": "CVE-2026-42533",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "8.2",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:f5:nginx:*:*:*:*:*:*:*:*",
+      "product": "NGINX Open Source / NGINX Plus",
+      "vendor": "F5",
+      "description": {
+        "en": "A heap buffer overflow vulnerability in NGINX's map directive processing when regular expression (regex) processing references capture variables in a specific order, enabling remote unauthenticated attackers to trigger DoS or potentially execute arbitrary code.",
+        "fr": "Une vulnérabilité de dépassement de capacité de mémoire tas (Heap Buffer Overflow) dans le traitement de la directive 'map' par NGINX lorsqu'un traitement par expressions régulières (regex) référence des variables de capture dans un ordre spécifique. Un attaquant distant non authentifié peut soumettre des requêtes HTTP spécifiquement formées pour corrompre la mémoire du processus de travail (worker process) de NGINX, provoquant un déni de service (crash) ou potentiellement l'exécution de code arbitraire."
+      },
+      "mitre_ttps": ["T1190", "T1499.004"],
+      "recommandations": [
+        {
+          "en": "Upgrade NGINX Open Source and NGINX Plus to fixed versions released by F5.",
+          "fr": "Mettre à niveau NGINX Open Source et NGINX Plus vers les versions corrigées diffusées par F5."
+        },
+        {
+          "en": "Review configuration files to identify complex 'map' directives featuring nested capture variables.",
+          "fr": "Passer en revue les fichiers de configuration de NGINX pour identifier l'utilisation de directives 'map' complexes avec des variables de regex imbriquées."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain an updated inventory of NGINX configuration profiles across the infrastructure.",
+            "Apply security hardening standards for reverse proxies."
+          ],
+          "fr": [
+            "Maintenir un inventaire à jour des profils de configuration NGINX sur l'infrastructure.",
+            "Appliquer des standards de durcissement sur les reverse proxies."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor NGINX worker process crash events and core dumps.",
+            "Detect abnormal HTTP requests containing complex, malformed regex patterns."
+          ],
+          "fr": [
+            "Surveiller les plantages des processus de travail (worker process) NGINX et les dumps de mémoire.",
+            "Détecter les requêtes HTTP anormales contenant des regex complexes ou malformées."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Temporarily disable impacted 'map' directives if upgrading is delayed.",
+            "Implement WAF rules to drop traffic featuring malicious pattern structures."
+          ],
+          "fr": [
+            "Désactiver temporairement les directives 'map' concernées si la mise à jour est différée.",
+            "Appliquer des règles WAF pour rejeter le trafic exploitant ces structures de patterns."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Deploy the latest NGINX security packages and verify process stability.",
+            "Run automated tests to ensure no regression on services relying on rewrites."
+          ],
+          "fr": [
+            "Déployer les derniers paquets de sécurité NGINX et vérifier la stabilité du service.",
+            "Exécuter des tests automatisés pour valider l'absence de régression sur les services."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Query system logs for memory corruption indicators (SIGSEGV) in NGINX processes."
+          ],
+          "fr": [
+            "Rechercher dans les logs système les indicateurs de corruption mémoire (SIGSEGV) liés aux processus NGINX."
+          ]
+        }
+      },
+      "tags": ["NGINX", "Heap Overflow", "DoS", "F5", "Proxy"],
+      "sources": [
+        "https://socprime.com/blog/cve-2026-42533-analysis/",
+        "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0894/"
+      ],
+      "date": "2026-07-16"
+    },
+    {
+      "cve_id": "CVE-2026-53412",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:zoom:zoom:*:*:*:*:*:*:*:*",
+      "product": "Zoom Desktop Client, Zoom VDI Client, Meeting SDK for Windows",
+      "vendor": "Zoom",
+      "description": {
+        "en": "An improper input validation flaw affecting Zoom clients for Windows. Unauthenticated remote attackers with network access can exploit this vulnerability to achieve complete Account Takeover (ATO) without victim interaction.",
+        "fr": "Une faille critique de validation d'entrée non sécurisée affecte les clients Zoom pour Windows. Un attaquant distant non authentifié disposant d'un accès réseau peut exploiter cette faille pour réaliser une prise de contrôle totale de compte d'utilisateur (Account Takeover - ATO) sans aucune interaction de la victime."
+      },
+      "mitre_ttps": ["T1190", "T1078"],
+      "recommandations": [
+        {
+          "en": "Apply immediate software updates published by Zoom for Workplace, VDI Client, and Meeting SDK for Windows.",
+          "fr": "Appliquer immédiatement les mises à jour logicielles correctives publiées par Zoom pour Workplace, VDI Client et Meeting SDK pour Windows."
+        },
+        {
+          "en": "Deploy software updates centrally across all enterprise workstations.",
+          "fr": "Déployer les mises à jour de manière centralisée pour toutes les stations de travail."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain an inventory of installed Zoom clients and active SDK deployments.",
+            "Establish automated software patch deployment channels."
+          ],
+          "fr": [
+            "Maintenir un inventaire des clients Zoom installés et des déploiements SDK actifs.",
+            "Mettre en place des canaux automatisés de déploiement de correctifs."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Identify suspicious remote connection attempts originating from or targeting Zoom API endpoints.",
+            "Monitor accounts for unexpected profile updates or session creations."
+          ],
+          "fr": [
+            "Identifier les tentatives de connexions distantes suspectes ciblant les API Zoom.",
+            "Surveiller les profils pour détecter des modifications ou des créations de sessions inattendues."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Revoke sessions for suspected compromised accounts immediately.",
+            "Restrict Zoom local execution or block its network ports if updates cannot be applied."
+          ],
+          "fr": [
+            "Révoquer immédiatement les sessions des comptes suspectés de compromission.",
+            "Restreindre l'exécution de Zoom ou bloquer ses ports réseau si les mises à jour ne peuvent être appliquées."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Enforce client updates across all hosts before restoring standard access rights.",
+            "Perform security audits of user profiles and connected services."
+          ],
+          "fr": [
+            "Imposer la mise à jour des clients sur tous les postes avant de restaurer les droits d'accès.",
+            "Effectuer un audit de sécurité des profils utilisateurs et des services connectés."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search login histories for multiple authentication endpoints anomalies within short intervals."
+          ],
+          "fr": [
+            "Rechercher dans l'historique des connexions des anomalies de terminaux d'authentification multiples sur de courts intervalles."
+          ]
+        }
+      },
+      "tags": ["Zoom", "Account Takeover", "Improper Input Validation", "Windows"],
+      "sources": [
+        "https://securityaffairs.com/195454/security/zoom-fixes-cve-2026-53412-a-critical-account-takeover-bug.html",
+        "https://www.security.nl/posting/945177/"
+      ],
+      "date": "2026-07-16"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "Compromise of Brazilian Gov Infrastructure by PhantomEnigma",
+        "fr": "Abus d'infrastructures brésiliennes gouvernementales compromises par l'acteur PhantomEnigma"
+      },
+      "description": {
+        "en": "PhantomEnigma actively targets Brazilian institutions by leveraging compromised .gov.br and .jus.br mailbox credentials to bypass email authentication standards, dropping a sophisticated Node.js backdoor compiled within a modified Boostnote application.",
+        "fr": "L'éditeur de bac à sable ANY.RUN a identifié une campagne active de PhantomEnigma, combinant la compromission de boîtes aux lettres et de sous-domaines .gov.br et .jus.br légitimes avec des leurres d'ingénierie sociale basés sur de faux documents d'enquête de la police civile. L'attaque s'appuie sur un backdoor complexe écrit en Node.js, compilé en Inno Setup et dissimulé dans une application Boostnote modifiée."
+      },
+      "threat_actor": "PhantomEnigma",
+      "threat_actor_origin": "Brazil",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Finance", "Government_and_Defense"],
+        "fr": ["Finance", "Gouvernement_et_Defense"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": ["195.177.94.103"],
+        "IPv6": [],
+        "DOMAIN": ["zsxocjarsate.com", "policiacivilmg.com"],
+        "EMAIL": [],
+        "HASH_SHA256": ["71f69978667dc421e7edf8885e9f3bde9dd527d9f7974228c9a6eac84c2ab71c"],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": ["Boostnote", "Inno Setup", "PowerShell"]
+      },
+      "mitre_ttps": ["T1566.002", "T1204.002", "T1059.001", "T1547.001"],
+      "analyse": {
+        "en": "PhantomEnigma uses authentic PDF lures that redirect users to ClickFix pages downloading an installer wrapper compiled in Delphi/Inno Setup. Double-layer encryption obfuscates the main JavaScript payload, which achieves persistence via Windows Registry Run keys.",
+        "fr": "La chaîne d'infection comprend l'envoi d'un courriel authentifié (qui passe avec succès les validations SPF/DKIM/DMARC) contenant une fausse injonction PDF. Le PDF redirige la victime vers un domaine de filtrage IP. Si le visiteur est considéré comme une victime légitime, il est redirigé vers une page ClickFix téléchargeant un binaire Delphi/Inno Setup qui déploie un Boostnote malveillant avec un injecteur JavaScript persistant."
+      },
+      "recommandations": [
+        {
+          "en": "Configure email gateways to filter and block PowerShell execution commands triggered by PDF investigation lures.",
+          "fr": "Auditer les passerelles de messagerie pour filtrer et bloquer l'exécution de scripts PowerShell distants depuis des fichiers de leurre d'enquête de la police."
+        },
+        {
+          "en": "Deploy endpoint behavioral policies targeting unauthorized child processes spawned by Inno Setup installers.",
+          "fr": "Mettre en œuvre des règles de détection comportementale pour les processus enfants inattendus issus d'utilitaires d'installation de type Inno Setup."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Establish baseline for administrative installer execution.",
+            "Deploy SIEM rules flagging silent Inno Setup executions in user Temp directories."
+          ],
+          "fr": [
+            "Établir une base de référence d'exécution de processus légitimes d'entreprise excluant l'utilisation de Boostnote en local.",
+            "Configurer les règles SIEM pour lever des alertes immédiates sur l'exécution silencieuse d'installateurs Delphi Inno Setup dans les répertoires temporaires d'utilisateurs."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor PowerShell executions initiated by PDF documents or links.",
+            "Alert on DNS queries to policiacivilmg[.]com."
+          ],
+          "fr": [
+            "Détecter l'exécution de processus PowerShell à partir de documents PDF ou de liens gouvernementaux brésiliens inattendus.",
+            "Surveiller les connexions DNS/IP vers les domaines de l'acteur, comme policiacivilmg[.]com."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate infected hosts from the network logical segment.",
+            "Block outbound connections to identified C2 IP (195.177.94.103)."
+          ],
+          "fr": [
+            "Isoler immédiatement l'appareil infecté du réseau logique de l'entreprise.",
+            "Bloquer l'accès réseau sortant vers les adresses IP de commande et contrôle connues de PhantomEnigma (ex: 195.177.94[.]103)."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Analyze logs to identify potential exfiltration of credentials.",
+            "Rebuild endpoints from standard corporate images to eliminate backdoors."
+          ],
+          "fr": [
+            "Analyser les journaux d'activité pour documenter l'exfiltration éventuelle d'identifiants bancaires d'entreprise.",
+            "Restaurer le système à partir d'une image certifiée saine pour éliminer toute trace de backdoor Node.js persistant."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for 'Procuracao_Digital.exe' or 'OficioDigital.exe' strings in processes logs."
+          ],
+          "fr": [
+            "Recherche de l'exécution initiale des binaires de livraison d'artefacts de PhantomEnigma sur les postes d'extrémité de l'entreprise."
+          ]
+        }
+      },
+      "tags": ["PhantomEnigma", "Brazil", "Phishing", "Backdoor", "Node.js"],
+      "sources": ["https://any.run/cybersecurity-blog/phantomenigma-research/"],
+      "date": "2026-07-16"
+    },
+    {
+      "title": {
+        "en": "ClickLock Stealer: Aggressive macOS Malware Targeting Crypto Wallets",
+        "fr": "ClickLock Stealer : Un nouveau malware macOS agressif visant les portefeuilles de crypto-monnaies"
+      },
+      "description": {
+        "en": "A modular macOS information stealer active in Europe and the Middle East, delivered via 'ClickFix' templates, which locks user application windows to force the input of session credentials.",
+        "fr": "Découverte d'un voleur d'informations modulaire ciblant les utilisateurs de macOS en Europe et au Moyen-Orient. Distribué via des pages de type 'ClickFix', le malware incite l'utilisateur à exécuter une commande PowerShell/Terminal qui déploie quatre modules malveillants distincts. ClickLock emploie une technique de verrouillage ('locker') agressive, forçant la fermeture de toutes les fenêtres d'applications visibles à l'exception des dialogues de mot de passe système, forçant ainsi l'utilisateur à divulguer son mot de passe de session."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Technology_and_Telecom", "Finance"],
+        "fr": ["Technologie_et_Telecom", "Finance"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": ["otx.alienvault.com", "bleepingcomputer.com"],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": ["GSocket", "PowerShell"]
+      },
+      "mitre_ttps": ["T1566", "T1204.002", "T1003"],
+      "analyse": {
+        "en": "The malware leverages terminal commands executed via social engineering to deploy GSocket tunnels, bypass local firewalls, and extract keychain credentials alongside 31 cryptocurrency browser extensions data.",
+        "fr": "Le vecteur initial repose sur l'exécution volontaire par ingénierie sociale d'une commande via le Terminal macOS. Une fois en place, le malware utilise GSocket pour maintenir un tunnel de communication chiffré inversé persistant, contournant les pare-feux locaux, et extrait l'ensemble des clés cryptographiques stockées dans le trousseau d'accès macOS (Keychain), ciblant également 31 extensions de navigateurs dédiées aux portefeuilles de crypto-monnaies."
+      },
+      "recommandations": [
+        {
+          "en": "Block or monitor shell commands copy-pasted from web browsers into terminal interfaces.",
+          "fr": "Désactiver ou surveiller strictement l'exécution de commandes système copiées depuis des sites Web externes au sein de l'utilitaire Terminal."
+        },
+        {
+          "en": "Implement macOS endpoint detection rules targeting anomalous GSocket injections.",
+          "fr": "Mettre en œuvre des solutions d'EDR macOS avancées capables de détecter les injections d'API GSocket ou les arrêts forcés inexpliqués d'applications légitimes."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Block unsigned Keychain queries via enterprise endpoint security rules.",
+            "Limit installation of unapproved browser extensions on corporate profiles."
+          ],
+          "fr": [
+            "Configurer les agents de sécurité d'extrémité d'entreprise pour bloquer les tentatives de requêtes Keychain non signées.",
+            "Établir un registre d'applications macOS d'entreprise valides et restreindre l'exécution d'utilitaires tiers non approuvés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect outbound network anomalies from active background GSocket processes.",
+            "Monitor intense termination calls ('kill') on active visible corporate applications."
+          ],
+          "fr": [
+            "Détecter l'activité réseau anormale émanant de processus GSocket d'arrière-plan vers des serveurs externes.",
+            "Surveiller l'utilisation intensive des commandes système de type 'kill' sur des processus d'applications d'entreprise visibles."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Disconnect the affected macOS client from any network logic domain.",
+            "Revoke active corporate credentials and session tokens stored on the terminal."
+          ],
+          "fr": [
+            "Isoler immédiatement le poste macOS de tout réseau d'entreprise ou domestique.",
+            "Révoquer l'ensemble des jetons de sessions et secrets d'API d'entreprise enregistrés sur l'appareil."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Capture system image for forensical analysis of active persistence components.",
+            "Wipe and reinstall macOS endpoints to validated enterprise baselines."
+          ],
+          "fr": [
+            "Réaliser une sauvegarde d'image complète pour analyse forensique de la persistence installée.",
+            "Réinitialiser et restaurer l'appareil macOS à ses paramètres d'usine sécurisés."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for active GSocket tunnels in system daemon profiles."
+          ],
+          "fr": [
+            "Recherche de connexions SSH ou de tunnels asynchrones gérés par l'utilitaire GSocket dissimulé dans les journaux système."
+          ]
+        }
+      },
+      "tags": ["macOS", "ClickLock", "Keychain", "GSocket", "Crypto"],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/new-clicklock-macos-malware-traps-users-into-revealing-login-password/",
+        "https://social.raytec.co/@techbot/116932520949603080"
+      ],
+      "date": "2026-07-16"
+    },
+    {
+      "title": {
+        "en": "OkoBot: A New Data Stealing Framework Deploying Multiple Payloads",
+        "fr": "OkoBot : Un nouveau framework de vol de données déployant de multiples charges utiles"
+      },
+      "description": {
+        "en": "A highly modular data theft framework capable of pushing and loading up to 20 distinct payloads in memory or disk, focusing on exfiltrating credentials and crypto wallets.",
+        "fr": "Le framework malveillant OkoBot a fait son apparition, intégrant une architecture de distribution de charges utiles hautement sophistiquée. Capable de charger et d'exécuter jusqu'à 20 composants malveillants distincts en mémoire ou sur disque, il se concentre sur l'exfiltration de documents confidentiels, d'identifiants de navigateurs et de portefeuilles de crypto-monnaies d'entreprise."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Technology_and_Telecom", "Business_Services"],
+        "fr": ["Technologie_et_Telecom", "Services_aux_Entreprises"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": ["bleepingcomputer.com"],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": ["PowerShell"]
+      },
+      "mitre_ttps": ["T1204.002", "T1003", "T1102"],
+      "analyse": {
+        "en": "OkoBot performs detailed environment profiling on host clients before pulling specific payloads (such as stealers and miners) from its C2 infrastructure. It implements robust anti-analysis and sandboxing controls.",
+        "fr": "OkoBot repose sur un chargeur modulaire qui évalue l'environnement de la victime avant de solliciter l'infrastructure C2 pour obtenir des scripts PowerShell, des binaires d'infostealers commodity et des mineurs de crypto-monnaies. Il intègre de fortes fonctions anti-analyse et de détection de bacs à sable."
+      },
+      "recommandations": [
+        {
+          "en": "Restrict administration interpreters (PowerShell, Cmd, Wscript) on endpoints without administrative needs.",
+          "fr": "Restreindre l'exécution d'utilitaires système (PowerShell, CMD, wscript) sur les hôtes d'utilisateurs n'en ayant pas la nécessité administrative."
+        },
+        {
+          "en": "Monitor CPU usage levels to identify stealth mining software.",
+          "fr": "Mettre en place des mécanismes de surveillance de l'activité CPU pour identifier le minage furtif d'actifs numériques."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Audit DNS profiles for emerging C2 resolution attempts.",
+            "Deploy EDR rules blocking memory process hollowing on browser processes."
+          ],
+          "fr": [
+            "Auditer régulièrement les configurations DNS locales pour identifier l'existence de requêtes vers des noms de domaine de C2 OkoBot naissants.",
+            "Déployer des profils EDR renforcés interdisant les injections de mémoire (process hollowing) sur les applications de navigateurs d'entreprise."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect DNS spikes targeting anonymous hosting segments.",
+            "Alert on unauthorized process reads targeting Chrome configuration paths."
+          ],
+          "fr": [
+            "Identifier des pics inhabituels de requêtes DNS vers des domaines d'hébergement gratuits ou anonymes.",
+            "Surveiller l'accès simultané d'applications non approuvées aux dossiers de configuration de navigateurs (AppData\\Local\\Google\\Chrome)."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate identified endpoints from logical internal segments.",
+            "Suspend affected AD accounts and kill active OkoBot memory threads."
+          ],
+          "fr": [
+            "Isoler le terminal identifié comme infecté de toute communication réseau locale et externe.",
+            "Suspendre temporairement les profils d'utilisateurs Windows connectés à la station affectée et détruire les fichiers sources."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Run full enterprise scans looking for OkoBot file artifacts.",
+            "Rotate stored credentials across affected workstations."
+          ],
+          "fr": [
+            "Réaliser un balayage complet (scan) de l'ensemble du parc informatique à la recherche de signatures d'OkoBot.",
+            "Réinitialiser les jetons d'accès et mots de passe système stockés localement sur le poste victime."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Detect direct access attempts to browser 'Login Data' database profiles."
+          ],
+          "fr": [
+            "Identification d'accès directs de processus non légitimes aux bases de données d'identifiants stockées de Google Chrome."
+          ]
+        }
+      },
+      "tags": ["OkoBot", "Infostealer", "Crypto", "PowerShell", "Framework"],
+      "sources": ["https://www.bleepingcomputer.com/news/security/new-okobot-framework-deploys-20-payloads-to-steal-data-crypto/"],
+      "date": "2026-07-16"
+    },
+    {
+      "title": {
+        "en": "TELEPUZ: New Malware-As-A-Service Distributed via ClickFix-Vidar Waves",
+        "fr": "TELEPUZ : Un nouveau malware as a service distribué par des vagues ClickFix-Vidar"
+      },
+      "description": {
+        "en": "A modular and lightweight MaaS payload named TELEPUZ distributed via ClickFix chains that exploit social engineering to run shell commands, delivering a Go-based Vidar variant.",
+        "fr": "Le laboratoire de sécurité d'Elastic suit une nouvelle menace modulaire et légère nommée TELEPUZ. Active depuis fin avril 2026, cette charge utile est distribuée via des chaînes ClickFix qui exploitent l'ingénierie sociale pour forcer l'utilisateur à exécuter une commande Windows shell. La charge utile intermédiaire est une variante en langage Go du célèbre stealer Vidar, qui télécharge ensuite le stager TELEPUZ (install.exe) et le binaire principal (telepuz.dll)."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Finance", "Retail"],
+        "fr": ["Finance", "Commerce_et_Consommation"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": ["cal.joycedoula.com.br", "cal.snehamumbai.org", "codebasecode.com"],
+        "EMAIL": [],
+        "HASH_SHA256": ["03fa348b70819296c958c842e7646b3b7efe5fa217ed5098143003c47995a746", "580b441e2961739fd26e54e0a0ea08351cb10a51839519fc722cfa39ecd0c954"],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": ["Vidar"]
+      },
+      "mitre_ttps": ["T1204.002", "T1548.002", "T1562.001", "T1071.001"],
+      "analyse": {
+        "en": "TELEPUZ is characterized by garbage instructions to hinder reversing, a custom RC4 string encryption, and indirect syscalls mapped to a clean memory copy of ntdll.dll. It bypasses Windows UAC via elevation COM monikers and patches AMSI/ETW.",
+        "fr": "TELEPUZ se distingue par l'utilisation d'instructions de masquage ('garbage instructions') pour freiner l'analyse inversée, un chiffrement de chaînes de caractères RC4 personnalisé, et une initialisation d'appels système indirects (indirect syscalls) via le mappage en mémoire d'une copie saine de ntdll.dll. Il utilise également des mécanismes de détection de bacs à sable (anti-VM), désactive AMSI/ETW par des méthodes de patch de fonctions mémoire (AmsiScanBuffer, EtwEventWrite) et contourne le contrôle de compte d'utilisateur (UAC) Windows via des monikers d'élévation COM."
+      },
+      "recommandations": [
+        {
+          "en": "Block unencrypted WebSockets communication protocols to unknown external hosts.",
+          "fr": "Bloquer l'utilisation du protocole de communication WebSockets non chiffré ou chiffré vers des serveurs inconnus à l'échelle du réseau d'entreprise."
+        },
+        {
+          "en": "Restrict running rundll32.exe from non-standard directory locations.",
+          "fr": "Restreindre l'exécution d'utilitaires système d'arrière-plan (rundll32.exe) en dehors des chemins systèmes standard approuvés."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Deploy policies forbidding copying command-line parameters directly from browsers.",
+            "Enforce EDR rules to block modification of ntdll.dll by unsigned code."
+          ],
+          "fr": [
+            "Établir des politiques d'interdiction de copie-coller de commandes PowerShell/CMD depuis des navigateurs internet pour les utilisateurs.",
+            "Mettre en œuvre des profils EDR pour bloquer la modification en mémoire de ntdll.dll par des applications non signées."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect rundll32.exe spawning from %TEMP% directory locations.",
+            "Monitor for svchost.exe processes hosting unknown service profiles."
+          ],
+          "fr": [
+            "Détecter l'exécution suspecte de rundll32.exe depuis le dossier %TEMP% ou %AppData%.",
+            "Surveiller l'existence d'un processus svchost.exe hébergeant un service non répertorié nommé 'CipherAllocator'."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate compromised endpoints from active network routing structures.",
+            "Destroy associated 'cfgmgr_mtx' mutex handles."
+          ],
+          "fr": [
+            "Isoler immédiatement l'hôte de l'entreprise des flux réseau de communication.",
+            "Supprimer le service 'CipherAllocator' et le mutex 'cfgmgr_mtx' associé en mémoire."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Audit firewall logs to find potential exfiltrations over WebSockets.",
+            "Perform bare-metal rebuild of the compromised platform."
+          ],
+          "fr": [
+            "Analyser les journaux d'activité du pare-feu d'application Web pour documenter d'éventuelles exfiltrations de données via WebSockets.",
+            "Réinstaller totalement l'hôte victime à partir de masters d'exploitation sains."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Identify PowerShell parent structures execution leading to installation wrappers."
+          ],
+          "fr": [
+            "Recherche de l'exécution séquentielle du chargeur de TELEPUZ initiée par une commande PowerShell ClickFix."
+          ]
+        }
+      },
+      "tags": ["TELEPUZ", "ClickFix", "MaaS", "Anti-VM", "Evasion"],
+      "sources": ["https://www.elastic.co/security-labs/telepuz-maas-malware-clickfix"],
+      "date": "2026-07-16"
+    },
+    {
+      "title": {
+        "en": "ACR Stealer: Analysis of Active Intrusion Chains Exploiting ClickFix",
+        "fr": "ACR Stealer : Analyse de deux chaînes d'intrusion actives exploitant ClickFix"
+      },
+      "description": {
+        "en": "Microsoft Defender Experts tracked a surge in ACR Stealer activity. Two main infection paths were highlighted: WebDAV payloads with a Python loader, and MSHTA chains resolving payloads via steganography inside JPEGs.",
+        "fr": "Les experts de Microsoft Defender ont observé une hausse d'activité d'ACR Stealer, un infostealer distribué sous forme de malware-as-a-service (MaaS). Deux campagnes principales émergent : l'une reposant sur des charges utiles WebDAV, un chargeur écrit en Python et des résolutions C2 décentralisées via la blockchain (EtherHiding) ; la seconde s'appuie sur MSHTA, des scripts PowerShell hautement obscurcis et l'usage de la stéganographie pour extraire la charge utile d'images JPEG d'apparence légitime."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Technology_and_Telecom", "Business_Services"],
+        "fr": ["Technologie_et_Telecom", "Services_aux_Entreprises"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": ["auramatrixa.com", "deep-harborio.com", "prism-vertex.com", "zealpraxis.com"],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": ["MSHTA", "Python", "PowerShell"]
+      },
+      "mitre_ttps": ["T1566", "T1140", "T1027.003", "T1055"],
+      "analyse": {
+        "en": "In the WebDAV variant, cmd.exe loads an external DLL via a WebDAV share, executing the payload stealthily using Windows Fibers API. Exfiltration targets Chrome-based and Firefox-based browsers using DPAPI.",
+        "fr": "Dans la variante WebDAV, le leurre ClickFix déclenche l'exécution de cmd.exe, qui charge une bibliothèque DLL externe depuis un partage WebDAV distant chiffré via rundll32.exe. L'injecteur Python résout dynamiquement les API Windows en mémoire, extrait un package d'installation d'apparence légitime et utilise l'API Windows Fiber pour une exécution furtive en mémoire (VirtualAlloc, ConvertThreadToFiber, etc.). La phase d'exfiltration cible l'ensemble des navigateurs basés sur Chromium et Mozilla Firefox pour déchiffrer les identifiants via DPAPI."
+      },
+      "recommandations": [
+        {
+          "en": "Disable WebClient service (WebDAV) globally on corporate workstations to block remote disk mounting.",
+          "fr": "Désactiver le protocole WebDAV (Web Client service) à l'échelle des postes de travail d'entreprise pour stopper l'exécution d'images de disques distantes."
+        },
+        {
+          "en": "Block MSHTA.exe execution via Attack Surface Reduction (ASR) controls.",
+          "fr": "Activer le blocage de l'exécution d'utilitaires d'application HTML (MSHTA.exe) via des règles de réduction de la surface d'attaque (ASR)."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Configure endpoints agents to flag anomalous WebDAV connections on non-standard ports.",
+            "Prevent pythonw.exe execution from temporary directory paths."
+          ],
+          "fr": [
+            "Configurer Microsoft Defender Experts pour surveiller l'activité réseau WebDAV anormale vers des ports non standards.",
+            "Créer des politiques de restriction logicielle pour empêcher pythonw.exe de s'exécuter depuis des profils temporaires d'utilisateurs."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Audit RPC calls directed to Web3 nodes (EtherHiding).",
+            "Monitor rundll32.exe attempting connections to remote WebDAV files."
+          ],
+          "fr": [
+            "Rechercher des traces d'historique réseau révélant l'utilisation d'EtherHiding (requêtes RPC vers des nœuds Web3).",
+            "Détecter le spawn inattendu d'un processus rundll32.exe pointant vers une ressource réseau à distance (ex: google.ct)."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate compromised workstations from Active Directory domains.",
+            "Block identified ACR Stealer C2 domains at the firewall level."
+          ],
+          "fr": [
+            "Déconnecter immédiatement la station de travail infectée du domaine Active Directory d'entreprise.",
+            "Bloquer de manière centralisée les adresses de C2 d'ACR Stealer (ex: auramatrixa[.]com)."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Review files shares accesses from affected hosts.",
+            "Rotate user secrets and active cloud session identifiers."
+          ],
+          "fr": [
+            "Réaliser un audit de sécurité des accès de comptes initiés à partir de la station victime vers les partages d'équipe (SharePoint/OneDrive).",
+            "Désinfecter l'environnement de l'ordinateur de toute trace de scripts persistants écrits par MSHTA ou PowerShell."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for MSHTA processes launching remote URL parameter profiles."
+          ],
+          "fr": [
+            "Identification de processus d'utilitaire HTML (MSHTA) téléchargeant des scripts malveillants distants pour lancer ACR Stealer."
+          ]
+        }
+      },
+      "tags": ["ACR Stealer", "ClickFix", "EtherHiding", "WebDAV", "MSHTA"],
+      "sources": ["https://www.microsoft.com/en-us/security/blog/2026/07/16/acr-stealer-two-observed-intrusion-chains-amid-increased-threat-activity/"],
+      "date": "2026-07-16"
+    },
+    {
+      "title": {
+        "en": "npm @asyncapi Supply Chain Compromise Delivering Miasma Trojan",
+        "fr": "Compromission de la supply chain npm @asyncapi et livraison de charge utile au chargement"
+      },
+      "description": {
+        "en": "A supply chain attack compromised npm packages of @asyncapi, embedding the Miasma Trojan. It triggers during module import inside enterprise applications, bypassing installation-phase security parameters.",
+        "fr": "Le 14 juillet 2026, Microsoft Threat Intelligence a identifié une compromission coordonnée de la supply chain npm ciblant l'organisation @asyncapi. Cinq versions de paquets malveillants ont été publiées sur le registre npm, embarquant une charge utile nommée Miasma (Trojan:JS/MiasmStealer.SC). Contrairement aux attaques habituelles exploitant des hooks d'installation d'npm, cette charge s'exécute silencieusement au moment de l'importation du module par l'application d'entreprise (require-time), contournant l'option d'installation '--ignore-scripts'."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Technology_and_Telecom"],
+        "fr": ["Technologie_et_Telecom"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": ["85.137.53.71"],
+        "IPv6": [],
+        "DOMAIN": ["rentry.co"],
+        "EMAIL": [],
+        "HASH_SHA256": ["082d733db0687dcd768104972b065d4b58cb1e6043688c6c20fa3702337f36ab", "bfaeb987faa6de2b5a5eb63b1233d055215b09b0349a9394f2175fd7cdf385e4"],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": ["npm", "GitHub Actions", "IPFS"]
+      },
+      "mitre_ttps": ["T1195", "T1547", "T1102"],
+      "analyse": {
+        "en": "The threat actor leveraged a compromised publishing bot credential (asyncapi-bot) via a 'pull_request_target' vulnerability in GitHub Actions (PR #2155). The Trojan payload is fetched from IPFS, establishing multi-platform persistence (HKCU Run key on Windows, systemd on Linux, .zshrc/.bashrc on macOS).",
+        "fr": "L'attaque tire son origine de la compromission d'un jeton d'accès d'un robot de publication (asyncapi-bot) via une faille de type 'pull_request_target' dans le workflow GitHub Actions du projet (PR #2155). L'attaquant a ainsi pu intégrer du code malveillant directement dans la branche principale et générer des packages d'installation dotés de signatures de provenance légitimes (GitHub OIDC). Le chargeur télécharge la charge utile finale via IPFS (InterPlanetary File System) et établit une persistance inter-plateformes (HKCU Run key sous Windows, service unit systemd sous Linux et injection .zshrc/.bashrc sous macOS)."
+      },
+      "recommandations": [
+        {
+          "en": "Block network access to public IPFS gateways (e.g., ipfs.io, dweb.link, cloudflare-ipfs.com) within the corporate perimeter.",
+          "fr": "Bloquer l'accès réseau aux passerelles de serveurs de distribution IPFS publiques (ex: ipfs.io, dweb.link, cloudflare-ipfs.com) au périmètre de l'entreprise."
+        },
+        {
+          "en": "Enforce strict branch protection policies and review GitHub Action secrets scopes.",
+          "fr": "Auditer et durcir les workflows de sécurité des projets de développement (token scopes GitHub, approval pr, protected branches)."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Perform automated static analysis of npm dependencies inside CI/CD pipelines.",
+            "Restrict usage profiles for broad permissions GITHUB_TOKEN components.",
+            "Verify environment sandboxing standards across active build runners."
+          ],
+          "fr": [
+            "Mettre en œuvre des politiques d'analyse statique régulières des paquets npm dépendants au sein du pipeline d'intégration (CI/CD).",
+            "Établir des contraintes strictes sur l'utilisation de jetons de secrets d'intégration continue de type GITHUB_TOKEN.",
+            "Garantir la mise en place d'environnements de build de paquets éphémères se réinitialisant à chaque exécution."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect creation of unrecognized 'sync.js' files within node projects environments.",
+            "Monitor outbound calls on ports 8080, 8081, 8091 pointing to 85.137.53[.]71.",
+            "Flag node.exe spawning command shells in build environments."
+          ],
+          "fr": [
+            "Détecter l'apparition d'un fichier malveillant nommé 'sync.js' au sein des répertoires d'exécution de Node.js d'entreprise.",
+            "Surveiller l'existence de connexions sortantes suspectes vers l'adresse IP de commande et contrôle 85.137.53[.]71 sur les ports 8080, 8081 et 8091.",
+            "Surveiller la présence de processus node.exe ou d'arrière-plan spawant des shells inattendus depuis des serveurs Web ou des agents de build."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Flush and purge local npm and Yarn caching components across development devices.",
+            "Enforce outbound blocks targeting Miasma C2 IP indicators.",
+            "Rotate active development secrets accessible from compromised builds (AWS keys, npm tokens)."
+          ],
+          "fr": [
+            "Purger de toute urgence les caches locaux npm et Yarn de l'ensemble de l'infrastructure de développement.",
+            "Bloquer les adresses IP d'exfiltration de Miasma au pare-feu réseau central.",
+            "Suspendre l'utilisation des dépôts GitHub affectés et révoquer les clés d'API (clés AWS, jetons Azure, clés OpenAI/Anthropic) accessibles depuis ces environnements."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Rebuild affected container profiles and environments using clean images.",
+            "Audit developer accounts and force rotation of compromised secrets."
+          ],
+          "fr": [
+            "Reconstruct l'ensemble des images de conteneurs de développement et des serveurs d'intégration à partir de configurations certifiées saines.",
+            "Réaliser une rotation complète de l'ensemble des identifiants et clés de secrets d'entreprise exposés aux environnements corrompus."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Query actions logs for anomalous publishing events or unauthorized branch pushes."
+          ],
+          "fr": [
+            "Identification de déclenchements de pipelines de publication de paquets par des poussées de commits non autorisées d'acteurs de supply chain."
+          ]
+        }
+      },
+      "tags": ["AsyncAPI", "npm", "Supply Chain", "Miasma", "GitHub Actions"],
+      "sources": ["https://www.microsoft.com/en-us/security/blog/2026/07/15/unpacking-asyncapi-npm-supply-chain-compromise-import-time-payload-delivery/"],
+      "date": "2026-07-16"
+    },
+    {
+      "title": {
+        "en": "Spirals: A New Stealth Rust Ransomware Targeting South Asian IT Company",
+        "fr": "Spirals : Un nouveau rançongiciel furtif écrit en Rust ciblant une entreprise informatique d'Asie du Sud"
+      },
+      "description": {
+        "en": "Symantec Threat Hunter team discovered 'Spirals', a sophisticated double-extortion ransomware written in Rust that compromised an IT services firm in South Asia via web shell deployment on an IIS server.",
+        "fr": "L'équipe Symantec Threat Hunter a découvert un nouveau rançongiciel sophistiqué nommé 'Spirals', développé en Rust. L'attaque de double extorsion a frappé une société de services informatiques en Asie du Sud en juin 2026. L'attaquant s'est introduit via la compromission d'un serveur Web IIS, y a déployé un web shell ASP.NET et s'est déplacé latéralement en moins de 24 heures."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Technology_and_Telecom", "Business_Services"],
+        "fr": ["Technologie_et_Telecom", "Services_aux_Entreprises"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": ["185.141.216.194"],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": ["0f9574dc38e5c34a31153f0bcc603c6ec29cb3bf65c3d25380dbe86d42573141", "4cab935d0ec400059a3fcdc95b6623efdd51a61dff401fba8d5da244cc2de649", "7f0d49b11d0a3697685622ce510c570199bf2dc76515b3f9a6b6735de8c9134b"],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": ["Chisel", "PsExec", "IIS", "ASP.NET"]
+      },
+      "mitre_ttps": ["T1190", "T1003", "T1021.002", "T1486"],
+      "analyse": {
+        "en": "Initial compromise was achieved via an ASP.NET web shell that launched cmd.exe and PowerShell to bypass UAC. The operator deployed three redundant tunneling tools (tunn.exe, revsocks.exe, and Chisel) and used WMI/PsExec to stop 23 services prior to execution.",
+        "fr": "La compromission initiale s'effectue via un web shell ASP.NET qui déclenche cmd.exe et powershell.exe pour contourner l'UAC. L'opérateur installe trois utilitaires de tunneling réseau redondants (tunn.exe, revsocks.exe et Chisel/chrome.exe) pour maintenir sa connectivité. Il utilise ensuite WMI et PsExec pour distribuer des scripts d'arrêt forcé de 23 services d'infrastructure critiques (Exchange, VMware, Veeam, SQL Server) avant d'exécuter Spirals sous le nom de bitsadmin.exe."
+      },
+      "recommandations": [
+        {
+          "en": "Restrict administration framework execution (PsExec, WMI) to dedicated secure management workstations (PAWs).",
+          "fr": "Restreindre l'exécution d'applications d'administration réseau (PsExec, WMI) à des postes de gestion dédiés protégés (PAW)."
+        },
+        {
+          "en": "Monitor for unexpected service halts targeting backup frameworks (Veeam, SQL databases).",
+          "fr": "Mettre en œuvre une surveillance comportementale active des activités d'arrêt inexpliquées de services de sauvegarde ou de bases de données (Veeam, SQL Server)."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Store Active Directory scripts in write-protected admin directories.",
+            "Enforce MFA across all Remote Desktop (RDP) connection endpoints."
+          ],
+          "fr": [
+            "Garantir l'hébergement des scripts d'administration de domaine Active Directory au sein de répertoires sécurisés en lecture seule.",
+            "Mettre en œuvre une authentification MFA forte sur toutes les connexions Bureau à distance (RDP) d'entreprise."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect tunnels execution originating from web server profiles.",
+            "Monitor spikes in remote WMI queries across active AD endpoints."
+          ],
+          "fr": [
+            "Détecter l'exécution inattendue d'utilitaires de tunneling (Chisel, Revsocks) s'exécutant à partir de répertoires d'applications Web.",
+            "Surveiller les pics anormaux d'appels WMI distants ciblant plus de 10 contrôleurs de domaine en moins de 5 minutes."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Terminate outbound routing towards 185.141.216[.]194.",
+            "Isolate compromised IIS servers from Active Directory segments."
+          ],
+          "fr": [
+            "Couper les communications Internet sortantes vers l'adresse IP de relais 185.141.216[.]194.",
+            "Isoler logiquement le segment du serveur IIS compromis du reste du réseau Active Directory d'entreprise."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Restore infrastructure operations from clean offline backups.",
+            "Audit AD accounts and prune shadow administration accounts."
+          ],
+          "fr": [
+            "Restaurer les services essentiels (Exchange, SQL Server, etc.) à partir de configurations de sauvegardes saines déconnectées.",
+            "Auditer les comptes administrateurs de domaine et supprimer tout compte fantôme créé par les cybercriminels lors de la phase de maintien de l'accès."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Identify PowerShell calls aimed at stopping core databases or backups services."
+          ],
+          "fr": [
+            "Identification de l'exécution de scripts PowerShell visant à couper de force les applications de stockage ou de base de données."
+          ]
+        }
+      },
+      "tags": ["Spirals", "Ransomware", "Rust", "IIS", "DoubleClick"],
+      "sources": [
+        "https://www.security.com/threat-intelligence/ransomware-spirals-extortion",
+        "https://social.raytec.co/@techbot/116932510759811676"
+      ],
+      "date": "2026-07-16"
+    },
+    {
+      "title": {
+        "en": "UAT-11795 Campaign Deploying Starland RAT and WLDR Agent",
+        "fr": "Campagne d'envergure de l'acteur UAT-11795 propageant Starland RAT et WLDR agent"
+      },
+      "description": {
+        "en": "Cisco Talos tracked a financially motivated campaign targeting Western organizations, deploying Starland RAT and a memory-only PowerShell loader (WLDR agent) via trojanized software packages.",
+        "fr": "Cisco Talos a identifié une campagne cybercriminelle active d'envergure, menée par l'acteur russophone UAT-11795, ciblant des utilisateurs en Europe et aux États-Unis. L'attaque exploite des installateurs de logiciels d'entreprise trojanisés (Zoom, Webex, DBeaver) pour installer un outil d'accès à distance écrit en Python, nommé Starland RAT, ainsi qu'un implant de commande et contrôle basé sur PowerShell s'exécutant entièrement en mémoire, nommé WLDR agent."
+      },
+      "threat_actor": "UAT-11795",
+      "threat_actor_origin": "Russia",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Technology_and_Telecom", "Business_Services"],
+        "fr": ["Technologie_et_Telecom", "Services_aux_Entreprises"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": ["aipythondevs.com", "eorthopaedics.com", "sastoro.com", "windowscreenrepairnearme.com"],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": ["Starland RAT", "WLDR agent", "Telegram"]
+      },
+      "mitre_ttps": ["T1204.002", "T1053.005", "T1562.001", "T1102"],
+      "analyse": {
+        "en": "Attack starts with a ClickFix HTA lure executed via MSHTA. VBScript extracts a trojanized NSIS installer wrapping Python loaders. Starland RAT harvests AD domain credentials, then executes memory-resident WLDR agent communicating via Web3 Polygon or Telegram API blocks.",
+        "fr": "La compromission débute par un leurre ClickFix téléchargeant un utilitaire HTA malveillant via mshta.exe. Le script VBScript embarqué déploie un installateur trojanisé (via le système NSIS) contenant un chargeur de code Python compilé obscurci. Starland RAT s'exécute en mémoire et configure des tâches planifiées persistantes. Il récolte les identifiants de domaine et de navigateurs, puis exécute une commande PowerShell chargeant le WLDR agent en mémoire."
+      },
+      "recommandations": [
+        {
+          "en": "Restrict MSHTA and HTA process components across enterprise endpoints.",
+          "fr": "Restreindre l'exécution d'utilitaires HTA ou de mshta.exe à l'échelle globale de l'entreprise."
+        },
+        {
+          "en": "Supervise creation of Windows Scheduled Tasks calling local unsigned Python runtimes.",
+          "fr": "Superviser de manière stricte l'établissement de tâches planifiées Windows contenant des chaînes aléatoires ou faisant référence à des environnements Python non signés."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Prohibit software installations from unverified source mirror sites.",
+            "Instruct development profiles regarding software package injection vectors."
+          ],
+          "fr": [
+            "Déployer des politiques d'interdiction de téléchargement d'installateurs de logiciels depuis des sites ou miroirs web non validés.",
+            "Sensibiliser les administrateurs système et les développeurs aux risques liés aux faux packages d'outils de codage."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect Windows Scheduled Tasks prefixed with 'PythonLauncher' executing with administrative context.",
+            "Identify RPC connections directed to Telegram bots or Polygon networks."
+          ],
+          "fr": [
+            "Détecter l'apparition anormale de tâches planifiées nommées 'PythonLauncher-***' s'exécutant avec des privilèges SYSTEM.",
+            "Surveiller les flux d'appels RPC sortants émanant de processus Windows vers des nœuds d'infrastructure Polygon ou de bots Telegram."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate the affected workstation from active network links.",
+            "Purge associated scheduled tasks and registry keys."
+          ],
+          "fr": [
+            "Isoler immédiatement l'ordinateur infecté des segments réseau de domaine.",
+            "Supprimer la tâche planifiée associée et éliminer la clé d'enregistrement 'MyApp' du registre."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Trigger complete rotation of user credentials.",
+            "Audit AD forest for unrecognized domain administrative profiles."
+          ],
+          "fr": [
+            "Réaliser une rotation immédiate de l'ensemble des identifiants et jetons Active Directory de l'utilisateur concerné.",
+            "Auditer l'arborescence Active Directory pour s'assurer qu'aucun nouvel utilisateur administrateur de domaine illégitime n'a été créé."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Scan processes memories looking for strings associated with PowerShell launch keys."
+          ],
+          "fr": [
+            "Identification du mot de passe en clair du chargeur de WLDR agent injecté au sein de commandes PowerShell en mémoire."
+          ]
+        }
+      },
+      "tags": ["Starland RAT", "UAT-11795", "WLDR agent", "ClickFix", "Telegram C2"],
+      "sources": [
+        "https://blog.talosintelligence.com/uat-11795-deploys-novel-starland-rat-and-bespoke-wldr-c2-implant-in-financially-motivated-campaign/",
+        "https://thehackernews.com/2026/07/threatsday-game-cheat-spyware-24-hour.html"
+      ],
+      "date": "2026-07-16"
+    }
+  ]
+}
