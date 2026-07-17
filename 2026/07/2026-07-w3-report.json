@@ -1,0 +1,614 @@
+{
+  "threat_level": {
+    "score": 4,
+    "label": {
+      "en": "Critical",
+      "fr": "Critique"
+    },
+    "justification": {
+      "en": "The threat level is elevated due to Microsoft's record-breaking patching of 622 vulnerabilities in a single month (active exploitation of SharePoint Server RCE CVE-2026-58644), alongside massive open-source supply chain compromises targeting developers (AsyncAPI on npm by TeamPCP). Active nation-state operations by Chinese group Daxin (Stupig backdoor) and Russian FSB Center 16 targeting legacy networking devices (SNMP) further amplify exposure across critical sectors.",
+      "fr": "Le niveau de menace est élevé en raison du record de 622 vulnérabilités corrigées par Microsoft (dont l'exploitation active de SharePoint RCE CVE-2026-58644) et de compromissions majeures de la chaîne d'approvisionnement ciblant les développeurs (AsyncAPI sur npm par TeamPCP). Les opérations étatiques de Daxin (Chine) et du FSB Center 16 (Russie) ciblant les routeurs d'entreprise (SNMP) renforcent l'exposition des secteurs d'importance vitale."
+    },
+    "_triggers": [
+      "+4 — 2 CVE(s) CISA KEV",
+      "+3 — 3 CVE(s) CVSS ≥ 9.0",
+      "+4 — 2 acteur(s) étatique(s)",
+      "+1 — ≥ 3 acteurs distincts actifs",
+      "+2 — 2 breach(es) ≥ 100k enregistrements",
+      "+2 — secteurs critiques ciblés : Government_and_Defense, Critical_Infrastructure"
+    ]
+  },
+  "executive_summary": {
+    "en": "Week 3 of July 2026 was marked by intense defensive activity following Microsoft's record-breaking July Patch Tuesday and a series of sophisticated supply chain and credential harvesting operations. The TeamPCP group successfully poisoned npm packages associated with the widely-used AsyncAPI framework, using GitHub Actions token theft to exfiltrate enterprise cloud environments. Nation-state groups (Daxin, FSB Center 16, UAC-0145) maintained persistent campaigns, while cybercriminals targeted the financial and technology sectors via advanced malware overlays (OkoBot targeting Ledger and Trezor hardware wallet desktop apps) and emerging adversary-in-the-middle PhaaS kits (Kratos targeting Microsoft 365).",
+    "fr": "La troisième semaine de juillet 2026 a été marquée par une activité défensive intense après le Patch Tuesday record de Microsoft et une série de compromissions sophistiquées de la chaîne d'approvisionnement. Le groupe TeamPCP a empoisonné les paquets npm d'AsyncAPI en utilisant le vol de jetons GitHub Actions pour exfiltrer des environnements cloud. Les groupes étatiques (Daxin, FSB Center 16, UAC-0145) maintiennent des campagnes persistantes, tandis que les cybercriminels ciblent la finance et la tech via des injections mémoire (OkoBot ciblant Ledger/Trezor) et des kits d'hameçonnage AiTM (Kratos ciblant M365)."
+  },
+  "regulatory": {
+    "analyse": {
+      "en": "Strategic paragraph: Regulatory enforcement signals are strengthening globally, with joint international law enforcement takedowns against platforms like Leakbase and Spain-based investment fraud networks. There is a strong focus on compliance and structural integrity under emerging frameworks like the EU AI Act, forcing organizations to re-evaluate the security of AI models and autonomous agents. Meanwhile, NGOs and regulators are pushing for urgent re-evaluations of trans-border data transfers (such as the EU-US Data Privacy Framework) in response to shifts in administrative oversight.",
+      "fr": "Les signaux d'application de la réglementation se renforcent à l'échelle mondiale, avec des démantèlements internationaux coordonnés visant des plateformes comme Leakbase et des réseaux de fraude en Espagne. Un accent particulier est mis sur la conformité et l'intégrité structurelle sous l'égide de l'EU AI Act, contraignant les organisations à évaluer la sécurité des modèles et agents autonomes d'IA. En parallèle, les ONG et régulateurs exigent une réévaluation urgente des transferts de données transatlantiques (EU-US Data Privacy Framework)."
+    },
+    "events": [
+      {
+        "title": {
+          "en": "EU-US Data Privacy Framework Adequacy Demand",
+          "fr": "Demande de réévaluation d'adéquation du cadre de protection des données UE-USA"
+        },
+        "issuing_body": "EDRi & 36 NGOs",
+        "date": "2026-07-14",
+        "jurisdiction": {
+          "region": "EU",
+          "countries": [
+            "US",
+            "BE"
+          ]
+        },
+        "type": "Proposal",
+        "status": "Under_Review",
+        "reference": "GDPR Art. 45",
+        "affected_sectors": [
+          "Technology_and_Telecom"
+        ],
+        "description": {
+          "en": "Following the Trump v. Slaughter judicial decision, 36 NGOs requested an urgent review of the EU-US data adequacy framework, highlighting concerns over lack of independent oversight of US agencies and its impact on corporate data compliance.",
+          "fr": "Suite à la décision de justice Trump v. Slaughter, 36 ONG ont demandé une révision urgente du cadre d'adéquation des données UE-USA, soulevant des inquiétudes quant à l'absence de contrôle indépendant des agences américaines."
+        },
+        "source_url": "https://edri.org/our-work/when-the-facts-change-adequacy-must-be-reviewed/"
+      },
+      {
+        "title": {
+          "en": "Spanish Police Cyber Fraud Takedown",
+          "fr": "Démantèlement d'un réseau de cyberfraude par la police espagnole"
+        },
+        "issuing_body": "Policia Nacional",
+        "date": "2026-07-14",
+        "jurisdiction": {
+          "region": "Europe",
+          "countries": [
+            "ES"
+          ]
+        },
+        "type": "Enforcement_Action",
+        "status": "Active",
+        "reference": "EU Cybercrime Directive 2013/40/EU",
+        "affected_sectors": [
+          "Finance"
+        ],
+        "description": {
+          "en": "Disruption of a major international cybercriminal network specialized in investment fraud and phishing, responsible for extorting over 140 million euros. Four key suspects were arrested.",
+          "fr": "Démantèlement d'un important réseau cybercriminel international spécialisé dans la fraude à l'investissement et l'hameçonnage, ayant extorqué plus de 140 millions d'euros ; arrestation de quatre suspects clés."
+        },
+        "source_url": "https://www.bleepingcomputer.com/news/security/spanish-police-take-down-140-million-cyber-fraud-ring-arrest-four/"
+      },
+      {
+        "title": {
+          "en": "Leakbase International Law Enforcement Operation",
+          "fr": "Opération policière internationale contre Leakbase"
+        },
+        "issuing_body": "FBI & Europol",
+        "date": "2026-07-17",
+        "jurisdiction": {
+          "region": "Global",
+          "countries": [
+            "US",
+            "NL"
+          ]
+        },
+        "type": "Enforcement_Action",
+        "status": "Active",
+        "reference": "International Law Enforcement Operation Leak",
+        "affected_sectors": [
+          "Security"
+        ],
+        "description": {
+          "en": "A coordinated international operation targeted the infamous Leakbase platform, illustrating active data breach indexing crackdown efforts by federal agencies and Europol.",
+          "fr": "Une opération internationale coordonnée a ciblé la plateforme Leakbase, illustrant les efforts actifs des agences fédérales et d'Europol contre l'indexation et le recel de données volées."
+        },
+        "source_url": "https://t.me/vxunderground/9145"
+      }
+    ]
+  },
+  "threats_actors": {
+    "geographic_analyse": [
+      {
+        "geographic_zone_name": {
+          "en": "Russia",
+          "fr": "Russie"
+        },
+        "geographic_zone_strategic_analyse": {
+          "en": "Russian state-sponsored activity (FSB Center 16) remains highly persistent, focusing on strategic network reconnaissance and pre-positioning. Actors actively scan for and exploit outdated routers and network equipment (SNMP, Smart Install) to steal configuration files and maintain long-term access to government, energy, and telecom sectors globally.",
+          "fr": "L'activité étatique russe (FSB Center 16) reste très persistante, se concentrant sur la reconnaissance réseau et le pré-positionnement. Les acteurs exploitent activement les routeurs d'entreprise (SNMP, Smart Install) pour exfiltrer des configurations et maintenir un accès à long terme aux secteurs stratégiques."
+        }
+      },
+      {
+        "geographic_zone_name": {
+          "en": "China",
+          "fr": "Chine"
+        },
+        "geographic_zone_strategic_analyse": {
+          "en": "Chinese state-sponsored espionage operations continue to demonstrate high technical sophistication in East Asia, as illustrated by the Daxin group. Their tactics leverage stealthy kernel-mode rootkits and helper DLLs to hijack legitimate applications (such as WeChat) and quietly monitor critical governmental and technological infrastructures.",
+          "fr": "Les opérations d'espionnage de la Chine maintiennent une sophistication technique élevée en Asie de l'Est, comme l'illustre le groupe Daxin. Leurs tactiques s'appuient sur des rootkits en mode noyau et des DLL pour détourner des applications légitimes (WeChat) et espionner les gouvernements cibles."
+        }
+      }
+    ],
+    "details": [
+      {
+        "threat_actor_name": "FSB Center 16",
+        "origin_country": "Russia",
+        "type": {
+          "en": "Nation-state",
+          "fr": "Nation-state"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Critical_Infrastructure",
+            "Government_and_Defense",
+            "Finance",
+            "Healthcare_and_Life_Sciences",
+            "Technology_and_Telecom"
+          ],
+          "fr": [
+            "Critical_Infrastructure",
+            "Government_and_Defense",
+            "Finance",
+            "Healthcare_and_Life_Sciences",
+            "Technology_and_Telecom"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Global",
+            "United States",
+            "Europe"
+          ],
+          "fr": [
+            "Global",
+            "États-Unis",
+            "Europe"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1046",
+          "T1505",
+          "T1190"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Russian State-Sponsored SNMP Router Attacks"
+          ],
+          "fr": [
+            "Attaques russes d'espionnage contre les routeurs SNMP"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "TeamPCP",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Cybercriminal",
+          "fr": "Cybercriminal"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Technology_and_Telecom",
+            "Business_Services"
+          ],
+          "fr": [
+            "Technology_and_Telecom",
+            "Business_Services"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Global"
+          ],
+          "fr": [
+            "Global"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1195.001",
+          "T1195.002",
+          "T1059.003"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "AsyncAPI npm package supply chain compromise",
+            "Python PyPI package poisoning campaign"
+          ],
+          "fr": [
+            "Compromission de la chaîne d'approvisionnement npm d'AsyncAPI",
+            "Campagne d'empoisonnement de paquets Python PyPI"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "Daxin Espionage Group",
+        "origin_country": "China",
+        "type": {
+          "en": "Nation-state",
+          "fr": "Nation-state"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Government_and_Defense",
+            "Technology_and_Telecom",
+            "Media_and_Communication"
+          ],
+          "fr": [
+            "Government_and_Defense",
+            "Technology_and_Telecom",
+            "Media_and_Communication"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Asia-Pacific"
+          ],
+          "fr": [
+            "Asie-Pacifique"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1014",
+          "T1547.004"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Stupig Backdoor Deployment in Taiwan"
+          ],
+          "fr": [
+            "Déploiement de la porte dérobée Stupig à Taïwan"
+          ]
+        }
+      }
+    ]
+  },
+  "mitre_attack_ttps": {
+    "ttps_strategic_analyse": {
+      "en": "The threat landscape shows a high consolidation of TTPs around initial access through public-facing applications, memory evasion, and supply chain poisoning. Adversaries are actively leveraging OIDC token theft in CI/CD environments to bypass build-system integrity. Concurrently, evasion of standard hardware-enforced CPU security mechanisms (such as Intel CET via thread pool callback trampolining) is transitioning rapidly from offensive academic research to modular criminal loaders, rendering static callstack verification unreliable.",
+      "fr": "Le paysage des menaces montre une consolidation des TTP autour de l'exploitation de failles périmétriques, de l'évasion mémoire et de l'empoisonnement de packages. Les attaquants exploitent le vol de jetons OIDC dans les environnements CI/CD pour contourner la sécurité des builds. Parallèlement, le contournement des protections CPU (Intel CET par thread pool callback trampolining) passe rapidement de l'état de recherche à l'intégration dans des loaders criminels, affaiblissant la détection comportementale standard."
+    },
+    "ttps_list": [
+      {
+        "id": "T1190",
+        "tactic": {
+          "en": "Initial Access",
+          "fr": "Accès Initial"
+        },
+        "technique_name": "Exploit Public-Facing Application",
+        "frequency": 3,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "Used heavily by Russian FSB Center 16 targeting Cisco Smart Install (CVE-2018-0171) and active exploitation of SharePoint Server (CVE-2026-58644 and CVE-2026-56164) and SonicWall SMA (CVE-2026-15409) to achieve remote execution on network borders."
+          ],
+          "fr": [
+            "Utilisé intensivement par le FSB Center 16 (CVE-2018-0171) et dans l'exploitation active de SharePoint (CVE-2026-58644) et SonicWall (CVE-2026-15409) pour exécuter du code sur les routeurs et serveurs frontaux."
+          ]
+        }
+      },
+      {
+        "id": "T1055",
+        "tactic": {
+          "en": "Defense Evasion",
+          "fr": "Évasion de Défense"
+        },
+        "technique_name": "Process Injection",
+        "frequency": 3,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Observed in AtlasRAT injecting Delphi-based shellcode into WeChat.exe in memory, OkoBot hook injections in hardware wallet applications, and recent offensive loaders like BingusLdr and UnwindRaven implementing CET-compatible callstack spoofing."
+          ],
+          "fr": [
+            "Observé dans l'injection en mémoire d'AtlasRAT dans WeChat.exe, l'injection par hook d'OkoBot dans les applications de portefeuilles matériels, et l'émergence de loaders offensifs (BingusLdr, UnwindRaven) contournant CET par callstack spoofing."
+          ]
+        }
+      },
+      {
+        "id": "T1195.002",
+        "tactic": {
+          "en": "Initial Access",
+          "fr": "Accès Initial"
+        },
+        "technique_name": "Supply Chain Compromise: Software Dependencies",
+        "frequency": 3,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "Exploited by TeamPCP to plant malicious dependency files in Python PyPI (setup.py, .pth) and npm package ecosystems (AsyncAPI generator/specs) to exfiltrate cloud infrastructure environment credentials during import-time."
+          ],
+          "fr": [
+            "Exploité par TeamPCP pour implanter des dépendances malveillantes sur Python PyPI (setup.py, .pth) et npm (AsyncAPI) afin d'exfiltrer les secrets d'infrastructure cloud lors du chargement des modules (import-time)."
+          ]
+        }
+      },
+      {
+        "id": "T1566.002",
+        "tactic": {
+          "en": "Initial Access",
+          "fr": "Accès Initial"
+        },
+        "technique_name": "Phishing: Spearphishing Link",
+        "frequency": 3,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Utilized by Kratos PhaaS to spoof Office 365 login portals and steal MFA session cookies. Also leveraged by UAC-0145 utilizing fake Microsoft Update notifications to target Ukrainian government personnel."
+          ],
+          "fr": [
+            "Utilisé par Kratos PhaaS pour imiter les portails d'authentification M365 et voler les cookies MFA. Également exploité par UAC-0145 via de fausses notifications de mises à jour Microsoft ciblant l'Ukraine."
+          ]
+        }
+      }
+    ]
+  },
+  "vulnerabilities": {
+    "analyse": {
+      "en": "The vulnerability landscape is dominated by high-impact exploits, with several added to the CISA KEV catalog this period. Major threats involve deserialization in SharePoint Server (CVE-2026-58644) and critical zero-day scenarios in SonicWall SMA (CVE-2026-15409) allowing remote bypasses. Enterprise software vendors like Zoom also addressed critical client-side account takeover bugs (CVE-2026-53412), stressing the urgency of enterprise patch compliance.",
+      "fr": "Le paysage des vulnérabilités est dominé par des failles à fort impact, dont plusieurs ont été intégrées au catalogue KEV de la CISA. Les menaces majeures concernent la désérialisation de SharePoint (CVE-2026-58644) et des failles critiques dans SonicWall SMA (CVE-2026-15409) permettant des contournements à distance. Des éditeurs majeurs comme Zoom ont également corrigé des vulnérabilités critiques de prise de contrôle de compte (CVE-2026-53412)."
+    },
+    "list": [
+      {
+        "cve_id": "CVE-2026-58644",
+        "cvss_score": 9.8,
+        "epss_score": "N/A",
+        "cisa_kev": true,
+        "affected_product": "SharePoint Server",
+        "affected_product_vendor": "Microsoft",
+        "vulnerability_type": {
+          "en": [
+            "Deserialization of Untrusted Data"
+          ],
+          "fr": [
+            "Désérialisation de données non approuvées"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "A critical remote code execution vulnerability in Microsoft SharePoint Server that allows remote unauthenticated attackers to execute arbitrary code. Exploited actively in the wild.",
+          "fr": "Une vulnérabilité critique d'exécution de code à distance dans Microsoft SharePoint Server permettant à des attaquants distants non authentifiés d'exécuter du code arbitraire. Exploitée activement."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-15409",
+        "cvss_score": 10.0,
+        "epss_score": "N/A",
+        "cisa_kev": true,
+        "affected_product": "SMA 1000 Series",
+        "affected_product_vendor": "SonicWall",
+        "vulnerability_type": {
+          "en": [
+            "Server-Side Request Forgery"
+          ],
+          "fr": [
+            "Server-Side Request Forgery (SSRF)"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "A critical Server-Side Request Forgery vulnerability in SonicWall SMA 1000 Series devices allowing remote unauthenticated attackers to pivot into secure environments.",
+          "fr": "Une vulnérabilité critique de Server-Side Request Forgery (SSRF) dans les équipements SonicWall SMA série 1000 permettant à des attaquants distants non authentifiés de pivoter vers des réseaux internes sécurisés."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-53412",
+        "cvss_score": 9.8,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Workplace for Windows",
+        "affected_product_vendor": "Zoom",
+        "vulnerability_type": {
+          "en": [
+            "Improper Input Validation"
+          ],
+          "fr": [
+            "Validation d'entrée incorrecte"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "An improper input validation defect in Zoom Workplace for Windows that allows remote unauthenticated attackers to achieve complete corporate account takeover.",
+          "fr": "Un défaut de validation d'entrée dans Zoom Workplace pour Windows permettant à des attaquants distants de prendre le contrôle total du compte utilisateur associé."
+        },
+        "mitre_attack_ttps_id": [
+          "T1055"
+        ]
+      }
+    ]
+  },
+  "data_breaches": [
+    {
+      "victim": "Fluke",
+      "sector": "Industry_and_Manufacturing",
+      "country": "United States",
+      "records_count": 821000,
+      "data_types": {
+        "en": [
+          "Names",
+          "Email addresses",
+          "Employer names",
+          "Job titles"
+        ],
+        "fr": [
+          "Noms",
+          "Adresses e-mail",
+          "Noms d'employeurs",
+          "Intitulés de postes"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://beesint.com/pulse/0abf944f-ee4d-42cf-8002-0dd5d4558b45"
+    },
+    {
+      "victim": "AssuranceAmerica",
+      "sector": "Finance",
+      "country": "United States",
+      "records_count": 1100000,
+      "data_types": {
+        "en": [
+          "Social Security Numbers (SSN)",
+          "Driver's License numbers",
+          "Insurance policy information"
+        ],
+        "fr": [
+          "Numéros de sécurité sociale (SSN)",
+          "Numéros de permis de conduire",
+          "Informations de polices d'assurance"
+        ]
+      },
+      "threat_actor": "Ransomware group (unspecified)",
+      "financial_impact_usd": null,
+      "source_url": "https://cyber.netsecops.io/articles/assuranceamerica-data-breach-exposes-ssns-of-over-1-1-million-people/"
+    },
+    {
+      "victim": "Nihon Kotsu",
+      "sector": "Retail_and_Consumer",
+      "country": "Japan",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "Dispatch logs",
+          "Fleet scheduling data",
+          "Customer booking details"
+        ],
+        "fr": [
+          "Logs de dispatching",
+          "Données de planification de flotte",
+          "Détails de réservations de clients"
+        ]
+      },
+      "threat_actor": "Ransomware group (unspecified)",
+      "financial_impact_usd": null,
+      "source_url": "https://securityaffairs.com/195305/cyber-crime/malware-hits-japans-largest-taxi-company-nihon-kotsu-services-temporarily-suspended.html"
+    }
+  ],
+  "target": {
+    "sectors": {
+      "en": [
+        "Government_and_Defense",
+        "Finance",
+        "Critical_Infrastructure",
+        "Healthcare_and_Life_Sciences",
+        "Retail_and_Consumer",
+        "Industry_and_Manufacturing",
+        "Technology_and_Telecom",
+        "Hospitality_and_Entertainment"
+      ],
+      "fr": [
+        "Government_and_Defense",
+        "Finance",
+        "Critical_Infrastructure",
+        "Healthcare_and_Life_Sciences",
+        "Retail_and_Consumer",
+        "Industry_and_Manufacturing",
+        "Technology_and_Telecom",
+        "Hospitality_and_Entertainment"
+      ]
+    },
+    "countries": {
+      "en": [
+        "United States",
+        "Ukraine",
+        "Taiwan",
+        "Spain",
+        "Japan",
+        "India",
+        "Finland"
+      ],
+      "fr": [
+        "États-Unis",
+        "Ukraine",
+        "Taïwan",
+        "Espagne",
+        "Japon",
+        "Inde",
+        "Finlande"
+      ]
+    },
+    "narrative": {
+      "en": "- **Government & Defense:** Ukrainian state institutions targeted by UAC-0145 utilizing spoofed Microsoft updates for espionage, and Taiwanese governmental entities compromised by Daxin espionage group.\n- **Finance:** AssuranceAmerica suffered a major breach exposing SSNs and driver's licenses of over 1.1 million individuals, while Spanish investment fraud rings extorted €140 million before police takedown.\n- **Critical Infrastructure:** Kudankulam Nuclear Power Plant (India) suffered data exposure of sensitive engineering plans and blueprints, risking geopolitical stability.\n- **Healthcare:** Finnish Vastaamo psychotherapy database hack consequences persist with international wanted notices for blackmailing tens of thousands of therapy patients.\n- **Retail & Consumer:** Lidl's online shop breached through a third-party service provider compromise, exposing e-commerce customer records.\n- **Industry & Manufacturing:** Fluke Corporation suffered a massive breach of 821,000 corporate user records (names, emails, employers) with no DMARC defense, exposing partners to subsequent BEC.\n- **Technology & Telecom:** AsyncAPI's npm packages (used by over 2 million developers) poisoned by TeamPCP using GitHub Actions OIDC token theft to exfiltrate AWS/GCP cloud secrets.\n- **Hospitality & Entertainment:** Madison Square Garden's VIP celebrity surveillance database leaked, exposing internal tracking metrics.",
+      "fr": "- **Gouvernement et Défense :** Les institutions d'État ukrainiennes ont été ciblées par UAC-0145 à l'aide de fausses mises à jour Microsoft à des fins d'espionnage, et des entités gouvernementales taïwanaises ont été compromises par le groupe Daxin.\n- **Finance :** AssuranceAmerica a subi une violation majeure exposant les numéros de sécurité sociale et les permis de conduire de plus de 1,1 m d'individus, tandis qu'un réseau de fraude espagnol a extorqué 140 M€ avant son démantèlement.\n- **Infrastructures Critiques :** La centrale nucléaire de Kudankulam (Inde) a été victime d'une fuite de plans d'ingénierie et de schémas industriels confidentiels, menaçant la stabilité géopolitique régionale.\n- **Santé :** Les répercussions du piratage de la clinique finlandaise Vastaamo se poursuivent avec des mandats d'arrêt internationaux pour le chantage de dizaines de milliers de patients.\n- **Grande Distribution :** La boutique en ligne de Lidl a été compromise via un prestataire de services tiers, exposant les données de clients de commerce électronique.\n- **Industrie :** Fluke Corporation a subi une violation de 821 000 enregistrements (noms, e-mails, employeurs) sans aucune protection DMARC, exposant ses partenaires à des fraudes BEC.\n- **Technologie et Télécoms :** Les paquets npm d'AsyncAPI (utilisés par 2 millions de développeurs) ont été empoisonnés par TeamPCP via le vol de jetons OIDC GitHub Actions pour exfiltrer des secrets AWS/GCP.\n- **Divertissement et Restauration :** Le restaurant ヨプの王豚塩焼 d'Akasaka au Japon a subi un vol physique de 284 cartes bancaires par skimming interne sur près de deux ans."
+    }
+  },
+  "trends": {
+    "emerging_techniques": {
+      "en": [
+        "Autonomous AI agent offensive orchestration (vending machine exploits, JADEPUFFER agentic ransomware)",
+        "OIDC GitHub Actions CI/CD pipeline token abuse",
+        "Import-time/require-time npm module execution bypassing --ignore-scripts"
+      ],
+      "fr": [
+        "Orchestration d'attaques autonomes par IA (vending machines d'exploits, ransomware agentique JADEPUFFER)",
+        "Abus de jetons OIDC dans les pipelines CI/CD de GitHub Actions",
+        "Exécution de modules npm au moment du chargement (import-time) contournant --ignore-scripts"
+      ]
+    },
+    "declining_techniques": {
+      "en": [
+        "Static signature antivirus scanning",
+        "Manual vulnerability assessment",
+        "Unencrypted SMS MFA"
+      ],
+      "fr": [
+        "Analyse de signatures antivirus statiques",
+        "Évaluation manuelle des vulnérabilités",
+        "Authentification MFA par SMS non chiffré"
+      ]
+    },
+    "geopolitical_context": {
+      "en": "Multilateral cyber friction in Eastern Europe (Russia-Ukraine) and East Asia (China-Taiwan). Russia leveraging FSB Center 16 for strategic persistence on routers, while Western coalitions focus on law enforcement takedowns (Leakbase, Spanish fraud rings) and restrictive export controls on frontier AI models (Claude Fable).",
+      "fr": "Frictions cybernétiques multilatérales en Europe de l'Est (Russie-Ukraine) et en Asie de l'Est (Chine-Taïwan). La Russie s'appuie sur le FSB Center 16 pour assurer sa persistance sur les routeurs, tandis que les coalitions occidentales se concentrent sur le démantèlement judiciaire (Leakbase) et le contrôle d'exportation de l'IA (Claude Fable)."
+    }
+  },
+  "recommendations": {
+    "strategic": {
+      "en": [
+        {
+          "title": "Enforce FIDO2 Hardware MFA globally",
+          "detail": "Adversary-in-the-Middle (AiTM) phishing tools, particularly the emerging Kratos PhaaS and EvilProxy platforms, easily bypass standard SMS and TOTP MFA. Organizations must transition to FIDO2/WebAuthn hardware keys (like YubiKey 5 Series or Google Titan) for all enterprise Microsoft 365 and Entra ID accounts. This completely neutralizes the threat of token theft and session hijacking observed in recent campaigns."
+        },
+        {
+          "title": "Isolate CI/CD Build Runners completely",
+          "detail": "TeamPCP is actively exploiting permissive GitHub Actions workflow configurations (like pull_request_target) to exfiltrate OIDC tokens and poison npm packages like AsyncAPI. Security teams must restrict workflow permissions, enforce SLSA-verifier policies, and utilize ephemeral, network-isolated runners to prevent credential exfiltration. This mitigates the risk of supply chain contamination before deployment to production environments."
+        }
+      ],
+      "fr": [
+        {
+          "title": "Imposer l'authentification MFA matérielle FIDO2",
+          "detail": "Les plateformes d'hameçonnage AiTM (Adversary-in-the-Middle), notamment Kratos PhaaS, contournent facilement le MFA classique par SMS et TOTP. Les organisations doivent imposer l'usage de clés matérielles FIDO2 (YubiKey 5, Google Titan) sur tous les comptes M365 et Entra ID. Cela neutralise définitivement le vol de jetons de session observé dans les récentes campagnes."
+        },
+        {
+          "title": "Isoler totalement les runners CI/CD",
+          "detail": "TeamPCP exploite activement les configurations permissives de GitHub Actions (telles que pull_request_target) pour exfiltrer des jetons OIDC et empoisonner les paquets npm d'AsyncAPI. Les équipes doivent restreindre les permissions des workflows, valider la provenance SLSA et isoler les runners du réseau externe. Cela élimine les risques de contamination de la chaîne d'approvisionnement logicielle."
+        }
+      ]
+    },
+    "operational": {
+      "en": [
+        {
+          "title": "Update SharePoint and audit local installations",
+          "detail": "Active exploitation of SharePoint RCE flaws (CVE-2026-58644 and CVE-2026-56164) is being leveraged to compromise internal corporate directories. Administrators must immediately apply the Microsoft July 2026 cumulative updates on all SharePoint servers. Active health checks on AMSI integration should be validated using Get-SharePointDiagnostics to verify active defense posture."
+        },
+        {
+          "title": "Harden enterprise routers against SNMP scans",
+          "detail": "Russian state actor FSB Center 16 is actively scanning for exposed SNMPv1/v2 configurations to exfiltrate configuration files (CVE-2018-0171). Network administrators must disable Cisco Smart Install using the no vstack command and restrict SNMP access to local subnet ranges using ACLs. Ensure all community strings are rotated away from defaults to prevent unauthorized configuration dumping."
+        }
+      ],
+      "fr": [
+        {
+          "title": "Mettre à jour SharePoint Server immédiatement",
+          "detail": "L'exploitation active des vulnérabilités SharePoint (CVE-2026-58644 et CVE-2026-56164) permet des exécutions de code à distance (RCE) critiques. Les administrateurs doivent déployer d'urgence les correctifs Microsoft de juillet 2026 sur tous les serveurs exposés. Validez le fonctionnement d'AMSI avec Get-SharePointDiagnostics pour confirmer l'état défensif global."
+        },
+        {
+          "title": "Sécuriser les routeurs contre l'espionnage SNMP",
+          "detail": "Le groupe étatique russe FSB Center 16 cible de vieux protocoles SNMP (CVE-2018-0171) pour voler les configurations de routeurs d'entreprise Cisco. Désactivez immédiatement Smart Install avec la commande no vstack sur tous les équipements affectés. Limitez l'accès SNMP aux seuls réseaux locaux internes via des règles ACL strictes."
+        }
+      ]
+    }
+  }
+}
