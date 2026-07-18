@@ -1,0 +1,1304 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "Threat analysis for this period focuses on three major axes. First, North Korean state-sponsored hacking activity (Lazarus, APT37, PolinRider) targeting developers with fake job offers or coding challenges to infiltrate software supply chains and steal cryptocurrency. Second, the hybrid cyberwarfare led by the Russian Federation (specifically FSB Unit 61240) targeting European critical infrastructure and services, prompting countries like France to toughen their diplomatic and technical response. Finally, the discovery and disclosure of critical vulnerabilities in key industrial equipment (Siemens ROX II) and trusted libraries (OpenSSL), combined with continuous pressure from ransomware groups (Qilin) targeting the agrifood and healthcare sectors.",
+      "fr": "L'analyse de la menace pour la période se concentre sur trois axes majeurs. Premièrement, l'activité de piratage parrainée par l'État nord-coréen (Lazarus, APT37, PolinRider) qui cible agressivement les développeurs via des fausses offres d'emploi ou des challenges de code afin d'infiltrer les chaînes d'approvisionnement logicielles et de voler des cryptomonnaies. Deuxièmement, la cyberguerre hybride menée par la Fédération de Russie (notamment l'unité 61240 du FSB) visant les infrastructures et les services critiques en Europe, incitant des pays comme la France à durcir leur réponse diplomatique et technique. Enfin, la découverte et la divulgation de vulnérabilités critiques dans des équipements industriels clés (Siemens ROX II) et des bibliothèques de confiance (OpenSSL), combinées à une pression continue des groupes de ransomware (Qilin) ciblant le secteur agroalimentaire et de la santé."
+    },
+    "date": "2026-07-18"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": ["Government_and_Defense"],
+        "fr": ["Gouvernement et défense"]
+      },
+      "theme": {
+        "en": "Transnational geopolitical reorganizations in the Sahel region",
+        "fr": "Recompositions géopolitiques transfrontalières dans la région du Sahel"
+      },
+      "description": {
+        "en": "The Sudanese conflict between SAF and RSF accelerates the geopolitical restructuring of the Sahelo-Saharan space, creating a strategic continuum conducive to the weakening of state sovereignty and the rise of trafficking.",
+        "fr": "Le conflit soudanais entre les SAF et les RSF accélère les recompositions géopolitiques de l'espace sahélo-saharien, créant un continuum stratégique propice à l'affaiblissement des souverainetés étatiques et aux trafics."
+      },
+      "recommandations": [
+        {
+          "en": "Adapt security monitoring to transnational circulations of hybrid actors.",
+          "fr": "Adapter la veille de sécurité aux circulations transfrontalières d'acteurs hybrides."
+        },
+        {
+          "en": "Develop surveillance of regional logistical risks.",
+          "fr": "Développer une surveillance des risques logistiques régionaux."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Assess the exposure of critical infrastructures in the region.", "Monitor transborder information flows."],
+          "fr": ["Évaluer l'exposition des infrastructures critiques de la région.", "Surveiller les flux transfrontaliers d'informations."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor local social media activity.", "Analyze weak geopolitical signals."],
+          "fr": ["Suivre l'activité des réseaux sociaux locaux.", "Analyser les signaux faibles géopolitiques."]
+        },
+        "phase3_containment": {
+          "en": ["Isolate exposed regional information systems.", "Establish secure information corridors."],
+          "fr": ["Isoler les systèmes informatiques régionaux exposés.", "Mettre en place des corridors d'information sécurisés."]
+        },
+        "phase4_post_incident": {
+          "en": ["Conduct a post-conflict impact assessment.", "Adjust supply chain resilience."],
+          "fr": ["Mener une évaluation d'impact post-conflit.", "Ajuster la résilience des chaînes d'approvisionnement."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Hunt for influence campaigns in the Sahelo-Saharan zone using T1566 indicators."],
+          "fr": ["Rechercher des campagnes d'influence dans la zone sahélo-saharienne en utilisant les indicateurs T1566."]
+        }
+      },
+      "tags": ["sudan", "conflict", "sahel", "libya"],
+      "sources": ["https://www.iris-france.org/du-nil-au-fezzan-le-conflit-soudanais-comme-accelerateur-des-recompositions-geopoltiques-sahelo-sahariennes/"],
+      "date": "2026-07-17"
+    },
+    {
+      "sector": {
+        "en": ["Government_and_Defense"],
+        "fr": ["Gouvernement et défense"]
+      },
+      "theme": {
+        "en": "Cyber attribution and diplomatic tensions between France and Russia",
+        "fr": "Attribution cyber et tensions diplomatiques entre la France et la Russie"
+      },
+      "description": {
+        "en": "France hardens its stance against cyberattacks and espionage campaigns attributed directly to FSB Unit 61240, marking a turning point in public attribution and support for European sanctions.",
+        "fr": "La France hausse le ton face aux cyberattaques et campagnes d'espionnage attribuées directement à l'unité 61240 du FSB russe, franchissant un palier dans l'attribution publique et le soutien aux sanctions européennes."
+      },
+      "recommandations": [
+        {
+          "en": "Audit and restrict connections to suspected Russian servers.",
+          "fr": "Auditer et restreindre les liaisons vers les serveurs russes suspectés."
+        },
+        {
+          "en": "Strengthen national active defense infrastructure.",
+          "fr": "Renforcer l'infrastructure de défense active nationale."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Raise awareness among administration executives on interference risks.", "Audit state network exposure points."],
+          "fr": ["Sensibiliser les cadres de l'administration aux risques d'ingérence.", "Auditer les points d'exposition réseau de l'État."]
+        },
+        "phase2_detection": {
+          "en": ["Detect persistent intrusions attributable to FSB Unit 61240.", "Monitor phishing attempts targeting ministries."],
+          "fr": ["Détecter les intrusions persistantes attribuables à l'unité 61240.", "Surveiller les tentatives d'hameçonnage visant les ministères."]
+        },
+        "phase3_containment": {
+          "en": ["Immediately revoke compromised access accounts.", "Apply isolation measures on diplomatic subnetworks."],
+          "fr": ["Révoquer immédiatement les accès compromis.", "Appliquer des mesures d'isolement sur les sous-réseaux diplomatiques."]
+        },
+        "phase4_post_incident": {
+          "en": ["Coordinate political attributions at the European level.", "Strengthen data leak detection policies."],
+          "fr": ["Coordonner les attributions politiques au niveau européen.", "Renforcer les politiques de détection de fuites de données."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search for FSB Unit 61240 phishing signatures in mail servers using T1114 patterns."],
+          "fr": ["Rechercher des signatures d'hameçonnage de l'unité 61240 du FSB dans les serveurs de messagerie (T1114)."]
+        }
+      },
+      "tags": ["hybrid_warfare", "russia", "france", "fsb"],
+      "sources": ["https://www.lemonde.fr/international/article/2026/07/17/pourquoi-la-guerre-hybride-menee-par-la-russie-pousse-la-france-a-hausser-le-ton_6724233_3210.html"],
+      "date": "2026-07-17"
+    },
+    {
+      "sector": {
+        "en": ["Technology_and_Telecom"],
+        "fr": ["Technologies et télécommunications"]
+      },
+      "theme": {
+        "en": "Software sovereignty and espionage linked to European password manager Passwork",
+        "fr": "Souveraineté logicielle et espionnage liés au gestionnaire de mots de passe Passwork"
+      },
+      "description": {
+        "en": "The Passwork software, marketed as European, actually has close links with Russia and possesses an FSB license. This situation poses a critical interception risk for European corporate credentials.",
+        "fr": "Le logiciel Passwork, présenté comme européen, dispose en réalité de liens étroits avec la Russie et d'une licence du FSB. Cette situation fait peser un risque critique d'interception sur la gestion des identifiants des entreprises européennes."
+      },
+      "recommandations": [
+        {
+          "en": "Urgently migrate credentials and passwords to a certified, sovereign tool.",
+          "fr": "Migrer urgemment les mots de passe vers un outil certifié et souverain."
+        },
+        {
+          "en": "Audit the network data flows of all third-party security tools.",
+          "fr": "Auditer les flux de données réseau de tous les outils de sécurité tiers."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Inventory sensitive tool licenses of Russian origin.", "Set up a migration plan to sovereign alternative solutions."],
+          "fr": ["Dresser l'inventaire des licences d'outils sensibles d'origine russe.", "Mettre en place un plan de migration vers des solutions souveraines."]
+        },
+        "phase2_detection": {
+          "en": ["Analyze outgoing network traffic from Passwork applications.", "Look for transfers of encrypted keys or archives."],
+          "fr": ["Analyser les flux réseau sortant de l'application Passwork.", "Rechercher d'éventuels transferts de clés ou d'archives chiffrées."]
+        },
+        "phase3_containment": {
+          "en": ["Isolate the password management server to a closed network.", "Force a reset of all secrets and credentials stored in Passwork."],
+          "fr": ["Isoler le serveur de gestion des mots de passe en réseau fermé.", "Forcer la réinitialisation de tous les secrets stockés dans Passwork."]
+        },
+        "phase4_post_incident": {
+          "en": ["Deploy a certified password manager compliant with sovereign standards.", "Terminate all contracts associated with Passwork."],
+          "fr": ["Déployer un gestionnaire de mots de passe conforme aux normes nationales.", "Résilier tous les contrats liés à Passwork."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Scan proxies for traffic patterns to domains associated with FSB or entities under sanctions."],
+          "fr": ["Analyser les proxys à la recherche de flux vers des domaines associés au FSB ou à des entités sous sanctions."]
+        }
+      },
+      "tags": ["passwork", "password_manager", "espionage", "fsb", "russia"],
+      "sources": ["https://www.lemonde.fr/pixels/article/2026/07/17/les-liens-troubles-avec-la-russie-d-un-gestionnaire-de-mots-de-passe-europeen_6724124_4408996.html"],
+      "date": "2026-07-17"
+    }
+  ],
+  "regulatory_and_legal": [
+    {
+      "title": {
+        "en": "Implementing Regulation (EU) 2026/1778 - Digital Product Passport Registry",
+        "fr": "Règlement d'exécution (UE) 2026/1778 - Registre du passeport numérique des produits"
+      },
+      "description": {
+        "en": "Adoption of the implementing regulation laying down the technical and operational rules of the registry of the digital product passport.",
+        "fr": "Adoption du règlement d'exécution fixant les modalités techniques et opérationnelles du registre du passeport numérique des produits."
+      },
+      "organisation": {
+        "en": ["European Commission"],
+        "fr": ["Commission Européenne"]
+      },
+      "jurisdiction": {
+        "en": ["European Union"],
+        "fr": ["Union Européenne"]
+      },
+      "references": {
+        "en": ["CELEX:32026R1778"],
+        "fr": ["CELEX:32026R1778"]
+      },
+      "tags": ["regulation", "europe", "products", "digital_passport"],
+      "sources": ["https://eur-lex.europa.eu/legal-content/AUTO/?uri=CELEX:32026R1778"],
+      "date": "2026-07-17"
+    },
+    {
+      "title": {
+        "en": "Money Laundering Charges Over $43 Million Investment Fraud",
+        "fr": "Inculpation pour blanchiment de 43 millions de dollars issus d'une fraude à l'investissement"
+      },
+      "description": {
+        "en": "The United States Department of Justice charged two individuals with laundering $43 million generated through investment scams.",
+        "fr": "Le Département de la Justice des États-Unis a inculpé deux individus pour le blanchiment de 43 millions de dollars issus de fraudes à l'investissement."
+      },
+      "organisation": {
+        "en": ["United States Department of Justice"],
+        "fr": ["Département de la Justice des États-Unis"]
+      },
+      "jurisdiction": {
+        "en": ["United States"],
+        "fr": ["États-Unis"]
+      },
+      "references": {
+        "en": ["US DOJ 2026"],
+        "fr": ["US DOJ 2026"]
+      },
+      "tags": ["fraud", "money_laundering", "united_states", "legal"],
+      "sources": ["https://www.bleepingcomputer.com/news/security/us-charges-two-over-laundering-43-million-from-investment-fraud/"],
+      "date": "2026-07-17"
+    },
+    {
+      "title": {
+        "en": "FBI Arrest Over Malicious Steam Games Used for Crypto Draining",
+        "fr": "Arrestation par le FBI d'un homme utilisant des jeux Steam pour vider des portefeuilles crypto"
+      },
+      "description": {
+        "en": "The FBI arrested a man accused of distributing malicious games on the Steam platform to drain victims' cryptocurrency wallets.",
+        "fr": "Arrestation par le FBI d'un cybercriminel ayant utilisé des jeux Steam malveillants pour vider les portefeuilles de cryptomonnaies de ses victimes."
+      },
+      "organisation": {
+        "en": ["Federal Bureau of Investigation"],
+        "fr": ["Federal Bureau of Investigation"]
+      },
+      "jurisdiction": {
+        "en": ["United States"],
+        "fr": ["États-Unis"]
+      },
+      "references": {
+        "en": ["FBI Arrest 2026"],
+        "fr": ["FBI Arrest 2026"]
+      },
+      "tags": ["arrest", "cybercrime", "steam", "crypto_drainer"],
+      "sources": ["https://databreaches.net/2026/07/17/fbi-arrests-man-accused-of-using-steam-games-to-drain-victims-crypto-wallets/"],
+      "date": "2026-07-17"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Ernst & Young (EY)",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Business_Services"],
+        "fr": ["Business_Services"]
+      },
+      "description": {
+        "en": "A compromise of a third-party support ticketing platform used by EY allowed an unauthorized actor to access and exfiltrate highly confidential client tax documents.",
+        "fr": "Une intrusion sur une plateforme de gestion des tickets de support informatique tierce utilisée par EY a permis à un tiers non autorisé d'accéder et de télécharger des documents fiscaux confidentiels de clients."
+      },
+      "mitre_ttps": ["T1199"],
+      "recommandations": [
+        {
+          "en": "Systematically encrypt files containing sensitive tax data before uploading them to support platforms.",
+          "fr": "Chiffrer systématiquement les documents contenant des données hautement sensibles avant leur dépôt sur des plateformes de support."
+        },
+        {
+          "en": "Apply the principle of least privilege to support and ticketing accounts.",
+          "fr": "Appliquer le principe du moindre privilège pour les comptes de support."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Audit all subcontractors who have access to tax and financial data.", "Establish exfiltration detection thresholds."],
+          "fr": ["Auditer l'ensemble des sous-traitants ayant accès aux données fiscales.", "Établir des seuils d'alertes sur les exfiltrations vers l'exterieur."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor for abnormal or high-volume download activities.", "Detect off-hours access on the support ticketing portal."],
+          "fr": ["Surveiller les activités de téléchargement volumineuses et anormales.", "Détecter les accès hors horaires normaux sur la plateforme de support."]
+        },
+        "phase3_containment": {
+          "en": ["Deactivate compromised access to the third-party ticketing portal.", "Isolate integration servers between EY and the support platform."],
+          "fr": ["Désactiver les accès compromis du système de ticket tiers.", "Isoler le serveur d'intégration entre EY et la plateforme de support."]
+        },
+        "phase4_post_incident": {
+          "en": ["Notify clients affected by the tax document leak.", "Revise vendor security auditing policies."],
+          "fr": ["Notifier les clients impactés par la fuite de données fiscales.", "Réviser la politique d'audit de sécurité des fournisseurs."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Query support portal logs for atypical API calls or bulk downloads from external IPs."],
+          "fr": ["Rechercher dans les journaux du portail de support des appels API atypiques ou des téléchargements en masse depuis des IP externes."]
+        }
+      },
+      "tags": ["ey", "data_breach", "third_party", "support_tickets"],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/ernst-and-young-discloses-data-breach-after-support-system-hack/",
+        "https://securityaffairs.com/195550/data-breach/ernst-young-ey-investigates-data-breach-involving-third-party-support-tickets.html"
+      ],
+      "date": "2026-07-17"
+    },
+    {
+      "victim": "Abbott Laboratories",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Healthcare_and_Life_Sciences"],
+        "fr": ["Healthcare_and_Life_Sciences"]
+      },
+      "description": {
+        "en": "Abbott Laboratories is investigating two separate security incidents following extortion claims and potential unauthorized data access by threat actors.",
+        "fr": "Abbott Laboratories enquête sur deux incidents de sécurité distincts à la suite de revendications d'extorsion formulées par des cybercriminels."
+      },
+      "mitre_ttps": ["T1486", "T1048"],
+      "recommandations": [
+        {
+          "en": "Ensure strong encryption and segment databases containing intellectual property.",
+          "fr": "Assurer un chiffrement fort et segmenter les environnements de stockage de propriété intellectuelle."
+        },
+        {
+          "en": "Monitor outbound traffic for connection attempts to anonymous hosting services.",
+          "fr": "Surveiller les flux sortants vers les services d'hébergement anonymes."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Test corporate crisis communication plans.", "Isolate and back up critical healthcare data."],
+          "fr": ["Tester le plan de communication de crise de l'entreprise.", "Sauvegarder et isoler les données critiques de santé."]
+        },
+        "phase2_detection": {
+          "en": ["Analyze alerts for unauthorized cloud access.", "Monitor ransomware and extortion leak forums."],
+          "fr": ["Analyser les alertes d'accès non autorisés au cloud.", "Surveiller les forums d'extorsion et de ransomware."]
+        },
+        "phase3_containment": {
+          "en": ["Deactivate suspicious API access tokens.", "Reset all network administration privileges."],
+          "fr": ["Désactiver les jetons d'accès API suspects.", "Réinitialiser l'ensemble des privilèges d'administration réseau."]
+        },
+        "phase4_post_incident": {
+          "en": ["Audit identified exfiltration vectors.", "Review technical responses to extortion scenarios."],
+          "fr": ["Auditer les vecteurs d'exfiltration identifiés.", "Faire un bilan de la réponse technique face à l'extorsion."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search Active Directory logs for unusual service account behavior and privilege escalations."],
+          "fr": ["Rechercher dans les journaux Active Directory des comportements de comptes de service inhabituels et des élévations de privilèges."]
+        }
+      },
+      "tags": ["abbott", "extortion", "cyber_incident", "medical"],
+      "sources": ["https://www.bleepingcomputer.com/news/security/abbott-laboratories-probes-two-cyber-incidents-amid-extortion-claims/"],
+      "date": "2026-07-17"
+    },
+    {
+      "victim": "Nichirei Corporation",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": ["Industry_and_Manufacturing"],
+        "fr": ["Industry_and_Manufacturing"]
+      },
+      "description": {
+        "en": "Nichirei suffered a widespread system outage caused by a targeted cyberattack. To prevent propagation, the group suspended all logistical and warehouse operations networks.",
+        "fr": "Nichirei a subi une panne système généralisée provoquée par une cyberattaque ciblée. Pour limiter la propagation, le groupe a suspendu l'ensemble de ses réseaux logistiques d'expédition et d'entrepôt."
+      },
+      "mitre_ttps": ["T1133"],
+      "recommandations": [
+        {
+          "en": "Strengthen network isolation of operational control systems from administrative networks.",
+          "fr": "Renforcer l'isolation réseau des systèmes de contrôle opérationnel vis-à-vis des réseaux de gestion."
+        },
+        {
+          "en": "Perform regular vulnerability assessments on remote access gateways.",
+          "fr": "Effectuer des analyses de vulnérabilités régulières sur les passerelles distantes."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Establish offline Business Continuity Plans (BCP) for physical supply chain operations.", "Deploy rapid network isolation capabilities."],
+          "fr": ["Élaborer un plan de continuité d'activité (PCA) pour la chaîne d'approvisionnement physique.", "Disposer d'outils d'isolation réseau rapides."]
+        },
+        "phase2_detection": {
+          "en": ["Scan for anomalies in warehouse management systems.", "Verify unusual logins on production servers."],
+          "fr": ["Rechercher des anomalies dans les systèmes de gestion d'entrepôt.", "Vérifier les connexions inhabituelles sur les serveurs de production."]
+        },
+        "phase3_containment": {
+          "en": ["Disconnect affected logistics systems from the internet.", "Isolate critical storage network infrastructures."],
+          "fr": ["Déconnecter l'ensemble des systèmes du groupe d'Internet.", "Isoler le réseau de logistique réfrigérée des réseaux d'entreprise."]
+        },
+        "phase4_post_incident": {
+          "en": ["Restore logistics operations incrementally after verification.", "Submit reports to relevant data protection regulators."],
+          "fr": ["Restaurer les services logistiques de manière graduelle après validation de sécurité.", "Soumettre les rapports aux instances de régulation de données personnelles."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Analyze firewall logs for unexpected internal routing toward cold chain shipping networks."],
+          "fr": ["Analyser les journaux de pare-feu à la recherche de routages internes suspects vers les réseaux logistiques."]
+        }
+      },
+      "tags": ["nichirei", "japan", "supply_chain", "food_industry"],
+      "sources": ["https://securityaffairs.com/195543/security/a-cyberattack-hit-nichirei-one-of-japans-largest-food-companies.html"],
+      "date": "2026-07-17"
+    },
+    {
+      "victim": "Droguería Martorani",
+      "threat_actor": "Qilin",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": ["Qilin"],
+      "sector": {
+        "en": ["Healthcare_and_Life_Sciences"],
+        "fr": ["Healthcare_and_Life_Sciences"]
+      },
+      "description": {
+        "en": "Droguería Martorani was listed as a victim on the Qilin ransomware extortion site, posing a risk of massive leakage of commercial and health data.",
+        "fr": "La pharmacie Droguería Martorani a été listée comme victime du groupe de ransomware Qilin, entraînant un risque de fuite massive de données commerciales et de santé."
+      },
+      "mitre_ttps": ["T1486"],
+      "recommandations": [
+        {
+          "en": "Enforce strict access controls and active directory monitoring for administrative tools.",
+          "fr": "Sensibiliser à la sécurité et surveiller de près les outils d'administration active."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Perform daily offline backups.", "Deploy EDR on all systems."],
+          "fr": ["Réaliser des sauvegardes quotidiennes déconnectées.", "Déployer un EDR sur l'ensemble du parc informatique."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor for abnormal PowerShell usage.", "Analyze massive file writes across the network."],
+          "fr": ["Surveiller l'utilisation anormale de PowerShell ou d'outils de script.", "Analyser les écritures massives de fichiers sur le réseau."]
+        },
+        "phase3_containment": {
+          "en": ["Block ransomware encryption by isolating initiator hosts.", "Sever network access between critical databases."],
+          "fr": ["Bloquer le chiffrement en isolant l'hôte initiateur.", "Couper les accès réseau entre les serveurs critiques de base de données."]
+        },
+        "phase4_post_incident": {
+          "en": ["Restore systems from verified safe backups.", "Analyze initial vector of compromise."],
+          "fr": ["Restaurer les systèmes à partir de sauvegardes hors ligne testées saines.", "Analyser le point d'entrée initial de l'infection."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Scan for unknown executables or volume shadow copy deletion commands using EDR."],
+          "fr": ["Rechercher des exécutables inconnus ou des commandes de suppression de clichés instantanés via l'EDR."]
+        }
+      },
+      "tags": ["martorani", "qilin", "ransomware", "healthcare"],
+      "sources": ["https://www.ransomlook.io/group/qilin"],
+      "date": "2026-07-18"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2025-40949",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "9.1",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:o:siemens:ruggedcom_rox_ii:*:*:*:*:*:*:*:*",
+      "product": "Ruggedcom ROX II",
+      "vendor": "Siemens",
+      "description": {
+        "en": "Command injection vulnerability in Siemens ROX II scheduler allowing authenticated users with limited privileges to inject persistent root commands.",
+        "fr": "Troisième faille d'une chaîne de trois zero-days permettant à un attaquant avec des droits limités d'injecter des commandes root persistantes dans la configuration des tâches planifiées de Siemens ROX II."
+      },
+      "mitre_ttps": ["T1053"],
+      "recommandations": [
+        {
+          "en": "Update Siemens Ruggedcom ROX II firmware to V2.17.1 or newer.",
+          "fr": "Mettre à jour le firmware Siemens ROX II vers la version V2.17.1 ou ultérieure."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Maintain asset inventory of Ruggedcom ROX II switches.", "Limit admin web interface exposure."],
+          "fr": ["Dresser l'inventaire des switchs Ruggedcom ROX II de la structure.", "Limiter l'exposition des interfaces d'administration."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor for changes in scheduler configuration files.", "Log unauthorized access attempts to the web UI."],
+          "fr": ["Surveiller les modifications des fichiers de configuration du planificateur.", "Tracer les accès non autorisés à l'interface d'administration."]
+        },
+        "phase3_containment": {
+          "en": ["Isolate network management segments.", "Restrict routing to the management portal."],
+          "fr": ["Isoler les segments d'administration réseau.", "Restreindre le routage vers le portail de gestion."]
+        },
+        "phase4_post_incident": {
+          "en": ["Deploy the V2.17.1 firmware update.", "Verify integrity of scheduled jobs on the device."],
+          "fr": ["Déployer la mise à jour du firmware V2.17.1.", "Vérifier l'intégrité des tâches planifiées sur l'appareil."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Query OT logs for unexpected root-level command execution and abnormal tasks."],
+          "fr": ["Rechercher dans les journaux industriels des exécutions de commandes root et des tâches planifiées anormales."]
+        }
+      },
+      "tags": ["siemens", "rox_ii", "ruggedcom", "zero_day", "command_injection"],
+      "sources": ["https://unit42.paloaltonetworks.com/siemens-rox-ii-zero-day-vulnerabilities/"],
+      "date": "2026-07-17"
+    },
+    {
+      "cve_id": "CVE-2025-40947",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "7.5",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:o:siemens:ruggedcom_rox_ii:*:*:*:*:*:*:*:*",
+      "product": "Ruggedcom ROX II",
+      "vendor": "Siemens",
+      "description": {
+        "en": "Command injection vulnerability in the Siemens ROX II license verification mechanism due to lack of input sanitization prior to executing verification processes.",
+        "fr": "La validation de la clé de licence du commutateur ROX II n'assure pas le nettoyage adéquat de l'entrée de signature avant son exécution, permettant l'injection de commandes root."
+      },
+      "mitre_ttps": ["T1068"],
+      "recommandations": [
+        {
+          "en": "Upgrade Siemens Ruggedcom ROX II firmware to V2.17.1 or newer.",
+          "fr": "Mettre à jour le firmware Siemens ROX II vers la version V2.17.1 ou ultérieure."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Perform regular firmware reviews.", "Enforce strict network access control lists for switches."],
+          "fr": ["Effectuer des revues régulières de firmware.", "Appliquer des listes de contrôle d'accès réseau strictes pour les switchs."]
+        },
+        "phase2_detection": {
+          "en": ["Audit license upload operations.", "Inspect syslogs for anomalous commands execution on switches."],
+          "fr": ["Auditer les opérations de chargement de licences.", "Inspecter les journaux système pour des exécutions de commandes anormales sur les commutateurs."]
+        },
+        "phase3_containment": {
+          "en": ["Disable management access to affected switches temporarily.", "Isolate the switches to dedicated OT management VLANs."],
+          "fr": ["Désactiver temporairement les accès d'administration aux switchs affectés.", "Isoler les switchs dans des VLANs d'administration OT dédiés."]
+        },
+        "phase4_post_incident": {
+          "en": ["Apply firmware version V2.17.1.", "Audit existing active licenses for any unapproved items."],
+          "fr": ["Appliquer la version de firmware V2.17.1.", "Auditer les licences actives existantes pour détecter d'éventuels éléments non approuvés."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search for signature verification bypass indicators in licensing logs on switches."],
+          "fr": ["Rechercher des indicateurs de contournement de vérification de signature dans les journaux de licence des switchs."]
+        }
+      },
+      "tags": ["siemens", "rox_ii", "ruggedcom", "privilege_escalation"],
+      "sources": ["https://unit42.paloaltonetworks.com/siemens-rox-ii-zero-day-vulnerabilities/"],
+      "date": "2026-07-17"
+    },
+    {
+      "cve_id": "CVE-2025-40948",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "6.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:o:siemens:ruggedcom_rox_ii:*:*:*:*:*:*:*:*",
+      "product": "Ruggedcom ROX II",
+      "vendor": "Siemens",
+      "description": {
+        "en": "Unsecured execution of the xz decompression utility with root privileges allows arbitrary file disclosure on Siemens ROX II platforms.",
+        "fr": "L'utilisation non sécurisée de l'outil de décompression xz exécuté avec des privilèges root permet de lire n'importe quel fichier système en passant des paramètres forgés."
+      },
+      "mitre_ttps": ["T1083"],
+      "recommandations": [
+        {
+          "en": "Apply firmware update V2.17.1 on Ruggedcom ROX II switches.",
+          "fr": "Mettre à jour le firmware Siemens ROX II vers la version V2.17.1 ou ultérieure."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Train personnel on secure OT deployment guidelines.", "Segment administration networks."],
+          "fr": ["Former le personnel aux règles de déploiement OT sécurisées.", "Segmenter les réseaux d'administration."]
+        },
+        "phase2_detection": {
+          "en": ["Track directory traversal and file reading command structures.", "Log xz execution patterns on devices."],
+          "fr": ["Suivre les structures de commandes de traversée et de lecture de fichiers.", "Enregistrer les modèles d'exécution de xz sur les appareils."]
+        },
+        "phase3_containment": {
+          "en": ["Block remote root CLI sessions on Ruggedcom interfaces.", "Isolate configuration management VLANs."],
+          "fr": ["Bloquer les sessions root distantes en CLI sur les commutateurs.", "Isoler les VLANs de gestion de configuration."]
+        },
+        "phase4_post_incident": {
+          "en": ["Update Ruggedcom ROX II firmware to V2.17.1.", "Rotate administration secrets and credentials on devices."],
+          "fr": ["Mettre à jour le firmware Ruggedcom ROX II vers la version V2.17.1.", "Renouveler les secrets d'administration et identifiants des appareils."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search for anomalous calls to the xz binary or file reading attempts in switch histories."],
+          "fr": ["Rechercher des appels anormaux au binaire xz ou des tentatives de lecture de fichiers dans l'historique des commutateurs."]
+        }
+      },
+      "tags": ["siemens", "rox_ii", "ruggedcom", "information_disclosure"],
+      "sources": ["https://unit42.paloaltonetworks.com/siemens-rox-ii-zero-day-vulnerabilities/"],
+      "date": "2026-07-17"
+    },
+    {
+      "cve_id": "CVE-2026-46817",
+      "euvd_id": "unknown",
+      "cisa_kev": "true",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:oracle:financials_payments:*:*:*:*:*:*:*:*",
+      "product": "Oracle Payments",
+      "vendor": "Oracle",
+      "description": {
+        "en": "Unauthenticated remote code execution vulnerability in Oracle Payments affecting financial transactions systems, added to the CISA KEV catalog.",
+        "fr": "Faille critique dans Oracle Payments permettant l'exécution de code à distance non authentifiée sur HTTP, ajoutée au catalogue KEV de la CISA."
+      },
+      "mitre_ttps": ["T1190"],
+      "recommandations": [
+        {
+          "en": "Apply the latest patch set in Oracle's Critical Patch Update (CPU).",
+          "fr": "Appliquer immédiatement le dernier correctif de sécurité Oracle (Critical Patch Update)."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Identify active Oracle Financials and Payments service instances.", "Deploy WAF rules to intercept exploit attempts."],
+          "fr": ["Identifier les instances actives d'Oracle Financials et Payments.", "Déployer des règles de WAF pour intercepter les tentatives d'exploitation."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor web server request logs targeting payments endpoints.", "Alert on abnormal processes spawned by application threads."],
+          "fr": ["Surveiller les requêtes web ciblant les points de terminaison de paiement.", "Alerter en cas de processus anormaux générés par les threads applicatifs."]
+        },
+        "phase3_containment": {
+          "en": ["Restrict or suspend exposed Oracle Payments HTTP interfaces if vulnerable.", "Isolate payment database servers."],
+          "fr": ["Restreindre ou suspendre les interfaces HTTP d'Oracle Payments vulnérables.", "Isoler les serveurs de base de données de paiement."]
+        },
+        "phase4_post_incident": {
+          "en": ["Apply official Oracle security patches.", "Conduct a forensic review of transaction logs for potential tamper attempts."],
+          "fr": ["Appliquer les correctifs officiels d'Oracle.", "Mener une enquête forensique sur les transactions pour déceler des altérations."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Hunt for web application payload structures matching RCE exploitation signatures for Oracle Payments."],
+          "fr": ["Rechercher des payloads d'applications web correspondant aux signatures d'exploitation RCE d'Oracle Payments."]
+        }
+      },
+      "tags": ["oracle", "payments", "cisa_kev", "rce"],
+      "sources": ["https://securityaffairs.com/195516/security/u-s-cisa-adds-knx-association-knx-protocol-connection-authorization-option-1-and-oracle-flaws-to-its-known-exploited-vulnerabilities-catalog.html"],
+      "date": "2026-07-17"
+    },
+    {
+      "cve_id": "CVE-2023-4346",
+      "euvd_id": "unknown",
+      "cisa_kev": "true",
+      "cvss": "8.5",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:knx:knx_protocol:*:*:*:*:*:*:*:*",
+      "product": "KNX Protocol Connection Authorization Option 1",
+      "vendor": "KNX Association",
+      "description": {
+        "en": "KNX protocol authorization bypass vulnerability allowing attackers to lock hardware devices permanently via BCU keys, added to CISA KEV.",
+        "fr": "Vulnérabilité dans l'autorisation de connexion du protocole KNX permettant de verrouiller définitivement les appareils physiques via une clé BCU, ajoutée au KEV de la CISA."
+      },
+      "mitre_ttps": ["T1190"],
+      "recommandations": [
+        {
+          "en": "Isolate physical KNX control networks from external networks.",
+          "fr": "Isoler impérativement les réseaux physiques de contrôle KNX des réseaux externes."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Identify and list KNX building automation networks.", "Perform regular audits of BCU keys."],
+          "fr": ["Identifier et lister les réseaux KNX de domotique.", "Effectuer des audits réguliers des clés BCU."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor KNX bus traffic for abnormal authorization packets.", "Investigate sudden device connection drops on building systems."],
+          "fr": ["Surveiller le trafic de bus KNX pour détecter des paquets d'autorisation anormaux.", "Enquêter sur les déconnexions soudaines de dispositifs de domotique."]
+        },
+        "phase3_containment": {
+          "en": ["Segment physical bus communication networks.", "Isolate the compromised BCU from active nodes."],
+          "fr": ["Segmenter les réseaux physiques de communication de bus.", "Isoler le BCU compromis des nœuds actifs."]
+        },
+        "phase4_post_incident": {
+          "en": ["Reset affected KNX hardware devices in coordination with vendors.", "Deploy updated security settings for authorization."],
+          "fr": ["Réinitialiser les dispositifs KNX affectés en relation avec le constructeur.", "Déployer des paramètres de sécurité mis à jour pour l'authentification."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search KNX communication logs for anomalous authentication requests matching KNX Option 1 exploits."],
+          "fr": ["Analyser les journaux de communication KNX pour rechercher des requêtes d'authentification Option 1 anormales."]
+        }
+      },
+      "tags": ["knx", "protocol", "cisa_kev", "iot", "building_automation"],
+      "sources": ["https://securityaffairs.com/195516/security/u-s-cisa-adds-knx-association-knx-protocol-connection-authorization-option-1-and-oracle-flaws-to-its-known-exploited-vulnerabilities-catalog.html"],
+      "date": "2026-07-17"
+    },
+    {
+      "cve_id": "CVE-2026-12283",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "6.5",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:amazon:athena_federated_query_synapse_connector:*:*:*:*:*:*:*:*",
+      "product": "Athena Federated Query Synapse Connector",
+      "vendor": "Amazon",
+      "description": {
+        "en": "Vulnerability in AWS Athena Federated Query Synapse Connector allowing potential cross-tenant data leaks via forged database table names.",
+        "fr": "Une vulnérabilité affecte le connecteur Azure Synapse d'Athena Query Federation, provoquant de potentielles fuites de données inter-comptes."
+      },
+      "mitre_ttps": ["T1114"],
+      "recommandations": [
+        {
+          "en": "Upgrade Athena Query Federation to version v2026.21.1 or later.",
+          "fr": "Mettre à jour le connecteur Athena Query Federation vers la version v2026.21.1 ou supérieure."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Verify active deployment of Athena Synapse connectors.", "Enable detailed CloudTrail and Athena logging."],
+          "fr": ["Vérifier le déploiement actif des connecteurs Athena Synapse.", "Activer les logs détaillés CloudTrail et Athena."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor queries for atypical table names referencing out-of-scope schemas.", "Track cross-account data requests in CloudTrail."],
+          "fr": ["Surveiller les requêtes pour des noms de tables atypiques hors du schéma.", "Tracer les requêtes de données croisées dans CloudTrail."]
+        },
+        "phase3_containment": {
+          "en": ["Temporarily disable the Synapse connector if unpatched.", "Restrict network permissions of the connector execution role."],
+          "fr": ["Désactiver temporairement le connecteur Synapse non corrigé.", "Restreindre les droits réseau du rôle d'exécution du connecteur."]
+        },
+        "phase4_post_incident": {
+          "en": ["Deploy updated connector package version v2026.21.1.", "Perform data impact assessment to identify leaked records."],
+          "fr": ["Déployer la mise à jour v2026.21.1 du connecteur.", "Évaluer l'impact sur les données pour identifier des fuites d'enregistrements."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search Athena query history for commands attempting to access cross-tenant Synapse tables."],
+          "fr": ["Rechercher dans l'historique d'Athena des requêtes ciblant des tables Synapse inter-comptes."]
+        }
+      },
+      "tags": ["aws", "athena", "synapse", "data_leak"],
+      "sources": ["https://aws.amazon.com/security/security-bulletins/rss/2026-059-aws/"],
+      "date": "2026-07-17"
+    },
+    {
+      "cve_id": "CVE-2026-15415",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "7.2",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:amazon:aws-healthomics-mcp-server:*:*:*:*:*:*:*:*",
+      "product": "aws-healthomics-mcp-server",
+      "vendor": "Amazon",
+      "description": {
+        "en": "Path traversal and arbitrary file write vulnerability in the workflow linters of the aws-healthomics-mcp-server prior to v0.0.36.",
+        "fr": "Une faille de traversée de répertoires permet l'écriture arbitraire de fichiers hors de l'espace de stockage prévu via le paramètre workflow_files dans le linter de l'agent MCP d'HealthOmics."
+      },
+      "mitre_ttps": ["T2019"],
+      "recommandations": [
+        {
+          "en": "Upgrade aws-healthomics-mcp-server to version 0.0.36 or higher.",
+          "fr": "Mettre à niveau aws-healthomics-mcp-server vers la version 0.0.36 ou supérieure."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Identify systems running aws-healthomics-mcp-server.", "Implement strict folder permissions on application roots."],
+          "fr": ["Identifier les serveurs utilisant aws-healthomics-mcp-server.", "Mettre en œuvre des permissions de répertoires strictes sur les racines applicatives."]
+        },
+        "phase2_detection": {
+          "en": ["Look for path traversal indicators such as '../' in server logs.", "Monitor file creation events in workflow directories."],
+          "fr": ["Rechercher des indicateurs de traversée de répertoires type '../' dans les logs.", "Tracer les créations de fichiers dans les répertoires de workflow."]
+        },
+        "phase3_containment": {
+          "en": ["Restrict linter file write permissions.", "Isolate the execution environment of the linter processes."],
+          "fr": ["Restreindre les droits d'écriture du processus linter.", "Isoler l'environnement d'exécution du processus de linting."]
+        },
+        "phase4_post_incident": {
+          "en": ["Update aws-healthomics-mcp-server to v0.0.36.", "Inspect server root directory for unapproved executable files."],
+          "fr": ["Mettre à niveau l'application vers v0.0.36.", "Inspecter le répertoire racine pour des fichiers exécutables non approuvés."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search application logs for occurrences of directory traversal sequences in workflow file submissions."],
+          "fr": ["Analyser les logs applicatifs pour détecter des séquences de traversée de répertoires dans les soumissions de workflows."]
+        }
+      },
+      "tags": ["aws", "healthomics", "path_traversal", "file_write"],
+      "sources": ["https://aws.amazon.com/security/security-bulletins/rss/2026-060-aws/"],
+      "date": "2026-07-17"
+    },
+    {
+      "cve_id": "CVE-2026-55518",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "6.5",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:avohq:avo:*:*:*:*:*:*:*:*",
+      "product": "Avo",
+      "vendor": "AvoHQ",
+      "description": {
+        "en": "Missing authorization in the association attachment endpoint of Avo admin panel for Ruby on Rails, allowing unauthorized resource association.",
+        "fr": "Un défaut d'autorisation sur l'endpoint d'écriture de création d'association dans Avo pour Ruby on Rails permet l'association illégitime de ressources."
+      },
+      "mitre_ttps": ["T1548"],
+      "recommandations": [
+        {
+          "en": "Update Avo gem to version 3.32.1, 4.0.0.beta.51 or higher.",
+          "fr": "Mettre à niveau le framework Avo vers la version 3.32.1 ou v4.0.0.beta.51 ou supérieure."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Verify gemfile dependencies of Ruby on Rails projects.", "Enforce robust authorization checks at API controllers."],
+          "fr": ["Vérifier les dépendances du fichier Gemfile des applications Rails.", "Renforcer les contrôles d'autorisation dans les contrôleurs API."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor POST requests directed to Avo association endpoints.", "Audit unauthorized association error messages in application logs."],
+          "fr": ["Surveiller les requêtes POST vers les endpoints d'association d'Avo.", "Analyser les erreurs d'autorisation d'association dans les logs."]
+        },
+        "phase3_containment": {
+          "en": ["Temporarily suspend the specific association feature in the Avo configuration.", "Filter external requests targeting affected endpoints."],
+          "fr": ["Suspendre temporairement la fonction d'association concernée dans Avo.", "Filtrer les requêtes externes ciblant les endpoints affectés."]
+        },
+        "phase4_post_incident": {
+          "en": ["Deploy updated Avo package version.", "Perform logical database consistency checks on resource relationships."],
+          "fr": ["Déployer la version mise à jour d'Avo.", "Vérifier la cohérence logique des associations de ressources en base de données."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Scan web server logs for suspicious POST attempts to Avo association endpoints without prior token validations."],
+          "fr": ["Scanner les logs pour identifier des requêtes POST d'association Avo suspectes sans jeton valide."]
+        }
+      },
+      "tags": ["avo", "ruby_on_rails", "privilege_escalation"],
+      "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-55518"],
+      "date": "2026-07-17"
+    },
+    {
+      "cve_id": "CVE-2026-54498",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "6.1",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:github:view_component:*:*:*:*:*:*:*:*",
+      "product": "view_component",
+      "vendor": "GitHub",
+      "description": {
+        "en": "HTML-safety bypass vulnerability in view_component gem's around_render method allowing Cross-Site Scripting (XSS).",
+        "fr": "Une anomalie sémantique dans la fonction around_render de view_component permet de renvoyer des chaînes malveillantes non échappées, menant à du XSS."
+      },
+      "mitre_ttps": ["T1059"],
+      "recommandations": [
+        {
+          "en": "Upgrade view_component to version 4.12.0 or newer.",
+          "fr": "Déployer la version stable 4.12.0 de view_component."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Audit codebases for use of around_render in view_component.", "Enforce CSP (Content Security Policy) headers."],
+          "fr": ["Auditer le code source pour l'utilisation d'around_render dans view_component.", "Déployer des entêtes CSP (Content Security Policy) robustes."]
+        },
+        "phase2_detection": {
+          "en": ["Scan for malicious payloads containing script tags in HTTP inputs.", "Log CSP violation reports in real time."],
+          "fr": ["Détecter les payloads malveillants contenant des balises script dans les entrées.", "Enregistrer les alertes de violation CSP en temps réel."]
+        },
+        "phase3_containment": {
+          "en": ["Implement manual HTML sanitization wrappers in around_render.", "Restrict script execution using strict CSP configurations."],
+          "fr": ["Mettre en œuvre des fonctions manuelles de sanitisation dans around_render.", "Bloquer l'exécution de scripts via une politique CSP restrictive."]
+        },
+        "phase4_post_incident": {
+          "en": ["Deploy view_component v4.12.0.", "Validate inputs rendered by views to prevent reflection payloads."],
+          "fr": ["Mettre à jour vers view_component v4.12.0.", "Valider les entrées utilisateur affichées par les vues pour éviter le reflet de scripts."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Scan access logs for scripts or encoded HTML payloads targeted at components rendering pages."],
+          "fr": ["Rechercher dans les logs d'accès des scripts ou payloads HTML encodés visant les composants de rendu de page."]
+        }
+      },
+      "tags": ["view_component", "ruby_on_rails", "xss"],
+      "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-54498"],
+      "date": "2026-07-17"
+    },
+    {
+      "cve_id": "CVE-2026-54466",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "5.3",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:faye:websocket-driver:*:*:*:*:*:node.js:*",
+      "product": "websocket-driver",
+      "vendor": "Faye Project",
+      "description": {
+        "en": "Integer overflow vulnerability in Faye websocket-driver Node.js library due to missing length check on draft75 frames, leading to message corruption.",
+        "fr": "Une faille de corruption de message affecte le protocole draft75 de websocket-driver via des paquets d'en-tête de longueur arbitraire."
+      },
+      "mitre_ttps": ["T1499"],
+      "recommandations": [
+        {
+          "en": "Upgrade websocket-driver to version 0.7.5.",
+          "fr": "Passer à la version corrigée 0.7.5 de websocket-driver."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Identify applications utilizing websocket-driver-node.", "Enforce standard websocket framing limits."],
+          "fr": ["Identifier les applications utilisant websocket-driver-node.", "Appliquer des limites de formatage websocket standard."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor WebSocket connection endpoints for unusual frame sizing.", "Track memory corruption indicators on Node.js processes."],
+          "fr": ["Surveiller les connexions WebSocket pour des tailles de trames anormales.", "Tracer les indicateurs de corruption mémoire sur les processus Node.js."]
+        },
+        "phase3_containment": {
+          "en": ["Close active connection loops utilizing draft75 protocols.", "Rate-limit incoming WebSocket messages from untrusted IPs."],
+          "fr": ["Fermer les connexions WebSocket actives utilisant draft75.", "Limiter le taux de messages WebSocket entrants pour les IP non certifiées."]
+        },
+        "phase4_post_incident": {
+          "en": ["Apply websocket-driver 0.7.5 patch.", "Conduct system process reviews on affected host environments."],
+          "fr": ["Appliquer le correctif websocket-driver 0.7.5.", "Mener des revues de processus système sur les environnements hôtes affectés."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Scan logs for WebSocket frame packets exceeding standard payload sizes or using malformed draft75 headers."],
+          "fr": ["Tracer les paquets WebSocket dont la taille dépasse les spécifications normales ou utilisant des entêtes draft75 malformées."]
+        }
+      },
+      "tags": ["websocket", "node_js", "denial_of_service"],
+      "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-54466"],
+      "date": "2026-07-17"
+    },
+    {
+      "cve_id": "CVE-2026-54159",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:prestashop:faceted_search:*:*:*:*:*:*:*:*",
+      "product": "facetedsearch module (ps_facetedsearch)",
+      "vendor": "Prestashop",
+      "description": {
+        "en": "PHP Object Injection vulnerability in the faceted search cache (ps_facetedsearch) module of Prestashop, allowing remote code execution via unsafe unserialization.",
+        "fr": "Une faille critique d'injection d'objets PHP permet d'exécuter des commandes à distance sans authentification dans le module de recherche ps_facetedsearch."
+      },
+      "mitre_ttps": ["T1190"],
+      "recommandations": [
+        {
+          "en": "Update the ps_facetedsearch module of Prestashop to version 4.0.4.",
+          "fr": "Mettre à jour le module ps_facetedsearch vers la version 4.0.4."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Inventory all Prestashop ecommerce websites.", "Deploy WAF rules to detect PHP object serialization patterns in query strings."],
+          "fr": ["Répertorier l'ensemble des sites e-commerce Prestashop.", "Déployer des signatures de WAF pour intercepter la sérialisation d'objets PHP."]
+        },
+        "phase2_detection": {
+          "en": ["Analyze access logs for serialized PHP strings inside search parameters.", "Detect unusual PHP script creation within the module directories."],
+          "fr": ["Analyser les logs d'accès pour des chaînes PHP sérialisées dans les paramètres de recherche.", "Tracer la création de fichiers PHP anormaux dans les répertoires du module."]
+        },
+        "phase3_containment": {
+          "en": ["Deactivate the ps_facetedsearch module temporarily.", "Isolate Prestashop application servers from modifying webroot folders."],
+          "fr": ["Désactiver temporairement le module de recherche ps_facetedsearch.", "Interdire au serveur Prestashop la modification du dossier racine web."]
+        },
+        "phase4_post_incident": {
+          "en": ["Apply the 4.0.4 update for ps_facetedsearch.", "Scan the webroot for any uploaded backdoor shells."],
+          "fr": ["Appliquer la mise à jour 4.0.4 de ps_facetedsearch.", "Scanner la racine web pour détecter d'éventuels webshells."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search web logs for query inputs containing serialization signatures ('O:', 'a:', 's:') targeted at ps_facetedsearch endpoints."],
+          "fr": ["Rechercher dans les logs web des requêtes contenant des signatures de sérialisation ('O:', 'a:', 's:') ciblant le module de recherche."]
+        }
+      },
+      "tags": ["prestashop", "php", "object_injection", "rce"],
+      "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-54159"],
+      "date": "2026-07-17"
+    },
+    {
+      "cve_id": "CVE-2026-53727",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "8.5",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:css_parser_project:css_parser:*:*:*:*:*:ruby:*",
+      "product": "css_parser",
+      "vendor": "css_parser project",
+      "description": {
+        "en": "SSRF and Local File Disclosure vulnerability in the read_remote_file function of Ruby's css_parser library due to unsafe follow redirection handling.",
+        "fr": "Une vulnérabilité SSRF critique dans la fonction read_remote_file de la bibliothèque Ruby css_parser permet l'accès non autorisé aux fichiers locaux."
+      },
+      "mitre_ttps": ["T1190"],
+      "recommandations": [
+        {
+          "en": "Upgrade Ruby css_parser library to version 3.0.0 or higher.",
+          "fr": "Mettre à jour css_parser vers la version 3.0.0 ou supérieure."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Identify Ruby projects running css_parser.", "Restrict outbound network permissions for web application worker processes."],
+          "fr": ["Identifier les projets Ruby exploitant la gem css_parser.", "Limiter les connexions réseau sortantes des processus applicatifs."]
+        },
+        "phase2_detection": {
+          "en": ["Scan for outbound HTTP connections toward metadata or localhost IP ranges.", "Detect file:// protocols inclusion attempts in input fields."],
+          "fr": ["Tracer les requêtes HTTP sortantes vers les IPs locales ou de métadonnées.", "Détecter l'inclusion du protocole file:// dans les requêtes de feuilles de style."]
+        },
+        "phase3_containment": {
+          "en": ["Block outbound traffic from the application parser engines to external resources.", "Isolate application hosts on separate network segments."],
+          "fr": ["Interdire le trafic sortant des moteurs d'analyse applicatifs.", "Isoler les hôtes d'applications concernées sur un réseau dédié."]
+        },
+        "phase4_post_incident": {
+          "en": ["Deploy css_parser version 3.0.0.", "Review application sanitization policies for stylesheet URIs."],
+          "fr": ["Installer css_parser v3.0.0.", "Revoir les politiques de validation des URIs de feuilles de style."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Hunt for loopback or non-http protocol schemas inside inputs that trigger css_parser actions."],
+          "fr": ["Rechercher des schémas de protocoles locaux ou non-http dans les entrées traitées par css_parser."]
+        }
+      },
+      "tags": ["ssrf", "ruby", "css_parser", "file_disclosure"],
+      "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-53727"],
+      "date": "2026-07-17"
+    },
+    {
+      "cve_id": "CVE-2026-48062",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "8.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:codeigniter:codeigniter:*:*:*:*:*:*:*:*",
+      "product": "CodeIgniter",
+      "vendor": "CodeIgniter Foundation",
+      "description": {
+        "en": "Validation bypass vulnerability in CodeIgniter's file upload mechanism (ext_in function) relying on user-controlled MIME type header instead of strict file extension checks, allowing RCE.",
+        "fr": "Un contournement de validation d'extension dans CodeIgniter permet d'enregistrer et d'exécuter des scripts PHP malveillants via la fonction ext_in."
+      },
+      "mitre_ttps": ["T1505"],
+      "recommandations": [
+        {
+          "en": "Install CodeIgniter version 4.7.3 or newer.",
+          "fr": "Installer CodeIgniter version 4.7.3 ou supérieure."
+        },
+        {
+          "en": "Disable execution of PHP scripts inside public uploads directories.",
+          "fr": "Bloquer l'exécution de scripts PHP dans les dossiers d'uploads publics."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Audit file upload directories on CodeIgniter installations.", "Ensure script execution is disabled on upload folders via server configuration."],
+          "fr": ["Auditer les dossiers de téléversement des applications CodeIgniter.", "S'assurer de la désactivation de l'exécution de scripts dans ces dossiers via le serveur."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor filesystem for file additions with double extensions or mismatching content types.", "Track executions of web server commands spawned by upload directories."],
+          "fr": ["Tracer l'ajout de fichiers à double extension ou types de contenu incohérents.", "Surveiller les exécutions de commandes initiées par les répertoires d'images."]
+        },
+        "phase3_containment": {
+          "en": ["Revoke write permissions on upload folders on the host filesystem.", "Filter out dynamic scripts upload via WAF policies."],
+          "fr": ["Retirer les permissions d'écriture sur les répertoires d'images.", "Bloquer le chargement de scripts dynamiques au niveau du WAF."]
+        },
+        "phase4_post_incident": {
+          "en": ["Update CodeIgniter to 4.7.3.", "Verify that no PHP scripts exist inside the uploads directory tree."],
+          "fr": ["Mettre à niveau CodeIgniter vers la version 4.7.3.", "S'assurer qu'aucun script PHP ne réside dans l'arborescence des uploads."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search for recently created PHP files within non-standard code execution paths like /uploads/."],
+          "fr": ["Rechercher des fichiers PHP créés récemment dans des chemins d'exécution non standard comme /uploads/."]
+        }
+      },
+      "tags": ["codeigniter", "file_upload", "bypass", "webshell"],
+      "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-48062"],
+      "date": "2026-07-17"
+    },
+    {
+      "cve_id": "CVE-2026-13446",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:langflow:langflow:*:*:*:*:*:*:*:*",
+      "product": "Langflow",
+      "vendor": "IBM",
+      "description": {
+        "en": "Vulnerability in Langflow allowing remote code execution and authentication bypass due to hardcoded credentials and unsafe integration tokens in the source code.",
+        "fr": "IBM Langflow intègre des jetons d'authentification et des clés cryptographiques codés en dur dans son code source, permettant l'exécution de code à distance et le contournement d'autorisation."
+      },
+      "mitre_ttps": ["T1552"],
+      "recommandations": [
+        {
+          "en": "Isolate Langflow servers from public exposure and rotate integration keys.",
+          "fr": "Isoler les serveurs Langflow d'Internet et renouveler les clés d'intégration."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Identify Langflow server instances across dev and prod environments.", "Audit code repository for hardcoded keys."],
+          "fr": ["Identifier les serveurs Langflow actifs de test et production.", "Auditer le dépôt de code à la recherche d'identifiants en dur."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor API endpoint requests targeting administrative paths.", "Detect default credential usage patterns in network requests."],
+          "fr": ["Tracer les requêtes API ciblant des répertoires d'administration.", "Détecter l'utilisation d'identifiants par défaut dans le trafic réseau."]
+        },
+        "phase3_containment": {
+          "en": ["Enforce network access proxy with custom multi-factor authentication.", "Isolate Langflow containers inside secure network partitions."],
+          "fr": ["Mettre en place un proxy réseau d'authentification multifacteur tiers.", "Isoler les conteneurs Langflow dans des partitions réseau hermétiques."]
+        },
+        "phase4_post_incident": {
+          "en": ["Apply official patch and rotate all application cryptographic secrets.", "Ensure configuration files use dynamic environment variables instead of hardcoded strings."],
+          "fr": ["Déployer la mise à jour corrective et renouveler les secrets de chiffrement.", "S'assurer que les configurations utilisent des variables d'environnement dynamiques."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search configuration repositories and live application configs for the presence of IBM default keys or passwords."],
+          "fr": ["Rechercher dans les dépôts de configuration la présence de clés d'intégration par défaut."]
+        }
+      },
+      "tags": ["langflow", "ibm", "hardcoded_credentials", "rce"],
+      "sources": ["https://cvefeed.io/vuln/detail/CVE-2026-13446"],
+      "date": "2026-07-17"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "North Korean Contagious Interview Campaign Targeting Developers",
+        "fr": "Campagne nord-coréenne Contagious Interview ciblant les développeurs"
+      },
+      "description": {
+        "en": "North Korean state-sponsored threat group Lazarus (REF9403, PolinRider) targets developers on LinkedIn and Slack with fake job offers and technical coding challenges to infect systems with OTTERCOOKIE, ChainVeil, and ViteVenom malwares.",
+        "fr": "L'acteur nord-coréen REF9403 piège les espaces communautaires de développeurs avec des propositions d'emploi et des projets de tests contenant la charge utile OTTERCOOKIE, ChainVeil ou ViteVenom."
+      },
+      "threat_actor": "Lazarus Group",
+      "threat_actor_origin": "Corée du Nord",
+      "threat_actor_type": "State-sponsored",
+      "threat_actor_aliases": ["APT38", "REF9403", "PolinRider", "Lazarus"],
+      "sector": {
+        "en": ["Technology_and_Telecom", "Finance"],
+        "fr": ["Technologies et télécommunications", "Finance"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "ldb.rightwidth.dev",
+          "upload.rightwidth.dev",
+          "controller.rightwidth.dev",
+          "file.rightwidth.dev",
+          "rightwidth.dev"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": ["OTTERCOOKIE", "ChainVeil", "ViteVenom"]
+      },
+      "mitre_ttps": ["T1566", "T1027", "T1189", "T1584"],
+      "analyse": {
+        "en": "The threat campaign relies on social engineering (ClickFix and fake hiring portals) to distribute steganographic SVG images of flags holding base64-encoded payloads. The malware acts as a password and crypto-wallet stealer, as well as providing reverse interactive access via Socket.IO.",
+        "fr": "La campagne s'appuie sur de l'ingénierie sociale pour diffuser des images SVG de drapeaux hébergeant des charges utiles stéganographiques encodées en base64. Les implants volent des identifiants et portefeuilles de crypto-monnaies tout en procurant un accès reverse via Socket.IO."
+      },
+      "recommandations": [
+        {
+          "en": "Forbid execution of third-party test repositories on corporate devices.",
+          "fr": "Interdire l'exécution de dépôts de test tiers non audités sur les postes d'entreprise."
+        },
+        {
+          "en": "Block all outbound communications to rightwidth.dev subdomains.",
+          "fr": "Détecter et bloquer les communications sortantes vers les sous-domaines de rightwidth.dev."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Block rightwidth.dev domain.", "Educate developers on risks of remote hiring malware tests."],
+          "fr": ["Bloquer préventivement le domaine rightwidth.dev.", "Informer les développeurs des risques de projets de test compromis."]
+        },
+        "phase2_detection": {
+          "en": ["Search for processes mimicking dhcpSvc.exe, hostService.exe, printSvc.exe.", "Scan SVG files for abnormal base64 data blocks."],
+          "fr": ["Rechercher l'exécution de processus usurpant dhcpSvc.exe, hostService.exe, printSvc.exe.", "Analyser les fichiers SVG à la recherche de blocs de commentaires suspects."]
+        },
+        "phase3_containment": {
+          "en": ["Isolate developers' workstations that executed the test projects.", "Revoke their active Git and cloud API credentials."],
+          "fr": ["Isoler les postes des développeurs ayant exécuté des projets de test externes.", "Révoquer l'ensemble de leurs clés API et secrets Git."]
+        },
+        "phase4_post_incident": {
+          "en": ["Reinstall operating systems on compromised workstations.", "Verify git server log integrities."],
+          "fr": ["Vider la mémoire des postes infectés et réinstaller le système d'exploitation.", "Vérifier l'absence d'accès illicite persistant sur les serveurs Git internes."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Search filesystem for flag images (SVG) containing embedded script signatures."],
+          "fr": ["Rechercher des images de drapeaux (SVG) contenant du code JavaScript masqué."]
+        }
+      },
+      "tags": ["dprk", "lazarus", "steganography", "ottercookie", "developer_targeting"],
+      "sources": [
+        "https://www.elastic.co/security-labs/contagious-interview-malware-svg-steganography",
+        "https://opensourcemalware.com/blog/chainveil-and-vitevenom-dprk-polinrider-campaign"
+      ],
+      "date": "2026-07-18"
+    },
+    {
+      "title": {
+        "en": "Russian UAT-11795 ClickFix Campaign Spreading Starland RAT",
+        "fr": "Campagne russe ClickFix du groupe UAT-11795 diffusant Starland RAT"
+      },
+      "description": {
+        "en": "Russian cybercrime group UAT-11795 targets organizations using the ClickFix technique to push fake Webex and Zoom installers, loading Starland RAT and WLDR agent.",
+        "fr": "Une campagne du groupe financier russophone UAT-11795 utilise l'ingénierie sociale ClickFix (faux installateurs Webex/Zoom) pour diffuser les malwares Starland RAT et WLDR."
+      },
+      "threat_actor": "UAT-11795",
+      "threat_actor_origin": "Russie",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": ["UAT-11795"],
+      "sector": {
+        "en": ["Technology_and_Telecom"],
+        "fr": ["Technologies et télécommunications"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": ["polygon-rpc.com"],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": ["Starland RAT", "WLDR"]
+      },
+      "mitre_ttps": ["T1204", "T1547", "T1027"],
+      "analyse": {
+        "en": "Starland RAT is written in Python and uses a backup Polygon blockchain smart contract if primary command-and-control communication fails. The WLDR agent is an in-memory PowerShell loader bypassing common security controls.",
+        "fr": "Starland RAT est développé en Python. Il utilise un contrat intelligent Polygon de secours en cas d'indisponibilité du C2 principal. L'agent WLDR est un implant PowerShell s'exécutant entièrement en mémoire."
+      },
+      "recommandations": [
+        {
+          "en": "Block access to public Polygon blockchain RPC endpoints unless business-critical.",
+          "fr": "Bloquer l'accès à l'endpoint Polygon public si aucune application légitime n'en a besoin."
+        },
+        {
+          "en": "Enforce strict host PowerShell script auditing and execution restrictions.",
+          "fr": "Mettre en œuvre des règles d'audit PowerShell robustes."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Prohibit software installations from unofficial sites.", "Implement application control rules."],
+          "fr": ["Interdire le téléchargement de binaires d'outils de communication hors portails officiels.", "Mettre en œuvre des règles de contrôle d'applications."]
+        },
+        "phase2_detection": {
+          "en": ["Monitor JSON-RPC calls over web ports.", "Alert on abnormal autostart registry entries."],
+          "fr": ["Surveiller les appels d'API blockchain via JSON-RPC.", "Rechercher la modification du registre au démarrage utilisateur."]
+        },
+        "phase3_containment": {
+          "en": ["Kill active python interpreters executing Starland RAT scripts.", "Isolate host from the AD environment."],
+          "fr": ["Arrêter les processus Python suspectés d'exécuter Starland RAT.", "Suspendre l'hôte compromis."]
+        },
+        "phase4_post_incident": {
+          "en": ["Purge malicious scheduler tasks.", "Verify credentials rotation for potentially exfiltrated accounts."],
+          "fr": ["Nettoyer le planificateur de tâches et restaurer les fichiers de registre.", "Mettre à jour l'EDR pour bloquer les techniques ClickFix."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Scan systems for PowerShell instances loading obfuscated payloads from external sources."],
+          "fr": ["Rechercher d'appels PowerShell obfuscés contenant des mécanismes de communication chiffrés AES."]
+        }
+      },
+      "tags": ["uat_11795", "clickfix", "starland_rat", "wldr", "blockchain_c2"],
+      "sources": ["https://securityaffairs.com/195532/malware/new-russian-campaign-uses-fake-webex-and-zoom-installers-to-deploy-starland-rat.html"],
+      "date": "2026-07-17"
+    },
+    {
+      "title": {
+        "en": "APT37 Operation Capsule Vault Targeting Academic Researchers",
+        "fr": "APT37 Opération Capsule Vault ciblant les chercheurs académiques"
+      },
+      "description": {
+        "en": "North Korean threat actor APT37 targets the academic community and research institutes using the Capsule Vault campaign to distribute trojanized remote access tools.",
+        "fr": "Le groupe parrainé par la Corée du Nord APT37 cible principalement la communauté académique et de recherche avec l'opération Capsule Vault."
+      },
+      "threat_actor": "APT37",
+      "threat_actor_origin": "Corée du Nord",
+      "threat_actor_type": "State-sponsored",
+      "threat_actor_aliases": ["Reaper", "Group123", "APT37"],
+      "sector": {
+        "en": ["Education_and_Research"],
+        "fr": ["Education_and_Research"]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": ["otx.alienvault.com"],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": ["Capsule Vault RAT"]
+      },
+      "mitre_ttps": ["T1566"],
+      "analyse": {
+        "en": "Operation Capsule Vault relies heavily on spear-phishing lures containing trojanized attachments to drop remote access Trojans on researchers' machines for espionage.",
+        "fr": "L'opération Capsule Vault utilise des chevaux de Troie d'accès distant (RAT) diffusés par harponnage ciblé (spear-phishing) d'universitaires."
+      },
+      "recommandations": [
+        {
+          "en": "Train research staff on validating attachment origins before opening them.",
+          "fr": "Sensibiliser en priorité le corps enseignant et de recherche à la vérification des sources."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": ["Identify email addresses of research departments.", "Enforce robust attachment sandboxing on email gateways."],
+          "fr": ["Identifier les comptes e-mail clés des départements de recherche.", "Déployer des bacs à sable robustes pour les pièces jointes sur les serveurs de messagerie."]
+        },
+        "phase2_detection": {
+          "en": ["Audit inbound emails containing macro attachments.", "Detect abnormal outbound sessions from research assets."],
+          "fr": ["Détecter les courriels contenant des fichiers joints masquant des RAT.", "Tracer les connexions sortantes suspectes depuis les serveurs de recherche."]
+        },
+        "phase3_containment": {
+          "en": ["Suspend targeted mailbox accounts.", "Isolate infected research systems from the internal lab networks."],
+          "fr": ["Geler les postes d'utilisateurs de recherche signalés.", "Révoquer l'accès des comptes mail ciblés."]
+        },
+        "phase4_post_incident": {
+          "en": ["Purge malicious persistence keys from systems.", "Rotate research repository secrets."],
+          "fr": ["Éradiquer la persistance du malware et réinitialiser les secrets de recherche.", "Mettre à niveau l'authentification de l'environnement de recherche."]
+        },
+        "phase5_threat_hunting": {
+          "en": ["Query email logs for subjects matching academic or research paper solicitation lures."],
+          "fr": ["Rechercher dans les journaux de messagerie des campagnes de harponnage ciblant les chercheurs académiques."]
+        }
+      },
+      "tags": ["apt37", "capsule_vault", "academic_espionage"],
+      "sources": ["https://social.raytec.co/@techbot/116938280336268380"],
+      "date": "2026-07-18"
+    }
+  ]
+}
