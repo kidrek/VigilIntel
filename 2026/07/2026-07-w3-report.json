@@ -1,36 +1,62 @@
 {
   "threat_level": {
-    "score": 4,
+    "score": 5,
     "label": {
-      "en": "Critical",
-      "fr": "Critique"
+      "en": "Severe",
+      "fr": "Sévère"
     },
     "justification": {
-      "en": "The threat level is high due to record-breaking patch cycles, active exploitation of critical zero-days in enterprise platforms (SharePoint, SonicWall, Oracle), automated AI-driven attack platforms (TuxBot v3, agentic ransomware), and highly sophisticated supply chain compromises targeting npm/PyPI developer environments.",
-      "fr": "Le niveau de menace est élevé en raison d'un volume record de correctifs, de l'exploitation active de vulnérabilités zero-day critiques (SharePoint, SonicWall, Oracle), de l'automatisation d'attaques par IA (TuxBot v3, ransomwares agentiels), et de compromissions sophistiquées de chaînes d'approvisionnement ciblant les développeurs via npm et PyPI."
+      "en": "Active exploitation of multiple critical zero-day vulnerabilities in remote-access systems (SharePoint, FortiSandbox, SonicWall), paired with highly structured developer-targeted supply chain attacks (TeamPCP, Lazarus/REF9403) and persistent kernel-mode rootkits (Daxin), represents an elevated threat landscape targeting enterprise access vectors.",
+      "fr": "L'exploitation active de multiples vulnérabilités zero-day critiques dans des systèmes d'accès à distance (SharePoint, FortiSandbox, SonicWall), conjuguée à des attaques sophistiquées contre la supply chain des développeurs (TeamPCP, Lazarus/REF9403) et à la persistance de rootkits en mode noyau (Daxin), caractérise un niveau de menace élevé ciblant les vecteurs d'accès des entreprises."
     },
     "_triggers": [
       "+6 — 3 CVE(s) CISA KEV",
-      "+2 — 2 CVE(s) CVSS ≥ 9.0",
-      "+2 — 1 acteur(s) étatique(s)",
-      "+2 — 2 breach(es) ≥ 100k enregistrements",
-      "+2 — secteurs critiques ciblés : Critical_Infrastructure, Government_and_Defense"
+      "+4 — 4 CVE(s) CVSS ≥ 9.0",
+      "+4 — 2 acteur(s) étatique(s)",
+      "+1 — ≥ 3 acteurs distincts actifs",
+      "+3 — 3 breach(es) ≥ 100k enregistrements",
+      "+2 — secteurs critiques ciblés : Government_and_Defense, Critical_Infrastructure"
     ]
   },
   "executive_summary": {
-    "en": "Week 3 of July 2026 is marked by an unprecedented expansion of the global attack surface, highlighted by Microsoft patching a record 622 vulnerabilities. This acceleration is driven by autonomous AI agents used both defensively for code auditing (MDASH) and offensively to generate stealthy exploits on the fly. State-sponsored espionage remains highly active, with Chinese Daxin rootkits discovered in Taiwan and Russian FSB Center 16 continuing their long-term targeting of network router configurations. Concurrently, supply chain threat actors like TeamPCP have industrialized the compromise of open-source repositories (npm, PyPI) to steal cloud API tokens, while opportunistic cybercriminals weaponize 'ClickFix' social engineering techniques using smart contracts and memory-only loaders to deploy new malware like Starland RAT.",
-    "fr": "La troisième semaine de juillet 2026 est caractérisée par une expansion sans précédent de la surface d'attaque globale, marquée par un record de 622 vulnérabilités corrigées par Microsoft. Cette accélération s'explique par l'intégration d'agents d'IA autonomes utilisés défensivement pour l'audit de code (MDASH) et offensivement pour générer des exploits furtifs à la volée. L'espionnage étatique reste intense, illustré par la découverte de rootkits chinois (Daxin) à Taïwan et la persistance du groupe russe FSB Center 16 ciblant les configurations de routeurs critiques. En parallèle, des acteurs de cybercriminalité comme TeamPCP ont industrialisé le sabotage d'écosystèmes open-source (npm, PyPI) pour voler des clés d'API cloud, tandis que des campagnes d'ingénierie sociale de type 'ClickFix' s'appuient sur des contrats intelligents et des chargeurs en mémoire pour diffuser de nouvelles menaces telles que Starland RAT."
+    "en": "Week 3 of July 2026 is defined by a heavy focus on software supply chain compromises targeting DevOps personnel (specifically TeamPCP and Lazarus/REF9403) and highly persistent state-sponsored cyber espionage operations. State actors continue to leverage long-term stealth mechanisms, exemplified by Chinese Daxin's 13-year undetected presence in Taiwanese high-tech networks and Russian FSB Center 16's continuous exploitation of legacy enterprise routers. Simultaneously, generative AI is actively operationalized both as a defensive code-auditing driver and as an offensive force-multiplier for dynamic exploit generation and defensive evasion. Organizations must prioritize immediate patching of SharePoint (CVE-2026-58644) and Fortinet devices, alongside enforcing phishing-resistant MFA to combat session-hijacking infostealers.",
+    "fr": "La troisième semaine de juillet 2026 est caractérisée par une focalisation majeure sur les compromissions de la supply chain logicielle ciblant les profils DevOps (notamment via TeamPCP et Lazarus/REF9403) et par des opérations d'espionnage étatique persistantes. Les acteurs étatiques maintiennent des mécanismes furtifs à long terme, illustrés par la présence non détectée de Daxin (Chine) pendant 13 ans à Taïwan, et par l'exploitation continue de routeurs obsolètes par le Center 16 du FSB russe. Parallèlement, l'IA générative est opérationnalisée comme outil d'audit défensif et comme multiplicateur de force offensif pour la génération d'exploits. Les organisations doivent prioriser le déploiement immédiat des correctifs SharePoint (CVE-2026-58644) et Fortinet, tout en imposant une authentification multifacteur résistante à l'hameçonnage contre le vol de session."
   },
   "regulatory": {
     "analyse": {
-      "en": "The regulatory landscape is adapting to the systemic risks introduced by autonomous AI models, with the European Systemic Risk Board issuing warnings on Frontier AI Models (FAIMs) and the US Department of Commerce restricting exports of advanced models like Claude Fable. National security concerns are driving aggressive sanctions, as seen in updated EU asset freezes targeting state-sponsored hackers. Additionally, defense supply chain requirements are pivoting toward real-world resilience over bureaucracy, exemplified by the suspension of CMMC Phase II. Cross-border law enforcement actions are targeting cybercriminal ecosystems, with coordinated actions against carding forums and data-broker networks like Leakbase.",
-      "fr": "Le paysage réglementaire s'adapte aux risques systémiques introduits par les modèles d'IA autonomes, le Comité européen du risque systémique publiant des alertes sur les modèles de frontière (FAIM) et le ministère du Commerce américain limitant l'exportation de modèles avancés tels que Claude Fable. Les enjeux de sécurité nationale motivent des sanctions accrues, à l'image du gel des avoirs de l'UE ciblant les hackers étatiques. De plus, les exigences relatives à la chaîne d'approvisionnement de la défense pivotent vers une résilience réelle plutôt que bureaucratique, comme l'illustre la suspension de la phase II de CMMC. Les forces de l'ordre internationales multiplient également les opérations coordonnées contre les forums cybercriminels et les réseaux de revente de données comme Leakbase."
+      "en": "Regulatory compliance is shifting rapidly towards high-severity enforcement actions regarding biometric and genetic data protection, coupled with structural adjustments in critical supply chains. The record settlement of $18M against 23andMe highlights severe liabilities for negligent credential-stuffing defense. Concurrently, US defense supply chain compliance sees operational relaxation with the suspension of CMMC Phase II to relieve administrative pressure on SMBs, while the EU implements strict technical guidelines for its Digital Product Passport ecosystem.",
+      "fr": "La conformité réglementaire s'oriente rapidement vers des mesures d'application rigoureuses concernant la protection des données biométriques et génétiques, associées à des ajustements structurels dans les chaînes d'approvisionnement critiques. L'accord de 18 millions de dollars conclu contre 23andMe souligne la responsabilité civile sévère en cas de défaut de défense contre le credential stuffing. Parallèlement, la chaîne de défense américaine bénéficie d'un allègement temporaire avec la suspension de la phase II du CMMC, tandis que l'UE déploie les directives techniques liées au passeport numérique des produits."
     },
     "events": [
       {
         "title": {
-          "en": "Suspension of CMMC Phase II",
-          "fr": "Suspension de la Phase II de CMMC"
+          "en": "23andMe Data Breach Settlement",
+          "fr": "Règlement de l'incident de violation de données de 23andMe"
+        },
+        "issuing_body": "New York Attorney General",
+        "date": "2026-07-18",
+        "jurisdiction": {
+          "region": "US",
+          "countries": [
+            "US"
+          ]
+        },
+        "type": "Enforcement_Action",
+        "status": "Active",
+        "reference": "NY AG 23andMe Settlement 2026",
+        "affected_sectors": [
+          "Healthcare_and_Life_Sciences"
+        ],
+        "description": {
+          "en": "An $18 million settlement was secured against 23andMe for failing to protect consumer genetic data during a massive credential stuffing attack. The settlement mandates the strict implementation of multi-factor authentication (MFA) and continuous logging controls.",
+          "fr": "Un accord de 18 millions de dollars a été conclu contre 23andMe pour défaut de protection des données génétiques lors d'une attaque par credential stuffing. Ce règlement impose l'obligation d'activer l'authentification multifacteur (MFA) et un contrôle continu des logs."
+        },
+        "source_url": "https://databreaches.net/2026/07/18/ny-attorney-general-james-secures-18-million-from-23andme-for-failing-to-protect-customers-genetic-data/"
+      },
+      {
+        "title": {
+          "en": "CMMC Phase II Suspension",
+          "fr": "Suspension de la Phase II du CMMC"
         },
         "issuing_body": "US Department of War",
         "date": "2026-07-15",
@@ -44,22 +70,21 @@
         "status": "Active",
         "reference": "32 CFR Part 170",
         "affected_sectors": [
-          "Government_and_Defense",
-          "Industry_and_Manufacturing"
+          "Government_and_Defense"
         ],
         "description": {
-          "en": "The US Department of War suspended CMMC Phase II audits to alleviate bureaucratic burdens on small and medium-sized Defense Industrial Base (DIB) vendors, shifting the focus from paper compliance to actual cyber resilience and real-time response capabilities.",
-          "fr": "Le Département de la Guerre des États-Unis a suspendu les audits de la phase II de CMMC afin d'alléger la charge administrative des PME de la base industrielle de défense (DIB), réorientant les efforts de la conformité théorique vers la résilience réelle et la détection d'intrusions."
+          "en": "The US Department of War suspended CMMC Phase II requirements to reduce bureaucratic overhead for Small and Medium Businesses (SMBs) in the Defense Industrial Base, prioritizing immediate risk-based resilience over certification checkboxes.",
+          "fr": "Le Département de la Guerre des États-Unis a suspendu la phase II du CMMC afin d'alléger la charge bureaucratique pour les PME de la Base Industrielle de Défense, privilégiant la résilience opérationnelle immédiate plutôt que la simple conformité documentaire."
         },
         "source_url": "https://www.guidepointsecurity.com/blog/cmmc-phase-ii-suspension-risk-based-cybersecurity/"
       },
       {
         "title": {
-          "en": "European Union Cyber Sanctions Update",
-          "fr": "Mise à jour des sanctions cyber de l'Union Européenne"
+          "en": "Digital Product Passport Execution Regulation",
+          "fr": "Règlement d'exécution du Passeport Numérique des Produits"
         },
-        "issuing_body": "Council of the European Union",
-        "date": "2026-07-14",
+        "issuing_body": "European Commission",
+        "date": "2026-07-17",
         "jurisdiction": {
           "region": "EU",
           "countries": [
@@ -68,18 +93,17 @@
             "ES"
           ]
         },
-        "type": "Sanctions",
+        "type": "New_Law",
         "status": "Active",
-        "reference": "Council Decision 2026/1713",
+        "reference": "CELEX:32026R1778",
         "affected_sectors": [
-          "Critical_Infrastructure",
-          "Government_and_Defense"
+          "Industry_and_Manufacturing"
         ],
         "description": {
-          "en": "The Council updated asset freezes and travel restrictions on specific individuals and entities linked to significant cyberattacks targeting EU institutions and member states, strengthening the legal attribution framework against state-sponsored threat groups.",
-          "fr": "Le Conseil a mis à jour les mesures de gel des avoirs et de restriction de visa visant des individus et entités impliqués dans des cyberattaques majeures ciblant l'UE, renforçant le cadre juridique d'attribution face aux groupes étatiques."
+          "en": "This regulation establishes the detailed technical and authentication requirements for the European Digital Product Passport registry, enforcing cryptographic data protection and product pedigree transparency.",
+          "fr": "Ce règlement d'exécution fixe les exigences techniques et d'authentification pour le registre européen du passeport numérique des produits, imposant une protection cryptographique des données et la traçabilité des produits."
         },
-        "source_url": "https://eur-lex.europa.eu/legal-content/AUTO/?uri=CELEX:52026XG03798"
+        "source_url": "https://eur-lex.europa.eu/legal-content/AUTO/?uri=CELEX:32026R1778"
       }
     ]
   },
@@ -91,8 +115,8 @@
           "fr": "Russie"
         },
         "geographic_zone_strategic_analyse": {
-          "en": "Russian state-sponsored groups, particularly FSB Center 16, remain a persistent threat to global critical infrastructure. They prioritize long-term, stealthy espionage campaigns by targeting peripheral edge devices (such as Cisco enterprise routers) using legacy protocol flaws like SNMPv1/v2 and Smart Install. In parallel, financially motivated Russian cybercriminals have operationalized the 'ClickFix' social engineering technique to infect corporate targets with custom implants like Starland RAT and WLDR.",
-          "fr": "Les groupes étatiques russes, en particulier le Center 16 du FSB, demeurent une menace persistante pour les infrastructures critiques mondiales. Ils privilégient des campagnes d'espionnage furtives à long terme en ciblant les équipements périphériques réseau (routeurs d'entreprise Cisco) via des protocoles obsolètes (SNMPv1/v2, Smart Install). En parallèle, des cybercriminels russes ont opérationnalisé la technique d'ingénierie sociale 'ClickFix' pour infecter des cibles d'affaires avec des implants sur mesure (Starland RAT, WLDR)."
+          "en": "Russian state-sponsored groups (specifically FSB Center 16) focus on persistent cyber espionage and structural pre-positioning within global critical infrastructure networks. They systematically scan for and exploit legacy and misconfigured SNMP routing systems to exfiltrate configurations, while hybrid operations (Unité 61240) target government communications under the threshold of overt conflict.",
+          "fr": "Les groupes étatiques russes (en particulier le Center 16 du FSB) se concentrent sur l'espionnage persistant et le pré-positionnement tactique au sein des infrastructures critiques mondiales. Ils exploitent de manière systématique les routeurs d'entreprise vulnérables via le protocole SNMP, tandis que les opérations de guerre hybride (Unité 61240) ciblent les communications gouvernementales."
         }
       },
       {
@@ -101,8 +125,18 @@
           "fr": "Chine"
         },
         "geographic_zone_strategic_analyse": {
-          "en": "Chinese cyber espionage continues to focus on high-technology, manufacturing, and governmental targets in East Asia and Western countries. The resurrection of the Daxin espionage group in Taiwan, using highly stealthy kernel-level rootkits (Stupig backdoor) to intercept and route network traffic passively, demonstrates China's sustained focus on persistent, deep-access operations within strategic regional targets.",
-          "fr": "L'espionnage cyber chinois reste concentré sur la haute technologie, l'industrie manufacturière et les cibles gouvernementales en Asie de l'Est et dans les pays occidentaux. La résurgence du groupe d'espionnage Daxin à Taïwan, utilisant des rootkits noyau hautement furtifs (backdoor Stupig) pour intercepter passivement le trafic réseau, démontre l'accent mis par Pékin sur le maintien d'accès persistants au cœur de cibles régionales stratégiques."
+          "en": "Chinese cyber operations demonstrate exceptional stealth and longevity, highlighted by the Daxin kernel rootkit maintaining active espionage inside Taiwanese manufacturing networks for over 13 years. In parallel, highly structured cybercriminal syndicates run domestic 'reward-farming' networks using compromised automated tools (Qinglong) to exfiltrate credentials and session tokens.",
+          "fr": "Les cyber-opérations chinoises font preuve d'une furtivité exceptionnelle, illustrée par le rootkit Daxin qui s'est maintenu actif dans les réseaux industriels taïwanais pendant plus de 13 ans. En parallèle, des syndicats cybercriminels structurés opèrent des réseaux nationaux de 'reward-farming' via le détournement d'outils d'automatisation (Qinglong) pour exfiltrer des cookies de session."
+        }
+      },
+      {
+        "geographic_zone_name": {
+          "en": "North Korea",
+          "fr": "Corée du Nord"
+        },
+        "geographic_zone_strategic_analyse": {
+          "en": "State-sponsored campaigns (Lazarus, REF9403, APT37) continue to run highly contextualized social engineering operations (such as 'Contagious Interview') targeting developers and engineers. Their objective remains the infiltration of software supply chains via trojanized dependency packages (NPM/PyPI) to exfiltrate proprietary source code and siphon cryptocurrency assets.",
+          "fr": "Les campagnes étatiques nord-coréennes (Lazarus, REF9403, APT37) s'appuient sur l'ingénierie sociale ciblée (campagne 'Contagious Interview') pour piéger les développeurs. Leur objectif principal reste la compromission de la supply chain logicielle via des paquets corrompus (NPM/PyPI) afin d'exfiltrer du code source propriétaire et dérober des crypto-actifs."
         }
       }
     ],
@@ -112,30 +146,32 @@
         "origin_country": "Russia",
         "type": {
           "en": "Nation-state",
-          "fr": "Acteur étatique"
+          "fr": "Nation-state"
         },
         "targeted_sectors": {
           "en": [
             "Critical_Infrastructure",
             "Government_and_Defense",
             "Technology_and_Telecom",
-            "Finance"
+            "Finance",
+            "Healthcare_and_Life_Sciences"
           ],
           "fr": [
             "Critical_Infrastructure",
             "Government_and_Defense",
             "Technology_and_Telecom",
-            "Finance"
+            "Finance",
+            "Healthcare_and_Life_Sciences"
           ]
         },
         "targeted_regions": {
           "en": [
-            "North America",
+            "United States",
             "Europe",
             "Global"
           ],
           "fr": [
-            "Amérique du Nord",
+            "États-Unis",
             "Europe",
             "Global"
           ]
@@ -147,10 +183,10 @@
         ],
         "campaign_or_operation": {
           "en": [
-            "Russian State-Sponsored SNMP Router Attacks"
+            "SNMP Router Config Exfiltration"
           ],
           "fr": [
-            "Attaques de routeurs SNMP par l'État russe"
+            "Exfiltration de configurations de routeurs par SNMP"
           ]
         }
       },
@@ -159,14 +195,16 @@
         "origin_country": "Unknown",
         "type": {
           "en": "Cybercriminal",
-          "fr": "Cybercriminel"
+          "fr": "Cybercriminal"
         },
         "targeted_sectors": {
           "en": [
-            "Technology_and_Telecom"
+            "Technology_and_Telecom",
+            "Business_Services"
           ],
           "fr": [
-            "Technology_and_Telecom"
+            "Technology_and_Telecom",
+            "Business_Services"
           ]
         },
         "targeted_regions": {
@@ -184,12 +222,51 @@
         ],
         "campaign_or_operation": {
           "en": [
-            "AsyncAPI npm supply chain compromise",
-            "Miasma NPM infection campaign"
+            "AsyncAPI npm supply chain compromise"
           ],
           "fr": [
-            "Compromission de la chaîne d'approvisionnement npm d'AsyncAPI",
-            "Campagne d'infection npm Miasma"
+            "Compromission de la chaîne d'approvisionnement npm AsyncAPI"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "Daxin Espionage Group",
+        "origin_country": "China",
+        "type": {
+          "en": "Nation-state",
+          "fr": "Nation-state"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Technology_and_Telecom",
+            "Government_and_Defense",
+            "Industry_and_Manufacturing"
+          ],
+          "fr": [
+            "Technology_and_Telecom",
+            "Government_and_Defense",
+            "Industry_and_Manufacturing"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Asia-Pacific"
+          ],
+          "fr": [
+            "Asie-Pacifique"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1014",
+          "T1547.004",
+          "T1505.003"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Long-term Taiwan Manufacturing Espionage"
+          ],
+          "fr": [
+            "Espionnage de long terme de l'industrie manufacturière taïwanaise"
           ]
         }
       }
@@ -197,8 +274,8 @@
   },
   "mitre_attack_ttps": {
     "ttps_strategic_analyse": {
-      "en": "Week 3 of July 2026 highlights the industrialization of supply chain compromises (T1195.001/.002), where actors exploit loose CI/CD configurations to sign malicious modules legally. In-memory execution and advanced process injection (T1055) are standard, bypassing endpoint security. Attackers increasingly leverage 'ClickFix' tactics (T1204) to trick users into manual terminal execution, effectively bypassing perimeter defenses. Defensively, monitoring must pivot to runtime behavioral analysis (eBPF, Falco) to track unauthorized API abuse (T1078) and credential theft within cloud and containerized environments.",
-      "fr": "La troisième semaine de juillet 2026 met en évidence l'industrialisation des compromissions de la chaîne d'approvisionnement (T1195.001/.002), où les attaquants exploitent les configurations CI/CD pour signer légitimement des modules malveillants. L'exécution en mémoire et l'injection de processus (T1055) se généralisent pour contourner les antivirus. De plus, l'ingénierie sociale 'ClickFix' (T1204) incite les utilisateurs à exécuter manuellement du code en console. Face à ces techniques, la défense doit s'orienter vers l'analyse comportementale au runtime (eBPF, Falco) pour tracer l'abus d'identifiants API (T1078) dans le cloud et les conteneurs."
+      "en": "This period is heavily characterized by the weaponization of software dependencies (T1195.002) and active exploitation of public-facing infrastructure (T1190) to gain initial access. Advanced evasion techniques, notably kernel-level rootkits (T1014) and complex memory process injection methods (T1055), are increasingly deployed by state actors to ensure long-term stealth, while social engineering relies heavily on highly targeted multi-stage phishing loops.",
+      "fr": "Cette période est fortement marquée par l'instrumentalisation des dépendances logicielles (T1195.002) et l'exploitation active des applications web exposées (T1190) comme vecteurs d'accès initiaux. Les techniques d'évasion avancées, notamment les rootkits en mode noyau (T1014) et l'injection de processus en mémoire (T1055), sont déployées de manière persistante, tandis que l'ingénierie sociale utilise des boucles d'hameçonnage complexes par étapes."
     },
     "ttps_list": [
       {
@@ -207,37 +284,33 @@
           "en": "Initial Access",
           "fr": "Accès Initial"
         },
-        "technique_name": "Supply Chain Compromise: Compromise Software Dependencies",
+        "technique_name": "Supply Chain Compromise: Software Dependencies",
         "frequency": 4,
         "severity": "critical",
         "context": {
           "en": [
-            "TeamPCP compromised open-source repositories by poisoning PyPI and npm ecosystems, injecting malware like Miasma directly into developer libraries.",
-            "Lazarus and other DPRK groups poisoned NPM packages to target engineers through job interview phishing schemes."
+            "TeamPCP compromised the npm AsyncAPI software packages, distributing malicious payloads executed at import-time to bypass downstream security validation."
           ],
           "fr": [
-            "TeamPCP a compromis des référentiels open-source en empoisonnant les écosystèmes PyPI et npm, injectant le malware Miasma dans les bibliothèques de développement.",
-            "Le groupe Lazarus et d'autres acteurs nord-coréens ont empoisonné des paquets npm pour cibler des ingénieurs via de faux entretiens d'embauche."
+            "TeamPCP a compromis les packages npm d'AsyncAPI, injectant des charges utiles exécutées au moment de l'import pour contourner les contrôles de sécurité locaux."
           ]
         }
       },
       {
-        "id": "T1204.001",
+        "id": "T1566",
         "tactic": {
-          "en": "Execution",
-          "fr": "Exécution"
+          "en": "Initial Access",
+          "fr": "Accès Initial"
         },
-        "technique_name": "User Execution: Malicious Link",
+        "technique_name": "Phishing",
         "frequency": 4,
         "severity": "high",
         "context": {
           "en": [
-            "Widespread ClickFix campaigns (TELEPUZ, Starland RAT) manipulate users into copying malicious PowerShell code to their clipboard and executing it manually to 'fix' web errors.",
-            "Kratos PhaaS uses reverse-proxy AiTM phishing links to intercept Microsoft 365 MFA session tokens."
+            "Used heavily across campaigns, including Kratos AiTM M365 credential theft, UAC-0145 fake software updates in Ukraine, and contract signature simulation scams."
           ],
           "fr": [
-            "De vastes campagnes ClickFix (TELEPUZ, Starland RAT) manipulent les utilisateurs pour copier du code PowerShell malveillant dans le presse-papiers et l'exécuter.",
-            "La plateforme Kratos PhaaS exploite des liens d'hameçonnage AiTM avec reverse-proxy pour intercepter les jetons de session MFA Microsoft 365."
+            "Utilisé intensivement, notamment dans les vols d'identifiants M365 via Kratos AiTM, les fausses mises à jour d'UAC-0145 en Ukraine, et les simulations de signature de contrat."
           ]
         }
       },
@@ -248,16 +321,50 @@
           "fr": "Évasion de Défense"
         },
         "technique_name": "Process Injection",
-        "frequency": 4,
+        "frequency": 3,
         "severity": "high",
         "context": {
           "en": [
-            "OkoBot injects malicious overlays into Trezor Suite and Ledger Live process memory to harvest cryptocurrency recovery seed phrases.",
-            "AtlasRAT and TELEPUZ use in-memory DLL and shellcode injection to execute covertly within trusted application processes like WeChat and rundll32."
+            "Observed in AtlasRAT Delphi memory loaders, function stomping proofs-of-concept, and advanced CET-compliant callstack spoofing frameworks like UnwindRaven."
           ],
           "fr": [
-            "OkoBot injecte de fausses interfaces dans la mémoire des processus Trezor Suite et Ledger Live pour dérober les phrases de récupération de crypto-actifs.",
-            "AtlasRAT et TELEPUZ utilisent l'injection de DLL et de shellcode en mémoire pour s'exécuter furtivement dans des processus légitimes (WeChat, rundll32)."
+            "Observé dans les chargeurs mémoire Delphi d'AtlasRAT, les preuves de concept de function stomping, et les frameworks de callstack spoofing compatibles CET comme UnwindRaven."
+          ]
+        }
+      },
+      {
+        "id": "T1190",
+        "tactic": {
+          "en": "Initial Access",
+          "fr": "Accès Initial"
+        },
+        "technique_name": "Exploit Public-Facing Application",
+        "frequency": 4,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "Leveraged actively in targeting SharePoint Server (CVE-2026-58644), Fortinet FortiSandbox (CVE-2026-25089), and SonicWall SMA 1000 gateways."
+          ],
+          "fr": [
+            "Exploité activement pour cibler SharePoint Server (CVE-2026-58644), Fortinet FortiSandbox (CVE-2026-25089), et les passerelles SonicWall SMA 1000."
+          ]
+        }
+      },
+      {
+        "id": "T1014",
+        "tactic": {
+          "en": "Defense Evasion",
+          "fr": "Évasion de Défense"
+        },
+        "technique_name": "Rootkit",
+        "frequency": 3,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "Deployed by Daxin operators, executing arbitrary kernel code and intercepting network traffic passively on compromise targets."
+          ],
+          "fr": [
+            "Déployé par les opérateurs de Daxin, exécutant du code arbitraire au niveau noyau et interceptant de manière passive les communications réseau."
           ]
         }
       }
@@ -265,10 +372,56 @@
   },
   "vulnerabilities": {
     "analyse": {
-      "en": "Vulnerability management this period is characterized by critical exploits in widely-deployed corporate systems (SharePoint, SonicWall SMA, Oracle Payments) heavily targeted by both APT and ransomware groups. The addition of legacy router flaws (CVE-2018-0171) to CISA's KEV highlights the persistent danger of unpatched network appliances. Simultaneously, zero-days targeting industrial networking equipment (Siemens ROX II) and Windows core registry handling (LegacyHive) present significant risk, requiring rapid deployment of compensating controls where patches are delayed.",
-      "fr": "La gestion des vulnérabilités cette semaine est marquée par des failles critiques dans des systèmes d'entreprise très répandus (SharePoint, SonicWall SMA, Oracle Payments) activement exploitées par des APT et groupes de ransomware. L'ajout de failles de routeurs historiques (CVE-2018-0171) au catalogue KEV de la CISA souligne le danger permanent des équipements réseau non corrigés. En parallèle, des failles zero-day ciblant les réseaux industriels (Siemens ROX II) et le registre Windows (LegacyHive) présentent un risque majeur, imposant le déploiement rapide de mesures compensatoires."
+      "en": "Vulnerability management was dominated by active exploitation of high-profile remote-access and collaboration platforms. CISA expanded its KEV catalog with immediate patching orders for SharePoint Server (CVE-2026-58644) and Fortinet FortiSandbox (CVE-2026-25089). Additionally, severe command-injection bugs in industrial frameworks (Siemens ROX II) and critical RCE vulnerabilities in enterprise gateways highlight the fragility of exposed edge equipment.",
+      "fr": "La gestion des vulnérabilités a été dominée par l'exploitation active de plateformes d'accès à distance et de collaboration. La CISA a étendu son catalogue KEV en ordonnant le déploiement de correctifs pour SharePoint Server (CVE-2026-58644) et Fortinet FortiSandbox (CVE-2026-25089). De plus, des failles d'injection de commandes dans des systèmes industriels (Siemens ROX II) confirment la fragilité des équipements périphériques."
     },
     "list": [
+      {
+        "cve_id": "CVE-2026-58644",
+        "cvss_score": "9.8",
+        "epss_score": "N/A",
+        "cisa_kev": true,
+        "affected_product": "SharePoint Server",
+        "affected_product_vendor": "Microsoft",
+        "vulnerability_type": {
+          "en": [
+            "Deserialization of Untrusted Data"
+          ],
+          "fr": [
+            "Désérialisation de données non approuvées"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "A critical remote code execution vulnerability in Microsoft SharePoint Server that allows an unauthenticated attacker to achieve arbitrary code execution via malicious deserialization patterns.",
+          "fr": "Une vulnérabilité critique d'exécution de code à distance dans Microsoft SharePoint Server qui permet à un attaquant non authentifié d'exécuter du code arbitraire par désérialisation malveillante."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-25089",
+        "cvss_score": "9.8",
+        "epss_score": "N/A",
+        "cisa_kev": true,
+        "affected_product": "FortiSandbox",
+        "affected_product_vendor": "Fortinet",
+        "vulnerability_type": {
+          "en": [
+            "OS Command Injection"
+          ],
+          "fr": [
+            "Injection de commandes OS"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "An OS command injection vulnerability in Fortinet FortiSandbox allows an unauthenticated attacker to execute arbitrary command sequences on the underlying operating system.",
+          "fr": "Une vulnérabilité d'injection de commandes OS dans Fortinet FortiSandbox permet à un attaquant non authentifié d'exécuter des séquences de commandes sur le système sous-jacent."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
       {
         "cve_id": "CVE-2026-15409",
         "cvss_score": "10.0",
@@ -278,63 +431,38 @@
         "affected_product_vendor": "SonicWall",
         "vulnerability_type": {
           "en": [
-            "Server-Side Request Forgery (SSRF)"
+            "Server-Side Request Forgery"
           ],
           "fr": [
-            "Server-Side Request Forgery (SSRF)"
+            "Server-Side Request Forgery"
           ]
         },
         "vulnerability_description": {
-          "en": "A critical Server-Side Request Forgery vulnerability in SonicWall SMA 1000 Series allows unauthenticated remote attackers to access internal resources and potentially pivot into the corporate intranet.",
-          "fr": "Une vulnérabilité critique de type Server-Side Request Forgery dans les boîtiers SonicWall SMA 1000 permet à des attaquants non authentifiés d'accéder aux ressources internes et de pivoter vers l'intranet."
+          "en": "A critical Server-Side Request Forgery (SSRF) flaw in SonicWall SMA 1000 series that allows unauthenticated network actors to access internal resources and execute arbitrary commands.",
+          "fr": "Une faille critique de Server-Side Request Forgery (SSRF) dans les équipements SonicWall SMA 1000 qui permet à un acteur réseau non authentifié d'accéder aux ressources internes."
         },
         "mitre_attack_ttps_id": [
           "T1190"
         ]
       },
       {
-        "cve_id": "CVE-2026-56164",
-        "cvss_score": "8.8",
+        "cve_id": "CVE-2025-40949",
+        "cvss_score": "9.1",
         "epss_score": "N/A",
-        "cisa_kev": true,
-        "affected_product": "SharePoint Server",
-        "affected_product_vendor": "Microsoft",
+        "cisa_kev": false,
+        "affected_product": "ROX II",
+        "affected_product_vendor": "Siemens",
         "vulnerability_type": {
           "en": [
-            "Authentication Bypass",
-            "Remote Code Execution"
+            "Command Injection"
           ],
           "fr": [
-            "Contournement d'authentification",
-            "Exécution de code à distance"
+            "Injection de commandes"
           ]
         },
         "vulnerability_description": {
-          "en": "An actively exploited vulnerability in Microsoft SharePoint Server allows remote attackers to bypass authentication and execute arbitrary code on the hosting server.",
-          "fr": "Une vulnérabilité activement exploitée dans Microsoft SharePoint Server permet à des attaquants distants de contourner l'authentification et d'exécuter du code arbitraire sur le serveur."
-        },
-        "mitre_attack_ttps_id": [
-          "T1190"
-        ]
-      },
-      {
-        "cve_id": "CVE-2026-46817",
-        "cvss_score": "9.8",
-        "epss_score": "N/A",
-        "cisa_kev": true,
-        "affected_product": "Oracle Payments",
-        "affected_product_vendor": "Oracle",
-        "vulnerability_type": {
-          "en": [
-            "Remote Code Execution (RCE)"
-          ],
-          "fr": [
-            "Exécution de code à distance (RCE)"
-          ]
-        },
-        "vulnerability_description": {
-          "en": "A critical vulnerability in Oracle Payments allows unauthenticated remote attackers to execute arbitrary code with elevated privileges, potentially compromising financial transaction databases.",
-          "fr": "Une vulnérabilité critique dans Oracle Payments permet à des attaquants distants non authentifiés d'exécuter du code avec de hauts privilèges, compromettant potentiellement les bases de transactions financières."
+          "en": "A command injection vulnerability in the scheduler component of Siemens ROX II (prior to V2.17.1) allows authenticated local attackers to achieve arbitrary root-level command execution.",
+          "fr": "Une vulnérabilité d'injection de commandes dans le planificateur de Siemens ROX II (avant V2.17.1) permet à un utilisateur local authentifié d'exécuter des commandes avec les privilèges root."
         },
         "mitre_attack_ttps_id": [
           "T1190"
@@ -344,6 +472,29 @@
   },
   "data_breaches": [
     {
+      "victim": "23andMe",
+      "sector": "Healthcare_and_Life_Sciences",
+      "country": "United States",
+      "records_count": 6900000,
+      "data_types": {
+        "en": [
+          "Genetic profiles",
+          "Family trees",
+          "Personal emails",
+          "Login credentials"
+        ],
+        "fr": [
+          "Profils génétiques",
+          "Arbres généalogiques",
+          "E-mails personnels",
+          "Identifiants de connexion"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": 18000000,
+      "source_url": "https://databreaches.net/2026/07/18/ny-attorney-general-james-secures-18-million-from-23andme-for-failing-to-protect-customers-genetic-data/"
+    },
+    {
       "victim": "AssuranceAmerica",
       "sector": "Finance",
       "country": "United States",
@@ -351,16 +502,16 @@
       "data_types": {
         "en": [
           "Social Security Numbers (SSN)",
-          "Driver's License Numbers",
-          "Insurance Policy Details"
+          "Driver's license numbers",
+          "Insurance policy details"
         ],
         "fr": [
-          "Numéros de Sécurité Sociale (SSN)",
-          "Numéros de Permis de Conduire",
-          "Détails de Polices d'Assurance"
+          "Numéros de sécurité sociale (SSN)",
+          "Numéros de permis de conduire",
+          "Détails de polices d'assurance"
         ]
       },
-      "threat_actor": "Unknown",
+      "threat_actor": null,
       "financial_impact_usd": null,
       "source_url": "https://cyber.netsecops.io/articles/assuranceamerica-data-breach-exposes-ssns-of-over-1-1-million-people/"
     },
@@ -371,40 +522,38 @@
       "records_count": null,
       "data_types": {
         "en": [
-          "Corporate Tax Documents",
-          "Support Tickets",
-          "Client Financial Data"
+          "Confidential client tax documents",
+          "Internal support tickets"
         ],
         "fr": [
-          "Documents Fiscaux d'Entreprise",
-          "Tickets de Support IT",
-          "Données Financières de Clients"
+          "Documents fiscaux confidentiels de clients",
+          "Tickets de support internes"
         ]
       },
-      "threat_actor": "Unknown",
+      "threat_actor": null,
       "financial_impact_usd": null,
       "source_url": "https://www.bleepingcomputer.com/news/security/ernst-and-young-discloses-data-breach-after-support-system-hack/"
     },
     {
-      "victim": "Fluke Corporation",
-      "sector": "Retail_and_Consumer",
+      "victim": "Fluke",
+      "sector": "Industry_and_Manufacturing",
       "country": "United States",
       "records_count": 821000,
       "data_types": {
         "en": [
-          "Names",
-          "Email Addresses",
-          "Employer Details",
-          "Job Titles"
+          "Personal names",
+          "Corporate emails",
+          "Employer names",
+          "Job titles"
         ],
         "fr": [
-          "Noms",
-          "Adresses Email",
-          "Détails de l'Employeur",
-          "Intitulés de Postes"
+          "Noms personnels",
+          "E-mails d'entreprise",
+          "Noms d'employeurs",
+          "Intitulés de postes"
         ]
       },
-      "threat_actor": "Unknown",
+      "threat_actor": null,
       "financial_impact_usd": null,
       "source_url": "https://beesint.com/pulse/0abf944f-ee4d-42cf-8002-0dd5d4558b45"
     }
@@ -417,9 +566,8 @@
         "Finance",
         "Healthcare_and_Life_Sciences",
         "Technology_and_Telecom",
-        "Business_Services",
-        "Retail_and_Consumer",
-        "Education_and_Research"
+        "Industry_and_Manufacturing",
+        "Business_Services"
       ],
       "fr": [
         "Critical_Infrastructure",
@@ -427,112 +575,109 @@
         "Finance",
         "Healthcare_and_Life_Sciences",
         "Technology_and_Telecom",
-        "Business_Services",
-        "Retail_and_Consumer",
-        "Education_and_Research"
+        "Industry_and_Manufacturing",
+        "Business_Services"
       ]
     },
     "countries": {
       "en": [
         "United States",
-        "Ukraine",
-        "Taiwan",
         "France",
-        "Japan",
-        "India",
-        "Tonga",
-        "Spain"
+        "Taiwan",
+        "Ukraine",
+        "Finland",
+        "Spain",
+        "Japan"
       ],
       "fr": [
         "États-Unis",
-        "Ukraine",
-        "Taïwan",
         "France",
-        "Japon",
-        "Inde",
-        "Tonga",
-        "Espagne"
+        "Taïwan",
+        "Ukraine",
+        "Finlande",
+        "Espagne",
+        "Japon"
       ]
     },
     "narrative": {
-      "en": "- **Government & Defense:** Ukrainian state institutions were targeted in high-context phishing campaigns by UAC-0145 using fraudulent Microsoft updates to deploy administrative backdoors.\n- **Critical Infrastructure & Energy:** The Kudankulam Nuclear Power Plant in India suffered a significant data breach exposing industrial design files and engineering configurations.\n- **Technology & Telecom:** Developer environments and CI/CD pipelines of AsyncAPI and PyPI were infected by TeamPCP, compromising credentials and cloud access tokens across potentially 2 million developer hosts.\n- **Finance & Insurance:** AssuranceAmerica suffered an exposure of Social Security Numbers (SSNs) and driver's licenses affecting 1.1 million insurance policyholders.\n- **Business & Professional Services:** Professional services firm Ernst & Young (EY) disclosed a data breach involving exfiltrated client tax documents through a compromised external IT support system.\n- **Healthcare & Life Sciences:** Abbott Laboratories and Droguería Martorani were targeted by ransomware and extortion actors (including Qilin), resulting in the exfiltration of sensitive commercial and internal corporate files.\n- **Logistics & Food Supply:** Nichirei Corporation, a major Japanese food supplier, and Nihon Kotsu, Japan's largest taxi fleet, suffered severe operational outages and system freezes due to targeted network compromises.\n- **Retail & E-commerce:** Industrial tool provider Fluke experienced a database breach exposing names, emails, and job roles of 821,000 customers, compounded by an lack of SPF/DMARC DNS records.",
-      "fr": "- **Gouvernement & Défense :** Des administrations ukrainiennes ont été ciblées par le groupe étatique UAC-0145 via de faux e-mails de mises à jour Microsoft installant des portes dérobées.\n- **Infrastructures Critiques & Énergie :** La centrale nucléaire de Kudankulam en Inde a subi une fuite massive de données de conception d'ingénierie et de plans d'infrastructures industrielles.\n- **Technologie & Télécoms :** Les environnements de développement d'AsyncAPI (npm) et de PyPI ont été empoisonnés par TeamPCP, menaçant de voler les secrets d'API cloud de 2 millions de développeurs.\n- **Finance & Assurances :** L'assureur AssuranceAmerica a fait l'objet d'une violation de données exposant les numéros de sécurité sociale (SSN) et permis de conduire de 1,1 million d'assurés.\n- **Services aux Entreprises :** Le cabinet d'audit Ernst & Young (EY) a subi une intrusion sur son portail de support tiers, entraînant l'exfiltration de documents fiscaux confidentiels de clients.\n- **Santé & Sciences de la Vie :** Abbott Laboratories et Droguería Martorani ont été visés par des cyberattaques d'extorsion (notamment par Qilin), compromettant d'importants volumes de fichiers commerciaux.\n- **Logistique & Transports :** Le logisticien agroalimentaire Nichirei et la compagnie de taxis Nihon Kotsu au Japon ont vu leurs systèmes de répartition complètement paralysés par des cyberattaques.\n- **Commerce & Distribution :** Le fabricant d'outils industriels Fluke a exposé les données d'identification (emails, employeurs) de 821 000 clients, une fuite aggravée par l'absence de configurations SPF/DMARC."
+      "en": "- **Technology & Telecom:** AsyncAPI npm packages, with over 2 million weekly downloads, were compromised in a software supply chain campaign by TeamPCP.\n- **Healthcare & Life Sciences:** Genetic testing firm 23andMe suffered a massive breach of user databases, settling with the NY Attorney General for $18,000,000.\n- **Professional & Business Services:** Ernst & Young (EY) disclosed the exfiltration of confidential client tax and financial documents via a third-party support ticket breach.\n- **Finance & Insurance:** Insurer AssuranceAmerica experienced a major data breach compromising the Social Security Numbers (SSNs) and driver's licenses of over 1.1 million individuals.\n- **Critical Infrastructure:** Siemens ROX II industrial routers, essential for power grid operations, were targeted by three zero-day bugs (such as CVE-2025-40949) allowing root code injection.\n- **Government & Defense:** Ukrainian public administrations were targeted by espionage group UAC-0145 using spear-phishing disguised as urgent Microsoft Windows security patches.\n- **Retail & Consumer:** Large supermarket online store Lidl was breached through a service provider hack, compromising customer database records.\n- **Hospitality & Entertainment:** Japanese restaurant 'ヨプの王豚塩焼 Akasaka' suffered an insider skimming campaign where 284 physical credit cards were stolen over several months.",
+      "fr": "- **Technology & Telecom :** Les packages npm d'AsyncAPI, représentant plus de 2 millions de téléchargements hebdomadaires, ont été compromis par TeamPCP.\n- **Healthcare & Life Sciences :** La société 23andMe a subi une violation massive de ses bases de données génétiques, se soldant par un accord de 18 000 000 $ avec le procureur de NY.\n- **Business Services :** Le cabinet d'audit Ernst & Young (EY) a dévoilé l'exfiltration de documents fiscaux confidentiels de clients via une faille de support tierce.\n- **Finance :** L'assureur AssuranceAmerica a fait l'objet d'une violation de données compromettant les numéros de sécurité sociale (SSN) de plus de 1,1 million d'assurés.\n- **Critical Infrastructure :** Les routeurs industriels Siemens ROX II, critiques pour les réseaux d'énergie, ont été visés par trois failles zero-day (dont CVE-2025-40949) permettant l'injection de commandes root.\n- **Government & Defense :** Les administrations publiques ukrainiennes ont été ciblées par le groupe d'espionnage UAC-0145 via des campagnes d'hameçonnage imitant des correctifs Windows.\n- **Retail & Consumer :** La boutique en ligne de Lidl a été victime d'une violation de données via un prestataire tiers, compromettant les informations de comptes clients.\n- **Hospitality & Entertainment :** Le restaurant japonais 'ヨプの王豚塩焼 Akasaka' a subi un skimming physique interne menant au vol de 284 cartes bancaires."
     }
   },
   "trends": {
     "emerging_techniques": {
       "en": [
-        "Blockchain fallback C2 (utilizing Polygon smart contracts JSON-RPC for resilient C2 infrastructure resolution)",
-        "Import-time payload execution in npm dependencies to bypass script-ignoring restrictions",
-        "ClickFix social engineering abusing system clipboards and manual terminal copy-pasting",
-        "Intel CET-compliant callstack spoofing using thread pool enum callback trampolining"
+        "Generative AI-orchestrated autonomous zero-day vulnerability exploitation loops",
+        "Blockchain Polygon JSON-RPC lookups for decentralized C2 redirection bypass",
+        "OIDC token hijacking via loose pull_request_target workflows in GitHub Actions",
+        "CET-compliant callstack spoofing using thread pool enum callback trampolines"
       ],
       "fr": [
-        "C2 avec repli sur blockchain (utilisation de contrats intelligents Polygon via JSON-RPC pour la résolution d'infrastructure)",
-        "Exécution de charges utiles à l'importation de dépendances npm pour contourner le blocage de scripts",
-        "Ingénierie sociale 'ClickFix' détournant le presse-papiers et forçant le copier-coller en console",
-        "Spoofing de callstack compatible Intel CET via trampolines de callbacks d'énumération de thread pool"
+        "Boucles autonomes d'exploitation de vulnérabilités zero-day orchestrées par IA générative",
+        "Interrogations de smart contracts Polygon pour redirection de serveurs C2 décentralisés",
+        "Détournement de jetons OIDC via des configurations lâches de workflows GitHub Actions",
+        "Callstack spoofing compatible CET via l'abus de callbacks du thread pool"
       ]
     },
     "declining_techniques": {
       "en": [
-        "Traditional installation scripts in npm (postinstall hooks) as defenders enforce --ignore-scripts policies",
-        "Static hash-based malware detection as AI-generated dynamic code modification becomes prevalent",
-        "Unauthenticated network telemetry transmissions over cleartext protocols"
+        "Static signature-based detection for web shells (bypassed by memory function-stomping)",
+        "Traditional SMS or push-based MFA (heavily bypassed by reverse-proxy AiTM PhaaS platforms)",
+        "Un-obfuscated script drops onto disk (declining due to advanced EDR heuristic blocking)"
       ],
       "fr": [
-        "Scripts d'installation npm traditionnels (hooks postinstall) du fait de la généralisation de --ignore-scripts",
-        "Détection de signatures statiques de fichiers à cause des variations de code dynamique générées par IA",
-        "Transmissions de télémétrie réseau d'administration non authentifiées sur protocoles en clair"
+        "Détection par signatures statiques de webshells (contournée par injection en mémoire)",
+        "Authentification MFA par SMS ou push simple (contournée par proxys inversés AiTM)",
+        "Dépôt de scripts non obfusqués sur disque (bloqué par les heuristiques avancées des EDR)"
       ]
     },
     "geopolitical_context": {
-      "en": "State-sponsored cyber activities are increasingly used as tools of hybrid warfare beneath the threshold of open conflict, causing direct diplomatic tensions. This is highlighted by France publicly attributing cyberespionnage campaigns to Russian FSB Unit 61240, and the exposure of European password manager Passwork's structural links to the Russian state and FSB licensing. Concurrently, East Asian tensions remain elevated with the deployment of stealthy Chinese rootkits in Taiwan's infrastructure.",
-      "fr": "Les cyberattaques étatiques sont de plus en plus utilisées comme leviers de guerre hybride sous le seuil du conflit ouvert, générant d'intenses tensions diplomatiques. Cela est illustré par l'attribution publique par la France d'opérations d'espionnage à l'unité 61240 du FSB russe, et par la révélation des liens structurels du gestionnaire de mots de passe Passwork avec le FSB russe. En parallèle, les tensions restent vives en Asie de l'Est avec le déploiement de rootkits chinois dissimulés à Taïwan."
+      "en": "Cyber operations remain deeply synchronized with structural geopolitical rivalries. Russian state-sponsored operations focus heavily on pre-positioning and persistence within global critical routing systems, triggering active public CTI attribution from European nations. Simultaneously, Chinese-aligned espionage teams leverage highly advanced rootkits (Daxin) to monitor manufacturing supply chains in Taiwan, while North Korean groups aggressively target international cryptocurrency platforms and developer nodes to bypass international financial sanctions.",
+      "fr": "Les cyber-opérations restent étroitement synchronisées avec les rivalités géopolitiques structurelles. Les opérations étatiques russes se concentrent sur le pré-positionnement persistant dans les réseaux de routage critiques, déclenchant des attributions CTI publiques en Europe. Simultanément, la Chine s'appuie sur des rootkits avancés (Daxin) pour surveiller l'industrie à Taïwan, tandis que la Corée du Nord cible les plateformes de crypto-actifs et les nœuds de développement pour contourner les sanctions."
     }
   },
   "recommendations": {
     "strategic": {
       "en": [
         {
-          "title": "Enforce FIDO2 Hardware MFA for Developer Accounts",
-          "detail": "Traditional SMS or TOTP-based MFA is systematically bypassed by modern Adversary-in-the-Middle (AiTM) phishing platforms such as Kratos and Tycoon observed this period. Mandate the deployment of FIDO2 WebAuthn hardware security keys (e.g., YubiKey 5, Google Titan) for all developer, DevOps, and cloud administrator accounts. This strictly mitigates the risk of session hijacking and credential harvesting in Microsoft 365 and AWS environments."
+          "title": "Enforce FIDO2 Hardware MFA for All Administrative and Developer Accounts",
+          "detail": "Traditional SMS and app-based push MFA are consistently bypassed by advanced reverse-proxy AiTM platforms such as Kratos and Tycoon observed this period. Mandate the strict use of FIDO2 hardware keys (YubiKey 5, Google Titan) for all administrative and developer profiles accessing Microsoft Entra ID and corporate GitHub environments. This completely mitigates the threat of session hijacking and unauthorized API token exfiltration."
         },
         {
-          "title": "Audit and Limit Cloud Service Account Privileges",
-          "detail": "Attackers are actively exploiting over-privileged non-human identities (NHI) and GCP default service accounts via Local File Inclusion (LFI) to escalate privileges to Project Editor. Transition all serverless architectures and cloud functions (GCP Cloud Run, AWS Lambda) away from default configurations. Implement custom service accounts governed by strict IAM Least Privilege policies and short-lived tokens to mitigate tenant takeover risks."
+          "title": "Establish Comprehensive AI Governance and CIRCUIT Framework Compliance",
+          "detail": "The unchecked development and deployment of autonomous AI agents (Shadow AI) by developers introduces severe data leakage and local privilege escalation vulnerabilities. Implement the FIRST CIRCUIT v1.0 governance framework to inventory, audit, and regulate local AI systems. Ensure all corporate model weights are cryptographically signed using OpenSSF Model Signing (OMS) specifications to prevent malware injection inside AI pipelines."
         }
       ],
       "fr": [
         {
-          "title": "Imposer l'authentification MFA matérielle FIDO2 des développeurs",
-          "detail": "Le MFA traditionnel par SMS ou TOTP est systématiquement contourné par les plateformes de phishing AiTM telles que Kratos et Tycoon observées cette semaine. Déployez des clés de sécurité physiques FIDO2/WebAuthn (YubiKey 5, Google Titan) pour tous les comptes d'administration cloud et de développeurs. Cela élimine le risque de vol de session et de contournement MFA sur Microsoft 365 et Azure."
+          "title": "Imposer l'authentification MFA matérielle FIDO2 pour les comptes sensibles",
+          "detail": "Les méthodes MFA traditionnelles (SMS ou push applicatif) sont systématiquement contournées par les proxys inversés AiTM comme Kratos observés cette semaine. Imposez l'utilisation de clés matérielles FIDO2 (YubiKey 5, Google Titan) pour tous les comptes d'administration et de développement accédant à Microsoft Entra ID et GitHub. Cela neutralise le risque de vol de session et d'exfiltration de jetons d'API."
         },
         {
-          "title": "Auditer et restreindre les privilèges des comptes de services",
-          "detail": "Les attaquants exploitent les privilèges excessifs d'identités non-humaines (NHI) et de comptes par défaut (GCP Default Service Account) via des failles LFI pour s'élever au rang d'éditeur. Configurez des comptes de services personnalisés appliquant le moindre privilège et l'usage de jetons de session éphémères pour vos fonctions serverless (GCP Cloud Run, AWS Lambda) afin d'isoler l'infrastructure."
+          "title": "Déployer une gouvernance des agents d'IA basée sur le framework CIRCUIT",
+          "detail": "Le déploiement non contrôlé d'agents d'IA autonomes (Shadow AI) par les développeurs génère des risques sévères de fuite de données et d'élévation de privilèges. Implémentez le framework de gouvernance FIRST CIRCUIT v1.0 pour inventorier, auditer et réguler les systèmes d'IA locaux. Assurez-vous que les poids des modèles sont signés cryptographiquement via les spécifications OpenSSF OMS."
         }
       ]
     },
     "operational": {
       "en": [
         {
-          "title": "Harden Developer Systems Against npm Supply Chain Compromises",
-          "detail": "TeamPCP is actively poisoning npm dependencies like AsyncAPI executing code at import-time. Configure developers' environments to run 'npm install --ignore-scripts' by default, and enforce package locking via checksum verification in CI/CD pipelines. Integrate the open-source slsa-verifier tool to validate build provenance and block un-signed open-source libraries."
+          "title": "Audit All active npm and PyPI Package Configurations Immediately",
+          "detail": "In light of the TeamPCP compromises targeting AsyncAPI, execute immediate scans across all CI/CD pipelines to detect poisoned dependencies. Utilize the `slsa-verifier` tool to validate package provenance, and configure local build runners with the `--ignore-scripts` flag to prevent unauthorized setup execution. Ensure all pipeline environment secrets are rotated and active sessions revoked."
         },
         {
-          "title": "Disable Legacy Cisco Services to Block State Espionage",
-          "detail": "Russian state-sponsored actors (FSB Center 16) are actively exploiting legacy routing flaws (CVE-2018-0171 and CVE-2008-4128) to exfiltrate core configuration files. Immediately execute the command 'no vstack' on all enterprise Cisco IOS and IOS-XE switches to disable the Smart Install service. Restrict network access to SNMP interfaces (ports 161/162) using strict ACLs, and mandate SNMPv3 with encryption."
+          "title": "Deploy Microsoft SharePoint Cumulative Updates for CVE-2026-58644",
+          "detail": "As a high-priority vulnerability added to the CISA KEV catalog, SharePoint Server installations must be updated immediately with the Microsoft July 2026 Cumulative Update. Verify that the Antimalware Scan Interface (AMSI) is running in Full Mode across all frontends to actively intercept memory-based exploitation attempts. Isolate administrative HTTP routes from direct internet exposure using web application firewalls (WAF)."
         }
       ],
       "fr": [
         {
-          "title": "Sécuriser les postes de développements face aux attaques npm",
-          "detail": "L'acteur TeamPCP empoisonne activement des paquets npm comme AsyncAPI pour exécuter du code malveillant au chargement du module. Configurez l'environnement de développement pour forcer la commande 'npm install --ignore-scripts' par défaut et imposez la vérification des sommes de contrôle dans la CI/CD. Intégrez l'utilitaire slsa-verifier pour certifier la provenance des dépendances."
+          "title": "Auditer immédiatement les dépendances de packages npm et PyPI",
+          "detail": "Suite aux compromissions de TeamPCP visant AsyncAPI, exécutez un scan de tous les pipelines CI/CD pour détecter les dépendances corrompues. Utilisez l'outil `slsa-verifier` pour valider la provenance des paquets et configurez les runners avec l'argument `--ignore-scripts`. Assurez-vous d'effectuer une rotation complète des secrets d'environnement des pipelines."
         },
         {
-          "title": "Désactiver les protocoles Cisco obsolètes contre l'espionnage russe",
-          "detail": "Les groupes étatiques russes (FSB Center 16) exploitent activement des vulnérabilités de routeurs (CVE-2018-0171 et CVE-2008-4128) pour voler les configurations réseau. Exécutez immédiatement la commande d'administration 'no vstack' sur l'ensemble de vos commutateurs Cisco IOS/IOS-XE. Restreignez l'accès à SNMP (ports 161/162) par des ACL strictes et imposez SNMPv3 chiffré."
+          "title": "Déployer les correctifs Microsoft SharePoint pour la faille CVE-2026-58644",
+          "detail": "Cette faille critique ayant été ajoutée au catalogue KEV de la CISA, mettez à jour d'urgence les serveurs SharePoint avec la mise à jour cumulative de juillet 2026. Assurez-vous que l'interface AMSI est configurée en mode complet (Full Mode) sur tous les serveurs web pour intercepter l'exploitation en mémoire, et filtrez les accès administratifs via un WAF."
         }
       ]
     }
