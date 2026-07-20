@@ -9,8 +9,8 @@
   * [Articles sélectionnés](#articles-selectionnes)
   * [Articles non sélectionnés](#articles-non-selectionnes)
 * [Articles](#articles)
-  * [ACR Stealer + Session Cookie Exfiltration](#acr-stealer-session-cookie-exfiltration)
-  * [Chinese Reward-Farming Underground + Qinglong Malicious Scripts](#chinese-reward-farming-underground-qinglong-malicious-scripts)
+  * [Spirals Ransomware + Microsoft IIS Server Compromise](#spirals-ransomware-microsoft-iis-server-compromise)
+  * [Google Slides Phishing Campaign](#google-slides-phishing-campaign)
 
 ---
 
@@ -18,9 +18,11 @@
 
 # ANALYSE STRATÉGIQUE
 
-L'analyse de la menace cybernétique pour cette période met en évidence une sophistication croissante des opérations d'espionnage étatique et une exploitation opportuniste extrêmement rapide des vulnérabilités logicielles critiques. Les acteurs alignés sur des intérêts étatiques, notamment la Corée du Nord (REF9403) et la Chine (opérateurs du rootkit Daxin), démontrent une persistance exceptionnelle. La campagne nord-coréenne cible habilement les environnements de développement via des mécanismes d'ingénierie sociale basés sur de faux entretiens techniques, introduisant des charges utiles par stéganographie au sein d'images SVG pour compromettre la chaîne d'approvisionnement (supply chain). Par ailleurs, la découverte de la persistance de Daxin sur les réseaux industriels taïwanais pendant plus de treize ans témoigne de l'extrême furtivité des implants en mode noyau chinois.
+L'actualité de la cybersécurité de ce mois de juillet 2026 met en lumière une intensification marquée des attaques ciblant les couches applicatives exposées et les infrastructures réseau critiques. On assiste à une exploitation active et extrêmement rapide de vulnérabilités critiques de type Zero-Day, notamment sur les solutions de VPN d'entreprise (SonicWall SMA 1000) et les systèmes de gestion de contenu à grande échelle (WordPress avec la chaîne wp2shell). Ces attaques révèlent un niveau élevé de préparation et de sophistication de la part de groupes d'acteurs comme UTA0533, capables de contourner des mécanismes de sécurité robustes pour obtenir des accès root complets et installer des persistances locales indétectables.
 
-Sur le plan des vulnérabilités, la réactivité des attaquants est illustrée par l'intégration rapide dans le catalogue CISA KEV de failles critiques affectant Microsoft SharePoint (CVE-2026-58644) et Fortinet FortiSandbox. L'écosystème cybercriminel continue également de se structurer, comme le démontre l'émergence de réseaux de fraude publicitaire hautement organisés en Chine (reward-farming) exploitant des scripts d'automatisation légitimes détournés pour exfiltrer des cookies de session. Les organisations doivent impérativement renforcer la surveillance des accès privilégiés, systématiser l'authentification multifacteur (MFA) résistante au phishing et prioriser les correctifs de sécurité des infrastructures exposées.
+Parallèlement, la menace des rançongiciels continue de muter avec l'apparition de variantes sophistiquées codées en Rust, telles que "Spirals", ciblant spécifiquement des serveurs Web Microsoft IIS exposés. Ce choix technologique illustre la volonté des cybercriminels d'optimiser la vitesse de chiffrement et d'échapper à la détection par les solutions EDR traditionnelles en utilisant des langages compilés modernes et performants.
+
+Enfin, les enjeux géopolitiques se manifestent par des campagnes d'espionnage ciblées en Russie, où des attaquants abusent de solutions logicielles nationales de confiance (la suite de chiffrement ViPNet) pour infiltrer les ministères et administrations. Cela démontre que même les liaisons de communication théoriquement sécurisées et certifiées au niveau étatique restent des vecteurs privilégiés de compromission. Pour les organisations, la priorité absolue doit aller au déploiement rapide de correctifs sur les technologies de périmètre, au renforcement des contrôles d'accès cloud (MFA résistante au phishing) et à une segmentation stricte des serveurs web exposés.
 
 ---
 
@@ -34,8 +36,9 @@ Sur le plan des vulnérabilités, la réactivité des attaquants est illustrée 
 
 | Nom de l'acteur | Secteur(s) ciblé(s) | Mode opératoire | TTP MITRE ATT&CK | Source(s) |
 |---|---|---|---|---|
-| **REF9403** (Contagious Interview) | Technologie, Cryptomonnaie, Développement Logiciel | Ingénierie sociale via Slack, fausses offres d'emploi, envoi de dépôts Git malveillants contenant des fichiers SVG altérés via stéganographie (OTTERCOOKIE). | T1566.002, T1027.003, T1204.002 | [Elastic Security Labs](https://www.elastic.co/security-labs/contagious-interview-malware-svg-steganography) |
-| **Opérateurs Daxin/Stupig** | Haute technologie, Gouvernements, Infrastructures critiques | Utilisation du rootkit noyau Daxin pour intercepter le trafic TCP légitime et de la backdoor Stupig dissimulée en DLL système (winlogon.exe) pour un accès persistant. | T1014, T1505.003 | [Symantec Threat Hunter Team](https://securityaffairs.com/195577/malware/daxin-13-year-old-china-linked-malware-found-still-active-on-manufacturers-network.html) |
+| **UTA0533** | Gouvernement, Défense, Infrastructures critiques | Exploitation de vulnérabilités Zero-Day (contournement d'authentification et injection de commandes) pour obtenir un accès root complet et une persistance sur les passerelles VPN SonicWall SMA 1000. | T1190, T1068 | [The Hacker News](https://thehackernews.com/2026/07/sonicwall-sma-zero-days-exploited.html) |
+| **ShinyHunters** | Santé, Technologie, Finance | Ciblage et compromission de bases de données cloud tierces et d'identifiants d'API d'entreprise pour exfiltrer de gros volumes de données confidentielles à des fins d'extorsion. | T1567 | [DataBreaches](https://databreaches.net/2026/07/19/medical-giant-abbott-investigates-two-cyber-incidents-as-shinyhunters-and-shadowbyt3-both-claim-breaches/?pk_campaign=feed&pk_kwd=medical-giant-abbott-investigates-two-cyber-incidents-as-shinyhunters-and-shadowbyt3-both-claim-breaches) |
+| **ShadowByt3$** | Santé, Secteur public | Exfiltration de fichiers sensibles et chantage direct aux entreprises via des publications publiques et des canaux de double extorsion. | T1567 | [DataBreaches](https://databreaches.net/2026/07/19/medical-giant-abbott-investigates-two-cyber-incidents-as-shinyhunters-and-shadowbyt3-both-claim-breaches/?pk_campaign=feed&pk_kwd=medical-giant-abbott-investigates-two-cyber-incidents-as-shinyhunters-and-shadowbyt3-both-claim-breaches) |
 
 ---
 
@@ -45,8 +48,7 @@ Sur le plan des vulnérabilités, la réactivité des attaquants est illustrée 
 
 | Pays/Région | Secteur | Thème | Description | Source(s) |
 |---|---|---|---|---|
-| Corée du Nord / Global | Technologie / Software Engineering | Espionnage & Supply Chain | Campagnes ciblées de REF9403 visant les développeurs ayant des accès privilégiés aux pipelines d'intégration continue afin de mener des sabotages et du vol d'identifiants. | [Elastic Security Labs](https://www.elastic.co/security-labs/contagious-interview-malware-svg-steganography) |
-| Chine / Taïwan | Haute technologie, Manufacturier | Espionnage industriel | Persistance de long terme (13 ans) d'implants de niveau noyau (Daxin/Stupig) sur le réseau de fabricants taïwanais pour exfiltrer de la propriété intellectuelle. | [Symantec Threat Hunter Team](https://securityaffairs.com/195577/malware/daxin-13-year-old-china-linked-malware-found-still-active-on-manufacturers-network.html) |
+| **Russie** | Gouvernement, Secteur Public | Abus de logiciels de confiance nationaux à des fins d'espionnage | Des cyber-espions contournent les défenses traditionnelles en abusant et en détournant la suite logicielle VPN/chiffrement gouvernementale **ViPNet** (très déployée au sein des ministères russes) pour mener de l'espionnage étatique et infiltrer des réseaux sécurisés. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/hackers-abuse-vipnet-software-to-target-russian-govt-agencies/) |
 
 ---
 
@@ -54,9 +56,7 @@ Sur le plan des vulnérabilités, la réactivité des attaquants est illustrée 
 
 ## Synthèse réglementaire et juridique
 
-| Titre | Auteur/Organisme | Date | Juridiction | Référence | Description | Source(s) |
-|---|---|---|---|---|---|---|
-| NY AG 23andMe Settlement | Procureure générale de New York (Letitia James) | 2026-07-18 | USA - New York | NY AG 23andMe Settlement | Sanction financière de 18 millions de dollars contre l'entreprise 23andMe pour manquement flagrant de protection des données biométriques et génétiques de ses clients suite à un credential stuffing. Obligation d'imposer l'authentification multifacteur (MFA). | [DataBreaches.net](https://databreaches.net/2026/07/18/ny-attorney-general-james-secures-18-million-from-23andme-for-failing-to-protect-customers-genetic-data/) |
+> Aucune actualité réglementaire ou juridique majeure n'a été recensée dans les sources de ce jour.
 
 ---
 
@@ -66,7 +66,8 @@ Sur le plan des vulnérabilités, la réactivité des attaquants est illustrée 
 
 | Secteur | Victime | Données compromises | Volume estimé | Source(s) |
 |---|---|---|---|---|
-| Santé / Génétique | 23andMe | Données génétiques, profils familiaux, adresses email, identifiants de connexion | Millions de clients | [DataBreaches.net](https://databreaches.net/2026/07/18/ny-attorney-general-james-secures-18-million-from-23andme-for-failing-to-protect-customers-genetic-data/) |
+| **Santé** | Abbott | Données corporatives confidentielles, informations personnelles possibles, données de santé potentielles (revendications d'exfiltration concurrentes par ShinyHunters et ShadowByt3$). | Non spécifié | [DataBreaches](https://databreaches.net/2026/07/19/medical-giant-abbott-investigates-two-cyber-incidents-as-shinyhunters-and-shadowbyt3-both-claim-breaches/?pk_campaign=feed&pk_kwd=medical-giant-abbott-investigates-two-cyber-incidents-as-shinyhunters-and-shadowbyt3-both-claim-breaches) |
+| **Gig Economy / Finance** | Paidwork | Adresses e-mail, profils d'utilisateurs, informations bancaires, historique des paiements, mots de passe hachés avec Bcrypt (archive SQL de 11 Go publiée publiquement). | 23 272 765 comptes uniques | [Have I Been Pwned](https://haveibeenpwned.com/Breach/Paidwork) |
 
 ---
 
@@ -79,43 +80,33 @@ Sur le plan des vulnérabilités, la réactivité des attaquants est illustrée 
 
 | # | CVE-ID | CISA KEV | Exploitation | Score Composite | CVSS | Clé de tri |
 |---|---|---|---|---|---|---|
-| 1 | CVE-2026-25089 | TRUE  | Active    | 7.0 | 9.8   | (1,1,7.0,9.8) |
-| 2 | CVE-2026-58644 | TRUE  | Active    | 6.5 | 8.8   | (1,1,6.5,8.8) |
-| 3 | wp2shell       | FALSE | Active    | 5.0 | 9.8   | (0,1,5.0,9.8) |
-| 4 | CVE-2026-10130 | FALSE | Théorique | 2.5 | 9.8   | (0,0,2.5,9.8) |
-| 5 | CVE-2026-11826 | FALSE | Théorique | 2.0 | 9.8   | (0,0,2.0,9.8) |
-| 6 | 7zip-rce       | FALSE | Théorique | 2.0 | 9.0   | (0,0,2.0,9.0) |
-| 7 | CVE-2026-12228 | FALSE | Théorique | 2.0 | 8.5   | (0,0,2.0,8.5) |
-| 8 | CVE-2026-9323  | FALSE | Théorique | 2.0 | 8.0   | (0,0,2.0,8.0) |
-| 9 | CVE-2024-58366 | FALSE | Théorique | 1.5 | 8.0   | (0,0,1.5,8.0) |
-| 10| CVE-2025-71392 | FALSE | Théorique | 1.0 | 8.0   | (0,0,1.0,8.0) |
-| 11| CVE-2026-16117 | FALSE | Théorique | 1.0 | 8.0   | (0,0,1.0,8.0) |
+| 1 | CVE-2026-15409 | TRUE  | Active    | 7.0 | 10.0  | (1,1,7.0,10.0) |
+| 2 | CVE-2026-63030 | FALSE | Active    | 5.0 | 9.8   | (0,1,5.0,9.8)  |
+| 3 | CVE-2026-44359 | FALSE | Active    | 4.0 | 9.8   | (0,1,4.0,9.8)  |
+| 4 | N/A - Hikvision ISAPI | FALSE | Active    | 2.5 | N/A→0 | (0,1,2.5,0.0)  |
+| 5 | CVE-2026-42533 | FALSE | Théorique | 2.0 | 9.2   | (0,0,2.0,9.2)  |
+| 6 | CVE-2026-12484 | FALSE | Théorique | 1.0 | 7.8   | (0,0,1.0,7.8)  |
 -->
 
-| CVE-ID | Score CVSS | EPSS | CISA KEV | Score Composite | Produit affecté | Type de vulnérabilité | Impact | Exploitation | Mesures de contournement | Source(s) |
+| CVE-ID | Score CVSS | EPSS | CISA KEV | Score Composite | Produit affecté | Type de vulnérabilité | Impact | Exploitation | Mesures de contournement / Correctifs | Source(s) |
 |---|---|---|---|---|---|---|---|---|---|---|
-| **CVE-2026-25089** | 9.8 | N/A | **TRUE** | 7.0 | Fortinet FortiSandbox | Injection de commandes OS | RCE | Active | Appliquer immédiatement les mises à jour et correctifs fournis par l'éditeur Fortinet. | [Security Affairs](https://securityaffairs.com/195569/security/u-s-cisa-adds-fortinet-fortisandbox-and-microsoft-sharepoint-flaws-to-its-known-exploited-vulnerabilities-catalog.html) |
-| **CVE-2026-58644** | 8.8 | N/A | **TRUE** | 6.5 | Microsoft SharePoint Server | Désérialisation de données non approuvées | RCE | Active | Installer le correctif issu du Patch Tuesday Microsoft de Juillet 2026. | [Security Affairs](https://securityaffairs.com/195569/security/u-s-cisa-adds-fortinet-fortisandbox-and-microsoft-sharepoint-flaws-to-its-known-exploited-vulnerabilities-catalog.html) |
-| **wp2shell** | 9.8 | N/A | FALSE | 5.0 | WordPress Core | Mauvaise gestion des shells PHP | RCE | Active | Mettre à jour WordPress Core vers la dernière version et déployer des règles WAF adaptées. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/wordpress-core-wp2shell-rce-flaws-get-public-exploits-patch-now/) |
-| **CVE-2026-10130** | 9.8 | N/A | FALSE | 2.5 | QueryWeaver (FalkorDB) | Défaut logique d'attribution de token | Auth Bypass | PoC public | Mettre à jour l'application et appliquer le commit correctif de FalkorDB. | [cvefeed.io](https://cvefeed.io/vuln/detail/CVE-2026-10130) |
-| **CVE-2026-11826** | 9.8 | N/A | FALSE | 2.0 | OpenPLC_v3 | Dépassement de tas (Heap-Based Overflow) | RCE | Théorique | Migrer d'urgence vers OpenPLC Runtime v4 (la v3 n'étant plus maintenue). | [cvefeed.io](https://cvefeed.io/vuln/detail/CVE-2026-11826) |
-| **7zip-rce** | 9.0 | N/A | FALSE | 2.0 | 7-Zip | Défaut de parsing d'archives malveillantes | RCE | Théorique | Effectuer une mise à niveau forcée vers la dernière version stable de 7-Zip. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/update-now-7-zip-fixes-rce-flaw-exploitable-with-malicious-archives/) |
-| **CVE-2026-12228** | 8.5 | N/A | FALSE | 2.0 | parisneo/lollms | Cross-Site Scripting stocké (v-html) | Auth Bypass | PoC public | Appliquer le correctif d'assainissement de regex et restreindre l'utilisation de v-html. | [cvefeed.io](https://cvefeed.io/vuln/detail/CVE-2026-12228)<br>[Mastodon @offseq](https://infosec.exchange/@offseq/116943698895820998) |
-| **CVE-2026-9323** | 8.0 | N/A | FALSE | 2.0 | urwid Web Display Backend | PRNG non sécurisé & divulgation d'identifiants | LPE | Théorique | Mettre à jour la bibliothèque urwid afin de remplacer random par secrets en Python. | [cvefeed.io](https://cvefeed.io/vuln/detail/CVE-2026-9323) |
-| **CVE-2024-58366** | 8.0 | N/A | FALSE | 1.5 | SurrealDB | Chaîne de formatage (Format String) dans QuickJS | RCE | Théorique | Installer la version 1.1.1 ou supérieure de SurrealDB. | [cvefeed.io](https://cvefeed.io/vuln/detail/CVE-2024-58366) |
-| **CVE-2025-71392** | 8.0 | N/A | FALSE | 1.0 | SurrealDB | Injection de code via SurrealQL lors d'un export | LPE | Théorique | Mettre à jour SurrealDB vers la version 2.2.2 ou supérieure. | [cvefeed.io](https://cvefeed.io/vuln/detail/CVE-2025-71392) |
-| **CVE-2026-16117** | 8.0 | N/A | FALSE | 1.0 | @fastify/http-proxy | Échappement de préfixe via URL encodée | Auth Bypass | Théorique | Mettre à jour le package @fastify/http-proxy vers la version 11.6.0. | [cvefeed.io](https://cvefeed.io/vuln/detail/CVE-2026-16117) |
+| **CVE-2026-15409** | 10.0 | N/A | **TRUE** | 7.0 | SonicWall Secure Mobile Access (SMA) 1000 Series | Authentication Bypass | Auth Bypass / RCE | Active | Appliquer immédiatement les correctifs officiels de SonicWall. | [The Hacker News](https://thehackernews.com/2026/07/sonicwall-sma-zero-days-exploited.html) |
+| **CVE-2026-63030** | 9.8 | N/A | FALSE | 5.0 | WordPress Core (6.9.x et 7.0.x) | Remote Code Execution | RCE | Active | Mettre à jour WordPress immédiatement (mises à jour forcées activées). Bloquer l'accès à `/wp-json/batch/v1`. | [Security Affairs](https://securityaffairs.com/195597/hacking/attackers-can-take-over-wordpress-sites-using-newly-released-wp2shell-exploits.html) |
+| **CVE-2026-44359** | 9.8 | N/A | FALSE | 4.0 | Meshtastic Firmware GitHub Repository | Code Injection via GitHub Actions | RCE / Supply Chain | Active | Mettre à jour le firmware vers la version 2.7.21.1370b23 ou supérieure. Sécuriser pull_request_target. | [CVEFeed](https://cvefeed.io/vuln/detail/CVE-2026-44359)<br>[InfoSec Exchange](https://infosec.exchange/@offseq/116949361347720615) |
+| **N/A - Hikvision ISAPI** | N/A | N/A | FALSE | 2.5 | Hikvision Intelligent Security API (ISAPI) | Insecure Resource Exposure | Info Disclosure | Active | Ne pas exposer directement les caméras Hikvision sur Internet sans VPN ou pare-feu restrictif. | [SANS ISC](https://isc.sans.edu/diary/rss/33164) |
+| **CVE-2026-42533** | 9.2 | N/A | FALSE | 2.0 | NGINX Open Source, NGINX Plus | Heap Buffer Overflow | RCE / DoS | Théorique | Mettre à jour vers Nginx 1.30.4 (stable) ou 1.31.3 (mainline). Utiliser des captures nommées au lieu de captures numérotées. | [The Hacker News](https://thehackernews.com/2026/07/critical-nginx-vulnerability-can-crash.html) |
+| **CVE-2026-12484** | 7.8 | N/A | FALSE | 1.0 | Keras-Team (TorchModuleWrapper) | Insecure Deserialization | RCE | Théorique | Restreindre l'exécution de modèles provenant de sources non fiables. Migrer vers le format Safetensors. | [Mastodon](https://mastodon.social/@hugovalters/116949132770600340) |
 
 ---
 
-<div id="articles-selected"></div>
+<div id="articles-selectionnes"></div>
 
 ## Articles sélectionnés
 
 | Titre | Sujet canonique | Raison de sélection | Source(s) |
 |---|---|---|---|
-| Microsoft warns of surge in ACR Stealer attacks on customers | ACR Stealer + Session Cookie Exfiltration | Alerte majeure émise par l'éditeur concernant le vol d'informations de session Cloud via un infostealer actif. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/microsoft-warns-of-surge-in-acr-stealer-attacks-on-customers/) |
-| Mapping a 16-actor Chinese reward-farming underground - Part 1 & 2 | Chinese Reward-Farming Underground + Qinglong Malicious Scripts | Analyse cybercriminelle approfondie d'un réseau structuré de vol de données via scripts d'automatisation. | [Mastodon @NeuroWinter](https://infosec.exchange/@NeuroWinter/116943723644691418)<br>[Mastodon @NeuroWinter Duplicate](https://infosec.exchange/@NeuroWinter/116943710976752683) |
+| Rapid Ransomware Campaign Targeting Microsoft IIS Servers | **Spirals Ransomware + Microsoft IIS Server Compromise** | Campagne active de rançongiciel sophistiqué développé en Rust ciblant spécifiquement des serveurs IIS exposés, présentant un fort intérêt technique (langage moderne, tactiques agressives). | [Mastodon / Techbot](https://social.raytec.co/@techbot/116949607400329808) |
+| Possible Phishing on Google Presentation | **Google Slides Phishing Campaign** | Campagne d'hameçonnage active qui abuse de la publication web légitime de Google Slides, contournant ainsi les filtrages de messagerie et de réputation habituels. | [InfoSec Exchange / URLDNA](https://infosec.exchange/@urldna/116949595599290634) |
 
 ---
 
@@ -125,12 +116,12 @@ Sur le plan des vulnérabilités, la réactivité des attaquants est illustrée 
 
 | Titre | Raison d'exclusion | Source(s) |
 |---|---|---|
-| OpenSSL Fixes HollowByte Memory Exhaustion Bug (CVE-2026-53412) | Faille traitée comme vulnérabilité / Score composite insuffisant (< 1.0). | [Security Affairs](https://securityaffairs.com/195588/hacking/openssl-fixes-hollowbyte-memory-exhaustion-bug.html) |
-| CVE-2026-53994: ProFTPD mod_sftp heap buffer overflow | Faille traitée comme vulnérabilité / Score composite insuffisant (< 1.0). | [Mastodon @offseq](https://infosec.exchange/@offseq/116944052588841641) |
-| Campcodes: 536 CVEs, 99% unpatched | Alerte éditeur généraliste / Absence d'attaque active ou de CVE de criticité élevée documentée. | [Mastodon @hugovalters](https://mastodon.social/@hugovalters/116943715795963118) |
-| The Future of Age Verification: Your Face Never Leaves Your Device | Article technologique et sociétal portant sur la vie privée, pas de menace cyber active. | [BleepingComputer](https://www.bleepingcomputer.com/news/security/the-future-of-age-verification-your-face-never-leaves-your-device/) |
-| ASN: AS174 Location: Yangon, MM Added: 2026-07-13 | simple détection automatisée d'actifs (OSINT), ne représente pas une menace ou campagne active. | [Mastodon @shodansafari](https://infosec.exchange/@shodansafari/116943933023274080) |
-| Dropping in our #DEFCON 34 Artist lineup for the main stage! | Article événementiel non lié à la cybersécurité opérationnelle. | [Mastodon @Defcon_Music](https://defcon.social/@Defcon_Music/116943607554854260) |
+| ISC Stormcast For Monday, July 20th, 2026 | Contenu d'actualité générale / podcast de synthèse sans analyse d'incident ou de menace spécifique. | [SANS ISC](https://isc.sans.edu/diary/rss/33166) |
+| SECURITY AFFAIRS MALWARE NEWSLETTER ROUND 106 | Compilation généraliste de menaces de malwares (newsletter) sans focus sur un incident ou une campagne unique. | [Security Affairs](https://securityaffairs.com/195620/malware/security-affairs-malware-newsletter-round-106.html) |
+| Security Affairs newsletter Round 586 | Compilation d'actualités hebdomadaires globales sans focus sur un sujet technique unique ou un incident précis. | [Security Affairs](https://securityaffairs.com/195611/breaking-news/security-affairs-newsletter-round-586-by-pierluigi-paganini-international-edition.html) |
+| Everyone selling quantum randomness | Guide d'achat informatif et d'analyse théorique sur les générateurs d'entropie quantique, sans incident de cybersécurité associé. | [Mastodon / InfoSec](https://defcon.social/@infosec/116949610717793653) |
+| ASN: AS34373 Location: Rotterdam, NL | Flux brut automatisé Shodan décrivant des informations de routage sans analyse de menace concrète ou incident de sécurité. | [InfoSec Exchange / Shodansafari](https://infosec.exchange/@shodansafari/116949359485295366) |
+| RE: Mastodon.social post Me_Star_Son | Post social informel et communautaire sans analyse technique exploitable ou incident de sécurité. | [Mastodon / Me_Star_Son](https://mastodon.social/@Me_Star_Son/116949263550585076) |
 
 ---
 
@@ -140,33 +131,33 @@ Sur le plan des vulnérabilités, la réactivité des attaquants est illustrée 
 
 ---
 
-<div id="acr-stealer-session-cookie-exfiltration"></div>
+<div id="spirals-ransomware-microsoft-iis-server-compromise"></div>
 
-## ACR Stealer + Session Cookie Exfiltration
+## Spirals Ransomware + Microsoft IIS Server Compromise
 
 ---
 
 ### Résumé technique
 
-* **Contexte et découverte** : Microsoft a émis une alerte de sécurité constatant une hausse fulgurante des attaques ciblant ses utilisateurs via l'infostealer connu sous le nom de **ACR Stealer**. 
-* **Mécanisme technique** : Ce malware s'attaque de manière ciblée aux navigateurs web des utilisateurs finaux (Chrome, Edge, Firefox, etc.). Son objectif est d'extraire les identifiants stockés localement, les cookies de session actifs ainsi que les secrets de portefeuilles de cryptomonnaies. L'infection s'initie typiquement via des campagnes de phishing ou des publicités malveillantes menant au téléchargement de l'exécutable.
-* **Infrastructure** : Après la collecte locale des secrets, les données sont transmises de façon chiffrée vers l'infrastructure de commande et contrôle (C2) de l'attaquant.
-* **Victimologie** : Cette menace cible indifféremment tous les secteurs, mais met en grand danger les environnements professionnels en cherchant à usurper les accès aux services Cloud critiques d'entreprise (M365, portails d'administration, AWS).
+* **Contexte et découverte** : Une campagne de rançongiciel rapide et agressive cible spécifiquement les serveurs Web Microsoft IIS (Internet Information Services) exposés sur Internet.
+* **Mécanisme technique** : Les attaquants obtiennent un accès initial en exploitant des vulnérabilités sur les serveurs IIS. Après la compromission Web initiale via le processus `w3wp.exe`, ils mènent une élévation de privilèges locaux et des mouvements latéraux. Le rançongiciel "Spirals", entièrement codé en Rust, est ensuite déployé. Il désactive de manière agressive les services de sécurité locaux et les processus de sauvegarde (tels que Windows Backup / Volume Shadow Copies) pour empêcher la récupération. Il procède ensuite au chiffrement rapide des fichiers sur les volumes système locaux et les partages réseau découverts, en leur ajoutant l'extension `.spirals`.
+* **Infrastructure** : Utilisation de serveurs de commande et contrôle (C2) pour coordonner la campagne et exfiltrer les clés de chiffrement.
+* **Victimologie** : Secteurs technologiques, infrastructures, et toute entreprise exposant des services IIS non correctement cloisonnés ou patchés.
 
 ---
 
 ### Analyse de l'impact
 
-* **Impact opérationnel** : Très élevé. Le vol de cookies de session active permet aux attaquants de contourner directement les mécanismes d'authentification multifacteur traditionnels (MFA Session Hijacking). Cela ouvre la voie à des intrusions réseau, du vol de propriété intellectuelle ou de la fraude financière.
-* **Niveau de sophistication** : Moyen. ACR Stealer repose sur des techniques d'extraction éprouvées (dumping de bases SQLite locales de navigateurs), mais son automatisation et sa diffusion rapide le rendent particulièrement agressif.
+* **Impact opérationnel** : Chiffrement complet des serveurs IIS, entraînant l'interruption immédiate des services web publics et des applications métiers critiques associées. Perte de données si les sauvegardes ne sont pas isolées du réseau d'administration principal.
+* **Niveau de sophistication** : Élevé. L'usage de Rust rend l'analyse statique difficile pour les antivirus traditionnels, et les tactiques d'arrêt des processus de sécurité démontrent une bonne connaissance des mécanismes internes de Windows.
 
 ---
 
 ### Recommandations
 
-* Interdire l'enregistrement de mots de passe professionnels au sein des navigateurs web via l'utilisation de stratégies de groupe (GPO).
-* Déployer l'authentification multifacteur résistante au phishing (FIDO2 ou Windows Hello for Business).
-* Configurer des politiques de contrôle d'accès conditionnel basées sur l'intégrité de l'appareil (Device Compliance).
+* Auditer et restreindre les privilèges du compte de service IIS (`w3wp.exe`) pour empêcher l'exécution de commandes système ou d'outils d'élévation de privilèges.
+* Déployer un pare-feu applicatif (WAF) devant IIS et installer un agent EDR durci sur tous les serveurs Web publics.
+* Segmenter strictement le réseau hébergeant les serveurs Web publics par rapport aux bases de données internes et aux contrôleurs de domaine (Active Directory).
 
 ---
 
@@ -174,41 +165,44 @@ Sur le plan des vulnérabilités, la réactivité des attaquants est illustrée 
 
 #### Phase 1 — Préparation
 
-* Activer la journalisation avancée au niveau des terminaux (process execution, file modification).
-* S'assurer du déploiement de l'EDR sur 100 % des serveurs et postes clients.
-* Établir des règles de restriction d'enregistrement de secrets dans les navigateurs par politique système (GPO).
+* Vérifier que les logs d'exécution des processus IIS (`w3wp.exe`) et les logs d'événements de sécurité Windows (Event ID 4688, activation du suivi des lignes de commande) sont activés et centralisés dans le SIEM.
+* S'assurer de la disponibilité d'outils de réponse (EDR en mode isolation, outils d'acquisition mémoire comme FTK Imager Lite).
+* S'assurer que des sauvegardes immuables et isolées du réseau (hors ligne) sont configurées et fonctionnelles pour tous les serveurs IIS.
 
 #### Phase 2 — Détection et analyse
 
-* **Requête EDR (syntaxe générique) pour détecter des comportements anormaux d'extraction** :
-  `process.target_file : "*\\User Data\\Default\\Login Data" AND process.signature : "unsigned"`
-* Détecter les requêtes HTTP/HTTPS inhabituelles provenant de processus utilisateur non signés ou nommés `*acr*`.
-* Rechercher des accès répétés non autorisés aux dossiers `%\LocalAppData%\Google\Chrome\User Data\` et `%\LocalAppData%\Microsoft\Edge\User Data\`.
+* **Règles de détection contextualisées** :
+  * *Requête EDR (générique)* : Detecter le processus parent `w3wp.exe` engendrant un interpréteur de commandes :
+    `ParentImage == "w3wp.exe" AND Image IN ("cmd.exe", "powershell.exe", "wscript.exe", "vssadmin.exe")`
+  * *Règle de détection de fichiers* : Alerte sur la création d'au moins 20 fichiers se terminant par `.spirals` en moins de 10 secondes sur un même lecteur.
+* Analyser les logs pour reconstruire la timeline de la compromission Web initiale et estimer le temps de présence (dwell time).
 
 #### Phase 3 — Confinement, éradication et récupération
 
 **Confinement :**
-* Isoler le poste compromis du réseau d'entreprise via l'EDR afin d'interrompre l'exfiltration vers le C2.
-* Révoquer immédiatement toutes les sessions actives (global logout) de l'utilisateur concerné sur toutes les plateformes de l'entreprise (Azure/M365, AWS, Salesforce, etc.).
+* Appliquer immédiatement une isolation logique réseau de la machine IIS via l'EDR pour bloquer les tentatives de déplacements latéraux.
+* Bloquer les adresses IP C2 et domaines suspects identifiés au niveau du pare-feu périmétrique.
 
 **Éradication :**
-* Identifier et supprimer définitivement l'exécutable à l'origine de l'infostealer.
-* Forcer la réinitialisation immédiate de tous les mots de passe de comptes d'entreprise qui étaient potentiellement accessibles ou enregistrés sur le poste infecté.
+* Tuer les processus actifs du ransomware compilé en Rust. Supprimer les fichiers binaires malveillants situés dans les dossiers temporaires d'IIS (ex. `C:\Windows\Temp\` ou les répertoires virtuels IIS).
+* Réinitialiser l'ensemble des comptes de service associés aux applications IIS et forcer le renouvellement des secrets.
 
 **Récupération :**
-* S'assurer de la désinfection complète du terminal en exécutant un scan EDR global approfondi ou procéder à la réinstallation du système d'exploitation à partir d'un master sain.
+* Restaurer les systèmes à partir des sauvegardes immuables validées comme saines après réinstallation complète du système d'exploitation pour écarter toute persistance cachée.
+* Surveiller de manière renforcée les accès réseau et l'activité des processus pendant 72 heures après la remise en ligne.
 
 #### Phase 4 — Activités post-incident
 
-* Documenter la chronologie de l'attaque et estimer le dwell time (temps de présence).
-* Analyser les logs d'accès Cloud (ex: Unified Audit Log dans M365) pour s'assurer qu'aucune session exfiltrée n'a été réutilisée par l'attaquant pour accéder à des données sensibles.
-* Notifier la CNIL (RGPD Art. 33) sous 72h si une fuite avérée de données personnelles d'utilisateurs a eu lieu.
+* Rédiger le rapport d'incident complet détaillant le vecteur d'intrusion applicatif initial afin de corriger la faille de sécurité d'origine.
+* Évaluer les obligations de notification réglementaire :
+  * Si des données personnelles ou de santé de citoyens européens ont été accédées, notifier la CNIL sous 72 heures conformément à l'article 33 du RGPD.
 
 #### Phase 5 — Threat Hunting (proactif)
 
 | Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
 |---|---|---|---|
-| Identification de processus non validés ou non signés accédant en lecture aux bases de données de mots de passe SQLite des navigateurs. | T1539 | EDR Host Logs | `process.target_file_path : "*\\User Data\\Default\\Login Data" AND process.signature_status != "valid"` |
+| Recherche d'exécutions suspectes engendrées par le serveur Web | T1059.003 | Journaux Windows Security (Event 4688) | `EventID=4688 AND CreatorProcessName="*w3wp.exe" AND ProcessName=("*cmd.exe" OR "*powershell.exe")` |
+| Détection d'appels de suppression de clichés instantanés | T1490 | Command Line logs (EDR) | Recherche de la chaîne de caractères `vssadmin delete shadows` ou `Resize-Partition` exécutée sur les serveurs applicatifs Windows. |
 
 ---
 
@@ -216,7 +210,9 @@ Sur le plan des vulnérabilités, la réactivité des attaquants est illustrée 
 
 | Type | Valeur (DEFANG) | Description | Fiabilité |
 |---|---|---|---|
-| Chemin fichier | `%\LocalAppData%\Google\Chrome\User Data\Default\Login Data` | Base SQLite de mots de passe ciblée par l'infostealer | Haute |
+| Domaine | otx[.]alienvault[.]com | Plateforme de Threat Intelligence liée aux sources de surveillance | Moyenne |
+| Email | techbot[at]social[.]raytec[.]co | Identifiant de notification ou d'alerte | Moyenne |
+| Chemin fichier | C:\Windows\Temp\*.spirals | Extension appliquée aux fichiers chiffrés | Haute |
 
 ---
 
@@ -224,42 +220,45 @@ Sur le plan des vulnérabilités, la réactivité des attaquants est illustrée 
 
 | ID TTP | Tactique | Technique | Description contextuelle |
 |---|---|---|---|
-| **T1539** | Credential Access | Steal Web Session Cookie | Extraction directe de cookies de session et de données d'identification stockées dans l'espace de profil des navigateurs web. |
+| T1190 | Initial Access | Exploit Public-Facing Application | Compromission d'applications IIS exposées pour obtenir l'accès initial. |
+| T1486 | Impact | Data Encrypted for Impact | Chiffrement en masse des volumes par le rançongiciel Spirals codé en Rust. |
+| T1490 | Impact | Inhibit System Recovery | Arrêt ou suppression des clichés instantanés de volume (Shadow Copies) pour bloquer la restauration locale. |
 
 ---
 
 ### Sources
 
-* [BleepingComputer](https://www.bleepingcomputer.com/news/security/microsoft-warns-of-surge-in-acr-stealer-attacks-on-customers/)
+* [Mastodon TechBot](https://social.raytec.co/@techbot/116949607400329808)
 
 ---
 
-<div id="chinese-reward-farming-underground-qinglong-malicious-scripts"></div>
+<div id="google-slides-phishing-campaign"></div>
 
-## Chinese Reward-Farming Underground + Qinglong Malicious Scripts
+## Google Slides Phishing Campaign
 
 ---
 
 ### Résumé technique
 
-* **Contexte et découverte** : Des travaux d'investigation récents ont mis en lumière un vaste réseau cybercriminel chinois souterrain composé de 16 acteurs malveillants impliqués dans des opérations de "wool-farming" (récolte automatisée de récompenses publicitaires).
-* **Mécanisme technique** : Les attaquants s'appuient sur le framework d'automatisation légitime **Qinglong**. Ils diffusent des scripts tiers trojanisés (via la bibliothèque `qlk`). Ces scripts utilisent une obfuscation multicouche particulièrement robuste (combinant XOR, base85, compression zlib et sérialisation marshal) pour dissimuler leur charge utile. Un module additionnel appelé "smallfawn JD login" transmet en clair les cookies de connexion et identifiants de la plateforme JD.com vers le serveur C2 de l'attaquant.
-* **Infrastructure** : Le réseau utilise des protections avancées pour les scripts (DRM-as-a-service basé sur Rust/AES-CBC) et communique avec des serveurs d'exfiltration spécifiques (`wyourname`).
-* **Victimologie** : Les cibles privilégiées sont les utilisateurs de plateformes de commerce électronique (JD.com) et de services civiques chinois utilisant des conteneurs d'automatisation.
+* **Contexte et découverte** : Une campagne active de phishing abuse de la fonctionnalité de publication web de la suite bureautique cloud Google Workspace (particulièrement Google Slides/Presentations).
+* **Mécanisme technique** : Les attaquants créent une présentation Google Slides piégée contenant des visuels d'usurpation d'identité de haut niveau (pages de connexion de banques, de portails RH ou d'identifiants d'entreprise). Ils publient ensuite cette présentation sur le web via l'option native "Publier sur le Web" de Google, générant une URL légitime sous le domaine de confiance `docs.google.com`. Les emails de phishing envoyés aux victimes contiennent cette URL. En cliquant, les victimes sont dirigées vers la présentation interactive qui contient des redirections externes vers des formulaires de vol d'identifiants.
+* **Infrastructure** : Utilisation de l'infrastructure de publication de Google pour héberger le contenu d'hameçonnage, contournant ainsi les filtres de sécurité basés sur la réputation de domaine.
+* **Victimologie** : Utilisateurs d'entreprise, grand public.
 
 ---
 
 ### Analyse de l'impact
 
-* **Impact opérationnel** : Élevé. En compromettant des outils d'automatisation comme Qinglong, les attaquants s'octroient les informations d'identification et de paiement de comptes d'envergure. Dans un cadre professionnel, l'exécution non contrôlée de conteneurs Docker de "farming" sur le réseau d'entreprise présente un risque d'intrusion directe.
-* **Niveau de sophistication** : Élevé. Le déploiement d'obfuscations imbriquées complexes et d'un système de DRM compilé en Rust démontre un fort niveau technique.
+* **Impact opérationnel** : Vol massif d'identifiants de connexion d'entreprise (Microsoft 365, Google Workspace, outils RH), menant à des accès non autorisés et potentiellement à des compromissions de messagerie d'entreprise (BEC).
+* **Niveau de sophistication** : Moyen. L'utilisation de la publication de Google Presentations permet d'obtenir un taux de délivrabilité très élevé car les passerelles de messagerie (Secure Email Gateways) n'analysent pas le contenu dynamique des pages Google légitimes.
 
 ---
 
 ### Recommandations
 
-* Interdire strictement l'utilisation et le déploiement de scripts de "farming" ou d'automatisation de gains personnels sur les postes et serveurs de l'entreprise.
-* Auditer de manière exhaustive l'usage des conteneurs Docker et restreindre le trafic vers des hôtes ou registres non autorisés.
+* Bloquer les accès proxy aux URLs de présentation Google publiées sur le web non approuvées par l'organisation.
+* Sensibiliser les collaborateurs au fait que les formulaires d'identification d'entreprise ne doivent jamais être hébergés sur des documents Google, Microsoft, ou d'autres stockages cloud publics.
+* Déployer une authentification multifacteur (MFA) résistante au phishing (FIDO2/WebAuthn).
 
 ---
 
@@ -267,40 +266,40 @@ Sur le plan des vulnérabilités, la réactivité des attaquants est illustrée 
 
 #### Phase 1 — Préparation
 
-* Configurer le pare-feu pour interdire l'accès aux hôtes d'exfiltration connus.
-* Restreindre le déploiement d'images Docker Qinglong aux seuls environnements de test isolés.
-* Auditer et valider par signature cryptographique tout script d'automatisation externe.
+* Mettre en œuvre des programmes de sensibilisation des employés sur le détournement des services cloud légitimes pour le phishing.
+* Configurer les passerelles de messagerie pour inspecter et analyser les emails contenant des liens Google Docs/Slides publics envoyés par des expéditeurs externes non fiables.
 
 #### Phase 2 — Détection et analyse
 
-* **Règles de détection** :
-  * Recherche de fichiers d'automatisation de tâches ou de crons contenant les chaînes de caractères obfusquées `base85` ou `zlib` associées à des processus `python` non identifiés.
-  * Détection d'un trafic réseau inhabituel ou massif vers `grep[.]app` ou des serveurs d'exfiltration chinois.
-* Analyser l'activité des conteneurs Docker pour déceler des pics d'utilisation CPU ou de requêtes réseau persistantes.
+* **Règles de détection contextualisées** :
+  * *Requête SIEM (Proxy/DNS)* : Identifier les connexions vers les présentations Google publiées publiquement :
+    `url_path LIKE "%docs.google.com/presentation/d/%/pub%" OR url_path LIKE "%docs.google.com/presentation/d/%/embed%"`
+* Analyser les logs de messagerie pour retrouver l'email initial, l'expéditeur et les destinataires internes ayant cliqué sur le lien.
 
 #### Phase 3 — Confinement, éradication et récupération
 
 **Confinement :**
-* Couper immédiatement l'accès internet et isoler le conteneur Docker hébergeant le framework Qinglong compromis.
-* Bloquer le domaine de C2 `grep[.]app` et les connexions vers le C2 lié au DRM `wyourname`.
+* Bloquer l'accès à l'URL spécifique identifiée comme malveillante sur l'ensemble des proxys et pare-feu de navigation de l'entreprise.
+* Révoquer immédiatement les sessions actives et isoler logiquement les comptes des utilisateurs ayant cliqué sur le lien et soumis leurs identifiants.
 
 **Éradication :**
-* Supprimer tous les conteneurs et images Docker associés aux scripts `qlk` ou `smallfawn`.
-* Révoquer l'ensemble des jetons API, mots de passe et sessions JD.com (ou autres plateformes e-commerce) qui ont été traités par les scripts malveillants.
+* Réinitialiser les mots de passe des comptes compromis et forcer l'inscription de nouveaux jetons MFA si nécessaire.
+* Signaler l'URL de présentation frauduleuse à Google Trust & Safety pour exiger sa suppression.
 
 **Récupération :**
-* Reconstruire l'environnement d'automatisation uniquement à partir de dépôts de confiance, après avoir désactivé les fonctionnalités de téléchargement automatique de scripts tiers.
+* Restaurer l'accès aux comptes des utilisateurs sécurisés, s'assurer que la MFA est bien activée et qu'aucune règle de redirection de mail malveillante n'a été créée à leur insu dans Outlook/Gmail.
 
 #### Phase 4 — Activités post-incident
 
-* Établir le rapport d'incident documentant la fuite potentielle de secrets et d'identifiants d'entreprise.
-* Ajuster les stratégies de restriction des droits d'exécution d'applications d'automatisation au sein du réseau.
+* Vérifier si des données sensibles ont été accédées ou exfiltrées depuis la boîte mail compromise (recherche de logs d'accès IP, de téléchargements OneDrive/SharePoint inhabituels).
+* Améliorer le filtrage de courrier en intégrant des règles sur les patterns d'URL de publication Google.
 
 #### Phase 5 — Threat Hunting (proactif)
 
 | Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
 |---|---|---|---|
-| Présence de scripts Python obfusqués via zlib/marshal s'exécutant au sein de conteneurs Docker Qinglong. | T1056.001 | Docker Container Logs / Files | `file.content : "Qinglong" AND (file.content : "base85" OR file.content : "zlib")` |
+| Détection de connexions sortantes suspectes vers des publications cloud | T1566.002 | Proxy / DNS Logs | Analyse des requêtes HTTP vers des domaines de stockage cloud (`docs.google.com`) contenant des termes de publication (`/pub`, `/embed`) en corrélation avec des expéditeurs de mails inconnus. |
+| Création de règles de messagerie suspectes suite à un clic | T1137.005 | Exchange / O365 Logs | Recherche de règles de transfert de mail créées par des utilisateurs dans les 24 heures suivant l'accès à une URL Google Presentation. |
 
 ---
 
@@ -308,8 +307,7 @@ Sur le plan des vulnérabilités, la réactivité des attaquants est illustrée 
 
 | Type | Valeur (DEFANG) | Description | Fiabilité |
 |---|---|---|---|
-| Domaine | `grep[.]app` | Service légitime utilisé pour le mapping et le ciblage des scripts par l'attaquant | Moyenne |
-| Domaine | `jd[.]com` | Plateforme de commerce ciblée par l'exfiltration | Info |
+| URL | hxxps[://]docs[.]google[.]com/presentation/d/1gBvfAiCvkPTcu0YFovbn7Wwa_P3j08o0aRSbttl3JlU/pub?start=false&loop=false | URL de la présentation Google Slide frauduleuse | Haute |
 
 ---
 
@@ -317,34 +315,33 @@ Sur le plan des vulnérabilités, la réactivité des attaquants est illustrée 
 
 | ID TTP | Tactique | Technique | Description contextuelle |
 |---|---|---|---|
-| **T1056.001** | Credential Access | Keylogging / Credential Stealer | Capture et exfiltration en texte clair des cookies et mots de passe JD.com via le script malveillant de smallfawn. |
+| T1566.002 | Initial Access | Phishing: Spearphishing Link | Utilisation de liens de présentation Google Slides publiés sur le Web pour contourner les protections traditionnelles. |
 
 ---
 
 ### Sources
 
-* [Mastodon @NeuroWinter](https://infosec.exchange/@NeuroWinter/116943723644691418)
-* [Mastodon @NeuroWinter Duplicate](https://infosec.exchange/@NeuroWinter/116943710976752683)
+* [InfoSec Exchange / URLDNA](https://infosec.exchange/@urldna/116949595599290634)
 
 ---
 
 <!--
 CONTRÔLE FINAL
 
-1. [✅] Aucun article n'apparaît dans plusieurs sections : [Vérifié]
-2. [✅] La TOC est présente et chaque lien pointe vers une ancre existante : [Vérifié]
-3. [✅] Chaque ancre est unique — <div id="..."> statiques ET dynamiques présents, cohérents avec la TOC ET identiques entre TOC / div id / table interne : [Vérifié]
-4. [✅] Tous les IoC sont en mode DEFANG : [Vérifié]
-5. [✅] Aucun article de Vulnérabilités ou Géopolitique dans la section "Articles" : [Vérifié]
-6. [✅] Le tableau des vulnérabilités ne contient que des entrées avec score composite ≥ 1 : [Vérifié]
-7. [✅] La table de tri intermédiaire est présente et l'ordre du tableau final correspond ligne par ligne : [Vérifié]
-8. [✅] Toutes les sections attendues sont présentes : [Vérifié]
-9. [✅] Le playbook est contextualisé (pas de tâches génériques) : [Vérifié]
-10. [✅] Les hypothèses de threat hunting sont présentes pour chaque article : [Vérifié]
-11. [✅] Tout article sans URL complète disponible dans raw_content est dans "Articles non sélectionnés" — aucun article sans URL complète ne figure dans les synthèses ou la section "Articles" : [Vérifié]
-12. [✅] Chaque article est COMPLET (9 sections toutes présentes) — aucun article tronqué : [Vérifié]
-13. [✅] Chaque article contient un PLAYBOOK DE REPONSE A INCIDENT avec les 5 phases : Phase 1 — Préparation, Phase 2 — Détection et analyse, Phase 3 — Confinement, éradication et récupération, Phase 4 — Activités post-incident, Phase 5 — Threat Hunting (proactif) : [Vérifié]
-14. [✅] Aucun bug fonctionnel, article commercial ou contenu non-sécuritaire dans la section "Articles" : [Vérifié]
+1. ☑ Aucun article n'apparaît dans plusieurs sections : [Vérifié]
+2. ☑ La TOC est présente et chaque lien pointe vers une ancre existante : [Vérifié]
+3. ☑ Chaque ancre est unique — <div id="..."> statiques ET dynamiques présents, cohérents avec la TOC ET identiques entre TOC / div id / table interne : [Vérifié]
+4. ☑ Tous les IoC sont en mode DEFANG : [Vérifié]
+5. ☑ Aucun article de Vulnérabilités ou Géopolitique dans la section "Articles" : [Vérifié]
+6. ☑ Le tableau des vulnérabilités ne contient que des entrées avec score composite ≥ 1 : [Vérifié]
+7. ☑ La table de tri intermédiaire est présente et l'ordre du tableau final correspond ligne par ligne : [Vérifié]
+8. ☑ Toutes les sections attendues sont présentes : [Vérifié]
+9. ☑ Le playbook est contextualisé (pas de tâches génériques) : [Vérifié]
+10. ☑ Les hypothèses de threat hunting sont présentes pour chaque article : [Vérifié]
+11. ☑ Tout article sans URL complète disponible dans raw_content est dans "Articles non sélectionnés" — aucun article sans URL complète ne figure dans les synthèses ou la section "Articles" : [Vérifié]
+12. ☑ Chaque article est COMPLET (9 sections toutes présentes) — aucun article tronqué : [Vérifié]
+13. ☑ Chaque article contient un PLAYBOOK DE REPONSE A INCIDENT avec les 5 phases : [Vérifié]
+14. ☑ Aucun bug fonctionnel, article commercial ou contenu non-sécuritaire dans la section "Articles" : [Vérifié]
 
 Statut global : [✅ Rapport valide]
 -->
