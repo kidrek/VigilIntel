@@ -1,0 +1,1551 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The cyber news of July 2026 is marked by the active exploitation of several critical Zero-Day vulnerabilities and the emergence of new ransomware threats developed in Rust. The successful exploitation of flaws on key platforms such as WordPress, Nginx, and SonicWall SMA highlights the persistence of threats targeting large-scale network and software infrastructures. Furthermore, sophisticated espionage campaigns continue to target Russian state infrastructures by abusing internal encryption solutions.",
+      "fr": "L'actualité cyber de juillet 2026 est marquée par l'exploitation active de plusieurs vulnérabilités critiques de type Zero-Day et l'émergence de nouvelles menaces de rançongiciels développés en Rust. L'exploitation réussie de failles sur des plateformes clés telles que WordPress, Nginx, et SonicWall SMA met en évidence la persistance des menaces ciblant les infrastructures réseau et logicielles à grande échelle. Par ailleurs, des campagnes d'espionnage sophistiquées continuent de cibler les infrastructures étatiques russes en abusant de solutions de chiffrement internes."
+    },
+    "date": "2026-07-20"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement_et_Défense"
+        ]
+      },
+      "theme": {
+        "en": "Abuse of trusted national software for espionage purposes",
+        "fr": "Abus de logiciels de confiance nationaux à des fins d'espionnage"
+      },
+      "description": {
+        "en": "Attackers exploit and abuse the ViPNet VPN/encryption software suite, a security tool heavily deployed within Russian administrations and ministries. By hijacking a communication channel deemed highly secure by the state, attackers bypass traditional defenses to conduct high-level espionage.",
+        "fr": "Des attaquants exploitent et abusent de la suite logicielle VPN/chiffrement ViPNet, un outil de sécurité massivement déployé au sein des administrations et ministères russes. En détournant un canal de communication considéré comme hautement sécurisé par l'État, les attaquants contournent les défenses traditionnelles pour mener de l'espionnage de haut niveau."
+      },
+      "recommandations": [
+        {
+          "en": "Restrict logical access to machines hosting ViPNet",
+          "fr": "Restreindre les accès logiques aux machines hébergeant ViPNet"
+        },
+        {
+          "en": "Verify the integrity of digital signatures of executed ViPNet software modules",
+          "fr": "Vérifier l'intégrité des signatures numériques des modules logiciels ViPNet exécutés"
+        },
+        {
+          "en": "Hermetically separate sensitive government network zones",
+          "fr": "Séparer hermétiquement les zones réseau gouvernementales sensibles"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Audit all ViPNet software installations within the infrastructure.",
+            "Harden security configurations and network access rights associated with ViPNet servers."
+          ],
+          "fr": [
+            "Auditer l'ensemble des installations du logiciel ViPNet au sein de l'infrastructure.",
+            "Durcir les configurations de sécurité et les droits d'accès réseau liés aux serveurs ViPNet."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor anomalous VPN connections or unauthorized administrative sessions on ViPNet software.",
+            "Enable SIEM rules to identify unusual process execution by ViPNet binaries."
+          ],
+          "fr": [
+            "Surveiller les connexions VPN anormales ou les sessions administratives non autorisées sur le logiciel ViPNet.",
+            "Activer des règles SIEM pour identifier l'exécution de processus inhabituels par les binaires ViPNet."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate compromised ViPNet communication servers from the network.",
+            "Immediately reset encryption and authentication keys of the VPN infrastructure."
+          ],
+          "fr": [
+            "Isoler du réseau les serveurs de communication ViPNet compromis.",
+            "Réinitialiser immédiatement les clés de chiffrement et d'authentification de l'infrastructure VPN."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Perform a thorough analysis of compromised systems to identify potential backdoors.",
+            "Update endpoint and encrypted communications security policy."
+          ],
+          "fr": [
+            "Effectuer une analyse approfondie des systèmes compromis pour repérer d'éventuelles portes dérobées.",
+            "Mettre à jour la politique de sécurité des terminaux et des communications chiffrées."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for suspicious network activity or data exfiltration via proprietary ViPNet protocols."
+          ],
+          "fr": [
+            "Recherche d'activités réseau suspectes ou d'exfiltration de données via les protocoles propriétaires ViPNet."
+          ]
+        }
+      },
+      "tags": [
+        "russia",
+        "vipnet",
+        "cyber-espionage",
+        "government"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/hackers-abuse-vipnet-software-to-target-russian-govt-agencies/"
+      ],
+      "date": "2026-07-19"
+    }
+  ],
+  "regulatory_and_legal": [],
+  "breach_analyse": [
+    {
+      "victim": "Abbott",
+      "threat_actor": "ShinyHunters",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercriminalité",
+      "threat_actor_aliases": [
+        "ShinyHunters"
+      ],
+      "sector": {
+        "en": [
+          "Healthcare_and_Life_Sciences"
+        ],
+        "fr": [
+          "Santé_et_sciences_de_la_vie"
+        ]
+      },
+      "description": {
+        "en": "Healthcare giant Abbott is facing competing or multiple data theft claims from ShinyHunters and ShadowByt3$. The company is currently investigating two separate cybersecurity incidents.",
+        "fr": "Le géant de la santé Abbott fait l'objet de revendications de vol de données concurrentes ou multiples de la part de ShinyHunters et ShadowByt3$. L'entreprise enquête actuellement sur deux incidents de cybersécurité distincts."
+      },
+      "mitre_ttps": [
+        "T1567"
+      ],
+      "recommandations": [
+        {
+          "en": "Revoke and reissue all API keys and corporate cloud credentials",
+          "fr": "Révoquer et rééditer toutes les clés d'API et identifiants cloud d'entreprise"
+        },
+        {
+          "en": "Perform a thorough analysis of Abbott's exposed systems",
+          "fr": "Effectuer une analyse approfondie des systèmes exposés d'Abbott"
+        },
+        {
+          "en": "Review network access policies for contractors and partners",
+          "fr": "Revoir les politiques d'accès réseau des sous-traitants et partenaires"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Implement strict encryption policies for all healthcare data at rest and in transit.",
+            "Perform regular audits of third-party access to Abbott's cloud environments."
+          ],
+          "fr": [
+            "Mettre en œuvre des politiques de chiffrement strictes pour toutes les données de santé au repos et en transit.",
+            "Réaliser des audits réguliers des accès tiers aux environnements cloud d'Abbott."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Set up DLP alerts on large volume data exfiltration to external cloud services.",
+            "Monitor simultaneous access from partner accounts."
+          ],
+          "fr": [
+            "Mettre en place des alertes DLP sur l'exfiltration de gros volumes de données vers des services cloud externes.",
+            "Surveiller les accès simultanés de comptes partenaires."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Disable potentially compromised or suspicious access accounts.",
+            "Restrict access to targeted network segments and databases."
+          ],
+          "fr": [
+            "Désactiver les comptes d'accès potentiellement compromis ou suspects.",
+            "Restreindre l'accès aux segments réseau et bases de données ciblés."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Notify health regulatory authorities and affected users according to regulations.",
+            "Improve multi-factor authentication (MFA) protocols."
+          ],
+          "fr": [
+            "Informer les autorités de régulation de la santé et les utilisateurs affectés selon les réglementations.",
+            "Améliorer les protocoles d'authentification multifacteur (MFA)."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Detect potential compromises of API credentials or cloud storage roles abused by ShinyHunters or ShadowByt3$."
+          ],
+          "fr": [
+            "Détecter d'éventuelles compromissions d'identifiants d'API ou de rôles de stockage cloud abusés par ShinyHunters ou ShadowByt3$."
+          ]
+        }
+      },
+      "tags": [
+        "data-leak",
+        "extortion",
+        "healthcare"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/07/19/medical-giant-abbott-investigates-two-cyber-incidents-as-shinyhunters-and-shadowbyt3-both-claim-breaches/?pk_campaign=feed&pk_kwd=medical-giant-abbott-investigates-two-cyber-incidents-as-shinyhunters-and-shadowbyt3-both-claim-breaches"
+      ],
+      "date": "2026-07-19"
+    },
+    {
+      "victim": "Paidwork",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Finance",
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Finance",
+          "Technologies_et_Télécommunications"
+        ]
+      },
+      "description": {
+        "en": "The micro-work platform Paidwork suffered a massive 11 GB data leak containing highly sensitive information about the platform's users, including their payment credentials and banking details.",
+        "fr": "La plateforme de micro-travail Paidwork a subi une fuite massive de données de 11 Go contenant des informations hautement sensibles sur les utilisateurs de la plateforme, incluant leurs identifiants de paiement et leurs informations bancaires."
+      },
+      "mitre_ttps": [
+        "T1567"
+      ],
+      "recommandations": [
+        {
+          "en": "Force a general password reset",
+          "fr": "Forcer une réinitialisation générale des mots de passe"
+        },
+        {
+          "en": "Warn users of the increased risks of targeted phishing campaigns",
+          "fr": "Avertir les utilisateurs des risques accrus de campagnes de phishing ciblé"
+        },
+        {
+          "en": "Implement fraud detection mechanisms on payment transactions",
+          "fr": "Mettre en place des mécanismes de détection de fraude sur les transactions de paiement"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Ensure all user passwords are hashed using modern and robust algorithms like Bcrypt with an appropriate cost.",
+            "Set up a crisis communication plan for large-scale data leaks."
+          ],
+          "fr": [
+            "S'assurer que tous les mots de passe utilisateurs sont hachés avec des algorithmes modernes et robustes comme Bcrypt avec un coût approprié.",
+            "Mettre en place un plan de communication de crise pour les fuites de données de grande envergure."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor cybercriminal forums and Telegram channels for mentions of the brand.",
+            "Monitor for unusual database export queries."
+          ],
+          "fr": [
+            "Surveiller les forums cybercriminels et les canaux Telegram pour détecter la mention de la marque.",
+            "Surveiller les requêtes inhabituelles d'exportation de bases de données."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Force a global password reset for all registered users.",
+            "Close unnecessary network access and ports to database servers."
+          ],
+          "fr": [
+            "Forcer la réinitialisation globale des mots de passe de tous les utilisateurs inscrits.",
+            "Fermer les accès et ports réseau non indispensables aux bases de données."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Notify data protection authorities (e.g., GDPR) and affected users.",
+            "Implement enhanced monitoring against phishing campaigns targeting Paidwork users."
+          ],
+          "fr": [
+            "Notifier les autorités de protection des données (ex. RGPD) et les utilisateurs affectés.",
+            "Mettre en place une surveillance renforcée contre les campagnes de phishing visant les utilisateurs de Paidwork."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for dictionary or credential stuffing attacks following the leak of user emails."
+          ],
+          "fr": [
+            "Recherche d'attaques par dictionnaire ou credential stuffing suite à la fuite des e-mails des utilisateurs."
+          ]
+        }
+      },
+      "tags": [
+        "credential-theft",
+        "bcrypt",
+        "gig-economy"
+      ],
+      "sources": [
+        "https://haveibeenpwned.com/Breach/Paidwork"
+      ],
+      "date": "2026-07-19"
+    },
+    {
+      "victim": "Microsoft IIS Server Users",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom",
+          "Critical_Infrastructure"
+        ],
+        "fr": [
+          "Technologies_et_Télécommunications",
+          "Infrastructures_critiques"
+        ]
+      },
+      "description": {
+        "en": "A rapid ransomware campaign deploys 'Spirals', an encryption malware coded in Rust. The attack begins with the compromise of exposed Microsoft IIS Web servers, followed by privilege escalation and lateral movement.",
+        "fr": "Une campagne de rançongiciel rapide déploie 'Spirals', un malware de chiffrement codé en Rust. L'attaque débute par la compromission de serveurs Web Microsoft IIS exposés, suivie d'une élévation de privilèges et d'un déplacement latéral."
+      },
+      "mitre_ttps": [
+        "T1190",
+        "T1486"
+      ],
+      "recommandations": [
+        {
+          "en": "Audit exposed IIS servers and disable unused modules",
+          "fr": "Auditer les serveurs IIS exposés et désactiver les modules inutilisés"
+        },
+        {
+          "en": "Deploy an EDR on all public Web servers",
+          "fr": "Déployer un EDR sur tous les serveurs Web publics"
+        },
+        {
+          "en": "Ensure the immutability and isolation of backups",
+          "fr": "S'assurer de l'immuabilité et de l'isolement des sauvegardes"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Keep all IIS servers up to date with the latest Microsoft security patches.",
+            "Limit the privileges of processes running IIS to the strict minimum."
+          ],
+          "fr": [
+            "Maintenir à jour l'ensemble des serveurs IIS avec les derniers correctifs de sécurité de Microsoft.",
+            "Limiter les privilèges des processus exécutant IIS au strict minimum."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for anomalous creation of child processes from w3wp.exe.",
+            "Detect bulk file access and write activities (typical ransomware behavior)."
+          ],
+          "fr": [
+            "Surveiller la création anormale de processus enfants à partir de w3wp.exe.",
+            "Détecter les activités d'accès et d'écriture de fichiers en masse (comportement typique du rançongiciel)."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate the compromised IIS server from the internal network to prevent lateral movement.",
+            "Stop IIS and related services to freeze the system state."
+          ],
+          "fr": [
+            "Isoler le serveur IIS compromis du réseau interne pour éviter les mouvements latéraux.",
+            "Stopper les services IIS et connexes pour figer l'état du système."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Restore data from secure offline backups.",
+            "Analyze the initial intrusion vector and fix the exploited vulnerability on IIS."
+          ],
+          "fr": [
+            "Restaurer les données à partir de sauvegardes sécurisées hors ligne.",
+            "Analyser le vecteur d'intrusion initial et corriger la vulnérabilité exploitée sur IIS."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Detect remote command shell executions initiated by the IIS process (w3wp.exe)."
+          ],
+          "fr": [
+            "Détection de l'exécution de shells de commande à distance initiés par le processus IIS (w3wp.exe)."
+          ]
+        }
+      },
+      "tags": [
+        "ransomware",
+        "rust",
+        "iis",
+        "spirals"
+      ],
+      "sources": [
+        "https://social.raytec.co/@techbot/116949607400329808"
+      ],
+      "date": "2026-07-20"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-42533",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "9.2",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:f5:nginx:*:*:*:*:*:*:*:*",
+      "product": "NGINX Open Source, NGINX Plus",
+      "vendor": "F5 / Nginx",
+      "description": {
+        "en": "A critical flaw affects the Nginx scripting engine due to incorrect two-pass evaluation of regex-based map variables with numbered captures, allowing buffer memory overwrite. Impact: Ability for an unauthenticated remote attacker to cause a denial of service (crash) of Nginx workers or bypass ASLR to execute remote code (RCE).",
+        "fr": "Une faille critique affecte le moteur de script de Nginx en raison d'une mauvaise évaluation en deux passes de variables de cartes (maps) basées sur des regex avec des captures numérotées, permettant d'écraser la mémoire tampon. Impact : Possibilité pour un attaquant distant non authentifié de provoquer un déni de service (crash) des workers Nginx ou de contourner l'ASLR pour exécuter du code à distance (RCE)."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Update to Nginx 1.30.4 (stable), 1.31.3 (mainline), or NGINX Plus 37.0.3.1",
+          "fr": "Mettre à jour vers Nginx 1.30.4 (stable), 1.31.3 (mainline), ou NGINX Plus 37.0.3.1"
+        },
+        {
+          "en": "As a temporary solution, switch to named captures instead of numbered captures",
+          "fr": "En solution temporaire, passer à des captures nommées au lieu de captures numérotées"
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Audit all Nginx configuration files (nginx.conf) to identify map directives with regex and numbered variables."
+          ],
+          "fr": [
+            "Auditer tous les fichiers de configuration Nginx (nginx.conf) pour identifier des directives map avec regex et variables numérotées."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Search Nginx error logs for lines mentioning repeated worker crashes (segfault)."
+          ],
+          "fr": [
+            "Rechercher dans les journaux d'erreurs Nginx des lignes mentionnant des plantages (segfault) répétés des workers Nginx."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Apply the temporary mitigation of switching to named captures instead of numbered captures."
+          ],
+          "fr": [
+            "Appliquer la remédiation temporaire de bascule vers des captures nommées au lieu de captures numérotées."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Update Nginx to secure stable version 1.30.4 or mainline 1.31.3."
+          ],
+          "fr": [
+            "Mettre à jour Nginx vers la version sécurisée stable 1.30.4 ou mainline 1.31.3 d'ici 21 jours."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for frequent Nginx process crashes that could correspond to failed heap overflow attempts."
+          ],
+          "fr": [
+            "Recherche de plantages fréquents des processus Nginx pouvant correspondre à une tentative de dépassement de tas infructueuse."
+          ]
+        }
+      },
+      "tags": [
+        "nginx",
+        "rce",
+        "heap-overflow"
+      ],
+      "sources": [
+        "https://thehackernews.com/2026/07/critical-nginx-vulnerability-can-crash.html"
+      ],
+      "date": "2026-07-19"
+    },
+    {
+      "cve_id": "CVE-2026-15409",
+      "euvd_id": "unknown",
+      "cisa_kev": "true",
+      "cvss": "10.0",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:h:sonicwall:secure_mobile_access_1000:*:*:*:*:*:*:*:*",
+      "product": "SonicWall Secure Mobile Access (SMA) 1000 Series",
+      "vendor": "SonicWall",
+      "description": {
+        "en": "The CVE-2026-15409 flaw is a pre-authentication authentication bypass on the /wsproxy endpoint allowing malicious WebSocket tunnels to be established to the device's local services. Combined with CVE-2026-15410, it allows remote code execution (RCE) with full root access and access to credentials transiting through the VPN.",
+        "fr": "La faille CVE-2026-15409 est un contournement d'authentification pré-authentification sur l'endpoint /wsproxy permettant d'établir des tunnels WebSocket malveillants vers les services locaux de l'équipement. Combinée avec CVE-2026-15410, elle permet une exécution de code à distance (RCE) avec accès root complet et accès aux identifiants transitant par le VPN."
+      },
+      "mitre_ttps": [
+        "T1190",
+        "T1068"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply official SonicWall patches immediately.",
+          "fr": "Appliquer immédiatement les correctifs officiels de SonicWall."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Ensure strict segmentation of SMA 1000 VPN devices from internal system administration zones."
+          ],
+          "fr": [
+            "S'assurer du cloisonnement strict des équipements SMA 1000 VPN par rapport aux zones d'administration système internes."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Search network access logs for User-Agent values containing 'SMA Connect Agent' associated with illegitimate WebSocket tunnels.",
+            "Audit the device's /tmp directory for exploitation artifacts."
+          ],
+          "fr": [
+            "Rechercher dans les journaux d'accès réseau des valeurs de User-Agent contenant 'SMA Connect Agent' associées à des tunnels WebSocket illégitimes.",
+            "Auditer le répertoire /tmp de l'appareil à la recherche d'artefacts d'exploitation."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Cut off external access to the affected SMA VPN appliance.",
+            "Change the appliance's administrative access secrets."
+          ],
+          "fr": [
+            "Couper les accès externes de l'équipement VPN SMA affecté.",
+            "Changer les secrets administratifs d'accès de l'appliance."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Apply urgent patches provided by SonicWall to fix CVE-2026-15409 and CVE-2026-15410."
+          ],
+          "fr": [
+            "Appliquer les correctifs fournis d'urgence par SonicWall pour corriger CVE-2026-15409 et CVE-2026-15410."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Identify potential WebSocket establishment attempts via authentication bypass."
+          ],
+          "fr": [
+            "Identifier d'éventuelles tentatives d'établissement de WebSocket par contournement d'authentification."
+          ]
+        }
+      },
+      "tags": [
+        "sonicwall",
+        "zero-day",
+        "active-exploitation",
+        "auth-bypass"
+      ],
+      "sources": [
+        "https://thehackernews.com/2026/07/sonicwall-sma-zero-days-exploited.html"
+      ],
+      "date": "2026-07-19"
+    },
+    {
+      "cve_id": "CVE-2026-44359",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:meshtastic:meshtastic_firmware:*:*:*:*:*:*:*:*",
+      "product": "Meshtastic Firmware GitHub Repository",
+      "vendor": "Meshtastic",
+      "description": {
+        "en": "The 'main_matrix.yml' workflow is triggered via 'pull_request_target' without prior approval for external contributors. It directly executes code from the attacker's forked branch with access to main GitHub repository secrets. Impact: Software supply chain compromise, repository secrets theft, and build runner compromise.",
+        "fr": "Le workflow 'main_matrix.yml' se déclenche via 'pull_request_target' sans approbation préalable pour des contributeurs externes. Il exécute directement le code de la branche dérivée (fork) de l'attaquant en ayant accès aux secrets du dépôt GitHub principal. Impact : Compromission de la chaîne logistique logicielle, vol de secrets de dépôt et compromission des exécuteurs de tâches de build."
+      },
+      "mitre_ttps": [
+        "T1195"
+      ],
+      "recommandations": [
+        {
+          "en": "Update Meshtastic firmware to version 2.7.21.1370b23 or higher.",
+          "fr": "Mettre à jour le firmware Meshtastic vers la version 2.7.21.1370b23 ou supérieure."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Review configuration of all GitHub repositories to disable pull_request_target without prior approval."
+          ],
+          "fr": [
+            "Revoir la configuration de l'ensemble des dépôts GitHub pour désactiver pull_request_target sans approbation préalable."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor GitHub Actions task executions triggered by unapproved forks."
+          ],
+          "fr": [
+            "Surveiller les exécutions de tâches GitHub Actions déclenchées par des forks non approuvés."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Immediately invalidate all repository secrets potentially exposed during workflow execution."
+          ],
+          "fr": [
+            "Invalider immédiatement l'ensemble des secrets de dépôt potentiellement exposés lors de l'exécution du workflow."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Modify the workflow to use only secure contexts and restrict the GITHUB_TOKEN."
+          ],
+          "fr": [
+            "Modifier le workflow pour utiliser uniquement des contextes sécurisés et restreindre le GITHUB_TOKEN."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for anomalous GitHub integration builds automatically triggered by unidentified actors."
+          ],
+          "fr": [
+            "Recherche de builds GitHub d'intégration lancés automatiquement par des acteurs non identifiés."
+          ]
+        }
+      },
+      "tags": [
+        "github-actions",
+        "meshtastic",
+        "code-injection",
+        "ci-cd"
+      ],
+      "sources": [
+        "https://infosec.exchange/@offseq/116949361347720615",
+        "https://cvefeed.io/vuln/detail/CVE-2026-44359"
+      ],
+      "date": "2026-07-20"
+    },
+    {
+      "cve_id": "CVE-2026-63030",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+      "product": "WordPress Core (6.9.x and 7.0.x)",
+      "vendor": "WordPress.org",
+      "description": {
+        "en": "By chaining CVE-2026-63030 and CVE-2026-60137 (code-named 'wp2shell'), an unauthenticated attacker can execute remote code on a default WordPress installation. Impact: Full takeover of the target WordPress site without any pre-conditions.",
+        "fr": "En chaînant CVE-2026-63030 et CVE-2026-60137 (nom de code 'wp2shell'), un attaquant non authentifié peut exécuter du code à distance sur une installation par défaut de WordPress. Impact : Prise de contrôle totale du site WordPress cible sans aucune pré-condition."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Update WordPress immediately. Forced automatic updates have been enabled.",
+          "fr": "Mettre à jour immédiatement WordPress. Les mises à jour automatiques forcées ont été activées."
+        },
+        {
+          "en": "As a temporary fix, block access to /wp-json/batch/v1.",
+          "fr": "En guise de remède temporaire, bloquer l'accès à /wp-json/batch/v1."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Ensure automatic updates are enabled on production WordPress servers.",
+            "Deploy a WAF filtering suspicious requests targeting the REST API."
+          ],
+          "fr": [
+            "S'assurer que la mise à jour automatique est activée sur les serveurs WordPress de production.",
+            "Déployer un WAF filtrant les requêtes suspectes ciblant l'API REST."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor suspicious calls to /wp-json/batch/v1 or the rest_route=/batch/v1 parameter.",
+            "Detect the presence of new unknown PHP files in wp-content/uploads/."
+          ],
+          "fr": [
+            "Surveiller les appels suspects vers /wp-json/batch/v1 ou le paramètre rest_route=/batch/v1.",
+            "Détecter la présence de nouveaux fichiers PHP inconnus dans wp-content/uploads/."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Temporarily block access to the batch API via WAF or rewrite rules.",
+            "Isolate the affected WordPress site."
+          ],
+          "fr": [
+            "Bloquer temporairement les accès à l'API batch via le WAF ou des règles de réécriture.",
+            "Isoler le site WordPress affecté."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Replace WordPress core files with clean versions.",
+            "Reset all secret authentication keys defined in wp-config.php."
+          ],
+          "fr": [
+            "Remplacer les fichiers du noyau WordPress par des versions propres.",
+            "Réinitialiser l'ensemble des clés secrètes d'authentification définies dans wp-config.php."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for attempts to exploit wp2shell via batch API call logs."
+          ],
+          "fr": [
+            "Recherche de tentatives d'exploitation de wp2shell via les traces d'appels API batch."
+          ]
+        }
+      },
+      "tags": [
+        "wordpress",
+        "rce",
+        "exploit-chain",
+        "wp2shell"
+      ],
+      "sources": [
+        "https://securityaffairs.com/195597/hacking/attackers-can-take-over-wordpress-sites-using-newly-released-wp2shell-exploits.html"
+      ],
+      "date": "2026-07-19"
+    },
+    {
+      "cve_id": "CVE-2026-12484",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "7.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:keras:keras:*:*:*:*:*:*:*:*",
+      "product": "Keras-Team (TorchModuleWrapper)",
+      "vendor": "Keras-Team",
+      "description": {
+        "en": "The flaw lies in the insecure loading of PyTorch pickle files in `torch.load` via the `TorchModuleWrapper.from_config` method. Impact: Arbitrary code execution on the victim's system when importing manipulated PyTorch model configurations.",
+        "fr": "La faille réside dans le chargement non sécurisé de fichiers pickle PyTorch dans `torch.load` via la méthode `TorchModuleWrapper.from_config`. Impact : Exécution de code arbitraire sur le système de la victime lors de l'import de configurations de modèles PyTorch manipulées."
+      },
+      "mitre_ttps": [
+        "T1203"
+      ],
+      "recommandations": [
+        {
+          "en": "Restrict model execution from untrusted sources.",
+          "fr": "Restreindre l'exécution de modèles provenant de sources non fiables."
+        },
+        {
+          "en": "Apply least privilege principles to AI training scripts.",
+          "fr": "Appliquer le principe de moindre privilège pour les scripts d'entraînement d'IA."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Forbid the direct use of torch.load on external files without prior validation."
+          ],
+          "fr": [
+            "Interdire l'utilisation directe de torch.load sur des fichiers d'origine externe sans vérification préalable."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detect AI model import or evaluation executions by non-privileged users."
+          ],
+          "fr": [
+            "Détecter les exécutions de fonctions d'import ou d'évaluation de modèles IA par des utilisateurs non-privilégiés."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate model training instances from the global enterprise network."
+          ],
+          "fr": [
+            "Isoler les instances d'apprentissage de modèles du réseau d'entreprise global."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Replace obsolete Keras wrappers with alternatives validating model integrity (e.g., safetensors)."
+          ],
+          "fr": [
+            "Remplacer les wrappers Keras obsolètes par des alternatives validant l'intégrité des modèles (safetensors)."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Identify instantiation of suspect Keras-Team wrappers related to PyTorch pickle code execution attempts."
+          ],
+          "fr": [
+            "Identifier l'instanciation de wrappers Keras-Team suspects liés à des tentatives d'exécution de code pickle PyTorch."
+          ]
+        }
+      },
+      "tags": [
+        "keras",
+        "pytorch",
+        "deserialization",
+        "ai-security"
+      ],
+      "sources": [
+        "https://mastodon.social/@hugovalters/116949132770600340"
+      ],
+      "date": "2026-07-19"
+    },
+    {
+      "cve_id": "unknown",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:o:hikvision:camera_firmware:*:*:*:*:*:*:*:*",
+      "product": "Hikvision Cameras OPEN Intelligent Security API (ISAPI)",
+      "vendor": "Hikvision",
+      "description": {
+        "en": "Massive scans target the /ISAPI/System/status endpoint to inventory and identify the presence of configured ISAPI interfaces on the brand's cameras. Impact: Disclosure of profiling information and preparation for brute force attacks against Basic/Digest authentication.",
+        "fr": "Des scans massifs ciblent l'endpoint /ISAPI/System/status afin de recenser et d'identifier la présence d'interfaces ISAPI configurées sur les caméras de la marque. Impact : Divulgation d'informations de profilage et préparation à des attaques par force brute contre l'authentification Basic/Digest."
+      },
+      "mitre_ttps": [
+        "T1595"
+      ],
+      "recommandations": [
+        {
+          "en": "Do not directly expose Hikvision cameras on the Internet without a VPN or restrictive firewall.",
+          "fr": "Ne pas exposer directement les caméras Hikvision sur Internet sans VPN ou pare-feu restrictif."
+        },
+        {
+          "en": "Configure TLS encryption for ISAPI.",
+          "fr": "Configurer le chiffrement TLS pour ISAPI."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Ensure all Hikvision cameras are not publicly accessible.",
+            "Enable TLS encryption and change default passwords."
+          ],
+          "fr": [
+            "S'assurer que toutes les caméras Hikvision ne sont pas accessibles publiquement.",
+            "Activer le chiffrement TLS et changer les mots de passe par défaut."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor camera HTTP logs for calls to /ISAPI/System/status.",
+            "Detect abnormal rates of 401/403 errors indicating brute force."
+          ],
+          "fr": [
+            "Surveiller les logs HTTP des caméras à la recherche d'appels à /ISAPI/System/status.",
+            "Détecter les taux anormaux d'erreurs 401/403 indiquant du brute-force."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Restrict IP addresses authorized to interact with the administrative interface."
+          ],
+          "fr": [
+            "Restreindre les adresses IP autorisées à interagir avec l'interface d'administration."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify if the camera firmware is up to date against historical authentication bypass vulnerabilities."
+          ],
+          "fr": [
+            "Vérifier si le micrologiciel de la caméra est à jour contre les vulnérabilités historiques de contournement d'authentification."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search for IP addresses conducting targeted reconnaissance activities on IoT cameras."
+          ],
+          "fr": [
+            "Recherche d'adresses IP menant des activités de reconnaissance ciblées sur des caméras IoT."
+          ]
+        }
+      },
+      "tags": [
+        "hikvision",
+        "isapi",
+        "iot",
+        "reconnaissance"
+      ],
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33164"
+      ],
+      "date": "2026-07-19"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "SANS ISC Stormcast - July 20, 2026",
+        "fr": "SANS ISC Stormcast - 20 Juillet 2026"
+      },
+      "description": {
+        "en": "The SANS Internet Storm Center daily podcast presents the summary of operational security news for the week of July 20, 2026.",
+        "fr": "Le podcast quotidien du SANS Internet Storm Center présente le résumé des actualités sécurité opérationnelles pour le début de la semaine du 20 juillet 2026."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologies_et_Télécommunications"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "Audio broadcast providing an overview of the latest vulnerabilities and attack trends identified by SANS experts.",
+        "fr": "Émission audio fournissant une vue d'ensemble des dernières vulnérabilités et tendances d'attaques recensées par la communauté d'experts du SANS."
+      },
+      "recommandations": [
+        {
+          "en": "Listen to the podcast regularly to identify early threat signals.",
+          "fr": "Écouter régulièrement le podcast pour identifier des signaux faibles de menaces émergentes."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Ensure regular monitoring of SANS ISC security RSS feeds."
+          ],
+          "fr": [
+            "Assurer une veille quotidienne des flux RSS de sécurité SANS ISC."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Check if newly mentioned threats apply to the infrastructure."
+          ],
+          "fr": [
+            "Vérifier si de nouvelles menaces mentionnées s'appliquent à l'infrastructure."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Not applicable for informational threat feeds."
+          ],
+          "fr": [
+            "Sans objet pour un contenu de veille informationnelle."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Share threat intelligence summaries with operational teams."
+          ],
+          "fr": [
+            "Partager les synthèses de veille avec les équipes opérationnelles."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [],
+          "fr": []
+        }
+      },
+      "tags": [
+        "podcast",
+        "daily-news"
+      ],
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33166"
+      ],
+      "date": "2026-07-20"
+    },
+    {
+      "title": {
+        "en": "Security Affairs Malware Newsletter Round 106",
+        "fr": "Security Affairs Malware Newsletter Round 106"
+      },
+      "description": {
+        "en": "The monthly newsletter of Security Affairs provides a comprehensive overview of the latest discovered malware threats.",
+        "fr": "La newsletter mensuelle de Security Affairs fait le tour complet des dernières menaces de malwares découvertes, fournissant des analyses techniques de pointe."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologies_et_Télécommunications"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [
+          "pierluigi.paganini@securityaffairs.co"
+        ],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "Synthesis of vendor reports and reverse-engineering analyses on several active ransomware, infostealer, and banking trojan families.",
+        "fr": "Synthèse de rapports d'éditeurs et d'analyses de reverse-engineering sur plusieurs familles de ransomwares, infostealers et chevaux de Troie bancaires actifs."
+      },
+      "recommandations": [
+        {
+          "en": "Integrate malware signatures from the newsletter into mail gateways and EDR.",
+          "fr": "Intégrer les signatures de malwares de la newsletter dans les passerelles de messagerie et EDR."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain an active subscription to Cyber Threat Intelligence (CTI) feeds."
+          ],
+          "fr": [
+            "Maintenir à jour l'abonnement aux flux de renseignement sur les menaces (CTI)."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Use published indicators of compromise to feed SIEM watchlists."
+          ],
+          "fr": [
+            "Utiliser les indicateurs de compromission publiés pour alimenter les listes de surveillance SIEM."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Not applicable for summary newsletter content."
+          ],
+          "fr": [
+            "Sans objet direct (contenu de type synthèse d'actualité)."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Update the SOC team's internal knowledge base."
+          ],
+          "fr": [
+            "Mettre à jour les bases de connaissances de l'équipe SOC."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [],
+          "fr": []
+        }
+      },
+      "tags": [
+        "newsletter",
+        "malware-roundup"
+      ],
+      "sources": [
+        "https://securityaffairs.com/195620/malware/security-affairs-malware-newsletter-round-106.html"
+      ],
+      "date": "2026-07-19"
+    },
+    {
+      "title": {
+        "en": "Security Affairs Newsletter Round 586 - International Edition",
+        "fr": "Security Affairs Newsletter Round 586 - International Edition"
+      },
+      "description": {
+        "en": "International edition of the famous newsletter compiling major news on cybercrime, state espionage, and vulnerabilities from the past week.",
+        "fr": "Édition internationale de la célèbre newsletter compilant les actualités majeures sur la cybercriminalité, l'espionnage étatique et les vulnérabilités de la semaine passée."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologies_et_Télécommunications"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [
+          "pierluigi.paganini@securityaffairs.co"
+        ],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "Global overview grouping multiple CTI reports and vulnerability analyses.",
+        "fr": "Tour d'horizon global regroupant de multiples articles CTI et analyses de vulnérabilités."
+      },
+      "recommandations": [
+        {
+          "en": "Analyze the evolutions of adversary tactics listed in this edition.",
+          "fr": "Analyser les évolutions de tactiques adverses recensées dans cette édition."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Ensure regular reading of cyber news compilations."
+          ],
+          "fr": [
+            "Assurer la lecture régulière des compilations d'actualités cyber."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Correlate described incidents with internal SOC alerts."
+          ],
+          "fr": [
+            "Corréler les incidents décrits avec les alertes internes du SOC."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Not applicable."
+          ],
+          "fr": [
+            "Sans objet."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Adapt defense plan based on newly documented APT tactics."
+          ],
+          "fr": [
+            "Adapter le plan de défense selon les nouvelles tactiques d'acteurs APT."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [],
+          "fr": []
+        }
+      },
+      "tags": [
+        "newsletter",
+        "global-threats"
+      ],
+      "sources": [
+        "https://securityaffairs.com/195611/breaking-news/security-affairs-newsletter-round-586-by-pierluigi-paganini-international-edition.html"
+      ],
+      "date": "2026-07-19"
+    },
+    {
+      "title": {
+        "en": "Quantum Randomness Evaluation and Sourcing Guide",
+        "fr": "Évaluation et Guide d'Achat de l'Entropie Quantique"
+      },
+      "description": {
+        "en": "A purchasing guide published by PostQuantum to help buyers of QRNG (Quantum Random Number Generators) solutions distinguish real quantum entropy from classical noise generators.",
+        "fr": "Un guide d'achat publié par PostQuantum aide les acquéreurs de solutions QRNG (Quantum Random Number Generators) à faire la différence entre la vraie entropie quantique et de simples générateurs de bruit classique marketés indûment."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologies_et_Télécommunications"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "postquantum.com"
+        ],
+        "EMAIL": [
+          "infosec@defcon.social"
+        ],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "The document addresses standardizing entropy and necessary trust certifications to validate post-quantum hardware cryptographic components.",
+        "fr": "Le document traite de la standardisation de l'entropie et des certifications de confiance requises pour valider les composants matériels de chiffrement post-quantique."
+      },
+      "recommandations": [
+        {
+          "en": "Demand independent quantum randomness physical test certificates from QRNG vendors.",
+          "fr": "Exiger des fournisseurs de QRNG des certificats de tests physiques d'aléa quantique indépendants."
+        },
+        {
+          "en": "Audit internal cryptographic libraries.",
+          "fr": "Auditer les bibliothèques cryptographiques internes."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Evaluate the quality of entropy sources used for cryptographic key generation."
+          ],
+          "fr": [
+            "Évaluer la qualité des sources d'entropie utilisées pour la génération de clés cryptographiques."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for key generation failures or poor statistical distribution of entropy."
+          ],
+          "fr": [
+            "Surveiller les échecs de génération de clés ou la faible distribution statistique d'entropie."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Replace faulty or fraudulent hardware generators with validated alternatives."
+          ],
+          "fr": [
+            "Remplacer les générateurs matériels défectueux ou frauduleux par des alternatives validées."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Reissue all cryptographic keys generated with the faulty entropy source."
+          ],
+          "fr": [
+            "Réémettre toutes les clés cryptographiques générées avec la source d'entropie défectueuse."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [],
+          "fr": []
+        }
+      },
+      "tags": [
+        "qrng",
+        "cryptography",
+        "quantum"
+      ],
+      "sources": [
+        "https://defcon.social/@infosec/116949610717793653"
+      ],
+      "date": "2026-07-20"
+    },
+    {
+      "title": {
+        "en": "Phishing Campaign Exploiting Google Presentations",
+        "fr": "Campagne d'Hameçonnage Exploitant Google Presentations"
+      },
+      "description": {
+        "en": "Active phishing campaign impersonating official Google services by publishing a malicious Google Slides presentation that redirects users to credential harvesting forms.",
+        "fr": "Campagne d'hameçonnage en cours usurpant des services officiels de Google en publiant une présentation piégée (Google Slides) qui redirige l'internaute vers des formulaires d'obtention de mot de passe."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom",
+          "Business_Services"
+        ],
+        "fr": [
+          "Technologies_et_Télécommunications",
+          "Services_professionnels"
+        ]
+      },
+      "indicators": {
+        "URL": [
+          "https://docs.google.com/presentation/d/1gBvfAiCvkPTcu0YFovbn7Wwa_P3j08o0aRSbttl3JlU/pub?start=false&loop=false"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "docs.google.com"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1566"
+      ],
+      "analyse": {
+        "en": "The technique uses Google Slides' public web publishing mode to bypass traditional domain reputation-based protections.",
+        "fr": "La technique utilise le mode de publication web public de Google Slides pour contourner les protections traditionnelles basées sur la réputation de domaine."
+      },
+      "recommandations": [
+        {
+          "en": "Block access to the listed malicious presentation URL.",
+          "fr": "Bloquer l'accès à l'URL de présentation répertoriée."
+        },
+        {
+          "en": "Remind employees to never submit credentials on forms originating from Google Docs/Slides.",
+          "fr": "Rappeler aux collaborateurs de ne jamais soumettre d'identifiants sur des formulaires provenant de Google Docs/Slides."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Train users against phishing threats leveraging legitimate cloud platforms (Google Drive, OneDrive).",
+            "Update web content filtering policies."
+          ],
+          "fr": [
+            "Former les utilisateurs aux menaces d'hameçonnage exploitant des plateformes cloud légitimes (Google Drive, Microsoft OneDrive).",
+            "Mettre à jour la politique de filtrage de contenu web."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Search proxy traffic logs for accesses to unauthorized published Google Slides."
+          ],
+          "fr": [
+            "Rechercher dans les journaux de trafic proxy les accès à des publications de présentations Google non autorisées."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Block network access to the specific identified malicious URL."
+          ],
+          "fr": [
+            "Bloquer l'accès réseau à l'URL spécifique identifiée comme malveillante."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Report the fraudulent link to Google Abuse to shut down the presentation document."
+          ],
+          "fr": [
+            "Signaler le lien frauduleux à Google Abuse pour fermeture du document de présentation."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Identify other navigation sessions pointing to suspicious document sharing links."
+          ],
+          "fr": [
+            "Identifier d'autres sessions de navigation vers des présentations de partage suspectes."
+          ]
+        }
+      },
+      "tags": [
+        "phishing",
+        "google-docs"
+      ],
+      "sources": [
+        "https://infosec.exchange/@urldna/116949595599290634"
+      ],
+      "date": "2026-07-20"
+    },
+    {
+      "title": {
+        "en": "Shodan Exposure Scans for AS34373 Rotterdam",
+        "fr": "Scans d'Exposition Shodan pour AS34373 Rotterdam"
+      },
+      "description": {
+        "en": "Automated publication of infrastructure information detected by Shodan concerning Autonomous System AS34373 based in Rotterdam, Netherlands.",
+        "fr": "Publication automatisée d'informations d'infrastructure détectées par Shodan concernant l'Autonomous System AS34373 basé à Rotterdam, NL."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologies_et_Télécommunications"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "shodansafari.net"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "Raw technical indicator of routing and geographical exposure of public Internet services.",
+        "fr": "Indicateur technique brut de routage et d'exposition géographique de services Internet."
+      },
+      "recommandations": [
+        {
+          "en": "Verify if this ASN hosts company services and audit their public exposure.",
+          "fr": "Vérifier si cet ASN héberge des services de l'entreprise et auditer leur exposition publique."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain an up-to-date inventory of the company's public IP ranges."
+          ],
+          "fr": [
+            "Maintenir à jour l'inventaire des plages d'adresses IP publiques de l'entreprise."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor Shodan discoveries associated with the organization's ASN."
+          ],
+          "fr": [
+            "Surveiller les découvertes Shodan associées à l'ASN de l'organisation."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Block undocumented exposed services at the firewall level."
+          ],
+          "fr": [
+            "Bloquer au niveau du pare-feu les services exposés non documentés."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Update the company's public exposure security policy."
+          ],
+          "fr": [
+            "Mettre à jour la politique d'exposition publique des services de l'entreprise."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [],
+          "fr": []
+        }
+      },
+      "tags": [
+        "shodan",
+        "asn"
+      ],
+      "sources": [
+        "https://infosec.exchange/@shodansafari/116949359485295366"
+      ],
+      "date": "2026-07-20"
+    },
+    {
+      "title": {
+        "en": "Mastodon Open-Source Community Social Post",
+        "fr": "Publication Sociale de la Communauté Open-Source Mastodon"
+      },
+      "description": {
+        "en": "Community or technical mention shared within the open-source and cybersecurity community on Mastodon.",
+        "fr": "Post ou mention à vocation communautaire et technique échangé au sein de la communauté open-source et sécurité sur Mastodon."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologies_et_Télécommunications"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [
+          "Me_Star_Son@mastodon.social"
+        ],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "Unstructured social content grouping various keywords related to hacking and Linux development.",
+        "fr": "Contenu non structuré à caractère social regroupant divers mots-clés liés au piratage et au développement Linux."
+      },
+      "recommandations": [
+        {
+          "en": "Filter out the post unless specifically relevant to threat intelligence requirements.",
+          "fr": "Faire abstraction du post sauf intérêt spécifique pour la veille technologique."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Monitor social platforms to detect technical discussions and noise."
+          ],
+          "fr": [
+            "Surveiller les plateformes sociales pour détecter le bruit et les discussions techniques."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Identify company asset mentions on Mastodon."
+          ],
+          "fr": [
+            "Identifier les mentions d'équipements de l'entreprise sur Mastodon."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Not applicable."
+          ],
+          "fr": [
+            "Sans objet."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Not applicable."
+          ],
+          "fr": [
+            "Sans objet."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [],
+          "fr": []
+        }
+      },
+      "tags": [
+        "social-media",
+        "community"
+      ],
+      "sources": [
+        "https://mastodon.social/@Me_Star_Son/116949263550585076"
+      ],
+      "date": "2026-07-20"
+    }
+  ]
+}
