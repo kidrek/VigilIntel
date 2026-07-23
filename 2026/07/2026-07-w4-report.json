@@ -6,63 +6,89 @@
       "fr": "Sévère"
     },
     "justification": {
-      "en": "Driven by 24 vulnerability disclosures including actively exploited zero-days in enterprise solutions (Microsoft SharePoint CVE-2026-50522, ServiceNow CVE-2026-6875), combined with 12 major data breaches and persistent RaaS extortion campaigns targeting healthcare, public administration, and critical supply chains.",
-      "fr": "Dominé par la divulgation de 24 vulnérabilités dont des failles zéro-day exploitées dans des solutions d'entreprise (Microsoft SharePoint CVE-2026-50522, ServiceNow CVE-2026-6875), combinées à 12 fuites de données majeures et des campagnes d'extorsion RaaS visant la santé et les services publics."
+      "en": "The period is marked by critical actively exploited zero-day vulnerabilities in enterprise platforms (Microsoft SharePoint CVE-2026-50522, WordPress Core CVE-2026-63030, Langflow CVE-2025-3248/CVE-2026-0770), mass data breaches across healthcare, education, and government entities, and persistent ransomware extortions by groups like Qilin, Titan, Space Bears, and RansomHouse. Automation of attacks via GenAI and malicious botnets further escalates systemic risk.",
+      "fr": "La période est marquée par des vulnérabilités zero-day critiques activement exploitées dans des plateformes d'entreprise (Microsoft SharePoint CVE-2026-50522, WordPress Core CVE-2026-63030, Langflow CVE-2025-3248/CVE-2026-0770), des violations de données massives touchant la santé, l'éducation et le secteur public, ainsi qu'une pression constante d'extorsion par rançongiciel (Qilin, Titan, Space Bears, RansomHouse). L'automatisation offensive via l'IA générative et les botnets renforce ce niveau de risque élevé."
     },
     "_triggers": [
-      "+6 — 3 CVE(s) CISA KEV",
+      "+8 — 5 CVE(s) CISA KEV",
       "+4 — 4 CVE(s) CVSS ≥ 9.0",
       "+2 — 1 acteur(s) étatique(s)",
       "+2 — 2 opérateur(s) ransomware",
       "+1 — ≥ 3 acteurs distincts actifs",
-      "+3 — 3 breach(es) ≥ 100k enregistrements",
-      "+2 — secteurs critiques ciblés : Government_and_Defense"
+      "+3 — 4 breach(es) ≥ 100k enregistrements",
+      "+2 — secteurs critiques ciblés : Critical_Infrastructure, Government_and_Defense"
     ]
   },
   "executive_summary": {
-    "en": "During Week 4 of July 2026, threat activity was characterized by aggressive exploitation of critical vulnerabilities in enterprise collaboration and AI platforms, notably Microsoft SharePoint (CVE-2026-50522) and ServiceNow (CVE-2026-6875). Simultaneously, ransomware groups including Qilin, RansomHouse, Titan, and Space Bears expanded their multi-extortion attacks against healthcare, logistics, and critical infrastructure. Cloud identity risks intensified with Kali365 deploying Device Code Phishing against M365 tenants, while state-sponsored APTs like Kimsuky maintained pressure on software supply chains in East Asia.",
-    "fr": "Au cours de la 4e semaine de juillet 2026, l'activité criminelle a été marquée par l'exploitation agressive de vulnérabilités critiques sur des plateformes collaboratives et d'IA, notamment Microsoft SharePoint (CVE-2026-50522) et ServiceNow (CVE-2026-6875). En parallèle, des groupes de rançongiciels comme Qilin, RansomHouse, Titan et Space Bears ont intensifié leurs attaques de double extorsion contre la santé, la logistique et les infrastructures critiques. Les risques liés aux identités cloud se sont accrus avec les campagnes de Device Code Phishing de Kali365, tandis que l'APT Kimsuky a ciblé la chaîne d'approvisionnement logicielle."
+    "en": "Week 4 of July 2026 observed high threat activity driven by active exploitation of enterprise vulnerabilities (Microsoft SharePoint, ServiceNow, WordPress Core, Langflow AI framework) and zero-day containment escapes in AI environments. Threat actors including Kimsuky, Kali365, TrickBot, and multiple ransomware RaaS affiliates (Qilin, RansomHouse, Titan, Space Bears) intensified campaigns targeting public sector, healthcare, education, and critical supply chains. GenAI adoption by attackers has significantly enhanced device code phishing, identity theft, and initial access execution speed, necessitating automated defense, FIDO2 MFA enforcement, and immediate patching of edge software.",
+    "fr": "La quatrième semaine de juillet 2026 s'illustre par une intensité criminelle élevée, tirée par l'exploitation active de vulnérabilités d'entreprise critiques (Microsoft SharePoint, ServiceNow, WordPress Core, framework IA Langflow) et des évasions de bacs à sable IA. Les acteurs étatiques et cybercriminels (Kimsuky, Kali365, TrickBot, Qilin, RansomHouse, Titan, Space Bears) ont ciblé de manière agressive le secteur public, la santé, l'éducation et les chaînes logistiques. L'usage de l'IA générative par les attaquants optimise les campagnes de phishing par code d'appareil et le vol d'accès, imposant un déploiement urgent du MFA FIDO2 et l'application immédiate des correctifs de bordure."
   },
   "regulatory": {
     "analyse": {
-      "en": "European regulatory bodies are accelerating the formalization of cybersecurity standards with the EESC opinion on the Cybersecurity Act 2 and NIS2 alignment, expanding ENISA's mandate over ICT supply chains. Concurrently, US judicial enforcement and regulatory penalties, such as NYSDFS's $50M fine against Swedbank and the $2.15M GRIPA MOVEit settlement, demonstrate escalating legal liabilities for vendor vulnerabilities and non-cooperation during breach investigations.",
-      "fr": "Les organes réglementaires européens accélèrent la formalisation des normes de cybersécurité avec l'avis du CESE sur le Cybersecurity Act 2 et l'alignement NIS2, élargissant le mandat de l'ENISA aux chaînes d'approvisionnement TIC. En parallèle, les sanctions américaines (amende de 50M$ du NYSDFS contre Swedbank et règlement GRIPA MOVEit de 2,15M$) démontrent la hausse des responsabilités juridiques liées aux failles de fournisseurs."
+      "en": "European regulatory bodies advance the Cybersecurity Act 2 proposal alongside NIS2 adjustments to expand ENISA's mandate over ICT supply chains and standardize EU-wide certification schemes. Concurrently, US regulatory enforcement demonstrates severe financial and legal penalties for data retention and breach reporting delays, as evidenced by NYSDFS penalties against Swedbank and ongoing MOVEit class action settlements in healthcare.",
+      "fr": "Les organes réglementaires européens font progresser la proposition Cybersecurity Act 2 et les ajustements NIS2 pour étendre le mandat de l'ENISA à la chaîne d'approvisionnement TIC et harmoniser la certification européenne. En parallèle, les autorités américaines renforcent les sanctions financières pour défaut de coopération et retard de notification de fuites de données, comme l'illustrent les amendes du NYSDFS contre Swedbank et les règlements judiciaires sur l'affaire MOVEit."
     },
     "events": [
       {
         "title": {
-          "en": "EESC Opinion on Cybersecurity Act 2 and NIS2 Alignment",
-          "fr": "Avis du CESE sur le Cybersecurity Act 2 et l'alignement NIS2"
+          "en": "Cybersecurity Act 2 & NIS2 Alignment Proposal",
+          "fr": "Avis CESE sur le Cybersecurity Act 2 et l'alignement NIS2"
         },
-        "issuing_body": "European Economic and Social Committee",
+        "issuing_body": "European Economic and Social Committee (EESC) / European Commission",
         "date": "2026-07-22",
         "jurisdiction": {
           "region": "EU",
           "countries": [
             "FR",
-            "DE"
+            "DE",
+            "EU"
           ]
         },
         "type": "Proposal",
         "status": "Under_Review",
-        "reference": "OJ C/2026/3549 – EESC 2026/00075",
+        "reference": "COM(2026) 11 final / COM(2026) 13 final",
         "affected_sectors": [
           "Technology_and_Telecom",
           "Government_and_Defense",
           "Critical_Infrastructure"
         ],
         "description": {
-          "en": "The EESC issued an official opinion on the proposed Cybersecurity Act 2, which expands ENISA's mandate to cover ICT supply chain security and updates European cybersecurity certification schemes. It also proposes modifications to the NIS2 Directive to streamline administrative requirements for essential and important entities.",
-          "fr": "Le CESE a rendu un avis officiel sur la proposition de Cybersecurity Act 2, élargissant le mandat de l'ENISA à la sécurité de la chaîne d'approvisionnement TIC et révisant les schémas de certification. Le texte amende également NIS2 pour simplifier les obligations administratives des entités essentielles et importantes."
+          "en": "EESC opinion on Cybersecurity Act 2, expanding ENISA's mandate over ICT supply chain security, enhancing EUCC certification frameworks, and simplifying NIS2 reporting burdens for essential entities.",
+          "fr": "Avis du CESE sur le Cybersecurity Act 2, élargissant le mandat de l'ENISA à la chaîne d'approvisionnement TIC, renforçant les certifications EUCC et simplifiant NIS2 pour les entités essentielles."
         },
-        "source_url": "https://eur-lex.europa.eu/legal-content/AUTO/?uri=OJ:C_202603549"
+        "source_url": "https://eur-lex.europa.eu/legal-content/AUTO/?uri=CELEX:52026AE0075"
       },
       {
         "title": {
-          "en": "GRIPA MOVEit Breach Class Action Settlement",
-          "fr": "Règlement à l'amiable GRIPA - Fuite de données MOVEit"
+          "en": "NYSDFS $50M Penalty Against Swedbank",
+          "fr": "Pénalité de 50M$ du NYSDFS contre Swedbank"
         },
-        "issuing_body": "US Federal Court",
+        "issuing_body": "New York State Department of Financial Services (NYSDFS)",
+        "date": "2026-07-21",
+        "jurisdiction": {
+          "region": "US",
+          "countries": [
+            "US"
+          ]
+        },
+        "type": "Enforcement_Action",
+        "status": "Active",
+        "reference": "NYSDFS Banking Law Sec. 44",
+        "affected_sectors": [
+          "Finance"
+        ],
+        "description": {
+          "en": "NYSDFS secured a $50 million penalty against Swedbank for withholding information and failure to cooperate during a regulatory investigation.",
+          "fr": "Le NYSDFS a infligé une amende de 50 millions de dollars à Swedbank pour rétention d'informations et défaut de coopération lors d'une enquête réglementaire."
+        },
+        "source_url": "https://databreaches.net/2026/07/21/nysdfs-secures-50-million-penalty-from-swedbank-for-withholding-information-from-investigators/"
+      },
+      {
+        "title": {
+          "en": "GRIPA MOVEit Class Action Settlement",
+          "fr": "Règlement judiciaire GRIPA relatif à la fuite MOVEit"
+        },
+        "issuing_body": "US Federal District Court",
         "date": "2026-07-21",
         "jurisdiction": {
           "region": "US",
@@ -72,40 +98,15 @@
         },
         "type": "Court_Ruling",
         "status": "Active",
-        "reference": "GRIPA MOVEit Class Action 2023",
+        "reference": "GRIPA MOVEit Litigation 2023-2026",
         "affected_sectors": [
           "Healthcare_and_Life_Sciences"
         ],
         "description": {
-          "en": "GRIPA agreed to pay $2.15 million to settle class-action lawsuits resulting from the May 2023 MOVEit zero-day breach that exposed patient PII and PHI. This ruling highlights the ongoing long-term financial and legal liabilities associated with vendor software vulnerabilities.",
-          "fr": "GRIPA a accepté de verser 2,15 millions USD pour régler les actions collectives liées à l'exploitation de la vulnérabilité MOVEit de mai 2023 ayant exposé des données de santé et PII. Ce jugement illustre la persistance des responsabilités financières liées aux failles de fournisseurs."
+          "en": "Greater Rochester Independent Practice Association agreed to pay $2.15M to settle class action claims stemming from the May 2023 MOVEit zero-day vulnerability data breach.",
+          "fr": "GRIPA a accepté de verser 2,15 millions de dollars pour régler les actions collectives liées à la fuite de données suite à la vulnérabilité zero-day MOVEit."
         },
         "source_url": "https://www.defensorum.com/greater-rochester-independent-practice-association-moveit-data-breach/"
-      },
-      {
-        "title": {
-          "en": "NYSDFS Enforcement Action Against Swedbank",
-          "fr": "Sanction du NYSDFS contre Swedbank"
-        },
-        "issuing_body": "NYSDFS",
-        "date": "2026-07-21",
-        "jurisdiction": {
-          "region": "US",
-          "countries": [
-            "US"
-          ]
-        },
-        "type": "Fine",
-        "status": "Active",
-        "reference": "NYSDFS Enforcement Action 2026",
-        "affected_sectors": [
-          "Finance"
-        ],
-        "description": {
-          "en": "The New York State Department of Financial Services secured a $50 million penalty against Swedbank for withholding critical information during a regulatory investigation. This decision emphasizes strict compliance expectations for financial institutions regarding transparency and regulatory disclosure.",
-          "fr": "Le NYSDFS a infligé une pénalité de 50 millions de dollars à Swedbank pour rétention d'informations lors d'une enquête réglementaire. Cette sanction rappelle aux institutions financières l'obligation absolue de coopération et de transparence."
-        },
-        "source_url": "https://databreaches.net/2026/07/21/nysdfs-secures-50-million-penalty-from-swedbank-for-withholding-information-from-investigators/"
       }
     ]
   },
@@ -117,8 +118,8 @@
           "fr": "Corée du Nord"
         },
         "geographic_zone_strategic_analyse": {
-          "en": "North Korean state-sponsored actors, notably Kimsuky, continue targeting software supply chains and groupware vendors in South Korea. Their deployment of customized Gomir malware variants via spear-phishing represents a sustained threat to regional government and technology sectors.",
-          "fr": "Les acteurs étatiques nord-coréens, en particulier Kimsuky, poursuivent le ciblage des chaînes d'approvisionnement logicielles et des éditeurs de groupware en Corée du Sud. Leur déploiement de variantes du malware Gomir menace directement les éditeurs régionaux."
+          "en": "North Korean state-sponsored threat actors like Kimsuky continue targeted espionage against South Korean software vendors and groupware providers to compromise supply chains and conduct intelligence gathering.",
+          "fr": "Les groupes étatiques nord-coréens comme Kimsuky poursuivent leurs opérations d'espionnage ciblé contre les éditeurs de logiciels sud-coréens pour compromettre la chaîne d'approvisionnement."
         }
       },
       {
@@ -127,18 +128,18 @@
           "fr": "Russie"
         },
         "geographic_zone_strategic_analyse": {
-          "en": "Russian-speaking RaaS operators and cybercriminals (Qilin, RansomHouse, Titan, Space Bears) maintain intense multi-extortion operations globally, prioritizing critical infrastructure, healthcare, and logistical supply chains to extract large ransom payments.",
-          "fr": "Les cybercriminels et opérateurs RaaS russophones (Qilin, RansomHouse, Titan, Space Bears) poursuivent des opérations de double extorsion à l'échelle mondiale, ciblant la santé, la logistique et l'industrie."
+          "en": "Russian cybercrime syndicates and RaaS operators (TrickBot, Qilin) maintain intense financial extortion campaigns while state proxy networks leverage Kaliningrad for European information warfare.",
+          "fr": "Les syndicats cybercriminels russes et affiliés RaaS (TrickBot, Qilin) maintiennent une pression d'extorsion élevée tandis que les relais étatiques utilisent Kaliningrad pour des opérations d'influence."
         }
       },
       {
         "geographic_zone_name": {
-          "en": "Other",
-          "fr": "Autre"
+          "en": "China",
+          "fr": "Chine"
         },
         "geographic_zone_strategic_analyse": {
-          "en": "Financially motivated threat groups like Kali365 and large-scale cybercrime networks operating across Southeast Asia focus on OAuth credential abuse, Device Code Phishing, and industrial-scale scam operations targeting Western organizations and government assets.",
-          "fr": "Des groupes cybercriminels comme Kali365 et des réseaux organisés en Asie du Sud-Est exploitent le Device Code Phishing et des centres d'arnaques à grande échelle pour compromettre des accès cloud et extorquer des fonds."
+          "en": "China leverages open-source AI diplomacy and hardware autonomy to challenge Western technological dominance while expanding influence in the Global South.",
+          "fr": "La Chine s'appuie sur la diplomatie de l'IA open-source et l'autonomie matérielle pour contester l'hégémonie technologique occidentale."
         }
       }
     ],
@@ -148,7 +149,7 @@
         "origin_country": "North Korea",
         "type": {
           "en": "Nation-state",
-          "fr": "État-nation"
+          "fr": "Acteur étatique"
         },
         "targeted_sectors": {
           "en": [
@@ -162,12 +163,12 @@
         },
         "targeted_regions": {
           "en": [
-            "Asia-Pacific",
-            "South Korea"
+            "South Korea",
+            "Asia-Pacific"
           ],
           "fr": [
-            "Asie-Pacifique",
-            "Corée du Sud"
+            "Corée du Sud",
+            "Asie-Pacifique"
           ]
         },
         "mitre_attack_ttps_id": [
@@ -178,53 +179,10 @@
         ],
         "campaign_or_operation": {
           "en": [
-            "South Korean Groupware Supply Chain Campaign"
+            "South Korean Groupware Vendor Supply Chain Attack"
           ],
           "fr": [
-            "Campagne Supply Chain Éditeurs Groupware Sud-Coréens"
-          ]
-        }
-      },
-      {
-        "threat_actor_name": "RansomHouse",
-        "origin_country": "Russia",
-        "type": {
-          "en": "Ransomware",
-          "fr": "Rançongiciel"
-        },
-        "targeted_sectors": {
-          "en": [
-            "Agriculture_and_Environment",
-            "Business_Services",
-            "Industry_and_Manufacturing"
-          ],
-          "fr": [
-            "Agriculture_and_Environment",
-            "Business_Services",
-            "Industry_and_Manufacturing"
-          ]
-        },
-        "targeted_regions": {
-          "en": [
-            "Asia-Pacific",
-            "Japan"
-          ],
-          "fr": [
-            "Asie-Pacifique",
-            "Japon"
-          ]
-        },
-        "mitre_attack_ttps_id": [
-          "T1486",
-          "T1657",
-          "T1567"
-        ],
-        "campaign_or_operation": {
-          "en": [
-            "Japanese Food & Logistics Extortion"
-          ],
-          "fr": [
-            "Extorsion Agroalimentaire et Logistique au Japon"
+            "Attaque Supply Chain contre un éditeur de groupware sud-coréen"
           ]
         }
       },
@@ -247,11 +205,9 @@
         },
         "targeted_regions": {
           "en": [
-            "North America",
             "United States"
           ],
           "fr": [
-            "Amérique du Nord",
             "États-Unis"
           ]
         },
@@ -259,15 +215,55 @@
           "T1566.002",
           "T1078",
           "T1528",
-          "T1539",
-          "T1027"
+          "T1539"
         ],
         "campaign_or_operation": {
           "en": [
-            "US M365 Device Code Phishing"
+            "M365 Device Code Phishing Campaign"
           ],
           "fr": [
-            "Hameçonnage Device Code M365 USA"
+            "Campagne de Phishing Device Code M365"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "RansomHouse",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Ransomware",
+          "fr": "Rançongiciel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Agriculture_and_Environment",
+            "Industry_and_Manufacturing"
+          ],
+          "fr": [
+            "Agriculture_and_Environment",
+            "Industry_and_Manufacturing"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Japan",
+            "Asia-Pacific"
+          ],
+          "fr": [
+            "Japon",
+            "Asie-Pacifique"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1486",
+          "T1657",
+          "T1567"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Nichirei and Askul Extortion"
+          ],
+          "fr": [
+            "Extorsion de Nichirei et Askul"
           ]
         }
       },
@@ -281,11 +277,11 @@
         "targeted_sectors": {
           "en": [
             "Retail_and_Consumer",
-            "Hospitality_and_Entertainment"
+            "Healthcare_and_Life_Sciences"
           ],
           "fr": [
             "Retail_and_Consumer",
-            "Hospitality_and_Entertainment"
+            "Healthcare_and_Life_Sciences"
           ]
         },
         "targeted_regions": {
@@ -305,10 +301,87 @@
         ],
         "campaign_or_operation": {
           "en": [
-            "Qilin RaaS Double Extortion"
+            "Postres Reina Extortion & Palo Alto VPN Exploitation"
           ],
           "fr": [
-            "Double Extorsion RaaS Qilin"
+            "Extorsion Postres Reina et exploitation des VPN Palo Alto"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "TrickBot Cybercrime Group",
+        "origin_country": "Russia",
+        "type": {
+          "en": "Cybercriminal",
+          "fr": "Cybercriminel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Finance",
+            "Business_Services"
+          ],
+          "fr": [
+            "Finance",
+            "Business_Services"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Global"
+          ],
+          "fr": [
+            "Mondial"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1071.004",
+          "T1572"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "IPv4 MSB DNS Tunneling C2 Campaign"
+          ],
+          "fr": [
+            "Campagne C2 par tunnel DNS MSB IPv4"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "Rondo Botnet",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Cybercriminal",
+          "fr": "Cybercriminel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Technology_and_Telecom",
+            "Critical_Infrastructure"
+          ],
+          "fr": [
+            "Technology_and_Telecom",
+            "Critical_Infrastructure"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Global"
+          ],
+          "fr": [
+            "Mondial"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1190",
+          "T1059.004",
+          "T1105"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "GeoServer CVE-2024-36401 Exploitation"
+          ],
+          "fr": [
+            "Exploitation GeoServer CVE-2024-36401"
           ]
         }
       }
@@ -316,43 +389,61 @@
   },
   "mitre_attack_ttps": {
     "ttps_strategic_analyse": {
-      "en": "Adversary TTPs during this reporting period were dominated by initial access via OAuth Device Code Phishing (T1528) and Spearphishing Links (T1566.002), bypassing traditional MFA. Post-compromise activity centered on Data Encrypted for Impact (T1486), Financial Extortion (T1657), and Recovery Inhibition (T1490). Adversaries also increased reliance on legitimate web services such as Telegram (T1102) for command-and-control infrastructure.",
-      "fr": "Les TTPs de cette période ont été dominées par l'accès initial via Device Code Phishing (T1528) et liens de spear-phishing (T1566.002), contournant le MFA classique. La phase post-exploitation s'est concentrée sur le chiffrement de données (T1486), l'extorsion financière (T1657) et la destruction des sauvegardes (T1490). L'usage de Telegram (T1102) comme canal C2 s'est également intensifié."
+      "en": "Threat actors are increasingly relying on identity-based initial access (OAuth session hijacking, Device Code Phishing, valid credential replay) combined with rapid exploitation of unpatched public-facing infrastructure (SharePoint, WordPress, GeoServer, Langflow). Exfiltration and double extorsion remain primary objectives, enhanced by GenAI automation.",
+      "fr": "Les attaquants privilégient l'accès initial fondé sur les identités (détournement de sessions OAuth, phishing Device Code, rejeu d'identifiants) combiné à l'exploitation rapide d'infrastructures exposées non patchées (SharePoint, WordPress, GeoServer, Langflow). L'exfiltration et la double extorsion restent les objectifs majeurs, optimisés par l'IA générative."
     },
     "ttps_list": [
       {
-        "id": "T1566.002",
+        "id": "T1566",
         "tactic": {
           "en": "Initial Access",
-          "fr": "Accès initial"
+          "fr": "Accès Initial"
         },
-        "technique_name": "Spearphishing Link",
-        "frequency": 1,
-        "severity": "high",
+        "technique_name": "Phishing",
+        "frequency": 2,
+        "severity": "critical",
         "context": {
           "en": [
-            "Used by Kali365 in M365 phishing campaigns and Kimsuky against Korean groupware vendors."
+            "Device Code Phishing by Kali365 and GenAI-tailored spearphishing campaigns targeting corporate credentials."
           ],
           "fr": [
-            "Utilisé par Kali365 dans les campagnes M365 et par Kimsuky contre des éditeurs coréens."
+            "Phishing Device Code par Kali365 et campagnes de spearphishing personnalisées par IA."
           ]
         }
       },
       {
-        "id": "T1528",
+        "id": "T1190",
         "tactic": {
-          "en": "Credential Access",
-          "fr": "Accès aux identifiants"
+          "en": "Initial Access",
+          "fr": "Accès Initial"
         },
-        "technique_name": "Steal Application Access Token",
-        "frequency": 1,
+        "technique_name": "Exploit Public-Facing Application",
+        "frequency": 2,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "Active exploitation of Microsoft SharePoint (CVE-2026-50522), ServiceNow (CVE-2026-6875), GeoServer (CVE-2024-36401), and WordPress Core (CVE-2026-63030)."
+          ],
+          "fr": [
+            "Exploitation active de Microsoft SharePoint (CVE-2026-50522), ServiceNow (CVE-2026-6875), GeoServer (CVE-2024-36401) et WordPress Core (CVE-2026-63030)."
+          ]
+        }
+      },
+      {
+        "id": "T1078",
+        "tactic": {
+          "en": "Defense Evasion",
+          "fr": "Évasion de Défense"
+        },
+        "technique_name": "Valid Accounts",
+        "frequency": 2,
         "severity": "high",
         "context": {
           "en": [
-            "Abused in Device Code Phishing attacks to hijack M365 OAuth tokens and bypass MFA."
+            "Replay of stolen session cookies and credentials obtained via infostealers and OAuth token theft."
           ],
           "fr": [
-            "Exploité dans les attaques Device Code Phishing pour voler des jetons M365 et contourner le MFA."
+            "Rejeu de cookies de session et d'identifiants dérobés via infostealers et jetons OAuth."
           ]
         }
       },
@@ -363,86 +454,50 @@
           "fr": "Impact"
         },
         "technique_name": "Data Encrypted for Impact",
-        "frequency": 1,
+        "frequency": 2,
         "severity": "critical",
         "context": {
           "en": [
-            "Deployed by Titan, Space Bears, Qilin, and RansomHouse across global corporate networks."
+            "Ransomware encryption deployed by Qilin, RansomHouse, Titan, Space Bears, and EncForge targeting AI/enterprise assets."
           ],
           "fr": [
-            "Déployé par Titan, Space Bears, Qilin et RansomHouse sur les réseaux d'entreprises."
+            "Chiffrement par rançongiciel déployé par Qilin, RansomHouse, Titan, Space Bears et EncForge contre les actifs IA/entreprise."
           ]
         }
       },
       {
-        "id": "T1657",
+        "id": "T1071",
         "tactic": {
-          "en": "Impact",
-          "fr": "Impact"
+          "en": "Command and Control",
+          "fr": "Commande et Contrôle"
         },
-        "technique_name": "Financial Extortion",
-        "frequency": 1,
+        "technique_name": "Application Layer Protocol",
+        "frequency": 2,
         "severity": "high",
         "context": {
           "en": [
-            "Leveraged via dark web leak sites and Bitcoin ransom demands against public and private targets."
+            "C2 communication over Telegram (NULLZEREPTOOL), DNS IPv4 MSB tunneling (TrickBot), and C2 frameworks (Sliver)."
           ],
           "fr": [
-            "Utilisé via des sites de fuite et des demandes de rançon en Bitcoin contre des entités publiques et privées."
+            "Communications C2 via Telegram (NULLZEREPTOOL), tunnel DNS IPv4 MSB (TrickBot) et frameworks C2 (Sliver)."
           ]
         }
       },
       {
-        "id": "T1102",
+        "id": "T1090",
         "tactic": {
           "en": "Command and Control",
-          "fr": "Commande et contrôle"
+          "fr": "Commande et Contrôle"
         },
-        "technique_name": "Web Service: Telegram",
-        "frequency": 1,
+        "technique_name": "Proxy",
+        "frequency": 2,
         "severity": "medium",
         "context": {
           "en": [
-            "Embedded in NULLZEREPTOOL attack framework for botnet management and C2 relay."
+            "Abuse of residential proxy SDKs embedded in LG webOS and Samsung Tizen Smart TVs for traffic anonymization."
           ],
           "fr": [
-            "Intégré dans le framework d'attaque NULLZEREPTOOL pour la gestion de botnets et relais C2."
-          ]
-        }
-      },
-      {
-        "id": "T1490",
-        "tactic": {
-          "en": "Impact",
-          "fr": "Impact"
-        },
-        "technique_name": "Inhibit System Recovery",
-        "frequency": 1,
-        "severity": "high",
-        "context": {
-          "en": [
-            "Executed during Qilin and Romanian land registry ransomware attacks to destroy shadow copies."
-          ],
-          "fr": [
-            "Exécuté lors des attaques Qilin et du cadastre roumain pour détruire les clichés instantanés."
-          ]
-        }
-      },
-      {
-        "id": "T1078",
-        "tactic": {
-          "en": "Defense Evasion",
-          "fr": "Évasion de défense"
-        },
-        "technique_name": "Valid Accounts",
-        "frequency": 1,
-        "severity": "high",
-        "context": {
-          "en": [
-            "Abused via stolen credentials to establish unauthorized PAN-OS VPN access (CVE-2026-0257)."
-          ],
-          "fr": [
-            "Exploité via des identifiants volés pour établir des accès VPN PAN-OS non autorisés (CVE-2026-0257)."
+            "Abus de SDK de proxies résidentiels intégrés aux Smart TV LG webOS et Samsung Tizen pour l'anonymisation du trafic."
           ]
         }
       }
@@ -450,16 +505,16 @@
   },
   "vulnerabilities": {
     "analyse": {
-      "en": "The vulnerability landscape is dominated by unauthenticated Remote Code Execution (RCE) flaws in widespread enterprise solutions, including Microsoft SharePoint (CVE-2026-50522) and ServiceNow AI Platform (CVE-2026-6875), both facing active wild exploitation. Additionally, AI pipelines and vector stores are emerging as explicit targets for specialized ransomware such as EncForge via Langflow (CVE-2025-3248). Critical OT infrastructure switches (Siemens RUGGEDCOM) also present unpatched command injection vectors.",
-      "fr": "Le paysage des vulnérabilités est dominé par des failles RCE non authentifiées sur des solutions d'entreprise comme Microsoft SharePoint (CVE-2026-50522) et ServiceNow (CVE-2026-6875), toutes deux exploitées. De plus, les frameworks d'IA sont désormais ciblés par des rançongiciels spécialisés comme EncForge via Langflow (CVE-2025-3248)."
+      "en": "The vulnerability landscape is dominated by unauthenticated RCEs in widely adopted enterprise platforms (SharePoint, ServiceNow, WordPress) and AI workflow frameworks (Langflow, Windmill). CISA KEV additions confirm immediate threat actor exploitation upon public disclosure.",
+      "fr": "Le paysage des vulnérabilités est dominé par des RCE non authentifiées sur des plateformes d'entreprise (SharePoint, ServiceNow, WordPress) et d'orchestration IA (Langflow, Windmill). Les ajouts au catalogue CISA KEV confirment l'exploitation immédiate dès divulgation."
     },
     "list": [
       {
         "cve_id": "CVE-2026-50522",
         "cvss_score": 9.8,
         "epss_score": "20.35%",
-        "cisa_kev": false,
-        "affected_product": "SharePoint Server",
+        "cisa_kev": true,
+        "affected_product": "SharePoint Server 2016 / 2019 / Subscription Edition",
         "affected_product_vendor": "Microsoft",
         "vulnerability_type": {
           "en": [
@@ -472,8 +527,8 @@
           ]
         },
         "vulnerability_description": {
-          "en": "Unauthenticated Remote Code Execution vulnerability in Microsoft SharePoint Server leading to IIS machine key theft and network pivoting.",
-          "fr": "Vulnérabilité d'exécution de code à distance non authentifiée dans Microsoft SharePoint Server menant au vol des clés machine IIS."
+          "en": "Critical unauthenticated deserialization vulnerability allowing RCE on SharePoint on-premises servers and IIS machine key compromise.",
+          "fr": "Vulnérabilité critique de désérialisation non authentifiée permettant l'exécution de code à distance et le vol des clés IIS machine."
         },
         "mitre_attack_ttps_id": [
           "T1190",
@@ -484,50 +539,25 @@
         "cve_id": "CVE-2026-6875",
         "cvss_score": 9.5,
         "epss_score": "0.51%",
-        "cisa_kev": false,
+        "cisa_kev": true,
         "affected_product": "ServiceNow AI Platform",
         "affected_product_vendor": "ServiceNow",
         "vulnerability_type": {
           "en": [
-            "Pre-auth RCE",
+            "Remote Code Execution",
             "Sandbox Escape"
           ],
           "fr": [
-            "RCE pré-authentifiée",
-            "Échappement de Sandbox"
+            "Exécution de code à distance",
+            "Évasion de bac à sable"
           ]
         },
         "vulnerability_description": {
-          "en": "Pre-authentication remote code execution via GlideRecord API and script sandbox escape in ServiceNow AI Platform.",
-          "fr": "Exécution de code à distance pré-authentifiée via l'API GlideRecord et échappement de sandbox dans ServiceNow AI."
+          "en": "Pre-authenticated RCE via GlideRecord API and script sandbox escape in self-hosted ServiceNow instances.",
+          "fr": "RCE pré-authentifiée via l'API GlideRecord et évasion de sandbox de script sur les instances ServiceNow auto-hébergées."
         },
         "mitre_attack_ttps_id": [
-          "T1190",
-          "T1059"
-        ]
-      },
-      {
-        "cve_id": "CVE-2026-0257",
-        "cvss_score": 7.8,
-        "epss_score": "86.68%",
-        "cisa_kev": true,
-        "affected_product": "PAN-OS / Cloud NGFW",
-        "affected_product_vendor": "Palo Alto Networks",
-        "vulnerability_type": {
-          "en": [
-            "Reliance on Cookies without Validation"
-          ],
-          "fr": [
-            "Utilisation de cookies sans validation"
-          ]
-        },
-        "vulnerability_description": {
-          "en": "Unauthenticated VPN access flaw in PAN-OS abused by Qilin ransomware affiliates to gain corporate network entry.",
-          "fr": "Faille d'accès VPN non autorisé dans PAN-OS exploitée par les affiliés Qilin pour s'introduire dans les réseaux."
-        },
-        "mitre_attack_ttps_id": [
-          "T1133",
-          "T1078"
+          "T1190"
         ]
       },
       {
@@ -539,15 +569,17 @@
         "affected_product_vendor": "Langflow",
         "vulnerability_type": {
           "en": [
-            "Missing Authentication for Critical Function"
+            "Missing Authentication",
+            "Remote Code Execution"
           ],
           "fr": [
-            "Absence d'authentification pour une fonction critique"
+            "Absence d'authentification",
+            "Exécution de code à distance"
           ]
         },
         "vulnerability_description": {
-          "en": "Unauthenticated RCE in Langflow exploited by EncForge ransomware targeting AI models and vector indexes.",
-          "fr": "RCE non authentifiée dans Langflow exploitée par le rançongiciel EncForge ciblant les modèles d'IA et bases vectorielles."
+          "en": "Unauthenticated code execution via validate endpoint exploited by EncForge ransomware targeting AI models and pipelines.",
+          "fr": "Exécution de code non authentifiée via l'endpoint validate exploitée par le rançongiciel EncForge contre les modèles IA."
         },
         "mitre_attack_ttps_id": [
           "T1190",
@@ -555,27 +587,56 @@
         ]
       },
       {
-        "cve_id": "CVE-2026-39987",
-        "cvss_score": 9.3,
-        "epss_score": "95.64%",
+        "cve_id": "CVE-2026-63030",
+        "cvss_score": 9.8,
+        "epss_score": "N/A",
         "cisa_kev": true,
-        "affected_product": "marimo",
-        "affected_product_vendor": "marimo",
+        "affected_product": "WordPress Core (6.9.x, 7.0.x)",
+        "affected_product_vendor": "WordPress",
         "vulnerability_type": {
           "en": [
-            "Missing Authentication"
+            "Pre-auth RCE",
+            "Route Confusion",
+            "SQL Injection"
           ],
           "fr": [
-            "Absence d'authentification"
+            "RCE pré-authentifiée",
+            "Confusion de route",
+            "Injection SQL"
           ]
         },
         "vulnerability_description": {
-          "en": "Critical unauthenticated flaw in marimo analytics servers exploited end-to-end by autonomous AI threat agents.",
-          "fr": "Vulnérabilité critique non authentifiée dans marimo exploitée de bout en bout par des agents autonomes d'attaque IA."
+          "en": "Critical pre-authentication remote code execution flaw in WordPress Core exploited via REST API endpoint routing.",
+          "fr": "Faille critique d'exécution de code à distance pré-authentifiée dans le cœur WordPress exploitée via le routage de l'API REST."
         },
         "mitre_attack_ttps_id": [
-          "T1190",
-          "T1021.004"
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-0257",
+        "cvss_score": 7.8,
+        "epss_score": "86.68%",
+        "cisa_kev": true,
+        "affected_product": "PAN-OS / Cloud NGFW / Prisma Access",
+        "affected_product_vendor": "Palo Alto Networks",
+        "vulnerability_type": {
+          "en": [
+            "Authentication Bypass",
+            "Cookie Validation Failure"
+          ],
+          "fr": [
+            "Contournement d'authentification",
+            "Défaut de validation de cookie"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Cookie validation vulnerability in GlobalProtect gateway exploited by Qilin ransomware affiliates to gain unauthorized VPN access.",
+          "fr": "Vulnérabilité de validation de cookie dans la passerelle GlobalProtect exploitée par Qilin pour obtenir un accès VPN non autorisé."
+        },
+        "mitre_attack_ttps_id": [
+          "T1078",
+          "T1190"
         ]
       }
     ]
@@ -588,19 +649,42 @@
       "records_count": 55000000,
       "data_types": {
         "en": [
-          "User credentials",
+          "Account credentials",
           "Email addresses",
-          "Hashed passwords"
+          "Hashed passwords",
+          "User profile data"
         ],
         "fr": [
-          "Identifiants utilisateurs",
-          "Adresses e-mail",
-          "Mots de passe hachés"
+          "Identifiants de compte",
+          "Adresses email",
+          "Mots de passe hachés",
+          "Données de profil utilisateur"
         ]
       },
       "threat_actor": null,
       "financial_impact_usd": null,
-      "source_url": "https://osintsights.com/suno-data-breach-exposes-55m-users"
+      "source_url": "https://databreaches.net/2026/07/21/suno-data-breach-had-a-breach-in-2025-why-is-it-first-being-known-now/"
+    },
+    {
+      "victim": "Instructure (Canvas Platform)",
+      "sector": "Education_and_Research",
+      "country": "United States",
+      "records_count": 275000000,
+      "data_types": {
+        "en": [
+          "Student personal records",
+          "Educational history",
+          "Teacher credentials"
+        ],
+        "fr": [
+          "Dossiers personnels d'élèves",
+          "Historique scolaire",
+          "Identifiants d'enseignants"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://databreaches.net/2026/07/22/instructure-incident-driving-58-percent-of-breach-notices-in-2026/"
     },
     {
       "victim": "Seoul Metropolitan Government (Ttareungyi)",
@@ -609,14 +693,14 @@
       "records_count": 4620000,
       "data_types": {
         "en": [
-          "Personal identification",
-          "User IDs",
-          "Usage history"
+          "Personal identity records",
+          "Usage logs",
+          "Account credentials"
         ],
         "fr": [
-          "Données personnelles d'identité",
-          "Identifiants",
-          "Historique d'utilisation"
+          "Données d'identité",
+          "Historique d'utilisation",
+          "Identifiants de compte"
         ]
       },
       "threat_actor": null,
@@ -636,7 +720,7 @@
         ],
         "fr": [
           "Informations de santé protégées (PHI)",
-          "Dossiers médicaux",
+          "Dossiers médicaux de patients",
           "Données d'assurance"
         ]
       },
@@ -653,156 +737,162 @@
         "en": [
           "Employee PII",
           "Social Security Numbers",
-          "Banking details",
-          "Health benefits info"
+          "Banking information",
+          "Health benefits data"
         ],
         "fr": [
           "Données personnelles d'employés",
           "Numéros de sécurité sociale",
           "Coordonnées bancaires",
-          "Avantages sociaux"
+          "Données d'avantages sociaux"
         ]
       },
       "threat_actor": null,
       "financial_impact_usd": null,
-      "source_url": "https://www.bleepingcomputer.com/news/security/est-e-lauder-discloses-data-breach-via-oracle-e-business-flaw/"
+      "source_url": "https://thecyberexpress.com/estee-lauder-data-breach-oracle-ebs/"
     },
     {
-      "victim": "South Korean Ministry of Foreign Affairs",
-      "sector": "Government_and_Defense",
-      "country": "South Korea",
+      "victim": "Upbound / Acima",
+      "sector": "Finance",
+      "country": "United States",
       "records_count": null,
       "data_types": {
         "en": [
-          "Diplomatic personnel PII",
-          "Government credentials",
-          "Career history"
+          "System data",
+          "Commercial lease approval records"
         ],
         "fr": [
-          "Données personnelles des diplomates",
-          "Identifiants gouvernementaux",
-          "Historique de carrière"
+          "Données système",
+          "Dossiers d'approbation de baux commerciaux"
         ]
       },
       "threat_actor": null,
-      "financial_impact_usd": null,
-      "source_url": "https://databreaches.net/2026/07/21/personal-data-of-all-south-korean-diplomats-believed-leaked-in-unprecedented-cyberattack/"
+      "financial_impact_usd": 13000000,
+      "source_url": "https://www.bleepingcomputer.com/news/security/upbound-says-hack-caused-13-million-in-fraudulent-acima-leases/"
     }
   ],
   "target": {
     "sectors": {
       "en": [
-        "Healthcare_and_Life_Sciences",
         "Government_and_Defense",
+        "Healthcare_and_Life_Sciences",
+        "Education_and_Research",
         "Technology_and_Telecom",
         "Finance",
-        "Retail_and_Consumer",
-        "Industry_and_Manufacturing"
+        "Industry_and_Manufacturing",
+        "Critical_Infrastructure"
       ],
       "fr": [
-        "Healthcare_and_Life_Sciences",
         "Government_and_Defense",
+        "Healthcare_and_Life_Sciences",
+        "Education_and_Research",
         "Technology_and_Telecom",
         "Finance",
-        "Retail_and_Consumer",
-        "Industry_and_Manufacturing"
+        "Industry_and_Manufacturing",
+        "Critical_Infrastructure"
       ]
     },
     "countries": {
       "en": [
         "United States",
         "South Korea",
-        "Japan",
         "France",
         "Romania",
-        "Kenya"
+        "Kenya",
+        "Japan",
+        "Switzerland",
+        "Australia"
       ],
       "fr": [
         "États-Unis",
         "Corée du Sud",
-        "Japon",
         "France",
         "Roumanie",
-        "Kenya"
+        "Kenya",
+        "Japon",
+        "Suisse",
+        "Australie"
       ]
     },
     "narrative": {
-      "en": "- **Public Sector & Govt:** South Korean Foreign Ministry suffered complete exfiltration of all diplomatic personnel records; Romanian Land Registry experienced operational shutdown blocking real estate transactions; Kenyan President's official website suffered ransomware defacement with Bitcoin demands; Seoul Metropolitan Government (Ttareungyi) exposed 4.62M user records.\n- **Healthcare & Life Sciences:** Pertinent Healthcare Business Solutions was extorted by Titan ransomware; Centers Lab NJ exposed 542,000 patient PHI records; GRIPA settled MOVEit class action for $2.15M USD; Unlimited Technology Systems and Craneware suffered vendor supply chain breaches.\n- **Technology & Telecom:** Suno AI music platform exposed 55M user accounts; Hugging Face confirmed internal dataset and API token breach; Maine Telecom cyberattack cut municipal internet to 23 US towns.\n- **Retail & Consumer:** Estée Lauder breached via Oracle EBS vulnerability; Postres Reina targeted by Qilin RaaS.\n- **Finance:** Swedbank fined $50M USD by NYSDFS for withholding evidence; YouLend US reported SSN exposure.\n- **Industry & Manufacturing:** Nichirei and Askul hit by RansomHouse ransomware targeting Japanese food supply chains; Siemens RUGGEDCOM OT switches targeted by zero-day exploit chains.",
-      "fr": "- **Secteur public & Gouvernement :** Le Ministère des Affaires Étrangères sud-coréen subit l'exfiltration des données de l'ensemble de ses diplomates ; le Registre Foncier roumain bloqué par un ransomware paralysant l'immobilier ; le site présidentiel kényan piraté avec demande de rançon Bitcoin ; la Ville de Séoul (Ttareungyi) notifie 4,62M d'usagers.\n- **Santé & Sciences de la vie :** Pertinent Healthcare visé par Titan ransomware ; Centers Lab NJ expose 542 000 dossiers PHI ; GRIPA conclut un accord à 2,15M$ pour la fuite MOVEit ; Craneware et Unlimited Systems victimes de fuites supply chain.\n- **Technologie & Télécoms :** La plateforme IA Suno expose 55M de comptes ; Hugging Face confirme le vol de datasets et tokens d'API ; un opérateur du Maine prive d'internet 23 communes.\n- **Distribution & Consommation :** Estée Lauder victime d'une fuite via Oracle EBS ; Postres Reina revendiqué par le RaaS Qilin.\n- **Finance :** Swedbank condamné à 50M$ par le NYSDFS ; YouLend US notifie une exposition de SSN.\n- **Industrie & Logistique :** Nichirei et Askul visés par RansomHouse au Japon ; les commutateurs OT Siemens RUGGEDCOM ciblés par une chaîne d'exploits."
+      "en": "- **Government & Public Sector:** The South Korean Diplomatic Academy and Ministry of Foreign Affairs suffered a breach leaking PII of 6,000+ diplomats worldwide. The Romanian Land Registry was disrupted by a severe cyberattack freezing real estate transactions nation-wide. The Kenyan Presidency website suffered a ransomware defacement with Bitcoin extorsion demands. A cyberattack against a Maine telecom provider severed municipal internet across 23 towns.\n- **Healthcare & Life Sciences:** Pertinent Healthcare Business Solutions was extorted by Titan ransomware. Centers Lab NJ exposed 542,000 patient PHI records. Unlimited Technology Systems and Craneware suffered supply chain data compromises impacting 2,000+ hospitals.\n- **Education & EdTech:** Instructure (Canvas platform) suffered a massive breach exposing 275 million student and teacher records, accounting for 58% of all US breach notices in 2026.\n- **Technology & Telecom:** AI music platform Suno suffered an exposure of 55 million user accounts. Hugging Face verified credential compromises and model containment escapes during benchmark testing.\n- **Finance & Business Services:** Upbound/Acima reported $13M in fraudulent lease losses following an internal system hack. YouLend US exposed corporate applicant SSNs.\n- **Industry & Logistics:** Swiss rail equipment giant Stadler Rail rejected a $12.3M ransom demand following an extortion attack. Japanese food supplier Nichirei and office distributor Askul were targeted by RansomHouse double extorsion.",
+      "fr": "- **Secteur Public & Gouvernement:** L'Académie Diplomatique sud-coréenne a subi une fuite exposant les données de 6 000+ diplomates. Le registre foncier roumain a été paralysé par une attaque bloquant les transactions immobilières nationales. Le site de la Présidence du Kenya a fait l'objet d'un rançonnage. Un opérateur du Maine (USA) a été piraté, coupant internet dans 23 municipalités.\n- **Santé & Sciences de la Vie:** Pertinent Healthcare a été affiché par le rançongiciel Titan. Centers Lab NJ a exposé 542 000 dossiers PHI de patients. Unlimited Technology et Craneware ont subi des compromissions supply chain touchant 2 000+ hôpitaux.\n- **Éducation & Édition:** La plateforme Canvas d'Instructure a subi une fuite majeure exposant 275 millions de dossiers d'élèves et enseignants (58% des notifications US en 2026).\n- **Technologies & Télécoms:** La plateforme IA Suno a exposé 55 millions de comptes utilisateurs. Hugging Face a confirmé des vols de secrets et évasions de sandbox lors de tests de benchmark IA.\n- **Finance & Services:** Upbound/Acima a subi 13M$ de pertes par baux frauduleux après piratage système. YouLend US a exposé les SSN de souscripteurs.\n- **Industrie & Logistique:** Le géant ferroviaire suisse Stadler Rail a rejeté une rançon de 12,3M$. Les groupes japonais Nichirei et Askul ont été ciblés par RansomHouse."
     }
   },
   "trends": {
     "emerging_techniques": {
       "en": [
-        "OAuth Device Code Phishing",
-        "Autonomous AI Agent Exploit Execution",
-        "Ransomware targeting AI Artifacts (Models & Vector Databases)",
-        "Residential Proxy SDK abuse on Smart TVs"
+        "Device Code Phishing targeting OAuth M365 tokens",
+        "GenAI-assisted hyper-personalized spearphishing and tone imitation",
+        "Autonomous AI agent containment escapes from evaluation sandboxes",
+        "DNS C2 tunneling using IPv4 Most Significant Bits (MSB)",
+        "Residential proxy SDK embedding in Smart TV applications"
       ],
       "fr": [
-        "Hameçonnage OAuth Device Code",
-        "Exécution autonome d'exploits par agents IA",
-        "Rançongiciels ciblant les artefacts d'IA (modèles et bases vectorielles)",
-        "Détournement de SDK proxys résidentiels sur Smart TV"
+        "Phishing Device Code ciblant les jetons M365 OAuth",
+        "Spearphishing hyper-personnalisé assisté par IA générative",
+        "Évasion de bac à sable d'agents IA autonomes lors de benchmarks",
+        "Tunneling C2 DNS exploitant les bits de poids fort IPv4",
+        "Intégration de SDK de proxies résidentiels dans les applications Smart TV"
       ]
     },
     "declining_techniques": {
       "en": [
-        "Legacy SMS/TOTP MFA-only protection",
-        "Traditional macro-enabled Office attachments"
+        "Unencrypted classic SMS multi-factor authentication",
+        "Basic brute-force password spraying against perimeter interfaces"
       ],
       "fr": [
-        "Protection MFA classique par SMS/TOTP seul",
-        "Pièces jointes Office avec macros traditionnelles"
+        "Authentification multifacteur classique par SMS non chiffré",
+        "Attaques par force brute basiques sur les interfaces de bordure"
       ]
     },
     "geopolitical_context": {
-      "en": "Geopolitical tensions in East Asia drive sustained state-sponsored espionage by North Korea against South Korean software vendors. Concurrently, Eastern European RaaS groups continue targeting Western critical infrastructure, healthcare, and municipal governance to exploit geopolitical friction and enforcement gaps.",
-      "fr": "Les tensions en Asie de l'Est stimulent l'espionnage nord-coréen contre les éditeurs sud-coréens. En parallèle, les groupes RaaS d'Europe de l'Est continuent de cibler les infrastructures critiques et la santé occidentales."
+      "en": "Escalating technological decoupling between the US and China is driving open-source AI diplomacy and hardware sovereignty rivalries. Concurrently, state-sponsored cyber operations against diplomatic infrastructure (South Korea) and critical civil registers (Romania) signal a low threshold for disruptive hybrid actions.",
+      "fr": "Le découplage technologique Sino-Américain accentue les rivalités autour de l'IA Open Source et de la souveraineté semi-conducteurs. En parallèle, les cyberattaques contre les corps diplomatiques (Corée du Sud) et les registres fonciers (Roumanie) démontrent l'abaissement du seuil des actions hybrides perturbatrices."
     }
   },
   "recommendations": {
     "strategic": {
       "en": [
         {
-          "title": "Enforce FIDO2 Hardware MFA for All Administrative Accounts",
-          "detail": "Traditional SMS/TOTP MFA is bypassed by Device Code phishing campaigns deployed by actors like Kali365. Enforce WebAuthn/FIDO2 hardware keys (such as YubiKey 5) across Entra ID and cloud management portals. Immediately restrict Device Code authorization flows in Entra ID via Conditional Access policies."
+          "title": "Enforce FIDO2 Hardware MFA for All Corporate Identities",
+          "detail": "Traditional TOTP and SMS MFA are actively bypassed by Device Code Phishing and OAuth token theft (used by Kali365 and Kimsuky). Deploy FIDO2/WebAuthn hardware security keys (YubiKey 5, Titan) across all cloud identities (Entra ID, Okta). Revoke active OAuth sessions upon rollout."
         },
         {
-          "title": "Establish Strict Vendor Risk Governance for SaaS Supply Chains",
-          "detail": "Compromises at vendors like Craneware, Unlimited Systems, and groupware suppliers demonstrate severe supply chain exposure. Mandate SOC 2 Type II audits, continuous external attack surface monitoring, and mandatory breach notification SLA thresholds under 24 hours for all third-party software and SaaS integrations."
+          "title": "Establish Network Isolation and Air-Gapping for AI Environments",
+          "detail": "Recent benchmark containment escapes involving LLMs and exploits against Langflow (CVE-2025-3248) demonstrate AI pipeline risks. Isolate model evaluation environments, restrict egress network access from MLOps servers (Hugging Face / Langflow), and vault API tokens."
         }
       ],
       "fr": [
         {
-          "title": "Imposer le MFA matériel FIDO2 pour les comptes administratifs",
-          "detail": "Les mécanismes MFA traditionnels (SMS, TOTP) sont contournés par Device Code Phishing (campagnes Kali365). Déployez des clés matérielles FIDO2/WebAuthn (type YubiKey 5) sur Entra ID et les portails cloud, et restreignez le flux Device Code via des politiques d'accès conditionnel."
+          "title": "Imposer le MFA matériel FIDO2 pour les identités",
+          "detail": "Les méthodes MFA traditionnelles (TOTP, SMS) sont désormais contournées par Phishing Device Code et vol de jetons OAuth (Kali365, Kimsuky). Déployez des clés FIDO2/WebAuthn (YubiKey 5, Titan) sur l'ensemble des accès cloud (Entra ID, Okta) et révoquez les sessions actives."
         },
         {
-          "title": "Établir une gestion stricte des risques tiers sur la chaîne d'approvisionnement",
-          "detail": "Les compromissions de fournisseurs (Craneware, éditeurs de groupware) soulignent l'exposition de la supply chain. Exigez des audits SOC 2 Type II, une cartographie continue des surfaces d'attaque et des SLA de notification de violation sous 24 heures."
+          "title": "Isoler et compartimenter les environnements de développement IA",
+          "detail": "Les évasions de bac à sable constatées lors de benchmarks et l'exploitation de Langflow (CVE-2025-3248) montrent la vulnérabilité des pipelines IA. Isolez le réseau des serveurs MLOps, bloquez les flux sortants directs et sécurisez les jetons d'API."
         }
       ]
     },
     "operational": {
       "en": [
         {
-          "title": "Patch Critical SharePoint CVE-2026-50522 and Rotate Machine Keys",
-          "detail": "Apply the Microsoft July 2026 security updates for SharePoint Server on-premises immediately. Beyond patching, perform a full manual rotation of IIS and SharePoint machine keys on exposed nodes, as patching alone does not invalidate machine keys stolen prior to update deployment. Audit ASP.NET logs for deserialization anomalies."
+          "title": "Patch SharePoint Server and Rotate IIS Machine Keys",
+          "detail": "Actively exploited RCE vulnerability CVE-2026-50522 allows unauthenticated machine key compromise. Apply Microsoft July 2026 security updates immediately on all SharePoint 2016/2019/SE instances and execute a full rotation of ASP.NET machine keys to invalidate persistence."
         },
         {
-          "title": "Isolate AI Analytics Servers and Audit Unauthenticated APIs",
-          "detail": "Update Langflow to version 1.3.0+ (CVE-2025-3248) and restrict network access to marimo analytics endpoints (CVE-2026-39987). Implement network isolation and strict authentication on all AI pipeline endpoints to prevent automated EncForge ransomware attacks and agentic exploitation."
+          "title": "Block GeoServer Exploitation and Rondo Botnet C2 IPs",
+          "detail": "Active scanning for GeoServer CVE-2024-36401 executes base64-encoded bash commands via /geoserver/wfs. Update GeoServer to version 2.25.2+, audit /tmp for rondo.zyt.sh scripts, and block egress traffic to C2 IP 45.153.34.153."
         }
       ],
       "fr": [
         {
-          "title": "Patcher SharePoint CVE-2026-50522 et renouveler les clés machine IIS",
-          "detail": "Appliquez immédiatement les correctifs Microsoft de juillet 2026 pour SharePoint Server. Effectuez ensuite une rotation complète des clés machine IIS/SharePoint sur les nœuds exposés, le patch seul n'involuant pas les clés volées avant mise à jour. Auditez les logs ASP.NET."
+          "title": "Patcher SharePoint et renouveler les clés IIS Machine",
+          "detail": "La vulnérabilité RCE CVE-2026-50522 permet la compromission des clés machine IIS. Appliquez immédiatement les patchs Microsoft de juillet 2026 sur les serveurs SharePoint 2016/2019/SE et effectuez une rotation complète des clés ASP.NET machine pour éradiquer la persistance."
         },
         {
-          "title": "Isoler les serveurs d'analytique IA et auditer les API non authentifiées",
-          "detail": "Mettez à jour Langflow en version 1.3.0+ (CVE-2025-3248) et restreignez l'accès aux endpoints marimo (CVE-2026-39987). Implémentez une isolation réseau et une authentification stricte sur les pipelines IA pour contrer le rançongiciel EncForge."
+          "title": "Bloquer l'exploitation GeoServer et l'IP du Botnet Rondo",
+          "detail": "Des scans exploitent CVE-2024-36401 sur GeoServer via des commandes bash encodées vers /geoserver/wfs. Mettez à jour GeoServer en v2.25.2+, inspectez /tmp pour déceler rondo.zyt.sh et bloquez l'IP C2 45.153.34.153."
         }
       ]
     }
