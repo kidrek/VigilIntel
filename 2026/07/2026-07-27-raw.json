@@ -1,1 +1,1289 @@
-[{'title': 'ISC Stormcast For Monday, July 27th, 2026 https://isc.sans.edu/podcastdetail/10024, (Mon, Jul 27th)', 'publication_date': 'Mon, 27 Jul 2026 02:00:02 GMT', 'source': 'https://isc.sans.edu/diary/rss/33186', 'source_type': "['operational', 'strategical']", 'source_level': 2, 'text': [], 'observables': {}}, {'title': 'Scans for ESAFENET CDG 3 Document Management System Weak Logins, (Sun, Jul 26th)', 'publication_date': 'Sun, 26 Jul 2026 15:26:14 GMT', 'source': 'https://isc.sans.edu/diary/rss/33184', 'source_type': "['operational', 'strategical']", 'source_level': 2, 'text': ['ESAFENET\'s CDG showed up in our data before. The company focused on secure document management and data leakage prevention solutions. The "CDG" stands for "Content Data Guard", and the product appears to be mostly targeting the Chinese market [1]. Sadly, like so many security products, it suffers from basic security vulnerabilities like SQL Injection, XSS, and default passwords. We have seen scanning for ESAFENET CDG before, in particular after the cross-site scripting vulnerability was made public.', 'The scans we are seeing right now are going after the well-known default passwords that ESAFENET CDG ships with. Exploit scripts listing these passwords are, for example, included in a nulei template published in 2023 [2].', 'POST /CDGServer3/SystemConfigHost: [redacted]User-Agent: Mozilla/5.0 (Ubuntu; Linux i686; rv:124.0) Gecko/20100101 Firefox/124.0Content-Length: 73Accept: */*Accept-Language: enContent-Type: application/x-www-form-urlencodedAccept-Encoding: gzipConnection: close', 'This is a typical case of a password that will likely pass many standard security checks (10 characters, upper/lower case, special characters, and numbers), but it is still terribly insecure as it is a well-known default password.'], 'observables': {'domain-name': ['sans.edu'], 'url': ['https://esafenet.com', 'https://github.com/projectdiscovery/nuclei-templates/issues/7094']}}, {'title': 'GitHub, PyPI add time-based defenses against supply chain attacks', 'publication_date': 'Sun, 26 Jul 2026 10:13:39 -0400', 'source': 'https://www.bleepingcomputer.com/news/security/github-pypi-add-time-absed-defenses-against-supply-chain-attacks/', 'source_type': "['operational', 'vulnerabilities']", 'source_level': 2, 'text': [], 'observables': {'domain-name': ['bleepingcomputer.com'], 'url': ['http://www.bleepingcomputer.com']}}, {'title': 'SECURITY AFFAIRS MALWARE NEWSLETTER ROUND 107', 'publication_date': 'Sun, 26 Jul 2026 13:30:44 +0000', 'source': 'https://securityaffairs.com/196037/malware/security-affairs-malware-newsletter-round-107.html', 'source_type': "['']", 'source_level': 2, 'text': [], 'observables': {'email-addr': ['pierluigi.paganini@securityaffairs.co'], 'vulnerability': ['CVE-2026-8933', 'CVE-2026-50522']}}, {'title': 'Hackers Hijack Hotel Wi-Fi to Steal Microsoft 365 Credentials', 'publication_date': 'Sun, 26 Jul 2026 13:04:27 +0000', 'source': 'https://securityaffairs.com/196017/security/hackers-hijack-hotel-wi-fi-to-steal-microsoft-365-credentials.html', 'source_type': "['']", 'source_level': 2, 'text': ['ReliaQuest’s threat research teamjust documented attackers compromising the Wi-Fi gateways at hotels and conference centers, then quietly rerouting guests toward fake Microsoft login pages. No phishing email required. No malicious attachment. Just bad luck about which hotel you picked.', '“Adversaries have been compromising public Wi-Fi gateways at hotels, conference centers, and other shared venues to hijack the accounts of traveling corporate employees.” reads thereportpublished by ReliaQuest. “Once they control the Wi-Fi gateway, they quietly redirect users to attacker-controlled infrastructure to steal credentials, in activity ongoing since at least June 2026.”', 'The mechanism is simple once you see it. These gateways handle DNS for every device that connects, so whoever controls the gateway controls where your traffic actually goes, even when the address bar looks completely normal. ReliaQuest found compromised devices across several US cities plus India and Saudi Arabia, hitting employees from finance, law, healthcare, energy, and retail, which tells you this isn’t aimed at one industry. It’s aimed at anyone who travels for work.', '“ReliaQuest assesses with low-to-medium confidence that initial access into these devices exploited exposed management interfaces (including internet-facing SSH, SNMP, and web administration consoles) in combination with weak or reused administrative credentials.” continues the report. “We encountered visibility constraints into the individual devices that prevented confirmation of this hypothesis, but this methodology would be consistent with the gateway targeting and DNS poisoning patterns documented in recent reporting on anAPT28-linked campaign known as “FrostArmada.””', 'Once inside, the attackers pointed DNS toward domains built to look like Microsoft’s login pages, including m365-owa.com and ms365-live.com. The whole thing runs on trust, since a device joining a network just assumes the DNS resolver it’s handed is telling the truth.', 'That trust gets abused in a way that dodges the DNS protections people already have. Switching to a hardcoded resolver like 8.8.8.8 doesn’t save you, because the query still leaves the laptop unencrypted and the gateway can rewrite the answer before it ever reaches Google’s server. Encrypted DNS tools help only if they run in strict mode; the default “opportunistic” mode quietly falls back to plaintext the moment encryption fails, and that fallback is exactly what gets hijacked.', '“Two configurations do stop it. A full-tunnel VPN routes all DNS through the corporate tunnel before the gateway can touch the request. Encrypted DNS in strict mode (DNS over HTTPS or DNS over TLS with plaintext fallback disabled) ensures the gateway can’t forge a response.” states the cybersecurity firm. “Most DNS encryption tools default to opportunistic mode, which permits plaintext fallback when encrypted resolution fails. That fallback is what the gateway redirects, making opportunistic mode insufficient; only strict mode closes the gap.”', 'WPAD is a Windows feature that automatically discovers proxy settings when a device connects to a network. In this campaign, attackers abused it by controlling DNS responses, potentially tricking Windows into loading a malicious proxy configuration. If successful, they could intercept traffic from browsers, authentication services, and enterprise apps. Because the traffic still uses HTTPS, the attack can blend in with normal network activity and be difficult to detect.', 'Pull that off and the attacker routes a much wider slice of an employee’s traffic, not just login attempts, through their own proxy. In a smaller number of cases, the attackers skipped credential theft entirely and went after Microsoft’s device-code sign-in flow instead, tricking users into approving a login they didn’t realize belonged to someone else. Approve that prompt and the attacker walks away with a valid, MFA-cleared session token, no password needed.', '“In roughly one-third of observed cases—Windows devices that didn’t have Web Proxy Auto-Discovery (WPAD) disabled, or Mac devices—the attacker also attempted WPAD abuse. If successful, it routes all Windows application traffic through the attacker’s proxy, broadening the redirection surface well beyond authentication traffic.” continues the report. “This technique wasn’t documented in prior FrostArmada-linked reporting, making it one of the clearest distinctions between this campaign and previously observed APT28 activity.”', 'There’s a pattern connecting all this to previous campaigns. The tradecraft echoes a Russian-linked operation called FrostArmada, which hit home routers the same way earlier this year, and researchers tie both to the group known asAPT28(aka UAC-0001, akaFancy Bear,Pawn Storm,Sofacy Group,Sednit, BlueDelta, andSTRONTIUM). The link isn’t a smoking gun; it’s shared technique, not shared infrastructure, and the researchers say so plainly.', 'The fix is almost boringly simple, which is rare in this line of work. Force every corporate device onto an always-on VPN with full-tunnel routing, so DNS never touches the hotel network at all, and shut off split-tunnel exceptions that would let it sneak through anyway. Disable WPAD where nobody needs it, block Microsoft’s device-code flow at the identity provider unless someone has a real reason to keep it, and train people to check the certificate before they type a password on airport or hotel Wi-Fi.'], 'observables': {'domain-name': ['m365-owa.com', 'ms365-live.com'], 'email-addr': ['pierluigi.paganini@securityaffairs.co'], 'ipv4-addr': ['8.8.8.8'], 'vulnerability': ['CVE-2026-8933', 'CVE-2026-50522']}}, {'title': 'Security Affairs newsletter Round 587 by Pierluigi Paganini – INTERNATIONAL EDITION', 'publication_date': 'Sun, 26 Jul 2026 11:42:44 +0000', 'source': 'https://securityaffairs.com/196006/security/security-affairs-newsletter-round-587-by-pierluigi-paganini-international-edition.html', 'source_type': "['']", 'source_level': 2, 'text': [], 'observables': {'email-addr': ['pierluigi.paganini@securityaffairs.co'], 'vulnerability': ['CVE-2026-8933', 'CVE-2026-50522', 'CVE-2026-0257', 'CVE-2026-6875', 'CVE-2026-42533', 'CVE-2026-15409', 'CVE-2026-15410']}}, {'title': '5 open-source security tools you should know in 2026:1. Strix AI-powered vulnerability scanner that finds flaws before attackers do. https://github.com/usestrix/strix2. rz-git Rust CLI for forensic Git repository auditing. Minimal, fast. https://github.com/ahahn/rz-git3. sn0int Modular OSINT framework — from recon to controlled exploitation. https://github.com/kpcyrd/sn0int4. VulnCheck Curated CVE database with zero noise. Better than relying on NVD alone. https://github.com/vulncheck5. Bumblebee Supply chain dependency scanner that checks your packages for suspicious code in seconds. https://github.com/perplexity/bumblebee100% open source. All free. Worth bookmarking.#opensource #infosec #security #github #linux', 'publication_date': 'Mon, 27 Jul 2026 00:59:34 +0000', 'source': 'https://infosec.exchange/@th1ago/116989223674039835', 'source_type': "['']", 'source_level': 2, 'text': [], 'observables': {'url': ['https://github.com/ahahn/rz-git3', 'https://github.com/kpcyrd/sn0int4', 'https://github.com/perplexity/bumblebee100%', 'https://github.com/usestrix/strix2', 'https://github.com/vulncheck5']}}, {'title': "Just off the top of my non-expert head about the security of LLM: 1. Security holes and malicious elements in the models' corpus. 2. Holes, bugs and vagueness in their interpretation of natural language prompts. 3. Their inability to separate commands from data. 4. Security holes in the systems that interface the LLM engine with users. 5. Complex interactions between all of the above leave fertile ground for systemic security holes and bugs that may not be findable or fixable. #LLM #infosec", 'publication_date': 'Mon, 27 Jul 2026 00:59:34 +0000', 'source': 'https://mastodon.social/@dancingtreefrog/116989172517520552', 'source_type': "['']", 'source_level': 2, 'text': [], 'observables': {'email-addr': ['dancingtreefrog@mastodon.social']}}, {'title': '🐛 SIGINT // Cybersecurity Watch — 2026-07-27 Nine-year-old Linux kernel XFS flaw (RefluXFS, CVE-2026-64600) lets local users gain root on default RHEL, Oracle Linux, Rocky & AlmaLinux installs. https://thehackernews.com/2026/07/nine-year-old-refluxfs-linux-flaw-gives.html #CVE #Linux #InfoSec #Cybersecurity', 'publication_date': 'Mon, 27 Jul 2026 00:00:22 +0000', 'source': 'https://fosstodon.org/@sigint/116988769077433380', 'source_type': "['']", 'source_level': 2, 'text': ['SIGINT // Cybersecurity Watch — 2026-07-27Nine-year-old Linux kernel XFS flaw (RefluXFS, CVE-2026-64600) lets local users gain root on default RHEL, Oracle Linux, Rocky & AlmaLinux installs.https://thehackernews.com/2026/07/nine-year-old-refluxfs-linux-flaw-gives.html#CVE#Linux#InfoSec#Cybersecurity'], 'observables': {'domain-name': ['thehackernews.com'], 'email-addr': ['sigint@fosstodon.org'], 'vulnerability': ['CVE-2026-64600']}}, {'title': 'Williams Accounting Professional By genesis', 'publication_date': 'Sun, 26 Jul 2026 23:05:25 +0000', 'source': 'https://www.ransomlook.io//group/genesis', 'source_type': "['']", 'source_level': 2, 'text': ["Financial interests only.We do not provide or work with affiliate programs, no collaborations either.The requested payment must be made within a specified time frame, otherwise the price may be increased, we will begin to publish the data we have about your company and notify the company's customers and suppliers.Charitable, non-profit, and medical institutions are only hacked if they have reputation gaps known from open sources or discovered in company data. However, this is only data extraction; live support systems are not affected.Data is always destroyed after payment; we do not attack the same company twice.Interesting fact: once, the total amount of claims against a breached company exceeded its entire capitalization. We know how to create trouble, though it is in our mutual interest to avoid it.To make the data leak more valuable, the most important information is published in a separate folder for each company called “parsed” and is also published on darkweb forums."], 'observables': {'domain-name': ['austincapitaltrust.com', 'claimlinx.com', 'dependableplastic.com', 'genesis.info', 'ronvil.com'], 'email-addr': ['genesis.info@onionmail.org'], 'url': ['http://genesis6ixpb5mcy4kudybtw5op2wqlrkocfogbnenz3c647ibqixiad.onion/', 'http://rothandscholl.com', 'http://www.austincapitaltrust.com', 'http://www.claimlinx.com', 'http://www.dependableplastic.com', 'http://www.ronvil.com', 'https://healthylivingmarket.com/', 'https://i-tekmedical.com', 'https://rivercityeye.com', 'https://southernspecialtysupply.com', 'https://www.austincapitaltrust.com', 'https://www.claimlinx.com', 'https://www.dependableplastic.com', 'https://www.ronvil.com']}}, {'title': 'JJP Slip Forming Inc. By genesis', 'publication_date': 'Sun, 26 Jul 2026 23:05:25 +0000', 'source': 'https://www.ransomlook.io//group/genesis', 'source_type': "['']", 'source_level': 2, 'text': ["Financial interests only.We do not provide or work with affiliate programs, no collaborations either.The requested payment must be made within a specified time frame, otherwise the price may be increased, we will begin to publish the data we have about your company and notify the company's customers and suppliers.Charitable, non-profit, and medical institutions are only hacked if they have reputation gaps known from open sources or discovered in company data. However, this is only data extraction; live support systems are not affected.Data is always destroyed after payment; we do not attack the same company twice.Interesting fact: once, the total amount of claims against a breached company exceeded its entire capitalization. We know how to create trouble, though it is in our mutual interest to avoid it.To make the data leak more valuable, the most important information is published in a separate folder for each company called “parsed” and is also published on darkweb forums."], 'observables': {'domain-name': ['austincapitaltrust.com', 'claimlinx.com', 'dependableplastic.com', 'genesis.info', 'ronvil.com'], 'email-addr': ['genesis.info@onionmail.org'], 'url': ['http://genesis6ixpb5mcy4kudybtw5op2wqlrkocfogbnenz3c647ibqixiad.onion/', 'http://rothandscholl.com', 'http://www.austincapitaltrust.com', 'http://www.claimlinx.com', 'http://www.dependableplastic.com', 'http://www.ronvil.com', 'https://healthylivingmarket.com/', 'https://i-tekmedical.com', 'https://rivercityeye.com', 'https://southernspecialtysupply.com', 'https://www.austincapitaltrust.com', 'https://www.claimlinx.com', 'https://www.dependableplastic.com', 'https://www.ronvil.com']}}, {'title': 'Building Envelope Systems By genesis', 'publication_date': 'Sun, 26 Jul 2026 23:05:25 +0000', 'source': 'https://www.ransomlook.io//group/genesis', 'source_type': "['']", 'source_level': 2, 'text': ["Financial interests only.We do not provide or work with affiliate programs, no collaborations either.The requested payment must be made within a specified time frame, otherwise the price may be increased, we will begin to publish the data we have about your company and notify the company's customers and suppliers.Charitable, non-profit, and medical institutions are only hacked if they have reputation gaps known from open sources or discovered in company data. However, this is only data extraction; live support systems are not affected.Data is always destroyed after payment; we do not attack the same company twice.Interesting fact: once, the total amount of claims against a breached company exceeded its entire capitalization. We know how to create trouble, though it is in our mutual interest to avoid it.To make the data leak more valuable, the most important information is published in a separate folder for each company called “parsed” and is also published on darkweb forums."], 'observables': {'domain-name': ['austincapitaltrust.com', 'claimlinx.com', 'dependableplastic.com', 'genesis.info', 'ronvil.com'], 'email-addr': ['genesis.info@onionmail.org'], 'url': ['http://genesis6ixpb5mcy4kudybtw5op2wqlrkocfogbnenz3c647ibqixiad.onion/', 'http://rothandscholl.com', 'http://www.austincapitaltrust.com', 'http://www.claimlinx.com', 'http://www.dependableplastic.com', 'http://www.ronvil.com', 'https://healthylivingmarket.com/', 'https://i-tekmedical.com', 'https://rivercityeye.com', 'https://southernspecialtysupply.com', 'https://www.austincapitaltrust.com', 'https://www.claimlinx.com', 'https://www.dependableplastic.com', 'https://www.ronvil.com']}}, {'title': 'Westlake Realty Group, Inc. By genesis', 'publication_date': 'Sun, 26 Jul 2026 23:05:25 +0000', 'source': 'https://www.ransomlook.io//group/genesis', 'source_type': "['']", 'source_level': 2, 'text': ["Financial interests only.We do not provide or work with affiliate programs, no collaborations either.The requested payment must be made within a specified time frame, otherwise the price may be increased, we will begin to publish the data we have about your company and notify the company's customers and suppliers.Charitable, non-profit, and medical institutions are only hacked if they have reputation gaps known from open sources or discovered in company data. However, this is only data extraction; live support systems are not affected.Data is always destroyed after payment; we do not attack the same company twice.Interesting fact: once, the total amount of claims against a breached company exceeded its entire capitalization. We know how to create trouble, though it is in our mutual interest to avoid it.To make the data leak more valuable, the most important information is published in a separate folder for each company called “parsed” and is also published on darkweb forums."], 'observables': {'domain-name': ['austincapitaltrust.com', 'claimlinx.com', 'dependableplastic.com', 'genesis.info', 'ronvil.com'], 'email-addr': ['genesis.info@onionmail.org'], 'url': ['http://genesis6ixpb5mcy4kudybtw5op2wqlrkocfogbnenz3c647ibqixiad.onion/', 'http://rothandscholl.com', 'http://www.austincapitaltrust.com', 'http://www.claimlinx.com', 'http://www.dependableplastic.com', 'http://www.ronvil.com', 'https://healthylivingmarket.com/', 'https://i-tekmedical.com', 'https://rivercityeye.com', 'https://southernspecialtysupply.com', 'https://www.austincapitaltrust.com', 'https://www.claimlinx.com', 'https://www.dependableplastic.com', 'https://www.ronvil.com']}}, {'title': 'CVE-2026-17497 - NoteGen arbitrary OS command execution via Tauri shell:allow-execute for bash/python', 'publication_date': 'Sun, 26 Jul 2026 15:16:27 +0000', 'source': 'https://cvefeed.io/vuln/detail/CVE-2026-17497', 'source_type': "['']", 'source_level': 2, 'text': ["NoteGen before 0.32.0 grants the Tauri shell plugin shell:allow-execute capability for bash, python, and python3 with arbitrary arguments in the default desktop capabilities. JavaScript running in the application webview can therefore invoke plugin:shell|execute to run attacker-controlled operating system commands with the privileges of the NoteGen process. In combination with script execution in the webview (for example via chat XSS), this enables full remote code execution on the user's machine.", 'The following products are affected byCVE-2026-17497vulnerability. Even ifcvefeed.iois aware of the exact versions of the products that are affected, the information is not represented in the table below.', 'Common Attack Pattern Enumeration and Classification (CAPEC) stores attack patterns, which are descriptions of the common attributes and approaches employed by adversaries to exploit theCVE-2026-17497weaknesses.', 'We scan GitHub repositories to detect new proof-of-concept exploits. Following list is a collection of public exploits and proof-of-concepts, which have been published on GitHub (sorted by the most recently updated).', "Vulnerability history details can be useful for understanding the evolution of a vulnerability, and for identifying the most recent changes that may impact the vulnerability's severity, exploitability, or other characteristics."], 'observables': {'domain-name': ['cvefeed.io'], 'email-addr': ['reefs@jfrog.com'], 'file': [{'hash_type': 'SHA-1', 'values': ['00064a4a8ec4177d51094ffb3e15bf0758009c1f']}], 'url': ['https://github.com/codexu/note-gen', 'https://github.com/codexu/note-gen/commit/00064a4a8ec4177d51094ffb3e15bf0758009c1f', 'https://github.com/codexu/note-gen/releases/tag/note-gen-v0.32.0'], 'vulnerability': ['CVE-2026-17497']}}, {'title': 'CVE-2026-17496 - NoteGen chat preview XSS via unsanitized AI/skill HTML rendering', 'publication_date': 'Sun, 26 Jul 2026 15:16:27 +0000', 'source': 'https://cvefeed.io/vuln/detail/CVE-2026-17496', 'source_type': "['']", 'source_level': 2, 'text': ['NoteGen before 0.32.0 renders AI chat responses with markdown-it configured with html:true and injects the result into the DOM via dangerouslySetInnerHTML in chat-preview, without HTML sanitization and with CSP set to null. Attacker-controlled content that reaches the model prompt (for example a malicious skill REFERENCE.md that instructs the model to emit HTML) can cause the model response to include executable markup such as an img onerror handler. When the user views the chat response, that markup runs as JavaScript in the privileged Tauri webview, enabling arbitrary script execution in the application context (cross-site scripting).', 'The following products are affected byCVE-2026-17496vulnerability. Even ifcvefeed.iois aware of the exact versions of the products that are affected, the information is not represented in the table below.', 'Common Attack Pattern Enumeration and Classification (CAPEC) stores attack patterns, which are descriptions of the common attributes and approaches employed by adversaries to exploit theCVE-2026-17496weaknesses.', 'We scan GitHub repositories to detect new proof-of-concept exploits. Following list is a collection of public exploits and proof-of-concepts, which have been published on GitHub (sorted by the most recently updated).', "Vulnerability history details can be useful for understanding the evolution of a vulnerability, and for identifying the most recent changes that may impact the vulnerability's severity, exploitability, or other characteristics."], 'observables': {'domain-name': ['cvefeed.io'], 'email-addr': ['reefs@jfrog.com'], 'file': [{'hash_type': 'SHA-1', 'values': ['ae3ba948c41d8a74b4a20f4c6f26fcdda2002298']}], 'url': ['https://github.com/codexu/note-gen', 'https://github.com/codexu/note-gen/commit/ae3ba948c41d8a74b4a20f4c6f26fcdda2002298', 'https://github.com/codexu/note-gen/releases/tag/note-gen-v0.32.0'], 'vulnerability': ['CVE-2026-17496']}}, {'title': 'CVE-2026-15962 - Fluent Forms Pro Add On Pack <= 6.2.6 - Authenticated (Subscriber+) PHP Object Injection to Arbitrary User Password Change via User Meta Field', 'publication_date': 'Sun, 26 Jul 2026 02:16:28 +0000', 'source': 'https://cvefeed.io/vuln/detail/CVE-2026-15962', 'source_type': "['']", 'source_level': 2, 'text': ['The Fluent Forms Pro Add On Pack plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 6.2.6 via deserialization of untrusted input. This makes it possible for authenticated attackers, with Subscriber-level access and above, to inject a PHP Object. The additional presence of a POP chain allows attackers to change user passwords and potentially take over administrator accounts. Note: This can only be exploited if user update integration is enabled and a user meta field is mapped.', 'The following products are affected byCVE-2026-15962vulnerability. Even ifcvefeed.iois aware of the exact versions of the products that are affected, the information is not represented in the table below.', 'Common Attack Pattern Enumeration and Classification (CAPEC) stores attack patterns, which are descriptions of the common attributes and approaches employed by adversaries to exploit theCVE-2026-15962weaknesses.', 'We scan GitHub repositories to detect new proof-of-concept exploits. Following list is a collection of public exploits and proof-of-concepts, which have been published on GitHub (sorted by the most recently updated).', "Vulnerability history details can be useful for understanding the evolution of a vulnerability, and for identifying the most recent changes that may impact the vulnerability's severity, exploitability, or other characteristics."], 'observables': {'domain-name': ['cvefeed.io'], 'email-addr': ['security@wordfence.com'], 'url': ['http://www.wordfence.com/threat-intel/vulnerabilities/id/b95ec70c-ac76-48fa-9d9d-01cf1983e504?source=cve', 'https://fluentforms.com', 'https://www.wordfence.com/threat-intel/vulnerabilities/id/b95ec70c-ac76-48fa-9d9d-01cf1983e504?source=cve'], 'vulnerability': ['CVE-2026-15962']}}, {'title': 'Developing: AnMed reports phone and internet outage impacting all hospital locations; ERs remain open', 'publication_date': 'Sun, 26 Jul 2026 14:10:29 +0000', 'source': 'https://databreaches.net/2026/07/26/developing-anmed-reports-phone-and-internet-outage-impacting-all-hospital-locations-ers-remain-open/?pk_campaign=feed&pk_kwd=developing-anmed-reports-phone-and-internet-outage-impacting-all-hospital-locations-ers-remain-open', 'source_type': "['']", 'source_level': 2, 'text': [], 'observables': {'domain-name': ['databreaches.net']}}, {'title': 'A-list directors, actors and celebrities exposed in Tribeca film festival data leak', 'publication_date': 'Sun, 26 Jul 2026 13:06:14 +0000', 'source': 'https://databreaches.net/2026/07/26/a-list-directors-actors-and-celebrities-exposed-in-tribeca-film-festival-data-leak/?pk_campaign=feed&pk_kwd=a-list-directors-actors-and-celebrities-exposed-in-tribeca-film-festival-data-leak', 'source_type': "['']", 'source_level': 2, 'text': [], 'observables': {'domain-name': ['databreaches.net']}}, {'title': 'Arnaque au faux climatiseur\xa0: les entreprises qui se cachent derrière un business florissant', 'publication_date': 'Sun, 26 Jul 2026 06:00:47 +0200', 'source': 'https://www.lemonde.fr/pixels/article/2026/07/26/arnaque-au-faux-climatiseur-les-entreprises-qui-se-cachent-derriere-un-business-florissant_6732772_4408996.html', 'source_type': "['']", 'source_level': 2, 'text': [], 'observables': {}}]
+[
+  {
+    "title": "CVE-2026-15928 - XMLRPC-C Library Reflected Cross-Site Scripting Vulnerability",
+    "publication_date": "Mon, 27 Jul 2026 03:16:18 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-15928",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "8.2\n\nHIGH\nCVSS 4.0\n\nCVE-2026-15928\nXMLRPC-C Library Reflected Cross-Site Scripting Vulnerability\n\nXMLRPC-C Library versions 1.07 through 1.67.01 are vulnerable to a reflected cross-site scripting (XSS) vulnerability in the error page component.\n\nPublished Date :\nJuly 27, 2026, 3:16 a.m.\n\nLast Modified :\nJuly 27, 2026, 3:16 a.m.\n\nRemotely Exploit :\nYes !\n\nSource :\nvdp@themissinglink.com.au\n\nImpact\nAffected Products\n\nThe following products are affected by CVE-2026-15928\nvulnerability.\nEven if cvefeed.io is aware of the exact versions of the\nproducts\nthat\nare\naffected, the information is not represented in the table below.\n\nNo affected product recoded yet\n\nThe Common Vulnerability Scoring System is a standardized framework\nfor assessing the severity of vulnerabilities in software and systems.\nWe collect and displays CVSS scores from various sources for each CVE.\n\nScore\nVersion\nSeverity\nVector\nExploitability Score\nImpact Score\nSource\n\n8.2\n\nCVSS 4.0\n\nHIGH\n\n07aac9b9-e3e9-4d03-a447-764bd31371d7\n\n8.2\n\nCVSS 4.0\n\nHIGH\n\nvdp@themissinglink.com.au\n\nUpdate XMLRPC-C library to a version addressing the reflected cross-site scripting vulnerability.\n\nUpdate XMLRPC-C library to version 1.67.02 or later.\n\nApply relevant security patches for affected versions.\n\nHere, you will find a curated list of external links that provide in-depth\ninformation, practical solutions, and valuable tools related to\nCVE-2026-15928.\n\nURL\nResource\n\nhttps://www.themissinglink.com.au/security-advisories/cve-2026-15928\n\nhttps://xmlrpc-c.sourceforge.io/\n\nWhile CVE identifies\nspecific instances of vulnerabilities, CWE categorizes the common flaws or\nweaknesses that can lead to vulnerabilities. CVE-2026-15928 is\nassociated with the following CWEs:\n\nCWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')\n\nCommon Attack Pattern Enumeration and Classification\n(CAPEC)\nstores attack patterns, which are descriptions of the common attributes and\napproaches employed by adversaries to exploit the CVE-2026-15928\nweaknesses.\n\nCAPEC-63: Cross-Site Scripting (XSS) Cross-Site Scripting (XSS)\n\nCAPEC-85: AJAX Footprinting AJAX Footprinting\n\nCAPEC-209: XSS Using MIME Type Mismatch XSS Using MIME Type Mismatch\n\nCAPEC-588: DOM-Based XSS DOM-Based XSS\n\nCAPEC-591: Reflected XSS Reflected XSS\n\nCAPEC-592: Stored XSS Stored XSS\n\nWe scan GitHub repositories to detect new proof-of-concept exploits. Following list is a collection\nof public exploits and proof-of-concepts, which have been published on GitHub (sorted by the most recently\nupdated).\n\nResults are limited to the first 15 repositories due to potential performance issues.\n\nThe following list is the news that have been mention\nCVE-2026-15928 vulnerability anywhere in the article.\n\nThe following table lists the changes that have been made to the\nCVE-2026-15928 vulnerability over time.\n\nVulnerability history details can be useful for understanding the evolution\nof a vulnerability, and for identifying the most recent changes that may\nimpact the vulnerability's severity, exploitability, or other characteristics.\n\nNew CVE Received\nby vdp@themissinglink.com.au\n\nJul. 27, 2026\n\nAction\nType\nOld Value\nNew Value\n\nAdded\nAffected\n\n[{'repo': 'https://sourceforge.net/p/xmlrpc-c/code/HEAD/tree/', 'vendor': 'XMLRPC-C', 'product': 'XMLRPC-C', 'versions': [{'status': 'affected', 'version': '1.07', 'versionType': 'Advanced', 'lessThanOrEqual': '1.67.01'}, {'status': 'affected', 'version': '1.07', 'versionType': 'Super stable', 'lessThanOrEqual': '1.64.03'}], 'defaultStatus': 'unaffected'}]\n\nAdded\nDescription\n\nXMLRPC-C Library versions 1.07 through 1.67.01 are vulnerable to a reflected cross-site scripting (XSS) vulnerability in the error page component.\n\nAdded\nCVSS […]",
+    "word_count": 473,
+    "observables": {
+      "domain-name": [
+        "cvefeed.io"
+      ],
+      "email-addr": [
+        "vdp@themissinglink.com.au"
+      ],
+      "url": [
+        "http://www.themissinglink.com.au/security-advisories/cve-2026-15928",
+        "https://sourceforge.net/p/xmlrpc-c/code/HEAD/tree/",
+        "https://www.themissinglink.com.au/security-advisories/cve-2026-15928",
+        "https://xmlrpc-c.sourceforge.io/"
+      ],
+      "vulnerability": [
+        "CVE-2026-15928"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "CVE-2026-17497 - NoteGen arbitrary OS command execution via Tauri shell:allow-execute for bash/python",
+    "publication_date": "Sun, 26 Jul 2026 15:16:27 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-17497",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "8.3\n\nHIGH\nCVSS 3.1\n\nCVE-2026-17497\nNoteGen arbitrary OS command execution via Tauri shell:allow-execute for bash/python\n\nNoteGen before 0.32.0 grants the Tauri shell plugin shell:allow-execute capability for bash, python, and python3 with arbitrary arguments in the default desktop capabilities. JavaScript running in the application webview can therefore invoke plugin:shell|execute to run attacker-controlled operating system commands with the privileges of the NoteGen process. In combination with script execution in the webview (for example via chat XSS), this enables full remote code execution on the user's machine.\n\nPublished Date :\nJuly 26, 2026, 3:16 p.m.\n\nLast Modified :\nJuly 26, 2026, 3:16 p.m.\n\nRemotely Exploit :\nYes !\n\nSource :\nreefs@jfrog.com\n\nImpact\nAffected Products\n\nThe following products are affected by CVE-2026-17497\nvulnerability.\nEven if cvefeed.io is aware of the exact versions of the\nproducts\nthat\nare\naffected, the information is not represented in the table below.\n\nNo affected product recoded yet\n\nThe Common Vulnerability Scoring System is a standardized framework\nfor assessing the severity of vulnerabilities in software and systems.\nWe collect and displays CVSS scores from various sources for each CVE.\n\nScore\nVersion\nSeverity\nVector\nExploitability Score\nImpact Score\nSource\n\n8.3\n\nCVSS 3.1\n\nHIGH\n\n48a46f29-ae42-4e1d-90dd-c1676c1e5e6d\n\n8.3\n\nCVSS 3.1\n\nHIGH\n\n1.6\n\n6.0\n\nreefs@jfrog.com\n\n8.3\n\nCVSS 3.1\n\nHIGH\n\n1.6\n\n6\n\nMITRE-CVE\n\nUpdate NoteGen to version 0.32.0 or later to fix the shell execution vulnerability.\n\nUpdate NoteGen to version 0.32.0 or later.\n\nReview and restrict shell plugin capabilities.\n\nImplement input sanitization for webview scripts.\n\nConsider disabling unnecessary shell commands.\n\nHere, you will find a curated list of external links that provide in-depth\ninformation, practical solutions, and valuable tools related to\nCVE-2026-17497.\n\nURL\nResource\n\nhttps://github.com/codexu/note-gen\n\nhttps://github.com/codexu/note-gen/commit/00064a4a8ec4177d51094ffb3e15bf0758009c1f\n\nhttps://github.com/codexu/note-gen/releases/tag/note-gen-v0.32.0\n\nWhile CVE identifies\nspecific instances of vulnerabilities, CWE categorizes the common flaws or\nweaknesses that can lead to vulnerabilities. CVE-2026-17497 is\nassociated with the following CWEs:\n\nCWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')\n\nCWE-276: Incorrect Default Permissions\n\nCWE-1249: Application-Level Admin Tool with Inconsistent View of Underlying Operating System\n\nCommon Attack Pattern Enumeration and Classification\n(CAPEC)\nstores attack patterns, which are descriptions of the common attributes and\napproaches employed by adversaries to exploit the CVE-2026-17497\nweaknesses.\n\nCAPEC-6: Argument Injection Argument Injection\n\nCAPEC-15: Command Delimiters Command Delimiters\n\nCAPEC-43: Exploiting Multiple Input Interpretation Layers Exploiting Multiple Input Interpretation Layers\n\nCAPEC-88: OS Command Injection OS Command Injection\n\nCAPEC-108: Command Line Execution through SQL Injection Command Line Execution through SQL Injection\n\nCAPEC-1: Accessing Functionality Not Properly Constrained by ACLs Accessing Functionality Not Properly Constrained by ACLs\n\nCAPEC-81: Web Server Logs Tampering Web Server Logs Tampering\n\nCAPEC-127: Directory Indexing Directory Indexing\n\nWe scan GitHub repositories to detect new proof-of-concept exploits. Following list is a collection\nof public exploits and proof-of-concepts, which have been published on GitHub (sorted by the most recently\nupdated).\n\nResults are limited to the first 15 repositories due to potential performance issues.\n\nThe following list is the news that have been mention\nCVE-2026-17497 vulnerability anywhere in the article.\n\nThe following table lists the changes that have been made to the\nCVE-2026-17497 vulnerability over time.\n\nVulnerability history details can be useful for understanding the evolution\nof a vulnerability, and for identifying the most recent changes that […]",
+    "word_count": 521,
+    "observables": {
+      "domain-name": [
+        "cvefeed.io"
+      ],
+      "email-addr": [
+        "reefs@jfrog.com"
+      ],
+      "file": [
+        {
+          "hash_type": "SHA-1",
+          "values": [
+            "00064a4a8ec4177d51094ffb3e15bf0758009c1f"
+          ]
+        }
+      ],
+      "url": [
+        "https://github.com/codexu/note-gen",
+        "https://github.com/codexu/note-gen/commit/00064a4a8ec4177d51094ffb3e15bf0758009c1f",
+        "https://github.com/codexu/note-gen/releases/tag/note-gen-v0.32.0"
+      ],
+      "vulnerability": [
+        "CVE-2026-17497"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "CVE-2026-17496 - NoteGen chat preview XSS via unsanitized AI/skill HTML rendering",
+    "publication_date": "Sun, 26 Jul 2026 15:16:27 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-17496",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "8.1\n\nHIGH\nCVSS 3.1\n\nCVE-2026-17496\nNoteGen chat preview XSS via unsanitized AI/skill HTML rendering\n\nNoteGen before 0.32.0 renders AI chat responses with markdown-it configured with html:true and injects the result into the DOM via dangerouslySetInnerHTML in chat-preview, without HTML sanitization and with CSP set to null. Attacker-controlled content that reaches the model prompt (for example a malicious skill REFERENCE.md that instructs the model to emit HTML) can cause the model response to include executable markup such as an img onerror handler. When the user views the chat response, that markup runs as JavaScript in the privileged Tauri webview, enabling arbitrary script execution in the application context (cross-site scripting).\n\nPublished Date :\nJuly 26, 2026, 3:16 p.m.\n\nLast Modified :\nJuly 26, 2026, 3:16 p.m.\n\nRemotely Exploit :\nYes !\n\nSource :\nreefs@jfrog.com\n\nImpact\nAffected Products\n\nThe following products are affected by CVE-2026-17496\nvulnerability.\nEven if cvefeed.io is aware of the exact versions of the\nproducts\nthat\nare\naffected, the information is not represented in the table below.\n\nNo affected product recoded yet\n\nThe Common Vulnerability Scoring System is a standardized framework\nfor assessing the severity of vulnerabilities in software and systems.\nWe collect and displays CVSS scores from various sources for each CVE.\n\nScore\nVersion\nSeverity\nVector\nExploitability Score\nImpact Score\nSource\n\n8.1\n\nCVSS 3.1\n\nHIGH\n\n48a46f29-ae42-4e1d-90dd-c1676c1e5e6d\n\n8.1\n\nCVSS 3.1\n\nHIGH\n\n2.8\n\n5.2\n\nreefs@jfrog.com\n\n8.1\n\nCVSS 3.1\n\nHIGH\n\n2.8\n\n5.2\n\nMITRE-CVE\n\nSanitize all HTML rendered from model responses before DOM injection.\n\nEnable HTML sanitization for markdown-it.\n\nUpdate the markdown-it renderer configuration.\n\nAvoid using dangerouslySetInnerHTML.\n\nImplement Content Security Policy.\n\nHere, you will find a curated list of external links that provide in-depth\ninformation, practical solutions, and valuable tools related to\nCVE-2026-17496.\n\nURL\nResource\n\nhttps://github.com/codexu/note-gen\n\nhttps://github.com/codexu/note-gen/commit/ae3ba948c41d8a74b4a20f4c6f26fcdda2002298\n\nhttps://github.com/codexu/note-gen/releases/tag/note-gen-v0.32.0\n\nWhile CVE identifies\nspecific instances of vulnerabilities, CWE categorizes the common flaws or\nweaknesses that can lead to vulnerabilities. CVE-2026-17496 is\nassociated with the following CWEs:\n\nCWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')\n\nCommon Attack Pattern Enumeration and Classification\n(CAPEC)\nstores attack patterns, which are descriptions of the common attributes and\napproaches employed by adversaries to exploit the CVE-2026-17496\nweaknesses.\n\nCAPEC-63: Cross-Site Scripting (XSS) Cross-Site Scripting (XSS)\n\nCAPEC-85: AJAX Footprinting AJAX Footprinting\n\nCAPEC-209: XSS Using MIME Type Mismatch XSS Using MIME Type Mismatch\n\nCAPEC-588: DOM-Based XSS DOM-Based XSS\n\nCAPEC-591: Reflected XSS Reflected XSS\n\nCAPEC-592: Stored XSS Stored XSS\n\nWe scan GitHub repositories to detect new proof-of-concept exploits. Following list is a collection\nof public exploits and proof-of-concepts, which have been published on GitHub (sorted by the most recently\nupdated).\n\nResults are limited to the first 15 repositories due to potential performance issues.\n\nThe following list is the news that have been mention\nCVE-2026-17496 vulnerability anywhere in the article.\n\nThe following table lists the changes that have been made to the\nCVE-2026-17496 vulnerability over time.\n\nVulnerability history details can be useful for understanding the evolution\nof a vulnerability, and for identifying the most recent changes that may\nimpact the vulnerability's severity, exploitability, or other characteristics.\n\nNew CVE Received\nby reefs@jfrog.com\n\nJul. 26, 2026\n\nAction\nType\nOld Value\nNew Value\n\nAdded\nAffected\n\n[{'repo': 'git://github.com/codexu/note-gen', 'vendor': 'codexu', 'product': 'NoteGen', 'versions': [{'status': 'affected', 'version': '0', 'lessThan': '0.32.0', […]",
+    "word_count": 523,
+    "observables": {
+      "domain-name": [
+        "cvefeed.io"
+      ],
+      "email-addr": [
+        "reefs@jfrog.com"
+      ],
+      "file": [
+        {
+          "hash_type": "SHA-1",
+          "values": [
+            "ae3ba948c41d8a74b4a20f4c6f26fcdda2002298"
+          ]
+        }
+      ],
+      "url": [
+        "https://github.com/codexu/note-gen",
+        "https://github.com/codexu/note-gen/commit/ae3ba948c41d8a74b4a20f4c6f26fcdda2002298",
+        "https://github.com/codexu/note-gen/releases/tag/note-gen-v0.32.0"
+      ],
+      "vulnerability": [
+        "CVE-2026-17496"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "CVE-2026-64530 - net/sched: cls_api: Handle TC_ACT_CONSUMED in tcf_qevent_handle",
+    "publication_date": "Sun, 26 Jul 2026 07:16:41 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-64530",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "9.8\n\nCRITICAL\nCVSS 3.1\n\nCVE-2026-64530\nnet/sched: cls_api: Handle TC_ACT_CONSUMED in tcf_qevent_handle\n\nIn the Linux kernel, the following vulnerability has been resolved:\n\nnet/sched: cls_api: Handle TC_ACT_CONSUMED in tcf_qevent_handle\n\ntcf_classify() can return TC_ACT_CONSUMED while the skb is held by the\ndefragmentation engine (e.g. act_ct on out-of-order fragments). When\nthat happens the skb is no longer owned by the caller and must not be\ntouched again.\n\ntcf_qevent_handle() did not handle TC_ACT_CONSUMED: it fell through the\nswitch and returned the skb to the caller as if classification had\npassed. The only qdisc that wires up qevents today is RED, via three call sites\n(qe_mark on RED_PROB_MARK/HARD_MARK, qe_early_drop on congestion_drop)\nred_enqueue() was continuing to operate on an skb it no longer owns in this\ncase -- enqueueing it, dropping it, or updating statistics. Resulting in a UAF.\n\ntc qdisc add dev eth0 root handle 1: red ... qevent early_drop block 10\ntc filter add block 10 ... action ct\n\n(with ct defrag enabled and traffic that produces out-of-order\nfragments, e.g. a fragmented UDP stream)\n\nHandle TC_ACT_CONSUMED in tcf_qevent_handle() the same way the ingress\nand egress fast paths do: treat it as stolen and return NULL without\ntouching the skb. Unlike the TC_ACT_STOLEN case, the skb must not be\ndropped/freed here, as it is no longer owned by us.\n\nPublished Date :\nJuly 26, 2026, 7:16 a.m.\n\nLast Modified :\nJuly 27, 2026, 5:16 a.m.\n\nRemotely Exploit :\nYes !\n\nSource :\n416baaa9-dc9f-4396-8d5f-8c081fb06d67\n\nImpact\nAffected Products\n\nThe following products are affected by CVE-2026-64530\nvulnerability.\nEven if cvefeed.io is aware of the exact versions of the\nproducts\nthat\nare\naffected, the information is not represented in the table below.\n\nID\nVendor\nProduct\nAction\n\n1\nLinux\nlinux_kernel\n\nThe Common Vulnerability Scoring System is a standardized framework\nfor assessing the severity of vulnerabilities in software and systems.\nWe collect and displays CVSS scores from various sources for each CVE.\n\nScore\nVersion\nSeverity\nVector\nExploitability Score\nImpact Score\nSource\n\n9.8\n\nCVSS 3.1\n\nCRITICAL\n\n3.9\n\n5.9\n\n416baaa9-dc9f-4396-8d5f-8c081fb06d67\n\nAddress a Use-After-Free vulnerability by handling TC_ACT_CONSUMED correctly.\n\nUpdate the Linux kernel to resolve the vulnerability.\n\nEnsure TC_ACT_CONSUMED is handled as stolen.\n\nDo not touch the skb when it is no longer owned.\n\nHere, you will find a curated list of external links that provide in-depth\ninformation, practical solutions, and valuable tools related to\nCVE-2026-64530.\n\nURL\nResource\n\nhttps://git.kernel.org/stable/c/2140c2f3f2e7b066e1ae616ede8856cafd8015e9\n\nhttps://git.kernel.org/stable/c/447d493034a9cf7bf13a2abac86d0573d907ec2f\n\nhttps://git.kernel.org/stable/c/5ed3d6f85991656667059d3fa5a1d683ac58c447\n\nhttps://git.kernel.org/stable/c/a8a02897f2b479127db261de05cbf0c28b98d159\n\nhttps://git.kernel.org/stable/c/e1270e69dcf2c3512c453484178f2e9dc0db3f05\n\nhttps://git.kernel.org/stable/c/e28aedab9488343924d227b5a896faed67ce84d5\n\nhttps://git.kernel.org/stable/c/f42e8134a3a1074b834a574d404352f867ba994a\n\nWhile CVE identifies\nspecific instances of vulnerabilities, CWE categorizes the common flaws or\nweaknesses that can lead to vulnerabilities. CVE-2026-64530 is\nassociated with the following CWEs:\n\nCommon Attack Pattern Enumeration and Classification\n(CAPEC)\nstores attack patterns, which are descriptions of the common attributes and\napproaches employed by adversaries to exploit the CVE-2026-64530\nweaknesses.\n\nWe scan GitHub repositories to detect new proof-of-concept exploits. Following list is a collection\nof public exploits and proof-of-concepts, which have been published on GitHub (sorted by the most recently\nupdated).\n\nResults are limited to the first 15 repositories due to potential performance issues.\n\nThe following list is the news that have been mention\nCVE-2026-64530 vulnerability anywhere in the article.\n\nThe following table lists the changes that have been made to […]",
+    "word_count": 515,
+    "observables": {
+      "domain-name": [
+        "cvefeed.io"
+      ],
+      "file": [
+        {
+          "hash_type": "SHA-1",
+          "values": [
+            "2140c2f3f2e7b066e1ae616ede8856cafd8015e9",
+            "447d493034a9cf7bf13a2abac86d0573d907ec2f",
+            "5ed3d6f85991656667059d3fa5a1d683ac58c447",
+            "a8a02897f2b479127db261de05cbf0c28b98d159",
+            "e1270e69dcf2c3512c453484178f2e9dc0db3f05",
+            "e28aedab9488343924d227b5a896faed67ce84d5",
+            "f42e8134a3a1074b834a574d404352f867ba994a"
+          ]
+        }
+      ],
+      "url": [
+        "https://git.kernel.org/stable/c/2140c2f3f2e7b066e1ae616ede8856cafd8015e9",
+        "https://git.kernel.org/stable/c/447d493034a9cf7bf13a2abac86d0573d907ec2f",
+        "https://git.kernel.org/stable/c/5ed3d6f85991656667059d3fa5a1d683ac58c447",
+        "https://git.kernel.org/stable/c/a8a02897f2b479127db261de05cbf0c28b98d159",
+        "https://git.kernel.org/stable/c/e1270e69dcf2c3512c453484178f2e9dc0db3f05",
+        "https://git.kernel.org/stable/c/e28aedab9488343924d227b5a896faed67ce84d5",
+        "https://git.kernel.org/stable/c/f42e8134a3a1074b834a574d404352f867ba994a"
+      ],
+      "vulnerability": [
+        "CVE-2026-64530"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "CVE-2026-15962 - Fluent Forms Pro Add On Pack <= 6.2.6 - Authenticated (Subscriber+) PHP Object Injection to Arbitrary User Password Change via User Meta Field",
+    "publication_date": "Sun, 26 Jul 2026 02:16:28 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-15962",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "8.8\n\nHIGH\nCVSS 3.1\n\nCVE-2026-15962\nFluent Forms Pro Add On Pack <= 6.2.6 - Authenticated (Subscriber+) PHP Object Injection to Arbitrary User Password Change via User Meta Field\n\nThe Fluent Forms Pro Add On Pack plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 6.2.6 via deserialization of untrusted input. This makes it possible for authenticated attackers, with Subscriber-level access and above, to inject a PHP Object. The additional presence of a POP chain allows attackers to change user passwords and potentially take over administrator accounts. Note: This can only be exploited if user update integration is enabled and a user meta field is mapped.\n\nPublished Date :\nJuly 26, 2026, 2:16 a.m.\n\nLast Modified :\nJuly 26, 2026, 2:16 a.m.\n\nRemotely Exploit :\nYes !\n\nSource :\nsecurity@wordfence.com\n\nImpact\nAffected Products\n\nThe following products are affected by CVE-2026-15962\nvulnerability.\nEven if cvefeed.io is aware of the exact versions of the\nproducts\nthat\nare\naffected, the information is not represented in the table below.\n\nNo affected product recoded yet\n\nThe Common Vulnerability Scoring System is a standardized framework\nfor assessing the severity of vulnerabilities in software and systems.\nWe collect and displays CVSS scores from various sources for each CVE.\n\nScore\nVersion\nSeverity\nVector\nExploitability Score\nImpact Score\nSource\n\n8.8\n\nCVSS 3.1\n\nHIGH\n\n2.8\n\n5.9\n\nsecurity@wordfence.com\n\nUpdate Fluent Forms Pro Add On Pack to the latest version to fix PHP Object Injection.\n\nUpdate Fluent Forms Pro Add On Pack plugin.\n\nDisable user update integration if not needed.\n\nReview mapped user meta fields for safety.\n\nHere, you will find a curated list of external links that provide in-depth\ninformation, practical solutions, and valuable tools related to\nCVE-2026-15962.\n\nURL\nResource\n\nhttps://fluentforms.com\n\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/b95ec70c-ac76-48fa-9d9d-01cf1983e504?source=cve\n\nWhile CVE identifies\nspecific instances of vulnerabilities, CWE categorizes the common flaws or\nweaknesses that can lead to vulnerabilities. CVE-2026-15962 is\nassociated with the following CWEs:\n\nCWE-502: Deserialization of Untrusted Data\n\nCommon Attack Pattern Enumeration and Classification\n(CAPEC)\nstores attack patterns, which are descriptions of the common attributes and\napproaches employed by adversaries to exploit the CVE-2026-15962\nweaknesses.\n\nCAPEC-586: Object Injection Object Injection\n\nWe scan GitHub repositories to detect new proof-of-concept exploits. Following list is a collection\nof public exploits and proof-of-concepts, which have been published on GitHub (sorted by the most recently\nupdated).\n\nResults are limited to the first 15 repositories due to potential performance issues.\n\nThe following list is the news that have been mention\nCVE-2026-15962 vulnerability anywhere in the article.\n\nThe following table lists the changes that have been made to the\nCVE-2026-15962 vulnerability over time.\n\nVulnerability history details can be useful for understanding the evolution\nof a vulnerability, and for identifying the most recent changes that may\nimpact the vulnerability's severity, exploitability, or other characteristics.\n\nNew CVE Received\nby security@wordfence.com\n\nJul. 26, 2026\n\nAction\nType\nOld Value\nNew Value\n\nAdded\nAffected\n\n[{'vendor': 'techjewel', 'product': 'Fluent Forms Pro Add On Pack', 'versions': [{'status': 'affected', 'version': '0', 'versionType': 'semver', 'lessThanOrEqual': '6.2.6'}], 'defaultStatus': 'unaffected'}]\n\nAdded\nDescription\n\nThe Fluent Forms Pro Add On Pack plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 6.2.6 via deserialization of untrusted input. This makes it possible for authenticated attackers, with Subscriber-level access and above, to inject a PHP Object. The additional presence of a POP chain allows attackers to change user passwords and potentially take over administrator accounts. Note: […]",
+    "word_count": 561,
+    "observables": {
+      "domain-name": [
+        "cvefeed.io"
+      ],
+      "email-addr": [
+        "security@wordfence.com"
+      ],
+      "url": [
+        "http://www.wordfence.com/threat-intel/vulnerabilities/id/b95ec70c-ac76-48fa-9d9d-01cf1983e504?source=cve",
+        "https://fluentforms.com",
+        "https://www.wordfence.com/threat-intel/vulnerabilities/id/b95ec70c-ac76-48fa-9d9d-01cf1983e504?source=cve"
+      ],
+      "vulnerability": [
+        "CVE-2026-15962"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "ISC Stormcast For Monday, July 27th, 2026 https://isc.sans.edu/podcastdetail/10024, (Mon, Jul 27th)",
+    "publication_date": "Mon, 27 Jul 2026 02:00:02 GMT",
+    "source": "https://isc.sans.edu/diary/rss/33186",
+    "source_categories": [
+      "operational",
+      "strategic"
+    ],
+    "source_level": 2,
+    "text": "Internet Storm Center",
+    "word_count": 3,
+    "observables": {},
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Scans for ESAFENET CDG 3 Document Management System Weak Logins, (Sun, Jul 26th)",
+    "publication_date": "Sun, 26 Jul 2026 15:26:14 GMT",
+    "source": "https://isc.sans.edu/diary/rss/33184",
+    "source_categories": [
+      "operational",
+      "strategic"
+    ],
+    "source_level": 2,
+    "text": "Handler on Duty: Johannes Ullrich\n\nThreat Level: green\n\npreviousClick HERE to learn more about classes Johannes is teaching for SANS\n\nfunction maxarticle() {\nvar article=document.getElementsByTagName('article');\nvar cn=article[0].className;\nif ( article[0].className=='fullscreen' ) {\narticle[0].className='normal';\n} else {\narticle[0].className='fullscreen';\n}\n}\n\nScans for ESAFENET CDG 3 Document Management System Weak Logins\n\n0 comment(s)\n\nESAFENET's CDG showed up in our data before. The company focused on secure document management and data leakage prevention solutions. The \"CDG\" stands for \"Content Data Guard\", and the product appears to be mostly targeting the Chinese market [1]. Sadly, like so many security products, it suffers from basic security vulnerabilities like SQL Injection, XSS, and default passwords. We have seen scanning for ESAFENET CDG before, in particular after the cross-site scripting vulnerability was made public.\n\nThe scans we are seeing right now are going after the well-known default passwords that ESAFENET CDG ships with. Exploit scripts listing these passwords are, for example, included in a nulei template published in 2023 [2].\n\nPOST /CDGServer3/SystemConfig\nHost: [redacted]\nUser-Agent: Mozilla/5.0 (Ubuntu; Linux i686; rv:124.0) Gecko/20100101 Firefox/124.0\nContent-Length: 73\nAccept: */*\nAccept-Language: en\nContent-Type: application/x-www-form-urlencoded\nAccept-Encoding: gzip\nConnection: close\n\ncommand=Login&help=null&verifyCodeDigit=dfd&name=secadmin&pass=Est@Spc820\n\nThis is a typical case of a password that will likely pass many standard security checks (10 characters, upper/lower case, special characters, and numbers), but it is still terribly insecure as it is a well-known default password.\n\n[1]  https://esafenet.com\n[2] https://github.com/projectdiscovery/nuclei-templates/issues/7094\n\n--\nJohannes B. Ullrich, Ph.D. , Dean of Research, SANS.edu\nTwitter|\n\nKeywords: ESAFENET cdg default login\n0 comment(s)\n\nClick HERE to learn more about classes Johannes is teaching for SANSprevious\n\nComments\n\nLogin here to join the discussion.\n\nTop of page\n\n×\n\nDiary Archives\n\n'use strict';\nhljs.initHighlightingOnLoad();\nvar block = $('.diary-body pre code');\nif (block.length > 0) {\nblock.parent().wrap('<div class=\"code-wrapper\"></div>')\n}",
+    "word_count": 289,
+    "observables": {
+      "domain-name": [
+        "sans.edu"
+      ],
+      "url": [
+        "https://esafenet.com",
+        "https://github.com/projectdiscovery/nuclei-templates/issues/7094"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Offensive x64 Assembly: Collection of programs I made while learning assembly.",
+    "publication_date": "2026-07-26T20:43:49+00:00",
+    "source": "https://www.reddit.com/r/redteamsec/comments/1v7fj9f/offensive_x64_assembly_collection_of_programs_i/",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 3,
+    "text": "You've been blocked by network security.\nIf you think you've been blocked by mistake, file a ticket below and we'll look into it.\nFile a ticket",
+    "word_count": 26,
+    "observables": {},
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "OffsetInspect v3.0.0 – AMSI/Defender boundary analysis, in-memory multi-region discovery, and corpus diffing [PowerShell, MIT]",
+    "publication_date": "2026-07-26T17:48:17+00:00",
+    "source": "https://www.reddit.com/r/redteamsec/comments/1v7asoz/offsetinspect_v300_amsidefender_boundary_analysis/",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 3,
+    "text": "You've been blocked by network security.\nIf you think you've been blocked by mistake, file a ticket below and we'll look into it.\nFile a ticket",
+    "word_count": 26,
+    "observables": {},
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Cobalt Strike",
+    "publication_date": "2026-07-26T20:13:18+00:00",
+    "source": "https://www.reddit.com/r/redteamsec/comments/1v7epy9/cobalt_strike/",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 3,
+    "text": "You've been blocked by network security.\nIf you think you've been blocked by mistake, file a ticket below and we'll look into it.\nFile a ticket",
+    "word_count": 26,
+    "observables": {},
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Ensalá Papas - The Hacker Labs - Windows | SecNotes",
+    "publication_date": "2026-07-26T06:00:54+00:00",
+    "source": "https://www.reddit.com/r/redteamsec/comments/1v6vblb/ensalá_papas_the_hacker_labs_windows_secnotes/",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 3,
+    "text": "window.__REDDIT_TIME_CONFIG = {};\n\nEnsalá Papas - The Hacker Labs - Windows | SecNotes : r/redteamsec\n\nSML.load([\"_H0ELgc4KX\",\"0nyUDofZDh\",\"20uwpv-35d\",\"6I6fxdyezN\",\"7a3tfyF0mK\",\"B-UlEbPZg6\",\"B3e0Kgj8VH\",\"B4PMJX3vdT\",\"B4zSfaKACS\",\"B5fUmooD_F\",\"B5h9g4frAy\",\"B65d8mZ9dk\",\"B7e31yPpxY\",\"B7PXKqsNyl\",\"B8CsezRoAa\",\"B9blEC3Zo-\",\"BANggT8vIM\",\"BaWEAe-zaq\",\"BblKTw-kRx\",\"BC9D2ihao_\",\"BCqVRjhgzT\",\"BDvNVZ263u\",\"BeU6jsq_VE\",\"BfIf_-pj3g\",\"BfkAjFiGqF\",\"BFu7xY_wRf\",\"BG6LZENQ-b\",\"BglKkZOxZh\",\"BhbCFHk-RQ\",\"BlthSLIumO\",\"BmDOORc5mX\",\"BmSVhJV5L_\",\"BpBrKuncPc\",\"Bqh06hGcRy\",\"BquiyvZD5u\",\"BSC1Xbc7a1\",\"BWCXTiPGp2\",\"BWtNRWgJbk\",\"BXQSTBrOQ9\",\"BXuU2Qog4h\",\"BxWPxl2V5P\",\"Bz92HJ2r3d\",\"Bzg64MS41h\",\"BzJmQi9nQv\",\"BzqEhzZtTs\",\"C2cQuBam2F\",\"C94masaw0a\",\"C9Ru3BP85k\",\"CAlUCNJIS7\",\"Ccgw3DYuhX\",\"CcYN8cJBJt\",\"CDzELnUfOb\",\"Cf8VW3QbAd\",\"CH8C78J0qI\",\"Ci3aArq4HH\",\"CJ759zkonq\",\"CJeX2r-Dui\",\"cJKeTEg-DS\",\"CL8cle1uwY\",\"CLNrenHcfv\",\"CmFcHJvopc\",\"CmJ9jp-4dT\",\"CNaCdGiJNn\",\"CnAR-zgvkK\",\"CnjCNJiRbS\",\"CO6qgiTsyx\",\"CPu6tiQY4s\",\"CpUVzRajT_\",\"CQkLxrnWqn\",\"CS8R-h0IBb\",\"CSEkhsNIzE\",\"CsTTOsRrEX\",\"CsxaRnJ9Da\",\"CVINmWOY6d\",\"CW1i1b4ncz\",\"Cx1C8HQNBN\",\"D_Y11oVhpF\",\"D2B46vfr5l\",\"D5x1nN6CLK\",\"D8l1s5bTyi\",\"d8ZmdZRsLU\",\"D9HY5PDeVw\",\"DECynXjKul\",\"Df4LYYNxLu\",\"DfLQlGzrgp\",\"DgxsaCn6mr\",\"DH8Fh5a7VE\",\"DHRvslsDnv\",\"DI16h1TunZ\",\"DIIzlRA5Zj\",\"DJbRggUIcv\",\"DKfmlt8TsB\",\"DlfBMN_RyU\",\"DmLR3hQce-\",\"DMSNN6zV-m\",\"Dn-_yxyxKi\",\"Dp_LBLfcfF\",\"Dpb2JCTpgo\",\"Ds4CK8BHbb\",\"DsJ0Y6t0G1\",\"DuRrFrGKkR\",\"DV69y5_4Hh\",\"DvALStUTWk\",\"DwZZWwzJwp\",\"DyBEex7qfk\",\"Dzd9RaagTr\",\"fJeIx9ypOU\",\"Gh88HIPlLG\",\"Hbik5A5bgx\",\"hSgt0vEiwi\",\"kZMIcMjnaK\",\"lXmtgL270o\",\"nIkwDG-Axj\",\"OeUogDMBCN\",\"PahjdQ_pOg\",\"pqdtcIL3w4\",\"Qcgz9TcjJn\",\"rLoumLJw_e\",\"sb0k7GVWH6\",\"sgPaEdhJEZ\",\"X3H7JeYkUZ\",\"yKMZXIwpyX\",\"z5CAmmfHDJ\"], 'en-US/', 'auto');\n\nSML.load([\"AGgArPi6yj\",\"B65d8mZ9dk\",\"B7D3bURw2x\",\"BacIvF0ogW\",\"BC19a8iz-y\",\"BfIf_-pj3g\",\"BglKkZOxZh\",\"BLQUMx0hMG\",\"BqOYNOS0ws\",\"BWCXTiPGp2\",\"BwMy7ENnjA\",\"BWNGfD4lsf\",\"BxWPxl2V5P\",\"Bz92HJ2r3d\",\"C01fBwoqUT\",\"C3GIZPMfTY\",\"C3HjJ6eoH_\",\"C9BjXtckUA\",\"CEgDBX7uFX\",\"CEvq12cbO2\",\"CG7Oy5Oa58\",\"CJZO6zCEnN\",\"CLNrenHcfv\",\"CmJ9jp-4dT\",\"CnAR-zgvkK\",\"CNUWpgWaIA\",\"CS8R-h0IBb\",\"CTcMW4Q1Eb\",\"Cx1C8HQNBN\",\"CxELov8rjp\",\"CxnHh3Xapn\",\"D19Ejx-JyA\",\"D9HY5PDeVw\",\"DgxsaCn6mr\",\"DhQ1EhZjSG\",\"DKpL-m64Vf\",\"DLDdB8OmXC\",\"DmLR3hQce-\",\"Dpb2JCTpgo\",\"DsJ0Y6t0G1\",\"DvALStUTWk\",\"fIsHtK-gDl\",\"HJDIP5U2tP\",\"lOqCUSbwku\",\"sb0k7GVWH6\",\"xBA7ySfwk8\"], 'en-US/', 'auto');\n\nSML.load([\"-NjnDFwABO\",\"B-GRNGNWsp\",\"B65d8mZ9dk\",\"BglKkZOxZh\",\"BOiosWT5bU\",\"BOQH5WESeL\",\"BpBrKuncPc\",\"BWCXTiPGp2\",\"C2cQuBam2F\",\"CIC6lMIvhS\",\"CL8cle1uwY\",\"CmJ9jp-4dT\",\"CnAR-zgvkK\",\"CS8R-h0IBb\",\"D9HY5PDeVw\",\"DyfhZRJL49\",\"X3H7JeYkUZ\",\"ztG92RK0x7\"], 'en-US/', 'auto');\n\nSML.load([\"CJgmADX7X2\"], 'en-US/', 'auto');\n\nSML.load([\"xw9oywGUJO\"], 'en-US/', 'auto');\n\nSML.load([\"_kOjWFfX-2\",\"B3e0Kgj8VH\",\"B65d8mZ9dk\",\"BEixOMOUBa\",\"BglKkZOxZh\",\"Bjfou9YsqK\",\"BKrbhfqCiB\",\"BLdNrtzeot\",\"Bv66pqHoxm\",\"BvPb4W0hQc\",\"BWCXTiPGp2\",\"BWNGfD4lsf\",\"Bz92HJ2r3d\",\"BzJmQi9nQv\",\"BzqEhzZtTs\",\"CJ759zkonq\",\"CJZO6zCEnN\",\"CL8cle1uwY\",\"CmJ9jp-4dT\",\"CMw0ZGUABp\",\"CnAR-zgvkK\",\"CNQzRZCJVs\",\"CS8R-h0IBb\",\"CvrzzQHIuw\",\"Cx1C8HQNBN\",\"D9HY5PDeVw\",\"DgxsaCn6mr\",\"DKpL-m64Vf\",\"DKTJBi_k1A\",\"DsJ0Y6t0G1\",\"fIsHtK-gDl\",\"Hbik5A5bgx\",\"sgPaEdhJEZ\",\"YvsA-t8SkC\"], 'en-US/', 'auto');\n\nSML.load([\"B5fUmooD_F\",\"BglKkZOxZh\",\"BWCXTiPGp2\",\"CJeX2r-Dui\",\"CLNrenHcfv\",\"CmJ9jp-4dT\",\"CnAR-zgvkK\",\"CS8R-h0IBb\",\"Cx1C8HQNBN\",\"D9HY5PDeVw\",\"DmLR3hQce-\",\"Dpb2JCTpgo\",\"DsJ0Y6t0G1\",\"Qcgz9TcjJn\",\"X3H7JeYkUZ\"], 'en-US/', 'auto');\n\nSML.load([\"B3e0Kgj8VH\",\"B65d8mZ9dk\",\"BglKkZOxZh\",\"BKrbhfqCiB\",\"BvPb4W0hQc\",\"BWCXTiPGp2\",\"Bz92HJ2r3d\",\"BzqEhzZtTs\",\"CJ759zkonq\",\"CL8cle1uwY\",\"CmJ9jp-4dT\",\"CMw0ZGUABp\",\"CnAR-zgvkK\",\"CS8R-h0IBb\",\"CvrzzQHIuw\",\"D9HY5PDeVw\",\"DKTJBi_k1A\",\"fIsHtK-gDl\",\"Hbik5A5bgx\",\"sgPaEdhJEZ\"], 'en-US/', 'auto');\n\nSML.load([\"C-z6eMUiC9\"], 'en-US/', […]",
+    "word_count": 42,
+    "observables": {},
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "SECURITY AFFAIRS MALWARE NEWSLETTER ROUND 107",
+    "publication_date": "Sun, 26 Jul 2026 13:30:44 +0000",
+    "source": "https://securityaffairs.com/196037/malware/security-affairs-malware-newsletter-round-107.html",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "HOME\nCYBER CRIME\nCYBER WARFARE\nAPT\nDATA BREACH\nDEEP WEB\nHACKING\nHACKTIVISM\nINTELLIGENCE\nMUST READ\n\nSECURITY AFFAIRS MALWARE NEWSLETTER ROUND 107\n\n|\n\nHackers Hijack Hotel Wi-Fi to Steal Microsoft 365 Credentials\n\n|\n\nSecurity Affairs newsletter Round 587 by Pierluigi Paganini – INTERNATIONAL EDITION\n\n|\n\nIran-Linked Actors Breach Are Targeting US Water and Energy Control Systems\n\n|\n\nAustralian energy provider Origin Energy disclosed a data breach impacting customer data\n\n|\n\nGoogle Fined €890M Under EU Digital Markets Act Over Search and Play Store Practices\n\n|\n\nThailand's Ministry of Finance Targeted With Hermes AI Agent Running Unattended, Hades Implant Staged\n\n|\n\nUAC-0099 Is Now Hiding Malware Inside a Fake Notepad++ Plugin to Target Ukrainian Organizations\n\n|\n\nThe AI Trust Paradox: Businesses Are Racing Ahead, but Consumers Are Hesitating\n\n|\n\nUS Agencies Warn of Laundry Bear Campaign Targeting Unpatched Zimbra Servers\n\n|\n\nU.S. CISA adds Microsoft SharePoint and Check Point SmartConsole flaws to its Known Exploited Vulnerabilities catalog\n\n|\n\nChaos ransomware deploys browser-based msaRAT to evade network detection\n\n|\n\nGoogle Released Gemini 3.5 Flash Cyber AI, a Specialized AI Model for Vulnerability Hunting\n\n|\n\nCheck Point patches actively exploited SmartConsole authentication bypass flaw\n\n|\n\nCVE-2026-8933: Ubuntu security flaw breaks Snap sandbox protections\n\n|\n\nAdobe Acrobat Chrome extension bug enabled silent WhatsApp data theft\n\n|\n\nU.S. CISA adds DD-WRT, Langflow and WordPress flaws to its Known Exploited Vulnerabilities catalog\n\n|\n\nOpenAI AI models exploited zero-days to reach Hugging Face in benchmark test\n\n|\n\nPublic PoC triggers active exploitation of critical SharePoint RCE vulnerability CVE-2026-50522\n\n|\n\nZimbra 10.1.20 patches multiple security issues, including a critical command injection bug\n\n| \nHOME\nCYBER CRIME\nCYBER WARFARE\nAPT\nDATA BREACH\nDEEP WEB\nHACKING\nHACKTIVISM\nINTELLIGENCE\nARTIFICIAL INTELLIGENCE\nINTERNET OF THINGS\nLAWS AND REGULATIONS\nMALWARE\nMOBILE\nREPORTS\nSECURITY\nSOCIAL NETWORKS\nTERRORISM\nICS-SCADA\nCRYPTO\nPOLICIES\nCONTACT ME\nHome Breaking News Malware Security SECURITY AFFAIRS MALWARE NEWSLETTER ROUND 107\nSECURITY AFFAIRS MALWARE NEWSLETTER ROUND 107\nPierluigi Paganini\n\nJuly 26, 2026\nSecurity Affairs Malware newsletter includes a collection of the best articles and research on malware in the international landscape\n\nMalware Newsletter\n\nUAC-0145 Primary Compromise Vectors as of July 2026\n\nSleeperGem: Compromised git_credential_manager, Dendreo, and fastlane RubyGems Drop a Persistent Backdoor\n\nAgentBaiting: How 800+ Fake AI Skills and MCP Servers Delivered Malware\n\nChaos ransomware’s msaRAT: Living off the browser to build a covert C2 channel\n\nHOLLOWGRAPH: Turning Microsoft 365 Calendars into Covert Command-and-Control Channels\n\nThe Perfect Heist: NuGet Typosquat Targets Betting Platform to Rig Results\n\nUAC-0099: LUNCHPOKE, BURNYBEAR, updated to MATCHBOIL.V2 and using Notepad++ 8.8.3\n\nSol Searching | Can Frontier Models Tackle Autonomous Long-Horizon Malware Analysis?\n\nThailand’s Ministry of Finance Targeted With Hermes AI Agent Running Unattended, Hades Implant Staged\n\nDolphin X Stealer Targets 300+ Apps and Profiles Users with AI\n\nSymmetric Dual-Domain Prototype Adaptation for Few-Shot Image-Based Malware Classification\n\nSmall, Free, and Effective: Orchestrating Open-Weight Small Language Models to Outperform Single LLM for Malware Analysis\n\n(A)iSpy: Parasitic Trojans for Machine Learning Infrastructure\n\nTaming the Security-Energy Paradox: A Green AI Approach to Optimized Android Malware Detection\n\nFollow me on Twitter: @securityaffairs and Facebook and Mastodon\n\nPierluigi Paganini\n\n(SecurityAffairs – hacking, newsletter)\n\nFACEBOOK\nLINKEDIN\nTWITTER\nCybercrime\nHacking\nhacking news\ninformation security news\nIT Information Security\nmalware\nNewsletter\nPierluigi Paganini\nSecurity Affairs\nSecurity News\nNEWSLETTER\nSubscribe to my email list and stay\nup-to-date!\n\nRECENT ARTICLES\nSECURITY AFFAIRS MALWARE […]",
+    "word_count": 545,
+    "observables": {
+      "vulnerability": [
+        "CVE-2026-8933",
+        "CVE-2026-50522"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Hackers Hijack Hotel Wi-Fi to Steal Microsoft 365 Credentials",
+    "publication_date": "Sun, 26 Jul 2026 13:04:27 +0000",
+    "source": "https://securityaffairs.com/196017/security/hackers-hijack-hotel-wi-fi-to-steal-microsoft-365-credentials.html",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "HOME\nCYBER CRIME\nCYBER WARFARE\nAPT\nDATA BREACH\nDEEP WEB\nHACKING\nHACKTIVISM\nINTELLIGENCE\nMUST READ\n\nSECURITY AFFAIRS MALWARE NEWSLETTER ROUND 107\n\n|\n\nHackers Hijack Hotel Wi-Fi to Steal Microsoft 365 Credentials\n\n|\n\nSecurity Affairs newsletter Round 587 by Pierluigi Paganini – INTERNATIONAL EDITION\n\n|\n\nIran-Linked Actors Breach Are Targeting US Water and Energy Control Systems\n\n|\n\nAustralian energy provider Origin Energy disclosed a data breach impacting customer data\n\n|\n\nGoogle Fined €890M Under EU Digital Markets Act Over Search and Play Store Practices\n\n|\n\nThailand's Ministry of Finance Targeted With Hermes AI Agent Running Unattended, Hades Implant Staged\n\n|\n\nUAC-0099 Is Now Hiding Malware Inside a Fake Notepad++ Plugin to Target Ukrainian Organizations\n\n|\n\nThe AI Trust Paradox: Businesses Are Racing Ahead, but Consumers Are Hesitating\n\n|\n\nUS Agencies Warn of Laundry Bear Campaign Targeting Unpatched Zimbra Servers\n\n|\n\nU.S. CISA adds Microsoft SharePoint and Check Point SmartConsole flaws to its Known Exploited Vulnerabilities catalog\n\n|\n\nChaos ransomware deploys browser-based msaRAT to evade network detection\n\n|\n\nGoogle Released Gemini 3.5 Flash Cyber AI, a Specialized AI Model for Vulnerability Hunting\n\n|\n\nCheck Point patches actively exploited SmartConsole authentication bypass flaw\n\n|\n\nCVE-2026-8933: Ubuntu security flaw breaks Snap sandbox protections\n\n|\n\nAdobe Acrobat Chrome extension bug enabled silent WhatsApp data theft\n\n|\n\nU.S. CISA adds DD-WRT, Langflow and WordPress flaws to its Known Exploited Vulnerabilities catalog\n\n|\n\nOpenAI AI models exploited zero-days to reach Hugging Face in benchmark test\n\n|\n\nPublic PoC triggers active exploitation of critical SharePoint RCE vulnerability CVE-2026-50522\n\n|\n\nZimbra 10.1.20 patches multiple security issues, including a critical command injection bug\n\n| \nHOME\nCYBER CRIME\nCYBER WARFARE\nAPT\nDATA BREACH\nDEEP WEB\nHACKING\nHACKTIVISM\nINTELLIGENCE\nARTIFICIAL INTELLIGENCE\nINTERNET OF THINGS\nLAWS AND REGULATIONS\nMALWARE\nMOBILE\nREPORTS\nSECURITY\nSOCIAL NETWORKS\nTERRORISM\nICS-SCADA\nCRYPTO\nPOLICIES\nCONTACT ME\nHome APT Breaking News Cyber warfare Intelligence Security Hackers Hijack Hotel Wi-Fi to Steal Microsoft 365 Credentials\nHACKERS HIJACK HOTEL WI-FI TO STEAL MICROSOFT 365 CREDENTIALS\nPierluigi Paganini\n\nJuly 26, 2026\nHackers compromised hotel Wi-Fi gateways to redirect users to fake Microsoft 365 login pages and steal credentials.\n\nReliaQuest’s threat research team just documented attackers compromising the Wi-Fi gateways at hotels and conference centers, then quietly rerouting guests toward fake Microsoft login pages. No phishing email required. No malicious attachment. Just bad luck about which hotel you picked.\n\n“Adversaries have been compromising public Wi-Fi gateways at hotels, conference centers, and other shared venues to hijack the accounts of traveling corporate employees.” reads the report published by ReliaQuest. “Once they control the Wi-Fi gateway, they quietly redirect users to attacker-controlled infrastructure to steal credentials, in activity ongoing since at least June 2026.”\n\nThe mechanism is simple once you see it. These gateways handle DNS for every device that connects, so whoever controls the gateway controls where your traffic actually goes, even when the address bar looks completely normal. ReliaQuest found compromised devices across several US cities plus India and Saudi Arabia, hitting employees from finance, law, healthcare, energy, and retail, which tells you this isn’t aimed at one industry. It’s aimed at anyone who travels for work.\n\nResearchers think the entry point was weak or reused admin credentials on internet-facing management interfaces, things like exposed SSH or web consoles.\n\n“ReliaQuest assesses with low-to-medium confidence that initial access into these devices exploited exposed management interfaces (including internet-facing SSH, SNMP, and web administration consoles) in combination with weak or reused administrative credentials.” […]",
+    "word_count": 567,
+    "observables": {
+      "vulnerability": [
+        "CVE-2026-8933",
+        "CVE-2026-50522"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Security Affairs newsletter Round 587 by Pierluigi Paganini – INTERNATIONAL EDITION",
+    "publication_date": "Sun, 26 Jul 2026 11:42:44 +0000",
+    "source": "https://securityaffairs.com/196006/security/security-affairs-newsletter-round-587-by-pierluigi-paganini-international-edition.html",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "HOME\nCYBER CRIME\nCYBER WARFARE\nAPT\nDATA BREACH\nDEEP WEB\nHACKING\nHACKTIVISM\nINTELLIGENCE\nMUST READ\n\nSECURITY AFFAIRS MALWARE NEWSLETTER ROUND 107\n\n|\n\nHackers Hijack Hotel Wi-Fi to Steal Microsoft 365 Credentials\n\n|\n\nSecurity Affairs newsletter Round 587 by Pierluigi Paganini – INTERNATIONAL EDITION\n\n|\n\nIran-Linked Actors Breach Are Targeting US Water and Energy Control Systems\n\n|\n\nAustralian energy provider Origin Energy disclosed a data breach impacting customer data\n\n|\n\nGoogle Fined €890M Under EU Digital Markets Act Over Search and Play Store Practices\n\n|\n\nThailand's Ministry of Finance Targeted With Hermes AI Agent Running Unattended, Hades Implant Staged\n\n|\n\nUAC-0099 Is Now Hiding Malware Inside a Fake Notepad++ Plugin to Target Ukrainian Organizations\n\n|\n\nThe AI Trust Paradox: Businesses Are Racing Ahead, but Consumers Are Hesitating\n\n|\n\nUS Agencies Warn of Laundry Bear Campaign Targeting Unpatched Zimbra Servers\n\n|\n\nU.S. CISA adds Microsoft SharePoint and Check Point SmartConsole flaws to its Known Exploited Vulnerabilities catalog\n\n|\n\nChaos ransomware deploys browser-based msaRAT to evade network detection\n\n|\n\nGoogle Released Gemini 3.5 Flash Cyber AI, a Specialized AI Model for Vulnerability Hunting\n\n|\n\nCheck Point patches actively exploited SmartConsole authentication bypass flaw\n\n|\n\nCVE-2026-8933: Ubuntu security flaw breaks Snap sandbox protections\n\n|\n\nAdobe Acrobat Chrome extension bug enabled silent WhatsApp data theft\n\n|\n\nU.S. CISA adds DD-WRT, Langflow and WordPress flaws to its Known Exploited Vulnerabilities catalog\n\n|\n\nOpenAI AI models exploited zero-days to reach Hugging Face in benchmark test\n\n|\n\nPublic PoC triggers active exploitation of critical SharePoint RCE vulnerability CVE-2026-50522\n\n|\n\nZimbra 10.1.20 patches multiple security issues, including a critical command injection bug\n\n| \nHOME\nCYBER CRIME\nCYBER WARFARE\nAPT\nDATA BREACH\nDEEP WEB\nHACKING\nHACKTIVISM\nINTELLIGENCE\nARTIFICIAL INTELLIGENCE\nINTERNET OF THINGS\nLAWS AND REGULATIONS\nMALWARE\nMOBILE\nREPORTS\nSECURITY\nSOCIAL NETWORKS\nTERRORISM\nICS-SCADA\nCRYPTO\nPOLICIES\nCONTACT ME\nHome Breaking News Security Security Affairs newsletter Round 587 by Pierluigi Paganini – INTERNATIONAL EDITION\nSECURITY AFFAIRS NEWSLETTER ROUND 587 BY PIERLUIGI PAGANINI – INTERNATIONAL EDITION\nPierluigi Paganini\n\nJuly 26, 2026\nA new round of the weekly Security Affairs newsletter has arrived! Every week, the best security articles from Security Affairs are free in your email box.\n\nEnjoy a new round of the weekly SecurityAffairs newsletter, including the international press.\n\nIran-Linked Actors Breach Are Targeting US Water and Energy Control Systems\nAustralian energy provider Origin Energy disclosed a data breach impacting customer data\nGoogle Fined €890M Under EU Digital Markets Act Over Search and Play Store Practices\nThailand’s Ministry of Finance Targeted With Hermes AI Agent Running Unattended, Hades Implant Staged\nUAC-0099 Is Now Hiding Malware Inside a Fake Notepad++ Plugin to Target Ukrainian Organizations\nThe AI Trust Paradox: Businesses Are Racing Ahead, but Consumers Are Hesitating\nUS Agencies Warn of Laundry Bear Campaign Targeting Unpatched Zimbra Servers\nU.S. CISA adds Microsoft SharePoint and Check Point SmartConsole flaws to its Known Exploited Vulnerabilities catalog\nChaos ransomware deploys browser-based msaRAT to evade network detection\nGoogle Released Gemini 3.5 Flash Cyber AI, a Specialized AI Model for Vulnerability Hunting\nCheck Point patches actively exploited SmartConsole authentication bypass flaw\nCVE-2026-8933: Ubuntu security flaw breaks Snap sandbox protections\nAdobe Acrobat Chrome extension bug enabled silent WhatsApp data theft\nU.S. CISA adds DD-WRT, Langflow and WordPress flaws to its Known Exploited Vulnerabilities catalog\nOpenAI AI models exploited zero-days to reach Hugging Face in benchmark test\nPublic PoC triggers active exploitation of critical SharePoint RCE vulnerability CVE-2026-50522\nZimbra 10.1.20 patches multiple security issues, […]",
+    "word_count": 565,
+    "observables": {
+      "vulnerability": [
+        "CVE-2026-8933",
+        "CVE-2026-50522"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Hardware Asesorias Software Ltda By deadlock",
+    "publication_date": "Mon, 27 Jul 2026 05:08:03 +0000",
+    "source": "https://www.ransomlook.io//group/deadlock",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Deadlock\n\n2/2 up\n\nparser",
+    "word_count": 4,
+    "observables": {},
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "ISC Stormcast du 27 juillet — un flux quotidien discret, mais qui reste l'une des sources les plus denses et les moins bruyantes du paysage infosec. Indicateurs, analyses de malwares, tendances du moment : tout ça en quelques minutes. Pas de hype, juste du signal. Parfois, moins de bruit, c'est la vraie valeur ajoutée. #infosec #malware #threatintel https://malware.news/t/isc-stormcast-for-monday-july-27th-2026-https-isc-sans-edu-podcastdetail-10024-mon-jul-27th/124252",
+    "publication_date": "Mon, 27 Jul 2026 04:58:18 +0000",
+    "source": "https://mastobot.ping.moi/@Bobe_bot/116989940255763893",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastobot.ping.moi is one of the many independent Mastodon servers you can use to participate in the fediverse.\nServeur Mastodon dédié à l'hébergement de bots d'intérêt public. 🇨🇭 Serveur personnel, non commercial. (administré par @decio@infosec.exchange) Contenu automatisé — pas d'inscriptions publiques.\nADMINISTERED BY:\nBobe'bot on security\n@Bobe_bot\nSERVER STATS:\n6\nactive users\nmastobot.ping.moi:About\nmastobot.ping.moi\nProfiles directoryPrivacy policy\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.3\nBack\nBobe'bot on security\n@Bobe_bot@mastobot.ping.moi\n\nISC Stormcast du 27 juillet — un flux quotidien discret, mais qui reste l'une des sources les plus denses et les moins bruyantes du paysage infosec. Indicateurs, analyses de malwares, tendances du moment : tout ça en quelques minutes. Pas de hype, juste du signal. Parfois, moins de bruit, c'est la vraie valeur ajoutée. #infosec #malware #threatintel\n\nhttps://\nmalware.news/t/isc-stormcast-f\nor-monday-july-27th-2026-https-isc-sans-edu-podcastdetail-10024-mon-jul-27th/124252\n\nJul 27, 2026, 06:00 AM\n·\n·\ntooting_bot\n0\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\nLive feeds\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 192,
+    "observables": {
+      "domain-name": [
+        "malware.news"
+      ],
+      "email-addr": [
+        "Bobe_bot@mastobot.ping.moi",
+        "decio@infosec.exchange"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "AI is making cyberattacks faster — but it's worth asking what that means precisely. Faster reconnaissance? Faster payload generation? Faster lateral movement? The claim is plausible, but \"faster attacks\" as a headline risks flattening a complex shift in threat dynamics into a single talking point. The surface area is changing. The fundamentals, less so. #infosec #AI #threatintel https://www.japantimes.co.jp/business/2026/07/27/companies/cybersecurity-sj-head-interview/",
+    "publication_date": "Mon, 27 Jul 2026 04:58:18 +0000",
+    "source": "https://mastobot.ping.moi/@Bobe_bot/116989939979320882",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastobot.ping.moi is one of the many independent Mastodon servers you can use to participate in the fediverse.\nServeur Mastodon dédié à l'hébergement de bots d'intérêt public. 🇨🇭 Serveur personnel, non commercial. (administré par @decio@infosec.exchange) Contenu automatisé — pas d'inscriptions publiques.\nADMINISTERED BY:\nBobe'bot on security\n@Bobe_bot\nSERVER STATS:\n6\nactive users\nmastobot.ping.moi:About\nmastobot.ping.moi\nProfiles directoryPrivacy policy\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.3\nBack\nBobe'bot on security\n@Bobe_bot@mastobot.ping.moi\n\nAI is making cyberattacks faster — but it's worth asking what that means precisely. Faster reconnaissance? Faster payload generation? Faster lateral movement? The claim is plausible, but \"faster attacks\" as a headline risks flattening a complex shift in threat dynamics into a single talking point. The surface area is changing. The fundamentals, less so. #infosec #AI #threatintel\n\nhttps://www.\njapantimes.co.jp/business/2026\n/07/27/companies/cybersecurity-sj-head-interview/\n\nJul 27, 2026, 06:00 AM\n·\n·\ntooting_bot\n0\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\nLive feeds\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 192,
+    "observables": {
+      "domain-name": [
+        "japantimes.co.jp"
+      ],
+      "email-addr": [
+        "Bobe_bot@mastobot.ping.moi",
+        "decio@infosec.exchange"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "MCBS Data Breach Affects 1.2 Million Individuals",
+    "publication_date": "Mon, 27 Jul 2026 04:53:42 +0000",
+    "source": "https://www.securityweek.com/mcbs-data-breach-affects-1-2-million-individuals/",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "A data breach suffered last year by Atlanta-based medical business management company MCBS (Medical Computer Business Services) affects more than 1.2 million individuals.\n\nAccording to a data breach notification posted on its website, MCBS was targeted by hackers in September 2025.\n\nAn investigation showed that attackers had access to its systems between September 22 and September 26, potentially stealing files that contained personal information such as name, address, SSN, date of birth, health insurance information, and medical information.\n\nThe medical revenue cycle management and billing company’s data breach notification names seven healthcare organizations whose data was compromised in this cyberattack.\n\nThe healthcare data breach tracker maintained by the US Department of Health and Human Services shows that the MCBS hack impacts 1,261,464 individuals.\n\nThe PEAR ransomware group took credit for hacking MCBS in late September 2025, claiming to have stolen more than 3 TB worth of files, including company and client financials, HR and business operations documents, partner and vendor data, patient PII and PHI records, payment details, and emails.\n\nThe hackers have made available for download the information allegedly stolen from the company.\n\nThe PEAR ransomware group emerged in mid-2025, and its leak website currently lists more than 100 alleged victims.\n\nThe cybercrime gang has also taken credit for the Motility Software Solutions hack, which affected 766,000 people, and the Tri-Century Eye Care breach, which affected 200,000 people.\n\nRelated: Xsolis Data Breach Affects 1.4 Million Individuals\n\nRelated: Centers Laboratory Data Breach Affects 540,000 Individuals\n\nRelated: Clover Health Investments Discloses Data Breach\n\nRelated: iRhythm Confirms Data Stolen in Hack\n\nWritten By\nEduard Kovacs\n\nEduard Kovacs (@EduardKovacs) is senior managing editor at SecurityWeek. He worked as a high school IT teacher before starting a career in journalism in 2011. Eduard holds a bachelor’s degree in industrial informatics and a master’s degree in computer techniques applied in electrical engineering.\n\nMore from Eduard Kovacs\n\nNuclear-Sabotage Malware Benchmark Trips Up Most Frontier AI ModelsUpbound Group Says Data Breach Led to $13 Million in Fraudulent Contract LossesNew Check Point Zero-Day Vulnerability Exploited in the WildUS Warns of Iranian Hackers Targeting Siemens, Schneider, and Rockwell ICS DevicesSuno, Paidwork Data Breaches Affect Tens of Millions of AccountsFlaw in Adobe Extension With 300M Installs Enabled WhatsApp Data TheftFourth SharePoint Vulnerability Exploited in Past Month’s Wave of AttacksOracle Patches Over 1,400 Vulnerabilities With Quarterly Security Updates\n\nLatest News\n\nRockwell Patches Code Execution Flaws in Arena Simulation SoftwareIn Other News: Dolphin X AI-Powered Malware, Car Anti-Theft Device Hack, 400 Linux Kernel FlawsAegisAI Raises $36 Million for AI-Powered Email SecurityIndustry Reactions to OpenAI Models Hacking Hugging Face: Feedback FridayData Breach Confirmed After Australian Energy Giant Origin Is HackedOpenAI Fixes ChatGPT Agent Flaw That Could Let Attackers Forge an AI InsiderIs Patching Dead? Vulnerability Management in the Post-Mythos EraChick-fil-A Accounts Get Fried in Credential Stuffing Attack\n\nTrending{\"title\":\"Trending\",\"limit\":\"8\",\"offset\":0,\"range\":\"custom\",\"time_quantity\":\"48\",\"time_unit\":\"hour\",\"freshness\":false,\"order_by\":\"views\",\"post_type\":\"post\",\"pid\":\"\",\"exclude\":\"\",\"cat\":\"\",\"taxonomy\":\"category\",\"term_id\":\"\",\"author\":\"\",\"shorten_title\":{\"active\":false,\"length\":0,\"words\":false},\"post-excerpt\":{\"active\":false,\"length\":0,\"keep_format\":false,\"words\":false},\"thumbnail\":{\"active\":false,\"build\":\"manual\",\"width\":0,\"height\":0},\"rating\":false,\"stats_tag\":{\"comment_count\":false,\"views\":false,\"author\":false,\"date\":{\"active\":false,\"format\":\"F j, Y\"},\"category\":false,\"taxonomy\":{\"active\":false,\"name\":\"category\"}},\"markup\":{\"custom_html\":true,\"wpp-start\":\"&lt;div […]",
+    "word_count": 468,
+    "observables": {},
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "\"According to the Mozilla Foundation’s latest findings examining the privacy practices of period-tracking apps, Stardust was found to be sharing users’ sensitive health information with third-party analytics company RudderStack. This data included the user’s birthdate, birth control type, reproductive goals, and specific symptoms that the user was experiencing, and it tied that record to a unique identifier in place of the person’s name. (The FTC has long warned that this does not make the data anonymous or prevent it from being linked back to a person.)Stardust claimed it was end-to-end encrypted — meaning that not even the company could access its users’ data — but TechCrunch found by analyzing the app’s network traffic that the company’s claim was false.\"https://techcrunch.com/2026/07/16/period-tracker-stardust-shares-users-health-data-with-analytics-firm-says-mozilla-research/#InfoSec #Privacy #Surveillance #Tech #Abortion",
+    "publication_date": "Mon, 27 Jul 2026 02:59:09 +0000",
+    "source": "https://infosec.exchange/@LisaKalayji/116989572361775510",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "Delta Electronics DTM Soft contains a deserialization flaw in project files enabling remote code execution with user interaction. #Cybersecurity #InfoSec https://deafnews.it/en/article/delta-electronics-dtm-soft-exposed-to-user-interaction-rce-via-project-files",
+    "publication_date": "Mon, 27 Jul 2026 02:59:09 +0000",
+    "source": "https://infosec.exchange/@deafnews/116989502940488233",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "@briankrebs A full an exhaustive #infosec analysis (including the updated version) of the #Whitehouse app is here:https://www.atomic.computer/blog/white-house-app-security-analysis/As a counterpoint, this security firm says \"nothing to see here... because everything is shitty in mobile world\" https://www.nowsecure.com/blog/2026/03/31/an-experts-perspective-on-the-white-house-app-putting-security-findings-in-context/I am going with the 1st source, as it still has major designed-in anti-privacy/malware features.",
+    "publication_date": "Mon, 27 Jul 2026 02:59:09 +0000",
+    "source": "https://infosec.exchange/@n_dimension/116989500183507219",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "infosec.exchange is one of the many independent Mastodon servers you can use to participate in the fediverse.A Mastodon instance for info/cyber security-minded people.\nAdministered by:Scary Jerry 👻 @jerryServer stats:10Kactive users Why in the world would the White House's mobile app need permissions or any kind of interaction with (or even reference to) the Chinese tech giant Huawei, whose products are banned from the United States for concerns about national security, espionage and intellectual property theft? Here's a scan at Virustotal.com of what's bundled in the latest White House app: https://www.virustotal.com/gui/file/a98f49eb467bdbe4c32c55cc155a85eadc2b7806fad72cd6e06de25d51a0eac7/detailsALTHide 1+ 11h *Wulfy—Speaker to the machines @n_dimension@infosec.exchange@briankrebs A full an exhaustive #infosec analysis (including the updated version) of the #Whitehouse app is here:https://www.atomic.computer/blog/white-house-app-security-analysis/As a counterpoint, this security firm says \"nothing to see here... because everything is shitty in mobile world\"https://www.nowsecure.com/blog/2026/03/31/an-experts-perspective-on-the-white-house-app-putting-security-findings-in-context/I am going with the 1st source, as it still has major designed-in anti-privacy/malware features.Jul 27, 2026, 04:08 AM··Web1 boost·0 quotes·0 favorites",
+    "word_count": 151,
+    "observables": {
+      "domain-name": [
+        "nowsecure.com",
+        "virustotal.com"
+      ],
+      "email-addr": [
+        "n_dimension@infosec.exchange"
+      ],
+      "file": [
+        {
+          "hash_type": "SHA-256",
+          "values": [
+            "a98f49eb467bdbe4c32c55cc155a85eadc2b7806fad72cd6e06de25d51a0eac7"
+          ]
+        }
+      ],
+      "url": [
+        "http://www.nowsecure.com/blog/2026/03/31/an-experts-perspective-on-the-white-house-app-putting-security-findings-in-context/I",
+        "http://www.virustotal.com/gui/file/a98f49eb467bdbe4c32c55cc155a85eadc2b7806fad72cd6e06de25d51a0eac7/detailsALTHide",
+        "https://www.nowsecure.com/blog/2026/03/31/an-experts-perspective-on-the-white-house-app-putting-security-findings-in-context/I",
+        "https://www.virustotal.com/gui/file/a98f49eb467bdbe4c32c55cc155a85eadc2b7806fad72cd6e06de25d51a0eac7/detailsALTHide"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "#infosec #privacy #corruption¿Entiendes por qué es tan importante proteger tu privacidad y seguridad?No podemos permitir que el gobierno registre nuestra persona y nuestras pertenencias sin una orden judicial.Esto pone en peligro nuestra vida y la de nuestros seres queridos.Mantente a seguro.Mantente alerta. 👍🙏https://x.com/i/status/2081560284733309121",
+    "publication_date": "Mon, 27 Jul 2026 02:59:09 +0000",
+    "source": "https://mastodon.social/@const_data/116989490752198003",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.social is one of the many independent Mastodon servers you can use to participate in the fediverse.\nThe original server of Mastodon, operated by Mastodon GmbH for the common good.\nADMINISTERED BY:\nMastodon\n@Mastodon\nSERVER STATS:\n265K\nactive users\nmastodon.social:About\nmastodon.social\nStatusProfiles directoryPrivacy policy\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.3\nBack\nconst_data\n@const_data@mastodon.social\n\n#infosec #privacy #corruption\n\n¿Entiendes por qué es tan importante proteger tu privacidad y seguridad?\n\nNo podemos permitir que el gobierno registre nuestra persona y nuestras pertenencias sin una orden judicial.\n\nEsto pone en peligro nuestra vida y la de nuestros seres queridos.\n\nMantente a seguro.\n\nMantente alerta. 👍️🙏\n\nhttps://\nx.com/i/status/208156028473330\n9121\n\nX (formerly Twitter)\nJoel Vázquez Ortiz (@_substrg_) on X\n#infosec #encryption #corruption Are you understanding why it's so important to protect your privacy and security. We cannot let our government search our person and items without a warrant. It puts us and our loved ones lives in danger. Stay safe. Stay vigilant. 👍🙏\nJul 27, 2026, 04:06 AM\n·\n·\nMastodon for Android\n1\nboost\n·\n0\nquotes\n·\n0\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 222,
+    "observables": {
+      "domain-name": [
+        "x.com"
+      ],
+      "email-addr": [
+        "const_data@mastodon.social"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Read our latest weekly threat intelligence briefing. This active vulnerability update reveals critical Microsoft Exchange and Oracle flaws for July 2026.#ThreatIntelligence #CyberSecurity #VulnerabilityUpdate #CISA #ZeroDay #InfoSechttps://securityonline.info/weekly-threat-intelligence-briefing-july-26-2026/?utm_source=mastodon&utm_medium=jetpack_social",
+    "publication_date": "Mon, 27 Jul 2026 01:59:30 +0000",
+    "source": "https://infosec.exchange/@DailyCyberSecurity/116989432835384151",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "Possible Phishing 🎣  on: ⚠️hxxps[:]//next-netflix-23rd-kappa[.]vercel[.]app/detail/1171145?type=movie  🧬 Analysis at: https://urldna.io/scan/6a66adca3b77500005589b93 #cybersecurity #phishing #infosec #urldna #scam #infosec",
+    "publication_date": "Mon, 27 Jul 2026 01:59:30 +0000",
+    "source": "https://infosec.exchange/@urldna/116989349828974552",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "ASN: AS3352 Location: Lloret de Mar, ES Added: 2026-07-24T15:11#shodansafari #infosec",
+    "publication_date": "Mon, 27 Jul 2026 01:59:30 +0000",
+    "source": "https://infosec.exchange/@shodansafari/116989231592266366",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "5 open-source security tools you should know in 2026:1. Strix AI-powered vulnerability scanner that finds flaws before attackers do. https://github.com/usestrix/strix2. rz-git Rust CLI for forensic Git repository auditing. Minimal, fast. https://github.com/ahahn/rz-git3. sn0int Modular OSINT framework — from recon to controlled exploitation. https://github.com/kpcyrd/sn0int4. VulnCheck Curated CVE database with zero noise. Better than relying on NVD alone. https://github.com/vulncheck5. Bumblebee Supply chain dependency scanner that checks your packages for suspicious code in seconds. https://github.com/perplexity/bumblebee100% open source. All free. Worth bookmarking.#opensource #infosec #security #github #linux",
+    "publication_date": "Mon, 27 Jul 2026 00:59:34 +0000",
+    "source": "https://infosec.exchange/@th1ago/116989223674039835",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "infosec.exchange is one of the many independent Mastodon servers you can use to participate in the fediverse.A Mastodon instance for info/cyber security-minded people.\nAdministered by:Scary Jerry 👻 @jerryServer stats:10Kactive users @th1ago@infosec.exchange5 open-source security tools you should know in 2026:1. StrixAI-powered vulnerability scanner that finds flaws before attackers do.https://github.com/usestrix/strix2. rz-gitRust CLI for forensic Git repository auditing. Minimal, fast.https://github.com/ahahn/rz-git3. sn0intModular OSINT framework — from recon to controlled exploitation.https://github.com/kpcyrd/sn0int4. VulnCheckCurated CVE database with zero noise. Better than relying on NVD alone.https://github.com/vulncheck5. BumblebeeSupply chain dependency scanner that checks your packages for suspicious code in seconds.https://github.com/perplexity/bumblebee100% open source. All free. Worth bookmarking.GitHubGitHub - usestrix/strix: Open-source AI penetration testing tool to find and fix your app’s vulnerabilities.Open-source AI penetration testing tool to find and fix your app’s vulnerabilities. - usestrix/strix#opensource#infosec#security…and 2 moreJul 27, 2026, 02:58 AM··Zyltr4x1 boost·0 quotes·2 favorites",
+    "word_count": 133,
+    "observables": {
+      "url": [
+        "https://github.com/ahahn/rz-git3",
+        "https://github.com/kpcyrd/sn0int4",
+        "https://github.com/perplexity/bumblebee100%",
+        "https://github.com/usestrix/strix2",
+        "https://github.com/vulncheck5"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Just off the top of my non-expert head about the security of LLM: 1. Security holes and malicious elements in the models' corpus. 2. Holes, bugs and vagueness in their interpretation of natural language prompts. 3. Their inability to separate commands from data. 4. Security holes in the systems that interface the LLM engine with users. 5. Complex interactions between all of the above leave fertile ground for systemic security holes and bugs that may not be findable or fixable. #LLM #infosec",
+    "publication_date": "Mon, 27 Jul 2026 00:59:34 +0000",
+    "source": "https://mastodon.social/@dancingtreefrog/116989172517520552",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.social is one of the many independent Mastodon servers you can use to participate in the fediverse.\nThe original server of Mastodon, operated by Mastodon GmbH for the common good.\nADMINISTERED BY:\nMastodon\n@Mastodon\nSERVER STATS:\n265K\nactive users\nmastodon.social:About\nmastodon.social\nStatusProfiles directoryPrivacy policy\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.3\nBack\nDavid W. Jones\n@dancingtreefrog@mastodon.social\n\nJust off the top of my non-expert head about the security of LLM:\n1. Security holes and malicious elements in the models' corpus.\n2. Holes, bugs and vagueness in their interpretation of natural language prompts.\n3. Their inability to separate commands from data.\n4. Security holes in the systems that interface the LLM engine with users.\n5. Complex interactions between all of the above leave fertile ground for systemic security holes and bugs that may not be findable or fixable.\n#LLM #infosec\n\nJul 27, 2026, 02:45 AM\n·\n·\nWeb\nLast edited Jul 27, 02:47 AM\n1\nboost\n·\n0\nquotes\n·\n1\nfavorite\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 206,
+    "observables": {
+      "email-addr": [
+        "dancingtreefrog@mastodon.social"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "🐛 SIGINT // Cybersecurity Watch — 2026-07-27 Nine-year-old Linux kernel XFS flaw (RefluXFS, CVE-2026-64600) lets local users gain root on default RHEL, Oracle Linux, Rocky & AlmaLinux installs. https://thehackernews.com/2026/07/nine-year-old-refluxfs-linux-flaw-gives.html #CVE #Linux #InfoSec #Cybersecurity",
+    "publication_date": "Mon, 27 Jul 2026 00:00:22 +0000",
+    "source": "https://fosstodon.org/@sigint/116988769077433380",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nfosstodon.org is one of the many independent Mastodon servers you can use to participate in the fediverse.\nFosstodon is an invite only Mastodon instance that is open to those who are interested in technology; particularly free & open source software. If you wish to join, contact us for an invite.\nADMINISTERED BY:\nFosstodon\n@fosstodon\nSERVER STATS:\n7.2K\nactive users\nfosstodon.org:About\nfosstodon.org\nStatusProfiles directoryPrivacy policy\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.3\nBack\nSIGINT 🛡️🤖\n@sigint@fosstodon.org\n\n🐛 SIGINT // Cybersecurity Watch — 2026-07-27\nNine-year-old Linux kernel XFS flaw (RefluXFS, CVE-2026-64600) lets local users gain root on default RHEL, Oracle Linux, Rocky & AlmaLinux installs.\n\nhttps://\nthehackernews.com/2026/07/nine\n-year-old-refluxfs-linux-flaw-gives.html\n\n#CVE #Linux #InfoSec #Cybersecurity\n\nThe Hacker News\nNine-Year-Old RefluXFS Linux Flaw Gives Local Users Root on Default RHEL Installs\nCVE-2026-64600 lets local users overwrite root-owned files on reflink-enabled XFS systems, preserving metadata and persistent root access after reboot\nJul 27, 2026, 01:02 AM\n·\n·\nSIGINT\n1\nboost\n·\n0\nquotes\n·\n0\nfavorites\nTrending\nLive feeds\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 208,
+    "observables": {
+      "domain-name": [
+        "thehackernews.com"
+      ],
+      "email-addr": [
+        "sigint@fosstodon.org"
+      ],
+      "vulnerability": [
+        "CVE-2026-64600"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Williams Accounting Professional By genesis",
+    "publication_date": "Sun, 26 Jul 2026 23:05:25 +0000",
+    "source": "https://www.ransomlook.io//group/genesis",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Genesis\n\n0/1 offline\n\nparser\n\nCompare\nCrypto\n\n105posts (all time)\n16last 30 days\n6last 7 days\n\n80%\navg uptime 30d\n\nActivity · last 30 days\n\nlast post 2026-07-27 00:51\n\nParsing: enabled\n\nView crypto\n\nDescription\nFinancial interests only.\nWe do not provide or work with affiliate programs, no collaborations either.\nThe requested payment must be made within a specified time frame, otherwise the price may be increased, we will begin to publish the data we have about your company and notify the company's customers and suppliers.\nCharitable, non-profit, and medical institutions are only hacked if they have reputation gaps known from open sources or discovered in company data. However, this is only data extraction; live support systems are not affected.\nData is always destroyed after payment; we do not attack the same company twice.\nInteresting fact: once, the total amount of claims against a breached company exceeded its entire capitalization. We know how to create trouble, though it is in our mutual interest to avoid it.\nTo make the data leak more valuable, the most important information is published in a separate folder for each company called “parsed” and is also published on darkweb forums.\n\nMail1\n\nMail\ngenesis.info@onionmail.org\n\nUrls1\n\nUrl\nStatus\nScreen\nUptime 30d\nHealth\n\nhttp://genesis6ixpb5mcy4kudybtw5op2wqlrkocfogbnenz3c647ibqixiad.onion/\n\nDown\n\n80%\n\nActivity (interactive)\n105\n\nActivity charts\n\nAggregation\n\nDaily\nWeekly\n\nRolling avg.\n\nOff\n3\n7\n14\n\nPNG\n\nNov 2025Dec 2025Jan 2026Feb 2026Mar 2026Apr 2026May 2026Jun 2026Jul 202602468\n\nPosts105\n\nDate\nTitle\nDescription\nScreen\n\n2026-07-27\nWilliams Accounting Professional\nA full service CPA firm\n\n2026-07-27\nJJP Slip Forming Inc.\nA company that operates in the Restaurants industry\n\n2026-07-27\nBuilding Envelope Systems\nA reputable construction company based in Plainville, MA\n\n2026-07-27\nWestlake Realty Group, Inc.\nA full-service real estate development company\n\n2026-07-27\nServonix Technologies\nA provider of IT services\n\n2026-07-27\nInfinity Pipeline,Inc.\nA family owned, local construction company.\n\n2026-07-05\nApex Agro, LLC\nA Chemical Production Company\n\n2026-07-05\nMirage Endoscopy Center\nA healthcare organization\n\n2026-07-05\nBri-Tech, Inc\nA technology design and integration firm\n\n2026-07-05\nSBI Software\nAn Enterprise Resource Planning Software Provider\n\n2026-07-05\nDICON\nA general contracting construction firm\n\n2026-07-05\nWestgate\nA construction management company\n\n2026-07-05\nDunagan Associates\nProvides services in residential real estate and insurance\n\n2026-07-05\nSynergy Interactive\nA provider of staffing services\n\n2026-07-05\nEast Texas Family Medicine\nA healthcare organization\n\n2026-06-30\nBrooklyn Defender Services\nA legal organization dedicated to safeguard the rights of its clients\n\n2026-06-18\nUnited Personnel (a division of Masis Staffing Solutions)\nA provider of staffing services\n\n2026-06-18\nThe Associated Builders and Contractors of Indiana/Kentucky\nA trade association\n\n2026-06-06\n*B*\nA trade association\n\n2026-06-05\nFamily Medical Associates of Raleigh\nA healthcare organization\n\n2026-05-30\nCavalier Flooring Systems Inc.\nA flooring and tile contractor\n\n2026-05-30\nWentworth\nthe DC Metro area's premier design-build firm\n\n2026-05-30\nGreen Resource\nA leading distributor of professional fertilizers, chemicals, and seeds for local and lawn grasses\n\n2026-05-30\nCedar Street Capital (A part of a Cynvestors Limited Partnership)\nA private investment entity associated with Cynthia Stiehl\n\n2026-05-30\nA Roettgers\nFuel distributor and gas station operator\n\n2026-05-29\n******** & Co\nA provider of financial services\n\n2026-05-29\n*M**\nA healthcare organization\n\n2026-05-28\nPeña & Bromberg\nA legal firm dedicated to safeguard the rights of its clients\n\n2026-05-23\n**** & ********\nA legal firm dedicated to safeguard the rights of its clients\n\n2026-05-12\nPequod Associates\nA global leader in the provision of Marine Claims TPA and Recovery services.\n\n2026-05-12\nCasino Gaming Commission\nOfficial Casino Gaming […]",
+    "word_count": 557,
+    "observables": {
+      "domain-name": [
+        "genesis.info"
+      ],
+      "email-addr": [
+        "genesis.info@onionmail.org"
+      ],
+      "url": [
+        "http://genesis6ixpb5mcy4kudybtw5op2wqlrkocfogbnenz3c647ibqixiad.onion/"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Developing: AnMed reports phone and internet outage impacting all hospital locations; ERs remain open",
+    "publication_date": "Sun, 26 Jul 2026 14:10:29 +0000",
+    "source": "https://databreaches.net/2026/07/26/developing-anmed-reports-phone-and-internet-outage-impacting-all-hospital-locations-ers-remain-open/?pk_campaign=feed&pk_kwd=developing-anmed-reports-phone-and-internet-outage-impacting-all-hospital-locations-ers-remain-open",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "databreaches.net",
+    "word_count": 1,
+    "observables": {
+      "domain-name": [
+        "databreaches.net"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "A-list directors, actors and celebrities exposed in Tribeca film festival data leak",
+    "publication_date": "Sun, 26 Jul 2026 13:06:14 +0000",
+    "source": "https://databreaches.net/2026/07/26/a-list-directors-actors-and-celebrities-exposed-in-tribeca-film-festival-data-leak/?pk_campaign=feed&pk_kwd=a-list-directors-actors-and-celebrities-exposed-in-tribeca-film-festival-data-leak",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "databreaches.net",
+    "word_count": 1,
+    "observables": {
+      "domain-name": [
+        "databreaches.net"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "🇵🇭 We tracked a data breach claim by XPLOITZ targeting the Philippine Mines and Geosciences Bureau, part of the Department of Environment and Natural Resources. The actor claims to have external documentation of the exploit. We've logged 114 XPLOITZ listings in the past 30 days across our monitoring. #DataBreach #Government #ThreatIntelDetails + live feed → https://go.darkwebsonar.io/xploitz-mastodon",
+    "publication_date": "Mon, 27 Jul 2026 04:58:09 +0000",
+    "source": "https://infosec.exchange/@darkwebsonar/116990031797458248",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "Ugh, this shit pisses me off! They expose my data because they rely on a dozen third-party sites. Then I am not allowed to protect myself from those same sites when trying to login to their site.https://www.bleepingcomputer.com/news/security/chick-fil-a-data-breach-affects-more-than-13-000-customers/#ChickFilA #DataBreach",
+    "publication_date": "Mon, 27 Jul 2026 02:58:20 +0000",
+    "source": "https://social.sdf.org/@jchaven/116989553293883030",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nsocial.sdf.org is one of the many independent Mastodon servers you can use to participate in the fediverse.\nSDF Social is a private Mastodon instance for members of the SDF Public Access UNIX System\nADMINISTERED BY:\nSDF\n@SDF\nSERVER STATS:\n79\nactive users\nsocial.sdf.org:About\nsocial.sdf.org\nProfiles directoryPrivacy policy\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.3\nBack\nMayor of Nerdocrumbesia 🏡\n@jchaven@social.sdf.org\n\nUgh, this shit pisses me off! They expose my data because they rely on a dozen third-party sites.\n\nThen I am not allowed to protect myself from those same sites when trying to login to their site.\n\nhttps://www.\nbleepingcomputer.com/news/secu\nrity/chick-fil-a-data-breach-affects-more-than-13-000-customers/\n\nALT\nHide\n#\nChickFilA\n#\nDataBreach\nJul 27, 2026, 04:21 AM\n·\n·\nWeb\n0\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\nLive feeds\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 170,
+    "observables": {
+      "domain-name": [
+        "bleepingcomputer.com"
+      ],
+      "email-addr": [
+        "jchaven@social.sdf.org"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Operation Endgame 4.0 - 4,348,526 breached accounts - https://www.redpacketsecurity.com/operation-endgame-4-0-4-348-526-breached-accounts/#databreach #HaveIBeenPwnedLatestBreaches #HIBP #OSINT #Security #threatintel #TroyHunt",
+    "publication_date": "Mon, 27 Jul 2026 02:58:20 +0000",
+    "source": "https://mastodon.social/@RedPacketSecurity/116989470494255004",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.social is one of the many independent Mastodon servers you can use to participate in the fediverse.\nThe original server of Mastodon, operated by Mastodon GmbH for the common good.\nADMINISTERED BY:\nMastodon\n@Mastodon\nSERVER STATS:\n265K\nactive users\nmastodon.social:About\nmastodon.social\nStatusProfiles directoryPrivacy policy\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.3\nBack\nRedPacket Security\n@RedPacketSecurity@mastodon.social\n\nOperation Endgame 4.0 - 4,348,526 breached accounts -\nhttps://www.\nredpacketsecurity.com/operatio\nn-endgame-4-0-4-348-526-breached-accounts/\n\nRedPacket Security · 4h\nOperation Endgame 4.0 - 4,348,526 breached accounts - RedPacket Security\nOn 18 June 2026, the latest phase of Operation Endgame targeted the SocGholish malware operation, a prolific malware distribution network used to compromise\n#\ndatabreach\n#\nHaveIBeenPwnedLatestBreaches\n#\nHIBP\n…and 4 more\nJul 27, 2026, 04:00 AM\n·\n·\nn8n\n0\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 174,
+    "observables": {
+      "domain-name": [
+        "redpacketsecurity.com"
+      ],
+      "email-addr": [
+        "RedPacketSecurity@mastodon.social"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "I know I probably shouldn't tell someone who committed a felony to relax, but let's be real here, bro. FBI agents are paid like shit and they're dealing with serious problems, Schlunko McSchmeeSchmee isn't even on their radar. They probably don't even feel like doing the paperwork, some agent probably saw it, said \"heh\", and went back to some case where someone is laundering $10,000,000 of Bitcoin  \n  \nHow much money was stolen? What? Like $700? The FBI doesn't even look at you until you've done somewhere between $100,000 - $1,000,000. It costs them $200/hr for the attorneys alone, not to mention the man hours to talk to Steam, do the court paperwork, subpoena people, determine which field office is going to handle.  \n  \nI don't know bro, whatever",
+    "publication_date": "Mon, 27 Jul 2026 02:00:48 +0000",
+    "source": "https://t.me/vxunderground/9205",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {},
+    "extractor": "none"
+  },
+  {
+    "title": "Dawg, I don't want to sound like a hater, but you need to CHILL OUT.  \n  \nYour goopies just got attention because it was video game goop. This isn't like, CL0P ransomware group extorting the United States government for $50,000,000 because of a 0day exploit they had.  \n  \nYou're NOT FBI most wanted, bro. They're worried about big malware campaigns. The internet has crypto-drainers bringing in $100,000/month, CSAM all over TOR, large-scale botnets wreaking havoc on home users, businesses, and critical infrastructure, and they're also dealing with state-sponsored Threat Groups which are enemies of the United States.  \n  \nYou popping 50 people from Schlunko McSchmeeSchmee on Steam isn't going to make Kash Patel call the President of the United States and say you're El Chapo 2.0. This only got attention because it was on Steam  \n  \nGosh dang, bro. Relax. Half these fucking people on social media talking about it unironically spend a majority of their day scrolling TikTok and arguing in the comment section on YouTube videos. It's not that deep, bro.",
+    "publication_date": "Mon, 27 Jul 2026 02:00:48 +0000",
+    "source": "https://t.me/vxunderground/9204",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {},
+    "extractor": "none"
+  },
+  {
+    "title": "Also, apparently Meccha Chameleon people follow me on Telegram.  \n  \nHello MecchaChameleon malware people living inside my computer,  \n  \nI think overall your strategy of using a malicious custom map thingie was cool and probably yielded moderate success. I don't think your intention was being like, 100,000 infected machines, but I suspect you got enough infected machines to be happy. People wrote you were using PureRAT, whether or not that is true, I don't know, YARA rules for flagging can be iffy.  \n  \nBut, when I was reverse engineering your C# payload (which I think you attempted to obfuscate?) I saw the weird dependency you used for remote access to machines. I can't remember what it was now, I deleted your goopies off my machine, but I saw it as an embedded resource next to PAYLOAD_ULTRA_MEGA_FUCK_OFF.zip which you decrypted and loaded as a raw assembly. Maybe that raw assembly you loaded was PureRAT? Or was it the stager? I don't know.  \n  \nObviously we've been this a million times before with other video games (malicious mods), but seeing it in something obscure was a nice surprise. Your advertisement, or demo, or whatever, you showed was not an RCE. An RCE would require ... remote code execution. This is really fancy payload smuggling.  \n  \nAnyway, it's obvious your staging was vibe coded. It was pretty easy to reverse engineer. I think you had the right idea on how to go about things, but between the segments being in order (1 - 66), the obvious embedded payload in the 2nd stager, and the really loud BATCH files, it wasn't going to go very far.  \n  \nThanks for the goopies though, it was chill.  \n  \nCheers,  \n  \n(pic unrelated)",
+    "publication_date": "Mon, 27 Jul 2026 02:00:48 +0000",
+    "source": "https://t.me/vxunderground/9203",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {},
+    "extractor": "none"
+  },
+  {
+    "title": "This thingie",
+    "publication_date": "Mon, 27 Jul 2026 02:00:48 +0000",
+    "source": "https://t.me/vxunderground/9202",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {},
+    "extractor": "none"
+  },
+  {
+    "title": "Everyone on X was yapping about this Meccha Chameleon malware thingie. Internet nerds have been doing some internet detective research trying to find out who did it (I have no idea why, it was a relatively small malware campaign, there is much more dangerous malware than this).  \n  \nAnyway, I bonked it with a stick.  \n  \n> everyone yappin about this  \n> look inside  \n> goofy ahh batch file  \n> http downloads from ip address  \n> http? not https? what year is it?  \n> steamb.bat   \n> more ghetto batch files  \n> not obfuscated  \n> ok thanks i guess idk  \n> more http downloads  \n> makes fake microsoft security center folder  \n> ???  \n> downloads auto hot key script  \n> notes present  \n> AI GENERATED TRASH  \n> aes256 encrypted data blob  \n> fragmented  \n> all parts are labeled (part 1 - part 66)  \n> aes256 iv and key labeled  \n> ??? WHO IS THIS FOOLING BRO  \n> image 1  \n> make goopy python script  \n> add p1 - p66 together  \n> decrypt with documented aes256 keys  \n> lmfao wtf  \n> makes .exe  \n> look at .exe  \n> .NET c# goop  \n> first line of code  \n> EXTRACT PAYLOAD FROM RESOURCE SECTION  \n> ???  \n> encrypted, but encryption goopies still there  \n> image 2  \n> extract goopies  \n> another .exe  \n> slight attempt and obfuscation  \n> lol crypto stealer (image 3)  \n> other goop that looks like for RAT  \n  \nSHA256: dc9a2f090f8d7ba31e1195573bbb5b1f0891f3b3722d8ad4c159f2519b1cb5b0",
+    "publication_date": "Mon, 27 Jul 2026 02:00:48 +0000",
+    "source": "https://t.me/vxunderground/9199",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {},
+    "extractor": "none"
+  },
+  {
+    "title": "Let's start the week very wrong with an alleged hack by the very ungentlemanly ransomware group, The Gentlemen.Yayyyy... These guys are making effort to surpass Qilin as one of the most active extortion groups on the darknet, and I'll bet dollars to donuts they take the top spot by the end of the year.#ransomware #databreach #cybersecurityhttps://www.cyberdaily.au/security/13957-exclusive-victorian-heritage-restoration-firm-listed-by-the-gentlemen-ransomware-group",
+    "publication_date": "Mon, 27 Jul 2026 01:57:42 +0000",
+    "source": "https://mastodon.social/@David_Hollingworth/116989273797003196",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.social is one of the many independent Mastodon servers you can use to participate in the fediverse.\nThe original server of Mastodon, operated by Mastodon GmbH for the common good.\nADMINISTERED BY:\nMastodon\n@Mastodon\nSERVER STATS:\n265K\nactive users\nmastodon.social:About\nmastodon.social\nStatusProfiles directoryPrivacy policy\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.3\nBack\nDavid Hollingworth\n@David_Hollingworth@mastodon.social\n\nLet's start the week very wrong with an alleged hack by the very ungentlemanly ransomware group, The Gentlemen.\n\nYayyyy... These guys are making effort to surpass Qilin as one of the most active extortion groups on the darknet, and I'll bet dollars to donuts they take the top spot by the end of the year.\n\n#ransomware #databreach #cybersecurity\n\nhttps://www.\ncyberdaily.au/security/13957-e\nxclusive-victorian-heritage-restoration-firm-listed-by-the-gentlemen-ransomware-group\n\nCyber Daily · 6h\nExclusive: Victorian heritage & restoration firm listed by The Gentlemen ransomware group\nBy David Hollingworth\nJul 27, 2026, 03:10 AM\n·\n·\nWeb\n0\nboosts\n·\n0\nquotes\n·\n2\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 197,
+    "observables": {
+      "domain-name": [
+        "cyberdaily.au"
+      ],
+      "email-addr": [
+        "David_Hollingworth@mastodon.social"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "旭化成セラピューティクスとシミックヘルスケア・インスティテュート、不正アクセスで患者サポートプログラム「RAコネクト」で個人情報漏洩https://rocket-boys.co.jp/security-measures-lab/asahi-kasei-cmic-ra-connect-data-breach/#セキュリティ対策Lab #security #securitynews #cyberattack #incident #databreach",
+    "publication_date": "Mon, 27 Jul 2026 00:58:14 +0000",
+    "source": "https://mastodon.social/@securityLab_jp/116989178899850612",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.social is one of the many independent Mastodon servers you can use to participate in the fediverse.\nThe original server of Mastodon, operated by Mastodon GmbH for the common good.\nADMINISTERED BY:\nMastodon\n@Mastodon\nSERVER STATS:\n265K\nactive users\nmastodon.social:About\nmastodon.social\nStatusProfiles directoryPrivacy policy\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.3\nBack\nセキュリティ対策Lab\n@securityLab_jp@mastodon.social\n\n旭化成セラピューティクスとシミックヘルスケア・インスティテュート、不正アクセスで患者サポートプログラム「RAコネクト」で個人情報漏洩\n\nhttps://\nrocket-boys.co.jp/security-mea\nsures-lab/asahi-kasei-cmic-ra-connect-data-breach/\n\n合同会社ロケットボーイズ · 6h\n旭化成セラピューティクスとシミックヘルスケア・インスティテュート、不正アクセスで患者サポートプログラム「RAコネクト」で個人情報漏洩\nBy 三村\n#\nセキュリティ対策Lab\n#\nsecurity\n#\nsecuritynews\n…and 3 more\nJul 27, 2026, 02:46 AM\n·\n·\nWeb\n0\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 135,
+    "observables": {
+      "domain-name": [
+        "rocket-boys.co.jp"
+      ],
+      "email-addr": [
+        "securityLab_jp@mastodon.social"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "神奈川県警の警部補が暴力団組員へ捜査 情報を漏洩、地方公務員法違反容疑で書類送検-停職6か月、県警の連絡禁止指示後も繰り返される癒着https://rocket-boys.co.jp/security-measures-lab/kanagawa-police-leak-yakuza-investigation/#セキュリティ対策Lab #security #securitynews #incident #databreach",
+    "publication_date": "Sun, 26 Jul 2026 23:58:23 +0000",
+    "source": "https://mastodon.social/@securityLab_jp/116988914299697552",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.social is one of the many independent Mastodon servers you can use to participate in the fediverse.\nThe original server of Mastodon, operated by Mastodon GmbH for the common good.\nADMINISTERED BY:\nMastodon\n@Mastodon\nSERVER STATS:\n265K\nactive users\nmastodon.social:About\nmastodon.social\nStatusProfiles directoryPrivacy policy\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.3\nBack\nセキュリティ対策Lab\n@securityLab_jp@mastodon.social\n\n神奈川県警の警部補が暴力団組員へ捜査 情報を漏洩、地方公務員法違反容疑で書類送検-停職6か月、県警の連絡禁止指示後も繰り返される癒着\n\nhttps://\nrocket-boys.co.jp/security-mea\nsures-lab/kanagawa-police-leak-yakuza-investigation/\n\n合同会社ロケットボーイズ · 7h\n神奈川県警の警部補が暴力団組員へ捜査 情報を漏洩、地方公務員法違反容疑で書類送検-停職6か月、県警の連絡禁止指示後も繰り返される癒着\nBy 三村\n#\nセキュリティ対策Lab\n#\nsecurity\n#\nsecuritynews\n…and 2 more\nJul 27, 2026, 01:39 AM\n·\n·\nWeb\n0\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 137,
+    "observables": {
+      "domain-name": [
+        "rocket-boys.co.jp"
+      ],
+      "email-addr": [
+        "securityLab_jp@mastodon.social"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Claudeのチャットがグーグルなどの検索エンジン経由で漏洩-日本語 チャットも発見https://rocket-boys.co.jp/security-measures-lab/claude-shared-chat-search-indexing-leak/#セキュリティ対策Lab #security #securitynews #cyberattack #incident #databreach #ainews",
+    "publication_date": "Sun, 26 Jul 2026 22:58:31 +0000",
+    "source": "https://mastodon.social/@securityLab_jp/116988661201001718",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.social is one of the many independent Mastodon servers you can use to participate in the fediverse.\nThe original server of Mastodon, operated by Mastodon GmbH for the common good.\nADMINISTERED BY:\nMastodon\n@Mastodon\nSERVER STATS:\n265K\nactive users\nmastodon.social:About\nmastodon.social\nStatusProfiles directoryPrivacy policy\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.3\nBack\nセキュリティ対策Lab\n@securityLab_jp@mastodon.social\n\nClaudeのチャットがグーグルなどの検索エンジン経由で漏洩-日本語 チャットも発見\n\nhttps://\nrocket-boys.co.jp/security-mea\nsures-lab/claude-shared-chat-search-indexing-leak/\n\n合同会社ロケットボーイズ · 8h\nClaudeのチャットがグーグルなどの検索エンジン経由で漏洩-日本語 チャットも発見\nBy 三村\n#\nセキュリティ対策Lab\n#\nsecurity\n#\nsecuritynews\n…and 4 more\nJul 27, 2026, 12:35 AM\n·\n·\nWeb\n0\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 137,
+    "observables": {
+      "domain-name": [
+        "rocket-boys.co.jp"
+      ],
+      "email-addr": [
+        "securityLab_jp@mastodon.social"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "ベルギー連邦検察、NATO欧州連合軍最高司令部（SHAPE）の中国系カナダ人インターンをスパイ容疑で逮捕 https://rocket-boys.co.jp/security-measures-lab/nato-shape-intern-espionage-arrest/#セキュリティ対策Lab #security #securitynews #cyberattack #incident #databreach #安全保障",
+    "publication_date": "Sun, 26 Jul 2026 22:58:31 +0000",
+    "source": "https://mastodon.social/@securityLab_jp/116988621358182500",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.social is one of the many independent Mastodon servers you can use to participate in the fediverse.\nThe original server of Mastodon, operated by Mastodon GmbH for the common good.\nADMINISTERED BY:\nMastodon\n@Mastodon\nSERVER STATS:\n265K\nactive users\nmastodon.social:About\nmastodon.social\nStatusProfiles directoryPrivacy policy\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.3\nBack\nセキュリティ対策Lab\n@securityLab_jp@mastodon.social\n\nベルギー連邦検察、NATO欧州連合軍最高司令部（SHAPE）の中国系カナダ人インターンをスパイ容疑で逮捕\n\nhttps://\nrocket-boys.co.jp/security-mea\nsures-lab/nato-shape-intern-espionage-arrest/\n\n合同会社ロケットボーイズ · 10h\nベルギー連邦検察、NATO欧州連合軍最高司令部（SHAPE）の中国系カナダ人インターンをスパイ容疑で逮捕\nBy 三村\n#\nセキュリティ対策Lab\n#\nsecurity\n#\nsecuritynews\n…and 4 more\nJul 27, 2026, 12:24 AM\n·\n·\nWeb\n0\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 135,
+    "observables": {
+      "domain-name": [
+        "rocket-boys.co.jp"
+      ],
+      "email-addr": [
+        "securityLab_jp@mastodon.social"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Two big breaches broke in the same week: Paidwork  and Suno Paidwork said nothing publicly. Suno gave an on-the-record statement claiming \"no sensitive personal information was compromised\" — but HaveIBeenPwned's own data shows addresses, phone numbers, and partial payment details in the leak. Here's what actually happened, and what to do:  https://www.leaklens.org/explainers/paidwork-breach-2026#DataBreach #Privacy #Cybersecurity",
+    "publication_date": "Sun, 26 Jul 2026 20:59:47 +0000",
+    "source": "https://mastodon.social/@LeakLens/116988237460996725",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.social is one of the many independent Mastodon servers you can use to participate in the fediverse.\nThe original server of Mastodon, operated by Mastodon GmbH for the common good.\nADMINISTERED BY:\nMastodon\n@Mastodon\nSERVER STATS:\n265K\nactive users\nmastodon.social:About\nmastodon.social\nStatusProfiles directoryPrivacy policy\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.3\nBack\nLeak Lens\n@LeakLens@mastodon.social\n\nTwo big breaches broke in the same week: Paidwork and Suno\nPaidwork said nothing publicly. Suno gave an on-the-record statement claiming \"no sensitive personal information was compromised\" — but HaveIBeenPwned's own data shows addresses, phone numbers, and partial payment details in the leak.\nHere's what actually happened, and what to do:\nhttps://www.\nleaklens.org/explainers/paidwo\nrk-breach-2026\n\n#\nDataBreach\n#\nPrivacy\n#\nCybersecurity\nJul 26, 2026, 10:47 PM\n·\n·\nWeb\nLast edited Jul 26, 10:50 PM\n0\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 183,
+    "observables": {
+      "domain-name": [
+        "leaklens.org"
+      ],
+      "email-addr": [
+        "LeakLens@mastodon.social"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "RE: https://mastodon.thenewoil.org/@thenewoil/116988051467364026FINALLY! A Data Breach that doesn't affect me!#DataBreach #CyberSecurity",
+    "publication_date": "Sun, 26 Jul 2026 20:59:47 +0000",
+    "source": "https://dmv.community/@pixelpusher220/116988130889618279",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\ndmv.community is one of the many independent Mastodon servers you can use to participate in the fediverse.\nA small regional Mastodon instance for those in the DC, Maryland, and Virginia areas. Local news, commentary, and conversation.\nADMINISTERED BY:\njcrabapple\n@jcrabapple\nSERVER STATS:\n116\nactive users\ndmv.community:About\ndmv.community\nStatusProfiles directoryPrivacy policy\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.3\nBack\nPusher of Pixels\n@pixelpusher220@dmv.community\n\nFINALLY! A Data Breach that doesn't affect me!\n\n#\nDataBreach\n#\nCyberSecurity\nThe New Oil\n@thenewoil@mastodon.thenewoil.org\n10h\n\n#ChickFilA #DataBreach affects more than 13,000 customers\n\nhttps://www.\nbleepingcomputer.com/news/secu\nrity/chick-fil-a-data-breach-affects-more-than-13-000-customers/\n\n#\nprivacy\n#\ncybersecurity\n#\nFastFood\nJul 26, 2026, 10:20 PM\n·\n·\nWeb\n3\nboosts\n·\n0\nquotes\n·\n8\nfavorites\nTrending\nLive feeds\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 159,
+    "observables": {
+      "domain-name": [
+        "bleepingcomputer.com"
+      ],
+      "email-addr": [
+        "pixelpusher220@dmv.community",
+        "thenewoil@mastodon.thenewoil.org"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "#ChickFilA #DataBreach affects more than 13,000 customershttps://www.bleepingcomputer.com/news/security/chick-fil-a-data-breach-affects-more-than-13-000-customers/#privacy #cybersecurity #FastFood",
+    "publication_date": "Sun, 26 Jul 2026 20:00:32 +0000",
+    "source": "https://mastodon.thenewoil.org/@thenewoil/116988051467364026",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.thenewoil.org is one of the many independent Mastodon servers you can use to participate in the fediverse.\nA Mastodon instance hosted by The New Oil Media.\nADMINISTERED BY:\nAdmin\n@admin\nSERVER STATS:\n4\nactive users\nmastodon.thenewoil.org:About\nmastodon.thenewoil.org\nProfiles directoryPrivacy policyTerms of service\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.3\nBack\nThe New Oil\n@thenewoil@mastodon.thenewoil.org\n\n#ChickFilA #DataBreach affects more than 13,000 customers\n\nhttps://www.\nbleepingcomputer.com/news/secu\nrity/chick-fil-a-data-breach-affects-more-than-13-000-customers/\n\n#\nprivacy\n#\ncybersecurity\n#\nFastFood\nJul 26, 2026, 10:00 PM\n·\n4\nboosts\n·\n1\nquote\n·\n0\nfavorites\nTrending\nLive feeds\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 132,
+    "observables": {
+      "domain-name": [
+        "bleepingcomputer.com"
+      ],
+      "email-addr": [
+        "thenewoil@mastodon.thenewoil.org"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Chick-fil-A, Estée Lauder, Hugging Face, OpenAI and more are all part of this week's breaches!#News #TechNews #Cybersecurity #DataBreach #Privacy #Ransomware #Malwarehttps://youtu.be/tTTLrbCL44o",
+    "publication_date": "Sun, 26 Jul 2026 19:00:06 +0000",
+    "source": "https://mastodon.social/@NickAEsp/116987684343348418",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.social is one of the many independent Mastodon servers you can use to participate in the fediverse.\nThe original server of Mastodon, operated by Mastodon GmbH for the common good.\nADMINISTERED BY:\nMastodon\n@Mastodon\nSERVER STATS:\n265K\nactive users\nmastodon.social:About\nmastodon.social\nStatusProfiles directoryPrivacy policy\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.3\nBack\nNick Espinosa\n@NickAEsp@mastodon.social\n\nChick-fil-A, Estée Lauder, Hugging Face, OpenAI and more are all part of this week's breaches!\n\n#News #TechNews #Cybersecurity #DataBreach #Privacy #Ransomware #Malware\n\nhttps://\nyoutu.be/tTTLrbCL44o\n\nYouTube\nYour Breaches of the Week! July 20 to July 26, 2026\nBy Nick Espinosa\nJul 26, 2026, 08:26 PM\n·\n·\nWeb\n3\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 156,
+    "observables": {
+      "email-addr": [
+        "NickAEsp@mastodon.social"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Daily podcast: Chick-fil-A, Estée Lauder, Hugging Face, OpenAI and more are all part of this week's breaches!#News #TechNews #Cybersecurity #DataBreach #Privacy #Ransomware #Malware #podcasthttps://open.spotify.com/episode/25UlILqOWYN05I7EskaoIE?si=wDOkE491Ruml_7aThMbwbw",
+    "publication_date": "Sun, 26 Jul 2026 19:00:06 +0000",
+    "source": "https://mastodon.social/@NickAEsp/116987674623460984",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.social is one of the many independent Mastodon servers you can use to participate in the fediverse.\nThe original server of Mastodon, operated by Mastodon GmbH for the common good.\nADMINISTERED BY:\nMastodon\n@Mastodon\nSERVER STATS:\n265K\nactive users\nmastodon.social:About\nmastodon.social\nStatusProfiles directoryPrivacy policy\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.3\nBack\nNick Espinosa\n@NickAEsp@mastodon.social\n\nDaily podcast: Chick-fil-A, Estée Lauder, Hugging Face, OpenAI and more are all part of this week's breaches!\n\n#News #TechNews #Cybersecurity #DataBreach #Privacy #Ransomware #Malware #podcast\n\nhttps://\nopen.spotify.com/episode/25UlI\nLqOWYN05I7EskaoIE?si=wDOkE491Ruml_7aThMbwbw\n\nSpotify\nYour Breaches of the Week! July 20 to July 26, 2026\nThe Deep Dive Radio Show and Nick's Nerd News · Episode\nJul 26, 2026, 08:24 PM\n·\n·\nWeb\n1\nboost\n·\n0\nquotes\n·\n0\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 168,
+    "observables": {
+      "domain-name": [
+        "open.spotify.com"
+      ],
+      "email-addr": [
+        "NickAEsp@mastodon.social"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Threat Actor Claims 130GB Microsoft Corporate Data BreachA threat actor claims to have breached Microsoft and exfiltrated approximately 130 GB of corporate data, allegedly published on a TOR-based leak site.Full technical analysis: https://thecybersecguru.com/news/alleged-microsoft-data-breach-130gb-leak/The claimed dataset reportedly includes PII, authentication-related information, password hashes, employee and customer records, internal service tickets, access permissions, and other corporate data.These claims remain unverified. Microsoft has not publicly confirmed that a breach occurred or that the alleged dataset is authentic.If validated, the exposure could enable credential attacks, phishing, business email compromise (BEC), identity theft, and other follow-on intrusions.#InfoSec #CyberSecurity #Microsoft #DataBreach #ThreatIntelligence #BlueTeam #DFIR #SOC #ThreatHunting #DarkWeb",
+    "publication_date": "Sun, 26 Jul 2026 19:00:06 +0000",
+    "source": "https://infosec.exchange/@thecybersecguru/116987647913883868",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "infosec.exchange is one of the many independent Mastodon servers you can use to participate in the fediverse.A Mastodon instance for info/cyber security-minded people.\nAdministered by:Scary Jerry 👻 @jerryServer stats:10Kactive users thecybersecguru @thecybersecguru@infosec.exchangeThreat Actor Claims 130GB Microsoft Corporate Data BreachA threat actor claims to have breached Microsoft and exfiltrated approximately 130 GB of corporate data, allegedly published on a TOR-based leak site.Full technical analysis:https://thecybersecguru.com/news/alleged-microsoft-data-breach-130gb-leak/The claimed dataset reportedly includes PII, authentication-related information, password hashes, employee and customer records, internal service tickets, access permissions, and other corporate data.These claims remain unverified. Microsoft has not publicly confirmed that a breach occurred or that the alleged dataset is authentic.If validated, the exposure could enable credential attacks, phishing, business email compromise (BEC), identity theft, and other follow-on intrusions.#InfoSec#CyberSecurity#Microsoft…and 7 more Alleged Microsoft Data Breach Claims 130 GB of Corporate Data Published on TOR Leak Site\n\nA threat actor claims to have stolen and leaked 130GB of Microsoft corporate data. Here's what is known, what remains unverified, and the potential security risks\n\nhttps://thecybersecguru.com/news/alleged-microsoft-data-breach-130gb-leak/ALTALTHideJul 26, 2026, 08:17 PM··Web0 boosts·0 quotes·1 favorite",
+    "word_count": 173,
+    "observables": {
+      "email-addr": [
+        "thecybersecguru@infosec.exchangeThreat"
+      ],
+      "url": [
+        "https://thecybersecguru.com/news/alleged-microsoft-data-breach-130gb-leak/ALTALTHideJul",
+        "https://thecybersecguru.com/news/alleged-microsoft-data-breach-130gb-leak/The"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "",
+    "publication_date": "Sun, 26 Jul 2026 18:55:47 +0000",
+    "source": "https://t.me/vxunderground/9198",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {},
+    "extractor": "none"
+  },
+  {
+    "title": "",
+    "publication_date": "Sun, 26 Jul 2026 16:48:55 +0000",
+    "source": "https://infosec.exchange/@thecybersecguru/116987300100601248",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "infosec.exchange is one of the many independent Mastodon servers you can use to participate in the fediverse.A Mastodon instance for info/cyber security-minded people.\nAdministered by:Scary Jerry 👻 @jerryServer stats:10Kactive users thecybersecguru @thecybersecguru@infosec.exchange🚨 Alleged Microsoft Data Breach Claims SurfaceA threat actor claims to have breached Microsoft and exfiltrated approximately 130GB of corporate data, which is allegedly being published on a TOR-based leak site.The claimed dataset reportedly includes PII, employee and customer contact information, authentication-related data, password hashes, portal identities, corporate account information, internal service tickets, access permissions, and other internal records.At this time, these claims remain unverified, and Microsoft has not publicly confirmed that a breach occurred or that the alleged data is authentic.If validated, such information could significantly increase the risk of credential abuse, targeted phishing, business email compromise (BEC), identity theft, and follow-on intrusion attempts.Technical analysis and what defenders should know:🔗 https://thecybersecguru.com/news/alleged-microsoft-data-breach-130gb-leak/#CyberSecurity#InfoSec#DataBreach…and 10 more Alleged Microsoft Data Breach Claims 130 GB of Corporate Data Published on TOR Leak Site\n\nA threat actor claims to have stolen and leaked 130GB of Microsoft corporate data. Here's what is known, what remains unverified, and the potential security risks\n\nhttps://thecybersecguru.com/news/alleged-microsoft-data-breach-130gb-leak/ALTALTHideJul 26, 2026, 06:48 PM··Web1 boost·0 quotes·0 favorites",
+    "word_count": 194,
+    "observables": {
+      "email-addr": [
+        "thecybersecguru@infosec.exchange"
+      ],
+      "url": [
+        "https://thecybersecguru.com/news/alleged-microsoft-data-breach-130gb-leak/#CyberSecurity#InfoSec#DataBreach…and",
+        "https://thecybersecguru.com/news/alleged-microsoft-data-breach-130gb-leak/ALTALTHideJul"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "",
+    "publication_date": "Sun, 26 Jul 2026 16:01:36 +0000",
+    "source": "https://infosec.exchange/@bugxhunter/116987114032305783",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "",
+    "publication_date": "Sun, 26 Jul 2026 15:30:06 +0000",
+    "source": "https://mastodon.thenewoil.org/@thenewoil/116986990177975365",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.thenewoil.org is one of the many independent Mastodon servers you can use to participate in the fediverse.\nA Mastodon instance hosted by The New Oil Media.\nADMINISTERED BY:\nAdmin\n@admin\nSERVER STATS:\n4\nactive users\nmastodon.thenewoil.org:About\nmastodon.thenewoil.org\nProfiles directoryPrivacy policyTerms of service\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.3\nBack\nThe New Oil\n@thenewoil@mastodon.thenewoil.org\n\nAustralian #energy provider #Origin says #DataBreach exposes client data\n\nhttps://www.\nbleepingcomputer.com/news/secu\nrity/australian-energy-provider-origin-says-data-breach-exposes-client-data/\n\n#\nAustralia\n#\nprivacy\n#\ncybersecurity\n…and 1 more\nJul 26, 2026, 05:30 PM\n·\n0\nboosts\n·\n0\nquotes\n·\n1\nfavorite\nTrending\nLive feeds\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 137,
+    "observables": {
+      "domain-name": [
+        "bleepingcomputer.com"
+      ],
+      "email-addr": [
+        "thenewoil@mastodon.thenewoil.org"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "",
+    "publication_date": "Sun, 26 Jul 2026 12:01:41 +0000",
+    "source": "https://infosec.exchange/@beyondmachines1/116986170651908441",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "",
+    "publication_date": "Sun, 26 Jul 2026 11:01:41 +0000",
+    "source": "https://infosec.exchange/@beyondmachines1/116985934724563571",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "",
+    "publication_date": "Sun, 26 Jul 2026 09:01:41 +0000",
+    "source": "https://infosec.exchange/@beyondmachines1/116985462858096648",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "Arnaque au faux climatiseur : les entreprises qui se cachent derrière un business florissant",
+    "publication_date": "Sun, 26 Jul 2026 06:00:47 +0200",
+    "source": "https://www.lemonde.fr/pixels/article/2026/07/26/arnaque-au-faux-climatiseur-les-entreprises-qui-se-cachent-derriere-un-business-florissant_6732772_4408996.html",
+    "source_categories": [
+      "geopolitic",
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "is verifying your browser...",
+    "word_count": 4,
+    "observables": {},
+    "extractor": "cti_extractor"
+  }
+]
