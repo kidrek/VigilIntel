@@ -1,0 +1,1834 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The cyber threat intelligence flow for July 27, 2026, highlights a dual surge in nation-state cyber operations and financial cybercrime. Russian state-sponsored actor APT28 (FrostArmada) has been observed hijacking hotel Wi-Fi networks to execute adversary-in-the-middle attacks against traveling executives to steal Microsoft 365 credentials. Simultaneously, ransomware activity continues unabated with the Genesis Group demanding ransoms across accounting, construction, and real estate firms. In vulnerability research, a 9-year-old privilege escalation flaw in the Linux kernel (RefluXFS, CVE-2026-64600) and critical RCE/XSS vulnerabilities in AI/note-taking application NoteGen (CVE-2026-17497, CVE-2026-17496) underscore the essential requirement for diligent patch management and defensive depth.",
+      "fr": "L'analyse du flux de renseignements sur les menaces du 27 juillet 2026 met en évidence une double augmentation des opérations étatiques et de la cybercriminalité financière. Le groupe étatique russe APT28 (FrostArmada) a été observé détournant le Wi-Fi d'hôtels pour mener des attaques d'interception visant les cadres en déplacement afin de voler leurs identifiants Microsoft 365. En parallèle, les ransomwares poursuivent leurs extorsions, à l'image du groupe Genesis ciblant la comptabilité, la construction et l'immobilier. Au niveau technique, la résurgence d'une vulnérabilité vieille de 9 ans dans le noyau Linux (RefluXFS, CVE-2026-64600) et de failles RCE/XSS dans l'application NoteGen (CVE-2026-17497, CVE-2026-17496) rappelle l'urgence d'une gestion rigoureuse des correctifs."
+    },
+    "date": "2026-07-27"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": [
+          "Hospitality_and_Entertainment",
+          "Finance",
+          "Healthcare_and_Life_Sciences"
+        ],
+        "fr": [
+          "Hôtellerie et divertissement",
+          "Finance",
+          "Santé et sciences de la vie"
+        ]
+      },
+      "theme": {
+        "en": "Global campaign of hotel Wi-Fi hijacking and M365 credential theft against corporate executives",
+        "fr": "Campagne globale de détournement de Wi-Fi d'hôtels et de vol d'identifiants M365 ciblant les cadres"
+      },
+      "description": {
+        "en": "Russian state-sponsored actor APT28 (FrostArmada) compromises hotel and conference center Wi-Fi networks, carrying out DNS poisoning to redirect traveling executives to fake M365 login portals and abusing WPAD/Device Code flows.",
+        "fr": "Le groupe étatique russe APT28 (FrostArmada) meurtrit les réseaux Wi-Fi d'hôtels et de centres de conférences, empoisonnant le DNS pour rediriger les cadres en déplacement vers de faux portails M365."
+      },
+      "recommandations": [
+        {
+          "en": "Enforce mandatory full-tunnel Always-On VPN for all mobile workforce endpoints.",
+          "fr": "Imposer un VPN full-tunnel Always-On systématique pour l'ensemble des équipements nomades."
+        },
+        {
+          "en": "Disable Web Proxy Auto-Discovery (WPAD) via Group Policy across the organization.",
+          "fr": "Désactiver le protocole WPAD via GPO sur l'ensemble du parc informatique."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Configure Always-On full-tunnel VPN profiles on all corporate laptop deployments.",
+            "Deploy GPO/MDM settings to disable WPAD and enforce strict DNS over HTTPS/TLS."
+          ],
+          "fr": [
+            "Configurer les profils VPN Always-On Full-Tunnel pour la flotte d'ordinateurs portables.",
+            "Déployer des GPO/MDM désactivant WPAD et forçant le DNS sécurisé strict."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor web proxy and DNS logs for connections to suspicious domains like m365-owa[.]com or ms365-live[.]com.",
+            "Alert on unusual OAuth Device Code flow initiation events in Microsoft Entra ID."
+          ],
+          "fr": [
+            "Surveiller les résolutions DNS vers des domaines suspects tels que m365-owa[.]com ou ms365-live[.]com.",
+            "Détecter les demandes de connexion OAuth Device Code déclenchées de façon inhabituelle."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Revoke all active M365 session tokens for compromised accounts immediately.",
+            "Quarantine endpoints suspected of interacting with rogue Wi-Fi access points."
+          ],
+          "fr": [
+            "Révoquer immédiatement les sessions M365 actives des comptes utilisateurs compromis.",
+            "Mettre en quarantaine les terminaux ayant interagi avec les réseaux Wi-Fi suspects."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Force password resets and re-enroll MFA credentials for impacted accounts.",
+            "Notify hotel security or facility management regarding network infrastructure tampering."
+          ],
+          "fr": [
+            "Réinitialiser les mots de passe et forcer le réenrôlement MFA pour les comptes touchés.",
+            "Informer les responsables de l'établissement hôtelier de la compromission du réseau."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search proxy logs for HTTP requests directed to known APT28 credential harvesting infrastructure.",
+            "Inspect user inbox rules created during the suspected timeframe for unauthorized forwarding."
+          ],
+          "fr": [
+            "Rechercher dans les journaux proxy les requêtes vers l'infrastructure d'hameçonnage d'APT28.",
+            "Inspecter les règles de transfert automatique créées dans la boîte de messagerie des victimes."
+          ]
+        }
+      },
+      "tags": [
+        "APT28",
+        "FrostArmada",
+        "Wi-Fi Hijack",
+        "DNS Poisoning",
+        "M365 Phishing"
+      ],
+      "sources": [
+        "https://securityaffairs.com/196017/security/hackers-hijack-hotel-wi-fi-to-steal-microsoft-365-credentials.html"
+      ],
+      "date": "2026-07-26"
+    }
+  ],
+  "regulatory_and_legal": [
+    {
+      "title": {
+        "en": "GitHub and PyPI add time-based defenses against supply chain attacks",
+        "fr": "GitHub et PyPI ajoutent des défenses temporelles contre les attaques de la chaîne d'approvisionnement"
+      },
+      "description": {
+        "en": "GitHub and PyPI have introduced time-based defense mechanisms to counter automated software supply chain attacks and malicious package releases.",
+        "fr": "GitHub et PyPI ont introduit des mécanismes de défense temporels pour contrer les attaques automatisées de la chaîne d'approvisionnement logicielle et la publication de paquets malveillants."
+      },
+      "organisation": {
+        "en": [
+          "GitHub",
+          "PyPI Security Committee"
+        ],
+        "fr": [
+          "GitHub",
+          "Comité de Sécurité PyPI"
+        ]
+      },
+      "jurisdiction": {
+        "en": [
+          "International"
+        ],
+        "fr": [
+          "International"
+        ]
+      },
+      "references": {
+        "en": [
+          "Supply Chain Time-based Defenses"
+        ],
+        "fr": [
+          "Défenses temporelles Supply Chain"
+        ]
+      },
+      "tags": [
+        "GitHub",
+        "PyPI",
+        "Supply Chain",
+        "Security"
+      ],
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/github-pypi-add-time-absed-defenses-against-supply-chain-attacks/"
+      ],
+      "date": "2026-07-26"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Williams Accounting Professional",
+      "threat_actor": "Genesis Group",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [
+        "Genesis"
+      ],
+      "sector": {
+        "en": [
+          "Finance",
+          "Business_Services"
+        ],
+        "fr": [
+          "Finance",
+          "Services aux entreprises"
+        ]
+      },
+      "description": {
+        "en": "Williams Accounting Professional was listed on the Genesis Group ransomware extortion site with stolen financial and client data threatened for public release.",
+        "fr": "Williams Accounting Professional a été affiché sur le site d'extorsion de Genesis Group, le groupe menaçant de publier des données financières et clientes volées."
+      },
+      "mitre_ttps": [
+        "T1486",
+        "T1567"
+      ],
+      "recommandations": [
+        {
+          "en": "Isolate affected accounting networks and review privileged account access logs.",
+          "fr": "Isoler les réseaux comptables affectés et vérifier les journaux d'accès aux comptes privilégiés."
+        },
+        {
+          "en": "Maintain offline immutable backups of financial and client ledgers.",
+          "fr": "Maintenir des sauvegardes hors-ligne immuables des registres financiers et clients."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Ensure regular immutable offline backups for financial databases.",
+            "Establish incident communication templates for accounting client notifications."
+          ],
+          "fr": [
+            "Garantir des sauvegardes immuables et hors-ligne pour les bases de données financières.",
+            "Préparer des modèles de communication de crise pour informer les clients."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor outbound network bandwidth for exfiltration spikes to Tor endpoints.",
+            "Set alerts for shadow copy deletion commands (vssadmin delete shadows)."
+          ],
+          "fr": [
+            "Surveiller la bande passante sortante pour détecter des pics d'exfiltration vers Tor.",
+            "Configurer des alertes sur les commandes de suppression des clichés instantanés."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate compromised servers and sever external internet access.",
+            "Reset Active Directory admin credentials and invalidate Kerberos tickets."
+          ],
+          "fr": [
+            "Isoler les serveurs compromis et couper l'accès internet externe.",
+            "Réinitialiser les identifiants d'administration AD et invalider les tickets Kerberos."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Perform forensic analysis to identify initial entry vector.",
+            "Restore systems from clean offline backup images."
+          ],
+          "fr": [
+            "Mener une analyse légale pour identifier le vecteur d'entrée initial.",
+            "Régénérer les systèmes à partir de sauvegardes hors-ligne saines."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Query EDR logs for lateral movement tools like PsExec or WMI remote execution.",
+            "Scan file system for typical ransom extension markers and ransom notes."
+          ],
+          "fr": [
+            "Rechercher dans l'EDR l'utilisation d'outils de mouvement latéral comme PsExec ou WMI.",
+            "Scruter le système de fichiers à la recherche de notes de rançon ou d'extensions chiffrées."
+          ]
+        }
+      },
+      "tags": [
+        "Ransomware",
+        "Genesis",
+        "Extortion",
+        "Finance"
+      ],
+      "sources": [
+        "https://www.ransomlook.io//group/genesis"
+      ],
+      "date": "2026-07-26"
+    },
+    {
+      "victim": "JJP Slip Forming Inc.",
+      "threat_actor": "Genesis Group",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [
+        "Genesis"
+      ],
+      "sector": {
+        "en": [
+          "Real_Estate_and_Construction"
+        ],
+        "fr": [
+          "Immobilier et construction"
+        ]
+      },
+      "description": {
+        "en": "Construction firm JJP Slip Forming Inc. was targeted by Genesis Group ransomware operators who claimed exfiltration of corporate files.",
+        "fr": "La société de construction JJP Slip Forming Inc. a été ciblée par le groupe de ransomware Genesis revendiquant l'exfiltration de fichiers d'entreprise."
+      },
+      "mitre_ttps": [
+        "T1486"
+      ],
+      "recommandations": [
+        {
+          "en": "Activate corporate incident response plan and isolate corporate infrastructure.",
+          "fr": "Activer le plan de réponse à incident et isoler l'infrastructure informatique."
+        },
+        {
+          "en": "Enforce multi-factor authentication across all remote access entry points.",
+          "fr": "Appliquer l'authentification multi-facteurs sur tous les points d'accès distants."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain disconnected backup copies of operational project files.",
+            "Conduct security awareness training against phishing for operational staff."
+          ],
+          "fr": [
+            "Maintenir des copies de sauvegarde déconnectées des fichiers de projets.",
+            "Sensibiliser le personnel opérationnel aux attaques de phishing."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor system logs for file creation with unrecognized extension patterns.",
+            "Detect unusual domain controller query volume from internal workstations."
+          ],
+          "fr": [
+            "Surveiller les journaux système pour détecter la création de fichiers aux extensions inconnues.",
+            "Détecter les requêtes anormales vers le contrôleur de domaine."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Disconnect infected subnets from the primary corporate network.",
+            "Block IP addresses associated with Genesis Command and Control infrastructure."
+          ],
+          "fr": [
+            "Déconnecter les sous-réseaux infectés du réseau principal.",
+            "Bloquer les adresses IP associées aux serveurs de commande C2 de Genesis."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Rebuild compromised workstations from standardized golden images.",
+            "Notify legal and compliance officers regarding potential operational data loss."
+          ],
+          "fr": [
+            "Reconstruire les postes compromis à partir de master sains.",
+            "Informer le service juridique de la fuite potentielle de données métiers."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search SIEM for execution of batch scripts or PowerShell obfuscated downloaders.",
+            "Inspect firewalls for large upload streams during off-peak hours."
+          ],
+          "fr": [
+            "Rechercher dans le SIEM l'exécution de scripts batch ou PowerShell obfusqués.",
+            "Inspecter le pare-feu pour détecter des volumes d'envoi élevés en heures creuses."
+          ]
+        }
+      },
+      "tags": [
+        "Ransomware",
+        "Genesis",
+        "Construction"
+      ],
+      "sources": [
+        "https://www.ransomlook.io//group/genesis"
+      ],
+      "date": "2026-07-26"
+    },
+    {
+      "victim": "Building Envelope Systems",
+      "threat_actor": "Genesis Group",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [
+        "Genesis"
+      ],
+      "sector": {
+        "en": [
+          "Real_Estate_and_Construction",
+          "Industry_and_Manufacturing"
+        ],
+        "fr": [
+          "Immobilier et construction",
+          "Industrie et fabrication"
+        ]
+      },
+      "description": {
+        "en": "Building Envelope Systems fell victim to a double-extortion ransomware attack by Genesis Group, resulting in internal data exfiltration.",
+        "fr": "Building Envelope Systems a été victime d'une attaque de ransomware à double extorsion menée par le groupe Genesis, entraînant le vol de données internes."
+      },
+      "mitre_ttps": [
+        "T1486",
+        "T1048"
+      ],
+      "recommandations": [
+        {
+          "en": "Block known C2 domains and IP indicators associated with Genesis Group.",
+          "fr": "Bloquer les domaines C2 et adresses IP associés au groupe Genesis."
+        },
+        {
+          "en": "Audit firewall outgoing traffic rules and restrict non-essential outbound ports.",
+          "fr": "Auditer les règles de trafic sortant du pare-feu et restreindre les ports inutiles."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Implement network segmentation between corporate networks and production/CAD environments.",
+            "Ensure regular testing of backup restoration procedures."
+          ],
+          "fr": [
+            "Mettre en place un cloisonnement réseau entre la bureautique et les environnements de production.",
+            "Tester régulièrement la restauration des sauvegardes."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor network traffic for sudden spikes in outbound transfers to anonymous file-hosting platforms.",
+            "Alert on unauthorized disabling of endpoint protection software."
+          ],
+          "fr": [
+            "Surveiller les augmentations soudaines d'exfiltration vers des sites d'hébergement anonymes.",
+            "Alerter en cas de désactivation non autorisée de l'antivirus/EDR."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate compromised CAD/engineering servers from internal network.",
+            "Terminate suspicious remote access sessions immediately."
+          ],
+          "fr": [
+            "Isoler du réseau les serveurs de DAO/conception compromis.",
+            "Terminer immédiatement les sessions d'accès distant suspectes."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Conduct full system audit to verify absence of persistent backdoors.",
+            "Review access control lists for sensitive engineering file shares."
+          ],
+          "fr": [
+            "Réaliser un audit système complet pour s'assurer de l'absence de portes dérobées.",
+            "Revoir les listes de contrôle d'accès sur les partages de fichiers sensibles."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for creation of scheduled tasks designed for persistence.",
+            "Check process executions for credential dumping utilities like Mimikatz or ProcDump."
+          ],
+          "fr": [
+            "Rechercher la création de tâches planifiées créées à des fins de persistance.",
+            "Vérifier les exécutions d'outils d'extraction d'identifiants (Mimikatz, ProcDump)."
+          ]
+        }
+      },
+      "tags": [
+        "Ransomware",
+        "Genesis",
+        "Engineering"
+      ],
+      "sources": [
+        "https://www.ransomlook.io//group/genesis"
+      ],
+      "date": "2026-07-26"
+    },
+    {
+      "victim": "Westlake Realty Group, Inc.",
+      "threat_actor": "Genesis Group",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [
+        "Genesis"
+      ],
+      "sector": {
+        "en": [
+          "Real_Estate_and_Construction"
+        ],
+        "fr": [
+          "Immobilier et construction"
+        ]
+      },
+      "description": {
+        "en": "Westlake Realty Group was compromise by Genesis ransomware actor, threatening the exposure of property, tenant, and financial records.",
+        "fr": "Westlake Realty Group a été compromis par le ransomware Genesis, menaçant la publication de dossiers immobiliers, locatifs et financiers."
+      },
+      "mitre_ttps": [
+        "T1486"
+      ],
+      "recommandations": [
+        {
+          "en": "Revoke all remote access credentials and perform enterprise-wide password reset.",
+          "fr": "Révoquer tous les identifiants d'accès distant et forcer la réinitialisation globale des mots de passe."
+        },
+        {
+          "en": "Engage digital forensics experts to assess data leak scope.",
+          "fr": "Engager des experts en analyse forensique pour évaluer l'étendue de la fuite de données."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Secure tenant and property database backups with immutable encryption.",
+            "Implement strict conditional access policies for remote workers."
+          ],
+          "fr": [
+            "Protéger les sauvegardes des bases de données immobilières avec un chiffrement immuable.",
+            "Appliquer des politiques d'accès conditionnel strictes pour le télétravail."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor domain logs for unauthorized privilege escalation attempts.",
+            "Track unexpected high-volume reads from property management databases."
+          ],
+          "fr": [
+            "Surveiller les journaux pour détecter des tentatives d'élévation de privilèges.",
+            "Traquer l'extraction volumineuse inhabituelle depuis les bases de données."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Sever VPN connectivity and isolate compromised database systems.",
+            "Revoke Active Directory accounts linked to initial access."
+          ],
+          "fr": [
+            "Couper la connectivité VPN et isoler les systèmes de bases de données touchés.",
+            "Révoquer les comptes Active Directory associés à l'accès initial."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Re-architect external remote gateways with MFA enforced.",
+            "Notify data protection authorities and affected tenants if personal data was leaked."
+          ],
+          "fr": [
+            "Sécuriser les passerelles d'accès distant avec de la MFA obligatoire.",
+            "Notifier la CNIL/autorités et les locataires si des données PII ont été fuitées."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Query process command lines for living-off-the-land binaries (certutil, bitsadmin).",
+            "Identify suspicious network persistence services installed on servers."
+          ],
+          "fr": [
+            "Examiner les lignes de commande de processus pour déceler l'usage d'outils système (certutil, bitsadmin).",
+            "Identifier les services de persistance réseau suspects sur les serveurs."
+          ]
+        }
+      },
+      "tags": [
+        "Ransomware",
+        "Genesis",
+        "Real Estate"
+      ],
+      "sources": [
+        "https://www.ransomlook.io//group/genesis"
+      ],
+      "date": "2026-07-26"
+    },
+    {
+      "victim": "Tribeca Film Festival",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Hospitality_and_Entertainment",
+          "Media_and_Communication"
+        ],
+        "fr": [
+          "Hôtellerie et divertissement",
+          "Médias et communication"
+        ]
+      },
+      "description": {
+        "en": "A major data leak at the Tribeca Film Festival exposed personally identifiable information (PII) belonging to A-list directors, actors, and high-profile celebrities.",
+        "fr": "Une fuite de données majeure lors du Festival du film de Tribeca a exposé des données personnelles (PII) appartenant à des réalisateurs, acteurs et célébrités de premier plan."
+      },
+      "mitre_ttps": [
+        "T1530"
+      ],
+      "recommandations": [
+        {
+          "en": "Notify affected individuals regarding potential targeted social engineering and phishing attacks.",
+          "fr": "Informer les personnes touchées quant au risque d'attaques ciblées de spear-phishing."
+        },
+        {
+          "en": "Restrict access permissions to cloud storage buckets containing guest or event database records.",
+          "fr": "Restreindre les permissions d'accès aux compartiments Cloud hébergeant des bases événementielles."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Enforce strict role-based access control (RBAC) and encryption for celebrity/VIP databases.",
+            "Audit public-facing cloud storage configurations continuously."
+          ],
+          "fr": [
+            "Imposer un contrôle d'accès strict (RBAC) et le chiffrement des bases VIP.",
+            "Auditer en continu les configurations des stockage cloud exposés à Internet."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor cloud audit logs for unauthenticated or unexpected download events.",
+            "Set alerts for public bucket policy modifications."
+          ],
+          "fr": [
+            "Surveiller les journaux d'audit cloud pour détecter les téléchargements non authentifiés.",
+            "Alerter lors de modifications de politiques de stockage rendant un bucket public."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Immediately restrict public access permissions on exposed cloud buckets/databases.",
+            "Rotate access keys associated with the compromised storage resource."
+          ],
+          "fr": [
+            "Fermer immédiatement les accès publics sur les buckets/bases de données exposés.",
+            "Périmer et renouveler les clés d'accès associées à la ressource compromise."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Notify relevant privacy authorities and affected VIP guests in accordance with regulations.",
+            "Conduct thorough technical audit of event registration platforms."
+          ],
+          "fr": [
+            "Notifier les autorités de protection des données et les célébrités touchées.",
+            "Mener un audit technique approfondi des plateformes d'inscription à l'événement."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Inspect web application gateway logs for SQL injection or path traversal attempts against attendee endpoints.",
+            "Search dark web intelligence feeds for trading of leaked guest lists."
+          ],
+          "fr": [
+            "Analyser les logs de pare-feu applicatif (WAF) pour déceler des tentatives d'injection SQL.",
+            "Surveiller les forums du dark web pour repérer la mise en vente de la liste d'invités."
+          ]
+        }
+      },
+      "tags": [
+        "Data Leak",
+        "PII",
+        "Celebrities",
+        "Entertainment"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/07/26/a-list-directors-actors-and-celebrities-exposed-in-tribeca-film-festival-data-leak/"
+      ],
+      "date": "2026-07-26"
+    },
+    {
+      "victim": "AnMed Health Systems",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Healthcare_and_Life_Sciences"
+        ],
+        "fr": [
+          "Santé et sciences de la vie"
+        ]
+      },
+      "description": {
+        "en": "AnMed Health Systems suffered a major phone and internet system outage impacting all hospital facilities, while emergency rooms remained operational under contingency protocols.",
+        "fr": "AnMed Health Systems a subi une panne majeure de ses systèmes téléphoniques et réseau impactant tous ses hôpitaux, les urgences restant opérationnelles sous protocole dégradé."
+      },
+      "mitre_ttps": [
+        "T1489"
+      ],
+      "recommandations": [
+        {
+          "en": "Activate clinical business continuity and disaster recovery plans for offline hospital operations.",
+          "fr": "Activer le plan de continuité d'activité (PCA) médical pour le fonctionnement hors-ligne."
+        },
+        {
+          "en": "Establish alternative satellite or cellular emergency communications for healthcare staff.",
+          "fr": "Déployer des moyens de communication de secours (lignes cellulaires/satellitaires) pour les soignants."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain redundant internet service provider (ISP) links and secondary VOIP channels.",
+            "Conduct routine downtime simulations for hospital emergency staff."
+          ],
+          "fr": [
+            "Maintenir des liens opérateurs réseau redondants et des canaux VOIP de secours.",
+            "Réaliser des exercices réguliers de travail en mode dégradé dans les hôpitaux."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor WAN gateway telemetry for link down state or massive DDoS traffic patterns.",
+            "Alert on core router interface failures across hospital sites."
+          ],
+          "fr": [
+            "Surveiller la télémétrie réseau WAN pour détecter des coupures de liens ou des attaques DDoS.",
+            "Alerter en cas de panne sur les interfaces des routeurs cœurs de réseau."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate affected perimeter networking gear to prevent lateral spread if ransomware is suspected.",
+            "Failover phone systems to emergency satellite cellular backup links."
+          ],
+          "fr": [
+            "Isoler les équipements périmétriques en cas de suspicion d'attaque par ransomware.",
+            "Basculer la téléphonie vers les canaux de secours cellulaires/satellitaires."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Determine root cause (cyberattack/DDoS vs physical telecom provider outage).",
+            "Perform security verification of network routing equipment before service restoration."
+          ],
+          "fr": [
+            "Déterminer la cause racine (cyberattaque/DDoS vs panne d'infrastructure télécom).",
+            "Auditer les équipements de routage avant le rétablissement complet du réseau."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Examine edge router syslog files for unauthorized configuration modification or BGP route hijacking.",
+            "Search perimeter traffic logs for volumetric DDoS attack vectors."
+          ],
+          "fr": [
+            "Examiner les syslogs des routeurs pour repérer toute modification de configuration non autorisée.",
+            "Analyser les journaux de trafic périmétrique à la recherche de volumétries anormales de type DDoS."
+          ]
+        }
+      },
+      "tags": [
+        "Outage",
+        "Hospital",
+        "Healthcare",
+        "DDoS"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/07/26/developing-anmed-reports-phone-and-internet-outage-impacting-all-hospital-locations-ers-remain-open/"
+      ],
+      "date": "2026-07-26"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-64600",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "7.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:o:linux:linux_kernel:-:*:*:*:*:*:*:*",
+      "product": "Linux Kernel (XFS Filesystem Subsystem)",
+      "vendor": "Linux Kernel Community",
+      "description": {
+        "en": "A 9-year-old privilege escalation vulnerability dubbed RefluXFS in the Linux Kernel XFS filesystem subsystem allows local non-privileged users to escalate privileges to root.",
+        "fr": "Une vulnérabilité d'élévation de privilèges vieille de 9 ans baptisée RefluXFS dans le sous-système de fichiers XFS du noyau Linux permet à un utilisateur local d'obtenir les droits root."
+      },
+      "mitre_ttps": [
+        "T1068"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply latest updated kernel packages provided by Linux distribution vendors (RedHat, Oracle Linux, Rocky, AlmaLinux).",
+          "fr": "Appliquer d'urgence les mises à jour noyau fournies par les éditeurs de distributions Linux (RHEL, Oracle Linux, Rocky, AlmaLinux)."
+        },
+        {
+          "en": "Restrict unprivileged user access and local shell permissions on critical production servers.",
+          "fr": "Restreindre les accès shell locaux non privilégiés sur les serveurs de production critiques."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory Linux systems utilizing XFS filesystem partitions.",
+            "Establish rapid kernel patch management testing pipelines."
+          ],
+          "fr": [
+            "Inventorier les systèmes Linux utilisant des partitions de fichiers XFS.",
+            "Établir une procédure de test rapide pour les mises à jour du noyau Linux."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor system call audit logs (auditd) for unexpected root privilege transitions originating from low-privilege accounts.",
+            "Detect execution of known RefluXFS exploit PoC binaries using EDR behavior monitoring."
+          ],
+          "fr": [
+            "Surveiller les journaux auditd pour détecter des transitions vers le compte root depuis un compte non privilégié.",
+            "Détecter l'exécution de PoC exploitant la faille RefluXFS via l'EDR."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Restrict SSH local user sessions on unpatched servers.",
+            "Unmount unneeded XFS filesystems where feasible."
+          ],
+          "fr": [
+            "Restreindre les accès SSH pour les utilisateurs non administrateurs sur les serveurs non corrigés.",
+            "Démonter les systèmes de fichiers XFS non essentiels si possible."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Reboot system with updated and patched Linux kernel version.",
+            "Conduct integrity verification of root binaries and system libraries."
+          ],
+          "fr": [
+            "Redémarrer les serveurs sur la version corrigée du noyau Linux.",
+            "Vérifier l'intégrité des binaire système root et des bibliothèques."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt audit logs for suspicious xfs_* kernel syscall invocations.",
+            "Search temp directories (/tmp, /var/tmp, /dev/shm) for compiled exploit artifacts."
+          ],
+          "fr": [
+            "Rechercher dans les journaux d'audit les appels système kernel xfs_* suspects.",
+            "Scruter les répertoires temporaires (/tmp, /var/tmp, /dev/shm) à la recherche de binaires d'exploitation."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "Linux",
+        "Kernel",
+        "RefluXFS",
+        "Privilege Escalation"
+      ],
+      "sources": [
+        "https://thehackernews.com/2026/07/nine-year-old-refluxfs-linux-flaw-gives.html",
+        "https://fosstodon.org/@sigint/116988769077433380"
+      ],
+      "date": "2026-07-27"
+    },
+    {
+      "cve_id": "CVE-2026-17497",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:notegen:notegen:*:*:*:*:*:*:*:*",
+      "product": "NoteGen",
+      "vendor": "NoteGen",
+      "description": {
+        "en": "NoteGen before 0.32.0 allows arbitrary OS command execution because the Tauri shell plugin grants shell:allow-execute permission for bash/python with arbitrary arguments from webview.",
+        "fr": "NoteGen avant 0.32.0 permet l'exécution de commandes système arbitraires car le plugin shell Tauri accorde la permission shell:allow-execute pour bash/python avec des arguments arbitraires depuis la webview."
+      },
+      "mitre_ttps": [
+        "T1059"
+      ],
+      "recommandations": [
+        {
+          "en": "Update NoteGen application to version 0.32.0 or higher immediately.",
+          "fr": "Mettre à jour immédiatement l'application NoteGen vers la version 0.32.0 ou supérieure."
+        },
+        {
+          "en": "Audit Tauri framework configurations in custom web applications to restrict shell execution scopes.",
+          "fr": "Auditer les configurations du framework Tauri dans les applications développées pour restreindre le périmètre shell."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Identify all endpoints running NoteGen software in the enterprise.",
+            "Enforce application control policies restricting execution of outdated NoteGen binaries."
+          ],
+          "fr": [
+            "Recenser les postes de travail où l'application NoteGen est installée.",
+            "Appliquer des politiques de contrôle d'application pour bloquer les versions vulnérables de NoteGen."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Set EDR alerts for child processes (bash, python, cmd) spawned directly by NoteGen.exe.",
+            "Monitor network traffic for outbound command and control connections initiated by NoteGen subprocesses."
+          ],
+          "fr": [
+            "Configurer des alertes EDR pour détecter tout processus enfant (bash, python) généré par NoteGen.exe.",
+            "Surveiller le trafic réseau pour repérer des connexions C2 initiées par des sous-processus de NoteGen."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Block NoteGen application execution via EDR/AppLocker.",
+            "Isolate hosts exhibiting suspicious parent-child process chains involving NoteGen."
+          ],
+          "fr": [
+            "Bloquer l'exécution de NoteGen via l'EDR ou AppLocker.",
+            "Isoler du réseau les hôtes présentant des chaînes de processus anormales issues de NoteGen."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Upgrade NoteGen to version 0.32.0 across all managed devices.",
+            "Conduct full antimalware scan on impacted hosts."
+          ],
+          "fr": [
+            "Mettre à jour NoteGen en version 0.32.0 sur tous les appareils gérés.",
+            "Exécuter une analyse antimalware complète sur les hôtes affectés."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Query EDR telemetry for parent_process_name == 'NoteGen.exe' AND process_name IN ('bash.exe', 'python.exe', 'cmd.exe', 'powershell.exe').",
+            "Review system process creation events for unauthorized command arguments."
+          ],
+          "fr": [
+            "Rechercher dans l'EDR les paires parent NoteGen.exe et enfant bash/python/powershell.",
+            "Examiner les événements de création de processus système pour repérer des arguments de commande suspects."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "RCE",
+        "NoteGen",
+        "Tauri",
+        "Command Execution"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-17497"
+      ],
+      "date": "2026-07-26"
+    },
+    {
+      "cve_id": "CVE-2026-17496",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "8.6",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:notegen:notegen:*:*:*:*:*:*:*:*",
+      "product": "NoteGen",
+      "vendor": "NoteGen",
+      "description": {
+        "en": "Unsanitized HTML rendering in NoteGen < 0.32.0 AI chat preview via markdown-it (html:true) and dangerouslySetInnerHTML without proper CSP allows Cross-Site Scripting (XSS).",
+        "fr": "Le rendu HTML non assaini dans l'aperçu du chat IA de NoteGen < 0.32.0 via markdown-it (html:true) et dangerouslySetInnerHTML sans CSP approprié permet du Cross-Site Scripting (XSS)."
+      },
+      "mitre_ttps": [
+        "T1059.007"
+      ],
+      "recommandations": [
+        {
+          "en": "Upgrade NoteGen software to version 0.32.0 or newer.",
+          "fr": "Mettre à jour le logiciel NoteGen vers la version 0.32.0 ou ultérieure."
+        },
+        {
+          "en": "Avoid loading untrusted Markdown files or AI prompts into unpatched NoteGen instances.",
+          "fr": "Éviter de charger des fichiers Markdown non vérifiés ou des prompts IA dans les instances NoteGen non patchées."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Ensure desktop applications embedding WebViews enforce robust Content Security Policies (CSP).",
+            "Implement patch monitoring for AI-assisted workspace tools."
+          ],
+          "fr": [
+            "S'assurer que les applications clientes embarquant des WebViews appliquent une CSP stricte.",
+            "Mettre en place une veille sur les correctifs des outils de travail intégrant des IA."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Inspect webview render logs for script injection patterns inside Markdown preview components.",
+            "Alert on unexpected JavaScript execution within NoteGen web context."
+          ],
+          "fr": [
+            "Inspecter les logs de rendu webview pour déceler des modèles d'injection de script.",
+            "Alerter en cas d'exécution JavaScript inattendue dans le contexte web NoteGen."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Disable AI chat feature preview in NoteGen settings where available.",
+            "Quarantine untrusted Markdown/Skill files imported into the application."
+          ],
+          "fr": [
+            "Désactiver la fonctionnalité d'aperçu de chat IA dans les paramètres de NoteGen si possible.",
+            "Mettre en quarantaine les fichiers Markdown/Skill non fiables."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Deploy patched NoteGen version 0.32.0 across enterprise endpoints.",
+            "Verify complete removal of malicious Markdown files triggering XSS payloads."
+          ],
+          "fr": [
+            "Déployer la version corrigée NoteGen 0.32.0 sur les postes de l'entreprise.",
+            "Vérifier la suppression complète des fichiers Markdown malveillants contenant les injections."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Scan workspace directories for Markdown files containing embedded <script> tags or onerror handlers.",
+            "Search endpoint events for DOM manipulation attempts targeting local storage tokens."
+          ],
+          "fr": [
+            "Analyser les dossiers de travail à la recherche de fichiers Markdown contenant des balises <script>.",
+            "Rechercher des tentatives de manipulation du DOM visant à voler des jetons locaux."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "XSS",
+        "NoteGen",
+        "AI Chat",
+        "Markdown"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-17496"
+      ],
+      "date": "2026-07-26"
+    },
+    {
+      "cve_id": "CVE-2026-15962",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "8.8",
+      "epss": "unknown",
+      "cpe": "cpe:2.3:a:fluentforms:fluent_forms_pro:*:*:*:*:*:wordpress:*:*",
+      "product": "Fluent Forms Pro Add On Pack",
+      "vendor": "Fluent Forms",
+      "description": {
+        "en": "Deserialization of untrusted data in Fluent Forms Pro Add On Pack <= 6.2.6 for WordPress allows authenticated low-privileged users (Subscriber+) to execute PHP Object Injection and hijack admin accounts.",
+        "fr": "La désérialisation de données non fiables dans Fluent Forms Pro Add On Pack <= 6.2.6 pour WordPress permet à des utilisateurs authentifiés (Abonnés+) de réaliser une injection d'objets PHP et prendre le contrôle de comptes administrateurs."
+      },
+      "mitre_ttps": [
+        "T1059"
+      ],
+      "recommandations": [
+        {
+          "en": "Update Fluent Forms Pro Add On Pack plugin to a version higher than 6.2.6.",
+          "fr": "Mettre à jour l'extension Fluent Forms Pro Add On Pack vers une version supérieure à 6.2.6."
+        },
+        {
+          "en": "Restrict subscriber registration on WordPress instances where forms are publicly accessible.",
+          "fr": "Restreindre l'inscription d'abonnés sur les sites WordPress dont les formulaires sont accessibles au public."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory all WordPress installations using Fluent Forms Pro plugins.",
+            "Implement Web Application Firewall (WAF) rules filtering PHP serialization payload strings."
+          ],
+          "fr": [
+            "Inventorier tous les sites WordPress utilisant l'extension Fluent Forms Pro.",
+            "Appliquer des règles WAF filtrant les chaînes de sérialisation PHP suspectes."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor web access logs for POST requests to Fluent Forms endpoints containing serialized PHP objects (e.g. O:8:\"ClassName\").",
+            "Alert on administrative password change events triggered by low-privilege users."
+          ],
+          "fr": [
+            "Surveiller les logs web POST vers Fluent Forms contenant des objets PHP sérialisés.",
+            "Alerter lors de modifications de mot de passe administrateur déclenchées par des comptes d'abonnés."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Disable the Fluent Forms Pro plugin temporarily.",
+            "Revoke suspicious administrative sessions and reset passwords."
+          ],
+          "fr": [
+            "Désactiver temporairement l'extension Fluent Forms Pro.",
+            "Révoquer les sessions d'administration suspectes et réinitialiser les mots de passe."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Apply Fluent Forms Pro security patch (> 6.2.6).",
+            "Audit WordPress database for newly added administrative users or webshells."
+          ],
+          "fr": [
+            "Installer la mise à jour de sécurité de Fluent Forms Pro (> 6.2.6).",
+            "Auditer la base de données WordPress pour déceler d'éventuels nouveaux comptes admin ou webshells."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Search web server logs for request payloads targeting user meta update hooks.",
+            "Inspect wp_users database table for unauthorized account privilege escalation."
+          ],
+          "fr": [
+            "Examiner les logs du serveur web pour repérer les requêtes ciblant les hooks de mise à jour utilisateur.",
+            "Inspecter la table wp_users pour détecter des élévations de privilèges non autorisées."
+          ]
+        }
+      },
+      "tags": [
+        "vulnerability",
+        "WordPress",
+        "Fluent Forms",
+        "PHP Object Injection"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-15962"
+      ],
+      "date": "2026-07-26"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "Scans for ESAFENET CDG 3 Document Management System Weak Logins",
+        "fr": "Scans ciblant les identifiants par défaut du système de GED ESAFENET CDG 3"
+      },
+      "description": {
+        "en": "Active scanning activity has been detected targeting factory default administrative credentials on ESAFENET CDG 3 document management systems utilizing public Nuclei templates.",
+        "fr": "Une activité de balayage active est détectée, ciblant les mots de passe par défaut du système de GED ESAFENET CDG 3 via l'utilisation de modèles Nuclei publics."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom",
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Technologie et télécommunications",
+          "Gouvernement et défense"
+        ]
+      },
+      "indicators": {
+        "URL": [
+          "https://esafenet.com",
+          "https://github.com/projectdiscovery/nuclei-templates/issues/7094"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "esafenet.com"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Nuclei"
+        ]
+      },
+      "mitre_ttps": [
+        "T1078.001"
+      ],
+      "analyse": {
+        "en": "Threat actors are attempting automated exploitation of factory-set weak default credentials on ESAFENET CDG 3 instances exposed to the internet. Successful authentication allows access to corporate document management systems and sensitive intellectual property.",
+        "fr": "Des attaquants mènent des balayages automatisés pour exploiter des identifiants par défaut sur les instances ESAFENET CDG 3 exposées. Une authentification réussie offre un accès direct au système de gestion documentaire et aux données confidentielles."
+      },
+      "recommandations": [
+        {
+          "en": "Immediately change factory default passwords on all ESAFENET CDG 3 administration portals.",
+          "fr": "Changer immédiatement les mots de passe par défaut sur tous les portails d'administration ESAFENET CDG 3."
+        },
+        {
+          "en": "Restrict external web access to /CDGServer3/SystemConfig endpoints via IP whitelisting or firewall rules.",
+          "fr": "Restreindre l'accès web externe à l'interface /CDGServer3/SystemConfig par filtrage IP ou pare-feu."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory all public-facing ESAFENET CDG installations.",
+            "Ensure default credentials policy compliance across document management servers."
+          ],
+          "fr": [
+            "Inventorier toutes les installations ESAFENET CDG exposées sur Internet.",
+            "Vérifier la conformité des mots de passe d'administration sur les serveurs de GED."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor web server HTTP POST logs directed to '/CDGServer3/SystemConfig'.",
+            "Set alerts for automated scanner user agents testing default password parameters."
+          ],
+          "fr": [
+            "Surveiller les requêtes HTTP POST vers '/CDGServer3/SystemConfig' dans les journaux web.",
+            "Configurer des alertes sur les scanners d'identifiants par défaut."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Block scanning IP addresses at network perimeter firewall.",
+            "Temporarily restrict external access to ESAFENET management interface."
+          ],
+          "fr": [
+            "Bloquer les adresses IP d'origine du scan au niveau du pare-feu périmétrique.",
+            "Restreindre temporairement l'accès externe à l'interface d'administration ESAFENET."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Enforce mandatory strong passwords and MFA for ESAFENET administrative accounts.",
+            "Review administrative audit logs for unauthorized configuration changes."
+          ],
+          "fr": [
+            "Imposer des mots de passe forts et de la MFA pour les comptes administrateurs ESAFENET.",
+            "Examiner les journaux d'audit à la recherche de modifications non autorisées."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Query web server logs for URI '/CDGServer3/SystemConfig' and status code 200 following automated POST sequences.",
+            "Inspect system file download logs for exfiltrated document records."
+          ],
+          "fr": [
+            "Rechercher dans les journaux web la séquence d'accès à '/CDGServer3/SystemConfig' ayant retourné un code 200.",
+            "Inspecter les journaux de téléchargement pour vérifier l'absence d'exfiltration de documents."
+          ]
+        }
+      },
+      "tags": [
+        "ESAFENET",
+        "Default Password",
+        "Scanner",
+        "Nuclei"
+      ],
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33184"
+      ],
+      "date": "2026-07-26"
+    },
+    {
+      "title": {
+        "en": "SANS ISC Stormcast Cyber Threat Overview - July 27, 2026",
+        "fr": "Synthèse des menaces informatiques SANS ISC Stormcast - 27 juillet 2026"
+      },
+      "description": {
+        "en": "Daily operational threat intelligence roundup from the SANS Internet Storm Center highlighting active cyber threat trends and daily security advisories.",
+        "fr": "Synthèse quotidienne d'actualité opérationnelle du SANS Internet Storm Center résumant les menaces et vulnérabilités cyber du jour."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Security"
+        ],
+        "fr": [
+          "Sécurité"
+        ]
+      },
+      "indicators": {
+        "URL": [
+          "https://isc.sans.edu/diary/rss/33186"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "isc.sans.edu"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "Operational awareness broadcast tracking daily threat vectors, ongoing port scans, and newly disclosed software flaws.",
+        "fr": "Bulletin de sensibilisation opérationnelle couvrant les vecteurs de menaces quotidiens, les balayages de ports et les nouvelles vulnérabilités."
+      },
+      "recommandations": [
+        {
+          "en": "Regularly monitor daily threat intelligence bulletins to adapt defensive postures.",
+          "fr": "Suivre régulièrement les bulletins d'actualité cyber pour adapter sa posture de défense."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain active threat intelligence subscription feeds and podcast briefings."
+          ],
+          "fr": [
+            "S'abonner aux flux de renseignement sur les menaces et briefings de sécurité."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "N/A"
+          ],
+          "fr": [
+            "N/A"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "N/A"
+          ],
+          "fr": [
+            "N/A"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "N/A"
+          ],
+          "fr": [
+            "N/A"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "N/A"
+          ],
+          "fr": [
+            "N/A"
+          ]
+        }
+      },
+      "tags": [
+        "Podcast",
+        "SANS",
+        "ISC",
+        "Intelligence"
+      ],
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33186"
+      ],
+      "date": "2026-07-27"
+    },
+    {
+      "title": {
+        "en": "Security Affairs Malware Newsletter Round 107 Review",
+        "fr": "Revue de la newsletter Security Affairs Malware Round 107"
+      },
+      "description": {
+        "en": "Weekly news roundup summarizing malware campaigns, vulnerability updates, and recent cyber attacks.",
+        "fr": "Synthèse hebdomadaire des actualités relatives aux malwares, mises à jour de sécurité et cyberattaques récentes."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Security"
+        ],
+        "fr": [
+          "Sécurité"
+        ]
+      },
+      "indicators": {
+        "URL": [
+          "https://securityaffairs.com/196037/malware/security-affairs-malware-newsletter-round-107.html"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "securityaffairs.com"
+        ],
+        "EMAIL": [
+          "pierluigi.paganini@securityaffairs.co"
+        ],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "Synthesis of malware ecosystem news and vulnerability releases provided by Pierluigi Paganini.",
+        "fr": "Synthèse de l'actualité de l'écosystème des logiciels malveillants rédigée par Pierluigi Paganini."
+      },
+      "recommandations": [
+        {
+          "en": "Review referenced CVE vulnerabilities in internal patch management tracking.",
+          "fr": "Passer en revue les vulnérabilités citées dans le suivi des correctifs d'entreprise."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Review weekly malware reports to align endpoint detection signatures with emerging threats."
+          ],
+          "fr": [
+            "Consulter les revues de presse malwares pour aligner les règles de détection EDR."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "N/A"
+          ],
+          "fr": [
+            "N/A"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "N/A"
+          ],
+          "fr": [
+            "N/A"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "N/A"
+          ],
+          "fr": [
+            "N/A"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "N/A"
+          ],
+          "fr": [
+            "N/A"
+          ]
+        }
+      },
+      "tags": [
+        "Newsletter",
+        "Malware",
+        "Security Affairs"
+      ],
+      "sources": [
+        "https://securityaffairs.com/196037/malware/security-affairs-malware-newsletter-round-107.html"
+      ],
+      "date": "2026-07-26"
+    },
+    {
+      "title": {
+        "en": "Security Affairs International Newsletter Round 587",
+        "fr": "Newsletter internationale Security Affairs Round 587"
+      },
+      "description": {
+        "en": "International cybersecurity roundup edition covering emerging vulnerability disclosures and international cyber incidents.",
+        "fr": "Édition internationale de la revue de presse Security Affairs couvrant les révélations de vulnérabilités et incidents cyber mondiaux."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Security"
+        ],
+        "fr": [
+          "Sécurité"
+        ]
+      },
+      "indicators": {
+        "URL": [
+          "https://securityaffairs.com/196006/security/security-affairs-newsletter-round-587-by-pierluigi-paganini-international-edition.html"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "securityaffairs.com"
+        ],
+        "EMAIL": [
+          "pierluigi.paganini@securityaffairs.co"
+        ],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "Global news collation of security incidents and vulnerability tracking.",
+        "fr": "Panoramique mondial des faits marquants en cybersécurité et suivi des vulnérabilités."
+      },
+      "recommandations": [
+        {
+          "en": "Verify patch implementation status for vulnerabilities listed in the report.",
+          "fr": "Vérifier le déploiement des correctifs pour l'ensemble des vulnérabilités mentionnées."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Maintain global threat awareness monitoring channels."
+          ],
+          "fr": [
+            "Maintenir une veille internationale sur l'écosystème des menaces."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "N/A"
+          ],
+          "fr": [
+            "N/A"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "N/A"
+          ],
+          "fr": [
+            "N/A"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "N/A"
+          ],
+          "fr": [
+            "N/A"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "N/A"
+          ],
+          "fr": [
+            "N/A"
+          ]
+        }
+      },
+      "tags": [
+        "Newsletter",
+        "CVE",
+        "Security Affairs"
+      ],
+      "sources": [
+        "https://securityaffairs.com/196006/security/security-affairs-newsletter-round-587-by-pierluigi-paganini-international-edition.html"
+      ],
+      "date": "2026-07-26"
+    },
+    {
+      "title": {
+        "en": "Top 5 Open-Source Security Tools Overview for 2026",
+        "fr": "Présentation de 5 outils open source de sécurité incontournables en 2026"
+      },
+      "description": {
+        "en": "Curated selection of 5 open-source security tools: Strix (AI security scanner), rz-git (Rust-based Git audit tool), sn0int (OSINT framework), VulnCheck (vulnerability database), and Bumblebee (dependency scanner).",
+        "fr": "Présentation de 5 outils open source de sécurité : Strix (scanner d'IA), rz-git (audit Git en Rust), sn0int (framework OSINT), VulnCheck (base de données de vulnérabilités) et Bumblebee (scanner de dépendances)."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom",
+          "Security"
+        ],
+        "fr": [
+          "Technologie et télécommunications",
+          "Sécurité"
+        ]
+      },
+      "indicators": {
+        "URL": [
+          "https://github.com/usestrix/strix2",
+          "https://github.com/ahahn/rz-git3",
+          "https://github.com/kpcyrd/sn0int4",
+          "https://github.com/vulncheck5",
+          "https://github.com/perplexity/bumblebee100%"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "github.com"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Strix",
+          "rz-git",
+          "sn0int",
+          "VulnCheck",
+          "Bumblebee"
+        ]
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "Tool review recommending modern open-source utilities to improve security assessment, OSINT, dependency auditing, and AI vulnerability scanning.",
+        "fr": "Revue d'outils recommandant des utilitaires open source modernes pour renforcer l'évaluation de sécurité, l'OSINT et l'audit de dépendances."
+      },
+      "recommandations": [
+        {
+          "en": "Evaluate open-source security tools in isolated sandbox environments prior to security team adoption.",
+          "fr": "Évaluer les outils open source dans un environnement de bac à sable avant déploiement."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Test and integrate open-source scanning tools into security assessment workflows."
+          ],
+          "fr": [
+            "Tester et intégrer des outils d'analyse open source dans le socle de défense et d'audit."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "N/A"
+          ],
+          "fr": [
+            "N/A"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "N/A"
+          ],
+          "fr": [
+            "N/A"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "N/A"
+          ],
+          "fr": [
+            "N/A"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "N/A"
+          ],
+          "fr": [
+            "N/A"
+          ]
+        }
+      },
+      "tags": [
+        "OpenSource",
+        "Tools",
+        "OSINT",
+        "Scanner",
+        "Git"
+      ],
+      "sources": [
+        "https://infosec.exchange/@th1ago/116989223674039835"
+      ],
+      "date": "2026-07-27"
+    },
+    {
+      "title": {
+        "en": "Large Language Model (LLM) Security Architecture Challenges",
+        "fr": "Réflexions sur les défis de sécurité des Modèles de Langage (LLM)"
+      },
+      "description": {
+        "en": "Analysis detailing key vulnerabilities in LLM architecture: poisoned training corpora, ambiguous prompt interpretation, lack of instruction/data isolation, API interface bugs, and systemic agent flaws.",
+        "fr": "Analyse synthétisant les vulnérabilités majeures des architectures LLM : corpus malveillants, ambiguïté d'interprétation des prompts, non-séparation instructions/données et failles d'interface."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology_and_Telecom"
+        ],
+        "fr": [
+          "Technologie et télécommunications"
+        ]
+      },
+      "indicators": {
+        "URL": [
+          "https://mastodon.social/@dancingtreefrog/116989172517520552"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "mastodon.social"
+        ],
+        "EMAIL": [
+          "dancingtreefrog@mastodon.social"
+        ],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "Theoretical overview of emerging risks when integrating LLM components into enterprise software workflows, highlighting indirect prompt injection and data poisoning vectors.",
+        "fr": "Aperçu des défis posés par la sécurisation des architectures intégrant des modèles de langage, soulignant l'injection indirecte de prompt et l'empoisonnement de données."
+      },
+      "recommandations": [
+        {
+          "en": "Implement strict input/output isolation and sanitization boundaries for LLM-integrated applications.",
+          "fr": "Mettre en place un cloisonnement strict et un assainissement des entrées/sorties pour les applications intégrant des LLM."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Incorporate LLM threat modeling (OWASP Top 10 for LLM) into software design lifecycles."
+          ],
+          "fr": [
+            "Inclure la modélisation des menaces sur les LLM (OWASP Top 10 for LLM) dans les cycles de développement."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "N/A"
+          ],
+          "fr": [
+            "N/A"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "N/A"
+          ],
+          "fr": [
+            "N/A"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "N/A"
+          ],
+          "fr": [
+            "N/A"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "N/A"
+          ],
+          "fr": [
+            "N/A"
+          ]
+        }
+      },
+      "tags": [
+        "LLM",
+        "AI Security",
+        "Prompt Injection"
+      ],
+      "sources": [
+        "https://mastodon.social/@dancingtreefrog/116989172517520552"
+      ],
+      "date": "2026-07-27"
+    },
+    {
+      "title": {
+        "en": "Fake Air Conditioner Scam Business Network Investigation",
+        "fr": "Enquête sur le réseau d'arnaques aux faux climatiseurs en ligne"
+      },
+      "description": {
+        "en": "Journalistic investigation uncovering commercial online fraud networks selling fake air conditioners during summer heatwaves.",
+        "fr": "Enquête démonte le réseau commercial trompeur derrière la vente en ligne de faux climatiseurs lors des périodes de forte chaleur."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Retail_and_Consumer"
+        ],
+        "fr": [
+          "Commerce et grande consommation"
+        ]
+      },
+      "indicators": {
+        "URL": [
+          "https://www.lemonde.fr/pixels/article/2026/07/26/arnaque-au-faux-climatiseur-les-entreprises-qui-se-cachent-derriere-un-business-florissant_6732772_4408996.html"
+        ],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [
+          "lemonde.fr"
+        ],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [],
+      "analyse": {
+        "en": "E-commerce consumer scam taking advantage of seasonal heatwaves through fraudulent advertising and misleading storefronts.",
+        "fr": "Escroquerie commerciale en ligne exploitant la demande saisonnière via de la publicité mensongère et de faux sites marchands."
+      },
+      "recommandations": [
+        {
+          "en": "Verify online merchant legitimacy and business registration details prior to seasonal transactions.",
+          "fr": "Vérifier la réputation et l'immatriculation légale des sites marchands avant tout achat."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Conduct consumer awareness briefings regarding seasonal e-commerce fraud."
+          ],
+          "fr": [
+            "Sensibiliser les utilisateurs aux arnaques saisonnières en ligne."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "N/A"
+          ],
+          "fr": [
+            "N/A"
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "N/A"
+          ],
+          "fr": [
+            "N/A"
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "N/A"
+          ],
+          "fr": [
+            "N/A"
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "N/A"
+          ],
+          "fr": [
+            "N/A"
+          ]
+        }
+      },
+      "tags": [
+        "Fraud",
+        "Scam",
+        "E-commerce",
+        "Phishing"
+      ],
+      "sources": [
+        "https://www.lemonde.fr/pixels/article/2026/07/26/arnaque-au-faux-climatiseur-les-entreprises-qui-se-cachent-derriere-un-business-florissant_6732772_4408996.html"
+      ],
+      "date": "2026-07-26"
+    }
+  ]
+}
