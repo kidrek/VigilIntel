@@ -1,0 +1,14 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "No cyber intelligence articles provided for analysis.",
+      "fr": "Aucun article de veille cyber fourni pour l'analyse."
+    },
+    "date": "2026-08-03"
+  },
+  "geopolitical_analyse": [],
+  "regulatory_and_legal": [],
+  "breach_analyse": [],
+  "vulnerabilities_analyse": [],
+  "threats_analyse": []
+}
