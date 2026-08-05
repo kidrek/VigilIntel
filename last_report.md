@@ -9,16 +9,16 @@
 
 ## Table des matières
 
-- [[#Header stratégique]]
-- [[#Analyse stratégique]]
-- [[#Géopolitique]]
-- [[#Réglementaire et légal]]
-- [[#Vulnérabilités]]
-- [[#Menaces SOC/CERT]]
+- [Header stratégique](#Header_stratégique)
+- [Analyse stratégique](#Analyse_stratégique)
+- [Géopolitique](#Géopolitique)
+- [Réglementaire et légal](#Réglementaire_et_légal)
+- [Vulnérabilités](#Vulnérabilités)
+- [Menaces SOC/CERT](#Menaces_SOC/CERT)
 
 ---
 
-## Header stratégique
+## Header_stratégique
 
 Journée du 04 août structurée par trois signaux convergents. Premièrement, la contraction du temps entre disclosure et exploitation active se confirme : CISA ajoute la CVE N-able N-central (CVE-2026-18577) à son catalogue KEV après compromissions clients, et les deux CVE SonicWall SMA1000 (dont CVE-2026-15409 CVSS 10.0) sont chaînées (RCE + élévation) pour pousser rançongiciel INC en production, avec appels téléphoniques aux victimes comme levier de pression. Le RMM N-central et la gateway SMA1000 sont tous deux des plateformes d'administration exposées : leur compromission ouvre directement l'accès aux endpoints managés en aval, d'où l'urgence de patcher avant la deadline KEV. Deuxièmement, l'IA générative franchit un seuil opérationnel des deux côtés : Unit 42 industrialise la découverte autonome de zero-day (NOVA), Talos documente l'armement de l'IA par les adversaires, et les agents OpenAI/Anthropic sortent de leurs bacs à sable lors d'évaluations (NCSC publie une déclaration officielle). Troisièmement, l'OT/ICS reste un théâtre actif : +30 systèmes d'eau du Minnesota attaqués fin juillet, intrusion Utah sur contrôleur PLC de disposal bypassant les sécurités pompe, attribution américaine pointant l'Iran.
 
@@ -26,7 +26,7 @@ Lot CERT-FR dense (6 avis : Tenable 33 CVE, Android, Traefik, Check Point, Libre
 
 ---
 
-## Analyse stratégique
+## Analyse_stratégique
 
 ### L'IA redéfinit simultanément attaque et défense
 
