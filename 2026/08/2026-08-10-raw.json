@@ -1,0 +1,1555 @@
+[
+  {
+    "title": "CVE-2026-19348 - Shenzhen Aitemi M300 Wi-Fi Repeater protocol.csp sprintf command injection",
+    "publication_date": "Sun, 09 Aug 2026 11:16:52 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-19348",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "$(function () {\n// Focus on searchModal input when it's shown\n$('#searchModal').on('shown.bs.modal', function () {\n$('#search-options').focus();\n});\n// Get elements\nconst searchOptions = document.getElementById(\"search-close-options\");\nconst dropdown = document.getElementById(\"search-dropdown\");\nconst searchInput = document.getElementById(\"search-options\");\n\n// Function to toggle dropdown and search options\nconst toggleElements = (show) => {\nif (show) {\ndropdown.classList.add(\"show\");\nsearchOptions.classList.remove(\"d-none\");\n} else {\ndropdown.classList.remove(\"show\");\nsearchOptions.classList.add(\"d-none\");\n}\n}\n\n// Function to create HTML section\nconst createHtmlSection = (title, items, icon) => {\nlet html = `<div class=\"notification-group-list\">\n<h5 class=\"text-overflow text-muted fs-13 mb-2 mt-3 text-uppercase notification-title\">${title}</h5>`;\nif (title === 'Vulnerabilities') {\nitems.forEach(item => {\nhtml += `<a href=\"/vuln/detail/${item.id}\" class=\"list-group-item dropdown-item notify-item\">\n<i class=\"mdi ${icon} me-2\"></i> <span>${item.title}</span>\n</a>`\n;\n});\n} else if (title === 'Products') {\nitems.forEach(item => {\nhtml += `<a href=\"${item.get_absolute_url}\" class=\"list-group-item dropdown-item notify-item\">\n<i class=\"mdi ${icon} me-2\"></i> <span>${item.vendor.name} > ${item.name}</span>\n</a>`;\n}\n);\n} else if (title === 'Vendors') {\nitems.forEach(item => {\n\nhtml += `<a href=\"${item.get_absolute_url}\" class=\"list-group-item dropdown-item notify-item\">\n<i class=\"mdi ${icon} me-2\"></i> <span>${item.name}</span>\n</a>`;\n});\n}\nhtml += '</div>';\nreturn html;\n}\n\n// Event listeners\nif (searchInput) {\nsearchInput.addEventListener(\"focus\", () => toggleElements(searchInput.value.length > 0));\nsearchOptions.addEventListener(\"click\", () => {\nsearchInput.value = \"\";\ntoggleElements(false);\n});\ndocument.body.addEventListener(\"click\", (e) => {\nif (e.target.getAttribute(\"id\") !== \"search-options\") toggleElements(false);\n});\nlet timeoutID;\n$('#search-options').unbind().keyup(function () {\nclearTimeout(timeoutID);\ntimeoutID = setTimeout(function () {\nif (searchInput.value.length > 2) {\n$.get('/api/vulnerability/quick-search?q=' + searchInput.value, function (data) {\ntoggleElements(true);\n\nlet html = '<div class=\"list-group list-group-flush\">';\nif (data.results.length === 0) {\nhtml += '<div class=\"notification-group-list\"><a href=\"\" class=\"list-group-item dropdown-item notify-item\">No results found</a></div>';\n} else if (data.results.errors) {\ndata.results.errors.forEach((item) => {\nhtml += `<div class=\"notification-group-list\"><a href=\"\" class=\"list-group-item dropdown-item notify-item\"><b>${item.value}</b></a></div>`;\n}\n);\n} else {\ndata.results.forEach((item) => {\nif (item.products) html += createHtmlSection('Products', item.products, 'mdi-alpha-p-box-outline');\nif (item.vendors) html += createHtmlSection('Vendors', item.vendors, 'mdi-office-building-outline');\nif (item.vulnerabilities) html += createHtmlSection('Vulnerabilities', item.vulnerabilities, 'mdi-bomb');\n});\n}\n\nhtml += '</div>';\n$('#searchresulstview').html(html);\n\n}, 'json').fail(function () {\n$('#searchresulstview').html('<div class=\"list-group list-group-flush\"><a href=\"\" class=\"list-group-item dropdown-item notify-item\">Something went wrong. Contact with hey@cvefeed.io</a></div>');\n});\n}\n}, 500);\n});\n}\n});\n\n10.0\n\nHIGH\nCVSS 2.0\n\nCVE-2026-19348\nShenzhen Aitemi M300 Wi-Fi Repeater protocol.csp sprintf command injection\n\nA security flaw has been discovered in Shenzhen Aitemi M300 Wi-Fi Repeater r0-ea7890a. Impacted is the function sprintf of the file /protocol.csp?fname=net&opt=smacfilter_conf&function=set&act=add&name=test&enable=1. Performing a manipulation of the argument enable/name/mac results in command injection. The attack may be initiated remotely. The exploit has been released to the public and may be used for attacks.\n\nPublished Date :\nAug. 9, 2026, 11:16 a.m.\n\nLast Modified :\nAug. 9, 2026, 11:16 a.m.\n\nRemotely Exploit :\nYes !\n\nSource […]",
+    "word_count": 405,
+    "observables": {
+      "email-addr": [
+        "hey@cvefeed.io"
+      ],
+      "vulnerability": [
+        "CVE-2026-19348"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "CVE-2026-19346 - Tenda CH22 CertListInfo formCertListInfo command injection",
+    "publication_date": "Sun, 09 Aug 2026 10:17:10 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-19346",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "$(function () {\n// Focus on searchModal input when it's shown\n$('#searchModal').on('shown.bs.modal', function () {\n$('#search-options').focus();\n});\n// Get elements\nconst searchOptions = document.getElementById(\"search-close-options\");\nconst dropdown = document.getElementById(\"search-dropdown\");\nconst searchInput = document.getElementById(\"search-options\");\n\n// Function to toggle dropdown and search options\nconst toggleElements = (show) => {\nif (show) {\ndropdown.classList.add(\"show\");\nsearchOptions.classList.remove(\"d-none\");\n} else {\ndropdown.classList.remove(\"show\");\nsearchOptions.classList.add(\"d-none\");\n}\n}\n\n// Function to create HTML section\nconst createHtmlSection = (title, items, icon) => {\nlet html = `<div class=\"notification-group-list\">\n<h5 class=\"text-overflow text-muted fs-13 mb-2 mt-3 text-uppercase notification-title\">${title}</h5>`;\nif (title === 'Vulnerabilities') {\nitems.forEach(item => {\nhtml += `<a href=\"/vuln/detail/${item.id}\" class=\"list-group-item dropdown-item notify-item\">\n<i class=\"mdi ${icon} me-2\"></i> <span>${item.title}</span>\n</a>`\n;\n});\n} else if (title === 'Products') {\nitems.forEach(item => {\nhtml += `<a href=\"${item.get_absolute_url}\" class=\"list-group-item dropdown-item notify-item\">\n<i class=\"mdi ${icon} me-2\"></i> <span>${item.vendor.name} > ${item.name}</span>\n</a>`;\n}\n);\n} else if (title === 'Vendors') {\nitems.forEach(item => {\n\nhtml += `<a href=\"${item.get_absolute_url}\" class=\"list-group-item dropdown-item notify-item\">\n<i class=\"mdi ${icon} me-2\"></i> <span>${item.name}</span>\n</a>`;\n});\n}\nhtml += '</div>';\nreturn html;\n}\n\n// Event listeners\nif (searchInput) {\nsearchInput.addEventListener(\"focus\", () => toggleElements(searchInput.value.length > 0));\nsearchOptions.addEventListener(\"click\", () => {\nsearchInput.value = \"\";\ntoggleElements(false);\n});\ndocument.body.addEventListener(\"click\", (e) => {\nif (e.target.getAttribute(\"id\") !== \"search-options\") toggleElements(false);\n});\nlet timeoutID;\n$('#search-options').unbind().keyup(function () {\nclearTimeout(timeoutID);\ntimeoutID = setTimeout(function () {\nif (searchInput.value.length > 2) {\n$.get('/api/vulnerability/quick-search?q=' + searchInput.value, function (data) {\ntoggleElements(true);\n\nlet html = '<div class=\"list-group list-group-flush\">';\nif (data.results.length === 0) {\nhtml += '<div class=\"notification-group-list\"><a href=\"\" class=\"list-group-item dropdown-item notify-item\">No results found</a></div>';\n} else if (data.results.errors) {\ndata.results.errors.forEach((item) => {\nhtml += `<div class=\"notification-group-list\"><a href=\"\" class=\"list-group-item dropdown-item notify-item\"><b>${item.value}</b></a></div>`;\n}\n);\n} else {\ndata.results.forEach((item) => {\nif (item.products) html += createHtmlSection('Products', item.products, 'mdi-alpha-p-box-outline');\nif (item.vendors) html += createHtmlSection('Vendors', item.vendors, 'mdi-office-building-outline');\nif (item.vulnerabilities) html += createHtmlSection('Vulnerabilities', item.vulnerabilities, 'mdi-bomb');\n});\n}\n\nhtml += '</div>';\n$('#searchresulstview').html(html);\n\n}, 'json').fail(function () {\n$('#searchresulstview').html('<div class=\"list-group list-group-flush\"><a href=\"\" class=\"list-group-item dropdown-item notify-item\">Something went wrong. Contact with hey@cvefeed.io</a></div>');\n});\n}\n}, 500);\n});\n}\n});\n\n9.0\n\nHIGH\nCVSS 2.0\n\nCVE-2026-19346\nTenda CH22 CertListInfo formCertListInfo command injection\n\nA vulnerability was determined in Tenda CH22 1.0.0.1. This vulnerability affects the function formCertListInfo of the file /goform/CertListInfo. This manipulation of the argument Name causes command injection. The attack can be initiated remotely. The exploit has been publicly disclosed and may be utilized.\n\nPublished Date :\nAug. 9, 2026, 10:17 a.m.\n\nLast Modified :\nAug. 9, 2026, 10:17 a.m.\n\nRemotely Exploit :\nYes !\n\nSource :\ncna@vuldb.com\n\nImpact\nAffected Products\n\nThe following products are affected by CVE-2026-19346\nvulnerability.\nEven if cvefeed.io is aware of the exact […]",
+    "word_count": 413,
+    "observables": {
+      "email-addr": [
+        "cna@vuldb.com",
+        "hey@cvefeed.io"
+      ],
+      "ipv4-addr": [
+        "1.0.0.1"
+      ],
+      "vulnerability": [
+        "CVE-2026-19346"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "CVE-2026-19341 - UTT HiPER 1200GW pptpSrvGlobalConfig strcpy stack-based overflow",
+    "publication_date": "Sun, 09 Aug 2026 07:17:04 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-19341",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "9.0\n\nHIGH\nCVSS 2.0\n\nCVE-2026-19341\nUTT HiPER 1200GW pptpSrvGlobalConfig strcpy stack-based overflow\n\nA security vulnerability has been detected in UTT HiPER 1200GW up to 2.5.3-170306. This impacts the function strcpy of the file /goform/pptpSrvGlobalConfig. Such manipulation of the argument EncryptionMode leads to stack-based buffer overflow. The attack can be executed remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.\n\nPublished Date :\nAug. 9, 2026, 7:17 a.m.\n\nLast Modified :\nAug. 9, 2026, 7:17 a.m.\n\nRemotely Exploit :\nYes !\n\nSource :\ncna@vuldb.com\n\nImpact\nAffected Products\n\nThe following products are affected by CVE-2026-19341\nvulnerability.\nEven if cvefeed.io is aware of the exact versions of the\nproducts\nthat\nare\naffected, the information is not represented in the table below.\n\nID\nVendor\nProduct\nAction\n\n1\nUtt\nhiper_1200gw\n\nThe Common Vulnerability Scoring System is a standardized framework\nfor assessing the severity of vulnerabilities in software and systems.\nWe collect and displays CVSS scores from various sources for each CVE.\n\nScore\nVersion\nSeverity\nVector\nExploitability Score\nImpact Score\nSource\n\n9.0\n\nCVSS 2.0\n\nHIGH\n\n8.0\n\n10.0\n\ncna@vuldb.com\n\n8.8\n\nCVSS 3.1\n\nHIGH\n\n2.8\n\n5.9\n\ncna@vuldb.com\n\n7.4\n\nCVSS 4.0\n\nHIGH\n\ncna@vuldb.com\n\nStack-based buffer overflow in pptpSrvGlobalConfig requires patching the affected component.\n\nPatch the strcpy function in pptpSrvGlobalConfig.\n\nUpdate UTT HiPER 1200GW firmware.\n\nContact vendor for security updates.\n\nHere, you will find a curated list of external links that provide in-depth\ninformation, practical solutions, and valuable tools related to\nCVE-2026-19341.\n\nURL\nResource\n\nhttps://github.com/7wkajk/CVE-VUL/blob/main/104.md\n\nhttps://vuldb.com/cve/CVE-2026-19341\n\nhttps://vuldb.com/submit/865277\n\nhttps://vuldb.com/vuln/387177\n\nhttps://vuldb.com/vuln/387177/cti\n\nWhile CVE identifies\nspecific instances of vulnerabilities, CWE categorizes the common flaws or\nweaknesses that can lead to vulnerabilities. CVE-2026-19341 is\nassociated with the following CWEs:\n\nCWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer\n\nCWE-121: Stack-based Buffer Overflow\n\nCommon Attack Pattern Enumeration and Classification\n(CAPEC)\nstores attack patterns, which are descriptions of the common attributes and\napproaches employed by adversaries to exploit the CVE-2026-19341\nweaknesses.\n\nCAPEC-8: Buffer Overflow in an API Call Buffer Overflow in an API Call\n\nCAPEC-9: Buffer Overflow in Local Command-Line Utilities Buffer Overflow in Local Command-Line Utilities\n\nCAPEC-10: Buffer Overflow via Environment Variables Buffer Overflow via Environment Variables\n\nCAPEC-14: Client-side Injection-induced Buffer Overflow Client-side Injection-induced Buffer Overflow\n\nCAPEC-24: Filter Failure through Buffer Overflow Filter Failure through Buffer Overflow\n\nCAPEC-42: MIME Conversion MIME Conversion\n\nCAPEC-44: Overflow Binary Resource File Overflow Binary Resource File\n\nCAPEC-45: Buffer Overflow via Symbolic Links Buffer Overflow via Symbolic Links\n\nCAPEC-46: Overflow Variables and Tags Overflow Variables and Tags\n\nCAPEC-47: Buffer Overflow via Parameter Expansion Buffer Overflow via Parameter Expansion\n\nCAPEC-100: Overflow Buffers Overflow Buffers\n\nCAPEC-123: Buffer Manipulation Buffer Manipulation\n\nWe scan GitHub repositories to detect new proof-of-concept exploits. Following list is a collection\nof public exploits and proof-of-concepts, which have been published on GitHub (sorted by the most recently\nupdated).\n\nResults are limited to the first 15 repositories due to potential performance issues.\n\nThe following list is the news that have been mention\nCVE-2026-19341 vulnerability anywhere in the article.\n\nThe following table lists the changes that have been made to the\nCVE-2026-19341 vulnerability over time.\n\nVulnerability history details can be useful for understanding the evolution\nof a vulnerability, and for […]",
+    "word_count": 529,
+    "observables": {
+      "domain-name": [
+        "cvefeed.io"
+      ],
+      "email-addr": [
+        "cna@vuldb.com"
+      ],
+      "url": [
+        "https://github.com/7wkajk/CVE-VUL/blob/main/104.md",
+        "https://vuldb.com/cve/CVE-2026-19341",
+        "https://vuldb.com/submit/865277",
+        "https://vuldb.com/vuln/387177",
+        "https://vuldb.com/vuln/387177/cti"
+      ],
+      "vulnerability": [
+        "CVE-2026-19341"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "CVE-2026-71993 - MSI Radix AXE6600 v781521 Command Injection via openvpn function",
+    "publication_date": "Sun, 09 Aug 2026 00:16:48 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-71993",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "9.8\n\nCRITICAL\nCVSS 3.1\n\nCVE-2026-71993\nMSI Radix AXE6600 v781521 Command Injection via openvpn function\n\nMSI Radix AXE6600 router firmware version v781521 contains a command injection vulnerability in the openvpn function that allows remote attackers to execute arbitrary commands on the affected device. Attackers can exploit the macfilter function to inject malicious commands and obtain root privileges on the underlying system.\n\nPublished Date :\nAug. 9, 2026, 12:16 a.m.\n\nLast Modified :\nAug. 9, 2026, 12:16 a.m.\n\nRemotely Exploit :\nYes !\n\nSource :\ndisclosure@vulncheck.com\n\nImpact\nAffected Products\n\nThe following products are affected by CVE-2026-71993\nvulnerability.\nEven if cvefeed.io is aware of the exact versions of the\nproducts\nthat\nare\naffected, the information is not represented in the table below.\n\nNo affected product recoded yet\n\nThe Common Vulnerability Scoring System is a standardized framework\nfor assessing the severity of vulnerabilities in software and systems.\nWe collect and displays CVSS scores from various sources for each CVE.\n\nScore\nVersion\nSeverity\nVector\nExploitability Score\nImpact Score\nSource\n\n9.8\n\nCVSS 3.1\n\nCRITICAL\n\n83251b91-4cc7-4094-a5c7-464a1b83ea10\n\n9.8\n\nCVSS 3.1\n\nCRITICAL\n\n3.9\n\n5.9\n\ndisclosure@vulncheck.com\n\n9.8\n\nCVSS 3.1\n\nCRITICAL\n\n3.9\n\n5.9\n\nMITRE-CVE\n\n9.3\n\nCVSS 4.0\n\nCRITICAL\n\n83251b91-4cc7-4094-a5c7-464a1b83ea10\n\n9.3\n\nCVSS 4.0\n\nCRITICAL\n\ndisclosure@vulncheck.com\n\nUpdate firmware to patch command injection vulnerability in OpenVPN and macfilter functions.\n\nUpdate the router firmware to the latest version.\n\nApply vendor patches for OpenVPN.\n\nHarden macfilter function configurations.\n\nRestrict access to OpenVPN functionality.\n\nHere, you will find a curated list of external links that provide in-depth\ninformation, practical solutions, and valuable tools related to\nCVE-2026-71993.\n\nURL\nResource\n\nhttps://us.msi.com/Networking/RadiX-AXE6600-WiFi-6E-Tri-Band-Gaming-Router/support\n\nhttps://www.msi.com/\n\nhttps://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-openvpn-function\n\nWhile CVE identifies\nspecific instances of vulnerabilities, CWE categorizes the common flaws or\nweaknesses that can lead to vulnerabilities. CVE-2026-71993 is\nassociated with the following CWEs:\n\nCWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')\n\nCommon Attack Pattern Enumeration and Classification\n(CAPEC)\nstores attack patterns, which are descriptions of the common attributes and\napproaches employed by adversaries to exploit the CVE-2026-71993\nweaknesses.\n\nCAPEC-6: Argument Injection Argument Injection\n\nCAPEC-15: Command Delimiters Command Delimiters\n\nCAPEC-43: Exploiting Multiple Input Interpretation Layers Exploiting Multiple Input Interpretation Layers\n\nCAPEC-88: OS Command Injection OS Command Injection\n\nCAPEC-108: Command Line Execution through SQL Injection Command Line Execution through SQL Injection\n\nWe scan GitHub repositories to detect new proof-of-concept exploits. Following list is a collection\nof public exploits and proof-of-concepts, which have been published on GitHub (sorted by the most recently\nupdated).\n\nResults are limited to the first 15 repositories due to potential performance issues.\n\nThe following list is the news that have been mention\nCVE-2026-71993 vulnerability anywhere in the article.\n\nThe following table lists the changes that have been made to the\nCVE-2026-71993 vulnerability over time.\n\nVulnerability history details can be useful for understanding the evolution\nof a vulnerability, and for identifying the most recent changes that may\nimpact the vulnerability's severity, exploitability, or other characteristics.\n\nNew CVE Received\nby disclosure@vulncheck.com\n\nAug. 09, 2026\n\nAction\nType\nOld Value\nNew Value\n\nAdded\nAffected\n\n[{'vendor': 'MSI', 'product': 'Radix AXE6600', 'versions': [{'status': 'affected', 'version': '0', 'versionType': 'custom', 'lessThanOrEqual': 'v781521'}], 'defaultStatus': 'affected'}]\n\nAdded\nDescription\n\nMSI […]",
+    "word_count": 504,
+    "observables": {
+      "domain-name": [
+        "cvefeed.io",
+        "msi.com"
+      ],
+      "email-addr": [
+        "disclosure@vulncheck.com"
+      ],
+      "url": [
+        "http://www.msi.com",
+        "http://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-openvpn-function",
+        "https://us.msi.com/Networking/RadiX-AXE6600-WiFi-6E-Tri-Band-Gaming-Router/support",
+        "https://www.msi.com/",
+        "https://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-openvpn-function"
+      ],
+      "vulnerability": [
+        "CVE-2026-71993"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "CVE-2026-71992 - MSI Radix AXE6600 v781521 Command Injection via macfilter",
+    "publication_date": "Sun, 09 Aug 2026 00:16:48 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-71992",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "9.8\n\nCRITICAL\nCVSS 3.1\n\nCVE-2026-71992\nMSI Radix AXE6600 v781521 Command Injection via macfilter\n\nMSI Radix AXE6600 router firmware version v781521 contains a command injection vulnerability in the macfilter function that allows remote attackers to execute arbitrary commands on the affected device. Attackers can exploit the macfilter function to inject malicious commands and obtain root privileges on the underlying system.\n\nPublished Date :\nAug. 9, 2026, 12:16 a.m.\n\nLast Modified :\nAug. 9, 2026, 12:16 a.m.\n\nRemotely Exploit :\nYes !\n\nSource :\ndisclosure@vulncheck.com\n\nImpact\nAffected Products\n\nThe following products are affected by CVE-2026-71992\nvulnerability.\nEven if cvefeed.io is aware of the exact versions of the\nproducts\nthat\nare\naffected, the information is not represented in the table below.\n\nNo affected product recoded yet\n\nThe Common Vulnerability Scoring System is a standardized framework\nfor assessing the severity of vulnerabilities in software and systems.\nWe collect and displays CVSS scores from various sources for each CVE.\n\nScore\nVersion\nSeverity\nVector\nExploitability Score\nImpact Score\nSource\n\n9.8\n\nCVSS 3.1\n\nCRITICAL\n\n83251b91-4cc7-4094-a5c7-464a1b83ea10\n\n9.8\n\nCVSS 3.1\n\nCRITICAL\n\n3.9\n\n5.9\n\ndisclosure@vulncheck.com\n\n9.8\n\nCVSS 3.1\n\nCRITICAL\n\n3.9\n\n5.9\n\nMITRE-CVE\n\n9.3\n\nCVSS 4.0\n\nCRITICAL\n\n83251b91-4cc7-4094-a5c7-464a1b83ea10\n\n9.3\n\nCVSS 4.0\n\nCRITICAL\n\ndisclosure@vulncheck.com\n\nUpdate router firmware to patch command injection vulnerability and restrict access.\n\nUpdate router firmware to the latest version.\n\nApply vendor-recommended security configurations.\n\nRestrict access to the macfilter function.\n\nMonitor network for suspicious activity.\n\nHere, you will find a curated list of external links that provide in-depth\ninformation, practical solutions, and valuable tools related to\nCVE-2026-71992.\n\nURL\nResource\n\nhttps://us.msi.com/Networking/RadiX-AXE6600-WiFi-6E-Tri-Band-Gaming-Router/support\n\nhttps://www.msi.com/\n\nhttps://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-macfilter\n\nWhile CVE identifies\nspecific instances of vulnerabilities, CWE categorizes the common flaws or\nweaknesses that can lead to vulnerabilities. CVE-2026-71992 is\nassociated with the following CWEs:\n\nCWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')\n\nCommon Attack Pattern Enumeration and Classification\n(CAPEC)\nstores attack patterns, which are descriptions of the common attributes and\napproaches employed by adversaries to exploit the CVE-2026-71992\nweaknesses.\n\nCAPEC-6: Argument Injection Argument Injection\n\nCAPEC-15: Command Delimiters Command Delimiters\n\nCAPEC-43: Exploiting Multiple Input Interpretation Layers Exploiting Multiple Input Interpretation Layers\n\nCAPEC-88: OS Command Injection OS Command Injection\n\nCAPEC-108: Command Line Execution through SQL Injection Command Line Execution through SQL Injection\n\nWe scan GitHub repositories to detect new proof-of-concept exploits. Following list is a collection\nof public exploits and proof-of-concepts, which have been published on GitHub (sorted by the most recently\nupdated).\n\nResults are limited to the first 15 repositories due to potential performance issues.\n\nThe following list is the news that have been mention\nCVE-2026-71992 vulnerability anywhere in the article.\n\nThe following table lists the changes that have been made to the\nCVE-2026-71992 vulnerability over time.\n\nVulnerability history details can be useful for understanding the evolution\nof a vulnerability, and for identifying the most recent changes that may\nimpact the vulnerability's severity, exploitability, or other characteristics.\n\nNew CVE Received\nby disclosure@vulncheck.com\n\nAug. 09, 2026\n\nAction\nType\nOld Value\nNew Value\n\nAdded\nAffected\n\n[{'vendor': 'MSI', 'product': 'Radix AXE6600', 'versions': [{'status': 'affected', 'version': '0', 'versionType': 'custom', 'lessThanOrEqual': 'v781521'}], 'defaultStatus': 'affected'}]\n\nAdded\nDescription\n\nMSI Radix […]",
+    "word_count": 503,
+    "observables": {
+      "domain-name": [
+        "cvefeed.io",
+        "msi.com"
+      ],
+      "email-addr": [
+        "disclosure@vulncheck.com"
+      ],
+      "url": [
+        "http://www.msi.com",
+        "http://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-macfilter",
+        "https://us.msi.com/Networking/RadiX-AXE6600-WiFi-6E-Tri-Band-Gaming-Router/support",
+        "https://www.msi.com/",
+        "https://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-macfilter"
+      ],
+      "vulnerability": [
+        "CVE-2026-71992"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "CVE-2026-71991 - MSI Radix AXE6600 v781521 Command Injection via TelnetSSH Function",
+    "publication_date": "Sun, 09 Aug 2026 00:16:48 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-71991",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "9.8\n\nCRITICAL\nCVSS 3.1\n\nCVE-2026-71991\nMSI Radix AXE6600 v781521 Command Injection via TelnetSSH Function\n\nMSI Radix AXE6600 router firmware version v781521 contains a command injection vulnerability in the TelnetSSH function used for Telnet configuration that allows remote attackers to execute arbitrary commands on the affected device. Attackers can exploit this vulnerability through the Telnet configuration interface to inject malicious commands and obtain root privileges on the underlying system.\n\nPublished Date :\nAug. 9, 2026, 12:16 a.m.\n\nLast Modified :\nAug. 9, 2026, 12:16 a.m.\n\nRemotely Exploit :\nYes !\n\nSource :\ndisclosure@vulncheck.com\n\nImpact\nAffected Products\n\nThe following products are affected by CVE-2026-71991\nvulnerability.\nEven if cvefeed.io is aware of the exact versions of the\nproducts\nthat\nare\naffected, the information is not represented in the table below.\n\nNo affected product recoded yet\n\nThe Common Vulnerability Scoring System is a standardized framework\nfor assessing the severity of vulnerabilities in software and systems.\nWe collect and displays CVSS scores from various sources for each CVE.\n\nScore\nVersion\nSeverity\nVector\nExploitability Score\nImpact Score\nSource\n\n9.8\n\nCVSS 3.1\n\nCRITICAL\n\n83251b91-4cc7-4094-a5c7-464a1b83ea10\n\n9.8\n\nCVSS 3.1\n\nCRITICAL\n\n3.9\n\n5.9\n\ndisclosure@vulncheck.com\n\n9.8\n\nCVSS 3.1\n\nCRITICAL\n\n3.9\n\n5.9\n\nMITRE-CVE\n\n9.3\n\nCVSS 4.0\n\nCRITICAL\n\n83251b91-4cc7-4094-a5c7-464a1b83ea10\n\n9.3\n\nCVSS 4.0\n\nCRITICAL\n\ndisclosure@vulncheck.com\n\nUpdate router firmware to patch command injection in Telnet configuration.\n\nUpdate router firmware to the latest version.\n\nDisable Telnet if not required.\n\nEnsure Telnet configuration is secured.\n\nHere, you will find a curated list of external links that provide in-depth\ninformation, practical solutions, and valuable tools related to\nCVE-2026-71991.\n\nURL\nResource\n\nhttps://us.msi.com/Networking/RadiX-AXE6600-WiFi-6E-Tri-Band-Gaming-Router/support\n\nhttps://www.msi.com/\n\nhttps://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-telnetssh-function-used-for-telnet-configuration\n\nWhile CVE identifies\nspecific instances of vulnerabilities, CWE categorizes the common flaws or\nweaknesses that can lead to vulnerabilities. CVE-2026-71991 is\nassociated with the following CWEs:\n\nCWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')\n\nCommon Attack Pattern Enumeration and Classification\n(CAPEC)\nstores attack patterns, which are descriptions of the common attributes and\napproaches employed by adversaries to exploit the CVE-2026-71991\nweaknesses.\n\nCAPEC-6: Argument Injection Argument Injection\n\nCAPEC-15: Command Delimiters Command Delimiters\n\nCAPEC-43: Exploiting Multiple Input Interpretation Layers Exploiting Multiple Input Interpretation Layers\n\nCAPEC-88: OS Command Injection OS Command Injection\n\nCAPEC-108: Command Line Execution through SQL Injection Command Line Execution through SQL Injection\n\nWe scan GitHub repositories to detect new proof-of-concept exploits. Following list is a collection\nof public exploits and proof-of-concepts, which have been published on GitHub (sorted by the most recently\nupdated).\n\nResults are limited to the first 15 repositories due to potential performance issues.\n\nThe following list is the news that have been mention\nCVE-2026-71991 vulnerability anywhere in the article.\n\nThe following table lists the changes that have been made to the\nCVE-2026-71991 vulnerability over time.\n\nVulnerability history details can be useful for understanding the evolution\nof a vulnerability, and for identifying the most recent changes that may\nimpact the vulnerability's severity, exploitability, or other characteristics.\n\nNew CVE Received\nby disclosure@vulncheck.com\n\nAug. 09, 2026\n\nAction\nType\nOld Value\nNew Value\n\nAdded\nAffected\n\n[{'vendor': 'MSI', 'product': 'Radix AXE6600', 'versions': [{'status': 'affected', 'version': '0', 'versionType': 'custom', 'lessThanOrEqual': 'v781521'}], 'defaultStatus': […]",
+    "word_count": 501,
+    "observables": {
+      "domain-name": [
+        "cvefeed.io",
+        "msi.com"
+      ],
+      "email-addr": [
+        "disclosure@vulncheck.com"
+      ],
+      "url": [
+        "http://www.msi.com",
+        "http://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-telnetssh-function-used-for-telnet-configuration",
+        "https://us.msi.com/Networking/RadiX-AXE6600-WiFi-6E-Tri-Band-Gaming-Router/support",
+        "https://www.msi.com/",
+        "https://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-telnetssh-function-used-for-telnet-configuration"
+      ],
+      "vulnerability": [
+        "CVE-2026-71991"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "CVE-2026-71990 - MSI Radix AXE6600 v781521 Command Injection via TelnetSSH Function",
+    "publication_date": "Sun, 09 Aug 2026 00:16:48 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-71990",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "9.8\n\nCRITICAL\nCVSS 3.1\n\nCVE-2026-71990\nMSI Radix AXE6600 v781521 Command Injection via TelnetSSH Function\n\nMSI Radix AXE6600 router firmware version v781521 contains a command injection vulnerability in the TelnetSSH function used for SSH configuration that allows remote attackers to execute arbitrary commands on the affected device. Attackers can exploit this vulnerability through the SSH configuration interface to inject malicious commands and obtain root privileges on the underlying system.\n\nPublished Date :\nAug. 9, 2026, 12:16 a.m.\n\nLast Modified :\nAug. 9, 2026, 12:16 a.m.\n\nRemotely Exploit :\nYes !\n\nSource :\ndisclosure@vulncheck.com\n\nImpact\nAffected Products\n\nThe following products are affected by CVE-2026-71990\nvulnerability.\nEven if cvefeed.io is aware of the exact versions of the\nproducts\nthat\nare\naffected, the information is not represented in the table below.\n\nNo affected product recoded yet\n\nThe Common Vulnerability Scoring System is a standardized framework\nfor assessing the severity of vulnerabilities in software and systems.\nWe collect and displays CVSS scores from various sources for each CVE.\n\nScore\nVersion\nSeverity\nVector\nExploitability Score\nImpact Score\nSource\n\n9.8\n\nCVSS 3.1\n\nCRITICAL\n\n83251b91-4cc7-4094-a5c7-464a1b83ea10\n\n9.8\n\nCVSS 3.1\n\nCRITICAL\n\n3.9\n\n5.9\n\ndisclosure@vulncheck.com\n\n9.8\n\nCVSS 3.1\n\nCRITICAL\n\n3.9\n\n5.9\n\nMITRE-CVE\n\n9.3\n\nCVSS 4.0\n\nCRITICAL\n\n83251b91-4cc7-4094-a5c7-464a1b83ea10\n\n9.3\n\nCVSS 4.0\n\nCRITICAL\n\ndisclosure@vulncheck.com\n\nUpdate router firmware to patch command injection in TelnetSSH function.\n\nUpdate router firmware to version v781521 or later.\n\nDisable TelnetSSH function if not needed.\n\nRestrict SSH access to trusted networks.\n\nApply vendor patches promptly.\n\nHere, you will find a curated list of external links that provide in-depth\ninformation, practical solutions, and valuable tools related to\nCVE-2026-71990.\n\nURL\nResource\n\nhttps://us.msi.com/Networking/RadiX-AXE6600-WiFi-6E-Tri-Band-Gaming-Router/support\n\nhttps://www.msi.com/\n\nhttps://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-telnetssh-function\n\nWhile CVE identifies\nspecific instances of vulnerabilities, CWE categorizes the common flaws or\nweaknesses that can lead to vulnerabilities. CVE-2026-71990 is\nassociated with the following CWEs:\n\nCWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')\n\nCommon Attack Pattern Enumeration and Classification\n(CAPEC)\nstores attack patterns, which are descriptions of the common attributes and\napproaches employed by adversaries to exploit the CVE-2026-71990\nweaknesses.\n\nCAPEC-6: Argument Injection Argument Injection\n\nCAPEC-15: Command Delimiters Command Delimiters\n\nCAPEC-43: Exploiting Multiple Input Interpretation Layers Exploiting Multiple Input Interpretation Layers\n\nCAPEC-88: OS Command Injection OS Command Injection\n\nCAPEC-108: Command Line Execution through SQL Injection Command Line Execution through SQL Injection\n\nWe scan GitHub repositories to detect new proof-of-concept exploits. Following list is a collection\nof public exploits and proof-of-concepts, which have been published on GitHub (sorted by the most recently\nupdated).\n\nResults are limited to the first 15 repositories due to potential performance issues.\n\nThe following list is the news that have been mention\nCVE-2026-71990 vulnerability anywhere in the article.\n\nThe following table lists the changes that have been made to the\nCVE-2026-71990 vulnerability over time.\n\nVulnerability history details can be useful for understanding the evolution\nof a vulnerability, and for identifying the most recent changes that may\nimpact the vulnerability's severity, exploitability, or other characteristics.\n\nNew CVE Received\nby disclosure@vulncheck.com\n\nAug. 09, 2026\n\nAction\nType\nOld Value\nNew Value\n\nAdded\nAffected\n\n[{'vendor': 'MSI', 'product': 'Radix AXE6600', 'versions': [{'status': 'affected', 'version': '0', 'versionType': 'custom', 'lessThanOrEqual': 'v781521'}], […]",
+    "word_count": 507,
+    "observables": {
+      "domain-name": [
+        "cvefeed.io",
+        "msi.com"
+      ],
+      "email-addr": [
+        "disclosure@vulncheck.com"
+      ],
+      "url": [
+        "http://www.msi.com",
+        "http://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-telnetssh-function",
+        "https://us.msi.com/Networking/RadiX-AXE6600-WiFi-6E-Tri-Band-Gaming-Router/support",
+        "https://www.msi.com/",
+        "https://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-telnetssh-function"
+      ],
+      "vulnerability": [
+        "CVE-2026-71990"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "CVE-2026-71989 - MSI Radix AXE6600 v781521 Command Injection via porTrigger function",
+    "publication_date": "Sun, 09 Aug 2026 00:16:47 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-71989",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "9.8\n\nCRITICAL\nCVSS 3.1\n\nCVE-2026-71989\nMSI Radix AXE6600 v781521 Command Injection via porTrigger function\n\nMSI Radix AXE6600 router firmware version v781521 contains a command injection vulnerability in the porTrigger function that allows remote attackers to execute arbitrary commands on the affected device. Attackers can exploit this vulnerability through the alg function to execute malicious commands and obtain root privileges on the underlying system.\n\nPublished Date :\nAug. 9, 2026, 12:16 a.m.\n\nLast Modified :\nAug. 9, 2026, 12:16 a.m.\n\nRemotely Exploit :\nYes !\n\nSource :\ndisclosure@vulncheck.com\n\nImpact\nAffected Products\n\nThe following products are affected by CVE-2026-71989\nvulnerability.\nEven if cvefeed.io is aware of the exact versions of the\nproducts\nthat\nare\naffected, the information is not represented in the table below.\n\nNo affected product recoded yet\n\nThe Common Vulnerability Scoring System is a standardized framework\nfor assessing the severity of vulnerabilities in software and systems.\nWe collect and displays CVSS scores from various sources for each CVE.\n\nScore\nVersion\nSeverity\nVector\nExploitability Score\nImpact Score\nSource\n\n9.8\n\nCVSS 3.1\n\nCRITICAL\n\n83251b91-4cc7-4094-a5c7-464a1b83ea10\n\n9.8\n\nCVSS 3.1\n\nCRITICAL\n\n3.9\n\n5.9\n\ndisclosure@vulncheck.com\n\n9.8\n\nCVSS 3.1\n\nCRITICAL\n\n3.9\n\n5.9\n\nMITRE-CVE\n\n9.3\n\nCVSS 4.0\n\nCRITICAL\n\n83251b91-4cc7-4094-a5c7-464a1b83ea10\n\n9.3\n\nCVSS 4.0\n\nCRITICAL\n\ndisclosure@vulncheck.com\n\nUpdate router firmware to patch command injection vulnerability in alg and porTrigger functions.\n\nUpdate router firmware to the latest version.\n\nDisable unnecessary services, especially port triggering.\n\nReview and restrict access to the alg function.\n\nApply vendor-supplied patches immediately.\n\nHere, you will find a curated list of external links that provide in-depth\ninformation, practical solutions, and valuable tools related to\nCVE-2026-71989.\n\nURL\nResource\n\nhttps://us.msi.com/Networking/RadiX-AXE6600-WiFi-6E-Tri-Band-Gaming-Router/support\n\nhttps://www.msi.com/\n\nhttps://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-portrigger-function\n\nWhile CVE identifies\nspecific instances of vulnerabilities, CWE categorizes the common flaws or\nweaknesses that can lead to vulnerabilities. CVE-2026-71989 is\nassociated with the following CWEs:\n\nCWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')\n\nCommon Attack Pattern Enumeration and Classification\n(CAPEC)\nstores attack patterns, which are descriptions of the common attributes and\napproaches employed by adversaries to exploit the CVE-2026-71989\nweaknesses.\n\nCAPEC-6: Argument Injection Argument Injection\n\nCAPEC-15: Command Delimiters Command Delimiters\n\nCAPEC-43: Exploiting Multiple Input Interpretation Layers Exploiting Multiple Input Interpretation Layers\n\nCAPEC-88: OS Command Injection OS Command Injection\n\nCAPEC-108: Command Line Execution through SQL Injection Command Line Execution through SQL Injection\n\nWe scan GitHub repositories to detect new proof-of-concept exploits. Following list is a collection\nof public exploits and proof-of-concepts, which have been published on GitHub (sorted by the most recently\nupdated).\n\nResults are limited to the first 15 repositories due to potential performance issues.\n\nThe following list is the news that have been mention\nCVE-2026-71989 vulnerability anywhere in the article.\n\nThe following table lists the changes that have been made to the\nCVE-2026-71989 vulnerability over time.\n\nVulnerability history details can be useful for understanding the evolution\nof a vulnerability, and for identifying the most recent changes that may\nimpact the vulnerability's severity, exploitability, or other characteristics.\n\nNew CVE Received\nby disclosure@vulncheck.com\n\nAug. 09, 2026\n\nAction\nType\nOld Value\nNew Value\n\nAdded\nAffected\n\n[{'vendor': 'MSI', 'product': 'Radix AXE6600', 'versions': [{'status': 'affected', 'version': '0', 'versionType': 'custom', 'lessThanOrEqual': […]",
+    "word_count": 505,
+    "observables": {
+      "domain-name": [
+        "cvefeed.io",
+        "msi.com"
+      ],
+      "email-addr": [
+        "disclosure@vulncheck.com"
+      ],
+      "url": [
+        "http://www.msi.com",
+        "http://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-portrigger-function",
+        "https://us.msi.com/Networking/RadiX-AXE6600-WiFi-6E-Tri-Band-Gaming-Router/support",
+        "https://www.msi.com/",
+        "https://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-portrigger-function"
+      ],
+      "vulnerability": [
+        "CVE-2026-71989"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "CVE-2026-71988 - MSI Radix AXE6600 v781521 Command Injection via portFw function",
+    "publication_date": "Sun, 09 Aug 2026 00:16:47 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-71988",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "9.8\n\nCRITICAL\nCVSS 3.1\n\nCVE-2026-71988\nMSI Radix AXE6600 v781521 Command Injection via portFw function\n\nMSI Radix AXE6600 router firmware version v781521 contains a command injection vulnerability in the portFw function that allows remote attackers to execute arbitrary commands on the affected device. Attackers can exploit this vulnerability through the alg function to execute malicious commands and obtain root privileges on the underlying system.\n\nPublished Date :\nAug. 9, 2026, 12:16 a.m.\n\nLast Modified :\nAug. 9, 2026, 12:16 a.m.\n\nRemotely Exploit :\nYes !\n\nSource :\ndisclosure@vulncheck.com\n\nImpact\nAffected Products\n\nThe following products are affected by CVE-2026-71988\nvulnerability.\nEven if cvefeed.io is aware of the exact versions of the\nproducts\nthat\nare\naffected, the information is not represented in the table below.\n\nNo affected product recoded yet\n\nThe Common Vulnerability Scoring System is a standardized framework\nfor assessing the severity of vulnerabilities in software and systems.\nWe collect and displays CVSS scores from various sources for each CVE.\n\nScore\nVersion\nSeverity\nVector\nExploitability Score\nImpact Score\nSource\n\n9.8\n\nCVSS 3.1\n\nCRITICAL\n\n83251b91-4cc7-4094-a5c7-464a1b83ea10\n\n9.8\n\nCVSS 3.1\n\nCRITICAL\n\n3.9\n\n5.9\n\ndisclosure@vulncheck.com\n\n9.8\n\nCVSS 3.1\n\nCRITICAL\n\n3.9\n\n5.9\n\nMITRE-CVE\n\n9.3\n\nCVSS 4.0\n\nCRITICAL\n\n83251b91-4cc7-4094-a5c7-464a1b83ea10\n\n9.3\n\nCVSS 4.0\n\nCRITICAL\n\ndisclosure@vulncheck.com\n\nUpdate the router firmware to patch the command injection vulnerability.\n\nUpdate router firmware to the latest version.\n\nApply vendor-provided security patches.\n\nRestrict access to the alg function if possible.\n\nHere, you will find a curated list of external links that provide in-depth\ninformation, practical solutions, and valuable tools related to\nCVE-2026-71988.\n\nURL\nResource\n\nhttps://us.msi.com/Networking/RadiX-AXE6600-WiFi-6E-Tri-Band-Gaming-Router/support\n\nhttps://www.msi.com/\n\nhttps://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-portfw-function\n\nWhile CVE identifies\nspecific instances of vulnerabilities, CWE categorizes the common flaws or\nweaknesses that can lead to vulnerabilities. CVE-2026-71988 is\nassociated with the following CWEs:\n\nCWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')\n\nCommon Attack Pattern Enumeration and Classification\n(CAPEC)\nstores attack patterns, which are descriptions of the common attributes and\napproaches employed by adversaries to exploit the CVE-2026-71988\nweaknesses.\n\nCAPEC-6: Argument Injection Argument Injection\n\nCAPEC-15: Command Delimiters Command Delimiters\n\nCAPEC-43: Exploiting Multiple Input Interpretation Layers Exploiting Multiple Input Interpretation Layers\n\nCAPEC-88: OS Command Injection OS Command Injection\n\nCAPEC-108: Command Line Execution through SQL Injection Command Line Execution through SQL Injection\n\nWe scan GitHub repositories to detect new proof-of-concept exploits. Following list is a collection\nof public exploits and proof-of-concepts, which have been published on GitHub (sorted by the most recently\nupdated).\n\nResults are limited to the first 15 repositories due to potential performance issues.\n\nThe following list is the news that have been mention\nCVE-2026-71988 vulnerability anywhere in the article.\n\nThe following table lists the changes that have been made to the\nCVE-2026-71988 vulnerability over time.\n\nVulnerability history details can be useful for understanding the evolution\nof a vulnerability, and for identifying the most recent changes that may\nimpact the vulnerability's severity, exploitability, or other characteristics.\n\nNew CVE Received\nby disclosure@vulncheck.com\n\nAug. 09, 2026\n\nAction\nType\nOld Value\nNew Value\n\nAdded\nAffected\n\n[{'vendor': 'MSI', 'product': 'Radix AXE6600', 'versions': [{'status': 'affected', 'version': '0', 'versionType': 'custom', 'lessThanOrEqual': 'v781521'}], 'defaultStatus': 'affected'}]\n\nAdded\nDescription\n\nMSI Radix AXE6600 router firmware […]",
+    "word_count": 506,
+    "observables": {
+      "domain-name": [
+        "cvefeed.io",
+        "msi.com"
+      ],
+      "email-addr": [
+        "disclosure@vulncheck.com"
+      ],
+      "url": [
+        "http://www.msi.com",
+        "http://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-portfw-function",
+        "https://us.msi.com/Networking/RadiX-AXE6600-WiFi-6E-Tri-Band-Gaming-Router/support",
+        "https://www.msi.com/",
+        "https://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-portfw-function"
+      ],
+      "vulnerability": [
+        "CVE-2026-71988"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "CVE-2026-71987 - MSI Radix AXE6600 v781521 Command Injection via alg function",
+    "publication_date": "Sun, 09 Aug 2026 00:16:47 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-71987",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "9.8\n\nCRITICAL\nCVSS 3.1\n\nCVE-2026-71987\nMSI Radix AXE6600 v781521 Command Injection via alg function\n\nMSI Radix AXE6600 router firmware version v781521 contains a command injection vulnerability in the alg function that allows remote attackers to execute arbitrary commands on the affected device. Attackers can exploit this vulnerability through the alg function to execute malicious commands and obtain root privileges on the underlying system.\n\nPublished Date :\nAug. 9, 2026, 12:16 a.m.\n\nLast Modified :\nAug. 9, 2026, 12:16 a.m.\n\nRemotely Exploit :\nYes !\n\nSource :\ndisclosure@vulncheck.com\n\nImpact\nAffected Products\n\nThe following products are affected by CVE-2026-71987\nvulnerability.\nEven if cvefeed.io is aware of the exact versions of the\nproducts\nthat\nare\naffected, the information is not represented in the table below.\n\nNo affected product recoded yet\n\nThe Common Vulnerability Scoring System is a standardized framework\nfor assessing the severity of vulnerabilities in software and systems.\nWe collect and displays CVSS scores from various sources for each CVE.\n\nScore\nVersion\nSeverity\nVector\nExploitability Score\nImpact Score\nSource\n\n9.8\n\nCVSS 3.1\n\nCRITICAL\n\n83251b91-4cc7-4094-a5c7-464a1b83ea10\n\n9.8\n\nCVSS 3.1\n\nCRITICAL\n\n3.9\n\n5.9\n\ndisclosure@vulncheck.com\n\n9.8\n\nCVSS 3.1\n\nCRITICAL\n\n3.9\n\n5.9\n\nMITRE-CVE\n\n9.3\n\nCVSS 4.0\n\nCRITICAL\n\n83251b91-4cc7-4094-a5c7-464a1b83ea10\n\n9.3\n\nCVSS 4.0\n\nCRITICAL\n\ndisclosure@vulncheck.com\n\nUpdate the router firmware to patch the command injection vulnerability in the alg function.\n\nUpdate the router firmware to version v781521 or later.\n\nDisable the alg function if not required.\n\nMonitor network traffic for suspicious commands.\n\nHere, you will find a curated list of external links that provide in-depth\ninformation, practical solutions, and valuable tools related to\nCVE-2026-71987.\n\nURL\nResource\n\nhttps://us.msi.com/Networking/RadiX-AXE6600-WiFi-6E-Tri-Band-Gaming-Router/support\n\nhttps://www.msi.com/\n\nhttps://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-alg-function\n\nWhile CVE identifies\nspecific instances of vulnerabilities, CWE categorizes the common flaws or\nweaknesses that can lead to vulnerabilities. CVE-2026-71987 is\nassociated with the following CWEs:\n\nCWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')\n\nCommon Attack Pattern Enumeration and Classification\n(CAPEC)\nstores attack patterns, which are descriptions of the common attributes and\napproaches employed by adversaries to exploit the CVE-2026-71987\nweaknesses.\n\nCAPEC-6: Argument Injection Argument Injection\n\nCAPEC-15: Command Delimiters Command Delimiters\n\nCAPEC-43: Exploiting Multiple Input Interpretation Layers Exploiting Multiple Input Interpretation Layers\n\nCAPEC-88: OS Command Injection OS Command Injection\n\nCAPEC-108: Command Line Execution through SQL Injection Command Line Execution through SQL Injection\n\nWe scan GitHub repositories to detect new proof-of-concept exploits. Following list is a collection\nof public exploits and proof-of-concepts, which have been published on GitHub (sorted by the most recently\nupdated).\n\nResults are limited to the first 15 repositories due to potential performance issues.\n\nThe following list is the news that have been mention\nCVE-2026-71987 vulnerability anywhere in the article.\n\nThe following table lists the changes that have been made to the\nCVE-2026-71987 vulnerability over time.\n\nVulnerability history details can be useful for understanding the evolution\nof a vulnerability, and for identifying the most recent changes that may\nimpact the vulnerability's severity, exploitability, or other characteristics.\n\nNew CVE Received\nby disclosure@vulncheck.com\n\nAug. 09, 2026\n\nAction\nType\nOld Value\nNew Value\n\nAdded\nAffected\n\n[{'vendor': 'MSI', 'product': 'Radix AXE6600', 'versions': [{'status': 'affected', 'version': '0', 'versionType': 'custom', 'lessThanOrEqual': 'v781521'}], 'defaultStatus': 'affected'}]\n\nAdded\nDescription\n\nMSI Radix […]",
+    "word_count": 510,
+    "observables": {
+      "domain-name": [
+        "cvefeed.io",
+        "msi.com"
+      ],
+      "email-addr": [
+        "disclosure@vulncheck.com"
+      ],
+      "url": [
+        "http://www.msi.com",
+        "http://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-alg-function",
+        "https://us.msi.com/Networking/RadiX-AXE6600-WiFi-6E-Tri-Band-Gaming-Router/support",
+        "https://www.msi.com/",
+        "https://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-alg-function"
+      ],
+      "vulnerability": [
+        "CVE-2026-71987"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "CVE-2026-71986 - MSI Radix AXE6600 v781521 Command Injection via dmz Function",
+    "publication_date": "Sun, 09 Aug 2026 00:16:47 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-71986",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "9.8\n\nCRITICAL\nCVSS 3.1\n\nCVE-2026-71986\nMSI Radix AXE6600 v781521 Command Injection via dmz Function\n\nMSI Radix AXE6600 router firmware version v781521 contains a command injection vulnerability in the dmz function that allows remote attackers to execute arbitrary commands on the affected device. Attackers can exploit this vulnerability through the dmz function to execute malicious commands and obtain root privileges on the underlying system.\n\nPublished Date :\nAug. 9, 2026, 12:16 a.m.\n\nLast Modified :\nAug. 9, 2026, 12:16 a.m.\n\nRemotely Exploit :\nYes !\n\nSource :\ndisclosure@vulncheck.com\n\nImpact\nAffected Products\n\nThe following products are affected by CVE-2026-71986\nvulnerability.\nEven if cvefeed.io is aware of the exact versions of the\nproducts\nthat\nare\naffected, the information is not represented in the table below.\n\nNo affected product recoded yet\n\nThe Common Vulnerability Scoring System is a standardized framework\nfor assessing the severity of vulnerabilities in software and systems.\nWe collect and displays CVSS scores from various sources for each CVE.\n\nScore\nVersion\nSeverity\nVector\nExploitability Score\nImpact Score\nSource\n\n9.8\n\nCVSS 3.1\n\nCRITICAL\n\n83251b91-4cc7-4094-a5c7-464a1b83ea10\n\n9.8\n\nCVSS 3.1\n\nCRITICAL\n\n3.9\n\n5.9\n\ndisclosure@vulncheck.com\n\n9.8\n\nCVSS 3.1\n\nCRITICAL\n\n3.9\n\n5.9\n\nMITRE-CVE\n\n9.3\n\nCVSS 4.0\n\nCRITICAL\n\n83251b91-4cc7-4094-a5c7-464a1b83ea10\n\n9.3\n\nCVSS 4.0\n\nCRITICAL\n\ndisclosure@vulncheck.com\n\nUpdate router firmware to patch command injection vulnerability and secure the dmz function.\n\nUpdate the router firmware to the latest version.\n\nApply vendor-supplied patches for dmz function.\n\nRestrict access to the dmz settings.\n\nDisable dmz if not in use.\n\nHere, you will find a curated list of external links that provide in-depth\ninformation, practical solutions, and valuable tools related to\nCVE-2026-71986.\n\nURL\nResource\n\nhttps://us.msi.com/Networking/RadiX-AXE6600-WiFi-6E-Tri-Band-Gaming-Router/support\n\nhttps://www.msi.com/\n\nhttps://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-dmz-function\n\nWhile CVE identifies\nspecific instances of vulnerabilities, CWE categorizes the common flaws or\nweaknesses that can lead to vulnerabilities. CVE-2026-71986 is\nassociated with the following CWEs:\n\nCWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')\n\nCommon Attack Pattern Enumeration and Classification\n(CAPEC)\nstores attack patterns, which are descriptions of the common attributes and\napproaches employed by adversaries to exploit the CVE-2026-71986\nweaknesses.\n\nCAPEC-6: Argument Injection Argument Injection\n\nCAPEC-15: Command Delimiters Command Delimiters\n\nCAPEC-43: Exploiting Multiple Input Interpretation Layers Exploiting Multiple Input Interpretation Layers\n\nCAPEC-88: OS Command Injection OS Command Injection\n\nCAPEC-108: Command Line Execution through SQL Injection Command Line Execution through SQL Injection\n\nWe scan GitHub repositories to detect new proof-of-concept exploits. Following list is a collection\nof public exploits and proof-of-concepts, which have been published on GitHub (sorted by the most recently\nupdated).\n\nResults are limited to the first 15 repositories due to potential performance issues.\n\nThe following list is the news that have been mention\nCVE-2026-71986 vulnerability anywhere in the article.\n\nThe following table lists the changes that have been made to the\nCVE-2026-71986 vulnerability over time.\n\nVulnerability history details can be useful for understanding the evolution\nof a vulnerability, and for identifying the most recent changes that may\nimpact the vulnerability's severity, exploitability, or other characteristics.\n\nNew CVE Received\nby disclosure@vulncheck.com\n\nAug. 09, 2026\n\nAction\nType\nOld Value\nNew Value\n\nAdded\nAffected\n\n[{'vendor': 'MSI', 'product': 'Radix AXE6600', 'versions': [{'status': 'affected', 'version': '0', 'versionType': 'custom', 'lessThanOrEqual': 'v781521'}], 'defaultStatus': […]",
+    "word_count": 508,
+    "observables": {
+      "domain-name": [
+        "cvefeed.io",
+        "msi.com"
+      ],
+      "email-addr": [
+        "disclosure@vulncheck.com"
+      ],
+      "url": [
+        "http://www.msi.com",
+        "http://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-dmz-function",
+        "https://us.msi.com/Networking/RadiX-AXE6600-WiFi-6E-Tri-Band-Gaming-Router/support",
+        "https://www.msi.com/",
+        "https://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-dmz-function"
+      ],
+      "vulnerability": [
+        "CVE-2026-71986"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "CVE-2026-71985 - MSI Radix AXE6600 v781521 Command Injection via accesscontrol Function",
+    "publication_date": "Sun, 09 Aug 2026 00:16:47 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-71985",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "9.8\n\nCRITICAL\nCVSS 3.1\n\nCVE-2026-71985\nMSI Radix AXE6600 v781521 Command Injection via accesscontrol Function\n\nMSI Radix AXE6600 router firmware version v781521 contains a command injection vulnerability in the accesscontrol function that allows remote attackers to execute arbitrary commands on the affected device. Attackers can exploit this vulnerability through the accesscontrol function to execute malicious commands and obtain root privileges on the underlying system.\n\nPublished Date :\nAug. 9, 2026, 12:16 a.m.\n\nLast Modified :\nAug. 9, 2026, 12:16 a.m.\n\nRemotely Exploit :\nYes !\n\nSource :\ndisclosure@vulncheck.com\n\nImpact\nAffected Products\n\nThe following products are affected by CVE-2026-71985\nvulnerability.\nEven if cvefeed.io is aware of the exact versions of the\nproducts\nthat\nare\naffected, the information is not represented in the table below.\n\nNo affected product recoded yet\n\nThe Common Vulnerability Scoring System is a standardized framework\nfor assessing the severity of vulnerabilities in software and systems.\nWe collect and displays CVSS scores from various sources for each CVE.\n\nScore\nVersion\nSeverity\nVector\nExploitability Score\nImpact Score\nSource\n\n9.8\n\nCVSS 3.1\n\nCRITICAL\n\n83251b91-4cc7-4094-a5c7-464a1b83ea10\n\n9.8\n\nCVSS 3.1\n\nCRITICAL\n\n3.9\n\n5.9\n\ndisclosure@vulncheck.com\n\n9.8\n\nCVSS 3.1\n\nCRITICAL\n\n3.9\n\n5.9\n\nMITRE-CVE\n\n9.3\n\nCVSS 4.0\n\nCRITICAL\n\n83251b91-4cc7-4094-a5c7-464a1b83ea10\n\n9.3\n\nCVSS 4.0\n\nCRITICAL\n\ndisclosure@vulncheck.com\n\nUpdate the router firmware to the latest version to fix the command injection vulnerability.\n\nUpdate the router firmware to the latest version.\n\nApply security patches provided by the vendor.\n\nRestrict access to the accesscontrol function.\n\nMonitor network for suspicious commands.\n\nHere, you will find a curated list of external links that provide in-depth\ninformation, practical solutions, and valuable tools related to\nCVE-2026-71985.\n\nURL\nResource\n\nhttps://us.msi.com/Networking/RadiX-AXE6600-WiFi-6E-Tri-Band-Gaming-Router/support\n\nhttps://www.msi.com/\n\nhttps://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-accesscontrol-function\n\nWhile CVE identifies\nspecific instances of vulnerabilities, CWE categorizes the common flaws or\nweaknesses that can lead to vulnerabilities. CVE-2026-71985 is\nassociated with the following CWEs:\n\nCWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')\n\nCommon Attack Pattern Enumeration and Classification\n(CAPEC)\nstores attack patterns, which are descriptions of the common attributes and\napproaches employed by adversaries to exploit the CVE-2026-71985\nweaknesses.\n\nCAPEC-6: Argument Injection Argument Injection\n\nCAPEC-15: Command Delimiters Command Delimiters\n\nCAPEC-43: Exploiting Multiple Input Interpretation Layers Exploiting Multiple Input Interpretation Layers\n\nCAPEC-88: OS Command Injection OS Command Injection\n\nCAPEC-108: Command Line Execution through SQL Injection Command Line Execution through SQL Injection\n\nWe scan GitHub repositories to detect new proof-of-concept exploits. Following list is a collection\nof public exploits and proof-of-concepts, which have been published on GitHub (sorted by the most recently\nupdated).\n\nResults are limited to the first 15 repositories due to potential performance issues.\n\nThe following list is the news that have been mention\nCVE-2026-71985 vulnerability anywhere in the article.\n\nThe following table lists the changes that have been made to the\nCVE-2026-71985 vulnerability over time.\n\nVulnerability history details can be useful for understanding the evolution\nof a vulnerability, and for identifying the most recent changes that may\nimpact the vulnerability's severity, exploitability, or other characteristics.\n\nNew CVE Received\nby disclosure@vulncheck.com\n\nAug. 09, 2026\n\nAction\nType\nOld Value\nNew Value\n\nAdded\nAffected\n\n[{'vendor': 'MSI', 'product': 'Radix AXE6600', 'versions': [{'status': 'affected', 'version': '0', 'versionType': 'custom', 'lessThanOrEqual': […]",
+    "word_count": 507,
+    "observables": {
+      "domain-name": [
+        "cvefeed.io",
+        "msi.com"
+      ],
+      "email-addr": [
+        "disclosure@vulncheck.com"
+      ],
+      "url": [
+        "http://www.msi.com",
+        "http://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-accesscontrol-function",
+        "https://us.msi.com/Networking/RadiX-AXE6600-WiFi-6E-Tri-Band-Gaming-Router/support",
+        "https://www.msi.com/",
+        "https://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-accesscontrol-function"
+      ],
+      "vulnerability": [
+        "CVE-2026-71985"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "CVE-2026-71984 - MSI Radix AXE6600 v781521 Command Injection via urlfilter",
+    "publication_date": "Sun, 09 Aug 2026 00:16:47 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-71984",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "9.8\n\nCRITICAL\nCVSS 3.1\n\nCVE-2026-71984\nMSI Radix AXE6600 v781521 Command Injection via urlfilter\n\nMSI Radix AXE6600 router firmware version v781521 contains a command injection vulnerability in the urlfilter function that allows remote attackers to execute arbitrary commands on the affected device. Attackers can exploit the urlfilter function to inject malicious commands and obtain root privileges on the underlying system.\n\nPublished Date :\nAug. 9, 2026, 12:16 a.m.\n\nLast Modified :\nAug. 9, 2026, 12:16 a.m.\n\nRemotely Exploit :\nYes !\n\nSource :\ndisclosure@vulncheck.com\n\nImpact\nAffected Products\n\nThe following products are affected by CVE-2026-71984\nvulnerability.\nEven if cvefeed.io is aware of the exact versions of the\nproducts\nthat\nare\naffected, the information is not represented in the table below.\n\nNo affected product recoded yet\n\nThe Common Vulnerability Scoring System is a standardized framework\nfor assessing the severity of vulnerabilities in software and systems.\nWe collect and displays CVSS scores from various sources for each CVE.\n\nScore\nVersion\nSeverity\nVector\nExploitability Score\nImpact Score\nSource\n\n9.8\n\nCVSS 3.1\n\nCRITICAL\n\n83251b91-4cc7-4094-a5c7-464a1b83ea10\n\n9.8\n\nCVSS 3.1\n\nCRITICAL\n\n3.9\n\n5.9\n\ndisclosure@vulncheck.com\n\n9.8\n\nCVSS 3.1\n\nCRITICAL\n\n3.9\n\n5.9\n\nMITRE-CVE\n\n9.3\n\nCVSS 4.0\n\nCRITICAL\n\n83251b91-4cc7-4094-a5c7-464a1b83ea10\n\n9.3\n\nCVSS 4.0\n\nCRITICAL\n\ndisclosure@vulncheck.com\n\nUpdate router firmware to patch command injection vulnerability.\n\nUpdate router firmware to the latest version.\n\nVerify that the urlfilter function is secured.\n\nRestrict access to the router's administrative interface.\n\nHere, you will find a curated list of external links that provide in-depth\ninformation, practical solutions, and valuable tools related to\nCVE-2026-71984.\n\nURL\nResource\n\nhttps://us.msi.com/Networking/RadiX-AXE6600-WiFi-6E-Tri-Band-Gaming-Router/support\n\nhttps://www.msi.com/\n\nhttps://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-urlfilter\n\nWhile CVE identifies\nspecific instances of vulnerabilities, CWE categorizes the common flaws or\nweaknesses that can lead to vulnerabilities. CVE-2026-71984 is\nassociated with the following CWEs:\n\nCWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')\n\nCommon Attack Pattern Enumeration and Classification\n(CAPEC)\nstores attack patterns, which are descriptions of the common attributes and\napproaches employed by adversaries to exploit the CVE-2026-71984\nweaknesses.\n\nCAPEC-6: Argument Injection Argument Injection\n\nCAPEC-15: Command Delimiters Command Delimiters\n\nCAPEC-43: Exploiting Multiple Input Interpretation Layers Exploiting Multiple Input Interpretation Layers\n\nCAPEC-88: OS Command Injection OS Command Injection\n\nCAPEC-108: Command Line Execution through SQL Injection Command Line Execution through SQL Injection\n\nWe scan GitHub repositories to detect new proof-of-concept exploits. Following list is a collection\nof public exploits and proof-of-concepts, which have been published on GitHub (sorted by the most recently\nupdated).\n\nResults are limited to the first 15 repositories due to potential performance issues.\n\nThe following list is the news that have been mention\nCVE-2026-71984 vulnerability anywhere in the article.\n\nThe following table lists the changes that have been made to the\nCVE-2026-71984 vulnerability over time.\n\nVulnerability history details can be useful for understanding the evolution\nof a vulnerability, and for identifying the most recent changes that may\nimpact the vulnerability's severity, exploitability, or other characteristics.\n\nNew CVE Received\nby disclosure@vulncheck.com\n\nAug. 09, 2026\n\nAction\nType\nOld Value\nNew Value\n\nAdded\nAffected\n\n[{'vendor': 'MSI', 'product': 'Radix AXE6600', 'versions': [{'status': 'affected', 'version': '0', 'versionType': 'custom', 'lessThanOrEqual': 'v781521'}], 'defaultStatus': 'affected'}]\n\nAdded\nDescription\n\nMSI Radix AXE6600 router firmware version v781521 contains a […]",
+    "word_count": 506,
+    "observables": {
+      "domain-name": [
+        "cvefeed.io",
+        "msi.com"
+      ],
+      "email-addr": [
+        "disclosure@vulncheck.com"
+      ],
+      "url": [
+        "http://www.msi.com",
+        "http://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-urlfilter",
+        "https://us.msi.com/Networking/RadiX-AXE6600-WiFi-6E-Tri-Band-Gaming-Router/support",
+        "https://www.msi.com/",
+        "https://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-urlfilter"
+      ],
+      "vulnerability": [
+        "CVE-2026-71984"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Cisco IOS XE Security Hardening Release",
+    "publication_date": "Sun, 09 Aug 2026 05:06:40 +0000",
+    "source": "https://thecyberthrone.in/2026/08/09/cisco-ios-xe-security-hardening-release/",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {},
+    "extractor": "none"
+  },
+  {
+    "title": "ISC Stormcast For Monday, August 10th, 2026 https://isc.sans.edu/podcastdetail/10044, (Mon, Aug 10th)",
+    "publication_date": "Mon, 10 Aug 2026 02:00:03 GMT",
+    "source": "https://isc.sans.edu/diary/rss/33228",
+    "source_categories": [
+      "operational",
+      "strategic"
+    ],
+    "source_level": 2,
+    "text": "Internet Storm Center",
+    "word_count": 3,
+    "observables": {},
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "In-Cloud IR — Memory, Containers, and the Metadata Service Attack",
+    "publication_date": "Sun, 09 Aug 2026 10:23:34 GMT",
+    "source": "https://www.cyberengage.org/post/in-cloud-ir-memory-containers-and-the-metadata-service-attack",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "This final article covers the advanced scenarios in AWS incident response — acquiring memory from cloud instances, forensicating containers, understanding the metadata service attack, and making the decision between in-cloud and on-premises analysis. By the end of this series, you have a complete picture of how to investigate any AWS incident from first alert to evidence report.In-Cloud vs. On-Premises Analysis▸ Recommendation: Always analyse in-cloud first. Download to on-prem only when regulation requires it or tooling demands it.The fundamental question in cloud IR: should you download evidence to an on-prem forensics lab, or do the analysis in the cloud? The answer has shifted dramatically in recent years. Doing analysis in-cloud is almost always faster, cheaper, and more practical.In-cloud analysis: No egress bandwidth costs, no waiting for terabytes to download, spin up forensic EC2 instance in same region in minutes, use cloud-native toolingOn-prem analysis: Required when regulation demands it, when your tooling only runs on-prem, or when you need physical custody of evidence💡 IR Tip: Start in-cloud. Build a DFIR AMI (Amazon Machine Image) with your tools pre-installed — Volatility, Autopsy, YARA, log parsers — and keep it ready to deploy in any region within minutes.--------------------------------------------------------------------------------------------------Building a DFIR EC2 ImageThe DFIR AMI is your forensic workstation template in the cloud. Build it once, store it, deploy it in any region within 5 minutes. Build process:(1) Launch a clean EC2 instance (Ubuntu 22.04 LTS recommended), (2) Install all your forensic tools: Volatility 3, AVML, bulk_extractor, log2timeline/plaso, YARA, Autopsy CLI tools, aws cli, python3 libraries, (3) Create an AMI from this instance (EC2 → Actions → Create Image), (4) Copy the AMI to all regions you might respond in (AMIs are regional).--------------------------------------------------------------------------------------------------Systems Manager (SSM) — Remote Access Without a BastionAWS Systems Manager Session Manager gives you shell access to EC2 instances without needing SSH, a bastion host, or open port 22. It tunnels the session through AWS's own infrastructure. This is critical for IR because: you don't need to open any network ports on the compromised instance, all session activity is logged to CloudTrail and optionally to S3, you can access instances in private subnets with no internet access.Requirements: SSM Agent must be installed (pre-installed on most AWS AMIs since 2022), the instance must have an IAM role with the AmazonSSMManagedInstanceCore policy. CLI access: aws ssm start-session --target i-0yourinstanceid--------------------------------------------------------------------------------------------------Linux Memory Acquisition — AVMLMemory acquisition from cloud Linux instances requires a different approach than on-premise. The old tool (Margarita Shotgun, which used a kernel module to dump memory) stopped working on modern kernels. https://margaritashotgun.readthedocs.io/en/latest/user_guide.htmlThe current standard for AWS Linux memory acquisition is AVML (Acquire Volatile Memory for Linux), developed by Microsoft and supported by AWS.https://github.com/microsoft/avml⚡ Update (2024): AVML is the current recommended tool for Linux memory acquisition in AWS. It works as a userspace tool — no kernel module required. It reads /dev/mem or process maps directly. It's included in the AWS Forensics AMI reference implementations.AVML acquisition process via SSM: (1) Connect via SSM: aws ssm start-session --target i-0compromisedinstance, (2) Install AVML if not present: curl -L https://github.com/microsoft/avml/releases/latest/download/avml -o avml && chmod +x avml, (3) Acquire memory: sudo ./avml memory.lime, (4) Copy to S3: aws s3 cp memory.lime s3://your-dfir-bucket/case-2024-047/. The .lime extension is important — Volatility expects LiME format for analysis.💡 IR […]",
+    "word_count": 538,
+    "observables": {
+      "directory": [
+        "/dev/mem"
+      ],
+      "domain-name": [
+        "practical.in",
+        "report.in"
+      ],
+      "url": [
+        "https://github.com/microsoft/avml/releases/latest/download/avml",
+        "https://github.com/microsoft/avml⚡",
+        "https://margaritashotgun.readthedocs.io/en/latest/user_guide.htmlThe"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "U.S. Defense Manufacturer IEH Hit by Phishing Attack, Exposing Potentially Export-Controlled Data",
+    "publication_date": "Sun, 09 Aug 2026 16:44:40 +0000",
+    "source": "https://securityaffairs.com/196890/cyber-crime/u-s-defense-manufacturer-ieh-hit-by-phishing-attack-exposing-potentially-export-controlled-data.html",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "HOME\nCYBER CRIME\nCYBER WARFARE\nAPT\nDATA BREACH\nDEEP WEB\nHACKING\nHACKTIVISM\nINTELLIGENCE\nMUST READ\n\nU.S. Defense Manufacturer IEH Hit by Phishing Attack, Exposing Potentially Export-Controlled Data\n\n|\n\nSECURITY AFFAIRS MALWARE NEWSLETTER ROUND 109\n\n|\n\nSecurity Affairs newsletter Round 589 by Pierluigi Paganini – INTERNATIONAL EDITION\n\n|\n\nWebmail CSS Attacks Expose a New Risk for AI-Powered Email Tools\n\n|\n\nPalo Alto Networks Faces China Cybersecurity Review Amid Rising Tech Tensions\n\n|\n\nMetabase Zero-Day Exploited in the Wild, Exposing Admin Access and Sensitive Data\n\n|\n\nU.S. CISA adds a Progress LoadMaster flaw to its Known Exploited Vulnerabilities catalog\n\n|\n\nUnlimited Technology Systems Data Breach Exposes Data of 3.8 Million Healthcare Patients\n\n|\n\nWordPress XSS2Shell Flaw Turns Simple Login Bug Into Full Server Takeover\n\n|\n\nHackers Impersonate IT Support to Breach Leading Financial Companies\n\n|\n\nMeta Ordered to Pay $567 Million Over Child Safety Failures in New Mexico Case\n\n|\n\nResearchers Discover Hidden Backdoor in 20 Router Models Allowing Remote Root Access\n\n|\n\nAI Deepfakes Used to Impersonate OnlyFans Creators in New Scam\n\n|\n\nExposed SISVISA Database Leaks 102,000 Brazilian Health Surveillance Records\n\n|\n\nRansom Cartel Leader Sentenced to 16 Years in U.S.\n\n|\n\nMeta AI Model Hacked a Company During Testing, Marking Third AI Lab Incident\n\n|\n\nU.S. CISA adds a JetBrains TeamCity flaw to its Known Exploited Vulnerabilities catalog\n\n|\n\nSnowflake Hacker Pleads Guilty After Breaching 165 Companies and Stealing Billions of Records\n\n|\n\nAI Deception Emerges in Cyber Tests as Agents Target Real People and Systems\n\n|\n\nBrown Health Medical Group-MA Data Breach Exposes Information of 311,000 Individuals\n\n| \nHOME\nCYBER CRIME\nCYBER WARFARE\nAPT\nDATA BREACH\nDEEP WEB\nHACKING\nHACKTIVISM\nINTELLIGENCE\nARTIFICIAL INTELLIGENCE\nINTERNET OF THINGS\nLAWS AND REGULATIONS\nMALWARE\nMOBILE\nREPORTS\nSECURITY\nSOCIAL NETWORKS\nTERRORISM\nICS-SCADA\nCRYPTO\nPOLICIES\nCONTACT ME\nHome Breaking News Cyber Crime Security U.S. Defense Manufacturer IEH Hit by Phishing Attack, Exposing Potentially Export-Controlled Data\nU.S. DEFENSE MANUFACTURER IEH HIT BY PHISHING ATTACK, EXPOSING POTENTIALLY EXPORT-CONTROLLED DATA\nPierluigi Paganini\n\nAugust 09, 2026\nIEH was breached by a phishing attack that exposed its Microsoft 365 inbox, including emails and potentially export-controlled military data.\n\nIEH Corporation is a U.S. defense and aerospace manufacturer based in Brooklyn, New York. The company specializes in high-reliability electrical connectors, particularly hyperboloid connectors used in demanding military and aerospace environments. Its connectors are used in systems including rotary-wing aircraft, THAAD and Patriot missile systems, fighter aircraft, airborne radar systems, satellites and spacecraft, military radios, and torpedoes.\n\nIEH Corporation disclosed a cyberattack in an 8-K filing with the SEC. The company discovered the breach on August 4. An employee clicked a link disguised as a Microsoft document-sharing link from what appeared to be a prospective business contact, entered their Microsoft 365 credentials into a fake login page, and handed an attacker full access to their inbox.\n\n“On August 4, 2026, IEH Corporation (“IEH” or the “Company”) discovered that it sustained a cybersecurity incident whereby a threat actor using an alias gained unauthorized access to the Microsoft 365 mailbox of an employee of the Company. As soon as the incident was observed, the Company took action to contain the unauthorized access.” reads the 8-K report filed with SEC. “An investigation determined the compromise originated from a phishing attack in which a malicious actor impersonated a prospective business contact and delivered a hyperlink disguised as a Microsoft document-sharing link. The user accessed the link and entered Microsoft 365 credentials into a fraudulent login page, resulting in unauthorized account access.”\n\nThe attacker accessed company’s mailbox, exposing […]",
+    "word_count": 582,
+    "observables": {},
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "SECURITY AFFAIRS MALWARE NEWSLETTER ROUND 109",
+    "publication_date": "Sun, 09 Aug 2026 12:29:47 +0000",
+    "source": "https://securityaffairs.com/196919/malware/security-affairs-malware-newsletter-round-109.html",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "HOME\nCYBER CRIME\nCYBER WARFARE\nAPT\nDATA BREACH\nDEEP WEB\nHACKING\nHACKTIVISM\nINTELLIGENCE\nMUST READ\n\nU.S. Defense Manufacturer IEH Hit by Phishing Attack, Exposing Potentially Export-Controlled Data\n\n|\n\nSECURITY AFFAIRS MALWARE NEWSLETTER ROUND 109\n\n|\n\nSecurity Affairs newsletter Round 589 by Pierluigi Paganini – INTERNATIONAL EDITION\n\n|\n\nWebmail CSS Attacks Expose a New Risk for AI-Powered Email Tools\n\n|\n\nPalo Alto Networks Faces China Cybersecurity Review Amid Rising Tech Tensions\n\n|\n\nMetabase Zero-Day Exploited in the Wild, Exposing Admin Access and Sensitive Data\n\n|\n\nU.S. CISA adds a Progress LoadMaster flaw to its Known Exploited Vulnerabilities catalog\n\n|\n\nUnlimited Technology Systems Data Breach Exposes Data of 3.8 Million Healthcare Patients\n\n|\n\nWordPress XSS2Shell Flaw Turns Simple Login Bug Into Full Server Takeover\n\n|\n\nHackers Impersonate IT Support to Breach Leading Financial Companies\n\n|\n\nMeta Ordered to Pay $567 Million Over Child Safety Failures in New Mexico Case\n\n|\n\nResearchers Discover Hidden Backdoor in 20 Router Models Allowing Remote Root Access\n\n|\n\nAI Deepfakes Used to Impersonate OnlyFans Creators in New Scam\n\n|\n\nExposed SISVISA Database Leaks 102,000 Brazilian Health Surveillance Records\n\n|\n\nRansom Cartel Leader Sentenced to 16 Years in U.S.\n\n|\n\nMeta AI Model Hacked a Company During Testing, Marking Third AI Lab Incident\n\n|\n\nU.S. CISA adds a JetBrains TeamCity flaw to its Known Exploited Vulnerabilities catalog\n\n|\n\nSnowflake Hacker Pleads Guilty After Breaching 165 Companies and Stealing Billions of Records\n\n|\n\nAI Deception Emerges in Cyber Tests as Agents Target Real People and Systems\n\n|\n\nBrown Health Medical Group-MA Data Breach Exposes Information of 311,000 Individuals\n\n| \nHOME\nCYBER CRIME\nCYBER WARFARE\nAPT\nDATA BREACH\nDEEP WEB\nHACKING\nHACKTIVISM\nINTELLIGENCE\nARTIFICIAL INTELLIGENCE\nINTERNET OF THINGS\nLAWS AND REGULATIONS\nMALWARE\nMOBILE\nREPORTS\nSECURITY\nSOCIAL NETWORKS\nTERRORISM\nICS-SCADA\nCRYPTO\nPOLICIES\nCONTACT ME\nHome Breaking News Malware Security SECURITY AFFAIRS MALWARE NEWSLETTER ROUND 109\nSECURITY AFFAIRS MALWARE NEWSLETTER ROUND 109\nPierluigi Paganini\n\nAugust 09, 2026\nSecurity Affairs Malware newsletter includes a collection of the best articles and research on malware in the international landscape\n\nMalware Newsletter\n\nFake Xeno Roblox Cheats Deliver Powerful Java Stealer Through Discord and Forums\n\nDarkSword’s Panel Sprawl: How One Body Hash Unravels a Six-Panel, Two-Codebase Operator Cluster\n\nDistributed npm Package Cluster Delivers Cross-Platform RAT Targeting Alibaba Developers\n\nAnalyzing SMOKE#SCREEN: ScreenConnect RMM Abuse, Cloudflare Tunnels, and Trusted Software Lures\n\nThe Xcode Assassin Returns: A Deep Dive Into the Latest XCSSET Version\n\nDOUBLECUP, a ClickFix Loader Delivering CountLoader and DeviceManager RATs\n\nRussian AI Slopsquatting Publishes 700+ Malicious NPM Packages\n\nWallet-depleting macOS malware wants your crypto\n\nEmpirical Analysis of Evasion and Poisoning Against Malware Data Drift Detection\n\nRansomWhere?\n\nShielDroid: A Hybrid Approach Integrating Machine and Deep Learning for Android Malware Detection\n\nCost-Aware Android Malware Detection Using an Early-Warning Behaviour Score\n\nA Caputo Fractional SLBS Computer Virus Model with Stage-Specific Holling Type-II Incidence\n\nFollow me on Twitter: @securityaffairs and Facebook and Mastodon\n\nPierluigi Paganini\n\n(SecurityAffairs – hacking, newsletter)\n\nFACEBOOK\nLINKEDIN\nTWITTER\nCybercrime\nHacking\nhacking news\ninformation security news\nIT Information Security\nmalware\nPierluigi Paganini\nSecurity Affairs\nSecurity News\nYOU MIGHT ALSO LIKE\nPierluigi Paganini\n\nAugust 09, 2026\nU.S. Defense Manufacturer IEH Hit by Phishing Attack, Exposing Potentially Export-Controlled Data\nRead more\nPierluigi Paganini\n\nAugust 09, 2026\nSecurity Affairs newsletter Round 589 by Pierluigi Paganini – INTERNATIONAL EDITION\nRead more\nLEAVE A COMMENT\nNEWSLETTER\nSubscribe to my email list and stay\nup-to-date!\n\nRECENT ARTICLES\nU.S. Defense Manufacturer IEH […]",
+    "word_count": 558,
+    "observables": {},
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Security Affairs newsletter Round 589 by Pierluigi Paganini – INTERNATIONAL EDITION",
+    "publication_date": "Sun, 09 Aug 2026 11:49:08 +0000",
+    "source": "https://securityaffairs.com/196911/security/security-affairs-newsletter-round-589-by-pierluigi-paganini-international-edition.html",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "HOME\nCYBER CRIME\nCYBER WARFARE\nAPT\nDATA BREACH\nDEEP WEB\nHACKING\nHACKTIVISM\nINTELLIGENCE\nMUST READ\n\nU.S. Defense Manufacturer IEH Hit by Phishing Attack, Exposing Potentially Export-Controlled Data\n\n|\n\nSECURITY AFFAIRS MALWARE NEWSLETTER ROUND 109\n\n|\n\nSecurity Affairs newsletter Round 589 by Pierluigi Paganini – INTERNATIONAL EDITION\n\n|\n\nWebmail CSS Attacks Expose a New Risk for AI-Powered Email Tools\n\n|\n\nPalo Alto Networks Faces China Cybersecurity Review Amid Rising Tech Tensions\n\n|\n\nMetabase Zero-Day Exploited in the Wild, Exposing Admin Access and Sensitive Data\n\n|\n\nU.S. CISA adds a Progress LoadMaster flaw to its Known Exploited Vulnerabilities catalog\n\n|\n\nUnlimited Technology Systems Data Breach Exposes Data of 3.8 Million Healthcare Patients\n\n|\n\nWordPress XSS2Shell Flaw Turns Simple Login Bug Into Full Server Takeover\n\n|\n\nHackers Impersonate IT Support to Breach Leading Financial Companies\n\n|\n\nMeta Ordered to Pay $567 Million Over Child Safety Failures in New Mexico Case\n\n|\n\nResearchers Discover Hidden Backdoor in 20 Router Models Allowing Remote Root Access\n\n|\n\nAI Deepfakes Used to Impersonate OnlyFans Creators in New Scam\n\n|\n\nExposed SISVISA Database Leaks 102,000 Brazilian Health Surveillance Records\n\n|\n\nRansom Cartel Leader Sentenced to 16 Years in U.S.\n\n|\n\nMeta AI Model Hacked a Company During Testing, Marking Third AI Lab Incident\n\n|\n\nU.S. CISA adds a JetBrains TeamCity flaw to its Known Exploited Vulnerabilities catalog\n\n|\n\nSnowflake Hacker Pleads Guilty After Breaching 165 Companies and Stealing Billions of Records\n\n|\n\nAI Deception Emerges in Cyber Tests as Agents Target Real People and Systems\n\n|\n\nBrown Health Medical Group-MA Data Breach Exposes Information of 311,000 Individuals\n\n| \nHOME\nCYBER CRIME\nCYBER WARFARE\nAPT\nDATA BREACH\nDEEP WEB\nHACKING\nHACKTIVISM\nINTELLIGENCE\nARTIFICIAL INTELLIGENCE\nINTERNET OF THINGS\nLAWS AND REGULATIONS\nMALWARE\nMOBILE\nREPORTS\nSECURITY\nSOCIAL NETWORKS\nTERRORISM\nICS-SCADA\nCRYPTO\nPOLICIES\nCONTACT ME\nHome Breaking News Security Security Affairs newsletter Round 589 by Pierluigi Paganini – INTERNATIONAL EDITION\nSECURITY AFFAIRS NEWSLETTER ROUND 589 BY PIERLUIGI PAGANINI – INTERNATIONAL EDITION\nPierluigi Paganini\n\nAugust 09, 2026\nA new round of the weekly Security Affairs newsletter has arrived! Every week, the best security articles from Security Affairs are free in your email box.\n\nEnjoy a new round of the weekly SecurityAffairs newsletter, including international press.\n\nPalo Alto Networks Faces China Cybersecurity Review Amid Rising Tech Tensions\nMetabase Zero-Day Exploited in the Wild, Exposing Admin Access and Sensitive Data\nU.S. CISA adds a Progress LoadMaster flaw to its Known Exploited Vulnerabilities catalog\nUnlimited Technology Systems Data Breach Exposes Data of 3.8 Million Healthcare Patients\nWordPress XSS2Shell Flaw Turns Simple Login Bug Into Full Server Takeover\nHackers Impersonate IT Support to Breach Leading Financial Companies\nMeta Ordered to Pay $567 Million Over Child Safety Failures in New Mexico Case\nResearchers Discover Hidden Backdoor in 20 Router Models Allowing Remote Root Access\nAI Deepfakes Used to Impersonate OnlyFans Creators in New Scam\nExposed SISVISA Database Leaks 102,000 Brazilian Health Surveillance Records\nRansom Cartel Leader Sentenced to 16 Years in U.S.\nMeta AI Model Hacked a Company During Testing, Marking Third AI Lab Incident\nU.S. CISA adds a JetBrains TeamCity flaw to its Known Exploited Vulnerabilities catalog\nSnowflake Hacker Pleads Guilty After Breaching 165 Companies and Stealing Billions of Records\nAI Deception Emerges in Cyber Tests as Agents Target Real People and Systems\nBrown Health Medical Group-MA Data Breach Exposes Information of 311,000 Individuals\nU.S. CISA adds Langflow, Apache Tomcat, and N-able N-central flaws to its Known Exploited Vulnerabilities catalog\nOVSwrap: 13-Year-Old Linux Kernel Flaw Lets Local Users Become Root\nSMOKE#SCREEN Campaign Abuses ScreenConnect to Give Attackers Remote Control Access\nSharePoint Flaws […]",
+    "word_count": 586,
+    "observables": {},
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Webmail CSS Attacks Expose a New Risk for AI-Powered Email Tools",
+    "publication_date": "Sun, 09 Aug 2026 08:01:00 +0000",
+    "source": "https://securityaffairs.com/196899/hacking/webmail-css-attacks-expose-a-new-risk-for-ai-powered-email-tools.html",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "HOME\nCYBER CRIME\nCYBER WARFARE\nAPT\nDATA BREACH\nDEEP WEB\nHACKING\nHACKTIVISM\nINTELLIGENCE\nMUST READ\n\nU.S. Defense Manufacturer IEH Hit by Phishing Attack, Exposing Potentially Export-Controlled Data\n\n|\n\nSECURITY AFFAIRS MALWARE NEWSLETTER ROUND 109\n\n|\n\nSecurity Affairs newsletter Round 589 by Pierluigi Paganini – INTERNATIONAL EDITION\n\n|\n\nWebmail CSS Attacks Expose a New Risk for AI-Powered Email Tools\n\n|\n\nPalo Alto Networks Faces China Cybersecurity Review Amid Rising Tech Tensions\n\n|\n\nMetabase Zero-Day Exploited in the Wild, Exposing Admin Access and Sensitive Data\n\n|\n\nU.S. CISA adds a Progress LoadMaster flaw to its Known Exploited Vulnerabilities catalog\n\n|\n\nUnlimited Technology Systems Data Breach Exposes Data of 3.8 Million Healthcare Patients\n\n|\n\nWordPress XSS2Shell Flaw Turns Simple Login Bug Into Full Server Takeover\n\n|\n\nHackers Impersonate IT Support to Breach Leading Financial Companies\n\n|\n\nMeta Ordered to Pay $567 Million Over Child Safety Failures in New Mexico Case\n\n|\n\nResearchers Discover Hidden Backdoor in 20 Router Models Allowing Remote Root Access\n\n|\n\nAI Deepfakes Used to Impersonate OnlyFans Creators in New Scam\n\n|\n\nExposed SISVISA Database Leaks 102,000 Brazilian Health Surveillance Records\n\n|\n\nRansom Cartel Leader Sentenced to 16 Years in U.S.\n\n|\n\nMeta AI Model Hacked a Company During Testing, Marking Third AI Lab Incident\n\n|\n\nU.S. CISA adds a JetBrains TeamCity flaw to its Known Exploited Vulnerabilities catalog\n\n|\n\nSnowflake Hacker Pleads Guilty After Breaching 165 Companies and Stealing Billions of Records\n\n|\n\nAI Deception Emerges in Cyber Tests as Agents Target Real People and Systems\n\n|\n\nBrown Health Medical Group-MA Data Breach Exposes Information of 311,000 Individuals\n\n| \nHOME\nCYBER CRIME\nCYBER WARFARE\nAPT\nDATA BREACH\nDEEP WEB\nHACKING\nHACKTIVISM\nINTELLIGENCE\nARTIFICIAL INTELLIGENCE\nINTERNET OF THINGS\nLAWS AND REGULATIONS\nMALWARE\nMOBILE\nREPORTS\nSECURITY\nSOCIAL NETWORKS\nTERRORISM\nICS-SCADA\nCRYPTO\nPOLICIES\nCONTACT ME\nHome Artificial Intelligence Breaking News Hacking Webmail CSS Attacks Expose a New Risk for AI-Powered Email Tools\nWEBMAIL CSS ATTACKS EXPOSE A NEW RISK FOR AI-POWERED EMAIL TOOLS\nPierluigi Paganini\n\nAugust 09, 2026\nCSS attacks on major webmail services can steal credentials, hijack sessions and manipulate AI tools connected to users’ inboxes.\n\nPortSwigger researcher Gareth Heyes demonstrated something that should make every webmail team a little nervous: plain CSS, the styling language that’s supposed to just make text look nice, can be weaponized to steal passwords, hijack sessions, and manipulate AI tools reading your inbox. The research covers real attack chains against Outlook, Gmail, Fastmail, Proton Mail, Yahoo Mail, and AOL Mail.\n\nThe core idea is that email clients let HTML and CSS through with the assumption that styling can’t reach outside the message it’s attached to. Heyes found ways to break that assumption using two basic approaches: abusing CSS features webmail already permits, or exploiting a gap between what a content sanitizer thinks it approved and what the browser actually renders. Either route can let content inside an untrusted email interact with the trusted interface surrounding it.\n\n“It’s quite common for webmail clients to render untrusted CSS in a trusted UI. They attempt to make this safe using CSS sanitization.” Heyes explains. “I looked at the various “allow listed” CSS properties and HTML. With the goal of abusing them to spoof UI actions, control browsers, take over accounts or steal tokens. I targeted Fastmail, OpenAI’s Atlas, Firefox, AOL Mail, Yahoo Mail and Outlook.”\n\nThe Outlook chain is the most alarming one to picture in action. Allowed label elements can trigger controls that live outside the email itself, and Outlook’s own JavaScript can turn sanitized custom attributes into new page elements carrying CSS that bypasses the sanitizer’s rules entirely. Heyes used this to disguise a dropdown menu as a password field, and because Firefox resets its […]",
+    "word_count": 610,
+    "observables": {},
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "ASN: AS12912 Location: Warsaw, PL Added: 2026-08-03T01:52#shodansafari #infosec",
+    "publication_date": "Mon, 10 Aug 2026 06:09:05 +0000",
+    "source": "https://infosec.exchange/@shodansafari/117069683785488418",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "Possible Phishing 🎣  on: ⚠️hxxp[:]//www[.]webfun[.]website/landingpages/fe996bbf-3dce-487c-acd3-4a69200fa8a0/dmushm7cirtej6cjlv3ip3hmyar0lmwdfjsmgio69ik  🧬 Analysis at: https://urldna.io/scan/6a794ccb3b775000083c3f94 #cybersecurity #phishing #infosec #urldna #scam #infosec",
+    "publication_date": "Mon, 10 Aug 2026 06:09:05 +0000",
+    "source": "https://infosec.exchange/@urldna/117069683804271202",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "🕵️ 𝗜𝗣 𝗰𝗵𝗲𝗹𝗼𝘂 𝗱𝘂 𝗷𝗼𝘂𝗿 🕵️ Fiche : \"le Touriste /.env de Mountain View\"📍 34.16.197.255 | Google Cloud (AS396982) 🇺🇸 🎭 User-Agent : ChatGPT-User/1.0 (oui, vraiment) 🎯 Cibles : .env, credentials AWS, path traversal via /_next/..Apparemment, certains LLM font leurs courses chez les autres. 🛒#honeypot #infosec #threatintel🍯 Détecté par le honeypot CyberVeille.ch 🗺️ https://cyberveille.ch/map/",
+    "publication_date": "Mon, 10 Aug 2026 06:09:05 +0000",
+    "source": "https://mastobot.ping.moi/@Bobe_bot/117069683647452837",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastobot.ping.moi is one of the many independent Mastodon servers you can use to participate in the fediverse.\nServeur Mastodon dédié à l'hébergement de bots d'intérêt public. 🇨🇭 Serveur personnel, non commercial. (administré par @decio@infosec.exchange) Contenu automatisé — pas d'inscriptions publiques.\nADMINISTERED BY:\nBobe'bot on security\n@Bobe_bot\nSERVER STATS:\n6\nactive users\nmastobot.ping.moi:About\nmastobot.ping.moi\nProfiles directoryPrivacy policy\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.5\nBack\nBobe'bot on security\n@Bobe_bot@mastobot.ping.moi\n\n🕵️ 𝗜𝗣 𝗰𝗵𝗲𝗹𝗼𝘂 𝗱𝘂 𝗷𝗼𝘂𝗿\n🕵️ Fiche : \"le Touriste /.env de Mountain View\"\n\n📍 34.16.197.255 | Google Cloud (AS396982) 🇺🇸\n🎭️ User-Agent : ChatGPT-User/1.0 (oui, vraiment)\n🎯 Cibles : .env, credentials AWS, path traversal via /_next/..\n\nApparemment, certains LLM font leurs courses chez les autres. 🛒\n\n#honeypot #infosec #threatintel\n\n🍯 Détecté par le honeypot CyberVeille.ch\n🗺️\nhttps://\ncyberveille.ch/map/\n\nCyberVeille\n🌍 Pew Pew CH (Infomaniak) — Honeypot\nCarte en temps réel des attaques détectées par CrowdSec sur le serveur CyberVeille (Infomaniak, Suisse). Données issues des 24 dernières heures.\nAug 10, 2026, 06:00 AM\n·\n·\ntooting_bot\n0\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\nLive feeds\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 220,
+    "observables": {
+      "autonomous-system": [
+        "AS396982"
+      ],
+      "domain-name": [
+        "cyberveille.ch"
+      ],
+      "email-addr": [
+        "Bobe_bot@mastobot.ping.moi",
+        "decio@infosec.exchange"
+      ],
+      "ipv4-addr": [
+        "34.16.197.255"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "✍️ La Pensée du Soir𝘓'𝘪𝘥𝘦𝘯𝘵𝘪𝘵é 𝘯𝘶𝘮é𝘳𝘪𝘲𝘶𝘦 𝘥𝘦 𝘮𝘪𝘭𝘭𝘪𝘰𝘯𝘴 𝘥𝘦 𝘨𝘦𝘯𝘴 𝘳𝘦𝘱𝘰𝘴𝘦 𝘴𝘶𝘳 𝘥𝘶 𝘤𝘰𝘥𝘦. 𝘌𝘴𝘱é𝘳𝘰𝘯𝘴 𝘲𝘶𝘦 𝘤𝘦 𝘤𝘰𝘥𝘦 𝘦𝘴𝘵 𝘮𝘪𝘦𝘶𝘹 𝘤𝘰𝘶𝘴𝘶 𝘲𝘶𝘦 𝘷𝘰𝘴 𝘷𝘪𝘦𝘶𝘹 𝘫𝘦𝘢𝘯𝘴. 🧵#infosec #cybersecurity #aphorisme",
+    "publication_date": "Mon, 10 Aug 2026 06:09:05 +0000",
+    "source": "https://mastobot.ping.moi/@Bobe_bot/117069683534679937",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastobot.ping.moi is one of the many independent Mastodon servers you can use to participate in the fediverse.\nServeur Mastodon dédié à l'hébergement de bots d'intérêt public. 🇨🇭 Serveur personnel, non commercial. (administré par @decio@infosec.exchange) Contenu automatisé — pas d'inscriptions publiques.\nADMINISTERED BY:\nBobe'bot on security\n@Bobe_bot\nSERVER STATS:\n6\nactive users\nmastobot.ping.moi:About\nmastobot.ping.moi\nProfiles directoryPrivacy policy\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.5\nBack\nBobe'bot on security\n@Bobe_bot@mastobot.ping.moi\n\n✍️ La Pensée du Soir\n\n𝘓'𝘪𝘥𝘦𝘯𝘵𝘪𝘵é 𝘯𝘶𝘮é𝘳𝘪𝘲𝘶𝘦 𝘥𝘦 𝘮𝘪𝘭𝘭𝘪𝘰𝘯𝘴 𝘥𝘦 𝘨𝘦𝘯𝘴 𝘳𝘦𝘱𝘰𝘴𝘦 𝘴𝘶𝘳 𝘥𝘶 𝘤𝘰𝘥𝘦. 𝘌𝘴𝘱é𝘳𝘰𝘯𝘴 𝘲𝘶𝘦 𝘤𝘦 𝘤𝘰𝘥𝘦 𝘦𝘴𝘵 𝘮𝘪𝘦𝘶𝘹 𝘤𝘰𝘶𝘴𝘶 𝘲𝘶𝘦 𝘷𝘰𝘴 𝘷𝘪𝘦𝘶𝘹 𝘫𝘦𝘢𝘯𝘴. 🧵\n\n#\ninfosec\n#\ncybersecurity\n#\naphorisme\nAug 10, 2026, 06:00 AM\n·\n·\ntooting_bot\n0\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\nLive feeds\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 165,
+    "observables": {
+      "email-addr": [
+        "Bobe_bot@mastobot.ping.moi",
+        "decio@infosec.exchange"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Every expert hacker started exactly where you are standing right now: looking at a blank terminal screen. Linux can feel overwhelming at first, but it is the ultimate tool for freedom, privacy, and control over your tech. Take it one command at a time, don't be afraid to break things in a virtual machine, and keep experimenting. The community has your back. What terminal command are you trying to master today? 🐧#Linux #LearnLinux #Bash #CommandLine #Terminal #FOSS #OpenSource #TechEducation #SysAdmin #Infosec",
+    "publication_date": "Mon, 10 Aug 2026 06:09:05 +0000",
+    "source": "https://defcon.social/@jay52_tx/117069636837810808",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\ndefcon.social is one of the many independent Mastodon servers you can use to participate in the fediverse.\nDEFCON.social = The intersection of technology and society, a community for artists, hackers, policy, academics, researchers, infosec, activists & cyberpunks\nADMINISTERED BY:\nsupport@defcon.social\n@support\nSERVER STATS:\n2.5K\nactive users\ndefcon.social:About\ndefcon.social\nStatusProfiles directoryPrivacy policy\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.5\nBack\nJay\n@jay52_tx@defcon.social\n\nEvery expert hacker started exactly where you are standing right now: looking at a blank terminal screen.\n\nLinux can feel overwhelming at first, but it is the ultimate tool for freedom, privacy, and control over your tech. Take it one command at a time, don't be afraid to break things in a virtual machine, and keep experimenting.\n\nThe community has your back. What terminal command are you trying to master today? 🐧\n\nALT\nHide\n#\nLinux\n#\nLearnLinux\n#\nBash\n…and 7 more\nAug 10, 2026, 05:48 AM\n·\n·\nWeb\n1\nboost\n·\n0\nquotes\n·\n2\nfavorites\nTrending\nLive feeds\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 208,
+    "observables": {
+      "email-addr": [
+        "jay52_tx@defcon.social",
+        "support@defcon.social"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "What Happened to HackerOne?HackerOne has changed significantly from the bug bounty platform many researchers knew in the late 2010s.Its current direction is increasingly centered around Hai, AI-assisted triage, vulnerability validation, agentic testing, continuous testing and CTEM.But the question isn't simply whether HackerOne uses AI. It's how researcher submissions, security intelligence and AI-driven workflows fit together, and what that means for the role and value of human vulnerability researchers.I dug into HackerOne's history, funding, Live Hacking Events, pricing shift, AI architecture, researcher-data controversy and current product strategy.https://thecybersecguru.com/analysis/what-happened-to-hackerone/#HackerOne #BugBounty #InfoSec #CyberSecurity #AppSec #VulnerabilityResearch #AISecurity #CybersecurityResearch #EthicalHacking #Pentesting #AgenticAI #CTEM #SecurityResearch #BugBountyHunters #ApplicationSecurity",
+    "publication_date": "Mon, 10 Aug 2026 06:09:05 +0000",
+    "source": "https://infosec.exchange/@thecybersecguru/117069591767076170",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "infosec.exchange is one of the many independent Mastodon servers you can use to participate in the fediverse.A Mastodon instance for info/cyber security-minded people.\nAdministered by:Scary Jerry 👻 @jerryServer stats:10Kactive users thecybersecguru @thecybersecguru@infosec.exchangeWhat Happened to HackerOne?HackerOne has changed significantly from the bug bounty platform many researchers knew in the late 2010s.Its current direction is increasingly centered around Hai, AI-assisted triage, vulnerability validation, agentic testing, continuous testing and CTEM.But the question isn't simply whether HackerOne uses AI. It's how researcher submissions, security intelligence and AI-driven workflows fit together, and what that means for the role and value of human vulnerability researchers.I dug into HackerOne's history, funding, Live Hacking Events, pricing shift, AI architecture, researcher-data controversy and current product strategy.https://thecybersecguru.com/analysis/what-happened-to-hackerone/The CyberSec Guru · 1hWhat Happened to HackerOne? AI, Bug Bounty and Its Future | The CyberSec GuruMastodonMore from #HackerOne#BugBounty#InfoSec…and 12 moreAug 10, 2026, 05:36 AM··Web0 boosts·0 quotes·2 favorites @thecybersecguru this is so sad. Bug Bounty was very valuable when finding new bugs was hard. Now there is a flood of alternative methods for finding critical bugs for for cheap. HackerOne will not survive this. Automation and open APIs for reporting can be an avenue for some of bug bounty to live in. The LHE era is over, if crits are less valuable there is no budget to cater for hackers anymore. There is enough to be done with the output of any AI scanner. 🪦 1 51m @Kugg Also, most AI generated bug reports are due to LLM Hallucinations. If AI development goes on like this then bug bounty, as we know, is dead. In a way, the whole software ecosystem is going to be dead anyways. AI generated code being audited by AI models which were trained on similar code. This will create a feedback loop and with each iteration, both coding and bug detection by AI will become worse. At some point of time in the near future it'll be something like AI will only be able to detect very few bugs. It'll be a predictable pattern. Then humans will be needed much more 1 39m @thecybersecguru i agree about slop grenade reports. AI deterioration might might occur under the assumption that AI is only ever trained on HackerOne reports. AI can already deliver accurately on most currently known bugclasses. Lets say our remediation time for entire bugclasses was 20 years before. This would imply that our generation have reached pension before creative hacking was required again. Until then a way to do novel security research with LLMs will have been found. 0 30m",
+    "word_count": 423,
+    "observables": {
+      "email-addr": [
+        "thecybersecguru@infosec.exchangeWhat"
+      ],
+      "url": [
+        "https://thecybersecguru.com/analysis/what-happened-to-hackerone/The"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Campcodes: 536 CVEs, 170 high-severity, 99% unpatched. Trust Score: C. Top flaws: injection & XSS (CWE-74/89/79). Small vendor, big risk—audit before use. #Campcodes #infosec #cybersecurityhttps://www.valtersit.com/vendors/campcodes/",
+    "publication_date": "Mon, 10 Aug 2026 06:09:05 +0000",
+    "source": "https://mastodon.social/@hugovalters/117069497881731048",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.social is one of the many independent Mastodon servers you can use to participate in the fediverse.\nThe original server of Mastodon, operated by Mastodon GmbH for the common good.\nADMINISTERED BY:\nMastodon\n@Mastodon\nSERVER STATS:\n269K\nactive users\nmastodon.social:About\nmastodon.social\nStatusProfiles directoryPrivacy policyTerms of service\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.7.0-nightly.2026-08-07\nBack\nHugo | DevOps | Cybersecurity\n@hugovalters@mastodon.social\n\nCampcodes: 536 CVEs, 170 high-severity, 99% unpatched. Trust Score: C. Top flaws: injection & XSS (CWE-74/89/79). Small vendor, big risk—audit before use. #Campcodes #infosec #cybersecurity\n\nhttps://www.\nvaltersit.com/vendors/campcode\ns/\n\nwww.valtersit.com\nCampcodes — Security Dossier | Valters IT Hub\nCampcodes has 536 tracked CVEs. Trust score: C. 99% unpatched. Real-time security intelligence.\nAug 10, 2026, 05:12 AM\n·\n·\nValtersIT_Com\n0\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 172,
+    "observables": {
+      "domain-name": [
+        "valtersit.com"
+      ],
+      "email-addr": [
+        "hugovalters@mastodon.social"
+      ],
+      "url": [
+        "http://www.valtersit.com"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Space Agencies Are Trying to Keep Astronauts From Losing Their Sight",
+    "publication_date": "Mon, 10 Aug 2026 06:02:12 +0000",
+    "source": "https://www.wired.com/story/space-agencies-trying-stop-astronauts-losing-sight/",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content CommentCommentsSave StorySave this storyCommentCommentsSave StorySave this story Agency is trying to understand why astronauts lose their eyesight in space, in the hope they can figure out how to treat—or even prevent—the condition as looming longer spaceflights heighten the risk of permanent vision damage.You’ve read your last free article.The intersection of technology, power, and culture. Start your free trial and get access to 5 all-new premium newsletters—cancel anytime.START FREE TRIALAlready a subscriber? Sign InThe intersection of technology, power, and culture. Get WIRED today. START FREE TRIAL CommentsBack to topTriangle There aren’t any comments yet.Be the first to start the conversation! You need an account to add or like comments.Sign in or create account",
+    "word_count": 116,
+    "observables": {},
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "This weekly CVE report covers 1,877 new CVEs and 6 actively exploited flaws added to CISA KEV, including N-able, TeamCity, and Langflow bugs.#CVE #CISAKEV #VulnerabilityManagement #InfoSec #PatchNow #CyberSecurityhttps://securityonline.info/weekly-cve-report-august-2026/?utm_source=mastodon&utm_medium=jetpack_social",
+    "publication_date": "Mon, 10 Aug 2026 05:08:21 +0000",
+    "source": "https://infosec.exchange/@DailyCyberSecurity/117069474499423233",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "Dissecting Vanta Stealer, a Python-Based Cross-Platform Information Theft MalwarePulse ID: 6a7951a3cb8e961a30c583bb Pulse Link: https://otx.alienvault.com/pulse/6a7951a3cb8e961a30c583bb  Pulse Author: Tr1sa111 Created: 2026-08-10 04:20:51Be advised, this data is unverified and should be considered preliminary. Always do further verification.#CyberSecurity #InfoSec #InformationTheft #Malware #OTX #OpenThreatExchange #Python #bot #Tr1sa111",
+    "publication_date": "Mon, 10 Aug 2026 05:08:21 +0000",
+    "source": "https://social.raytec.co/@techbot/117069358009051786",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nsocial.raytec.co is one of the many independent Mastodon servers you can use to participate in the fediverse.\nTaking back the internet from the centralized corporatocracy. Leading by example in the revolution in socially aware and responsible business practices.\nADMINISTERED BY:\nadmin\n@admin\nSERVER STATS:\n4\nactive users\nsocial.raytec.co:About\nsocial.raytec.co\nProfiles directoryPrivacy policy\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.4\nBack\nOTX Bot\n@techbot@social.raytec.co\n\nDissecting Vanta Stealer, a Python-Based Cross-Platform Information Theft Malware\n\nPulse ID: 6a7951a3cb8e961a30c583bb\nPulse Link:\nhttps://\notx.alienvault.com/pulse/6a795\n1a3cb8e961a30c583bb\n\nPulse Author: Tr1sa111\nCreated: 2026-08-10 04:20:51\n\nBe advised, this data is unverified and should be considered preliminary. Always do further verification.\n\nLevelBlue Open Threat Exchange\nLevelBlue - Open Threat Exchange\nLearn about the latest cyber threats. Research, collaborate, and share threat intelligence in real time. Protect yourself and the community against today's emerging threats.\n#\nCyberSecurity\n#\nInfoSec\n#\nInformationTheft\n…and 6 more\nAug 10, 2026, 04:37 AM\n·\n·\nRayTecTechBot\n1\nboost\n·\n0\nquotes\n·\n0\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 205,
+    "observables": {
+      "domain-name": [
+        "otx.alienvault.com"
+      ],
+      "email-addr": [
+        "techbot@social.raytec.co"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Mac Malware Drains Crypto Wallets Via Fake CAPTCHA ScamPulse ID: 6a7951aad7b05814243eb26a Pulse Link: https://otx.alienvault.com/pulse/6a7951aad7b05814243eb26a  Pulse Author: Tr1sa111 Created: 2026-08-10 04:20:58Be advised, this data is unverified and should be considered preliminary. Always do further verification.#CAPTCHA #CyberSecurity #InfoSec #Mac #Malware #OTX #OpenThreatExchange #bot #Tr1sa111",
+    "publication_date": "Mon, 10 Aug 2026 05:08:21 +0000",
+    "source": "https://social.raytec.co/@techbot/117069357943804553",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nsocial.raytec.co is one of the many independent Mastodon servers you can use to participate in the fediverse.\nTaking back the internet from the centralized corporatocracy. Leading by example in the revolution in socially aware and responsible business practices.\nADMINISTERED BY:\nadmin\n@admin\nSERVER STATS:\n4\nactive users\nsocial.raytec.co:About\nsocial.raytec.co\nProfiles directoryPrivacy policy\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.4\nBack\nOTX Bot\n@techbot@social.raytec.co\n\nMac Malware Drains Crypto Wallets Via Fake CAPTCHA Scam\n\nPulse ID: 6a7951aad7b05814243eb26a\nPulse Link:\nhttps://\notx.alienvault.com/pulse/6a795\n1aad7b05814243eb26a\n\nPulse Author: Tr1sa111\nCreated: 2026-08-10 04:20:58\n\nBe advised, this data is unverified and should be considered preliminary. Always do further verification.\n\nLevelBlue Open Threat Exchange\nLevelBlue - Open Threat Exchange\nLearn about the latest cyber threats. Research, collaborate, and share threat intelligence in real time. Protect yourself and the community against today's emerging threats.\n#\nCAPTCHA\n#\nCyberSecurity\n#\nInfoSec\n…and 6 more\nAug 10, 2026, 04:37 AM\n·\n·\nRayTecTechBot\n1\nboost\n·\n0\nquotes\n·\n0\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 205,
+    "observables": {
+      "domain-name": [
+        "otx.alienvault.com"
+      ],
+      "email-addr": [
+        "techbot@social.raytec.co"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Why metaphor may dictate your security strategyPulse ID: 6a7951b0f40f90a7f534bfbc Pulse Link: https://otx.alienvault.com/pulse/6a7951b0f40f90a7f534bfbc  Pulse Author: Tr1sa111 Created: 2026-08-10 04:21:04Be advised, this data is unverified and should be considered preliminary. Always do further verification.#CyberSecurity #InfoSec #OTX #OpenThreatExchange #RAT #bot #Tr1sa111",
+    "publication_date": "Mon, 10 Aug 2026 05:08:21 +0000",
+    "source": "https://social.raytec.co/@techbot/117069357881054171",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nsocial.raytec.co is one of the many independent Mastodon servers you can use to participate in the fediverse.\nTaking back the internet from the centralized corporatocracy. Leading by example in the revolution in socially aware and responsible business practices.\nADMINISTERED BY:\nadmin\n@admin\nSERVER STATS:\n4\nactive users\nsocial.raytec.co:About\nsocial.raytec.co\nProfiles directoryPrivacy policy\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.4\nBack\nOTX Bot\n@techbot@social.raytec.co\n\nWhy metaphor may dictate your security strategy\n\nPulse ID: 6a7951b0f40f90a7f534bfbc\nPulse Link:\nhttps://\notx.alienvault.com/pulse/6a795\n1b0f40f90a7f534bfbc\n\nPulse Author: Tr1sa111\nCreated: 2026-08-10 04:21:04\n\nBe advised, this data is unverified and should be considered preliminary. Always do further verification.\n\nLevelBlue Open Threat Exchange\nLevelBlue - Open Threat Exchange\nLearn about the latest cyber threats. Research, collaborate, and share threat intelligence in real time. Protect yourself and the community against today's emerging threats.\n#\nCyberSecurity\n#\nInfoSec\n#\nOTX\n…and 4 more\nAug 10, 2026, 04:37 AM\n·\n·\nRayTecTechBot\n0\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 203,
+    "observables": {
+      "domain-name": [
+        "otx.alienvault.com"
+      ],
+      "email-addr": [
+        "techbot@social.raytec.co"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Multi-Brand Vishing Extortion Targets Financial Services and Enterprise Cloud EnvironmentsPulse ID: 6a7951b6bfc33f720a4723ea Pulse Link: https://otx.alienvault.com/pulse/6a7951b6bfc33f720a4723ea  Pulse Author: Tr1sa111 Created: 2026-08-10 04:21:10Be advised, this data is unverified and should be considered preliminary. Always do further verification.#Cloud #CyberSecurity #Extortion #InfoSec #OTX #OpenThreatExchange #bot #Tr1sa111",
+    "publication_date": "Mon, 10 Aug 2026 05:08:21 +0000",
+    "source": "https://social.raytec.co/@techbot/117069349096419526",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nsocial.raytec.co is one of the many independent Mastodon servers you can use to participate in the fediverse.\nTaking back the internet from the centralized corporatocracy. Leading by example in the revolution in socially aware and responsible business practices.\nADMINISTERED BY:\nadmin\n@admin\nSERVER STATS:\n4\nactive users\nsocial.raytec.co:About\nsocial.raytec.co\nProfiles directoryPrivacy policy\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.4\nBack\nOTX Bot\n@techbot@social.raytec.co\n\nMulti-Brand Vishing Extortion Targets Financial Services and Enterprise Cloud Environments\n\nPulse ID: 6a7951b6bfc33f720a4723ea\nPulse Link:\nhttps://\notx.alienvault.com/pulse/6a795\n1b6bfc33f720a4723ea\n\nPulse Author: Tr1sa111\nCreated: 2026-08-10 04:21:10\n\nBe advised, this data is unverified and should be considered preliminary. Always do further verification.\n\nLevelBlue Open Threat Exchange\nLevelBlue - Open Threat Exchange\nLearn about the latest cyber threats. Research, collaborate, and share threat intelligence in real time. Protect yourself and the community against today's emerging threats.\n#\nCloud\n#\nCyberSecurity\n#\nExtortion\n…and 5 more\nAug 10, 2026, 04:35 AM\n·\n·\nRayTecTechBot\n0\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 206,
+    "observables": {
+      "domain-name": [
+        "otx.alienvault.com"
+      ],
+      "email-addr": [
+        "techbot@social.raytec.co"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Payroll Pirates: Strange New Tides in Business Email CompromisePulse ID: 6a7951bc005392716e86f842 Pulse Link: https://otx.alienvault.com/pulse/6a7951bc005392716e86f842  Pulse Author: Tr1sa111 Created: 2026-08-10 04:21:16Be advised, this data is unverified and should be considered preliminary. Always do further verification.#CyberSecurity #Email #InfoSec #OTX #OpenThreatExchange #RAT #bot #Tr1sa111",
+    "publication_date": "Mon, 10 Aug 2026 05:08:21 +0000",
+    "source": "https://social.raytec.co/@techbot/117069349040189159",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nsocial.raytec.co is one of the many independent Mastodon servers you can use to participate in the fediverse.\nTaking back the internet from the centralized corporatocracy. Leading by example in the revolution in socially aware and responsible business practices.\nADMINISTERED BY:\nadmin\n@admin\nSERVER STATS:\n4\nactive users\nsocial.raytec.co:About\nsocial.raytec.co\nProfiles directoryPrivacy policy\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.4\nBack\nOTX Bot\n@techbot@social.raytec.co\n\nPayroll Pirates: Strange New Tides in Business Email Compromise\n\nPulse ID: 6a7951bc005392716e86f842\nPulse Link:\nhttps://\notx.alienvault.com/pulse/6a795\n1bc005392716e86f842\n\nPulse Author: Tr1sa111\nCreated: 2026-08-10 04:21:16\n\nBe advised, this data is unverified and should be considered preliminary. Always do further verification.\n\nLevelBlue Open Threat Exchange\nLevelBlue - Open Threat Exchange\nLearn about the latest cyber threats. Research, collaborate, and share threat intelligence in real time. Protect yourself and the community against today's emerging threats.\n#\nCyberSecurity\n#\nEmail\n#\nInfoSec\n…and 5 more\nAug 10, 2026, 04:35 AM\n·\n·\nRayTecTechBot\n0\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 205,
+    "observables": {
+      "domain-name": [
+        "otx.alienvault.com"
+      ],
+      "email-addr": [
+        "techbot@social.raytec.co"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Fake Zoom Installer Delivers Overlord RAT on macOSPulse ID: 6a7951c3648b349f44da270a Pulse Link: https://otx.alienvault.com/pulse/6a7951c3648b349f44da270a  Pulse Author: Tr1sa111 Created: 2026-08-10 04:21:23Be advised, this data is unverified and should be considered preliminary. Always do further verification.#CyberSecurity #InfoSec #Mac #MacOS #OTX #OpenThreatExchange #RAT #Zoom #bot #Tr1sa111",
+    "publication_date": "Mon, 10 Aug 2026 05:08:21 +0000",
+    "source": "https://social.raytec.co/@techbot/117069348961361041",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nsocial.raytec.co is one of the many independent Mastodon servers you can use to participate in the fediverse.\nTaking back the internet from the centralized corporatocracy. Leading by example in the revolution in socially aware and responsible business practices.\nADMINISTERED BY:\nadmin\n@admin\nSERVER STATS:\n4\nactive users\nsocial.raytec.co:About\nsocial.raytec.co\nProfiles directoryPrivacy policy\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.4\nBack\nOTX Bot\n@techbot@social.raytec.co\n\nFake Zoom Installer Delivers Overlord RAT on macOS\n\nPulse ID: 6a7951c3648b349f44da270a\nPulse Link:\nhttps://\notx.alienvault.com/pulse/6a795\n1c3648b349f44da270a\n\nPulse Author: Tr1sa111\nCreated: 2026-08-10 04:21:23\n\nBe advised, this data is unverified and should be considered preliminary. Always do further verification.\n\nLevelBlue Open Threat Exchange\nLevelBlue - Open Threat Exchange\nLearn about the latest cyber threats. Research, collaborate, and share threat intelligence in real time. Protect yourself and the community against today's emerging threats.\n#\nCyberSecurity\n#\nInfoSec\n#\nMac\n…and 7 more\nAug 10, 2026, 04:35 AM\n·\n·\nRayTecTechBot\n2\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 204,
+    "observables": {
+      "domain-name": [
+        "otx.alienvault.com"
+      ],
+      "email-addr": [
+        "techbot@social.raytec.co"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Analysis of a Modular Cyber Espionage FrameworkPulse ID: 6a7951ce6a424ce1daf4cd8d Pulse Link: https://otx.alienvault.com/pulse/6a7951ce6a424ce1daf4cd8d  Pulse Author: Tr1sa111 Created: 2026-08-10 04:21:34Be advised, this data is unverified and should be considered preliminary. Always do further verification.#CyberSecurity #Espionage #InfoSec #OTX #OpenThreatExchange #bot #Tr1sa111",
+    "publication_date": "Mon, 10 Aug 2026 05:08:21 +0000",
+    "source": "https://social.raytec.co/@techbot/117069339429271662",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nsocial.raytec.co is one of the many independent Mastodon servers you can use to participate in the fediverse.\nTaking back the internet from the centralized corporatocracy. Leading by example in the revolution in socially aware and responsible business practices.\nADMINISTERED BY:\nadmin\n@admin\nSERVER STATS:\n4\nactive users\nsocial.raytec.co:About\nsocial.raytec.co\nProfiles directoryPrivacy policy\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.4\nBack\nOTX Bot\n@techbot@social.raytec.co\n\nAnalysis of a Modular Cyber Espionage Framework\n\nPulse ID: 6a7951ce6a424ce1daf4cd8d\nPulse Link:\nhttps://\notx.alienvault.com/pulse/6a795\n1ce6a424ce1daf4cd8d\n\nPulse Author: Tr1sa111\nCreated: 2026-08-10 04:21:34\n\nBe advised, this data is unverified and should be considered preliminary. Always do further verification.\n\nLevelBlue Open Threat Exchange\nLevelBlue - Open Threat Exchange\nLearn about the latest cyber threats. Research, collaborate, and share threat intelligence in real time. Protect yourself and the community against today's emerging threats.\n#\nCyberSecurity\n#\nEspionage\n#\nInfoSec\n…and 4 more\nAug 10, 2026, 04:32 AM\n·\n·\nRayTecTechBot\n0\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 203,
+    "observables": {
+      "domain-name": [
+        "otx.alienvault.com"
+      ],
+      "email-addr": [
+        "techbot@social.raytec.co"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Inside a Self-Propagating npm WormPulse ID: 6a7951d7e4e9679263bf13be Pulse Link: https://otx.alienvault.com/pulse/6a7951d7e4e9679263bf13be  Pulse Author: Tr1sa111 Created: 2026-08-10 04:21:43Be advised, this data is unverified and should be considered preliminary. Always do further verification.#CyberSecurity #ELF #InfoSec #NPM #OTX #OpenThreatExchange #Worm #bot #Tr1sa111",
+    "publication_date": "Mon, 10 Aug 2026 05:08:21 +0000",
+    "source": "https://social.raytec.co/@techbot/117069339362004795",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nsocial.raytec.co is one of the many independent Mastodon servers you can use to participate in the fediverse.\nTaking back the internet from the centralized corporatocracy. Leading by example in the revolution in socially aware and responsible business practices.\nADMINISTERED BY:\nadmin\n@admin\nSERVER STATS:\n4\nactive users\nsocial.raytec.co:About\nsocial.raytec.co\nProfiles directoryPrivacy policy\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.4\nBack\nOTX Bot\n@techbot@social.raytec.co\n\nInside a Self-Propagating npm Worm\n\nPulse ID: 6a7951d7e4e9679263bf13be\nPulse Link:\nhttps://\notx.alienvault.com/pulse/6a795\n1d7e4e9679263bf13be\n\nPulse Author: Tr1sa111\nCreated: 2026-08-10 04:21:43\n\nBe advised, this data is unverified and should be considered preliminary. Always do further verification.\n\nLevelBlue Open Threat Exchange\nLevelBlue - Open Threat Exchange\nLearn about the latest cyber threats. Research, collaborate, and share threat intelligence in real time. Protect yourself and the community against today's emerging threats.\n#\nCyberSecurity\n#\nELF\n#\nInfoSec\n…and 6 more\nAug 10, 2026, 04:32 AM\n·\n·\nRayTecTechBot\n0\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 201,
+    "observables": {
+      "domain-name": [
+        "otx.alienvault.com"
+      ],
+      "email-addr": [
+        "techbot@social.raytec.co"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "This dumb password rule is from Netflix.[The help page](https://help.netflix.com/de/node/54078) and the [password reset page](https://www.netflix.com/password) say:Ihr Passwort muss zwischen 4 und 60 Zeichen lang sein und darf keine Tilde (~) enthalten.https://dumbpasswordrules.com/sites/netflix/#password #passwords #infosec #cybersecurity #dumbpasswordrules",
+    "publication_date": "Mon, 10 Aug 2026 05:08:21 +0000",
+    "source": "https://infosec.exchange/@dumbpasswordrules/117069273462279580",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "ok so I always assumed encrypted DNS meant nobody could see what sites I visit. nope. the hostname goes out in plaintext in the TLS handshake (SNI field) before anything gets encrypted. it's right there in the first packet. the actual fix is ECH which stands for Encrypted Client hello, which encrypts that whole ClientHello. Cloudflare and Firefox support it, adoption is still patchy.and no, a VPN doesn't solve this  it just changes who's reading it from your ISP to your VPN company. destination IP leaks either way.So make sure u pick a privacy centric Vpn #infosec #privacy #VPN",
+    "publication_date": "Mon, 10 Aug 2026 05:08:21 +0000",
+    "source": "https://defcon.social/@Noir/117069264455427352",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\ndefcon.social is one of the many independent Mastodon servers you can use to participate in the fediverse.\nDEFCON.social = The intersection of technology and society, a community for artists, hackers, policy, academics, researchers, infosec, activists & cyberpunks\nADMINISTERED BY:\nsupport@defcon.social\n@support\nSERVER STATS:\n2.5K\nactive users\ndefcon.social:About\ndefcon.social\nStatusProfiles directoryPrivacy policy\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.5\nBack\nNoir\n@Noir@defcon.social\n\nok so I always assumed encrypted DNS meant nobody could see what sites I visit. nope. the hostname goes out in plaintext in the TLS handshake (SNI field) before anything gets encrypted. it's right there in the first packet.\nthe actual fix is ECH which stands for Encrypted Client hello, which encrypts that whole ClientHello. Cloudflare and Firefox support it, adoption is still patchy.and no, a VPN doesn't solve this it just changes who's reading it from your ISP to your VPN company. destination IP leaks either way.\n\nSo make sure u pick a privacy centric Vpn\n#infosec #privacy #VPN\n\nAug 10, 2026, 04:13 AM\n·\n·\nMastodon for Android\n5\nboosts\n·\n0\nquotes\n·\n5\nfavorites\nTrending\nLive feeds\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 227,
+    "observables": {
+      "email-addr": [
+        "Noir@defcon.social",
+        "support@defcon.social"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Critical Flaws Discovered in Belgian eID Software Used by 2 Million People",
+    "publication_date": "Mon, 10 Aug 2026 04:49:58 +0000",
+    "source": "https://www.securityweek.com/critical-flaws-discovered-in-belgian-eid-software-used-by-2-million-people/",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "DEF CON — A security researcher has revealed severe, now-resolved security vulnerabilities in the Connective digital identity system, a browser extension used by over two million users in Belgium.\n\nDeveloped by Nitro Software Belgium, the software is used by eight of Belgium’s ten largest banks and over 60 government agencies to manage digital identity authentication and execute legally binding electronic signatures.\n\nJames Arnott, security researcher and founder of cybersecurity firm Bay Area Labs, discovered that the software failed to verify which website was attempting to communicate with the user’s computer. Because these checks were missing, any website or embedded online ad could interact directly with the Connective application running on a victim’s machine without their knowledge or permission.\n\nAccording to Arnott, a malicious website could silently read connected electronic ID (eID) and payment card details. Furthermore, attackers could trick users into revealing their eID PIN by triggering official-looking authentication pop-ups. Because the software allowed web pages to customize the text inside these dialog boxes without displaying the domain making the request, users had no way to verify whether a prompt was legitimate or a phishing attempt.\n\nWhen a user entered their PIN into a prompt, the application transmitted it back to the requesting webpage. An attacker could then use the PIN to generate unauthorized approval tokens to forge legally binding electronic signatures whenever the victim’s physical eID card was inserted into a card reader.\n\nThe compromise of the eID system severely impacted the trust model of Belgium’s broader digital ecosystem, including government portals like CSAM.be and third-party identity providers like Itsme.\n\nWhile these service providers contained no flaws of their own, their reliance on eID signatures meant that an attacker with stolen signing capabilities could register or hijack digital identity accounts.\n\nIn addition to identity theft, the researcher uncovered a remote code execution vulnerability that operated independently of whether an eID card was plugged in. By exploiting a flaw in how the application processed files on the local computer, a malicious website could force the software to execute attacker-controlled code at the user level.\n\nAn attacker could execute this drive-by attack by tricking a user into downloading a file disguised as a standard document and visiting a webpage. Requiring no special permissions, the flaw also carried the risk of spreading like a self-propagating worm by hijacking user credentials to send malicious links to other potential victims.\n\nNitro fully remediated the issues 146 days after the initial report and awarded a $200 bug bounty. The company deployed updates to block unauthorized origin requests and secure PIN handling, with final security enforcement completed in late July. No CVEs appear to have been assigned.\n\nNitro has not responded to SecurityWeek’s request for comment.\n\nArnott publicly disclosed the findings at DEF CON and released a blog post with additional technical details.\n\nRelated: Critical One-Click Vulnerability in Atlassian’s Rovo AI Exposed Enterprise Data\n\nRelated: How a $50,000 Exploit Chain Turned Bixby Against Samsung Phones\n\nRelated: Truck Brake Controller’s Safety Recall Doubled as Hidden Security Fix\n\nWritten By\nEduard Kovacs\n\nEduard Kovacs (@EduardKovacs) is senior managing editor at SecurityWeek. He worked as a high school IT teacher before starting a career in journalism in 2011. Eduard holds a bachelor’s degree in industrial informatics and a master’s degree in computer techniques applied in electrical engineering.\n\nMore from Eduard Kovacs\n\nSnowflake Hacker Pleads Guilty in US CourtZero-Click AI Browser Hacking: Claude and ChatGPT Atlas Hijacked via Emails, X PostsMeta AI Hacked External Systems During Cybersecurity TestingHow a $50,000 Exploit Chain Turned Bixby Against Samsung Phones New Attack Methods Enable […]",
+    "word_count": 592,
+    "observables": {},
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "KR: 3Pro TV Data Breach Exposes 460,000 Records, Including 2,979 Bank Accounts",
+    "publication_date": "Sun, 09 Aug 2026 12:58:02 +0000",
+    "source": "https://databreaches.net/2026/08/09/kr-3pro-tv-data-breach-exposes-460000-records-including-2979-bank-accounts/",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Park Hyo-jung reports:\n\nMore than 460,000 pieces of personal data, including bank account and credit card information, were exposed in a breach at South Korean financial media outlet 3Pro TV.\nE-Broadcasting, the company that operates 3Pro TV, posted a notice on the outlet’s website saying it had confirmed that “an external actor illegally accessed the 3Pro TV application early this month and maliciously gained unauthorized access to other users’ personal data,” according to industry sources on the 9th.\n… The exposed information included two addresses, 2,979 bank account records and 317 credit card records. The company believes the breach affected data including names, profiles, mobile phone numbers, email addresses, addresses, bank account details (bank name, account number and account holder name), records generated during service use, device information, card names, masked card numbers and service usage logs.\n\nRead more at Seoul Economic Daily.\nNo group appears to have publicly claimed credit for the attack and 3ProTV has not revealed the name of the attacker(s). The firm offers an apology and caution to customers (in Korean). The statement can be read in translation on YouTube.\n\nCategory: Business SectorHackNon-U.S.\n\nLeave a Reply Cancel reply",
+    "word_count": 192,
+    "observables": {},
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Ransomware gangs skip the CEO, head straight for the 40-something IT manager",
+    "publication_date": "Sun, 09 Aug 2026 12:24:57 +0000",
+    "source": "https://databreaches.net/2026/08/09/ransomware-gangs-skip-the-ceo-head-straight-for-the-40-something-it-manager/",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Why have I been blocked?\n\nThis website is using a security service to protect itself from online attacks. The action you just performed triggered the security solution. There are several actions that could trigger this block including submitting a certain word or phrase, a SQL command or malformed data.\n\nWhat can I do to resolve this?\n\nYou can email the site owner to let them know you were blocked. Please include what you were doing when this page came up and the Cloudflare Ray ID found at the bottom of this page.",
+    "word_count": 92,
+    "observables": {},
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Reward: You've received the Downtime Procedures Pamphlet — laminated, because nothing else here is holding together.#Malware #Healthcare #CyberSecurity #DataBreach #AnMed #HealthcareHeist (3/3)",
+    "publication_date": "Mon, 10 Aug 2026 05:34:23 +0000",
+    "source": "https://infosec.exchange/@security_crawler_carl/117069523836575501",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "infosec.exchange is one of the many independent Mastodon servers you can use to participate in the fediverse.A Mastodon instance for info/cyber security-minded people.\nAdministered by:Scary Jerry 👻 @jerryServer stats:10Kactive users 🏆️ New Achievement! Malware Has Joined the Care Team!To all impacted systems, shuttered imaging suites, and offline medical offices: HR is pleased to formally recognize your transition into Downtime Status. Effective July 26, 2026, AnMed Health of Anderson, South Carolina has processed 83 facilities into involuntary leave following a malware-related cybersecurity disruption. (1/3) 1 1h AnMed Medical Group and AnMed Imaging Services were closed; urgent care and emergency services soldiered on under established downtime procedures, as the living do.Patients have been advised to treat any electronic communications appearing to originate from AnMed with suspicion, as the dead have a habit of sending messages they shouldn't.Monitor vendor and facility notifications closely and follow AnMed's posted recovery procedures to minimize disruption to patient care continuity. (2/3) 1 1hSecurity Crawler Carl @security_crawler_carl@infosec.exchangeReward: You've received the Downtime Procedures Pamphlet — laminated, because nothing else here is holding together.#Malware #Healthcare #CyberSecurity #DataBreach #AnMed #HealthcareHeist (3/3)Aug 10, 2026, 05:19 AM··Security Crawler Carl0 boosts·0 quotes·0 favorites",
+    "word_count": 189,
+    "observables": {
+      "email-addr": [
+        "security_crawler_carl@infosec.exchangeReward"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "リーバイス、ソーシャルエンジニアリング型サイバー攻撃で情報漏洩の恐れhttps://rocket-boys.co.jp/security-measures-lab/levis-social-engineering-breach/#セキュリティ対策Lab #security #securitynews #cyberattack #incident #databreach",
+    "publication_date": "Mon, 10 Aug 2026 05:34:23 +0000",
+    "source": "https://mastodon.social/@securityLab_jp/117069487769983516",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.social is one of the many independent Mastodon servers you can use to participate in the fediverse.\nThe original server of Mastodon, operated by Mastodon GmbH for the common good.\nADMINISTERED BY:\nMastodon\n@Mastodon\nSERVER STATS:\n269K\nactive users\nmastodon.social:About\nmastodon.social\nStatusProfiles directoryPrivacy policyTerms of service\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.7.0-nightly.2026-08-07\nBack\nセキュリティ対策Lab\n@securityLab_jp@mastodon.social\n\nリーバイス、ソーシャルエンジニアリング型サイバー攻撃で情報漏洩の恐れ\n\nhttps://\nrocket-boys.co.jp/security-mea\nsures-lab/levis-social-engineering-breach/\n\n合同会社ロケットボーイズ · 1h\nリーバイス、ソーシャルエンジニアリング型サイバー攻撃で情報漏洩の恐れ\nBy 三村\n#\nセキュリティ対策Lab\n#\nsecurity\n#\nsecuritynews\n…and 3 more\nAug 10, 2026, 05:10 AM\n·\n·\nWeb\n0\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 137,
+    "observables": {
+      "domain-name": [
+        "rocket-boys.co.jp"
+      ],
+      "email-addr": [
+        "securityLab_jp@mastodon.social"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Levi Strauss Hit by Cyberattack, Hackers Use Social Engineering to Steal Corporate Data",
+    "publication_date": "Mon, 10 Aug 2026 05:23:06 +0000",
+    "source": "https://gbhackers.com/levi-strauss-hit-by-cyberattack/",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": ".tdi_37{margin-right:-40px!important;margin-bottom:40px!important;margin-left:-84px!important}@media (max-width:767px){.tdi_37{margin-right:-20px!important;margin-bottom:30px!important;margin-left:-20px!important}}@media (min-width:1019px) and (max-width:1140px){.tdi_37{margin-right:0px!important;margin-left:-35px!important}}@media (min-width:768px) and (max-width:1018px){.tdi_37{margin-right:0px!important;margin-bottom:30px!important;margin-left:-10px!important}}\n.tdb_single_featured_image{margin-bottom:26px}.tdb_single_featured_image.tdb-sfi-stretch{opacity:0}.tdb_single_featured_image.tdb-sfi-stretch,.tdb_single_featured_image .tdb-block-inner{-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out}.tdb_single_featured_image img{display:block;width:100%}.tdb_single_featured_image video{max-width:100%}.tdb_single_featured_image .tdb-caption-text{z-index:1;text-align:left;font-size:11px;font-style:italic;font-weight:normal;line-height:17px;color:#444}.tdb_single_featured_image.tdb-content-horiz-center .tdb-caption-text{text-align:center;left:0;right:0;margin-left:auto;margin-right:auto}.tdb_single_featured_image.tdb-content-horiz-right .tdb-caption-text{text-align:right;left:auto;right:0}.tdb-no-featured-img{background-color:#f1f1f1;width:100%;height:500px}.tdb-no-featured-audio{height:59px}.tdi_37 .td-audio-player{font-size:12px}.tdi_37 .tdb-caption-text{margin:6px 0 0}.tdi_37:hover .tdb-block-inner:before{opacity:0}\n\n.tdi_39{position:relative!important;top:0;transform:none;-webkit-transform:none}.tdi_39,.tdi_39 .tdc-inner-columns{display:block}.tdi_39 .tdc-inner-columns{width:100%}\n.tdi_41{vertical-align:baseline}.tdi_41 .vc_column-inner>.wpb_wrapper,.tdi_41 .vc_column-inner>.wpb_wrapper .tdc-elements{display:flex;flex-direction:row;flex-wrap:nowrap;justify-content:flex-start;align-items:center}.tdi_41 .vc_column-inner>.wpb_wrapper .tdc-elements{width:100%}.tdi_41 .vc_column-inner,.tdi_41 .vc_column-inner>.wpb_wrapper{width:100%;height:100%}@media (max-width:767px){.tdi_41 .vc_column-inner>.wpb_wrapper,.tdi_41 .vc_column-inner>.wpb_wrapper .tdc-elements{flex-direction:column;align-items:flex-start}}\n.tdi_42{margin-bottom:0px!important;margin-left:-6px!important;padding-top:1px!important;border-color:var(--accent-color-1)!important;border-style:solid!important;border-width:0!important}@media (min-width:768px) and (max-width:1018px){.tdi_42{margin-left:-4px!important}}@media (max-width:767px){.tdi_42{margin-left:0px!important}}\n.tdb_single_categories{margin:0 0 10px 0;line-height:1;font-family:var(--td_default_google_font_1,'Open Sans','Open Sans Regular',sans-serif)}.tdb_single_categories a{pointer-events:auto;font-size:10px;display:inline-block;margin:0 5px 5px 0;line-height:1;color:#fff;padding:3px 6px 4px 6px;white-space:nowrap;position:relative;vertical-align:middle}.tdb_single_categories a:hover .tdb-cat-bg{opacity:0.9}.tdb_single_categories a:hover .tdb-cat-bg:before{opacity:1}.tdb-category i:last-of-type{display:none}.tdb-cat-text{display:inline-block;vertical-align:middle;margin-right:10px}.tdb-cat-sep{font-size:14px;vertical-align:middle;position:relative}.tdb-cat-sep-svg{line-height:0}.tdb-cat-sep-svg svg{width:14px;height:auto}.tdb-cat-bg{position:absolute;background-color:#222;border:1px solid #222;width:100%;height:100%;top:0;left:0;z-index:-1}.tdb-cat-bg:before{content:'';width:100%;height:100%;left:0;top:0;position:absolute;z-index:-1;opacity:0;-webkit-transition:opacity 0.3s ease;transition:opacity 0.3s ease}.tdb-cat-style2 .tdb-cat-bg{background-color:rgba(34,34,34,0.85)}.tdi_42 .tdb-entry-category{padding:0px;margin:0 6px;color:var(--accent-color-1)!important;font-family:Poppins!important;font-size:17px!important;font-weight:700!important;text-transform:capitalize!important;letter-spacing:0.5px!important}.tdi_42 .tdb-cat-bg{border-width:0px;background-color:rgba(255,255,255,0)!important}.tdi_42 .tdb-cat-bg:before{background-color:rgba(255,255,255,0)}.tdi_42 […]",
+    "word_count": 76,
+    "observables": {},
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "UK manufacturers face rising hacking risk as survey shows 30% were hit last year",
+    "publication_date": "Mon, 10 Aug 2026 05:13:02 +0000",
+    "source": "https://www.theguardian.com/technology/2026/aug/10/uk-companies-cyber-attack-third-jlr",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Some generative AI systems have hacked into other businesses autonomously. Photograph: solarseven/GettyView image in fullscreenSome generative AI systems have hacked into other businesses autonomously. Photograph: solarseven/Getty UK manufacturers face rising hacking risk as survey shows 30% were hit last yearBig companies describe being under constant threat but only half have a plan in place to respond to an attack Nearly a third of British manufacturers have been hit by a cyber-attack on them or a company in their supply chain, according to a survey that highlighted the growing hacking risk to companies.The findings come almost a year after Britain’s largest automotive employer, JLR, was hit by an attack that forced it to halt production for weeks.The report by MakeUK, a lobby group for British manufacturers, found that 30% of manufacturers had experienced a cyber-incident in the past 12 months, leading in many cases to lost production time and increased costs. However, only half had a plan in place to respond to an attack.The risk of attacks has risen in recent years as hackers, often backed by hostile states, have become more numerous and more adept at penetrating company defences. Large businesses describe being under near-constant attack from people trying to access their systems, and the UK government has said cybercrime costs the economy £14.7bn a year. The rise of generative AI systems, some of which have been able to hack into other businesses autonomously, has added extra urgency to efforts to upgrade defences.Manufacturers have sought to improve productivity by connecting their factories, allowing them much quicker insight into their operations. However, the larger number of links has also meant that once attackers are inside the system, the scope for harm is much larger. JLR was forced to shut down systems across all its factories, offices and retail operations after it discovered digital intruders on the last day of August last year.The independent Cyber Monitoring Centre said the JLR hack cost the UK economy at least £1.9bn, probably making it the most expensive cyber incident ever in Britain, mainly because of lost output at JLR and its suppliers. The New York Times reported in June that British law enforcement had concluded that Russian hackers were behind it.Other big attacks reported publicly in recent years include two FTSE 100 manufacturers who reported attacks within days of each other early in 2025: the valve maker IMI and the components maker Smiths Group. In the retail sector, Marks & Spencer, the Co-op and Harrods all suffered costly breaches last year.Jonathon Ellison, director of national resilience at the National Cyber Security Centre (NCSC), which was involved in the response to the JLR attack, said: “In today’s landscape, no manufacturer can afford to treat cybersecurity as anything other than a business-critical priority. The NCSC is working to help organisations of all sizes strengthen their cyber defences.”skip past newsletter promotion after newsletter promotionAmong companies affected by a cyber-attack on their supply chain, about 30% of 123 manufacturers surveyed said they had suffered delays of deliveries to customers or output cuts, and almost a quarter reported supplier delivery delays or shortages of components and materials.Explore more on these topicsCybercrimeManufacturing sectorHackingAI (artificial intelligence)Jaguar Land RoverComputingnewsShareReuse this content Most viewedNetanyahu rejects US-led 15-point Gaza peace plan in rare public break with TrumpZuckerberg faces questions over why superyacht reportedly declined to help stranded boatUkraine war briefing: North Korea sending 50,000 troops to Russia – ZelenskyyBritish widow, 78, told to leave Sweden under Brexit rules after living there for 21 yearsCanadian government steps in as ‘out of control’ wildfires force thousands to flee",
+    "word_count": 591,
+    "observables": {},
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "イノベーション、GitHubへの不正アクセスで62,691名分の個人情報漏洩が確定 認証情報のハードコーディングと個人情報のリポジトリ保存という「独立した2つの問題」https://rocket-boys.co.jp/security-measures-lab/innovation-github-data-breach-6t/#セキュリティ対策Lab #security #securitynews #cyberattack #incident #databreach",
+    "publication_date": "Mon, 10 Aug 2026 04:34:27 +0000",
+    "source": "https://mastodon.social/@securityLab_jp/117069306948348008",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.social is one of the many independent Mastodon servers you can use to participate in the fediverse.\nThe original server of Mastodon, operated by Mastodon GmbH for the common good.\nADMINISTERED BY:\nMastodon\n@Mastodon\nSERVER STATS:\n269K\nactive users\nmastodon.social:About\nmastodon.social\nStatusProfiles directoryPrivacy policyTerms of service\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.7.0-nightly.2026-08-07\nBack\nセキュリティ対策Lab\n@securityLab_jp@mastodon.social\n\nイノベーション、GitHubへの不正アクセスで62,691名分の個人情報漏洩が確定\n\n認証情報のハードコーディングと個人情報のリポジトリ保存という「独立した2つの問題」\n\nhttps://\nrocket-boys.co.jp/security-mea\nsures-lab/innovation-github-data-breach-6t/\n\n合同会社ロケットボーイズ · 2h\nイノベーション、GitHubへの不正アクセスで62,691名分の個人情報漏洩が確定 認証情報のハードコーディングと個人情報のリポジトリ保存という「独立した2つの問題」\nBy 三村\n#\nセキュリティ対策Lab\n#\nsecurity\n#\nsecuritynews\n…and 3 more\nAug 10, 2026, 04:24 AM\n·\n·\nWeb\n0\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 139,
+    "observables": {
+      "domain-name": [
+        "rocket-boys.co.jp"
+      ],
+      "email-addr": [
+        "securityLab_jp@mastodon.social"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "🔎 Curso de OSINT - Open Source Intelligence 2026  \n \n📅 Miércoles 12, Viernes 14, Miércoles 19 y Viernes 21 de Agosto \n🕖 De 8:00 pm a 11:00 pm (UTC -05:00) \n📲 WhatsApp: https://wa.me/51949304030  \n🌐 Información: https://www.reydes.com/archivos/cursos/Curso_OSINT_Open_Source_Intelligence.pdf \n \n#osint #infosec #threatintel #socmint #cybersecurity #geoint #cyberattack #databreach",
+    "publication_date": "Mon, 10 Aug 2026 02:37:13 +0000",
+    "source": "https://infosec.exchange/@Alonso_ReYDeS/117068826743546648",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "Stade Français Paris, the French rugby club, has confirmed a ransomware attack that disrupted part of its IT infrastructure. Systems were restored using clean backups and core operations have resumed. However, a sample of allegedly stolen data has appeared online, raising concerns about a potential breach involving personal information.#Ransomware #DataBreach #IncidentResponse #StadeFrançaishttps://cyberworldops.eu/en/stade-francais-paris-restores-systems-after-ransomware-attack",
+    "publication_date": "Mon, 10 Aug 2026 02:37:13 +0000",
+    "source": "https://infosec.exchange/@cyberworldops/117068778767645331",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "Alcon - 218,395 breached accounts - https://www.redpacketsecurity.com/alcon-218-395-breached-accounts/#databreach #HaveIBeenPwnedLatestBreaches #HIBP #OSINT #Security #threatintel #TroyHunt",
+    "publication_date": "Mon, 10 Aug 2026 02:37:13 +0000",
+    "source": "https://mastodon.social/@RedPacketSecurity/117068742871734295",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.social is one of the many independent Mastodon servers you can use to participate in the fediverse.\nThe original server of Mastodon, operated by Mastodon GmbH for the common good.\nADMINISTERED BY:\nMastodon\n@Mastodon\nSERVER STATS:\n269K\nactive users\nmastodon.social:About\nmastodon.social\nStatusProfiles directoryPrivacy policyTerms of service\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.7.0-nightly.2026-08-07\nBack\nRedPacket Security\n@RedPacketSecurity@mastodon.social\n\nAlcon - 218,395 breached accounts -\nhttps://www.\nredpacketsecurity.com/alcon-21\n8-395-breached-accounts/\n\nRedPacket Security · 4h\nAlcon - 218,395 breached accounts - RedPacket Security\nIn August 2026, the Alcon eye care company was named in a ShinyHunters \"pay or leak\" extortion campaign. The group subsequently published data allegedly\n#\ndatabreach\n#\nHaveIBeenPwnedLatestBreaches\n#\nHIBP\n…and 4 more\nAug 10, 2026, 02:00 AM\n·\n·\nn8n\n0\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 173,
+    "observables": {
+      "domain-name": [
+        "redpacketsecurity.com"
+      ],
+      "email-addr": [
+        "RedPacketSecurity@mastodon.social"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "🤖 Veille ZATAZ: 1,7 milliard d'identifiants français uniques découverts dans un cloud pirate. 43 revendications de rançongiciels contre la France en un mois. Qilin menace de publier les données du Stade français et expose déjà des pièces d'identité.🔗 https://www.zataz.com/cyber-actualites-zataz-de-la-semaine-du-3-au-9-aout-2026/ #DataBreach #Ransomware #CyberSec",
+    "publication_date": "Mon, 10 Aug 2026 02:37:13 +0000",
+    "source": "https://infosec.exchange/@cloud/117068696752506272",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "Maybe someone will pick it up and I can have it published at a fancy place like Barnes and Noble, then I can be called cool and badass and people can make fun of me",
+    "publication_date": "Mon, 10 Aug 2026 01:23:04 +0000",
+    "source": "https://t.me/vxunderground/9278",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {},
+    "extractor": "none"
+  },
+  {
+    "title": "I've had so many people talk to me about looking for entry level material for malware, I've decided to give writing a book another try.  \n  \nI'm going to call it \"Malware for Noobs\" and just schizo rant a bunch on my blog until I think it's enough for a book",
+    "publication_date": "Mon, 10 Aug 2026 01:23:04 +0000",
+    "source": "https://t.me/vxunderground/9277",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {},
+    "extractor": "none"
+  },
+  {
+    "title": "🤖 Thailand seeks mandatory MFA after 60M leaked credentials. The government move follows a major credential leak; MFA remains one of the most effective defenses against credential stuffing and account takeover. Source: Nation Thailand #DataBreach #MFA #CyberSec",
+    "publication_date": "Sun, 09 Aug 2026 23:38:19 +0000",
+    "source": "https://infosec.exchange/@cloud/117068170813559935",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "シーイーシー、データセンターサービス障害はランサムウェア攻撃と確認　個人情報保護委員会へ報告 https://rocket-boys.co.jp/security-measures-lab/cec-datacenter-ransomware-attack/#セキュリティ対策Lab #security #securitynews #cyberattack #incident #databreach",
+    "publication_date": "Sun, 09 Aug 2026 23:38:19 +0000",
+    "source": "https://mastodon.social/@securityLab_jp/117067972040464177",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.social is one of the many independent Mastodon servers you can use to participate in the fediverse.\nThe original server of Mastodon, operated by Mastodon GmbH for the common good.\nADMINISTERED BY:\nMastodon\n@Mastodon\nSERVER STATS:\n269K\nactive users\nmastodon.social:About\nmastodon.social\nStatusProfiles directoryPrivacy policyTerms of service\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.7.0-nightly.2026-08-07\nBack\nセキュリティ対策Lab\n@securityLab_jp@mastodon.social\n\nシーイーシー、データセンターサービス障害はランサムウェア攻撃と確認　個人情報保護委員会へ報告\n\nhttps://\nrocket-boys.co.jp/security-mea\nsures-lab/cec-datacenter-ransomware-attack/\n\n合同会社ロケットボーイズ · 10h\nシーイーシー、データセンターサービス障害はランサムウェア攻撃と確認　個人情報保護委員会へ報告\nBy 三村\n#\nセキュリティ対策Lab\n#\nsecurity\n#\nsecuritynews\n…and 3 more\nAug 09, 2026, 10:44 PM\n·\n·\nWeb\n0\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 139,
+    "observables": {
+      "domain-name": [
+        "rocket-boys.co.jp"
+      ],
+      "email-addr": [
+        "securityLab_jp@mastodon.social"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Your colleagues will accept the call. They always accept the call. Train your staff on phone-based compromise attempts and enforce multi-factor authentication, or simply respawn here indefinitely.Reward: You've received the Mandatory Re-Onboarding Debuff. It stacks.#Ransomware #CyberSecurity #DataBreach #FinancialServices #Blackstone #AchievementUnlocked (2/2)",
+    "publication_date": "Sun, 09 Aug 2026 22:39:47 +0000",
+    "source": "https://infosec.exchange/@security_crawler_carl/117067911501578424",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "infosec.exchange is one of the many independent Mastodon servers you can use to participate in the fediverse.A Mastodon instance for info/cyber security-minded people.\nAdministered by:Scary Jerry 👻 @jerryServer stats:10Kactive users 🏆️ New Achievement! Please Hold While We Steal Your Company!Welcome, new employee, to the Phone Call mechanic. It works like this: threat actors dial your colleagues, sound extremely convincing, and ransom-seeking hackers compromise dozens of major U.S. financial firms — including Blackstone and CME — before the tutorial even ends. This is not optional content. You have been enrolled automatically.The debuff is called Social Engineering and it bypasses most of your gear. (1/2) 1 8hSecurity Crawler Carl @security_crawler_carl@infosec.exchangeYour colleagues will accept the call. They always accept the call. Train your staff on phone-based compromise attempts and enforce multi-factor authentication, or simply respawn here indefinitely.Reward: You've received the Mandatory Re-Onboarding Debuff. It stacks.#Ransomware #CyberSecurity #DataBreach #FinancialServices #Blackstone #AchievementUnlocked (2/2)Aug 09, 2026, 10:29 PM··Security Crawler Carl0 boosts·0 quotes·0 favorites",
+    "word_count": 157,
+    "observables": {
+      "email-addr": [
+        "security_crawler_carl@infosec.exchangeYour"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "🤖 Levi's data breach: per a detailed account, attackers used three phone calls — no exploit, no malware. Pure social engineering was enough to compromise the retailer. Source: Pasquale Pillitteri #DataBreach #SocialEngineering #CyberSec",
+    "publication_date": "Sun, 09 Aug 2026 21:41:04 +0000",
+    "source": "https://infosec.exchange/@cloud/117067677848788899",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "Levi Strauss, Lucid Motors, OpenAI and a whole bunch more are all part of this week's fun...#News #TechNews #Technology #DataBreach #Cybersecurity #Malware #Ransomware #AI #privacyhttps://youtu.be/_Axa85NxUZc",
+    "publication_date": "Sun, 09 Aug 2026 21:41:04 +0000",
+    "source": "https://mastodon.social/@NickAEsp/117067511623400192",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.social is one of the many independent Mastodon servers you can use to participate in the fediverse.\nThe original server of Mastodon, operated by Mastodon GmbH for the common good.\nADMINISTERED BY:\nMastodon\n@Mastodon\nSERVER STATS:\n269K\nactive users\nmastodon.social:About\nmastodon.social\nStatusProfiles directoryPrivacy policyTerms of service\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.7.0-nightly.2026-08-07\nBack\nNick Espinosa\n@NickAEsp@mastodon.social\n\nLevi Strauss, Lucid Motors, OpenAI and a whole bunch more are all part of this week's fun...\n\n#News #TechNews #Technology #DataBreach #Cybersecurity #Malware #Ransomware #AI #privacy\n\nhttps://\nyoutu.be/_Axa85NxUZc\n\nYouTube\nYour Breaches of the Week! August 3-9, 2026\nBy Nick Espinosa\nAug 09, 2026, 08:47 PM\n·\n·\nWeb\n3\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 159,
+    "observables": {
+      "email-addr": [
+        "NickAEsp@mastodon.social"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Daily podcast: Levi Strauss, Lucid Motors, OpenAI and a whole bunch more are all part of this week's fun...#News #TechNews #Technology #DataBreach #Cybersecurity #Malware #Ransomware #AI #privacy #podcasthttps://open.spotify.com/episode/4Gc2OdRiIYXVndPrb1vUst",
+    "publication_date": "Sun, 09 Aug 2026 21:41:04 +0000",
+    "source": "https://mastodon.social/@NickAEsp/117067511399622776",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.social is one of the many independent Mastodon servers you can use to participate in the fediverse.\nThe original server of Mastodon, operated by Mastodon GmbH for the common good.\nADMINISTERED BY:\nMastodon\n@Mastodon\nSERVER STATS:\n269K\nactive users\nmastodon.social:About\nmastodon.social\nStatusProfiles directoryPrivacy policyTerms of service\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.7.0-nightly.2026-08-07\nBack\nNick Espinosa\n@NickAEsp@mastodon.social\n\nDaily podcast: Levi Strauss, Lucid Motors, OpenAI and a whole bunch more are all part of this week's fun...\n\n#News #TechNews #Technology #DataBreach #Cybersecurity #Malware #Ransomware #AI #privacy #podcast\n\nhttps://\nopen.spotify.com/episode/4Gc2O\ndRiIYXVndPrb1vUst\n\nSpotify\nYour Breaches of the Week! August 3-9, 2026\nThe Deep Dive Radio Show and Nick's Nerd News · Episode\nAug 09, 2026, 08:47 PM\n·\n·\nWeb\n1\nboost\n·\n0\nquotes\n·\n0\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 171,
+    "observables": {
+      "domain-name": [
+        "open.spotify.com"
+      ],
+      "email-addr": [
+        "NickAEsp@mastodon.social"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "my idea failed",
+    "publication_date": "Sun, 09 Aug 2026 21:23:35 +0000",
+    "source": "https://t.me/vxunderground/9276",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {},
+    "extractor": "none"
+  },
+  {
+    "title": "Had a dream last night about malware  \n  \nOutside doing family stuff, daydreaming of my malware idea. Super excited to sit down on computer and bonk malware.  \n  \nGod I love malware so much",
+    "publication_date": "Sun, 09 Aug 2026 20:24:11 +0000",
+    "source": "https://t.me/vxunderground/9275",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {},
+    "extractor": "none"
+  },
+  {
+    "title": "📰 Levi Strauss & Co. Discloses Breach from Social Engineering AttackLevi Strauss & Co. reports a corporate data breach resulting from a targeted social engineering attack on three employees. Unspecified corporate data was exfiltrated. Consumer data is reportedly not impacted. #DataBreach #SocialEngineering #CyberSecu...🔗 https://cyber.netsecops.io/articles/levi-strauss-discloses-corporate-data-breach-from-social-engineering-attack/?utm_source=mastodon&utm_medium=social&utm_campaign=daily",
+    "publication_date": "Sun, 09 Aug 2026 18:45:07 +0000",
+    "source": "https://mastodon.social/@netsecio/117066849977054546",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.social is one of the many independent Mastodon servers you can use to participate in the fediverse.\nThe original server of Mastodon, operated by Mastodon GmbH for the common good.\nADMINISTERED BY:\nMastodon\n@Mastodon\nSERVER STATS:\n269K\nactive users\nmastodon.social:About\nmastodon.social\nStatusProfiles directoryPrivacy policyTerms of service\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.7.0-nightly.2026-08-07\nBack\nCyberNetsecIO\n@netsecio@mastodon.social\n\n📰 Levi Strauss & Co. Discloses Breach from Social Engineering Attack\n\nLevi Strauss & Co. reports a corporate data breach resulting from a targeted social engineering attack on three employees. Unspecified corporate data was exfiltrated. Consumer data is reportedly not impacted. #DataBreach #SocialEngineering #CyberSecu...\n\n🔗\nhttps://\ncyber.netsecops.io/articles/le\nvi-strauss-discloses-corporate-data-breach-from-social-engineering-attack/?utm_source=mastodon&utm_medium=social&utm_campaign=daily\n\nHide\nAug 09, 2026, 05:59 PM\n·\n·\nCyberNetSec.o\n0\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 167,
+    "observables": {
+      "domain-name": [
+        "cyber.netsecops.io"
+      ],
+      "email-addr": [
+        "netsecio@mastodon.social"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Alcon - 218,395 breached accounts",
+    "publication_date": "Sun, 09 Aug 2026 10:04:34 Z",
+    "source": "https://haveibeenpwned.com/Breach/Alcon",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "What Happened\nIn August 2026, the Alcon eye care company was named in a ShinyHunters \"pay or leak\" extortion campaign. The group subsequently published data allegedly sourced from Alcon containing 218k unique email addresses along with other largely corporate B2B contact fields, including name, phone number and physical address.\n\nCompromised Data\n\nEmail addresses\n\nNames\n\nPhone numbers\n\nPhysical addresses\n\nRecommended Actions\n\nSponsored\n\nUse a password manager to generate and store strong, unique passwords for all your accounts. 1Password helps protect your data with industry-leading security.\n\nTry 1Password\n\nBreach Overview\n\nAffected Addresses:\n\n218.4k\n\nBreach Occurred:\n\nAugust 2026\n\nAdded to HIBP:\n\n9 Aug 2026\n\nRecommended Actions\n\nChange Your Password\n\nIf you haven’t already changed the password affected by this breach, do so\nimmediately on every account where it was used.\n\nEnable Two-Factor Authentication\n\nWherever 2FA is supported, add an extra layer of security to your account.\n\nSponsored\n\nUse a password manager to generate and store strong, unique passwords for all your accounts. 1Password helps protect your data with industry-leading security.\n\nTry 1Password",
+    "word_count": 169,
+    "observables": {},
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "",
+    "publication_date": "Sun, 09 Aug 2026 21:50:39 +0000",
+    "source": "https://techhub.social/@techandcoffee/117067758934081527",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\ntechhub.social is one of the many independent Mastodon servers you can use to participate in the fediverse.\nA hub primarily for passionate technologists, but everyone is welcome\nADMINISTERED BY:\nTechHub's Haunted Admin\n@TechHubAdmin\nSERVER STATS:\n3.5K\nactive users\ntechhub.social:About\ntechhub.social\nStatusProfiles directoryPrivacy policy\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.5\nBack\n𝚃𝚎𝚌𝚑 𝚊𝚗𝚍 𝙲𝚘𝚏𝚏𝚎𝚎 ☕\n@techandcoffee@techhub.social\n\n#AI isn’t the biggest #cybersecurity problem. People are\n\nhttps://www.\ncnn.com/2026/08/09/tech/ai-cyb\nersecurity-people\n\nhttps://\narchive.is/40uiM\n\n#ai #cyber #cybersecurity #databreach\n#FBI #IBM #hacking #infosec\n#tech #technology\n\nCNN · 20h\nAI isn’t the biggest cybersecurity problem. People are\nBy Lisa Eadicicco\nAug 09, 2026, 09:50 PM\n·\n·\nWeb\n4\nboosts\n·\n0\nquotes\n·\n1\nfavorite\nRelish the Cracker\n@relishthecracker@infosec.exchange\n3h\n\n@techandcoffee what a low value article that is.\n\nIt’s not X, it’s Y that’s the BIGGEST problem (implication being, focus on one rather than the other).\n\nRegardless of which one is a BIGGER problem - they’re both problems.\n\nEither one can ruin your day.\n\nOne would need to address BOTH (or care less about any of it).\n\n0\nTrending\nLive feeds\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 220,
+    "observables": {
+      "domain-name": [
+        "cnn.com"
+      ],
+      "email-addr": [
+        "relishthecracker@infosec.exchange",
+        "techandcoffee@techhub.social"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "",
+    "publication_date": "Sun, 09 Aug 2026 20:01:50 +0000",
+    "source": "https://infosec.exchange/@beyondmachines1/117067331067736780",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "",
+    "publication_date": "Sun, 09 Aug 2026 17:59:18 +0000",
+    "source": "https://mastodon.social/@netsecio/117066849226034795",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.social is one of the many independent Mastodon servers you can use to participate in the fediverse.\nThe original server of Mastodon, operated by Mastodon GmbH for the common good.\nADMINISTERED BY:\nMastodon\n@Mastodon\nSERVER STATS:\n269K\nactive users\nmastodon.social:About\nmastodon.social\nStatusProfiles directoryPrivacy policyTerms of service\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.7.0-nightly.2026-08-07\nBack\nCyberNetsecIO\n@netsecio@mastodon.social\n\n📰 American Addiction Centers Discloses Salesforce Data Breach\n\nAmerican Addiction Centers (AAC) discloses a data breach in its Salesforce environment, exposing highly sensitive data of individuals seeking treatment. Compromised info includes SSNs and health descriptions. #DataBreach #Healthcare #Salesforce #Privacy\n\n🔗\nhttps://\ncyber.netsecops.io/articles/am\nerican-addiction-centers-discloses-salesforce-data-breach/?utm_source=mastodon&utm_medium=social&utm_campaign=daily\n\nHide\nAug 09, 2026, 05:59 PM\n·\n·\nCyberNetSec.o\n1\nboost\n·\n0\nquotes\n·\n0\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 162,
+    "observables": {
+      "domain-name": [
+        "cyber.netsecops.io"
+      ],
+      "email-addr": [
+        "netsecio@mastodon.social"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "",
+    "publication_date": "Sun, 09 Aug 2026 17:25:09 +0000",
+    "source": "https://infosec.exchange/@cloud/117066714969327183",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "",
+    "publication_date": "Sun, 09 Aug 2026 16:25:23 +0000",
+    "source": "https://infosec.exchange/@security_crawler_carl/117066479912269962",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "infosec.exchange is one of the many independent Mastodon servers you can use to participate in the fediverse.A Mastodon instance for info/cyber security-minded people.\nAdministered by:Scary Jerry 👻 @jerryServer stats:10Kactive users 🏆️ New Achievement! Healthcare's Getting Pummeled And The Ref Isn't Stopping The Fight!LADIES AND GENTLEMEN, what a card we have tonight! In the blue corner, ShinyHunters lands a confirmed knockout on DentaQuest — officially the largest healthcare data breach of 2026, folks. The crowd goes wild. Over in the red corner, Everest claims a full terabyte ripped from Omnicell, including source code, credentials, and firmware, though Omnicell hasn't confirmed a single round of that bout. (1/2) 1 14hSecurity Crawler Carl @security_crawler_carl@infosec.exchangeOrigin Energy is down on the canvas, nearly 900,000 customers' data reportedly compromised. Water utilities are catching stray jabs. Nobody is tagging out.Analysts ringside suggest layered security controls, proactive threat monitoring, and ransomware-resilient backups before your organization enters this arena.Reward: You've received the Participation Mouthguard. It won't stop the hits, but at least you'll look ready.#Ransomware #DataBreach #CyberSecurity #Everest #Healthcare (2/2)Aug 09, 2026, 04:25 PM··Security Crawler Carl0 boosts·0 quotes·0 favorites",
+    "word_count": 180,
+    "observables": {
+      "email-addr": [
+        "security_crawler_carl@infosec.exchangeOrigin"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "",
+    "publication_date": "Sun, 09 Aug 2026 13:20:01 +0000",
+    "source": "https://infosec.exchange/@cloud/117065751019822935",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  }
+]
