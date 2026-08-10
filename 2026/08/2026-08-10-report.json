@@ -1,0 +1,2513 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "The news cycle is dominated by social engineering attacks targeting humans rather than systems: Levi Strauss & Co. confirmed compromised via three phone calls (no exploit, no malware), and dozens of major US financial firms (Blackstone, CME) hit by vishing ransomware. The second strong signal is sustained pressure on healthcare and digital identity: AnMed Health (83 facilities down since July 26 2026), DentaQuest (largest 2026 healthcare breach, ShinyHunters), Alcon (218k accounts), and DEF CON disclosure of critical flaws in Belgian eID Connective (2M users). On the vulnerability side, the MSI RadiX AXE6600 batch (10 RCE CVEs at CVSS 9.8) highlights neglected consumer IoT/router attack surface. French context: ZATAZ reports 1.7 billion unique French credentials found in a pirate cloud and 43 ransomware claims against France in one month, including Stade Francais (Qilin).",
+      "fr": "L'actualité du jour est dominée par une vague d'attaques par ingénierie sociale ciblant l'humain plutôt que les systèmes : Levi Strauss & Co. confirmé compromis via trois simples appels téléphoniques (sans exploit, sans malware), et un rapport fait état de dizaines de grandes firmes financières américaines (Blackstone, CME) compromises par du vishing ransomware. Le second signal fort est la pression continue sur le secteur santé et l'identité numérique : AnMed Health (83 établissements en arrêt depuis le 26 juillet 2026), DentaQuest (plus grosse breach santé de 2026, ShinyHunters), Alcon (218k comptes, ShinyHunters), et la divulgation DEF CON de failles critiques dans l'eID belge Connective (2M utilisateurs). Côté vulnérabilités éditrices, le lot MSI Radix AXE6600 (10 CVE en RCE racine, CVSS 9.8) illustre la persistance d'une surface d'attaque IoT/routeur grand public négligée. Contexte français à surveiller : ZATAZ rapporte 1,7 milliard d'identifiants français uniques découverts dans un cloud pirate et 43 revendications de rançongiciels contre la France en un mois, dont Stade Français (Qilin)."
+    },
+    "date": "2026-08-10"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": [
+          "Cybersecurity",
+          "Technology"
+        ],
+        "fr": [
+          "Cybersécurité",
+          "Technologie"
+        ]
+      },
+      "theme": {
+        "en": "China cybersecurity review on Palo Alto Networks amid rising tech tensions",
+        "fr": "Revue de cybersécurité chinoise sur Palo Alto Networks dans un contexte de tensions technologiques croissantes"
+      },
+      "description": {
+        "en": "Palo Alto Networks is undergoing a cybersecurity review by China in a context of rising technological tensions between Beijing and Washington. The measure is part of a reciprocity dynamic on audits and exclusions of foreign suppliers, already observed with Kaspersky, Huawei and Western vendors targeted by US regulations.",
+        "fr": "Palo Alto Networks fait l'objet d'une revue de cybersécurité par la Chine dans un contexte de tensions technologiques croissantes entre Pékin et Washington. Mesure qui s'inscrit dans la dynamique de réciprocité sur les audits et exclusions de fournisseurs étrangers, déjà observée avec Kaspersky, Huawei et les éditeurs occidentaux visés par les régulations américaines."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor China vendor review scope and timeline for impacts on Palo Alto Networks product deployment in China.",
+          "fr": "Surveiller le périmètre et le calendrier de la revue chinoise pour impact sur le déploiement des produits Palo Alto Networks en Chine."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory Palo Alto Networks products deployed in China and APAC region.",
+            "Assess supply chain exposure to Chinese regulatory decisions."
+          ],
+          "fr": [
+            "Inventorier les produits Palo Alto Networks déployés en Chine et région APAC.",
+            "Évaluer l'exposition de la chaîne d'approvisionnement aux décisions réglementaires chinoises."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor vendor communications for review outcome and product status changes.",
+            "Track Chinese regulatory announcements on foreign cybersecurity vendors."
+          ],
+          "fr": [
+            "Surveiller les communications éditeur pour l'issue de la revue et les changements de statut produit.",
+            "Suivre les annonces réglementaires chinoises sur les éditeurs cyber étrangers."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Prepare fallback plan for firewall/IDS replacement if product excluded from Chinese market.",
+            "Maintain extended logging on affected perimeter."
+          ],
+          "fr": [
+            "Préparer un plan de repli pour le remplacement firewall/IDS si produit exclu du marché chinois.",
+            "Maintenir une journalisation étendue sur le périmètre affecté."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Document review outcome and regulatory decisions.",
+            "Update supply chain risk register with China exposure."
+          ],
+          "fr": [
+            "Documenter l'issue de la revue et les décisions réglementaires.",
+            "Mettre à jour le registre des risques supply chain avec l'exposition Chine."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for indicators of targeted intrusion against Palo Alto products in APAC region."
+          ],
+          "fr": [
+            "Chasser les indicateurs d'intrusion ciblée contre les produits Palo Alto en région APAC."
+          ]
+        }
+      },
+      "tags": [
+        "China",
+        "US",
+        "Palo_Alto_Networks",
+        "regulatory_review",
+        "tech_tensions"
+      ],
+      "sources": [
+        "https://securityaffairs.com/196890/cyber-crime/u-s-defense-manufacturer-ieh-hit-by-phishing-attack-exposing-potentially-export-controlled-data.html"
+      ],
+      "date": "2026-08-10"
+    },
+    {
+      "sector": {
+        "en": [
+          "Manufacturing",
+          "Critical_Infrastructure"
+        ],
+        "fr": [
+          "Industrie_manufacturière",
+          "Infrastructure_critique"
+        ]
+      },
+      "theme": {
+        "en": "30% of UK manufacturers hit by cyber-attacks in past 12 months",
+        "fr": "30 % des manufacturiers britanniques cyberattaqués en 12 mois"
+      },
+      "description": {
+        "en": "MakeUK survey: nearly a third of British manufacturers experienced a cyber-incident in the past 12 months, including JLR (production halt for weeks in August 2025). Only half have a response plan in place. UK cybercrime cost estimated at 14.7 billion GBP/year. Generative AI (capable of autonomously hacking businesses) adds urgency.",
+        "fr": "Sondage MakeUK : près d'un tiers des manufacturiers britanniques ont subi un incident cyber sur 12 mois, dont JLR (arrêt production plusieurs semaines en août 2025). Seule la moitié dispose d'un plan de réponse. Le coût du cybercrime pour l'économie UK est évalué à 14,7 Mds £/an. L'IA générative (capable de pirater de façon autonome) aggrave l'urgence."
+      },
+      "recommandations": [
+        {
+          "en": "Mandate incident response plans for all UK manufacturing sector entities.",
+          "fr": "Imposer des plans de réponse à incident pour toutes les entités du secteur manufacturier UK."
+        },
+        {
+          "en": "Strengthen OT/IT segmentation in connected factories to limit lateral movement scope.",
+          "fr": "Renforcer la segmentation OT/IT dans les usines connectées pour limiter la portée du mouvement latéral."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory OT/IT integration points in connected factories.",
+            "Test offline backups for production systems.",
+            "Define downtime procedures for manufacturing operations."
+          ],
+          "fr": [
+            "Inventorier les points d'intégration OT/IT dans les usines connectées.",
+            "Tester les sauvegardes hors-ligne pour les systèmes de production.",
+            "Définir les procédures de downtime pour les opérations manufacturières."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Deploy EDR on manufacturing IT zone.",
+            "Monitor for lateral movement via SMB/Windows Admin Shares."
+          ],
+          "fr": [
+            "Déployer EDR sur la zone IT manufacturière.",
+            "Surveiller le mouvement latéral via SMB/Windows Admin Shares."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate affected factory segments.",
+            "Cut external connectivity if ransomware deployment detected."
+          ],
+          "fr": [
+            "Isoler les segments d'usine affectés.",
+            "Couper la connectivité externe si déploiement ransomware détecté."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Notify regulators (NIS2 if essential entity).",
+            "Conduct post-incident review with MakeUK sector sharing."
+          ],
+          "fr": [
+            "Notifier les régulateurs (NIS2 si entité essentielle).",
+            "Conduire un REX avec partage sectoriel MakeUK."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for signs of state-sponsored intrusion in manufacturing supply chains."
+          ],
+          "fr": [
+            "Chasser les signes d'intrusion étatique dans les chaînes d'approvisionnement manufacturières."
+          ]
+        }
+      },
+      "tags": [
+        "UK",
+        "manufacturing",
+        "MakeUK",
+        "JLR",
+        "cybercrime_cost",
+        "OT_IT"
+      ],
+      "sources": [
+        "https://www.theguardian.com/technology/2026/aug/10/uk-companies-cyber-attack-third-jlr"
+      ],
+      "date": "2026-08-10"
+    }
+  ],
+  "regulatory_and_legal": [
+    {
+      "title": {
+        "en": "NIS2 and GDPR pressure on French breach wave (43 ransomware claims, 1.7B French credentials)",
+        "fr": "Pression NIS2 et RGPD sur la vague française de breaches (43 revendications ransomware, 1,7 Md identifiants français)"
+      },
+      "description": {
+        "en": "NIS2 and GDPR weigh on the French breach wave: ZATAZ counts 43 ransomware claims against France in one month and 1.7 billion unique French credentials in a pirate cloud. French victims identified (Stade Francais via Qilin, with identity documents exposed) are subject to mandatory notification to CNIL within 72h for personal data breaches, and significant incident notification to ANSSI within 24h under NIS2 (if essential/important entity).",
+        "fr": "Le régime NIS2 et le RGPD pèsent sur la vague française de breaches : ZATAZ recense 43 revendications de rançongiciels contre la France en un mois, et 1,7 milliard d'identifiants français uniques dans un cloud pirate. Les victimes françaises identifiées du jour (Stade Français via Qilin, avec exposition de pièces d'identité) sont soumises à notification obligatoire à la CNIL sous 72h en cas de breach de données personnelles, et notification d'incident significatif à l'ANSSI sous 24h au titre de NIS2 (si entité essentielle/importante)."
+      },
+      "organisation": {
+        "en": [
+          "CNIL",
+          "ANSSI"
+        ],
+        "fr": [
+          "CNIL",
+          "ANSSI"
+        ]
+      },
+      "jurisdiction": {
+        "en": [
+          "France",
+          "European_Union"
+        ],
+        "fr": [
+          "France",
+          "Union_européenne"
+        ]
+      },
+      "references": {
+        "en": [
+          "NIS2 Directive (EU) 2022/2555",
+          "GDPR Regulation (EU) 2016/679"
+        ],
+        "fr": [
+          "Directive NIS2 (UE) 2022/2555",
+          "Règlement RGPD (UE) 2016/679"
+        ]
+      },
+      "tags": [
+        "NIS2",
+        "GDPR",
+        "CNIL",
+        "ANSSI",
+        "France",
+        "ransomware",
+        "breach_notification"
+      ],
+      "sources": [
+        "https://infosec.exchange/@cloud/117068696752506272"
+      ],
+      "date": "2026-08-10"
+    },
+    {
+      "title": {
+        "en": "Thailand seeks mandatory MFA after 60M leaked credentials",
+        "fr": "Thaïlande - MFA obligatoire après fuite de 60 millions d'identifiants"
+      },
+      "description": {
+        "en": "The Thai government is considering mandating multi-factor authentication following a major credential leak. MFA remains one of the most effective defenses against credential stuffing and account takeover.",
+        "fr": "Le gouvernement thaïlandais envisage d'imposer l'authentification multi-facteurs à la suite d'une fuite majeure de credentials. Le MFA reste l'une des défenses les plus efficaces contre le credential stuffing et le takeover de comptes."
+      },
+      "organisation": {
+        "en": [
+          "Government of Thailand"
+        ],
+        "fr": [
+          "Gouvernement thaïlandais"
+        ]
+      },
+      "jurisdiction": {
+        "en": [
+          "Thailand"
+        ],
+        "fr": [
+          "Thailande"
+        ]
+      },
+      "references": {
+        "en": [
+          "Nation Thailand report"
+        ],
+        "fr": [
+          "Rapport Nation Thailand"
+        ]
+      },
+      "tags": [
+        "Thailand",
+        "MFA",
+        "credential_stuffing",
+        "regulation"
+      ],
+      "sources": [
+        "https://infosec.exchange/@cloud/117068170813559935"
+      ],
+      "date": "2026-08-10"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "Levi Strauss & Co.",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Retail",
+          "Apparel"
+        ],
+        "fr": [
+          "Retail",
+          "Textile"
+        ]
+      },
+      "description": {
+        "en": "Levi Strauss & Co. disclosed a corporate data breach resulting from a social engineering attack targeting three employees. According to the detailed account, three phone calls were enough: no technical exploit, no malware. Attackers manipulated employees to exfiltrate unspecified corporate data. Consumer data reportedly not impacted.",
+        "fr": "Levi Strauss & Co. a disclosed une breach de données corporate résultant d'une attaque d'ingénierie sociale ciblant trois employés. Selon le compte-rendu détaillé, trois appels téléphoniques ont suffi : aucun exploit technique, aucun malware. Les attaquants ont manipulé les employés pour exfiltrer des données corporate non spécifiées. Les données consommateurs ne sont pas impactées selon la société."
+      },
+      "mitre_ttps": [
+        "T1566.004"
+      ],
+      "recommandations": [
+        {
+          "en": "Strengthen vishing awareness and phone support procedures (callback verification on official number).",
+          "fr": "Renforcer la sensibilisation au vishing et aux procédures d'assistance téléphonique (vérification en retour, callback sur numéro officiel)."
+        },
+        {
+          "en": "Impose out-of-band validation for any data transfer or privileged action initiated by phone.",
+          "fr": "Imposer une validation hors-bande pour toute demande de transfert de données ou d'action privilégiée initiée par téléphone."
+        },
+        {
+          "en": "Deploy corporate data exfiltration detection (DLP, outbound traffic anomalies).",
+          "fr": "Mettre en place la détection d'exfiltration de données corporate (DLP, anomalies de trafic sortant)."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Define phone identity verification procedure for sensitive requests (validation token, authenticated callback).",
+            "Train support functions (IT, HR, finance) on targeted vishing scenarios.",
+            "Enable data access and external transfer logging.",
+            "Prepare a fast reporting channel for suspicious calls."
+          ],
+          "fr": [
+            "Définir une procédure de vérification d'identité pour les demandes téléphoniques sensibles (token de validation, callback authentifié).",
+            "Former les fonctions support (IT, RH, finance) aux scénarios de vishing ciblé.",
+            "Activer la journalisation des accès données et des transferts externes.",
+            "Préparer un canal de signalement rapide des appels suspects."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "DLP rule: alert on large/atypical corporate data transfers initiated within hours following a phone support ticket.",
+            "SIEM rule: correlation between support ticket opening and atypical data access outside employee's usual perimeter.",
+            "Analyze call timeline, actions by targeted employees, volume and nature of exfiltrated data.",
+            "Identify relay accounts and any access ceded."
+          ],
+          "fr": [
+            "Règle DLP : alerte sur transferts de données corporate volumineux ou inhabituels initiés dans les heures suivant un ticket d'assistance téléphonique.",
+            "Règle SIEM : corrélation entre ouverture de ticket support et accès données atypiques hors périmètre habituel de l'employé.",
+            "Analyser la chronologie : horodatage des appels, actions effectuées par les employés ciblés, volume et nature des données exfiltrées.",
+            "Identifier les comptes ayant servi de relais et les éventuels accès cédés."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Revoke any access ceded during the call (accounts, sessions, tokens).",
+            "Isolate targeted employees' workstations during analysis.",
+            "Remove any persistence relays (email forwarding rules, OAuth access, active sessions).",
+            "Reset credentials of targeted employees and their management chain."
+          ],
+          "fr": [
+            "Révoquer les accès éventuellement cédés pendant l'appel (comptes, sessions, tokens).",
+            "Isoler les postes des employés ciblés le temps de l'analyse.",
+            "Supprimer les éventuels relais de persistance (aucun malware confirmé ici, mais vérifier les règles de forwarding email, accès OAuth, sessions actives).",
+            "Réinitialiser les credentials des employés ciblés et de leur chaîne managériale."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Write incident report with call and action timeline.",
+            "Assess MTTD/MTTR.",
+            "REX with support functions and management.",
+            "GDPR notification if corporate personal data involved.",
+            "Share with national CERT if coordinated campaign."
+          ],
+          "fr": [
+            "Rédiger le rapport d'incident avec chronologie des appels et actions.",
+            "Évaluer MTTD/MTTR.",
+            "REX avec fonctions support et direction.",
+            "Notifications RGPD si données personnelles corporate impliquées (évaluer la qualification).",
+            "Partage au CERT national si campagne coordonnée."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for other unreported vishing calls via support ticket / telephony logs correlation.",
+            "Hunt for OAuth grants and mail forwarding rules created during the incident window."
+          ],
+          "fr": [
+            "Chasser les autres appels vishing non signalés via corrélation tickets support / logs téléphonie.",
+            "Chasser les grants OAuth et règles de forwarding email créés pendant la fenêtre de l'incident."
+          ]
+        }
+      },
+      "tags": [
+        "Levi_Strauss",
+        "social_engineering",
+        "vishing",
+        "data_breach",
+        "retail",
+        "no_malware"
+      ],
+      "sources": [
+        "https://gbhackers.com/levi-strauss-hit-by-cyberattack/",
+        "https://mastodon.social/@netsecio/117066849977054546",
+        "https://infosec.exchange/@cloud/117067677848788899",
+        "https://mastodon.social/@securityLab_jp/117069487769983516"
+      ],
+      "date": "2026-08-10"
+    },
+    {
+      "victim": "Alcon, DentaQuest",
+      "threat_actor": "ShinyHunters",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Healthcare",
+          "Eye_Care"
+        ],
+        "fr": [
+          "Santé",
+          "Soins_oculaires"
+        ]
+      },
+      "description": {
+        "en": "ShinyHunters runs a 'pay or leak' extortion campaign. Alcon (Swiss eye care company): 218,395 unique email addresses published with names, phone numbers and physical addresses (B2B corporate data). DentaQuest: described as the largest 2026 healthcare breach. Data published if ransom not paid.",
+        "fr": "Le groupe ShinyHunters mène une campagne d'extorsion « pay or leak ». Alcon (société suisse de soins oculaires) : 218 395 adresses email uniques publiées avec noms, numéros de téléphone et adresses physiques (données B2B corporate). DentaQuest : décrite comme la plus grosse breach santé de 2026. Les données sont publiées en cas de non-paiement."
+      },
+      "mitre_ttps": [
+        "T1530",
+        "T1567"
+      ],
+      "recommandations": [
+        {
+          "en": "Monitor bulk access to databases and exfiltration to external destinations (DLP, anomaly detection).",
+          "fr": "Surveiller les accès bulk aux bases de données et l'exfiltration vers des destinations externes (DLP, anomaly detection)."
+        },
+        {
+          "en": "Strengthen access control to data warehouses (MFA, least privilege, segmentation).",
+          "fr": "Renforcer le contrôle d'accès aux entrepôts de données (MFA, moindre privilège, segmentation)."
+        },
+        {
+          "en": "Prepare a distinct extortion response plan (negotiation, communication, notification).",
+          "fr": "Mettre en place un plan de réponse à l'extorsion (négociation, communication, notification) distinct du plan ransomware."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory sensitive data warehouses and their exposure (cloud, APIs, service accounts).",
+            "Immutable backups + data access logging (CloudTrail, Snowflake access history).",
+            "Pre-approved breach communication plan (legal, PR, regulators)."
+          ],
+          "fr": [
+            "Inventorier les entrepôts de données sensibles et leur exposition (cloud, APIs, comptes service).",
+            "Sauvegardes immuables + journalisation d'accès données (CloudTrail, Snowflake access history).",
+            "Plan de communication de breach pré-approuvé (juridique, RP, régulateurs)."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Cloud rule: alert on bulk SELECT * or mass exports from warehouses (Snowflake, BigQuery, RDS) outside business hours.",
+            "IAM rule: alert on service token usage accessing data outside its perimeter.",
+            "Identify entry point (credential stuffing, token leak, supply chain), exfiltrated volume, dwell time."
+          ],
+          "fr": [
+            "Règle cloud : alerte sur requêtes bulk `SELECT *` ou exports massifs depuis entrepôts (Snowflake, BigQuery, RDS) hors plage ouvrée.",
+            "Règle IAM : alerte sur usage de token de service pour accéder à des données hors périmètre.",
+            "Identifier le point d'entrée (credential stuffing, token leak, supply chain comme Snowflake 2024), le volume exfiltré, le dwell time."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Revoke compromised credentials/tokens.",
+            "Cut external access to warehouses (temporary IP whitelist).",
+            "Remove malicious accounts created.",
+            "Rotate all suspicious access keys.",
+            "Verify data integrity (anti-tampering)."
+          ],
+          "fr": [
+            "Révoquer les credentials/tokens compromis.",
+            "Couper l'accès externe aux entrepôts (whitelist IP temporaire).",
+            "Supprimer les comptes malveillants créés.",
+            "Pivoter toutes les clés d'accès suspectes.",
+            "Vérifier l'intégrité des données (anti-falsification)."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "GDPR (72h CNIL/authorities) and HIPAA (HHS) notifications per jurisdiction.",
+            "Communication to affected individuals (Alcon: 218k).",
+            "Share IOCs with national CERT and sectoral H-CIRT."
+          ],
+          "fr": [
+            "Notifications RGPD (72h CNIL/autorités) et HIPAA (HHS) selon juridiction.",
+            "Communication aux personnes concernées (Alcon : 218k individus).",
+            "Partage IOCs au CERT national et sectoriel (H-CIRT pour santé)."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for credential stuffing success on exposed services.",
+            "Hunt for service tokens used to exfiltrate data outside expected perimeter."
+          ],
+          "fr": [
+            "Chasser les succès de credential stuffing sur services exposés.",
+            "Chasser les tokens de service utilisés pour exfiltrer des données hors périmètre attendu."
+          ]
+        }
+      },
+      "tags": [
+        "ShinyHunters",
+        "extortion",
+        "Alcon",
+        "DentaQuest",
+        "healthcare",
+        "data_leak",
+        "pay_or_leak"
+      ],
+      "sources": [
+        "https://haveibeenpwned.com/Breach/Alcon",
+        "https://mastodon.social/@RedPacketSecurity/117068742871734295",
+        "https://infosec.exchange/@security_crawler_carl/117066479912269962"
+      ],
+      "date": "2026-08-10"
+    },
+    {
+      "victim": "AnMed Health, Stade Francais Paris, CEC, Origin Energy, 3Pro TV, Innovation, American Addiction Centers, Omnicell",
+      "threat_actor": "Qilin (Stade Francais), Everest (Omnicell claim, unconfirmed), unknown (others)",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Healthcare",
+          "Sports",
+          "Datacenter",
+          "Energy",
+          "Media",
+          "Addiction_Treatment",
+          "Healthcare_Technology"
+        ],
+        "fr": [
+          "Santé",
+          "Sport",
+          "Datacenter",
+          "Energie",
+          "Media",
+          "Traitement_addictions",
+          "Technologie_santé"
+        ]
+      },
+      "description": {
+        "en": "Multiple simultaneous incidents: AnMed Health (Anderson, SC) - malware disruption since July 26 2026, 83 facilities in downtime, AnMed Medical Group and Imaging closed. Stade Francais Paris (rugby) - ransomware, restored from clean backups, stolen data sample published, identity documents exposed, attributed to Qilin. CEC (Japan, datacenter) - service incident confirmed as ransomware, reported to data protection commission. Origin Energy (Australia) - ~900,000 customers potentially compromised. 3Pro TV (South Korea, financial media) - 460,000 records incl. 2,979 bank accounts and 317 bank cards. Innovation (Japan) - GitHub breach, 62,691 individuals, hardcoded authentication + PII in repo. American Addiction Centers - Salesforce breach, SSNs and health descriptions exposed. Everest claims 1 TB from Omnicell (source code, credentials, firmware) - unconfirmed by victim.",
+        "fr": "Plusieurs incidents simultanés signalés ce jour, sans lien d'acteur établi mais illustrant une pression opérationnelle continue : AnMed Health (Anderson, Caroline du Sud) - malware/disruption cyber depuis le 26 juillet 2026, 83 établissements en downtime, AnMed Medical Group et AnMed Imaging fermés. Stade Français Paris (rugby, France) - rançongiciel, restauration depuis backups propres, échantillon de données volées publié en ligne, pièces d'identité exposées, attribution Qilin selon ZATAZ. CEC (Japon, datacenter) - incident de service confirmé comme rançongiciel, notification à la commission protection des données. Origin Energy (Australie) - ~900 000 clients potentiellement compromis. 3Pro TV (Corée du Sud, média financier) - 460 000 enregistrements dont 2 979 comptes bancaires et 317 cartes bancaires. Innovation (Japon) - breach GitHub, 62 691 individus, authentification hardcodée + PII stockée dans le repo. American Addiction Centers - breach Salesforce, SSN et descriptions de santé exposés. Everest revendique 1 To extrait d'Omnicell (source code, credentials, firmware) - non confirmé par la victime."
+      },
+      "mitre_ttps": [
+        "T1486",
+        "T1552.001",
+        "T1530"
+      ],
+      "recommandations": [
+        {
+          "en": "Prioritize hardening of third-party SaaS access (MFA, token audit, credential rotation, GitHub secret scanning).",
+          "fr": "Prioriser le durcissement des accès tiers SaaS (MFA, audit des tokens, rotation des credentials, GitHub secret scanning)."
+        },
+        {
+          "en": "Verify backup resilience (AnMed and Stade Francais restored from backups - positive case studies).",
+          "fr": "Vérifier la résilience des sauvegardes (AnMed et Stade Français ont restauré depuis backups - cas d'école positifs)."
+        },
+        {
+          "en": "Segment datacenters and isolate mutual clients in case of infrastructure incident (CEC).",
+          "fr": "Segmenter les datacenters et isoler les clients mutuels en cas d'incident sur l'infrastructure (CEC)."
+        },
+        {
+          "en": "Strengthen exfiltration detection on SaaS environments (Salesforce, GitHub).",
+          "fr": "Renforcer la détection d'exfiltration sur les environnements SaaS (Salesforce, GitHub)."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory third-party SaaS dependencies and their data perimeters.",
+            "Tested immutable offline backups monthly.",
+            "Healthcare 'degraded mode' business continuity plan (paper procedures, documented downtime procedures)."
+          ],
+          "fr": [
+            "Inventaire des dépendances SaaS tierces et de leurs périmètres de données.",
+            "Sauvegardes hors-ligne immuables testées mensuellement.",
+            "Plan de continuité d'activité « mode dégradé » pour les établissements de santé (procédures papier, downtime procedures documentées)."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "EDR rule: mass encryption detection (Event ID 4663 burst modifications, file extensions).",
+            "SaaS rule: alert on mass exports from Salesforce/GitHub (bulk API, repo cloning).",
+            "Network rule: lateral movement detection post-initial access (PsExec, WMI, SMB admin shares) on datacenters.",
+            "Per-victim timeline: identify patient zero, dwell time, exfiltrated volume."
+          ],
+          "fr": [
+            "Règle EDR : détection de chiffrement massif (Event ID 4663 modifications en rafale, extension de fichiers).",
+            "Règle SaaS : alerte sur exports massifs depuis Salesforce/GitHub (API bulk, clonage de repo).",
+            "Règle réseau : détection de mouvements latéraux post-initial (PsExec, WMI, SMB admin shares) sur les datacenters.",
+            "Chronologie par victime : identifier le patient zéro, le dwell time, le volume exfiltré."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate impacted segments (AnMed facilities, CEC datacenter clients).",
+            "Cut compromised SaaS external access (revoke Salesforce, GitHub tokens).",
+            "Remove ransomware implants and malicious accounts.",
+            "Rotate all exposed credentials (GitHub, Salesforce, AD).",
+            "Close persistence channels (scheduled tasks, malicious services)."
+          ],
+          "fr": [
+            "Isoler les segments impactés (établissements AnMed, clients du datacenter CEC).",
+            "Couper les accès externes SaaS compromise (révoquer tokens Salesforce, GitHub).",
+            "Supprimer les implants ransomware et les comptes malveillants.",
+            "Pivoter toutes les credentials exposées (GitHub, Salesforce, AD).",
+            "Fermer les canaux de persistance (tâches planifiées, services malveillants)."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Notifications: GDPR/CNIL (Stade Francais, 72h), NIS2 if essential entity, HHS/HIPAA (AnMed, AAC), Japanese law (CEC, Innovation), PIPEDA/Korean law (per jurisdiction).",
+            "Share IOCs with national CERTs (CERT-FR, JPCERT/CC, KOISC).",
+            "REX and MTTD/MTTR metrics."
+          ],
+          "fr": [
+            "Notifications RGPD/CNIL (Stade Français, 72h), NIS2 si entité essentielle, HHS/HIPAA (AnMed, AAC), loi japonaise (CEC, Innovation), PIPEDA/coren (selon juridiction).",
+            "Partage IOCs au CERT national (CERT-FR pour Stade Français, JPCERT/CC pour CEC/Innovation, KOISC pour 3Pro TV).",
+            "REX et métriques MTTD/MTTR."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for hardcoded GitHub credentials in other repos.",
+            "Hunt for mass Salesforce exports on other accounts."
+          ],
+          "fr": [
+            "Chasser les credentials GitHub hardcodés exposés dans d'autres repos.",
+            "Chasser les exports Salesforce massifs sur d'autres comptes."
+          ]
+        }
+      },
+      "tags": [
+        "AnMed_Health",
+        "Stade_Francais",
+        "Qilin",
+        "CEC",
+        "Origin_Energy",
+        "3Pro_TV",
+        "Innovation",
+        "American_Addiction_Centers",
+        "Omnicell",
+        "Everest",
+        "ransomware",
+        "data_breach",
+        "GitHub",
+        "Salesforce",
+        "healthcare",
+        "supply_chain"
+      ],
+      "sources": [
+        "https://infosec.exchange/@security_crawler_carl/117069523836575501",
+        "https://infosec.exchange/@cyberworldops/117068778767645331",
+        "https://infosec.exchange/@cloud/117068696752506272",
+        "https://mastodon.social/@securityLab_jp/117067972040464177",
+        "https://mastodon.social/@securityLab_jp/117069306948348008",
+        "https://databreaches.net/2026/08/09/kr-3pro-tv-data-breach-exposes-460000-records-including-2979-bank-accounts/",
+        "https://infosec.exchange/@security_crawler_carl/117066479912269962",
+        "https://mastodon.social/@netsecio/117066849226034795"
+      ],
+      "date": "2026-08-10"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-71993",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "RadiX AXE6600",
+      "vendor": "MSI",
+      "description": {
+        "en": "MSI RadiX AXE6600 router firmware v781521 contains a command injection vulnerability in the openvpn function allowing remote attackers to execute arbitrary commands and obtain root privileges.",
+        "fr": "MSI RadiX AXE6600 router firmware v781521 contient une vulnérabilité d'injection de commande dans la fonction openvpn permettant à un attaquant distant d'exécuter des commandes arbitraires et d'obtenir les privilèges root."
+      },
+      "mitre_ttps": [
+        "T1203"
+      ],
+      "recommandations": [
+        {
+          "en": "Update firmware; restrict OpenVPN access.",
+          "fr": "MAJ firmware ; restreindre accès OpenVPN."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory MSI RadiX AXE6600 routers."
+          ],
+          "fr": [
+            "Inventorier les routeurs MSI RadiX AXE6600."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor openvpn function access attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'accès à la fonction openvpn."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate affected routers.",
+            "Restrict openvpn function."
+          ],
+          "fr": [
+            "Isoler les routeurs affectés.",
+            "Restreindre openvpn function/openvpn."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Apply firmware patch."
+          ],
+          "fr": [
+            "Appliquer le patch firmware."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for openvpn function exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation openvpn."
+          ]
+        }
+      },
+      "tags": [
+        "MSI",
+        "RadiX_AXE6600",
+        "command_injection",
+        "router",
+        "RCE",
+        "root",
+        "openvpn"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-71993",
+        "https://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-openvpn-function"
+      ],
+      "date": "2026-08-09"
+    },
+    {
+      "cve_id": "CVE-2026-71992",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "RadiX AXE6600",
+      "vendor": "MSI",
+      "description": {
+        "en": "MSI RadiX AXE6600 router firmware v781521 contains a command injection vulnerability in the macfilter function allowing remote attackers to execute arbitrary commands and obtain root privileges.",
+        "fr": "MSI RadiX AXE6600 router firmware v781521 contient une vulnérabilité d'injection de commande dans la fonction macfilter permettant à un attaquant distant d'exécuter des commandes arbitraires et d'obtenir les privilèges root."
+      },
+      "mitre_ttps": [
+        "T1203"
+      ],
+      "recommandations": [
+        {
+          "en": "Update firmware; restrict macfilter function access.",
+          "fr": "MAJ firmware ; restreindre macfilter."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory MSI RadiX AXE6600 routers."
+          ],
+          "fr": [
+            "Inventorier les routeurs MSI RadiX AXE6600."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor macfilter function access attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'accès à la fonction macfilter."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate affected routers.",
+            "Restrict macfilter function."
+          ],
+          "fr": [
+            "Isoler les routeurs affectés.",
+            "Restreindre macfilter function/macfilter."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Apply firmware patch."
+          ],
+          "fr": [
+            "Appliquer le patch firmware."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for macfilter function exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation macfilter."
+          ]
+        }
+      },
+      "tags": [
+        "MSI",
+        "RadiX_AXE6600",
+        "command_injection",
+        "router",
+        "RCE",
+        "root",
+        "macfilter"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-71992",
+        "https://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-macfilter"
+      ],
+      "date": "2026-08-09"
+    },
+    {
+      "cve_id": "CVE-2026-71991",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "RadiX AXE6600",
+      "vendor": "MSI",
+      "description": {
+        "en": "MSI RadiX AXE6600 router firmware v781521 contains a command injection vulnerability in the TelnetSSH function (Telnet configuration) allowing remote attackers to execute arbitrary commands and obtain root privileges.",
+        "fr": "MSI RadiX AXE6600 router firmware v781521 contient une vulnérabilité d'injection de commande dans la fonction TelnetSSH (configuration Telnet) permettant à un attaquant distant d'exécuter des commandes arbitraires et d'obtenir les privilèges root."
+      },
+      "mitre_ttps": [
+        "T1203"
+      ],
+      "recommandations": [
+        {
+          "en": "Update firmware; disable Telnet.",
+          "fr": "MAJ firmware ; désactiver Telnet."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory MSI RadiX AXE6600 routers."
+          ],
+          "fr": [
+            "Inventorier les routeurs MSI RadiX AXE6600."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor TelnetSSH function (Telnet configuration) access attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'accès à la fonction TelnetSSH (configuration Telnet)."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate affected routers.",
+            "Restrict TelnetSSH function (Telnet configuration)."
+          ],
+          "fr": [
+            "Isoler les routeurs affectés.",
+            "Restreindre TelnetSSH function (Telnet configuration)/TelnetSSH (configuration Telnet)."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Apply firmware patch."
+          ],
+          "fr": [
+            "Appliquer le patch firmware."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for TelnetSSH function (Telnet configuration) exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation TelnetSSH (configuration Telnet)."
+          ]
+        }
+      },
+      "tags": [
+        "MSI",
+        "RadiX_AXE6600",
+        "command_injection",
+        "router",
+        "RCE",
+        "root",
+        "Telnet"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-71991",
+        "https://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-telnetssh-function-used-for-telnet-configuration"
+      ],
+      "date": "2026-08-09"
+    },
+    {
+      "cve_id": "CVE-2026-71990",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "RadiX AXE6600",
+      "vendor": "MSI",
+      "description": {
+        "en": "MSI RadiX AXE6600 router firmware v781521 contains a command injection vulnerability in the TelnetSSH function (SSH configuration) allowing remote attackers to execute arbitrary commands and obtain root privileges.",
+        "fr": "MSI RadiX AXE6600 router firmware v781521 contient une vulnérabilité d'injection de commande dans la fonction TelnetSSH (configuration SSH) permettant à un attaquant distant d'exécuter des commandes arbitraires et d'obtenir les privilèges root."
+      },
+      "mitre_ttps": [
+        "T1203"
+      ],
+      "recommandations": [
+        {
+          "en": "Update firmware; restrict SSH access to trusted networks.",
+          "fr": "MAJ firmware ; restreindre SSH aux réseaux de confiance."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory MSI RadiX AXE6600 routers."
+          ],
+          "fr": [
+            "Inventorier les routeurs MSI RadiX AXE6600."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor TelnetSSH function (SSH configuration) access attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'accès à la fonction TelnetSSH (configuration SSH)."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate affected routers.",
+            "Restrict TelnetSSH function (SSH configuration)."
+          ],
+          "fr": [
+            "Isoler les routeurs affectés.",
+            "Restreindre TelnetSSH function (SSH configuration)/TelnetSSH (configuration SSH)."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Apply firmware patch."
+          ],
+          "fr": [
+            "Appliquer le patch firmware."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for TelnetSSH function (SSH configuration) exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation TelnetSSH (configuration SSH)."
+          ]
+        }
+      },
+      "tags": [
+        "MSI",
+        "RadiX_AXE6600",
+        "command_injection",
+        "router",
+        "RCE",
+        "root",
+        "SSH"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-71990",
+        "https://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-telnetssh-function"
+      ],
+      "date": "2026-08-09"
+    },
+    {
+      "cve_id": "CVE-2026-71989",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "RadiX AXE6600",
+      "vendor": "MSI",
+      "description": {
+        "en": "MSI RadiX AXE6600 router firmware v781521 contains a command injection vulnerability in the porTrigger function allowing remote attackers to execute arbitrary commands and obtain root privileges.",
+        "fr": "MSI RadiX AXE6600 router firmware v781521 contient une vulnérabilité d'injection de commande dans la fonction porTrigger permettant à un attaquant distant d'exécuter des commandes arbitraires et d'obtenir les privilèges root."
+      },
+      "mitre_ttps": [
+        "T1203"
+      ],
+      "recommandations": [
+        {
+          "en": "Update firmware; disable port triggering.",
+          "fr": "MAJ firmware ; désactiver port triggering."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory MSI RadiX AXE6600 routers."
+          ],
+          "fr": [
+            "Inventorier les routeurs MSI RadiX AXE6600."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor porTrigger function access attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'accès à la fonction porTrigger."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate affected routers.",
+            "Restrict porTrigger function."
+          ],
+          "fr": [
+            "Isoler les routeurs affectés.",
+            "Restreindre porTrigger function/porTrigger."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Apply firmware patch."
+          ],
+          "fr": [
+            "Appliquer le patch firmware."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for porTrigger function exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation porTrigger."
+          ]
+        }
+      },
+      "tags": [
+        "MSI",
+        "RadiX_AXE6600",
+        "command_injection",
+        "router",
+        "RCE",
+        "root",
+        "port_triggering"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-71989",
+        "https://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-portrigger-function"
+      ],
+      "date": "2026-08-09"
+    },
+    {
+      "cve_id": "CVE-2026-71988",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "RadiX AXE6600",
+      "vendor": "MSI",
+      "description": {
+        "en": "MSI RadiX AXE6600 router firmware v781521 contains a command injection vulnerability in the portFw function allowing remote attackers to execute arbitrary commands and obtain root privileges.",
+        "fr": "MSI RadiX AXE6600 router firmware v781521 contient une vulnérabilité d'injection de commande dans la fonction portFw permettant à un attaquant distant d'exécuter des commandes arbitraires et d'obtenir les privilèges root."
+      },
+      "mitre_ttps": [
+        "T1203"
+      ],
+      "recommandations": [
+        {
+          "en": "Update firmware; restrict alg function.",
+          "fr": "MAJ firmware ; restreindre alg."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory MSI RadiX AXE6600 routers."
+          ],
+          "fr": [
+            "Inventorier les routeurs MSI RadiX AXE6600."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor portFw function access attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'accès à la fonction portFw."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate affected routers.",
+            "Restrict portFw function."
+          ],
+          "fr": [
+            "Isoler les routeurs affectés.",
+            "Restreindre portFw function/portFw."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Apply firmware patch."
+          ],
+          "fr": [
+            "Appliquer le patch firmware."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for portFw function exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation portFw."
+          ]
+        }
+      },
+      "tags": [
+        "MSI",
+        "RadiX_AXE6600",
+        "command_injection",
+        "router",
+        "RCE",
+        "root",
+        "port_forwarding"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-71988",
+        "https://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-portfw-function"
+      ],
+      "date": "2026-08-09"
+    },
+    {
+      "cve_id": "CVE-2026-71987",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "RadiX AXE6600",
+      "vendor": "MSI",
+      "description": {
+        "en": "MSI RadiX AXE6600 router firmware v781521 contains a command injection vulnerability in the alg function allowing remote attackers to execute arbitrary commands and obtain root privileges.",
+        "fr": "MSI RadiX AXE6600 router firmware v781521 contient une vulnérabilité d'injection de commande dans la fonction alg permettant à un attaquant distant d'exécuter des commandes arbitraires et d'obtenir les privilèges root."
+      },
+      "mitre_ttps": [
+        "T1203"
+      ],
+      "recommandations": [
+        {
+          "en": "Update firmware; disable alg if unused.",
+          "fr": "MAJ firmware ; désactiver alg si inutile."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory MSI RadiX AXE6600 routers."
+          ],
+          "fr": [
+            "Inventorier les routeurs MSI RadiX AXE6600."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor alg function access attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'accès à la fonction alg."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate affected routers.",
+            "Restrict alg function."
+          ],
+          "fr": [
+            "Isoler les routeurs affectés.",
+            "Restreindre alg function/alg."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Apply firmware patch."
+          ],
+          "fr": [
+            "Appliquer le patch firmware."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for alg function exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation alg."
+          ]
+        }
+      },
+      "tags": [
+        "MSI",
+        "RadiX_AXE6600",
+        "command_injection",
+        "router",
+        "RCE",
+        "root",
+        "alg"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-71987",
+        "https://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-alg-function"
+      ],
+      "date": "2026-08-09"
+    },
+    {
+      "cve_id": "CVE-2026-71986",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "RadiX AXE6600",
+      "vendor": "MSI",
+      "description": {
+        "en": "MSI RadiX AXE6600 router firmware v781521 contains a command injection vulnerability in the dmz function allowing remote attackers to execute arbitrary commands and obtain root privileges.",
+        "fr": "MSI RadiX AXE6600 router firmware v781521 contient une vulnérabilité d'injection de commande dans la fonction dmz permettant à un attaquant distant d'exécuter des commandes arbitraires et d'obtenir les privilèges root."
+      },
+      "mitre_ttps": [
+        "T1203"
+      ],
+      "recommandations": [
+        {
+          "en": "Update firmware; disable DMZ if unused.",
+          "fr": "MAJ firmware ; désactiver DMZ."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory MSI RadiX AXE6600 routers."
+          ],
+          "fr": [
+            "Inventorier les routeurs MSI RadiX AXE6600."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor dmz function access attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'accès à la fonction dmz."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate affected routers.",
+            "Restrict dmz function."
+          ],
+          "fr": [
+            "Isoler les routeurs affectés.",
+            "Restreindre dmz function/dmz."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Apply firmware patch."
+          ],
+          "fr": [
+            "Appliquer le patch firmware."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for dmz function exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation dmz."
+          ]
+        }
+      },
+      "tags": [
+        "MSI",
+        "RadiX_AXE6600",
+        "command_injection",
+        "router",
+        "RCE",
+        "root",
+        "dmz"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-71986",
+        "https://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-dmz-function"
+      ],
+      "date": "2026-08-09"
+    },
+    {
+      "cve_id": "CVE-2026-71985",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "RadiX AXE6600",
+      "vendor": "MSI",
+      "description": {
+        "en": "MSI RadiX AXE6600 router firmware v781521 contains a command injection vulnerability in the accesscontrol function allowing remote attackers to execute arbitrary commands and obtain root privileges.",
+        "fr": "MSI RadiX AXE6600 router firmware v781521 contient une vulnérabilité d'injection de commande dans la fonction accesscontrol permettant à un attaquant distant d'exécuter des commandes arbitraires et d'obtenir les privilèges root."
+      },
+      "mitre_ttps": [
+        "T1203"
+      ],
+      "recommandations": [
+        {
+          "en": "Update firmware; restrict accesscontrol function.",
+          "fr": "MAJ firmware ; restreindre accesscontrol."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory MSI RadiX AXE6600 routers."
+          ],
+          "fr": [
+            "Inventorier les routeurs MSI RadiX AXE6600."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor accesscontrol function access attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'accès à la fonction accesscontrol."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate affected routers.",
+            "Restrict accesscontrol function."
+          ],
+          "fr": [
+            "Isoler les routeurs affectés.",
+            "Restreindre accesscontrol function/accesscontrol."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Apply firmware patch."
+          ],
+          "fr": [
+            "Appliquer le patch firmware."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for accesscontrol function exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation accesscontrol."
+          ]
+        }
+      },
+      "tags": [
+        "MSI",
+        "RadiX_AXE6600",
+        "command_injection",
+        "router",
+        "RCE",
+        "root",
+        "accesscontrol"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-71985",
+        "https://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-accesscontrol-function"
+      ],
+      "date": "2026-08-09"
+    },
+    {
+      "cve_id": "CVE-2026-71984",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "RadiX AXE6600",
+      "vendor": "MSI",
+      "description": {
+        "en": "MSI RadiX AXE6600 router firmware v781521 contains a command injection vulnerability in the urlfilter function allowing remote attackers to execute arbitrary commands and obtain root privileges.",
+        "fr": "MSI RadiX AXE6600 router firmware v781521 contient une vulnérabilité d'injection de commande dans la fonction urlfilter permettant à un attaquant distant d'exécuter des commandes arbitraires et d'obtenir les privilèges root."
+      },
+      "mitre_ttps": [
+        "T1203"
+      ],
+      "recommandations": [
+        {
+          "en": "Update firmware; restrict admin interface.",
+          "fr": "MAJ firmware ; restreindre interface admin."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory MSI RadiX AXE6600 routers."
+          ],
+          "fr": [
+            "Inventorier les routeurs MSI RadiX AXE6600."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor urlfilter function access attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'accès à la fonction urlfilter."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate affected routers.",
+            "Restrict urlfilter function."
+          ],
+          "fr": [
+            "Isoler les routeurs affectés.",
+            "Restreindre urlfilter function/urlfilter."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Apply firmware patch."
+          ],
+          "fr": [
+            "Appliquer le patch firmware."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for urlfilter function exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation urlfilter."
+          ]
+        }
+      },
+      "tags": [
+        "MSI",
+        "RadiX_AXE6600",
+        "command_injection",
+        "router",
+        "RCE",
+        "root",
+        "urlfilter"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-71984",
+        "https://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-urlfilter"
+      ],
+      "date": "2026-08-09"
+    },
+    {
+      "cve_id": "CVE-2026-19341",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "8.8",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "HiPER 1200GW",
+      "vendor": "UTT",
+      "description": {
+        "en": "UTT HiPER 1200GW up to 2.5.3-170306 contains a stack-based buffer overflow in strcpy of /goform/pptpSrvGlobalConfig via manipulation of EncryptionMode argument. Remote exploitation possible. Exploit publicly disclosed. Vendor did not respond to disclosure.",
+        "fr": "UTT HiPER 1200GW jusqu'à 2.5.3-170306 contient un stack-based buffer overflow dans strcpy de /goform/pptpSrvGlobalConfig via manipulation de l'argument EncryptionMode. Exploitation distante possible. Exploit public. Éditeur sans réponse à la divulgation."
+      },
+      "mitre_ttps": [
+        "T1203"
+      ],
+      "recommandations": [
+        {
+          "en": "Patch strcpy in pptpSrvGlobalConfig; update firmware; contact vendor.",
+          "fr": "Patcher strcpy dans pptpSrvGlobalConfig ; MAJ firmware ; contacter éditeur (sans réponse)."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory UTT HiPER 1200GW routers.",
+            "Isolate management interfaces from Internet."
+          ],
+          "fr": [
+            "Inventorier les routeurs UTT HiPER 1200GW.",
+            "Isoler les interfaces de gestion d'Internet."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor /goform/pptpSrvGlobalConfig access for EncryptionMode manipulation.",
+            "Detect exploit attempts via PoC github reference."
+          ],
+          "fr": [
+            "Surveiller les accès /goform/pptpSrvGlobalConfig pour manipulation de EncryptionMode.",
+            "Détecter les tentatives d'exploit via référence PoC GitHub."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate affected routers.",
+            "Block external access to pptpSrvGlobalConfig."
+          ],
+          "fr": [
+            "Isoler les routeurs affectés.",
+            "Bloquer l'accès externe à pptpSrvGlobalConfig."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Apply patch when available (vendor unresponsive, consider third-party mitigations)."
+          ],
+          "fr": [
+            "Appliquer le patch quand disponible (éditeur sans réponse, envisager mitigations tierces)."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for strcpy exploitation patterns in router logs."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation strcpy dans les logs routeur."
+          ]
+        }
+      },
+      "tags": [
+        "UTT",
+        "HiPER_1200GW",
+        "buffer_overflow",
+        "router",
+        "RCE",
+        "exploit_public",
+        "vendor_unresponsive"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-19341",
+        "https://vuldb.com/cve/CVE-2026-19341",
+        "https://github.com/7wkajk/CVE-VUL/blob/main/104.md"
+      ],
+      "date": "2026-08-09"
+    },
+    {
+      "cve_id": "CVE-2026-19346",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "CH22",
+      "vendor": "Tenda",
+      "description": {
+        "en": "Tenda CH22 contains a command injection vulnerability in formCertListInfo (CertListInfo).",
+        "fr": "Tenda CH22 contient une vulnérabilité d'injection de commande dans formCertListInfo (CertListInfo)."
+      },
+      "mitre_ttps": [
+        "T1203"
+      ],
+      "recommandations": [
+        {
+          "en": "Contact vendor; restrict admin interface.",
+          "fr": "Contacter éditeur ; restreindre interface admin."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory Tenda CH22 devices."
+          ],
+          "fr": [
+            "Inventorier les équipements Tenda CH22."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor formCertListInfo access attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'accès formCertListInfo."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate affected devices.",
+            "Restrict admin interface."
+          ],
+          "fr": [
+            "Isoler les équipements affectés.",
+            "Restreindre l'interface admin."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Apply patch when available."
+          ],
+          "fr": [
+            "Appliquer le patch quand disponible."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for formCertListInfo exploitation."
+          ],
+          "fr": [
+            "Chasser l'exploitation formCertListInfo."
+          ]
+        }
+      },
+      "tags": [
+        "Tenda",
+        "CH22",
+        "command_injection",
+        "router"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-19346"
+      ],
+      "date": "2026-08-09"
+    },
+    {
+      "cve_id": "CVE-2026-19348",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "M300 Wi-Fi Repeater",
+      "vendor": "Shenzhen Aitemi",
+      "description": {
+        "en": "Shenzhen Aitemi M300 Wi-Fi Repeater contains a command injection vulnerability in protocol.csp via sprintf.",
+        "fr": "Shenzhen Aitemi M300 Wi-Fi Repeater contient une vulnérabilité d'injection de commande dans protocol.csp via sprintf."
+      },
+      "mitre_ttps": [
+        "T1203"
+      ],
+      "recommandations": [
+        {
+          "en": "Contact vendor; isolate the repeater.",
+          "fr": "Contacter éditeur ; isoler le répéteur."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory Shenzhen Aitemi M300 repeaters."
+          ],
+          "fr": [
+            "Inventorier les répéteurs Shenzhen Aitemi M300."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor protocol.csp access attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'accès protocol.csp."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate affected repeaters."
+          ],
+          "fr": [
+            "Isoler les répéteurs affectés."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Apply patch when available."
+          ],
+          "fr": [
+            "Appliquer le patch quand disponible."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for protocol.csp exploitation."
+          ],
+          "fr": [
+            "Chasser l'exploitation protocol.csp."
+          ]
+        }
+      },
+      "tags": [
+        "Shenzhen_Aitemi",
+        "M300",
+        "Wi-Fi_repeater",
+        "command_injection"
+      ],
+      "sources": [
+        "https://cvefeed.io/vuln/detail/CVE-2026-19348"
+      ],
+      "date": "2026-08-09"
+    },
+    {
+      "cve_id": "unknown",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "Connective (eID browser extension)",
+      "vendor": "Nitro Software Belgium",
+      "description": {
+        "en": "Severe now-resolved vulnerabilities in the Connective digital identity system used by 2M+ users, 8 of Belgium's 10 largest banks and 60+ government agencies. Missing origin verification let any website or embedded ad interact silently with the Connective application. Attackers could read eID and payment card details, trick users into revealing eID PIN via spoofed authentication pop-ups, and forge legally binding electronic signatures. Disclosed by James Arnott (Bay Area Labs) at DEF CON. Impact on Belgian digital ecosystem trust model (CSAM.be, Itsme).",
+        "fr": "Failles critiques désormais corrigées dans le système d'identité numérique Connective utilisé par 2M+ utilisateurs, 8 des 10 plus grandes banques belges et 60+ agences gouvernementales. Absence de vérification d'origine : tout site ou publicité en ligne pouvait interagir silencieusement avec l'application Connective. Les attaquants pouvaient lire les données eID et carte de paiement, soutirer le PIN eID via pop-ups d'authentification contrefaits, et forger des signatures électroniques à valeur légale. Divulgation par James Arnott (Bay Area Labs) à DEF CON. Impact sur le trust model de l'écosystème numérique belge (CSAM.be, Itsme)."
+      },
+      "mitre_ttps": [
+        "T1557"
+      ],
+      "recommandations": [
+        {
+          "en": "Verify patch applied on all Connective installations.",
+          "fr": "Vérifier le correctif appliqué sur toutes les installations Connective."
+        },
+        {
+          "en": "Audit electronic signatures issued during exposure window.",
+          "fr": "Auditer les signatures électroniques émises pendant la fenêtre d'exposition."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory Connective installations across the organization.",
+            "Verify patch status."
+          ],
+          "fr": [
+            "Inventorier les installations Connective dans l'organisation.",
+            "Vérifier le statut du correctif."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for abuse traces in Connective logs.",
+            "Detect unauthorized eID PIN requests."
+          ],
+          "fr": [
+            "Surveiller les traces d'abus dans les logs Connective.",
+            "Détecter les requêtes PIN eID non autorisées."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Apply patch if not already.",
+            "Revoke signatures issued during exposure window."
+          ],
+          "fr": [
+            "Appliquer le correctif si non fait.",
+            "Révoquer les signatures émises pendant la fenêtre d'exposition."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Notify regulators if signatures forged.",
+            "Audit impacted users."
+          ],
+          "fr": [
+            "Notifier les régulateurs si signatures forgées.",
+            "Auditer les utilisateurs impactés."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for signs of historical exploitation of the origin verification bypass."
+          ],
+          "fr": [
+            "Chasser les signes d'exploitation historique du contournement de vérification d'origine."
+          ]
+        }
+      },
+      "tags": [
+        "Nitro_Software_Belgium",
+        "Connective",
+        "eID_Belgium",
+        "DEF_CON",
+        "identity",
+        "signatures",
+        "CSAM_be",
+        "Itsme"
+      ],
+      "sources": [
+        "https://www.securityweek.com/critical-flaws-discovered-in-belgian-eid-software-used-by-2-million-people/"
+      ],
+      "date": "2026-08-10"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "Vishing extortion campaign against US financial services (Blackstone, CME, dozens of firms)",
+        "fr": "Vishing et extorsion contre les services financiers (Blackstone, CME et dizaines d'autres)"
+      },
+      "description": {
+        "en": "A ransomware actor reportedly compromised dozens of major US financial firms, including Blackstone and CME, via vishing (social engineering phone calls). Employees systematically accepted calls and attackers deployed ransomware. The modus operandi targets support and IT functions via phone, in line with the Levi Strauss cluster. A separate OTX pulse ('Multi-Brand Vishing Extortion Targets Financial Services and Enterprise Cloud Environments') confirms the trend on enterprise cloud environments.",
+        "fr": "Un acteur rançongiciel aurait compromis des dizaines de grandes firmes financières américaines, dont Blackstone et CME, via du vishing (appels téléphoniques d'ingénierie sociale). Le rapport décrit les employés acceptant systématiquement les appels et les attaquants déployant ensuite des ransomwares. Le mode opératoire cible les fonctions support et IT via téléphone, dans la lignée du cluster Levi Strauss. Un pulse OTX distinct (« Multi-Brand Vishing Extortion Targets Financial Services and Enterprise Cloud Environments ») confirme la tendance sur les environnements cloud d'entreprise."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Financial_Services",
+          "Cloud"
+        ],
+        "fr": [
+          "Services_financiers",
+          "Cloud"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1566.004",
+        "T1486"
+      ],
+      "analyse": {
+        "en": "The financial sector is under sustained attack. The cost of a business outage at a market operator (CME) or asset manager (Blackstone) is systemic. The vishing + ransomware + cloud convergence creates a fast compromise scenario without technical exploit. Absolute priority on hardening support processes and identity governance.",
+        "fr": "Le secteur financier est sous attaque soutenue. Le coût d'un arrêt d'activité chez un opérateur de marché (CME) ou un gestionnaire d'actifs (Blackstone) est systémique. La convergence vishing + ransomware + cloud crée un scénario de compromission rapide sans besoin d'exploit technique. Priorité absolue de durcissement des processus de support et de gestion d'identité."
+      },
+      "recommandations": [
+        {
+          "en": "Mandatory callback on official number for any support request involving access or transfer.",
+          "fr": "Imposer le callback obligatoire sur numéro officiel pour toute demande de support impliquant un accès ou un transfert."
+        },
+        {
+          "en": "Strengthen admin authentication (phishing-resistant MFA: FIDO2) and reduce support function privileges.",
+          "fr": "Renforcer l'authentification des administrateurs (MFA phishing-resistant : FIDO2) et réduire les privilèges des fonctions support."
+        },
+        {
+          "en": "Segment cloud management environments (admin console) and log all IAM actions.",
+          "fr": "Segmenter les environnements cloud de gestion (console admin) et journaliser toutes les actions IAM."
+        },
+        {
+          "en": "Train support teams on vishing ransomware scenarios (red team phone exercises).",
+          "fr": "Former les équipes support aux scénarios de vishing rançongiciel (exercices red team téléphone)."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Deploy phishing-resistant MFA (FIDO2/WebAuthn) on all privileged and support accounts.",
+            "Phone identity verification procedure with disposable token.",
+            "Tested offline immutable backups for cloud environments (immutable snapshots).",
+            "Cloud admin console cutoff plan."
+          ],
+          "fr": [
+            "Déployer MFA phishing-resistant (FIDO2/WebAuthn) sur tous les comptes à privilèges et comptes support.",
+            "Procédure de vérification d'identité téléphone avec token jetable.",
+            "Sauvegardes hors-ligne testées pour les environnements cloud (snapshots immuables).",
+            "Plan de coupure des consoles d'administration cloud en cas de détection."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "SIEM rule: correlation between phone support ticket + IAM privilege escalation within 2h.",
+            "Cloud rule: alert on AWS/GCP access key creations or Angular console sessions off-hours by support account.",
+            "EDR detection: execution of discovery tools (AdFind, BloodHound, Cobalt Strike) post-support-ticket.",
+            "Timeline: identify first call, compromised account, dwell time before ransomware deployment."
+          ],
+          "fr": [
+            "Règle SIEM : corrélation ticket support téléphone + élévation de privilège IAM dans les 2h.",
+            "Règle cloud : alerte sur créations de clés d'accès AWS/GCP ou sessions Angular console hors heures ouvrées par compte support.",
+            "Détection EDR : exécution d'outils de découverte (AdFind, BloodHound, Cobalt Strike) post-ticket support.",
+            "Chronologie : identifier le premier appel, le compte compromis, le dwell time avant déploiement du rançongiciel."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate compromised workstations/accounts; disable cloud access keys created during attack.",
+            "Cut Internet access to admin consoles if ransomware deployment confirmed.",
+            "Revoke sessions and tokens (Entra ID, AWS STS, GCP).",
+            "Remove implants and persistence channels (scheduled tasks, malicious services).",
+            "Restore encrypted systems from immutable offline snapshots.",
+            "Rebuild domain controllers and admin accounts if compromised.",
+            "72h EDR/cloud monitoring post-restoration."
+          ],
+          "fr": [
+            "Isoler les postes et comptes compromis ; désactiver les clés d'accès cloud créées pendant l'attaque.",
+            "Couper l'accès Internet des consoles d'administration si déploiement ransomware avéré.",
+            "Révoquer sessions et tokens (Entra ID, AWS STS, GCP).",
+            "Supprimer implants et canaux de persistance (tâches planifiées, services malveillants).",
+            "Restaurer les systèmes chiffrés depuis snapshots immuables hors-ligne.",
+            "Reconstruire les contrôleurs de domaine et comptes admin si compromis.",
+            "Surveillance EDR/cloud continue 72h post-restauration."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Incident report distinguishing vishing and ransomware phases.",
+            "MTTD/MTTR.",
+            "REX with management + regulators (DORA for EU financial entities, central bank notification).",
+            "GDPR/NIS2 notifications per impact. Share IOCs with national CERT and FS-ISAC."
+          ],
+          "fr": [
+            "Rapport d'incident distinguant phase vishing et phase ransomware.",
+            "MTTD/MTTR.",
+            "REX direction + régulateurs (DORA pour entités financières EU, notification banque centrale).",
+            "Notifications RGPD/NIS2 selon impact. Partage IOCs au CERT national et FS-ISAC."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for cloud access keys created by recently targeted support accounts.",
+            "Hunt for mail forwarding/transport rules created for exfiltration."
+          ],
+          "fr": [
+            "Chasser les clés d'accès cloud créées par des comptes support récemment ciblés.",
+            "Chasser les forwards email ou règles de transport créés pour l'exfiltration."
+          ]
+        }
+      },
+      "tags": [
+        "vishing",
+        "ransomware",
+        "financial_services",
+        "Blackstone",
+        "CME",
+        "cloud",
+        "social_engineering"
+      ],
+      "sources": [
+        "https://infosec.exchange/@security_crawler_carl/117067911501578424",
+        "https://otx.alienvault.com/pulse/6a7951b6bfc33f720a4723ea"
+      ],
+      "date": "2026-08-10"
+    },
+    {
+      "title": {
+        "en": "Vanta Stealer - Python cross-platform information theft malware",
+        "fr": "Vanta Stealer - Malware de vol d'informations en Python (cross-platform)"
+      },
+      "description": {
+        "en": "An OTX pulse describes Vanta Stealer, a cross-platform information theft malware written in Python (Windows, Linux, potentially macOS). The pulse is unverified (preliminary). Technical details (initial access vector, targets, TTP) not provided in source.",
+        "fr": "Un pulse OTX décrit « Vanta Stealer », un malware de vol d'informations écrit en Python et cross-platform (Windows, Linux, macOS potentiellement). Le pulse est non vérifié (préliminaire). Les détails techniques (vecteur d'accès initial, cibles, TTP) ne sont pas fournis dans la source."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Cross_sector"
+        ],
+        "fr": [
+          "Transversal"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1005",
+        "T1027.002"
+      ],
+      "analyse": {
+        "en": "Cross-platform Python stealers are increasingly common (infection via fake installers, malicious pip scripts). For SOC/CERT, detection relies on behavior (browser access, crypto wallets) rather than fixed IOCs. Stolen data feeds takeover and extortion campaigns.",
+        "fr": "Les stealers cross-platform en Python sont de plus en plus courants (phase d'infection via faux installers, scripts pip malveillants). Pour SOC/CERT, la détection repose sur l'observation de comportements (accès navigateurs, lecture de wallets crypto) plus que sur des IOCs fixes. Les données volées alimentent les campagnes de takeover et d'extorsion."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor unsigned Python script executions and access to browser/crypto wallet directories.",
+          "fr": "Surveiller les exécutions de scripts Python non signés et les accès aux répertoires de navigateurs et wallets crypto."
+        },
+        {
+          "en": "Restrict Python execution outside approved paths on user workstations.",
+          "fr": "Restreindre l'exécution de Python hors des chemins approuvés sur les postes utilisateurs."
+        },
+        {
+          "en": "Deploy YARA rules on suspected PyInstaller binaries.",
+          "fr": "Déployer des règles YARA sur les binaires PyInstaller suspectés."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Log Python process executions (Sysmon Event ID 1) and access to sensitive directories (browsers, wallets).",
+            "EDR with behavioral detection on chained access to session/password files."
+          ],
+          "fr": [
+            "Journaliser les exécutions de processus Python (Sysmon Event ID 1) et les accès aux répertoires sensibles (browsers, wallets).",
+            "EDR avec détection comportementale sur accès en chaîne aux fichiers de session/passwords."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Sysmon rule: python.exe accessing browser Login Data files.",
+            "YARA rule: signatures on PyInstaller compiled with Vanta Stealer patterns (enrich once technical publication).",
+            "Analyze entry vector (fake installer, malicious pip package, phishing)."
+          ],
+          "fr": [
+            "Règle Sysmon : `Image = python.exe` accédant à `%LOCALAPPDATA%\\Google\\Chrome\\User Data\\Default\\Login Data`.",
+            "Règle YARA : signatures sur PyInstaller compilé avec motifs Vanta Stealer (à enrichir dès publication technique).",
+            "Analyser le vecteur d'entrée (faux installer, package pip malveillant, phishing)."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate compromised workstation.",
+            "Revoke browser sessions and exposed wallets.",
+            "Remove PyInstaller binary and dropped files.",
+            "Rotate passwords stored in compromised browsers.",
+            "Reset all exposed credentials.",
+            "72h takeover attempt monitoring."
+          ],
+          "fr": [
+            "Isoler le poste compromis.",
+            "Révoquer les sessions navigateur et wallets exposés.",
+            "Supprimer le binaire PyInstaller et les dropped files.",
+            "Pivoter les passwords stockés dans les navigateurs compromise.",
+            "Réinitialiser toutes les credentials exposées.",
+            "Surveillance 72h sur les tentatives de takeover."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "GDPR notifications if personal data stolen.",
+            "Share sample with national CERT."
+          ],
+          "fr": [
+            "Notifications RGPD si données personnelles volées.",
+            "Partage du sample au CERT national."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for other PyInstaller suspicious binary executions."
+          ],
+          "fr": [
+            "Chasser les autres exécutions de binaires PyInstaller suspects."
+          ]
+        }
+      },
+      "tags": [
+        "Vanta_Stealer",
+        "Python",
+        "cross_platform",
+        "info_stealer",
+        "PyInstaller",
+        "OTX_unverified"
+      ],
+      "sources": [
+        "https://otx.alienvault.com/pulse/6a7951a3cb8e961a30c583bb"
+      ],
+      "date": "2026-08-10"
+    },
+    {
+      "title": {
+        "en": "macOS malware - Fake CAPTCHA (crypto drainer) and Fake Zoom Installer (Overlord RAT)",
+        "fr": "Mac malware - Fake CAPTCHA (crypto) et fake Zoom Installer (Overlord RAT)"
+      },
+      "description": {
+        "en": "Two unverified OTX pulses targeting macOS: (1) Mac Malware Drains Crypto Wallets Via Fake CAPTCHA Scam - a fake CAPTCHA lures users into executing malware draining crypto wallets. (2) Fake Zoom Installer Delivers Overlord RAT on macOS - a fake Zoom installer deploys the Overlord RAT.",
+        "fr": "Deux pulses OTX (non vérifiés) ciblant macOS : (1) « Mac Malware Drains Crypto Wallets Via Fake CAPTCHA Scam » : un faux CAPTCHA sert de leurre pour exécuter un malware drainant les wallets crypto. (2) « Fake Zoom Installer Delivers Overlord RAT on macOS » : un faux installer Zoom déploie le RAT Overlord sur macOS."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Cross_sector",
+          "Cryptocurrency"
+        ],
+        "fr": [
+          "Transversal",
+          "Cryptomonnaies"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": [
+          "Overlord RAT"
+        ]
+      },
+      "mitre_ttps": [
+        "T1204.002",
+        "T1547.011",
+        "T1059.004"
+      ],
+      "analyse": {
+        "en": "The macOS fleet is historically under-covered by EDR and awareness. Fake installers and fake CAPTCHAs are effective vectors against non-technical users. Crypto wallet theft has direct irreversible financial impact; a persistent RAT enables long-term exfiltration and lateral movement.",
+        "fr": "Le parc macOS est historiquement sous-couvert par les EDR et la sensibilisation. Les faux installers et faux CAPTCHA sont des vecteurs efficaces contre les utilisateurs non techniques. Le vol de wallets crypto a un impact financier direct et irréversible ; un RAT persistant permet l'exfiltration long terme et le mouvement latéral."
+      },
+      "recommandations": [
+        {
+          "en": "Strengthen macOS EDR detection (Jamf, CrowdStrike, Microsoft Defender for Endpoint).",
+          "fr": "Renforcer la détection EDR macOS (Jamf, CrowdStrike, Microsoft Defender pour Endpoint)."
+        },
+        {
+          "en": "Block unsigned/unnotarized installers (strict Gatekeeper, up-to-date XProtect).",
+          "fr": "Bloquer les installers non signés/notarisés (Gatekeeper strict, XProtect à jour)."
+        },
+        {
+          "en": "Awareness on fake CAPTCHAs and installers downloaded outside official stores.",
+          "fr": "Sensibiliser aux faux CAPTCHA et aux installers téléchargés hors stores officiels."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Verify Gatekeeper, XProtect and EDR deployment across macOS fleet.",
+            "Inventory crypto wallets used on professional workstations."
+          ],
+          "fr": [
+            "Vérifier Gatekeeper, XProtect et le déploiement EDR sur tout le parc macOS.",
+            "Inventorier les wallets crypto utilisés sur les postes pro."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "macOS rule: screencapture process or keychain access (security CLI) by unsigned process.",
+            "EDR rule: unsigned binary execution + outbound C2 connection.",
+            "YARA detection: Overlord RAT signatures (enrich).",
+            "Analyze entry vector (download site, email, fake CAPTCHA)."
+          ],
+          "fr": [
+            "Règle macOS : `process_name = screencapture` ou accès au trousseau (`security` CLI) par un processus non signé.",
+            "Règle EDR : exécution de binaire non notarisé + connexion C2 sortante.",
+            "Détection YARA : signatures Overlord RAT (à enrichir).",
+            "Analyser le vecteur d'entrée (site de téléchargement, email, fake CAPTCHA)."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate compromised Mac from network.",
+            "Cut Internet access to stop C2.",
+            "Remove malicious binary and LaunchAgents/LaunchDaemons persistence.",
+            "Verify installed macOS configuration profiles (common persistence vector).",
+            "Restore from Time Machine if integrity doubt.",
+            "Migrate crypto wallets to a new clean wallet (keys presumed compromised)."
+          ],
+          "fr": [
+            "Isoler le Mac compromise du réseau.",
+            "Couper l'accès Internet pour stopper le C2.",
+            "Supprimer le binaire malveillant et les LaunchAgents/LaunchDaemons de persistance.",
+            "Vérifier les profils de configuration macOS installés (vecteur de persistance courant).",
+            "Restaurer depuis Time Machine si doute sur l'intégrité.",
+            "Migrer les wallets crypto vers un nouveau wallet propre (clés présumées compromises)."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Notifications if pro data accessible.",
+            "Share sample with Apple (product-security[AT]apple[.]com) and national CERT."
+          ],
+          "fr": [
+            "Notifications si données pro accessibles.",
+            "Partage du sample à Apple (product-security[AT]apple[.]com) et au CERT national."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for unsigned persistent LaunchAgents.",
+            "Hunt for non-notarized binaries executed via quarantine bypass."
+          ],
+          "fr": [
+            "Chasser les LaunchAgents non signés persistants.",
+            "Chasser les binaires non notarisés exécutés via contournement de quarantaine."
+          ]
+        }
+      },
+      "tags": [
+        "macOS",
+        "fake_CAPTCHA",
+        "crypto_wallet",
+        "Overlord_RAT",
+        "fake_installer",
+        "Zoom",
+        "OTX_unverified"
+      ],
+      "sources": [
+        "https://otx.alienvault.com/pulse/6a7951aad7b05814243eb26a",
+        "https://otx.alienvault.com/pulse/6a7951c3648b349f44da270a"
+      ],
+      "date": "2026-08-10"
+    },
+    {
+      "title": {
+        "en": "Emerging OTX signals - BEC Payroll, modular cyber espionage framework, self-propagating npm worm",
+        "fr": "Signaux OTX non vérifiés - BEC, espionnage, worm npm"
+      },
+      "description": {
+        "en": "Three additional unverified OTX pulses (author Tr1sa111, preliminary) signal emerging threats without technical detail in source: (1) Payroll Pirates - new Business Email Compromise (BEC) waves targeting payroll processes. (2) Analysis of a Modular Cyber Espionage Framework - modular espionage framework (likely APT, attribution unspecified). (3) Inside a Self-Propagating npm Worm - self-propagating worm on the npm ecosystem (JavaScript supply chain).",
+        "fr": "Trois pulses OTX supplémentaires (auteur Tr1sa111, préliminaires et non vérifiés) signalent des menaces émergentes sans détail technique dans la source : (1) Payroll Pirates : nouvelles vagues de Business Email Compromise (BEC) ciblant les process de paie. (2) Analysis of a Modular Cyber Espionage Framework : framework d'espionnage modulaire (APT probable, attribution non précisée). (3) Inside a Self-Propagating npm Worm : ver auto-propageant sur l'écosystème npm (chaîne d'approvisionnement JavaScript)."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Cross_sector",
+          "Software_Development"
+        ],
+        "fr": [
+          "Transversal",
+          "Developpement_logiciel"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1566.004",
+        "T1546.003",
+        "T1195.002"
+      ],
+      "analyse": {
+        "en": "Low information density but signals to watch. The npm worm is particularly concerning for SOC/CERT with a Node.js development fleet (risk of transverse supply chain propagation). The modular espionage framework suggests APT activity, to correlate with state-sponsored campaign signals.",
+        "fr": "Faible densité informationnelle mais signaux à surveiller. Le ver npm est particulièrement préoccupant pour les SOC/CERT ayant un parc de développement Node.js (risque de propagation transverse dans la supply chain). Le framework d'espionnage modulaire suggère activité APT, à corréler avec les signaux de campagne étatique."
+      },
+      "recommandations": [
+        {
+          "en": "npm worm: audit production npm dependencies (npm audit, lockfile integrity), restrict installation of unverified packages, enable npm 2FA for internal maintainers.",
+          "fr": "Ver npm : auditer les dépendances npm en production (`npm audit`, lockfile integrity), restreindre l'installation de packages non vérifiés, activer npm two-factor auth pour les mainteneurs internes."
+        },
+        {
+          "en": "BEC Payroll: reinforce out-of-band validation of employee bank detail changes (HR callback).",
+          "fr": "BEC Paie : renforcer la validation hors-bande des changements de coordonnées bancaires employés (callback RH)."
+        },
+        {
+          "en": "Espionage: activate advanced persistence detection (WMI subscriptions, rootkits, dual-use tools).",
+          "fr": "Espionnage : activer la détection de persistance avancée (WMI subscriptions, rootkits, double-use tools)."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory critical npm dependencies and maintainers.",
+            "Bank detail change validation procedure (double validation + callback).",
+            "WMI Event Subscription detection capability (Event ID 5861)."
+          ],
+          "fr": [
+            "Inventorier les dépendances npm critiques et leurs mainteneurs.",
+            "Procédure de validation des changements de coordonnées bancaires employés (double validation + callback).",
+            "Capacité de détection WMI Event Subscription (Event ID 5861)."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "SIEM rule (npm worm): alert on npm install executed by service account + outbound connection to non-official registry.",
+            "SIEM rule (BEC Payroll): correlation between email requesting bank detail change and effective modification in HR/payroll.",
+            "Sysmon rule (espionage): EventID 5861 WMI Event Consumer Creation with obfuscated PowerShell commands."
+          ],
+          "fr": [
+            "Règle SIEM (ver npm) : alerte sur `npm install` exécuté par un compte service + connexion sortante vers un registry non officiel.",
+            "Règle SIEM (BEC Paie) : corrélation entre email demandant changement de coordonnées bancaires et modification effective dans le RH/PAIE.",
+            "Règle Sysmon (espionnage) : `EventID 5861` WMI Event Consumer Creation avec commandes PowerShell obfusquées."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "npm worm: isolate dev machines, block non-official registries.",
+            "BEC: block ongoing financial transfers to suspicious new bank details.",
+            "Espionage: isolate hosts suspected of WMI persistence.",
+            "Remove malicious npm packages, force npm ci from clean lockfile.",
+            "Restore legitimate bank details.",
+            "Remove malicious WMI Event Subscriptions, rotate compromised credentials.",
+            "72h post-eradication monitoring."
+          ],
+          "fr": [
+            "Ver npm : isoler les machines de dev, bloquer les registrys non officiels.",
+            "BEC : bloquer les transferts financiers en cours vers les nouvelles coordonnées suspectes.",
+            "Espionnage : isoler les hôtes suspectés de persistance WMI.",
+            "Supprimer les packages npm malveillants, forcer `npm ci` depuis lockfile propre.",
+            "Restaurer les coordonnées bancaires légitimes.",
+            "Supprimer les Event Subscriptions WMI malveillants, pivoter les credentials compromis.",
+            "Surveillance 72h post-éradication."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Notifications (GDPR/NIS2 per impact, especially if BEC successful).",
+            "Share IOCs with national CERT and npm ecosystem (GitHub Advisory)."
+          ],
+          "fr": [
+            "Notifications (RGPD/NIS2 selon impact, notamment si BEC réussi).",
+            "Partage IOCs au CERT national et à l'écosystème npm (GitHub Advisory)."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for malicious npm packages installed in dev.",
+            "Hunt for suspicious WMI Event Subscriptions."
+          ],
+          "fr": [
+            "Chasser les packages npm malveillants installés en dev.",
+            "Chasser les Event Subscriptions WMI suspectes."
+          ]
+        }
+      },
+      "tags": [
+        "BEC",
+        "payroll",
+        "npm_worm",
+        "supply_chain",
+        "cyber_espionage",
+        "APT",
+        "OTX_unverified"
+      ],
+      "sources": [
+        "https://otx.alienvault.com/pulse/6a7951bc005392716e86f842",
+        "https://otx.alienvault.com/pulse/6a7951ce6a424ce1daf4cd8d",
+        "https://otx.alienvault.com/pulse/6a7951d7e4e9679263bf13be"
+      ],
+      "date": "2026-08-10"
+    },
+    {
+      "title": {
+        "en": "Emerging signal - LLM crawler (ChatGPT-User) scanning .env files and AWS credentials",
+        "fr": "Signal émergent - Crawler LLM (ChatGPT-User) scannant les fichiers .env et credentials AWS"
+      },
+      "description": {
+        "en": "The CyberVeille.ch honeypot detected IP 34.16.197.255 (Google Cloud, AS396982, US) with User-Agent ChatGPT-User/1.0 targeting .env paths, AWS credentials and path traversal /_next/.. . The signal suggests an LLM/crawler using a ChatGPT UA performing opportunistic scans on sensitive resources. Community source (honeypot, level 2 but reclassified as emerging level 3 signal).",
+        "fr": "Le honeypot CyberVeille.ch a détecté une IP `34.16.197.255` (Google Cloud, AS396982, US) avec un User-Agent `ChatGPT-User/1.0` ciblant les chemins `.env`, credentials AWS et path traversal `/_next/..`. Le signal suggère qu'un LLM/crawler utilisant un UA ChatGPT effectue des scans opportunistes sur des ressources sensibles. Source communautaire (honeypot, niveau 2 mais à requalifier comme signal émergent de niveau 3)."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Cross_sector",
+          "Cloud"
+        ],
+        "fr": [
+          "Transversal",
+          "Cloud"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [
+          "34[.]16[.]197[.]255"
+        ],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1595.001",
+        "T1592.004"
+      ],
+      "analyse": {
+        "en": "If the UA is authentic (not spoofed), this raises an AI crawler governance question: inadvertent data exposure by LLMs themselves, and risk of legitimizing malicious scans via spoofed UA. For SOC/CERT, the signal should be correlated with any public .env exposure in the perimeter. Low impact in itself but trend indicator (AI crawlers as passive exposure vector).",
+        "fr": "Si l'UA est authentique (et non spoofé), cela pose une question de gouvernance des crawlers IA : exposition involontaire de données par les LLM eux-mêmes, et risque de légitimation de scans malveillants via UA usurpé. Pour les SOC/CERT, le signal est à corréler avec toute exposition `.env` publique dans le périmètre. Impact faible en soi mais indicateur d'une tendance (crawlers IA comme vecteur passif d'exposition)."
+      },
+      "recommandations": [
+        {
+          "en": "Block or rate-limit known AI crawler UAs (ChatGPT-User, GPTBot, ClaudeBot, etc.) on sensitive paths.",
+          "fr": "Bloquer ou rate-limiter les UA de crawlers IA connus (ChatGPT-User, GPTBot, ClaudeBot, etc.) sur les chemins sensibles."
+        },
+        {
+          "en": "Verify no .env file is publicly exposed (external perimeter scan).",
+          "fr": "Vérifier qu'aucun fichier `.env` n'est exposé publiquement (scan du périmètre web externe)."
+        },
+        {
+          "en": "Log and alert on access to .env, /_next/.., /.aws/credentials paths.",
+          "fr": "Journaliser et alerter sur les accès aux chemins `.env`, `/_next/..`, `/.aws/credentials`."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory sensitive paths exposed (.env, config, credentials) via external scan.",
+            "Define AI crawler block policy on sensitive endpoints."
+          ],
+          "fr": [
+            "Inventorier les chemins sensibles exposés (`.env`, config, credentials) via scan externe.",
+            "Définir une politique de blocage des crawlers IA sur les endpoints sensibles."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "WAF rule: alert on User-Agent = ChatGPT-User + access to /.env, /.aws/, /_next/..",
+            "SIEM rule: correlation between Google Cloud IP and sensitive path access.",
+            "Verify if exfiltration succeeded (200 status on .env)."
+          ],
+          "fr": [
+            "Règle WAF : alerte sur `User-Agent = ChatGPT-User` + accès à `/.env`, `/.aws/`, `/_next/..`.",
+            "Règle SIEM : corrélation entre IP Google Cloud et accès à chemins sensibles.",
+            "Vérifier si l'exfiltration a réussi (statut 200 sur `.env`)."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Block source IP and AS396982 on sensitive endpoints.",
+            "Return generic 404 instead of 200 for .env paths.",
+            "If .env exfiltrated: immediately rotate all exposed AWS/DB credentials.",
+            "Remove public exposure of the file.",
+            "Monitor rotated credentials usage for 72h.",
+            "Check AWS CloudTrail logs for post-exposure abuse."
+          ],
+          "fr": [
+            "Bloquer l'IP source et l'AS396982 sur les endpoints sensibles.",
+            "Restreindre l'accès aux chemins `.env` (404 générique au lieu de 200).",
+            "Si `.env` exfiltré : pivoter toutes les credentials AWS/DB exposées immédiatement.",
+            "Supprimer l'exposition publique du fichier.",
+            "Surveiller l'usage des credentials pivotées sur 72h.",
+            "Vérifier les logs AWS CloudTrail pour usage abusif post-exposition."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "If AWS credentials used: client and regulator notifications if personal data impacted.",
+            "Share signal with national CERT and honeypot community."
+          ],
+          "fr": [
+            "Si credentials AWS utilisées : notifications clients et régulateurs si données personnelles impactées.",
+            "Partage du signal au CERT national et à la communauté honeypot."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for other AI crawler UAs accessing sensitive paths.",
+            "Hunt for credentials exfiltrated via exposed .env."
+          ],
+          "fr": [
+            "Chasser les autres crawlers IA ayant accédé à des chemins sensibles.",
+            "Chasser les credentials exfiltrées via `.env` exposé."
+          ]
+        }
+      },
+      "tags": [
+        "LLM_crawler",
+        "ChatGPT_User",
+        "honeypot",
+        "env_exposure",
+        "AWS_credentials",
+        "path_traversal",
+        "emerging_signal"
+      ],
+      "sources": [
+        "https://mastobot.ping.moi/@Bobe_bot/117069683647452837"
+      ],
+      "date": "2026-08-10"
+    }
+  ]
+}
