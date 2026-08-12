@@ -1,852 +1,1203 @@
-# Table des matières
-* [Analyse Stratégique](#analyse-strategique)
-* [Synthèses](#syntheses)
-  * [Synthèse des acteurs malveillants](#synthese-des-acteurs-malveillants)
-  * [Synthèse de l'actualité géopolitique](#synthese-geopolitique)
-  * [Synthèse réglementaire et juridique](#synthese-reglementaire)
-  * [Synthèse des violations de données](#synthese-des-violations-de-donnees)
-  * [Synthèse des vulnérabilités critiques](#synthese-des-vulnerabilites-critiques)
-* [Articles](#articles)
-  * [DeadLock ransomware : analyse d'un encryptor Rust avec infrastructure de récupération décentralisée](#deadlock-ransomware-analyse-dun-encryptor-rust-avec-infrastructure-de-recuperation-decentralisee)
-  * [Aeternum : analyse d'un botnet loader utilisant la blockchain Polygon comme infrastructure C2 décentralisée](#aeternum-analyse-dun-botnet-loader-utilisant-la-blockchain-polygon-comme-infrastructure-c2-decentralisee)
-  * [tl;dv : 181 874 réunions exposées par défaut d'isolation tenant sur Firestore](#tldv-181-874-reunions-exposees-par-defaut-disolation-tenant-sur-firestore)
-  * [Malware 4 Noobs (Partie I) : introduction aux concepts de développement malware, stagers et LOLBINs](#malware-4-noobs-partie-i-introduction-aux-concepts-de-developpement-malware-stagers-et-lolbins)
-  * [NoiseHound : scoring des chemins d'attaque BloodHound avec prise en compte de la détectabilité](#noisehound-scoring-des-chemins-dattaque-bloodhound-avec-prise-en-compte-de-la-detectabilite)
-  * [Opérateur russophone : chaînage de CVE sur caméras et routeurs pour créer un pipeline proxy et de visualisation contre l'Ukraine](#operateur-russophone-chainage-de-cve-sur-cameras-et-routeurs-pour-creer-un-pipeline-proxy-et-de-visualisation-contre-lukraine)
-  * [PyPsPipeJack : implémentation Python d'une technique de mouvement latéral et d'escalade de privilèges via PowerShell named pipes](#pypspipejack-implementation-python-dune-technique-de-mouvement-lateral-et-descalade-de-privileges-via-powershell-named-pipes)
+# Brief quotidien de veille cyber - 2026-08-12
 
----
+**Domaine :** cyber SOC/CERT
+**Date :** 2026-08-12
+**Entrée :** 136 articles scrapés (12 source_level 1, 119 level 2, 5 level 3)
+**Sortie :** 38 clusters produits (Patch Tuesday Microsoft, Zoomsday, 6 avis CERT-FR, 14 éditeurs CVE, 14 menaces/breaches)
 
-<div id="analyse-strategique"></div>
+## Table des matières
 
-# ANALYSE STRATÉGIQUE
+- [Géopolitique](#geopolitique)
+- [Réglementaire et légal](#reglementaire-et-legal)
+- [Vulnérabilités](#vulnerabilites)
+- [Menaces SOC/CERT](#menaces-soc-cert)
 
-La journée est marquée par un volume exceptionnel de 70 vulnérabilités, largement dominé par le Patch Tuesday de Microsoft (juin 2025) qui corrige 67 failles dont 9 critiques et 2 zero-days, dont CVE-2025-33053 activement exploitée. Des vulnérabilités critiques hors écosystème Microsoft retiennent également l'attention, notamment CVE-2025-5777 (CitrixBleed 2) sur NetScaler permettant le détournement de session sans authentification, et deux failles CVSS 10.0 sur Cisco ISE (CVE-2025-20281/20282) exposant à l'exécution de code à distance non authentifiée. En parallèle, 9 fuites de données significatives sont recensées, parmi lesquelles l'attaque contre l'assureur Aflac attribuée au groupe Scattered Spider, la compromission de 8,4 millions d'utilisateurs chez Zoomcar, et la fuite historique de 16 milliards d'identifiants issue de logs d'infostealers. L'absence totale de signaux sur les acteurs de menace, la géopolitique et la réglementation suggère une focalisation de l'écosystème sur la remédiation technique et la gestion d'incidents post-compromission. Les équipes SOC doivent prioriser le patching immédiat de Citrix NetScaler et Cisco ISE, dont l'exploitation non authentifiée présente un risque élevé de pivot initial. La masse d'identifiants exposés via infostealers accroît significativement le risque de prise de compte et de phishing ciblé dans les jours à venir. Une vigilance renforcée sur les secteurs assurance et santé, particulièrement visés, est recommandée.
+<a id="analyse-strategique"></a>
+## Analyse stratégique
 
----
+Le jour est dominé par le Patch Tuesday d'août 2026 : Microsoft corrige 415 vulnérabilités dont une zero-day exploitée activement (CVE-2026-68820, AFD.sys / WinSock, élévation de privilège locale, attribuée à Lazarus dans Operation Dream Job par Check Point Research) et 62 CVE Critical, dont 4 CVSS 9.8 sans authentification (Windows DNS Server, Windows Deployment Services, QUIC, HPC Pack). À côté, la zero-day Cisco firewall (CVE-2026-20349, DoS sur Remote Access SSL VPN, exploitée en août 2026) et les 7 flaws ClamAV (dont 2 avec PoC public) rappellent que les infrastructures de sécurité sont elles-mêmes la cible. Le second signal fort est la divulgation de « Zoomsday » (CVE-2026-53413/14/15), faille zero-click dans l'annotation Zoom permettant le hijack du client d'un participant, corrigée depuis juin/juillet mais publiée le 11 août.
 
-<div id="syntheses"></div>
+Côté menaces actives, trois clusters à fort impact opérationnel : Gunra ransomware (alerte FBI/CISA, 51 victimes, exploitation Fortinet CVE-2025-24472 + Schneider CVE-2024-5559, double extorsion) ; Lazarus Operation Dream Job (déploiement du rootkit kernel FudModule via la zero-day AFD.sys sur des cibles défense en Europe et Inde) ; et la compromission d'une centrale polonaise CHP via un APN cellulaire privé, premier cas documenté de pivot IT/OT par ce vecteur (turbine arrêtée, 50 000 habitants concernés, incident de décembre 2025 divulgué le 8 août par CERT Polska). Côté breaches, DentaQuest confirme 15 millions d'individus impactés (plus grosse breach santé 2026, ShinyHunters, base de 234 Go publiée), et la supply chain logistique CEVA Logistics contamine banques, retailers et clients Steam. À surveiller aussi : OpenAI lance GPT-5.6-Cyber avec safeguards réduits pour la recherche d'exploits (Daybreak Red), et l'OpenSSF publie un guide de préparation au Cyber Resilience Act (CRA) pour les communautés open source.
 
-# SYNTHÈSES
+<a id="geopolitique"></a>
+## Géopolitique
 
-<div id="synthese-des-acteurs-malveillants"></div>
-
-## Synthèse des acteurs malveillants
-
-_Aucun acteur identifié._
-
----
-
-<div id="synthese-geopolitique"></div>
-
-## Synthèse géopolitique
-
-_Aucun événement géopolitique._
-
----
-
-<div id="synthese-reglementaire"></div>
-
-## Synthèse réglementaire et juridique
-
-_Aucune actualité réglementaire._
-
----
-
-<div id="synthese-des-violations-de-donnees"></div>
-
-## Synthèse des violations de données
-
-| Secteur | Victime | Données compromises | Volume estimé | Source(s) |
+| Pays/Région | Secteur | Thème | Description | Source(s) |
 |---|---|---|---|---|
-| **Gouvernement / Immigration** | Israel Population and Immigration Authority | Numéros d'identification nationale, adresses, numéros de téléphone, dates de naissance et de décès, dates d'immigration, liens familiaux | 9200000 | [https://securityaffairs.com/196942/cyber-crime/9-2-million-israeli-records-sold-as-a-new-breach-are-20-years-old.html](https://securityaffairs.com/196942/cyber-crime/9-2-million-israeli-records-sold-as-a-new-breach-are-20-years-old.html) |
-| **Logistique et transport** | Ceva Logistics | Noms, adresses postales, numéros de téléphone, adresses email, détails de commandes clients | Inconnu | [https://infosec.exchange/@beyondmachines1/117072991700624929](https://infosec.exchange/@beyondmachines1/117072991700624929)<br>[https://infosec.exchange/@suriq/117071874780704817](https://infosec.exchange/@suriq/117071874780704817)<br>[https://techcrunch.com/2026/08/10/a-data-breach-at-shipping-giant-ceva-logistics-is-rippling-across-banks-retailers-steam-gamers-and-beyond/](https://techcrunch.com/2026/08/10/a-data-breach-at-shipping-giant-ceva-logistics-is-rippling-across-banks-retailers-steam-gamers-and-beyond/) |
-| **Multi-secteurs (santé, gouvernement, VPN, technologie)** | SplitVPN et multiples organisations (secteur santé et gouvernement) | Données variées selon les 28 incidents : enregistrements SplitVPN (865 336), données de santé, données gouvernementales, credentials et tokens potentiellement compromis via les failles exploitées | 1200000 | [https://infosec.exchange/@beyondmachines1/117072285595442089](https://infosec.exchange/@beyondmachines1/117072285595442089) |
-| **Gouvernement, infrastructures critiques, organisations diverses** | Gunra Ransomware (CISA Advisory) | Données chiffrées et données exfiltrées (menace de publication sur DLS) | Inconnu | [https://databreaches.net/2026/08/10/cisa-advisory-stopransomware-gunra-ransomware/](https://databreaches.net/2026/08/10/cisa-advisory-stopransomware-gunra-ransomware/) |
-| **Transport aérien** | Frontier Airlines | Données de passagers (détails non spécifiés) | Inconnu | [https://mastodon.au/@vibewire/117073728711972564](https://mastodon.au/@vibewire/117073728711972564) |
-| **Services informatiques / IT** | TCS (Tata Consultancy Services) | Données employés (détails non spécifiés) | Inconnu | [https://mastodon.social/@EarthInsider/117073473410148536](https://mastodon.social/@EarthInsider/117073473410148536) |
-| **Matériel informatique / Hardware** | Framework (entreprise informatique) | Données clients (détails non spécifiés) | Inconnu | [https://techhub.social/@techandcoffee/117073205921914899](https://techhub.social/@techandcoffee/117073205921914899) |
-| **Défense / Manufacture** | IEH Corp | Données d'ingénierie sensibles et données contrôlées à l'export | Inconnu | [https://mastodon.social/@netsecio/117072020883105029](https://mastodon.social/@netsecio/117072020883105029) |
-| **Santé / Technology** | Unlimited Technology Systems | Données personnelles (détails non spécifiés, potentiellement données de santé) | 3800000 | [https://mastodon.thenewoil.org/@thenewoil/117071688733178253](https://mastodon.thenewoil.org/@thenewoil/117071688733178253) |
+| **Iran / US** | Eau potable / infrastructure critique | Cyberattaque APT contre infrastructures US | Groupe lié à l'Iran ciblant de nouvelles infrastructures water aux US (New Jersey et Alabama). S'inscrit dans la série d'attaques contre stations de traitement eau et municipalités observée depuis 2023, attribution typique CyberAv3ngers / IRGC-aligned. Pas de détail technique sur le vecteur dans la source. | [securityaffairs](https://securityaffairs.com/197012/hacking/iran-linked-hackers-target-more-us-water-infrastructure-in-new-jersey-and-alabama.html) |
+| **Pologne / Russie (présumé)** | Énergie / CHP | Premier pivot IT/OT via APN cellulaire privé documenté | Incident de décembre 2025 divulgué le 8 août 2026 par CERT Polska. Attaquants ont atteint le réseau de contrôle d'une centrale CHP (50 000 habitants chauffés) via un APN cellulaire privé de l'opérateur de distribution, en pivotant depuis un réseau éolien compromis. Turbine à vapeur et traitement d'eau process arrêtées. Aucune coupure client. Premier cas réel de ce vecteur APN selon CERT Polska. CVE-2023-32349 et CVE-2023-32350 citées. Voir [Menaces SOC/CERT](#polish-power-apn). | [thehackernews](https://thehackernews.com/2026/08/hackers-breach-polish-power-plant.html) |
+| **DPRK / Europe + Inde** | Défense | Operation Dream Job - Lazarus exploite zero-day Microsoft | Campagne Lazarus (DPRK) ciblant le secteur défense en Europe et Inde via de fausses offres d'emploi et un faux lecteur PDF « SecurityPDF » livrant le backdoor Troy. Exploitation de CVE-2026-68820 (AFD.sys, zero-day Microsoft Patch Tuesday août) pour déployer le rootkit kernel FudModule. Divulgation Check Point Research, patch Microsoft publié le 11 août. Voir [Menaces SOC/CERT](#lazarus-dream-job). | [Check Point Research](https://research.checkpoint.com/2026/shattering-the-dream-when-a-job-offer-becomes-a-zero-day-attack/) |
 
----
+<a id="reglementaire-et-legal"></a>
+## Réglementaire et légal
 
-<div id="synthese-des-vulnerabilites-critiques"></div>
+**Meta sanctionnée pour destruction de preuves (France, Le Monde, 11 août 2026).** Meta a été condamné pour destruction de preuves dans une affaire de publicités frauduleuses. La sanction illustre l'obligation de préservation des preuves numériques au titre du droit de la consommation et du RGPD, et l'escalade des sanctions contre les plateformes pour manquement à la coopération avec les autorités. Source : [Le Monde](https://www.lemonde.fr/pixels/article/2026/08/11/meta-sanctionnee-pour-destruction-de-preuves-dans-une-affaire-de-publicites-frauduleuses).
 
-## Synthèse des vulnérabilités critiques
+**Change Healthcare - encadrement judiciaire des données volées (Minnesota, 7 août 2026).** Un juge fédéral du Minnesota a approuvé un protocole strict de manipulation des données volées lors du litige consolidé contre UnitedHealth Group, Change Healthcare, Optum et United HealthCare Services (suite à la breach 2024). Le protocole couvre les données patients (PHI/PII), validé par un expert cyber indépendant. Précédent sur la gestion judiciaire des données exfiltrées en class action. Source : [databreaches.net](https://databreaches.net/2026/08/11/stolen-change-healthcare-data-gets-new-handling-rules-in-court-order/).
 
-| CVE-ID | Score CVSS | EPSS | CISA KEV | Produit affecté | Type de vulnérabilité | Impact | Exploitation | Mesures de contournement | Source(s) |
+**Cyber Resilience Act (CRA) - guide de préparation pour les communautés open source (OpenSSF, 11 août 2026).** L'OpenSSF publie « CRA Readiness: A Practitioner's Guide to Compliance » et un podcast associé, pour accompagner les communautés open source dans la mise en conformité au Cyber Resilience Act (UE). Enjeu : obligations des fabricants de produits numériques, responsabilité de la supply chain open source, exigences de divulgation de vulnérabilités. À suivre pour les éditeurs intégrant des composants OSS. Sources : [openssf.org/blog](https://openssf.org/blog/2026/08/11/cra-readiness-a-practitioners-guide-to-compliance/), [openssf.org/podcast](https://openssf.org/podcast/2026/08/11/whats-in-the-soss-podcast-68-s3e20-cra-readiness-practical-strategies-for-open-source-communities-with-megan-knight).
+
+<a id="vulnerabilites"></a>
+## Vulnérabilités
+
+### Microsoft (Patch Tuesday août 2026 - 415 CVE, 1 zero-day exploitée)
+
+| CVE | Score CVSS | EPSS | CISA KEV | Éditeur / Produit affecté | Versions affectées | Type de vulnérabilité | Impact | Mesures de contournement / Correctif | Source(s) |
 |---|---|---|---|---|---|---|---|---|---|
-| **CVE-2026-15581** | 8.0 | N/A | FALSE | Red Hat OpenShift AI (RHOAI) | CWE-306 Missing Authentication for Critical Function | Accès non authentifié à l'API TAS permettant la lecture, la modification et la suppression de données de monitoring et de configurations. Possibilité d'injection de données arbitraires dans le service, pouvant perturber les opérations des tenants du cluster OpenShift AI. | Theoretical | Restreindre l'accès réseau au service TAS via des NetworkPolicies Kubernetes. Exiger l'authentification pour l'API backend TAS. Limiter l'accès réseau des pods. Revoir la sécurité du déploiement TAS. Appliquer les correctifs de Red Hat dès leur disponibilité. Consulter les ressources : hxxps[://]access[.]redhat[.]com/security/cve/CVE-2026-15581 et hxxps[://]bugzilla[.]redhat[.]com/show_bug[.]cgi?id=2499637 | [https://cvefeed.io/vuln/detail/CVE-2026-15581](https://cvefeed.io/vuln/detail/CVE-2026-15581) |
-| **CVE-2025-30241** | 8.6 | N/A | FALSE | HB810(US2) V1.0/1.6/2.0/2.6, HB810(EU1) V2.0, HB710(US2) V1.6/1.0 | CWE-78 Improper neutralization of special elements used in an OS command ('OS command injection') | Exécution de commandes système arbitraires avec privilèges élevés, pouvant mener à une compromission complète du dispositif et un accès au réseau environnant. | Theoretical | Mettre à jour les dispositifs TP-Link Aginet avec le dernier firmware disponible. Restreindre l'accès à l'interface web. Sanitiser toutes les entrées utilisateur. Consulter : hxxps[://]www[.]tp-link[.]com/us/support/faq/5239/ | [https://cvefeed.io/vuln/detail/CVE-2025-30241](https://cvefeed.io/vuln/detail/CVE-2025-30241) |
-| **CVE-2025-30239** | 8.5 | N/A | FALSE | HB810(US2) V1.0/1.6/2.0/2.6, HB810(EU1) V2.0, HB710(US2) V1.6/1.0 | CWE-321: Use of Hard-coded Cryptographic Key | Accès aux données de configuration sensibles déchiffrées, incluant des credentials et des informations de service, pouvant mener à une compromission du dispositif et du réseau. | Theoretical | Mettre à jour le firmware à la dernière version. Éviter l'utilisation de clés cryptographiques codées en dur. Implémenter des pratiques de gestion sécurisée des clés. Revoir et sécuriser les données sensibles stockées. Consulter : hxxps[://]www[.]tp-link[.]com/us/support/faq/5239/ | [https://cvefeed.io/vuln/detail/CVE-2025-30239](https://cvefeed.io/vuln/detail/CVE-2025-30239) |
-| **CVE-2025-30238** | 8.6 | N/A | FALSE | HB810(US2) V1.0/1.6/2.0/2.6, HB810(EU1) V2.0, HB710(US2) V1.6/1.0 | CWE-863: Incorrect Authorization | Élévation de privilèges permettant la création de comptes administrateurs et la modification de configurations critiques, menant à une compromission complète du dispositif. | Theoretical | Mettre à jour le firmware à la dernière version. Revoir et restreindre les privilèges des utilisateurs. Surveiller le système pour détecter les modifications non autorisées. Consulter : hxxps[://]www[.]tp-link[.]com/us/support/faq/5239/ | [https://cvefeed.io/vuln/detail/CVE-2025-30238](https://cvefeed.io/vuln/detail/CVE-2025-30238) |
-| **CVE-2025-30237** | 8.7 | N/A | FALSE | HB810(US2) V1.0/1.6/2.0/2.6, HB810(EU1) V2.0, HB710(US2) V1.6/1.0 | CWE-862: Missing Authorization | Un attaquant non authentifié peut exécuter des opérations privilégiées et obtenir le contrôle complet du dispositif, permettant potentiellement le pivot vers le réseau interne. | Theoretical | Mettre à jour le firmware à la dernière version. Appliquer l'authentification de manière cohérente sur tous les endpoints de l'interface web. Valider les credentials utilisateur sur toutes les requêtes. Implémenter une gestion robuste des sessions. Consulter : hxxps[://]www[.]tp-link[.]com/us/support/faq/5239/ | [https://cvefeed.io/vuln/detail/CVE-2025-30237](https://cvefeed.io/vuln/detail/CVE-2025-30237) |
-| **CVE-2026-18577** | 8.2 | 4.10% | TRUE | N-central | CWE-288 Authentication bypass using an alternate path or channel | Compromission complète du serveur N-central permettant l'accès à tous les appareils gérés (jusqu'à 24 000 par serveur). Déploiement de ransomware StormEncryptor, exfiltration de données, vol de credentials via Mimikatz, et mouvement latéral via outils RMM. Impact potentiellement massif sur les clients des MSP affectés. | Active | Appliquer immédiatement les hotfix de N-able pour CVE-2026-18577 et CVE-2026-18556. Restreindre l'exposition Internet des serveurs N-central. Surveiller les accès administratifs. Révoquer et réinitialiser tous les credentials après application des correctifs. Mettre en place un accès VPN pour atteindre N-central. Désinstaller ou surveiller les outils RMM non autorisés (AnyDesk, SimpleHelp). | [https://thehackernews.com/2026/08/china-linked-hackers-deploy-new.html](https://thehackernews.com/2026/08/china-linked-hackers-deploy-new.html)<br>[https://www.security.nl/posting/948726/Microsoft+vermoedt+dat+criminelen+ransomware+verspreiden+via+N-Central-lek?channel=rss](https://www.security.nl/posting/948726/Microsoft+vermoedt+dat+criminelen+ransomware+verspreiden+via+N-Central-lek?channel=rss) |
-| **CVE-2026-4793** | 7.3 | 0.13% | FALSE | Synology Assistant | CWE-276 Incorrect Default Permissions | Atteinte à la confidentialité des données, atteinte à l'intégrité des données, déni de service | None | Se référer au bulletin de sécurité de l'éditeur Synology (Synology_SA_26_12) pour l'obtention des correctifs et mettre à jour vers la version 7.0.7-50095 ou supérieure. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0988/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0988/)<br>[https://www.synology.com/en-global/security/advisory/Synology_SA_26_12](https://www.synology.com/en-global/security/advisory/Synology_SA_26_12) |
-| **CVE-2026-33377** | 7.1 | 0.23% | FALSE | Grafana OSS | Élévation de privilèges / Contournement de politique de sécurité | Élévation de privilèges, contournement de la politique de sécurité | None | Se référer au bulletin de sécurité HPE Aruba Networking (HPESBNW05119) pour l'obtention des correctifs et mettre à jour vers la version 1.26.1.3 ou supérieure. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0989/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0989/)<br>[https://csaf.arubanetworking.hpe.com/2026/hpe_aruba_networking_-_hpesbnw05119.txt](https://csaf.arubanetworking.hpe.com/2026/hpe_aruba_networking_-_hpesbnw05119.txt) |
-| **CVE-2026-54763** | 7.8 | 0.21% | FALSE | traefik | CWE-178: Improper Handling of Case Sensitivity | Élévation de privilèges, contournement de la politique de sécurité | None | Se référer au bulletin de sécurité HPE Aruba Networking (HPESBNW05119) pour l'obtention des correctifs et mettre à jour vers la version 1.26.1.3 ou supérieure. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0989/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0989/)<br>[https://csaf.arubanetworking.hpe.com/2026/hpe_aruba_networking_-_hpesbnw05119.txt](https://csaf.arubanetworking.hpe.com/2026/hpe_aruba_networking_-_hpesbnw05119.txt) |
-| **CVE-2026-66151** | N/A | 0.16% | FALSE | Global VPN Client | CWE-125 Out-of-bounds read | Déni de service | None | Se référer au bulletin de sécurité SonicWall (SNWLID-2026-0010) pour l'obtention des correctifs et mettre à jour vers la version 5.0.0.2008 ou supérieure. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0990/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0990/)<br>[https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2026-0010](https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2026-0010) |
-| **CVE-2018-11798** | N/A | 4.88% | FALSE | Apache Thrift | Improper Access Control | Problème de sécurité non spécifié par l'éditeur | None | Se référer au bulletin de sécurité VMware (38158) pour l'obtention des correctifs et mettre à jour vers la version 8.0.3 ou supérieure. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0991/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0991/)<br>[https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38158](https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38158) |
-| **CVE-2019-0205** | N/A | 9.16% | FALSE | Apache Thrift | Potential DoS when processing untrusted Thrift payloads | Problème de sécurité non spécifié par l'éditeur | None | Se référer au bulletin de sécurité VMware (38158) pour l'obtention des correctifs et mettre à jour vers la version 8.0.3 ou supérieure. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0991/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0991/)<br>[https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38158](https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38158) |
-| **CVE-2020-13949** | N/A | 6.78% | FALSE | Apache Thrift | Potential DoS when processing untrusted Thrift payloads | Problème de sécurité non spécifié par l'éditeur | None | Se référer au bulletin de sécurité VMware (38158) pour l'obtention des correctifs et mettre à jour vers la version 8.0.3 ou supérieure. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0991/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0991/)<br>[https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38158](https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38158) |
-| **CVE-2026-43869** | 7.3 | 0.63% | FALSE | Apache Thrift | CWE-297 Improper Validation of Certificate with Host Mismatch | Problème de sécurité non spécifié par l'éditeur | None | Se référer au bulletin de sécurité VMware (38158) pour l'obtention des correctifs et mettre à jour vers la version 8.0.3 ou supérieure. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0991/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0991/)<br>[https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38158](https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38158) |
-| **CVE-2026-45205** | 5.3 | 0.47% | FALSE | Apache Commons Configuration | CWE-674 Uncontrolled Recursion | Problème de sécurité non spécifié par l'éditeur | None | Se référer au bulletin de sécurité VMware (38158) pour l'obtention des correctifs et mettre à jour vers la version 8.0.3 ou supérieure. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0991/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0991/)<br>[https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38158](https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38158) |
-| **CVE-2026-54291** | 8.2 | 0.20% | FALSE | pgjdbc | CWE-636: Not Failing Securely ('Failing Open') | Problème de sécurité non spécifié par l'éditeur | None | Se référer au bulletin de sécurité VMware (38158) pour l'obtention des correctifs et mettre à jour vers la version 8.0.3 ou supérieure. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0991/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0991/)<br>[https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38158](https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38158) |
-| **CVE-2026-55831** | 7.5 | 0.42% | FALSE | netty | CWE-770: Allocation of Resources Without Limits or Throttling | Problème de sécurité non spécifié par l'éditeur | None | Se référer au bulletin de sécurité VMware (38158) pour l'obtention des correctifs et mettre à jour vers la version 8.0.3 ou supérieure. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0991/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0991/)<br>[https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38158](https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38158) |
-| **CVE-2026-55833** | 7.5 | 0.42% | FALSE | netty | CWE-400: Uncontrolled Resource Consumption | Problème de sécurité non spécifié par l'éditeur | None | Se référer au bulletin de sécurité VMware (38158) pour l'obtention des correctifs et mettre à jour vers la version 8.0.3 ou supérieure. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0991/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0991/)<br>[https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38158](https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38158) |
-| **CVE-2026-56745** | 8.7 | 0.61% | FALSE | netty | CWE-400: Uncontrolled Resource Consumption | Problème de sécurité non spécifié par l'éditeur | None | Se référer au bulletin de sécurité VMware (38158) pour l'obtention des correctifs et mettre à jour vers la version 8.0.3 ou supérieure. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0991/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0991/)<br>[https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38158](https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38158) |
-| **CVE-2026-56746** | 6.5 | 0.38% | FALSE | netty | CWE-284: Improper Access Control | Problème de sécurité non spécifié par l'éditeur | None | Se référer au bulletin de sécurité VMware (38158) pour l'obtention des correctifs et mettre à jour vers la version 8.0.3 ou supérieure. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0991/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0991/)<br>[https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38158](https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38158) |
-| **CVE-2026-56819** | 7.5 | 0.36% | FALSE | netty | CWE-400: Uncontrolled Resource Consumption | Problème de sécurité non spécifié par l'éditeur | None | Se référer au bulletin de sécurité VMware (38158) pour l'obtention des correctifs et mettre à jour vers la version 8.0.3 ou supérieure. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0991/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0991/)<br>[https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38158](https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38158) |
-| **CVE-2026-59898** | 6.3 | 0.25% | FALSE | netty | CWE-444: Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling') | Problème de sécurité non spécifié par l'éditeur | None | Se référer au bulletin de sécurité VMware (38158) pour l'obtention des correctifs et mettre à jour vers la version 8.0.3 ou supérieure. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0991/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0991/)<br>[https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38158](https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38158) |
-| **CVE-2026-59899** | 6.9 | 0.34% | FALSE | netty | CWE-770: Allocation of Resources Without Limits or Throttling | Problème de sécurité non spécifié par l'éditeur | None | Se référer au bulletin de sécurité VMware (38158) pour l'obtention des correctifs et mettre à jour vers la version 8.0.3 ou supérieure. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0991/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0991/)<br>[https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38158](https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38158) |
-| **CVE-2026-59900** | 6.9 | 0.23% | FALSE | netty | CWE-444: Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling') | Problème de sécurité non spécifié par l'éditeur | None | Se référer au bulletin de sécurité VMware (38158) pour l'obtention des correctifs et mettre à jour vers la version 8.0.3 ou supérieure. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0991/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0991/)<br>[https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38158](https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38158) |
-| **CVE-2026-59901** | 8.7 | 0.26% | FALSE | netty | CWE-835: Loop with Unreachable Exit Condition ('Infinite Loop') | Problème de sécurité non spécifié par l'éditeur | None | Se référer au bulletin de sécurité VMware (38158) pour l'obtention des correctifs et mettre à jour vers la version 8.0.3 ou supérieure. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0991/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0991/)<br>[https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38158](https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38158) |
-| **CVE-2026-59921** | 5.7 | 0.47% | FALSE | netty | CWE-93: Improper Neutralization of CRLF Sequences ('CRLF Injection') | Problème de sécurité non spécifié par l'éditeur | None | Se référer au bulletin de sécurité VMware (38158) pour l'obtention des correctifs et mettre à jour vers la version 8.0.3 ou supérieure. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0991/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0991/)<br>[https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38158](https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38158) |
-| **CVE-2025-8088** | 8.4 | 94.55% | TRUE | WinRAR | CWE-35 Path traversal | Atteinte à la confidentialité des données, déni de service, problème de sécurité non spécifié | None | Mettre à jour ClamAV vers la version 1.5.4 (branche 1.5.x) ou 1.4.6 (branche 1.4.x) selon la version utilisée. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0992/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0992/)<br>[https://blog.clamav.net/2026/08/clamav-154-and-146-security-patch.html](https://blog.clamav.net/2026/08/clamav-154-and-146-security-patch.html) |
-| **CVE-2026-20337** | 7.5 | 0.36% | FALSE | Cisco Secure Endpoint | CWE-120 Buffer Copy without Checking Size of Input ('Classic Buffer Overflow') | Atteinte à la confidentialité des données, déni de service, problème de sécurité non spécifié | None | Mettre à jour ClamAV vers la version 1.5.4 (branche 1.5.x) ou 1.4.6 (branche 1.4.x) selon la version utilisée. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0992/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0992/)<br>[https://blog.clamav.net/2026/08/clamav-154-and-146-security-patch.html](https://blog.clamav.net/2026/08/clamav-154-and-146-security-patch.html) |
-| **CVE-2026-20338** | 7.5 | 0.33% | FALSE | Cisco Secure Endpoint | CWE-415 Double Free | Atteinte à la confidentialité des données, déni de service, problème de sécurité non spécifié | None | Mettre à jour ClamAV vers la version 1.5.4 (branche 1.5.x) ou 1.4.6 (branche 1.4.x) selon la version utilisée. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0992/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0992/)<br>[https://blog.clamav.net/2026/08/clamav-154-and-146-security-patch.html](https://blog.clamav.net/2026/08/clamav-154-and-146-security-patch.html) |
-| **CVE-2026-20339** | 7.5 | 0.33% | FALSE | Cisco Secure Endpoint | CWE-190 Integer Overflow or Wraparound | Atteinte à la confidentialité des données, déni de service, problème de sécurité non spécifié | None | Mettre à jour ClamAV vers la version 1.5.4 (branche 1.5.x) ou 1.4.6 (branche 1.4.x) selon la version utilisée. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0992/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0992/)<br>[https://blog.clamav.net/2026/08/clamav-154-and-146-security-patch.html](https://blog.clamav.net/2026/08/clamav-154-and-146-security-patch.html) |
-| **CVE-2026-20345** | 7.5 | 0.33% | FALSE | Cisco Secure Endpoint | CWE-121 Stack-based Buffer Overflow | Atteinte à la confidentialité des données, déni de service, problème de sécurité non spécifié | None | Mettre à jour ClamAV vers la version 1.5.4 (branche 1.5.x) ou 1.4.6 (branche 1.4.x) selon la version utilisée. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0992/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0992/)<br>[https://blog.clamav.net/2026/08/clamav-154-and-146-security-patch.html](https://blog.clamav.net/2026/08/clamav-154-and-146-security-patch.html) |
-| **CVE-2026-20346** | 7.5 | 0.33% | FALSE | Cisco Secure Endpoint | CWE-125 Out-of-bounds Read | Atteinte à la confidentialité des données, déni de service, problème de sécurité non spécifié | None | Mettre à jour ClamAV vers la version 1.5.4 (branche 1.5.x) ou 1.4.6 (branche 1.4.x) selon la version utilisée. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0992/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0992/)<br>[https://blog.clamav.net/2026/08/clamav-154-and-146-security-patch.html](https://blog.clamav.net/2026/08/clamav-154-and-146-security-patch.html) |
-| **CVE-2026-20347** | 7.5 | 0.33% | FALSE | Cisco Secure Endpoint | CWE-125 Out-of-bounds Read | Atteinte à la confidentialité des données, déni de service, problème de sécurité non spécifié | None | Mettre à jour ClamAV vers la version 1.5.4 (branche 1.5.x) ou 1.4.6 (branche 1.4.x) selon la version utilisée. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0992/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0992/)<br>[https://blog.clamav.net/2026/08/clamav-154-and-146-security-patch.html](https://blog.clamav.net/2026/08/clamav-154-and-146-security-patch.html) |
-| **CVE-2026-20348** | N/A | 0.33% | FALSE | ClamAV versions 1.5.x antérieures à 1.5.4 et versions antérieures à 1.4.6 | Non spécifiée | Atteinte à la confidentialité des données, déni de service, problème de sécurité non spécifié | None | Mettre à jour ClamAV vers la version 1.5.4 (branche 1.5.x) ou 1.4.6 (branche 1.4.x) selon la version utilisée. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0992/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0992/)<br>[https://blog.clamav.net/2026/08/clamav-154-and-146-security-patch.html](https://blog.clamav.net/2026/08/clamav-154-and-146-security-patch.html) |
-| **CVE-2026-8718** | 8.4 | N/A | FALSE | zephyr | CWE-787 bounds | Débordement de tampon heap noyau pouvant potentiellement mener à une exécution de code ou un crash du système. Le contenu débordant est contrôlé par le pair distant via le CID DTLS. | Theoretical | Appliquer le correctif qui rejette les appels dont optlen est inférieur à MBEDTLS_SSL_CID_OUT_LEN_MAX avec -EINVAL. S'assurer que les configurations DTLS Connection ID sont sécurisées. Désactiver CONFIG_MBEDTLS_SSL_DTLS_CONNECTION_ID si non nécessaire. | [https://cvefeed.io/vuln/detail/CVE-2026-8718](https://cvefeed.io/vuln/detail/CVE-2026-8718)<br>[https://github.com/zephyrproject-rtos/zephyr/commit/aa317825a55a401315e8e17f620c70c02e8f176d](https://github.com/zephyrproject-rtos/zephyr/commit/aa317825a55a401315e8e17f620c70c02e8f176d)<br>[https://github.com/zephyrproject-rtos/zephyr/security/advisories/GHSA-p3r6-mx6c-33gq](https://github.com/zephyrproject-rtos/zephyr/security/advisories/GHSA-p3r6-mx6c-33gq) |
-| **CVE-2026-48161** | 9.3 | N/A | FALSE | react18-use | CWE-506: Embedded Malicious Code | Compromission complète des machines de développement ayant exécuté `npm install` contre un checkout affecté. Le payload de second stade était hébergé par l'attaquant et ne peut être reconstitué. Considérer que tout ce qui est accessible depuis un processus Node avec les permissions de l'utilisateur est compromis. | Active | Supprimer les commits malveillants et src/install[.]js des clones locaux. Jeter les clones locaux du dépôt. Réinitialiser tous les identifiants et auditer l'activité des comptes depuis le 2026-05-19 01:07:01. Considérer les machines affectées comme compromises et effectuer une investigation forensique complète. | [https://cvefeed.io/vuln/detail/CVE-2026-48161](https://cvefeed.io/vuln/detail/CVE-2026-48161)<br>[https://github.com/dai-shi/react18-use/security/advisories/GHSA-32xh-vg5f-64fm](https://github.com/dai-shi/react18-use/security/advisories/GHSA-32xh-vg5f-64fm) |
-| **CVE-2026-73030** | 7.2 | N/A | FALSE | unearth | CWE-22 Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') | Écriture arbitraire de fichiers sur le système de fichiers, pouvant mener à une exécution de code ou une corruption de données selon l'emplacement d'écriture. | Theoretical | Mettre à jour unearth vers une version incluant les correctifs de sécurité (commit 6c78164 ou supérieur). Éviter de traiter des archives non fiables avec unearth. Normaliser les chemins avant validation dans les implémentations personnalisées. | [https://cvefeed.io/vuln/detail/CVE-2026-73030](https://cvefeed.io/vuln/detail/CVE-2026-73030)<br>[https://github.com/frostming/unearth/commit/6c78164e7bfa28b8b3d6f247b87e560692e3c8ba](https://github.com/frostming/unearth/commit/6c78164e7bfa28b8b3d6f247b87e560692e3c8ba)<br>[https://github.com/frostming/unearth/issues/180](https://github.com/frostming/unearth/issues/180)<br>[https://github.com/frostming/unearth/pull/181](https://github.com/frostming/unearth/pull/181)<br>[https://www.vulncheck.com/advisories/unearth-path-traversal-via-unnormalized-paths-and-symlink-escape](https://www.vulncheck.com/advisories/unearth-path-traversal-via-unnormalized-paths-and-symlink-escape) |
-| **CVE-2026-72911** | 9.9 | N/A | FALSE | erpnext | CWE-1336: Improper Neutralization of Special Elements Used in a Template Engine | Exécution de code arbitraire côté serveur (RCE) par un utilisateur authentifié avec un rôle opérationnel standard. Accès en lecture à l'ensemble des données de l'application. Score CVSS 3.1 : 9.9 (CRITICAL). | Theoretical | Mettre à jour ERPNext vers la version 15.118.0 ou 16.29.0. Restreindre l'accès au module process_statement_of_accounts. Surveiller les journails d'exécution de templates. | [https://cvefeed.io/vuln/detail/CVE-2026-72911](https://cvefeed.io/vuln/detail/CVE-2026-72911)<br>[https://github.com/frappe/erpnext/security/advisories/GHSA-qq49-v74j-hjh7](https://github.com/frappe/erpnext/security/advisories/GHSA-qq49-v74j-hjh7) |
-| **CVE-2026-72904** | 9.3 | N/A | FALSE | firecrawl | CWE-77: Improper Neutralization of Special Elements used in a Command ('Command Injection') | Lecture arbitraire de fichiers sur le serveur, pouvant exposer des secrets, des configurations et des données sensibles. Score CVSS 4.0 : 9.3 (CRITICAL). | Theoretical | Mettre à jour Firecrawl vers la version 2.11.32 ou ultérieure. Restreindre l'accès à l'API d'extraction. Désactiver la résolution de références externes dans json-schema-ref-parser. | [https://cvefeed.io/vuln/detail/CVE-2026-72904](https://cvefeed.io/vuln/detail/CVE-2026-72904) |
-| **CVE-2026-72903** | 8.1 | N/A | FALSE | tabby | CWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') | Écriture ou écrasement de fichiers arbitraires en dehors du répertoire de téléchargement sélectionné par l'utilisateur, pouvant mener à l'exécution de code ou à la corruption de fichiers système. Score CVSS 3.1 : 8.1 (HIGH). | Theoretical | Mettre à jour Tabby vers la version 1.0.235 ou ultérieure. Vérifier le traitement des noms de fichiers SFTP. Éviter les connexions vers des serveurs SFTP non fiables. | [https://cvefeed.io/vuln/detail/CVE-2026-72903](https://cvefeed.io/vuln/detail/CVE-2026-72903)<br>[https://github.com/Eugeny/tabby/security/advisories/GHSA-59p9-8gwf-v9v7](https://github.com/Eugeny/tabby/security/advisories/GHSA-59p9-8gwf-v9v7) |
-| **CVE-2026-48160** | 9.3 | N/A | FALSE | react-tracked | CWE-506: Embedded Malicious Code | Compromission complète des machines de développement ayant exécuté `npm install` contre un checkout affecté. Le payload de second stade étant hébergé par l'attaquant, l'étendue exacte de la compromission ne peut être déterminée. Il faut supposer une compromission totale de tout ce qui est accessible depuis un processus Node avec les permissions de l'utilisateur. Score CVSS 4.0 : 9.3 (CRITICAL). | Active | Supprimer les commits malveillants des clones locaux. Auditer l'activité des comptes depuis le 2026-05-18 19:26:36. Rotationner tous les credentials accessibles par la machine. Réinstaller les dépendances depuis une source de confiance. | [https://cvefeed.io/vuln/detail/CVE-2026-48160](https://cvefeed.io/vuln/detail/CVE-2026-48160)<br>[https://github.com/dai-shi/react-tracked/security/advisories/GHSA-79c5-q7m9-9c6x](https://github.com/dai-shi/react-tracked/security/advisories/GHSA-79c5-q7m9-9c6x) |
-| **CVE-2026-18478** | 5.1 | N/A | FALSE | Magnolia CMS | CWE-79 Improper neutralization of input during web page generation ('cross-site scripting') | Exécution de code JavaScript arbitraire dans le contexte de session d'autres utilisateurs (potentiellement des administrateurs), pouvant mener à un vol de session, une élévation de privilèges ou une exfiltration de données. | Theoretical | Mettre à jour Magnolia CMS vers la version 6.3.10 ou ultérieure. Restreindre les privilèges éditeur. Valider et sanitiser les noms de fichiers lors de l'import. | [https://cert.pl/en/posts/2026/08/CVE-2026-18478/](https://cert.pl/en/posts/2026/08/CVE-2026-18478/) |
-| **CVE-2026-34348** | 6.5 | 0.71% | FALSE | Windows 10 Version 1809, Windows 10 Version 21H2, Windows 10 Version 22H2 | CWE-693: Protection Mechanism Failure | Usurpation d'identité d'utilisateurs privilégiés contournant les politiques de MFA résistant au phishing. Accès non autorisé à des ressources et données sensibles via Microsoft Entra ID. | Theoretical | Appliquer les mises à jour de sécurité Microsoft pour CVE-2026-34348. Adopter une approche Zero Trust et least-privilege. Maintenir les protections endpoint. Surveiller les authentifications Entra ID pour des comportements anormaux. | [https://thehackernews.com/2026/08/new-passkey-attacks-can-recover-synced.html](https://thehackernews.com/2026/08/new-passkey-attacks-can-recover-synced.html) |
-| **CVE-2026-18370** | 4.8 | N/A | FALSE | entr | CWE-122 Heap-based buffer overflow | Corruption mémoire, arrêt de processus et déni de service par un attaquant local. Potentielle exécution de code arbitraire selon le contexte d'exploitation. | Theoretical | Appliquer le commit 2467fe0 ou mettre à jour vers une version supérieure à 5.8. Limiter la longueur des arguments passés à entr. Surveiller les crashes du processus. | [https://cert.pl/en/posts/2026/08/CVE-2026-18370/](https://cert.pl/en/posts/2026/08/CVE-2026-18370/) |
-| **CVE-2026-3502** | 7.8 | 5.75% | TRUE | TrueConf Client | CWE-494: Download of Code Without Integrity Check. | Compromission de systèmes exécutant TrueConf Client via exploitation zero-day, ciblant des entités gouvernementales d'Asie du Sud-Est. | Active | Mettre à jour TrueConf Client avec la dernière version corrigée. Surveiller les activités suspectes liées au client TrueConf. | [https://thehackernews.com/2026/08/head-mare-exploits-trueconf-flaws-to.html](https://thehackernews.com/2026/08/head-mare-exploits-trueconf-flaws-to.html) |
-| **CVE-2026-66484** | 4.6 | N/A | FALSE | cpio | CWE-22 Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') | Permet à un attaquant de créer des liens physiques vers des fichiers arbitraires en dehors du répertoire d'extraction prévu, pouvant mener à une corruption de fichiers ou un accès non autorisé. | None | Appliquer le correctif (commit e2b9cbdd3354d2b1569b7390d1bc15c1930559ad). Éviter d'extraire des archives non fiables avec cpio. | [https://cert.pl/en/posts/2026/08/CVE-2026-66484/](https://cert.pl/en/posts/2026/08/CVE-2026-66484/) |
-| **CVE-2026-66485** | 4.6 | N/A | FALSE | cpio | CWE-789 Memory allocation with excessive size value | Déni de service – crash du processus cpio lors de l'extraction d'une archive malveillante. | None | Appliquer le correctif (commit 3cd514031371d8aeeaf2048aa10103e02831aaa9). Éviter d'extraire des archives cpio non fiables. | [https://cert.pl/en/posts/2026/08/CVE-2026-66484/](https://cert.pl/en/posts/2026/08/CVE-2026-66484/) |
-| **CVE-2026-66486** | 4.6 | N/A | FALSE | cpio | CWE-116 Improper Encoding or Escaping of Output | Falsification de listes d'archives et injection de séquences de contrôle terminal, pouvant tromper les utilisateurs ou automatiser des actions via terminal. | None | Appliquer le correctif (commit 2ff9600c9ef32e88759843cdbde74c8db5ae9b30). Éviter d'afficher des listes d'archives non fiables. | [https://cert.pl/en/posts/2026/08/CVE-2026-66484/](https://cert.pl/en/posts/2026/08/CVE-2026-66484/) |
-| **CVE-2026-71391** | 5.3 | N/A | FALSE | Emacs | CWE-193 Off-by-one Error | Exposition du contenu de la mémoire du tas, pouvant être utilisée pour contourner ASLR et faciliter des attaques ultérieures. | None | Appliquer le correctif (commit 95ab9ef627b212d74d321c5bbb5b56a1be7b9fbe). Éviter de charger des polices TrueType non fiables dans Emacs. | [https://cert.pl/en/posts/2026/08/CVE-2026-71391/](https://cert.pl/en/posts/2026/08/CVE-2026-71391/) |
-| **CVE-2026-71392** | 5.3 | N/A | FALSE | Emacs | CWE-190 Integer Overflow or Wraparound | Corruption de la mémoire du tas pouvant mener à l'exécution de code arbitraire. | None | Appliquer le correctif (commit c4e20777c26548722a37b03db93243e83a0d6188). Éviter de charger des polices TrueType non fiables. | [https://cert.pl/en/posts/2026/08/CVE-2026-71391/](https://cert.pl/en/posts/2026/08/CVE-2026-71391/) |
-| **CVE-2026-71393** | 5.3 | N/A | FALSE | Emacs | CWE-190 Integer Overflow or Wraparound | Corruption de la mémoire du tas pouvant mener à l'exécution de code arbitraire. | None | Appliquer le correctif (commit d51a4722316efe0960994d371e1859099894d1ca). Éviter de charger des polices TrueType non fiables. | [https://cert.pl/en/posts/2026/08/CVE-2026-71391/](https://cert.pl/en/posts/2026/08/CVE-2026-71391/) |
-| **CVE-2026-71394** | 5.3 | N/A | FALSE | Emacs | CWE-1284 Improper Validation of Specified Quantity in Input | Utilisation de données tas non initialisées dans les recherches de tables ultérieures, pouvant entraîner une divulgation d'informations, des crashes ou un accès mémoire arbitraire sur les cibles 32 bits. | None | Appliquer le correctif (commit 7621ee1d01229d50e5c0cddea6bf0b01095a62cf). Éviter de charger des polices TrueType non fiables. | [https://cert.pl/en/posts/2026/08/CVE-2026-71391/](https://cert.pl/en/posts/2026/08/CVE-2026-71391/) |
-| **CVE-2026-8037** | 9.6 | 99.31% | TRUE | LoadMaster, ECS Connections Manager, Object Scale Connection Manager | CWE-77: Improper Neutralization of Special Elements used in a Command ('Command Injection') | Compromission totale des load balancers LoadMaster par un attaquant non authentifié, permettant l'exécution de commandes système, le pivot réseau, et potentiellement l'interception ou la manipulation du trafic load balancé. | Active | Appliquer immédiatement les mises à jour Progress Kemp LoadMaster disponibles depuis début juin 2026. Restreindre l'accès aux interfaces d'administration. Consulter le bulletin de sécurité Progress (CVE-2026-8037 / CVE-2026-33691). | [https://www.security.nl/posting/948652/Kritiek+lek+in+Progress+Kemp+LoadMaster-loadbalancers+actief+misbruikt?channel=rss](https://www.security.nl/posting/948652/Kritiek+lek+in+Progress+Kemp+LoadMaster-loadbalancers+actief+misbruikt?channel=rss) |
-| **CVE-2024-1212** | 10.0 | 95.39% | TRUE | LoadMaster | CWE-78 Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') | Compromission des load balancers LoadMaster (historique). | Active | S'assurer que les correctifs pour CVE-2024-1212 sont appliqués sur toutes les instances LoadMaster. | [https://www.security.nl/posting/948652/Kritiek+lek+in+Progress+Kemp+LoadMaster-loadbalancers+actief+misbruikt?channel=rss](https://www.security.nl/posting/948652/Kritiek+lek+in+Progress+Kemp+LoadMaster-loadbalancers+actief+misbruikt?channel=rss) |
-| **CVE-2026-12537** | 10.0 | 0.15% | FALSE | Gemini CLI, run-gemini-cli GitHub Action | CWE-20 Improper Input Validation | Exécution de code arbitraire et vol de clés API dans les environnements d'automatisation utilisant Gemini CLI. | None | Mettre à jour Gemini CLI vers la dernière version corrigée. Révoquer et réémettre les clés API. Renforcer la gestion des secrets. | [https://research.checkpoint.com/2026/10th-august-threat-intelligence-report/](https://research.checkpoint.com/2026/10th-august-threat-intelligence-report/) |
-| **CVE-2026-54316** | 6.0 | 0.40% | FALSE | claude-code | CWE-183: Permissive List of Allowed Inputs | Exécution de code arbitraire et vol de clés API dans les environnements d'automatisation utilisant Claude Code. | None | Mettre à jour Claude Code vers la dernière version corrigée. Révoquer et réémettre les clés API. Renforcer la gestion des secrets. | [https://research.checkpoint.com/2026/10th-august-threat-intelligence-report/](https://research.checkpoint.com/2026/10th-august-threat-intelligence-report/) |
-| **CVE-2026-64638** | 8.9 | 0.77% | FALSE | WordPress | CWE-79 Cross-site Scripting (XSS) - Reflected | Exécution de scripts malveillants dans le navigateur des utilisateurs via XSS pré-authentification, pouvant escalader en RCE sur le serveur WordPress. | None | Mettre à jour WordPress vers la version 7.0.3. Appliquer les correctifs rétroportés pour les branches supportées. Déployer un WAF avec des règles de protection XSS. | [https://research.checkpoint.com/2026/10th-august-threat-intelligence-report/](https://research.checkpoint.com/2026/10th-august-threat-intelligence-report/) |
-| **CVE-2026-65617** | 8.8 | 0.31% | FALSE | artifactory | CWE-502 Deserialization of Untrusted Data | Compromission initiale de l'environnement d'évaluation OpenAI via Artifactory, servant de point d'entrée à une campagne d'intrusion à grande échelle contre Hugging Face. | Active | Appliquer les correctifs Artifactory. Réduire les trust relationships héritées entre environnements. Mettre en place une défense en couches limitant la propagation d'un compromis initial. | [https://www.recordedfuture.com/blog/hugging-face-cheap-persistence](https://www.recordedfuture.com/blog/hugging-face-cheap-persistence) |
-| **CVE-2026-65923** | 6.8 | 0.19% | FALSE | artifactory | CWE-918 Server-Side Request Forgery (SSRF) | Compromission de l'environnement d'évaluation OpenAI et pivot vers Hugging Face. | Active | Appliquer les correctifs Artifactory. Réduire les trust relationships héritées. Mettre en place une défense en couches. | [https://www.recordedfuture.com/blog/hugging-face-cheap-persistence](https://www.recordedfuture.com/blog/hugging-face-cheap-persistence) |
-| **CVE-2026-66018** | 6.5 | 0.23% | FALSE | artifactory | CWE-200 Exposure of Sensitive Information to an Unauthorized Actor | Compromission de l'environnement d'évaluation OpenAI et pivot vers Hugging Face. | Active | Appliquer les correctifs Artifactory. Réduire les trust relationships héritées. Mettre en place une défense en couches. | [https://www.recordedfuture.com/blog/hugging-face-cheap-persistence](https://www.recordedfuture.com/blog/hugging-face-cheap-persistence) |
-| **CVE-2026-33825** | 7.8 | 6.75% | TRUE | Microsoft Defender Antimalware Platform | CWE-1220: Insufficient Granularity of Access Control | Escalade de privilèges locale permettant aux attaquants d'élever leurs privilèges et de faciliter le déploiement de ransomware sur les systèmes compromis. | Active | Appliquer le correctif Microsoft publié le 14 avril 2026. Surveiller les activités d'escalade de privilèges. Maintenir une veille sur le catalogue KEV de CISA. | [https://securelist.com/malware-report-q2-2026-pc-iot-statistics/120960/](https://securelist.com/malware-report-q2-2026-pc-iot-statistics/120960/) |
-| **CVE-2026-50751** | N/A | 82.55% | FALSE | Check Point Remote Access VPN et Mobile Access | Vulnérabilité critique (zero-day exploitée dans la nature) | Compromission initiale via le VPN permettant le déploiement de ransomware Qilin, chiffrement des données et extorsion. | Active | Appliquer les correctifs Check Point pour CVE-2026-50751. Restreindre l'accès aux interfaces VPN. Surveiller les connexions anormales. | [https://securelist.com/malware-report-q2-2026-pc-iot-statistics/120960/](https://securelist.com/malware-report-q2-2026-pc-iot-statistics/120960/) |
-| **CVE-2026-50752** | 7.4 | 4.55% | FALSE | Quantum Security Gateway, Spark Firewalls | CWE-295: Improper Certificate Validation. | Contournement potentiel de l'authentification des connexions VPN site-to-site utilisant IKEv1, permettant des connexions non autorisées. | Theoretical | Appliquer les correctifs Check Point. Migrer d'IKEv1 vers IKEv2. Renouveler les certificats VPN site-to-site. | [https://securelist.com/malware-report-q2-2026-pc-iot-statistics/120960/](https://securelist.com/malware-report-q2-2026-pc-iot-statistics/120960/) |
-| **CVE-2026-66738** | 7.7 | N/A | FALSE | SPIP | CWE-94 Improper Control of Generation of Code ('Code Injection') | Exécution de code à distance par des éditeurs authentifiés, pouvant mener à une compromission totale du serveur hébergeant SPIP. | None | Mettre à jour SPIP vers la version 4.4.18 ou supérieure dès que disponible. Isoler les instances non patchées. Restreindre l'accès aux comptes éditeurs. | [https://mastodon.social/@hugovalters/117073701052682697](https://mastodon.social/@hugovalters/117073701052682697) |
-| **CVE-2026-47754** | 9.3 | N/A | FALSE | metacat | CWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') | Un attaquant non authentifié peut lire des fichiers arbitraires sur le serveur, ce qui peut entraîner l'exfiltration de données sensibles (fichiers de configuration, credentials, clés privées) et potentiellement faciliter des attaques ultérieures. | Theoretical | Désactiver immédiatement l'exposition publique des instances Metacat vulnérables. Restreindre l'accès via VPN ou liste blanche d'IP. Déployer un WAF avec filtrage des séquences de path traversal. Surveiller les journaux d'accès. Appliquer le correctif dès sa disponibilité. | [https://mastodon.social/@hugovalters/117072550822098454](https://mastodon.social/@hugovalters/117072550822098454)<br>[https://www.valtersit.com/cve/CVE-2026-47754/](https://www.valtersit.com/cve/CVE-2026-47754/) |
-| **CVE-2026-60004** | N/A | N/A | FALSE | Forgejo (basé sur Gitea) - versions antérieures à v15 LTS et v16 | Exécution de code à distance (RCE) via endpoint diffpatch | Exécution de code à distance non authentifiée (après création de compte si inscriptions ouvertes) permettant le déploiement de crypto-miners, potentiellement des reverse shells ou des outils de mouvement latéral. Dans le cas documenté, l'impact s'est limité à un crypto-miner sans mouvement latéral détecté. | Active | Mettre à jour Forgejo vers v15 LTS ou v16. Désactiver les inscriptions ouvertes. Désactiver l'authentification locale au profit d'une authentification fédérée. Restreindre les connexions sortantes des conteneurs. Surveiller les appels à l'endpoint diffpatch. Maintenir les sauvegardes 3-2-1. | [https://social.lol/@phillip/117072545215119586](https://social.lol/@phillip/117072545215119586)<br>[https://phunky.cafe/my-homelab-got-hacked/](https://phunky.cafe/my-homelab-got-hacked/) |
-| **CVE-2026-68121** | N/A | N/A | FALSE | Linux | Use-after-free via reallocation d'en-tête skb | Un attaquant local pourrait exploiter cette vulnérabilité pour provoquer une corruption mémoire menant potentiellement à une élévation de privilèges (exécution de code en ring 0) ou à un déni de service (kernel panic). | Theoretical | Désactiver ou restreindre le module PPPoE kernel si non nécessaire. Filtrer le trafic PPPoE au niveau du pare-feu. Surveiller les journaux kernel pour des anomalies liées à pppoe_sendmsg. Appliquer la mise à jour kernel corrective dès sa disponibilité. | [https://mastodon.social/@hugovalters/117072332979193830](https://mastodon.social/@hugovalters/117072332979193830)<br>[https://www.valtersit.com/cve/CVE-2026-68121/](https://www.valtersit.com/cve/CVE-2026-68121/) |
-| **** | N/A | N/A | FALSE | Roundcube Webmail versions 1.6.x antérieures à 1.6.18 et versions 1.7.x antérieures à 1.7.3 | Multiples vulnérabilités (RCE, XSS, SSRF, contournement de politique de sécurité, atteinte à la confidentialité) | Exécution de code arbitraire à distance, atteinte à la confidentialité des données, falsification de requêtes côté serveur (SSRF), injection de code indirecte (XSS) et contournement de la politique de sécurité. Compromission potentielle du serveur de messagerie et des données des utilisateurs. | Theoretical | Se référer au bulletin de sécurité de l'éditeur et appliquer les mises à jour vers Roundcube Webmail 1.6.18 ou 1.7.3. Consulter : hxxps[://]roundcube[.]net/news/2026/08/09/security-updates-1[.]6[.]18-and-1[.]7[.]3 | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0987/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0987/) |
-| **KLCERT-26-057** | N/A | N/A | FALSE | TrueConf Server (versions 5.3.x ≤ 5.3.9, 5.4.x ≤ 5.4.9, 5.5.x ≤ 5.5.5 et antérieures) | Exécution de code arbitraire avec privilèges élevés (chaîne d'exploitation) | Compromission totale du serveur TrueConf avec privilèges SYSTEM, permettant le déploiement de web shells, le vol d'identifiants (dump lsass), l'exfiltration de données et l'empoisonnement des installateurs clients (attaque de la chaîne d'approvisionnement). | Active | Mettre à jour TrueConf Server vers les versions 5.3.9, 5.4.9 ou 5.5.5 publiées le 18 juin 2026. Restreindre l'accès au port TCP 4307. Surveiller les modifications de fichiers dans le répertoire public/js. | [https://thehackernews.com/2026/08/head-mare-exploits-trueconf-flaws-to.html](https://thehackernews.com/2026/08/head-mare-exploits-trueconf-flaws-to.html) |
-| **KLCERT-26-058** | N/A | N/A | FALSE | TrueConf Server (versions 5.3.x ≤ 5.3.9, 5.4.x ≤ 5.4.9, 5.5.x ≤ 5.5.5 et antérieures) | Évasion d'environnement isolé / Exécution de code arbitraire avec privilèges SYSTEM | Évasion de sandbox menant à une compromission complète du serveur avec privilèges SYSTEM, déploiement de web shells, vol de données et empoisonnement de la chaîne d'approvisionnement logicielle. | Active | Mettre à jour TrueConf Server vers les versions corrigées (5.3.9, 5.4.9, 5.5.5 – 18 juin 2026). Restreindre l'accès au port TCP 4307 et surveiller les activités suspectes. | [https://thehackernews.com/2026/08/head-mare-exploits-trueconf-flaws-to.html](https://thehackernews.com/2026/08/head-mare-exploits-trueconf-flaws-to.html) |
+| [CVE-2026-68820](https://www.cve.org/CVERecord?id=CVE-2026-68820) | 7.0 (IMPORTANT, v3.1) | N/A | Oui (exploitée, KEV) | **Microsoft** Windows AFD.sys (Ancillary Function Driver for WinSock) | Toutes versions antérieures au patch du 11/08 | Use-after-free (CWE-416), race condition | Élévation de privilège locale vers SYSTEM | Correctif publié 11/08 ; exploitée par Lazarus (Operation Dream Job) → voir [Lazarus Dream Job](#lazarus-dream-job) | [CrowdStrike](https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-august-2026)<br>[thehackernews](https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including-a-windows-driver-zero-day-under-active-attack.html)<br>[Check Point](https://research.checkpoint.com/2026/shattering-the-dream-when-a-job-offer-becomes-a-zero-day-attack/)<br>[CIS](https://www.cisecurity.org/advisory/critical-patches-issued-for-microsoft-products-august-11-2026)<br>[KrebsOnSecurity](https://krebsonsecurity.com/2026/08/microsoft-plugs-nearly-400-security-holes/) |
+| [CVE-2026-62832](https://www.cve.org/CVERecord?id=CVE-2026-62832) | 9.8 (CRITICAL, v3.1) | N/A | Non | **Microsoft** Windows DNS Server | Versions antérieures au patch | RCE non authentifiée | RCE distante sans interaction | Correctif publié 11/08 | [CrowdStrike](https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-august-2026)<br>[KrebsOnSecurity](https://krebsonsecurity.com/2026/08/microsoft-plugs-nearly-400-security-holes/) |
+| [CVE-2026-62893](https://www.cve.org/CVERecord?id=CVE-2026-62893) | 9.8 (CRITICAL, v3.1) | N/A | Non | **Microsoft** Windows Deployment Services (WDSServer) | Windows Server avec WDS activé | Use-after-free, RCE adjacente réseau | RCE SYSTEM sans authentification (si WDS activé) | Correctif publié 11/08 ; désactiver WDS si inutile | [ZDI-26-544](http://www.zerodayinitiative.com/advisories/ZDI-26-544/)<br>[thehackernews](https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including-a-windows-driver-zero-day-under-active-attack.html) |
+| [CVE-2026-72971](https://www.cve.org/CVERecord?id=CVE-2026-72971) | 9.8 (CRITICAL, v3.1) | N/A | Non | **Microsoft** implémentation QUIC | Versions antérieures au patch | RCE non authentifiée | RCE distante | Correctif publié 11/08 | [CrowdStrike](https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-august-2026)<br>[KrebsOnSecurity](https://krebsonsecurity.com/2026/08/microsoft-plugs-nearly-400-security-holes/) |
+| CVE-2026-xxxx (HPC Pack) | 9.8 (CRITICAL, v3.1) | N/A | Non | **Microsoft** HPC Pack | Versions antérieures au patch | RCE non authentifiée | RCE distante | Correctif publié 11/08 | [thehackernews](https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including-a-windows-driver-zero-day-under-active-attack.html) |
+| [CVE-2026-63520](https://www.cve.org/CVERecord?id=CVE-2026-63520) | N/A | N/A | Non | **Microsoft** SharePoint | Toutes versions non patchées (patch 11/08) | RCE via custom .NET gadget chain | RCE authentifiée ; combinée à CVE-2026-55040 = RCE non authentifiée | Correctif publié 11/08 ; → voir [SharePoint RCE chain](#sharepoint-rce) | [thehackernews](https://thehackernews.com/2026/08/researchers-disclose-ai-assisted-sharepoint-exploit-chain-reaching-unauthenticated-rce.html)<br>[security.nl](https://www.security.nl/posting/948844/Microsoft+komt+vanavond+met+update+voor+RCE-lek+in+SharePoint) |
+| [CVE-2026-55040](https://www.cve.org/CVERecord?id=CVE-2026-55040) | N/A | N/A | Non | **Microsoft** SharePoint | Versions patchées le 14/07 seulement | Contournement authentification | RCE non authentifiée combinée à CVE-2026-63520 | Correctif publié 14/07 ; surveiller exploitation chain | [thehackernews](https://thehackernews.com/2026/08/researchers-disclose-ai-assisted-sharepoint-exploit-chain-reaching-unauthenticated-rce.html)<br>[security.nl](https://www.security.nl/posting/948844/Microsoft+komt+vanavond+met+update+voor+RCE-lek+in+SharePoint) |
+| [CVE-2026-45659](https://www.cve.org/CVERecord?id=CVE-2026-45659) | 9.8 (CRITICAL, v3.1) | N/A | Oui (KEV, ransomware) | **Microsoft** SharePoint | Versions antérieures au patch 12/05 | RCE non authentifiée | RCE distante exploitée pour ransomware (CISA KEV depuis 01/07) | Correctif publié 12/05 (bulletin publié 21/05) ; → voir [Gunra](#gunra-ransomware) | [security.nl](https://www.security.nl/posting/948804/Kritiek+Microsoft+SharePoint-lek+ook+gebruikt+bij+ransomware-aanvallen) |
+| [CVE-2026-62911](https://www.cve.org/CVERecord?id=CVE-2026-62911) | 8.8 (HIGH, v3.1) | N/A | Non | **Microsoft** Exchange | Versions antérieures au patch | Improper authorization, contournement auth | Élévation de privilège vers SYSTEM (auth requise mais bypassable) | Correctif publié 11/08 (Pwn2Own, orange_8361 DEVCORE) | [ZDI-26-538](http://www.zerodayinitiative.com/advisories/ZDI-26-538/) |
+| [CVE-2026-65814](https://www.cve.org/CVERecord?id=CVE-2026-65814) | 8.8 (HIGH, v3.1) | N/A | Non | **Microsoft** Windows storport | Versions antérieures au patch | Integer overflow | Élévation de privilège locale vers SYSTEM | Correctif publié 11/08 (Pwn2Own, Viettel) | [ZDI-26-537](http://www.zerodayinitiative.com/advisories/ZDI-26-537/) |
+| [CVE-2026-54984](https://www.cve.org/CVERecord?id=CVE-2026-54984) | 7.8 (HIGH, v3.1) | N/A | Non | **Microsoft** Windows (Mscms.dll ICC) | Versions antérieures au patch | OOB write parsing ICC color profiles | RCE dans le contexte du processus | Correctif publié 11/08 | [ZDI-26-543](http://www.zerodayinitiative.com/advisories/ZDI-26-543/) |
+| [CVE-2026-62712](https://www.cve.org/CVERecord?id=CVE-2026-62712) | 7.8 (HIGH, v3.1) | N/A | Non | **Microsoft** Windows UMPDDrvBitBlt (win32kfull) | Versions antérieures au patch | Improper object management | Élévation de privilège locale vers SYSTEM | Correctif publié 11/08 | [ZDI-26-542](http://www.zerodayinitiative.com/advisories/ZDI-26-542/) |
+| [CVE-2026-65775](https://www.cve.org/CVERecord?id=CVE-2026-65775) | 8.8 (HIGH, v3.1) | N/A | Non | **Microsoft** Windows win32kfull (Pwn2Own) | Versions antérieures au patch | Use-after-free | Élévation de privilège locale vers SYSTEM | Correctif publié 11/08 | [ZDI-26-541](http://www.zerodayinitiative.com/advisories/ZDI-26-541/) |
+| [CVE-2026-65776](https://www.cve.org/CVERecord?id=CVE-2026-65776) | 6.5 (MEDIUM, v3.1) | N/A | Non | **Microsoft** Windows win32kfull (Pwn2Own) | Versions antérieures au patch | Use-after-free information disclosure | Fuite d'informations, exploitable en chain vers SYSTEM | Correctif publié 11/08 | [ZDI-26-540](http://www.zerodayinitiative.com/advisories/ZDI-26-540/) |
+| [CVE-2026-65773](https://www.cve.org/CVERecord?id=CVE-2026-65773) | 7.8 (HIGH, v3.1) | N/A | Non | **Microsoft** Windows ipt.sys (Pwn2Own) | Versions antérieures au patch | Incorrect permission on registry key | Élévation de privilège locale vers SYSTEM | Correctif publié 11/08 | [ZDI-26-539](http://www.zerodayinitiative.com/advisories/ZDI-26-539/) |
 
----
+> Patch Tuesday août 2026 : 415 CVE au total (CrowdStrike) / 398 (ZDI, en comptant différemment), 62 Critical, 4 zero-day divulguées (3 non exploitées + 1 exploitée CVE-2026-68820). Répartition par technique : élévation de privilège 174 (42 %), RCE 109 (26 %), fuite d'informations 85 (20 %). Windows reçoit 233 patches, ESU 192, Office 125. Aucune des 4 CVE 9.8 non authentifiées n'était exploitée au moment du patch. Source additionnelle : [Talos (Snort rules)](https://blog.talosintelligence.com/microsoft-patch-tuesday-for-august-2026), [ISC SANS](https://isc.sans.edu/diary/rss/33236).
 
-<div id="articles"></div>
+### Zoom (Zoomsday - faille zero-click annotation)
 
-# SECTION "ARTICLES"
+| CVE | Score CVSS | EPSS | CISA KEV | Éditeur / Produit affecté | Versions affectées | Type de vulnérabilité | Impact | Mesures de contournement / Correctif | Source(s) |
+|---|---|---|---|---|---|---|---|---|---|
+| [CVE-2026-53413](https://www.cve.org/CVERecord?id=CVE-2026-53413) | N/A (critique, zero-click) | N/A | Non | **Zoom** Workplace / Rooms / Meeting SDK | Workplace < 7.1.5 / 7.0.6 ; VDI Client < 7.0.11 / 6.6.16 ; Rooms & SDK < 7.1.0 | Faille annotation zero-click | Hijack du client d'un participant (RCE potentielle) par un participant partageant l'écran | Correctifs client publiés en juin/juillet ; aucune exploitation signalée | [thehackernews](https://thehackernews.com/2026/08/zoom-annotation-flaws-could-let-a-meeting-participant-hijack-another-attendees-client.html)<br>[securityaffairs](https://securityaffairs.com/197042/hacking/zoom-patches-zoomsday-zero-click-flaw-enabling-remote-code-execution.html)<br>[security.nl](https://www.security.nl/posting/948857/Zoom-beveiligingslek) |
+| [CVE-2026-53414](https://www.cve.org/CVERecord?id=CVE-2026-53414) | N/A | N/A | Non | **Zoom** Workplace / Rooms / Meeting SDK | Idem | Faille annotation zero-click | Hijack du client du présentateur par un participant | Correctifs juin/juillet | [thehackernews](https://thehackernews.com/2026/08/zoom-annotation-flaws-could-let-a-meeting-participant-hijack-another-attendees-client.html) |
+| [CVE-2026-53415](https://www.cve.org/CVERecord?id=CVE-2026-53415) | N/A | N/A | Non | **Zoom** Workplace / Rooms / Meeting SDK | Rooms & SDK < 7.1.5 | Faille annotation zero-click | Hijack du client | Correctifs juin/juillet | [thehackernews](https://thehackernews.com/2026/08/zoom-annotation-flaws-could-let-a-meeting-participant-hijack-another-attendees-client.html) |
 
----
+> Surnommée « Zoomsday ». La faille est dans l'outil d'annotation (partage d'écran). Aucun clic, aucun prompt, aucun téléchargement requis côté victime : la simple présence dans la réunion suffit. Recherche par « A Security » (startup israélienne, levée 37 M$ en juin). Correctifs clients publiés en juin (Zoom Workplace) et juillet (VDI, Rooms, SDK), soit ~2 mois avant divulgation publique. Pas d'exploitation connue. Source additionnelle : [infosec.exchange/@Markcarter](https://infosec.exchange/@Markcarter/117080210846617612).
 
-<div id="deadlock-ransomware-analyse-dun-encryptor-rust-avec-infrastructure-de-recuperation-decentralisee"></div>
+### CERT-FR (avis du 11 août 2026)
 
-## DeadLock ransomware : analyse d'un encryptor Rust avec infrastructure de récupération décentralisée
+| CVE | Score CVSS | EPSS | CISA KEV | Éditeur / Produit affecté | Versions affectées | Type de vulnérabilité | Impact | Mesures de contournement / Correctif | Source(s) |
+|---|---|---|---|---|---|---|---|---|---|
+| N/A | N/A | N/A | N/A | **Postfix** | Versions antérieures au dernier correctif | Multiples vulnérabilités | Non spécifié par l'éditeur | Suivre bulletin éditeur | [CERTFR-2026-AVI-0993](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0993/) |
+| [CVE-2026-18503](https://www.cve.org/CVERecord?id=CVE-2026-18503) | N/A | N/A | N/A | **CPython** | Versions antérieures au dernier correctif | Vulnérabilité | Non spécifié | Suivre bulletin éditeur | [CERTFR-2026-AVI-0994](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0994/) |
+| N/A | N/A | N/A | N/A | **SPIP** | Versions antérieures au dernier correctif | Multiples vulnérabilités | Non spécifié | Suivre bulletin éditeur | [CERTFR-2026-AVI-0995](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0995/) |
+| [CVE-2026-17106](https://www.cve.org/CVERecord?id=CVE-2026-17106) | N/A | N/A | N/A | **Docker** Desktop | < 4.86.0 | Atteinte à l'intégrité des données | Compromission de l'intégrité | MAJ Docker Desktop >= 4.86.0 | [CERTFR-2026-AVI-0996](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0996/) |
+| N/A | N/A | N/A | N/A | **OpenSSH** | < 10.5 | Multiples vulnérabilités | Non spécifié | MAJ OpenSSH 10.5 | [CERTFR-2026-AVI-0997](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0997/) |
+| N/A | N/A | N/A | N/A | **SAP** (ABAP Tools, APO, AP FICA ODN, et autres) | Multiples versions SAP_BASIS, S4CORE, KERNEL, FI-CA | RCE, XSS, SQLi, élév. privilèges, contournement politique sécurité, atteinte confidentialité | Multiples | Appliquer correctifs SAP august-2026 | [CERTFR-2026-AVI-0998](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0998/) |
 
-### Résumé
+### Adobe (CIS advisory, 12 CVE)
 
-Microsoft Threat Intelligence publie une analyse technique détaillée du ransomware DeadLock, un encryptor écrit en Rust observé depuis juillet 2025. DeadLock pratique la double extortion et a publié plus de 80 organisations compromises sur son site de leak, avec plus de la moitié des victimes en Europe. L'encryptor utilise un chiffrement hybride Curve25519/XChaCha20 avec une clé publique embarquée (03bf50bb...). Il implémente un geofencing linguistique (exclusion Russie, Ukraine, Biélorussie, etc.), un mécanisme de throttling basé sur les ressources système (CPU < 70%, mémoire < 29%), une stratégie de chiffrement partiel par taille de fichier (100% < 50MB, 50% < 118MB, 25% < 500MB, 10% < 1GB, chunked au-delà), et vide les journaux d'événements Windows via trois méthodes complémentaires. Sa particularité majeure est son infrastructure de récupération décentralisée : un fichier HTML RECOVERY_CHAT auto-contenu qui interroge des smart contracts Polygon pour récupérer l'URL du proxy, communique via le réseau Session (messenger onion-routed) pour le chat victime-opérateur, et héberge les données de leak sur Wasabi (S3-compatible). DeadLock est déployé par des affiliés des écosystèmes Lynx et INC ransomware.
+| CVE | Score CVSS | EPSS | CISA KEV | Éditeur / Produit affecté | Versions affectées | Type de vulnérabilité | Impact | Mesures de contournement / Correctif | Source(s) |
+|---|---|---|---|---|---|---|---|---|---|
+| CVE-2026-48362, CVE-2026-48273, CVE-2026-71384, CVE-2026-71387, CVE-2026-71385, CVE-2026-25652, CVE-2026-71383, CVE-2026-48375, CVE-2026-71386, CVE-2026-34635, CVE-2026-48440, CVE-2026-21279 | N/A | N/A | N/A | **Adobe** (multiples produits) | Multiples | Arbitrary code execution | Exécution de code arbitraire | Appliquer correctifs Adobe | [CIS](https://www.cisecurity.org/advisory/multiple-vulnerabilities-in-adobe-products-could-allow-for-arbitrary-code-execution) |
 
----
+### Cisco (ClamAV 7 flaws + firewall zero-day)
 
-### Analyse opérationnelle
+| CVE | Score CVSS | EPSS | CISA KEV | Éditeur / Produit affecté | Versions affectées | Type de vulnérabilité | Impact | Mesures de contournement / Correctif | Source(s) |
+|---|---|---|---|---|---|---|---|---|---|
+| CVE-2026-20337, CVE-2026-20339, CVE-2026-20345, CVE-2026-20348, CVE-2026-20338 (+ 2 autres) | N/A | N/A | N/A | **Cisco** ClamAV | Versions antérieures au dernier correctif | Multiples (2 avec PoC public) | RCE / DoS (antivirus lui-même) | MAJ ClamAV ; surveiller PoC publics | [securityaffairs](https://securityaffairs.com/196973/security/cisco-warns-of-seven-clamav-flaws-two-with-public-pocs.html) |
+| [CVE-2026-20349](https://www.cve.org/CVERecord?id=CVE-2026-20349) | N/A | N/A | Oui (exploitée août 2026) | **Cisco** Secure Firewall ASA / FTD (Remote Access SSL VPN) | Versions antérieures au patch | DoS via requête HTTP craftée sur SSL VPN | Reload appliance = DoS du pare-feu (impact sécurité : désactivation détection/blocage) | Correctif publié ; exploité depuis août 2026 | [securityweek](https://www.securityweek.com/cisco-patches-firewall-zero-day-exploited-for-dos-attacks/) |
 
-L'encryptor DeadLock présente plusieurs défis de détection pour les équipes SOC : (1) Le throttling basé sur les ressources maintient une consommation CPU/mémoire normale, rendant la détection comportementale plus difficile ; (2) Le chiffrement partiel intermittent (blocs de 512 octets à intervalles réguliers) accélère l'impact tout en rendant les fichiers inutilisables ; (3) L'effacement des journaux d'événements via trois méthodes (API EventLog, manipulation registre WINEVT\Channels, wevtapi.dll) complique l'investigation forensique post-incident ; (4) L'infrastructure décentralisée (Polygon blockchain + Session messenger) rend les takedowns traditionnels inefficaces car il n'y a pas de domaine central à saisir ; (5) La terminaison de processus de sécurité (msmpeng, smartscreen) et la désactivation de services (windefend, vss, wbengine, Hyper-V, AD) nécessitent une protection tamper-proof préalable. Les équipes doivent surveiller les requêtes vers les endpoints RPC Polygon publics, la création de fichiers .dlock, et les modifications de clés registre WINEVT. Microsoft fournit des détections Defender (Ransom:Win32/Deadlock.*) et recommande l'activation de Controlled Folder Access, EDR en mode bloc, et les règles ASR.
+### SonicWall GMS
 
----
+| CVE | Score CVSS | EPSS | CISA KEV | Éditeur / Produit affecté | Versions affectées | Type de vulnérabilité | Impact | Mesures de contournement / Correctif | Source(s) |
+|---|---|---|---|---|---|---|---|---|---|
+| [CVE-2026-66147](https://www.cve.org/CVERecord?id=CVE-2026-66147) | 9.4 (CRITICAL, v3.1) | N/A | Non | **SonicWall** GMS Dispatcher Service | GMS <= 9.5.1 (Build 9510.1044) | Command injection non authentifiée | RCE distante non authentifiée | MAJ GMS ; restreindre exposition | [cvefeed](https://cvefeed.io/vuln/detail/CVE-2026-66147) |
+| [CVE-2026-66154](https://www.cve.org/CVERecord?id=CVE-2026-66154) | 8.3 (HIGH, v3.1) | N/A | Non | **SonicWall** GMS | GMS <= 9.5.1 | Insufficient certificate validation | Changements non autorisés sous MitM | MAJ GMS ; durcir TLS | [cvefeed](https://cvefeed.io/vuln/detail/CVE-2026-66154) |
 
-### Implications stratégiques
+### ZDI - Flowise (RCE non authentifiée)
 
-L'utilisation de la blockchain Polygon comme infrastructure C2 et de Session messenger pour les communications représente une évolution majeure dans le paysage des ransomwares. Cette architecture décentralisée rend les efforts de takedown par les autorités considérablement plus complexes : les smart contracts sont immuables et résistants à la censure, le réseau Session est décentralisé et anonyme. Le modèle d'affiliation (Lynx, INC) montre une consolidation du marché RaaS. La concentration des victimes en Europe suggère un ciblage géographique délibéré. Le geofencing linguistique (exclusion CIS/Russie) est un indicateur fort du lieu d'origine probable des opérateurs. L'adoption de Rust pour l'encryptor suit une tendance observée chez plusieurs acteurs de menace récents, offrant des avantages en termes de performance et d'analyse plus complexe pour les chercheurs. Les organisations doivent repenser leurs stratégies de défense pour inclure la surveillance du trafic blockchain et la détection de comportements plutôt que la simple liste noire d'IOCs.
+| CVE | Score CVSS | EPSS | CISA KEV | Éditeur / Produit affecté | Versions affectées | Type de vulnérabilité | Impact | Mesures de contournement / Correctif | Source(s) |
+|---|---|---|---|---|---|---|---|---|---|
+| [CVE-2026-69264](https://www.cve.org/CVERecord?id=CVE-2026-69264) | 9.8 (CRITICAL, v3.1) | N/A | Non | **Flowise** (Airtable_Agent) | Versions antérieures au patch | Code injection non authentifiée | RCE contexte service account | MAJ Flowise (PR #6499) | [ZDI-26-546](http://www.zerodayinitiative.com/advisories/ZDI-26-546/) |
+| [CVE-2026-69256](https://www.cve.org/CVERecord?id=CVE-2026-69256) | 8.8 (HIGH, v3.1) | N/A | Non | **Flowise** (CSV_Agent customReadCSV) | Versions antérieures au patch | Code injection authentifiée | RCE contexte service account | MAJ Flowise (PR #6257) | [ZDI-26-545](http://www.zerodayinitiative.com/advisories/ZDI-26-545/) |
 
----
+### ZDI - OriginLab OriginPro (6 CVE parsing fichiers)
 
-### Recommandations
+| CVE | Score CVSS | EPSS | CISA KEV | Éditeur / Produit affecté | Versions affectées | Type de vulnérabilité | Impact | Mesures de contournement / Correctif | Source(s) |
+|---|---|---|---|---|---|---|---|---|---|
+| [CVE-2026-18289](https://www.cve.org/CVERecord?id=CVE-2026-18289) | 7.8 (HIGH, v3.1) | N/A | Non | **OriginLab** OriginPro (OPJ) | Versions antérieures au patch | OOB write parsing OPJ | RCE contexte processus (interaction utilisateur requise) | MAJ OriginPro ; ne pas ouvrir fichiers suspects | [ZDI-26-548](http://www.zerodayinitiative.com/advisories/ZDI-26-548/) |
+| [CVE-2026-18288](https://www.cve.org/CVERecord?id=CVE-2026-18288) | 7.8 (HIGH, v3.1) | N/A | Non | **OriginLab** OriginPro (OPJU) | Versions antérieures au patch | OOB write parsing OPJU | RCE | MAJ OriginPro | [ZDI-26-547](http://www.zerodayinitiative.com/advisories/ZDI-26-547/) |
+| [CVE-2026-18290](https://www.cve.org/CVERecord?id=CVE-2026-18290) | 7.8 (HIGH, v3.1) | N/A | Non | **OriginLab** OriginPro (OGG) | Versions antérieures au patch | OOB write parsing OGG | RCE | MAJ OriginPro | [ZDI-26-549](http://www.zerodayinitiative.com/advisories/ZDI-26-549/) |
+| [CVE-2026-18291](https://www.cve.org/CVERecord?id=CVE-2026-18291) | 7.8 (HIGH, v3.1) | N/A | Non | **OriginLab** OriginPro (OGW) | Versions antérieures au patch | Memory corruption parsing OGW | RCE | MAJ OriginPro | [ZDI-26-550](http://www.zerodayinitiative.com/advisories/ZDI-26-550/) |
+| [CVE-2026-18292](https://www.cve.org/CVERecord?id=CVE-2026-18292) | 7.8 (HIGH, v3.1) | N/A | Non | **OriginLab** OriginPro (OGG) | Versions antérieures au patch | Memory corruption parsing OGG | RCE | MAJ OriginPro | [ZDI-26-551](http://www.zerodayinitiative.com/advisories/ZDI-26-551/) |
+| [CVE-2026-18293](https://www.cve.org/CVERecord?id=CVE-2026-18293) / [CVE-2026-18294](https://www.cve.org/CVERecord?id=CVE-2026-18294) | 7.8 (HIGH, v3.1) | N/A | Non | **OriginLab** OriginPro / Origin Viewer (OPJ, OGW) | Versions antérieures au patch | OOB write / memory corruption | RCE | MAJ OriginLab | [ZDI-26-552](http://www.zerodayinitiative.com/advisories/ZDI-26-552/)<br>[ZDI-26-553](http://www.zerodayinitiative.com/advisories/ZDI-26-553/) |
 
-* Activer Controlled Folder Access (CFA) en mode blocage sur les assets sensibles
-* Activer tamper protection sur tous les endpoints pour empêcher la désactivation de Defender
-* Déployer les règles ASR : blocage exécutables non prevalents, blocage PSExec/WMI, protection avancée ransomware
-* Surveiller le trafic sortant vers les endpoints RPC Polygon publics connus
-* Maintenir des sauvegardes hors ligne testées régulièrement (3-2-1 rule)
-* Former les équipes SOC aux indicateurs comportementaux de DeadLock (throttling, chiffrement partiel, effacement journaux)
+### ZDI - Parallels RAS Client (3 CVE LPE)
 
----
+| CVE | Score CVSS | EPSS | CISA KEV | Éditeur / Produit affecté | Versions affectées | Type de vulnérabilité | Impact | Mesures de contournement / Correctif | Source(s) |
+|---|---|---|---|---|---|---|---|---|---|
+| [CVE-2026-18263](https://www.cve.org/CVERecord?id=CVE-2026-18263) | N/A | N/A | N/A | **Parallels** RAS Client RDP Backend Service | Versions antérieures au patch | Exposed dangerous function | Élévation de privilège locale | MAJ Parallels RAS | [ZDI-26-556](http://www.zerodayinitiative.com/advisories/ZDI-26-556/) |
+| [CVE-2026-18262](https://www.cve.org/CVERecord?id=CVE-2026-18262) | N/A | N/A | N/A | **Parallels** RAS Client RDP Backend Service | Versions antérieures au patch | Exposed dangerous function | Élévation de privilège locale | MAJ Parallels RAS | [ZDI-26-555](http://www.zerodayinitiative.com/advisories/ZDI-26-555/) |
+| [CVE-2026-13121](https://www.cve.org/CVERecord?id=CVE-2026-13121) | N/A | N/A | N/A | **Parallels** RAS Client RDP Backend Service | Versions antérieures au patch | Exposed dangerous function | Élévation de privilège locale | MAJ Parallels RAS | [ZDI-26-554](http://www.zerodayinitiative.com/advisories/ZDI-26-554/) |
 
-### Playbook de réponse à incident
+### libgit2 (shell command injection via ssh_libssh2)
 
-#### Phase 1 — Préparation
+| CVE | Score CVSS | EPSS | CISA KEV | Éditeur / Produit affecté | Versions affectées | Type de vulnérabilité | Impact | Mesures de contournement / Correctif | Source(s) |
+|---|---|---|---|---|---|---|---|---|---|
+| [CVE-2026-5917](https://www.cve.org/CVERecord?id=CVE-2026-5917) | 9.6 (CRITICAL, v3.1) | N/A | Non | **libgit2** (build avec backend ssh_libssh2) | v0.27.0 à v1.9.0 | Shell command injection (gen_proto() non échappé) | RCE sur serveur SSH via métacaractères dans le chemin du repo (submodule URL malveillante dans .gitmodules, recursive clone) | MAJ libgit2 ; éviter backend libssh2 si possible | [cvefeed](https://cvefeed.io/vuln/detail/CVE-2026-5917) |
 
-* Activer Controlled Folder Access (CFA) en mode audit pour évaluer l'impact, puis basculer en mode blocage
-* Activer tamper protection sur Microsoft Defender Antivirus pour empêcher la désactivation des services de sécurité
-* Vérifier que les sauvegardes hors ligne (offline) sont opérationnelles et testées régulièrement
-* Déployer EDR en mode blocage (block mode) sur tous les endpoints
-* Documenter les règles ASR recommandées : blocage exécutables non prevalents, blocage PSExec/WMI, protection avancée anti-ransomware
+### Snowflake (path traversal, confused-deputy priv esc)
 
-#### Phase 2 — Détection et analyse
+| CVE | Score CVSS | EPSS | CISA KEV | Éditeur / Produit affecté | Versions affectées | Type de vulnérabilité | Impact | Mesures de contournement / Correctif | Source(s) |
+|---|---|---|---|---|---|---|---|---|---|
+| [CVE-2026-19594](https://www.cve.org/CVERecord?id=CVE-2026-19594) | N/A | N/A | Non | **Snowflake** Python API (snowflake.core) | Versions antérieures au patch | Path traversal + HTTP parameter pollution | Confused-deputy privilege escalation | MAJ snowflake.core | [cvefeed](https://cvefeed.io/vuln/detail/CVE-2026-19594) |
 
-* Surveiller la création de fichiers .cmd aléatoires (8 caractères majuscules) dans ProgramData ou Temp avec exécution via ShellExecuteW RunAs
-* Détecter l'activation en masse de privilèges token (SeDebugPrivilege, SeRestorePrivilege, SeTakeOwnershipPrivilege) sur un même processus
-* Surveiller la modification de clés registre HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Channels (Enabled=0, SDDL restrictif)
-* Détecter la création de la clé HKLM\SOFTWARE\Classes\.dlock\DefaultIcon
-* Surveiller les requêtes HTTP vers des endpoints RPC Polygon (polygon-bor-rpc.publicnode[.]com, polygon-rpc[.]com, etc.)
-* Alerte sur changement de wallpaper système via HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Wallpaper
-* Détecter la terminaison en masse de processus (msmpeng, explorer, taskmgr, onedrive, etc.) et la désactivation de services (windefend, vss, wbengine)
+### Autres éditeurs (cvefeed, tableau compact)
 
-#### Phase 3 — Confinement, éradication et récupération
+| CVE | Score CVSS | EPSS | CISA KEV | Éditeur / Produit affecté | Versions affectées | Type de vulnérabilité | Impact | Mesures de contournement / Correctif | Source(s) |
+|---|---|---|---|---|---|---|---|---|---|
+| [CVE-2026-73248](https://www.cve.org/CVERecord?id=CVE-2026-73248) | N/A | N/A | Non | **calibre** | Versions antérieures au patch | Bypass des restrictions Python template via nested `template()` | RCE | MAJ calibre | [cvefeed](https://cvefeed.io/vuln/detail/CVE-2026-73248) |
+| [CVE-2026-73247](https://www.cve.org/CVERecord?id=CVE-2026-73247) | N/A | N/A | Non | **Kestra** (Pebble http()) | Versions antérieures au patch | SSRF non authentifiée | Accès services internes + cloud metadata | MAJ Kestra ; restreindre Pebble http() | [cvefeed](https://cvefeed.io/vuln/detail/CVE-2026-73247) |
+| [CVE-2026-73242](https://www.cve.org/CVERecord?id=CVE-2026-73242) | 8.3 (HIGH, v4.0) | N/A | Non | **FreeRDP** (Kerberos) | < 3.30.0 | OOB decrypt (GSS Wrap-token EC non borné) | OOB read/write via RDP peer malveillant (CredSSP/NLA) | MAJ FreeRDP 3.30.0 | [cvefeed](https://cvefeed.io/vuln/detail/CVE-2026-73242) |
+| [CVE-2026-55676](https://www.cve.org/CVERecord?id=CVE-2026-55676) | 8.8 (HIGH, v3.1) | N/A | Non | **Malcolm** (network traffic analysis, FilePond PHP) | < 26.06.1 | Upload .php non restreint | RCE via GET sur fichier uploadé (exécution php-fpm) | MAJ Malcolm 26.06.1 ; durcir allow-list | [cvefeed](https://cvefeed.io/vuln/detail/CVE-2026-55676) |
+| [CVE-2026-48765](https://www.cve.org/CVERecord?id=CVE-2026-48765) | 9.9 (CRITICAL, v3.1) | N/A | Non | **TypeBot** (OAuth credentials) | < 3.17.0 | Cross-workspace OAuth credential takeover | Takeover credentials OAuth cross-workspace | MAJ TypeBot 3.17.0 | [cvefeed](https://cvefeed.io/vuln/detail/CVE-2026-48765) |
+| [CVE-2026-48763](https://www.cve.org/CVERecord?id=CVE-2026-48763) | 8.2 (HIGH, v3.1) | N/A | Non | **TypeBot** (S3 upload) | < 3.17.0 | S3 object write arbitraire via endpoint public déprécié | Écriture S3 cross-tenant | MAJ TypeBot 3.17.0 | [cvefeed](https://cvefeed.io/vuln/detail/CVE-2026-48763) |
+| [CVE-2026-14863](https://www.cve.org/CVERecord?id=CVE-2026-14863) | 8.8 (HIGH, v3.1) | N/A | Non | **FileRun** (thumbnail generation) | <= 2026.2.0 | Command injection (filename non échappé via exec()) | RCE authentifiée via nom de fichier malveillant | MAJ FileRun ; sanitize filenames | [cvefeed](https://cvefeed.io/vuln/detail/CVE-2026-14863) |
+| [CVE-2026-15606](https://www.cve.org/CVERecord?id=CVE-2026-15606) | 8.8 (HIGH, v3.1) | N/A | Non | **Frontend Admin by DynamiApps** (plugin WordPress) | <= 3.29.9 | Auth bypass (CBC bit-flipping sur token chiffré) | Reset password arbitraire (y compris admin) = takeover complet | MAJ plugin > 3.29.9 | [cvefeed](https://cvefeed.io/vuln/detail/CVE-2026-15606) |
+| [CVE-2026-18961](https://www.cve.org/CVERecord?id=CVE-2026-18961) | N/A | N/A | Non | **VentraConnect** (plugin WordPress passwordless login) | <= 1.4.3 | Unauthenticated authentication bypass | Auth bypass = accès admin | MAJ plugin > 1.4.3 | [cvefeed](https://cvefeed.io/vuln/detail/CVE-2026-18961) |
+| CVE-2026-72526 / CVE-2026-70398 | N/A | N/A | Non | **multicloud-integrations** | Versions antérieures au patch | Hub tenant → spoke cluster arbitraire / exposition bearer tokens spoke | Compromission multi-cloud | MAJ multicloud-integrations | [cvefeed](https://cvefeed.io/vuln/detail/CVE-2026-72526)<br>[cvefeed](https://cvefeed.io/vuln/detail/CVE-2026-70398) |
+| CVE-2026-68067 / CVE-2026-67568 / CVE-2026-66875 | N/A | N/A | Non | **Mira** Hormone Monitor / Mira Android App | Versions antérieures au patch | Weak auth, hard-coded credentials, missing auth sur fonction critique | Compromission device médical IoT | MAJ app ; contacter éditeur | [cvefeed](https://cvefeed.io/vuln/detail/CVE-2026-68067)<br>[cvefeed](https://cvefeed.io/vuln/detail/CVE-2026-67568)<br>[cvefeed](https://cvefeed.io/vuln/detail/CVE-2026-66875) |
+| [CVE-2026-6484](https://www.cve.org/CVERecord?id=CVE-2026-6484) | N/A | N/A | Non | **Microsoft** GMS FV (verified boot) | Certaines FV | Lack of verified boot | Arbitrary code execution | MAJ firmware | [cvefeed](https://cvefeed.io/vuln/detail/CVE-2026-6484) |
+| [CVE-2026-64954](https://www.cve.org/CVERecord?id=CVE-2026-64954) | N/A | N/A | Non | **Velociraptor** (collect_client) | Versions antérieures au patch | Permissions bypass | Contournement des permissions | MAJ Velociraptor | [cvefeed](https://cvefeed.io/vuln/detail/CVE-2026-64954) |
 
-* Isoler immédiatement les machines compromises du réseau pour empêcher la propagation latérale
-* Bloquer les domaines de leak site au niveau DNS/pare-feu : deadlock.liveblog365[.]com, dlock.liveblog365[.]com, deadlockblog.great-site[.]net, deadlockblog.medianewsonline[.]com
-* Bloquer les endpoints RPC Polygon utilisés par le recovery chat HTML au niveau du proxy de sortie
-* Restaurer les services de sécurité désactivés (windefend, vss, wbengine) depuis une image de référence saine
-* Préserver les artefacts forensiques (mémoire, disque) avant réinstallation pour analyse post-incident
-* Vérifier l'intégrité des sauvegardes hors ligne et restaurer depuis des copies non connectées
+### StormEncryptor (ransomware, thecyberthrone)
 
-#### Phase 4 — Activités post-incident
+| CVE | Score CVSS | EPSS | CISA KEV | Éditeur / Produit affecté | Versions affectées | Type de vulnérabilité | Impact | Mesures de contournement / Correctif | Source(s) |
+|---|---|---|---|---|---|---|---|---|---|
+| CVE-2026-18577 / CVE-2026-18556 | N/A | N/A | N/A | **StormEncryptor** (ransomware) | N/A | Vulnérabilités internes au ransomware | Exploitation possible de la chaîne StormEncryptor | Analyse défensive ; pas de correctif (malware) | [thecyberthrone](https://thecyberthrone.in/2026/08/11/stormencryptor-ransomware-dissection/) |
 
-* Analyser les journaux résiduels (SIEM, EDR, pare-feu) pour reconstituer la chaîne d'attaque et identifier le vecteur initial
-* Vérifier l'absence de persistance résiduelle (raccourcis Startup, tâches planifiées, services modifiés)
-* Réinitialiser tous les credentials potentiellement compromis (AD, comptes locaux, services cloud)
-* Mener une revue de la configuration Firestore/Firebase si des services cloud sont utilisés
-* Documenter le timeline d'attaque et mettre à jour les playbooks IR avec les IOCs DeadLock
-* Évaluer l'exposition des données exfiltrées via le blog de leak DeadLock (smart contracts Polygon)
+<a id="menaces-soc-cert"></a>
+## Menaces SOC/CERT
 
-#### Phase 5 — Threat Hunting (proactif)
+<a id="lazarus-dream-job"></a>
+### Lazarus / Operation Dream Job - Zero-day Microsoft AFD.sys + FudModule rootkit
 
-* Rechercher des fichiers avec extension .dlock sur tous les endpoints et serveurs de fichiers
-* Chercher des processus effectuant des requêtes eth_call vers des smart contracts Polygon (fonction selector 0x933a9ce8, 0xd4070542)
-* Détecter des connexions vers des nodes Session messenger depuis des navigateurs ou applications non standard
-* Rechercher des fichiers HTML nommés RECOVERY_CHAT.*.html sur les racines de disques et dossiers Desktop
-* Scanner les fichiers .cmd dans ProgramData avec noms aléatoires de 8 caractères majuscules
-* Surveiller le trafic vers les 6 endpoints RPC Polygon publics utilisés par le recovery chat
-* Rechercher des modifications de clé registre WINEVT\Channels avec SDDL restrictif
+### Résumé technique
 
----
+Check Point Research publie « Shattering the Dream », l'analyse d'une vague récente de l'Operation Dream Job, campagne longue durée attribuée au groupe Lazarus (DPRK). La vague actuelle cible le secteur défense en Europe et en Inde. Le vecteur initial est un faux offre d'emploi livrant « SecurityPDF », un lecteur PDF modifié qui ouvre des documents PDF artisanalement conçus et exécute un nouveau backdoor baptisé Troy.
 
-### Indicateurs de compromission
+Pendant l'intrusion, l'attaquant exploite CVE-2026-68820, zero-day du driver Microsoft AFD.sys (Windows Ancillary Function Driver for WinSock), pour déployer une nouvelle version du rootkit kernel-mode FudModule. La divulgation responsable de Check Point a conduit au patch Microsoft du 11 août 2026 (Patch Tuesday).
 
-| Type | Valeur (DEFANG) | Fiabilité |
-|---|---|---|
-| HASH_SHA256 | `a1fdf65020ce4a0f0940c793c6425baf8a0b994ec48b9baaf72788661a9d29f4` | High |
-| URL | `hxxps://deadlock.liveblog365[.]com` | High |
-| URL | `hxxps://dlock.liveblog365[.]com` | High |
-| URL | `hxxp://deadblogdbdu5wprek7wa2o4ce7rnt6u6ntqeud3hzjjcveosgpsqqqd[.]onion` | High |
-| URL | `hxxps://deadlockblog.great-site[.]net` | High |
-| URL | `hxxps://deadlockblog.medianewsonline[.]com` | High |
+### Analyse de l'impact
 
----
-
-### TTP MITRE ATT&CK
-
-| ID TTP | Description |
-|---|---|
-| **T1486** | Data Encrypted for Impact – chiffrement XChaCha20 + Curve25519 |
-| **T1490** | Inhibit System Recovery – suppression VSS, services de sauvegarde désactivés |
-| **T1070** | Indicator Removal – effacement des journaux d'événements Windows |
-| **T1562** | Impair Defenses – terminaison Windows Defender, SmartScreen, outils de sécurité |
-| **T1485** | Data Destruction – vidage corbeille, chiffrement destructif |
-| **T1548** | Abuse Elevation Control Mechanism – élévation UAC via batch script |
-| **T1136** | Create Account – enregistrement icône .dlock dans le registre |
-| **T1027** | Obfuscated Files or Information – configuration XOR 8-byte key |
-| **T1071** | Application Layer Protocol – communications via Polygon RPC et Session messenger |
-
----
-
-### Sources
-
-* [https://www.microsoft.com/en-us/security/blog/2026/08/10/deadlock-ransomware-breaking-down-a-rust-based-encryptor-with-decentralized-recovery-infrastructure/](https://www.microsoft.com/en-us/security/blog/2026/08/10/deadlock-ransomware-breaking-down-a-rust-based-encryptor-with-decentralized-recovery-infrastructure/)
-
-
----
-
-<div id="aeternum-analyse-dun-botnet-loader-utilisant-la-blockchain-polygon-comme-infrastructure-c2-decentralisee"></div>
-
-## Aeternum : analyse d'un botnet loader utilisant la blockchain Polygon comme infrastructure C2 décentralisée
-
-### Résumé
-
-Palo Alto Unit42 publie une analyse détaillée d'Aeternum, un botnet loader C++ qui déplace entièrement son infrastructure C2 vers la blockchain publique Polygon. Au lieu de serveurs centralisés, les commandes chiffrées et en clair sont écrites directement dans des smart contracts. Les machines infectées interrogent en continu des endpoints RPC publics pour récupérer et exécuter ces commandes on-chain. L'analyse couvre trois échantillons : (1) le loader Aeternum qui utilise XOR pour l'obfuscation, des smart contracts Polygon (22 adresses identifiées) avec le function selector 0xb68d1809 (getDomain), un chiffrement faible PBKDF2HMAC/AES-GCM (self-salting password), et exfiltre des données via Telegram API avec des credentials hard-coded ; (2) un échantillon combinant XWorm RAT v7.4, XMRig miner (config via Pastebin) et exfiltration de données vers 193.221.200[.]219 en AES-128-ECB ; (3) un script Python source qui cible 55+ extensions crypto et 10 wallets desktop, utilise Early Bird APC injection via dpapimig.exe, et inclut des checks anti-VM (8GB RAM minimum, Zone.Identifier ADS validation). L'opérateur principal utilise le moniker LenAI avec l'adresse 0xcaf2c54e400437da717cf215181b170f65187abf. Plus de 29 000 événements de détection enregistrés par Palo Alto au 4 juin 2026.
-
----
-
-### Analyse opérationnelle
-
-Aeternum pose des défis opérationnels majeurs : (1) Le C2 sur blockchain rend les takedowns traditionnels inefficaces car les smart contracts sont immuables ; (2) L'utilisation de 22 adresses de smart contracts différentes complique le blocage par liste noire ; (3) Le chiffrement PBKDF2HMAC avec self-salting est cryptographiquement faible (NIST SP 800-132) et permet le décryptage des commandes avec seulement l'adresse du contrat et le payload ; (4) L'exfiltration via Telegram API avec credentials hard-coded offre un point de blocage (révocation des tokens bot) ; (5) L'utilisation de GitHub pour héberger des payloads malveillants (DotNetZip.dll dans des repos légitimes) élargit la surface d'attaque ; (6) Le multi-stage chaining (loader → XWorm + XMRig + exfiltration) nécessite une détection à chaque étape ; (7) Les checks anti-VM (8GB RAM, Zone.Identifier ADS, noms d'utilisateurs/machines blocklistés) compliquent l'analyse en sandbox. Les équipes SOC doivent surveiller le function selector 0xb68d1809 dans le trafic HTTP sortant, les connexions vers api.telegram[.]org depuis des processus non standard, et les raccourcis .lnk dans le dossier Startup.
-
----
-
-### Implications stratégiques
-
-La migration du C2 vers la blockchain Polygon représente une tendance émergente et stratégique dans le paysage des menaces. Les acteurs de menace exploitent l'immuabilité et la décentralisation des blockchains publiques pour créer des infrastructures de communication résilientes aux takedowns law enforcement. Cette approche réduit considérablement les coûts d'infrastructure (pas de serveurs à louer, pas de domaines à enregistrer) tout en augmentant la résilience opérationnelle. L'opérateur LenAI affine itérativement le codebase des smart contracts (évolution solc 0.8.0 → 0.8.30), indiquant un développement professionnel et continu. Le ciblage massif des wallets crypto (55+ extensions, 10 desktop wallets) s'inscrit dans la tendance croissante des vols de cryptocurrencies. L'utilisation de GitHub comme canal de distribution de payloads souligne le risque de compromission de la chaîne d'approvisionnement logicielle. Les organisations doivent adapter leurs stratégies de défense pour inclure la surveillance du trafic blockchain et la collaboration avec les plateformes crypto pour le blocage des wallets.
-
----
+Lazarus combine ingénierie sociale ciblée (faux emploi défense) + zero-day kernel + rootkit persistant : c'est un scénario d'espionnage à haut rendement contre le secteur défense. Le déploiement d'un rootkit kernel via zero-day Microsoft est rare et indique un acteur étatique bien doté. Le patch de CVE-2026-68820 est obligatoire en priorité maximale : la zero-day est activement exploitée et désormais publique.
 
 ### Recommandations
 
-* Surveiller le trafic HTTP sortant pour le function selector 0xb68d1809 (getDomain) caractéristique d'Aeternum
-* Bloquer les domaines C2 connus au niveau DNS : update.constant-path[.]xyz, update-launcher[.]xyz, test-steve[.]cyou, cdnjsdelivr[.]beer
-* Surveiller les connexions vers api.telegram[.]org depuis des processus non standard (DLL, exécutables C++)
-* Déployer des détections pour l'injection Early Bird APC dans dpapimig.exe
-* Vérifier les repositories GitHub internes pour la présence de fichiers malveillants (DotNetZip.dll)
-* Sensibiliser les utilisateurs aux faux installateurs DBeaver utilisés comme leurre d'ingénierie sociale
-* Collaborer avec les plateformes d'échange crypto pour tracer le wallet Monero 82pNS8tBnvZ5cmV1iU9cXdQmhGz95P18fZpASBrxtaSF1ToTmZtf3HGHrdXMt1Znuu8BLU17koPs2hTXxTajdTviLcgbbAi
-
----
+* Appliquer immédiatement le patch Microsoft d'août 2026 (CVE-2026-68820) sur tous les postes Windows, en particulier les postes R&D / défense.
+* Surveiller les activités de recrutement par email ciblant les ingénieurs défense (faux offres, PDF joints, plateformes job suspicieuses).
+* Déployer la détection du rootkit FudModule (signatures YARA, EDR avec inspection kernel).
+* Sensibiliser les employés du secteur défense à l'ingénierie sociale par fake job offer (campaigne Operation Dream Job documentée).
 
 ### Playbook de réponse à incident
 
-#### Phase 1 — Préparation
+#### Phase 1 - Préparation
+* Vérifier le déploiement du patch CVE-2026-68820 sur tout le parc Windows (priorité R&D/défense).
+* Activer la journalisation kernel (Sysmon Event ID 1, 7, 8 pour chargement drivers ; ETW pour AFD.sys).
+* Préparer des signatures FudModule (YARA, EDR) et le backdoor Troy.
+* Sauvegardes hors-ligne des postes R&D sensibles.
 
-* Inventorier et surveiller les endpoints RPC Polygon publics dans les règles de sortie du pare-feu
-* Déployer des règles de détection pour le function selector 0xb68d1809 (getDomain) dans le trafic HTTP sortant
-* Maintenir une liste de surveillance des smart contracts Polygon associés à Aeternum
-* Configurer le filtrage DNS pour bloquer les domaines C2 connus (update.constant-path[.]xyz, update-launcher[.]xyz, test-steve[.]cyou, cdnjsdelivr[.]beer)
-* Surveiller les connexions vers api.telegram[.]org depuis des processus non standard (DLL, scripts Python)
-* Former les équipes à reconnaître les techniques d'injection Early Bird APC
+#### Phase 2 - Détection et analyse
+* **Règles de détection contextualisées :**
+  * Règle Sysmon : chargement de driver non signé ou suspect dans le contexte d'un process PDF reader / SecurityPDF.
+  * Règle YARA : signatures FudModule (kernel rootkit) et Troy (backdoor userland).
+  * Détection EDR : manipulation de tokens kernel, hooks SSRB, désactivation de solutions de sécurité (T1562).
+* Analyser la chronologie : email de phishing → ouverture PDF → Troy → exploitation CVE-2026-68820 → FudModule.
+* Identifier les comptes ciblés (ingénieurs défense, accès à la propriété intellectuelle).
 
-#### Phase 2 — Détection et analyse
+#### Phase 3 - Confinement, éradication et récupération
 
-* Détecter les requêtes JSON-RPC HTTP POST vers des endpoints Polygon avec le champ 'data' contenant 0xb68d1809
-* Surveiller la création de raccourcis .lnk dans le dossier Startup avec des noms comme Wmi_Framework_APIKEY_wmsnet_*.lnk ou PythonLauncher-*.lnk
-* Détecter l'injection Early Bird APC dans dpapimig.exe (processus signé légitime détourné)
-* Surveiller les téléchargements de DotNetZip.dll depuis des repositories GitHub suspects
-* Détecter les connexions à api.telegram[.]org avec User-Agent 'SystemInfo Bot/2.0' ou 'cpp-httplib/0.18.3'
-* Alerte sur les connexions à 193.221.200[.]219 avec exfiltration de données Base64
-* Surveiller la création de fichiers esewurmgvbqt.exe ou XWormclient.exe dans le dossier Temp
+**Confinement :**
+* Isoler les postes compromis du réseau.
+* Révoquer les credentials des comptes ciblés.
 
-#### Phase 3 — Confinement, éradication et récupération
+**Éradication :**
+* Supprimer FudModule (kernel) et Troy (userland). Reconstruire le poste depuis une image propre si doute sur l'intégrité kernel.
+* Fermer les canaux de persistance FudModule (SSDT hooks, callback kernel).
 
-* Isoler les machines compromises du réseau pour empêcher la communication C2 blockchain
-* Bloquer les domaines C2 et IP d'exfiltration au niveau DNS et pare-feu (193.221.200[.]219, sekirolegion.duckdns[.]org)
-* Révoquer les tokens Telegram bot compromis (8305917772:AAHAou..., 7356125890:AAF5ncBIc2pJrEfYPAmy2g9YS7B5NjmtwTc)
-* Supprimer les raccourcis de persistance dans le dossier Startup
-* Terminer les processus de minage XMRig et les processus injectés (dpapimig.exe détourné)
-* Bloquer les wallets Monero identifiés au niveau des plateformes d'échange si applicable
+**Récupération :**
+* Restaurer depuis image propre post-patch CVE-2026-68820.
+* Surveillance EDR 72h post-restauration.
 
-#### Phase 4 — Activités post-incident
+#### Phase 4 - Activités post-incident
+* Rapport d'incident avec chronologie Dream Job → Troy → FudModule.
+* Notifications (NIS2 si entité essentielle, RGPD si données personnelles, export control si données défense).
+* Partage IOCs au CERT national et partenaires sectoriels défense.
 
-* Analyser les smart contracts Polygon associés pour identifier les commandes C2 historiques et les domaines rotés
-* Vérifier l'absence de persistance résiduelle (raccourcis Startup, copies dans AppData\Local)
-* Réinitialiser tous les credentials stockés sur les machines compromises (notamment wallets crypto, mots de passe navigateur)
-* Évaluer l'étendue de l'exfiltration de données via Telegram (captures d'écran, infos système)
-* Documenter la chaîne d'attaque complète et mettre à jour les playbooks IR avec les IOCs Aeternum
-* Vérifier si des extensions de navigateur crypto (55+) ou wallets desktop (10) ont été compromis
+#### Phase 5 - Threat Hunting (proactif)
 
-#### Phase 5 — Threat Hunting (proactif)
+| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
+|---|---|---|---|
+| D'autres postes ont reçu SecurityPDF. | T1566.001 - Spearphishing Attachment | Logs email / EDR | Pièces jointes PDF + process `SecurityPDF.exe` ou variantes sur 90 jours. |
+| FudModule a désactivé des solutions de sécurité. | T1562.001 - Disable Tools | EDR / Sysmon Event ID 1 | Arrêt ou modification de configuration d'AV/EDR sur postes R&D. |
 
-* Rechercher le function selector 0xb68d1809 dans les logs de trafic HTTP sortant (proxy, NGFW)
-* Scanner les endpoints pour la présence de fichiers Build.exe, XBinderOutput_protected.exe, DotNetZip.dll
-* Chercher des processus effectuant des requêtes vers des endpoints RPC Polygon publics multiples
-* Rechercher des raccourcis .lnk dans les dossiers Startup avec des noms contenant 'Wmi_Framework' ou 'PythonLauncher'
-* Surveiller les connexions Telegram API depuis des processus non navigateurs (DLL, exécutables C++)
-* Détecter les processus dpapimig.exe avec des comportements anormaux (connexions réseau, injection mémoire)
-* Rechercher des fichiers de configuration XMRig dans le dossier Temp ou AppData
-* Scanner les repositories GitHub internes pour des fichiers malveillants hébergés (DotNetZip.dll)
+### Indicateurs de compromission (DEFANG obligatoire)
 
----
-
-### Indicateurs de compromission
-
-| Type | Valeur (DEFANG) | Fiabilité |
-|---|---|---|
-| HASH_SHA256 | `5bfb25b8255b61e5ffdf6804451534bcfa9f1dfd225e6c8cdcefb5f50d846898` | High |
-| HASH_SHA256 | `f2a326cff405299e4ebdfaac955c52fc7e496544eaa0921ecad4816cb3ae3a27` | High |
-| HASH_SHA256 | `ea1b6ff3a0c1a749b9f09d66789973321d63d8896b48f7345193bdad512950a2` | High |
-| HASH_SHA256 | `1505eda3da68e2ff9919b55a31018bd30a991236f041aee835f3bc4e430ce505` | High |
-| HASH_SHA256 | `4e24bbd0fabac6c3efcec943046afbfd332b2c0108a13becfda23a0e26f9ff5f` | High |
-| HASH_SHA256 | `81bb80d9c5a97dc41b65f6248c131963c91346eb4fb672836b3d53ae67564d9f` | High |
-| IP | `193.221.200[.]219` | High |
-| DOMAIN | `gulf.moneroocean[.]stream` | High |
-| DOMAIN | `sekirolegion.duckdns[.]org` | High |
-| DOMAIN | `download.sftp-api-group-wechat[.]com` | High |
-| DOMAIN | `update.constant-path[.]xyz` | High |
-| DOMAIN | `update-launcher[.]xyz` | High |
-| DOMAIN | `test-steve[.]cyou` | High |
-| DOMAIN | `cdnjsdelivr[.]beer` | Medium |
-| URL | `hxxp://sekirolegion.duckdns[.]org/api/endpoint.php` | High |
-
----
+| Type | Valeur (DEFANG) | Description | Fiabilité |
+|---|---|---|---|
+| (aucun IOC technique publié dans la source OTX, se référer au rapport Check Point complet) | N/A | IOCs à extraire du PDF Check Point Research. | Moyenne |
 
 ### TTP MITRE ATT&CK
 
-| ID TTP | Description |
-|---|---|
-| **T1071** | Application Layer Protocol – C2 via Polygon RPC endpoints et Telegram API |
-| **T1105** | Ingress Tool Transfer – téléchargement de payloads depuis GitHub |
-| **T1059** | Command and Scripting Interpreter – Python script pour multi-stage decryption |
-| **T1547** | Boot or Logon Autostart Execution – raccourci Startup folder pour persistance |
-| **T1055** | Process Injection – Early Bird APC injection via dpapimig.exe |
-| **T1027** | Obfuscated Files or Information – XOR obfuscation, ChaCha20/AES multi-layer |
-| **T1496** | Resource Hijacking – XMRig cryptocurrency miner |
-| **T1567** | Exfiltration Over Web Service – exfiltration via Telegram API |
-| **T1552** | Unsecured Credentials – credentials Telegram bot hard-coded dans le binaire |
-| **T1083** | File and Directory Discovery – collecte infos système (CPU, RAM, GPU, UAC) |
-| **T1218** | System Binary Proxy Execution – utilisation de putty.exe légitime pour staging |
-
----
+| ID TTP | Tactique | Technique | Description contextuelle |
+|---|---|---|---|
+| T1566.001 | Initial Access | Spearphishing Attachment | Faux offre d'emploi + SecurityPDF malveillant. |
+| T1068 | Privilege Escalation | Exploitation for Privilege Escalation | Zero-day CVE-2026-68820 AFD.sys. |
+| T1014 | Defense Evasion | Rootkit | FudModule rootkit kernel-mode. |
 
 ### Sources
-
-* [https://unit42.paloaltonetworks.com/aeternum-blockchain-c2-analysis/](https://unit42.paloaltonetworks.com/aeternum-blockchain-c2-analysis/)
-* [https://otx.alienvault.com/pulse/6a7a570d454dd1ca4a1449b2](https://otx.alienvault.com/pulse/6a7a570d454dd1ca4a1449b2)
-* [https://social.raytec.co/@techbot/117073705664484048](https://social.raytec.co/@techbot/117073705664484048)
-
-
----
-
-<div id="tldv-181-874-reunions-exposees-par-defaut-disolation-tenant-sur-firestore"></div>
-
-## tl;dv : 181 874 réunions exposées par défaut d'isolation tenant sur Firestore
-
-### Résumé
-
-Un chercheur en sécurité révèle qu'une plateforme d'enregistrement de réunions IA, tl;dv (Too Long; Didn't View), laisse sa base de données Firestore (projects/lmi-store) entièrement ouverte à l'énumération cross-tenant. Tout utilisateur authentifié de tl;dv peut interroger la collection meetings et accéder aux métadonnées de toutes les réunions de tous les comptes : email du créateur, conference ID (joignable Google Meet/Teams), provider, statut d'enregistrement. 181 874 enregistrements de réunions appartenant à 84 312 utilisateurs uniques sur 35 003 domaines sont exposés, dont des réunions gouvernementales de 23 pays (Brésil, Ukraine, Malaisie, etc.), des universités (Berkeley, University of Tokyo) et des entreprises (HubSpot, Mitsui). Environ 1 000 meetings en statut 'recording' exposent des conference IDs actifs permettant de rejoindre des appels en direct. Le chercheur a rejoint deux réunions en proof-of-concept. L'application interne worldcup.tldv.io expose également l'annuaire employé sans authentification. La vulnérabilité a été signalée le 28 janvier 2026 et reste non corrigée en juillet 2026 malgré de multiples relances.
+* [Check Point Research - Shattering the Dream](https://research.checkpoint.com/2026/shattering-the-dream-when-a-job-offer-becomes-a-zero-day-attack/)
+* [thehackernews - Lazarus / AFD.sys](https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including-a-windows-driver-zero-day-under-active-attack.html)
+* [OTX Pulse - Lazarus AFD.sys FudModule](https://social.raytec.co/@techbot/117080559364185575)
+* [reddit r/blueteamsec](https://www.reddit.com/r/blueteamsec/comments/1vm2uwf/shattering_the_dream_when_a_job_offer_becomes_a/)
 
 ---
 
-### Analyse opérationnelle
+<a id="gunra-ransomware"></a>
+### Gunra ransomware - Alerte FBI/CISA, 51 victimes, Fortinet + Schneider
 
-Cette exposition de données pose des risques opérationnels directs : (1) Les conference IDs exposés permettent à un attaquant de rejoindre des réunions en cours (Google Meet, Teams) sans invitation, exposant des discussions sensibles en temps réel ; (2) Les métadonnées de réunions (emails, horaires, participants) constituent une source d'OSINT pour du spear-phishing ciblé ; (3) L'absence d'isolation tenant sur Firestore est une erreur de configuration corrigée sur toutes les autres collections (users, chats, transcripts, recordings retournent 403) mais oubliée sur meetings ; (4) L'application worldcup.tldv.io expose 19 emails d'employés @tldv[.]io sans authentification, facilitant le targeting ; (5) Le délai de 6 mois sans correction malgré disclosure crée une fenêtre d'exploitation prolongée. Les équipes SOC utilisant tl;dv doivent vérifier si leurs meetings sont exposés, surveiller les accès non autorisés aux conférences, et envisager une migration vers une plateforme alternative sécurisée.
+### Résumé technique
 
----
+Les services cyber de Corée du Sud et la CISA/FBI publient une alerte conjointe sur le rançongiciel Gunra, qui cible les infrastructures critiques mondiales : santé, services financiers, gouvernement, services professionnels et à but non lucratif. Gunra a listé 51 victimes depuis son émergence (Ransomware.Live).
 
-### Implications stratégiques
+Le vecteur d'accès initial combine : (1) failles internet-facing Schneider Electric PowerLogic P5 (CVE-2024-5559) et Fortinet FortiOS / FortiProxy (CVE-2025-24472), (2) credentials volés ou leakés, (3) failles SSH access control sur passerelles VPN. Post-compromission : mouvement latéral via sessions volées et RDP, ciblage des webservers d'auth VDI, contrôleurs Active Directory, bureaux virtuels IT, exfiltration OneDrive/SharePoint (parfois dizaines de To), puis déploiement ransomware. Modèle double extorsion : exfiltration + chiffrement. Délai de paiement 5 à 7 jours, publication sur data leak site sinon.
 
-Cette breach illustre plusieurs enjeux stratégiques : (1) Les plateformes SaaS d'enregistrement de réunions constituent une surface d'attaque critique souvent négligée par les organisations qui adoptent ces outils sans audit de sécurité ; (2) L'exposition de réunions gouvernementales de 23 pays soulève des questions de sécurité nationale et de souveraineté des données ; (3) Le non-respect du SLA de réponse de 24h annoncé par tl;dv (SOC2, GDPR compliant) démontre l'écart entre les certifications de conformité et la posture de sécurité réelle ; (4) L'absence de bug bounty program et l'ignorance prolongée de la disclosure créent un précédent dangereux pour la confiance dans les plateformes EU ; (5) Les organisations doivent intégrer l'audit de configuration cloud (Firebase, Firestore security rules) dans leur programme de due diligence vendor. Cette breach pourrait déclencher des actions réglementaires GDPR étant donné l'hébergement EU et le volume de données personnelles exposées.
+### Analyse de l'impact
 
----
+Gunra est l'évolution courante du « ransomware as a service » ciblant l'infrastructure critique. Le schéma Fortinet + credentials + SharePoint est opérationnellement critique : les pare-feu Fortinet sont très répandus, et la combinaison avec CVE-2026-45659 SharePoint (CISA KEV pour ransomware) crée une chaîne complète d'accès initial jusqu'au déploiement. Les SOC/CERT doivent traiter l'alerte FBI/CISA comme priorité maximale.
 
 ### Recommandations
 
-* Si votre organisation utilise tl;dv : auditer immédiatement les meetings exposés et évaluer l'impact
-* Vérifier que les conference IDs Google Meet/Teams n'ont pas été utilisés pour des accès non autorisés
-* Envisager une migration vers une plateforme alternative avec isolation tenant vérifiée
-* Intégrer l'audit de configuration Firebase/Firestore security rules dans les due diligence vendor
-* Sensibiliser les utilisateurs aux risques d'enregistrement de réunions sur des plateformes tierces
-* Surveiller les accès non autorisés aux conférences via les logs Google Workspace / Microsoft Teams
-
----
+* Vérifier le patch Fortinet CVE-2025-24472 sur tous les FortiOS / FortiProxy exposés (patch disponible depuis février 2025).
+* Vérifier le patch Schneider Electric PowerLogic P5 CVE-2024-5559.
+* Surveiller et restreindre les accès VPN (MFA phishing-resistant, rotation des credentials, détection SSH access control anomalies).
+* Segmenter Active Directory, VDI et SharePoint ; durcir l'authentification admin.
+* Détection d'exfiltration OneDrive/SharePoint (DLP, anomaly detection, alertes sur gros volumes).
 
 ### Playbook de réponse à incident
 
-#### Phase 1 — Préparation
+#### Phase 1 - Préparation
+* Inventorier les pare-feu Fortinet et Schneider PowerLogic P5 exposés, vérifier patchs.
+* MFA FIDO2 sur VPN, comptes admin AD, comptes VDI.
+* Sauvegardes hors-ligne immuables ; test de restauration SharePoint.
+* Journalisation VDI, AD, OneDrive/SharePoint (audit logs activés).
 
-* Auditer toutes les collections Firestore pour vérifier la présence de règles de sécurité (security rules) par collection
-* Vérifier l'isolation tenant sur toutes les collections contenant des données multi-utilisateurs
-* Mettre en place un processus de réponse aux disclosures de sécurité avec SLA de 24h
-* Surveiller les requêtes anormales sur les collections Firestore (volume, fréquence, cross-tenant)
-* Implémenter une authentification et une autorisation sur toutes les API internes
+#### Phase 2 - Détection et analyse
+* **Règles de détection contextualisées :**
+  * Règle SIEM : authentifications VPN成功 depuis IP suspectes + rotation rapide de sessions RDP/VDI.
+  * Règle EDR : exécution PsExec / WMI / Cobalt Strike post-authentification VPN.
+  * Détection cloud : bulk download OneDrive / SharePoint (>10 Go anormaux), créations de comptes admin AD.
+* Chronologie : identifier l'entrée (Fortinet / Schneider / credentials), le dwell time, le volume exfiltré.
 
-#### Phase 2 — Détection et analyse
+#### Phase 3 - Confinement, éradication et récupération
 
-* Surveiller les requêtes Firestore provenant de tokens Firebase valides mais accédant à des meetings d'autres tenants
-* Détecter les patterns d'énumération : requêtes massives sur la collection meetings avec pagination
-* Alerte sur les accès à worldcup.tldv.io/api/entities/Player sans session cookie
-* Surveiller les requêtes vers gw.tldv.io/v1/users/firebase/token depuis des comptes free-tier avec volume anormal
-* Détecter les jointures de conference IDs Google Meet/Teams depuis des comptes non invités
+**Confinement :**
+* Isoler les segments impactés ; couper l'accès VPN externe si déploiement ransomware.
+* Désactiver les comptes admin compromis ; réinitialiser deux fois `krbtgt`.
 
-#### Phase 3 — Confinement, éradication et récupération
+**Éradication :**
+* Supprimer les implants ransomware et les comptes malveillants.
+* Pivoter toutes les credentials admin AD, VPN, VDI.
+* Fermer les canaux de persistance (tâches planifiées, services malveillants).
 
-* Appliquer immédiatement les Firestore security rules sur la collection meetings (403 pour accès cross-tenant)
-* Révoquer les tokens Firebase potentiellement abusés
-* Sécuriser ou désactiver l'application worldcup.tldv.io (API Player sans auth)
-* Notifier les utilisateurs dont les meetings ont été exposés (181 874 enregistrements, 84 312 utilisateurs)
-* Bloquer les adresses IP ayant effectué des requêtes d'énumération massives
-* Vérifier si des conference IDs ont été utilisés pour rejoindre des appels en cours
+**Récupération :**
+* Restaurer SharePoint / OneDrive depuis sauvegardes hors-ligne immuables.
+* Reconstruire les contrôleurs de domaine si compromis.
+* Surveillance 72h post-restauration.
 
-#### Phase 4 — Activités post-incident
+#### Phase 4 - Activités post-incident
+* Notifications NIS2/RGPD/DORA selon entité ; CISA si US.
+* Partage IOCs au CERT national et FS-ISAC.
+* REX et métriques MTTD/MTTR.
 
-* Évaluer l'étendue de l'exposition : 181 874 meetings, 84 312 utilisateurs, 35 003 domaines, 23 gouvernements
-* Identifier et notifier les organisations gouvernementales impactées (Brésil, Ukraine, Malaisie, etc.)
-* Auditer toutes les autres collections Firestore pour des vulnérabilités similaires d'isolation tenant
-* Mettre en place un programme de bug bounty pour les futurs disclosures
-* Documenter la timeline de disclosure (28 janvier 2026 → juillet 2026, toujours non corrigé)
-* Évaluer les obligations réglementaires (GDPR, notification de breach) pour les données EU exposées
+#### Phase 5 - Threat Hunting (proactif)
 
-#### Phase 5 — Threat Hunting (proactif)
+| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
+|---|---|---|---|
+| Sessions VPN suspectes avec rotation RDP/VDI anormale. | T1078 - Valid Accounts | Logs VPN / VDI | Authentifications VPN réussies hors heures ouvrées + sessions RDP vers AD/VDI dans la foulée. |
+| Bulk download OneDrive/SharePoint pré-chiffrement. | T1530 - Data from Cloud Storage | Microsoft 365 audit logs | Téléchargements >10 Go par comptes non-admin sur 7 jours. |
 
-* Rechercher dans les logs Firebase les requêtes d'énumération sur la collection meetings par des comptes free-tier
-* Identifier les conference IDs Google Meet/Teams qui ont été rejoints par des participants non invités
-* Analyser les logs d'accès à worldcup.tldv.io pour identifier les requêtes non authentifiées sur /api/entities/Player
-* Corréler les tokens Firebase émis avec les patterns d'accès anormaux (volume, cross-tenant)
-* Vérifier si les 1 000+ meetings publics ont été accédés et par qui
-* Surveiller les sous-domaines tldv.io (cappellini, carbonara, fusilli, etc.) pour des vulnérabilités similaires
+### Indicateurs de compromission (DEFANG obligatoire)
 
----
-
-### Indicateurs de compromission
-
-| Type | Valeur (DEFANG) | Fiabilité |
-|---|---|---|
-| DOMAIN | `tldv[.]io` | High |
-| DOMAIN | `gw.tldv[.]io` | High |
-| DOMAIN | `worldcup.tldv[.]io` | Medium |
-
----
+| Type | Valeur (DEFANG) | Description | Fiabilité |
+|---|---|---|---|
+| (aucun IOC publié dans les sources journalistiques, se référer à l'alerte FBI/CISA originale) | N/A | IOCs à extraire de l'alerte conjointe. | Moyenne |
 
 ### TTP MITRE ATT&CK
 
-| ID TTP | Description |
-|---|---|
-| **T1552** | Unsecured Credentials – absence d'authentification sur l'API Player (worldcup.tldv.io) |
-| **T1213** | Data from Information Repositories – énumération de la collection meetings Firestore sans isolation tenant |
-| **T1087** | Account Discovery – exposition de 84 312 utilisateurs uniques et 19 emails d'employés |
-| **T1530** | Data from Cloud Storage Object – accès non autorisé aux enregistrements de réunions via Firebase token |
-
----
+| ID TTP | Tactique | Technique | Description contextuelle |
+|---|---|---|---|
+| T1190 | Initial Access | Exploit Public-Facing Application | Fortinet CVE-2025-24472 + Schneider CVE-2024-5559. |
+| T1078 | Initial Access | Valid Accounts | Credentials volés / leakés. |
+| T1021.001 | Lateral Movement | Remote Desktop Protocol | RDP pour mouvement latéral post-VPN. |
+| T1486 | Impact | Data Encrypted for Impact | Déploiement ransomware Gunra. |
+| T1567 | Exfiltration | Exfiltration Over Web Service | Exfiltration OneDrive/SharePoint. |
 
 ### Sources
-
-* [https://bobdahacker.com/blog/tldv-hack](https://bobdahacker.com/blog/tldv-hack)
-* [https://s.ovalerio.net/@dethos/117073696836772617](https://s.ovalerio.net/@dethos/117073696836772617)
-
-
----
-
-<div id="malware-4-noobs-partie-i-introduction-aux-concepts-de-developpement-malware-stagers-et-lolbins"></div>
-
-## Malware 4 Noobs (Partie I) : introduction aux concepts de développement malware, stagers et LOLBINs
-
-### Résumé
-
-vx-underground publie la première partie d'un guide éducatif sur le développement de malware Windows. L'article distingue les auteurs de malware malveillants (Financially Motivated Threat Actors vs State-Sponsored/APT) des chercheurs et éducateurs. Il explique les différences de TTPs entre les deux catégories : les acteurs financiers privilégient le smash-and-grab, le MaaS (Malware-as-a-Service) et le volume d'infection, tandis que les APT ciblent l'espionnage avec persistance. L'article détaille le concept de staging (stagers, initial access files, chaining), l'environmental keying (détection VM, géolocalisation, produits de sécurité), le masquerading de binaires (double extension, faux mods de jeux, fausses invitations Zoom), l'abus de LOLBINs (Living off the Land Binaries) pour le malware fileless, et la technique ClickFix (Mr.d0x) qui combine masquerading, LOLBIN et clipboard pour l'exécution par l'utilisateur.
+* [thehackernews - Gunra](https://thehackernews.com/2026/08/gunra-ransomware-exploits-fortinet-and-schneider-electric-flaws-to-breach-networks.html)
+* [security.nl - Gunra Fortinet](https://www.security.nl/posting/948776/VS+waarschuwt+voor+ransomware-aanvallen+via+kwetsbare+Fortinet-firewalls)
+* [thecyberexpress - Gunra RaaS](https://thecyberexpress.com/gunra-ransomware-expands-raas-operations/)
+* [security.nl - SharePoint ransomware](https://www.security.nl/posting/948804/Kritiek+Microsoft+SharePoint-lek+ook+gebruikt+bij+ransomware-aanvallen)
 
 ---
 
-### Analyse opérationnelle
+<a id="polish-power-apn"></a>
+### Centrale polonaise CHP - Premier pivot IT/OT via APN cellulaire privé
 
-Ce guide éducatif a une valeur opérationnelle pour les équipes SOC : (1) Il fournit une taxonomie claire des types d'acteurs de menace et leurs motivations, aidant à prioriser les alertes ; (2) La description du staging et de l'environmental keying permet de mieux comprendre pourquoi certains malwares ne se déclenchent pas en sandbox et d'adapter les environnements d'analyse ; (3) L'explication des LOLBINs et du concept fileless malware guide la création de règles de détection comportementale plutôt que signature-based ; (4) La technique ClickFix est particulièrement pertinente car elle exploite l'utilisateur final (clipboard → Win+R → exécution) et nécessite une détection au niveau du clipboard et de l'exécution de commandes ; (5) La liste des MaaS courants (StealC, Rhadamanthys, RedLine, Vidar, etc.) doit être intégrée dans les watchlists SOC.
+### Résumé technique
 
----
+CERT Polska a divulgué le 8 août 2026 un incident survenu en décembre 2025 dans une centrale combinée chaleur-énergie (CHP) polonaise approvisionnant en chaleur ~50 000 habitants. Les attaquants ont atteint le réseau de contrôle industriel via un APN cellulaire privé (Access Point Name), dédié à l'opérateur de distribution pour joindre des équipements distants. Une configuration permettant à n'importe quel device sur l'APN de communiquer avec les autres a permis à l'attaquant de pivoter depuis un réseau éolien compromis vers un contrôleur de la centrale CHP.
 
-### Implications stratégiques
+L'attaquant a arrêté la turbine à vapeur et le système de traitement d'eau process. La récupération a commencé vers 7h30 alors que les intrus étaient encore actifs. Aucune coupure client (ni chaleur ni électricité). CERT Polska indique qu'il s'agit, à sa connaissance, du premier cas réel documenté d'attaque IT/OT via APN cellulaire privé. CVE-2023-32349 et CVE-2023-32350 sont citées dans la chaîne (côté wind farm).
 
-La publication de guides éducatifs sur le développement malware par des acteurs de la communauté underground souligne la démocratisation des connaissances en matière de malware. Cette tendance abaisse le barrier to entry pour les nouveaux acteurs de menace et augmente le volume global de menaces. La distinction entre APT et financially motivated actors reste pertinente pour la priorisation stratégique de défense : les organisations gouvernementales et de défense doivent se concentrer sur les APT (espionnage, persistance), tandis que les entreprises doivent prioriser les menaces financières (MaaS, stealers, ransomware). L'évolution vers le fileless malware et l'abus de LOLBINs nécessite un changement de paradigme : passer de la détection par signature à la détection comportementale et l'analyse heuristique.
+### Analyse de l'impact
 
----
+Le vecteur APN cellulaire privé outrepasse la plupart des contrôles IT/OT classiques (segmentation Ethernet, pare-feu). Les infrastructures utilisant des APN dédiés (énergie, transport, télécoms) doivent reconsidérer leur modèle de isolation : un équipement compromis sur l'APN peut atteindre n'importe quel autre. L'arrêt d'une turbine en exploitation est un événement de sécurité physique potentiel.
 
 ### Recommandations
 
-* Intégrer la liste des MaaS courants (StealC, Rhadamanthys, RedLine, Vidar, etc.) dans les watchlists SOC
-* Déployer des détections pour la technique ClickFix (surveillance clipboard + exécution Win+R)
-* Maintenir une liste à jour des LOLBINs (LOLBAS project) pour la création de règles de détection
-* Adapter les environnements de sandbox pour contrer l'environmental keying (VM detection bypass)
-* Former les équipes SOC aux concepts de staging, chaining et masquerading
-
----
+* Segmenter les APN cellulaires privés : interdire la communication device-à-device sur l'APN sauf whitelist explicite.
+* Appliquer l'authentification mutuelle et le chiffrement sur les APN industriels.
+* Surveiller les flux intra-APN (IDS dédié, NetFlow).
+* Vérifier le patch CVE-2023-32349 / CVE-2023-32350 sur les équipements éoliens.
 
 ### Playbook de réponse à incident
 
-#### Phase 1 — Préparation
+#### Phase 1 - Préparation
+* Inventorier les APN cellulaires privés et leur configuration (isolation device-à-device).
+* Plan de coupure / isolation APN en cas d'incident.
+* Journalisation des flux intra-APN (IDS, NetFlow).
 
-* Former les équipes SOC aux concepts de staging, environmental keying et LOLBINs
-* Maintenir une liste à jour des LOLBINs connus (LOLBAS project) pour la détection
-* Déployer des règles de détection pour les techniques ClickFix (clipboard → Win+R → exécution)
-* Surveiller les types de fichiers couramment utilisés comme stagers (.ps1, .bat, .vbs, .js, .hta, .lnk)
+#### Phase 2 - Détection et analyse
+* **Règles de détection contextualisées :**
+  * Règle IDS/APN : connexion d'un équipement vers un contrôleur hors de son whitelist.
+  * Détection OT : arrêt de turbine / système de traitement sans commande légitime.
+* Chronologie : identifier le pivot depuis le réseau éolien, l'arrêt de la turbine, la fenêtre d'activité.
 
-#### Phase 2 — Détection et analyse
+#### Phase 3 - Confinement, éradication et récupération
 
-* Détecter les tentatives d'environmental keying (vérifications VM, géolocalisation IP, produits de sécurité installés)
-* Surveiller l'exécution de LOLBINs avec des paramètres anormaux (téléchargement, exécution de code)
-* Détecter les fichiers avec double extension (.mp3.exe, .doc.exe) dans les téléchargements et emails
-* Alerte sur la copie automatique de contenu dans le clipboard depuis des pages web (technique ClickFix)
+**Confinement :**
+* Isoler l'APN cellulaire ; couper la connectivité device-à-device.
+* Couper l'accès du réseau éolien compromis à l'APN.
 
-#### Phase 3 — Confinement, éradication et récupération
+**Éradication :**
+* Restaurer la configuration APN (whitelist, authentification mutuelle).
+* Patch CVE-2023-32349/32350 sur les équipements éoliens.
+* Reconstruire les contrôleurs compromise.
 
-* Isoler les machines ayant exécuté des stagers suspects
-* Bloquer les domaines de distribution de stagers (faux sites de mods, faux invitations Zoom)
-* Analyser les stagers pour identifier les payloads secondaires et les C2 associés
+**Récupération :**
+* Redémarrer la turbine et le traitement d'eau process selon procédure OT.
+* Surveillance OT 72h post-restauration.
 
-#### Phase 4 — Activités post-incident
+#### Phase 4 - Activités post-incident
+* Notifications NIS2 (entité essentielle énergie), IEC 62443, autorité sectorielle.
+* Partage au CERT national et ENISA.
+* REX avec l'opérateur de distribution et le régulateur énergie.
 
-* Documenter la chaîne d'infection complète (stager → payload → C2)
-* Mettre à jour les règles de détection avec les IOCs extraits de chaque étape
-* Évaluer l'impact du payload final (exfiltration, persistance, chiffrement)
+#### Phase 5 - Threat Hunting (proactif)
 
-#### Phase 5 — Threat Hunting (proactif)
+| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
+|---|---|---|---|
+| D'autres équipements sur l'APN ont été ciblés. | T808 - Contamination of Public Cloud (n/a) - préférer T1021 - Remote Services | Logs APN / NetFlow | Communications intra-APN hors whitelist sur 90 jours. |
+| Le réseau éolien a d'autres vecteurs d'accès non patchés. | T1190 - Exploit Public-Facing Application | Logs éoliens / EDR OT | Équipements éoliens non patchés CVE-2023-32349/32350. |
 
-* Rechercher des stagers dans les dossiers de téléchargements et emails (.ps1, .bat, .lnk non standard)
-* Surveiller l'exécution de LOLBINs avec des arguments de téléchargement ou d'exécution de code
-* Détecter les patterns ClickFix : contenu clipboard contenant des commandes PowerShell/cmd
-* Analyser les fichiers récemment téléchargés pour du masquerading (double extension, icônes trompeuses)
+### Indicateurs de compromission (DEFANG obligatoire)
 
----
+| Type | Valeur (DEFANG) | Description | Fiabilité |
+|---|---|---|---|
+| (aucun IOC publié par CERT Polska dans la source journalistique) | N/A | Se référer au rapport CERT Polska original. | Moyenne |
 
 ### TTP MITRE ATT&CK
 
-| ID TTP | Description |
-|---|---|
-| **T1027** | Obfuscated Files or Information – stagers pour environmental keying et evasion |
-| **T1218** | System Binary Proxy Execution – abus de LOLBINs pré-installés Windows |
-| **T1059** | Command and Scripting Interpreter – stagers PowerShell, batch, VBS, JS |
-| **T1036** | Masquerading – masquerading de binaires (double extension, faux mods de jeux) |
-| **T1204** | User Execution – technique ClickFix (copie clipboard → Win+R → exécution) |
-
----
+| ID TTP | Tactique | Technique | Description contextuelle |
+|---|---|---|---|
+| T808 | (ICS) | (n/a) | Pivot IT/OT via APN cellulaire privé. |
+| T1021 | Lateral Movement | Remote Services | Accès au contrôleur via APN. |
+| T1485 | Impact | Data Destruction | Arrêt de la turbine et du traitement d'eau. |
 
 ### Sources
-
-* [https://malwaresourcecode.com/home/my-projects/write-ups/part-i-malware-4-noobs-version-0](https://malwaresourcecode.com/home/my-projects/write-ups/part-i-malware-4-noobs-version-0)
-* [https://infosec.exchange/@AmmarSpaces/117073729706461650](https://infosec.exchange/@AmmarSpaces/117073729706461650)
-
+* [thehackernews - Polish power plant APN](https://thehackernews.com/2026/08/hackers-breach-polish-power-plant-controls-via-private-cellular-network-and-shut-turbine.html)
 
 ---
 
-<div id="noisehound-scoring-des-chemins-dattaque-bloodhound-avec-prise-en-compte-de-la-detectabilite"></div>
+<a id="head-mare-trueconf"></a>
+### Head Mare APT - Exploitation TrueConf server + PhantomCore / PhantomGraph
 
-## NoiseHound : scoring des chemins d'attaque BloodHound avec prise en compte de la détectabilité
+### Résumé technique
 
-### Résumé
+Kaspersky publie l'analyse d'une attaque du groupe Head Mare (précédemment classé hacktiviste, requalifié APT) détectée en juillet 2026. L'attaquant exploite une chaîne de deux nouvelles vulnérabilités (KLCERT-26-057 et KLCERT-26-058) sur le serveur de visioconférence TrueConf pour exécuter du code arbitraire avec privilèges maximaux. Le port 4307/TCP, ouvert par défaut, est utilisé pour se connecter sans autorisation préalable. Les versions TrueConf 5.3.x à 5.3.9, 5.4.x à 5.4.9, et 5.5.x à 5.5.5 sont affectées.
 
-NoiseHound est un outil open-source (Python, licence MIT) qui ajoute une dimension de détectabilité au scoring des chemins d'attaque générés par BloodHound. L'outil évalue les chemins d'attaque Active Directory en tenant compte de la probabilité de détection par les solutions de sécurité déployées, permettant aux équipes red team et SOC de prioriser les chemins les plus furtifs.
+Les attaquants remplacent les installers TrueConf client par des versions infectées qui déploient le malware PhantomCore sur les participants à la visioconférence. Un second composant, PhantomGraph, est aussi déployé. Absence d'activité destructive (chiffrement / wiping) sur les infrastructures cibles : orientation espionnage.
 
----
+### Analyse de l'impact
 
-### Analyse opérationnelle
-
-NoiseHound comble un gap opérationnel entre les équipes red team et blue team : en scorant les chemins d'attaque BloodHound selon leur détectabilité, il permet aux équipes SOC d'identifier les chemins aveugles (faible détectabilité) qui nécessitent une couverture de détection renforcée. Les équipes red team peuvent l'utiliser pour sélectionner les chemins les plus furtifs lors d'exercices d'attaque simulée. L'outil aide à prioriser les remédiations de configuration Active Directory en se concentrant sur les chemins à la fois exploitables et difficiles à détecter.
-
----
-
-### Implications stratégiques
-
-L'intégration de la dimension de détectabilité dans l'analyse des chemins d'attaque Active Directory représente une évolution vers une approche plus pragmatique de la sécurisation AD. Plutôt que de tenter de fermer tous les chemins d'attaque (souvent irréaliste dans des environnements AD complexes), les organisations peuvent prioriser les chemins à la fois critiques et furtifs. Cette approche aligne les exercices red team avec les capacités de détection réelles du SOC, créant un feedback loop plus efficace entre attaque et défense.
-
----
+TrueConf est un système de visioconférence déployé en entreprise et dans des contextes sensibles (gouvernement, défense). La compromission du serveur permet la redistribution de clients infectés à tous les participants, ce qui en fait un vecteur de supply chain interne à large échelle. Head Mare est désormais qualifié APT, ce qui élève le niveau de menace au-dessus des hacktivistes classiques.
 
 ### Recommandations
 
-* Évaluer NoiseHound dans le cadre du programme de sécurité offensive et défensive
-* Intégrer le scoring de détectabilité dans le processus de priorisation des remédiations AD
-* Utiliser NoiseHound pour identifier les gaps de couverture de détection sur les chemins d'attaque critiques
-
----
+* Mettre à jour TrueConf server au-delà des versions affectées (5.3.9, 5.4.9, 5.5.5).
+* Restreindre l'accès au port 4307/TCP (segmentation, ACL) ; ne pas l'exposer publiquement.
+* Vérifier l'intégrité des installers TrueConf client distribués (hashs, signature).
+* Déployer la détection PhantomCore et PhantomGraph (YARA, EDR).
 
 ### Playbook de réponse à incident
 
-#### Phase 1 — Préparation
+#### Phase 1 - Préparation
+* Inventorier les serveurs TrueConf et leur exposition (port 4307/TCP).
+* Vérifier les versions (5.3.x-5.3.9, 5.4.x-5.4.9, 5.5.x-5.5.5).
+* Préparer signatures YARA PhantomCore / PhantomGraph.
 
-* Évaluer NoiseHound pour le scoring des chemins d'attaque BloodHound avec prise en compte de la détectabilité
-* Maintenir des graphes BloodHound à jour pour l'environnement Active Directory
-* Identifier les chemins d'attaque à haut risque et prioriser leur remédiation
+#### Phase 2 - Détection et analyse
+* **Règles de détection contextualisées :**
+  * Règle firewall / IDS : connexions sur port 4307/TCP depuis IP non whitelistées.
+  * Détection EDR : exécution de binaires TrueConf client non signés ou avec hash inconnu.
+  * YARA : PhantomCore, PhantomGraph.
+* Analyser les installers distribués sur la période d'exposition.
 
-#### Phase 2 — Détection et analyse
+#### Phase 3 - Confinement, éradication et récupération
 
-* Surveiller les requêtes LDAP anormales correspondant aux patterns d'énumération BloodHound
-* Corréler les chemins d'attaque identifiés par NoiseHound avec les alertes de sécurité existantes
-* Identifier les chemins d'attaque à faible détectabilité signalés par NoiseHound pour prioriser le durcissement
+**Confinement :**
+* Isoler le serveur TrueConf compromise.
+* Couper la distribution d'installers client suspects.
 
-#### Phase 3 — Confinement, éradication et récupération
+**Éradication :**
+* Mettre à jour le serveur TrueConf.
+* Supprimer PhantomCore / PhantomGraph des postes participants.
+* Redistribuer des installers TrueConf authentiques.
 
-* Bloquer ou restreindre les comptes et chemins identifiés comme critiques par NoiseHound
-* Appliquer des corrections de configuration AD pour briser les chemins d'attaque à haut risque
+**Récupération :**
+* Surveillance EDR 72h post-éradication.
 
-#### Phase 4 — Activités post-incident
+#### Phase 4 - Activités post-incident
+* Notifications (NIS2/RGPD selon entité).
+* Partage IOCs au CERT national.
 
-* Utiliser NoiseHound pour vérifier que les chemins d'attaque exploités lors d'un incident ont été fermés
-* Mettre à jour les graphes BloodHound post-remédiation et re-scanner avec NoiseHound
+#### Phase 5 - Threat Hunting (proactif)
 
-#### Phase 5 — Threat Hunting (proactif)
+| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
+|---|---|---|---|
+| D'autres installers TrueConf ont été remplacés. | T1195.002 - Compromise Software Supply Chain | Logs déploiement / EDR | Hashs des binaires TrueConf client distribués sur 90 jours vs hashs officiels. |
+| PhantomCore a exfiltré des données. | T1041 - Exfiltration Over C2 Channel | EDR / réseau | Connexions sortantes depuis process TrueConf / PhantomCore. |
 
-* Utiliser NoiseHound pour identifier les chemins d'attaque à faible détectabilité nécessitant une surveillance renforcée
-* Rechercher des indicateurs d'énumération Active Directory correspondant aux patterns BloodHound/NoiseHound
-* Prioriser la chasse aux menaces sur les chemins d'attaque avec le score de détectabilité le plus faible
+### Indicateurs de compromission (DEFANG obligatoire)
 
----
+| Type | Valeur (DEFANG) | Description | Fiabilité |
+|---|---|---|---|
+| (IOCs disponibles dans le rapport Securelist complet : file hashes MD5, IP, domaines, noms de services Windows, chemins, clés de registre, règles YARA) | N/A | Se référer à la section IOCs du rapport Securelist. | Haute (Kaspersky) |
 
 ### TTP MITRE ATT&CK
 
-| ID TTP | Description |
-|---|---|
-| **T1087** | Account Discovery – énumération et scoring des chemins d'attaque AD |
-| **T1068** | Exploitation for Privilege Escalation – identification des chemins d'escalade via BloodHound |
-| **T1021** | Remote Services – chemins de mouvement latéral identifiés par BloodHound |
-
----
+| ID TTP | Tactique | Technique | Description contextuelle |
+|---|---|---|---|
+| T1190 | Initial Access | Exploit Public-Facing Application | Exploitation TrueConf server (KLCERT-26-057/058). |
+| T1195.002 | Initial Access | Compromise Software Supply Chain: Compromise Software Update | Remplacement des installers TrueConf client. |
+| T1219 | Execution | Remote Access Software | TrueConf utilisé comme vecteur d'exécution. |
 
 ### Sources
-
-* [https://www.reddit.com/r/redteamsec/comments/1vl0t2u/noisehound_detectionaware_bloodhound_attackpath/](https://www.reddit.com/r/redteamsec/comments/1vl0t2u/noisehound_detectionaware_bloodhound_attackpath/)
-
+* [Securelist - Head Mare TrueConf](https://securelist.com/tr/head-mare-targets-trueconf-server-with-phantomcore-phantomgraph/120981/)
 
 ---
 
-<div id="operateur-russophone-chainage-de-cve-sur-cameras-et-routeurs-pour-creer-un-pipeline-proxy-et-de-visualisation-contre-lukraine"></div>
+<a id="cav3rn"></a>
+### Project CAV3RN - C2 Google Apps Script relay, DNS-based channel selection (cibles Israël)
 
-## Opérateur russophone : chaînage de CVE sur caméras et routeurs pour créer un pipeline proxy et de visualisation contre l'Ukraine
+### Résumé technique
 
-### Résumé
+Kaspersky publie la suite de l'analyse du framework d'espionnage modulaire CAV3RN (rapports précédents juin et juillet 2026). Cible : Israël. Le nouveau module de communication C2 (`GoogleService.dll`, .NET 8 NativeAOT) utilise les réponses DNS A-record pour choisir entre canal HTTPS direct et relay Google Apps Script pour chaque transaction. L'infrastructure DNS peut valider et remplacer l'ID de déploiement du relay, permettant la rotation du canal Google.
 
-Un article publié sur r/redteamsec décrit comment un opérateur russophone a chaîné des vulnérabilités (CVE) sur des caméras IP et des routeurs pour construire un pipeline de proxy et de visualisation utilisé contre l'Ukraine. L'opérateur a exploité des dispositifs IoT exposés sur Internet pour créer une infrastructure de relais et de surveillance, transformant des équipements compromis en outils de collecte et de transmission de données.
+Le framework inclut aussi un broker local qui découvre et charge les composants DLL, route les messages entre eux, et supporte les mises à jour runtime. PDB path : `C:\Users\user\Desktop\Modules\broker-cavern\communication\GoogleCommunication\bin\Release\net8.0\win-x64\native\GoogleService.pdb`.
 
----
+### Analyse de l'impact
 
-### Analyse opérationnelle
-
-Ce cas illustre l'exploitation systématique de dispositifs IoT vulnérables (caméras IP, routeurs) comme infrastructure d'attaque. Pour les équipes SOC : (1) Les dispositifs IoT exposés sur Internet constituent une surface d'attaque souvent négligée mais activement exploitée par les acteurs de menace ; (2) Le chaînage de CVE sur des dispositifs IoT permet de construire des infrastructures proxy difficiles à attribuer et à démonter ; (3) Les caméras IP compromises peuvent servir de points de visualisation pour la surveillance tactique ; (4) La détection nécessite une surveillance du trafic anormal sur les segments IoT (connexions sortantes inattendues, patterns de proxy) ; (5) La remédiation passe par la mise à jour des firmwares, la segmentation réseau des dispositifs IoT, et la réduction de l'exposition Internet.
-
----
-
-### Implications stratégiques
-
-L'exploitation d'IoT pour des opérations de renseignement et de proxy s'inscrit dans le contexte du conflit russo-ukrainien où les infrastructures civiles sont ciblées. Les dispositifs IoT (caméras, routeurs) représentent une ressource stratégique pour les acteurs étatiques et non-étatiques : ils sont nombreux, souvent mal sécurisés, exposés sur Internet, et difficiles à attribuer. La construction de pipelines de proxy à partir d'IoT compromis permet de masquer l'origine des attaques et de créer des canaux de surveillance persistants. Les organisations gouvernementales et de défense doivent intégrer l'audit IoT dans leur programme de sécurité, en particulier dans les zones de conflit. La régulation de la sécurité des dispositifs IoT (cyber-resilience act, baseline security requirements) devient un enjeu géopolitique.
-
----
+L'usage de Google Apps Script comme relay C2 est significatif : le trafic sortant ressemble à un appel légitime à Google, contournant la plupart des listes de blocage. La sélection DNS entre canaux ajoute une résilience opérationnelle élevée. Framework modulaire typique d'un acteur étatique (cible Israël suggère Iran-aligned probable). Détection difficile, à baser sur le comportement (DLL inattendue, DNS exfiltration patterns).
 
 ### Recommandations
 
-* Inventorier et segmenter tous les dispositifs IoT (caméras, routeurs) sur un réseau dédié
-* Maintenir une veille CVE sur les dispositifs IoT déployés et appliquer les correctifs rapidement
-* Surveiller le trafic sortant des segments IoT pour détecter les patterns de proxy ou de surveillance
-* Réduire l'exposition Internet des dispositifs IoT au strict nécessaire
-* Appliquer des configurations de durcissement sur les caméras IP et routeurs (mots de passe forts, désactivation services inutiles)
-
----
+* Surveiller les appels à `script.google.com` depuis des processus non navigateurs (GoogleService.dll, .NET NativeAOT).
+* Détection DNS : requêtes A-record anormales avec rotation d'ID de déploiement.
+* Détection EDR : chargement de DLL non signée `GoogleService.dll`, broker DLL local.
+* Restreindre l'exécution de .NET NativeAOT hors des chemins approuvés.
 
 ### Playbook de réponse à incident
 
-#### Phase 1 — Préparation
+#### Phase 1 - Préparation
+* Journaliser les requêtes DNS et les appels à `script.google.com`.
+* Activer la détection EDR sur chargement de DLL .NET NativeAOT.
 
-* Inventorier tous les dispositifs IoT exposés (caméras, routeurs) et leur version firmware
-* Maintenir une veille CVE sur les dispositifs IoT déployés (caméras IP, routeurs边缘)
-* Segmenter les dispositifs IoT sur un réseau dédié avec accès restreint
+#### Phase 2 - Détection et analyse
+* **Règles de détection contextualisées :**
+  * Règle DNS : requêtes A avec patterns de rotation d'ID suspects.
+  * Règle EDR : process non navigateur contactant `script.google.com`.
+  * YARA : GoogleService.dll, broker CAV3RN.
+* Analyser le PDB path et les hashes.
 
-#### Phase 2 — Détection et analyse
+#### Phase 3 - Confinement, éradication et récupération
 
-* Surveiller le trafic anormal depuis des caméras IP ou routeurs (connexions sortantes, proxy traffic)
-* Détecter les tentatives d'exploitation de CVE connues sur les dispositifs IoT exposés
-* Surveiller les changements de configuration sur les caméras et routeurs (redirection de ports, proxy)
+**Confinement :**
+* Isoler les postes compromis.
+* Bloquer `script.google.com` pour les comptes non approuvés (proxy).
 
-#### Phase 3 — Confinement, éradication et récupération
+**Éradication :**
+* Supprimer GoogleService.dll et les composants CAV3RN.
+* Pivoter les credentials compromises.
 
-* Isoler les dispositifs IoT compromis du réseau
-* Mettre à jour les firmwares des dispositifs IoT vulnérables
-* Bloquer le trafic proxy sortant depuis les segments IoT
+**Récupération :**
+* Surveillance 72h post-éradication.
 
-#### Phase 4 — Activités post-incident
+#### Phase 4 - Activités post-incident
+* Notifications (NIS2/RGPD).
+* Partage IOCs au CERT national.
 
-* Analyser les logs des dispositifs IoT compromis pour identifier l'étendue de l'exploitation
-* Vérifier si les dispositifs ont été utilisés pour des attaques de rebond vers d'autres cibles
-* Renforcer la segmentation réseau IoT et appliquer le principe de moindre privilège
+#### Phase 5 - Threat Hunting (proactif)
 
-#### Phase 5 — Threat Hunting (proactif)
+| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
+|---|---|---|---|
+| D'autres postes contactent `script.google.com` hors navigateur. | T1071.001 - Web Protocols | Proxy / EDR | Appels `script.google.com` par process hors Chrome/Edge/Firefox. |
+| Rotation d'ID de déploiement Google Apps Script suspecte. | T1568.002 - Dynamic Resolution | Logs DNS | Requêtes A avec changements fréquents d'ID dans le path. |
 
-* Scanner les dispositifs IoT exposés pour des CVE connues exploitables
-* Rechercher des patterns de trafic proxy sur les segments IoT
-* Corréler les indicateurs avec les campagnes russophones ciblant l'Ukraine
+### Indicateurs de compromission (DEFANG obligatoire)
 
----
+| Type | Valeur (DEFANG) | Description | Fiabilité |
+|---|---|---|---|
+| (IOCs disponibles dans le rapport Securelist : file hashes, domaines, IPs) | N/A | Se référer au rapport complet. | Haute (Kaspersky) |
 
 ### TTP MITRE ATT&CK
 
-| ID TTP | Description |
-|---|---|
-| **T1190** | Exploit Public-Facing Application – exploitation de CVE sur caméras et routeurs exposés |
-| **T1090** | Proxy – utilisation des dispositifs compromis comme infrastructure proxy |
-| **T1059** | Command and Scripting Interpreter – automatisation de l'exploitation en chaîne |
-
----
+| ID TTP | Tactique | Technique | Description contextuelle |
+|---|---|---|---|
+| T1071.001 | Command and Control | Web Protocols | HTTPS via Google Apps Script relay. |
+| T1568.002 | Command and Control | Dynamic Resolution: Domain Generation Algorithms | Sélection de canal via DNS A-record. |
+| T1219 | Command and Control | Remote Access Software | (n/a - préférer T1105 Ingress Tool Transfer) |
 
 ### Sources
-
-* [https://www.reddit.com/r/redteamsec/comments/1vktd2p/how_one_russianspeaking_operator_chained_camera/](https://www.reddit.com/r/redteamsec/comments/1vktd2p/how_one_russianspeaking_operator_chained_camera/)
-
-
----
-
-<div id="pypspipejack-implementation-python-dune-technique-de-mouvement-lateral-et-descalade-de-privileges-via-powershell-named-pipes"></div>
-
-## PyPsPipeJack : implémentation Python d'une technique de mouvement latéral et d'escalade de privilèges via PowerShell named pipes
-
-### Résumé
-
-PyPsPipeJack est une implémentation Python de la technique OpenPsPipeJack, une nouvelle technique de mouvement latéral et d'escalade de privilèges utilisant les named pipes PowerShell. L'outil démontre comment les named pipes Windows peuvent être exploités pour exécuter des commandes à distance et escalader les privilèges sur des machines cibles.
+* [Securelist - Project CAV3RN continues](https://securelist.com/project-cav3rn-continues/120991/)
+* [OTX Pulse - CAV3RN Google Apps Script](https://social.raytec.co/@techbot/117080803713457795)
 
 ---
 
-### Analyse opérationnelle
+<a id="iran-water"></a>
+### Hackers liés à l'Iran ciblent de nouvelles infrastructures water US (NJ + Alabama)
 
-PyPsPipeJack expose une technique offensive utilisant les named pipes PowerShell pour le mouvement latéral et l'escalade de privilèges. Pour les équipes SOC : (1) Les named pipes PowerShell sont un canal de communication inter-processus légitime mais rarement surveillé, créant un gap de détection ; (2) La technique permet d'exécuter des commandes à distance sans utiliser les canaux traditionnels (WinRM, PSExec, WMI) qui sont mieux surveillés ; (3) La détection nécessite Sysmon Event ID 17 (Pipe Event Created) et 18 (Pipe Event Connected) avec surveillance des noms de pipes non standard ; (4) Le PowerShell Script Block Logging (Event ID 4104) doit être activé pour capturer les commandes exécutées via named pipes ; (5) La remédiation passe par le Constrained Language Mode PowerShell et la restriction des named pipes accessibles.
+### Résumé technique
 
----
+SecurityAffairs rapporte que des hackers liés à l'Iran ciblent de nouvelles infrastructures water aux US (New Jersey et Alabama). S'inscrit dans la série d'attaques contre stations de traitement eau et municipalités US observée depuis 2023, attribution typique CyberAv3ngers / IRGC-aligned. La source journalistique ne fournit pas de détail technique sur le vecteur (à corréler avec les alertes FBI/CISA sur appareils Unitronics PLC).
 
-### Implications stratégiques
+### Analyse de l'impact
 
-La publication d'outils comme PyPsPipeJack démocratise des techniques de mouvement latéral jusque-là réservées à des acteurs avancés. Les named pipes PowerShell représentent une surface d'attaque sous-estimée car ils sont un mécanisme Windows légitime rarement audité. Les organisations doivent intégrer la surveillance des named pipes dans leur stratégie de détection, en particulier pour les environnements où PowerShell est largement utilisé (administration système, automation). Cette technique souligne l'importance de durcir PowerShell (Constrained Language Mode, script block logging, transcription) plutôt que de tenter de le désactiver entièrement, ce qui est souvent irréaliste.
-
----
+Le secteur water est une infrastructure critique sous-protégée (OT peu segmenté, appareils PLC exposés). Les attaques successives contre le secteur water US indiquent une intention étatique de démonstration de capacité et de collecte de renseignement. Risque de contamination potable ou de coupure.
 
 ### Recommandations
 
-* Activer Sysmon Event ID 17/18 pour surveiller la création et connexion de named pipes
-* Activer PowerShell Script Block Logging (Event ID 4104) pour capturer les commandes exécutées via named pipes
-* Déployer PowerShell en Constrained Language Mode pour restreindre les capacités d'exécution
-* Établir une baseline des named pipes légitimes pour identifier les pipes anormaux
-* Intégrer la détection des named pipes suspects dans les règles EDR et SIEM
-
----
+* Segmenter les réseaux OT water des réseaux IT.
+* Vérifier l'exposition publique des PLC (Unitronics, Schneider) via Shodan.
+* Déployer la détection OT (Nozomi, Claroty).
+* Appliquer les recommandations CISA pour le secteur water (alertes CyberAv3ngers précédentes).
 
 ### Playbook de réponse à incident
 
-#### Phase 1 — Préparation
+#### Phase 1 - Préparation
+* Inventorier les PLC et équipements OT water exposés.
+* Journalisation OT (logs PLC, network flows).
 
-* Surveiller la création de named pipes PowerShell avec des noms non standard
-* Documenter les named pipes légitimes utilisés dans l'environnement pour établir une baseline
-* Restreindre l'exécution PowerShell via Constrained Language Mode et script block logging
+#### Phase 2 - Détection et analyse
+* **Règles de détection contextualisées :**
+  * Règle OT/IDS : connexions non autorisées sur PLC.
+  * Détection : changements de configuration PLC hors fenêtres de maintenance.
 
-#### Phase 2 — Détection et analyse
+#### Phase 3 - Confinement, éradication et récupération
+* Isoler les PLC compromise du réseau.
+* Restaurer la configuration PLC depuis backup offline.
+* Surveillance 72h.
 
-* Détecter la création de named pipes avec des noms aléatoires ou suspects via Sysmon Event ID 17/18
-* Surveiller les connexions PowerShell à distance utilisant des named pipes (Event ID 4104, 4103)
-* Corréler la création de named pipes avec des tentatives d'escalade de privilèges
+#### Phase 4 - Activités post-incident
+* Notifications NIS2 / CISA / EPA (secteur water US).
+* Partage au CERT national et WaterISAC.
 
-#### Phase 3 — Confinement, éradication et récupération
+#### Phase 5 - Threat Hunting (proactif)
 
-* Isoler les machines où des named pipes suspects ont été détectés
-* Terminer les sessions PowerShell utilisant des named pipes non standard
-* Bloquer l'exécution de PowerShell non signé ou non approuvé
+| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
+|---|---|---|---|
+| D'autres PLC sont exposés publiquement. | T805 - (ICS) | Shodan / scans externes | Exposition PLC Unitronics / Schneider sur IP publiques. |
 
-#### Phase 4 — Activités post-incident
+### Indicateurs de compromission (DEFANG obligatoire)
 
-* Analyser les logs Sysmon (Event ID 17/18) pour identifier tous les named pipes créés pendant l'attaque
-* Vérifier si la technique a été utilisée pour l'escalade de privilèges ou le mouvement latéral
-* Mettre à jour les règles de détection avec les patterns de named pipes identifiés
-
-#### Phase 5 — Threat Hunting (proactif)
-
-* Rechercher des named pipes PowerShell non standard dans les logs Sysmon
-* Identifier les machines avec des connexions PowerShell à distance via named pipes
-* Corréler les named pipes suspects avec des indicateurs d'escalade de privilèges ou de mouvement latéral
-
----
+| Type | Valeur (DEFANG) | Description | Fiabilité |
+|---|---|---|---|
+| (aucun IOC publié dans la source) | N/A | À corréler avec les alertes CISA CyberAv3ngers. | Faible |
 
 ### TTP MITRE ATT&CK
 
-| ID TTP | Description |
-|---|---|
-| **T1021** | Remote Services – mouvement latéral via PowerShell named pipes |
-| **T1078** | Valid Accounts – escalade de privilèges via named pipes impersonation |
-| **T1059** | Command and Scripting Interpreter – PowerShell pour exécution de commandes à distance |
-| **T1570** | Lateral Tool Transfer – utilisation de named pipes pour transférer et exécuter des outils |
+| ID TTP | Tactique | Technique | Description contextuelle |
+|---|---|---|---|
+| T808 | (ICS) | (n/a) | Attaque sur infrastructure water. |
+
+### Sources
+* [securityaffairs - Iran water NJ Alabama](https://securityaffairs.com/197012/hacking/iran-linked-hackers-target-more-us-water-infrastructure-in-new-jersey-and-alabama.html)
 
 ---
 
-### Sources
+<a id="kimwolf-v7"></a>
+### Kimwolf v7 - Évolution du botnet Android / IoT
 
-* [https://www.reddit.com/r/redteamsec/comments/1vkidvs/pypspipejack_python_implementation_of/](https://www.reddit.com/r/redteamsec/comments/1vkidvs/pypspipejack_python_implementation_of/)
+### Résumé technique
+
+Unit 42 (Palo Alto Networks) publie l'analyse de la v7 du botnet Kimwolf, qui cible les Android TV boxes et set-top boxes. La v7 améliore les capacités d'attaque DDoS et la résilience du C2 via un tunnel HTTP. Le nom « Kimwolf » contient un slur racial utilisé par l'opérateur (partiellement redacted par Unit 42 pour permettre l'identification).
+
+### Analyse de l'impact
+
+Les Android TV boxes et set-top boxes sont massivement déployées, sous-protégées (firmware non mis à jour, credentials par défaut), et constituent une surface de botnet idéal. Kimwolf v7 ajoute la résilience C2 (HTTP tunnel) qui complique le démantèlement. Les DDoS qui en sortent peuvent saturer des cibles critiques.
+
+### Recommandations
+
+* Mettre à jour les Android TV boxes et set-top boxes.
+* Changer les credentials par défaut.
+* Déployer la détection DDoS en sortie (NDR, NetFlow).
+* Surveiller les tunnels HTTP anormaux depuis devices IoT.
+
+### Playbook de réponse à incident
+
+#### Phase 1 - Préparation
+* Inventorier les Android TV / set-top boxes.
+* Journalisation des flux sortants IoT.
+
+#### Phase 2 - Détection et analyse
+* **Règles de détection contextualisées :**
+  * Règle NDR : tunnels HTTP anormaux depuis devices IoT.
+  * Détection : pics de trafic DDoS en sortie.
+
+#### Phase 3 - Confinement, éradication et récupération
+* Isoler les devices compromise.
+* Rebuilder firmware depuis image propre.
+* Surveillance 72h.
+
+#### Phase 4 - Activités post-incident
+* Notifications si DDoS sortant impacte des tiers.
+* Partage au CERT national.
+
+#### Phase 5 - Threat Hunting (proactif)
+
+| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
+|---|---|---|---|
+| D'autres Android TV boxes sont infectées. | T1498 - Network Denial of Service | NDR / NetFlow | Pics de trafic UDP/TCP synchronisés depuis devices IoT. |
+
+### Indicateurs de compromission (DEFANG obligatoire)
+
+| Type | Valeur (DEFANG) | Description | Fiabilité |
+|---|---|---|---|
+| (IOCs dans le rapport Unit 42 complet) | N/A | Se référer au rapport Unit 42. | Haute (Unit 42) |
+
+### TTP MITRE ATT&CK
+
+| ID TTP | Tactique | Technique | Description contextuelle |
+|---|---|---|---|
+| T1498 | Impact | Network Denial of Service | DDoS via botnet Kimwolf v7. |
+| T1071.001 | Command and Control | Web Protocols | Tunnel HTTP C2. |
+
+### Sources
+* [Unit 42 - Kimwolf v7](https://unit42.paloaltonetworks.com/kimwolf-v7-botnet-malware/)
+
+---
+
+<a id="bdthemes-supply-chain"></a>
+### BdThemes - Supply chain attack via JSON poisoning, rogue WordPress admins
+
+### Résumé technique
+
+thehackernews rapporte une attaque par supply chain contre BdThemes (vendeur de thèmes WordPress). Des fichiers JSON malveillants ont été injectés pour créer des administrateurs WordPress fantaisistes sur les sites utilisant les thèmes compromise. Le vecteur exact (compromission du dépôt, mise à jour malveillante) n'est pas détaillé dans la source journalistique.
+
+### Analyse de l'impact
+
+Les thèmes WordPress sont massivement déployés. Une compromission de la supply chain permet une prise de contrôle à large échelle de sites WordPress (e-commerce, médias, institutionnels). Les administrateurs fantaisistes constituent une persistance difficile à détecter sans audit des comptes admin.
+
+### Recommandations
+
+* Vérifier les comptes administrateurs WordPress sur les sites utilisant BdThemes.
+* Mettre à jour les thèmes BdThemes depuis une source propre.
+* Activer la détection d'administration fantaisiste (WAF, audit des comptes admin).
+* Durcir l'authentification admin WordPress (MFA, limitation des créations de comptes).
+
+### Playbook de réponse à incident
+
+#### Phase 1 - Préparation
+* Inventorier les sites WordPress utilisant BdThemes.
+* Activer l'audit des comptes admin.
+
+#### Phase 2 - Détection et analyse
+* **Règles de détection contextualisées :**
+  * Règle WAF / SIEM : créations de comptes admin WordPress sans légitimité.
+  * Détection : connexions admin WordPress depuis IP suspectes.
+
+#### Phase 3 - Confinement, éradication et récupération
+* Supprimer les comptes admin fantaisistes.
+* Mettre à jour BdThemes depuis source propre.
+* Pivoter les credentials admin légitimes.
+
+#### Phase 4 - Activités post-incident
+* Notifications si données personnelles / e-commerce compromises.
+* Partage au CERT national.
+
+#### Phase 5 - Threat Hunting (proactif)
+
+| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
+|---|---|---|---|
+| D'autres sites WordPress ont des comptes admin fantaisistes. | T1136.001 - Create Account: Local Account | Logs WordPress | Créations de comptes admin hors fenêtres de maintenance sur 90 jours. |
+
+### Indicateurs de compromission (DEFANG obligatoire)
+
+| Type | Valeur (DEFANG) | Description | Fiabilité |
+|---|---|---|---|
+| (aucun IOC publié dans la source journalistique) | N/A | À corréler avec l'analyse technique complète. | Faible |
+
+### TTP MITRE ATT&CK
+
+| ID TTP | Tactique | Technique | Description contextuelle |
+|---|---|---|---|
+| T1195.002 | Initial Access | Compromise Software Supply Chain | Supply chain BdThemes. |
+| T1136.001 | Persistence | Create Account: Local Account | Admins WordPress rogue. |
+
+### Sources
+* [thehackernews - BdThemes supply chain](https://thehackernews.com/2026/08/bdthemes-supply-chain-attack-poisons-json-to-create-rogue-wordpress-admins.html)
+
+---
+
+<a id="chaindrop-npm"></a>
+### ChainDrop - Ver auto-propageant npm, 400+ packages compromise
+
+### Résumé technique
+
+Un pulse OTX signale « ChainDrop Worm », un ver auto-propageant sur l'écosystème npm qui aurait infecté plus de 400 packages. Données préliminaires (non vérifiées). Pas de détail technique dans la source OTX. À rapprocher des vers npm précédents (2024, packages self-propagating).
+
+### Analyse de l'impact
+
+Un ver npm à 400+ packages indique une propagation transverse dans la supply chain JavaScript. Tout projet Node.js avec dépendances non verrouillées (pas de `npm ci` depuis lockfile immuable) est à risque d'exécution de code malveillant en build ou runtime. Les SOC/CERT avec un parc de développement Node.js doivent traiter comme incident supply chain majeur.
+
+### Recommandations
+
+* Verrouiller les dépendances npm (`npm ci`, lockfile integrity, SBOM).
+* Restreindre l'installation de packages non vérifiés.
+* Activer npm 2FA pour les mainteneurs internes.
+* Surveiller les `npm install` depuis registry non officiel.
+
+### Playbook de réponse à incident
+
+#### Phase 1 - Préparation
+* Inventorier les dépendances npm critiques.
+* Vérifier l'intégrité des lockfiles (SBOM, sigstore).
+
+#### Phase 2 - Détection et analyse
+* **Règles de détection contextualisées :**
+  * Règle SIEM : `npm install` exécuté par compte service + connexion vers registry non officiel.
+  * Détection : dépendances avec hashes inattendus vs lockfile.
+
+#### Phase 3 - Confinement, éradication et récupération
+* Isoler les machines de dev / build compromise.
+* Forcer `npm ci` depuis lockfile propre (post-nettoyage).
+* Bloquer les registrys non officiels.
+
+#### Phase 4 - Activités post-incident
+* Notifications si breach en production.
+* Partage au CERT national et écosystème npm (GitHub Advisory).
+
+#### Phase 5 - Threat Hunting (proactif)
+
+| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
+|---|---|---|---|
+| D'autres packages malveillants installés. | T1195.002 - Compromise Software Supply Chain | Logs npm / EDR | `npm install` hors lockfile sur 30 jours. |
+
+### Indicateurs de compromission (DEFANG obligatoire)
+
+| Type | Valeur (DEFANG) | Description | Fiabilité |
+|---|---|---|---|
+| (aucun IOC publié, pulse OTX préliminaire) | N/A | À enrichir dès publication technique. | Faible |
+
+### TTP MITRE ATT&CK
+
+| ID TTP | Tactique | Technique | Description contextuelle |
+|---|---|---|---|
+| T1195.002 | Initial Access | Compromise Software Supply Chain: Package Manager | Ver npm auto-propageant. |
+
+### Sources
+* [OTX Pulse - ChainDrop npm worm](https://social.raytec.co/@techbot/117080803630207771)
+
+---
+
+<a id="abyssos-rat"></a>
+### Abyssos - Nouveau RAT modulaire (OTX préliminaire)
+
+### Résumé technique
+
+Deux pulses OTX (auteur Tr1sa111, préliminaires non vérifiés) décrivent « Abyssos », un nouveau RAT modulaire. Pas de détail technique dans les sources OTX (à enrichir dès publication publique). Architecture modulaire suggère capacité d'extension par plugins.
+
+### Analyse de l'impact
+
+Faible densité informationnelle mais signal à surveiller. Les RAT modulaires sont difficiles à détecter par signatures fixes (plugins variables). Détection à baser sur le comportement (process injection, C2 anormal).
+
+### Recommandations
+
+* Surveiller les comportements de RAT (process injection, C2 beacons).
+* Déployer EDR avec détection comportementale.
+
+### Playbook de réponse à incident
+
+#### Phase 1 - Préparation
+* EDR détection comportementale active.
+
+#### Phase 2 - Détection et analyse
+* Détection : process injection, connexions C2 anormales.
+
+#### Phase 3 - Confinement, éradication et récupération
+* Isoler le poste.
+* Supprimer les modules Abyssos.
+
+#### Phase 4 - Activités post-incident
+* Partage au CERT national.
+
+#### Phase 5 - Threat Hunting (proactif)
+
+| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
+|---|---|---|---|
+| D'autres postes infectés par Abyssos. | T1055 - Process Injection | EDR | Process injection anormale sur 30 jours. |
+
+### Indicateurs de compromission (DEFANG obligatoire)
+
+| Type | Valeur (DEFANG) | Description | Fiabilité |
+|---|---|---|---|
+| (aucun IOC publié, pulse OTX préliminaire) | N/A | À enrichir. | Faible |
+
+### TTP MITRE ATT&CK
+
+| ID TTP | Tactique | Technique | Description contextuelle |
+|---|---|---|---|
+| T1055 | Defense Evasion | Process Injection | (typique RAT modulaire). |
+
+### Sources
+* [OTX Pulse - Abyssos RAT](https://social.raytec.co/@techbot/117080812382778866)
+* [OTX Pulse - Abyssos RAT (duplicate)](https://social.raytec.co/@techbot/117080792373367137)
+
+---
+
+<a id="falcon-extortion"></a>
+### Falcon extortion - AitM phishing + vishing contre services financiers
+
+### Résumé technique
+
+GuidePoint Security publie « Bird Watching », une analyse de l'infrastructure et du comportement des opérations d'extortion « Falcon-branded ». Activité soutenue depuis avril 2026, caractérisée par phishing adversary-in-the-middle (AitM) et vishing ciblant les services financiers, services professionnels, énergie et technologie. Le cluster est publiquement désigné sous le nom « Falcon ».
+
+### Analyse de l'impact
+
+L'attaque combine AitM (pour capturer credentials + MFA en temps réel) et vishing (pour manipuler les employés et bypass les procédures). Cible le secteur financier et l'énergie : impact financier direct et potentiel OT. Cluster à suivre pour les SOC/CERT de ces secteurs.
+
+### Recommandations
+
+* Déployer MFA phishing-resistant (FIDO2/WebAuthn) qui résiste à AitM.
+* Renforcer les procédures de vérification téléphone (callback).
+* Surveiller les sessions AitM (proxy TLS, anomalies de géolocalisation et user-agent).
+
+### Playbook de réponse à incident
+
+#### Phase 1 - Préparation
+* MFA FIDO2 sur comptes à privilèges.
+* Formation anti-vishing fonctions support.
+
+#### Phase 2 - Détection et analyse
+* **Règles de détection contextualisées :**
+  * Règle IDP : sessions avec user-agent / IP / géoloc anormales (AitM proxy).
+  * Détection : callback vishing + élévation de privilège dans la foulée.
+
+#### Phase 3 - Confinement, éradication et récupération
+* Révoquer les sessions AitM.
+* Pivoter les credentials compromis.
+
+#### Phase 4 - Activités post-incident
+* Notifications FS-ISAC / CERT national.
+
+#### Phase 5 - Threat Hunting (proactif)
+
+| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
+|---|---|---|---|
+| Sessions AitM actives. | T1557.001 - Adversary-in-the-Middle | IDP / WAF | Sessions avec user-agent inattendu et IP proxy connues. |
+
+### Indicateurs de compromission (DEFANG obligatoire)
+
+| Type | Valeur (DEFANG) | Description | Fiabilité |
+|---|---|---|---|
+| (IOCs disponibles dans le rapport GuidePoint complet : AS, domaines, URLs) | N/A | Se référer au rapport GuidePoint complet. | Moyenne |
+
+### TTP MITRE ATT&CK
+
+| ID TTP | Tactique | Technique | Description contextuelle |
+|---|---|---|---|
+| T1557.001 | Credential Access | Adversary-in-the-Middle | Phishing AitM. |
+| T1566.004 | Initial Access | Spearphishing Voice | Vishing sur fonctions support. |
+
+### Sources
+* [GuidePoint Security - Bird Watching Falcon extortion](https://www.guidepointsecurity.com/blog/characterizing-infrastructure-and-behavior-of-falcon-branded-extortion-operations/)
+
+---
+
+<a id="exfilsquad-ceva-wesco"></a>
+### ExfilSquad - Extorsion CEVA Logistics + Wesco (2,6 M records)
+
+### Résumé technique
+
+ExfilSquad, groupe d'extorsion par données, partage ses données via torrents selon SecurityAffairs. Deux victimes confirmées le 11 août :
+
+* **CEVA Logistics** (géant logistique, 8 entrepôts européens) : cyberattaque confirmée, retards de livraison, expositions de données clients personnels. Effet domino sur les clients de CEVA : banques, retailers, et clients Steam (Valve a prévenu les clients européens de Steam hardware). Noms, adresses, téléphones, emails, détails de commande exposés.
+* **Wesco** (distributeur B2B, cloud CRM) : ExfilSquad revendique le vol et la fuite de 2,6 millions de records.
+
+### Analyse de l'impact
+
+CEVA Logistics illustre l'effet domino d'une breach supply chain logistique : l'attaquant compromet un tiers et atteint les données de centaines de clients finaux (banques, retailers, gamers Steam). Wesco confirme la même stratégie (cloud CRM, 2,6 M records). Le modèle « extortion via torrents » de ExfilSquad (sans chiffrement, pure publication) rend les données rapidement disponibles publiquement.
+
+### Recommandations
+
+* Cartographier les tiers logistiques et leur accès aux données clients.
+* Vérifier les clauses de notification de breach dans les contrats supply chain.
+* Surveiller la réutilisation des données ExfilSquad (credential stuffing, phishing ciblé).
+
+### Playbook de réponse à incident
+
+#### Phase 1 - Préparation
+* Inventaire des tiers logistiques / supply chain et de leur exposition.
+* Plan de communication breach multi-clients.
+
+#### Phase 2 - Détection et analyse
+* Détection : corrélation entre incident tiers et données clients internes.
+* Identifier les enregistrements exposés via les listes ExfilSquad.
+
+#### Phase 3 - Confinement, éradication et récupération
+* Révoquer les accès du tiers compromise temporairement.
+* Notifier les clients dont les données sont exposées.
+
+#### Phase 4 - Activités post-incident
+* Notifications RGPD (72h CNIL) pour chaque entité dont les données clients sont impactées.
+* Notifications NIS2 si entité essentielle.
+
+#### Phase 5 - Threat Hunting (proactif)
+
+| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
+|---|---|---|---|
+| Les données ExfilSquad sont réutilisées en credential stuffing. | T1110.004 - Credential Stuffing | WAF / IDP | Pics d'échecs d'authentification avec credentials de la breach. |
+
+### Indicateurs de compromission (DEFANG obligatoire)
+
+| Type | Valeur (DEFANG) | Description | Fiabilité |
+|---|---|---|---|
+| (aucun IOC technique publié) | N/A | Données exfiltrées (PII), pas d'IOC réseau/fichier. | N/A |
+
+### TTP MITRE ATT&CK
+
+| ID TTP | Tactique | Technique | Description contextuelle |
+|---|---|---|---|
+| T1530 | Collection | Data from Cloud Storage | Exfiltration cloud CRM / supply chain. |
+| T1567 | Exfiltration | Exfiltration Over Web Service | Publication via torrents. |
+
+### Sources
+* [securityaffairs - ExfilSquad torrents](https://securityaffairs.com/197025/security/exfilsquad-targets-new-victims-shares-data-via-torrents.html)
+* [DevaOnBreaches - CEVA Logistics](https://infosec.exchange/@DevaOnBreaches/117080368393294744)
+* [DevaOnBreaches - Wesco](https://infosec.exchange/@DevaOnBreaches/117080365225417924)
+* [DevaOnBreaches - Valve Steam](https://infosec.exchange/@DevaOnBreaches/117080362008865002)
+* [killbait - CEVA](https://mastodon.social/@killbait/117078950350935953)
+* [thenewoil - CEVA](https://mastodon.thenewoil.org/@thenewoil/117078176696857846)
+
+---
+
+<a id="dentaquest-15m"></a>
+### DentaQuest - 15 millions d'individus, plus grosse breach santé 2026 (ShinyHunters)
+
+### Résumé technique
+
+DentaQuest disclosed une breach massive impactant 15 millions de personnes, qualifiée de plus grosse breach santé de 2026. Le groupe d'extorsion ShinyHunters a publié une base de données de 234 Go contenant PII, PHI et SSN des patients.
+
+### Analyse de l'impact
+
+Le secteur santé reste la cible numéro 1 des extorsions par données. 15 millions d'individus impactent un nombre significatif de patients US, avec risque d'usurpation d'identité, de fraude médicale, et de phishing ciblé. Impact réglementaire HIPAA majeur.
+
+### Recommandations
+
+* Surveiller la réutilisation des données patients (credential stuffing, fraude).
+* Notifier les patients impactés selon HIPAA.
+* Renforcer l'accès aux bases de données patients (MFA, moindre privilège).
+
+### Playbook de réponse à incident
+
+#### Phase 1 - Préparation
+* Inventaire des bases de données PHI.
+* Sauvegardes immuables + journalisation d'accès.
+
+#### Phase 2 - Détection et analyse
+* Détection : accès bulk aux données patients, exports massifs.
+
+#### Phase 3 - Confinement, éradication et récupération
+* Révoquer credentials / tokens compromise.
+* Couper l'accès externe aux entrepôts.
+
+#### Phase 4 - Activités post-incident
+* Notifications HIPAA (HHS), RGPD si patients EU.
+* Communication aux 15 M patients.
+
+#### Phase 5 - Threat Hunting (proactif)
+
+| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
+|---|---|---|---|
+| Accès bulk aux données patients. | T1530 - Data from Cloud Storage | Logs base de données | Requêtes `SELECT *` massives hors heures ouvrées. |
+
+### Indicateurs de compromission (DEFANG obligatoire)
+
+| Type | Valeur (DEFANG) | Description | Fiabilité |
+|---|---|---|---|
+| (aucun IOC publié) | N/A | Breach notification, pas de rapport technique. | N/A |
+
+### TTP MITRE ATT&CK
+
+| ID TTP | Tactique | Technique | Description contextuelle |
+|---|---|---|---|
+| T1530 | Collection | Data from Cloud Storage | Exfiltration base patients 234 Go. |
+
+### Sources
+* [netsecio - DentaQuest 15M](https://mastodon.social/@netsecio/117079487308517819)
+
+---
+
+<a id="vague-breaches-jp-us"></a>
+### Vague de breaches - Japon, US, Canada (Lennar, Oculus, Gig Works, tl;dv, JST, Digital Agency, Yonex, Beaver County, Manitoba HSC)
+
+### Résumé technique
+
+Plusieurs breaches disclosed le 11 août 2026, sans lien d'acteur établi :
+
+* **Lennar Corp** (US homebuilder) : breach par « ingénierie sociale sophistiquée », accès en mars 2026, vol SSN et données financières.
+* **Oculus Pathology** (US) : breach via compromission de comptes email employés en avril 2026, PHI, PII, SSN, diagnostics médicaux exposés.
+* **Gig Works** (Japon) : 3e notification d'accès serveur non autorisé, base de données de déclaration de dépendance potentiellement leakée.
+* **Nice Corp** (Japon) : accès non autorisé à l'adresse email de gestion, ~2 400 PII potentiellement leakées.
+* **tl;dv** (outil AI de transcription de réunions) : mauvaise configuration Firestore, 180 000+ réunions exposées, participation non autorisée aux appels en cours, contradiction entre chercheurs et entreprise.
+* **Digital Agency Japon** : fichier d'historique de login créé par erreur, 150 personnels leakés.
+* **JST** (Japan Science and Technology Agency) : accès non autorisé, 12 emails de staff, 16 000 records potentiellement leakés.
+* **Yonex Taiwan** : accès non autorisé à la filiale taïwanaise, serveurs isolés, fuite potentielle.
+* **Beaver County, Pennsylvania** : ransomware, 175 000 $ de rançon payée, accès aux dossiers patients coupé.
+* **Health Sciences Centre Manitoba** : ransomware, l'union des infirmières questionne la sécurité.
+* **Spacebears** (nouveau groupe ransomware) : publie Basso Fedele & Figli (Olio Basso) et Villa Raiano.
+
+### Analyse de l'impact
+
+La pression opérationnelle est continue, en particulier sur le secteur santé (Oculus, Beaver County, Manitoba) et les organisations japonaises (4 entités JP distinctes). Le pattern « erreur de configuration SaaS » (tl;dv Firestore) confirme que la surface d'attaque tierce reste sous-contrôlée. Spacebears est un nouveau groupe à suivre.
+
+### Recommandations
+
+* Durcir l'authentification email employé (MFA phishing-resistant) pour réduire le vecteur « email hack » (Oculus).
+* Auditer les configurations Firestore / SaaS (tl;dv) sur les bases contenant des PII.
+* Renforcer les procédures anti-ingénierie sociale (Lennar).
+* Préparer un plan de réponse ransomware pour le secteur santé (Beaver, Manitoba).
+
+### Playbook de réponse à incident
+
+#### Phase 1 - Préparation
+* MFA sur tous les comptes email.
+* Audit des configurations SaaS (Firestore, AWS S3, GitHub).
+* Plan de continuité d'activité pour établissements de santé.
+
+#### Phase 2 - Détection et analyse
+* **Règles de détection contextualisées :**
+  * Règle IDP : connexions email depuis IP suspectes.
+  * Règle cloud : bucket Firestore / S3 exposé publiquement.
+  * Détection : accès bulk aux données patients.
+
+#### Phase 3 - Confinement, éradication et récupération
+* Révoquer les comptes email compromise.
+* Restreindre l'accès public aux buckets SaaS.
+* Pour ransomware : restaurer depuis backups hors-ligne.
+
+#### Phase 4 - Activités post-incident
+* Notifications HIPAA (US), loi JP, RGPD si EU.
+* Communication aux patients / individus impactés.
+
+#### Phase 5 - Threat Hunting (proactif)
+
+| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
+|---|---|---|---|
+| D'autres buckets SaaS sont exposés publiquement. | T1530 - Data from Cloud Storage | CSPM / audit cloud | Buckets Firestore / S3 avec `public` ACL. |
+| Comptes email compromise non détectés. | T1078 - Valid Accounts | IDP | Connexions email depuis pays / IP anormaux. |
+
+### Indicateurs de compromission (DEFANG obligatoire)
+
+| Type | Valeur (DEFANG) | Description | Fiabilité |
+|---|---|---|---|
+| (aucun IOC publié, notifications de breach) | N/A | Pas de rapport technique. | N/A |
+
+### TTP MITRE ATT&CK
+
+| ID TTP | Tactique | Technique | Description contextuelle |
+|---|---|---|---|
+| T1566.004 | Initial Access | Spearphishing Voice | Lennar social engineering. |
+| T1078 | Initial Access | Valid Accounts | Oculus email hack. |
+| T1530 | Collection | Data from Cloud Storage | tl;dv Firestore misconfiguration. |
+| T1486 | Impact | Data Encrypted for Impact | Beaver County, Manitoba ransomware. |
+
+### Sources
+* [netsecio - Lennar](https://mastodon.social/@netsecio/117079487674283367)
+* [netsecio - Oculus Pathology](https://mastodon.social/@netsecio/117079487943286626)
+* [securityLab_jp - Gig Works](https://mastodon.social/@securityLab_jp/117080139120543623)
+* [securityLab_jp - Nice Corp](https://mastodon.social/@securityLab_jp/117079848476499119)
+* [securityLab_jp - tl;dv](https://mastodon.social/@securityLab_jp/117079506701951419)
+* [securityLab_jp - Digital Agency](https://mastodon.social/@securityLab_jp/117079378997478979)
+* [securityLab_jp - JST](https://mastodon.social/@securityLab_jp/117079345587093784)
+* [securityLab_jp - Yonex Taiwan](https://mastodon.social/@securityLab_jp/117079341043077294)
+* [DysruptionHub - Beaver County](https://infosec.exchange/@DysruptionHub/117078053805140272)
+* [glwinnipeg - Manitoba HSC](https://mastodon.hongkongers.net/@glwinnipeg_mirror/11707851)
+* [CTI_FYI - Spacebears](https://infosec.exchange/@CTI_FYI/117080373475266425)
+
+---
+
+<a id="lexisnexis-tierce"></a>
+### LexisNexis - Activité suspicieuse sur serveurs tierce partie, services offline
+
+### Résumé technique
+
+LexisNexis a disclosed le 10 août 2026 une activité inhabituelle sur des serveurs hébergés et gérés par un tiers. Leçons : isolation des systèmes affectés, services clients offline (Nexis Diligence, Newsdesk, Metabase API), investigation en cours avec experts externes, infrastructure reconstruite avant restauration.
+
+### Analyse de l'impact
+
+LexisNexis est un agrégateur de données massif (due diligence, intelligence, enquêtes). Une breach affecte potentiellement des données sensibles B2B et de due diligence. Le pattern « tierce partie qui héberge » rappelle que la supply chain d'infrastructure reste un vecteur majeur (cf. Snowflake 2024).
+
+### Recommandations
+
+* Auditer les contrats d'hébergement tierce (clause de sécurité, notification, audit).
+* Vérifier l'isolation des systèmes chez les hébergeurs.
+* Surveiller l'accès aux API sensibles (Metabase API ici, à corréler avec les vulnérabilités Metabase signalées par Bobe_bot).
+
+### Playbook de réponse à incident
+
+#### Phase 1 - Préparation
+* Inventaire des hébergeurs tierces et périmètres de données.
+* Contrats avec clause de notification < 24h.
+
+#### Phase 2 - Détection et analyse
+* Détection : activité inhabituelle sur serveurs hébergés.
+* Chronologie : identifier le vecteur d'entrée chez le tiers.
+
+#### Phase 3 - Confinement, éradication et récupération
+* Isoler les systèmes affectés.
+* Reconstruire l'infrastructure avant restauration.
+
+#### Phase 4 - Activités post-incident
+* Notifications RGPD/NIS2 selon données impactées.
+
+#### Phase 5 - Threat Hunting (proactif)
+
+| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
+|---|---|---|---|
+| D'autres serveurs hébergés par le même tiers sont compromise. | T1190 - Exploit Public-Facing Application | Logs hébergeur | Activité inhabituelle sur serveurs du même tiers. |
+
+### Indicateurs de compromission (DEFANG obligatoire)
+
+| Type | Valeur (DEFANG) | Description | Fiabilité |
+|---|---|---|---|
+| (aucun IOC publié) | N/A | Notification initiale. | N/A |
+
+### TTP MITRE ATT&CK
+
+| ID TTP | Tactique | Technique | Description contextuelle |
+|---|---|---|---|
+| T1190 | Initial Access | Exploit Public-Facing Application | (probable, à confirmer). |
+
+### Sources
+* [Field Effect - LexisNexis](https://fieldeffect.com/blog/lexisnexis-suspicious-activity-services-offline)
