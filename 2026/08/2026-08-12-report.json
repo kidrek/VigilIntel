@@ -1,0 +1,5224 @@
+{
+  "strategic_analysis": {
+    "analyse": {
+      "en": "August 2026 Patch Tuesday dominates the day: Microsoft patches 415 vulnerabilities including one exploited zero-day (CVE-2026-68820, AFD.sys/WinSock local privilege escalation, attributed to Lazarus in Operation Dream Job by Check Point Research) and 62 Critical CVEs including 4 CVSS 9.8 unauthenticated (Windows DNS Server, Windows Deployment Services, QUIC, HPC Pack). Alongside, the Cisco firewall zero-day (CVE-2026-20349, DoS on Remote Access SSL VPN, exploited in August 2026) and 7 ClamAV flaws (2 with public PoC) remind that security infrastructures are themselves targets. The second strong signal is the disclosure of 'Zoomsday' (CVE-2026-53413/14/15), a zero-click flaw in Zoom annotation enabling client hijack, patched since June/July but published August 11. On the active threats side, three high-impact operational clusters: Gunra ransomware (FBI/CISA alert, 51 victims, Fortinet CVE-2025-24472 + Schneider CVE-2024-5559 exploitation, double extortion); Lazarus Operation Dream Job (FudModule kernel rootkit deployment via AFD.sys zero-day against defense targets in Europe and India); and the compromise of a Polish CHP plant via a private cellular APN, first documented IT/OT pivot by this vector (turbine shutdown, 50,000 residents affected, December 2025 incident disclosed August 8 by CERT Polska). On the breach side, DentaQuest confirms 15 million individuals impacted (largest 2026 healthcare breach, ShinyHunters, 234 GB database published), and the CEVA Logistics supply chain breach contaminates banks, retailers and Steam customers. Also to watch: OpenAI launches GPT-5.6-Cyber with reduced safeguards for exploit research (Daybreak Red), and OpenSSF publishes a Cyber Resilience Act (CRA) readiness guide for open source communities.",
+      "fr": "Le jour est dominé par le Patch Tuesday d'août 2026 : Microsoft corrige 415 vulnérabilités dont une zero-day exploitée activement (CVE-2026-68820, AFD.sys / WinSock, élévation de privilège locale, attribuée à Lazarus dans Operation Dream Job par Check Point Research) et 62 CVE Critical, dont 4 CVSS 9.8 sans authentification (Windows DNS Server, Windows Deployment Services, QUIC, HPC Pack). À côté, la zero-day Cisco firewall (CVE-2026-20349, DoS sur Remote Access SSL VPN, exploitée en août 2026) et les 7 flaws ClamAV (dont 2 avec PoC public) rappellent que les infrastructures de sécurité sont elles-mêmes la cible. Le second signal fort est la divulgation de « Zoomsday » (CVE-2026-53413/14/15), faille zero-click dans l'annotation Zoom permettant le hijack du client d'un participant, corrigée depuis juin/juillet mais publiée le 11 août. Côté menaces actives, trois clusters à fort impact opérationnel : Gunra ransomware (alerte FBI/CISA, 51 victimes, exploitation Fortinet CVE-2025-24472 + Schneider CVE-2024-5559, double extorsion) ; Lazarus Operation Dream Job (déploiement du rootkit kernel FudModule via la zero-day AFD.sys sur des cibles défense en Europe et Inde) ; et la compromission d'une centrale polonaise CHP via un APN cellulaire privé, premier cas documenté de pivot IT/OT par ce vecteur (turbine arrêtée, 50 000 habitants concernés, incident de décembre 2025 divulgué le 8 août par CERT Polska). Côté breaches, DentaQuest confirme 15 millions d'individus impactés (plus grosse breach santé 2026, ShinyHunters, base de 234 Go publiée), et la supply chain logistique CEVA Logistics contamine banques, retailers et clients Steam. À surveiller aussi : OpenAI lance GPT-5.6-Cyber avec safeguards réduits pour la recherche d'exploits (Daybreak Red), et l'OpenSSF publie un guide de préparation au Cyber Resilience Act (CRA) pour les communautés open source."
+    },
+    "date": "2026-08-12"
+  },
+  "geopolitical_analyse": [
+    {
+      "sector": {
+        "en": [
+          "Water_utilities",
+          "Critical_Infrastructure"
+        ],
+        "fr": [
+          "Eau_potable",
+          "Infrastructure_critique"
+        ]
+      },
+      "theme": {
+        "en": "Iran-linked hackers target more US water infrastructure in New Jersey and Alabama",
+        "fr": "Hackers liés à l'Iran ciblent de nouvelles infrastructures water US (New Jersey et Alabama)"
+      },
+      "description": {
+        "en": "Iran-linked group targeting new US water infrastructure (New Jersey and Alabama). Part of the series of attacks against water treatment stations and municipalities observed since 2023, typical attribution CyberAv3ngers / IRGC-aligned. No technical detail on the vector in the source.",
+        "fr": "Groupe lié à l'Iran ciblant de nouvelles infrastructures water aux US (New Jersey et Alabama). S'inscrit dans la série d'attaques contre stations de traitement eau et municipalités observée depuis 2023, attribution typique CyberAv3ngers / IRGC-aligned. Pas de détail technique sur le vecteur dans la source."
+      },
+      "recommandations": [
+        {
+          "en": "Segment water OT networks from IT; verify public exposure of PLCs (Unitronics, Schneider) via Shodan; deploy OT detection (Nozomi, Claroty); apply CISA water sector recommendations.",
+          "fr": "Segmenter les réseaux OT water des réseaux IT ; vérifier l'exposition publique des PLC (Unitronics, Schneider) via Shodan ; déployer la détection OT (Nozomi, Claroty) ; appliquer les recommandations CISA pour le secteur water."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory water OT PLCs and exposure.",
+            "OT logging (PLC logs, network flows)."
+          ],
+          "fr": [
+            "Inventorier les PLC OT water et leur exposition.",
+            "Journalisation OT (logs PLC, network flows)."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "IDS/OT rule: unauthorized PLC connections.",
+            "Detection: PLC configuration changes outside maintenance windows."
+          ],
+          "fr": [
+            "Règle IDS/OT : connexions non autorisées sur PLC.",
+            "Détection : changements de configuration PLC hors fenêtres de maintenance."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate compromised PLCs.",
+            "Restore PLC config from offline backup.",
+            "72h monitoring."
+          ],
+          "fr": [
+            "Isoler les PLC compromis.",
+            "Restaurer la configuration PLC depuis backup offline.",
+            "Surveillance 72h."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Notify NIS2 / CISA / EPA (US water sector).",
+            "Share with CERT national and WaterISAC."
+          ],
+          "fr": [
+            "Notifier NIS2 / CISA / EPA (secteur water US).",
+            "Partager avec le CERT national et WaterISAC."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for other publicly exposed PLCs via Shodan."
+          ],
+          "fr": [
+            "Chasser les autres PLC exposés publiquement via Shodan."
+          ]
+        }
+      },
+      "tags": [
+        "Iran",
+        "US",
+        "water",
+        "CyberAv3ngers",
+        "IRGC",
+        "OT",
+        "critical_infrastructure"
+      ],
+      "sources": [
+        "https://securityaffairs.com/197012/hacking/iran-linked-hackers-target-more-us-water-infrastructure-in-new-jersey-and-alabama.html"
+      ],
+      "date": "2026-08-12"
+    },
+    {
+      "sector": {
+        "en": [
+          "Energy",
+          "CHP",
+          "Critical_Infrastructure"
+        ],
+        "fr": [
+          "Energie",
+          "CHP",
+          "Infrastructure_critique"
+        ]
+      },
+      "theme": {
+        "en": "First documented IT/OT pivot via private cellular APN - Polish CHP plant turbine shutdown",
+        "fr": "Premier pivot IT/OT via APN cellulaire privé documenté - arrêt turbine centrale CHP polonaise"
+      },
+      "description": {
+        "en": "December 2025 incident disclosed August 8, 2026 by CERT Polska. Attackers reached the industrial control network of a Polish combined heat and power (CHP) plant supplying heat to ~50,000 residents via a private cellular APN dedicated to the distribution system operator. A configuration allowing any device on the APN to communicate with others let the attacker pivot from a compromised wind-farm network to a controller at the CHP plant. Steam turbine and process-water treatment system shut down. No customer outage. First real-world documented case of this APN attack vector per CERT Polska. CVE-2023-32349 and CVE-2023-32350 cited (wind farm side).",
+        "fr": "Incident de décembre 2025 divulgué le 8 août 2026 par CERT Polska. Attaquants ont atteint le réseau de contrôle industriel d'une centrale CHP polonaise (50 000 habitants chauffés) via un APN cellulaire privé de l'opérateur de distribution. Une configuration permettant à n'importe quel device sur l'APN de communiquer avec les autres a permis à l'attaquant de pivoter depuis un réseau éolien compromis vers un contrôleur de la centrale CHP. Turbine à vapeur et traitement d'eau process arrêtés. Aucune coupure client. Premier cas réel documenté d'attaque IT/OT via APN selon CERT Polska. CVE-2023-32349 et CVE-2023-32350 citées (côté wind farm)."
+      },
+      "recommandations": [
+        {
+          "en": "Segment private cellular APNs: forbid device-to-device communication except explicit whitelist. Apply mutual auth and encryption on industrial APNs. Monitor intra-APN flows (IDS, NetFlow). Patch CVE-2023-32349/32350 on wind farm equipment.",
+          "fr": "Segmenter les APN cellulaires privés : interdire la communication device-à-device sauf whitelist explicite. Appliquer l'authentification mutuelle et le chiffrement sur les APN industriels. Surveiller les flux intra-APN (IDS, NetFlow). Patcher CVE-2023-32349/32350 sur les équipements éoliens."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory private cellular APNs and their configuration (device-to-device isolation).",
+            "APN cutoff/isolation plan.",
+            "Intra-APN flow logging (IDS, NetFlow)."
+          ],
+          "fr": [
+            "Inventorier les APN cellulaires privés et leur configuration (isolation device-à-device).",
+            "Plan de coupure / isolation APN.",
+            "Journalisation des flux intra-APN (IDS, NetFlow)."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "IDS/APN rule: device connecting to a controller outside its whitelist.",
+            "OT detection: turbine/treatment shutdown without legitimate command."
+          ],
+          "fr": [
+            "Règle IDS/APN : équipement se connectant à un contrôleur hors whitelist.",
+            "Détection OT : arrêt turbine / traitement sans commande légitime."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate cellular APN; cut device-to-device connectivity.",
+            "Cut compromised wind-farm network access to APN.",
+            "Restore APN config (whitelist, mutual auth).",
+            "Patch CVE-2023-32349/32350 on wind equipment.",
+            "Rebuild compromised controllers."
+          ],
+          "fr": [
+            "Isoler l'APN cellulaire ; couper la connectivité device-à-device.",
+            "Couper l'accès du réseau éolien compromis à l'APN.",
+            "Restaurer la configuration APN (whitelist, authentification mutuelle).",
+            "Patcher CVE-2023-32349/32350 sur les équipements éoliens.",
+            "Reconstruire les contrôleurs compromis."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Notifications NIS2 (essential entity energy), IEC 62443, sectoral regulator.",
+            "Share with CERT national and ENISA.",
+            "REX with distribution operator and energy regulator."
+          ],
+          "fr": [
+            "Notifications NIS2 (entité essentielle énergie), IEC 62443, autorité sectorielle.",
+            "Partager avec le CERT national et ENISA.",
+            "REX avec l'opérateur de distribution et le régulateur énergie."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for other intra-APN communications outside whitelist.",
+            "Hunt for unpatched wind farm equipment."
+          ],
+          "fr": [
+            "Chasser les autres communications intra-APN hors whitelist.",
+            "Chasser les équipements éoliens non patchés."
+          ]
+        }
+      },
+      "tags": [
+        "Poland",
+        "Russia_presumed",
+        "energy",
+        "CHP",
+        "APN",
+        "OT",
+        "IT_OT_pivot",
+        "CERT_Polska",
+        "critical_infrastructure"
+      ],
+      "sources": [
+        "https://thehackernews.com/2026/08/hackers-breach-polish-power-plant.html"
+      ],
+      "date": "2026-08-12"
+    },
+    {
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement_et_Defense"
+        ]
+      },
+      "theme": {
+        "en": "Operation Dream Job - Lazarus exploits Microsoft zero-day against defense sector in Europe and India",
+        "fr": "Operation Dream Job - Lazarus exploite une zero-day Microsoft contre le secteur défense en Europe et Inde"
+      },
+      "description": {
+        "en": "Lazarus (DPRK) campaign targeting the defense sector in Europe and India via fake job offers delivering 'SecurityPDF', a modified PDF viewer that opens attacker-crafted PDFs and executes a new backdoor named Troy. During the intrusion, the threat actor exploited CVE-2026-68820, a zero-day in the Microsoft AFD.sys driver, to deploy a new version of FudModule, Lazarus' kernel-mode rootkit. Check Point Research responsible disclosure led to the Microsoft August 11 patch.",
+        "fr": "Campagne Lazarus (DPRK) ciblant le secteur défense en Europe et Inde via de fausses offres d'emploi livrant « SecurityPDF », un lecteur PDF modifié qui ouvre des documents PDF artisanalement conçus et exécute un nouveau backdoor baptisé Troy. Pendant l'intrusion, l'attaquant a exploité CVE-2026-68820, zero-day du driver Microsoft AFD.sys, pour déployer une nouvelle version du rootkit kernel-mode FudModule. La divulgation responsable de Check Point a conduit au patch Microsoft du 11 août."
+      },
+      "recommandations": [
+        {
+          "en": "Apply Microsoft August 2026 patch (CVE-2026-68820) on all Windows hosts, priority R&D/defense. Monitor defense-targeted recruitment emails. Deploy FudModule detection (YARA, EDR kernel inspection). Sensitize defense employees to fake job offer social engineering.",
+          "fr": "Appliquer immédiatement le patch Microsoft d'août 2026 (CVE-2026-68820) sur tous les postes Windows, en priorité R&D / défense. Surveiller les emails de recrutement ciblant les ingénieurs défense. Déployer la détection du rootkit FudModule (YARA, EDR inspection kernel). Sensibiliser les employés du secteur défense à l'ingénierie sociale par fake job offer."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Verify CVE-2026-68820 patch deployment on all Windows hosts (priority R&D/defense).",
+            "Enable kernel logging (Sysmon Event ID 1, 7, 8; ETW for AFD.sys).",
+            "Prepare FudModule and Troy signatures.",
+            "Offline backups of sensitive R&D hosts."
+          ],
+          "fr": [
+            "Vérifier le déploiement du patch CVE-2026-68820 sur tout le parc Windows (priorité R&D/défense).",
+            "Activer la journalisation kernel (Sysmon Event ID 1, 7, 8 pour chargement drivers ; ETW pour AFD.sys).",
+            "Préparer signatures FudModule et Troy.",
+            "Sauvegardes hors-ligne des postes R&D sensibles."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Sysmon rule: unsigned/suspicious driver load in PDF reader/SecurityPDF context.",
+            "YARA: FudModule (kernel rootkit) and Troy (userland backdoor).",
+            "EDR: kernel token manipulation, SSRB hooks, security tool disabling (T1562)."
+          ],
+          "fr": [
+            "Règle Sysmon : chargement de driver non signé ou suspect dans le contexte d'un process PDF reader / SecurityPDF.",
+            "YARA : signatures FudModule (kernel rootkit) et Troy (backdoor userland).",
+            "EDR : manipulation de tokens kernel, hooks SSRB, désactivation de solutions de sécurité (T1562)."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate compromised hosts.",
+            "Revoke credentials of targeted accounts.",
+            "Remove FudModule (kernel) and Troy (userland). Rebuild from clean image if kernel integrity doubt.",
+            "Close FudModule persistence (SSDT hooks, kernel callbacks).",
+            "Restore from clean image post-CVE-2026-68820 patch.",
+            "72h EDR monitoring."
+          ],
+          "fr": [
+            "Isoler les postes compromis.",
+            "Révoquer les credentials des comptes ciblés.",
+            "Supprimer FudModule (kernel) et Troy (userland). Reconstruire le poste depuis une image propre si doute sur l'intégrité kernel.",
+            "Fermer les canaux de persistance FudModule (SSDT hooks, callback kernel).",
+            "Restaurer depuis image propre post-patch CVE-2026-68820.",
+            "Surveillance EDR 72h."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Incident report with Dream Job -> Troy -> FudModule timeline.",
+            "Notifications (NIS2 if essential entity, GDPR if personal data, export control if defense data).",
+            "Share IOCs with national CERT and defense sector partners."
+          ],
+          "fr": [
+            "Rapport d'incident avec chronologie Dream Job → Troy → FudModule.",
+            "Notifications (NIS2 si entité essentielle, RGPD si données personnelles, export control si données défense).",
+            "Partage IOCs au CERT national et partenaires sectoriels défense."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for other SecurityPDF deliveries.",
+            "Hunt for FudModule disabling security tools."
+          ],
+          "fr": [
+            "Chasser les autres livraisons SecurityPDF.",
+            "Chasser les FudModule désactivant des solutions de sécurité."
+          ]
+        }
+      },
+      "tags": [
+        "DPRK",
+        "Lazarus",
+        "Europe",
+        "India",
+        "defense",
+        "Operation_Dream_Job",
+        "AFD_sys",
+        "FudModule",
+        "Troy",
+        "zero_day",
+        "state_sponsored"
+      ],
+      "sources": [
+        "https://research.checkpoint.com/2026/shattering-the-dream-when-a-job-offer-becomes-a-zero-day-attack/",
+        "https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including-a-windows-driver-zero-day-under-active-attack.html"
+      ],
+      "date": "2026-08-12"
+    }
+  ],
+  "regulatory_and_legal": [
+    {
+      "title": {
+        "en": "Meta sanctioned for destruction of evidence in fraudulent advertising case",
+        "fr": "Meta sanctionnée pour destruction de preuves dans une affaire de publicités frauduleuses"
+      },
+      "description": {
+        "en": "Meta sanctioned for destruction of evidence in a fraudulent advertising case. Illustrates the obligation to preserve digital evidence under consumer law and GDPR, and the escalation of sanctions against platforms for failing to cooperate with authorities.",
+        "fr": "Meta a été condamné pour destruction de preuves dans une affaire de publicités frauduleuses. La sanction illustre l'obligation de préservation des preuves numériques au titre du droit de la consommation et du RGPD, et l'escalade des sanctions contre les plateformes pour manquement à la coopération avec les autorités."
+      },
+      "organisation": {
+        "en": [
+          "French regulator"
+        ],
+        "fr": [
+          "Régulateur français"
+        ]
+      },
+      "jurisdiction": {
+        "en": [
+          "France"
+        ],
+        "fr": [
+          "France"
+        ]
+      },
+      "references": {
+        "en": [
+          "Le Monde report"
+        ],
+        "fr": [
+          "Reportage Le Monde"
+        ]
+      },
+      "tags": [
+        "Meta",
+        "evidence_destruction",
+        "fraudulent_advertising",
+        "France",
+        "GDPR",
+        "consumer_law"
+      ],
+      "sources": [
+        "https://www.lemonde.fr/pixels/article/2026/08/11/meta-sanctionnee-pour-destruction-de-preuves-dans-une-affaire-de-publicites-frauduleuses"
+      ],
+      "date": "2026-08-12"
+    },
+    {
+      "title": {
+        "en": "Change Healthcare - court order sets strict rules for handling stolen data",
+        "fr": "Change Healthcare - encadrement judiciaire des données volées"
+      },
+      "description": {
+        "en": "A federal judge in Minnesota approved a strict protocol for handling data stolen in the Change Healthcare 2024 cyberattack during the consolidated lawsuit against UnitedHealth Group, Change Healthcare, Optum and United HealthCare Services. The protocol covers patient data (PHI/PII), validated by an independent cybersecurity expert. Precedent on judicial management of exfiltrated data in class action.",
+        "fr": "Un juge fédéral du Minnesota a approuvé un protocole strict de manipulation des données volées lors du litige consolidé contre UnitedHealth Group, Change Healthcare, Optum et United HealthCare Services (suite à la breach 2024). Le protocole couvre les données patients (PHI/PII), validé par un expert cyber indépendant. Précédent sur la gestion judiciaire des données exfiltrées en class action."
+      },
+      "organisation": {
+        "en": [
+          "US Federal Court (Minnesota)"
+        ],
+        "fr": [
+          "Tribunal fédéral US (Minnesota)"
+        ]
+      },
+      "jurisdiction": {
+        "en": [
+          "United_States"
+        ],
+        "fr": [
+          "Etats-Unis"
+        ]
+      },
+      "references": {
+        "en": [
+          "Becker's Health IT report"
+        ],
+        "fr": [
+          "Rapport Becker's Health IT"
+        ]
+      },
+      "tags": [
+        "Change_Healthcare",
+        "UnitedHealth",
+        "class_action",
+        "PHI",
+        "PII",
+        "court_order",
+        "data_handling"
+      ],
+      "sources": [
+        "https://databreaches.net/2026/08/11/stolen-change-healthcare-data-gets-new-handling-rules-in-court-order/"
+      ],
+      "date": "2026-08-12"
+    },
+    {
+      "title": {
+        "en": "Cyber Resilience Act (CRA) - Readiness guide for open source communities",
+        "fr": "Cyber Resilience Act (CRA) - Guide de préparation pour les communautés open source"
+      },
+      "description": {
+        "en": "OpenSSF publishes 'CRA Readiness: A Practitioner's Guide to Compliance' and an associated podcast, to accompany open source communities in complying with the EU Cyber Resilience Act. Stakes: obligations of digital product manufacturers, open source supply chain liability, vulnerability disclosure requirements. To watch for editors integrating OSS components.",
+        "fr": "L'OpenSSF publie « CRA Readiness: A Practitioner's Guide to Compliance » et un podcast associé, pour accompagner les communautés open source dans la mise en conformité au Cyber Resilience Act (UE). Enjeu : obligations des fabricants de produits numériques, responsabilité de la supply chain open source, exigences de divulgation de vulnérabilités. À suivre pour les éditeurs intégrant des composants OSS."
+      },
+      "organisation": {
+        "en": [
+          "OpenSSF"
+        ],
+        "fr": [
+          "OpenSSF"
+        ]
+      },
+      "jurisdiction": {
+        "en": [
+          "European_Union"
+        ],
+        "fr": [
+          "Union_europeenne"
+        ]
+      },
+      "references": {
+        "en": [
+          "EU Cyber Resilience Act (CRA)"
+        ],
+        "fr": [
+          "Cyber Resilience Act (CRA) UE"
+        ]
+      },
+      "tags": [
+        "CRA",
+        "OpenSSF",
+        "open_source",
+        "supply_chain",
+        "EU",
+        "compliance",
+        "vulnerability_disclosure"
+      ],
+      "sources": [
+        "https://openssf.org/blog/2026/08/11/cra-readiness-a-practitioners-guide-to-compliance/",
+        "https://openssf.org/podcast/2026/08/11/whats-in-the-soss-podcast-68-s3e20-cra-readiness-practical-strategies-for-open-source-communities-with-megan-knight"
+      ],
+      "date": "2026-08-12"
+    }
+  ],
+  "breach_analyse": [
+    {
+      "victim": "CEVA Logistics, Wesco",
+      "threat_actor": "ExfilSquad",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Logistics",
+          "Supply_Chain",
+          "B2B_Distribution"
+        ],
+        "fr": [
+          "Logistique",
+          "Supply_Chain",
+          "Distribution_B2B"
+        ]
+      },
+      "description": {
+        "en": "ExfilSquad extortion group shares data via torrents. Two confirmed victims on August 11: CEVA Logistics (giant logistics provider, 8 European warehouses) - cyberattack confirmed, delivery delays, customer personal data exposed, domino effect on CEVA clients (banks, retailers, Steam hardware customers - Valve warned European customers). Names, addresses, phones, emails, order details exposed. Wesco (B2B distributor, cloud CRM) - ExfilSquad claims theft and leak of 2.6 million records.",
+        "fr": "ExfilSquad, groupe d'extorsion par données, partage ses données via torrents. Deux victimes confirmées le 11 août : CEVA Logistics (géant logistique, 8 entrepôts européens) - cyberattaque confirmée, retards de livraison, expositions de données clients personnels, effet domino sur les clients de CEVA (banques, retailers, et clients Steam hardware - Valve a prévenu les clients européens). Noms, adresses, téléphones, emails, détails de commande exposés. Wesco (distributeur B2B, cloud CRM) - ExfilSquad revendique le vol et la fuite de 2,6 millions de records."
+      },
+      "mitre_ttps": [
+        "T1530",
+        "T1567"
+      ],
+      "recommandations": [
+        {
+          "en": "Map logistics third parties and their access to customer data.",
+          "fr": "Cartographier les tiers logistiques et leur accès aux données clients."
+        },
+        {
+          "en": "Verify breach notification clauses in supply chain contracts.",
+          "fr": "Vérifier les clauses de notification de breach dans les contrats supply chain."
+        },
+        {
+          "en": "Monitor reuse of ExfilSquad data (credential stuffing, targeted phishing).",
+          "fr": "Surveiller la réutilisation des données ExfilSquad (credential stuffing, phishing ciblé)."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory logistics third parties and data exposure.",
+            "Multi-client breach communication plan."
+          ],
+          "fr": [
+            "Inventaire des tiers logistiques et de leur exposition aux données clients.",
+            "Plan de communication breach multi-clients."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Correlation between third-party incident and internal customer data.",
+            "Identify records exposed via ExfilSquad lists."
+          ],
+          "fr": [
+            "Corrélation entre incident tiers et données clients internes.",
+            "Identifier les enregistrements exposés via les listes ExfilSquad."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Revoke compromised third-party access temporarily.",
+            "Notify customers whose data is exposed."
+          ],
+          "fr": [
+            "Révoquer les accès du tiers compromis temporairement.",
+            "Notifier les clients dont les données sont exposées."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "GDPR notifications (72h CNIL) for each entity whose customer data is impacted.",
+            "NIS2 if essential entity."
+          ],
+          "fr": [
+            "Notifications RGPD (72h CNIL) pour chaque entité dont les données clients sont impactées.",
+            "NIS2 si entité essentielle."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for ExfilSquad data reuse in credential stuffing."
+          ],
+          "fr": [
+            "Chasser la réutilisation des données ExfilSquad en credential stuffing."
+          ]
+        }
+      },
+      "tags": [
+        "ExfilSquad",
+        "CEVA_Logistics",
+        "Wesco",
+        "supply_chain",
+        "extortion",
+        "torrents",
+        "Valve",
+        "Steam"
+      ],
+      "sources": [
+        "https://securityaffairs.com/197025/security/exfilsquad-targets-new-victims-shares-data-via-torrents.html",
+        "https://infosec.exchange/@DevaOnBreaches/117080368393294744",
+        "https://infosec.exchange/@DevaOnBreaches/117080365225417924",
+        "https://infosec.exchange/@DevaOnBreaches/117080362008865002",
+        "https://mastodon.social/@killbait/117078950350935953",
+        "https://mastodon.thenewoil.org/@thenewoil/117078176696857846"
+      ],
+      "date": "2026-08-12"
+    },
+    {
+      "victim": "DentaQuest",
+      "threat_actor": "ShinyHunters",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Healthcare",
+          "Dental"
+        ],
+        "fr": [
+          "Sante",
+          "Dentaire"
+        ]
+      },
+      "description": {
+        "en": "DentaQuest disclosed a massive breach impacting 15 million people, the largest healthcare breach of 2026. The ShinyHunters extortion group published a 234 GB database containing patient PII, PHI and SSNs.",
+        "fr": "DentaQuest a disclosed une breach massive impactant 15 millions de personnes, la plus grosse breach santé de 2026. Le groupe d'extorsion ShinyHunters a publié une base de données de 234 Go contenant PII, PHI et SSN des patients."
+      },
+      "mitre_ttps": [
+        "T1530"
+      ],
+      "recommandations": [
+        {
+          "en": "Monitor reuse of patient data (credential stuffing, fraud).",
+          "fr": "Surveiller la réutilisation des données patients (credential stuffing, fraude)."
+        },
+        {
+          "en": "Notify impacted patients per HIPAA.",
+          "fr": "Notifier les patients impactés selon HIPAA."
+        },
+        {
+          "en": "Strengthen access control to patient data warehouses (MFA, least privilege).",
+          "fr": "Renforcer l'accès aux entrepôts de données patients (MFA, moindre privilège)."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory PHI databases.",
+            "Immutable backups + access logging."
+          ],
+          "fr": [
+            "Inventaire des bases de données PHI.",
+            "Sauvegardes immuables + journalisation d'accès."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detection: bulk access to patient data, massive exports."
+          ],
+          "fr": [
+            "Détection : accès bulk aux données patients, exports massifs."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Revoke compromised credentials/tokens.",
+            "Cut external access to warehouses."
+          ],
+          "fr": [
+            "Révoquer les credentials/tokens compromis.",
+            "Couper l'accès externe aux entrepôts."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "HIPAA (HHS) notifications, GDPR if EU patients.",
+            "Communication to 15M patients."
+          ],
+          "fr": [
+            "Notifications HIPAA (HHS), RGPD si patients EU.",
+            "Communication aux 15 M patients."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for bulk access to patient data."
+          ],
+          "fr": [
+            "Chasser les accès bulk aux données patients."
+          ]
+        }
+      },
+      "tags": [
+        "DentaQuest",
+        "ShinyHunters",
+        "healthcare",
+        "PHI",
+        "PII",
+        "SSN",
+        "extortion",
+        "15M",
+        "largest_2026"
+      ],
+      "sources": [
+        "https://mastodon.social/@netsecio/117079487308517819"
+      ],
+      "date": "2026-08-12"
+    },
+    {
+      "victim": "Lennar Corp., Oculus Pathology, Gig Works, Nice Corp, tl;dv, Digital Agency Japan, JST, Yonex Taiwan, Beaver County, Health Sciences Centre Manitoba, Basso Fedele & Figli, Villa Raiano",
+      "threat_actor": "Spacebears (Basso/Villa Raiano), unknown (others)",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Homebuilding",
+          "Healthcare",
+          "Technology",
+          "Government",
+          "Research",
+          "Sports_Equipment"
+        ],
+        "fr": [
+          "Construction_residentielle",
+          "Sante",
+          "Technologie",
+          "Gouvernement",
+          "Recherche",
+          "Equipement_sportif"
+        ]
+      },
+      "description": {
+        "en": "Multiple breaches disclosed August 11, 2026, no established actor link: Lennar Corp (US homebuilder) - social engineering breach, March 2026 access, SSN and financial data stolen. Oculus Pathology (US) - employee email compromise April 2026, PHI/PII/SSN/medical diagnoses exposed. Gig Works (Japan) - 3rd unauthorized server access notice, dependent database potentially leaked. Nice Corp (Japan) - admin email access, ~2,400 PII potentially leaked. tl;dv (AI meeting transcription) - Firestore misconfiguration, 180,000+ meetings exposed, unauthorized call joining, researcher/company disagreement. Digital Agency Japan - erroneous login history file, 150 staff leaked. JST (Japan Science and Technology Agency) - unauthorized access, 12 staff emails, 16,000 records potentially leaked. Yonex Taiwan - unauthorized access to Taiwanese subsidiary, servers isolated. Beaver County Pennsylvania - ransomware, $175,000 ransom paid, patient files access cut. Health Sciences Centre Manitoba - ransomware, nurses union questions safety. Spacebears (new ransomware group) - publishes Basso Fedele & Figli (Olio Basso) and Villa Raiano.",
+        "fr": "Plusieurs breaches disclosed le 11 août 2026, sans lien d'acteur établi : Lennar Corp (US homebuilder) - breach par ingénierie sociale, accès en mars 2026, vol SSN et données financières. Oculus Pathology (US) - compromission de comptes email employés en avril 2026, PHI, PII, SSN, diagnostics médicaux exposés. Gig Works (Japon) - 3e notification d'accès serveur non autorisé, base de données de déclaration de dépendance potentiellement leakée. Nice Corp (Japon) - accès non autorisé à l'adresse email de gestion, ~2 400 PII potentiellement leakées. tl;dv (outil AI de transcription de réunions) - mauvaise configuration Firestore, 180 000+ réunions exposées, participation non autorisée aux appels en cours, contradiction entre chercheurs et entreprise. Digital Agency Japon - fichier d'historique de login créé par erreur, 150 personnels leakés. JST (Japan Science and Technology Agency) - accès non autorisé, 12 emails de staff, 16 000 records potentiellement leakés. Yonex Taiwan - accès non autorisé à la filiale taïwanaise, serveurs isolés. Beaver County Pennsylvania - ransomware, 175 000 $ de rançon payée, accès aux dossiers patients coupé. Health Sciences Centre Manitoba - ransomware, l'union des infirmières questionne la sécurité. Spacebears (nouveau groupe ransomware) - publie Basso Fedele & Figli (Olio Basso) et Villa Raiano."
+      },
+      "mitre_ttps": [
+        "T1566.004",
+        "T1078",
+        "T1530",
+        "T1486"
+      ],
+      "recommandations": [
+        {
+          "en": "Harden employee email authentication (phishing-resistant MFA) to reduce the email hack vector (Oculus).",
+          "fr": "Durcir l'authentification email employé (MFA phishing-resistant) pour réduire le vecteur « email hack » (Oculus)."
+        },
+        {
+          "en": "Audit SaaS configurations (Firestore, AWS S3, GitHub) on bases containing PII (tl;dv).",
+          "fr": "Auditer les configurations SaaS (Firestore, AWS S3, GitHub) sur les bases contenant des PII (tl;dv)."
+        },
+        {
+          "en": "Reinforce anti-social-engineering procedures (Lennar).",
+          "fr": "Renforcer les procédures anti-ingénierie sociale (Lennar)."
+        },
+        {
+          "en": "Prepare a ransomware response plan for the healthcare sector (Beaver, Manitoba).",
+          "fr": "Préparer un plan de réponse ransomware pour le secteur santé (Beaver, Manitoba)."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "MFA on all email accounts.",
+            "Audit SaaS configs (Firestore, S3, GitHub).",
+            "Healthcare degraded-mode BCP."
+          ],
+          "fr": [
+            "MFA sur tous les comptes email.",
+            "Audit des configurations SaaS (Firestore, S3, GitHub).",
+            "Plan de continuité d'activité « mode dégradé » pour les établissements de santé."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "IDP rule: email connections from suspicious IPs.",
+            "Cloud rule: public Firestore/S3 bucket.",
+            "Detection: bulk access to patient data."
+          ],
+          "fr": [
+            "Règle IDP : connexions email depuis IP suspectes.",
+            "Règle cloud : bucket Firestore / S3 exposé publiquement.",
+            "Détection : accès bulk aux données patients."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Revoke compromised email accounts.",
+            "Restrict public access to SaaS buckets.",
+            "For ransomware: restore from offline backups."
+          ],
+          "fr": [
+            "Révoquer les comptes email compromis.",
+            "Restreindre l'accès public aux buckets SaaS.",
+            "Pour ransomware : restaurer depuis backups hors-ligne."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "HIPAA (US), JP law, GDPR if EU notifications.",
+            "Communication to impacted patients/individuals."
+          ],
+          "fr": [
+            "Notifications HIPAA (US), loi JP, RGPD si EU.",
+            "Communication aux patients / individus impactés."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for other publicly exposed SaaS buckets.",
+            "Hunt for undetected compromised email accounts."
+          ],
+          "fr": [
+            "Chasser les autres buckets SaaS exposés publiquement.",
+            "Chasser les comptes email compromis non détectés."
+          ]
+        }
+      },
+      "tags": [
+        "Lennar",
+        "Oculus_Pathology",
+        "Gig_Works",
+        "Nice_Corp",
+        "tldv",
+        "Digital_Agency_Japan",
+        "JST",
+        "Yonex_Taiwan",
+        "Beaver_County",
+        "Manitoba_HSC",
+        "Spacebears",
+        "Basso_Fedele",
+        "Villa_Raiano",
+        "ransomware",
+        "social_engineering",
+        "Firestore",
+        "email_hack"
+      ],
+      "sources": [
+        "https://mastodon.social/@netsecio/117079487674283367",
+        "https://mastodon.social/@netsecio/117079487943286626",
+        "https://mastodon.social/@securityLab_jp/117080139120543623",
+        "https://mastodon.social/@securityLab_jp/117079848476499119",
+        "https://mastodon.social/@securityLab_jp/117079506701951419",
+        "https://mastodon.social/@securityLab_jp/117079378997478979",
+        "https://mastodon.social/@securityLab_jp/117079345587093784",
+        "https://mastodon.social/@securityLab_jp/117079341043077294",
+        "https://infosec.exchange/@DysruptionHub/117078053805140272",
+        "https://mastodon.hongkongers.net/@glwinnipeg_mirror/11707851",
+        "https://infosec.exchange/@CTI_FYI/117080373475266425"
+      ],
+      "date": "2026-08-12"
+    },
+    {
+      "victim": "LexisNexis",
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Information_Services",
+          "Due_Diligence",
+          "Business_Intelligence"
+        ],
+        "fr": [
+          "Services_information",
+          "Due_diligence",
+          "Intelligence_economique"
+        ]
+      },
+      "description": {
+        "en": "LexisNexis disclosed August 10, 2026 unusual activity on servers hosted and managed by a third-party vendor. Customer-facing services taken offline (Nexis Diligence, Newsdesk, Metabase API). Systems isolated, external investigators engaged, affected infrastructure rebuilt before restoration. Pattern recalls third-party hosting supply chain vector (cf. Snowflake 2024).",
+        "fr": "LexisNexis a disclosed le 10 août 2026 une activité inhabituelle sur des serveurs hébergés et gérés par un tiers. Services clients offline (Nexis Diligence, Newsdesk, Metabase API). Systèmes isolés, experts externes engagés, infrastructure reconstruite avant restauration. Pattern qui rappelle le vecteur supply chain d'hébergement tierce (cf. Snowflake 2024)."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Audit third-party hosting contracts (security clause, notification, audit).",
+          "fr": "Auditer les contrats d'hébergement tierce (clause de sécurité, notification, audit)."
+        },
+        {
+          "en": "Verify isolation of systems at hosting providers.",
+          "fr": "Vérifier l'isolation des systèmes chez les hébergeurs."
+        },
+        {
+          "en": "Monitor access to sensitive APIs (Metabase API here, correlate with Metabase vulnerability signals).",
+          "fr": "Surveiller l'accès aux API sensibles (Metabase API ici, à corréler avec les signaux de vulnérabilité Metabase)."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory third-party hosting providers and data perimeters.",
+            "Contracts with <24h notification clause."
+          ],
+          "fr": [
+            "Inventaire des hébergeurs tierces et périmètres de données.",
+            "Contrats avec clause de notification < 24h."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detection: unusual activity on hosted servers.",
+            "Timeline: identify third-party entry vector."
+          ],
+          "fr": [
+            "Détection : activité inhabituelle sur serveurs hébergés.",
+            "Chronologie : identifier le vecteur d'entrée chez le tiers."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate affected systems.",
+            "Rebuild infrastructure before restoration."
+          ],
+          "fr": [
+            "Isoler les systèmes affectés.",
+            "Reconstruire l'infrastructure avant restauration."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "GDPR/NIS2 notifications per impacted data."
+          ],
+          "fr": [
+            "Notifications RGPD/NIS2 selon données impactées."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for other compromised servers at the same third party."
+          ],
+          "fr": [
+            "Chasser les autres serveurs compromis chez le même tiers."
+          ]
+        }
+      },
+      "tags": [
+        "LexisNexis",
+        "third_party",
+        "hosting",
+        "Metabase_API",
+        "supply_chain"
+      ],
+      "sources": [
+        "https://fieldeffect.com/blog/lexisnexis-suspicious-activity-services-offline"
+      ],
+      "date": "2026-08-12"
+    }
+  ],
+  "vulnerabilities_analyse": [
+    {
+      "cve_id": "CVE-2026-68820",
+      "euvd_id": "unknown",
+      "cisa_kev": "true",
+      "cvss": "7.0",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "Windows AFD.sys (Ancillary Function Driver for WinSock)",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "Important elevation of privilege vulnerability affecting the Windows AFD.sys for WinSock. Use-after-free (CWE-416) allows a low-privileged local attacker to elevate to SYSTEM via a race condition. Exploited in the wild (Lazarus Operation Dream Job).",
+        "fr": "Vulnérabilité d'élévation de privilège Importante affectant le driver Windows AFD.sys pour WinSock. Use-after-free (CWE-416) permettant à un attaquant local peu privilégié d'escalader vers SYSTEM via race condition. Exploitée in the wild (Lazarus Operation Dream Job)."
+      },
+      "mitre_ttps": [
+        "T1068"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply August 2026 patch; prioritize R&D/defense hosts.",
+          "fr": "Appliquer le patch d'août 2026 ; prioriser les postes R&D/défense."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory affected products and versions."
+          ],
+          "fr": [
+            "Inventorier les produits et versions affectés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for exploitation attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'exploitation."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Apply patch; isolate affected systems if exploited."
+          ],
+          "fr": [
+            "Appliquer le patch ; isoler les systèmes affectés si exploités."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify patch deployment; notifications if exploited."
+          ],
+          "fr": [
+            "Vérifier le déploiement du patch ; notifications si exploité."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation."
+          ]
+        }
+      },
+      "tags": [
+        "Microsoft",
+        "Windows",
+        "AFD_sys",
+        "WinSock",
+        "zero_day",
+        "Lazarus",
+        "KEV",
+        "use_after_free",
+        "priv_esc"
+      ],
+      "sources": [
+        "https://www.cve.org/CVERecord?id=CVE-2026-68820",
+        "https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-august-2026",
+        "https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including-a-windows-driver-zero-day-under-active-attack.html",
+        "https://research.checkpoint.com/2026/shattering-the-dream-when-a-job-offer-becomes-a-zero-day-attack/",
+        "https://www.cisecurity.org/advisory/critical-patches-issued-for-microsoft-products-august-11-2026",
+        "https://krebsonsecurity.com/2026/08/microsoft-plugs-nearly-400-security-holes/"
+      ],
+      "date": "2026-08-11"
+    },
+    {
+      "cve_id": "CVE-2026-62832",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "Windows DNS Server",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "Critical RCE unauthenticated vulnerability in Windows DNS Server. CVSS 9.8, no user interaction required.",
+        "fr": "Vulnérabilité RCE critique non authentifiée dans Windows DNS Server. CVSS 9.8, aucune interaction utilisateur requise."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply August 2026 patch.",
+          "fr": "Appliquer le patch d'août 2026."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory affected products and versions."
+          ],
+          "fr": [
+            "Inventorier les produits et versions affectés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for exploitation attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'exploitation."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Apply patch; isolate affected systems if exploited."
+          ],
+          "fr": [
+            "Appliquer le patch ; isoler les systèmes affectés si exploités."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify patch deployment; notifications if exploited."
+          ],
+          "fr": [
+            "Vérifier le déploiement du patch ; notifications si exploité."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation."
+          ]
+        }
+      },
+      "tags": [
+        "Microsoft",
+        "Windows",
+        "DNS",
+        "RCE",
+        "unauthenticated",
+        "Critical"
+      ],
+      "sources": [
+        "https://www.cve.org/CVERecord?id=CVE-2026-62832",
+        "https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-august-2026",
+        "https://krebsonsecurity.com/2026/08/microsoft-plugs-nearly-400-security-holes/"
+      ],
+      "date": "2026-08-11"
+    },
+    {
+      "cve_id": "CVE-2026-62893",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "Windows Deployment Services (WDSServer)",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "Critical use-after-free RCE in Windows Deployment Services. Network-adjacent attacker can execute code as SYSTEM without authentication (only systems with WDS enabled are vulnerable).",
+        "fr": "Use-after-free critique RCE dans Windows Deployment Services. Attaquant adjacent réseau peut exécuter du code comme SYSTEM sans authentification (seuls les systèmes avec WDS activé sont vulnérables)."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply August 2026 patch; disable WDS if unused.",
+          "fr": "Appliquer le patch d'août 2026 ; désactiver WDS si inutile."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory affected products and versions."
+          ],
+          "fr": [
+            "Inventorier les produits et versions affectés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for exploitation attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'exploitation."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Apply patch; isolate affected systems if exploited."
+          ],
+          "fr": [
+            "Appliquer le patch ; isoler les systèmes affectés si exploités."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify patch deployment; notifications if exploited."
+          ],
+          "fr": [
+            "Vérifier le déploiement du patch ; notifications si exploité."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation."
+          ]
+        }
+      },
+      "tags": [
+        "Microsoft",
+        "Windows",
+        "WDS",
+        "RCE",
+        "use_after_free",
+        "SYSTEM",
+        "Critical"
+      ],
+      "sources": [
+        "https://www.cve.org/CVERecord?id=CVE-2026-62893",
+        "http://www.zerodayinitiative.com/advisories/ZDI-26-544/",
+        "https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including-a-windows-driver-zero-day-under-active-attack.html"
+      ],
+      "date": "2026-08-11"
+    },
+    {
+      "cve_id": "CVE-2026-72971",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "QUIC implementation",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "Critical RCE unauthenticated in Microsoft QUIC transport protocol implementation. CVSS 9.8.",
+        "fr": "RCE critique non authentifiée dans l'implémentation Microsoft du protocole de transport QUIC. CVSS 9.8."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply August 2026 patch.",
+          "fr": "Appliquer le patch d'août 2026."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory affected products and versions."
+          ],
+          "fr": [
+            "Inventorier les produits et versions affectés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for exploitation attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'exploitation."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Apply patch; isolate affected systems if exploited."
+          ],
+          "fr": [
+            "Appliquer le patch ; isoler les systèmes affectés si exploités."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify patch deployment; notifications if exploited."
+          ],
+          "fr": [
+            "Vérifier le déploiement du patch ; notifications si exploité."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation."
+          ]
+        }
+      },
+      "tags": [
+        "Microsoft",
+        "QUIC",
+        "RCE",
+        "unauthenticated",
+        "Critical"
+      ],
+      "sources": [
+        "https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-august-2026",
+        "https://krebsonsecurity.com/2026/08/microsoft-plugs-nearly-400-security-holes/"
+      ],
+      "date": "2026-08-11"
+    },
+    {
+      "cve_id": "CVE-2026-63520",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "SharePoint",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "RCE via custom .NET gadget chain in SharePoint. Combined with CVE-2026-55040 (auth bypass) enables unauthenticated RCE. Patched August 11.",
+        "fr": "RCE via custom .NET gadget chain dans SharePoint. Combinée à CVE-2026-55040 (contournement auth) permet RCE non authentifiée. Patchée le 11 août."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply August 2026 patch; monitor for chain exploitation.",
+          "fr": "Appliquer le patch d'août 2026 ; surveiller l'exploitation chain."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory affected products and versions."
+          ],
+          "fr": [
+            "Inventorier les produits et versions affectés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for exploitation attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'exploitation."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Apply patch; isolate affected systems if exploited."
+          ],
+          "fr": [
+            "Appliquer le patch ; isoler les systèmes affectés si exploités."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify patch deployment; notifications if exploited."
+          ],
+          "fr": [
+            "Vérifier le déploiement du patch ; notifications si exploité."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation."
+          ]
+        }
+      },
+      "tags": [
+        "Microsoft",
+        "SharePoint",
+        "RCE",
+        "auth_bypass",
+        "gadget_chain"
+      ],
+      "sources": [
+        "https://www.cve.org/CVERecord?id=CVE-2026-63520",
+        "https://thehackernews.com/2026/08/researchers-disclose-ai-assisted-sharepoint-exploit-chain-reaching-unauthenticated-rce.html",
+        "https://www.security.nl/posting/948844/Microsoft+komt+vanavond+met+update+voor+RCE-lek+in+SharePoint"
+      ],
+      "date": "2026-08-11"
+    },
+    {
+      "cve_id": "CVE-2026-55040",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "SharePoint",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "Authentication bypass in SharePoint. Combined with CVE-2026-63520 enables unauthenticated RCE. Patched July 14.",
+        "fr": "Contournement d'authentification dans SharePoint. Combiné à CVE-2026-63520 permet RCE non authentifiée. Patché le 14 juillet."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Verify July 14 patch applied; monitor for chain exploitation.",
+          "fr": "Vérifier le patch du 14 juillet appliqué ; surveiller l'exploitation chain."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory affected products and versions."
+          ],
+          "fr": [
+            "Inventorier les produits et versions affectés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for exploitation attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'exploitation."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Apply patch; isolate affected systems if exploited."
+          ],
+          "fr": [
+            "Appliquer le patch ; isoler les systèmes affectés si exploités."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify patch deployment; notifications if exploited."
+          ],
+          "fr": [
+            "Vérifier le déploiement du patch ; notifications si exploité."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation."
+          ]
+        }
+      },
+      "tags": [
+        "Microsoft",
+        "SharePoint",
+        "auth_bypass"
+      ],
+      "sources": [
+        "https://www.cve.org/CVERecord?id=CVE-2026-55040",
+        "https://thehackernews.com/2026/08/researchers-disclose-ai-assisted-sharepoint-exploit-chain-reaching-unauthenticated-rce.html",
+        "https://www.security.nl/posting/948844/Microsoft+komt+vanavond+met+update+voor+RCE-lek+in+SharePoint"
+      ],
+      "date": "2026-08-11"
+    },
+    {
+      "cve_id": "CVE-2026-45659",
+      "euvd_id": "unknown",
+      "cisa_kev": "true",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "SharePoint",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "Critical unauthenticated RCE in SharePoint. CVSS 9.8. Exploited for ransomware (CISA KEV since July 1). Patch published May 12 (bulletin published May 21 - Microsoft initially forgot to list it).",
+        "fr": "RCE critique non authentifiée dans SharePoint. CVSS 9.8. Exploitée pour ransomware (CISA KEV depuis 01/07). Patch publié le 12/05 (bulletin publié le 21/05 - Microsoft avait oublié de le lister)."
+      },
+      "mitre_ttps": [
+        "T1190",
+        "T1486"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply May 12 patch; prioritize as KEV + ransomware exploitation.",
+          "fr": "Appliquer le patch du 12/05 ; prioriser car KEV + exploitation ransomware."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory affected products and versions."
+          ],
+          "fr": [
+            "Inventorier les produits et versions affectés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for exploitation attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'exploitation."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Apply patch; isolate affected systems if exploited."
+          ],
+          "fr": [
+            "Appliquer le patch ; isoler les systèmes affectés si exploités."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify patch deployment; notifications if exploited."
+          ],
+          "fr": [
+            "Vérifier le déploiement du patch ; notifications si exploité."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation."
+          ]
+        }
+      },
+      "tags": [
+        "Microsoft",
+        "SharePoint",
+        "RCE",
+        "KEV",
+        "ransomware",
+        "unauthenticated",
+        "Critical"
+      ],
+      "sources": [
+        "https://www.cve.org/CVERecord?id=CVE-2026-45659",
+        "https://www.security.nl/posting/948804/Kritiek+Microsoft+SharePoint-lek+ook+gebruikt+bij+ransomware-aanvallen"
+      ],
+      "date": "2026-08-11"
+    },
+    {
+      "cve_id": "CVE-2026-62911",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "8.8",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "Exchange",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "Improper authorization privilege escalation in Microsoft Exchange. Auth required but bypassable; can chain to SYSTEM RCE. Pwn2Own (orange_8361 DEVCORE). Patched August 11.",
+        "fr": "Élévation de privilège par improper authorization dans Microsoft Exchange. Auth requise mais contournable ; peut chain vers RCE SYSTEM. Pwn2Own (orange_8361 DEVCORE). Patchée le 11 août."
+      },
+      "mitre_ttps": [
+        "T1068"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply August 2026 patch.",
+          "fr": "Appliquer le patch d'août 2026."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory affected products and versions."
+          ],
+          "fr": [
+            "Inventorier les produits et versions affectés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for exploitation attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'exploitation."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Apply patch; isolate affected systems if exploited."
+          ],
+          "fr": [
+            "Appliquer le patch ; isoler les systèmes affectés si exploités."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify patch deployment; notifications if exploited."
+          ],
+          "fr": [
+            "Vérifier le déploiement du patch ; notifications si exploité."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation."
+          ]
+        }
+      },
+      "tags": [
+        "Microsoft",
+        "Exchange",
+        "Pwn2Own",
+        "priv_esc",
+        "DEVCORE"
+      ],
+      "sources": [
+        "https://www.cve.org/CVERecord?id=CVE-2026-62911",
+        "http://www.zerodayinitiative.com/advisories/ZDI-26-538/"
+      ],
+      "date": "2026-08-11"
+    },
+    {
+      "cve_id": "CVE-2026-65814",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "8.8",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "Windows storport",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "Integer overflow in Windows storport driver. Local attacker escalates to SYSTEM. Pwn2Own (Viettel). Patched August 11.",
+        "fr": "Integer overflow dans le driver Windows storport. Attaquant local escalade vers SYSTEM. Pwn2Own (Viettel). Patchée le 11 août."
+      },
+      "mitre_ttps": [
+        "T1068"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply August 2026 patch.",
+          "fr": "Appliquer le patch d'août 2026."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory affected products and versions."
+          ],
+          "fr": [
+            "Inventorier les produits et versions affectés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for exploitation attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'exploitation."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Apply patch; isolate affected systems if exploited."
+          ],
+          "fr": [
+            "Appliquer le patch ; isoler les systèmes affectés si exploités."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify patch deployment; notifications if exploited."
+          ],
+          "fr": [
+            "Vérifier le déploiement du patch ; notifications si exploité."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation."
+          ]
+        }
+      },
+      "tags": [
+        "Microsoft",
+        "Windows",
+        "storport",
+        "Pwn2Own",
+        "integer_overflow",
+        "priv_esc",
+        "Viettel"
+      ],
+      "sources": [
+        "https://www.cve.org/CVERecord?id=CVE-2026-65814",
+        "http://www.zerodayinitiative.com/advisories/ZDI-26-537/"
+      ],
+      "date": "2026-08-11"
+    },
+    {
+      "cve_id": "CVE-2026-54984",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "7.8",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "Windows (Mscms.dll ICC)",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "OOB write parsing ICC color profiles in Mscms.dll. Remote RCE in current process context, user interaction required.",
+        "fr": "OOB write lors du parsing des ICC color profiles dans Mscms.dll. RCE distante dans le contexte du processus, interaction utilisateur requise."
+      },
+      "mitre_ttps": [
+        "T1203"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply August 2026 patch.",
+          "fr": "Appliquer le patch d'août 2026."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory affected products and versions."
+          ],
+          "fr": [
+            "Inventorier les produits et versions affectés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for exploitation attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'exploitation."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Apply patch; isolate affected systems if exploited."
+          ],
+          "fr": [
+            "Appliquer le patch ; isoler les systèmes affectés si exploités."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify patch deployment; notifications if exploited."
+          ],
+          "fr": [
+            "Vérifier le déploiement du patch ; notifications si exploité."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation."
+          ]
+        }
+      },
+      "tags": [
+        "Microsoft",
+        "Windows",
+        "ICC",
+        "Mscms",
+        "OOB_write",
+        "RCE"
+      ],
+      "sources": [
+        "https://www.cve.org/CVERecord?id=CVE-2026-54984",
+        "http://www.zerodayinitiative.com/advisories/ZDI-26-543/"
+      ],
+      "date": "2026-08-11"
+    },
+    {
+      "cve_id": "CVE-2026-62712",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "7.8",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "Windows UMPDDrvBitBlt (win32kfull)",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "Improper object management in win32kfull UMPDDrvBitBlt. Local privilege escalation to SYSTEM.",
+        "fr": "Improper object management dans win32kfull UMPDDrvBitBlt. Élévation de privilège locale vers SYSTEM."
+      },
+      "mitre_ttps": [
+        "T1068"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply August 2026 patch.",
+          "fr": "Appliquer le patch d'août 2026."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory affected products and versions."
+          ],
+          "fr": [
+            "Inventorier les produits et versions affectés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for exploitation attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'exploitation."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Apply patch; isolate affected systems if exploited."
+          ],
+          "fr": [
+            "Appliquer le patch ; isoler les systèmes affectés si exploités."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify patch deployment; notifications if exploited."
+          ],
+          "fr": [
+            "Vérifier le déploiement du patch ; notifications si exploité."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation."
+          ]
+        }
+      },
+      "tags": [
+        "Microsoft",
+        "Windows",
+        "win32kfull",
+        "UMPDDrvBitBlt",
+        "priv_esc"
+      ],
+      "sources": [
+        "https://www.cve.org/CVERecord?id=CVE-2026-62712",
+        "http://www.zerodayinitiative.com/advisories/ZDI-26-542/"
+      ],
+      "date": "2026-08-11"
+    },
+    {
+      "cve_id": "CVE-2026-65775",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "8.8",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "Windows win32kfull (Pwn2Own)",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "Use-after-free in Windows win32kfull. Local privilege escalation to SYSTEM. Pwn2Own.",
+        "fr": "Use-after-free dans Windows win32kfull. Élévation de privilège locale vers SYSTEM. Pwn2Own."
+      },
+      "mitre_ttps": [
+        "T1068"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply August 2026 patch.",
+          "fr": "Appliquer le patch d'août 2026."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory affected products and versions."
+          ],
+          "fr": [
+            "Inventorier les produits et versions affectés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for exploitation attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'exploitation."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Apply patch; isolate affected systems if exploited."
+          ],
+          "fr": [
+            "Appliquer le patch ; isoler les systèmes affectés si exploités."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify patch deployment; notifications if exploited."
+          ],
+          "fr": [
+            "Vérifier le déploiement du patch ; notifications si exploité."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation."
+          ]
+        }
+      },
+      "tags": [
+        "Microsoft",
+        "Windows",
+        "win32kfull",
+        "Pwn2Own",
+        "use_after_free",
+        "priv_esc"
+      ],
+      "sources": [
+        "https://www.cve.org/CVERecord?id=CVE-2026-65775",
+        "http://www.zerodayinitiative.com/advisories/ZDI-26-541/"
+      ],
+      "date": "2026-08-11"
+    },
+    {
+      "cve_id": "CVE-2026-65776",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "6.5",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "Windows win32kfull (Pwn2Own)",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "Use-after-free information disclosure in Windows win32kfull. Can chain to SYSTEM escalation. Pwn2Own.",
+        "fr": "Use-after-free fuite d'informations dans Windows win32kfull. Peut chain vers élévation SYSTEM. Pwn2Own."
+      },
+      "mitre_ttps": [
+        "T1068"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply August 2026 patch.",
+          "fr": "Appliquer le patch d'août 2026."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory affected products and versions."
+          ],
+          "fr": [
+            "Inventorier les produits et versions affectés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for exploitation attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'exploitation."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Apply patch; isolate affected systems if exploited."
+          ],
+          "fr": [
+            "Appliquer le patch ; isoler les systèmes affectés si exploités."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify patch deployment; notifications if exploited."
+          ],
+          "fr": [
+            "Vérifier le déploiement du patch ; notifications si exploité."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation."
+          ]
+        }
+      },
+      "tags": [
+        "Microsoft",
+        "Windows",
+        "win32kfull",
+        "Pwn2Own",
+        "use_after_free",
+        "info_disclosure"
+      ],
+      "sources": [
+        "https://www.cve.org/CVERecord?id=CVE-2026-65776",
+        "http://www.zerodayinitiative.com/advisories/ZDI-26-540/"
+      ],
+      "date": "2026-08-11"
+    },
+    {
+      "cve_id": "CVE-2026-65773",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "7.8",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "Windows ipt.sys (Pwn2Own)",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "Incorrect permission assignment on a registry key in ipt.sys. Local privilege escalation to SYSTEM. Pwn2Own.",
+        "fr": "Incorrect permission assignment sur une clé de registre dans ipt.sys. Élévation de privilège locale vers SYSTEM. Pwn2Own."
+      },
+      "mitre_ttps": [
+        "T1068"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply August 2026 patch.",
+          "fr": "Appliquer le patch d'août 2026."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory affected products and versions."
+          ],
+          "fr": [
+            "Inventorier les produits et versions affectés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for exploitation attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'exploitation."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Apply patch; isolate affected systems if exploited."
+          ],
+          "fr": [
+            "Appliquer le patch ; isoler les systèmes affectés si exploités."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify patch deployment; notifications if exploited."
+          ],
+          "fr": [
+            "Vérifier le déploiement du patch ; notifications si exploité."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation."
+          ]
+        }
+      },
+      "tags": [
+        "Microsoft",
+        "Windows",
+        "ipt_sys",
+        "Pwn2Own",
+        "priv_esc",
+        "registry"
+      ],
+      "sources": [
+        "https://www.cve.org/CVERecord?id=CVE-2026-65773",
+        "http://www.zerodayinitiative.com/advisories/ZDI-26-539/"
+      ],
+      "date": "2026-08-11"
+    },
+    {
+      "cve_id": "CVE-2026-53413",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "Zoom Workplace / Rooms / Meeting SDK",
+      "vendor": "Zoom",
+      "description": {
+        "en": "Zoomsday - zero-click annotation flaw. A participant sharing their screen could hijack the client of any attendee. No click, no prompt, no download required. Patched June/July, published August 11.",
+        "fr": "Zoomsday - faille zero-click dans l'annotation. Un participant partageant son écran pouvait hijacker le client de n'importe quel participant. Aucun clic, aucun prompt, aucun téléchargement requis. Patchée en juin/juillet, publiée le 11 août."
+      },
+      "mitre_ttps": [
+        "T1203"
+      ],
+      "recommandations": [
+        {
+          "en": "Update Zoom Workplace to >= 7.1.5 / 7.0.6; VDI Client >= 7.0.11 / 6.6.16; Rooms & SDK >= 7.1.0.",
+          "fr": "MAJ Zoom Workplace >= 7.1.5 / 7.0.6 ; VDI Client >= 7.0.11 / 6.6.16 ; Rooms & SDK >= 7.1.0."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory affected products and versions."
+          ],
+          "fr": [
+            "Inventorier les produits et versions affectés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for exploitation attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'exploitation."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Apply patch; isolate affected systems if exploited."
+          ],
+          "fr": [
+            "Appliquer le patch ; isoler les systèmes affectés si exploités."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify patch deployment; notifications if exploited."
+          ],
+          "fr": [
+            "Vérifier le déploiement du patch ; notifications si exploité."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation."
+          ]
+        }
+      },
+      "tags": [
+        "Zoom",
+        "Zoomsday",
+        "zero_click",
+        "annotation",
+        "client_hijack"
+      ],
+      "sources": [
+        "https://www.cve.org/CVERecord?id=CVE-2026-53413",
+        "https://thehackernews.com/2026/08/zoom-annotation-flaws-could-let-a-meeting-participant-hijack-another-attendees-client.html",
+        "https://securityaffairs.com/197042/hacking/zoom-patches-zoomsday-zero-click-flaw-enabling-remote-code-execution.html"
+      ],
+      "date": "2026-08-11"
+    },
+    {
+      "cve_id": "CVE-2026-53414",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "Zoom Workplace / Rooms / Meeting SDK",
+      "vendor": "Zoom",
+      "description": {
+        "en": "Zoomsday - annotation flaw. A watching participant could hijack the presenter's client. Patched June/July.",
+        "fr": "Zoomsday - faille annotation. Un participant regardant pouvait hijacker le client du présentateur. Patchée en juin/juillet."
+      },
+      "mitre_ttps": [
+        "T1203"
+      ],
+      "recommandations": [
+        {
+          "en": "Update Zoom client to patched versions.",
+          "fr": "MAJ le client Zoom vers les versions patchées."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory affected products and versions."
+          ],
+          "fr": [
+            "Inventorier les produits et versions affectés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for exploitation attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'exploitation."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Apply patch; isolate affected systems if exploited."
+          ],
+          "fr": [
+            "Appliquer le patch ; isoler les systèmes affectés si exploités."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify patch deployment; notifications if exploited."
+          ],
+          "fr": [
+            "Vérifier le déploiement du patch ; notifications si exploité."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation."
+          ]
+        }
+      },
+      "tags": [
+        "Zoom",
+        "Zoomsday",
+        "annotation",
+        "client_hijack"
+      ],
+      "sources": [
+        "https://www.cve.org/CVERecord?id=CVE-2026-53414",
+        "https://thehackernews.com/2026/08/zoom-annotation-flaws-could-let-a-meeting-participant-hijack-another-attendees-client.html"
+      ],
+      "date": "2026-08-11"
+    },
+    {
+      "cve_id": "CVE-2026-53415",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "Zoom Workplace / Rooms / Meeting SDK",
+      "vendor": "Zoom",
+      "description": {
+        "en": "Zoomsday - annotation flaw. Client hijack. Patched June/July, published August 11.",
+        "fr": "Zoomsday - faille annotation. Hijack du client. Patchée en juin/juillet, publiée le 11 août."
+      },
+      "mitre_ttps": [
+        "T1203"
+      ],
+      "recommandations": [
+        {
+          "en": "Update Zoom Rooms & SDK to >= 7.1.5.",
+          "fr": "MAJ Zoom Rooms & SDK >= 7.1.5."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory affected products and versions."
+          ],
+          "fr": [
+            "Inventorier les produits et versions affectés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for exploitation attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'exploitation."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Apply patch; isolate affected systems if exploited."
+          ],
+          "fr": [
+            "Appliquer le patch ; isoler les systèmes affectés si exploités."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify patch deployment; notifications if exploited."
+          ],
+          "fr": [
+            "Vérifier le déploiement du patch ; notifications si exploité."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation."
+          ]
+        }
+      },
+      "tags": [
+        "Zoom",
+        "Zoomsday",
+        "annotation"
+      ],
+      "sources": [
+        "https://www.cve.org/CVERecord?id=CVE-2026-53415",
+        "https://thehackernews.com/2026/08/zoom-annotation-flaws-could-let-a-meeting-participant-hijack-another-attendees-client.html",
+        "https://www.security.nl/posting/948857/Zoom-beveiligingslek"
+      ],
+      "date": "2026-08-11"
+    },
+    {
+      "cve_id": "CVE-2026-17106",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "Docker Desktop",
+      "vendor": "Docker",
+      "description": {
+        "en": "Data integrity vulnerability in Docker Desktop. Affects versions < 4.86.0. CERT-FR advisory CERTFR-2026-AVI-0996.",
+        "fr": "Vulnérabilité d'atteinte à l'intégrité des données dans Docker Desktop. Affecte les versions < 4.86.0. Avis CERT-FR CERTFR-2026-AVI-0996."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Update Docker Desktop to >= 4.86.0.",
+          "fr": "MAJ Docker Desktop >= 4.86.0."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory affected products and versions."
+          ],
+          "fr": [
+            "Inventorier les produits et versions affectés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for exploitation attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'exploitation."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Apply patch; isolate affected systems if exploited."
+          ],
+          "fr": [
+            "Appliquer le patch ; isoler les systèmes affectés si exploités."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify patch deployment; notifications if exploited."
+          ],
+          "fr": [
+            "Vérifier le déploiement du patch ; notifications si exploité."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation."
+          ]
+        }
+      },
+      "tags": [
+        "Docker",
+        "Docker_Desktop",
+        "CERT_FR",
+        "CERTFR-2026-AVI-0996"
+      ],
+      "sources": [
+        "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0996/"
+      ],
+      "date": "2026-08-11"
+    },
+    {
+      "cve_id": "CVE-2026-18503",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "CPython",
+      "vendor": "CPython",
+      "description": {
+        "en": "Vulnerability in CPython. CERT-FR advisory CERTFR-2026-AVI-0994, August 11 2026.",
+        "fr": "Vulnérabilité dans CPython. Avis CERT-FR CERTFR-2026-AVI-0994, 11 août 2026."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply CPython patch per editor bulletin.",
+          "fr": "Appliquer le patch CPython selon le bulletin éditeur."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory affected products and versions."
+          ],
+          "fr": [
+            "Inventorier les produits et versions affectés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for exploitation attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'exploitation."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Apply patch; isolate affected systems if exploited."
+          ],
+          "fr": [
+            "Appliquer le patch ; isoler les systèmes affectés si exploités."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify patch deployment; notifications if exploited."
+          ],
+          "fr": [
+            "Vérifier le déploiement du patch ; notifications si exploité."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation."
+          ]
+        }
+      },
+      "tags": [
+        "CPython",
+        "Python",
+        "CERT_FR",
+        "CERTFR-2026-AVI-0994"
+      ],
+      "sources": [
+        "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0994/"
+      ],
+      "date": "2026-08-11"
+    },
+    {
+      "cve_id": "CVE-2026-20349",
+      "euvd_id": "unknown",
+      "cisa_kev": "true",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "Secure Firewall ASA / FTD (Remote Access SSL VPN)",
+      "vendor": "Cisco",
+      "description": {
+        "en": "Zero-day DoS vulnerability in Cisco Secure Firewall ASA and FTD via crafted HTTP requests to Remote Access SSL VPN service. Appliance reload = DoS. Exploited in August 2026. Discovered internally by Cisco + external researcher.",
+        "fr": "Vulnérabilité zero-day DoS dans Cisco Secure Firewall ASA et FTD via requêtes HTTP craftées sur le service Remote Access SSL VPN. Reload appliance = DoS. Exploitée en août 2026. Découverte interne Cisco + chercheur externe."
+      },
+      "mitre_ttps": [
+        "T1498"
+      ],
+      "recommandations": [
+        {
+          "en": "Apply Cisco patch; restrict SSL VPN exposure.",
+          "fr": "Appliquer le patch Cisco ; restreindre l'exposition SSL VPN."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory affected products and versions."
+          ],
+          "fr": [
+            "Inventorier les produits et versions affectés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for exploitation attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'exploitation."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Apply patch; isolate affected systems if exploited."
+          ],
+          "fr": [
+            "Appliquer le patch ; isoler les systèmes affectés si exploités."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify patch deployment; notifications if exploited."
+          ],
+          "fr": [
+            "Vérifier le déploiement du patch ; notifications si exploité."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation."
+          ]
+        }
+      },
+      "tags": [
+        "Cisco",
+        "ASA",
+        "FTD",
+        "SSL_VPN",
+        "zero_day",
+        "DoS",
+        "KEV",
+        "firewall"
+      ],
+      "sources": [
+        "https://www.cve.org/CVERecord?id=CVE-2026-20349",
+        "https://www.securityweek.com/cisco-patches-firewall-zero-day-exploited-for-dos-attacks/"
+      ],
+      "date": "2026-08-11"
+    },
+    {
+      "cve_id": "CVE-2026-66147",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "9.4",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "GMS Dispatcher Service",
+      "vendor": "SonicWall",
+      "description": {
+        "en": "Critical unauthenticated command injection in GMS Dispatcher Service. Remote code execution via crafted requests. GMS <= 9.5.1.",
+        "fr": "Command injection critique non authentifiée dans GMS Dispatcher Service. RCE via requêtes craftées. GMS <= 9.5.1."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Update GMS; restrict exposure.",
+          "fr": "MAJ GMS ; restreindre l'exposition."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory affected products and versions."
+          ],
+          "fr": [
+            "Inventorier les produits et versions affectés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for exploitation attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'exploitation."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Apply patch; isolate affected systems if exploited."
+          ],
+          "fr": [
+            "Appliquer le patch ; isoler les systèmes affectés si exploités."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify patch deployment; notifications if exploited."
+          ],
+          "fr": [
+            "Vérifier le déploiement du patch ; notifications si exploité."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation."
+          ]
+        }
+      },
+      "tags": [
+        "SonicWall",
+        "GMS",
+        "command_injection",
+        "RCE",
+        "unauthenticated",
+        "Critical"
+      ],
+      "sources": [
+        "https://www.cve.org/CVERecord?id=CVE-2026-66147",
+        "https://cvefeed.io/vuln/detail/CVE-2026-66147"
+      ],
+      "date": "2026-08-11"
+    },
+    {
+      "cve_id": "CVE-2026-66154",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "8.3",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "GMS",
+      "vendor": "SonicWall",
+      "description": {
+        "en": "Insufficient certificate validation in privileged communication workflow in GMS <= 9.5.1. Under MitM and controlled network conditions, could permit unauthorized changes.",
+        "fr": "Validation de certificat insuffisante dans un workflow de communication privilégié dans GMS <= 9.5.1. Sous MitM et conditions réseau contrôlées, pourrait permettre des changements non autorisés."
+      },
+      "mitre_ttps": [
+        "T1557"
+      ],
+      "recommandations": [
+        {
+          "en": "Update GMS; harden TLS.",
+          "fr": "MAJ GMS ; durcir TLS."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory affected products and versions."
+          ],
+          "fr": [
+            "Inventorier les produits et versions affectés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for exploitation attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'exploitation."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Apply patch; isolate affected systems if exploited."
+          ],
+          "fr": [
+            "Appliquer le patch ; isoler les systèmes affectés si exploités."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify patch deployment; notifications if exploited."
+          ],
+          "fr": [
+            "Vérifier le déploiement du patch ; notifications si exploité."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation."
+          ]
+        }
+      },
+      "tags": [
+        "SonicWall",
+        "GMS",
+        "certificate_validation",
+        "MitM"
+      ],
+      "sources": [
+        "https://www.cve.org/CVERecord?id=CVE-2026-66154",
+        "https://cvefeed.io/vuln/detail/CVE-2026-66154"
+      ],
+      "date": "2026-08-11"
+    },
+    {
+      "cve_id": "CVE-2026-69264",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "9.8",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "Flowise (Airtable_Agent)",
+      "vendor": "Flowise",
+      "description": {
+        "en": "Critical unauthenticated code injection in Flowise Airtable_Agent run method. RCE in service account context. ZDI-26-546.",
+        "fr": "Injection de code critique non authentifiée dans la méthode run de Flowise Airtable_Agent. RCE dans le contexte du service account. ZDI-26-546."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Update Flowise (PR #6499).",
+          "fr": "MAJ Flowise (PR #6499)."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory affected products and versions."
+          ],
+          "fr": [
+            "Inventorier les produits et versions affectés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for exploitation attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'exploitation."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Apply patch; isolate affected systems if exploited."
+          ],
+          "fr": [
+            "Appliquer le patch ; isoler les systèmes affectés si exploités."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify patch deployment; notifications if exploited."
+          ],
+          "fr": [
+            "Vérifier le déploiement du patch ; notifications si exploité."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation."
+          ]
+        }
+      },
+      "tags": [
+        "Flowise",
+        "Airtable_Agent",
+        "code_injection",
+        "RCE",
+        "unauthenticated",
+        "Critical"
+      ],
+      "sources": [
+        "https://www.cve.org/CVERecord?id=CVE-2026-69264",
+        "http://www.zerodayinitiative.com/advisories/ZDI-26-546/"
+      ],
+      "date": "2026-08-11"
+    },
+    {
+      "cve_id": "CVE-2026-69256",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "8.8",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "Flowise (CSV_Agent customReadCSV)",
+      "vendor": "Flowise",
+      "description": {
+        "en": "Authenticated code injection in Flowise CSV_Agent customReadCSV. RCE in service account context. ZDI-26-545.",
+        "fr": "Injection de code authentifiée dans Flowise CSV_Agent customReadCSV. RCE dans le contexte du service account. ZDI-26-545."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Update Flowise (PR #6257).",
+          "fr": "MAJ Flowise (PR #6257)."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory affected products and versions."
+          ],
+          "fr": [
+            "Inventorier les produits et versions affectés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for exploitation attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'exploitation."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Apply patch; isolate affected systems if exploited."
+          ],
+          "fr": [
+            "Appliquer le patch ; isoler les systèmes affectés si exploités."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify patch deployment; notifications if exploited."
+          ],
+          "fr": [
+            "Vérifier le déploiement du patch ; notifications si exploité."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation."
+          ]
+        }
+      },
+      "tags": [
+        "Flowise",
+        "CSV_Agent",
+        "code_injection",
+        "RCE"
+      ],
+      "sources": [
+        "https://www.cve.org/CVERecord?id=CVE-2026-69256",
+        "http://www.zerodayinitiative.com/advisories/ZDI-26-545/"
+      ],
+      "date": "2026-08-11"
+    },
+    {
+      "cve_id": "CVE-2026-5917",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "9.6",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "libgit2 (ssh_libssh2 backend)",
+      "vendor": "libgit2",
+      "description": {
+        "en": "Critical shell command injection in libgit2 v0.27.0-v1.9.0 built with libssh2 SSH backend. gen_proto() in ssh_libssh2.c inserts repo path unescaped into shell command. Malicious submodule URL in .gitmodules during recursive clone triggers RCE on SSH server.",
+        "fr": "Injection de commande shell critique dans libgit2 v0.27.0-v1.9.0 buildé avec backend ssh_libssh2. gen_proto() dans ssh_libssh2.c insère le chemin du repo non échappé dans une commande shell. URL submodule malveillante dans .gitmodules lors d'un recursive clone déclenche RCE sur serveur SSH."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Update libgit2; avoid libssh2 backend if possible.",
+          "fr": "MAJ libgit2 ; éviter le backend libssh2 si possible."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory affected products and versions."
+          ],
+          "fr": [
+            "Inventorier les produits et versions affectés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for exploitation attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'exploitation."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Apply patch; isolate affected systems if exploited."
+          ],
+          "fr": [
+            "Appliquer le patch ; isoler les systèmes affectés si exploités."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify patch deployment; notifications if exploited."
+          ],
+          "fr": [
+            "Vérifier le déploiement du patch ; notifications si exploité."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation."
+          ]
+        }
+      },
+      "tags": [
+        "libgit2",
+        "ssh_libssh2",
+        "command_injection",
+        "RCE",
+        "supply_chain",
+        "Critical"
+      ],
+      "sources": [
+        "https://www.cve.org/CVERecord?id=CVE-2026-5917",
+        "https://cvefeed.io/vuln/detail/CVE-2026-5917"
+      ],
+      "date": "2026-08-11"
+    },
+    {
+      "cve_id": "CVE-2026-73242",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "8.3",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "FreeRDP (Kerberos)",
+      "vendor": "FreeRDP",
+      "description": {
+        "en": "High OOB decrypt in FreeRDP Kerberos GSS Wrap-token (EC field unbounded). Malicious RDP peer triggers OOB reads/writes during CredSSP/NLA Kerberos decryption. Fixed in 3.30.0. CVSS v4.0.",
+        "fr": "OOB decrypt high dans FreeRDP Kerberos GSS Wrap-token (champ EC non borné). RDP peer malveillant déclenche OOB reads/writes lors du déchiffrement Kerberos CredSSP/NLA. Corrigé en 3.30.0. CVSS v4.0."
+      },
+      "mitre_ttps": [
+        "T1210"
+      ],
+      "recommandations": [
+        {
+          "en": "Update FreeRDP to 3.30.0.",
+          "fr": "MAJ FreeRDP vers 3.30.0."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory affected products and versions."
+          ],
+          "fr": [
+            "Inventorier les produits et versions affectés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for exploitation attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'exploitation."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Apply patch; isolate affected systems if exploited."
+          ],
+          "fr": [
+            "Appliquer le patch ; isoler les systèmes affectés si exploités."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify patch deployment; notifications if exploited."
+          ],
+          "fr": [
+            "Vérifier le déploiement du patch ; notifications si exploité."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation."
+          ]
+        }
+      },
+      "tags": [
+        "FreeRDP",
+        "Kerberos",
+        "OOB",
+        "CredSSP",
+        "NLA"
+      ],
+      "sources": [
+        "https://www.cve.org/CVERecord?id=CVE-2026-73242",
+        "https://cvefeed.io/vuln/detail/CVE-2026-73242"
+      ],
+      "date": "2026-08-11"
+    },
+    {
+      "cve_id": "CVE-2026-48765",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "9.9",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "TypeBot (OAuth credentials)",
+      "vendor": "TypeBot",
+      "description": {
+        "en": "Critical cross-workspace OAuth credential takeover in TypeBot < 3.17.0. Low-privilege read collaborator can extract and overwrite OAuth credentials across workspaces.",
+        "fr": "Takeover de credentials OAuth cross-workspace critique dans TypeBot < 3.17.0. Un collaborateur read low-privilege peut extraire et écraser des credentials OAuth cross-workspace."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Update TypeBot to 3.17.0.",
+          "fr": "MAJ TypeBot vers 3.17.0."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory affected products and versions."
+          ],
+          "fr": [
+            "Inventorier les produits et versions affectés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for exploitation attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'exploitation."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Apply patch; isolate affected systems if exploited."
+          ],
+          "fr": [
+            "Appliquer le patch ; isoler les systèmes affectés si exploités."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify patch deployment; notifications if exploited."
+          ],
+          "fr": [
+            "Vérifier le déploiement du patch ; notifications si exploité."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation."
+          ]
+        }
+      },
+      "tags": [
+        "TypeBot",
+        "OAuth",
+        "credential_takeover",
+        "Critical"
+      ],
+      "sources": [
+        "https://www.cve.org/CVERecord?id=CVE-2026-48765",
+        "https://cvefeed.io/vuln/detail/CVE-2026-48765"
+      ],
+      "date": "2026-08-11"
+    },
+    {
+      "cve_id": "CVE-2026-48763",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "8.2",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "TypeBot (S3 upload)",
+      "vendor": "TypeBot",
+      "description": {
+        "en": "Arbitrary S3 object write in TypeBot < 3.17.0 via deprecated public upload endpoint. Unauthenticated attacker with valid public typebotId/blockId can write to arbitrary S3 paths.",
+        "fr": "Écriture arbitraire d'objets S3 dans TypeBot < 3.17.0 via endpoint public déprécié. Attaquant non authentifié avec typebotId/blockId public valide peut écrire dans des paths S3 arbitraires."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Update TypeBot to 3.17.0.",
+          "fr": "MAJ TypeBot vers 3.17.0."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory affected products and versions."
+          ],
+          "fr": [
+            "Inventorier les produits et versions affectés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for exploitation attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'exploitation."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Apply patch; isolate affected systems if exploited."
+          ],
+          "fr": [
+            "Appliquer le patch ; isoler les systèmes affectés si exploités."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify patch deployment; notifications if exploited."
+          ],
+          "fr": [
+            "Vérifier le déploiement du patch ; notifications si exploité."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation."
+          ]
+        }
+      },
+      "tags": [
+        "TypeBot",
+        "S3",
+        "arbitrary_write"
+      ],
+      "sources": [
+        "https://www.cve.org/CVERecord?id=CVE-2026-48763",
+        "https://cvefeed.io/vuln/detail/CVE-2026-48763"
+      ],
+      "date": "2026-08-11"
+    },
+    {
+      "cve_id": "CVE-2026-73248",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "calibre",
+      "vendor": "calibre",
+      "description": {
+        "en": "Bypass of Python template restrictions via nested template() in calibre leading to RCE.",
+        "fr": "Contournement des restrictions Python template via template() imbriqué dans calibre menant à RCE."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Update calibre.",
+          "fr": "MAJ calibre."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory affected products and versions."
+          ],
+          "fr": [
+            "Inventorier les produits et versions affectés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for exploitation attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'exploitation."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Apply patch; isolate affected systems if exploited."
+          ],
+          "fr": [
+            "Appliquer le patch ; isoler les systèmes affectés si exploités."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify patch deployment; notifications if exploited."
+          ],
+          "fr": [
+            "Vérifier le déploiement du patch ; notifications si exploité."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation."
+          ]
+        }
+      },
+      "tags": [
+        "calibre",
+        "template",
+        "RCE",
+        "bypass"
+      ],
+      "sources": [
+        "https://www.cve.org/CVERecord?id=CVE-2026-73248",
+        "https://cvefeed.io/vuln/detail/CVE-2026-73248"
+      ],
+      "date": "2026-08-11"
+    },
+    {
+      "cve_id": "CVE-2026-73247",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "Kestra (Pebble http())",
+      "vendor": "Kestra",
+      "description": {
+        "en": "SSRF via Pebble http() function in Kestra. Unauthenticated access to internal services and cloud metadata.",
+        "fr": "SSRF via la fonction Pebble http() dans Kestra. Accès non authentifié aux services internes et cloud metadata."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Update Kestra; restrict Pebble http().",
+          "fr": "MAJ Kestra ; restreindre Pebble http()."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory affected products and versions."
+          ],
+          "fr": [
+            "Inventorier les produits et versions affectés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for exploitation attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'exploitation."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Apply patch; isolate affected systems if exploited."
+          ],
+          "fr": [
+            "Appliquer le patch ; isoler les systèmes affectés si exploités."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify patch deployment; notifications if exploited."
+          ],
+          "fr": [
+            "Vérifier le déploiement du patch ; notifications si exploité."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation."
+          ]
+        }
+      },
+      "tags": [
+        "Kestra",
+        "Pebble",
+        "SSRF",
+        "unauthenticated"
+      ],
+      "sources": [
+        "https://www.cve.org/CVERecord?id=CVE-2026-73247",
+        "https://cvefeed.io/vuln/detail/CVE-2026-73247"
+      ],
+      "date": "2026-08-11"
+    },
+    {
+      "cve_id": "CVE-2026-55676",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "8.8",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "Malcolm (FilePond PHP backend)",
+      "vendor": "Malcolm",
+      "description": {
+        "en": "RCE via unrestricted .php upload to Malcolm file-upload component (FilePond PHP). Empty allow-list by default; GET on uploaded .php executes as www-data. Fixed in 26.06.1.",
+        "fr": "RCE via upload .php non restreint dans le composant file-upload de Malcolm (FilePond PHP). Allow-list vide par défaut ; GET sur le .php uploadé exécute comme www-data. Corrigé en 26.06.1."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Update Malcolm to 26.06.1; harden file allow-list.",
+          "fr": "MAJ Malcolm vers 26.06.1 ; durcir l'allow-list des fichiers."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory affected products and versions."
+          ],
+          "fr": [
+            "Inventorier les produits et versions affectés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for exploitation attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'exploitation."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Apply patch; isolate affected systems if exploited."
+          ],
+          "fr": [
+            "Appliquer le patch ; isoler les systèmes affectés si exploités."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify patch deployment; notifications if exploited."
+          ],
+          "fr": [
+            "Vérifier le déploiement du patch ; notifications si exploité."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation."
+          ]
+        }
+      },
+      "tags": [
+        "Malcolm",
+        "FilePond",
+        "PHP",
+        "RCE",
+        "upload"
+      ],
+      "sources": [
+        "https://www.cve.org/CVERecord?id=CVE-2026-55676",
+        "https://cvefeed.io/vuln/detail/CVE-2026-55676"
+      ],
+      "date": "2026-08-11"
+    },
+    {
+      "cve_id": "CVE-2026-14863",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "8.8",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "FileRun (thumbnail generation)",
+      "vendor": "FileRun",
+      "description": {
+        "en": "RCE via command injection in FileRun <= 2026.2.0 thumbnail generation. Filename with shell substitution sequences $(PAYLOAD).mp4 passes sanitizer and is evaluated by ffmpeg/ImageMagick/vips/stl-thumb.",
+        "fr": "RCE via injection de commande dans FileRun <= 2026.2.0 génération de thumbnails. Nom de fichier avec séquences de substitution shell $(PAYLOAD).mp4 passe le sanitizer et est évalué par ffmpeg/ImageMagick/vips/stl-thumb."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Update FileRun; sanitize filenames.",
+          "fr": "MAJ FileRun ; sanitize les noms de fichiers."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory affected products and versions."
+          ],
+          "fr": [
+            "Inventorier les produits et versions affectés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for exploitation attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'exploitation."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Apply patch; isolate affected systems if exploited."
+          ],
+          "fr": [
+            "Appliquer le patch ; isoler les systèmes affectés si exploités."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify patch deployment; notifications if exploited."
+          ],
+          "fr": [
+            "Vérifier le déploiement du patch ; notifications si exploité."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation."
+          ]
+        }
+      },
+      "tags": [
+        "FileRun",
+        "thumbnail",
+        "command_injection",
+        "RCE"
+      ],
+      "sources": [
+        "https://www.cve.org/CVERecord?id=CVE-2026-14863",
+        "https://cvefeed.io/vuln/detail/CVE-2026-14863"
+      ],
+      "date": "2026-08-11"
+    },
+    {
+      "cve_id": "CVE-2026-15606",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "8.8",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "Frontend Admin by DynamiApps (WordPress plugin)",
+      "vendor": "DynamiApps",
+      "description": {
+        "en": "Authenticated (Subscriber+) arbitrary password reset via CBC bit-flipping on encrypted Current-User token. Full account takeover including administrators. Plugin <= 3.29.9.",
+        "fr": "Reset de password arbitraire authentifié (Subscriber+) via CBC bit-flipping sur token chiffré Current-User. Takeover complet de compte y compris administrateurs. Plugin <= 3.29.9."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Update plugin > 3.29.9.",
+          "fr": "MAJ le plugin > 3.29.9."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory affected products and versions."
+          ],
+          "fr": [
+            "Inventorier les produits et versions affectés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for exploitation attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'exploitation."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Apply patch; isolate affected systems if exploited."
+          ],
+          "fr": [
+            "Appliquer le patch ; isoler les systèmes affectés si exploités."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify patch deployment; notifications if exploited."
+          ],
+          "fr": [
+            "Vérifier le déploiement du patch ; notifications si exploité."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation."
+          ]
+        }
+      },
+      "tags": [
+        "WordPress",
+        "Frontend_Admin",
+        "DynamiApps",
+        "auth_bypass",
+        "CBC_bit_flipping",
+        "account_takeover"
+      ],
+      "sources": [
+        "https://www.cve.org/CVERecord?id=CVE-2026-15606",
+        "https://cvefeed.io/vuln/detail/CVE-2026-15606"
+      ],
+      "date": "2026-08-11"
+    },
+    {
+      "cve_id": "CVE-2026-18961",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "VentraConnect (WordPress passwordless login plugin)",
+      "vendor": "VentraConnect",
+      "description": {
+        "en": "Unauthenticated authentication bypass in Social Login, Passkeys, Magic Link & Email OTP plugin by VentraConnect <= 1.4.3. Full admin access.",
+        "fr": "Contournement d'authentification non authentifié dans le plugin Social Login, Passkeys, Magic Link & Email OTP de VentraConnect <= 1.4.3. Accès admin complet."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Update plugin > 1.4.3.",
+          "fr": "MAJ le plugin > 1.4.3."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory affected products and versions."
+          ],
+          "fr": [
+            "Inventorier les produits et versions affectés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for exploitation attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'exploitation."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Apply patch; isolate affected systems if exploited."
+          ],
+          "fr": [
+            "Appliquer le patch ; isoler les systèmes affectés si exploités."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify patch deployment; notifications if exploited."
+          ],
+          "fr": [
+            "Vérifier le déploiement du patch ; notifications si exploité."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation."
+          ]
+        }
+      },
+      "tags": [
+        "WordPress",
+        "VentraConnect",
+        "auth_bypass",
+        "unauthenticated",
+        "passwordless"
+      ],
+      "sources": [
+        "https://www.cve.org/CVERecord?id=CVE-2026-18961",
+        "https://cvefeed.io/vuln/detail/CVE-2026-18961"
+      ],
+      "date": "2026-08-11"
+    },
+    {
+      "cve_id": "CVE-2026-19594",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "Snowflake Python API (snowflake.core)",
+      "vendor": "Snowflake",
+      "description": {
+        "en": "Path traversal and HTTP parameter pollution in Snowflake Python API enabling confused-deputy privilege escalation.",
+        "fr": "Path traversal et HTTP parameter pollution dans l'API Python Snowflake permettant confused-deputy privilege escalation."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Update snowflake.core.",
+          "fr": "MAJ snowflake.core."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory affected products and versions."
+          ],
+          "fr": [
+            "Inventorier les produits et versions affectés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for exploitation attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'exploitation."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Apply patch; isolate affected systems if exploited."
+          ],
+          "fr": [
+            "Appliquer le patch ; isoler les systèmes affectés si exploités."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify patch deployment; notifications if exploited."
+          ],
+          "fr": [
+            "Vérifier le déploiement du patch ; notifications si exploité."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation."
+          ]
+        }
+      },
+      "tags": [
+        "Snowflake",
+        "snowflake_core",
+        "path_traversal",
+        "priv_esc"
+      ],
+      "sources": [
+        "https://www.cve.org/CVERecord?id=CVE-2026-19594",
+        "https://cvefeed.io/vuln/detail/CVE-2026-19594"
+      ],
+      "date": "2026-08-11"
+    },
+    {
+      "cve_id": "CVE-2026-64954",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "Velociraptor (collect_client)",
+      "vendor": "Velociraptor",
+      "description": {
+        "en": "Permissions bypass in Velociraptor collect_client().",
+        "fr": "Contournement des permissions dans Velociraptor collect_client()."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Update Velociraptor.",
+          "fr": "MAJ Velociraptor."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory affected products and versions."
+          ],
+          "fr": [
+            "Inventorier les produits et versions affectés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for exploitation attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'exploitation."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Apply patch; isolate affected systems if exploited."
+          ],
+          "fr": [
+            "Appliquer le patch ; isoler les systèmes affectés si exploités."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify patch deployment; notifications if exploited."
+          ],
+          "fr": [
+            "Vérifier le déploiement du patch ; notifications si exploité."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation."
+          ]
+        }
+      },
+      "tags": [
+        "Velociraptor",
+        "permissions_bypass"
+      ],
+      "sources": [
+        "https://www.cve.org/CVERecord?id=CVE-2026-64954",
+        "https://cvefeed.io/vuln/detail/CVE-2026-64954"
+      ],
+      "date": "2026-08-11"
+    },
+    {
+      "cve_id": "CVE-2026-6484",
+      "euvd_id": "unknown",
+      "cisa_kev": "false",
+      "cvss": "unknown",
+      "epss": "unknown",
+      "cpe": "unknown",
+      "product": "GMS FV (verified boot)",
+      "vendor": "Microsoft",
+      "description": {
+        "en": "Lack of verified boot to certain FV may cause arbitrary code execution.",
+        "fr": "Absence de verified boot sur certaines FV peut causer une exécution de code arbitraire."
+      },
+      "mitre_ttps": [
+        "T1190"
+      ],
+      "recommandations": [
+        {
+          "en": "Update firmware.",
+          "fr": "MAJ firmware."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory affected products and versions."
+          ],
+          "fr": [
+            "Inventorier les produits et versions affectés."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Monitor for exploitation attempts."
+          ],
+          "fr": [
+            "Surveiller les tentatives d'exploitation."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Apply patch; isolate affected systems if exploited."
+          ],
+          "fr": [
+            "Appliquer le patch ; isoler les systèmes affectés si exploités."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Verify patch deployment; notifications if exploited."
+          ],
+          "fr": [
+            "Vérifier le déploiement du patch ; notifications si exploité."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for exploitation patterns."
+          ],
+          "fr": [
+            "Chasser les patterns d'exploitation."
+          ]
+        }
+      },
+      "tags": [
+        "Microsoft",
+        "GMS",
+        "verified_boot",
+        "code_execution"
+      ],
+      "sources": [
+        "https://www.cve.org/CVERecord?id=CVE-2026-6484",
+        "https://cvefeed.io/vuln/detail/CVE-2026-6484"
+      ],
+      "date": "2026-08-11"
+    }
+  ],
+  "threats_analyse": [
+    {
+      "title": {
+        "en": "Lazarus / Operation Dream Job - Microsoft AFD.sys zero-day + FudModule rootkit",
+        "fr": "Lazarus / Operation Dream Job - Zero-day Microsoft AFD.sys + rootkit FudModule"
+      },
+      "description": {
+        "en": "Check Point Research publishes 'Shattering the Dream', analysis of a recent wave of Operation Dream Job (Lazarus, DPRK). Current wave targets defense sector in Europe and India. Initial vector: fake job offer delivering 'SecurityPDF', a modified PDF viewer that opens attacker-crafted PDFs and executes a new backdoor named Troy. During intrusion, attacker exploits CVE-2026-68820 (Microsoft AFD.sys zero-day) to deploy a new version of FudModule kernel-mode rootkit. Microsoft patched August 11.",
+        "fr": "Check Point Research publie « Shattering the Dream », l'analyse d'une vague récente de l'Operation Dream Job (Lazarus, DPRK). La vague actuelle cible le secteur défense en Europe et Inde. Vecteur initial : fausse offre d'emploi livrant « SecurityPDF », un lecteur PDF modifié qui ouvre des PDF artisanaux et exécute un nouveau backdoor baptisé Troy. Pendant l'intrusion, l'attaquant exploite CVE-2026-68820 (zero-day Microsoft AFD.sys) pour déployer une nouvelle version du rootkit kernel-mode FudModule. Microsoft a patché le 11 août."
+      },
+      "threat_actor": "Lazarus",
+      "threat_actor_origin": "DPRK",
+      "threat_actor_type": "State-sponsored",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Government_and_Defense"
+        ],
+        "fr": [
+          "Gouvernement_et_Defense"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1566.001",
+        "T1068",
+        "T1014"
+      ],
+      "analyse": {
+        "en": "Lazarus combines targeted social engineering (fake defense job offer) + kernel zero-day + persistent rootkit: high-yield espionage scenario against defense sector. Kernel rootkit deployment via Microsoft zero-day is rare and indicates a well-resourced state actor. CVE-2026-68820 patch is mandatory at maximum priority: zero-day is actively exploited and now public.",
+        "fr": "Lazarus combine ingénierie sociale ciblée (fausse offre défense) + zero-day kernel + rootkit persistant : scénario d'espionnage à haut rendement contre le secteur défense. Le déploiement d'un rootkit kernel via zero-day Microsoft est rare et indique un acteur étatique bien doté. Le patch CVE-2026-68820 est obligatoire en priorité maximale : la zero-day est activement exploitée et désormais publique."
+      },
+      "recommandations": [
+        {
+          "en": "Apply Microsoft August 2026 patch (CVE-2026-68820) on all Windows hosts, priority R&D/defense.",
+          "fr": "Appliquer le patch Microsoft d'août 2026 (CVE-2026-68820) sur tous les postes Windows, priorité R&D/défense."
+        },
+        {
+          "en": "Monitor defense-targeted recruitment emails.",
+          "fr": "Surveiller les emails de recrutement ciblant les ingénieurs défense."
+        },
+        {
+          "en": "Deploy FudModule detection (YARA, EDR kernel inspection).",
+          "fr": "Déployer la détection FudModule (YARA, EDR inspection kernel)."
+        },
+        {
+          "en": "Sensitize defense employees to fake job offer social engineering.",
+          "fr": "Sensibiliser les employés du secteur défense à l'ingénierie sociale fake job offer."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Verify CVE-2026-68820 patch on all Windows (priority R&D/defense).",
+            "Enable kernel logging (Sysmon 1, 7, 8; ETW AFD.sys).",
+            "Prepare FudModule/Troy signatures.",
+            "Offline backups of R&D hosts."
+          ],
+          "fr": [
+            "Vérifier le patch CVE-2026-68820 sur tout Windows (priorité R&D/défense).",
+            "Activer la journalisation kernel (Sysmon 1, 7, 8 ; ETW AFD.sys).",
+            "Préparer signatures FudModule/Troy.",
+            "Sauvegardes hors-ligne des postes R&D."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Sysmon: unsigned driver load in PDF reader/SecurityPDF context.",
+            "YARA: FudModule, Troy.",
+            "EDR: kernel token manipulation, SSRB hooks, T1562."
+          ],
+          "fr": [
+            "Sysmon : chargement driver non signé dans contexte PDF reader/SecurityPDF.",
+            "YARA : FudModule, Troy.",
+            "EDR : manipulation tokens kernel, hooks SSRB, T1562."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate compromised hosts.",
+            "Revoke targeted account credentials.",
+            "Remove FudModule/Troy; rebuild from clean image if kernel integrity doubt.",
+            "Close FudModule persistence (SSDT hooks, kernel callbacks).",
+            "Restore from clean image post-patch.",
+            "72h EDR monitoring."
+          ],
+          "fr": [
+            "Isoler les postes compromis.",
+            "Révoquer les credentials des comptes ciblés.",
+            "Supprimer FudModule/Troy ; reconstruire depuis image propre si doute kernel.",
+            "Fermer la persistance FudModule (SSDT hooks, callback kernel).",
+            "Restaurer depuis image propre post-patch.",
+            "Surveillance EDR 72h."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Incident report Dream Job -> Troy -> FudModule timeline.",
+            "NIS2/GDPR/export control notifications.",
+            "Share IOCs with national CERT and defense partners."
+          ],
+          "fr": [
+            "Rapport Dream Job → Troy → FudModule.",
+            "Notifications NIS2/RGPD/export control.",
+            "Partage IOCs au CERT national et partenaires défense."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for other SecurityPDF deliveries.",
+            "Hunt for FudModule disabling security tools."
+          ],
+          "fr": [
+            "Chasser les autres livraisons SecurityPDF.",
+            "Chasser les FudModule désactivant des solutions de sécurité."
+          ]
+        }
+      },
+      "tags": [
+        "Lazarus",
+        "DPRK",
+        "Operation_Dream_Job",
+        "AFD_sys",
+        "FudModule",
+        "Troy",
+        "CVE-2026-68820",
+        "defense",
+        "zero_day",
+        "state_sponsored"
+      ],
+      "sources": [
+        "https://research.checkpoint.com/2026/shattering-the-dream-when-a-job-offer-becomes-a-zero-day-attack/",
+        "https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including-a-windows-driver-zero-day-under-active-attack.html",
+        "https://social.raytec.co/@techbot/117080559364185575",
+        "https://www.reddit.com/r/blueteamsec/comments/1vm2uwf/shattering_the_dream_when_a_job_offer_becomes_a/"
+      ],
+      "date": "2026-08-12"
+    },
+    {
+      "title": {
+        "en": "Gunra ransomware - FBI/CISA alert, 51 victims, Fortinet + Schneider exploitation",
+        "fr": "Rançongiciel Gunra - Alerte FBI/CISA, 51 victimes, exploitation Fortinet + Schneider"
+      },
+      "description": {
+        "en": "South Korea cyber services and CISA/FBI publish a joint alert on Gunra ransomware targeting critical infrastructure worldwide: healthcare, financial services, government, professional and nonprofit services. Gunra listed 51 victims (Ransomware.Live). Initial access combines: (1) internet-facing Schneider Electric PowerLogic P5 (CVE-2024-5559) and Fortinet FortiOS/FortiProxy (CVE-2025-24472), (2) stolen/leaked credentials, (3) SSH access control flaws on VPN gateways. Post-compromise: lateral via stolen sessions and RDP, targeting VDI auth webservers, internal AD, IT virtual desktops, exfiltration OneDrive/SharePoint (sometimes dozens of TB), then ransomware deployment. Double extortion. 5-7 day payment deadline, publication on leak site otherwise.",
+        "fr": "Les services cyber de Corée du Sud et la CISA/FBI publient une alerte conjointe sur le rançongiciel Gunra ciblant les infrastructures critiques mondiales : santé, services financiers, gouvernement, services professionnels et à but non lucratif. Gunra a listé 51 victimes (Ransomware.Live). L'accès initial combine : (1) failles internet-facing Schneider Electric PowerLogic P5 (CVE-2024-5559) et Fortinet FortiOS/FortiProxy (CVE-2025-24472), (2) credentials volés ou leakés, (3) failles SSH access control sur passerelles VPN. Post-compromission : mouvement latéral via sessions volées et RDP, ciblage des webservers d'auth VDI, contrôleurs Active Directory, bureaux virtuels IT, exfiltration OneDrive/SharePoint (parfois dizaines de To), puis déploiement ransomware. Double extorsion. Délai de paiement 5 à 7 jours, publication sur leak site sinon."
+      },
+      "threat_actor": "Gunra",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Healthcare",
+          "Financial_Services",
+          "Government",
+          "Critical_Infrastructure"
+        ],
+        "fr": [
+          "Santé",
+          "Services_financiers",
+          "Gouvernement",
+          "Infrastructure_critique"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1190",
+        "T1078",
+        "T1021.001",
+        "T1486",
+        "T1567"
+      ],
+      "analyse": {
+        "en": "Gunra is the current evolution of RaaS targeting critical infrastructure. The Fortinet + credentials + SharePoint schema is operationally critical: Fortinet firewalls are widespread, and the combination with CVE-2026-45659 SharePoint (CISA KEV for ransomware) creates a complete initial-access-to-deployment chain. SOC/CERT must treat the FBI/CISA alert as maximum priority.",
+        "fr": "Gunra est l'évolution courante du RaaS ciblant l'infrastructure critique. Le schéma Fortinet + credentials + SharePoint est opérationnellement critique : les pare-feu Fortinet sont très répandus, et la combinaison avec CVE-2026-45659 SharePoint (CISA KEV pour ransomware) crée une chaîne complète d'accès initial jusqu'au déploiement. Les SOC/CERT doivent traiter l'alerte FBI/CISA comme priorité maximale."
+      },
+      "recommandations": [
+        {
+          "en": "Verify Fortinet CVE-2025-24472 patch on all exposed FortiOS/FortiProxy (patch available since Feb 2025).",
+          "fr": "Vérifier le patch Fortinet CVE-2025-24472 sur tous les FortiOS/FortiProxy exposés (patch disponible depuis février 2025)."
+        },
+        {
+          "en": "Verify Schneider Electric PowerLogic P5 CVE-2024-5559 patch.",
+          "fr": "Vérifier le patch Schneider Electric PowerLogic P5 CVE-2024-5559."
+        },
+        {
+          "en": "Monitor and restrict VPN access (phishing-resistant MFA, credential rotation, SSH access control anomaly detection).",
+          "fr": "Surveiller et restreindre les accès VPN (MFA phishing-resistant, rotation credentials, détection SSH access control anomalies)."
+        },
+        {
+          "en": "Segment AD, VDI, SharePoint; harden admin auth.",
+          "fr": "Segmenter AD, VDI, SharePoint ; durcir l'authentification admin."
+        },
+        {
+          "en": "Detect OneDrive/SharePoint exfiltration (DLP, anomaly detection, large volume alerts).",
+          "fr": "Détection d'exfiltration OneDrive/SharePoint (DLP, anomaly detection, alertes gros volumes)."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory exposed Fortinet/Schneider; verify patches.",
+            "FIDO2 MFA on VPN, admin AD, VDI.",
+            "Immutable offline backups; SharePoint restore test.",
+            "VDI/AD/OneDrive/SharePoint logging enabled."
+          ],
+          "fr": [
+            "Inventorier les Fortinet/Schneider exposés ; vérifier les patches.",
+            "MFA FIDO2 sur VPN, admin AD, VDI.",
+            "Sauvegardes hors-ligne immuables ; test de restauration SharePoint.",
+            "Journalisation VDI/AD/OneDrive/SharePoint activée."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "SIEM: suspicious VPN auth + rapid RDP/VDI session rotation.",
+            "EDR: PsExec/WMI/Cobalt Strike execution post-VPN.",
+            "Cloud: bulk OneDrive/SharePoint download (>10 GB)."
+          ],
+          "fr": [
+            "SIEM : authentifications VPN suspectes + rotation rapide sessions RDP/VDI.",
+            "EDR : exécution PsExec/WMI/Cobalt Strike post-VPN.",
+            "Cloud : bulk download OneDrive/SharePoint (>10 Go)."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate impacted segments; cut external VPN if ransomware.",
+            "Disable compromised admin accounts; reset krbtgt twice.",
+            "Remove ransomware implants and malicious accounts.",
+            "Rotate all admin AD/VPN/VDI credentials.",
+            "Close persistence (scheduled tasks, malicious services).",
+            "Restore SharePoint/OneDrive from immutable offline backups.",
+            "Rebuild DCs if compromised.",
+            "72h monitoring."
+          ],
+          "fr": [
+            "Isoler les segments impactés ; couper VPN externe si ransomware.",
+            "Désactiver les comptes admin compromis ; réinitialiser krbtgt deux fois.",
+            "Supprimer les implants ransomware et comptes malveillants.",
+            "Pivoter toutes les credentials admin AD/VPN/VDI.",
+            "Fermer la persistance (tâches planifiées, services malveillants).",
+            "Restaurer SharePoint/OneDrive depuis sauvegardes immuables hors-ligne.",
+            "Reconstruire les DC si compromis.",
+            "Surveillance 72h."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Incident report vishing + ransomware phases.",
+            "MTTD/MTTR.",
+            "REX with management + regulators (DORA for EU financial, central bank).",
+            "GDPR/NIS2 notifications. Share IOCs with national CERT and FS-ISAC."
+          ],
+          "fr": [
+            "Rapport vishing + ransomware.",
+            "MTTD/MTTR.",
+            "REX direction + régulateurs (DORA pour EU financier, banque centrale).",
+            "Notifications RGPD/NIS2. Partage IOCs au CERT national et FS-ISAC."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for suspicious VPN sessions with RDP/VDI rotation.",
+            "Hunt for bulk OneDrive/SharePoint downloads pre-encryption."
+          ],
+          "fr": [
+            "Chasser les sessions VPN suspectes avec rotation RDP/VDI.",
+            "Chasser les bulk downloads OneDrive/SharePoint pré-chiffrement."
+          ]
+        }
+      },
+      "tags": [
+        "Gunra",
+        "ransomware",
+        "RaaS",
+        "Fortinet",
+        "CVE-2025-24472",
+        "Schneider",
+        "CVE-2024-5559",
+        "FBI",
+        "CISA",
+        "double_extortion",
+        "SharePoint",
+        "OneDrive"
+      ],
+      "sources": [
+        "https://thehackernews.com/2026/08/gunra-ransomware-exploits-fortinet-and-schneider-electric-flaws-to-breach-networks.html",
+        "https://www.security.nl/posting/948776/VS+waarschuwt+voor+ransomware-aanvallen+via+kwetsbare+Fortinet-firewalls",
+        "https://thecyberexpress.com/gunra-ransomware-expands-raas-operations/",
+        "https://www.security.nl/posting/948804/Kritiek+Microsoft+SharePoint-lek+ook+gebruikt+bij+ransomware-aanvallen"
+      ],
+      "date": "2026-08-12"
+    },
+    {
+      "title": {
+        "en": "Polish CHP plant - First documented IT/OT pivot via private cellular APN",
+        "fr": "Centrale CHP polonaise - Premier pivot IT/OT via APN cellulaire privé documenté"
+      },
+      "description": {
+        "en": "CERT Polska disclosed August 8, 2026 a December 2025 incident in a Polish combined heat and power (CHP) plant supplying heat to ~50,000 residents. Attackers reached the industrial control network via a private cellular APN dedicated to the distribution system operator. A configuration allowing any device on the APN to communicate with others let the attacker pivot from a compromised wind-farm network to a CHP plant controller. Steam turbine and process-water treatment system shut down. No customer outage. First real-world documented case of this APN attack vector per CERT Polska. CVE-2023-32349 and CVE-2023-32350 cited (wind farm side).",
+        "fr": "CERT Polska a divulgué le 8 août 2026 un incident survenu en décembre 2025 dans une centrale CHP polonaise (50 000 habitants chauffés). Attaquants ont atteint le réseau de contrôle industriel via un APN cellulaire privé de l'opérateur de distribution. Une configuration permettant à n'importe quel device sur l'APN de communiquer avec les autres a permis à l'attaquant de pivoter depuis un réseau éolien compromis vers un contrôleur de la centrale CHP. Turbine à vapeur et traitement d'eau process arrêtés. Aucune coupure client. Premier cas réel documenté d'attaque IT/OT via APN selon CERT Polska. CVE-2023-32349 et CVE-2023-32350 citées (côté wind farm)."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "unknown",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Energy",
+          "Critical_Infrastructure",
+          "OT"
+        ],
+        "fr": [
+          "Energie",
+          "Infrastructure_critique",
+          "OT"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1021",
+        "T1485"
+      ],
+      "analyse": {
+        "en": "The private cellular APN vector bypasses most classic IT/OT controls (Ethernet segmentation, firewalls). Infrastructures using dedicated APNs (energy, transport, telecom) must reconsider their isolation model: a compromised device on the APN can reach any other. Stopping an operating turbine is a potential physical safety event.",
+        "fr": "Le vecteur APN cellulaire privé outrepasse la plupart des contrôles IT/OT classiques (segmentation Ethernet, pare-feu). Les infrastructures utilisant des APN dédiés (énergie, transport, télécoms) doivent reconsidérer leur modèle d'isolation : un équipement compromis sur l'APN peut atteindre n'importe quel autre. L'arrêt d'une turbine en exploitation est un événement de sécurité physique potentiel."
+      },
+      "recommandations": [
+        {
+          "en": "Segment private cellular APNs: forbid device-to-device except explicit whitelist.",
+          "fr": "Segmenter les APN cellulaires privés : interdire device-à-device sauf whitelist explicite."
+        },
+        {
+          "en": "Apply mutual auth and encryption on industrial APNs.",
+          "fr": "Appliquer l'authentification mutuelle et le chiffrement sur les APN industriels."
+        },
+        {
+          "en": "Monitor intra-APN flows (IDS, NetFlow).",
+          "fr": "Surveiller les flux intra-APN (IDS, NetFlow)."
+        },
+        {
+          "en": "Patch CVE-2023-32349/32350 on wind farm equipment.",
+          "fr": "Patcher CVE-2023-32349/32350 sur les équipements éoliens."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory private APNs and device-to-device config.",
+            "APN cutoff/isolation plan.",
+            "Intra-APN flow logging."
+          ],
+          "fr": [
+            "Inventorier les APN privés et la config device-à-device.",
+            "Plan de coupure/isolation APN.",
+            "Journalisation des flux intra-APN."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "IDS/APN: device connecting to controller outside whitelist.",
+            "OT detection: turbine/treatment shutdown without legitimate command."
+          ],
+          "fr": [
+            "IDS/APN : équipement se connectant à un contrôleur hors whitelist.",
+            "Détection OT : arrêt turbine/traitement sans commande légitime."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate cellular APN; cut device-to-device.",
+            "Cut compromised wind-farm access to APN.",
+            "Restore APN config (whitelist, mutual auth).",
+            "Patch CVE-2023-32349/32350.",
+            "Rebuild compromised controllers."
+          ],
+          "fr": [
+            "Isoler l'APN cellulaire ; couper device-à-device.",
+            "Couper l'accès du réseau éolien compromis à l'APN.",
+            "Restaurer la config APN (whitelist, auth mutuelle).",
+            "Patcher CVE-2023-32349/32350.",
+            "Reconstruire les contrôleurs compromis."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "NIS2 (essential entity energy), IEC 62443, sectoral regulator.",
+            "Share with CERT national and ENISA.",
+            "REX with distribution operator and energy regulator."
+          ],
+          "fr": [
+            "NIS2 (entité essentielle énergie), IEC 62443, autorité sectorielle.",
+            "Partager avec le CERT national et ENISA.",
+            "REX avec l'opérateur de distribution et le régulateur énergie."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for other intra-APN communications outside whitelist.",
+            "Hunt for unpatched wind farm equipment."
+          ],
+          "fr": [
+            "Chasser les autres communications intra-APN hors whitelist.",
+            "Chasser les équipements éoliens non patchés."
+          ]
+        }
+      },
+      "tags": [
+        "Poland",
+        "CHP",
+        "APN",
+        "IT_OT_pivot",
+        "CERT_Polska",
+        "CVE-2023-32349",
+        "CVE-2023-32350",
+        "wind_farm",
+        "turbine",
+        "critical_infrastructure"
+      ],
+      "sources": [
+        "https://thehackernews.com/2026/08/hackers-breach-polish-power-plant.html"
+      ],
+      "date": "2026-08-12"
+    },
+    {
+      "title": {
+        "en": "Head Mare APT - TrueConf server exploitation + PhantomCore/PhantomGraph",
+        "fr": "Head Mare APT - Exploitation serveur TrueConf + PhantomCore/PhantomGraph"
+      },
+      "description": {
+        "en": "Kaspersky publishes analysis of a Head Mare group attack (previously classified hacktivist, requalified APT) detected in July 2026. Attacker exploits a chain of two new vulnerabilities (KLCERT-26-057 and KLCERT-26-058) on the TrueConf video conferencing server to execute arbitrary code with maximum privileges. Port 4307/TCP, open by default, is used to connect without prior authorization. TrueConf 5.3.x-5.3.9, 5.4.x-5.4.9, 5.5.x-5.5.5 affected. Attackers replace TrueConf client installers with infected versions deploying PhantomCore malware on video conference participants. Second component PhantomGraph also deployed. No destructive activity (encryption/wiping) on target infrastructures: espionage orientation.",
+        "fr": "Kaspersky publie l'analyse d'une attaque du groupe Head Mare (précédemment classé hacktiviste, requalifié APT) détectée en juillet 2026. L'attaquant exploite une chaîne de deux nouvelles vulnérabilités (KLCERT-26-057 et KLCERT-26-058) sur le serveur de visioconférence TrueConf pour exécuter du code arbitraire avec privilèges maximaux. Port 4307/TCP, ouvert par défaut, utilisé pour se connecter sans autorisation préalable. TrueConf 5.3.x-5.3.9, 5.4.x-5.4.9, 5.5.x-5.5.5 affectés. Les attaquants remplacent les installers TrueConf client par des versions infectées déploiant le malware PhantomCore sur les participants à la visioconférence. Second composant PhantomGraph aussi déployé. Absence d'activité destructive (chiffrement/wiping) sur les infrastructures cibles : orientation espionnage."
+      },
+      "threat_actor": "Head Mare",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "State-sponsored",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Government",
+          "Defense",
+          "Technology"
+        ],
+        "fr": [
+          "Gouvernement",
+          "Defense",
+          "Technologie"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1190",
+        "T1195.002",
+        "T1219"
+      ],
+      "analyse": {
+        "en": "TrueConf is deployed in enterprise and sensitive contexts (government, defense). Server compromise enables redistribution of infected clients to all participants, making it a large-scale internal supply chain vector. Head Mare now APT-qualified, elevating the threat level above classic hacktivists.",
+        "fr": "TrueConf est déployé en entreprise et dans des contextes sensibles (gouvernement, défense). La compromission du serveur permet la redistribution de clients infectés à tous les participants, en faisant un vecteur de supply chain interne à large échelle. Head Mare désormais qualifié APT, ce qui élève le niveau de menace au-dessus des hacktivistes classiques."
+      },
+      "recommandations": [
+        {
+          "en": "Update TrueConf server beyond affected versions.",
+          "fr": "Mettre à jour le serveur TrueConf au-delà des versions affectées."
+        },
+        {
+          "en": "Restrict port 4307/TCP exposure (segmentation, ACL).",
+          "fr": "Restreindre l'exposition du port 4307/TCP (segmentation, ACL)."
+        },
+        {
+          "en": "Verify integrity of distributed TrueConf client installers.",
+          "fr": "Vérifier l'intégrité des installers TrueConf client distribués."
+        },
+        {
+          "en": "Deploy PhantomCore/PhantomGraph detection (YARA, EDR).",
+          "fr": "Déployer la détection PhantomCore/PhantomGraph (YARA, EDR)."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory TrueConf servers and port 4307/TCP exposure.",
+            "Verify versions (5.3.x-5.3.9, 5.4.x-5.4.9, 5.5.x-5.5.5).",
+            "Prepare PhantomCore/PhantomGraph YARA signatures."
+          ],
+          "fr": [
+            "Inventorier les serveurs TrueConf et l'exposition port 4307/TCP.",
+            "Vérifier les versions (5.3.x-5.3.9, 5.4.x-5.4.9, 5.5.x-5.5.5).",
+            "Préparer signatures YARA PhantomCore/PhantomGraph."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Firewall/IDS: connections on port 4307/TCP from non-whitelisted IPs.",
+            "EDR: unsigned/unknown-hash TrueConf client execution.",
+            "YARA: PhantomCore, PhantomGraph."
+          ],
+          "fr": [
+            "Firewall/IDS : connexions sur port 4307/TCP depuis IP non whitelistées.",
+            "EDR : exécution de binaires TrueConf client non signés ou hash inconnu.",
+            "YARA : PhantomCore, PhantomGraph."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate compromised TrueConf server.",
+            "Cut distribution of suspect client installers.",
+            "Update TrueConf server.",
+            "Remove PhantomCore/PhantomGraph from participant hosts.",
+            "Redistribute authentic TrueConf installers.",
+            "72h EDR monitoring."
+          ],
+          "fr": [
+            "Isoler le serveur TrueConf compromis.",
+            "Couper la distribution d'installers client suspects.",
+            "MAJ le serveur TrueConf.",
+            "Supprimer PhantomCore/PhantomGraph des postes participants.",
+            "Redistribuer des installers TrueConf authentiques.",
+            "Surveillance EDR 72h."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "NIS2/GDPR notifications.",
+            "Share IOCs with national CERT."
+          ],
+          "fr": [
+            "Notifications NIS2/RGPD.",
+            "Partage IOCs au CERT national."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for replaced TrueConf client installers.",
+            "Hunt for PhantomCore data exfiltration."
+          ],
+          "fr": [
+            "Chasser les installers TrueConf client remplacés.",
+            "Chasser l'exfiltration de données PhantomCore."
+          ]
+        }
+      },
+      "tags": [
+        "Head_Mare",
+        "APT",
+        "TrueConf",
+        "PhantomCore",
+        "PhantomGraph",
+        "KLCERT-26-057",
+        "KLCERT-26-058",
+        "supply_chain",
+        "espionage"
+      ],
+      "sources": [
+        "https://securelist.com/tr/head-mare-targets-trueconf-server-with-phantomcore-phantomgraph/120981/"
+      ],
+      "date": "2026-08-12"
+    },
+    {
+      "title": {
+        "en": "Project CAV3RN - Google Apps Script C2 relay, DNS-based channel selection (Israel targets)",
+        "fr": "Project CAV3RN - Relay C2 Google Apps Script, sélection DNS du canal (cibles Israël)"
+      },
+      "description": {
+        "en": "Kaspersky publishes continued analysis of the CAV3RN modular espionage framework (previous reports June and July 2026). Target: Israel. New C2 communication module (GoogleService.dll, .NET 8 NativeAOT) uses DNS A-record responses to choose between direct HTTPS and Google Apps Script relay for each transaction. DNS infrastructure can validate and replace the relay deployment ID, enabling Google channel rotation. Framework also includes a local broker that discovers and loads DLL components, routes messages between them, supports runtime upgrades.",
+        "fr": "Kaspersky publie la suite de l'analyse du framework d'espionnage modulaire CAV3RN (rapports précédents juin et juillet 2026). Cible : Israël. Nouveau module de communication C2 (GoogleService.dll, .NET 8 NativeAOT) utilise les réponses DNS A-record pour choisir entre canal HTTPS direct et relay Google Apps Script pour chaque transaction. L'infrastructure DNS peut valider et remplacer l'ID de déploiement du relay, permettant la rotation du canal Google. Le framework inclut aussi un broker local qui découvre et charge les composants DLL, route les messages entre eux, et supporte les mises à jour runtime."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "State-sponsored",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Government",
+          "Technology"
+        ],
+        "fr": [
+          "Gouvernement",
+          "Technologie"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1071.001",
+        "T1568.002"
+      ],
+      "analyse": {
+        "en": "Use of Google Apps Script as C2 relay is significant: outbound traffic looks like legitimate Google calls, bypassing most blocklists. DNS-based channel selection adds high operational resilience. Modular framework typical of state actor (Israel target suggests Iran-aligned probable). Difficult detection, to be based on behavior (unexpected DLL, DNS exfiltration patterns).",
+        "fr": "L'usage de Google Apps Script comme relay C2 est significatif : le trafic sortant ressemble à un appel légitime à Google, contournant la plupart des listes de blocage. La sélection DNS entre canaux ajoute une résilience opérationnelle élevée. Framework modulaire typique d'un acteur étatique (cible Israël suggère Iran-aligned probable). Détection difficile, à baser sur le comportement (DLL inattendue, patterns d'exfiltration DNS)."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor calls to script.google.com from non-browser processes.",
+          "fr": "Surveiller les appels à script.google.com depuis les processus non navigateurs."
+        },
+        {
+          "en": "DNS detection: anomalous A-record queries with deployment ID rotation.",
+          "fr": "Détection DNS : requêtes A anormales avec rotation d'ID de déploiement."
+        },
+        {
+          "en": "EDR detection: unsigned GoogleService.dll load, local broker DLL.",
+          "fr": "Détection EDR : chargement de GoogleService.dll non signée, broker DLL local."
+        },
+        {
+          "en": "Restrict .NET NativeAOT execution outside approved paths.",
+          "fr": "Restreindre l'exécution .NET NativeAOT hors chemins approuvés."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Log DNS queries and calls to script.google.com.",
+            "Enable EDR detection on .NET NativeAOT DLL load."
+          ],
+          "fr": [
+            "Journaliser les requêtes DNS et les appels à script.google.com.",
+            "Activer la détection EDR sur chargement de DLL .NET NativeAOT."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "DNS rule: A queries with suspicious deployment ID rotation.",
+            "EDR: non-browser process contacting script.google.com.",
+            "YARA: GoogleService.dll, CAV3RN broker."
+          ],
+          "fr": [
+            "Règle DNS : requêtes A avec rotation d'ID de déploiement suspecte.",
+            "EDR : process non navigateur contactant script.google.com.",
+            "YARA : GoogleService.dll, broker CAV3RN."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate compromised hosts.",
+            "Block script.google.com for non-approved accounts (proxy).",
+            "Remove GoogleService.dll and CAV3RN components.",
+            "Rotate compromised credentials.",
+            "72h monitoring."
+          ],
+          "fr": [
+            "Isoler les postes compromis.",
+            "Bloquer script.google.com pour les comptes non approuvés (proxy).",
+            "Supprimer GoogleService.dll et les composants CAV3RN.",
+            "Pivoter les credentials compromises.",
+            "Surveillance 72h."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "NIS2/GDPR notifications.",
+            "Share IOCs with national CERT."
+          ],
+          "fr": [
+            "Notifications NIS2/RGPD.",
+            "Partage IOCs au CERT national."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for non-browser script.google.com calls.",
+            "Hunt for Google Apps Script deployment ID rotation."
+          ],
+          "fr": [
+            "Chasser les appels script.google.com hors navigateur.",
+            "Chasser la rotation d'ID de déploiement Google Apps Script."
+          ]
+        }
+      },
+      "tags": [
+        "CAV3RN",
+        "Kaspersky",
+        "Google_Apps_Script",
+        "C2",
+        "DNS",
+        "Israel",
+        "espionage",
+        "state_sponsored",
+        "modular_framework"
+      ],
+      "sources": [
+        "https://securelist.com/project-cav3rn-continues/120991/",
+        "https://social.raytec.co/@techbot/117080803713457795"
+      ],
+      "date": "2026-08-12"
+    },
+    {
+      "title": {
+        "en": "Kimwolf v7 - Android/IoT botnet evolution",
+        "fr": "Kimwolf v7 - Évolution du botnet Android/IoT"
+      },
+      "description": {
+        "en": "Unit 42 (Palo Alto Networks) publishes analysis of Kimwolf v7 botnet, targeting Android TV boxes and set-top boxes. v7 upgrades DDoS attack capabilities and C2 infrastructure resilience via HTTP tunnel. Name 'Kimwolf' contains a racial slur used by the operator (partially redacted by Unit 42 for identification purposes).",
+        "fr": "Unit 42 (Palo Alto Networks) publie l'analyse de la v7 du botnet Kimwolf, qui cible les Android TV boxes et set-top boxes. La v7 améliore les capacités d'attaque DDoS et la résilience du C2 via un tunnel HTTP. Le nom « Kimwolf » contient un slur racial utilisé par l'opérateur (partiellement redacted par Unit 42 pour permettre l'identification)."
+      },
+      "threat_actor": "Kimwolf",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "IoT",
+          "Android",
+          "Consumer"
+        ],
+        "fr": [
+          "IoT",
+          "Android",
+          "Grand_public"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1498",
+        "T1071.001"
+      ],
+      "analyse": {
+        "en": "Android TV boxes and set-top boxes are massively deployed, under-protected (unpatched firmware, default credentials), and constitute an ideal botnet surface. Kimwolf v7 adds C2 resilience (HTTP tunnel) complicating takedown. Outgoing DDoS can saturate critical targets.",
+        "fr": "Les Android TV boxes et set-top boxes sont massivement déployées, sous-protégées (firmware non mis à jour, credentials par défaut), et constituent une surface de botnet idéal. Kimwolf v7 ajoute la résilience C2 (tunnel HTTP) qui complique le démantèlement. Les DDoS qui en sortent peuvent saturer des cibles critiques."
+      },
+      "recommandations": [
+        {
+          "en": "Update Android TV boxes and set-top boxes.",
+          "fr": "Mettre à jour les Android TV boxes et set-top boxes."
+        },
+        {
+          "en": "Change default credentials.",
+          "fr": "Changer les credentials par défaut."
+        },
+        {
+          "en": "Deploy outgoing DDoS detection (NDR, NetFlow).",
+          "fr": "Déployer la détection DDoS en sortie (NDR, NetFlow)."
+        },
+        {
+          "en": "Monitor anomalous HTTP tunnels from IoT devices.",
+          "fr": "Surveiller les tunnels HTTP anormaux depuis les devices IoT."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory Android TV / set-top boxes.",
+            "Log outgoing IoT flows."
+          ],
+          "fr": [
+            "Inventorier les Android TV / set-top boxes.",
+            "Journaliser les flux sortants IoT."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "NDR: anomalous HTTP tunnels from IoT devices.",
+            "Detection: synchronized DDoS outgoing traffic spikes."
+          ],
+          "fr": [
+            "NDR : tunnels HTTP anormaux depuis devices IoT.",
+            "Détection : pics de trafic DDoS sortant synchronisés."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate compromised devices.",
+            "Rebuild firmware from clean image.",
+            "72h monitoring."
+          ],
+          "fr": [
+            "Isoler les devices compromis.",
+            "Rebuilder firmware depuis image propre.",
+            "Surveillance 72h."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Notify if outgoing DDoS impacts third parties.",
+            "Share with national CERT."
+          ],
+          "fr": [
+            "Notifier si DDoS sortant impacte des tiers.",
+            "Partager avec le CERT national."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for infected Android TV boxes via synchronized traffic spikes."
+          ],
+          "fr": [
+            "Chasser les Android TV boxes infectées via pics de trafic synchronisés."
+          ]
+        }
+      },
+      "tags": [
+        "Kimwolf",
+        "botnet",
+        "Android",
+        "IoT",
+        "DDoS",
+        "HTTP_tunnel",
+        "Unit_42"
+      ],
+      "sources": [
+        "https://unit42.paloaltonetworks.com/kimwolf-v7-botnet-malware/"
+      ],
+      "date": "2026-08-12"
+    },
+    {
+      "title": {
+        "en": "BdThemes - Supply chain attack via JSON poisoning, rogue WordPress admins",
+        "fr": "BdThemes - Supply chain attack via JSON poisoning, admins WordPress rogue"
+      },
+      "description": {
+        "en": "thehackernews reports a supply chain attack against BdThemes (WordPress theme vendor). Malicious JSON files injected to create rogue WordPress admins on sites using compromised themes. Exact vector (repository compromise, malicious update) not detailed in source.",
+        "fr": "thehackernews rapporte une attaque par supply chain contre BdThemes (vendeur de thèmes WordPress). Des fichiers JSON malveillants ont été injectés pour créer des administrateurs WordPress rogue sur les sites utilisant les thèmes compromis. Vecteur exact (compromission du dépôt, mise à jour malveillante) non détaillé dans la source."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Technology",
+          "CMS",
+          "WordPress"
+        ],
+        "fr": [
+          "Technologie",
+          "CMS",
+          "WordPress"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1195.002",
+        "T1136.001"
+      ],
+      "analyse": {
+        "en": "WordPress themes are massively deployed. A supply chain compromise enables large-scale takeover of WordPress sites (e-commerce, media, institutional). Rogue admins are persistence hard to detect without account audit.",
+        "fr": "Les thèmes WordPress sont massivement déployés. Une compromission de la supply chain permet une prise de contrôle à large échelle de sites WordPress (e-commerce, médias, institutionnels). Les administrateurs rogue constituent une persistance difficile à détecter sans audit des comptes admin."
+      },
+      "recommandations": [
+        {
+          "en": "Check WordPress admin accounts on sites using BdThemes.",
+          "fr": "Vérifier les comptes administrateurs WordPress sur les sites utilisant BdThemes."
+        },
+        {
+          "en": "Update BdThemes themes from a clean source.",
+          "fr": "Mettre à jour les thèmes BdThemes depuis une source propre."
+        },
+        {
+          "en": "Detect rogue admin creation (WAF, account audit).",
+          "fr": "Détection d'administration rogue (WAF, audit des comptes admin)."
+        },
+        {
+          "en": "Harden WordPress admin auth (MFA, limit account creation).",
+          "fr": "Durcir l'authentification admin WordPress (MFA, limitation des créations de comptes)."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory WordPress sites using BdThemes.",
+            "Enable admin account audit."
+          ],
+          "fr": [
+            "Inventaire des sites WordPress utilisant BdThemes.",
+            "Activer l'audit des comptes admin."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "WAF/SIEM: WordPress admin account creation without legitimacy.",
+            "Detection: admin WordPress connections from suspicious IPs."
+          ],
+          "fr": [
+            "WAF/SIEM : créations de comptes admin WordPress sans légitimité.",
+            "Détection : connexions admin WordPress depuis IP suspectes."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Remove rogue admin accounts.",
+            "Update BdThemes from clean source.",
+            "Rotate legitimate admin credentials."
+          ],
+          "fr": [
+            "Supprimer les comptes admin rogue.",
+            "MAJ BdThemes depuis source propre.",
+            "Pivoter les credentials admin légitimes."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Notify if personal/e-commerce data compromised.",
+            "Share with national CERT."
+          ],
+          "fr": [
+            "Notifier si données personnelles / e-commerce compromises.",
+            "Partager avec le CERT national."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for rogue admin accounts on WordPress sites."
+          ],
+          "fr": [
+            "Chasser les comptes admin rogue sur les sites WordPress."
+          ]
+        }
+      },
+      "tags": [
+        "BdThemes",
+        "supply_chain",
+        "WordPress",
+        "JSON_poisoning",
+        "rogue_admin"
+      ],
+      "sources": [
+        "https://thehackernews.com/2026/08/bdthemes-supply-chain-attack-poisons-json-to-create-rogue-wordpress-admins.html"
+      ],
+      "date": "2026-08-12"
+    },
+    {
+      "title": {
+        "en": "ChainDrop - Self-propagating npm worm, 400+ packages compromised",
+        "fr": "ChainDrop - Ver auto-propageant npm, 400+ packages compromis"
+      },
+      "description": {
+        "en": "An OTX pulse signals 'ChainDrop Worm', a self-propagating worm on the npm ecosystem that infected 400+ packages. Preliminary data (unverified). No technical detail in the OTX source. Relates to previous npm worms (2024, self-propagating packages).",
+        "fr": "Un pulse OTX signale « ChainDrop Worm », un ver auto-propageant sur l'écosystème npm qui aurait infecté plus de 400 packages. Données préliminaires (non vérifiées). Pas de détail technique dans la source OTX. À rapprocher des vers npm précédents (2024, packages self-propagating)."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Software_Development",
+          "Supply_Chain"
+        ],
+        "fr": [
+          "Developpement_logiciel",
+          "Supply_Chain"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1195.002"
+      ],
+      "analyse": {
+        "en": "A 400+ package npm worm indicates transverse propagation in the JavaScript supply chain. Any Node.js project with un-locked dependencies (no npm ci from immutable lockfile) is at risk of malicious code execution in build or runtime. SOC/CERT with a Node.js development fleet must treat as major supply chain incident.",
+        "fr": "Un ver npm à 400+ packages indique une propagation transverse dans la supply chain JavaScript. Tout projet Node.js avec dépendances non verrouillées (pas de `npm ci` depuis lockfile immuable) est à risque d'exécution de code malveillant en build ou runtime. Les SOC/CERT avec un parc de développement Node.js doivent traiter comme incident supply chain majeur."
+      },
+      "recommandations": [
+        {
+          "en": "Lock npm dependencies (npm ci, lockfile integrity, SBOM).",
+          "fr": "Verrouiller les dépendances npm (`npm ci`, lockfile integrity, SBOM)."
+        },
+        {
+          "en": "Restrict installation of unverified packages.",
+          "fr": "Restreindre l'installation de packages non vérifiés."
+        },
+        {
+          "en": "Enable npm 2FA for internal maintainers.",
+          "fr": "Activer npm 2FA pour les mainteneurs internes."
+        },
+        {
+          "en": "Monitor npm install from non-official registries.",
+          "fr": "Surveiller les `npm install` depuis registry non officiel."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Inventory critical npm dependencies.",
+            "Verify lockfile integrity (SBOM, sigstore)."
+          ],
+          "fr": [
+            "Inventorier les dépendances npm critiques.",
+            "Vérifier l'intégrité des lockfiles (SBOM, sigstore)."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "SIEM: npm install by service account + non-official registry connection.",
+            "Detection: dependencies with unexpected hashes vs lockfile."
+          ],
+          "fr": [
+            "SIEM : `npm install` par compte service + connexion vers registry non officiel.",
+            "Détection : dépendances avec hashes inattendus vs lockfile."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate compromised dev/build machines.",
+            "Force npm ci from clean lockfile (post-cleanup).",
+            "Block non-official registries."
+          ],
+          "fr": [
+            "Isoler les machines de dev / build compromises.",
+            "Forcer `npm ci` depuis lockfile propre (post-nettoyage).",
+            "Bloquer les registrys non officiels."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Notify if production breach.",
+            "Share with national CERT and npm ecosystem (GitHub Advisory)."
+          ],
+          "fr": [
+            "Notifier si breach en production.",
+            "Partager au CERT national et écosystème npm (GitHub Advisory)."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for malicious npm packages installed."
+          ],
+          "fr": [
+            "Chasser les packages npm malveillants installés."
+          ]
+        }
+      },
+      "tags": [
+        "ChainDrop",
+        "npm",
+        "worm",
+        "supply_chain",
+        "JavaScript"
+      ],
+      "sources": [
+        "https://social.raytec.co/@techbot/117080803630207771"
+      ],
+      "date": "2026-08-12"
+    },
+    {
+      "title": {
+        "en": "Abyssos - New modular RAT (OTX preliminary)",
+        "fr": "Abyssos - Nouveau RAT modulaire (OTX préliminaire)"
+      },
+      "description": {
+        "en": "Two OTX pulses (author Tr1sa111, preliminary unverified) describe 'Abyssos', a new modular RAT. No technical detail in the OTX sources (to enrich upon public publication). Modular architecture suggests plugin-based extensibility.",
+        "fr": "Deux pulses OTX (auteur Tr1sa111, préliminaires non vérifiés) décrivent « Abyssos », un nouveau RAT modulaire. Pas de détail technique dans les sources OTX (à enrichir dès publication publique). Architecture modulaire suggère extension par plugins."
+      },
+      "threat_actor": "unknown",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Cross_sector"
+        ],
+        "fr": [
+          "Transversal"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1055"
+      ],
+      "analyse": {
+        "en": "Low information density but signal to watch. Modular RATs are hard to detect via fixed signatures (variable plugins). Detection to be based on behavior (process injection, anomalous C2).",
+        "fr": "Faible densité informationnelle mais signal à surveiller. Les RAT modulaires sont difficiles à détecter par signatures fixes (plugins variables). Détection à baser sur le comportement (process injection, C2 anormal)."
+      },
+      "recommandations": [
+        {
+          "en": "Monitor RAT behaviors (process injection, C2 beacons).",
+          "fr": "Surveiller les comportements de RAT (process injection, C2 beacons)."
+        },
+        {
+          "en": "Deploy EDR with behavioral detection.",
+          "fr": "Déployer EDR avec détection comportementale."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "EDR behavioral detection active."
+          ],
+          "fr": [
+            "EDR détection comportementale active."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detection: process injection, anomalous C2 connections."
+          ],
+          "fr": [
+            "Détection : process injection, connexions C2 anormales."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate the host.",
+            "Remove Abyssos modules."
+          ],
+          "fr": [
+            "Isoler le poste.",
+            "Supprimer les modules Abyssos."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "Share with national CERT."
+          ],
+          "fr": [
+            "Partager avec le CERT national."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for process injection anomalies."
+          ],
+          "fr": [
+            "Chasser les anomalies de process injection."
+          ]
+        }
+      },
+      "tags": [
+        "Abyssos",
+        "RAT",
+        "modular",
+        "OTX_unverified"
+      ],
+      "sources": [
+        "https://social.raytec.co/@techbot/117080812382778866",
+        "https://social.raytec.co/@techbot/117080792373367137"
+      ],
+      "date": "2026-08-12"
+    },
+    {
+      "title": {
+        "en": "Falcon extortion - AitM phishing + vishing against financial services",
+        "fr": "Extorsion Falcon - Phishing AitM + vishing contre services financiers"
+      },
+      "description": {
+        "en": "GuidePoint Security publishes 'Bird Watching', an analysis of the infrastructure and behavior of Falcon-branded extortion operations. Sustained activity since April 2026, characterized by adversary-in-the-middle (AitM) phishing and vishing targeting financial services, professional services, energy and technology. Cluster publicly designated 'Falcon'.",
+        "fr": "GuidePoint Security publie « Bird Watching », une analyse de l'infrastructure et du comportement des opérations d'extorsion « Falcon-branded ». Activité soutenue depuis avril 2026, caractérisée par phishing adversary-in-the-middle (AitM) et vishing ciblant les services financiers, services professionnels, énergie et technologie. Cluster publiquement désigné sous le nom « Falcon »."
+      },
+      "threat_actor": "Falcon",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Financial_Services",
+          "Professional_Services",
+          "Energy",
+          "Technology"
+        ],
+        "fr": [
+          "Services_financiers",
+          "Services_professionnels",
+          "Energie",
+          "Technologie"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1557.001",
+        "T1566.004"
+      ],
+      "analyse": {
+        "en": "The attack combines AitM (to capture credentials + MFA in real time) and vishing (to manipulate employees and bypass procedures). Targets financial sector and energy: direct financial impact and potential OT. Cluster to watch for SOC/CERT in these sectors.",
+        "fr": "L'attaque combine AitM (pour capturer credentials + MFA en temps réel) et vishing (pour manipuler les employés et bypasser les procédures). Cible le secteur financier et l'énergie : impact financier direct et potentiel OT. Cluster à suivre pour les SOC/CERT de ces secteurs."
+      },
+      "recommandations": [
+        {
+          "en": "Deploy phishing-resistant MFA (FIDO2/WebAuthn) that resists AitM.",
+          "fr": "Déployer MFA phishing-resistant (FIDO2/WebAuthn) qui résiste à AitM."
+        },
+        {
+          "en": "Reinforce phone verification procedures (callback).",
+          "fr": "Renforcer les procédures de vérification téléphone (callback)."
+        },
+        {
+          "en": "Monitor AitM sessions (TLS proxy, geolocation and user-agent anomalies).",
+          "fr": "Surveiller les sessions AitM (proxy TLS, anomalies de géolocalisation et user-agent)."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "FIDO2 MFA on privileged accounts.",
+            "Anti-vishing training for support functions."
+          ],
+          "fr": [
+            "MFA FIDO2 sur comptes à privilèges.",
+            "Formation anti-vishing fonctions support."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "IDP: sessions with anomalous user-agent/IP/geolocation (AitM proxy).",
+            "Detection: vishing callback + privilege escalation."
+          ],
+          "fr": [
+            "IDP : sessions avec user-agent/IP/géoloc anormales (proxy AitM).",
+            "Détection : callback vishing + élévation de privilège."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Revoke AitM sessions.",
+            "Rotate compromised credentials."
+          ],
+          "fr": [
+            "Révoquer les sessions AitM.",
+            "Pivoter les credentials compromis."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "FS-ISAC / national CERT notifications."
+          ],
+          "fr": [
+            "Notifications FS-ISAC / CERT national."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for active AitM sessions."
+          ],
+          "fr": [
+            "Chasser les sessions AitM actives."
+          ]
+        }
+      },
+      "tags": [
+        "Falcon",
+        "AitM",
+        "vishing",
+        "extortion",
+        "financial_services",
+        "GuidePoint"
+      ],
+      "sources": [
+        "https://www.guidepointsecurity.com/blog/characterizing-infrastructure-and-behavior-of-falcon-branded-extortion-operations/"
+      ],
+      "date": "2026-08-12"
+    },
+    {
+      "title": {
+        "en": "StormEncryptor ransomware dissection",
+        "fr": "Dissection du rançongiciel StormEncryptor"
+      },
+      "description": {
+        "en": "thecyberthrone publishes a dissection of StormEncryptor ransomware. CVE-2026-18577 and CVE-2026-18556 cited as internal vulnerabilities of the ransomware chain. No technical detail beyond the dissection overview in the source.",
+        "fr": "thecyberthrone publie une dissection du rançongiciel StormEncryptor. CVE-2026-18577 et CVE-2026-18556 citées comme vulnérabilités internes de la chaîne du ransomware. Pas de détail technique au-delà de l'overview de dissection dans la source."
+      },
+      "threat_actor": "StormEncryptor",
+      "threat_actor_origin": "unknown",
+      "threat_actor_type": "Cybercrime",
+      "threat_actor_aliases": [],
+      "sector": {
+        "en": [
+          "Cross_sector"
+        ],
+        "fr": [
+          "Transversal"
+        ]
+      },
+      "indicators": {
+        "URL": [],
+        "IPv4": [],
+        "IPv6": [],
+        "DOMAIN": [],
+        "EMAIL": [],
+        "HASH_SHA256": [],
+        "HASH_SHA1": [],
+        "HASH_MD5": [],
+        "TOOLS": []
+      },
+      "mitre_ttps": [
+        "T1486"
+      ],
+      "analyse": {
+        "en": "Defensive analysis of a ransomware chain. Internal CVEs (CVE-2026-18577, CVE-2026-18556) suggest potential weaknesses exploitable by defenders or competitors. No patch (malware).",
+        "fr": "Analyse défensive d'une chaîne ransomware. CVEs internes (CVE-2026-18577, CVE-2026-18556) suggèrent des faiblesses potentielles exploitables par les défenseurs ou les compétiteurs. Pas de correctif (malware)."
+      },
+      "recommandations": [
+        {
+          "en": "Analyze StormEncryptor samples for defensive exploitation of internal CVEs.",
+          "fr": "Analyser les samples StormEncryptor pour exploitation défensive des CVEs internes."
+        },
+        {
+          "en": "Deploy detection for StormEncryptor IOCs.",
+          "fr": "Déployer la détection des IOCs StormEncryptor."
+        }
+      ],
+      "incident_response_playbook": {
+        "phase1_preparation": {
+          "en": [
+            "Prepare StormEncryptor YARA/EDR signatures."
+          ],
+          "fr": [
+            "Préparer signatures YARA/EDR StormEncryptor."
+          ]
+        },
+        "phase2_detection": {
+          "en": [
+            "Detection: StormEncryptor encryption behavior, ransom note."
+          ],
+          "fr": [
+            "Détection : comportement de chiffrement StormEncryptor, rançon."
+          ]
+        },
+        "phase3_containment": {
+          "en": [
+            "Isolate compromised hosts.",
+            "Restore from offline backups."
+          ],
+          "fr": [
+            "Isoler les postes compromis.",
+            "Restaurer depuis backups hors-ligne."
+          ]
+        },
+        "phase4_post_incident": {
+          "en": [
+            "NIS2/RGPD notifications.",
+            "Share IOCs with national CERT."
+          ],
+          "fr": [
+            "Notifications NIS2/RGPD.",
+            "Partage IOCs au CERT national."
+          ]
+        },
+        "phase5_threat_hunting": {
+          "en": [
+            "Hunt for StormEncryptor encryption patterns."
+          ],
+          "fr": [
+            "Chasser les patterns de chiffrement StormEncryptor."
+          ]
+        }
+      },
+      "tags": [
+        "StormEncryptor",
+        "ransomware",
+        "CVE-2026-18577",
+        "CVE-2026-18556"
+      ],
+      "sources": [
+        "https://thecyberthrone.in/2026/08/11/stormencryptor-ransomware-dissection/"
+      ],
+      "date": "2026-08-12"
+    }
+  ]
+}
