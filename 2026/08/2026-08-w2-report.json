@@ -6,37 +6,91 @@
       "fr": "Sévère"
     },
     "justification": {
-      "en": "Week 2 of August 2026 is characterized by exceptional threat velocity: active zero-day exploitation of Microsoft AFD.sys (CVE-2026-68820) by Lazarus for kernel rootkit deployment, Cisco ASA/FTD zero-day DoS (CVE-2026-20349), zero-click Zoom execution (Zoomsday CVE-2026-53413), and CVSS 10.0 unauthenticated exploits across Metabase, Arista VCO, and Adobe ColdFusion. Concurrently, aggressive vishing and AitM campaigns by UNC6671 and Falcon have compromised major financial institutions and Fortune 500 enterprises, while massive data exfiltration events impacted over 30 million individuals across healthcare, logistics, and government sectors.",
-      "fr": "La deuxième semaine d'août 2026 est marquée par une intensité critique des menaces : exploitation active de zero-days dont Microsoft AFD.sys (CVE-2026-68820) par Lazarus pour déployer des rootkits noyau, Cisco ASA/FTD (CVE-2026-20349), exécution zero-click Zoom (Zoomsday CVE-2026-53413), et vulnérabilités CVSS 10.0 non authentifiées sur Metabase, Arista VCO et Adobe ColdFusion. Parallèlement, des campagnes agressives de vishing et AitM menées par UNC6671 et Falcon ont compromis des institutions financières majeures et des entreprises du Fortune 500, tandis que des exfiltrations massives ont touché plus de 30 millions d'individus dans la santé, la logistique et le secteur public."
+      "en": "The period was characterized by multiple actively exploited zero-day vulnerabilities, including a Windows kernel-level flaw (CVE-2026-68820) exploited by North Korean state actor Lazarus to deploy the FudModule rootkit, an unauthenticated CVSS 10.0 SQL injection in Metabase (CVE-2026-72898), and a Cisco ASA/FTD denial-of-service zero-day (CVE-2026-20349). Simultaneously, autonomous AI-agent-driven multi-stage cyberattacks were documented for the first time against government and critical infrastructure targets in Taiwan, while massive supply chain compromises hit PyPI (LiteLLM) and npm (ChainDrop, Wel1Dropper). Massive ransomware and data extortion campaigns also severely disrupted healthcare providers (DentaQuest, AnMed Health, Winnipeg HSC), financial institutions, and national tax infrastructure (French DGFiP).",
+      "fr": "La période est marquée par de multiples vulnérabilités zero-day exploitées en conditions réelles, notamment une faille noyau Windows (CVE-2026-68820) exploitée par le groupe étatique nord-coréen Lazarus pour déployer le rootkit FudModule, une injection SQL non authentifiée CVSS 10.0 dans Metabase (CVE-2026-72898), et une zero-day de déni de service sur Cisco ASA/FTD (CVE-2026-20349). En parallèle, des cyberattaques quasi-autonomes orchestrées par des agents d'IA ont été documentées pour la première fois contre des infrastructures gouvernementales et critiques à Taïwan, tandis que des compromissions majeures de la chaîne d'approvisionnement ont touché PyPI (LiteLLM) et npm (ChainDrop, Wel1Dropper). Des campagnes massives de rançongiciels et d'extorsion ont lourdement affecté la santé (DentaQuest, AnMed Health, Winnipeg HSC), la finance et l'administration fiscale française (DGFiP)."
     },
     "_triggers": [
-      "+6 — 3 CVE(s) CISA KEV",
+      "+8 — 4 CVE(s) CISA KEV",
       "+4 — 5 CVE(s) CVSS ≥ 9.0",
       "+4 — 2 acteur(s) étatique(s)",
       "+1 — 1 opérateur(s) ransomware",
       "+1 — ≥ 3 acteurs distincts actifs",
-      "+3 — 7 breach(es) ≥ 100k enregistrements",
+      "+3 — 5 breach(es) ≥ 100k enregistrements",
       "+2 — secteurs critiques ciblés : Government_and_Defense, Critical_Infrastructure",
-      "+1 — 12 TTPs distinctes"
+      "+1 — 10 TTPs distinctes"
     ]
   },
   "executive_summary": {
-    "en": "The threat landscape during Week 2 of August 2026 reached critical levels across three primary operational fronts: identity-based social engineering, infrastructure software vulnerabilities, and software supply chain poisoning. Adversaries notably bypassed technical perimeters via voice phishing (vishing) and Adversary-in-the-Middle (AiTM) proxies impersonating IT helpdesks, compromising entities such as Blackstone, CME Group, and Levi Strauss. On the vulnerability front, Microsoft's massive August Patch Tuesday resolved 415 flaws, highlighted by the in-the-wild exploitation of CVE-2026-68820 by DPRK state-sponsored actor Lazarus (Operation Dream Job) deploying the FudModule kernel rootkit, alongside critical pre-auth RCEs in Metabase (GHSA-vwf4-m7j8-wcjf), Arista VeloCloud (CVE-2026-16812), and Adobe ColdFusion (CVE-2026-48362). In the operational technology and critical infrastructure domain, a Polish combined heat and power (CHP) plant suffered an unprecedented IT/OT pivot via a private cellular APN resulting in a steam turbine shutdown. Software supply chains experienced systemic pressure with the ChainDrop npm worm infecting over 400 packages, TeamPCP compromising LiteLLM on PyPI to steal AI gateway secrets, and backdoors discovered in Zbtlink networking hardware. Data extortion groups, including ShinyHunters and ExfilSquad, intensified pure exfiltration campaigns targeting DentaQuest (15M records), Wesco (2.6M records), and CEVA Logistics.",
-    "fr": "Le paysage des cybermenaces au cours de la deuxième semaine d'août 2026 a atteint un niveau critique sur trois axes majeurs : l'ingénierie sociale ciblant l'identité, l'exploitation de failles d'infrastructure logicielles et l'empoisonnement de la supply chain logicielle. Les attaquants ont contourné les périmètres défensifs via le phishing vocal (vishing) et des proxys Adversary-in-the-Middle (AiTM) usurpant le support informatique, compromettant des organisations telles que Blackstone, CME Group et Levi Strauss. Sur le front des vulnérabilités, le Patch Tuesday Microsoft d'août a corrigé 415 failles, dominé par l'exploitation active de la zero-day CVE-2026-68820 par le groupe étatique nord-coréen Lazarus (Operation Dream Job) pour déployer le rootkit noyau FudModule, parallèlement à des RCE pré-authentification critiques dans Metabase (GHSA-vwf4-m7j8-wcjf), Arista VeloCloud (CVE-2026-16812) et Adobe ColdFusion (CVE-2026-48362). Côté infrastructures critiques, une centrale de cogénération polonaise a subi le premier pivot IT/OT documenté via un APN cellulaire privé entraînant l'arrêt d'une turbine à vapeur. La supply chain logicielle a subi des attaques systémiques majeures avec le ver npm ChainDrop (plus de 400 paquets infectés), l'infection de LiteLLM sur PyPI par TeamPCP pour dérober des secrets de passerelles IA, et des portes dérobées matérielles dans les routeurs Zbtlink. Les groupes d'extorsion, notamment ShinyHunters et ExfilSquad, ont intensifié leurs vols de données massifs ciblant DentaQuest (15M de dossiers), Wesco (2,6M de dossiers) et CEVA Logistics."
+    "en": "Week 2 of August 2026 saw an unprecedented convergence of offensive AI tradecraft, critical software supply chain weaponization, and kernel-level zero-day exploitation. Microsoft's August Patch Tuesday delivered fixes for 415 vulnerabilities, spotlighting CVE-2026-68820 (AFD.sys WinSock UAF) actively weaponized by Lazarus (Operation Dream Job) alongside the zero-click 'Zoomsday' suite (CVE-2026-53413/14/15) in Zoom. In a historic operational shift, Taiwanese authorities and researchers confirmed the first near-autonomous cyber offensive carried out by AI agents (using Hermes and OpenClaw frameworks) against 21 government systems, energy utilities, and nuclear safety entities. Concurrently, supply chain threat actors compromised the PyPI repository of LiteLLM (TeamPCP) to harvest AI API keys across 434,000 CI/CD pipelines, while npm was flooded by the self-propagating ChainDrop worm and 788 Russian-attributed AI-slopsquatted packages (Wel1Dropper). Extortion actors escalated cross-channel vishing campaigns (UNC6671/Falcon) targeting enterprise SaaS and corporate helpdesks, compromising victims such as Levi Strauss, Blackstone, and CME Group. Ransomware and exfiltration actors claimed severe real-world impacts: ShinyHunters published 15 million health records from DentaQuest (the largest healthcare breach of 2026), FulcrumSec leaked 1.3TB of Novo Nordisk clinical and drug design data, Winnipeg Health Sciences Centre suffered physical HVAC/door lockouts from ransomware, and a compromised VPN credential exposed 678,000 French taxpayer records from the DGFiP.",
+    "fr": "La deuxième semaine d'août 2026 a été marquée par une convergence sans précédent de tactiques offensives basées sur l'IA, de compromissions massives de chaînes d'approvisionnement logicielles et de l'exploitation de failles zero-day au niveau noyau. Le Patch Tuesday d'août de Microsoft a corrigé 415 vulnérabilités, mettant en lumière la CVE-2026-68820 (AFD.sys WinSock UAF) exploitée par Lazarus (Operation Dream Job) ainsi que la suite zero-click 'Zoomsday' (CVE-2026-53413/14/15) dans Zoom. Tournant opérationnel majeur, les autorités taïwanaises et des chercheurs ont confirmé la première offensive cyber quasi-autonome menée par des agents IA (frameworks Hermes et OpenClaw) contre 21 systèmes gouvernementaux, des compagnies énergétiques et l'agence de sûreté nucléaire. Parallèlement, la chaîne d'approvisionnement a été frappée sur PyPI avec la compromission de LiteLLM (TeamPCP) ciblant les clés d'API IA sur 434 000 pipelines CI/CD, et sur npm par le ver auto-propageant ChainDrop et 788 paquets malveillants générés par IA (Wel1Dropper). Les acteurs d'extorsion ont intensifié leurs campagnes de vishing (UNC6671/Falcon) contre les helpdesks d'entreprise, compromettant Levi Strauss, Blackstone et CME Group. Enfin, l'extorsion et les ransomwares ont engendré des impacts critiques : ShinyHunters a publié 15 millions de dossiers de DentaQuest (plus grande fuite santé de 2026), FulcrumSec a fait fuiter 1,3 To de données de Novo Nordisk, l'hôpital HSC de Winnipeg a vu ses systèmes HVAC et portes verrouillés par ransomware, et un accès VPN compromis a exposé 678 000 dossiers fiscaux français à la DGFiP."
   },
   "regulatory": {
     "analyse": {
-      "en": "Regulatory authorities globally are sharpening compliance and enforcement frameworks, particularly targeting critical supply chains, artificial intelligence integration, and evidentiary preservation. In the United States, the NYS DFS imposed financial penalties under 23 NYCRR Part 500 for unaddressed systemic vulnerabilities, while NIST launched a strategic RFI to revolutionize the NVD using AI-driven contextual remediation. In Europe, legal precedents around data destruction penalties under GDPR and civil procedures against Meta emphasize strict digital evidence preservation requirements, while the OpenSSF issued readiness guidance for the EU Cyber Resilience Act (CRA). In the Asia-Pacific region, China's CAC initiated national security cybersecurity reviews against foreign vendors like Palo Alto Networks, and Thailand moved toward mandatory MFA regulations following massive national credential disclosures.",
-      "fr": "Les autorités réglementaires mondiales renforcent leurs cadres de conformité et de sanctions, ciblant particulièrement les chaînes d'approvisionnement critiques, l'intégration de l'IA et la préservation des preuves numériques. Aux États-Unis, le NYS DFS a infligé des sanctions pécuniaires sous 23 NYCRR Part 500 pour négligence de vulnérabilités systémiques, tandis que le NIST a lancé un RFI stratégique pour moderniser la NVD via l'IA. En Europe, des condamnations pour destruction de preuves numériques contre Meta rappellent les exigences strictes de préservation sous le RGPD, tandis que l'OpenSSF a publié un guide de conformité pour le Cyber Resilience Act (CRA). En Asie-Pacifique, la CAC chinoise a ouvert des examens de sécurité nationale visant des équipementiers étrangers comme Palo Alto Networks, et la Thaïlande prépare une obligation de MFA généralisée."
+      "en": "Regulatory and legal enforcement intensified globally across critical infrastructure and emerging technology domains. The US Executive branch enacted a controversial policy framework authorizing vetted private cybersecurity firms to conduct offensive cyber operations against transnational criminal organizations (TCOs), introducing significant legal, attribution, and liability complexities. Concurrently, international cybersecurity authorities across the Five Eyes alliance issued coordinated guidance on the security risks of Agentic AI services, focusing on unauthorized permission aggregation and supply chain vulnerabilities. European authorities and standard bodies maintained strict pressure through GDPR breach notifications (with French DGFiP, UK charities via Beacon CRM, and Novo Nordisk facing severe supervisory scrutiny) and CRA compliance preparations led by OpenSSF, while Chinese regulators weaponized national security review procedures against Western security vendors such as Palo Alto Networks.",
+      "fr": "Le cadre réglementaire et juridique s'est considérablement durci sur les infrastructures critiques et les technologies émergentes. L'exécutif américain a promulgué un cadre autorisant des firmes privées de cybersécurité agréées à mener des opérations cyber-offensives contre des organisations criminelles transnationales (TCO), introduisant d'importantes complexités d'attribution et de responsabilité juridique. En parallèle, les agences de l'alliance Five Eyes ont publié des directives coordonnées sur la sécurisation des services d'IA agentique, ciblant l'agrégation de permissions et les risques supply chain. Les régulateurs européens maintiennent une pression soutenue via le RGPD (la DGFiP, les organisations caritatives britanniques via Beacon CRM et Novo Nordisk faisant l'objet d'enquêtes) et les préparatifs du Cyber Resilience Act (CRA) via l'OpenSSF, tandis que la Chine utilise ses revues de cybersécurité nationales comme levier politique contre des éditeurs occidentaux tels que Palo Alto Networks."
     },
     "events": [
       {
         "title": {
-          "en": "NYS DFS Cybersecurity Settlement with Order Express under 23 NYCRR Part 500",
-          "fr": "Sanction du NYS DFS contre Order Express sous le règlement 23 NYCRR Part 500"
+          "en": "Presidential Memorandum on Private Sector Offensive Cyber Operations Against TCOs",
+          "fr": "Mémorandum présidentiel autorisant les cyber-opérations offensives du secteur privé contre les TCO"
+        },
+        "issuing_body": "Executive Office of the President / DOJ / DHS",
+        "date": "2026-08-13",
+        "jurisdiction": {
+          "region": "US",
+          "countries": [
+            "US"
+          ]
+        },
+        "type": "New_Law",
+        "status": "Active",
+        "reference": "NSPM / Executive Memorandum 2026-08-13",
+        "affected_sectors": [
+          "Security",
+          "Government_and_Defense",
+          "Critical_Infrastructure"
+        ],
+        "description": {
+          "en": "Authorizes vetted private cybersecurity firms under federal oversight (DOJ/DHS) to conduct offensive cyber surveillance and disruption effects against transnational criminal organizations. Participating vendors must maintain a $1 million surety bond and strict operational compliance, fundamentally altering legal liability and private hack-back norms.",
+          "fr": "Autorise des entreprises de cybersécurité privées accréditées et supervisées par le DOJ et le DHS à mener des opérations de surveillance et de perturbation cyber contre des organisations criminelles transnationales. Les entreprises doivent fournir une caution d'au moins 1 million USD et respecter des règles strictes, bouleversant le cadre légal de la défense active."
+        },
+        "source_url": "https://www.whitehouse.gov/presidential-actions/2026/08/expanding-capabilities-to-combat-transnational-cyber-enabled-crime/"
+      },
+      {
+        "title": {
+          "en": "CAC Cybersecurity National Security Review of Palo Alto Networks",
+          "fr": "Examen de cybersécurité et de sécurité nationale de la CAC sur Palo Alto Networks"
+        },
+        "issuing_body": "Cyberspace Administration of China (CAC)",
+        "date": "2026-08-08",
+        "jurisdiction": {
+          "region": "Asia-Pacific",
+          "countries": [
+            "CN"
+          ]
+        },
+        "type": "Enforcement_Action",
+        "status": "Active",
+        "reference": "PRC Cybersecurity Law / National Security Law Art. 35",
+        "affected_sectors": [
+          "Security",
+          "Technology_and_Telecom",
+          "Critical_Infrastructure"
+        ],
+        "description": {
+          "en": "China's Cyberspace Administration initiated a formal cybersecurity investigation into products sold in China by Palo Alto Networks under national security pretexts. The action mirrors previous restrictions against Micron, creating significant market access risks and potential replacement mandates for foreign security hardware in Chinese critical infrastructure.",
+          "fr": "L'Administration du cyberespace de Chine a ouvert un examen formel de cybersécurité sur les produits vendus par Palo Alto Networks en Chine pour des motifs de sécurité nationale. Cette procédure rappelle celle menée contre Micron et pourrait conduire à des restrictions de vente dans les infrastructures critiques chinoises."
+        },
+        "source_url": "https://securityaffairs.com/196881/intelligence/palo-alto-networks-faces-china-cybersecurity-review-amid-rising-tech-tensions.html"
+      },
+      {
+        "title": {
+          "en": "NYS DFS Cybersecurity Settlement Enforcement with Order Express Inc.",
+          "fr": "Sanction de conformité cybersécurité du NYS DFS contre Order Express Inc."
         },
         "issuing_body": "New York State Department of Financial Services (NYS DFS)",
-        "date": "2026-08-08",
+        "date": "2026-08-05",
         "jurisdiction": {
           "region": "US",
           "countries": [
@@ -50,67 +104,41 @@
           "Finance"
         ],
         "description": {
-          "en": "The NYS DFS finalized a $250,000 monetary penalty against licensed money transmitter Order Express following an investigation into a 2022 ransomware incident. The audit exposed inadequate risk assessments, poor patch management policies, and failure to mitigate known exploitable vulnerabilities. Regulated financial entities must maintain active vulnerability lifecycle programs and adhere to amended Part 500 cybersecurity standards.",
-          "fr": "Le NYS DFS a infligé une pénalité financière de 250 000 USD au transmetteur de fonds Order Express suite à une enquête post-ransomware de 2022. L'audit a révélé des lacunes d'évaluation des risques, une gestion des correctifs déficiente et l'exposition à des vulnérabilités connues. Les entités financières régulées doivent maintenir des programmes de remédiation rigoureux conformes au règlement Part 500 amendé."
+          "en": "NYS DFS levied a $250,000 monetary penalty against licensed money transmitter Order Express following a ransomware post-incident investigation. The regulatory audit uncovered systemic deficiencies including inadequate risk assessments, poor patch management, and failure to remediate known exploitable vulnerabilities.",
+          "fr": "Le NYS DFS a infligé une sanction financière de 250 000 USD à la société de transfert de fonds Order Express suite à une enquête post-ransomware. L'audit a révélé des défaillances majeures dans l'évaluation des risques, la gestion des correctifs et l'exposition à des vulnérabilités connues."
         },
         "source_url": "https://databreaches.net/2026/08/07/new-york-state-department-of-financial-services-secures-cybersecurity-settlement-with-order-express-inc/"
       },
       {
         "title": {
-          "en": "CAC National Security Cybersecurity Review of Palo Alto Networks",
-          "fr": "Examen de cybersécurité de la CAC visant Palo Alto Networks"
+          "en": "CMMC 2.0 Compliance Guidance on Temporary Deficiencies and POA&Ms",
+          "fr": "Directives de conformité CMMC 2.0 sur les déficiences temporaires et les POA&M"
         },
-        "issuing_body": "Cyberspace Administration of China (CAC)",
-        "date": "2026-08-08",
+        "issuing_body": "Department of Defense (DoD)",
+        "date": "2026-08-13",
         "jurisdiction": {
-          "region": "China",
+          "region": "US",
           "countries": [
-            "CN"
+            "US"
           ]
         },
-        "type": "Enforcement_Action",
+        "type": "Guidance",
         "status": "Active",
-        "reference": "PRC Cybersecurity Law & National Security Law",
+        "reference": "32 CFR Part 170 / NIST SP 800-171 Rev. 2",
         "affected_sectors": [
-          "Technology_and_Telecom",
-          "Security"
+          "Government_and_Defense",
+          "Industry_and_Manufacturing"
         ],
         "description": {
-          "en": "China's Cyberspace Administration initiated a formal cybersecurity review under national security provisions against networking and security products sold by Palo Alto Networks in China. This regulatory action mirrors the 2023 Micron restrictions and poses operational compliance and market continuity risks for multinational corporations operating enterprise security stacks within mainland China.",
-          "fr": "L'Administration du cyberespace de Chine a ouvert un examen formel de cybersécurité au titre de la sécurité nationale contre les produits Palo Alto Networks vendus en Chine. Cette procédure rappelle les restrictions imposées à Micron en 2023 et crée un risque opérationnel pour les multinationales déployant ces technologies de sécurité sur le territoire chinois."
+          "en": "The DoD issued updated operational guidance under 32 CFR Part 170 detailing mandatory handling of Temporary Deficiencies and Plans of Action and Milestones (POA&M). Defense Industrial Base contractors must remediate non-compliant controls within a strict 180-day window or face certification revocation.",
+          "fr": "Le DoD a publié des directives opérationnelles sous 32 CFR Part 170 encadrant la gestion des déficiences temporaires et des plans d'action (POA&M). Les industriels de la base de défense doivent corriger les écarts sous 180 jours sous peine de refus de certification."
         },
-        "source_url": "https://securityaffairs.com/196881/intelligence/palo-alto-networks-faces-china-cybersecurity-review-amid-rising-tech-tensions.html"
+        "source_url": "https://www.guidepointsecurity.com/blog/cmmc-deficiencies-exceptions-poa/"
       },
       {
         "title": {
-          "en": "Judicial Sanction against Meta for Digital Evidence Destruction",
-          "fr": "Sanction judiciaire contre Meta pour destruction de preuves numériques"
-        },
-        "issuing_body": "French Judicial Court",
-        "date": "2026-08-11",
-        "jurisdiction": {
-          "region": "France",
-          "countries": [
-            "FR"
-          ]
-        },
-        "type": "Court_Ruling",
-        "status": "Active",
-        "reference": "French Civil Procedure Code & GDPR Art. 58",
-        "affected_sectors": [
-          "Technology_and_Telecom",
-          "Media_and_Communication"
-        ],
-        "description": {
-          "en": "A French court sanctioned Meta for destroying electronic evidence in ongoing litigation regarding deceptive online advertising. The ruling establishes a critical precedent for security and compliance teams regarding the mandatory legal hold and immutable archiving of platform telemetry, logs, and forensic artifacts during regulatory disputes.",
-          "fr": "Un tribunal français a sanctionné Meta pour destruction de preuves numériques dans un litige relatif à des publicités frauduleuses. Cette décision renforce les obligations de conservation légale stricte et d'archivage immuable des journaux et artefacts forensiques pour les équipes de conformité lors de procédures judiciaires."
-        },
-        "source_url": "https://www.lemonde.fr/pixels/article/2026/08/11/meta-sanctionnee-pour-destruction-de-preuves-dans-une-affaire-de-publicites-frauduleuses"
-      },
-      {
-        "title": {
-          "en": "NIST RFI on AI-Enabled Vulnerability Management and NVD Modernization",
-          "fr": "RFI du NIST sur la gestion des vulnérabilités par l'IA et la modernisation de la NVD"
+          "en": "NIST Request for Information on NVD Modernization and AI-Enabled Vulnerability Management",
+          "fr": "Appel à contributions du NIST sur la modernisation de la NVD et la gestion des vulnérabilités par l'IA"
         },
         "issuing_body": "National Institute of Standards and Technology (NIST)",
         "date": "2026-08-12",
@@ -120,16 +148,16 @@
             "US"
           ]
         },
-        "type": "Guidance",
+        "type": "Proposal",
         "status": "Proposed",
-        "reference": "NIST NVD Modernization Initiative",
+        "reference": "NIST RFI NVD-2026-01",
         "affected_sectors": [
           "Technology_and_Telecom",
           "Security"
         ],
         "description": {
-          "en": "NIST published a Request for Information seeking industry input to modernize the National Vulnerability Database through artificial intelligence and automated enrichment tools (such as V-etalon). The proposal aims to transition vulnerability management from periodic patching cycles to continuous, context-aware automated risk scoring.",
-          "fr": "Le NIST a publié un appel à contribution (RFI) pour moderniser la base nationale des vulnérabilités (NVD) grâce à l'IA et des outils d'enrichissement comme V-etalon. L'initiative vise à faire évoluer la gestion des vulnérabilités vers une priorisation continue, contextuelle et hautement automatisée."
+          "en": "NIST launched a formal RFI soliciting industry feedback on modernizing the National Vulnerability Database (NVD) via AI-driven automation, continuous context enrichment (V-etalon project), and structural overhauls to Common Platform Enumeration (CPE) specifications.",
+          "fr": "Le NIST a lancé un appel à contributions pour moderniser la base nationale des vulnérabilités (NVD) grâce à l'automatisation par IA, l'enrichissement contextuel continu (projet V-etalon) et la refonte des spécifications Common Platform Enumeration (CPE)."
         },
         "source_url": "https://www.nist.gov/blogs/cybersecurity-insights/shaping-nvd-future-we-need-your-feedback-ai-enabled-vulnerability"
       }
@@ -143,18 +171,8 @@
           "fr": "Corée du Nord"
         },
         "geographic_zone_strategic_analyse": {
-          "en": "North Korean state-sponsored threat actors, led by the Lazarus Group, demonstrated exceptional technical capabilities this period. Through Operation Dream Job, Lazarus targeted European and Indian defense contractors using sophisticated social engineering (fake job recruitment via LinkedIn) delivering a malicious PDF reader ('SecurityPDF') and the Troy backdoor. Crucially, they integrated active zero-day exploitation of the Windows kernel driver AFD.sys (CVE-2026-68820) to bypass security controls and deploy the latest iteration of the FudModule kernel rootkit, highlighting their continued focus on military intelligence and aerospace intellectual property theft.",
-          "fr": "Les acteurs étatiques nord-coréens, menés par le groupe Lazarus, ont démontré une sophistication technique majeure cette semaine. Dans le cadre d'Operation Dream Job, Lazarus a ciblé des sous-traitants de défense européens et indiens via de fausses offres d'emploi LinkedIn distribuant un faux lecteur PDF ('SecurityPDF') et la porte dérobée Troy. Ils ont intégré l'exploitation active de la zero-day du pilote Windows AFD.sys (CVE-2026-68820) pour contourner les protections et déployer la dernière version du rootkit noyau FudModule à des fins d'espionnage militaire et technologique."
-        }
-      },
-      {
-        "geographic_zone_name": {
-          "en": "Russia",
-          "fr": "Russie"
-        },
-        "geographic_zone_strategic_analyse": {
-          "en": "Russian-aligned and Russian-speaking threat clusters exhibited high operational tempo across cybercrime, hacktivism, and state-sponsored espionage. APT groups and hacktivists like Head Mare evolved from opportunistic disruptive actors to sophisticated APT operations, chaining proprietary zero-days (KLCERT-26-057/058) against TrueConf video servers to poison client updates with PhantomCore. In Ukraine, Russian operators weaponized chained IoT camera and router vulnerabilities to establish proxy pipelines and tactical visual reconnaissance. Concurrently, financially motivated ransomware groups including Gunra, DeadLock, and Qilin maintained sustained pressure on Western critical infrastructure.",
-          "fr": "Les cyberattaquants russophones et affiliés à l'État russe ont maintenu un rythme opérationnel élevé combinant cybercriminalité et cyberespionnage. Le groupe Head Mare a franchi un cap de sophistication en exploitant des failles zero-day sur les serveurs de visioconférence TrueConf (KLCERT-26-057/058) pour empoisonner les installateurs clients avec le malware PhantomCore. En Ukraine, des opérateurs russes ont chaîné des failles sur des caméras IP et routeurs pour bâtir des relais de proxy et de reconnaissance visuelle, tandis que les franchises de ransomware comme Gunra, DeadLock et Qilin ont ciblé les infrastructures occidentales."
+          "en": "North Korean state-sponsored threat groups, specifically Lazarus (APT38/Zinc), demonstrated high operational agility by operationalizing a kernel-level zero-day vulnerability (CVE-2026-68820 in Windows AFD.sys) within their ongoing 'Operation Dream Job' campaign. By weaponizing malicious recruitment decoys ('SecurityPDF') to deliver the new Troy backdoor, the group escalated to SYSTEM privileges and deployed the sophisticated FudModule kernel rootkit, systematically disabling endpoint security mechanisms to conduct espionage against aerospace and defense entities across Europe and India.",
+          "fr": "Les groupes étatiques nord-coréens, en particulier Lazarus (APT38/Zinc), ont fait preuve d'une agilité technique remarquable en exploitant une vulnérabilité zero-day noyau (CVE-2026-68820 dans AFD.sys de Windows) au sein de la campagne 'Operation Dream Job'. En utilisant de fausses offres d'emploi accompagnées d'un lecteur PDF piégé ('SecurityPDF') pour livrer la porte dérobée Troy, le groupe a élevé ses privilèges au niveau SYSTEM et déployé le rootkit kernel FudModule afin de désactiver les EDR et d'espionner le secteur défense et aérospatial en Europe et en Inde."
         }
       },
       {
@@ -163,8 +181,18 @@
           "fr": "Chine"
         },
         "geographic_zone_strategic_analyse": {
-          "en": "China-nexus threat actors pioneered the operationalization of autonomous AI agents in nation-state intrusions. Threat clusters such as GTG-1002 deployed multi-agent frameworks capable of conducting reconnaissance, credential harvesting, and lateral movement with minimal human latency against Taiwanese government and nuclear safety agencies. Chinese threat activity also focused heavily on edge infrastructure exploitation, attacking N-central RMM servers, Cisco firewalls, and Fortinet edge appliances to secure stealthy persistence into critical networks.",
-          "fr": "Les groupes cyber liés à la Chine ont franchi une étape majeure dans l'opérationnalisation d'agents IA autonomes lors d'intrusions étatiques. Le groupe GTG-1002 a utilisé des architectures multi-agents pour orchestrer des cyberattaques autonomes contre le gouvernement taïwanais et des agences de sûreté nucléaire. Les acteurs chinois continuent également de cibler massivement les équipements de bordure de réseau (N-central RMM, pare-feu Cisco et Fortinet) pour s'implanter durablement dans les infrastructures stratégiques."
+          "en": "Chinese state-nexus threat activity achieved a critical milestone with the execution of the first documented near-autonomous multi-agent AI cyberattack against Taiwanese government ministries, nuclear safety authorities, and energy providers. Utilizing open-source orchestration frameworks (Hermes, OpenClaw) powered by large language models (DeepSeek-V4-Flash), Chinese operators automated the full kill chain from reconnaissance and credential solving (100% CAPTCHA resolution) to SSO lateral movement across 21 interconnected government agencies.",
+          "fr": "L'activité cyber liée à la Chine a franchi une étape historique avec la première cyberattaque quasi-autonome orchestrée par des agents IA multi-rôles contre des ministères taïwanais, des régulateurs de sûreté nucléaire et des distributeurs d'énergie. En exploitant des frameworks open source (Hermes, OpenClaw) et des modèles de langage (DeepSeek-V4-Flash), les opérateurs chinois ont automatisé l'ensemble de la chaîne d'attaque, de la reconnaissance à la résolution de CAPTCHAs et au mouvement latéral SSO sur 21 systèmes interconnectés."
+        }
+      },
+      {
+        "geographic_zone_name": {
+          "en": "Russia",
+          "fr": "Russie"
+        },
+        "geographic_zone_strategic_analyse": {
+          "en": "Russian-aligned and Russian-speaking threat clusters continued aggressive supply chain poisoning, ransomware operations, and critical infrastructure attacks. Operators conducted the first documented IT/OT pivot via a private cellular APN into a Polish combined heat and power (CHP) plant, forcing an emergency steam turbine shutdown. Concurrently, Russian supply chain threat groups flooded the npm ecosystem with over 780 AI-slopsquatted packages (Wel1Dropper) delivering multi-platform stealers and Sliver C2 frameworks, while Head Mare leveraged zero-day chains on TrueConf servers for espionage.",
+          "fr": "Les cyberattaquants alignés sur la Russie ont maintenu une pression offensive sur la supply chain, le cybercrime et les infrastructures critiques. Un groupe a réalisé le premier pivot IT/OT documenté via un APN cellulaire privé vers une centrale thermique polonaise (CHP), arrêtant une turbine à vapeur. En parallèle, des acteurs russes ont injecté plus de 780 paquets npm générés par IA (Wel1Dropper) pour distribuer des infostealers et Sliver C2, tandis que le groupe Head Mare a exploité des vulnérabilités zero-day sur les serveurs TrueConf."
         }
       },
       {
@@ -173,18 +201,8 @@
           "fr": "Iran"
         },
         "geographic_zone_strategic_analyse": {
-          "en": "Iranian threat actors maintained sustained targeting of municipal water infrastructure in the United States (New Jersey and Alabama) utilizing opportunistic PLC exploitation, consistent with CyberAv3ngers / IRGC-aligned playbooks. Regionally, Iranian espionage operators deployed the modular CAV3RN framework against Israeli targets, featuring resilient C2 communications multiplexing through Google Apps Script relays and dynamic DNS routing to evade perimeter inspection.",
-          "fr": "Les acteurs affiliés à l'Iran ont poursuivi leurs attaques contre les infrastructures de traitement des eaux potables aux États-Unis (New Jersey et Alabama) en exploitant des automates programmables (PLC). Au Moyen-Orient, les opérations d'espionnage iraniennes ont déployé le framework modulaire CAV3RN contre des cibles israéliennes, utilisant des relais Google Apps Script et un routage dynamique par DNS pour dissimuler leurs communications C2."
-        }
-      },
-      {
-        "geographic_zone_name": {
-          "en": "Other",
-          "fr": "Autre"
-        },
-        "geographic_zone_strategic_analyse": {
-          "en": "Financially motivated cybercriminal syndicates, notably UNC6671 (operating under brands BlackFile, Redact, Pink, Helix, and Falcon), Scattered Spider, and ExfilSquad, executed high-impact identity-centric extortion campaigns. These groups heavily relied on voice phishing (vishing) targeting IT helpdesks and AiTM reverse proxies to capture FIDO2/MFA tokens, extorting dozens of private equity, asset management, and Fortune 500 enterprises. Furthermore, open-source supply chain threat actors (TeamPCP, ChainDrop worm authors) demonstrated industrial-scale compromise of PyPI and npm registries.",
-          "fr": "Les syndicats cybercriminels à motivation financière, notamment UNC6671 (opérant sous les marques BlackFile, Redact, Pink, Helix et Falcon), Scattered Spider et ExfilSquad, ont mené des extorsions massives fondées sur le vol d'identité. Utilisant le phishing vocal (vishing) et des proxys AiTM pour dérober identifiants et jetons MFA, ils ont extorqué des firmes de capital-investissement et de grandes entreprises. Parallèlement, des acteurs malveillants ciblant l'open source (TeamPCP, auteurs du ver ChainDrop) ont empoisonné à grande échelle les registres PyPI et npm."
+          "en": "Iranian threat groups (CyberAv3ngers / IRGC-linked clusters) sustained targeted reconnaissance and exploitation efforts against critical utility infrastructure, focusing on water and wastewater facilities in New Jersey and Alabama. Concurrently, advanced espionage operations under Project CAV3RN deployed specialized .NET NativeAOT modules abusing Google Apps Script relays and dynamic DNS A-record resolvers to establish stealthy, resilient C2 channels targeting Israeli strategic interests.",
+          "fr": "Les groupes étatiques iraniens (CyberAv3ngers / affiliés CGRI) ont poursuivi leurs attaques contre les infrastructures critiques, ciblant les installations de traitement des eaux dans le New Jersey et l'Alabama. En parallèle, les opérations d'espionnage du projet CAV3RN ont déployé des modules .NET NativeAOT détournant Google Apps Script et les résolutions DNS pour maintenir des canaux C2 furtifs et résilients contre des cibles stratégiques en Israël."
         }
       }
     ],
@@ -203,235 +221,39 @@
             "Industry_and_Manufacturing"
           ],
           "fr": [
-            "Gouvernement et défense",
-            "Technologies et télécommunications",
-            "Industrie et fabrication"
+            "Government_and_Defense",
+            "Technology_and_Telecom",
+            "Industry_and_Manufacturing"
           ]
         },
         "targeted_regions": {
           "en": [
             "Europe",
             "India",
-            "Global"
+            "North America"
           ],
           "fr": [
             "Europe",
             "Inde",
-            "Mondial"
+            "Amérique du Nord"
           ]
         },
         "mitre_attack_ttps_id": [
           "T1566.001",
-          "T1204.002",
           "T1068",
           "T1014",
           "T1562.001",
-          "T1059.001"
+          "T1204.002",
+          "T1055"
         ],
         "campaign_or_operation": {
           "en": [
             "Operation Dream Job",
-            "FudModule Rootkit Campaign"
+            "FudModule Kernel Rootkit Campaign"
           ],
           "fr": [
-            "Operation Dream Job",
-            "Campagne Rootkit FudModule"
-          ]
-        }
-      },
-      {
-        "threat_actor_name": "UNC6671",
-        "origin_country": "Unknown",
-        "type": {
-          "en": "Cybercriminal",
-          "fr": "Cybercriminel"
-        },
-        "targeted_sectors": {
-          "en": [
-            "Finance",
-            "Technology_and_Telecom",
-            "Retail_and_Consumer",
-            "Business_Services"
-          ],
-          "fr": [
-            "Finance",
-            "Technologies et télécommunications",
-            "Commerce de détail et grande consommation",
-            "Services aux entreprises"
-          ]
-        },
-        "targeted_regions": {
-          "en": [
-            "United States",
-            "Europe",
-            "Global"
-          ],
-          "fr": [
-            "États-Unis",
-            "Europe",
-            "Mondial"
-          ]
-        },
-        "mitre_attack_ttps_id": [
-          "T1566.004",
-          "T1557.001",
-          "T1556",
-          "T1078",
-          "T1530",
-          "T1090",
-          "T1565",
-          "T1583"
-        ],
-        "campaign_or_operation": {
-          "en": [
-            "BlackFile / Redact / Pink / Helix / Falcon Vishing Extortion"
-          ],
-          "fr": [
-            "Extorsion par Vishing BlackFile / Redact / Pink / Helix / Falcon"
-          ]
-        }
-      },
-      {
-        "threat_actor_name": "Gunra Ransomware Group",
-        "origin_country": "Russia",
-        "type": {
-          "en": "RaaS",
-          "fr": "RaaS"
-        },
-        "targeted_sectors": {
-          "en": [
-            "Critical_Infrastructure",
-            "Healthcare_and_Life_Sciences",
-            "Finance",
-            "Government_and_Defense"
-          ],
-          "fr": [
-            "Infrastructures critiques",
-            "Santé et sciences de la vie",
-            "Finance",
-            "Gouvernement et défense"
-          ]
-        },
-        "targeted_regions": {
-          "en": [
-            "United States",
-            "South Korea",
-            "Europe",
-            "Global"
-          ],
-          "fr": [
-            "États-Unis",
-            "Corée du Sud",
-            "Europe",
-            "Mondial"
-          ]
-        },
-        "mitre_attack_ttps_id": [
-          "T1190",
-          "T1078",
-          "T1021.001",
-          "T1486",
-          "T1567",
-          "T1490"
-        ],
-        "campaign_or_operation": {
-          "en": [
-            "Gunra Critical Infrastructure Double Extortion"
-          ],
-          "fr": [
-            "Double extorsion Gunra sur infrastructures critiques"
-          ]
-        }
-      },
-      {
-        "threat_actor_name": "Head Mare",
-        "origin_country": "Russia",
-        "type": {
-          "en": "Nation-state",
-          "fr": "Étatique"
-        },
-        "targeted_sectors": {
-          "en": [
-            "Government_and_Defense",
-            "Technology_and_Telecom"
-          ],
-          "fr": [
-            "Gouvernement et défense",
-            "Technologies et télécommunications"
-          ]
-        },
-        "targeted_regions": {
-          "en": [
-            "Southeast Asia",
-            "Eastern Europe"
-          ],
-          "fr": [
-            "Asie du Sud-Est",
-            "Europe de l'Est"
-          ]
-        },
-        "mitre_attack_ttps_id": [
-          "T1190",
-          "T1195.002",
-          "T1219",
-          "T1059.003",
-          "T1003.001"
-        ],
-        "campaign_or_operation": {
-          "en": [
-            "TrueConf Supply Chain Poisoning (PhantomCore / PhantomGraph)"
-          ],
-          "fr": [
-            "Empoisonnement de chaîne logistique TrueConf (PhantomCore / PhantomGraph)"
-          ]
-        }
-      },
-      {
-        "threat_actor_name": "ExfilSquad",
-        "origin_country": "Unknown",
-        "type": {
-          "en": "Cybercriminal",
-          "fr": "Cybercriminel"
-        },
-        "targeted_sectors": {
-          "en": [
-            "Industry_and_Manufacturing",
-            "Retail_and_Consumer",
-            "Business_Services",
-            "Critical_Infrastructure"
-          ],
-          "fr": [
-            "Industrie et fabrication",
-            "Commerce de détail et grande consommation",
-            "Services aux entreprises",
-            "Infrastructures critiques"
-          ]
-        },
-        "targeted_regions": {
-          "en": [
-            "United States",
-            "Europe",
-            "Global"
-          ],
-          "fr": [
-            "États-Unis",
-            "Europe",
-            "Mondial"
-          ]
-        },
-        "mitre_attack_ttps_id": [
-          "T1190",
-          "T1213",
-          "T1567",
-          "T1530",
-          "T1652"
-        ],
-        "campaign_or_operation": {
-          "en": [
-            "Microsoft Power Pages & SaaS CRM Data Extortion"
-          ],
-          "fr": [
-            "Extorsion de données sur Microsoft Power Pages et CRM SaaS"
+            "Opération Dream Job",
+            "Campagne Rootkit Kernel FudModule"
           ]
         }
       },
@@ -448,8 +270,8 @@
             "Business_Services"
           ],
           "fr": [
-            "Technologies et télécommunications",
-            "Services aux entreprises"
+            "Technology_and_Telecom",
+            "Business_Services"
           ]
         },
         "targeted_regions": {
@@ -465,14 +287,237 @@
           "T1552.001",
           "T1552.007",
           "T1041",
-          "T1037"
+          "T1071.001"
         ],
         "campaign_or_operation": {
           "en": [
             "LiteLLM PyPI Supply Chain Poisoning"
           ],
           "fr": [
-            "Empoisonnement de la chaîne logistique PyPI LiteLLM"
+            "Empoisonnement supply chain PyPI LiteLLM"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "UNC6671 (Falcon / BlackFile / Redact / Pink / Helix)",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Cybercriminal",
+          "fr": "Cybercriminel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Finance",
+            "Retail_and_Consumer",
+            "Technology_and_Telecom",
+            "Business_Services",
+            "Hospitality_and_Entertainment"
+          ],
+          "fr": [
+            "Finance",
+            "Retail_and_Consumer",
+            "Technology_and_Telecom",
+            "Business_Services",
+            "Hospitality_and_Entertainment"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "North America",
+            "Europe"
+          ],
+          "fr": [
+            "Amérique du Nord",
+            "Europe"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1566.004",
+          "T1556",
+          "T1078",
+          "T1530",
+          "T1090",
+          "T1656"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Multi-Brand Enterprise Vishing & SaaS Extortion"
+          ],
+          "fr": [
+            "Campagne multi-marques de vishing et extorsion SaaS"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "ShinyHunters",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Cybercriminal",
+          "fr": "Cybercriminel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Healthcare_and_Life_Sciences",
+            "Technology_and_Telecom",
+            "Retail_and_Consumer"
+          ],
+          "fr": [
+            "Healthcare_and_Life_Sciences",
+            "Technology_and_Telecom",
+            "Retail_and_Consumer"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "North America",
+            "Global"
+          ],
+          "fr": [
+            "Amérique du Nord",
+            "Mondial"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1530",
+          "T1078",
+          "T1567",
+          "T1657"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "2026 Pay-or-Leak Healthcare Extortion (DentaQuest, Alcon, RingCentral)"
+          ],
+          "fr": [
+            "Extorsion de données santé 2026 (DentaQuest, Alcon, RingCentral)"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "FulcrumSec",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Cybercriminal",
+          "fr": "Cybercriminel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Healthcare_and_Life_Sciences"
+          ],
+          "fr": [
+            "Healthcare_and_Life_Sciences"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Europe"
+          ],
+          "fr": [
+            "Europe"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1552.001",
+          "T1213.003",
+          "T1567.002",
+          "T1078"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Novo Nordisk Intellectual Property Extortion"
+          ],
+          "fr": [
+            "Extorsion de propriété intellectuelle Novo Nordisk"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "Head Mare",
+        "origin_country": "Russia",
+        "type": {
+          "en": "Nation-state",
+          "fr": "Étatique"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Government_and_Defense",
+            "Technology_and_Telecom"
+          ],
+          "fr": [
+            "Government_and_Defense",
+            "Technology_and_Telecom"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Asia-Pacific",
+            "Europe"
+          ],
+          "fr": [
+            "Asie-Pacifique",
+            "Europe"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1190",
+          "T1195.002",
+          "T1059",
+          "T1078"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "TrueConf Video Server Zero-Day Supply Chain Poisoning (PhantomCore)"
+          ],
+          "fr": [
+            "Compromission supply chain des serveurs TrueConf (PhantomCore)"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "Gunra",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Ransomware",
+          "fr": "Ransomware"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Healthcare_and_Life_Sciences",
+            "Finance",
+            "Government_and_Defense",
+            "Critical_Infrastructure"
+          ],
+          "fr": [
+            "Healthcare_and_Life_Sciences",
+            "Finance",
+            "Government_and_Defense",
+            "Critical_Infrastructure"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Global",
+            "North America",
+            "Asia-Pacific"
+          ],
+          "fr": [
+            "Mondial",
+            "Amérique du Nord",
+            "Asie-Pacifique"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1190",
+          "T1078",
+          "T1021.001",
+          "T1486",
+          "T1567"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Gunra Critical Infrastructure Double Extortion"
+          ],
+          "fr": [
+            "Campagne de double extorsion Gunra sur infrastructures critiques"
           ]
         }
       }
@@ -480,32 +525,10 @@
   },
   "mitre_attack_ttps": {
     "ttps_strategic_analyse": {
-      "en": "Threat actor operational techniques during Week 2 of August 2026 reflect an intense convergence toward identity bypass, software supply chain weaponization, and kernel-level defense evasion. Initial access heavily shifted toward human vulnerability via multi-stage voice phishing (T1566.004) and AiTM credential harvesting (T1557.001), bypassing conventional MFA by luring targets with FIDO2 migration pretexts. In software ecosystems, package manager poisoning (T1195.002) surged across npm (ChainDrop worm, Wel1Dropper, keyv/cacheable) and PyPI (LiteLLM), automating the theft of CI/CD tokens and AI gateway credentials. In post-exploitation, attackers privileged evasive persistence and defense impairment, including kernel rootkit installation via driver vulnerabilities (T1014 / T1068 by Lazarus), living-off-the-land script interpreters (T1059), and decentralized C2 infrastructures hosted on public blockchains (Polygon RPC) and encrypted relays (T1071 / T1090).",
-      "fr": "Les techniques opérationnelles observées en deuxième semaine d'août 2026 révèlent une convergence marquée vers le contournement d'identité, l'armement de la supply chain logicielle et l'évasion de défenses au niveau noyau. L'accès initial s'est fortement déplacé vers l'humain via le vishing multi-marques (T1566.004) et les proxys AiTM (T1557.001), contournant le MFA classique sous prétexte de migration vers FIDO2. Dans les écosystèmes logiciels, l'empoisonnement des gestionnaires de paquets (T1195.002) a explosé sur npm (ver ChainDrop, Wel1Dropper, keyv) et PyPI (LiteLLM) pour voler des secrets CI/CD et IA. En post-exploitation, les acteurs ont privilégié l'évasion avancée via rootkits noyau (T1014 / T1068 par Lazarus), l'exécution de scripts LOLBINs (T1059) et des infrastructures C2 décentralisées sur la blockchain Polygon (T1071 / T1090)."
+      "en": "MITRE ATT&CK telemetry for the period reflects three major operational dynamics: (1) The dominance of Social Engineering and Identity Subversion (T1566, T1566.004, T1078, T1556), where adversary-in-the-middle phishing and voice vishing directly bypassed MFA controls to hijack SaaS environments (Microsoft 365, Okta, Salesforce); (2) Software Supply Chain Weaponization (T1195.002, T1105) scaling across open-source package ecosystems (PyPI LiteLLM, npm ChainDrop/Wel1Dropper) and commercial installers (TrueConf, Zbtlink routers); and (3) Advanced Defense Evasion and Persistence (T1068, T1014, T1562.001, T1071.001), characterized by BYOVD and kernel-mode rootkits (FudModule), as well as decentralized blockchain RPC mechanisms (Polygon smart contracts) and legitimate web service relays (Google Apps Script).",
+      "fr": "L'analyse des TTPs MITRE ATT&CK sur la période met en relief trois dynamiques opérationnelles majeures : (1) La prédominance de l'ingénierie sociale et du détournement d'identité (T1566, T1566.004, T1078, T1556), où le phishing AiTM et le vishing contournent directement le MFA pour compromettre les environnements SaaS (M365, Okta, Salesforce) ; (2) L'industrialisation des attaques sur la supply chain logicielle (T1195.002, T1105) touchant les gestionnaires de paquets open source (PyPI LiteLLM, npm ChainDrop/Wel1Dropper) et les logiciels commerciaux (TrueConf, routeurs Zbtlink) ; et (3) L'évasion de défense avancée et la persistance noyau (T1068, T1014, T1562.001, T1071.001), illustrées par le déploiement de rootkits kernel (FudModule) et l'utilisation de C2 décentralisés sur blockchain Polygon ou de relais Google Apps Script."
     },
     "ttps_list": [
-      {
-        "id": "T1566.004",
-        "tactic": {
-          "en": "Initial Access",
-          "fr": "Accès initial"
-        },
-        "technique_name": "Spearphishing Voice",
-        "frequency": 6,
-        "severity": "critical",
-        "context": {
-          "en": [
-            "UNC6671 vishing campaigns targeting corporate and personal phones for M365/Okta extortion",
-            "Falcon extortion operations targeting US financial institutions (Blackstone, CME Group)",
-            "Levi Strauss social engineering breach compromising three corporate employee devices"
-          ],
-          "fr": [
-            "Campagnes de vishing UNC6671 ciblant téléphones pros et personnels pour extorsion M365/Okta",
-            "Opérations d'extorsion Falcon ciblant des institutions financières américaines (Blackstone, CME Group)",
-            "Compromission par ingénierie sociale chez Levi Strauss touchant les postes de trois employés"
-          ]
-        }
-      },
       {
         "id": "T1190",
         "tactic": {
@@ -513,22 +536,84 @@
           "fr": "Accès initial"
         },
         "technique_name": "Exploit Public-Facing Application",
-        "frequency": 5,
+        "frequency": 7,
         "severity": "critical",
         "context": {
           "en": [
-            "Zero-day unauthenticated SQLi GHSA-vwf4-m7j8-wcjf in Metabase BI instances",
-            "Zero-day OS command injection CVE-2026-16812 in Arista VeloCloud Orchestrator",
-            "Gunra ransomware exploiting Fortinet (CVE-2025-24472) and Schneider Electric (CVE-2024-5559)",
-            "Head Mare APT exploiting TrueConf server flaws (KLCERT-26-057/058) on TCP port 4307",
-            "Active exploitation of Progress Kemp LoadMaster CVE-2026-8037 and Cisco ASA/FTD CVE-2026-20349"
+            "Exploitation of Metabase unauthenticated SQLi zero-day (CVE-2026-72898 / GHSA-vwf4-m7j8-wcjf)",
+            "Exploitation of SharePoint RCE flaws (CVE-2026-55040, CVE-2026-63520, CVE-2026-45659)",
+            "Exploitation of Fortinet (CVE-2025-24472), Cisco ASA/FTD (CVE-2026-20349), and Schneider PowerLogic (CVE-2024-5559)"
           ],
           "fr": [
-            "Injection SQL zero-day non authentifiée GHSA-vwf4-m7j8-wcjf sur les instances Metabase BI",
-            "Injection de commande OS zero-day CVE-2026-16812 sur Arista VeloCloud Orchestrator",
-            "Ransomware Gunra exploitant Fortinet (CVE-2025-24472) et Schneider Electric (CVE-2024-5559)",
-            "APT Head Mare exploitant les failles TrueConf Server (KLCERT-26-057/058) sur le port TCP 4307",
-            "Exploitation active de Progress Kemp LoadMaster CVE-2026-8037 et Cisco ASA/FTD CVE-2026-20349"
+            "Exploitation de la zero-day SQLi non authentifiée de Metabase (CVE-2026-72898 / GHSA-vwf4-m7j8-wcjf)",
+            "Exploitation des failles RCE SharePoint (CVE-2026-55040, CVE-2026-63520, CVE-2026-45659)",
+            "Exploitation des failles Fortinet (CVE-2025-24472), Cisco ASA/FTD (CVE-2026-20349) et Schneider PowerLogic (CVE-2024-5559)"
+          ]
+        }
+      },
+      {
+        "id": "T1078",
+        "tactic": {
+          "en": "Defense Evasion / Initial Access",
+          "fr": "Évasion de défense / Accès initial"
+        },
+        "technique_name": "Valid Accounts",
+        "frequency": 7,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "Compromised VPN credentials used against French DGFiP tax administration by ZeroBytes",
+            "Hijacked M365 and Okta sessions utilized by UNC6671 across financial firms",
+            "Exfiltrated API keys and developer credentials in LiteLLM PyPI supply chain incident"
+          ],
+          "fr": [
+            "Identifiants VPN compromis utilisés contre la DGFiP française par ZeroBytes",
+            "Sessions M365 et Okta détournées par UNC6671 contre des institutions financières",
+            "Clés d'API et identifiants développeurs exfiltrés lors de la compromission de LiteLLM sur PyPI"
+          ]
+        }
+      },
+      {
+        "id": "T1566",
+        "tactic": {
+          "en": "Initial Access",
+          "fr": "Accès initial"
+        },
+        "technique_name": "Phishing",
+        "frequency": 7,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Recruitment lures delivering SecurityPDF by Lazarus (Operation Dream Job)",
+            "Spearphishing attachments containing VBS scripts targeting Brazilian banking sector",
+            "Google Ads malvertising redirecting to Google Sites Trezor seed phrase phishing pages"
+          ],
+          "fr": [
+            "Leurres de recrutement distribuant SecurityPDF par Lazarus (Operation Dream Job)",
+            "Pièces jointes spearphishing contenant des scripts VBS ciblant les banques brésiliennes",
+            "Malvertising Google Ads redirigeant vers des pages Google Sites dérobant les seed phrases Trezor"
+          ]
+        }
+      },
+      {
+        "id": "T1566.004",
+        "tactic": {
+          "en": "Initial Access",
+          "fr": "Accès initial"
+        },
+        "technique_name": "Spearphishing Voice",
+        "frequency": 4,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Vishing campaigns targeting IT helpdesks at Levi Strauss, Blackstone, and CME Group",
+            "UNC6671/Falcon multi-brand extortion operations using urgent FIDO2 passkey pretexts",
+            "Tech support scams manipulating corporate users to install remote management software (SKI Management)"
+          ],
+          "fr": [
+            "Campagnes de vishing ciblant les helpdesks IT chez Levi Strauss, Blackstone et CME Group",
+            "Opérations d'extorsion multi-marques UNC6671/Falcon sous prétexte de migration urgente vers FIDO2",
+            "Arnaques au support technique manipulant les employés pour installer des outils RMM (SKI Management)"
           ]
         }
       },
@@ -543,66 +628,14 @@
         "severity": "critical",
         "context": {
           "en": [
-            "ChainDrop self-propagating npm worm compromising 400+ packages with over 2B downloads",
-            "TeamPCP PyPI backdoor in LiteLLM packages exfiltrating environment variables and cloud keys",
-            "Wel1Dropper campaign deploying 788 malicious npm packages delivering cross-platform RATs",
-            "Maintainer account takeover on keyv and cacheable npm packages distributing malicious code",
-            "BdThemes WordPress supply chain JSON poisoning injecting rogue administrator accounts"
+            "LiteLLM PyPI package repository hijack by TeamPCP targeting AI credentials",
+            "ChainDrop self-propagating worm infecting over 400 npm packages",
+            "Wel1Dropper campaign publishing 788 AI-slopsquatted npm packages with Sliver C2"
           ],
           "fr": [
-            "Ver npm auto-propageant ChainDrop compromettant plus de 400 paquets (2 milliards de téléchargements)",
-            "Porte dérobée TeamPCP sur PyPI dans LiteLLM exfiltrant variables d'environnement et clés cloud",
-            "Campagne Wel1Dropper publiant 788 paquets npm malveillants livrant des RATs multiplateformes",
-            "Prise de contrôle de comptes mainteneurs npm sur keyv et cacheable pour injecter du malware",
-            "Attaque supply chain sur BdThemes via empoisonnement JSON créant des admins WordPress illégitimes"
-          ]
-        }
-      },
-      {
-        "id": "T1059",
-        "tactic": {
-          "en": "Execution",
-          "fr": "Exécution"
-        },
-        "technique_name": "Command and Scripting Interpreter",
-        "frequency": 6,
-        "severity": "high",
-        "context": {
-          "en": [
-            "Autonomous AI agent operations (JADEPUFFER, GTG-1002) utilizing bash and Python interpreters",
-            "Multi-stage PowerShell and VBS loaders downloading payloads from Vercel infrastructure",
-            "Wel1Dropper executing detached shell commands and anti-debugging routines via native APIs",
-            "Zbtlink router ENDLESSDOORS backdoor executing unauthenticated root popen() shell commands"
-          ],
-          "fr": [
-            "Opérations d'agents IA autonomes (JADEPUFFER, GTG-1002) utilisant des interpréteurs bash et Python",
-            "Chargeurs multi-étapes PowerShell et VBS téléchargeant des charges utiles depuis l'infrastructure Vercel",
-            "Wel1Dropper exécutant des commandes shell détachées et anti-debugging via APIs natives",
-            "Porte dérobée ENDLESSDOORS des routeurs Zbtlink exécutant des commandes popen() root sans authentification"
-          ]
-        }
-      },
-      {
-        "id": "T1078",
-        "tactic": {
-          "en": "Defense Evasion",
-          "fr": "Évasion de défenses"
-        },
-        "technique_name": "Valid Accounts",
-        "frequency": 5,
-        "severity": "high",
-        "context": {
-          "en": [
-            "Compromised Azure tenant credentials used against HCLTech and TCS employee data",
-            "Anubis ransomware operators purchasing initial access credentials from Initial Access Brokers (IABs)",
-            "Beacon CRM breach resulting from compromised administrator authentication credentials",
-            "Swiss BIT SharePoint breach leveraging compromised service and user account credentials"
-          ],
-          "fr": [
-            "Identifiants de tenant Azure compromis utilisés contre les données d'employés HCLTech et TCS",
-            "Opérateurs du ransomware Anubis achetant des accès initiaux auprès d'Initial Access Brokers (IAB)",
-            "Violation de données Beacon CRM résultant d'identifiants administrateurs compromis",
-            "Compromission de 200 comptes utilisateurs et techniques du BIT suisse sur SharePoint"
+            "Détournement du paquet PyPI LiteLLM par TeamPCP ciblant les clés d'API IA",
+            "Ver auto-propageant ChainDrop infectant plus de 400 paquets npm",
+            "Campagne Wel1Dropper publiant 788 paquets npm générés par IA avec implant Sliver C2"
           ]
         }
       },
@@ -613,20 +646,18 @@
           "fr": "Impact"
         },
         "technique_name": "Data Encrypted for Impact",
-        "frequency": 5,
+        "frequency": 6,
         "severity": "critical",
         "context": {
           "en": [
-            "DeadLock ransomware encrypting enterprise assets with hybrid Curve25519/XChaCha20",
-            "Anubis ransomware targeting City of Coweta local government files (.anubis extension)",
-            "Gunra ransomware deploying double extortion against critical infrastructure entities",
-            "Qilin ransomware deploying encryptors following Check Point VPN exploitation at Stade Français"
+            "DeadLock ransomware encrypting systems using Curve25519/XChaCha20 hybrid encryption",
+            "Anubis ransomware targeting City of Coweta local government infrastructure",
+            "Gunra ransomware targeting global critical infrastructure across healthcare and energy"
           ],
           "fr": [
-            "Ransomware DeadLock chiffrant les parcs d'entreprises avec l'algorithme hybride Curve25519/XChaCha20",
-            "Ransomware Anubis ciblant les fichiers municipaux de la ville de Coweta (extension .anubis)",
-            "Ransomware Gunra menant des opérations de double extorsion sur infrastructures critiques",
-            "Ransomware Qilin chiffrant les données du Stade Français après intrusion sur passerelle VPN Check Point"
+            "Ransomware DeadLock chiffrant les systèmes via chiffrement hybride Curve25519/XChaCha20",
+            "Ransomware Anubis ciblant l'infrastructure municipale de la ville de Coweta",
+            "Ransomware Gunra ciblant les infrastructures critiques mondiales de l'énergie et de la santé"
           ]
         }
       },
@@ -637,18 +668,18 @@
           "fr": "Élévation de privilèges"
         },
         "technique_name": "Exploitation for Privilege Escalation",
-        "frequency": 3,
+        "frequency": 5,
         "severity": "critical",
         "context": {
           "en": [
-            "Lazarus exploiting Windows AFD.sys zero-day CVE-2026-68820 to gain SYSTEM privileges",
-            "ShieldBreak exploit chaining symlink manipulation to bypass Defender patch CVE-2026-50656",
-            "Windows win32kfull and storport LPE vulnerabilities resolved in Microsoft August Patch Tuesday"
+            "Exploitation of Windows AFD.sys zero-day (CVE-2026-68820) by Lazarus for SYSTEM privilege escalation",
+            "Linux kernel vulnerabilities (CVE-2026-64564 18-year-old SCTP UAF, CVE-2026-64530)",
+            "Microsoft Defender engine LPE patch bypass (CVE-2026-50656 / ShieldBreak)"
           ],
           "fr": [
-            "Lazarus exploitant la zero-day Windows AFD.sys CVE-2026-68820 pour obtenir les privilèges SYSTEM",
-            "Exploit ShieldBreak contournant le correctif de Defender CVE-2026-50656 par manipulation de symlinks",
-            "Vulnérabilités d'élévation locale win32kfull et storport corrigées lors du Patch Tuesday Microsoft"
+            "Exploitation de la zero-day AFD.sys Windows (CVE-2026-68820) par Lazarus pour élévation SYSTEM",
+            "Vulnérabilités noyau Linux (CVE-2026-64564 faille SCTP vieille de 18 ans, CVE-2026-64530)",
+            "Contournement de correctif d'élévation de privilèges dans Microsoft Defender (CVE-2026-50656 / ShieldBreak)"
           ]
         }
       },
@@ -656,39 +687,19 @@
         "id": "T1014",
         "tactic": {
           "en": "Defense Evasion",
-          "fr": "Évasion de défenses"
+          "fr": "Évasion de défense"
         },
         "technique_name": "Rootkit",
         "frequency": 2,
         "severity": "critical",
         "context": {
           "en": [
-            "Lazarus Group deploying updated FudModule kernel-mode rootkit to disable EDR/AV hooks and tamper with memory",
-            "Kernel driver manipulation to blind security telemetry following CVE-2026-68820 exploitation"
+            "Lazarus deploying updated FudModule kernel-mode rootkit post CVE-2026-68820 exploitation",
+            "Direct DKOM kernel tampering to disable active EDR/AV sensor callbacks and hooks"
           ],
           "fr": [
-            "Groupe Lazarus déployant le rootkit noyau FudModule pour désactiver les hooks EDR/AV et manipuler la mémoire",
-            "Manipulation de pilotes noyau pour neutraliser la télémétrie de sécurité après exploitation de CVE-2026-68820"
-          ]
-        }
-      },
-      {
-        "id": "T1557.001",
-        "tactic": {
-          "en": "Credential Access",
-          "fr": "Accès aux identifiants"
-        },
-        "technique_name": "Adversary-in-the-Middle",
-        "frequency": 2,
-        "severity": "critical",
-        "context": {
-          "en": [
-            "UNC6671 deploying AiTM reverse proxy infrastructure (EvilTokens/Passkey portals) capturing SSO credentials and MFA session tokens",
-            "Falcon extortion operations setting up spoofed authentication portals to bypass phishing-resistant authentication"
-          ],
-          "fr": [
-            "UNC6671 déployant des proxys inverses AiTM (EvilTokens/portails Passkey) pour capturer identifiants SSO et jetons MFA",
-            "Opérations Falcon créant des portails d'authentification contrefaits pour contourner les protections MFA"
+            "Déploiement par Lazarus du rootkit kernel FudModule après exploitation de CVE-2026-68820",
+            "Manipulation directe d'objets noyau (DKOM) pour désactiver les callbacks et hooks EDR/AV"
           ]
         }
       },
@@ -698,19 +709,19 @@
           "en": "Collection",
           "fr": "Collecte"
         },
-        "technique_name": "Data from Cloud Storage Object",
+        "technique_name": "Data from Cloud Storage",
         "frequency": 5,
         "severity": "high",
         "context": {
           "en": [
-            "Automated scripting exfiltrating massive SharePoint/OneDrive/Okta repositories during UNC6671 intrusions",
-            "tl;dv Firestore misconfiguration allowing cross-tenant extraction of 181k meeting metadata records",
-            "ExfilSquad collecting data tables from misconfigured Microsoft Power Pages cloud repositories"
+            "ShinyHunters exfiltrating 15M records from DentaQuest cloud data stores",
+            "Cross-tenant meeting metadata exfiltration from misconfigured tl;dv Firestore collections",
+            "Automated M365 SharePoint/OneDrive data harvesting by UNC6671 scripts"
           ],
           "fr": [
-            "Scripts automatisés exfiltrant des données massives SharePoint/OneDrive/Okta lors des attaques UNC6671",
-            "Mauvaise configuration Firestore de tl;dv permettant l'extraction cross-tenant de 181k métadonnées de réunions",
-            "ExfilSquad collectant des tables de données sur des référentiels cloud Microsoft Power Pages mal configurés"
+            "Exfiltration par ShinyHunters de 15M de dossiers médicaux depuis les stockages cloud DentaQuest",
+            "Exfiltration cross-tenant de métadonnées de réunions sur Firestore mal configuré (tl;dv)",
+            "Moisson automatisée de données SharePoint/OneDrive M365 par les scripts de UNC6671"
           ]
         }
       },
@@ -720,39 +731,19 @@
           "en": "Command and Control",
           "fr": "Commandement et contrôle"
         },
-        "technique_name": "Web Protocols",
+        "technique_name": "Application Layer Protocol: Web Protocols",
         "frequency": 5,
         "severity": "high",
         "context": {
           "en": [
-            "Aeternum loader and DeadLock ransomware querying Polygon public blockchain RPC endpoints for C2 instructions",
-            "Project CAV3RN routing C2 traffic via Google Apps Script relays to blend with legitimate enterprise SaaS traffic",
-            "Kimwolf v7 resolving C2 servers via Ethereum Name Service (ENS) RPC endpoints"
+            "Aeternum loader querying Polygon blockchain RPC endpoints and Telegram Bot API for C2",
+            "Project CAV3RN routing C2 communications via Google Apps Script relays and DNS resolvers",
+            "Kimwolf v7 tunneling DDoS C2 traffic via Ethereum Name Service (ENS) and HTTP/2 Chrome fingerprints"
           ],
           "fr": [
-            "Chargeur Aeternum et ransomware DeadLock interrogeant des RPC blockchain Polygon pour leurs instructions C2",
-            "Project CAV3RN relayant son trafic C2 via Google Apps Script pour se fondre dans le trafic SaaS légitime",
-            "Kimwolf v7 résolvant ses serveurs C2 via des endpoints RPC Ethereum Name Service (ENS)"
-          ]
-        }
-      },
-      {
-        "id": "T1070",
-        "tactic": {
-          "en": "Defense Evasion",
-          "fr": "Évasion de défenses"
-        },
-        "technique_name": "Indicator Removal",
-        "frequency": 3,
-        "severity": "medium",
-        "context": {
-          "en": [
-            "DeadLock ransomware clearing Windows Event Logs using three concurrent methods (API, registry permissions SDDL, wevtapi.dll)",
-            "Arista VeloCloud zero-day attackers purging web server access logs post-exploitation"
-          ],
-          "fr": [
-            "Ransomware DeadLock purgeant les journaux d'événements Windows via trois méthodes (API, SDDL registre, wevtapi.dll)",
-            "Attaquants sur Arista VeloCloud effaçant les logs d'accès du serveur web post-exploitation"
+            "Loader Aeternum interrogeant les RPC de la blockchain Polygon et l'API Telegram pour son C2",
+            "Projet CAV3RN routant les communications C2 via des relais Google Apps Script et des résolveurs DNS",
+            "Kimwolf v7 masquant son C2 DDoS derrière Ethereum Name Service (ENS) et des empreintes Chrome HTTP/2"
           ]
         }
       }
@@ -760,8 +751,8 @@
   },
   "vulnerabilities": {
     "analyse": {
-      "en": "Vulnerability management during Week 2 of August 2026 was dominated by Microsoft's colossal August Patch Tuesday addressing 415 vulnerabilities (including 62 Critical and in-the-wild zero-day CVE-2026-68820 in AFD.sys), alongside an extraordinary concentration of unauthenticated CVSS 10.0 and 9.8 remote code execution flaws across enterprise infrastructure. Critical perimeter devices and management consoles suffered severe exposure: Arista VeloCloud Orchestrator (CVE-2026-16812), Metabase BI (GHSA-vwf4-m7j8-wcjf), Adobe ColdFusion (CVE-2026-48362), Adobe Campaign Classic (CVE-2026-71398), SAP Commerce Cloud (CVE-2026-58231), and SonicWall GMS (CVE-2026-66147). In the zero-day domain, Cisco ASA/FTD SSL VPN was actively exploited for remote denial of service (CVE-2026-20349), while researchers disclosed 'Zoomsday' (CVE-2026-53413), a zero-click client hijacking flaw in Zoom's screen annotation engine. Defensive security stacks themselves were heavily targeted, as evidenced by seven vulnerabilities in Cisco ClamAV and the ShieldBreak bypass of Microsoft Defender's patch.",
-      "fr": "La gestion des vulnérabilités de la deuxième semaine d'août 2026 a été dominée par le gigantesque Patch Tuesday Microsoft corrigeant 415 failles (dont 62 critiques et la zero-day exploitée CVE-2026-68820 dans AFD.sys), parallèlement à une concentration inédite de RCE pré-authentification notées CVSS 9.8 et 10.0 sur les équipements d'entreprise. Les consoles d'administration et passerelles de bordure ont été particulièrement exposées : Arista VeloCloud (CVE-2026-16812), Metabase BI (GHSA-vwf4-m7j8-wcjf), Adobe ColdFusion (CVE-2026-48362), Adobe Campaign Classic (CVE-2026-71398), SAP Commerce Cloud (CVE-2026-58231) et SonicWall GMS (CVE-2026-66147). Côté zero-days, Cisco ASA/FTD a subi des attaques DoS actives (CVE-2026-20349), tandis que la faille 'Zoomsday' (CVE-2026-53413) a révélé une prise de contrôle zero-click via l'annotation Zoom. Les outils de sécurité eux-mêmes ont été ciblés, avec 7 failles dans Cisco ClamAV et le contournement ShieldBreak sur Microsoft Defender."
+      "en": "The vulnerability landscape this week was characterized by intense Patch Tuesday disclosures and actively exploited edge/kernel zero-days. Microsoft released fixes for 415 CVEs, headlined by CVE-2026-68820 (AFD.sys LPE, actively weaponized by DPRK's Lazarus Group) and wormable remote code execution vulnerabilities in Windows DNS Server (CVE-2026-62878) and Windows Deployment Services (CVE-2026-62893). Critical remote access and perimeter appliances faced direct attacks, including Cisco ASA/FTD (CVE-2026-20349 DoS zero-day) and N-able N-central (CVE-2026-18577 auth bypass). Web applications and analytics platforms represented severe single points of failure, demonstrated by the unauthenticated CVSS 10.0 SQL injection in Metabase (CVE-2026-72898 / GHSA-vwf4-m7j8-wcjf) and an unauthenticated account takeover flaw in Adobe Commerce / Magento (CVE-2026-71362). Finally, collaboration software revealed zero-click risks via Zoom's 'Zoomsday' annotation flaws (CVE-2026-53413/14/15) allowing attendee machine takeover during live sessions.",
+      "fr": "Le paysage des vulnérabilités a été dominé par les publications massives du Patch Tuesday et l'exploitation active de failles zero-day périmétriques et noyau. Microsoft a corrigé 415 CVE, menées par la CVE-2026-68820 (AFD.sys LPE, exploitée par le groupe nord-coréen Lazarus) et des failles RCE wormables dans Windows DNS Server (CVE-2026-62878) et WDS (CVE-2026-62893). Les équipements périmétriques et d'accès distant ont subi des attaques directes, notamment Cisco ASA/FTD (zero-day DoS CVE-2026-20349) et N-able N-central (contournement d'auth CVE-2026-18577). Les applications web et outils d'analytics ont constitué des points critiques de défaillance, illustrés par l'injection SQL non authentifiée CVSS 10.0 dans Metabase (CVE-2026-72898) et la prise de contrôle de comptes Adobe Commerce / Magento (CVE-2026-71362). Enfin, les outils collaboratifs ont exposé des risques zero-click via la suite 'Zoomsday' de Zoom (CVE-2026-53413/14/15) permettant la prise de contrôle du poste d'un participant en réunion."
     },
     "list": [
       {
@@ -769,11 +760,11 @@
         "cvss_score": 7.0,
         "epss_score": "0.36%",
         "cisa_kev": true,
-        "affected_product": "Windows Ancillary Function Driver for WinSock (AFD.sys)",
+        "affected_product": "Windows 10, Windows 11, Windows Server (AFD.sys)",
         "affected_product_vendor": "Microsoft",
         "vulnerability_type": {
           "en": [
-            "Use-After-Free",
+            "Use After Free",
             "Privilege Escalation"
           ],
           "fr": [
@@ -782,38 +773,40 @@
           ]
         },
         "vulnerability_description": {
-          "en": "A race condition and use-after-free vulnerability in the Microsoft Windows Ancillary Function Driver for WinSock (AFD.sys) allows an authenticated local attacker to execute arbitrary code with NT AUTHORITY\\SYSTEM privileges. Actively exploited as a zero-day by Lazarus Group in Operation Dream Job to deploy the FudModule kernel rootkit.",
-          "fr": "Une condition de concurrence et utilisation de mémoire après libération dans le pilote AFD.sys permet à un attaquant local d'exécuter du code avec les privilèges NT AUTHORITY\\SYSTEM. Faille zero-day activement exploitée par Lazarus dans Operation Dream Job pour déployer le rootkit noyau FudModule."
+          "en": "A race condition and use-after-free vulnerability in the Windows Ancillary Function Driver for WinSock (AFD.sys) allows a local attacker to execute arbitrary code with elevated SYSTEM privileges. Actively exploited as a zero-day by Lazarus Group in Operation Dream Job to deploy the FudModule kernel rootkit.",
+          "fr": "Une condition de concurrence et une utilisation de mémoire après libération dans le pilote AFD.sys de Windows permet à un attaquant local d'exécuter du code avec les privilèges SYSTEM. Exploitée en zero-day par Lazarus dans l'opération Dream Job pour installer le rootkit FudModule."
         },
         "mitre_attack_ttps_id": [
           "T1068",
-          "T1014"
+          "T1014",
+          "T1562.001"
         ]
       },
       {
-        "cve_id": "CVE-2026-16812",
+        "cve_id": "CVE-2026-72898",
         "cvss_score": 10.0,
-        "epss_score": "N/A",
+        "epss_score": "10.40%",
         "cisa_kev": true,
-        "affected_product": "VeloCloud Orchestrator On-Prem (VCO)",
-        "affected_product_vendor": "Arista Networks",
+        "affected_product": "Metabase Open Source and Enterprise",
+        "affected_product_vendor": "Metabase",
         "vulnerability_type": {
           "en": [
-            "OS Command Injection",
-            "Remote Code Execution"
+            "SQL Injection",
+            "Authentication Bypass"
           ],
           "fr": [
-            "Injection de commandes OS",
-            "Exécution de code à distance"
+            "Injection SQL",
+            "Contournement d'authentification"
           ]
         },
         "vulnerability_description": {
-          "en": "An unauthenticated OS command injection vulnerability in the exposed web interface of Arista VeloCloud Orchestrator On-Prem allows remote attackers to execute arbitrary system commands with root privileges, compromising central SD-WAN management, configuration data, and encryption certificates. Actively exploited in the wild.",
-          "fr": "Une faille d'injection de commandes OS non authentifiée dans l'interface web d'Arista VeloCloud Orchestrator On-Prem permet d'exécuter des commandes root à distance et de compromettre la gestion centralisée du SD-WAN, les configurations et certificats. Exploitée activement dans la nature."
+          "en": "An unauthenticated SQL injection vulnerability in the password reset API endpoint (/api/session/reset_password) allows remote attackers to obtain complete administrative access, dump application databases, and harvest stored database connection credentials across enterprise data lakes.",
+          "fr": "Une injection SQL non authentifiée dans l'endpoint de réinitialisation de mot de passe (/api/session/reset_password) permet à un attaquant distant d'obtenir un accès administrateur complet et d'extraire les identifiants des bases de données connectées."
         },
         "mitre_attack_ttps_id": [
           "T1190",
-          "T1059"
+          "T1078",
+          "T1552.001"
         ]
       },
       {
@@ -821,76 +814,77 @@
         "cvss_score": 8.6,
         "epss_score": "0.97%",
         "cisa_kev": true,
-        "affected_product": "Secure Firewall ASA / FTD (Remote Access SSL VPN)",
+        "affected_product": "Secure Firewall ASA and FTD Software",
         "affected_product_vendor": "Cisco",
         "vulnerability_type": {
           "en": [
-            "Improper Memory Management",
-            "Denial of Service"
+            "Denial of Service",
+            "Improper Memory Management"
           ],
           "fr": [
-            "Gestion mémoire incorrecte",
-            "Déni de service"
+            "Déni de service",
+            "Gestion mémoire incorrecte"
           ]
         },
         "vulnerability_description": {
-          "en": "Improper clearing of heap memory in Cisco ASA and FTD Remote Access SSL VPN services allows an unauthenticated remote attacker to cause an unexpected reload of the firewall appliance by sending crafted HTTP requests. Actively exploited in the wild.",
-          "fr": "Un défaut de nettoyage de la mémoire du tas dans le service SSL VPN de Cisco ASA et FTD permet à un attaquant distant non authentifié de provoquer le redémarrage du pare-feu via des requêtes HTTP malformées. Faille activement exploitée."
+          "en": "A vulnerability in the Remote Access SSL VPN feature of Cisco ASA and FTD software allows an unauthenticated remote attacker to cause a reload of the affected firewall by sending crafted HTTP requests, resulting in a persistent Denial of Service.",
+          "fr": "Une faille dans la fonctionnalité VPN SSL Remote Access de Cisco ASA et FTD permet à un attaquant distant non authentifié de provoquer le redémarrage forcé de l'équipement via des requêtes HTTP forgées, causant un déni de service persistant."
         },
         "mitre_attack_ttps_id": [
           "T1190",
-          "T1498"
+          "T1499"
         ]
       },
       {
-        "cve_id": "CVE-2026-48362",
-        "cvss_score": 10.0,
-        "epss_score": "2.07%",
+        "cve_id": "CVE-2026-71362",
+        "cvss_score": 9.1,
+        "epss_score": "0.48%",
         "cisa_kev": false,
-        "affected_product": "ColdFusion 2023 / 2025",
+        "affected_product": "Adobe Commerce and Magento Open Source",
         "affected_product_vendor": "Adobe",
         "vulnerability_type": {
           "en": [
-            "OS Command Injection",
-            "Remote Code Execution"
+            "Incorrect Authorization",
+            "Account Takeover"
           ],
           "fr": [
-            "Injection de commandes OS",
-            "Exécution de code à distance"
+            "Autorisation incorrecte",
+            "Prise de contrôle de compte"
           ]
         },
         "vulnerability_description": {
-          "en": "Improper neutralization of special elements in Adobe ColdFusion 2023 and 2025 allows an unauthenticated remote attacker to execute arbitrary OS commands on the hosting server, leading to complete infrastructure compromise.",
-          "fr": "Une neutralisation incorrecte d'éléments spéciaux dans Adobe ColdFusion 2023 et 2025 permet à un attaquant distant non authentifié d'exécuter des commandes système arbitraires et de prendre le contrôle complet du serveur."
+          "en": "An incorrect authorization vulnerability in Adobe Commerce and Magento Open Source allows an unauthenticated attacker to hijack customer and administrator accounts, exposing customer personal data, order histories, and payment workflows.",
+          "fr": "Une faille de contrôle d'accès dans Adobe Commerce et Magento Open Source permet à un attaquant non authentifié de prendre le contrôle de comptes clients et administrateurs, exposant les données personnelles et les flux de commande."
         },
         "mitre_attack_ttps_id": [
           "T1190",
-          "T1059"
+          "T1078"
         ]
       },
       {
-        "cve_id": "CVE-2026-53413",
-        "cvss_score": 8.3,
-        "epss_score": "0.41%",
+        "cve_id": "CVE-2026-55040",
+        "cvss_score": 9.1,
+        "epss_score": "2.96%",
         "cisa_kev": false,
-        "affected_product": "Zoom Workplace / Rooms / Meeting SDK",
-        "affected_product_vendor": "Zoom",
+        "affected_product": "SharePoint Enterprise Server and Subscription Edition",
+        "affected_product_vendor": "Microsoft",
         "vulnerability_type": {
           "en": [
-            "Out-of-bounds Write",
-            "Zero-Click Remote Code Execution"
+            "Authentication Bypass",
+            "Improper Authentication"
           ],
           "fr": [
-            "Écriture hors limites",
-            "Exécution de code à distance Zero-Click"
+            "Contournement d'authentification",
+            "Authentification incorrecte"
           ]
         },
         "vulnerability_description": {
-          "en": "An out-of-bounds memory write flaw in Zoom's screen annotation component allows meeting participants to hijack the client application of other attendees or the presenter without user interaction (zero-click), enabling remote code execution.",
-          "fr": "Une écriture mémoire hors limites dans le composant d'annotation d'écran de Zoom permet à un participant de détourner le client d'autres participants ou du présentateur sans aucune interaction (zero-click), menant à l'exécution de code."
+          "en": "Weak authentication handling in Microsoft SharePoint allows remote unauthenticated attackers to forge JWT identity tokens, impersonate any user or administrator, and chain with CVE-2026-63520 to achieve unauthenticated Remote Code Execution.",
+          "fr": "Une gestion défaillante de l'authentification dans SharePoint permet à des attaquants distants non authentifiés de forger des jetons JWT, d'usurper l'identité de tout utilisateur et d'obtenir une exécution de code à distance en la combinant avec CVE-2026-63520."
         },
         "mitre_attack_ttps_id": [
-          "T1203"
+          "T1190",
+          "T1550"
         ]
       },
       {
@@ -902,67 +896,93 @@
         "affected_product_vendor": "Microsoft",
         "vulnerability_type": {
           "en": [
-            "Stack-based Buffer Overflow",
-            "Wormable Remote Code Execution"
+            "Remote Code Execution",
+            "Stack-based Buffer Overflow"
           ],
           "fr": [
-            "Débordement de tampon sur la pile",
-            "Exécution de code à distance auto-propageable"
+            "Exécution de code à distance",
+            "Débordement de tampon de pile"
           ]
         },
         "vulnerability_description": {
-          "en": "A critical stack-based buffer overflow in Windows DNS Server allows an unauthenticated remote attacker to execute arbitrary code in the context of the Local System Account via crafted DNS requests. The flaw possesses wormable characteristics across enterprise networks.",
-          "fr": "Un débordement de tampon critique dans Windows DNS Server permet à un attaquant distant non authentifié d'exécuter du code arbitraire avec privilèges SYSTEM via des requêtes DNS malformées, présentant un potentiel de propagation automatique (wormable)."
+          "en": "A stack-based buffer overflow in Windows DNS Server allows remote unauthenticated attackers to execute arbitrary code in the context of the Local System account via specially crafted DNS queries, presenting a critical wormable risk.",
+          "fr": "Un débordement de tampon dans le serveur DNS Windows permet à un attaquant distant non authentifié d'exécuter du code arbitraire avec les privilèges Local System via des requêtes DNS forgées, présentant un risque wormable critique."
         },
         "mitre_attack_ttps_id": [
-          "T1190"
+          "T1190",
+          "T1210"
         ]
       },
       {
-        "cve_id": "CVE-2026-58231",
+        "cve_id": "CVE-2026-53413",
+        "cvss_score": 8.3,
+        "epss_score": "0.41%",
+        "cisa_kev": false,
+        "affected_product": "Zoom Workplace, Rooms, Meeting SDK",
+        "affected_product_vendor": "Zoom",
+        "vulnerability_type": {
+          "en": [
+            "Remote Code Execution",
+            "Out-of-bounds Write"
+          ],
+          "fr": [
+            "Exécution de code à distance",
+            "Écriture hors limites"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Part of the 'Zoomsday' zero-click vulnerability suite. An out-of-bounds write flaw in Zoom's meeting annotation feature allows an attendee sharing screen content to execute arbitrary code on other meeting participants' clients without any user interaction.",
+          "fr": "Composante de la suite zero-click 'Zoomsday'. Une écriture hors limites dans la fonction d'annotation de réunion permet à un participant partageant son écran d'exécuter du code arbitraire sur le poste des autres participants sans interaction."
+        },
+        "mitre_attack_ttps_id": [
+          "T1203"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-18577",
+        "cvss_score": 8.2,
+        "epss_score": "4.10%",
+        "cisa_kev": true,
+        "affected_product": "N-central RMM Server",
+        "affected_product_vendor": "N-able",
+        "vulnerability_type": {
+          "en": [
+            "Authentication Bypass"
+          ],
+          "fr": [
+            "Contournement d'authentification"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "An authentication bypass flaw in N-able N-central remote monitoring servers allows remote unauthenticated attackers to gain administrative control over the RMM appliance and pivot downstream to all managed MSP client endpoints to deploy StormEncryptor ransomware.",
+          "fr": "Un contournement d'authentification dans les serveurs RMM N-able N-central permet à un attaquant distant d'obtenir un contrôle administrateur et de pivoter vers tous les endpoints gérés des clients de MSP pour déployer le ransomware StormEncryptor."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190",
+          "T1195.002",
+          "T1486"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-48362",
         "cvss_score": 10.0,
-        "epss_score": "0.73%",
+        "epss_score": "2.07%",
         "cisa_kev": false,
-        "affected_product": "SAP Commerce Cloud (Data Hub Adapter)",
-        "affected_product_vendor": "SAP",
+        "affected_product": "ColdFusion 2023, ColdFusion 2025",
+        "affected_product_vendor": "Adobe",
         "vulnerability_type": {
           "en": [
-            "Code Injection",
+            "OS Command Injection",
             "Remote Code Execution"
           ],
           "fr": [
-            "Injection de code",
+            "Injection de commande OS",
             "Exécution de code à distance"
           ]
         },
         "vulnerability_description": {
-          "en": "Improper control of code generation in SAP Commerce Cloud's Data Hub Adapter allows an unauthenticated remote attacker to inject and execute arbitrary code, compromising internal commerce backend services.",
-          "fr": "Un contrôle incorrect de la génération de code dans le composant Data Hub Adapter de SAP Commerce Cloud permet à un attaquant distant non authentifié d'injecter et d'exécuter du code arbitraire sur le backend e-commerce."
-        },
-        "mitre_attack_ttps_id": [
-          "T1190"
-        ]
-      },
-      {
-        "cve_id": "CVE-2026-66147",
-        "cvss_score": 9.4,
-        "epss_score": "1.05%",
-        "cisa_kev": false,
-        "affected_product": "Global Management System (GMS) Dispatcher Service",
-        "affected_product_vendor": "SonicWall",
-        "vulnerability_type": {
-          "en": [
-            "Command Injection",
-            "Remote Code Execution"
-          ],
-          "fr": [
-            "Injection de commandes",
-            "Exécution de code à distance"
-          ]
-        },
-        "vulnerability_description": {
-          "en": "An unauthenticated command injection vulnerability in SonicWall GMS Dispatcher Service (builds <= 9510.1044) allows remote attackers to execute arbitrary system commands with service privileges, compromising central firewall management.",
-          "fr": "Une injection de commandes non authentifiée dans le service Dispatcher de SonicWall GMS (builds <= 9510.1044) permet à des attaquants distants d'exécuter des commandes système et de compromettre la gestion centralisée des pare-feu."
+          "en": "An improper neutralization of special elements in Adobe ColdFusion enables unauthenticated remote attackers to execute arbitrary operating system commands, resulting in complete host compromise.",
+          "fr": "Une neutralisation incorrecte d'éléments spéciaux dans Adobe ColdFusion permet à un attaquant distant non authentifié d'exécuter des commandes système arbitraires et de compromettre totalement le serveur hôte."
         },
         "mitre_attack_ttps_id": [
           "T1190",
@@ -982,85 +1002,141 @@
           "Personally Identifiable Information (PII)",
           "Protected Health Information (PHI)",
           "Social Security Numbers (SSN)",
-          "Dental patient diagnostic and claim records"
+          "Dental treatment records"
         ],
         "fr": [
           "Données d'identification personnelle (PII)",
           "Données de santé protégées (PHI)",
           "Numéros de sécurité sociale (SSN)",
-          "Diagnostics dentaires et dossiers de remboursement"
+          "Dossiers de soins dentaires"
         ]
       },
       "threat_actor": "ShinyHunters",
       "financial_impact_usd": null,
-      "source_url": "https://mastodon.social/@netsecio/117079487308517819"
+      "source_url": "https://cyber.netsecops.io/articles/dentaquest-data-breach-impacts-15-million-in-largest-health-breach-of-2026/"
     },
     {
-      "victim": "Israel Population and Immigration Authority",
+      "victim": "Direction générale des Finances publiques (DGFiP - impots.gouv.fr)",
       "sector": "Government_and_Defense",
-      "country": "Israel",
-      "records_count": 9200000,
+      "country": "France",
+      "records_count": 678438,
       "data_types": {
         "en": [
-          "National identification numbers",
-          "Residential addresses",
-          "Phone numbers",
-          "Dates of birth and death",
-          "Family relationship registries"
+          "Taxpayer full names",
+          "Birth dates and birthplaces",
+          "Physical addresses",
+          "Phone numbers and emails",
+          "Fiscal reference income (RFR)",
+          "Withholding tax rates",
+          "Family and dependent tax shares"
         ],
         "fr": [
-          "Numéros d'identité nationale",
+          "Noms et prénoms des contribuables",
+          "Dates et lieux de naissance",
           "Adresses postales",
-          "Numéros de téléphone",
-          "Dates de naissance et de décès",
-          "Registres de liens familiaux"
+          "Numéros de téléphone et emails",
+          "Revenu fiscal de référence (RFR)",
+          "Taux de prélèvement à la source",
+          "Parts fiscales et situation familiale"
         ]
       },
-      "threat_actor": null,
+      "threat_actor": "ZeroBytes",
       "financial_impact_usd": null,
-      "source_url": "https://securityaffairs.com/196942/cyber-crime/9-2-million-israeli-records-sold-as-a-new-breach-are-20-years-old.html"
+      "source_url": "https://www.lemonde.fr/pixels/article/2026/08/13/la-plateforme-des-impots-victime-d-une-cyberattaque_6745830_4408996.html"
     },
     {
-      "victim": "Unlimited Technology Systems",
+      "victim": "Novo Nordisk",
       "sector": "Healthcare_and_Life_Sciences",
-      "country": "United States",
-      "records_count": 3800000,
+      "country": "Denmark",
+      "records_count": 163234,
       "data_types": {
         "en": [
-          "Full names",
-          "Social Security Numbers (SSN)",
-          "Medical record numbers",
-          "Scanned government IDs",
-          "Health insurance policy details"
+          "4,748 source code repositories",
+          "41,144 chemical drug structures",
+          "30+ proprietary AI models",
+          "Unreleased drug formulas (Amycretin)",
+          "Pseudonymized clinical trial data (11,500 patients)",
+          "Employee records"
         ],
         "fr": [
-          "Noms complets",
-          "Numéros de sécurité sociale (SSN)",
-          "Numéros de dossiers médicaux",
-          "Scans de pièces d'identité",
-          "Détails de polices d'assurance santé"
+          "4 748 dépôts de code source",
+          "41 144 structures moléculaires de médicaments",
+          "Plus de 30 modèles IA propriétaires",
+          "Formules de médicaments non publiées (Amycretin)",
+          "Données cliniques pseudonymisées (11 500 patients)",
+          "Dossiers de 163 234 employés"
         ]
       },
-      "threat_actor": null,
-      "financial_impact_usd": null,
-      "source_url": "https://www.securityweek.com/3-8-million-impacted-by-unlimited-technology-systems-data-breach/"
+      "threat_actor": "FulcrumSec",
+      "financial_impact_usd": 25000000,
+      "source_url": "https://databreaches.net/2026/08/12/more-novo-nordisk-data-dumped-by-fulcrumsec/"
     },
     {
-      "victim": "Wesco",
+      "victim": "CEVA Logistics",
+      "sector": "Retail_and_Consumer",
+      "country": "France",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "Customer names",
+          "Delivery addresses",
+          "Phone numbers",
+          "Email addresses",
+          "Order item descriptions and prices (Valve Steam, bank, and retail clients)"
+        ],
+        "fr": [
+          "Noms des clients",
+          "Adresses de livraison",
+          "Numéros de téléphone",
+          "Adresses email",
+          "Détails et prix des commandes (clients Valve Steam, banques et commerces)"
+        ]
+      },
+      "threat_actor": "ExfilSquad",
+      "financial_impact_usd": null,
+      "source_url": "https://securityaffairs.com/197086/data-breach/ceva-logistics-cyberattack-disrupts-european-warehouses-and-shipments.html"
+    },
+    {
+      "victim": "RingCentral",
+      "sector": "Technology_and_Telecom",
+      "country": "United States",
+      "records_count": 1596490,
+      "data_types": {
+        "en": [
+          "Email addresses",
+          "Full names",
+          "Phone numbers",
+          "Physical addresses"
+        ],
+        "fr": [
+          "Adresses email",
+          "Noms complets",
+          "Numéros de téléphone",
+          "Adresses physiques"
+        ]
+      },
+      "threat_actor": "ShinyHunters",
+      "financial_impact_usd": null,
+      "source_url": "https://haveibeenpwned.com/Breach/RingCentral"
+    },
+    {
+      "victim": "Wesco International",
       "sector": "Industry_and_Manufacturing",
       "country": "United States",
       "records_count": 2600000,
       "data_types": {
         "en": [
           "Customer and employee PII",
-          "CRM account and contact profiles",
-          "Credit identifiers",
+          "CRM user profiles",
+          "Contact information",
+          "Credit account IDs",
           "Authentication metadata"
         ],
         "fr": [
           "PII de clients et employés",
-          "Profils de contacts et comptes CRM",
-          "Identifiants de crédit",
+          "Profils utilisateurs CRM",
+          "Coordonnées de contact",
+          "Identifiants de comptes de crédit",
           "Métadonnées d'authentification"
         ]
       },
@@ -1069,25 +1145,27 @@
       "source_url": "https://www.bleepingcomputer.com/news/security/wesco-confirms-security-incident-after-exfilsquad-claims-data-theft/"
     },
     {
-      "victim": "CEVA Logistics",
-      "sector": "Critical_Infrastructure",
-      "country": "Switzerland",
-      "records_count": null,
+      "victim": "Trezor (via ShipMonk)",
+      "sector": "Finance",
+      "country": "Czech Republic",
+      "records_count": 13689,
       "data_types": {
         "en": [
-          "Customer delivery names and physical addresses",
-          "Phone numbers and emails",
-          "Ordered item specifications and pricing details across banking, retail, and gaming clients (Valve Steam)"
+          "Customer names",
+          "Email addresses",
+          "Phone numbers",
+          "Physical shipping addresses"
         ],
         "fr": [
-          "Noms et adresses physiques de livraison",
-          "Numéros de téléphone et emails",
-          "Détails des commandes et tarifs de clients bancaires, retail et gaming (Valve Steam)"
+          "Noms des clients",
+          "Adresses email",
+          "Numéros de téléphone",
+          "Adresses physiques de livraison"
         ]
       },
-      "threat_actor": "ExfilSquad",
+      "threat_actor": null,
       "financial_impact_usd": null,
-      "source_url": "https://securityaffairs.com/197086/data-breach/ceva-logistics-cyberattack-disrupts-european-warehouses-and-shipments.html"
+      "source_url": "https://thecybersecguru.com/news/trezor-shipmonk-data-breach-13689-customers/"
     },
     {
       "victim": "Beacon CRM (UK Charities)",
@@ -1096,262 +1174,197 @@
       "records_count": null,
       "data_types": {
         "en": [
-          "Supporter and donor contact details",
-          "Donation and payment transaction histories",
-          "Membership records across 1,500+ UK charities including Shrewsbury & Telford Hospital Charity and Molly Rose Foundation"
-        ],
-        "fr": [
-          "Coordonnées de donateurs et sympathisants",
-          "Historiques de dons et paiements",
-          "Dossiers d'adhésion de plus de 1 500 associations britanniques dont Shrewsbury & Telford Hospital Charity"
-        ]
-      },
-      "threat_actor": null,
-      "financial_impact_usd": null,
-      "source_url": "https://www.theregister.com/security/2026/08/05/uk-charities-count-the-cost-of-beacon-crm-cyberattack/5283305"
-    },
-    {
-      "victim": "Brinks Home",
-      "sector": "Security",
-      "country": "United States",
-      "records_count": 732000,
-      "data_types": {
-        "en": [
-          "Full names",
-          "Dates of birth",
-          "Physical and email addresses",
+          "Supporter names",
+          "Postal addresses",
+          "Email addresses",
           "Phone numbers",
-          "Partial credit card data",
-          "Purchase history"
+          "Donation and payment histories",
+          "Database backups across 1,500 charities"
         ],
         "fr": [
-          "Noms complets",
-          "Dates de naissance",
-          "Adresses physiques et électroniques",
+          "Noms des donateurs",
+          "Adresses postales",
+          "Adresses email",
           "Numéros de téléphone",
-          "Données partielles de cartes bancaires",
-          "Historique d'achats"
+          "Historique des dons et paiements",
+          "Sauvegardes de bases de données de 1 500 associations"
         ]
       },
       "threat_actor": null,
       "financial_impact_usd": null,
-      "source_url": "https://beesint.com/pulse/9c52beb8-6cc2-4cef-a45f-b449d01f87af"
-    },
-    {
-      "victim": "3Pro TV",
-      "sector": "Media_and_Communication",
-      "country": "South Korea",
-      "records_count": 460000,
-      "data_types": {
-        "en": [
-          "Subscriber personal details",
-          "2,979 financial bank account records",
-          "317 credit card records"
-        ],
-        "fr": [
-          "Données personnelles d'abonnés",
-          "2 979 comptes bancaires",
-          "317 cartes de paiement"
-        ]
-      },
-      "threat_actor": null,
-      "financial_impact_usd": null,
-      "source_url": "https://databreaches.net/2026/08/09/kr-3pro-tv-data-breach-exposes-460000-records-including-2979-bank-accounts/"
-    },
-    {
-      "victim": "Alcon",
-      "sector": "Healthcare_and_Life_Sciences",
-      "country": "Switzerland",
-      "records_count": 218395,
-      "data_types": {
-        "en": [
-          "Unique corporate and professional email addresses",
-          "Full names",
-          "Phone numbers",
-          "B2B physical business addresses"
-        ],
-        "fr": [
-          "Adresses emails professionnelles uniques",
-          "Noms complets",
-          "Numéros de téléphone",
-          "Adresses physiques d'entreprises B2B"
-        ]
-      },
-      "threat_actor": "ShinyHunters",
-      "financial_impact_usd": null,
-      "source_url": "https://haveibeenpwned.com/Breach/Alcon"
+      "source_url": "https://osintsights.com/compromised-aws-key-exposes-1500-uk-charities-to-data-breach"
     }
   ],
   "target": {
     "sectors": {
       "en": [
-        "Finance",
-        "Healthcare_and_Life_Sciences",
-        "Critical_Infrastructure",
         "Government_and_Defense",
+        "Healthcare_and_Life_Sciences",
+        "Finance",
         "Technology_and_Telecom",
+        "Critical_Infrastructure",
         "Industry_and_Manufacturing",
         "Retail_and_Consumer",
-        "Nonprofit_and_NGO",
-        "Security",
-        "Media_and_Communication"
+        "Nonprofit_and_NGO"
       ],
       "fr": [
+        "Government_and_Defense",
+        "Healthcare_and_Life_Sciences",
         "Finance",
-        "Santé et sciences de la vie",
-        "Infrastructures critiques",
-        "Gouvernement et défense",
-        "Technologies et télécommunications",
-        "Industrie et fabrication",
-        "Commerce de détail et grande consommation",
-        "Associations et ONG",
-        "Sécurité",
-        "Médias et communication"
+        "Technology_and_Telecom",
+        "Critical_Infrastructure",
+        "Industry_and_Manufacturing",
+        "Retail_and_Consumer",
+        "Nonprofit_and_NGO"
       ]
     },
     "countries": {
       "en": [
         "United States",
-        "United Kingdom",
-        "Poland",
         "France",
-        "Switzerland",
-        "Israel",
         "Taiwan",
-        "South Korea",
-        "India",
+        "United Kingdom",
+        "Denmark",
+        "Poland",
         "Canada",
+        "India",
+        "Romania",
         "Japan"
       ],
       "fr": [
         "États-Unis",
-        "Royaume-Uni",
-        "Pologne",
         "France",
-        "Suisse",
-        "Israël",
         "Taïwan",
-        "Corée du Sud",
-        "Inde",
+        "Royaume-Uni",
+        "Danemark",
+        "Pologne",
         "Canada",
+        "Inde",
+        "Roumanie",
         "Japon"
       ]
     },
     "narrative": {
-      "en": "- **Finance:** Over 30 major financial institutions, including Blackstone and CME Group, were targeted in voice phishing and AiTM extortion schemes by UNC6671 and Falcon, leading to substantial data theft and ransom demands averaging $750,000.\n- **Healthcare & Life Sciences:** DentaQuest suffered the largest healthcare data breach of 2026 with 15 million dental records leaked by ShinyHunters (234 GB database), while Unlimited Technology Systems (3.8M patients) and AnMed Health (83 operational sites forced into downtime across South Carolina) faced crippling disruptions.\n- **Critical Infrastructure & Energy:** Polish Combined Heat and Power (CHP) plant serving 50,000 residents suffered an unprecedented IT/OT pivot via a private cellular APN resulting in an emergency steam turbine shutdown; municipal water utilities in New Jersey and Alabama were probed by Iranian state-sponsored actors.\n- **Government & Defense:** European and Indian defense contractors were targeted by Lazarus using zero-day CVE-2026-68820 in Operation Dream Job; Taiwan government agencies and nuclear safety bureaus faced autonomous AI agent intrusions (GTG-1002); and the Swiss Federal IT Office (BIT) had 200 accounts compromised via SharePoint.\n- **Technology & Telecom:** Supply chain attacks compromised LiteLLM on PyPI via TeamPCP (434k installs exposing cloud API keys), while the ChainDrop npm worm infected 400+ packages (>2B downloads) and Framework Computer experienced database exfiltration via Metabase zero-day.\n- **Industry & Manufacturing:** Wesco (Fortune 500 electrical distributor, $24B revenue) had 2.6 million CRM records exfiltrated and leaked via torrents by ExfilSquad, while defense connector manufacturer IEH Corp disclosed export-controlled engineering data exposure.\n- **Retail & Consumer:** Levi Strauss & Co. ($6.3B revenue) confirmed corporate data exfiltration following sophisticated helpdesk vishing targeting three employee endpoints.\n- **Nonprofit & NGO:** Beacon CRM SaaS breach compromised sensitive donor records, contribution histories, and supporter details across more than 1,500 UK charities, including the Shrewsbury and Telford Hospital Charity and English National Ballet.",
-      "fr": "- **Finance :** Plus de 30 institutions financières majeures, dont Blackstone et CME Group, ont été ciblées par des campagnes de vishing et d'extorsion AiTM par UNC6671 et Falcon, avec des demandes de rançon moyennes de 750 000 USD.\n- **Santé et sciences de la vie :** DentaQuest a subi la plus grande fuite de données de santé de 2026 avec 15 millions de dossiers publiés par ShinyHunters (base de 234 Go), tandis qu'Unlimited Technology Systems (3,8M de patients) et AnMed Health (83 établissements paralysés en Caroline du Sud) ont fait face à de lourdes perturbations.\n- **Infrastructures critiques et énergie :** Une centrale de cogénération polonaise chauffant 50 000 habitants a subi un pivot IT/OT inédit via un APN cellulaire privé entraînant l'arrêt d'une turbine à vapeur ; des usines de traitement d'eau potable dans le New Jersey et l'Alabama ont été attaquées par des acteurs iraniens.\n- **Gouvernement et défense :** Des industriels de défense européens et indiens ont été ciblés par Lazarus exploitant la zero-day CVE-2026-68820 ; les agences gouvernementales et de sûreté nucléaire taïwanaises ont subi des attaques d'agents IA autonomes (GTG-1002) ; et le BIT suisse a vu 200 comptes compromis via SharePoint.\n- **Technologies et télécommunications :** Des attaques supply chain ont corrompu LiteLLM sur PyPI via TeamPCP (434k installations exposant des clés API cloud), le ver ChainDrop a infecté 400 paquets npm (>2Mds de téléchargements) et Framework Computer a subi une exfiltration via la zero-day Metabase.\n- **Industrie et fabrication :** Wesco (distributeur Fortune 500, 24 Mds $ de CA) a vu 2,6 millions de données CRM publiées par ExfilSquad via torrents, tandis que le fabricant de composants militaires IEH Corp a divulgué une compromission de données sous contrôle d'exportation.\n- **Commerce de détail :** Levi Strauss & Co. (6,3 Mds $ de CA) a confirmé une exfiltration de données corporate suite à un vishing helpdesk ciblant les postes de trois employés.\n- **Associations et ONG :** La compromission SaaS de Beacon CRM a exposé les données personnelles et historiques de dons de plus de 1 500 organisations caritatives britanniques, dont la Shrewsbury and Telford Hospital Charity et l'English National Ballet."
+      "en": "Adversary targeting across the week caused severe disruptions across multiple critical sectors:\n- **Government & Defense:** French Tax Administration (DGFiP) had 678,438 taxpayer records compromised via hijacked VPN access by ZeroBytes; Taiwanese government ministries, nuclear safety bodies, and energy grids suffered a 12-wave AI-agent autonomous offensive; Lazarus targeted European and Indian defense engineers via Operation Dream Job; and IEH Corporation disclosed exfiltration risks around Patriot and THAAD missile connector engineering data.\n- **Healthcare & Life Sciences:** DentaQuest suffered the largest health breach of 2026 with 15 million patient records exfiltrated and leaked by ShinyHunters (234GB database); Novo Nordisk lost 1.3TB of intellectual property, clinical trial data, and unreleased drug recipes to FulcrumSec ($25M ransom demand); AnMed Health endured an 83-facility downtime disruption; and Winnipeg Health Sciences Centre suffered an OT ransomware strike disabling electronic doors and HVAC systems.\n- **Finance & Banking:** Multiple top-tier US asset managers and exchanges (Blackstone, CME Group) were breached via helpdesk vishing and SaaS extortion by UNC6671; TechVentures Bank in Romania was listed on RansomHouse's extortion site; and Trezor hardware wallet customer shipment data (13,689 records) was exposed via third-party logistics provider ShipMonk.\n- **Technology & Software Supply Chain:** LiteLLM's PyPI repository was backdoored by TeamPCP, compromising AI keys across 434,000 CI/CD pipelines at 2,500 companies; RingCentral suffered a 1.59M user record leak via ShinyHunters; and over 1,180 malicious packages flooded npm via ChainDrop and Wel1Dropper.\n- **Critical Infrastructure & Energy:** Polish combined heat and power (CHP) plant suffered an unauthorized steam turbine shutdown via a private cellular APN pivot from a compromised wind farm; and US municipal water utilities in New Jersey and Alabama faced renewed Iranian cyber reconnaissance and intrusion attempts.\n- **Retail & Manufacturing:** Wesco International confirmed the exfiltration of 2.6 million CRM records by ExfilSquad; Levi Strauss disclosed corporate file compromise from employee vishing; and CEVA Logistics suffered major European warehouse fulfillment outages impacting Valve Steam hardware shipments.",
+      "fr": "Les attaques observées cette semaine ont provoqué des perturbations majeures à travers plusieurs secteurs critiques :\n- **Gouvernement & Défense :** La Direction Générale des Finances Publiques (DGFiP) en France a vu les données de 678 438 contribuables exfiltrées par ZeroBytes via un accès VPN compromis ; les ministères taïwanais, les régulateurs nucléaires et les réseaux électriques ont subi une offensive autonome d'agents IA en 12 vagues ; Lazarus a ciblé les ingénieurs défense en Europe et en Inde (Operation Dream Job) ; et IEH Corp a divulgué des risques de fuite sur les connecteurs de missiles Patriot et THAAD.\n- **Santé & Sciences de la vie :** DentaQuest a subi la plus grande fuite de données de santé de 2026 avec 15 millions de dossiers publiés par ShinyHunters (234 Go) ; Novo Nordisk s'est fait voler 1,3 To de données de recherche, secrets de fabrication et essais cliniques par FulcrumSec (rançon de 25M$) ; AnMed Health a vu 83 établissements paralysés ; et le Health Sciences Centre de Winnipeg a subi une attaque ransomware bloquant ses portes et son système HVAC.\n- **Finance & Banque :** Plusieurs grandes firmes financières américaines (Blackstone, CME Group) ont été compromises par vishing et extorsion SaaS par UNC6671 ; TechVentures Bank en Roumanie a été revendiquée par RansomHouse ; et 13 689 clients de portefeuilles Trezor ont vu leurs adresses de livraison compromises via le prestataire logistique ShipMonk.\n- **Technologie & Supply Chain :** Le paquet PyPI de LiteLLM a été empoisonné par TeamPCP, exposant les clés d'API IA de 434 000 pipelines CI/CD dans 2 500 entreprises ; RingCentral a subi une fuite de 1,59M de comptes par ShinyHunters ; et plus de 1 180 paquets npm malveillants ont été diffusés via ChainDrop et Wel1Dropper.\n- **Infrastructures critiques & Énergie :** Une centrale thermique polonaise (CHP) a subi l'arrêt d'une turbine à vapeur suite à un pivot d'attaquants via un APN cellulaire privé ; et des installations d'eau potable dans le New Jersey et en Alabama ont été ciblées par des acteurs iraniens.\n- **Industrie & Distribution :** Wesco International a confirmé le vol de 2,6 millions de données CRM par ExfilSquad ; Levi Strauss a subi une exfiltration de données corporate par vishing ; et CEVA Logistics a vu ses entrepôts européens paralysés, impactant les livraisons de matériel Valve Steam."
     }
   },
   "trends": {
     "emerging_techniques": {
       "en": [
-        "Autonomous AI Agent Intrusions (GTG-1002, JADEPUFFER) executing end-to-end multi-cloud reconnaissance, privilege escalation, and lateral movement in seconds",
-        "Decentralized Blockchain-Hosted C2 (Polygon smart contract RPCs and ENS used by Aeternum, DeadLock, and Kimwolf v7) rendering DNS takedowns obsolete",
-        "Voice Phishing (Vishing) combined with AiTM Reverse Proxies systematically targeting corporate helpdesks to bypass FIDO2/MFA enrollments",
-        "Private Cellular APN Pivot into Industrial Control Systems (ICS/OT) bypassing physical and network perimeter segmentations",
-        "Package Manager Worms with automated dependency self-propagation (ChainDrop, Wel1Dropper) targeting CI/CD build environments"
+        "Autonomous multi-agent offensive AI orchestration using open-source frameworks (Hermes, OpenClaw) for automated CAPTCHA solving, API discovery, and lateral movement",
+        "Decentralized Command & Control architectures abusing public blockchain smart contracts (Polygon RPC) and onion-routed messaging (Session) to evade network takedowns",
+        "Targeted voice phishing (vishing) impersonating IT helpdesks for urgent FIDO2 passkey migrations combined with AiTM token interception",
+        "OT and industrial control network pivots leveraging misconfigured private cellular Access Point Names (APNs)",
+        "Supply chain AI slopsquatting on package registries using LLMs to generate high-volume typo-squatted libraries (Wel1Dropper)"
       ],
       "fr": [
-        "Intrusions par agents IA autonomes (GTG-1002, JADEPUFFER) exécutant reconnaissance, élévation et mouvement latéral multi-cloud en quelques secondes",
-        "Command & Control décentralisé sur blockchain publique (smart contracts Polygon et ENS par Aeternum, DeadLock, Kimwolf v7) résistant aux takedowns DNS",
-        "Phishing vocal (vishing) combiné à des proxys inverses AiTM ciblant les helpdesks pour contourner les enrôlements FIDO2/MFA",
-        "Pivot IT/OT via des APN cellulaires privés industriels contournant la segmentation réseau et physique traditionnelle",
-        "Vers auto-propageants sur gestionnaires de paquets (ChainDrop, Wel1Dropper) ciblant directement les pipelines d'intégration continue CI/CD"
+        "Orchestration offensive quasi-autonome par agents IA multi-rôles (Hermes, OpenClaw) pour l'énumération d'API, la résolution de CAPTCHAs et le déplacement latéral",
+        "Infrastructures C2 décentralisées exploitant des smart contracts sur blockchain publique (Polygon RPC) et la messagerie Session pour neutraliser les takedowns",
+        "Attaques de vishing ultra-ciblées usurpant les helpdesks IT sous prétexte de migration FIDO2 combinées à des proxys d'interception AiTM",
+        "Pivots vers les réseaux industriels OT via des APN cellulaires privés industriels mal isolés",
+        "Slopsquatting IA sur les registres de paquets utilisant des LLM pour générer en masse des librairies piégées (Wel1Dropper)"
       ]
     },
     "declining_techniques": {
       "en": [
-        "Unobfuscated batch and shell scripts easily flagged by modern behavioural EDRs",
-        "Traditional SMS and push-based MFA mechanisms being completely neutralized by AiTM reverse proxies and session replay tools",
-        "Static C2 domain hosting vulnerable to rapid registrar suspensions and threat intel blocklists",
-        "Pure ransomware encryption without pre-exfiltration, rendered unprofitable due to robust immutable backup adoption"
+        "Basic unauthenticated mass email spam without context or pre-texting",
+        "Standard SMS-based or app-push MFA without phishing-resistant bindings",
+        "Pure file-encrypting ransomware without exfiltration or data leak extortion components"
       ],
       "fr": [
-        "Scripts batch et shell non obfusqués immédiatement bloqués par les EDR comportementaux modernes",
-        "MFA traditionnel par SMS ou notification push simple, neutralisé par les proxys AiTM et le rejeu de sessions",
-        "Hébergement C2 sur domaines statiques facilement neutralisés par les résolveurs DNS et registrars",
-        "Ransomwares à chiffrement pur sans exfiltration préalable, rendus inefficaces par la généralisation des sauvegardes immuables"
+        "Campagnes de spam email génériques non contextualisées sans ingénierie sociale préalable",
+        "Authentification MFA par SMS ou push applicatif simple sans liaison matérielle FIDO2",
+        "Ransomwares basiques procédant uniquement au chiffrement sans double extorsion ni exfiltration"
       ]
     },
     "geopolitical_context": {
-      "en": "Geopolitical friction heavily dictates offensive cyber postures across multiple theaters. In Eastern Europe, Russian-speaking threat groups continue hybrid cyber-kinetic operations, targeting Ukrainian reconnaissance channels via weaponized IoT devices and probing European energy grids (Polish CHP power plant). In the Indo-Pacific, tensions surrounding Taiwan prompted advanced Chinese cyber operations utilizing autonomous multi-agent AI systems against government and energy agencies. North Korea's Lazarus Group aggressively pursues high-end military and defense intelligence across NATO allies and India to support strategic weapons programs. Concurrently, regulatory and technological decoupling between the US and China intensifies, exemplified by China's national security scrutiny of Western security vendors like Palo Alto Networks.",
-      "fr": "Les tensions géopolitiques dictent directement les postures cyberoffensives régionales. En Europe de l'Est, les groupes russophones poursuivent des opérations hybrides, ciblant des relais IoT en Ukraine et testant les réseaux énergétiques européens (centrale de cogénération en Pologne). Dans la zone Indo-Pacifique, les tensions autour de Taïwan se traduisent par des cyberattaques chinoises pilotées par agents IA autonomes contre les infrastructures énergétiques et étatiques. En Corée du Nord, Lazarus intensifie son espionnage technologique et militaire contre l'OTAN et l'Inde via des failles zero-day pour soutenir ses programmes d'armement. Parallèlement, le découplage technologique sino-américain s'accentue, illustré par les enquêtes de sécurité nationale chinoises contre Palo Alto Networks."
+      "en": "Geopolitical friction increasingly manifests as asymmetric cyber operations targeting critical infrastructure, technology supply chains, and sovereign data repositories. North Korean state actors (Lazarus) continue to fund weapons programs and conduct espionage by exploiting kernel-level zero-days in defense contractor networks. Concurrently, China-nexus groups are pioneering operationalized offensive AI to conduct automated reconnaissance and reconnaissance-in-depth across Taiwanese critical infrastructure, while regulatory investigations against Western cybersecurity vendors highlight technology sovereignty tensions. Russian cyber warfare continues to blend disruptive OT sabotage against European energy infrastructure with high-volume cybercriminal supply chain contamination.",
+      "fr": "Les tensions géopolitiques s'expriment par des cyberattaques asymétriques visant les infrastructures critiques, la supply chain technologique et les registres souverains. La Corée du Nord (Lazarus) poursuit ses opérations d'espionnage et de financement en exploitant des zero-days noyau contre la défense. En parallèle, des groupes liés à la Chine expérimentent l'IA offensive automatisée contre les infrastructures critiques taïwanaises, tandis que les régulateurs chinois utilisent les audits de sécurité nationale contre les éditeurs occidentaux. Enfin, la Russie combine des actions de sabotage OT contre le secteur énergétique européen et une contamination cybercriminelle massive des chaînes d'approvisionnement."
     }
   },
   "recommendations": {
     "strategic": {
       "en": [
         {
-          "title": "Enforce FIDO2 Hardware Keys and Strict Out-of-Band Helpdesk Verification",
-          "detail": "Given the widespread success of UNC6671 and Falcon vishing campaigns against Blackstone and Levi Strauss, SMS/push MFA is obsolete. Mandate FIDO2/WebAuthn hardware tokens (YubiKey 5 Series) for all corporate and administrative identities across Okta and Microsoft Entra ID. Implement cryptographically verified, out-of-band identity challenge-response protocols for all employee helpdesk interactions involving authentication resets."
+          "title": "Mandate FIDO2 Phishing-Resistant MFA Across Identity Providers",
+          "detail": "Adversary-in-the-Middle (AiTM) proxies and vishing campaigns (UNC6671, Falcon) consistently bypass SMS, TOTP, and push-based MFA. Enforce FIDO2/WebAuthn hardware tokens (e.g., YubiKey 5 Series) or platform passkeys across all Entra ID and Okta environments. Require hardware-bound device trust and Conditional Access policies for all SaaS and VPN access."
         },
         {
-          "title": "Enforce Strict Cellular APN Isolation and Industrial OT Zero Trust",
-          "detail": "The Polish CHP plant intrusion demonstrated that private cellular APNs create unmonitored lateral conduits between renewable edge assets and primary plant control systems. Audit and reconfigure all private cellular APNs with mobile network operators to strictly prohibit device-to-device routing. Enforce micro-segmentation and bidirectional application-layer firewalls between IT networks, cellular gateways, and Layer 2/3 ICS engineering controllers."
+          "title": "Establish Immutable Offline Backups for Critical OT/IT Systems",
+          "detail": "Recent ransomware attacks against healthcare facilities (Winnipeg HSC, AnMed Health) and municipalities demonstrated that online backups are targeted and purged. Deploy Write-Once-Read-Many (WORM) storage, air-gapped snapshots, and segregated backup controllers. Test bare-metal restoration of directory services and SCADA configurations on a quarterly basis."
         },
         {
-          "title": "Harden Enterprise Software Supply Chain Governance and CI/CD Build Pipelines",
-          "detail": "With the proliferation of the ChainDrop npm worm and TeamPCP's LiteLLM backdoor on PyPI, organizations must eliminate unvetted open-source dependencies. Mandate immutable, signed package lockfiles with cryptographic hash pinning, restrict builds to private artifact mirrors (JFrog Artifactory, Nexus 3.95.0+), and scan CI/CD environments for leaked API tokens and environment secrets."
+          "title": "Enforce Strict SaaS and Third-Party Tenant Isolation",
+          "detail": "Data leaks in tl;dv (Firestore misconfiguration) and Wesco (Power Pages) highlight that SaaS configuration errors expose sensitive records at scale. Implement automated Cloud Security Posture Management (CSPM) and SaaS Security Posture Management (SSPM) tools to audit public read/write permissions, anonymous guest access, and cross-tenant API exposure."
         },
         {
-          "title": "Implement Continuous External Attack Surface and SaaS Multi-Tenant Auditing",
-          "detail": "Catastrophic data leaks in tl;dv (Firestore misconfiguration exposing 181k meetings) and Wesco (Microsoft Power Pages) highlight severe SaaS authorization blind spots. Deploy automated Attack Surface Management (ASM) and Cloud Security Posture Management (CSPM) to continuously audit public access control lists on cloud storage buckets, NoSQL collections, and external web portals."
+          "title": "Implement Continuous Supply Chain and SBOM Verification Controls",
+          "detail": "Poisoning of LiteLLM (PyPI) and ChainDrop/Wel1Dropper (npm) confirms that developers' dependencies represent high-risk attack surfaces. Enforce mandatory Software Bill of Materials (SBOM) generation, pin all build dependencies with cryptographic lockfile checksums, and mandate quarantine analysis for newly introduced open-source libraries."
         }
       ],
       "fr": [
         {
-          "title": "Imposer des clés matérielles FIDO2 et des protocoles stricts de vérification Helpdesk",
-          "detail": "Face aux succès des campagnes de vishing menées par UNC6671 et Falcon contre Blackstone et Levi Strauss, le MFA par SMS/push est obsolète. Déployez des clés matérielles FIDO2/WebAuthn (YubiKey série 5) pour l'ensemble des comptes Okta et Microsoft Entra ID. Instaurez un protocole d'authentification hors-bande obligatoire (code à usage unique ou rappel authentifié) pour toute réinitialisation de mot de passe ou d'enrôlement par le support IT."
+          "title": "Imposer le MFA FIDO2 résistant au phishing sur tous les IdP",
+          "detail": "Les attaques par proxy AiTM et vishing (UNC6671, Falcon) contournent systématiquement les MFA par SMS, TOTP et push. Déployez des clés matérielles FIDO2/WebAuthn (ex: YubiKey série 5) ou des passkeys d'entreprise sur l'ensemble des accès Entra ID et Okta. Associez-y des politiques d'accès conditionnel exigeant des terminaux gérés et conformes."
         },
         {
-          "title": "Isoler strictement les APN cellulaires privés et appliquer le Zero Trust industriel",
-          "detail": "L'incident de la centrale polonaise prouve que les APN cellulaires privés créent des passerelles directes vers les automates de contrôle. Auditez et reconfigurez les APN opérateurs pour interdire toute communication directe entre équipements distants. Mettez en place une micro-segmentation stricte et des pare-feu applicatifs bidirectionnels entre passerelles cellulaires et réseaux de contrôle industriel ICS (niveaux 2 et 3 Purdue)."
+          "title": "Déployer des sauvegardes immuables et isolées pour l'IT et l'OT",
+          "detail": "Les attaques récentes contre le secteur de la santé (HSC Winnipeg, AnMed Health) prouvent que les sauvegardes en ligne sont systématiquement ciblées. Implémentez un stockage WORM (Write Once Read Many), des snapshots isolés hors-réseau (air-gap) et testez trimestriellement la restauration complète des annuaires Active Directory et des postes de contrôle SCADA."
         },
         {
-          "title": "Durcir la gouvernance de la chaîne logistique logicielle et des pipelines CI/CD",
-          "detail": "L'explosion du ver npm ChainDrop et de la porte dérobée LiteLLM sur PyPI exige un contrôle drastique des dépendances logicielles. Imposez des fichiers de verrouillage signés et immuables avec vérification d'empreintes cryptographiques, limitez les builds aux dépôts d'artefacts internes vérifiés (Nexus 3.95.0+, Artifactory) et auditez les secrets d'environnement CI/CD."
+          "title": "Durcir l'isolation multi-tenant et la gouvernance des portails SaaS",
+          "detail": "Les fuites chez tl;dv (Firestore) et Wesco (Power Pages) démontrent que les erreurs de configuration SaaS exposent massivement les données métier. Déployez des outils CSPM/SSPM pour auditer automatiquement les permissions des comptes invités, bloquer les accès anonymes aux collections de bases de données et restreindre les API exposées."
         },
         {
-          "title": "Auditer en continu la surface d'attaque externe et l'isolation multi-tenant SaaS",
-          "detail": "Les fuites massives de tl;dv (mauvaise configuration Firestore exposant 181k réunions) et Wesco (Microsoft Power Pages) démontrent des défaillances critiques d'isolation SaaS. Déployez des solutions d'Attack Surface Management (ASM) et de CSPM pour auditer en continu les listes de contrôle d'accès sur les bases NoSQL, compartiments S3 et portails publics."
+          "title": "Systématiser la vérification SBOM et le contrôle supply chain",
+          "detail": "La compromission de LiteLLM (PyPI) et les attaques ChainDrop/Wel1Dropper (npm) font des dépendances de développement un vecteur critique. Imposez la génération de SBOM (Software Bill of Materials), verrouillez les lockfiles avec sommes de contrôle cryptographiques et mettez en quarantaine tout nouveau paquet tiers avant intégration en CI/CD."
         }
       ]
     },
     "operational": {
       "en": [
         {
-          "title": "Deploy Microsoft August 2026 Security Updates and Mitigate CVE-2026-68820",
-          "detail": "Immediately apply Microsoft KB cumulative updates across all Windows Server and Workstation endpoints to patch zero-day CVE-2026-68820 (AFD.sys) and wormable DNS RCE CVE-2026-62878. Prioritize R&D and defense-related engineering workstations. Deploy EDR kernel telemetry rules to detect anomalous driver loading and FudModule rootkit memory manipulation patterns."
+          "title": "Patch Windows Kernel AFD.sys Zero-Day CVE-2026-68820 Immediately",
+          "detail": "Apply Microsoft August 2026 Patch Tuesday updates across all Windows endpoints and servers to remediate CVE-2026-68820. Inspect endpoint telemetry for unauthorized driver loading, ETW tampering, or suspicious processes spawning with SYSTEM privileges. Deploy YARA rules targeting the FudModule kernel rootkit and Troy backdoor."
         },
         {
-          "title": "Patch and Isolate Vulnerable Edge Perimeter Appliances (Arista, Cisco, Metabase)",
-          "detail": "Immediately upgrade Arista VeloCloud Orchestrator to fixed builds (5.2.3.14, 6.1.3.4, 6.4.2.4, 7.0.0.1) and apply Cisco ASA/FTD hotfixes for CVE-2026-20349. Update self-hosted Metabase instances to >=1.63.5 (GHSA-vwf4-m7j8-wcjf) and immediately rotate all underlying database credentials stored in Metabase application tables."
+          "title": "Remediate Metabase SQL Injection CVE-2026-72898 and Rotate Credentials",
+          "detail": "Upgrade on-premise Metabase instances to patched versions (x.58.24, x.59.21, x.60.17, x.61.11, x.62.9, x.63.5). Block incoming HTTP POST requests to /api/session/reset_password returning status 400. Rotate all database passwords, data warehouse secrets, and API keys stored in Metabase application configs."
         },
         {
-          "title": "Audit Developer Repositories and Lockfiles for Malicious npm and PyPI Packages",
-          "detail": "Execute software composition audits across all repositories for indicators of ChainDrop, Wel1Dropper, and poisoned LiteLLM releases (litellm 1.40.10+). Check lockfiles for SHA-256 integrity mismatches, purge local caches (`npm cache clean --force`), and revoke/rotate any developer tokens or API keys exposed on infected developer endpoints."
+          "title": "Audit Private Cellular APNs and Segregate Industrial IoT Routing",
+          "detail": "Following the Polish CHP plant turbine shutdown, audit all private cellular APN configurations used for remote telemetry. Disable device-to-device routing within APN subnets, enforce mutual TLS (mTLS) for all industrial protocols, and deploy network monitoring on cellular gateway egress points."
         },
         {
-          "title": "Block Malicious Blockchain C2 Endpoints and Cryptographic Relays",
-          "detail": "Configure network egress firewalls and DNS resolvers to alert on and block high-frequency JSON-RPC queries to public Polygon nodes (polygon-rpc.com, polygon-bor-rpc.publicnode.com) containing function selectors `0xb68d1809` and `0x933a9ce8` associated with Aeternum and DeadLock C2 communications."
+          "title": "Block Malicious PyPI LiteLLM Releases and Rotate AI Provider Keys",
+          "detail": "Inspect all Python build environments, container base images, and lockfiles for compromised LiteLLM versions. Immediately revoke and regenerate all exposed AI service credentials (OPENAI_API_KEY, ANTHROPIC_API_KEY, AWS credentials, Kubernetes tokens). Block outbound traffic to TeamPCP C2 infrastructure."
+        },
+        {
+          "title": "Deploy Zoom Client Updates for Zoomsday Zero-Click Vulnerabilities",
+          "detail": "Update all Zoom Workplace, Rooms, and VDI client installations to versions >= 7.1.5 or 7.0.6 to remediate CVE-2026-53413, CVE-2026-53414, and CVE-2026-53415. Restrict in-meeting annotation permissions to hosts and verified presenters until all fleet endpoints have verified patch installations."
         }
       ],
       "fr": [
         {
-          "title": "Déployer les mises à jour Microsoft d'août 2026 et neutraliser CVE-2026-68820",
-          "detail": "Appliquez immédiatement les correctifs cumulatifs Microsoft sur tous les postes et serveurs Windows pour corriger la zero-day AFD.sys (CVE-2026-68820) et la RCE DNS critique CVE-2026-62878. Priorisez les postes R&D et d'ingénierie défense. Activez des règles EDR surveillant le chargement de pilotes non signés et les altérations de mémoire caractéristiques du rootkit FudModule."
+          "title": "Patcher en urgence la zero-day AFD.sys Windows CVE-2026-68820",
+          "detail": "Appliquez immédiatement le correctif Microsoft d'août 2026 sur tous les postes et serveurs Windows pour corriger CVE-2026-68820. Recherchez dans les logs Sysmon (Event ID 1, 7) tout chargement de pilote suspect ou désactivation d'agents de sécurité, et déployez des règles YARA pour détecter le rootkit FudModule et la porte dérobée Troy."
         },
         {
-          "title": "Patcher et isoler les passerelles et consoles critiques (Arista, Cisco, Metabase)",
-          "detail": "Mettez à jour Arista VeloCloud Orchestrator vers les versions corrigées (5.2.3.14, 6.1.3.4, 6.4.2.4, 7.0.0.1) et appliquez les correctifs Cisco ASA/FTD pour CVE-2026-20349. Mettez à niveau Metabase vers les versions >=1.63.5 et renouvelez impérativement tous les mots de passe des bases de données connectées à la plateforme."
+          "title": "Corriger l'injection SQL Metabase CVE-2026-72898 et faire pivoter les secrets",
+          "detail": "Mettez à niveau les instances Metabase auto-hébergées vers les versions corrigées (x.58.24, x.59.21, x.60.17, x.61.11, x.62.9, x.63.5). Bloquez les requêtes POST vers /api/session/reset_password renvoyant un code 400. Réinitialisez immédiatement tous les mots de passe et identifiants de bases de données enregistrés dans Metabase."
         },
         {
-          "title": "Auditer les dépôts de développement pour les paquets malveillants npm et PyPI",
-          "detail": "Exécutez des audits d'intégrité sur tous les projets de code pour détecter les indicateurs de ChainDrop, Wel1Dropper et des versions compromises de LiteLLM (litellm 1.40.10+). Purgez les caches locaux (`npm cache clean --force`) et révoquez l'ensemble des clés d'API et jetons CI/CD accessibles depuis les machines de développement affectées."
+          "title": "Auditer les APN cellulaires privés et segmenter les flux IoT/OT",
+          "detail": "Suite à l'attaque contre la centrale thermique polonaise, auditez les configurations des APN cellulaires privés reliant des équipements industriels. Désactivez les communications directes device-à-device sur l'APN, imposez le chiffrement mTLS et placez des sondes IDS/NDR sur les passerelles cellulaires."
         },
         {
-          "title": "Bloquer les communications C2 sur blockchain et relais cryptographiques",
-          "detail": "Configurez les pare-feu de sortie et résolveurs DNS pour bloquer et alerter sur les requêtes JSON-RPC vers les nœuds publics Polygon (polygon-rpc.com, polygon-bor-rpc.publicnode.com) présentant les sélecteurs de fonction `0xb68d1809` et `0x933a9ce8` associés aux malwares Aeternum et DeadLock."
+          "title": "Purger les versions PyPI malveillantes de LiteLLM et renouveler les clés IA",
+          "detail": "Scannez tous les environnements de build Python et pipelines CI/CD pour identifier les versions compromises de LiteLLM. Révoquez et régénérez immédiatement l'ensemble des clés d'API (OpenAI, Anthropic, AWS, tokens Kubernetes) accessibles dans les variables d'environnement des runners, et bloquez le C2 de TeamPCP."
+        },
+        {
+          "title": "Mettre à jour les clients Zoom contre les failles zero-click Zoomsday",
+          "detail": "Déployez sans délai les versions Zoom Workplace >= 7.1.5 (ou 7.0.6) sur l'ensemble du parc pour neutraliser les vulnérabilités zero-click d'annotation CVE-2026-53413/14/15. Désactivez les fonctionnalités d'annotation pour les invités externes en réunion tant que le déploiement n'est pas finalisé à 100%."
         }
       ]
     }
