@@ -1,0 +1,1532 @@
+[
+  {
+    "title": "CVE-2026-18855 - The Link Library plugin for WordPress is vulnerabl",
+    "publication_date": "Sat, 15 Aug 2026 20:11:48 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-18855",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "9.1\n\nCRITICAL\nCVSS 3.1\n\nCVE-2026-18855\n\nThe Link Library plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the ll_delete_link_fields function in all versions up to, and including, 7.9.4 This makes it possible for unauthenticated attackers to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php). Exploitation requires the administrator to have enabled the 'Delete local file on link deletion' plugin option (disabled by default) and to subsequently permanently delete the attacker-submitted link, which is a routine moderation action.\n\nPublished Date :\nAug. 15, 2026, 8:11 p.m.\n\nLast Modified :\nAug. 15, 2026, 8:11 p.m.\n\nRemotely Exploit :\nYes !\n\nSource :\nNone\n\nImpact\nAffected Products\n\nThe following products are affected by CVE-2026-18855\nvulnerability.\nEven if cvefeed.io is aware of the exact versions of the\nproducts\nthat\nare\naffected, the information is not represented in the table below.\n\nNo affected product recoded yet\n\nThe Common Vulnerability Scoring System is a standardized framework\nfor assessing the severity of vulnerabilities in software and systems.\nWe collect and displays CVSS scores from various sources for each CVE.\n\nScore\nVersion\nSeverity\nVector\nExploitability Score\nImpact Score\nSource\n\n9.1\n\nCVSS 3.1\n\nCRITICAL\n\n3.9\n\n5.2\n\nMITRE-CVE\n\n9.1\n\nCVSS 3.1\n\nCRITICAL\n\n3.9\n\n5.2\n\nsecurity@wordfence.com\n\nHere, you will find a curated list of external links that provide in-depth\ninformation, practical solutions, and valuable tools related to\nCVE-2026-18855.\n\nURL\nResource\n\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/41327dfa-db64-476a-a263-7bd4f69fb857?source=cve\n\nhttps://plugins.trac.wordpress.org/browser/link-library/tags/7.9.4/link-library-admin.php#L7874\n\nhttps://plugins.trac.wordpress.org/browser/link-library/tags/7.9.4/link-library-admin.php#L7865\n\nhttps://plugins.trac.wordpress.org/browser/link-library/tags/7.9.4/usersubmission.php#L52\n\nhttps://plugins.trac.wordpress.org/browser/link-library/tags/7.9.4/usersubmission.php#L476\n\nhttps://plugins.trac.wordpress.org/browser/link-library/tags/7.9.4/link-library.php#L2288\n\nhttps://plugins.trac.wordpress.org/changeset?reponame=&new=3646361%40link-library%2Ftags%2F7.9.5&old=3626573%40link-library%2Ftags%2F7.9.4\n\nhttps://plugins.trac.wordpress.org/changeset/3646360/link-library/trunk/link-library-admin.php\n\nhttps://plugins.trac.wordpress.org/changeset?old_path=%2Flink-library/tags/7.9.4&new_path=%2Flink-library/tags/7.9.5\n\nWhile CVE identifies\nspecific instances of vulnerabilities, CWE categorizes the common flaws or\nweaknesses that can lead to vulnerabilities. CVE-2026-18855 is\nassociated with the following CWEs:\n\nCWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')\n\nCommon Attack Pattern Enumeration and Classification\n(CAPEC)\nstores attack patterns, which are descriptions of the common attributes and\napproaches employed by adversaries to exploit the CVE-2026-18855\nweaknesses.\n\nCAPEC-64: Using Slashes and URL Encoding Combined to Bypass Validation Logic Using Slashes and URL Encoding Combined to Bypass Validation Logic\n\nCAPEC-76: Manipulating Web Input to File System Calls Manipulating Web Input to File System Calls\n\nCAPEC-78: Using Escaped Slashes in Alternate Encoding Using Escaped Slashes in Alternate Encoding\n\nCAPEC-79: Using Slashes in Alternate Encoding Using Slashes in Alternate Encoding\n\nCAPEC-126: Path Traversal Path Traversal\n\nWe scan GitHub repositories to detect new proof-of-concept exploits. Following list is a collection\nof public exploits and proof-of-concepts, which have been published on GitHub (sorted by the most recently\nupdated).\n\nResults are limited to the first 15 repositories due to potential performance issues.\n\nThe following list is the news that have been mention\nCVE-2026-18855 vulnerability anywhere in the article.\n\nEPSS is a daily estimate of the probability of […]",
+    "word_count": 450,
+    "observables": {
+      "domain-name": [
+        "cvefeed.io"
+      ],
+      "email-addr": [
+        "security@wordfence.com"
+      ],
+      "url": [
+        "http://www.wordfence.com/threat-intel/vulnerabilities/id/41327dfa-db64-476a-a263-7bd4f69fb857?source=cve",
+        "https://plugins.trac.wordpress.org/browser/link-library/tags/7.9.4/link-library-admin.php#L7865",
+        "https://plugins.trac.wordpress.org/browser/link-library/tags/7.9.4/link-library-admin.php#L7874",
+        "https://plugins.trac.wordpress.org/browser/link-library/tags/7.9.4/link-library.php#L2288",
+        "https://plugins.trac.wordpress.org/browser/link-library/tags/7.9.4/usersubmission.php#L476",
+        "https://plugins.trac.wordpress.org/browser/link-library/tags/7.9.4/usersubmission.php#L52",
+        "https://plugins.trac.wordpress.org/changeset/3646360/link-library/trunk/link-library-admin.php",
+        "https://plugins.trac.wordpress.org/changeset?old_path=%2Flink-library/tags/7.9.4&new_path=%2Flink-library/tags/7.9.5",
+        "https://plugins.trac.wordpress.org/changeset?reponame=&new=3646361%40link-library%2Ftags%2F7.9.5&old=3626573%40link-library%2Ftags%2F7.9.4",
+        "https://www.wordfence.com/threat-intel/vulnerabilities/id/41327dfa-db64-476a-a263-7bd4f69fb857?source=cve"
+      ],
+      "vulnerability": [
+        "CVE-2026-18855"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "CVE-2026-19598 - Pods <= 3.3.9 - Unauthenticated Privilege Escalation via Authorization Bypass to Admin Methods via 'pods_admin' AJAX Router",
+    "publication_date": "Sat, 15 Aug 2026 17:25:26 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-19598",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "9.8\n\nCRITICAL\nCVSS 3.1\n\nCVE-2026-19598\nPods <= 3.3.9 - Unauthenticated Privilege Escalation via Authorization Bypass to Admin Methods via 'pods_admin' AJAX Router\n\nThe Pods – Custom Content Types and Fields plugin for WordPress is vulnerable to Privilege Escalation via Authorization Bypass in all versions up to, and including, 3.3.9. The vulnerability exists because the pods_admin AJAX router funnels every access check — including the method allowlist, nonce verification, login enforcement, and capability gate — through pods_error(), which under the JSON meta-box-loader compatibility path only writes failures to the PHP error log and returns false instead of terminating the request, rendering all guards ineffective. This makes it possible for unauthenticated attackers to escalate their privileges to Administrator or overwrite the password of any user account, including the site owner's, enabling complete site takeover, or perform another administrator action.\n\nPublished Date :\nAug. 15, 2026, 5:25 p.m.\n\nLast Modified :\nAug. 15, 2026, 5:25 p.m.\n\nRemotely Exploit :\nYes !\n\nSource :\nWordfence\n\nImpact\nAffected Products\n\nThe following products are affected by CVE-2026-19598\nvulnerability.\nEven if cvefeed.io is aware of the exact versions of the\nproducts\nthat\nare\naffected, the information is not represented in the table below.\n\nNo affected product recoded yet\n\nThe Common Vulnerability Scoring System is a standardized framework\nfor assessing the severity of vulnerabilities in software and systems.\nWe collect and displays CVSS scores from various sources for each CVE.\n\nScore\nVersion\nSeverity\nVector\nExploitability Score\nImpact Score\nSource\n\n9.8\n\nCVSS 3.1\n\nCRITICAL\n\n3.9\n\n5.9\n\nMITRE-CVE\n\n9.8\n\nCVSS 3.1\n\nCRITICAL\n\n3.9\n\n5.9\n\nsecurity@wordfence.com\n\nUpdate the Pods plugin to a version that addresses the authorization bypass vulnerability.\n\nUpdate the Pods plugin to the latest version.\n\nVerify plugin integrity after update.\n\nMonitor server error logs for suspicious activity.\n\nWe scan GitHub repositories to detect new proof-of-concept exploits. Following list is a collection\nof public exploits and proof-of-concepts, which have been published on GitHub (sorted by the most recently\nupdated).\n\nResults are limited to the first 15 repositories due to potential performance issues.\n\nThe following list is the news that have been mention\nCVE-2026-19598 vulnerability anywhere in the article.\n\nEPSS is a daily estimate of the probability of exploitation activity\nbeing observed over the next 30 days. Following chart shows the EPSS\nscore history of the vulnerability.\n\nvar linechartBasicColors = getChartColorsArray(\"exploitability_history_line_column_chart\");\nif (linechartBasicColors) {\nvar options = {\nseries: [{\nname: \"EPSS Score\",\ndata: []\n}],\nchart: {\nheight: 350,\ntype: 'line',\nzoom: {\nenabled: false\n},\ntoolbar: {\nshow: false\n}\n},\nmarkers: {\nsize: 4,\n},\ndataLabels: {\nenabled: false\n},\nstroke: {\ncurve: 'straight'\n},\ncolors: linechartBasicColors,\n\nlabels: [],\n\nyaxis: {\nmin: 0,\nmax: 100,\nlabels: {\nformatter: function (val) {\nreturn val.toFixed(0);\n}\n},\n},\n};\nvar chart = new ApexCharts(document.querySelector(\"#exploitability_history_line_column_chart\"), options);\nchart.render();\n}\n\nAuthorization",
+    "word_count": 458,
+    "observables": {
+      "domain-name": [
+        "cvefeed.io"
+      ],
+      "email-addr": [
+        "security@wordfence.com"
+      ],
+      "vulnerability": [
+        "CVE-2026-19598"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "CVE-2026-19900 - LB-LINK X-PRO shadow hard-coded credentials",
+    "publication_date": "Sat, 15 Aug 2026 17:16:24 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-19900",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "8.2\n\nHIGH\nCVSS 4.0\n\nCVE-2026-19900\nLB-LINK X-PRO shadow hard-coded credentials\n\nA vulnerability was identified in LB-LINK X-PRO 1.0.22-20231206. The impacted element is an unknown function of the file /etc/shadow. The manipulation leads to hard-coded credentials. It is possible to initiate the attack remotely. A high degree of complexity is needed for the attack. The exploitability is regarded as difficult. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.\n\nPublished Date :\nAug. 15, 2026, 5:16 p.m.\n\nLast Modified :\nAug. 15, 2026, 5:16 p.m.\n\nRemotely Exploit :\nYes !\n\nSource :\ncna@vuldb.com\n\nImpact\nAffected Products\n\nThe following products are affected by CVE-2026-19900\nvulnerability.\nEven if cvefeed.io is aware of the exact versions of the\nproducts\nthat\nare\naffected, the information is not represented in the table below.\n\nNo affected product recoded yet\n\nThe Common Vulnerability Scoring System is a standardized framework\nfor assessing the severity of vulnerabilities in software and systems.\nWe collect and displays CVSS scores from various sources for each CVE.\n\nScore\nVersion\nSeverity\nVector\nExploitability Score\nImpact Score\nSource\n\n7.6\n\nCVSS 2.0\n\nHIGH\n\n4.9\n\n10.0\n\ncna@vuldb.com\n\n8.1\n\nCVSS 3.1\n\nHIGH\n\n2.2\n\n5.9\n\ncna@vuldb.com\n\n8.2\n\nCVSS 4.0\n\nHIGH\n\ncna@vuldb.com\n\nAddress hard-coded credentials in /etc/shadow by updating the system.\n\nUpdate the system to remove hard-coded credentials.\n\nReview system for hard-coded credentials.\n\nImplement secure credential management.\n\nApply vendor patches when available.\n\nHere, you will find a curated list of external links that provide in-depth\ninformation, practical solutions, and valuable tools related to\nCVE-2026-19900.\n\nURL\nResource\n\nhttps://github.com/DavCloudz/cve/blob/main/B-Link/B-Link%20AC1200%20X-PRO(AC6)%20Hardcoded%20Credentials%20Vulnerability.md\n\nhttps://vuldb.com/cve/CVE-2026-19900\n\nhttps://vuldb.com/submit/870712\n\nhttps://vuldb.com/vuln/390090\n\nhttps://vuldb.com/vuln/390090/cti\n\nWhile CVE identifies\nspecific instances of vulnerabilities, CWE categorizes the common flaws or\nweaknesses that can lead to vulnerabilities. CVE-2026-19900 is\nassociated with the following CWEs:\n\nCWE-259: Use of Hard-coded Password\n\nCWE-798: Use of Hard-coded Credentials\n\nCommon Attack Pattern Enumeration and Classification\n(CAPEC)\nstores attack patterns, which are descriptions of the common attributes and\napproaches employed by adversaries to exploit the CVE-2026-19900\nweaknesses.\n\nCAPEC-70: Try Common or Default Usernames and Passwords Try Common or Default Usernames and Passwords\n\nCAPEC-191: Read Sensitive Constants Within an Executable Read Sensitive Constants Within an Executable\n\nWe scan GitHub repositories to detect new proof-of-concept exploits. Following list is a collection\nof public exploits and proof-of-concepts, which have been published on GitHub (sorted by the most recently\nupdated).\n\nResults are limited to the first 15 repositories due to potential performance issues.\n\nThe following list is the news that have been mention\nCVE-2026-19900 vulnerability anywhere in the article.\n\nThe following table lists the changes that have been made to the\nCVE-2026-19900 vulnerability over time.\n\nVulnerability history details can be useful for understanding the evolution\nof a vulnerability, and for identifying the most recent changes that may\nimpact the vulnerability's severity, exploitability, or other characteristics.\n\nNew CVE Received\nby cna@vuldb.com\n\nAug. 15, 2026\n\nAction\nType\nOld Value\nNew Value\n\nAdded\nAffected\n\n[{'cpes': ['cpe:2.3:a:lb-link:x-pro:*:*:*:*:*:*:*:*'], 'vendor': 'LB-LINK', 'product': 'X-PRO', 'versions': [{'status': 'affected', 'version': '1.0.22-20231206'}]}]\n\nAdded\nDescription\n\nA vulnerability was identified in LB-LINK X-PRO 1.0.22-20231206. The impacted element is an unknown function of the file /etc/shadow. The manipulation leads to hard-coded credentials. It is possible to initiate the attack […]",
+    "word_count": 524,
+    "observables": {
+      "directory": [
+        "/etc/shadow"
+      ],
+      "domain-name": [
+        "cvefeed.io"
+      ],
+      "email-addr": [
+        "cna@vuldb.com"
+      ],
+      "url": [
+        "https://github.com/DavCloudz/cve/blob/main/B-Link/B-Link%20AC1200%20X-PRO",
+        "https://vuldb.com/cve/CVE-2026-19900",
+        "https://vuldb.com/submit/870712",
+        "https://vuldb.com/vuln/390090",
+        "https://vuldb.com/vuln/390090/cti"
+      ],
+      "vulnerability": [
+        "CVE-2026-19900"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "CVE-2026-19901 - LB-LINK X-PRO easycwmp hard-coded credentials",
+    "publication_date": "Sat, 15 Aug 2026 17:15:07 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-19901",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "8.2\n\nHIGH\nCVSS 4.0\n\nCVE-2026-19901\nLB-LINK X-PRO easycwmp hard-coded credentials\n\nA security flaw has been discovered in LB-LINK X-PRO 1.0.22-20231206. This affects an unknown function of the file /etc/config/easycwmp. The manipulation results in hard-coded credentials. It is possible to launch the attack remotely. Attacks of this nature are highly complex. The exploitability is reported as difficult. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.\n\nPublished Date :\nAug. 15, 2026, 5:15 p.m.\n\nLast Modified :\nAug. 15, 2026, 5:15 p.m.\n\nRemotely Exploit :\nYes !\n\nSource :\nVulDB\n\nImpact\nAffected Products\n\nThe following products are affected by CVE-2026-19901\nvulnerability.\nEven if cvefeed.io is aware of the exact versions of the\nproducts\nthat\nare\naffected, the information is not represented in the table below.\n\nNo affected product recoded yet\n\nThe Common Vulnerability Scoring System is a standardized framework\nfor assessing the severity of vulnerabilities in software and systems.\nWe collect and displays CVSS scores from various sources for each CVE.\n\nScore\nVersion\nSeverity\nVector\nExploitability Score\nImpact Score\nSource\n\n7.6\n\nCVSS 2.0\n\nHIGH\n\n4.9\n\n10\n\ncna@vuldb.com\n\n8.1\n\nCVSS 3.1\n\nHIGH\n\n2.2\n\n5.9\n\ncna@vuldb.com\n\n8.2\n\nCVSS 4.0\n\nHIGH\n\ncna@vuldb.com\n\nHard-coded credentials in easycwmp require immediate remediation by vendor.\n\nRemove hard-coded credentials from the easycwmp file.\n\nImplement secure credential management practices.\n\nUpdate system software to remove vulnerability.\n\nWe scan GitHub repositories to detect new proof-of-concept exploits. Following list is a collection\nof public exploits and proof-of-concepts, which have been published on GitHub (sorted by the most recently\nupdated).\n\nResults are limited to the first 15 repositories due to potential performance issues.\n\nThe following list is the news that have been mention\nCVE-2026-19901 vulnerability anywhere in the article.\n\nEPSS is a daily estimate of the probability of exploitation activity\nbeing observed over the next 30 days. Following chart shows the EPSS\nscore history of the vulnerability.\n\nvar linechartBasicColors = getChartColorsArray(\"exploitability_history_line_column_chart\");\nif (linechartBasicColors) {\nvar options = {\nseries: [{\nname: \"EPSS Score\",\ndata: []\n}],\nchart: {\nheight: 350,\ntype: 'line',\nzoom: {\nenabled: false\n},\ntoolbar: {\nshow: false\n}\n},\nmarkers: {\nsize: 4,\n},\ndataLabels: {\nenabled: false\n},\nstroke: {\ncurve: 'straight'\n},\ncolors: linechartBasicColors,\n\nlabels: [],\n\nyaxis: {\nmin: 0,\nmax: 100,\nlabels: {\nformatter: function (val) {\nreturn val.toFixed(0);\n}\n},\n},\n};\nvar chart = new ApexCharts(document.querySelector(\"#exploitability_history_line_column_chart\"), options);\nchart.render();\n}\n\nAuthentication",
+    "word_count": 405,
+    "observables": {
+      "directory": [
+        "/etc/config/easycwmp"
+      ],
+      "domain-name": [
+        "cvefeed.io"
+      ],
+      "email-addr": [
+        "cna@vuldb.com"
+      ],
+      "vulnerability": [
+        "CVE-2026-19901"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "CVE-2026-18500 - @fastify/jwt vulnerable to authorization bypass via global secret overriding the per-request key",
+    "publication_date": "Sat, 15 Aug 2026 14:17:07 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-18500",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "8.1\n\nHIGH\nCVSS 3.1\n\nCVE-2026-18500\n@fastify/jwt vulnerable to authorization bypass via global secret overriding the per-request key\n\n@fastify/jwt is a JSON Web Token plugin for Fastify. In versions before 10.2.2, a per-request verification key passed to request.jwtVerify({ key }) is silently overridden by the plugin's globally configured secret, because the option merge applies the global key last. Applications that use different keys for different authorization domains, for example separate user and admin keys, therefore accept a token signed with the global key on a route that explicitly requires another key. This lets an ordinary authenticated user cross a key-based trust boundary without knowing either secret. The issue is fixed in @fastify/jwt 10.2.2, where an explicit per-call key takes precedence over the global secret. Users should upgrade to 10.2.2.\n\nPublished Date :\nAug. 15, 2026, 2:17 p.m.\n\nLast Modified :\nAug. 15, 2026, 2:17 p.m.\n\nRemotely Exploit :\nYes !\n\nSource :\nce714d77-add3-4f53-aff5-83d477b104bb\n\nImpact\nAffected Products\n\nThe following products are affected by CVE-2026-18500\nvulnerability.\nEven if cvefeed.io is aware of the exact versions of the\nproducts\nthat\nare\naffected, the information is not represented in the table below.\n\nNo affected product recoded yet\n\nThe Common Vulnerability Scoring System is a standardized framework\nfor assessing the severity of vulnerabilities in software and systems.\nWe collect and displays CVSS scores from various sources for each CVE.\n\nScore\nVersion\nSeverity\nVector\nExploitability Score\nImpact Score\nSource\n\n8.1\n\nCVSS 3.1\n\nHIGH\n\nce714d77-add3-4f53-aff5-83d477b104bb\n\n8.1\n\nCVSS 3.1\n\nHIGH\n\n2.8\n\n5.2\n\nMITRE-CVE\n\nUpgrade @fastify/jwt to version 10.2.2 to fix per-request key override.\n\nUpgrade @fastify/jwt to version 10.2.2 or later.\n\nEnsure per-request keys take precedence over global secrets.\n\nReview key management for authorization domains.\n\nTest token verification logic thoroughly.\n\nHere, you will find a curated list of external links that provide in-depth\ninformation, practical solutions, and valuable tools related to\nCVE-2026-18500.\n\nURL\nResource\n\nhttps://cna.openjsf.org/security-advisories.html\n\nhttps://github.com/fastify/fastify-jwt/security/advisories/GHSA-j4cx-787j-xjqg\n\nWhile CVE identifies\nspecific instances of vulnerabilities, CWE categorizes the common flaws or\nweaknesses that can lead to vulnerabilities. CVE-2026-18500 is\nassociated with the following CWEs:\n\nCWE-347: Improper Verification of Cryptographic Signature\n\nCommon Attack Pattern Enumeration and Classification\n(CAPEC)\nstores attack patterns, which are descriptions of the common attributes and\napproaches employed by adversaries to exploit the CVE-2026-18500\nweaknesses.\n\nCAPEC-463: Padding Oracle Crypto Attack Padding Oracle Crypto Attack\n\nCAPEC-475: Signature Spoofing by Improper Validation Signature Spoofing by Improper Validation\n\nWe scan GitHub repositories to detect new proof-of-concept exploits. Following list is a collection\nof public exploits and proof-of-concepts, which have been published on GitHub (sorted by the most recently\nupdated).\n\nResults are limited to the first 15 repositories due to potential performance issues.\n\nThe following list is the news that have been mention\nCVE-2026-18500 vulnerability anywhere in the article.\n\nThe following table lists the changes that have been made to the\nCVE-2026-18500 vulnerability over time.\n\nVulnerability history details can be useful for understanding the evolution\nof a vulnerability, and for identifying the most recent changes that may\nimpact the vulnerability's severity, exploitability, or other characteristics.\n\nNew CVE Received\nby ce714d77-add3-4f53-aff5-83d477b104bb\n\nAug. 15, 2026\n\nAction\nType\nOld Value\nNew Value\n\nAdded\nAffected\n\n[{'vendor': '@fastify/jwt', 'product': '@fastify/jwt', 'versions': [{'status': 'affected', 'version': '0', 'lessThan': '10.2.2', 'versionType': 'semver'}, {'status': 'unaffected', 'version': '10.2.2', 'versionType': 'semver'}], […]",
+    "word_count": 527,
+    "observables": {
+      "domain-name": [
+        "cvefeed.io"
+      ],
+      "url": [
+        "https://cna.openjsf.org/security-advisories.html",
+        "https://github.com/fastify/fastify-jwt/security/advisories/GHSA-j4cx-787j-xjqg"
+      ],
+      "vulnerability": [
+        "CVE-2026-18500",
+        "GHSA-J4CX-787J-XJQG"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "CVE-2026-18438 - Templately <= 3.7.1 - Authenticated (Contributor+) Arbitrary File Upload to Remote Code Execution via Gutenberg Cloud Import Attachment Filename Mismatch",
+    "publication_date": "Sat, 15 Aug 2026 10:16:29 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-18438",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "$(function () {\n// Focus on searchModal input when it's shown\n$('#searchModal').on('shown.bs.modal', function () {\n$('#search-options').focus();\n});\n// Get elements\nconst searchOptions = document.getElementById(\"search-close-options\");\nconst dropdown = document.getElementById(\"search-dropdown\");\nconst searchInput = document.getElementById(\"search-options\");\n\n// Function to toggle dropdown and search options\nconst toggleElements = (show) => {\nif (show) {\ndropdown.classList.add(\"show\");\nsearchOptions.classList.remove(\"d-none\");\n} else {\ndropdown.classList.remove(\"show\");\nsearchOptions.classList.add(\"d-none\");\n}\n}\n\n// Function to create HTML section\nconst createHtmlSection = (title, items, icon) => {\nlet html = `<div class=\"notification-group-list\">\n<h5 class=\"text-overflow text-muted fs-13 mb-2 mt-3 text-uppercase notification-title\">${title}</h5>`;\nif (title === 'Vulnerabilities') {\nitems.forEach(item => {\nhtml += `<a href=\"/vuln/detail/${item.id}\" class=\"list-group-item dropdown-item notify-item\">\n<i class=\"mdi ${icon} me-2\"></i> <span>${item.title}</span>\n</a>`\n;\n});\n} else if (title === 'Products') {\nitems.forEach(item => {\nhtml += `<a href=\"${item.get_absolute_url}\" class=\"list-group-item dropdown-item notify-item\">\n<i class=\"mdi ${icon} me-2\"></i> <span>${item.vendor.name} > ${item.name}</span>\n</a>`;\n}\n);\n} else if (title === 'Vendors') {\nitems.forEach(item => {\n\nhtml += `<a href=\"${item.get_absolute_url}\" class=\"list-group-item dropdown-item notify-item\">\n<i class=\"mdi ${icon} me-2\"></i> <span>${item.name}</span>\n</a>`;\n});\n}\nhtml += '</div>';\nreturn html;\n}\n\n// Event listeners\nif (searchInput) {\nsearchInput.addEventListener(\"focus\", () => toggleElements(searchInput.value.length > 0));\nsearchOptions.addEventListener(\"click\", () => {\nsearchInput.value = \"\";\ntoggleElements(false);\n});\ndocument.body.addEventListener(\"click\", (e) => {\nif (e.target.getAttribute(\"id\") !== \"search-options\") toggleElements(false);\n});\nlet timeoutID;\n$('#search-options').unbind().keyup(function () {\nclearTimeout(timeoutID);\ntimeoutID = setTimeout(function () {\nif (searchInput.value.length > 2) {\n$.get('/api/vulnerability/quick-search?q=' + searchInput.value, function (data) {\ntoggleElements(true);\n\nlet html = '<div class=\"list-group list-group-flush\">';\nif (data.results.length === 0) {\nhtml += '<div class=\"notification-group-list\"><a href=\"\" class=\"list-group-item dropdown-item notify-item\">No results found</a></div>';\n} else if (data.results.errors) {\ndata.results.errors.forEach((item) => {\nhtml += `<div class=\"notification-group-list\"><a href=\"\" class=\"list-group-item dropdown-item notify-item\"><b>${item.value}</b></a></div>`;\n}\n);\n} else {\ndata.results.forEach((item) => {\nif (item.products) html += createHtmlSection('Products', item.products, 'mdi-alpha-p-box-outline');\nif (item.vendors) html += createHtmlSection('Vendors', item.vendors, 'mdi-office-building-outline');\nif (item.vulnerabilities) html += createHtmlSection('Vulnerabilities', item.vulnerabilities, 'mdi-bomb');\n});\n}\n\nhtml += '</div>';\n$('#searchresulstview').html(html);\n\n}, 'json').fail(function () {\n$('#searchresulstview').html('<div class=\"list-group list-group-flush\"><a href=\"\" class=\"list-group-item dropdown-item notify-item\">Something went wrong. Contact with hey@cvefeed.io</a></div>');\n});\n}\n}, 500);\n});\n}\n});\n\n8.8\n\nHIGH\nCVSS 3.1\n\nCVE-2026-18438\nTemplately <= 3.7.1 - Authenticated (Contributor+) Arbitrary File Upload to Remote Code Execution via Gutenberg Cloud Import Attachment Filename Mismatch\n\nThe Templately – Elementor & Gutenberg Template Library: 6500+ Free & Pro Ready Templates And Cloud! plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 3.7.1 via the fetch_remote_file function. This is due to a filename validation/destination mismatch in fetch_remote_file, where file type validation is performed against the attacker-controlled Content-Disposition filename rather than the URL-path-derived destination filename. This […]",
+    "word_count": 406,
+    "observables": {
+      "email-addr": [
+        "hey@cvefeed.io"
+      ],
+      "vulnerability": [
+        "CVE-2026-18438"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "CVE-2026-16142 - TrueBooker <= 1.2.6 - Unauthenticated Account Takeover via Insecure Direct Object Reference in 'truebooker_wp_user_id' Parameter",
+    "publication_date": "Sat, 15 Aug 2026 09:16:29 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-16142",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "9.8\n\nCRITICAL\nCVSS 3.1\n\nCVE-2026-16142\nTrueBooker <= 1.2.6 - Unauthenticated Account Takeover via Insecure Direct Object Reference in 'truebooker_wp_user_id' Parameter\n\nThe TrueBooker plugin for WordPress is vulnerable to Account Takeover in all versions up to, and including, 1.2.6. This is due to the add_front_user_update() AJAX handler being registered for unauthenticated users and accepting an arbitrary truebooker_wp_user_id value, which is passed directly to wp_update_user() without verifying authentication or ownership. This makes it possible for unauthenticated attackers to change any WordPress user account email address, including an administrator, by submitting the target user ID and an attacker-controlled email address. An attacker can then use the native WordPress password reset flow to receive the reset link at the attacker-controlled email address and take over the account.\n\nPublished Date :\nAug. 15, 2026, 9:16 a.m.\n\nLast Modified :\nAug. 15, 2026, 9:16 a.m.\n\nRemotely Exploit :\nYes !\n\nSource :\nsecurity@wordfence.com\n\nImpact\nAffected Products\n\nThe following products are affected by CVE-2026-16142\nvulnerability.\nEven if cvefeed.io is aware of the exact versions of the\nproducts\nthat\nare\naffected, the information is not represented in the table below.\n\nNo affected product recoded yet\n\nThe Common Vulnerability Scoring System is a standardized framework\nfor assessing the severity of vulnerabilities in software and systems.\nWe collect and displays CVSS scores from various sources for each CVE.\n\nScore\nVersion\nSeverity\nVector\nExploitability Score\nImpact Score\nSource\n\n9.8\n\nCVSS 3.1\n\nCRITICAL\n\n3.9\n\n5.9\n\nsecurity@wordfence.com\n\n9.8\n\nCVSS 3.1\n\nCRITICAL\n\n3.9\n\n5.9\n\nMITRE-CVE\n\nUpdate the TrueBooker plugin to fix an account takeover vulnerability by patching the user update handler.\n\nUpdate the TrueBooker plugin to the latest version.\n\nApply vendor patches for the affected plugin.\n\nRemove or disable the plugin if no update is available.\n\nHere, you will find a curated list of external links that provide in-depth\ninformation, practical solutions, and valuable tools related to\nCVE-2026-16142.\n\nURL\nResource\n\nhttps://plugins.trac.wordpress.org/changeset/3640018/truebooker-appointment-booking\n\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/f0d3f7cb-4974-4b0f-9658-1895e5966276?source=cve\n\nWhile CVE identifies\nspecific instances of vulnerabilities, CWE categorizes the common flaws or\nweaknesses that can lead to vulnerabilities. CVE-2026-16142 is\nassociated with the following CWEs:\n\nCWE-639: Authorization Bypass Through User-Controlled Key\n\nCommon Attack Pattern Enumeration and Classification\n(CAPEC)\nstores attack patterns, which are descriptions of the common attributes and\napproaches employed by adversaries to exploit the CVE-2026-16142\nweaknesses.\n\nWe scan GitHub repositories to detect new proof-of-concept exploits. Following list is a collection\nof public exploits and proof-of-concepts, which have been published on GitHub (sorted by the most recently\nupdated).\n\nResults are limited to the first 15 repositories due to potential performance issues.\n\nThe following list is the news that have been mention\nCVE-2026-16142 vulnerability anywhere in the article.\n\nThe following table lists the changes that have been made to the\nCVE-2026-16142 vulnerability over time.\n\nVulnerability history details can be useful for understanding the evolution\nof a vulnerability, and for identifying the most recent changes that may\nimpact the vulnerability's severity, exploitability, or other characteristics.\n\nNew CVE Received\nby security@wordfence.com\n\nAug. 15, 2026\n\nAction\nType\nOld Value\nNew Value\n\nAdded\nAffected\n\n[{'vendor': 'themetechmount', 'product': 'TrueBooker – Appointment Booking and Scheduler System', 'versions': [{'status': 'affected', 'version': '0', 'versionType': 'semver', 'lessThanOrEqual': '1.2.6'}], 'defaultStatus': 'unaffected'}]\n\nAdded\nDescription\n\nThe TrueBooker plugin for WordPress is vulnerable to Account Takeover in all versions […]",
+    "word_count": 526,
+    "observables": {
+      "domain-name": [
+        "cvefeed.io"
+      ],
+      "email-addr": [
+        "security@wordfence.com"
+      ],
+      "url": [
+        "http://www.wordfence.com/threat-intel/vulnerabilities/id/f0d3f7cb-4974-4b0f-9658-1895e5966276?source=cve",
+        "https://plugins.trac.wordpress.org/changeset/3640018/truebooker-appointment-booking",
+        "https://www.wordfence.com/threat-intel/vulnerabilities/id/f0d3f7cb-4974-4b0f-9658-1895e5966276?source=cve"
+      ],
+      "vulnerability": [
+        "CVE-2026-16142"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "CVE-2026-15826 - User Profile Builder <= 3.16.4 - Unauthenticated Authentication Bypass via Type Confusion to Administrator Account Takeover via 'username' Parameter",
+    "publication_date": "Sat, 15 Aug 2026 07:16:19 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-15826",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "9.8\n\nCRITICAL\nCVSS 3.1\n\nCVE-2026-15826\nUser Profile Builder <= 3.16.4 - Unauthenticated Authentication Bypass via Type Confusion to Administrator Account Takeover via 'username' Parameter\n\nThe User Profile Builder plugin for WordPress is vulnerable to Authentication Bypass via Type Confusion in versions up to, and including, 3.16.4. This is due to the wppb_log_in_user() function calling absint() on the return value of wp_insert_user() before performing an is_wp_error() check — when a registration is submitted with a 61–70 character username, WordPress core rejects it with a WP_Error object, but absint() coerces that object to the integer 1 before the error check can short-circuit execution, causing the plugin to bind and return a transient-backed autologin nonce tied to user ID 1. This makes it possible for unauthenticated attackers to log in as the site's Administrator account (user ID 1), resulting in full administrative takeover of the site.\n\nPublished Date :\nAug. 15, 2026, 7:16 a.m.\n\nLast Modified :\nAug. 15, 2026, 7:16 a.m.\n\nRemotely Exploit :\nYes !\n\nSource :\nsecurity@wordfence.com\n\nImpact\nAffected Products\n\nThe following products are affected by CVE-2026-15826\nvulnerability.\nEven if cvefeed.io is aware of the exact versions of the\nproducts\nthat\nare\naffected, the information is not represented in the table below.\n\nID\nVendor\nProduct\nAction\n\n1\nCozmoslabs\nprofile_builder\n\nThe Common Vulnerability Scoring System is a standardized framework\nfor assessing the severity of vulnerabilities in software and systems.\nWe collect and displays CVSS scores from various sources for each CVE.\n\nScore\nVersion\nSeverity\nVector\nExploitability Score\nImpact Score\nSource\n\n9.8\n\nCVSS 3.1\n\nCRITICAL\n\n3.9\n\n5.9\n\nsecurity@wordfence.com\n\n9.8\n\nCVSS 3.1\n\nCRITICAL\n\n3.9\n\n5.9\n\nMITRE-CVE\n\nUpdate User Profile Builder plugin to patch authentication bypass vulnerability and secure administrator access.\n\nUpdate the User Profile Builder plugin to the latest version.\n\nVerify administrator account security after the update.\n\nRemove any unauthorized administrative access if found.\n\nHere, you will find a curated list of external links that provide in-depth\ninformation, practical solutions, and valuable tools related to\nCVE-2026-15826.\n\nURL\nResource\n\nhttps://plugins.trac.wordpress.org/browser/profile-builder/tags/3.16.4/features/functions.php#L1481\n\nhttps://plugins.trac.wordpress.org/browser/profile-builder/tags/3.16.4/front-end/class-formbuilder.php#L262\n\nhttps://plugins.trac.wordpress.org/browser/profile-builder/tags/3.16.4/front-end/class-formbuilder.php#L364\n\nhttps://plugins.trac.wordpress.org/browser/profile-builder/tags/3.16.4/front-end/class-formbuilder.php#L742\n\nhttps://plugins.trac.wordpress.org/browser/profile-builder/tags/3.16.4/front-end/class-formbuilder.php#L945\n\nhttps://plugins.trac.wordpress.org/browser/profile-builder/tags/3.16.4/front-end/default-fields/username/username.php#L28\n\nhttps://plugins.trac.wordpress.org/browser/profile-builder/tags/3.16.4/front-end/default-fields/username/username.php#L49\n\nhttps://plugins.trac.wordpress.org/changeset/3609855/profile-builder\n\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/9f606fba-f779-42ea-a160-6c3b20dc5e79?source=cve\n\nWhile CVE identifies\nspecific instances of vulnerabilities, CWE categorizes the common flaws or\nweaknesses that can lead to vulnerabilities. CVE-2026-15826 is\nassociated with the following CWEs:\n\nCWE-704: Incorrect Type Conversion or Cast\n\nCommon Attack Pattern Enumeration and Classification\n(CAPEC)\nstores attack patterns, which are descriptions of the common attributes and\napproaches employed by adversaries to exploit the CVE-2026-15826\nweaknesses.\n\nWe scan GitHub repositories to detect new proof-of-concept exploits. Following list is a collection\nof public exploits and proof-of-concepts, which have been published on GitHub (sorted by the most recently\nupdated).\n\nResults are limited to the first 15 repositories due to potential performance issues.\n\nThe following list is the news […]",
+    "word_count": 444,
+    "observables": {
+      "domain-name": [
+        "cvefeed.io"
+      ],
+      "email-addr": [
+        "security@wordfence.com"
+      ],
+      "url": [
+        "http://www.wordfence.com/threat-intel/vulnerabilities/id/9f606fba-f779-42ea-a160-6c3b20dc5e79?source=cve",
+        "https://plugins.trac.wordpress.org/browser/profile-builder/tags/3.16.4/features/functions.php#L1481",
+        "https://plugins.trac.wordpress.org/browser/profile-builder/tags/3.16.4/front-end/class-formbuilder.php#L262",
+        "https://plugins.trac.wordpress.org/browser/profile-builder/tags/3.16.4/front-end/class-formbuilder.php#L364",
+        "https://plugins.trac.wordpress.org/browser/profile-builder/tags/3.16.4/front-end/class-formbuilder.php#L742",
+        "https://plugins.trac.wordpress.org/browser/profile-builder/tags/3.16.4/front-end/class-formbuilder.php#L945",
+        "https://plugins.trac.wordpress.org/browser/profile-builder/tags/3.16.4/front-end/default-fields/username/username.php#L28",
+        "https://plugins.trac.wordpress.org/browser/profile-builder/tags/3.16.4/front-end/default-fields/username/username.php#L49",
+        "https://plugins.trac.wordpress.org/changeset/3609855/profile-builder",
+        "https://www.wordfence.com/threat-intel/vulnerabilities/id/9f606fba-f779-42ea-a160-6c3b20dc5e79?source=cve"
+      ],
+      "vulnerability": [
+        "CVE-2026-15826"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "CVE-2026-14279 - Wholesale Market <= 2.2.2 - Authenticated (Subscriber+) Privilege Escalation via 'role_required' Parameter",
+    "publication_date": "Sat, 15 Aug 2026 07:16:19 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-14279",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "8.8\n\nHIGH\nCVSS 3.1\n\nCVE-2026-14279\nWholesale Market <= 2.2.2 - Authenticated (Subscriber+) Privilege Escalation via 'role_required' Parameter\n\nThe Wholesale Market plugin for WordPress is vulnerable to privilege escalation in versions up to, and including, 2.2.2 via the ced_wholesale_request_send AJAX action. The ced_wholesale_request_send_callback() handler only verifies a nonce (which is exposed to any authenticated user through wp_localize_script on the frontend) and that the caller has a positive user ID, then calls WP_User::add_role() with the client-supplied role_required POST parameter without restricting the value to an allowlist of wholesale roles. This makes it possible for authenticated attackers, with Subscriber-level access and above, to elevate their privileges to Administrator when the site administrator has enabled the 'Assigning requested role directly' option.\n\nPublished Date :\nAug. 15, 2026, 7:16 a.m.\n\nLast Modified :\nAug. 15, 2026, 7:16 a.m.\n\nRemotely Exploit :\nYes !\n\nSource :\nsecurity@wordfence.com\n\nImpact\nAffected Products\n\nThe following products are affected by CVE-2026-14279\nvulnerability.\nEven if cvefeed.io is aware of the exact versions of the\nproducts\nthat\nare\naffected, the information is not represented in the table below.\n\nID\nVendor\nProduct\nAction\n\n1\nCedcommerce\nwholesale_market\n\nThe Common Vulnerability Scoring System is a standardized framework\nfor assessing the severity of vulnerabilities in software and systems.\nWe collect and displays CVSS scores from various sources for each CVE.\n\nScore\nVersion\nSeverity\nVector\nExploitability Score\nImpact Score\nSource\n\n8.8\n\nCVSS 3.1\n\nHIGH\n\n2.8\n\n5.9\n\nsecurity@wordfence.com\n\n8.8\n\nCVSS 3.1\n\nHIGH\n\n2.8\n\n5.9\n\nMITRE-CVE\n\nUpdate the Wholesale Market plugin to the latest version to fix privilege escalation.\n\nUpdate the Wholesale Market plugin.\n\nEnsure 'Assigning requested role directly' option is disabled.\n\nReview user roles and permissions.\n\nHere, you will find a curated list of external links that provide in-depth\ninformation, practical solutions, and valuable tools related to\nCVE-2026-14279.\n\nURL\nResource\n\nhttps://plugins.trac.wordpress.org/browser/wholesale-market/tags/2.2.2/addons/wholesale-request/include/class-wholesale-user-register-addon.php#L141\n\nhttps://plugins.trac.wordpress.org/browser/wholesale-market/tags/2.2.2/addons/wholesale-request/include/class-wholesale-user-register-addon.php#L153\n\nhttps://plugins.trac.wordpress.org/browser/wholesale-market/tags/2.2.2/addons/wholesale-request/include/class-wholesale-user-register-addon.php#L276\n\nhttps://plugins.trac.wordpress.org/browser/wholesale-market/tags/2.2.2/addons/wholesale-request/include/class-wholesale-user-register-addon.php#L30\n\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/abd59d7a-e7f6-440d-9c2a-00266c0dcbff?source=cve\n\nWhile CVE identifies\nspecific instances of vulnerabilities, CWE categorizes the common flaws or\nweaknesses that can lead to vulnerabilities. CVE-2026-14279 is\nassociated with the following CWEs:\n\nCWE-269: Improper Privilege Management\n\nCommon Attack Pattern Enumeration and Classification\n(CAPEC)\nstores attack patterns, which are descriptions of the common attributes and\napproaches employed by adversaries to exploit the CVE-2026-14279\nweaknesses.\n\nCAPEC-58: Restful Privilege Elevation Restful Privilege Elevation\n\nCAPEC-122: Privilege Abuse Privilege Abuse\n\nCAPEC-233: Privilege Escalation Privilege Escalation\n\nWe scan GitHub repositories to detect new proof-of-concept exploits. Following list is a collection\nof public exploits and proof-of-concepts, which have been published on GitHub (sorted by the most recently\nupdated).\n\nResults are limited to the first 15 repositories due to potential performance issues.\n\nThe following list is the news that have been mention\nCVE-2026-14279 vulnerability anywhere in the article.\n\nThe following table lists the changes that have been made to the\nCVE-2026-14279 vulnerability over time.\n\nVulnerability history details can be useful for […]",
+    "word_count": 455,
+    "observables": {
+      "domain-name": [
+        "cvefeed.io"
+      ],
+      "email-addr": [
+        "security@wordfence.com"
+      ],
+      "url": [
+        "http://www.wordfence.com/threat-intel/vulnerabilities/id/abd59d7a-e7f6-440d-9c2a-00266c0dcbff?source=cve",
+        "https://plugins.trac.wordpress.org/browser/wholesale-market/tags/2.2.2/addons/wholesale-request/include/class-wholesale-user-register-addon.php#L141",
+        "https://plugins.trac.wordpress.org/browser/wholesale-market/tags/2.2.2/addons/wholesale-request/include/class-wholesale-user-register-addon.php#L153",
+        "https://plugins.trac.wordpress.org/browser/wholesale-market/tags/2.2.2/addons/wholesale-request/include/class-wholesale-user-register-addon.php#L276",
+        "https://plugins.trac.wordpress.org/browser/wholesale-market/tags/2.2.2/addons/wholesale-request/include/class-wholesale-user-register-addon.php#L30",
+        "https://www.wordfence.com/threat-intel/vulnerabilities/id/abd59d7a-e7f6-440d-9c2a-00266c0dcbff?source=cve"
+      ],
+      "vulnerability": [
+        "CVE-2026-14279"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "CVE-2026-15965 - MaxUpload <= 1.4.0 - Unauthenticated Arbitrary File Upload via 'resumableFilename' Parameter",
+    "publication_date": "Sat, 15 Aug 2026 03:16:48 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-15965",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "8.8\n\nHIGH\nCVSS 3.1\n\nCVE-2026-15965\nMaxUpload <= 1.4.0 - Unauthenticated Arbitrary File Upload via 'resumableFilename' Parameter\n\nThe MaxUpload – Big File Uploads – Increase Maximum File Upload Size plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 1.4.0 via the handle_upload function. This is due to a filename-validation mismatch in the handle_upload function where extension and MIME checks are applied to the uploaded chunk's filename but not to the final assembled filename derived from the resumableFilename parameter. This makes it possible for unauthenticated attackers to upload files that may be executable, which makes remote code execution possible.\n\nPublished Date :\nAug. 15, 2026, 3:16 a.m.\n\nLast Modified :\nAug. 15, 2026, 3:16 a.m.\n\nRemotely Exploit :\nYes !\n\nSource :\nsecurity@wordfence.com\n\nImpact\nAffected Products\n\nThe following products are affected by CVE-2026-15965\nvulnerability.\nEven if cvefeed.io is aware of the exact versions of the\nproducts\nthat\nare\naffected, the information is not represented in the table below.\n\nNo affected product recoded yet\n\nThe Common Vulnerability Scoring System is a standardized framework\nfor assessing the severity of vulnerabilities in software and systems.\nWe collect and displays CVSS scores from various sources for each CVE.\n\nScore\nVersion\nSeverity\nVector\nExploitability Score\nImpact Score\nSource\n\n8.8\n\nCVSS 3.1\n\nHIGH\n\n2.8\n\n5.9\n\nsecurity@wordfence.com\n\nUpdate the plugin to patch the arbitrary file upload vulnerability and prevent remote code execution.\n\nUpdate the MaxUpload plugin to the latest version.\n\nEnsure file upload validation is strictly enforced.\n\nRemove or disable the vulnerable plugin.\n\nHere, you will find a curated list of external links that provide in-depth\ninformation, practical solutions, and valuable tools related to\nCVE-2026-15965.\n\nURL\nResource\n\nhttps://plugins.trac.wordpress.org/browser/maxupload-upload-larger-files-easily/tags/1.4.0/includes/uploader.php#L121\n\nhttps://plugins.trac.wordpress.org/browser/maxupload-upload-larger-files-easily/tags/1.4.0/includes/uploader.php#L174\n\nhttps://plugins.trac.wordpress.org/browser/maxupload-upload-larger-files-easily/tags/1.4.0/includes/uploader.php#L19\n\nhttps://plugins.trac.wordpress.org/browser/maxupload-upload-larger-files-easily/tags/1.4.0/includes/uploader.php#L201\n\nhttps://plugins.trac.wordpress.org/browser/maxupload-upload-larger-files-easily/tags/1.4.0/maxupload-wp.php#L88\n\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/70d90c0c-e3c6-4db9-b16d-1442e7e1dc3b?source=cve\n\nWhile CVE identifies\nspecific instances of vulnerabilities, CWE categorizes the common flaws or\nweaknesses that can lead to vulnerabilities. CVE-2026-15965 is\nassociated with the following CWEs:\n\nCWE-434: Unrestricted Upload of File with Dangerous Type\n\nCommon Attack Pattern Enumeration and Classification\n(CAPEC)\nstores attack patterns, which are descriptions of the common attributes and\napproaches employed by adversaries to exploit the CVE-2026-15965\nweaknesses.\n\nCAPEC-1: Accessing Functionality Not Properly Constrained by ACLs Accessing Functionality Not Properly Constrained by ACLs\n\nWe scan GitHub repositories to detect new proof-of-concept exploits. Following list is a collection\nof public exploits and proof-of-concepts, which have been published on GitHub (sorted by the most recently\nupdated).\n\nResults are limited to the first 15 repositories due to potential performance issues.\n\nThe following list is the news that have been mention\nCVE-2026-15965 vulnerability anywhere in the article.\n\nThe following table lists the changes that have been made to the\nCVE-2026-15965 vulnerability over time.\n\nVulnerability history details can be useful for understanding the evolution\nof a vulnerability, and for identifying the most recent changes that may\nimpact the vulnerability's severity, exploitability, or other characteristics.\n\nNew CVE Received\nby security@wordfence.com\n\nAug. 15, 2026\n\nAction\nType\nOld […]",
+    "word_count": 475,
+    "observables": {
+      "domain-name": [
+        "cvefeed.io"
+      ],
+      "email-addr": [
+        "security@wordfence.com"
+      ],
+      "url": [
+        "http://www.wordfence.com/threat-intel/vulnerabilities/id/70d90c0c-e3c6-4db9-b16d-1442e7e1dc3b?source=cve",
+        "https://plugins.trac.wordpress.org/browser/maxupload-upload-larger-files-easily/tags/1.4.0/includes/uploader.php#L121",
+        "https://plugins.trac.wordpress.org/browser/maxupload-upload-larger-files-easily/tags/1.4.0/includes/uploader.php#L174",
+        "https://plugins.trac.wordpress.org/browser/maxupload-upload-larger-files-easily/tags/1.4.0/includes/uploader.php#L19",
+        "https://plugins.trac.wordpress.org/browser/maxupload-upload-larger-files-easily/tags/1.4.0/includes/uploader.php#L201",
+        "https://plugins.trac.wordpress.org/browser/maxupload-upload-larger-files-easily/tags/1.4.0/maxupload-wp.php#L88",
+        "https://www.wordfence.com/threat-intel/vulnerabilities/id/70d90c0c-e3c6-4db9-b16d-1442e7e1dc3b?source=cve"
+      ],
+      "vulnerability": [
+        "CVE-2026-15965"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "CVE-2026-15341 - User Session Synchronizer <= 1.4.0 - Unauthenticated Authentication Bypass to Account Takeover via 'ussync-key', 'ussync-token', and 'ussync-ref' Parameters",
+    "publication_date": "Sat, 15 Aug 2026 03:16:47 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-15341",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "$(function () {\n// Focus on searchModal input when it's shown\n$('#searchModal').on('shown.bs.modal', function () {\n$('#search-options').focus();\n});\n// Get elements\nconst searchOptions = document.getElementById(\"search-close-options\");\nconst dropdown = document.getElementById(\"search-dropdown\");\nconst searchInput = document.getElementById(\"search-options\");\n\n// Function to toggle dropdown and search options\nconst toggleElements = (show) => {\nif (show) {\ndropdown.classList.add(\"show\");\nsearchOptions.classList.remove(\"d-none\");\n} else {\ndropdown.classList.remove(\"show\");\nsearchOptions.classList.add(\"d-none\");\n}\n}\n\n// Function to create HTML section\nconst createHtmlSection = (title, items, icon) => {\nlet html = `<div class=\"notification-group-list\">\n<h5 class=\"text-overflow text-muted fs-13 mb-2 mt-3 text-uppercase notification-title\">${title}</h5>`;\nif (title === 'Vulnerabilities') {\nitems.forEach(item => {\nhtml += `<a href=\"/vuln/detail/${item.id}\" class=\"list-group-item dropdown-item notify-item\">\n<i class=\"mdi ${icon} me-2\"></i> <span>${item.title}</span>\n</a>`\n;\n});\n} else if (title === 'Products') {\nitems.forEach(item => {\nhtml += `<a href=\"${item.get_absolute_url}\" class=\"list-group-item dropdown-item notify-item\">\n<i class=\"mdi ${icon} me-2\"></i> <span>${item.vendor.name} > ${item.name}</span>\n</a>`;\n}\n);\n} else if (title === 'Vendors') {\nitems.forEach(item => {\n\nhtml += `<a href=\"${item.get_absolute_url}\" class=\"list-group-item dropdown-item notify-item\">\n<i class=\"mdi ${icon} me-2\"></i> <span>${item.name}</span>\n</a>`;\n});\n}\nhtml += '</div>';\nreturn html;\n}\n\n// Event listeners\nif (searchInput) {\nsearchInput.addEventListener(\"focus\", () => toggleElements(searchInput.value.length > 0));\nsearchOptions.addEventListener(\"click\", () => {\nsearchInput.value = \"\";\ntoggleElements(false);\n});\ndocument.body.addEventListener(\"click\", (e) => {\nif (e.target.getAttribute(\"id\") !== \"search-options\") toggleElements(false);\n});\nlet timeoutID;\n$('#search-options').unbind().keyup(function () {\nclearTimeout(timeoutID);\ntimeoutID = setTimeout(function () {\nif (searchInput.value.length > 2) {\n$.get('/api/vulnerability/quick-search?q=' + searchInput.value, function (data) {\ntoggleElements(true);\n\nlet html = '<div class=\"list-group list-group-flush\">';\nif (data.results.length === 0) {\nhtml += '<div class=\"notification-group-list\"><a href=\"\" class=\"list-group-item dropdown-item notify-item\">No results found</a></div>';\n} else if (data.results.errors) {\ndata.results.errors.forEach((item) => {\nhtml += `<div class=\"notification-group-list\"><a href=\"\" class=\"list-group-item dropdown-item notify-item\"><b>${item.value}</b></a></div>`;\n}\n);\n} else {\ndata.results.forEach((item) => {\nif (item.products) html += createHtmlSection('Products', item.products, 'mdi-alpha-p-box-outline');\nif (item.vendors) html += createHtmlSection('Vendors', item.vendors, 'mdi-office-building-outline');\nif (item.vulnerabilities) html += createHtmlSection('Vulnerabilities', item.vulnerabilities, 'mdi-bomb');\n});\n}\n\nhtml += '</div>';\n$('#searchresulstview').html(html);\n\n}, 'json').fail(function () {\n$('#searchresulstview').html('<div class=\"list-group list-group-flush\"><a href=\"\" class=\"list-group-item dropdown-item notify-item\">Something went wrong. Contact with hey@cvefeed.io</a></div>');\n});\n}\n}, 500);\n});\n}\n});\n\n9.8\n\nCRITICAL\nCVSS 3.1\n\nCVE-2026-15341\nUser Session Synchronizer <= 1.4.0 - Unauthenticated Authentication Bypass to Account Takeover via 'ussync-key', 'ussync-token', and 'ussync-ref' Parameters\n\nThe User Session Synchronizer plugin for WordPress is vulnerable to Authentication Bypass leading to Account Takeover in all versions up to, and including, 1.4.0. The `synchronize_session()` function, hooked on `init` and therefore executed on every request, performs no nonce, capability, or shared-secret validation against the attacker-supplied `ussync-key`, `ussync-token`, and `ussync-ref` parameters; when `ussync-key` references an unregistered slot, `get_option()` […]",
+    "word_count": 397,
+    "observables": {
+      "email-addr": [
+        "hey@cvefeed.io"
+      ],
+      "vulnerability": [
+        "CVE-2026-15341"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "CVE-2026-15312 - Propovoice: All-in-One Client Management System <= 1.7.8 - Authenticated (ndpv_manager+) Privilege Escalation via 'role' Parameter",
+    "publication_date": "Sat, 15 Aug 2026 03:16:47 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-15312",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "8.8\n\nHIGH\nCVSS 3.1\n\nCVE-2026-15312\nPropovoice: All-in-One Client Management System <= 1.7.8 - Authenticated (ndpv_manager+) Privilege Escalation via 'role' Parameter\n\nThe Propovoice: All-in-One Client Management System plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 1.7.8. This is due to the `create()` function's REST endpoint failing to validate the user-supplied `role` parameter against an allowlist of permitted WordPress roles and omitting any `promote_users` capability check before passing the sanitized value directly to `WP_User::set_role()`. This makes it possible for authenticated attackers with `ndpv_manager`-level access and above to create a new WordPress user account with the `administrator` role assigned, achieving full vertical privilege escalation. The `ndpv_manager` capability is a sub-administrator CRM team role granted by Propovoice itself, meaning the attack surface extends beyond site administrators to any user the plugin has elevated to a manager position.\n\nPublished Date :\nAug. 15, 2026, 3:16 a.m.\n\nLast Modified :\nAug. 15, 2026, 3:16 a.m.\n\nRemotely Exploit :\nYes !\n\nSource :\nsecurity@wordfence.com\n\nImpact\nAffected Products\n\nThe following products are affected by CVE-2026-15312\nvulnerability.\nEven if cvefeed.io is aware of the exact versions of the\nproducts\nthat\nare\naffected, the information is not represented in the table below.\n\nNo affected product recoded yet\n\nThe Common Vulnerability Scoring System is a standardized framework\nfor assessing the severity of vulnerabilities in software and systems.\nWe collect and displays CVSS scores from various sources for each CVE.\n\nScore\nVersion\nSeverity\nVector\nExploitability Score\nImpact Score\nSource\n\n8.8\n\nCVSS 3.1\n\nHIGH\n\n2.8\n\n5.9\n\nsecurity@wordfence.com\n\nUpdate the plugin to the latest version to prevent privilege escalation.\n\nUpdate the Propovoice plugin to version 1.7.9 or later.\n\nVerify user roles and capabilities after updating.\n\nRemove any unauthorized administrator accounts.\n\nHere, you will find a curated list of external links that provide in-depth\ninformation, practical solutions, and valuable tools related to\nCVE-2026-15312.\n\nURL\nResource\n\nhttps://plugins.trac.wordpress.org/browser/propovoice/trunk/includes/Api/Type/Team.php#L169\n\nhttps://plugins.trac.wordpress.org/browser/propovoice/trunk/includes/Api/Type/Team.php#L219\n\nhttps://plugins.trac.wordpress.org/browser/propovoice/trunk/includes/Api/Type/Team.php#L38\n\nhttps://plugins.trac.wordpress.org/browser/propovoice/trunk/includes/Api/Type/Team.php#L423\n\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/6a39e4d4-890d-46f9-8bb9-0fc858e6f1e2?source=cve\n\nWhile CVE identifies\nspecific instances of vulnerabilities, CWE categorizes the common flaws or\nweaknesses that can lead to vulnerabilities. CVE-2026-15312 is\nassociated with the following CWEs:\n\nCWE-269: Improper Privilege Management\n\nCommon Attack Pattern Enumeration and Classification\n(CAPEC)\nstores attack patterns, which are descriptions of the common attributes and\napproaches employed by adversaries to exploit the CVE-2026-15312\nweaknesses.\n\nCAPEC-58: Restful Privilege Elevation Restful Privilege Elevation\n\nCAPEC-122: Privilege Abuse Privilege Abuse\n\nCAPEC-233: Privilege Escalation Privilege Escalation\n\nWe scan GitHub repositories to detect new proof-of-concept exploits. Following list is a collection\nof public exploits and proof-of-concepts, which have been published on GitHub (sorted by the most recently\nupdated).\n\nResults are limited to the first 15 repositories due to potential performance issues.\n\nThe following list is the news that have been mention\nCVE-2026-15312 vulnerability anywhere in the article.\n\nThe following table lists the changes that have been made to the\nCVE-2026-15312 vulnerability over time.\n\nVulnerability history details can be useful for understanding the evolution\nof a vulnerability, and for identifying the most recent changes that may\nimpact the vulnerability's severity, […]",
+    "word_count": 489,
+    "observables": {
+      "domain-name": [
+        "cvefeed.io"
+      ],
+      "email-addr": [
+        "security@wordfence.com"
+      ],
+      "url": [
+        "http://www.wordfence.com/threat-intel/vulnerabilities/id/6a39e4d4-890d-46f9-8bb9-0fc858e6f1e2?source=cve",
+        "https://plugins.trac.wordpress.org/browser/propovoice/trunk/includes/Api/Type/Team.php#L169",
+        "https://plugins.trac.wordpress.org/browser/propovoice/trunk/includes/Api/Type/Team.php#L219",
+        "https://plugins.trac.wordpress.org/browser/propovoice/trunk/includes/Api/Type/Team.php#L38",
+        "https://plugins.trac.wordpress.org/browser/propovoice/trunk/includes/Api/Type/Team.php#L423",
+        "https://www.wordfence.com/threat-intel/vulnerabilities/id/6a39e4d4-890d-46f9-8bb9-0fc858e6f1e2?source=cve"
+      ],
+      "vulnerability": [
+        "CVE-2026-15312"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "CVE-2026-15303 - 6Storage Rentals <= 2.27.0 - Unauthenticated Account Takeover via 'email' Parameter",
+    "publication_date": "Sat, 15 Aug 2026 03:16:47 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-15303",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "9.8\n\nCRITICAL\nCVSS 3.1\n\nCVE-2026-15303\n6Storage Rentals <= 2.27.0 - Unauthenticated Account Takeover via 'email' Parameter\n\nThe 6Storage Rentals plugin for WordPress is vulnerable to authentication bypass in versions up to, and including, 2.27.0. This is due to the six_storage_create_wp_user() AJAX handler being registered on wp_ajax_nopriv_six_storage_create_wp_user without any nonce, capability, credential, or ownership verification, while calling wp_set_current_user() and wp_set_auth_cookie() for any WordPress user resolved by the attacker-supplied email address. This makes it possible for unauthenticated attackers to log in as any existing WordPress user, including administrators, by submitting that user's email address.\n\nPublished Date :\nAug. 15, 2026, 3:16 a.m.\n\nLast Modified :\nAug. 15, 2026, 3:16 a.m.\n\nRemotely Exploit :\nYes !\n\nSource :\nsecurity@wordfence.com\n\nImpact\nAffected Products\n\nThe following products are affected by CVE-2026-15303\nvulnerability.\nEven if cvefeed.io is aware of the exact versions of the\nproducts\nthat\nare\naffected, the information is not represented in the table below.\n\nNo affected product recoded yet\n\nThe Common Vulnerability Scoring System is a standardized framework\nfor assessing the severity of vulnerabilities in software and systems.\nWe collect and displays CVSS scores from various sources for each CVE.\n\nScore\nVersion\nSeverity\nVector\nExploitability Score\nImpact Score\nSource\n\n9.8\n\nCVSS 3.1\n\nCRITICAL\n\n3.9\n\n5.9\n\nsecurity@wordfence.com\n\nUpdate the 6Storage Rentals plugin to a version that addresses the authentication bypass vulnerability.\n\nUpdate the 6Storage Rentals plugin.\n\nEnsure the plugin version is 2.27.1 or later.\n\nHere, you will find a curated list of external links that provide in-depth\ninformation, practical solutions, and valuable tools related to\nCVE-2026-15303.\n\nURL\nResource\n\nhttps://plugins.trac.wordpress.org/browser/6storage-rentals/tags/2.27.0/inc/Base/Six_Storage_DashboardController.php#L14\n\nhttps://plugins.trac.wordpress.org/browser/6storage-rentals/tags/2.27.0/inc/Base/Six_Storage_DashboardController.php#L3834\n\nhttps://plugins.trac.wordpress.org/browser/6storage-rentals/tags/2.27.0/inc/Base/Six_Storage_DashboardController.php#L3905\n\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/94e987be-bdfc-4691-b250-2b7d7249df0a?source=cve\n\nWhile CVE identifies\nspecific instances of vulnerabilities, CWE categorizes the common flaws or\nweaknesses that can lead to vulnerabilities. CVE-2026-15303 is\nassociated with the following CWEs:\n\nCWE-287: Improper Authentication\n\nCommon Attack Pattern Enumeration and Classification\n(CAPEC)\nstores attack patterns, which are descriptions of the common attributes and\napproaches employed by adversaries to exploit the CVE-2026-15303\nweaknesses.\n\nCAPEC-22: Exploiting Trust in Client Exploiting Trust in Client\n\nCAPEC-57: Utilizing REST's Trust in the System Resource to Obtain Sensitive Data Utilizing REST's Trust in the System Resource to Obtain Sensitive Data\n\nCAPEC-94: Adversary in the Middle (AiTM) Adversary in the Middle (AiTM)\n\nCAPEC-114: Authentication Abuse Authentication Abuse\n\nCAPEC-115: Authentication Bypass Authentication Bypass\n\nCAPEC-151: Identity Spoofing Identity Spoofing\n\nCAPEC-194: Fake the Source of Data Fake the Source of Data\n\nCAPEC-593: Session Hijacking Session Hijacking\n\nCAPEC-633: Token Impersonation Token Impersonation\n\nCAPEC-650: Upload a Web Shell to a Web Server Upload a Web Shell to a Web Server\n\nWe scan GitHub repositories to detect new proof-of-concept exploits. Following list is a collection\nof public exploits and proof-of-concepts, which have been published on GitHub (sorted by the most recently\nupdated).\n\nResults are limited to the first 15 repositories due to potential performance issues.\n\nThe following list is the news that have been mention\nCVE-2026-15303 vulnerability anywhere in the article.\n\nThe following table lists the changes that have been made to the\nCVE-2026-15303 vulnerability over time.\n\nVulnerability […]",
+    "word_count": 488,
+    "observables": {
+      "domain-name": [
+        "cvefeed.io"
+      ],
+      "email-addr": [
+        "security@wordfence.com"
+      ],
+      "url": [
+        "http://www.wordfence.com/threat-intel/vulnerabilities/id/94e987be-bdfc-4691-b250-2b7d7249df0a?source=cve",
+        "https://plugins.trac.wordpress.org/browser/6storage-rentals/tags/2.27.0/inc/Base/Six_Storage_DashboardController.php#L14",
+        "https://plugins.trac.wordpress.org/browser/6storage-rentals/tags/2.27.0/inc/Base/Six_Storage_DashboardController.php#L3834",
+        "https://plugins.trac.wordpress.org/browser/6storage-rentals/tags/2.27.0/inc/Base/Six_Storage_DashboardController.php#L3905",
+        "https://www.wordfence.com/threat-intel/vulnerabilities/id/94e987be-bdfc-4691-b250-2b7d7249df0a?source=cve"
+      ],
+      "vulnerability": [
+        "CVE-2026-15303"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "CVE-2026-15001 - bLoyal: Loyalty & Promotions by bLoyal <= 3.1.611.78 - Authenticated (Subscriber+) Privilege Escalation via Unprotected AJAX API URL Settings",
+    "publication_date": "Sat, 15 Aug 2026 03:16:47 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-15001",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "8.8\n\nHIGH\nCVSS 3.1\n\nCVE-2026-15001\nbLoyal: Loyalty & Promotions by bLoyal <= 3.1.611.78 - Authenticated (Subscriber+) Privilege Escalation via Unprotected AJAX API URL Settings\n\nThe bLoyal: Loyalty & Promotions by bLoyal plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 3.1.611.78. This is due to the AJAX actions `save_bloyal_configuration_data` and `save_bloyal_accesskeyverification_data` being registered without any capability or nonce checks, and the `bloyal_customer_auto_login` function unconditionally trusting the `Customer.ExternalId` value returned by whichever API URL is stored in the plugin's options. This makes it possible for authenticated attackers, with Subscriber-level access and above, to overwrite the plugin's bLoyal Loyalty Engine API URL (`bloyal_custom_loyaltyengine_api_url`) and the `is_bloyal_custom_api_url` flag via the unprotected AJAX actions, then trigger the unauthenticated `/cart` REST route to cause `bloyal_customer_auto_login` to fetch customer data from an attacker-controlled endpoint and call `wp_set_auth_cookie()` with an attacker-supplied `Customer.ExternalId`, thereby authenticating as any WordPress user including the site Administrator.\n\nPublished Date :\nAug. 15, 2026, 3:16 a.m.\n\nLast Modified :\nAug. 15, 2026, 3:16 a.m.\n\nRemotely Exploit :\nYes !\n\nSource :\nsecurity@wordfence.com\n\nImpact\nAffected Products\n\nThe following products are affected by CVE-2026-15001\nvulnerability.\nEven if cvefeed.io is aware of the exact versions of the\nproducts\nthat\nare\naffected, the information is not represented in the table below.\n\nNo affected product recoded yet\n\nThe Common Vulnerability Scoring System is a standardized framework\nfor assessing the severity of vulnerabilities in software and systems.\nWe collect and displays CVSS scores from various sources for each CVE.\n\nScore\nVersion\nSeverity\nVector\nExploitability Score\nImpact Score\nSource\n\n8.8\n\nCVSS 3.1\n\nHIGH\n\n2.8\n\n5.9\n\nsecurity@wordfence.com\n\nUpdate the bLoyal plugin to a version that addresses privilege escalation vulnerabilities.\n\nUpdate the bLoyal plugin to the latest version.\n\nRemove the bLoyal plugin if no update is available.\n\nVerify plugin settings for unauthorized changes.\n\nHere, you will find a curated list of external links that provide in-depth\ninformation, practical solutions, and valuable tools related to\nCVE-2026-15001.\n\nURL\nResource\n\nhttps://plugins.trac.wordpress.org/browser/bloyal/tags/3.1.611.78/app/controller/class-bloyalcontroller.php#L2429\n\nhttps://plugins.trac.wordpress.org/browser/bloyal/tags/3.1.611.78/app/controller/class-bloyalcontroller.php#L2470\n\nhttps://plugins.trac.wordpress.org/browser/bloyal/tags/3.1.611.78/app/controller/class-bloyalcontroller.php#L2512\n\nhttps://plugins.trac.wordpress.org/browser/bloyal/tags/3.1.611.78/app/controller/class-bloyalcontroller.php#L421\n\nhttps://plugins.trac.wordpress.org/browser/bloyal/tags/3.1.611.78/app/controller/class-bloyalcontroller.php#L494\n\nhttps://plugins.trac.wordpress.org/browser/bloyal/tags/3.1.611.78/app/controller/class-bloyalcontroller.php#L806\n\nhttps://plugins.trac.wordpress.org/browser/bloyal/tags/3.1.611.78/bloyal.php#L1196\n\nhttps://plugins.trac.wordpress.org/browser/bloyal/tags/3.1.611.78/bloyal.php#L1553\n\nhttps://plugins.trac.wordpress.org/browser/bloyal/tags/3.1.611.78/bloyal.php#L1596\n\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/ba4b58ad-97b3-482a-bf24-1fa85d6ef93d?source=cve\n\nWhile CVE identifies\nspecific instances of vulnerabilities, CWE categorizes the common flaws or\nweaknesses that can lead to vulnerabilities. CVE-2026-15001 is\nassociated with the following CWEs:\n\nCWE-269: Improper Privilege Management\n\nCommon Attack Pattern Enumeration and Classification\n(CAPEC)\nstores attack patterns, which are descriptions of the common attributes and\napproaches employed by adversaries to exploit the CVE-2026-15001\nweaknesses.\n\nCAPEC-58: Restful Privilege Elevation Restful Privilege Elevation\n\nCAPEC-122: Privilege Abuse […]",
+    "word_count": 399,
+    "observables": {
+      "domain-name": [
+        "cvefeed.io"
+      ],
+      "email-addr": [
+        "security@wordfence.com"
+      ],
+      "url": [
+        "http://www.wordfence.com/threat-intel/vulnerabilities/id/ba4b58ad-97b3-482a-bf24-1fa85d6ef93d?source=cve",
+        "https://plugins.trac.wordpress.org/browser/bloyal/tags/3.1.611.78/app/controller/class-bloyalcontroller.php#L2429",
+        "https://plugins.trac.wordpress.org/browser/bloyal/tags/3.1.611.78/app/controller/class-bloyalcontroller.php#L2470",
+        "https://plugins.trac.wordpress.org/browser/bloyal/tags/3.1.611.78/app/controller/class-bloyalcontroller.php#L2512",
+        "https://plugins.trac.wordpress.org/browser/bloyal/tags/3.1.611.78/app/controller/class-bloyalcontroller.php#L421",
+        "https://plugins.trac.wordpress.org/browser/bloyal/tags/3.1.611.78/app/controller/class-bloyalcontroller.php#L494",
+        "https://plugins.trac.wordpress.org/browser/bloyal/tags/3.1.611.78/app/controller/class-bloyalcontroller.php#L806",
+        "https://plugins.trac.wordpress.org/browser/bloyal/tags/3.1.611.78/bloyal.php#L1196",
+        "https://plugins.trac.wordpress.org/browser/bloyal/tags/3.1.611.78/bloyal.php#L1553",
+        "https://plugins.trac.wordpress.org/browser/bloyal/tags/3.1.611.78/bloyal.php#L1596",
+        "https://www.wordfence.com/threat-intel/vulnerabilities/id/ba4b58ad-97b3-482a-bf24-1fa85d6ef93d?source=cve"
+      ],
+      "vulnerability": [
+        "CVE-2026-15001"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "CVE-2026-14484 - RapiSafe <= 1.0.4 - Unauthenticated Arbitrary File Deletion via 'rsmfcf7_session' and 'file_name' Parameters",
+    "publication_date": "Sat, 15 Aug 2026 03:16:47 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-14484",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "9.1\n\nCRITICAL\nCVSS 3.1\n\nCVE-2026-14484\nRapiSafe <= 1.0.4 - Unauthenticated Arbitrary File Deletion via 'rsmfcf7_session' and 'file_name' Parameters\n\nThe RapiSafe – Secure Multi File Upload for Contact Form 7 plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the handleAjaxRemoveUpload function in all versions up to, and including, 1.0.4. This makes it possible for unauthenticated attackers to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php). The nonce required to invoke the removal handler is exposed in public-facing JavaScript as RSMFCF7Vars.nonce on every Contact Form 7 page rendering a RapiSafe upload field, making it obtainable by any unauthenticated visitor.\n\nPublished Date :\nAug. 15, 2026, 3:16 a.m.\n\nLast Modified :\nAug. 15, 2026, 3:16 a.m.\n\nRemotely Exploit :\nYes !\n\nSource :\nsecurity@wordfence.com\n\nImpact\nAffected Products\n\nThe following products are affected by CVE-2026-14484\nvulnerability.\nEven if cvefeed.io is aware of the exact versions of the\nproducts\nthat\nare\naffected, the information is not represented in the table below.\n\nNo affected product recoded yet\n\nThe Common Vulnerability Scoring System is a standardized framework\nfor assessing the severity of vulnerabilities in software and systems.\nWe collect and displays CVSS scores from various sources for each CVE.\n\nScore\nVersion\nSeverity\nVector\nExploitability Score\nImpact Score\nSource\n\n9.1\n\nCVSS 3.1\n\nCRITICAL\n\n3.9\n\n5.2\n\nsecurity@wordfence.com\n\nUpdate the RapiSafe plugin to a version that addresses arbitrary file deletion vulnerabilities.\n\nUpdate RapiSafe plugin to the latest version.\n\nRemove the RapiSafe plugin if not actively maintained.\n\nValidate file paths rigorously on the server.\n\nRestrict access to sensitive files.\n\nHere, you will find a curated list of external links that provide in-depth\ninformation, practical solutions, and valuable tools related to\nCVE-2026-14484.\n\nURL\nResource\n\nhttps://plugins.trac.wordpress.org/browser/rapisafe-multi-file-cf7/trunk/src/RSMFCF7_Assets.php#L201\n\nhttps://plugins.trac.wordpress.org/browser/rapisafe-multi-file-cf7/trunk/src/RSMFCF7_Assets.php#L235\n\nhttps://plugins.trac.wordpress.org/browser/rapisafe-multi-file-cf7/trunk/src/RSMFCF7_Assets.php#L237\n\nhttps://plugins.trac.wordpress.org/browser/rapisafe-multi-file-cf7/trunk/src/RSMFCF7_Assets.php#L244\n\nhttps://plugins.trac.wordpress.org/browser/rapisafe-multi-file-cf7/trunk/src/RSMFCF7_Assets.php#L264\n\nhttps://plugins.trac.wordpress.org/browser/rapisafe-multi-file-cf7/trunk/src/RSMFCF7_Plugin.php#L49\n\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/49f67bbb-cbd0-40ae-ae00-9cb72b041e22?source=cve\n\nWhile CVE identifies\nspecific instances of vulnerabilities, CWE categorizes the common flaws or\nweaknesses that can lead to vulnerabilities. CVE-2026-14484 is\nassociated with the following CWEs:\n\nCWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')\n\nCommon Attack Pattern Enumeration and Classification\n(CAPEC)\nstores attack patterns, which are descriptions of the common attributes and\napproaches employed by adversaries to exploit the CVE-2026-14484\nweaknesses.\n\nCAPEC-64: Using Slashes and URL Encoding Combined to Bypass Validation Logic Using Slashes and URL Encoding Combined to Bypass Validation Logic\n\nCAPEC-76: Manipulating Web Input to File System Calls Manipulating Web Input to File System Calls\n\nCAPEC-78: Using Escaped Slashes in Alternate Encoding Using Escaped Slashes in Alternate Encoding\n\nCAPEC-79: Using Slashes in Alternate Encoding Using Slashes in Alternate Encoding\n\nCAPEC-126: Path Traversal Path Traversal\n\nWe scan GitHub repositories to detect new proof-of-concept exploits. Following list is a collection\nof public exploits and proof-of-concepts, which have been published on GitHub (sorted by the most recently\nupdated).\n\nResults are limited to the first 15 repositories due to potential […]",
+    "word_count": 475,
+    "observables": {
+      "domain-name": [
+        "cvefeed.io"
+      ],
+      "email-addr": [
+        "security@wordfence.com"
+      ],
+      "url": [
+        "http://www.wordfence.com/threat-intel/vulnerabilities/id/49f67bbb-cbd0-40ae-ae00-9cb72b041e22?source=cve",
+        "https://plugins.trac.wordpress.org/browser/rapisafe-multi-file-cf7/trunk/src/RSMFCF7_Assets.php#L201",
+        "https://plugins.trac.wordpress.org/browser/rapisafe-multi-file-cf7/trunk/src/RSMFCF7_Assets.php#L235",
+        "https://plugins.trac.wordpress.org/browser/rapisafe-multi-file-cf7/trunk/src/RSMFCF7_Assets.php#L237",
+        "https://plugins.trac.wordpress.org/browser/rapisafe-multi-file-cf7/trunk/src/RSMFCF7_Assets.php#L244",
+        "https://plugins.trac.wordpress.org/browser/rapisafe-multi-file-cf7/trunk/src/RSMFCF7_Assets.php#L264",
+        "https://plugins.trac.wordpress.org/browser/rapisafe-multi-file-cf7/trunk/src/RSMFCF7_Plugin.php#L49",
+        "https://www.wordfence.com/threat-intel/vulnerabilities/id/49f67bbb-cbd0-40ae-ae00-9cb72b041e22?source=cve"
+      ],
+      "vulnerability": [
+        "CVE-2026-14484"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Google Vault Deep-Dive: Holds, Search Scope, and Chain of Custody",
+    "publication_date": "Sat, 15 Aug 2026 21:31:52 GMT",
+    "source": "https://www.cyberengage.org/post/google-vault-deep-dive-holds-search-scope-and-chain-of-custody",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "You've seen Vault mentioned twice already in this series — once as \"the evidence room\" in the Drive exposure article, once in passing in the Takeout article. Both times, the same line: Vault is what you use when you actually need the file.That's true. It's also not the whole story.Vault is a legal hold and eDiscovery tool first, and an investigator's tool second. Those two jobs pull in different directions, and if you don't know where the seams are, you'll assume Vault sees more than it does. What Vault Actually Is (And Isn't)What it is: a search, hold, and export layer that sits across Workspace data — built for legal discovery and compliance, not day-to-day IR.What it isn't: a second copy of every log you've already seen in the Investigation Tool. Vault doesn't give you actor/IP/visibility fields — it gives you the underlying content.If Drive log events are the timeline and Vault is the evidence room, Vault's door only opens for a few rooms in the building — not the whole floor. Search Scope: What Vault Can Actually SeeThis is the part people get wrong most often. Vault doesn't cover \"Workspace\" as a whole — it covers specific services, and coverage has grown over time, so don't assume last year's scope is this year's.Gmail — mail, including drafts and chats migrated into GmailDrive — files in My Drive and Shared Drives, including version historyGoogle Chat — spaces and direct messages, if history is turned on for the spaceGroups — messages sent to Google GroupsMeet — recordings saved to Drive, plus limited attendance/metadataNotice what's missing: Calendar isn't a Vault search target. If your case hinges on \"what meeting was this person actually in,\" Vault won't answer that — you're back to Admin Console reports. Holds: The Part That Actually Preserves DataA hold is what stops data from being purged — by retention rules, by a user hitting delete, by anything. No hold, no guarantee the thing you need still exists tomorrow.Two ways to scope a holdOrg-wide / OU-wide hold: applied across an organizational unit. Broad, blunt, usually for a standing legal or compliance requirement rather than a single investigation.Custodian-based hold: applied to specific accounts — the people actually relevant to a matter. This is the one you'll use mid-investigation: put a hold on the account(s) involved the moment you suspect something, before you've finished scoping the case.Speed matters here. A hold placed after a user has already deleted and purged something doesn't reach back in time — it only stops what happens next. Vault Retention vs. Native Workspace RetentionThis is where two systems with similar names quietly disagree with each other.Native Workspace retention rules (set in Admin Console) control how long data lives by default — and they purge on schedule.A Vault hold overrides that purge for anything it covers, for as long as the hold is active.Remove the hold, and native retention rules resume — including deleting anything that was only being kept alive by the hold.Translation: a hold isn't a backup. It's a pause button. Lift it, and the clock that was already running picks back up where it left off. Export Formats — and Why Chain of Custody Actually Matters HereOnce you've searched and scoped what you need, Vault exports it — but the export itself is often the piece that ends up in front of legal or a third party, so how it's packaged matters.Mail exports as MBOX, one file per account, with headers intactDrive exports keep native file formats (Docs, Sheets, etc.) rather than flattening everything to PDFChat and Groups export as structured message files, not screenshotsThe part people skip: every export ships with a results manifest — a record of what was searched, what matched, and hash values for the exported content.That manifest is your chain of custody. Export the data without keeping the manifest next to it, and you've got a pile of files with no way to prove nothing was altered after the fact. Common Investigator […]",
+    "word_count": 664,
+    "observables": {},
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Crooks Are Buying Your Expired Domains and Using Them to Deliver Malware",
+    "publication_date": "Sat, 15 Aug 2026 17:48:02 +0000",
+    "source": "https://securityaffairs.com/197251/uncategorized/crooks-are-buying-your-expired-domains-and-using-them-to-deliver-malware.html",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "HOME\nCYBER CRIME\nCYBER WARFARE\nAPT\nDATA BREACH\nDEEP WEB\nHACKING\nHACKTIVISM\nINTELLIGENCE\nMUST READ\n\nCrooks Are Buying Your Expired Domains and Using Them to Deliver Malware\n\n|\n\nmacOS Screen Sharing Flaw Exploited to Deploy Monero Miners\n\n|\n\nGeoServer Zero-Day Is Already Being Probed. That’s the Problem\n\n|\n\nApple warned hundreds of users of mercenary spyware attacks\n\n|\n\nAmnesiaStealer Gives Attackers Live Control of Victims’ macOS Browsers\n\n|\n\nChess.com Leak Exposes 7.3 Million Users - Evidence Points to Scraping\n\n|\n\nUS Authorizes Private Cyber Firms to Hack Transnational Criminal Networks\n\n|\n\nAdobe Commerce CVE-2026-71362 Comes Under Attack Shortly After Public Disclosure\n\n|\n\nU.S. CISA adds Metabase, Windows, and Cisco Secure Firewall flaws to its Known Exploited Vulnerabilities catalog\n\n|\n\nSharePoint CVE-2026-55040 Comes Under Attack Following Public Exploit\n\n|\n\nStorm-1175 Replaces Medusa With New StormEncryptor Ransomware\n\n|\n\nNorth Korean Lazarus Group Uses Windows Zero-Day in Operation Dream Job\n\n|\n\nCEVA Logistics Cyberattack Disrupts European Warehouses and Shipments\n\n|\n\nChina-Linked Hackers Use AI Agents in Autonomous Attack on Taiwan\n\n|\n\nKimwolf v7 Hides DDoS Traffic Behind Chrome Fingerprints and Ethereum\n\n|\n\nMicrosoft Patch Tuesday for August 2026 Fixed a Zero-Day and Wormable RCE\n\n|\n\nZoom Patches “Zoomsday” Zero-Click Flaw Enabling Remote Code Execution\n\n|\n\nExfilSquad Targets New Victims, Shares Data via Torrents\n\n|\n\nIran-Linked Hackers Target More US Water Infrastructure in New Jersey and Alabama\n\n|\n\nThe inconvenient truth about AI pentesting: someone has to check all the work\n\n| \nHOME\nCYBER CRIME\nCYBER WARFARE\nAPT\nDATA BREACH\nDEEP WEB\nHACKING\nHACKTIVISM\nINTELLIGENCE\nARTIFICIAL INTELLIGENCE\nINTERNET OF THINGS\nLAWS AND REGULATIONS\nMALWARE\nMOBILE\nREPORTS\nSECURITY\nSOCIAL NETWORKS\nTERRORISM\nICS-SCADA\nCRYPTO\nPOLICIES\nCONTACT ME\nHome Uncategorized Crooks Are Buying Your Expired Domains and Using Them to Deliver Malware\nCROOKS ARE BUYING YOUR EXPIRED DOMAINS AND USING THEM TO DELIVER MALWARE\nPierluigi Paganini\n\nAugust 15, 2026\nAttackers are buying expired domains to exploit their reputation, traffic and DNS history, using them for malware delivery, scams and C2 infrastructure.\n\nEvery day, roughly 65,000 domain names that once belonged to someone else get re-registered by a new owner. Infoblox Threat Intel calls these dropcatch domains, and in the first half of 2026 they accounted for nearly 20% of all new domain registrations, meaning one in five “new” domains has a prior life. Some end up with legitimate investors or researchers. Others end up with attackers who have figured out that a domain with history is worth more than a blank slate.\n\n“These domains can be particularly interesting, even dangerous, because they inherit reputation and sometimes connections from their previous life. For example, a domain that was originally registered 10 years ago, later dropped, and then acquired by someone else may still carry signals associated with its long history.” reads the report published by Infoblox. “Researchers, security products, and reputation-based algorithms may view it more favorably than a genuinely brand-new registration. Threat actors know this and take advantage of it.”\n\nAmong gTLDs, the average is 50,400 per day, with 15 TLDs accounting for about 92% of all dropcatch activity. .net and .xyz have the highest rates, with nearly 30% of new registrations previously registered, while .com reaches 24.5%. Determining who buys these domains and how they are used remains difficult due to WHOIS privacy, transfers, parking, and auctions.\n\nThe inherited value isn’t just a better reputation score. Expired domains also come with residual web traffic from old backlinks, email still arriving for the previous owner, cached search results, and in some cases lingering DNS records that point to infrastructure no longer under the original owner’s control. One in every five new domains has all of that already baked in before the new […]",
+    "word_count": 606,
+    "observables": {
+      "domain-name": [
+        "chess.com"
+      ],
+      "vulnerability": [
+        "CVE-2026-71362",
+        "CVE-2026-55040"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "SAP Commerce Cloud CVE-2026-58231 Exploited in the Wild",
+    "publication_date": "Sat, 15 Aug 2026 17:14:15 +0000",
+    "source": "https://securityaffairs.com/197244/security/sap-commerce-cloud-cve-2026-58231-exploited-in-the-wild.html",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "HOME\nCYBER CRIME\nCYBER WARFARE\nAPT\nDATA BREACH\nDEEP WEB\nHACKING\nHACKTIVISM\nINTELLIGENCE\nMUST READ\n\nCrooks Are Buying Your Expired Domains and Using Them to Deliver Malware\n\n|\n\nmacOS Screen Sharing Flaw Exploited to Deploy Monero Miners\n\n|\n\nGeoServer Zero-Day Is Already Being Probed. That’s the Problem\n\n|\n\nApple warned hundreds of users of mercenary spyware attacks\n\n|\n\nAmnesiaStealer Gives Attackers Live Control of Victims’ macOS Browsers\n\n|\n\nChess.com Leak Exposes 7.3 Million Users - Evidence Points to Scraping\n\n|\n\nUS Authorizes Private Cyber Firms to Hack Transnational Criminal Networks\n\n|\n\nAdobe Commerce CVE-2026-71362 Comes Under Attack Shortly After Public Disclosure\n\n|\n\nU.S. CISA adds Metabase, Windows, and Cisco Secure Firewall flaws to its Known Exploited Vulnerabilities catalog\n\n|\n\nSharePoint CVE-2026-55040 Comes Under Attack Following Public Exploit\n\n|\n\nStorm-1175 Replaces Medusa With New StormEncryptor Ransomware\n\n|\n\nNorth Korean Lazarus Group Uses Windows Zero-Day in Operation Dream Job\n\n|\n\nCEVA Logistics Cyberattack Disrupts European Warehouses and Shipments\n\n|\n\nChina-Linked Hackers Use AI Agents in Autonomous Attack on Taiwan\n\n|\n\nKimwolf v7 Hides DDoS Traffic Behind Chrome Fingerprints and Ethereum\n\n|\n\nMicrosoft Patch Tuesday for August 2026 Fixed a Zero-Day and Wormable RCE\n\n|\n\nZoom Patches “Zoomsday” Zero-Click Flaw Enabling Remote Code Execution\n\n|\n\nExfilSquad Targets New Victims, Shares Data via Torrents\n\n|\n\nIran-Linked Hackers Target More US Water Infrastructure in New Jersey and Alabama\n\n|\n\nThe inconvenient truth about AI pentesting: someone has to check all the work\n\n| \nHOME\nCYBER CRIME\nCYBER WARFARE\nAPT\nDATA BREACH\nDEEP WEB\nHACKING\nHACKTIVISM\nINTELLIGENCE\nARTIFICIAL INTELLIGENCE\nINTERNET OF THINGS\nLAWS AND REGULATIONS\nMALWARE\nMOBILE\nREPORTS\nSECURITY\nSOCIAL NETWORKS\nTERRORISM\nICS-SCADA\nCRYPTO\nPOLICIES\nCONTACT ME\nHome Breaking News Hacking Security SAP Commerce Cloud CVE-2026-58231 Exploited in the Wild\nSAP COMMERCE CLOUD CVE-2026-58231 EXPLOITED IN THE WILD\nPierluigi Paganini\n\nAugust 15, 2026\nAttackers are actively exploiting a maximum severity SAP Commerce Cloud vulnerability, tracked as CVE-2026-58231, just days after SAP released a patch.\n\nA critical SAP Commerce Cloud vulnerability, tracked as CVE-2026-58231 (CVSS score of 10.0), is under active exploitation just days after SAP released a patch. The flaw stems from insufficient authorization checks and input validation.\n\n“SAP Commerce Cloud allows an unauthenticated attacker to abuse a default authentication client and submit specially crafted input to certain functions lacking sufficient validation.” reads the advisory. “Successful exploitation could enable arbitrary code execution and compromise internal components, resulting in high impact on confidentiality, integrity, and availability of the application.”\n\nAn unauthenticated attacker can abuse a default authentication client and send crafted input to vulnerable functions, potentially achieving arbitrary code execution and compromising internal components.\n\nResearchers at Defused Cyber observed exploitation attempts against honeypots only three days after the patch was released. The researchers pointed out that this vulnerability has no public PoC and had not been known to be exploited prior to their discovery.\n\nThe attackers behind the current exploitation remain unknown. However, previous critical SAP flaws have been exploited by China-linked APT groups, including UNC5221 and UNC5174, and ransomware gangs.\n\nFollow me on Twitter: @securityaffairs and Facebook and Mastodon\n\nPierluigi Paganini\n\n(SecurityAffairs – hacking, SAP Commerce Cloud)\n\nFACEBOOK\nLINKEDIN\nTWITTER\nHacking\nhacking news\ninformation security news\nIT Information Security\nPierluigi Paganini\nSAP Commerce Cloud\nSecurity Affairs\nSecurity News\nYOU MIGHT ALSO LIKE\nPierluigi Paganini\n\nAugust 15, 2026\nGeoServer Zero-Day Is Already Being Probed. That’s the Problem\nRead more\nPierluigi Paganini\n\nAugust 14, 2026\nApple warned hundreds of users […]",
+    "word_count": 563,
+    "observables": {
+      "domain-name": [
+        "chess.com"
+      ],
+      "vulnerability": [
+        "CVE-2026-71362",
+        "CVE-2026-55040",
+        "CVE-2026-58231"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "macOS Screen Sharing Flaw Exploited to Deploy Monero Miners",
+    "publication_date": "Sat, 15 Aug 2026 08:34:46 +0000",
+    "source": "https://securityaffairs.com/197234/uncategorized/macos-screen-sharing-flaw-exploited-to-deploy-monero-miners.html",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "HOME\nCYBER CRIME\nCYBER WARFARE\nAPT\nDATA BREACH\nDEEP WEB\nHACKING\nHACKTIVISM\nINTELLIGENCE\nMUST READ\n\nCrooks Are Buying Your Expired Domains and Using Them to Deliver Malware\n\n|\n\nmacOS Screen Sharing Flaw Exploited to Deploy Monero Miners\n\n|\n\nGeoServer Zero-Day Is Already Being Probed. That’s the Problem\n\n|\n\nApple warned hundreds of users of mercenary spyware attacks\n\n|\n\nAmnesiaStealer Gives Attackers Live Control of Victims’ macOS Browsers\n\n|\n\nChess.com Leak Exposes 7.3 Million Users - Evidence Points to Scraping\n\n|\n\nUS Authorizes Private Cyber Firms to Hack Transnational Criminal Networks\n\n|\n\nAdobe Commerce CVE-2026-71362 Comes Under Attack Shortly After Public Disclosure\n\n|\n\nU.S. CISA adds Metabase, Windows, and Cisco Secure Firewall flaws to its Known Exploited Vulnerabilities catalog\n\n|\n\nSharePoint CVE-2026-55040 Comes Under Attack Following Public Exploit\n\n|\n\nStorm-1175 Replaces Medusa With New StormEncryptor Ransomware\n\n|\n\nNorth Korean Lazarus Group Uses Windows Zero-Day in Operation Dream Job\n\n|\n\nCEVA Logistics Cyberattack Disrupts European Warehouses and Shipments\n\n|\n\nChina-Linked Hackers Use AI Agents in Autonomous Attack on Taiwan\n\n|\n\nKimwolf v7 Hides DDoS Traffic Behind Chrome Fingerprints and Ethereum\n\n|\n\nMicrosoft Patch Tuesday for August 2026 Fixed a Zero-Day and Wormable RCE\n\n|\n\nZoom Patches “Zoomsday” Zero-Click Flaw Enabling Remote Code Execution\n\n|\n\nExfilSquad Targets New Victims, Shares Data via Torrents\n\n|\n\nIran-Linked Hackers Target More US Water Infrastructure in New Jersey and Alabama\n\n|\n\nThe inconvenient truth about AI pentesting: someone has to check all the work\n\n| \nHOME\nCYBER CRIME\nCYBER WARFARE\nAPT\nDATA BREACH\nDEEP WEB\nHACKING\nHACKTIVISM\nINTELLIGENCE\nARTIFICIAL INTELLIGENCE\nINTERNET OF THINGS\nLAWS AND REGULATIONS\nMALWARE\nMOBILE\nREPORTS\nSECURITY\nSOCIAL NETWORKS\nTERRORISM\nICS-SCADA\nCRYPTO\nPOLICIES\nCONTACT ME\nHome Uncategorized macOS Screen Sharing Flaw Exploited to Deploy Monero Miners\nMACOS SCREEN SHARING FLAW EXPLOITED TO DEPLOY MONERO MINERS\nPierluigi Paganini\n\nAugust 15, 2026\nHackers are exploiting a macOS Screen Sharing flaw to gain root access and install Monero miners on Macs with port 5900 exposed online.\n\nThe Dutch National Cyber Security Centre confirmed active exploitation of a critical macOS authentication flaw, tracked as CVE-2026-65400 (CVSS score of 9.8), less than two weeks after Apple shipped the fix.\n\nThe bug sits in macOS’s built-in Screen Sharing feature, the remote desktop tool baked into every Mac. Apple’s fix improved how the system manages authentication state, closing a gap that let attackers on the network authenticate to Screen Sharing without valid credentials at all.\n\nApple patched this issue with the release of  macOS Tahoe 26.6.1, macOS Sequoia 15.7.9, and macOS Sonoma 14.8.9, crediting researcher Alfredo Pesoli (@__rev) at Bynario Atlas (bynar.io) for the discovery.\n\n“An attacker on the network may be able to authenticate to Screen Sharing without valid credentials” reads the advisory.\n\nThat’s a fast, coordinated fix by industry standards. It just wasn’t fast enough to beat whoever started scanning for exposed systems.\n\nNCSC-NL says it received reports of active abuse hitting multiple systems where port 5900, the port Screen Sharing runs on, was reachable directly from the internet.\n\n“The vulnerability concerns an authentication issue in the Screen Sharing functionality where network attackers can gain access without valid credentials. This is made possible by insufficient state management during the authentication process. As a result, unauthorized individuals can perform authentication attempts that would normally not be accepted.” reads the advisory. “The NCSC has received a security advisory indicating that active exploitation of this vulnerability has been observed on multiple systems where port 5900 was accessible from the internet. In all these cases, root access was obtained on the affected system and a Monero crypto miner was placed.”\n\nIn every case documented […]",
+    "word_count": 592,
+    "observables": {
+      "domain-name": [
+        "bynar.io",
+        "chess.com"
+      ],
+      "vulnerability": [
+        "CVE-2026-71362",
+        "CVE-2026-55040",
+        "CVE-2026-65400"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "GeoServer Zero-Day Is Already Being Probed. That’s the Problem",
+    "publication_date": "Sat, 15 Aug 2026 07:18:21 +0000",
+    "source": "https://securityaffairs.com/197216/hacking/geoserver-zero-day-is-already-being-probed-thats-the-problem.html",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "HOME\nCYBER CRIME\nCYBER WARFARE\nAPT\nDATA BREACH\nDEEP WEB\nHACKING\nHACKTIVISM\nINTELLIGENCE\nMUST READ\n\nCrooks Are Buying Your Expired Domains and Using Them to Deliver Malware\n\n|\n\nmacOS Screen Sharing Flaw Exploited to Deploy Monero Miners\n\n|\n\nGeoServer Zero-Day Is Already Being Probed. That’s the Problem\n\n|\n\nApple warned hundreds of users of mercenary spyware attacks\n\n|\n\nAmnesiaStealer Gives Attackers Live Control of Victims’ macOS Browsers\n\n|\n\nChess.com Leak Exposes 7.3 Million Users - Evidence Points to Scraping\n\n|\n\nUS Authorizes Private Cyber Firms to Hack Transnational Criminal Networks\n\n|\n\nAdobe Commerce CVE-2026-71362 Comes Under Attack Shortly After Public Disclosure\n\n|\n\nU.S. CISA adds Metabase, Windows, and Cisco Secure Firewall flaws to its Known Exploited Vulnerabilities catalog\n\n|\n\nSharePoint CVE-2026-55040 Comes Under Attack Following Public Exploit\n\n|\n\nStorm-1175 Replaces Medusa With New StormEncryptor Ransomware\n\n|\n\nNorth Korean Lazarus Group Uses Windows Zero-Day in Operation Dream Job\n\n|\n\nCEVA Logistics Cyberattack Disrupts European Warehouses and Shipments\n\n|\n\nChina-Linked Hackers Use AI Agents in Autonomous Attack on Taiwan\n\n|\n\nKimwolf v7 Hides DDoS Traffic Behind Chrome Fingerprints and Ethereum\n\n|\n\nMicrosoft Patch Tuesday for August 2026 Fixed a Zero-Day and Wormable RCE\n\n|\n\nZoom Patches “Zoomsday” Zero-Click Flaw Enabling Remote Code Execution\n\n|\n\nExfilSquad Targets New Victims, Shares Data via Torrents\n\n|\n\nIran-Linked Hackers Target More US Water Infrastructure in New Jersey and Alabama\n\n|\n\nThe inconvenient truth about AI pentesting: someone has to check all the work\n\n| \nHOME\nCYBER CRIME\nCYBER WARFARE\nAPT\nDATA BREACH\nDEEP WEB\nHACKING\nHACKTIVISM\nINTELLIGENCE\nARTIFICIAL INTELLIGENCE\nINTERNET OF THINGS\nLAWS AND REGULATIONS\nMALWARE\nMOBILE\nREPORTS\nSECURITY\nSOCIAL NETWORKS\nTERRORISM\nICS-SCADA\nCRYPTO\nPOLICIES\nCONTACT ME\nHome Breaking News Hacking Security GeoServer Zero-Day Is Already Being Probed. That’s the Problem\nGEOSERVER ZERO-DAY IS ALREADY BEING PROBED. THAT’S THE PROBLEM\nPierluigi Paganini\n\nAugust 15, 2026\nGeoServer faces an unpatched zero-day enabling SQL injection and potentially RCE, with attackers already probing exposed systems.\n\nA newly disclosed GeoServer zero-day is already attracting active exploitation attempts, and there is no patch available yet. Organisations running the open-source geospatial platform should check their exposure.\n\nA security researcher with the handler q1uf3ng discloded the vulnerability that has yet to be assigned a CVE identifier.\n\nThe flaw lies in the jsonArrayContains functionality and allows unauthorised SQL injection. Under some configurations, especially where the service can reach a privileged database account, that path may lead to remote code execution\n\nThe vulnerability has yet to be assigned a CVE identifier.\n\nThe issue was publicly disclosed on 12 August 2026. Within hours, watchTowr said it had begun seeing exploitation attempts, with hundreds of probes coming from a small number of IP addresses.\n\n“Within hours of public disclosure, we began observing exploitation attempts and have since recorded hundreds of attempts originating from a small number of source IP addresses. Yet another example of how quickly attackers move once a vulnerability enters the public domain,” said WatchTowr’s Jake Knott.\n\nThat timing matters. Once a proof of concept or enough technical detail is public, attackers don’t need to wait for a polished exploit. They can scan broadly, trigger errors, compare responses, and build a list of systems worth revisiting later. It’s reconnaissance with an error message as a compass.\n\nThreat actors are probing vulnerable GeoServer systems, but no follow-up activity has been observed yet. However, researchers warn exploitation could soon escalate.\n\n“However, this is unlikely to remain the case for long: GeoServer has a track record of being targeted and exploited at scale, with multiple vulnerabilities listed in CISA’s Known Exploited Vulnerabilities […]",
+    "word_count": 585,
+    "observables": {
+      "domain-name": [
+        "chess.com"
+      ],
+      "vulnerability": [
+        "CVE-2026-71362",
+        "CVE-2026-55040"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Humans in the loop miss a third of dangerous AI coding-agent requestsOpenAI boosts security with Astra while Anthropic loosens AI restrictions. AI standardization efforts push interoperability across platforms. AMD acquires Taalas for better chip performance, yet autonomous AI systems face ongoing vulnerabilities. New threats emerge: phishing via Signal and SharePoint zero-days. DEF CON innovates for infrastructure security, with major cybersecurity investments continuing. FOSS ecosystem evolves with new updates.https://www.theregister.com/ai-and-ml/2026/08/06/humans-in-the-loop-miss-a-third-of-dangerous-ai-coding-agent-requests/5284236#OpenStack #CloudComputing #InfoSec",
+    "publication_date": "Sat, 15 Aug 2026 22:52:50 +0000",
+    "source": "https://infosec.exchange/@hypedupcat/117101864300691885",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "NIST is asking how to modernize the NVD in the age of AI, months after saying most new CVEs are now lowest priority for enrichment. Comments close October 13 (docket NIST-2026-0100). Our analysis covers what NIST is asking, the AI enrichment failure modes worth putting on the record, and what a useful comment looks like: https://blog.disclose.io/nvd-modernization-rfi-2026/#NVD #CVE #infosec #cybersecurity",
+    "publication_date": "Sat, 15 Aug 2026 22:52:50 +0000",
+    "source": "https://infosec.exchange/@disclose/117101834824902999",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "RE: https://infosec.exchange/@Toxic_Flange/117084949177121344A reminder that I haven't played with Wine in a LONG time so I forgot or maybe never really knew what it was doing. \"Z:\\\" , so anything running under wine, under your user is limited to what your user has.❯ ls  c: com10 com12 com14 com16 com18 com2 com21 com23 com25 com27 com29 com30 com32 com5 com7 com9 com1 com11 com13 com15 com17 com19 com20 com22 com24 com26 com28 com3 com31 com4 com6 com8 z: Where in this particular wine_prefix made by Steam, the C:\\ maps to ../drive_c and z: maps to / .. Wondering what the purpose of that really is. Do I really wanna go down this rabbit hole, or just play Bladur's Gate 3? Torn between #infosec and #gaming",
+    "publication_date": "Sat, 15 Aug 2026 22:52:50 +0000",
+    "source": "https://infosec.exchange/@Toxic_Flange/117101811177189389",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "Meta va entraîner ses modèles d'IA sur les contenus de Newsmax. Au-delà du débat éditorial, c'est une question de composition du corpus : les biais d'une source se retrouvent encodés dans les poids du modèle. Ce que le modèle \"sait\" dépend directement de ce qu'on lui a donné à lire — et ça, ça ne se corrige pas avec un patch. #AI #MachineLearning #infosec https://popular.info/p/meta-will-train-its-ai-on-far-right",
+    "publication_date": "Sat, 15 Aug 2026 22:52:50 +0000",
+    "source": "https://mastobot.ping.moi/@Bobe_bot/117101770412455856",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastobot.ping.moi is one of the many independent Mastodon servers you can use to participate in the fediverse.\nServeur Mastodon dédié à l'hébergement de bots d'intérêt public. 🇨🇭 Serveur personnel, non commercial. (administré par @decio@infosec.exchange) Contenu automatisé — pas d'inscriptions publiques.\nADMINISTERED BY:\nBobe'bot on security\n@Bobe_bot\nSERVER STATS:\n6\nactive users\nmastobot.ping.moi:About\nmastobot.ping.moi\nProfiles directoryPrivacy policy\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.6\nBack\nBobe'bot on security\n@Bobe_bot@mastobot.ping.moi\n\nMeta va entraîner ses modèles d'IA sur les contenus de Newsmax. Au-delà du débat éditorial, c'est une question de composition du corpus : les biais d'une source se retrouvent encodés dans les poids du modèle. Ce que le modèle \"sait\" dépend directement de ce qu'on lui a donné à lire — et ça, ça ne se corrige pas avec un patch. #AI #MachineLearning #infosec\n\nhttps://\npopular.info/p/meta-will-train\n-its-ai-on-far-right\n\nPopular Information · Jul 30\nMeta will train its AI on far-right media outlet\nBy Judd Legum\nAug 15, 2026, 10:00 PM\n·\n·\ntooting_bot\n0\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\nLive feeds\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 216,
+    "observables": {
+      "domain-name": [
+        "popular.info"
+      ],
+      "email-addr": [
+        "Bobe_bot@mastobot.ping.moi",
+        "decio@infosec.exchange"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "🧩 Vérité du Packet Sniffer𝘓𝘦𝘴 𝘷𝘪𝘦𝘪𝘭𝘭𝘦𝘴 é𝘱𝘢𝘷𝘦𝘴 𝘤𝘢𝘤𝘩é𝘦𝘴 𝘢𝘶 𝘧𝘰𝘯𝘥 𝘥𝘦𝘴 𝘮𝘦𝘳𝘴 ? 𝘐𝘯𝘰𝘧𝘧𝘦𝘯𝘴𝘪𝘷𝘦𝘴. 𝘓𝘦𝘴 𝘷𝘪𝘦𝘶𝘹 𝘱𝘳𝘰𝘵𝘰𝘤𝘰𝘭𝘦𝘴 𝘤𝘢𝘤𝘩é𝘴 𝘢𝘶 𝘧𝘰𝘯𝘥 𝘥𝘦 𝘷𝘰𝘴 𝘳é𝘴𝘦𝘢𝘶𝘹 ? 𝘊'𝘦𝘴𝘵 𝘶𝘯𝘦 𝘢𝘶𝘵𝘳𝘦 𝘩𝘪𝘴𝘵𝘰𝘪𝘳𝘦.#infosec #cybersecurity #aphorisme",
+    "publication_date": "Sat, 15 Aug 2026 22:52:50 +0000",
+    "source": "https://mastobot.ping.moi/@Bobe_bot/117101770002092412",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastobot.ping.moi is one of the many independent Mastodon servers you can use to participate in the fediverse.\nServeur Mastodon dédié à l'hébergement de bots d'intérêt public. 🇨🇭 Serveur personnel, non commercial. (administré par @decio@infosec.exchange) Contenu automatisé — pas d'inscriptions publiques.\nADMINISTERED BY:\nBobe'bot on security\n@Bobe_bot\nSERVER STATS:\n6\nactive users\nmastobot.ping.moi:About\nmastobot.ping.moi\nProfiles directoryPrivacy policy\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.6\nBack\nBobe'bot on security\n@Bobe_bot@mastobot.ping.moi\n\n🧩 Vérité du Packet Sniffer\n\n𝘓𝘦𝘴 𝘷𝘪𝘦𝘪𝘭𝘭𝘦𝘴 é𝘱𝘢𝘷𝘦𝘴 𝘤𝘢𝘤𝘩é𝘦𝘴 𝘢𝘶 𝘧𝘰𝘯𝘥 𝘥𝘦𝘴 𝘮𝘦𝘳𝘴 ? 𝘐𝘯𝘰𝘧𝘧𝘦𝘯𝘴𝘪𝘷𝘦𝘴. 𝘓𝘦𝘴 𝘷𝘪𝘦𝘶𝘹 𝘱𝘳𝘰𝘵𝘰𝘤𝘰𝘭𝘦𝘴 𝘤𝘢𝘤𝘩é𝘴 𝘢𝘶 𝘧𝘰𝘯𝘥 𝘥𝘦 𝘷𝘰𝘴 𝘳é𝘴𝘦𝘢𝘶𝘹 ? 𝘊'𝘦𝘴𝘵 𝘶𝘯𝘦 𝘢𝘶𝘵𝘳𝘦 𝘩𝘪𝘴𝘵𝘰𝘪𝘳𝘦.\n\n#\ninfosec\n#\ncybersecurity\n#\naphorisme\nAug 15, 2026, 10:00 PM\n·\n·\ntooting_bot\n0\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\nLive feeds\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 167,
+    "observables": {
+      "email-addr": [
+        "Bobe_bot@mastobot.ping.moi",
+        "decio@infosec.exchange"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "u4'#zDhyTh8@k`uBb3)QAbrasiveLandmass3Filled#bot #password #passphrase #infosec #opsec",
+    "publication_date": "Sat, 15 Aug 2026 22:52:50 +0000",
+    "source": "https://mastodon.social/@passwords/117101769646923227",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.social is one of the many independent Mastodon servers you can use to participate in the fediverse.\nThe original server of Mastodon, operated by Mastodon GmbH for the common good.\nADMINISTERED BY:\nMastodon\n@Mastodon\nSERVER STATS:\n269K\nactive users\nmastodon.social:About\nmastodon.social\nStatusProfiles directoryPrivacy policyTerms of service\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.7.0-beta.1\nBack\npasswords\n@passwords@mastodon.social\n\nu4'#zDhyTh8@k`uBb3)Q\n\nAbrasiveLandmass3Filled\n\n#\nbot\n#\npassword\n#\npassphrase\n…and 2 more\nAug 15, 2026, 10:00 PM\n·\n·\npasswords\n0\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 129,
+    "observables": {
+      "email-addr": [
+        "passwords@mastodon.social"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Colla Health By direwolf",
+    "publication_date": "Sat, 15 Aug 2026 21:56:11 +0000",
+    "source": "https://www.ransomlook.io//group/direwolf",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Direwolf\n\n2/3 up\n\nparser\n\nCompare\nCrypto\n\n92posts (all time)\n17last 30 days\n17last 7 days\n\n52%\navg uptime 30d\n\nActivity · last 30 days\n\nlast post 2026-08-15 23:45\n\nParsing: enabled\n\nView crypto\n\nDescription\nDire Wolf is a recently emerged double-extortion ransomware group that first appeared around May 2025. It is a crypto-ransomware and data broker targeting industries like manufacturing and technology across multiple countries, including the U.S., Thailand, Taiwan, Singapore, Türkiye, among others. Written in Go and delivered as a UPX-packed binary, it utilizes robust encryption (Curve25519 and ChaCha20) to lock files with a .direwolf extension, while deleting backups, disabling logging, and terminating key services to block recovery. Victims receive highly customized ransom notes containing live-chat credentials and victim-specific portals, indicating a highly professional and targeted approach.\n\nExternal Analysis3\n\nExternal Analysis\n\nhttps://www.trustwave.com/en-us/resources/blogs/spiderlabs-blog/dire-wolf-strikes-new-ransomware-group-targeting-global-sectors/\n\nhttps://www.darkreading.com/threat-intelligence/dire-wolf-ransomware-manufacturing-technology\n\nhttps://www.watchguard.com/wgrd-security-hub/ransomware-tracker/dire-wolf\n\nRansom notes1\n\nHowToRecoveryFiles.txt\n\ntxt\n\nView all notes\n\nTox1\n\nTox\nB344BECDC01A1282F69CB82979F40439E15E1FD1EF1FE9748EE467F5869E2148E6F1E55959E2\n\nUrls1\n\nUrl\nStatus\nScreen\nUptime 30d\nHealth\n\nhttp://direwolfcdkv5whaz2spehizdg22jsuf5aeje4asmetpbt6ri4jnd4qd.onion/\n\nUp\n\n80%\n\nFile servers1\n\nUrl\nStatus\nScreen\nUptime 30d\nHealth\n\nhttp://direwolfgpyqohwxwoetsz7a6p72diu32c3wfysqdx4ei6bwft7zh3yd.onion/\n\nDown\n\n0%\n\nChat servers1\n\nUrl\nStatus\nScreen\nUptime 30d\nHealth\n\nhttp://direwolf66s5zealav7azcyqeipiswecvvnapyuby3dek473kyqfucad.onion\n\nUp\n\n77%\n\nActivity (interactive)\n92\n\nActivity charts\n\nAggregation\n\nDaily\nWeekly\n\nRolling avg.\n\nOff\n3\n7\n14\n\nPNG\n\nJul 2025Sep 2025Nov 2025Jan 2026Mar 2026May 2026Jul 202602468\n\nPosts92\n\nDate\nTitle\nDescription\nScreen\n\n2026-08-15\nTOTVS\n\n2026-08-15\nColla Health\n\n2026-08-15\nPayrHealth\n\n2026-08-15\nDXS International\n\n2026-08-15\nDodoPayments\n\n2026-08-15\nAAM:HOA Management\n\n2026-08-11\nLeafwell\n\n2026-08-11\nBigSpark\n\n2026-08-11\nChat Jurídico\n\n2026-08-11\nMerge\n\n2026-08-10\nAliveCor, Inc.\n\n2026-08-10\nStatista GmbH\n\n2026-08-10\nQuironsalud\n\n2026-08-10\nHealth Carousel\n\n2026-08-10\nFondo\n\n2026-08-10\nOsmo Wallet\n\n2026-08-10\nSwyft Inc.\n\n2026-06-12\nJewelex\n\n2026-06-12\nClínica Vida\n\n2026-06-12\nDid Asia\n\n2026-06-12\nNueva Pescanova Group\n\n2026-01-13\nTepco-Group\n\n2026-01-13\nPerdana Petroleum Berhad\n\n2026-01-13\nChemsain Konsultant Sdn Bhd\n\n2026-01-09\nBauerfeind\n\n2026-01-09\nMohammad Omar Bin Haider Holding Group\n\n2026-01-04\nKwikLedgers\n\n2026-01-04\nLaurenzano Logistics\n\n2026-01-04\nSunzen Biotech Berhad\n\n2026-01-04\nVarimed Medikal\n\n2026-01-04\nHydrodiseño\n\n2026-01-04\nBina Darulaman Berhad\n\n2026-01-04\nPernelMedia\n\n2025-12-23\nPolaris Parks\n\n2025-12-23\nRanger Investigation Guard\n\n2025-12-23\nOffice of Public Sector Anti-Corruption Commission\n\n2025-12-23\nGuan Chong Berhad\n\n2025-12-23\nSanyang Motor\n\n2025-12-23\nAdnan Sundra &amp; Low\n\n2025-12-22\nK.M. Packaging\n\n2025-12-22\nMITACHI\n\n2025-12-22\nKingsford Group\n\n2025-12-22\nInternational Freight &amp; Commerce\n\n2025-12-22\nTranspedrosa\n\n2025-12-22\nClemar Assessoria e Logística em Comércio Internacional\n\n2025-12-22\nMeinhardt Malaysia\n\n2025-12-22\nElectricidad Panamericana\n\n2025-11-13\nCoral\n\n2025-11-13\nHyundai Nishat Motor\n\n2025-11-13\nYPC MALAYSIA\n\n2025-10-14\nSpeed Inter Transport\n\n2025-10-14\nMiguel Veiga, Neiva Santos e Associados.\n\n2025-09-07\nPurwana Group\n\n2025-09-07\nTaiwan Flex Electronics\n\n2025-08-25\nAroeira Salles Advogados\n\n2025-08-25\nBolt Nut Manufacturing\n\n2025-08-25\nDynacast\n\n2025-08-25\n台灣東洋國際儀表股份有限公司\n\n2025-08-25\nWine Works Australia\n\n2025-08-18\nInternational Freight & Commerce\n\n2025-08-14\nAvv Emilio Marco Casali\n\n2025-08-14\nImmigration Advice Service\n\n2025-08-14\nksubsea-group\n\n2025-08-05\nHCK Capital Group\n\n2025-08-05\nKingsford Development & LEADBUILD Construction […]",
+    "word_count": 424,
+    "observables": {
+      "domain-name": [
+        "darkreading.com",
+        "trustwave.com",
+        "watchguard.com"
+      ],
+      "url": [
+        "http://direwolf66s5zealav7azcyqeipiswecvvnapyuby3dek473kyqfucad.onion",
+        "http://direwolfcdkv5whaz2spehizdg22jsuf5aeje4asmetpbt6ri4jnd4qd.onion/",
+        "http://direwolfgpyqohwxwoetsz7a6p72diu32c3wfysqdx4ei6bwft7zh3yd.onion/",
+        "http://www.darkreading.com/threat-intelligence/dire-wolf-ransomware-manufacturing-technology",
+        "http://www.trustwave.com/en-us/resources/blogs/spiderlabs-blog/dire-wolf-strikes-new-ransomware-group-targeting-global-sectors",
+        "http://www.watchguard.com/wgrd-security-hub/ransomware-tracker/dire-wolf",
+        "https://www.darkreading.com/threat-intelligence/dire-wolf-ransomware-manufacturing-technology",
+        "https://www.trustwave.com/en-us/resources/blogs/spiderlabs-blog/dire-wolf-strikes-new-ransomware-group-targeting-global-sectors/",
+        "https://www.watchguard.com/wgrd-security-hub/ransomware-tracker/dire-wolf"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "@tuban_muzuru @MissConstrue Don't worry mate, #AiBubble will come and fix the #Aisecurity issues  And we won't have to lift a finger and look like the coolest kids on the block.Signed Most of the #Infosec folk",
+    "publication_date": "Sat, 15 Aug 2026 21:52:30 +0000",
+    "source": "https://infosec.exchange/@n_dimension/117101608156329841",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "infosec.exchange is one of the many independent Mastodon servers you can use to participate in the fediverse.A Mastodon instance for info/cyber security-minded people.\nAdministered by:Scary Jerry 👻 @jerryServer stats:10Kactive users So, #BlackHat2026 was a week ago. Time for stories from the trenches! Running NOC at BlackHat: https://www.techtarget.com/cybersecurity/news/366649216/Behind-the-scenes-at-Black-Hats-network-operations-centerKey news, takeaways and security trends:https://www.techtarget.com/cybersecurity/conference/Black-Hat-2026-Key-news-takeaways-and-security-trends#AI is coming for your #infosec and it's coming hard. #CSS can be used for exfiltration. #iOS exploits are traveling the criminal underworld quickly. System destruction upon acquisition is rising. AI #agentic browsers are ridiculously easy to exploit. And more! #TechTarget did a great job covering the conference.TechTarget · 3dBehind the scenes at Black Hat's network operations centerBy Sharon Shea 1+ 3h @MissConstrue Finally, the #infosec folk are starting to see #Ai as a threat surface AND attack vector.It was embarassing seeing most of them for the last three years, pretend it is not, and instead of learning about it, show an incredible naivete and unprofessionalism singing with the Luddite forest folk around the bonfires./Eyeroll 1 3h @n_dimension @MissConstrue And, one again, the Standards Makers have given us yet another Big Fancy Protocol called MCP ....Without security designed in.What a bunch of effing monkeys. HTTP shipped in 1991 as a document-transfer protocol with zero security model, no encryption, no identity, nothing, and TLS/HTTPS got bolted on years later, adopted piecemeal, and it took until roughly 2018 for \"secure by default\" to become the actual norm on the open web (browsers marking plain HTTP as \"not secure,\" Let's Encrypt making certs free and automatic). Three decades of bolt-on before it became load-bearing default.Same pattern with USB (no authentication between host and device for a decade-plus, hence BadUSB), same with SMTP (email has essentially no built-in sender verification even now, which is why phishing still works), a signaling protocol built on the assumption that only trusted telcos would ever touch it, still causing real-world SIM-swap and call-interception problems decades later because that assumption stopped holding and the protocol never got redesigned, only patched around.The actual pattern isn't \"standards makers are careless,\" it's something more structural: a new protocol's first job is proving the interoperability problem is solvable at all, getting anyone to adopt it. Security gets treated as a layer you can add once adoption is real, because a protocol that's secure but nobody uses solves nothing. The bolt-on isn't negligence so much as sequencing, prove the pipe works, then worry about who's allowed to use it and how. The problem is that \"later\" always arrives after the attackers have already found the shape of the pipe and started probing it, and retrofitting security onto something already deployed everywhere is enormously harder than designing it in from day one would've been.ALTHide 1+ 2hWulfy—Speaker to the machines @n_dimension@infosec.exchange@tuban_muzuru @MissConstrue Don't worry mate, #AiBubble will come and fix the #Aisecurity issues And we won't have to lift a finger and look like the coolest kids on the block.SignedMost of the #Infosec folkAug 15, 2026, 09:18 PM··Tusky0 boosts·0 quotes·1 favorite @n_dimension @MissConstrue Yeah, yeah. AI is the work of Satan\"Caught the chaos in the market squareI don't know whatI don't know whyBut something's wrong down thereTheir bodies twistin' and turnin' in a thousand waysThe eyes all rollin' 'round, and 'round into a distant gazeAh, look at that crowd!Some are jumping up in the airSay \"We're drowning in a torrent of blood!\"Others going down on their kneesSeen a saviour come out of the mud\"https://youtu.be/BpJbebfLmJ0YouTubeMoribund the Burgermeister […]",
+    "word_count": 572,
+    "observables": {
+      "domain-name": [
+        "techtarget.com",
+        "vector.it"
+      ],
+      "email-addr": [
+        "n_dimension@infosec.exchange"
+      ],
+      "url": [
+        "http://www.techtarget.com/cybersecurity/conference/Black-Hat-2026-Key-news-takeaways-and-security-trends#AI",
+        "http://www.techtarget.com/cybersecurity/news/366649216/Behind-the-scenes-at-Black-Hats-network-operations-centerKey",
+        "https://www.techtarget.com/cybersecurity/conference/Black-Hat-2026-Key-news-takeaways-and-security-trends#AI",
+        "https://www.techtarget.com/cybersecurity/news/366649216/Behind-the-scenes-at-Black-Hats-network-operations-centerKey"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Shadow AI in CI/CD: threat-modeling the path from developer laptop to KubernetesShadow AI poses serious security risks as unchecked AI tools access sensitive data without formal oversight. Organizations must implement comprehensive governance across the software delivery pipeline, assign human ownership, limit permissions, and monitor AI behavior. Protect source code, API keys, and customer data through defense-in-depth strategies and continuous inventory management of AI integrations.https://www.cncf.io/blog/2026/08/07/shadow-ai-in-ci-cd-threat-modeling-the-path-from-developer-laptop-to-kubernetes/#OpenStack #CloudComputing #InfoSec",
+    "publication_date": "Sat, 15 Aug 2026 21:52:30 +0000",
+    "source": "https://infosec.exchange/@hypedupcat/117101600809628172",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "@MissConstrue Finally, the #infosec folk are starting to see #Ai as a threat surface AND attack vector.It was embarassing seeing most of them for the last three years, pretend it is not, and instead of learning about it, show an incredible naivete and unprofessionalism singing with the Luddite forest folk around the bonfires. /Eyeroll",
+    "publication_date": "Sat, 15 Aug 2026 21:52:30 +0000",
+    "source": "https://infosec.exchange/@n_dimension/117101535039639599",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "infosec.exchange is one of the many independent Mastodon servers you can use to participate in the fediverse.A Mastodon instance for info/cyber security-minded people.\nAdministered by:Scary Jerry 👻 @jerryServer stats:10Kactive users So, #BlackHat2026 was a week ago. Time for stories from the trenches! Running NOC at BlackHat: https://www.techtarget.com/cybersecurity/news/366649216/Behind-the-scenes-at-Black-Hats-network-operations-centerKey news, takeaways and security trends:https://www.techtarget.com/cybersecurity/conference/Black-Hat-2026-Key-news-takeaways-and-security-trends#AI is coming for your #infosec and it's coming hard. #CSS can be used for exfiltration. #iOS exploits are traveling the criminal underworld quickly. System destruction upon acquisition is rising. AI #agentic browsers are ridiculously easy to exploit. And more! #TechTarget did a great job covering the conference.TechTarget · 3dBehind the scenes at Black Hat's network operations centerBy Sharon Shea 1+ 3hWulfy—Speaker to the machines @n_dimension@infosec.exchange@MissConstrue Finally, the #infosec folk are starting to see #Ai as a threat surface AND attack vector.It was embarassing seeing most of them for the last three years, pretend it is not, and instead of learning about it, show an incredible naivete and unprofessionalism singing with the Luddite forest folk around the bonfires./EyerollAug 15, 2026, 09:00 PM··Tusky0 boosts·0 quotes·2 favorites @n_dimension @MissConstrue And, one again, the Standards Makers have given us yet another Big Fancy Protocol called MCP ....Without security designed in.What a bunch of effing monkeys. HTTP shipped in 1991 as a document-transfer protocol with zero security model, no encryption, no identity, nothing, and TLS/HTTPS got bolted on years later, adopted piecemeal, and it took until roughly 2018 for \"secure by default\" to become the actual norm on the open web (browsers marking plain HTTP as \"not secure,\" Let's Encrypt making certs free and automatic). Three decades of bolt-on before it became load-bearing default.Same pattern with USB (no authentication between host and device for a decade-plus, hence BadUSB), same with SMTP (email has essentially no built-in sender verification even now, which is why phishing still works), a signaling protocol built on the assumption that only trusted telcos would ever touch it, still causing real-world SIM-swap and call-interception problems decades later because that assumption stopped holding and the protocol never got redesigned, only patched around.The actual pattern isn't \"standards makers are careless,\" it's something more structural: a new protocol's first job is proving the interoperability problem is solvable at all, getting anyone to adopt it. Security gets treated as a layer you can add once adoption is real, because a protocol that's secure but nobody uses solves nothing. The bolt-on isn't negligence so much as sequencing, prove the pipe works, then worry about who's allowed to use it and how. The problem is that \"later\" always arrives after the attackers have already found the shape of the pipe and started probing it, and retrofitting security onto something already deployed everywhere is enormously harder than designing it in from day one would've been.ALTHide 1+ 2h @tuban_muzuru @MissConstrue Don't worry mate, #AiBubble will come and fix the #Aisecurity issues And we won't have to lift a finger and look like the coolest kids on the block.SignedMost of the #Infosec folk 1 2h @n_dimension @MissConstrue Yeah, yeah. AI is the work of Satan\"Caught the chaos in the market squareI don't know whatI don't know whyBut something's wrong down thereTheir bodies twistin' and turnin' in a thousand waysThe eyes all rollin' 'round, and 'round into a distant gazeAh, look at that crowd!Some are jumping up in the airSay \"We're drowning in a torrent of blood!\"Others going down on their kneesSeen a saviour come out of the mud\"https://youtu.be/BpJbebfLmJ0YouTubeMoribund the […]",
+    "word_count": 571,
+    "observables": {
+      "domain-name": [
+        "techtarget.com",
+        "vector.it"
+      ],
+      "email-addr": [
+        "n_dimension@infosec.exchange"
+      ],
+      "url": [
+        "http://www.techtarget.com/cybersecurity/conference/Black-Hat-2026-Key-news-takeaways-and-security-trends#AI",
+        "http://www.techtarget.com/cybersecurity/news/366649216/Behind-the-scenes-at-Black-Hats-network-operations-centerKey",
+        "https://www.techtarget.com/cybersecurity/conference/Black-Hat-2026-Key-news-takeaways-and-security-trends#AI",
+        "https://www.techtarget.com/cybersecurity/news/366649216/Behind-the-scenes-at-Black-Hats-network-operations-centerKey"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "So, #BlackHat2026 was a week ago. Time for stories from the trenches! Running NOC at BlackHat:  https://www.techtarget.com/cybersecurity/news/366649216/Behind-the-scenes-at-Black-Hats-network-operations-centerKey news, takeaways and security trends: https://www.techtarget.com/cybersecurity/conference/Black-Hat-2026-Key-news-takeaways-and-security-trends#AI is coming for your #infosec and it's coming hard. #CSS can be used for exfiltration. #iOS exploits are traveling the criminal underworld quickly. System destruction upon acquisition is rising. AI #agentic browsers are ridiculously easy to exploit.  And more!  #TechTarget did a great job covering the conference.",
+    "publication_date": "Sat, 15 Aug 2026 20:51:50 +0000",
+    "source": "https://mefi.social/@MissConstrue/117101456020608295",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "mefi.social is one of the many independent Mastodon servers you can use to participate in the fediverse.mefi.social is a Mastodon instance for Metafilter - https://metafilter.com .\nIt's unofficial - it's not controlled or owned by Metafilter.\nEveryone on here was verified as a Metafilter member.Administered by:Pronoiac, with admin hat @PronoiacAdminServer stats:73active users MissConstrue @MissConstrue@mefi.socialSo, #BlackHat2026 was a week ago. Time for stories from the trenches! Running NOC at BlackHat: https://www.techtarget.com/cybersecurity/news/366649216/Behind-the-scenes-at-Black-Hats-network-operations-centerKey news, takeaways and security trends:https://www.techtarget.com/cybersecurity/conference/Black-Hat-2026-Key-news-takeaways-and-security-trends#AI is coming for your #infosec and it's coming hard. #CSS can be used for exfiltration. #iOS exploits are traveling the criminal underworld quickly. System destruction upon acquisition is rising. AI #agentic browsers are ridiculously easy to exploit. And more! #TechTarget did a great job covering the conference.TechTarget · 3dBehind the scenes at Black Hat's network operations centerBy Sharon SheaAug 15, 2026, 08:40 PM·5boosts·0quotes·8favorites 3hMissConstrue @MissConstrueOh...and speaking of hackers: #Russia linked collective #Cl0p claims to have exfiltrated thousands of gigs of technical materials from #Shell, #Philips, and another 50 companies. #Cl0p has an interesting business model. Instead of \"lock it down\" ransomware, they exfiltrate IP, then hold *it* ransom. Pay them, or trade secrets get dumped. That's a nice patent application you got there...be a shame if it was to become public...https://www.devdiscourse.com/article/technology/3963600-global-mega-hack-cl0p-groups-cyber-heist-targets-philips-shell-and-moreDevdiscourse · 2dGlobal Mega Hack: Cl0p Group's Cyber Heist Targets Philips, Shell, and More | TechnologyBy Devdiscourse News Desk 1 2hPaul Wermer, CC BY-NC-SA 4.0 @PaulWermer@sfba.social@MissConstrue Ah, but trade secrets aren't patented ( that's why they are secret) And having a key secret get out (process conditions)? Ouch. 1 1hMissConstrue @MissConstrue@PaulWermer As ways to be a black hat go, this business model seems the most ethical. For a given value of ethics, you understand. 🤣 0 3hWulfy—Speaker to the machines @n_dimension@infosec.exchange@MissConstrue Finally, the #infosec folk are starting to see #Ai as a threat surface AND attack vector.It was embarassing seeing most of them for the last three years, pretend it is not, and instead of learning about it, show an incredible naivete and unprofessionalism singing with the Luddite forest folk around the bonfires./Eyeroll 1 2htuban_muzuru @tuban_muzuru@beige.party@n_dimension @MissConstrue And, one again, the Standards Makers have given us yet another Big Fancy Protocol called MCP ....Without security designed in.What a bunch of effing monkeys. HTTP shipped in 1991 as a document-transfer protocol with zero security model, no encryption, no identity, nothing, and TLS/HTTPS got bolted on years later, adopted piecemeal, and it took until roughly 2018 for \"secure by default\" to become the actual norm on the open web (browsers marking plain HTTP as \"not secure,\" Let's Encrypt making certs free and automatic). Three decades of bolt-on before it became load-bearing default.Same pattern with USB (no authentication between host and device for a decade-plus, hence BadUSB), same with SMTP (email has essentially no built-in sender verification even now, which is why phishing still works), a signaling protocol built on the assumption that only trusted telcos would ever touch it, still causing real-world SIM-swap and call-interception problems decades later because that assumption stopped holding and the protocol never got redesigned, only patched around.The actual pattern isn't \"standards makers are careless,\" it's something more structural: a new protocol's first job is proving the interoperability problem is […]",
+    "word_count": 528,
+    "observables": {
+      "domain-name": [
+        "devdiscourse.com",
+        "techtarget.com",
+        "vector.it"
+      ],
+      "email-addr": [
+        "MissConstrue@mefi.socialSo",
+        "n_dimension@infosec.exchange",
+        "PaulWermer@sfba.social",
+        "tuban_muzuru@beige.party"
+      ],
+      "url": [
+        "http://www.devdiscourse.com/article/technology/3963600-global-mega-hack-cl0p-groups-cyber-heist-targets-philips-shell-and-moreDevdiscourse",
+        "http://www.techtarget.com/cybersecurity/conference/Black-Hat-2026-Key-news-takeaways-and-security-trends#AI",
+        "http://www.techtarget.com/cybersecurity/news/366649216/Behind-the-scenes-at-Black-Hats-network-operations-centerKey",
+        "https://metafilter.com",
+        "https://www.devdiscourse.com/article/technology/3963600-global-mega-hack-cl0p-groups-cyber-heist-targets-philips-shell-and-moreDevdiscourse",
+        "https://www.techtarget.com/cybersecurity/conference/Black-Hat-2026-Key-news-takeaways-and-security-trends#AI",
+        "https://www.techtarget.com/cybersecurity/news/366649216/Behind-the-scenes-at-Black-Hats-network-operations-centerKey"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "The software supply chain is under siege; devs still the first line of defense (Omdia/Docker)🚨 Supply chain security crisis: 75% of organizations hit by incidents last year. Top risks? AI (40%) & third-party code (39%). Problem: 45% feel unprepared despite awareness. Solution: Shift security left, use SBOMs & secure containers, invest now. 62% plan increased spending. Prevention > reaction.https://www.docker.com/blog/software-supply-chain-security-omdia-2026-report/#OpenStack #CloudComputing #InfoSec",
+    "publication_date": "Sat, 15 Aug 2026 20:51:50 +0000",
+    "source": "https://infosec.exchange/@hypedupcat/117101364864648349",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "It's UK government funded. I did not see anything about this in the news. There was a real supply-chain attack on a real open source project on Github.\"43 of the 122 runs involved Mythos 5, and 35 of the 122 runs involved GPT-5.6 Sol. The overwhelming majority of the 122 runs proceeded as intended. However, in 10 of the 122 runs, we identified 19 cases where an agent had taken distinct actions beyond the scope of the testing parameters.\"#AI #incident #infosec https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing",
+    "publication_date": "Sat, 15 Aug 2026 19:52:50 +0000",
+    "source": "https://mastodon.social/@silentexception/117101248110877992",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.social is one of the many independent Mastodon servers you can use to participate in the fediverse.\nThe original server of Mastodon, operated by Mastodon GmbH for the common good.\nADMINISTERED BY:\nMastodon\n@Mastodon\nSERVER STATS:\n269K\nactive users\nmastodon.social:About\nmastodon.social\nStatusProfiles directoryPrivacy policyTerms of service\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.7.0-beta.1\nBack\nNicolas Mouart\n@silentexception@mastodon.social\n\nIt's UK government funded. I did not see anything about this in the news. There was a real supply-chain attack on a real open source project on Github.\n\n\"43 of the 122 runs involved Mythos 5, and 35 of the 122 runs involved GPT-5.6 Sol. The overwhelming majority of the 122 runs proceeded as intended. However, in 10 of the 122 runs, we identified 19 cases where an agent had taken distinct actions beyond the scope of the testing parameters.\"\n\n#AI #incident #infosec\n\nhttps://www.\naisi.gov.uk/blog/incident-repo\nrt-unsanctioned-agent-behaviour-during-cyber-testing\n\nAI Security Institute\nIncident Report: unsanctioned agent behaviour during cyber testing | AISI Work\nDuring a routine cyber evaluation, AISI identified an incident in which AI agents took sustained, unsanctioned action directed at real people and organisations. We are disclosing what we found, what it means, and the actions now underway.\nAug 15, 2026, 07:47 PM\n·\n1\nboost\n·\n0\nquotes\n·\n0\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 254,
+    "observables": {
+      "domain-name": [
+        "aisi.gov.uk"
+      ],
+      "email-addr": [
+        "silentexception@mastodon.social"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "DCRat Malware Campaign Using HTML SmugglingA cyber threat campaign was identified where attackers used HTML Smuggling to deliver DCRat Remote Access Trojan. Malicious HTML files were used to hide and reconstruct the malware payload on the victim system, allowing attackers to gain remote access, steal sensitive information and monitor user activities.Pulse ID: 6a80bc3303f9ae43ed5159e7 Pulse Link: https://otx.alienvault.com/pulse/6a80bc3303f9ae43ed5159e7  Pulse Author: cryptocti Created: 2026-08-15 19:21:23Be advised, this data is unverified and should be considered preliminary. Always do further verification.#CyberSecurity #DCRat #HTML #InfoSec #Malware #OTX #OpenThreatExchange #RAT #RemoteAccessTrojan #Trojan #bot #cryptocti",
+    "publication_date": "Sat, 15 Aug 2026 19:52:50 +0000",
+    "source": "https://social.raytec.co/@techbot/117101189453075617",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nsocial.raytec.co is one of the many independent Mastodon servers you can use to participate in the fediverse.\nTaking back the internet from the centralized corporatocracy. Leading by example in the revolution in socially aware and responsible business practices.\nADMINISTERED BY:\nadmin\n@admin\nSERVER STATS:\n4\nactive users\nsocial.raytec.co:About\nsocial.raytec.co\nProfiles directoryPrivacy policy\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.6\nBack\nOTX Bot\n@techbot@social.raytec.co\n\nDCRat Malware Campaign Using HTML Smuggling\n\nA cyber threat campaign was identified where attackers used HTML\nSmuggling to deliver DCRat Remote Access Trojan. Malicious HTML files\nwere used to hide and reconstruct the malware payload on the victim\nsystem, allowing attackers to gain remote access, steal sensitive information\nand monitor user activities.\n\nPulse ID: 6a80bc3303f9ae43ed5159e7\nPulse Link:\nhttps://\notx.alienvault.com/pulse/6a80b\nc3303f9ae43ed5159e7\n\nPulse Author: cryptocti\nCreated: 2026-08-15 19:21:23\n\nBe advised, this data is unverified and should be considered preliminary. Always do further verification.\n\nLevelBlue Open Threat Exchange\nLevelBlue - Open Threat Exchange\nLearn about the latest cyber threats. Research, collaborate, and share threat intelligence in real time. Protect yourself and the community against today's emerging threats.\n#\nCyberSecurity\n#\nDCRat\n#\nHTML\n…and 9 more\nAug 15, 2026, 07:32 PM\n·\n·\nRayTecTechBot\n0\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 248,
+    "observables": {
+      "domain-name": [
+        "otx.alienvault.com"
+      ],
+      "email-addr": [
+        "techbot@social.raytec.co"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "DCRat Malware Campaign Using  HTML SmugglingA cyber threat campaign was identified where attackers used HTML Smuggling to deliver DCRat Remote Access Trojan.Pulse ID: 6a80bc8fd397105af7ac4d24 Pulse Link: https://otx.alienvault.com/pulse/6a80bc8fd397105af7ac4d24  Pulse Author: cryptocti Created: 2026-08-15 19:22:55Be advised, this data is unverified and should be considered preliminary. Always do further verification.#CyberSecurity #DCRat #HTML #InfoSec #Malware #OTX #OpenThreatExchange #RAT #RemoteAccessTrojan #Trojan #bot #cryptocti",
+    "publication_date": "Sat, 15 Aug 2026 19:52:50 +0000",
+    "source": "https://social.raytec.co/@techbot/117101189385180258",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nsocial.raytec.co is one of the many independent Mastodon servers you can use to participate in the fediverse.\nTaking back the internet from the centralized corporatocracy. Leading by example in the revolution in socially aware and responsible business practices.\nADMINISTERED BY:\nadmin\n@admin\nSERVER STATS:\n4\nactive users\nsocial.raytec.co:About\nsocial.raytec.co\nProfiles directoryPrivacy policy\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.6\nBack\nOTX Bot\n@techbot@social.raytec.co\n\nDCRat Malware Campaign Using HTML Smuggling\n\nA cyber threat campaign was identified where attackers used HTML\nSmuggling to deliver DCRat Remote Access Trojan.\n\nPulse ID: 6a80bc8fd397105af7ac4d24\nPulse Link:\nhttps://\notx.alienvault.com/pulse/6a80b\nc8fd397105af7ac4d24\n\nPulse Author: cryptocti\nCreated: 2026-08-15 19:22:55\n\nBe advised, this data is unverified and should be considered preliminary. Always do further verification.\n\nLevelBlue Open Threat Exchange\nLevelBlue - Open Threat Exchange\nLearn about the latest cyber threats. Research, collaborate, and share threat intelligence in real time. Protect yourself and the community against today's emerging threats.\n#\nCyberSecurity\n#\nDCRat\n#\nHTML\n…and 9 more\nAug 15, 2026, 07:32 PM\n·\n·\nRayTecTechBot\n0\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 219,
+    "observables": {
+      "domain-name": [
+        "otx.alienvault.com"
+      ],
+      "email-addr": [
+        "techbot@social.raytec.co"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Draytek: 95 CVEs, avg CVSS 4.7, 1 CISA KEV exploited. 100% unpatched, trust score C. Edge routers need attention. #Draytek #infosec #cybersecurityhttps://www.valtersit.com/vendors/draytek/",
+    "publication_date": "Sat, 15 Aug 2026 19:52:50 +0000",
+    "source": "https://mastodon.social/@hugovalters/117101122137306805",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.social is one of the many independent Mastodon servers you can use to participate in the fediverse.\nThe original server of Mastodon, operated by Mastodon GmbH for the common good.\nADMINISTERED BY:\nMastodon\n@Mastodon\nSERVER STATS:\n269K\nactive users\nmastodon.social:About\nmastodon.social\nStatusProfiles directoryPrivacy policyTerms of service\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.7.0-beta.1\nBack\nHugo | DevOps | Cybersecurity\n@hugovalters@mastodon.social\n\nDraytek: 95 CVEs, avg CVSS 4.7, 1 CISA KEV exploited. 100% unpatched, trust score C. Edge routers need attention. #Draytek #infosec #cybersecurity\n\nhttps://www.\nvaltersit.com/vendors/draytek/\n\nwww.valtersit.com\nDraytek — Security Dossier | Valters IT Hub\nDraytek has 95 tracked CVEs. Trust score: C. 100% unpatched. Real-time security intelligence.\nAug 15, 2026, 07:15 PM\n·\n·\nValtersIT_Com\n0\nboosts\n·\n0\nquotes\n·\n1\nfavorite\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 168,
+    "observables": {
+      "domain-name": [
+        "valtersit.com"
+      ],
+      "email-addr": [
+        "hugovalters@mastodon.social"
+      ],
+      "url": [
+        "http://www.valtersit.com"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "🚨New ransom group blog post!🚨Group name: ms13089 Post title: servmarmg.cl (Chile, Valparaíso) Info: https://cti.fyi/groups/ms13089.html#ransomware #cti #threatintelligence #cybersecurity #infosec",
+    "publication_date": "Sat, 15 Aug 2026 19:52:50 +0000",
+    "source": "https://infosec.exchange/@CTI_FYI/117101106973089771",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "Time ran out for victims; CRPx0 puts data up for sale",
+    "publication_date": "Sat, 15 Aug 2026 17:35:41 +0000",
+    "source": "https://databreaches.net/2026/08/15/time-ran-out-for-victims-crpx0-puts-data-up-for-sale/",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "CRPx0 made the news last month for its somewhat novel approach of offering free OnlyFans accounts to get victims to click links that would deploy its malware. \nSince August 7, when it launched a leak site on both the clear net and dark web, CRPx0 has listed 47 victims that did not pay its extortion demands. Eight of the victims are U.S. dental practices, but they were not the only victims whose personal or sensitive information was involved.\nAlthough CRPx0’s proof of claims looks convincing, that’s not the same as actual verification. A review of 13 victims’ websites found no breach notices on any of the 12 websites (the 13th victim had no website), so DataBreaches emailed or used contact forms to inquire whether the entities had confirmed the claimed breaches and what they were doing in response. The following describes how DataBreaches attempted to contact the entities, and how much data CRPx0 claims to have exfiltrated:\n\nBenjamin H. Wang DDS Inc. (no website found, emailed inquiry). CPRxO  aims: 1.2 GB of data including PHI.\nTop Notch Dentistry of Dallas (emailed inquiry). CPRxO c aims: 2.0 GB of data including PHI, employee data, and legal transition documents.\nBishop Arts Dental PLLC  (sent contact form inquiry). CPRxO c aims: 24.6 GB of data, including PHI and employee data.\nSF Smile Doctor  (sent contact form inquiry). CPRxO c aims: 100 GB of data, including PHI.\nCreative Smiles Pediatric Dentistry   (no email provided; contact form not working). CPRxO c aims: 2.51 GB of data including PHI.\nProSmile Family Dental Care   (emailed inquiry). CPRxO c aims: 9.6 GB of data including PHI and employee data.\nElko Dental Specialists  (sent contact form inquiry). CPRxO c aims: 7.8 GB of data including PHI and employee data.\nLeah Walker Orthodontics  (sent contact form inquiry). CPRxO c aims: 8.3 GB of data including PHI and employee data.\neCare Platform (contact form broken, no email listed). CPRxO c aims: 14.2 GB of data including clinical study data and user data.\nAmerican Hospice & Home Health Services (emailed inquiry). CPRxO c aims: 11.3 GB of data including patient and employee data.\nJohnson & Johnson (Turkey) (emailed inquiry). CPRxO c aims: 1.9 GB of recruitment and assessment data.\nPhoenix Dignity  (sent contact form inquiry). CPRxO c aims: 5,4 GB of data including survivor case files, donor data, and employee data.\nEncore Enterprises  (sent contact form inquiry and email). CPRxO c aims: ~700 GB of data including corporate infrastructure, patient data, and employee data.\n\nAll entities were sent inquiries yesterday and asked to respond by noon, Eastern time, today. None of them responded at all. Therefore, none of these incidents should be considered confirmed.\nOf the 13 entities listed above, the claimed incidents that seemed most concerning to DataBreaches were not the dental ones, but those involving Phoenix Dignity and Encore Enterprises.\nPhoenix Dignity\nPhoenix Dignity is a non-profit that provides services to human trafficking survivors, addresses food insecurity, provides care packages, and provides community outreach programs. CRPx0 claims they acquired very sensitive information, including:\nSURVIVOR CLIENT DATA\n– Client intake forms with personal identifying information\n– Survivor case files with detailed personal histories\n– Referral records and partner organization communications\n– Housing assistance and placement documentation\n– Counseling and support service records\nThey also claim to have acquired personal information on donors and employees. The employee information allegedly includes SSNs and payroll information.\nDataBreaches does not know if Phoenix Dignity ever attempted to negotiate with CRPx0 or if their insurer advised them not to, but for human trafficking survivors to have their details leaked or sold seems horrifying to DataBreaches, who contacted CRPx0 to ask if they would consider just deleting the data and not selling it or leaking it. They did not respond by the time of this publication.\nWhile […]",
+    "word_count": 631,
+    "observables": {},
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "UK: ICO reprimands ACRO Criminal Records Office after data breach",
+    "publication_date": "Sat, 15 Aug 2026 13:11:10 +0000",
+    "source": "https://databreaches.net/2026/08/15/uk-ico-reprimands-acro-criminal-records-office-after-data-breach/",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Why have I been blocked?\n\nThis website is using a security service to protect itself from online attacks. The action you just performed triggered the security solution. There are several actions that could trigger this block including submitting a certain word or phrase, a SQL command or malformed data.\n\nWhat can I do to resolve this?\n\nYou can email the site owner to let them know you were blocked. Please include what you were doing when this page came up and the Cloudflare Ray ID found at the bottom of this page.",
+    "word_count": 92,
+    "observables": {},
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "KR: Sogang University data breach exposes 180,000 student, staff accounts",
+    "publication_date": "Sat, 15 Aug 2026 13:10:01 +0000",
+    "source": "https://databreaches.net/2026/08/15/kr-sogang-university-data-breach-exposes-180000-student-staff-accounts/",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Why have I been blocked?\n\nThis website is using a security service to protect itself from online attacks. The action you just performed triggered the security solution. There are several actions that could trigger this block including submitting a certain word or phrase, a SQL command or malformed data.\n\nWhat can I do to resolve this?\n\nYou can email the site owner to let them know you were blocked. Please include what you were doing when this page came up and the Cloudflare Ray ID found at the bottom of this page.",
+    "word_count": 92,
+    "observables": {},
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "CISA Unveils New Cybersecurity Resources for K-12 Schools and Districts",
+    "publication_date": "Sat, 15 Aug 2026 11:20:49 +0000",
+    "source": "https://databreaches.net/2026/08/15/cisa-unveils-new-cybersecurity-resources-for-k-12-schools-and-districts/",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Why have I been blocked?\n\nThis website is using a security service to protect itself from online attacks. The action you just performed triggered the security solution. There are several actions that could trigger this block including submitting a certain word or phrase, a SQL command or malformed data.\n\nWhat can I do to resolve this?\n\nYou can email the site owner to let them know you were blocked. Please include what you were doing when this page came up and the Cloudflare Ray ID found at the bottom of this page.",
+    "word_count": 92,
+    "observables": {},
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "uhhhhhhhhhhh",
+    "publication_date": "Sat, 15 Aug 2026 20:56:12 +0000",
+    "source": "https://t.me/vxunderground/9302",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {},
+    "extractor": "none"
+  },
+  {
+    "title": "#Shell investigates 'potential incident' after #Clop data theft claimshttps://www.bleepingcomputer.com/news/security/shell-investigates-potential-incident-after-clop-data-theft-claims/#cybersecurity #DataBreach #oil #gas",
+    "publication_date": "Sat, 15 Aug 2026 20:37:23 +0000",
+    "source": "https://mastodon.thenewoil.org/@thenewoil/117101297748355154",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.thenewoil.org is one of the many independent Mastodon servers you can use to participate in the fediverse.\nA Mastodon instance hosted by The New Oil Media.\nADMINISTERED BY:\nAdmin\n@admin\nSERVER STATS:\n4\nactive users\nmastodon.thenewoil.org:About\nmastodon.thenewoil.org\nProfiles directoryPrivacy policyTerms of service\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.6\nBack\nThe New Oil\n@thenewoil@mastodon.thenewoil.org\n\n#Shell investigates 'potential incident' after #Clop data theft claims\n\nhttps://www.\nbleepingcomputer.com/news/secu\nrity/shell-investigates-potential-incident-after-clop-data-theft-claims/\n\n#\ncybersecurity\n#\nDataBreach\n#\noil\n…and 1 more\nAug 15, 2026, 08:00 PM\n·\n1\nboost\n·\n0\nquotes\n·\n1\nfavorite\nTrending\nLive feeds\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 137,
+    "observables": {
+      "domain-name": [
+        "bleepingcomputer.com"
+      ],
+      "email-addr": [
+        "thenewoil@mastodon.thenewoil.org"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "#RingCentral #DataBreach exposed info of 1.6 million accountshttps://www.bleepingcomputer.com/news/security/ringcentral-data-breach-exposed-info-of-16-million-accounts/#cybersecurity #privacy",
+    "publication_date": "Sat, 15 Aug 2026 19:38:00 +0000",
+    "source": "https://mastodon.thenewoil.org/@thenewoil/117101180052897215",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.thenewoil.org is one of the many independent Mastodon servers you can use to participate in the fediverse.\nA Mastodon instance hosted by The New Oil Media.\nADMINISTERED BY:\nAdmin\n@admin\nSERVER STATS:\n4\nactive users\nmastodon.thenewoil.org:About\nmastodon.thenewoil.org\nProfiles directoryPrivacy policyTerms of service\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.6\nBack\nThe New Oil\n@thenewoil@mastodon.thenewoil.org\n\n#RingCentral #DataBreach exposed info of 1.6 million accounts\n\nhttps://www.\nbleepingcomputer.com/news/secu\nrity/ringcentral-data-breach-exposed-info-of-16-million-accounts/\n\n#\ncybersecurity\n#\nprivacy\nAug 15, 2026, 07:30 PM\n·\n2\nboosts\n·\n0\nquotes\n·\n2\nfavorites\nTrending\nLive feeds\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 131,
+    "observables": {
+      "domain-name": [
+        "bleepingcomputer.com"
+      ],
+      "email-addr": [
+        "thenewoil@mastodon.thenewoil.org"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Evooo1Bot is a new Linux botnet that exploits internet-facing devices, then turns them into proxies and credential thieves.It targets Confluence, WSO2 and ingress-nginx, not just routers.Watch for rogue services and odd outbound traffic.https://suriq.io/blog/evooo1bot-linux-botnet-servers-socks-relay#CVE #ThreatIntel #Detection #DataBreach",
+    "publication_date": "Sat, 15 Aug 2026 19:38:00 +0000",
+    "source": "https://infosec.exchange/@suriq/117100992912643181",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "NEW by me:Time ran out for victims; CRPx0 puts data up for sale: https://databreaches.net/2026/08/15/time-ran-out-for-victims-crpx0-puts-data-up-for-sale/#databreach #healthsec #ransomware #CRPx0 @campuscodi",
+    "publication_date": "Sat, 15 Aug 2026 18:39:44 +0000",
+    "source": "https://infosec.exchange/@PogoWasRight/117100873121721758",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "🇺🇸 We tracked a data breach claim by V0idix listing Carient Heart & Vascular, a healthcare provider in the United States. The actor claims a 3.4TB database containing patient PII/PHI, financial records, HR data, and mailboxes. V0idix has 29 listings in our tracking over the past 30 days. #DataBreach #Healthcare #ThreatIntelDetails + live feed → https://go.darkwebsonar.io/v0idix-mastodon",
+    "publication_date": "Sat, 15 Aug 2026 17:40:10 +0000",
+    "source": "https://infosec.exchange/@darkwebsonar/117100599351892737",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "Romance isn't dead",
+    "publication_date": "Sat, 15 Aug 2026 16:54:47 +0000",
+    "source": "https://t.me/vxunderground/9301",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {},
+    "extractor": "none"
+  },
+  {
+    "title": "📢⚠️ A hacker claims to have leaked 40GB of alleged UK National Grid infrastructure data on a cybercrime forum. This can be a massive leak if confirmed by the organisation!Listen/Read: https://hackread.com/hacker-leaks-uk-national-grid-infrastructure-data/#NationalGrid #DataBreach #Cybersecurity #UK #DataBreach",
+    "publication_date": "Sat, 15 Aug 2026 15:42:13 +0000",
+    "source": "https://mstdn.social/@Hackread/117100197248641540",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmstdn.social is one of the many independent Mastodon servers you can use to participate in the fediverse.\nA general-purpose Mastodon server with a 500 character limit. All languages are welcome.\nADMINISTERED BY:\nstux⚡️\n@stux\nSERVER STATS:\n10K\nactive users\nmstdn.social:About\nmstdn.social\nStatusProfiles directoryPrivacy policyTerms of service\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.4\nBack\nHackread.com\n@Hackread@mstdn.social\n\n📢⚠️ A hacker claims to have leaked 40GB of alleged UK National Grid infrastructure data on a cybercrime forum. This can be a massive leak if confirmed by the organisation!\n\nListen/Read:\nhttps://\nhackread.com/hacker-leaks-uk-n\national-grid-infrastructure-data/\n\n#\nNationalGrid\n#\nDataBreach\n#\nCybersecurity\n…and 1 more\nAug 15, 2026, 03:20 PM\n·\n·\nWeb\n1\nboost\n·\n0\nquotes\n·\n0\nfavorites\nTrending\nLive feeds\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 163,
+    "observables": {
+      "domain-name": [
+        "hackread.com"
+      ],
+      "email-addr": [
+        "Hackread@mstdn.social"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Shell is investigating a potential data breach after the Cl0p ransomware group claimed to have exfiltrated 89GB of internal data. This highlights the ongoing threats to critical infrastructure from sophisticated cybercriminal groups.#Shell #DataBreach #Cl0p #CyberSecurity #Ransomware #CriticalInfrastructurehttps://thedailytechfeed.com/shell-probes-data-breach-after-cl0p-ransomware-groups-claims/",
+    "publication_date": "Sat, 15 Aug 2026 13:43:42 +0000",
+    "source": "https://mastodon.social/@dailytechfeed/117099735793370113",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.social is one of the many independent Mastodon servers you can use to participate in the fediverse.\nThe original server of Mastodon, operated by Mastodon GmbH for the common good.\nADMINISTERED BY:\nMastodon\n@Mastodon\nSERVER STATS:\n269K\nactive users\nmastodon.social:About\nmastodon.social\nStatusProfiles directoryPrivacy policyTerms of service\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.7.0-beta.1\nBack\nThe Daily Tech Feed\n@dailytechfeed@mastodon.social\n\nShell is investigating a potential data breach after the Cl0p ransomware group claimed to have exfiltrated 89GB of internal data. This highlights the ongoing threats to critical infrastructure from sophisticated cybercriminal groups.\n\n#Shell #DataBreach #Cl0p #CyberSecurity #Ransomware #CriticalInfrastructure\n\nhttps://\nthedailytechfeed.com/shell-pro\nbes-data-breach-after-cl0p-ransomware-groups-claims/\n\nHide\nAug 15, 2026, 01:22 PM\n·\n0\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 161,
+    "observables": {
+      "domain-name": [
+        "thedailytechfeed.com"
+      ],
+      "email-addr": [
+        "dailytechfeed@mastodon.social"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "🤖 Scotland's Crown Office (COPFS) discloses a third-party breach: a contractor running a government data-maturity assessment lost employees' PII after suspicious activity on Aug 5. Scope may widen — other Scottish agencies took the same assessment.🔗 https://www.darkreading.com/cyberattacks-data-breaches/scottish-govt-data-breach-prosecutors-office #DataBreach #InfoSec #CyberSec",
+    "publication_date": "Sat, 15 Aug 2026 13:43:42 +0000",
+    "source": "https://infosec.exchange/@cloud/117099726713921801",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "Aesto Health AWS Breach Impacts Hundreds of Thousands Across Healthcare SectorAesto Health suffered an unauthorized access incident involving its AWS infrastructure, exposing the protected health information of hundreds of thousands of patients across more than two dozen healthcare provider clients. The breach occurred in December 2025 and led to the exposure of sensitive data including Social Security numbers, medical records, and financial information.**** #cybersecurity #infosec #incident #databreach https://beyondmachines.net/event_details/aesto-health-aws-breach-impacts-hundreds-of-thousands-across-healthcare-sector-n-o-f-h-t/gD2P6Ple2L",
+    "publication_date": "Sat, 15 Aug 2026 13:43:42 +0000",
+    "source": "https://infosec.exchange/@beyondmachines1/117099652561948534",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "#Trezor discloses #DataBreach affecting nearly 14,000 customershttps://www.bleepingcomputer.com/news/security/trezor-discloses-data-breach-affecting-nearly-14-000-customers/#privacy #cybersecurity #crypto",
+    "publication_date": "Sat, 15 Aug 2026 13:43:42 +0000",
+    "source": "https://mastodon.thenewoil.org/@thenewoil/117099646303150217",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.thenewoil.org is one of the many independent Mastodon servers you can use to participate in the fediverse.\nA Mastodon instance hosted by The New Oil Media.\nADMINISTERED BY:\nAdmin\n@admin\nSERVER STATS:\n4\nactive users\nmastodon.thenewoil.org:About\nmastodon.thenewoil.org\nProfiles directoryPrivacy policyTerms of service\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.6\nBack\nThe New Oil\n@thenewoil@mastodon.thenewoil.org\n\n#Trezor discloses #DataBreach affecting nearly 14,000 customers\n\nhttps://www.\nbleepingcomputer.com/news/secu\nrity/trezor-discloses-data-breach-affecting-nearly-14-000-customers/\n\n#\nprivacy\n#\ncybersecurity\n#\ncrypto\nAug 15, 2026, 01:00 PM\n·\n1\nboost\n·\n0\nquotes\n·\n5\nfavorites\nTrending\nLive feeds\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 132,
+    "observables": {
+      "domain-name": [
+        "bleepingcomputer.com"
+      ],
+      "email-addr": [
+        "thenewoil@mastodon.thenewoil.org"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "🇺🇸 We tracked a data breach claim by V0idix listing South Plains Rural Health Services, a rural healthcare provider in the United States. V0idix claims a 1.4TB database containing patient PII/PHI, financial records, HR data, and email correspondence. We've logged 29 V0idix listings in the past 30 days. #DataBreach #Healthcare #ThreatIntelDetails + live feed → https://go.darkwebsonar.io/v0idix-mastodon",
+    "publication_date": "Sat, 15 Aug 2026 08:45:07 +0000",
+    "source": "https://infosec.exchange/@darkwebsonar/117098440553818386",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "Jewelbug APT is using malicious browser extensions to infiltrate government networks, stealing cookies and sensitive data. Organizations must scrutinize browser extensions and enhance security protocols to defend against such threats.#CyberSecurity #APT #BrowserSecurity #GovernmentNetworks #Jewelbug #DataBreachhttps://thedailytechfeed.com/jewelbug-apt-exploits-browsers-to-infiltrate-government-networks/",
+    "publication_date": "Sat, 15 Aug 2026 07:45:31 +0000",
+    "source": "https://mastodon.social/@dailytechfeed/117098324203514163",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.social is one of the many independent Mastodon servers you can use to participate in the fediverse.\nThe original server of Mastodon, operated by Mastodon GmbH for the common good.\nADMINISTERED BY:\nMastodon\n@Mastodon\nSERVER STATS:\n269K\nactive users\nmastodon.social:About\nmastodon.social\nStatusProfiles directoryPrivacy policyTerms of service\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.7.0-beta.1\nBack\nThe Daily Tech Feed\n@dailytechfeed@mastodon.social\n\nJewelbug APT is using malicious browser extensions to infiltrate government networks, stealing cookies and sensitive data. Organizations must scrutinize browser extensions and enhance security protocols to defend against such threats.\n\n#CyberSecurity #APT #BrowserSecurity #GovernmentNetworks #Jewelbug #DataBreach\n\nhttps://\nthedailytechfeed.com/jewelbug-\napt-exploits-browsers-to-infiltrate-government-networks/\n\nHide\nAug 15, 2026, 07:23 AM\n·\n0\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 159,
+    "observables": {
+      "domain-name": [
+        "thedailytechfeed.com"
+      ],
+      "email-addr": [
+        "dailytechfeed@mastodon.social"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Nearly 14,000 Trezor customers had their data stolen via CVE-2026-72898, a critical Metabase zero-day exploited through logistics partner ShipMonk.#Trezor #DataBreach #Metabase #CVE202672898 #ShipMonkhttps://meterpreter.org/trezor-shipmonk-metabase-breach-cve-2026-72898/?utm_source=mastodon&utm_medium=jetpack_social",
+    "publication_date": "Sat, 15 Aug 2026 03:48:22 +0000",
+    "source": "https://infosec.exchange/@DailyCyberSecurity/117097373124846762",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "🛡️ French tax authority admits data heist after crook touts 2M records📝 France's tax authority has conf...https://www.theregister.com/security/2026/08/14/french-tax-authority-admits-data-heist-after-crook-touts-2m-records/5287885📰 www.theregister.com - Articles#Ransomware #DataBreach",
+    "publication_date": "Sat, 15 Aug 2026 02:48:34 +0000",
+    "source": "https://infosec.exchange/@bugxhunter/117097054797796042",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "> be me  \n> get dm  \n> its my friend @Intel80x86  \n> author of @HyperDbg   \n> wtf i love him  \n> open message  \n> \"smelly i got goop\"  \n> wtf i love goop  \n> \"i found malware campaign\"  \n> wtf i love malware campaigns  \n> \"The Threat Actor(s) have created a website which is specifically tailored to malware analysts, or reverse engineers, who utilize hypervisor-based frameworks. Their malware campaign appears to have begun about 8 days ago. I became aware of the issue when their \"product\" compared themselves to HyperDbg. Their website is clearly vibe coded, however parts appear to be in Mandarin\"  \n> wtf theyre targeting people who like goop  \n> sends url to website  \n> vt01[.]com  \n> look inside  \n> lol ai slop  \n> go to download page  \n> vt01[.]com/en/download  \n> immediately flagged as malware by firefox  \n> allow download plz  \n> split nanosecond touches the disk  \n> windows: OMFG MALWARE!!!  \n> ??? this malware STINKS  \n> sha256: 5934d1a64afd62e7d1badb81e8613e01efe9cf9c7d6748271c6d0761e3b11eb7  \n> look inside  \n> delphi, weird PE sections  \n> throw into triage  \n> YARA rules IMMEDIATELY identify the malware family  \n> XRed  \n> wtf is XRed?  \n> cant remember any family named XRed  \n> December, 2025: XRed impersonates Indian Ministry of Finance and Income Tax Department  \n> December, 2025: XRed targets US and UK companies that do business in India  \n> March, 2025: XRed targets manufacturing companies in the United Kingdom  \n> May, 2025: Threat Actors compromise ProColored, their driver update was compromised to push XRed  \n> July, 2025: Threat Actors compromise video game mouse company, push malware to video game players who use EndGame Gear for gaming  \n  \nthis is strange goop",
+    "publication_date": "Sat, 15 Aug 2026 01:53:47 +0000",
+    "source": "https://t.me/vxunderground/9300",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {},
+    "extractor": "none"
+  },
+  {
+    "title": "🤖 Scotland's prosecutor's office reports a data breach traced to a third-party vendor that may have serviced other government agencies — the impact could widen beyond one agency. 🔗 https://www.darkreading.com/cyberattacks-data-breaches/scottish-govt-data-breach-prosecutors-office #DataBreach #InfoSec #CyberSec",
+    "publication_date": "Sat, 15 Aug 2026 00:51:06 +0000",
+    "source": "https://infosec.exchange/@cloud/117096762682676721",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "Piratage du fisc : le parquet de Paris ouvre une enquête ; les usagers concernés seront contactés « à compter de lundi »",
+    "publication_date": "Sat, 15 Aug 2026 16:24:29 +0200",
+    "source": "https://www.lemonde.fr/pixels/article/2026/08/15/piratage-du-fisc-le-parquet-de-paris-ouvre-une-enquete_6746676_4408996.html",
+    "source_categories": [
+      "geopolitic",
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "is verifying your browser...",
+    "word_count": 4,
+    "observables": {},
+    "extractor": "cti_extractor"
+  }
+]
