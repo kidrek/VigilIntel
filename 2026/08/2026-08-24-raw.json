@@ -1,0 +1,1231 @@
+[
+  {
+    "title": "CVE-2026-8445 - justhtml before 1.12.0 Sanitizer Bypass via Markdown",
+    "publication_date": "Sun, 23 Aug 2026 14:16:54 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-8445",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "9.8\n\nCRITICAL\nCVSS 3.1\n\nCVE-2026-8445\njusthtml before 1.12.0 Sanitizer Bypass via Markdown\n\njusthtml versions <= 1.11.0 (fixed in 1.12.0) do not sufficiently escape HTML-significant characters (angle brackets) in text nodes when converting a parsed document to Markdown via to_markdown(). While a small set of Markdown metacharacters are escaped, characters such as < and > are preserved, so untrusted input that is safe in to_html() — including entity-decoded text (e.g. &lt;script&gt;) or text from RCDATA/RAWTEXT-parsed elements like <title>, <textarea>, <noscript>, and <plaintext> — can be emitted as raw HTML in the Markdown output, enabling a sanitizer bypass and potential cross-site scripting when that output is rendered.\n\nPublished Date :\nAug. 23, 2026, 2:16 p.m.\n\nLast Modified :\nAug. 23, 2026, 2:16 p.m.\n\nRemotely Exploit :\n\nYes !\n\nSource :\ndisclosure@vulncheck.com\n\nImpact\nAffected Products\n\nThe following products are affected by CVE-2026-8445\nvulnerability.\nEven if cvefeed.io is aware of the exact versions of the\nproducts\nthat\nare\naffected, the information is not represented in the table below.\n\nNo affected product recoded yet\n\nThe Common Vulnerability Scoring System is a standardized framework\nfor assessing the severity of vulnerabilities in software and systems.\nWe collect and displays CVSS scores from various sources for each CVE.\n\nScore\nVersion\nSeverity\nVector\nExploitability Score\nImpact Score\nSource\n\n9.8\n\nCVSS 3.1\n\nCRITICAL\n\n83251b91-4cc7-4094-a5c7-464a1b83ea10\n\n9.8\n\nCVSS 3.1\n\nCRITICAL\n\n3.9\n\n5.9\n\ndisclosure@vulncheck.com\n\n9.8\n\nCVSS 3.1\n\nCRITICAL\n\n3.9\n\n5.9\n\nMITRE-CVE\n\n9.3\n\nCVSS 4.0\n\nCRITICAL\n\n83251b91-4cc7-4094-a5c7-464a1b83ea10\n\n9.3\n\nCVSS 4.0\n\nCRITICAL\n\ndisclosure@vulncheck.com\n\nUpdate justhtml to version 1.12.0 or later to resolve HTML escaping issues.\n\nUpdate the justhtml library to version 1.12.0 or later.\n\nReview and sanitize Markdown output before rendering.\n\nImplement stricter HTML escaping in custom parsers.\n\nHere, you will find a curated list of external links that provide in-depth\ninformation, practical solutions, and valuable tools related to\nCVE-2026-8445.\n\nURL\nResource\n\nhttps://github.com/EmilStenstrom/justhtml/security/advisories/GHSA-3rcm-vjrc-p45j\n\nhttps://www.vulncheck.com/advisories/justhtml-before-sanitizer-bypass-via-markdown\n\nWhile CVE identifies\nspecific instances of vulnerabilities, CWE categorizes the common flaws or\nweaknesses that can lead to vulnerabilities. CVE-2026-8445 is\nassociated with the following CWEs:\n\nCWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')\n\nCommon Attack Pattern Enumeration and Classification\n(CAPEC)\nstores attack patterns, which are descriptions of the common attributes and\napproaches employed by adversaries to exploit the CVE-2026-8445\nweaknesses.\n\nCAPEC-63: Cross-Site Scripting (XSS) Cross-Site Scripting (XSS)\n\nCAPEC-85: AJAX Footprinting AJAX Footprinting\n\nCAPEC-209: XSS Using MIME Type Mismatch XSS Using MIME Type Mismatch\n\nCAPEC-588: DOM-Based XSS DOM-Based XSS\n\nCAPEC-591: Reflected XSS Reflected XSS\n\nCAPEC-592: Stored XSS Stored XSS\n\nWe scan GitHub repositories to detect new proof-of-concept exploits. Following list is a collection\nof public exploits and proof-of-concepts, which have been published on GitHub (sorted by the most recently\nupdated).\n\nResults are limited to the first 15 repositories due to potential performance issues.\n\nThe following list is the news that have been mention\nCVE-2026-8445 vulnerability anywhere in the article.\n\nThe following table lists the changes that have been made to the\nCVE-2026-8445 vulnerability over time.\n\nVulnerability history details can be useful for understanding the evolution\nof a vulnerability, and for identifying the most recent changes that may\nimpact the vulnerability's severity, exploitability, or other characteristics.\n\nNew CVE Received\nby disclosure@vulncheck.com\n\nAug. 23, 2026\n\nAction\nType\nOld Value\nNew Value\n\nAdded\nAffected\n\n[{'vendor': 'EmilStenstrom', 'product': […]",
+    "word_count": 527,
+    "observables": {
+      "domain-name": [
+        "cvefeed.io"
+      ],
+      "email-addr": [
+        "disclosure@vulncheck.com"
+      ],
+      "url": [
+        "http://www.vulncheck.com/advisories/justhtml-before-sanitizer-bypass-via-markdown",
+        "https://github.com/EmilStenstrom/justhtml/security/advisories/GHSA-3rcm-vjrc-p45j",
+        "https://www.vulncheck.com/advisories/justhtml-before-sanitizer-bypass-via-markdown"
+      ],
+      "vulnerability": [
+        "CVE-2026-8445",
+        "GHSA-3RCM-VJRC-P45J"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "CVE-2026-7808 - justhtml before 1.16.0 Multiple Security Issues via Sanitization",
+    "publication_date": "Sun, 23 Aug 2026 14:16:54 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-7808",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "$(function () {\n// Focus on searchModal input when it's shown\n$('#searchModal').on('shown.bs.modal', function () {\n$('#search-options').focus();\n});\n// Get elements\nconst searchOptions = document.getElementById(\"search-close-options\");\nconst dropdown = document.getElementById(\"search-dropdown\");\nconst searchInput = document.getElementById(\"search-options\");\n\n// Function to toggle dropdown and search options\nconst toggleElements = (show) => {\nif (show) {\ndropdown.classList.add(\"show\");\nsearchOptions.classList.remove(\"d-none\");\n} else {\ndropdown.classList.remove(\"show\");\nsearchOptions.classList.add(\"d-none\");\n}\n}\n\n// Function to create HTML section\n// How many CVEs a product carries. This is what separates two rows that\n// render identically -- vmware/a/esxi has 23, vmware/o/esxi has 124 --\n// so it sits at the trailing edge where the figures line up as a column.\n// Compact above 1,000 to keep that column from shifting width.\nconst cveTally = (count) => {\nconst n = Number(count);\nif (!Number.isFinite(n)) return '';\nconst shown = n >= 1000 ? (n / 1000).toFixed(1).replace(/\\.0$/, '') + 'k' : String(n);\nconst empty = n === 0 ? ' cve-tally--empty' : '';\nconst plural = n === 1 ? 'CVE' : 'CVEs';\nreturn `<span class=\"cve-tally${empty} ms-auto\" aria-label=\"${n} ${plural}\" title=\"${n.toLocaleString()} ${plural}\">\n<span class=\"cve-tally__count\">${shown}</span><span class=\"cve-tally__unit\" aria-hidden=\"true\">CVE</span>\n</span>`;\n};\n\nconst createHtmlSection = (title, items, icon) => {\nlet html = `<div class=\"notification-group-list\">\n<h5 class=\"text-overflow text-muted fs-13 mb-2 mt-3 text-uppercase notification-title\">${title}</h5>`;\nif (title === 'Vulnerabilities') {\nitems.forEach(item => {\nhtml += `<a href=\"/vuln/detail/${item.id}\" class=\"list-group-item dropdown-item notify-item\">\n<i class=\"mdi ${icon} me-2\"></i> <span>${item.title}</span>\n</a>`\n;\n});\n} else if (title === 'Products') {\nitems.forEach(item => {\nhtml += `<a href=\"${item.get_absolute_url}\" class=\"list-group-item dropdown-item notify-item d-flex align-items-center\">\n<i class=\"mdi ${icon} me-2\"></i>\n<span class=\"text-truncate search-result-label\">${item.vendor.name} > ${item.name}</span>\n${cveTally(item.cve_count)}\n</a>`;\n}\n);\n} else if (title === 'Vendors') {\nitems.forEach(item => {\n\nhtml += `<a href=\"${item.get_absolute_url}\" class=\"list-group-item dropdown-item notify-item\">\n<i class=\"mdi ${icon} me-2\"></i> <span>${item.name}</span>\n</a>`;\n});\n}\nhtml += '</div>';\nreturn html;\n}\n\n// Event listeners\nif (searchInput) {\nsearchInput.addEventListener(\"focus\", () => toggleElements(searchInput.value.length > 0));\nsearchOptions.addEventListener(\"click\", () => {\nsearchInput.value = \"\";\ntoggleElements(false);\n});\ndocument.body.addEventListener(\"click\", (e) => {\nif (e.target.getAttribute(\"id\") !== \"search-options\") toggleElements(false);\n});\nlet timeoutID;\n$('#search-options').unbind().keyup(function () {\nclearTimeout(timeoutID);\ntimeoutID = setTimeout(function () {\nif (searchInput.value.length > 2) {\n$.get('/api/vulnerability/quick-search?q=' + searchInput.value, function (data) {\ntoggleElements(true);\n\nlet html = '<div class=\"list-group list-group-flush\">';\nif (data.results.length === 0) {\nhtml += '<div class=\"notification-group-list\"><a href=\"\" class=\"list-group-item dropdown-item notify-item\">No results found</a></div>';\n} else if (data.results.errors) {\ndata.results.errors.forEach((item) => {\nhtml += `<div class=\"notification-group-list\"><a href=\"\" class=\"list-group-item dropdown-item notify-item\"><b>${item.value}</b></a></div>`;\n}\n);\n} else {\ndata.results.forEach((item) => {\nif (item.products) html += createHtmlSection('Products', item.products, 'mdi-alpha-p-box-outline');\nif (item.vendors) html += createHtmlSection('Vendors', item.vendors, 'mdi-office-building-outline');\nif (item.vulnerabilities) html += createHtmlSection('Vulnerabilities', item.vulnerabilities, 'mdi-bomb');\n});\n}\n\nhtml += '</div>';\n$('#searchresulstview').html(html);\n\n}, 'json').fail(function () […]",
+    "word_count": 417,
+    "observables": {},
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "CVE-2026-5388 - justhtml before 1.15.0 Multiple Security Issues",
+    "publication_date": "Sun, 23 Aug 2026 14:16:53 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-5388",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "$(function () {\n// Focus on searchModal input when it's shown\n$('#searchModal').on('shown.bs.modal', function () {\n$('#search-options').focus();\n});\n// Get elements\nconst searchOptions = document.getElementById(\"search-close-options\");\nconst dropdown = document.getElementById(\"search-dropdown\");\nconst searchInput = document.getElementById(\"search-options\");\n\n// Function to toggle dropdown and search options\nconst toggleElements = (show) => {\nif (show) {\ndropdown.classList.add(\"show\");\nsearchOptions.classList.remove(\"d-none\");\n} else {\ndropdown.classList.remove(\"show\");\nsearchOptions.classList.add(\"d-none\");\n}\n}\n\n// Function to create HTML section\n// How many CVEs a product carries. This is what separates two rows that\n// render identically -- vmware/a/esxi has 23, vmware/o/esxi has 124 --\n// so it sits at the trailing edge where the figures line up as a column.\n// Compact above 1,000 to keep that column from shifting width.\nconst cveTally = (count) => {\nconst n = Number(count);\nif (!Number.isFinite(n)) return '';\nconst shown = n >= 1000 ? (n / 1000).toFixed(1).replace(/\\.0$/, '') + 'k' : String(n);\nconst empty = n === 0 ? ' cve-tally--empty' : '';\nconst plural = n === 1 ? 'CVE' : 'CVEs';\nreturn `<span class=\"cve-tally${empty} ms-auto\" aria-label=\"${n} ${plural}\" title=\"${n.toLocaleString()} ${plural}\">\n<span class=\"cve-tally__count\">${shown}</span><span class=\"cve-tally__unit\" aria-hidden=\"true\">CVE</span>\n</span>`;\n};\n\nconst createHtmlSection = (title, items, icon) => {\nlet html = `<div class=\"notification-group-list\">\n<h5 class=\"text-overflow text-muted fs-13 mb-2 mt-3 text-uppercase notification-title\">${title}</h5>`;\nif (title === 'Vulnerabilities') {\nitems.forEach(item => {\nhtml += `<a href=\"/vuln/detail/${item.id}\" class=\"list-group-item dropdown-item notify-item\">\n<i class=\"mdi ${icon} me-2\"></i> <span>${item.title}</span>\n</a>`\n;\n});\n} else if (title === 'Products') {\nitems.forEach(item => {\nhtml += `<a href=\"${item.get_absolute_url}\" class=\"list-group-item dropdown-item notify-item d-flex align-items-center\">\n<i class=\"mdi ${icon} me-2\"></i>\n<span class=\"text-truncate search-result-label\">${item.vendor.name} > ${item.name}</span>\n${cveTally(item.cve_count)}\n</a>`;\n}\n);\n} else if (title === 'Vendors') {\nitems.forEach(item => {\n\nhtml += `<a href=\"${item.get_absolute_url}\" class=\"list-group-item dropdown-item notify-item\">\n<i class=\"mdi ${icon} me-2\"></i> <span>${item.name}</span>\n</a>`;\n});\n}\nhtml += '</div>';\nreturn html;\n}\n\n// Event listeners\nif (searchInput) {\nsearchInput.addEventListener(\"focus\", () => toggleElements(searchInput.value.length > 0));\nsearchOptions.addEventListener(\"click\", () => {\nsearchInput.value = \"\";\ntoggleElements(false);\n});\ndocument.body.addEventListener(\"click\", (e) => {\nif (e.target.getAttribute(\"id\") !== \"search-options\") toggleElements(false);\n});\nlet timeoutID;\n$('#search-options').unbind().keyup(function () {\nclearTimeout(timeoutID);\ntimeoutID = setTimeout(function () {\nif (searchInput.value.length > 2) {\n$.get('/api/vulnerability/quick-search?q=' + searchInput.value, function (data) {\ntoggleElements(true);\n\nlet html = '<div class=\"list-group list-group-flush\">';\nif (data.results.length === 0) {\nhtml += '<div class=\"notification-group-list\"><a href=\"\" class=\"list-group-item dropdown-item notify-item\">No results found</a></div>';\n} else if (data.results.errors) {\ndata.results.errors.forEach((item) => {\nhtml += `<div class=\"notification-group-list\"><a href=\"\" class=\"list-group-item dropdown-item notify-item\"><b>${item.value}</b></a></div>`;\n}\n);\n} else {\ndata.results.forEach((item) => {\nif (item.products) html += createHtmlSection('Products', item.products, 'mdi-alpha-p-box-outline');\nif (item.vendors) html += createHtmlSection('Vendors', item.vendors, 'mdi-office-building-outline');\nif (item.vulnerabilities) html += createHtmlSection('Vulnerabilities', item.vulnerabilities, 'mdi-bomb');\n});\n}\n\nhtml += '</div>';\n$('#searchresulstview').html(html);\n\n}, 'json').fail(function () […]",
+    "word_count": 417,
+    "observables": {},
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "CVE-2026-78155 - Untrusted Search Path in StackGres",
+    "publication_date": "Sun, 23 Aug 2026 10:16:28 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-78155",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "9.9\n\nCRITICAL\nCVSS 3.1\n\nCVE-2026-78155\nUntrusted Search Path in StackGres\n\nprivilege escalation in StackGres operator allows a low-privilege tenant who owns a database to gain administrator privileges\n\nPublished Date :\nAug. 23, 2026, 10:16 a.m.\n\nLast Modified :\nAug. 23, 2026, 10:16 a.m.\n\nRemotely Exploit :\n\nYes !\n\nSource :\ncve@gitlab.com\n\nImpact\nAffected Products\n\nThe following products are affected by CVE-2026-78155\nvulnerability.\nEven if cvefeed.io is aware of the exact versions of the\nproducts\nthat\nare\naffected, the information is not represented in the table below.\n\nNo affected product recoded yet\n\nThe Common Vulnerability Scoring System is a standardized framework\nfor assessing the severity of vulnerabilities in software and systems.\nWe collect and displays CVSS scores from various sources for each CVE.\n\nScore\nVersion\nSeverity\nVector\nExploitability Score\nImpact Score\nSource\n\n9.9\n\nCVSS 3.1\n\nCRITICAL\n\nceab7361-8a18-47b1-92ba-4d7d25f6715a\n\n9.9\n\nCVSS 3.1\n\nCRITICAL\n\n3.1\n\n6.0\n\ncve@gitlab.com\n\n9.9\n\nCVSS 3.1\n\nCRITICAL\n\n3.1\n\n6\n\nMITRE-CVE\n\nPatch StackGres operator to prevent privilege escalation by unauthorized users.\n\nApply the vendor-provided security patch for StackGres.\n\nReview and restrict database ownership privileges.\n\nMonitor access logs for suspicious activity.\n\nHere, you will find a curated list of external links that provide in-depth\ninformation, practical solutions, and valuable tools related to\nCVE-2026-78155.\n\nURL\nResource\n\nhttps://gitlab.com/ongresinc/stackgres/-/work_items/3177\n\nWhile CVE identifies\nspecific instances of vulnerabilities, CWE categorizes the common flaws or\nweaknesses that can lead to vulnerabilities. CVE-2026-78155 is\nassociated with the following CWEs:\n\nCWE-426: Untrusted Search Path\n\nCommon Attack Pattern Enumeration and Classification\n(CAPEC)\nstores attack patterns, which are descriptions of the common attributes and\napproaches employed by adversaries to exploit the CVE-2026-78155\nweaknesses.\n\nCAPEC-38: Leveraging/Manipulating Configuration File Search Paths Leveraging/Manipulating Configuration File Search Paths\n\nWe scan GitHub repositories to detect new proof-of-concept exploits. Following list is a collection\nof public exploits and proof-of-concepts, which have been published on GitHub (sorted by the most recently\nupdated).\n\nResults are limited to the first 15 repositories due to potential performance issues.\n\nThe following list is the news that have been mention\nCVE-2026-78155 vulnerability anywhere in the article.\n\nThe following table lists the changes that have been made to the\nCVE-2026-78155 vulnerability over time.\n\nVulnerability history details can be useful for understanding the evolution\nof a vulnerability, and for identifying the most recent changes that may\nimpact the vulnerability's severity, exploitability, or other characteristics.\n\nNew CVE Received\nby cve@gitlab.com\n\nAug. 23, 2026\n\nAction\nType\nOld Value\nNew Value\n\nAdded\nAffected\n\n[{'vendor': 'OnGres', 'product': 'StackGres', 'versions': [{'status': 'affected', 'version': '0', 'versionType': 'semver', 'lessThanOrEqual': '1.18.8'}], 'defaultStatus': 'unaffected'}]\n\nAdded\nDescription\n\nprivilege escalation in StackGres operator allows a low-privilege tenant who owns a database to gain administrator privileges\n\nAdded\nCVSS V3.1\n\nAV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H\n\nAdded\nCWE\n\nCWE-426\n\nAdded\nReference\n\nhttps://gitlab.com/ongresinc/stackgres/-/work_items/3177\n\nEPSS is a daily estimate of the probability of exploitation activity\nbeing observed over the next 30 days. Following chart shows the EPSS\nscore history of the vulnerability.\n\nvar linechartBasicColors = getChartColorsArray(\"exploitability_history_line_column_chart\");\nif (linechartBasicColors) {\nvar options = {\nseries: [{\nname: \"EPSS Score\",\ndata: []\n}],\nchart: {\nheight: 350,\ntype: 'line',\nzoom: {\nenabled: false\n},\ntoolbar: {\nshow: false\n}\n},\nmarkers: {\nsize: 4,\n},\ndataLabels: {\nenabled: false\n},\nstroke: {\ncurve: 'straight'\n},\ncolors: linechartBasicColors,\n\nlabels: [],\n\nyaxis: […]",
+    "word_count": 523,
+    "observables": {
+      "domain-name": [
+        "cvefeed.io"
+      ],
+      "email-addr": [
+        "cve@gitlab.com"
+      ],
+      "url": [
+        "https://gitlab.com/ongresinc/stackgres/-/work_items/3177"
+      ],
+      "vulnerability": [
+        "CVE-2026-78155"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "CVE-2026-10053 - Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') in GitLab",
+    "publication_date": "Sun, 23 Aug 2026 10:16:27 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-10053",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "8.5\n\nHIGH\nCVSS 3.1\n\nCVE-2026-10053\nImproper Limitation of a Pathname to a Restricted Directory ('Path Traversal') in GitLab\n\nGitLab has remediated an issue in GitLab CE/EE affecting all versions from 18.8 before 19.0.6, 19.1 before 19.1.4, and 19.2 before 19.2.2 that under certain conditions could have allowed an authenticated user to achieve remote code execution due to a path traversal vulnerability in the package registry.\n\nPublished Date :\nAug. 23, 2026, 10:16 a.m.\n\nLast Modified :\nAug. 23, 2026, 10:16 a.m.\n\nRemotely Exploit :\n\nYes !\n\nSource :\ncve@gitlab.com\n\nImpact\nAffected Products\n\nThe following products are affected by CVE-2026-10053\nvulnerability.\nEven if cvefeed.io is aware of the exact versions of the\nproducts\nthat\nare\naffected, the information is not represented in the table below.\n\nID\nVendor\nProduct\nAction\n\n1\nGitlab\ngitlab\n\nThe Common Vulnerability Scoring System is a standardized framework\nfor assessing the severity of vulnerabilities in software and systems.\nWe collect and displays CVSS scores from various sources for each CVE.\n\nScore\nVersion\nSeverity\nVector\nExploitability Score\nImpact Score\nSource\n\n8.5\n\nCVSS 3.1\n\nHIGH\n\nceab7361-8a18-47b1-92ba-4d7d25f6715a\n\n8.5\n\nCVSS 3.1\n\nHIGH\n\n1.8\n\n6.0\n\ncve@gitlab.com\n\n8.5\n\nCVSS 3.1\n\nHIGH\n\n1.8\n\n6\n\nMITRE-CVE\n\nUpdate GitLab to a patched version to fix path traversal allowing RCE.\n\nUpdate GitLab to a patched version.\n\nApply version 19.0.6, 19.1.4, or 19.2.2.\n\nRestrict access to the package registry.\n\nHere, you will find a curated list of external links that provide in-depth\ninformation, practical solutions, and valuable tools related to\nCVE-2026-10053.\n\nURL\nResource\n\nhttps://gitlab.com/gitlab-org/gitlab/-/work_items/601596\n\nhttps://hackerone.com/reports/3754194\n\nWhile CVE identifies\nspecific instances of vulnerabilities, CWE categorizes the common flaws or\nweaknesses that can lead to vulnerabilities. CVE-2026-10053 is\nassociated with the following CWEs:\n\nCWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')\n\nCommon Attack Pattern Enumeration and Classification\n(CAPEC)\nstores attack patterns, which are descriptions of the common attributes and\napproaches employed by adversaries to exploit the CVE-2026-10053\nweaknesses.\n\nCAPEC-64: Using Slashes and URL Encoding Combined to Bypass Validation Logic Using Slashes and URL Encoding Combined to Bypass Validation Logic\n\nCAPEC-76: Manipulating Web Input to File System Calls Manipulating Web Input to File System Calls\n\nCAPEC-78: Using Escaped Slashes in Alternate Encoding Using Escaped Slashes in Alternate Encoding\n\nCAPEC-79: Using Slashes in Alternate Encoding Using Slashes in Alternate Encoding\n\nCAPEC-126: Path Traversal Path Traversal\n\nWe scan GitHub repositories to detect new proof-of-concept exploits. Following list is a collection\nof public exploits and proof-of-concepts, which have been published on GitHub (sorted by the most recently\nupdated).\n\nResults are limited to the first 15 repositories due to potential performance issues.\n\nThe following list is the news that have been mention\nCVE-2026-10053 vulnerability anywhere in the article.\n\nThe following table lists the changes that have been made to the\nCVE-2026-10053 vulnerability over time.\n\nVulnerability history details can be useful for understanding the evolution\nof a vulnerability, and for identifying the most recent changes that may\nimpact the vulnerability's severity, exploitability, or other characteristics.\n\nNew CVE Received\nby cve@gitlab.com\n\nAug. 23, 2026\n\nAction\nType\nOld Value\nNew Value\n\nAdded\nAffected\n\n[{'cpes': ['cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*'], 'repo': 'git://git@gitlab.com:gitlab-org/gitlab.git', 'vendor': 'GitLab', 'product': 'GitLab', 'versions': [{'status': 'affected', 'version': '18.8', 'lessThan': '19.0.6', 'versionType': 'semver'}, {'status': 'affected', 'version': '19.1', 'lessThan': '19.1.4', 'versionType': 'semver'}, {'status': 'affected', 'version': '19.2', 'lessThan': '19.2.2', 'versionType': 'semver'}], […]",
+    "word_count": 532,
+    "observables": {
+      "domain-name": [
+        "cvefeed.io"
+      ],
+      "email-addr": [
+        "cve@gitlab.com",
+        "git@gitlab.com"
+      ],
+      "url": [
+        "https://gitlab.com/gitlab-org/gitlab/-/work_items/601596",
+        "https://hackerone.com/reports/3754194"
+      ],
+      "vulnerability": [
+        "CVE-2026-10053"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "CVE-2026-78050 - Comfast CF-N1-S Web Management mbox-config sub_41AD7C stack-based overflow",
+    "publication_date": "Sun, 23 Aug 2026 00:16:50 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-78050",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "9.9\n\nCRITICAL\nCVSS 3.1\n\nCVE-2026-78050\nComfast CF-N1-S Web Management mbox-config sub_41AD7C stack-based overflow\n\nA vulnerability was found in Comfast CF-N1-S 2.6.0.1. The affected element is the function sub_41AD7C of the file /cgi-bin/mbox-config?method=SET&section=ntp_timezone of the component Web Management. The manipulation of the argument timestr/ntp_client_enabled results in stack-based buffer overflow. It is possible to launch the attack remotely. The exploit has been made public and could be used.\n\nPublished Date :\nAug. 23, 2026, 12:16 a.m.\n\nLast Modified :\nAug. 23, 2026, 12:16 a.m.\n\nRemotely Exploit :\n\nYes !\n\nSource :\ncna@vuldb.com\n\nImpact\nAffected Products\n\nThe following products are affected by CVE-2026-78050\nvulnerability.\nEven if cvefeed.io is aware of the exact versions of the\nproducts\nthat\nare\naffected, the information is not represented in the table below.\n\nID\nVendor\nProduct\nAction\n\n1\nComfast\ncf-n1-s\n\nThe Common Vulnerability Scoring System is a standardized framework\nfor assessing the severity of vulnerabilities in software and systems.\nWe collect and displays CVSS scores from various sources for each CVE.\n\nScore\nVersion\nSeverity\nVector\nExploitability Score\nImpact Score\nSource\n\n9.0\n\nCVSS 2.0\n\nHIGH\n\n8.0\n\n10.0\n\ncna@vuldb.com\n\n9.9\n\nCVSS 3.1\n\nCRITICAL\n\n3.1\n\n6.0\n\ncna@vuldb.com\n\n8.6\n\nCVSS 4.0\n\nHIGH\n\ncna@vuldb.com\n\nUpdate firmware to a non-vulnerable version to fix stack-based buffer overflow.\n\nUpdate firmware to a patched version.\n\nAvoid using affected function or component.\n\nRestrict network access to the management interface.\n\nHere, you will find a curated list of external links that provide in-depth\ninformation, practical solutions, and valuable tools related to\nCVE-2026-78050.\n\nURL\nResource\n\nhttps://github.com/AdminSafe/CVE/issues/9\n\nhttps://vuldb.com/cve/CVE-2026-78050\n\nhttps://vuldb.com/submit/881293\n\nhttps://vuldb.com/vuln/394291\n\nhttps://vuldb.com/vuln/394291/cti\n\nWhile CVE identifies\nspecific instances of vulnerabilities, CWE categorizes the common flaws or\nweaknesses that can lead to vulnerabilities. CVE-2026-78050 is\nassociated with the following CWEs:\n\nCWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer\n\nCWE-121: Stack-based Buffer Overflow\n\nCommon Attack Pattern Enumeration and Classification\n(CAPEC)\nstores attack patterns, which are descriptions of the common attributes and\napproaches employed by adversaries to exploit the CVE-2026-78050\nweaknesses.\n\nCAPEC-8: Buffer Overflow in an API Call Buffer Overflow in an API Call\n\nCAPEC-9: Buffer Overflow in Local Command-Line Utilities Buffer Overflow in Local Command-Line Utilities\n\nCAPEC-10: Buffer Overflow via Environment Variables Buffer Overflow via Environment Variables\n\nCAPEC-14: Client-side Injection-induced Buffer Overflow Client-side Injection-induced Buffer Overflow\n\nCAPEC-24: Filter Failure through Buffer Overflow Filter Failure through Buffer Overflow\n\nCAPEC-42: MIME Conversion MIME Conversion\n\nCAPEC-44: Overflow Binary Resource File Overflow Binary Resource File\n\nCAPEC-45: Buffer Overflow via Symbolic Links Buffer Overflow via Symbolic Links\n\nCAPEC-46: Overflow Variables and Tags Overflow Variables and Tags\n\nCAPEC-47: Buffer Overflow via Parameter Expansion Buffer Overflow via Parameter Expansion\n\nCAPEC-100: Overflow Buffers Overflow Buffers\n\nCAPEC-123: Buffer Manipulation Buffer Manipulation\n\nWe scan GitHub repositories to detect new proof-of-concept exploits. Following list is a collection\nof public exploits and proof-of-concepts, which have been published on GitHub (sorted by the most recently\nupdated).\n\nResults are limited to the first 15 repositories due to potential performance issues.\n\nThe following list is the news that have been mention\nCVE-2026-78050 vulnerability anywhere in the article.\n\nThe following table lists the changes that have been made to the\nCVE-2026-78050 vulnerability over time.\n\nVulnerability history details can be useful for understanding the evolution\nof a vulnerability, and for […]",
+    "word_count": 523,
+    "observables": {
+      "domain-name": [
+        "cvefeed.io"
+      ],
+      "email-addr": [
+        "cna@vuldb.com"
+      ],
+      "ipv4-addr": [
+        "2.6.0.1"
+      ],
+      "url": [
+        "https://github.com/AdminSafe/CVE/issues/9",
+        "https://vuldb.com/cve/CVE-2026-78050",
+        "https://vuldb.com/submit/881293",
+        "https://vuldb.com/vuln/394291",
+        "https://vuldb.com/vuln/394291/cti"
+      ],
+      "vulnerability": [
+        "CVE-2026-78050"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "CVE-2026-16149 - Security Hardener <= 2.4.4 - Authenticated (Subscriber+) Privilege Escalation via REST API '/wp/v2/users' permission_callback Overwrite",
+    "publication_date": "Sun, 23 Aug 2026 00:16:50 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-16149",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "8.8\n\nHIGH\nCVSS 3.1\n\nCVE-2026-16149\nSecurity Hardener <= 2.4.4 - Authenticated (Subscriber+) Privilege Escalation via REST API '/wp/v2/users' permission_callback Overwrite\n\nThe Security Hardener plugin for WordPress is vulnerable to Missing Authorization in all versions up to, and including, 2.4.4. The vulnerability exists because the plugin's user-enumeration protection, which is enabled by default, hooks the rest_endpoints filter via secure_user_endpoints() and overwrites every registered handler's permission_callback on both the /wp/v2/users and /wp/v2/users/(?P<id>[\\d]+) routes — including POST, PUT, PATCH, and DELETE handlers — with a bare closure that returns only is_user_logged_in(), completely stripping WordPress Core's original capability checks such as create_users, promote_user, edit_users, and delete_users that WP_REST_Users_Controller normally enforces. This makes it possible for authenticated attackers with Subscriber-level access and above to create new Administrator accounts by sending POST request to /wp/v2/users with administrator role, or to reset an existing Administrator's password by issuing a PUT/POST request to /wp/v2/users/<id>. Because the block_user_enum option defaults to enabled, no special plugin configuration is required — the overwrite is active on every request as soon as the plugin is installed.\n\nPublished Date :\nAug. 23, 2026, 12:16 a.m.\n\nLast Modified :\nAug. 23, 2026, 12:16 a.m.\n\nRemotely Exploit :\n\nYes !\n\nSource :\nsecurity@wordfence.com\n\nImpact\nAffected Products\n\nThe following products are affected by CVE-2026-16149\nvulnerability.\nEven if cvefeed.io is aware of the exact versions of the\nproducts\nthat\nare\naffected, the information is not represented in the table below.\n\nNo affected product recoded yet\n\nThe Common Vulnerability Scoring System is a standardized framework\nfor assessing the severity of vulnerabilities in software and systems.\nWe collect and displays CVSS scores from various sources for each CVE.\n\nScore\nVersion\nSeverity\nVector\nExploitability Score\nImpact Score\nSource\n\n8.8\n\nCVSS 3.1\n\nHIGH\n\n2.8\n\n5.9\n\nsecurity@wordfence.com\n\n8.8\n\nCVSS 3.1\n\nHIGH\n\n2.8\n\n5.9\n\nMITRE-CVE\n\nUpdate the Security Hardener plugin to patch the missing authorization vulnerability.\n\nUpdate the Security Hardener plugin.\n\nVerify plugin settings after update.\n\nRemove plugin if not needed.\n\nHere, you will find a curated list of external links that provide in-depth\ninformation, practical solutions, and valuable tools related to\nCVE-2026-16149.\n\nURL\nResource\n\nhttps://plugins.trac.wordpress.org/browser/security-hardener/tags/2.4.4/security-hardener.php#L107\n\nhttps://plugins.trac.wordpress.org/browser/security-hardener/tags/2.4.4/security-hardener.php#L180\n\nhttps://plugins.trac.wordpress.org/browser/security-hardener/tags/2.4.4/security-hardener.php#L204\n\nhttps://plugins.trac.wordpress.org/browser/security-hardener/tags/2.4.4/security-hardener.php#L428\n\nhttps://plugins.trac.wordpress.org/browser/security-hardener/tags/2.4.4/security-hardener.php#L433\n\nhttps://plugins.trac.wordpress.org/browser/security-hardener/tags/2.4.4/security-hardener.php#L439\n\nhttps://plugins.trac.wordpress.org/changeset/3630896/security-hardener\n\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/64f1a71f-e210-4191-bfb4-56f8568180ed?source=cve\n\nWhile CVE identifies\nspecific instances of vulnerabilities, CWE categorizes the common flaws or\nweaknesses that can lead to vulnerabilities. CVE-2026-16149 is\nassociated with the following CWEs:\n\nCWE-269: Improper Privilege Management\n\nCommon Attack Pattern Enumeration and Classification\n(CAPEC)\nstores attack patterns, which are descriptions of the common attributes and\napproaches employed by adversaries to exploit the CVE-2026-16149\nweaknesses.\n\nCAPEC-58: Restful Privilege Elevation Restful Privilege Elevation\n\nCAPEC-122: Privilege Abuse Privilege Abuse\n\nCAPEC-233: Privilege Escalation Privilege Escalation\n\nWe scan GitHub repositories to detect new proof-of-concept exploits. Following list is a […]",
+    "word_count": 438,
+    "observables": {
+      "domain-name": [
+        "cvefeed.io"
+      ],
+      "email-addr": [
+        "security@wordfence.com"
+      ],
+      "url": [
+        "http://www.wordfence.com/threat-intel/vulnerabilities/id/64f1a71f-e210-4191-bfb4-56f8568180ed?source=cve",
+        "https://plugins.trac.wordpress.org/browser/security-hardener/tags/2.4.4/security-hardener.php#L107",
+        "https://plugins.trac.wordpress.org/browser/security-hardener/tags/2.4.4/security-hardener.php#L180",
+        "https://plugins.trac.wordpress.org/browser/security-hardener/tags/2.4.4/security-hardener.php#L204",
+        "https://plugins.trac.wordpress.org/browser/security-hardener/tags/2.4.4/security-hardener.php#L428",
+        "https://plugins.trac.wordpress.org/browser/security-hardener/tags/2.4.4/security-hardener.php#L433",
+        "https://plugins.trac.wordpress.org/browser/security-hardener/tags/2.4.4/security-hardener.php#L439",
+        "https://plugins.trac.wordpress.org/changeset/3630896/security-hardener",
+        "https://www.wordfence.com/threat-intel/vulnerabilities/id/64f1a71f-e210-4191-bfb4-56f8568180ed?source=cve"
+      ],
+      "vulnerability": [
+        "CVE-2026-16149"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "CVE-2026-0551 - PPWP – Password Protect Pages <= 1.9.18 - Authenticated (Contributor+) PHP Object Injection via post_protection_roles",
+    "publication_date": "Sun, 23 Aug 2026 00:16:49 +0000",
+    "source": "https://cvefeed.io/vuln/detail/CVE-2026-0551",
+    "source_categories": [
+      "vulnerabilities"
+    ],
+    "source_level": 2,
+    "text": "8.8\n\nHIGH\nCVSS 3.1\n\nCVE-2026-0551\nPPWP – Password Protect Pages <= 1.9.18 - Authenticated (Contributor+) PHP Object Injection via post_protection_roles\n\nThe PPWP – Password Protect Pages plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 1.9.18 via deserialization of untrusted input from the 'post_protection_roles' vulnerable parameter. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject a PHP Object. No known POP chain is present in the vulnerable software, which means this vulnerability has no impact unless another plugin or theme containing a POP chain is installed on the site. If a POP chain is present via an additional plugin or theme installed on the target system, it may allow the attacker to perform actions like delete arbitrary files, retrieve sensitive data, or execute code depending on the POP chain present.\n\nPublished Date :\nAug. 23, 2026, 12:16 a.m.\n\nLast Modified :\nAug. 23, 2026, 12:16 a.m.\n\nRemotely Exploit :\n\nYes !\n\nSource :\nsecurity@wordfence.com\n\nImpact\nAffected Products\n\nThe following products are affected by CVE-2026-0551\nvulnerability.\nEven if cvefeed.io is aware of the exact versions of the\nproducts\nthat\nare\naffected, the information is not represented in the table below.\n\nID\nVendor\nProduct\nAction\n\n1\nPasswordprotectwp\npassword_protect_wordpress\n\nThe Common Vulnerability Scoring System is a standardized framework\nfor assessing the severity of vulnerabilities in software and systems.\nWe collect and displays CVSS scores from various sources for each CVE.\n\nScore\nVersion\nSeverity\nVector\nExploitability Score\nImpact Score\nSource\n\n8.8\n\nCVSS 3.1\n\nHIGH\n\n2.8\n\n5.9\n\nsecurity@wordfence.com\n\n8.8\n\nCVSS 3.1\n\nHIGH\n\n2.8\n\n5.9\n\nMITRE-CVE\n\nUpdate the PPWP plugin to a version later than 1.9.18 to prevent PHP Object Injection.\n\nUpdate the PPWP plugin to the latest version.\n\nReview installed plugins and themes for POP chains.\n\nHere, you will find a curated list of external links that provide in-depth\ninformation, practical solutions, and valuable tools related to\nCVE-2026-0551.\n\nURL\nResource\n\nhttps://plugins.trac.wordpress.org/browser/password-protect-page/trunk/includes/services/class-ppw-passwords.php#L699\n\nhttps://plugins.trac.wordpress.org/changeset/3567221/password-protect-page\n\nhttps://www.wordfence.com/threat-intel/vulnerabilities/id/b8f53282-740e-4ac3-a2e1-7a97893e3355?source=cve\n\nWhile CVE identifies\nspecific instances of vulnerabilities, CWE categorizes the common flaws or\nweaknesses that can lead to vulnerabilities. CVE-2026-0551 is\nassociated with the following CWEs:\n\nCWE-502: Deserialization of Untrusted Data\n\nCommon Attack Pattern Enumeration and Classification\n(CAPEC)\nstores attack patterns, which are descriptions of the common attributes and\napproaches employed by adversaries to exploit the CVE-2026-0551\nweaknesses.\n\nCAPEC-586: Object Injection Object Injection\n\nWe scan GitHub repositories to detect new proof-of-concept exploits. Following list is a collection\nof public exploits and proof-of-concepts, which have been published on GitHub (sorted by the most recently\nupdated).\n\nResults are limited to the first 15 repositories due to potential performance issues.\n\nThe following list is the news that have been mention\nCVE-2026-0551 vulnerability anywhere in the article.\n\nThe following table lists the changes that have been made to the\nCVE-2026-0551 vulnerability over time.\n\nVulnerability history details can be useful for understanding the evolution\nof a vulnerability, and for identifying the most recent changes that may\nimpact the vulnerability's severity, exploitability, or other characteristics.\n\nNew CVE Received\nby security@wordfence.com\n\nAug. 23, 2026\n\nAction\nType\nOld Value\nNew Value\n\nAdded\nAffected\n\n[{'vendor': 'buildwps', 'product': 'PPWP – Password Protect Pages', 'versions': [{'status': 'affected', 'version': '0', 'versionType': 'semver', 'lessThanOrEqual': '1.9.18'}], 'defaultStatus': […]",
+    "word_count": 524,
+    "observables": {
+      "domain-name": [
+        "cvefeed.io"
+      ],
+      "email-addr": [
+        "security@wordfence.com"
+      ],
+      "url": [
+        "http://www.wordfence.com/threat-intel/vulnerabilities/id/b8f53282-740e-4ac3-a2e1-7a97893e3355?source=cve",
+        "https://plugins.trac.wordpress.org/browser/password-protect-page/trunk/includes/services/class-ppw-passwords.php#L699",
+        "https://plugins.trac.wordpress.org/changeset/3567221/password-protect-page",
+        "https://www.wordfence.com/threat-intel/vulnerabilities/id/b8f53282-740e-4ac3-a2e1-7a97893e3355?source=cve"
+      ],
+      "vulnerability": [
+        "CVE-2026-0551"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Google Cloud Compute and Cloud Ops Agent — What Actually Matters for DFIR",
+    "publication_date": "Sun, 23 Aug 2026 12:13:50 GMT",
+    "source": "https://www.cyberengage.org/post/google-cloud-compute-and-cloud-ops-agent-what-actually-matters-for-dfir",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "When people say \"compute\" in Google Cloud, they're really talking about anything that burns CPU. If it runs code, processes data, or executes workloads — it falls under compute.For investigations, though, not all compute is equal. Some services give you deep visibility. Others hide almost everything.Here's the case we'll come back to throughout this article: a billing alert flags an unexpected spike in Compute Engine usage on a project called fernbridge-prod. Nobody on the team provisioned new VMs. That's your incident — and everything below is how you'd actually work it. Compute Types (Quick Reality Check)Google Cloud groups compute into three big buckets:IaaS (Infrastructure as a Service) — this is where DFIR people feel at home. You control the operating system, installed software, and users, processes, and disks. Examples: Virtual Machines (Compute Engine), Shielded VMs, GPU-backed VMs. 👉 From a forensic standpoint, this is gold.PaaS (Platform as a Service) — here, Google manages the OS and runtime. You configure the app, not the system. Examples: App Engine, Google Kubernetes Engine (GKE), Cloud Run. You still get logs — but host-level evidence is mostly gone.FaaS (Function as a Service) — this is the black box. Examples: Cloud Functions, Cloud Workflows. You deploy code. Google handles everything else. From a DFIR perspective: great logs, almost zero disk or memory visibility. Why We Focus on Compute Engine (VMs)Google keeps adding new compute services all the time. But for DFIR work, Compute Engine VMs are the most valuable. Why? They behave like traditional systems, they generate OS-level artifacts, you can snapshot disks, you can run agents, and you can do \"normal\" forensics on them. Most of the investigation techniques you use here carry over to other compute types, but VMs give you the deepest access.In the fernbridge-prod case, the mystery workload turns out to be a handful of brand-new Compute Engine VMs — which is exactly why this article focuses here instead of on GKE or Cloud Functions: VMs are where you actually get to do forensics. VM Types (Don't Overthink It)Google offers a huge list of predefined VM types: General-purpose, High-memory, High-CPU, and Extreme performance machines (full list here). For DFIR, the size doesn't matter much — the artifacts do. A few things worth remembering: VMs can run Windows or Linux, they can use custom images, they can host Docker containers, and you can also define custom machine types.Special VM Configurations (DFIR Angle)GPUs are zone-specific add-ons for an existing VM. They're useful when you need to crunch through evidence fast — say, running ML-assisted malware classification — but they're not an especially interesting artifact source themselves.Preemptible VMs are cheap and not guaranteed to run continuously — they can disappear at any time. Picture this: you're investigating a spike in outbound traffic from a web cluster, and half the logs just stop mid-timeline. That's usually not evidence tampering — it's a preemptible VM getting reclaimed. These are about cost optimization, not stability, and they're common in exactly the kind of web clusters where you'd expect to find them.Shielded VMs add Secure Boot, integrity monitoring, and a virtual TPM (vTPM). Security-wise: great. Forensics-wise: mixed — they often come with additional logins that a standard VM wouldn't have, which is one more thing to check during triage. Capturing Evidence: Disk Snapshots (The Cloud Way)In cloud environments, you don't image disks the old-school way. Instead, you:Snapshot the persistent disk attached to the VMShare that snapshot with your DFIR projectCopy itConvert it back into a diskAttach it to a forensic VM as read-onlyAnalyze like a normal diskThis works whether your DFIR team is in the same org, a different org, or a completely separate third-party firm — it's just permissions. Same concept as AWS and Azure, just different buttons.For fernbridge-prod, day one looks exactly like […]",
+    "word_count": 628,
+    "observables": {
+      "domain-name": [
+        "access.in"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "I fine-tuned a 270M parameter SLM to translate natural language to Nmap commands (Runs 100% locally on CPU, 90% accuracy, with historical port autocomplete)",
+    "publication_date": "2026-08-23T12:54:34+00:00",
+    "source": "https://www.reddit.com/r/redteamsec/comments/1vw6gr6/i_finetuned_a_270m_parameter_slm_to_translate/",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 3,
+    "text": "Prove your humanity\n\nWe’re committed to safety and security. But not for bots. Complete the challenge below and let us know you’re\na real person.",
+    "word_count": 25,
+    "observables": {},
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "[ Removed by Reddit ]",
+    "publication_date": "2026-08-23T08:55:25+00:00",
+    "source": "https://www.reddit.com/r/redteamsec/comments/1vw21an/removed_by_reddit/",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 3,
+    "text": "Prove your humanity\n\nWe’re committed to safety and security. But not for bots. Complete the challenge below and let us know you’re\na real person.",
+    "word_count": 25,
+    "observables": {},
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "SECURITY AFFAIRS MALWARE NEWSLETTER ROUND 111",
+    "publication_date": "Sun, 23 Aug 2026 17:04:47 +0000",
+    "source": "https://securityaffairs.com/197743/security/security-affairs-malware-newsletter-round-111.html",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "HOME\nCYBER CRIME\nCYBER WARFARE\nAPT\nDATA BREACH\nDEEP WEB\nHACKING\nHACKTIVISM\nINTELLIGENCE\nMUST READ\n\nSECURITY AFFAIRS MALWARE NEWSLETTER ROUND 111\n\n|\n\nUK Power Plant Disabled for Four Days by Iran-Linked Hackers, Concurrent with US Water Attacks\n\n|\n\nSecurity Affairs newsletter Round 591 by Pierluigi Paganini – INTERNATIONAL EDITION\n\n|\n\nZero-Click Grok Chat History Theft: Adversa AI Demonstrates Cryptographic Context Injection\n\n|\n\nMalware Hijacks Android Car Head Units\n\n|\n\nU.S. CISA adds Zimbra Collaboration Suite (ZCS) flaw to its Known Exploited Vulnerabilities catalog\n\n|\n\nYour Shredded Visa Card May Still Work at the Checkout\n\n|\n\nSix Maximum-Severity Flaws Found in Cisco Products\n\n|\n\nGitLab Warns of Active Exploitation of Critical GraphQL Flaw\n\n|\n\nPoland's CERT Warns of Active Exploitation of Critical Zimbra Collaboration Suite Flaw\n\n|\n\nU.S. CISA adds TrueConf Server flaws to its Known Exploited Vulnerabilities catalog\n\n|\n\nCl0p Targets 40+ Organizations Through PTC Windchill Flaw\n\n|\n\nManic: The Android Malware That Exfiltrates Data Even When the Phone Is Offline\n\n|\n\nU.S. CISA adds an MLflow flaw to its Known Exploited Vulnerabilities catalog\n\n|\n\nUS Indicts 17 Iranians Over Years-Long Cyber Espionage Campaign\n\n|\n\nStopAndProtect Turns 2,000 Hacked WordPress Sites Into a Criminal Network\n\n|\n\nInside Operation CameraSwarm: How One Actor Took Over 14,000 Dahua Cameras\n\n|\n\nMicrosoft Tracks MacSync Stealer by Its Behavior, Not Its Domains\n\n|\n\n50,000 Stripe Secrets Leaked in Public Code\n\n|\n\nU.S. CISA adds Apple macOS, Microsoft SharePoint, Broadcom VMware vCenter, and Microsoft IKE flaws to its Known Exploited Vulnerabilities catalog\n\n| \nHOME\nCYBER CRIME\nCYBER WARFARE\nAPT\nDATA BREACH\nDEEP WEB\nHACKING\nHACKTIVISM\nINTELLIGENCE\nARTIFICIAL INTELLIGENCE\nINTERNET OF THINGS\nLAWS AND REGULATIONS\nMALWARE\nMOBILE\nREPORTS\nSECURITY\nSOCIAL NETWORKS\nTERRORISM\nICS-SCADA\nCRYPTO\nPOLICIES\nCONTACT ME\nHome Breaking News Malware Security SECURITY AFFAIRS MALWARE NEWSLETTER ROUND 111\nSECURITY AFFAIRS MALWARE NEWSLETTER ROUND 111\nPierluigi Paganini\n\nAugust 23, 2026\nSecurity Affairs Malware newsletter includes a collection of the best articles and research on malware in the international landscape\n\nMalware Newsletter\n\nAkira Hits Safe Mode: Ransomware Rebooting Around EDR\n\nMulti-Functional Linux Botnet “Evooo1Bot”\n\nStubMaker RubyGems Campaign Delivers a Windows Infostealer\n\nHunting MacSync Stealer infrastructure through behavioral pivots\n\nManic: Blend between Banking Malware & Spyware\n\nClop Returns with Custom Implant in Mass-Extortion Campaign\n\nThe ToxicPanda Never Sleeps: ToxicPanda 2.0 Prepares its Next Strike on Mobile\n\nStriking gold: Inside the GoldDigger Android malware\n\nSilkParasite: Tracking a China-Nexus APT Across Central Asia\n\nPrompting the Payload: How an npm Supply Chain Attack Delivers the RedC2 AI-Powered Linux Implant\n\nThe invisible passenger in your car\n\nMalware Crypting Services and the Threat Actors Who Sell Them\n\nGrandoreiro goes north: From Brazil to Mexico with a new DLL sideloading campaign\n\nSurvival of~the~Stealthiest: Evolving Low-Entropy Ransomware via~Genetic Algorithms\n\nMalformer: A Multi-Modal Malware Detector Using Transformers\n\nXAI-Guided Graph-Based Feature Engineering and Heterogeneous Ensemble Learning for Android Malware Detection\n\nAn Explainable Deep Learning Pipeline for Malware Family Classification: GAF Image Encoding and API-Grounded LLM Interpretation\n\nFollow me on Twitter: @securityaffairs and Facebook and Mastodon\n\nPierluigi Paganini\n\n(SecurityAffairs – hacking, newsletter)\n\nFACEBOOK\nLINKEDIN\nTWITTER\nCybercrime\nHacking\nhacking news\ninformation security news\nIT Information Security\nmalware\nNewsletter\nPierluigi Paganini\nSecurity Affairs\nSecurity News\nYOU MIGHT ALSO LIKE\nPierluigi Paganini\n\nAugust 23, 2026\nUK Power Plant Disabled for Four Days by Iran-Linked Hackers, Concurrent with US Water Attacks\nRead more\nPierluigi Paganini\n\nAugust 23, 2026\nSecurity Affairs newsletter Round 591 by Pierluigi Paganini – INTERNATIONAL […]",
+    "word_count": 556,
+    "observables": {},
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "UK Power Plant Disabled for Four Days by Iran-Linked Hackers, Concurrent with US Water Attacks",
+    "publication_date": "Sun, 23 Aug 2026 08:48:14 +0000",
+    "source": "https://securityaffairs.com/197734/cyber-warfare-2/uk-power-plant-disabled-for-four-days-by-iran-linked-hackers-concurrent-with-us-water-attacks.html",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "HOME\nCYBER CRIME\nCYBER WARFARE\nAPT\nDATA BREACH\nDEEP WEB\nHACKING\nHACKTIVISM\nINTELLIGENCE\nMUST READ\n\nSECURITY AFFAIRS MALWARE NEWSLETTER ROUND 111\n\n|\n\nUK Power Plant Disabled for Four Days by Iran-Linked Hackers, Concurrent with US Water Attacks\n\n|\n\nSecurity Affairs newsletter Round 591 by Pierluigi Paganini – INTERNATIONAL EDITION\n\n|\n\nZero-Click Grok Chat History Theft: Adversa AI Demonstrates Cryptographic Context Injection\n\n|\n\nMalware Hijacks Android Car Head Units\n\n|\n\nU.S. CISA adds Zimbra Collaboration Suite (ZCS) flaw to its Known Exploited Vulnerabilities catalog\n\n|\n\nYour Shredded Visa Card May Still Work at the Checkout\n\n|\n\nSix Maximum-Severity Flaws Found in Cisco Products\n\n|\n\nGitLab Warns of Active Exploitation of Critical GraphQL Flaw\n\n|\n\nPoland's CERT Warns of Active Exploitation of Critical Zimbra Collaboration Suite Flaw\n\n|\n\nU.S. CISA adds TrueConf Server flaws to its Known Exploited Vulnerabilities catalog\n\n|\n\nCl0p Targets 40+ Organizations Through PTC Windchill Flaw\n\n|\n\nManic: The Android Malware That Exfiltrates Data Even When the Phone Is Offline\n\n|\n\nU.S. CISA adds an MLflow flaw to its Known Exploited Vulnerabilities catalog\n\n|\n\nUS Indicts 17 Iranians Over Years-Long Cyber Espionage Campaign\n\n|\n\nStopAndProtect Turns 2,000 Hacked WordPress Sites Into a Criminal Network\n\n|\n\nInside Operation CameraSwarm: How One Actor Took Over 14,000 Dahua Cameras\n\n|\n\nMicrosoft Tracks MacSync Stealer by Its Behavior, Not Its Domains\n\n|\n\n50,000 Stripe Secrets Leaked in Public Code\n\n|\n\nU.S. CISA adds Apple macOS, Microsoft SharePoint, Broadcom VMware vCenter, and Microsoft IKE flaws to its Known Exploited Vulnerabilities catalog\n\n| \nHOME\nCYBER CRIME\nCYBER WARFARE\nAPT\nDATA BREACH\nDEEP WEB\nHACKING\nHACKTIVISM\nINTELLIGENCE\nARTIFICIAL INTELLIGENCE\nINTERNET OF THINGS\nLAWS AND REGULATIONS\nMALWARE\nMOBILE\nREPORTS\nSECURITY\nSOCIAL NETWORKS\nTERRORISM\nICS-SCADA\nCRYPTO\nPOLICIES\nCONTACT ME\nHome APT Breaking News Cyber warfare Hacking Security UK Power Plant Disabled for Four Days by Iran-Linked Hackers, Concurrent with US Water Attacks\nUK POWER PLANT DISABLED FOR FOUR DAYS BY IRAN-LINKED HACKERS, CONCURRENT WITH US WATER ATTACKS\nPierluigi Paganini\n\nAugust 23, 2026\nIran-linked hackers shut down a UK power plant for four days in the first confirmed attack of its kind, concurrent with water infrastructure attacks across 12 US states.\n\nIran-linked hackers shut down a British power plant for four days in what The Telegraph describes as the most successful cyberattack of its kind against UK energy infrastructure.\n\n“Iran shut down a British power plant for four days in an unprecedented cyber attack, The Telegraph can disclose.” reads the report published by The Telegraph. “It is thought to be the first time that hackers affiliated to the Iranian regime have succeeded in closing down such a facility in the UK, and is believed to be the most successful cyber attack of its kind.”\n\nBritish officials did not name the power plant because of security concerns. Staff worked for four days to restore it, but the plant was small and the outage did not affect the UK’s wider power supply. Still, the government warned power companies and businesses about the incident and provided guidance on how to respond.\n\nThe attack was reported to the National Cyber Security Centre (NCSC), part of GCHQ, which helps protect the UK’s critical infrastructure. The NCSC did not comment on the specific incident.\n\nThe US water infrastructure attacks hit dozens of wastewater treatment plants across 12 states, causing flooding and loss of pressure from taps. Authorities in affected areas told customers to boil water. The first reports came from Minnesota on July 26, followed by similar breaches in Michigan, Georgia, South Dakota, and New Jersey. The FBI attributed those incidents to “malicious cyber actors”; US government sources later confirmed the threat most likely originated in Tehran.\n\nThe UK attack is not thought to have been designed to harm civilians. The more probable intent […]",
+    "word_count": 620,
+    "observables": {},
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Security Affairs newsletter Round 591 by Pierluigi Paganini – INTERNATIONAL EDITION",
+    "publication_date": "Sun, 23 Aug 2026 08:29:02 +0000",
+    "source": "https://securityaffairs.com/197728/breaking-news/security-affairs-newsletter-round-591-by-pierluigi-paganini-international-edition.html",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "HOME\nCYBER CRIME\nCYBER WARFARE\nAPT\nDATA BREACH\nDEEP WEB\nHACKING\nHACKTIVISM\nINTELLIGENCE\nMUST READ\n\nSECURITY AFFAIRS MALWARE NEWSLETTER ROUND 111\n\n|\n\nUK Power Plant Disabled for Four Days by Iran-Linked Hackers, Concurrent with US Water Attacks\n\n|\n\nSecurity Affairs newsletter Round 591 by Pierluigi Paganini – INTERNATIONAL EDITION\n\n|\n\nZero-Click Grok Chat History Theft: Adversa AI Demonstrates Cryptographic Context Injection\n\n|\n\nMalware Hijacks Android Car Head Units\n\n|\n\nU.S. CISA adds Zimbra Collaboration Suite (ZCS) flaw to its Known Exploited Vulnerabilities catalog\n\n|\n\nYour Shredded Visa Card May Still Work at the Checkout\n\n|\n\nSix Maximum-Severity Flaws Found in Cisco Products\n\n|\n\nGitLab Warns of Active Exploitation of Critical GraphQL Flaw\n\n|\n\nPoland's CERT Warns of Active Exploitation of Critical Zimbra Collaboration Suite Flaw\n\n|\n\nU.S. CISA adds TrueConf Server flaws to its Known Exploited Vulnerabilities catalog\n\n|\n\nCl0p Targets 40+ Organizations Through PTC Windchill Flaw\n\n|\n\nManic: The Android Malware That Exfiltrates Data Even When the Phone Is Offline\n\n|\n\nU.S. CISA adds an MLflow flaw to its Known Exploited Vulnerabilities catalog\n\n|\n\nUS Indicts 17 Iranians Over Years-Long Cyber Espionage Campaign\n\n|\n\nStopAndProtect Turns 2,000 Hacked WordPress Sites Into a Criminal Network\n\n|\n\nInside Operation CameraSwarm: How One Actor Took Over 14,000 Dahua Cameras\n\n|\n\nMicrosoft Tracks MacSync Stealer by Its Behavior, Not Its Domains\n\n|\n\n50,000 Stripe Secrets Leaked in Public Code\n\n|\n\nU.S. CISA adds Apple macOS, Microsoft SharePoint, Broadcom VMware vCenter, and Microsoft IKE flaws to its Known Exploited Vulnerabilities catalog\n\n| \nHOME\nCYBER CRIME\nCYBER WARFARE\nAPT\nDATA BREACH\nDEEP WEB\nHACKING\nHACKTIVISM\nINTELLIGENCE\nARTIFICIAL INTELLIGENCE\nINTERNET OF THINGS\nLAWS AND REGULATIONS\nMALWARE\nMOBILE\nREPORTS\nSECURITY\nSOCIAL NETWORKS\nTERRORISM\nICS-SCADA\nCRYPTO\nPOLICIES\nCONTACT ME\nHome Breaking News Security Security Affairs newsletter Round 591 by Pierluigi Paganini – INTERNATIONAL EDITION\nSECURITY AFFAIRS NEWSLETTER ROUND 591 BY PIERLUIGI PAGANINI – INTERNATIONAL EDITION\nPierluigi Paganini\n\nAugust 23, 2026\nA new round of the weekly Security Affairs newsletter has arrived! Every week, the best security articles from Security Affairs are free in your email box.\n\nEnjoy a new round of the weekly SecurityAffairs newsletter, including international press.\n\nToxicPanda 2.0 Gets a Major Upgrade, Expanding Attacks Across 16 Countries\nMalware Hijacks Android Car Head Units\nCritical Flaw in NASA/JPL Open-Source Spacecraft Command Software Allowed Unauthenticated Command Execution\nU.S. CISA adds Zimbra Collaboration Suite (ZCS) flaw to its Known Exploited Vulnerabilities catalog\nYour Shredded Visa Card May Still Work at the Checkout\nSix Maximum-Severity Flaws Found in Cisco Products\nFake Conferences, OAuth and WhatsApp: Inside Russia’s New Espionage Tactics\nGitLab Warns of Active Exploitation of Critical GraphQL Flaw\nPoland’s CERT Warns of Active Exploitation of Critical Zimbra Collaboration Suite Flaw\nU.S. CISA adds TrueConf Server flaws to its Known Exploited Vulnerabilities catalog\nCl0p Targets 40+ Organizations Through PTC Windchill Flaw\nManic: The Android Malware That Exfiltrates Data Even When the Phone Is Offline\nNSA, CISA, FBI, DOE, and EPA Warn of Active AI-Assisted Attacks on Siemens S7 PLCs\nU.S. CISA adds an MLflow flaw to its Known Exploited Vulnerabilities catalog\nUS Indicts 17 Iranians Over Years-Long Cyber Espionage Campaign\nStopAndProtect Turns 2,000 Hacked WordPress Sites Into a Criminal Network\nInside Operation CameraSwarm: How One Actor Took Over 14,000 Dahua Cameras\nMicrosoft Tracks MacSync Stealer by Its Behavior, Not Its Domains\n50,000 Stripe Secrets Leaked in Public Code\nU.S. CISA adds Apple macOS, Microsoft SharePoint, Broadcom VMware vCenter, and Microsoft IKE flaws to its Known Exploited Vulnerabilities catalog\nHackers Expose Data of 1.2 Million Heights Finance Customers\nProject noRecognition: Teaching AI to Fool […]",
+    "word_count": 584,
+    "observables": {},
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Zero-Click Grok Chat History Theft: Adversa AI Demonstrates Cryptographic Context Injection",
+    "publication_date": "Sun, 23 Aug 2026 07:20:38 +0000",
+    "source": "https://securityaffairs.com/197717/hacking/zero-click-grok-chat-history-theft-adversa-ai-demonstrates-cryptographic-context-injection.html",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "HOME\nCYBER CRIME\nCYBER WARFARE\nAPT\nDATA BREACH\nDEEP WEB\nHACKING\nHACKTIVISM\nINTELLIGENCE\nMUST READ\n\nSECURITY AFFAIRS MALWARE NEWSLETTER ROUND 111\n\n|\n\nUK Power Plant Disabled for Four Days by Iran-Linked Hackers, Concurrent with US Water Attacks\n\n|\n\nSecurity Affairs newsletter Round 591 by Pierluigi Paganini – INTERNATIONAL EDITION\n\n|\n\nZero-Click Grok Chat History Theft: Adversa AI Demonstrates Cryptographic Context Injection\n\n|\n\nMalware Hijacks Android Car Head Units\n\n|\n\nU.S. CISA adds Zimbra Collaboration Suite (ZCS) flaw to its Known Exploited Vulnerabilities catalog\n\n|\n\nYour Shredded Visa Card May Still Work at the Checkout\n\n|\n\nSix Maximum-Severity Flaws Found in Cisco Products\n\n|\n\nGitLab Warns of Active Exploitation of Critical GraphQL Flaw\n\n|\n\nPoland's CERT Warns of Active Exploitation of Critical Zimbra Collaboration Suite Flaw\n\n|\n\nU.S. CISA adds TrueConf Server flaws to its Known Exploited Vulnerabilities catalog\n\n|\n\nCl0p Targets 40+ Organizations Through PTC Windchill Flaw\n\n|\n\nManic: The Android Malware That Exfiltrates Data Even When the Phone Is Offline\n\n|\n\nU.S. CISA adds an MLflow flaw to its Known Exploited Vulnerabilities catalog\n\n|\n\nUS Indicts 17 Iranians Over Years-Long Cyber Espionage Campaign\n\n|\n\nStopAndProtect Turns 2,000 Hacked WordPress Sites Into a Criminal Network\n\n|\n\nInside Operation CameraSwarm: How One Actor Took Over 14,000 Dahua Cameras\n\n|\n\nMicrosoft Tracks MacSync Stealer by Its Behavior, Not Its Domains\n\n|\n\n50,000 Stripe Secrets Leaked in Public Code\n\n|\n\nU.S. CISA adds Apple macOS, Microsoft SharePoint, Broadcom VMware vCenter, and Microsoft IKE flaws to its Known Exploited Vulnerabilities catalog\n\n| \nHOME\nCYBER CRIME\nCYBER WARFARE\nAPT\nDATA BREACH\nDEEP WEB\nHACKING\nHACKTIVISM\nINTELLIGENCE\nARTIFICIAL INTELLIGENCE\nINTERNET OF THINGS\nLAWS AND REGULATIONS\nMALWARE\nMOBILE\nREPORTS\nSECURITY\nSOCIAL NETWORKS\nTERRORISM\nICS-SCADA\nCRYPTO\nPOLICIES\nCONTACT ME\nHome Artificial Intelligence Breaking News Hacking Security Zero-Click Grok Chat History Theft: Adversa AI Demonstrates Cryptographic Context Injection\nZERO-CLICK GROK CHAT HISTORY THEFT: ADVERSA AI DEMONSTRATES CRYPTOGRAPHIC CONTEXT INJECTION\nPierluigi Paganini\n\nAugust 23, 2026\nNew Cryptographic Context Injection technique bypasses AI guardrails via AES-encrypted payloads, leaking full Grok chat histories zero-click\n\nAdversa AI researcher Rony Utevsky devised a new attack technique, called Cryptographic Context Injection, that bypasses AI safety filters by sending instructions as AES-encrypted ciphertext and tricking the model into decrypting them inside its own code execution runtime. The technique was demonstrated against two live production systems: xAI’s Grok and Google’s Gemini.\n\n“Cryptographic Context Injection hides malicious instructions inside AES-encrypted text so guardrails can’t read them, then tricks the AI into decrypting and trusting them as its own.” reads the report published by Adversa AI. “In Grok, an ordinary “summarize this page” steals the user’s chat data with no click or warning. In Gemini, it produces content the model normally refuses. Both are live production systems.”\n\nThe Grok case is the more serious of the two. A user asks Grok to summarize a webpage containing an encrypted payload and instructions to decrypt it. Grok visits the page, decrypts the payload in its Python sandbox, and follows the hidden instructions. It then accesses the user’s private session data, including their name, location, subscription plan, and full chat history, and puts this information into a URL that it opens automatically. The user receives no warning and does not need to click anything.\n\nThe key technical distinction from earlier cipher-based prompt injection work is what happens during decryption.\n\n“Static safety guardrails classify inputs as text; they do not execute them. An attacker ships ciphertext along with the key material and an instruction to decrypt it, and the model runs that decryption inside its own code execution sandbox.” continues […]",
+    "word_count": 588,
+    "observables": {},
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "A machine that cuts metal and injures the operator did what it was built to do. The fault sits with whoever removed the guard or ran the line outside its parameters. Nobody blames the lathe. Execution keeps getting more autonomous. Accountability did not go with it.#Governance #AI #Leadership #InfoSec #Accountability",
+    "publication_date": "Sun, 23 Aug 2026 23:14:34 +0000",
+    "source": "https://mastodon.social/@SargentJamesA/117147300058293318",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.social is one of the many independent Mastodon servers you can use to participate in the fediverse.\nThe original server of Mastodon, operated by Mastodon GmbH for the common good.\nADMINISTERED BY:\nMastodon\n@Mastodon\nSERVER STATS:\n275K\nactive users\nmastodon.social:About\nmastodon.social\nStatusProfiles directoryPrivacy policyTerms of service\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.7.0\nBack\nJames Sargent\n@SargentJamesA@mastodon.social\n\nA machine that cuts metal and injures the operator did what it was built to do. The fault sits with whoever removed the guard or ran the line outside its parameters. Nobody blames the lathe. Execution keeps getting more autonomous. Accountability did not go with it.\n\n#\nGovernance\n#\nAI\n#\nLeadership\n…and 2 more\nAug 23, 2026, 10:59 PM\n·\n·\nBuffer\n0\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 174,
+    "observables": {
+      "email-addr": [
+        "SargentJamesA@mastodon.social"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "If your program asks the user to verify a fingerprint (of a key, certificate, ...), at least TELL THEM WHICH HASH ALGO.Better yet, give them exact instructions how to calculate the hash so they don't have to google around.I am so tired of spending at least 10 minutes figuring out how to get the hash of a remote host every time there's a random key change, only to find out the hashes don't even have the same length.#CyberSecurity #InfoSec #UX #UI #Cryptography #SysAdmin #Security #DevOps",
+    "publication_date": "Sun, 23 Aug 2026 23:14:34 +0000",
+    "source": "https://mastodon.social/@martin_t/117147267965015899",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.social is one of the many independent Mastodon servers you can use to participate in the fediverse.\nThe original server of Mastodon, operated by Mastodon GmbH for the common good.\nADMINISTERED BY:\nMastodon\n@Mastodon\nSERVER STATS:\n275K\nactive users\nmastodon.social:About\nmastodon.social\nStatusProfiles directoryPrivacy policyTerms of service\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.7.0\nBack\nMartin Taibr\n@martin_t@mastodon.social\n\nIf your program asks the user to verify a fingerprint (of a key, certificate, ...), at least TELL THEM WHICH HASH ALGO.\n\nBetter yet, give them exact instructions how to calculate the hash so they don't have to google around.\n\nI am so tired of spending at least 10 minutes figuring out how to get the hash of a remote host every time there's a random key change, only to find out the hashes don't even have the same length.\n\n#\nCyberSecurity\n#\nInfoSec\n#\nUX\n…and 5 more\nAug 23, 2026, 10:50 PM\n·\n·\nWeb\n2\nboosts\n·\n0\nquotes\n·\n3\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 208,
+    "observables": {
+      "email-addr": [
+        "martin_t@mastodon.social"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Security Tip: Don't take package integrity for granted. 🛡️Supply chain attacks often target the distribution phase. If a download mirror is compromised, you could be installing a backdoor. Always verify SHA-256 checksums and GPG signatures provided by the official developers. Integrating hash verification into your CI/CD pipelines is a critical layer of defense.Stay informed on the latest threats: https://cvedatabase.com #InfoSec #CyberSecurity #SupplyChain #CVE",
+    "publication_date": "Sun, 23 Aug 2026 23:14:34 +0000",
+    "source": "https://techhub.social/@cvedatabase/117147186067751595",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\ntechhub.social is one of the many independent Mastodon servers you can use to participate in the fediverse.\nA hub primarily for passionate technologists, but everyone is welcome\nADMINISTERED BY:\nTechHub's Haunted Admin\n@TechHubAdmin\nSERVER STATS:\n3.5K\nactive users\ntechhub.social:About\ntechhub.social\nStatusProfiles directoryPrivacy policy\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.7.0\nBack\nCVEDatabase.com\n@cvedatabase@techhub.social\n\nSecurity Tip: Don't take package integrity for granted. 🛡️\n\nSupply chain attacks often target the distribution phase. If a download mirror is compromised, you could be installing a backdoor. Always verify SHA-256 checksums and GPG signatures provided by the official developers. Integrating hash verification into your CI/CD pipelines is a critical layer of defense.\n\nStay informed on the latest threats:\nhttps://\ncvedatabase.com\n\n#InfoSec #CyberSecurity #SupplyChain #CVE\n\nCVEDatabase.com\nCVEDatabase.com - Search & Analyze CVE Vulnerabilities\nSearch and analyze CVE vulnerabilities with instant access to CVSS scores, affected products, and AI-powered remediation guidance.\nAug 23, 2026, 10:30 PM\n·\n·\nsupabase\n0\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\nLive feeds\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 208,
+    "observables": {
+      "domain-name": [
+        "cvedatabase.com"
+      ],
+      "email-addr": [
+        "cvedatabase@techhub.social"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "💾 🔴 NIUS (nius.de) ✓ Verified · 🔒 Sensitive 📊 ~6K records compromised 📂 Bank account numbers, Email addresses, Names, Partial credit card data +2 more 📅 2025-07-13 · disclosed 406d after incident 🌐 cloudflare ⚠️ No SPF/DMARC configured🔗 https://beesint.com/pulse/f565e7d2-6571-43d8-ba5f-2eb056dca5b8#OSINT #DataBreach #HaveIBeenPwned #InfoSec #CyberSecurity",
+    "publication_date": "Sun, 23 Aug 2026 23:14:34 +0000",
+    "source": "https://mastodon.social/@BeeSINT/117147172974427621",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.social is one of the many independent Mastodon servers you can use to participate in the fediverse.\nThe original server of Mastodon, operated by Mastodon GmbH for the common good.\nADMINISTERED BY:\nMastodon\n@Mastodon\nSERVER STATS:\n275K\nactive users\nmastodon.social:About\nmastodon.social\nStatusProfiles directoryPrivacy policyTerms of service\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.7.0\nBack\nBeeSINT\n@BeeSINT@mastodon.social\n\n💾 🔴 NIUS (nius.de)\n✓ Verified · 🔒️ Sensitive\n📊 ~6K records compromised\n📂 Bank account numbers, Email addresses, Names, Partial credit card data +2 more\n📅 2025-07-13 · disclosed 406d after incident\n🌐 cloudflare\n⚠️ No SPF/DMARC configured\n\n🔗\nhttps://\nbeesint.com/pulse/f565e7d2-657\n1-43d8-ba5f-2eb056dca5b8\n\nBeeSINT\nBeeSINT - OSINT Investigation Platform\nBeeSINT - Plateforme d'investigation OSINT. Analysez domaines, IPs, emails et profils en quelques secondes.\n#\nOSINT\n#\nDataBreach\n#\nHaveIBeenPwned\n…and 2 more\nAug 23, 2026, 10:26 PM\n·\n·\nBeeSINT\n0\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 190,
+    "observables": {
+      "domain-name": [
+        "beesint.com",
+        "nius.de"
+      ],
+      "email-addr": [
+        "BeeSINT@mastodon.social"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "tmpout_v",
+    "publication_date": "Sun, 23 Aug 2026 22:14:57 +0000",
+    "source": "https://www.reddit.com/r/blueteamsec/comments/1vwhl65/tmpout_v/",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "window.__REDDIT_TIME_CONFIG = {};\n\ntmpout_v : r/blueteamsec\n\nSML.load([\"4YVY51TDvU\",\"6H34jRqIOP\",\"6wLBLOsnHQ\",\"A-hDHuLIek\",\"AbA77rdCEI\",\"Aq0wavIxn3\",\"B0WvRUzbEc\",\"B1cD4ZW067\",\"B35uEz-NEp\",\"Ba1_wjkpsO\",\"BAIUESdMwT\",\"Bawcg4pqOh\",\"BB4Dw0wr7k\",\"BbjKzOnrKM\",\"BbtpGT_Eld\",\"BdHlujr6p7\",\"BfqMWW00us\",\"Bfzcb-0_LY\",\"BgcyBHqgZH\",\"BhF6y65aN_\",\"BJ4nLwM7JQ\",\"BmxB2vFZ66\",\"BNsaaw9ZAx\",\"BONrPEdW30\",\"BOXaLYmyLx\",\"BpoHnkpuPZ\",\"BQ-VNBd6PH\",\"Bsq6sAeRgk\",\"Btld0NDt5V\",\"Bv4mayBeHx\",\"BvWNOQIc4u\",\"BZhyYOr65j\",\"C-DKskPjqc\",\"C-R99AaZS3\",\"C7C5MjAIvC\",\"Cci95pST_6\",\"Ceegrse6Fu\",\"CfzAv5l_mX\",\"CGb-_5dLQE\",\"Cl5cfX-IWY\",\"CLvk4IyN7Y\",\"CMuaWNk_j8\",\"CofiDnuwBC\",\"CpIyUGsdS0\",\"CPQLfQqpT9\",\"CQ86DstHXM\",\"CqooWg5Xpm\",\"CQrG9ueNSp\",\"CsBrYoUsGP\",\"CshtTZR1Xd\",\"CsOpdp6FVC\",\"CyfPHJuFqR\",\"Cz3ArUaCYE\",\"CzrSlBk5Ew\",\"D_4EbGa8cq\",\"D-taLhMdX_\",\"D-yGLPbyw8\",\"D0DVrgdKOH\",\"D1laXNC0mB\",\"D2AsWsszL8\",\"D8Rz9nglUK\",\"DC4X-lBSiJ\",\"Dc9EOHyBlh\",\"DcJkQ6k3VJ\",\"DdgaLku-V-\",\"DEd77Tfe8E\",\"DEnMi_3a84\",\"DERdhmMGf9\",\"DffTv7mLqm\",\"Diblugi_R5\",\"DIl76U49_8\",\"DjmjadAkDt\",\"DJwAWvi_6l\",\"DlveTfaToE\",\"DM_0cmrc-h\",\"DMsrMxMqGQ\",\"DPE0WSwrIZ\",\"DPPSuS344f\",\"DqcstBNsOQ\",\"DQzQ3S8TlU\",\"DRLUj9AgIN\",\"DrrW7g7xAg\",\"DSALvlCXQT\",\"DtFptWu9TN\",\"dTnSAj7D7r\",\"DWAyopvoB6\",\"Dyjed8XKGh\",\"DZexn_-CvY\",\"E3Qj1Ox0GV\",\"fC3SfKqfzK\",\"fFSkecXnsz\",\"G4VyH23Ump\",\"gqSWybBxEo\",\"HS99XdAYi0\",\"hslPG0lq4z\",\"iWUcLXaDtx\",\"JSj7CPw3cX\",\"k_hfgqQmji\",\"K1hBsqffWV\",\"kAJ99pzYcR\",\"kb42Kt-bPZ\",\"Kt-J6rOYOo\",\"MOH6xgPpqD\",\"mr_XyoQEfY\",\"MwcRAEm-D8\",\"mXumjk6uGT\",\"naY1G7f3rS\",\"OjB1e5_0Te\",\"PwZPs4KiEJ\",\"r2ikPlt_Bf\",\"tf_hefJPgF\",\"Toy-Jb-ey8\",\"UI4XTgIgXi\",\"v3Vm7KGxXO\",\"VwGnHKWbEv\",\"WuAYBygWxd\",\"Y-hyHsArT8\",\"yHrSD9BhEn\",\"ZxvyW2duqB\"], 'en-US/', 'auto');\n\nSML.load([\"_x1OuAzmB3\",\"3Fyeon8uPH\",\"9gYKNurq80\",\"B1cD4ZW067\",\"BAED_rr8CK\",\"BAOSKMJhq3\",\"BbjKzOnrKM\",\"BeuLRKJ-yN\",\"BeY5OKRJ-r\",\"BfELlfcu0s\",\"BmA-003adM\",\"BNe-vEYTBF\",\"BNsaaw9ZAx\",\"BvWNOQIc4u\",\"BX6PQo0Edz\",\"ByM6pesF-1\",\"C_MgzpFIgA\",\"C-KfK63cxY\",\"C1XsbosKWV\",\"C7C5MjAIvC\",\"CDXsOCr29n\",\"CfzAv5l_mX\",\"CoFNe4fW6z\",\"CQ86DstHXM\",\"CqLaHtF3gE\",\"CrB0gWOkMk\",\"CsOpdp6FVC\",\"CT_TR9ZWA9\",\"CyfPHJuFqR\",\"D2AsWsszL8\",\"DbVjXBU2Pr\",\"DdgaLku-V-\",\"DHMuAfPQje\",\"DlveTfaToE\",\"DxMbUgF8Zv\",\"giFPzSM0p5\",\"iWUcLXaDtx\",\"jNJb9NM32R\",\"Ka7ZESVCSk\",\"mr_XyoQEfY\",\"r2ikPlt_Bf\",\"Toy-Jb-ey8\",\"Vrh692qYoj\",\"WuAYBygWxd\"], 'en-US/', 'auto');\n\nSML.load([\"4dNQRXVfX-\",\"B6-8fkZXEV\",\"BbjKzOnrKM\",\"BdgBzpONQu\",\"BvWNOQIc4u\",\"C7C5MjAIvC\",\"CthjQ4nBCe\",\"CtKYlSE0TR\",\"CyfPHJuFqR\",\"D1laXNC0mB\",\"DC4X-lBSiJ\",\"DlDllW2mfZ\",\"DlveTfaToE\",\"dTnSAj7D7r\",\"omE79N7zZC\",\"WuAYBygWxd\",\"yHrSD9BhEn\"], 'en-US/', 'auto');\n\nSML.load([\"BfrbEk1_tk\"], 'en-US/', 'auto');\n\nSML.load([\"CwyZV2mIAk\"], 'en-US/', 'auto');\n\nSML.load([\"9QBlPIy9rj\",\"BbjKzOnrKM\",\"BClSS8Ks2M\",\"Bfzcb-0_LY\",\"BhF6y65aN_\",\"BmxB2vFZ66\",\"BnLgzEhaDh\",\"BNsaaw9ZAx\",\"BvWNOQIc4u\",\"C7C5MjAIvC\",\"CBI75AI0H0\",\"CfzAv5l_mX\",\"CGwKxZM3t3\",\"CK8JhXAUr0\",\"Cmlszo-sQF\",\"CQ86DstHXM\",\"CrB0gWOkMk\",\"CsOpdp6FVC\",\"CSxofD8NW_\",\"CWCcyTvRWO\",\"CyfPHJuFqR\",\"DbVjXBU2Pr\",\"DC4X-lBSiJ\",\"DlveTfaToE\",\"DM_0cmrc-h\",\"DPlXV6wlin\",\"DxMbUgF8Zv\",\"Dyjed8XKGh\",\"eyA_iFkCNR\",\"Ka7ZESVCSk\",\"kAJ99pzYcR\",\"nCRU_ETw5X\",\"Q6QBrjrB8b\",\"VxH8Us-RV-\",\"WuAYBygWxd\"], 'en-US/', 'auto');\n\nSML.load([\"BbjKzOnrKM\",\"C7C5MjAIvC\",\"CfzAv5l_mX\",\"CsOpdp6FVC\",\"CyfPHJuFqR\",\"D1laXNC0mB\",\"DlveTfaToE\",\"G4VyH23Ump\",\"iWUcLXaDtx\",\"mr_XyoQEfY\",\"PwZPs4KiEJ\",\"r2ikPlt_Bf\",\"WuAYBygWxd\"], 'en-US/', 'auto');\n\nSML.load([\"BbjKzOnrKM\",\"Bfzcb-0_LY\",\"BmxB2vFZ66\",\"BvWNOQIc4u\",\"C7C5MjAIvC\",\"CGwKxZM3t3\",\"Cmlszo-sQF\",\"CQ86DstHXM\",\"CrB0gWOkMk\",\"CSxofD8NW_\",\"CyfPHJuFqR\",\"DC4X-lBSiJ\",\"DlveTfaToE\",\"DM_0cmrc-h\",\"DPlXV6wlin\",\"Dyjed8XKGh\",\"eyA_iFkCNR\",\"kAJ99pzYcR\",\"Q6QBrjrB8b\",\"WuAYBygWxd\"], 'en-US/', 'auto');\n\nSML.load([\"DDATuwijFv\"], 'en-US/', 'auto');\n\nSML.load([\"B3JaeY7_zR\",\"Bawcg4pqOh\",\"BXs_nJQswy\",\"C7C5MjAIvC\",\"C9gUsDe1v4\",\"CAZfOa9MxI\",\"CfzAv5l_mX\",\"CQ86DstHXM\",\"CrB0gWOkMk\",\"CsOpdp6FVC\",\"CyfPHJuFqR\",\"CzrSlBk5Ew\",\"DpF4KtLjbz\",\"dTnSAj7D7r\",\"iWUcLXaDtx\",\"mr_XyoQEfY\",\"r2ikPlt_Bf\",\"vQvFuXVew9\",\"WuAYBygWxd\"], 'en-US/', […]",
+    "word_count": 36,
+    "observables": {},
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Auditing Microsoft Defender and Intune Configuration Changes",
+    "publication_date": "Sun, 23 Aug 2026 22:14:57 +0000",
+    "source": "https://www.reddit.com/r/blueteamsec/comments/1vwfc9y/auditing_microsoft_defender_and_intune/",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "window.__REDDIT_TIME_CONFIG = {};\n\nAuditing Microsoft Defender and Intune Configuration Changes : r/blueteamsec\n\nSML.load([\"4YVY51TDvU\",\"6H34jRqIOP\",\"6wLBLOsnHQ\",\"A-hDHuLIek\",\"AbA77rdCEI\",\"Aq0wavIxn3\",\"B0WvRUzbEc\",\"B1cD4ZW067\",\"B35uEz-NEp\",\"Ba1_wjkpsO\",\"BAIUESdMwT\",\"Bawcg4pqOh\",\"BB4Dw0wr7k\",\"BbjKzOnrKM\",\"BbtpGT_Eld\",\"BdHlujr6p7\",\"BfqMWW00us\",\"Bfzcb-0_LY\",\"BgcyBHqgZH\",\"BhF6y65aN_\",\"BJ4nLwM7JQ\",\"BmxB2vFZ66\",\"BNsaaw9ZAx\",\"BONrPEdW30\",\"BOXaLYmyLx\",\"BpoHnkpuPZ\",\"BQ-VNBd6PH\",\"Bsq6sAeRgk\",\"Btld0NDt5V\",\"Bv4mayBeHx\",\"BvWNOQIc4u\",\"BZhyYOr65j\",\"C-DKskPjqc\",\"C-R99AaZS3\",\"C7C5MjAIvC\",\"Cci95pST_6\",\"Ceegrse6Fu\",\"CfzAv5l_mX\",\"CGb-_5dLQE\",\"Cl5cfX-IWY\",\"CLvk4IyN7Y\",\"CMuaWNk_j8\",\"CofiDnuwBC\",\"CpIyUGsdS0\",\"CPQLfQqpT9\",\"CQ86DstHXM\",\"CqooWg5Xpm\",\"CQrG9ueNSp\",\"CsBrYoUsGP\",\"CshtTZR1Xd\",\"CsOpdp6FVC\",\"CyfPHJuFqR\",\"Cz3ArUaCYE\",\"CzrSlBk5Ew\",\"D_4EbGa8cq\",\"D-taLhMdX_\",\"D-yGLPbyw8\",\"D0DVrgdKOH\",\"D1laXNC0mB\",\"D2AsWsszL8\",\"D8Rz9nglUK\",\"DC4X-lBSiJ\",\"Dc9EOHyBlh\",\"DcJkQ6k3VJ\",\"DdgaLku-V-\",\"DEd77Tfe8E\",\"DEnMi_3a84\",\"DERdhmMGf9\",\"DffTv7mLqm\",\"Diblugi_R5\",\"DIl76U49_8\",\"DjmjadAkDt\",\"DJwAWvi_6l\",\"DlveTfaToE\",\"DM_0cmrc-h\",\"DMsrMxMqGQ\",\"DPE0WSwrIZ\",\"DPPSuS344f\",\"DqcstBNsOQ\",\"DQzQ3S8TlU\",\"DRLUj9AgIN\",\"DrrW7g7xAg\",\"DSALvlCXQT\",\"DtFptWu9TN\",\"dTnSAj7D7r\",\"DWAyopvoB6\",\"Dyjed8XKGh\",\"DZexn_-CvY\",\"E3Qj1Ox0GV\",\"fC3SfKqfzK\",\"fFSkecXnsz\",\"G4VyH23Ump\",\"gqSWybBxEo\",\"HS99XdAYi0\",\"hslPG0lq4z\",\"iWUcLXaDtx\",\"JSj7CPw3cX\",\"k_hfgqQmji\",\"K1hBsqffWV\",\"kAJ99pzYcR\",\"kb42Kt-bPZ\",\"Kt-J6rOYOo\",\"MOH6xgPpqD\",\"mr_XyoQEfY\",\"MwcRAEm-D8\",\"mXumjk6uGT\",\"naY1G7f3rS\",\"OjB1e5_0Te\",\"PwZPs4KiEJ\",\"r2ikPlt_Bf\",\"tf_hefJPgF\",\"Toy-Jb-ey8\",\"UI4XTgIgXi\",\"v3Vm7KGxXO\",\"VwGnHKWbEv\",\"WuAYBygWxd\",\"Y-hyHsArT8\",\"yHrSD9BhEn\",\"ZxvyW2duqB\"], 'en-US/', 'auto');\n\nSML.load([\"_x1OuAzmB3\",\"3Fyeon8uPH\",\"9gYKNurq80\",\"B1cD4ZW067\",\"BAED_rr8CK\",\"BAOSKMJhq3\",\"BbjKzOnrKM\",\"BeuLRKJ-yN\",\"BeY5OKRJ-r\",\"BfELlfcu0s\",\"BmA-003adM\",\"BNe-vEYTBF\",\"BNsaaw9ZAx\",\"BvWNOQIc4u\",\"BX6PQo0Edz\",\"ByM6pesF-1\",\"C_MgzpFIgA\",\"C-KfK63cxY\",\"C1XsbosKWV\",\"C7C5MjAIvC\",\"CDXsOCr29n\",\"CfzAv5l_mX\",\"CoFNe4fW6z\",\"CQ86DstHXM\",\"CqLaHtF3gE\",\"CrB0gWOkMk\",\"CsOpdp6FVC\",\"CT_TR9ZWA9\",\"CyfPHJuFqR\",\"D2AsWsszL8\",\"DbVjXBU2Pr\",\"DdgaLku-V-\",\"DHMuAfPQje\",\"DlveTfaToE\",\"DxMbUgF8Zv\",\"giFPzSM0p5\",\"iWUcLXaDtx\",\"jNJb9NM32R\",\"Ka7ZESVCSk\",\"mr_XyoQEfY\",\"r2ikPlt_Bf\",\"Toy-Jb-ey8\",\"Vrh692qYoj\",\"WuAYBygWxd\"], 'en-US/', 'auto');\n\nSML.load([\"4dNQRXVfX-\",\"B6-8fkZXEV\",\"BbjKzOnrKM\",\"BdgBzpONQu\",\"BvWNOQIc4u\",\"C7C5MjAIvC\",\"CthjQ4nBCe\",\"CtKYlSE0TR\",\"CyfPHJuFqR\",\"D1laXNC0mB\",\"DC4X-lBSiJ\",\"DlDllW2mfZ\",\"DlveTfaToE\",\"dTnSAj7D7r\",\"omE79N7zZC\",\"WuAYBygWxd\",\"yHrSD9BhEn\"], 'en-US/', 'auto');\n\nSML.load([\"BfrbEk1_tk\"], 'en-US/', 'auto');\n\nSML.load([\"CwyZV2mIAk\"], 'en-US/', 'auto');\n\nSML.load([\"9QBlPIy9rj\",\"BbjKzOnrKM\",\"BClSS8Ks2M\",\"Bfzcb-0_LY\",\"BhF6y65aN_\",\"BmxB2vFZ66\",\"BnLgzEhaDh\",\"BNsaaw9ZAx\",\"BvWNOQIc4u\",\"C7C5MjAIvC\",\"CBI75AI0H0\",\"CfzAv5l_mX\",\"CGwKxZM3t3\",\"CK8JhXAUr0\",\"Cmlszo-sQF\",\"CQ86DstHXM\",\"CrB0gWOkMk\",\"CsOpdp6FVC\",\"CSxofD8NW_\",\"CWCcyTvRWO\",\"CyfPHJuFqR\",\"DbVjXBU2Pr\",\"DC4X-lBSiJ\",\"DlveTfaToE\",\"DM_0cmrc-h\",\"DPlXV6wlin\",\"DxMbUgF8Zv\",\"Dyjed8XKGh\",\"eyA_iFkCNR\",\"Ka7ZESVCSk\",\"kAJ99pzYcR\",\"nCRU_ETw5X\",\"Q6QBrjrB8b\",\"VxH8Us-RV-\",\"WuAYBygWxd\"], 'en-US/', 'auto');\n\nSML.load([\"BbjKzOnrKM\",\"C7C5MjAIvC\",\"CfzAv5l_mX\",\"CsOpdp6FVC\",\"CyfPHJuFqR\",\"D1laXNC0mB\",\"DlveTfaToE\",\"G4VyH23Ump\",\"iWUcLXaDtx\",\"mr_XyoQEfY\",\"PwZPs4KiEJ\",\"r2ikPlt_Bf\",\"WuAYBygWxd\"], 'en-US/', 'auto');\n\nSML.load([\"BbjKzOnrKM\",\"Bfzcb-0_LY\",\"BmxB2vFZ66\",\"BvWNOQIc4u\",\"C7C5MjAIvC\",\"CGwKxZM3t3\",\"Cmlszo-sQF\",\"CQ86DstHXM\",\"CrB0gWOkMk\",\"CSxofD8NW_\",\"CyfPHJuFqR\",\"DC4X-lBSiJ\",\"DlveTfaToE\",\"DM_0cmrc-h\",\"DPlXV6wlin\",\"Dyjed8XKGh\",\"eyA_iFkCNR\",\"kAJ99pzYcR\",\"Q6QBrjrB8b\",\"WuAYBygWxd\"], 'en-US/', 'auto');\n\nSML.load([\"DDATuwijFv\"], 'en-US/', 'auto');\n\nSML.load([\"B3JaeY7_zR\",\"Bawcg4pqOh\",\"BXs_nJQswy\",\"C7C5MjAIvC\",\"C9gUsDe1v4\",\"CAZfOa9MxI\",\"CfzAv5l_mX\",\"CQ86DstHXM\",\"CrB0gWOkMk\",\"CsOpdp6FVC\",\"CyfPHJuFqR\",\"CzrSlBk5Ew\",\"DpF4KtLjbz\",\"dTnSAj7D7r\",\"iWUcLXaDtx\",\"mr_XyoQEfY\",\"r2ikPlt_Bf\",\"vQvFuXVew9\",\"WuAYBygWxd\"], 'en-US/', […]",
+    "word_count": 42,
+    "observables": {},
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "The Cure for Exceptional Zeek Package Testing (Part 3)",
+    "publication_date": "Sun, 23 Aug 2026 22:14:57 +0000",
+    "source": "https://www.reddit.com/r/blueteamsec/comments/1vwfb3v/the_cure_for_exceptional_zeek_package_testing/",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "window.__REDDIT_TIME_CONFIG = {};\n\nThe Cure for Exceptional Zeek Package Testing (Part 3) : r/blueteamsec\n\nSML.load([\"4YVY51TDvU\",\"6H34jRqIOP\",\"6wLBLOsnHQ\",\"A-hDHuLIek\",\"AbA77rdCEI\",\"Aq0wavIxn3\",\"B0WvRUzbEc\",\"B1cD4ZW067\",\"B35uEz-NEp\",\"Ba1_wjkpsO\",\"BAIUESdMwT\",\"Bawcg4pqOh\",\"BB4Dw0wr7k\",\"BbjKzOnrKM\",\"BbtpGT_Eld\",\"BdHlujr6p7\",\"BfqMWW00us\",\"Bfzcb-0_LY\",\"BgcyBHqgZH\",\"BhF6y65aN_\",\"BJ4nLwM7JQ\",\"BmxB2vFZ66\",\"BNsaaw9ZAx\",\"BONrPEdW30\",\"BOXaLYmyLx\",\"BpoHnkpuPZ\",\"BQ-VNBd6PH\",\"Bsq6sAeRgk\",\"Btld0NDt5V\",\"Bv4mayBeHx\",\"BvWNOQIc4u\",\"BZhyYOr65j\",\"C-DKskPjqc\",\"C-R99AaZS3\",\"C7C5MjAIvC\",\"Cci95pST_6\",\"Ceegrse6Fu\",\"CfzAv5l_mX\",\"CGb-_5dLQE\",\"Cl5cfX-IWY\",\"CLvk4IyN7Y\",\"CMuaWNk_j8\",\"CofiDnuwBC\",\"CpIyUGsdS0\",\"CPQLfQqpT9\",\"CQ86DstHXM\",\"CqooWg5Xpm\",\"CQrG9ueNSp\",\"CsBrYoUsGP\",\"CshtTZR1Xd\",\"CsOpdp6FVC\",\"CyfPHJuFqR\",\"Cz3ArUaCYE\",\"CzrSlBk5Ew\",\"D_4EbGa8cq\",\"D-taLhMdX_\",\"D-yGLPbyw8\",\"D0DVrgdKOH\",\"D1laXNC0mB\",\"D2AsWsszL8\",\"D8Rz9nglUK\",\"DC4X-lBSiJ\",\"Dc9EOHyBlh\",\"DcJkQ6k3VJ\",\"DdgaLku-V-\",\"DEd77Tfe8E\",\"DEnMi_3a84\",\"DERdhmMGf9\",\"DffTv7mLqm\",\"Diblugi_R5\",\"DIl76U49_8\",\"DjmjadAkDt\",\"DJwAWvi_6l\",\"DlveTfaToE\",\"DM_0cmrc-h\",\"DMsrMxMqGQ\",\"DPE0WSwrIZ\",\"DPPSuS344f\",\"DqcstBNsOQ\",\"DQzQ3S8TlU\",\"DRLUj9AgIN\",\"DrrW7g7xAg\",\"DSALvlCXQT\",\"DtFptWu9TN\",\"dTnSAj7D7r\",\"DWAyopvoB6\",\"Dyjed8XKGh\",\"DZexn_-CvY\",\"E3Qj1Ox0GV\",\"fC3SfKqfzK\",\"fFSkecXnsz\",\"G4VyH23Ump\",\"gqSWybBxEo\",\"HS99XdAYi0\",\"hslPG0lq4z\",\"iWUcLXaDtx\",\"JSj7CPw3cX\",\"k_hfgqQmji\",\"K1hBsqffWV\",\"kAJ99pzYcR\",\"kb42Kt-bPZ\",\"Kt-J6rOYOo\",\"MOH6xgPpqD\",\"mr_XyoQEfY\",\"MwcRAEm-D8\",\"mXumjk6uGT\",\"naY1G7f3rS\",\"OjB1e5_0Te\",\"PwZPs4KiEJ\",\"r2ikPlt_Bf\",\"tf_hefJPgF\",\"Toy-Jb-ey8\",\"UI4XTgIgXi\",\"v3Vm7KGxXO\",\"VwGnHKWbEv\",\"WuAYBygWxd\",\"Y-hyHsArT8\",\"yHrSD9BhEn\",\"ZxvyW2duqB\"], 'en-US/', 'auto');\n\nSML.load([\"_x1OuAzmB3\",\"3Fyeon8uPH\",\"9gYKNurq80\",\"B1cD4ZW067\",\"BAED_rr8CK\",\"BAOSKMJhq3\",\"BbjKzOnrKM\",\"BeuLRKJ-yN\",\"BeY5OKRJ-r\",\"BfELlfcu0s\",\"BmA-003adM\",\"BNe-vEYTBF\",\"BNsaaw9ZAx\",\"BvWNOQIc4u\",\"BX6PQo0Edz\",\"ByM6pesF-1\",\"C_MgzpFIgA\",\"C-KfK63cxY\",\"C1XsbosKWV\",\"C7C5MjAIvC\",\"CDXsOCr29n\",\"CfzAv5l_mX\",\"CoFNe4fW6z\",\"CQ86DstHXM\",\"CqLaHtF3gE\",\"CrB0gWOkMk\",\"CsOpdp6FVC\",\"CT_TR9ZWA9\",\"CyfPHJuFqR\",\"D2AsWsszL8\",\"DbVjXBU2Pr\",\"DdgaLku-V-\",\"DHMuAfPQje\",\"DlveTfaToE\",\"DxMbUgF8Zv\",\"giFPzSM0p5\",\"iWUcLXaDtx\",\"jNJb9NM32R\",\"Ka7ZESVCSk\",\"mr_XyoQEfY\",\"r2ikPlt_Bf\",\"Toy-Jb-ey8\",\"Vrh692qYoj\",\"WuAYBygWxd\"], 'en-US/', 'auto');\n\nSML.load([\"4dNQRXVfX-\",\"B6-8fkZXEV\",\"BbjKzOnrKM\",\"BdgBzpONQu\",\"BvWNOQIc4u\",\"C7C5MjAIvC\",\"CthjQ4nBCe\",\"CtKYlSE0TR\",\"CyfPHJuFqR\",\"D1laXNC0mB\",\"DC4X-lBSiJ\",\"DlDllW2mfZ\",\"DlveTfaToE\",\"dTnSAj7D7r\",\"omE79N7zZC\",\"WuAYBygWxd\",\"yHrSD9BhEn\"], 'en-US/', 'auto');\n\nSML.load([\"BfrbEk1_tk\"], 'en-US/', 'auto');\n\nSML.load([\"CwyZV2mIAk\"], 'en-US/', 'auto');\n\nSML.load([\"9QBlPIy9rj\",\"BbjKzOnrKM\",\"BClSS8Ks2M\",\"Bfzcb-0_LY\",\"BhF6y65aN_\",\"BmxB2vFZ66\",\"BnLgzEhaDh\",\"BNsaaw9ZAx\",\"BvWNOQIc4u\",\"C7C5MjAIvC\",\"CBI75AI0H0\",\"CfzAv5l_mX\",\"CGwKxZM3t3\",\"CK8JhXAUr0\",\"Cmlszo-sQF\",\"CQ86DstHXM\",\"CrB0gWOkMk\",\"CsOpdp6FVC\",\"CSxofD8NW_\",\"CWCcyTvRWO\",\"CyfPHJuFqR\",\"DbVjXBU2Pr\",\"DC4X-lBSiJ\",\"DlveTfaToE\",\"DM_0cmrc-h\",\"DPlXV6wlin\",\"DxMbUgF8Zv\",\"Dyjed8XKGh\",\"eyA_iFkCNR\",\"Ka7ZESVCSk\",\"kAJ99pzYcR\",\"nCRU_ETw5X\",\"Q6QBrjrB8b\",\"VxH8Us-RV-\",\"WuAYBygWxd\"], 'en-US/', 'auto');\n\nSML.load([\"BbjKzOnrKM\",\"C7C5MjAIvC\",\"CfzAv5l_mX\",\"CsOpdp6FVC\",\"CyfPHJuFqR\",\"D1laXNC0mB\",\"DlveTfaToE\",\"G4VyH23Ump\",\"iWUcLXaDtx\",\"mr_XyoQEfY\",\"PwZPs4KiEJ\",\"r2ikPlt_Bf\",\"WuAYBygWxd\"], 'en-US/', 'auto');\n\nSML.load([\"BbjKzOnrKM\",\"Bfzcb-0_LY\",\"BmxB2vFZ66\",\"BvWNOQIc4u\",\"C7C5MjAIvC\",\"CGwKxZM3t3\",\"Cmlszo-sQF\",\"CQ86DstHXM\",\"CrB0gWOkMk\",\"CSxofD8NW_\",\"CyfPHJuFqR\",\"DC4X-lBSiJ\",\"DlveTfaToE\",\"DM_0cmrc-h\",\"DPlXV6wlin\",\"Dyjed8XKGh\",\"eyA_iFkCNR\",\"kAJ99pzYcR\",\"Q6QBrjrB8b\",\"WuAYBygWxd\"], 'en-US/', 'auto');\n\nSML.load([\"DDATuwijFv\"], 'en-US/', 'auto');\n\nSML.load([\"B3JaeY7_zR\",\"Bawcg4pqOh\",\"BXs_nJQswy\",\"C7C5MjAIvC\",\"C9gUsDe1v4\",\"CAZfOa9MxI\",\"CfzAv5l_mX\",\"CQ86DstHXM\",\"CrB0gWOkMk\",\"CsOpdp6FVC\",\"CyfPHJuFqR\",\"CzrSlBk5Ew\",\"DpF4KtLjbz\",\"dTnSAj7D7r\",\"iWUcLXaDtx\",\"mr_XyoQEfY\",\"r2ikPlt_Bf\",\"vQvFuXVew9\",\"WuAYBygWxd\"], 'en-US/', […]",
+    "word_count": 44,
+    "observables": {},
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "The Cure for Exceptional Zeek Package Testing (Part 2)",
+    "publication_date": "Sun, 23 Aug 2026 22:14:57 +0000",
+    "source": "https://www.reddit.com/r/blueteamsec/comments/1vwfagw/the_cure_for_exceptional_zeek_package_testing/",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "window.__REDDIT_TIME_CONFIG = {};\n\nThe Cure for Exceptional Zeek Package Testing (Part 2) : r/blueteamsec\n\nSML.load([\"4YVY51TDvU\",\"6H34jRqIOP\",\"6wLBLOsnHQ\",\"A-hDHuLIek\",\"AbA77rdCEI\",\"Aq0wavIxn3\",\"B0WvRUzbEc\",\"B1cD4ZW067\",\"B35uEz-NEp\",\"Ba1_wjkpsO\",\"BAIUESdMwT\",\"Bawcg4pqOh\",\"BB4Dw0wr7k\",\"BbjKzOnrKM\",\"BbtpGT_Eld\",\"BdHlujr6p7\",\"BfqMWW00us\",\"Bfzcb-0_LY\",\"BgcyBHqgZH\",\"BhF6y65aN_\",\"BJ4nLwM7JQ\",\"BmxB2vFZ66\",\"BNsaaw9ZAx\",\"BONrPEdW30\",\"BOXaLYmyLx\",\"BpoHnkpuPZ\",\"BQ-VNBd6PH\",\"Bsq6sAeRgk\",\"Btld0NDt5V\",\"Bv4mayBeHx\",\"BvWNOQIc4u\",\"BZhyYOr65j\",\"C-DKskPjqc\",\"C-R99AaZS3\",\"C7C5MjAIvC\",\"Cci95pST_6\",\"Ceegrse6Fu\",\"CfzAv5l_mX\",\"CGb-_5dLQE\",\"Cl5cfX-IWY\",\"CLvk4IyN7Y\",\"CMuaWNk_j8\",\"CofiDnuwBC\",\"CpIyUGsdS0\",\"CPQLfQqpT9\",\"CQ86DstHXM\",\"CqooWg5Xpm\",\"CQrG9ueNSp\",\"CsBrYoUsGP\",\"CshtTZR1Xd\",\"CsOpdp6FVC\",\"CyfPHJuFqR\",\"Cz3ArUaCYE\",\"CzrSlBk5Ew\",\"D_4EbGa8cq\",\"D-taLhMdX_\",\"D-yGLPbyw8\",\"D0DVrgdKOH\",\"D1laXNC0mB\",\"D2AsWsszL8\",\"D8Rz9nglUK\",\"DC4X-lBSiJ\",\"Dc9EOHyBlh\",\"DcJkQ6k3VJ\",\"DdgaLku-V-\",\"DEd77Tfe8E\",\"DEnMi_3a84\",\"DERdhmMGf9\",\"DffTv7mLqm\",\"Diblugi_R5\",\"DIl76U49_8\",\"DjmjadAkDt\",\"DJwAWvi_6l\",\"DlveTfaToE\",\"DM_0cmrc-h\",\"DMsrMxMqGQ\",\"DPE0WSwrIZ\",\"DPPSuS344f\",\"DqcstBNsOQ\",\"DQzQ3S8TlU\",\"DRLUj9AgIN\",\"DrrW7g7xAg\",\"DSALvlCXQT\",\"DtFptWu9TN\",\"dTnSAj7D7r\",\"DWAyopvoB6\",\"Dyjed8XKGh\",\"DZexn_-CvY\",\"E3Qj1Ox0GV\",\"fC3SfKqfzK\",\"fFSkecXnsz\",\"G4VyH23Ump\",\"gqSWybBxEo\",\"HS99XdAYi0\",\"hslPG0lq4z\",\"iWUcLXaDtx\",\"JSj7CPw3cX\",\"k_hfgqQmji\",\"K1hBsqffWV\",\"kAJ99pzYcR\",\"kb42Kt-bPZ\",\"Kt-J6rOYOo\",\"MOH6xgPpqD\",\"mr_XyoQEfY\",\"MwcRAEm-D8\",\"mXumjk6uGT\",\"naY1G7f3rS\",\"OjB1e5_0Te\",\"PwZPs4KiEJ\",\"r2ikPlt_Bf\",\"tf_hefJPgF\",\"Toy-Jb-ey8\",\"UI4XTgIgXi\",\"v3Vm7KGxXO\",\"VwGnHKWbEv\",\"WuAYBygWxd\",\"Y-hyHsArT8\",\"yHrSD9BhEn\",\"ZxvyW2duqB\"], 'en-US/', 'auto');\n\nSML.load([\"_x1OuAzmB3\",\"3Fyeon8uPH\",\"9gYKNurq80\",\"B1cD4ZW067\",\"BAED_rr8CK\",\"BAOSKMJhq3\",\"BbjKzOnrKM\",\"BeuLRKJ-yN\",\"BeY5OKRJ-r\",\"BfELlfcu0s\",\"BmA-003adM\",\"BNe-vEYTBF\",\"BNsaaw9ZAx\",\"BvWNOQIc4u\",\"BX6PQo0Edz\",\"ByM6pesF-1\",\"C_MgzpFIgA\",\"C-KfK63cxY\",\"C1XsbosKWV\",\"C7C5MjAIvC\",\"CDXsOCr29n\",\"CfzAv5l_mX\",\"CoFNe4fW6z\",\"CQ86DstHXM\",\"CqLaHtF3gE\",\"CrB0gWOkMk\",\"CsOpdp6FVC\",\"CT_TR9ZWA9\",\"CyfPHJuFqR\",\"D2AsWsszL8\",\"DbVjXBU2Pr\",\"DdgaLku-V-\",\"DHMuAfPQje\",\"DlveTfaToE\",\"DxMbUgF8Zv\",\"giFPzSM0p5\",\"iWUcLXaDtx\",\"jNJb9NM32R\",\"Ka7ZESVCSk\",\"mr_XyoQEfY\",\"r2ikPlt_Bf\",\"Toy-Jb-ey8\",\"Vrh692qYoj\",\"WuAYBygWxd\"], 'en-US/', 'auto');\n\nSML.load([\"4dNQRXVfX-\",\"B6-8fkZXEV\",\"BbjKzOnrKM\",\"BdgBzpONQu\",\"BvWNOQIc4u\",\"C7C5MjAIvC\",\"CthjQ4nBCe\",\"CtKYlSE0TR\",\"CyfPHJuFqR\",\"D1laXNC0mB\",\"DC4X-lBSiJ\",\"DlDllW2mfZ\",\"DlveTfaToE\",\"dTnSAj7D7r\",\"omE79N7zZC\",\"WuAYBygWxd\",\"yHrSD9BhEn\"], 'en-US/', 'auto');\n\nSML.load([\"BfrbEk1_tk\"], 'en-US/', 'auto');\n\nSML.load([\"CwyZV2mIAk\"], 'en-US/', 'auto');\n\nSML.load([\"9QBlPIy9rj\",\"BbjKzOnrKM\",\"BClSS8Ks2M\",\"Bfzcb-0_LY\",\"BhF6y65aN_\",\"BmxB2vFZ66\",\"BnLgzEhaDh\",\"BNsaaw9ZAx\",\"BvWNOQIc4u\",\"C7C5MjAIvC\",\"CBI75AI0H0\",\"CfzAv5l_mX\",\"CGwKxZM3t3\",\"CK8JhXAUr0\",\"Cmlszo-sQF\",\"CQ86DstHXM\",\"CrB0gWOkMk\",\"CsOpdp6FVC\",\"CSxofD8NW_\",\"CWCcyTvRWO\",\"CyfPHJuFqR\",\"DbVjXBU2Pr\",\"DC4X-lBSiJ\",\"DlveTfaToE\",\"DM_0cmrc-h\",\"DPlXV6wlin\",\"DxMbUgF8Zv\",\"Dyjed8XKGh\",\"eyA_iFkCNR\",\"Ka7ZESVCSk\",\"kAJ99pzYcR\",\"nCRU_ETw5X\",\"Q6QBrjrB8b\",\"VxH8Us-RV-\",\"WuAYBygWxd\"], 'en-US/', 'auto');\n\nSML.load([\"BbjKzOnrKM\",\"C7C5MjAIvC\",\"CfzAv5l_mX\",\"CsOpdp6FVC\",\"CyfPHJuFqR\",\"D1laXNC0mB\",\"DlveTfaToE\",\"G4VyH23Ump\",\"iWUcLXaDtx\",\"mr_XyoQEfY\",\"PwZPs4KiEJ\",\"r2ikPlt_Bf\",\"WuAYBygWxd\"], 'en-US/', 'auto');\n\nSML.load([\"BbjKzOnrKM\",\"Bfzcb-0_LY\",\"BmxB2vFZ66\",\"BvWNOQIc4u\",\"C7C5MjAIvC\",\"CGwKxZM3t3\",\"Cmlszo-sQF\",\"CQ86DstHXM\",\"CrB0gWOkMk\",\"CSxofD8NW_\",\"CyfPHJuFqR\",\"DC4X-lBSiJ\",\"DlveTfaToE\",\"DM_0cmrc-h\",\"DPlXV6wlin\",\"Dyjed8XKGh\",\"eyA_iFkCNR\",\"kAJ99pzYcR\",\"Q6QBrjrB8b\",\"WuAYBygWxd\"], 'en-US/', 'auto');\n\nSML.load([\"DDATuwijFv\"], 'en-US/', 'auto');\n\nSML.load([\"B3JaeY7_zR\",\"Bawcg4pqOh\",\"BXs_nJQswy\",\"C7C5MjAIvC\",\"C9gUsDe1v4\",\"CAZfOa9MxI\",\"CfzAv5l_mX\",\"CQ86DstHXM\",\"CrB0gWOkMk\",\"CsOpdp6FVC\",\"CyfPHJuFqR\",\"CzrSlBk5Ew\",\"DpF4KtLjbz\",\"dTnSAj7D7r\",\"iWUcLXaDtx\",\"mr_XyoQEfY\",\"r2ikPlt_Bf\",\"vQvFuXVew9\",\"WuAYBygWxd\"], 'en-US/', […]",
+    "word_count": 44,
+    "observables": {},
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "The Cure for Exceptional Zeek Package Testing (Part 1)",
+    "publication_date": "Sun, 23 Aug 2026 22:14:57 +0000",
+    "source": "https://www.reddit.com/r/blueteamsec/comments/1vwf9vv/the_cure_for_exceptional_zeek_package_testing/",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "window.__REDDIT_TIME_CONFIG = {};\n\nThe Cure for Exceptional Zeek Package Testing (Part 1) : r/blueteamsec\n\nSML.load([\"4YVY51TDvU\",\"6H34jRqIOP\",\"6wLBLOsnHQ\",\"A-hDHuLIek\",\"AbA77rdCEI\",\"Aq0wavIxn3\",\"B0WvRUzbEc\",\"B1cD4ZW067\",\"B35uEz-NEp\",\"Ba1_wjkpsO\",\"BAIUESdMwT\",\"Bawcg4pqOh\",\"BB4Dw0wr7k\",\"BbjKzOnrKM\",\"BbtpGT_Eld\",\"BdHlujr6p7\",\"BfqMWW00us\",\"Bfzcb-0_LY\",\"BgcyBHqgZH\",\"BhF6y65aN_\",\"BJ4nLwM7JQ\",\"BmxB2vFZ66\",\"BNsaaw9ZAx\",\"BONrPEdW30\",\"BOXaLYmyLx\",\"BpoHnkpuPZ\",\"BQ-VNBd6PH\",\"Bsq6sAeRgk\",\"Btld0NDt5V\",\"Bv4mayBeHx\",\"BvWNOQIc4u\",\"BZhyYOr65j\",\"C-DKskPjqc\",\"C-R99AaZS3\",\"C7C5MjAIvC\",\"Cci95pST_6\",\"Ceegrse6Fu\",\"CfzAv5l_mX\",\"CGb-_5dLQE\",\"Cl5cfX-IWY\",\"CLvk4IyN7Y\",\"CMuaWNk_j8\",\"CofiDnuwBC\",\"CpIyUGsdS0\",\"CPQLfQqpT9\",\"CQ86DstHXM\",\"CqooWg5Xpm\",\"CQrG9ueNSp\",\"CsBrYoUsGP\",\"CshtTZR1Xd\",\"CsOpdp6FVC\",\"CyfPHJuFqR\",\"Cz3ArUaCYE\",\"CzrSlBk5Ew\",\"D_4EbGa8cq\",\"D-taLhMdX_\",\"D-yGLPbyw8\",\"D0DVrgdKOH\",\"D1laXNC0mB\",\"D2AsWsszL8\",\"D8Rz9nglUK\",\"DC4X-lBSiJ\",\"Dc9EOHyBlh\",\"DcJkQ6k3VJ\",\"DdgaLku-V-\",\"DEd77Tfe8E\",\"DEnMi_3a84\",\"DERdhmMGf9\",\"DffTv7mLqm\",\"Diblugi_R5\",\"DIl76U49_8\",\"DjmjadAkDt\",\"DJwAWvi_6l\",\"DlveTfaToE\",\"DM_0cmrc-h\",\"DMsrMxMqGQ\",\"DPE0WSwrIZ\",\"DPPSuS344f\",\"DqcstBNsOQ\",\"DQzQ3S8TlU\",\"DRLUj9AgIN\",\"DrrW7g7xAg\",\"DSALvlCXQT\",\"DtFptWu9TN\",\"dTnSAj7D7r\",\"DWAyopvoB6\",\"Dyjed8XKGh\",\"DZexn_-CvY\",\"E3Qj1Ox0GV\",\"fC3SfKqfzK\",\"fFSkecXnsz\",\"G4VyH23Ump\",\"gqSWybBxEo\",\"HS99XdAYi0\",\"hslPG0lq4z\",\"iWUcLXaDtx\",\"JSj7CPw3cX\",\"k_hfgqQmji\",\"K1hBsqffWV\",\"kAJ99pzYcR\",\"kb42Kt-bPZ\",\"Kt-J6rOYOo\",\"MOH6xgPpqD\",\"mr_XyoQEfY\",\"MwcRAEm-D8\",\"mXumjk6uGT\",\"naY1G7f3rS\",\"OjB1e5_0Te\",\"PwZPs4KiEJ\",\"r2ikPlt_Bf\",\"tf_hefJPgF\",\"Toy-Jb-ey8\",\"UI4XTgIgXi\",\"v3Vm7KGxXO\",\"VwGnHKWbEv\",\"WuAYBygWxd\",\"Y-hyHsArT8\",\"yHrSD9BhEn\",\"ZxvyW2duqB\"], 'en-US/', 'auto');\n\nSML.load([\"_x1OuAzmB3\",\"3Fyeon8uPH\",\"9gYKNurq80\",\"B1cD4ZW067\",\"BAED_rr8CK\",\"BAOSKMJhq3\",\"BbjKzOnrKM\",\"BeuLRKJ-yN\",\"BeY5OKRJ-r\",\"BfELlfcu0s\",\"BmA-003adM\",\"BNe-vEYTBF\",\"BNsaaw9ZAx\",\"BvWNOQIc4u\",\"BX6PQo0Edz\",\"ByM6pesF-1\",\"C_MgzpFIgA\",\"C-KfK63cxY\",\"C1XsbosKWV\",\"C7C5MjAIvC\",\"CDXsOCr29n\",\"CfzAv5l_mX\",\"CoFNe4fW6z\",\"CQ86DstHXM\",\"CqLaHtF3gE\",\"CrB0gWOkMk\",\"CsOpdp6FVC\",\"CT_TR9ZWA9\",\"CyfPHJuFqR\",\"D2AsWsszL8\",\"DbVjXBU2Pr\",\"DdgaLku-V-\",\"DHMuAfPQje\",\"DlveTfaToE\",\"DxMbUgF8Zv\",\"giFPzSM0p5\",\"iWUcLXaDtx\",\"jNJb9NM32R\",\"Ka7ZESVCSk\",\"mr_XyoQEfY\",\"r2ikPlt_Bf\",\"Toy-Jb-ey8\",\"Vrh692qYoj\",\"WuAYBygWxd\"], 'en-US/', 'auto');\n\nSML.load([\"4dNQRXVfX-\",\"B6-8fkZXEV\",\"BbjKzOnrKM\",\"BdgBzpONQu\",\"BvWNOQIc4u\",\"C7C5MjAIvC\",\"CthjQ4nBCe\",\"CtKYlSE0TR\",\"CyfPHJuFqR\",\"D1laXNC0mB\",\"DC4X-lBSiJ\",\"DlDllW2mfZ\",\"DlveTfaToE\",\"dTnSAj7D7r\",\"omE79N7zZC\",\"WuAYBygWxd\",\"yHrSD9BhEn\"], 'en-US/', 'auto');\n\nSML.load([\"BfrbEk1_tk\"], 'en-US/', 'auto');\n\nSML.load([\"CwyZV2mIAk\"], 'en-US/', 'auto');\n\nSML.load([\"9QBlPIy9rj\",\"BbjKzOnrKM\",\"BClSS8Ks2M\",\"Bfzcb-0_LY\",\"BhF6y65aN_\",\"BmxB2vFZ66\",\"BnLgzEhaDh\",\"BNsaaw9ZAx\",\"BvWNOQIc4u\",\"C7C5MjAIvC\",\"CBI75AI0H0\",\"CfzAv5l_mX\",\"CGwKxZM3t3\",\"CK8JhXAUr0\",\"Cmlszo-sQF\",\"CQ86DstHXM\",\"CrB0gWOkMk\",\"CsOpdp6FVC\",\"CSxofD8NW_\",\"CWCcyTvRWO\",\"CyfPHJuFqR\",\"DbVjXBU2Pr\",\"DC4X-lBSiJ\",\"DlveTfaToE\",\"DM_0cmrc-h\",\"DPlXV6wlin\",\"DxMbUgF8Zv\",\"Dyjed8XKGh\",\"eyA_iFkCNR\",\"Ka7ZESVCSk\",\"kAJ99pzYcR\",\"nCRU_ETw5X\",\"Q6QBrjrB8b\",\"VxH8Us-RV-\",\"WuAYBygWxd\"], 'en-US/', 'auto');\n\nSML.load([\"BbjKzOnrKM\",\"C7C5MjAIvC\",\"CfzAv5l_mX\",\"CsOpdp6FVC\",\"CyfPHJuFqR\",\"D1laXNC0mB\",\"DlveTfaToE\",\"G4VyH23Ump\",\"iWUcLXaDtx\",\"mr_XyoQEfY\",\"PwZPs4KiEJ\",\"r2ikPlt_Bf\",\"WuAYBygWxd\"], 'en-US/', 'auto');\n\nSML.load([\"BbjKzOnrKM\",\"Bfzcb-0_LY\",\"BmxB2vFZ66\",\"BvWNOQIc4u\",\"C7C5MjAIvC\",\"CGwKxZM3t3\",\"Cmlszo-sQF\",\"CQ86DstHXM\",\"CrB0gWOkMk\",\"CSxofD8NW_\",\"CyfPHJuFqR\",\"DC4X-lBSiJ\",\"DlveTfaToE\",\"DM_0cmrc-h\",\"DPlXV6wlin\",\"Dyjed8XKGh\",\"eyA_iFkCNR\",\"kAJ99pzYcR\",\"Q6QBrjrB8b\",\"WuAYBygWxd\"], 'en-US/', 'auto');\n\nSML.load([\"DDATuwijFv\"], 'en-US/', 'auto');\n\nSML.load([\"B3JaeY7_zR\",\"Bawcg4pqOh\",\"BXs_nJQswy\",\"C7C5MjAIvC\",\"C9gUsDe1v4\",\"CAZfOa9MxI\",\"CfzAv5l_mX\",\"CQ86DstHXM\",\"CrB0gWOkMk\",\"CsOpdp6FVC\",\"CyfPHJuFqR\",\"CzrSlBk5Ew\",\"DpF4KtLjbz\",\"dTnSAj7D7r\",\"iWUcLXaDtx\",\"mr_XyoQEfY\",\"r2ikPlt_Bf\",\"vQvFuXVew9\",\"WuAYBygWxd\"], 'en-US/', […]",
+    "word_count": 44,
+    "observables": {},
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "BRIDGEHEAD : An npm typosquatting campaign that crosses from WSL into Windows to plant a crypto-wallet stealer",
+    "publication_date": "Sun, 23 Aug 2026 22:14:57 +0000",
+    "source": "https://www.reddit.com/r/blueteamsec/comments/1vwf6ny/bridgehead_an_npm_typosquatting_campaign_that/",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "window.__REDDIT_TIME_CONFIG = {};\n\nBRIDGEHEAD : An npm typosquatting campaign that crosses from WSL into Windows to plant a crypto-wallet stealer : r/blueteamsec\n\nSML.load([\"4YVY51TDvU\",\"6H34jRqIOP\",\"6wLBLOsnHQ\",\"A-hDHuLIek\",\"AbA77rdCEI\",\"Aq0wavIxn3\",\"B0WvRUzbEc\",\"B1cD4ZW067\",\"B35uEz-NEp\",\"Ba1_wjkpsO\",\"BAIUESdMwT\",\"Bawcg4pqOh\",\"BB4Dw0wr7k\",\"BbjKzOnrKM\",\"BbtpGT_Eld\",\"BdHlujr6p7\",\"BfqMWW00us\",\"Bfzcb-0_LY\",\"BgcyBHqgZH\",\"BhF6y65aN_\",\"BJ4nLwM7JQ\",\"BmxB2vFZ66\",\"BNsaaw9ZAx\",\"BONrPEdW30\",\"BOXaLYmyLx\",\"BpoHnkpuPZ\",\"BQ-VNBd6PH\",\"Bsq6sAeRgk\",\"Btld0NDt5V\",\"Bv4mayBeHx\",\"BvWNOQIc4u\",\"BZhyYOr65j\",\"C-DKskPjqc\",\"C-R99AaZS3\",\"C7C5MjAIvC\",\"Cci95pST_6\",\"Ceegrse6Fu\",\"CfzAv5l_mX\",\"CGb-_5dLQE\",\"Cl5cfX-IWY\",\"CLvk4IyN7Y\",\"CMuaWNk_j8\",\"CofiDnuwBC\",\"CpIyUGsdS0\",\"CPQLfQqpT9\",\"CQ86DstHXM\",\"CqooWg5Xpm\",\"CQrG9ueNSp\",\"CsBrYoUsGP\",\"CshtTZR1Xd\",\"CsOpdp6FVC\",\"CyfPHJuFqR\",\"Cz3ArUaCYE\",\"CzrSlBk5Ew\",\"D_4EbGa8cq\",\"D-taLhMdX_\",\"D-yGLPbyw8\",\"D0DVrgdKOH\",\"D1laXNC0mB\",\"D2AsWsszL8\",\"D8Rz9nglUK\",\"DC4X-lBSiJ\",\"Dc9EOHyBlh\",\"DcJkQ6k3VJ\",\"DdgaLku-V-\",\"DEd77Tfe8E\",\"DEnMi_3a84\",\"DERdhmMGf9\",\"DffTv7mLqm\",\"Diblugi_R5\",\"DIl76U49_8\",\"DjmjadAkDt\",\"DJwAWvi_6l\",\"DlveTfaToE\",\"DM_0cmrc-h\",\"DMsrMxMqGQ\",\"DPE0WSwrIZ\",\"DPPSuS344f\",\"DqcstBNsOQ\",\"DQzQ3S8TlU\",\"DRLUj9AgIN\",\"DrrW7g7xAg\",\"DSALvlCXQT\",\"DtFptWu9TN\",\"dTnSAj7D7r\",\"DWAyopvoB6\",\"Dyjed8XKGh\",\"DZexn_-CvY\",\"E3Qj1Ox0GV\",\"fC3SfKqfzK\",\"fFSkecXnsz\",\"G4VyH23Ump\",\"gqSWybBxEo\",\"HS99XdAYi0\",\"hslPG0lq4z\",\"iWUcLXaDtx\",\"JSj7CPw3cX\",\"k_hfgqQmji\",\"K1hBsqffWV\",\"kAJ99pzYcR\",\"kb42Kt-bPZ\",\"Kt-J6rOYOo\",\"MOH6xgPpqD\",\"mr_XyoQEfY\",\"MwcRAEm-D8\",\"mXumjk6uGT\",\"naY1G7f3rS\",\"OjB1e5_0Te\",\"PwZPs4KiEJ\",\"r2ikPlt_Bf\",\"tf_hefJPgF\",\"Toy-Jb-ey8\",\"UI4XTgIgXi\",\"v3Vm7KGxXO\",\"VwGnHKWbEv\",\"WuAYBygWxd\",\"Y-hyHsArT8\",\"yHrSD9BhEn\",\"ZxvyW2duqB\"], 'en-US/', 'auto');\n\nSML.load([\"_x1OuAzmB3\",\"3Fyeon8uPH\",\"9gYKNurq80\",\"B1cD4ZW067\",\"BAED_rr8CK\",\"BAOSKMJhq3\",\"BbjKzOnrKM\",\"BeuLRKJ-yN\",\"BeY5OKRJ-r\",\"BfELlfcu0s\",\"BmA-003adM\",\"BNe-vEYTBF\",\"BNsaaw9ZAx\",\"BvWNOQIc4u\",\"BX6PQo0Edz\",\"ByM6pesF-1\",\"C_MgzpFIgA\",\"C-KfK63cxY\",\"C1XsbosKWV\",\"C7C5MjAIvC\",\"CDXsOCr29n\",\"CfzAv5l_mX\",\"CoFNe4fW6z\",\"CQ86DstHXM\",\"CqLaHtF3gE\",\"CrB0gWOkMk\",\"CsOpdp6FVC\",\"CT_TR9ZWA9\",\"CyfPHJuFqR\",\"D2AsWsszL8\",\"DbVjXBU2Pr\",\"DdgaLku-V-\",\"DHMuAfPQje\",\"DlveTfaToE\",\"DxMbUgF8Zv\",\"giFPzSM0p5\",\"iWUcLXaDtx\",\"jNJb9NM32R\",\"Ka7ZESVCSk\",\"mr_XyoQEfY\",\"r2ikPlt_Bf\",\"Toy-Jb-ey8\",\"Vrh692qYoj\",\"WuAYBygWxd\"], 'en-US/', 'auto');\n\nSML.load([\"4dNQRXVfX-\",\"B6-8fkZXEV\",\"BbjKzOnrKM\",\"BdgBzpONQu\",\"BvWNOQIc4u\",\"C7C5MjAIvC\",\"CthjQ4nBCe\",\"CtKYlSE0TR\",\"CyfPHJuFqR\",\"D1laXNC0mB\",\"DC4X-lBSiJ\",\"DlDllW2mfZ\",\"DlveTfaToE\",\"dTnSAj7D7r\",\"omE79N7zZC\",\"WuAYBygWxd\",\"yHrSD9BhEn\"], 'en-US/', 'auto');\n\nSML.load([\"BfrbEk1_tk\"], 'en-US/', 'auto');\n\nSML.load([\"CwyZV2mIAk\"], 'en-US/', 'auto');\n\nSML.load([\"9QBlPIy9rj\",\"BbjKzOnrKM\",\"BClSS8Ks2M\",\"Bfzcb-0_LY\",\"BhF6y65aN_\",\"BmxB2vFZ66\",\"BnLgzEhaDh\",\"BNsaaw9ZAx\",\"BvWNOQIc4u\",\"C7C5MjAIvC\",\"CBI75AI0H0\",\"CfzAv5l_mX\",\"CGwKxZM3t3\",\"CK8JhXAUr0\",\"Cmlszo-sQF\",\"CQ86DstHXM\",\"CrB0gWOkMk\",\"CsOpdp6FVC\",\"CSxofD8NW_\",\"CWCcyTvRWO\",\"CyfPHJuFqR\",\"DbVjXBU2Pr\",\"DC4X-lBSiJ\",\"DlveTfaToE\",\"DM_0cmrc-h\",\"DPlXV6wlin\",\"DxMbUgF8Zv\",\"Dyjed8XKGh\",\"eyA_iFkCNR\",\"Ka7ZESVCSk\",\"kAJ99pzYcR\",\"nCRU_ETw5X\",\"Q6QBrjrB8b\",\"VxH8Us-RV-\",\"WuAYBygWxd\"], 'en-US/', 'auto');\n\nSML.load([\"BbjKzOnrKM\",\"C7C5MjAIvC\",\"CfzAv5l_mX\",\"CsOpdp6FVC\",\"CyfPHJuFqR\",\"D1laXNC0mB\",\"DlveTfaToE\",\"G4VyH23Ump\",\"iWUcLXaDtx\",\"mr_XyoQEfY\",\"PwZPs4KiEJ\",\"r2ikPlt_Bf\",\"WuAYBygWxd\"], 'en-US/', 'auto');\n\nSML.load([\"BbjKzOnrKM\",\"Bfzcb-0_LY\",\"BmxB2vFZ66\",\"BvWNOQIc4u\",\"C7C5MjAIvC\",\"CGwKxZM3t3\",\"Cmlszo-sQF\",\"CQ86DstHXM\",\"CrB0gWOkMk\",\"CSxofD8NW_\",\"CyfPHJuFqR\",\"DC4X-lBSiJ\",\"DlveTfaToE\",\"DM_0cmrc-h\",\"DPlXV6wlin\",\"Dyjed8XKGh\",\"eyA_iFkCNR\",\"kAJ99pzYcR\",\"Q6QBrjrB8b\",\"WuAYBygWxd\"], 'en-US/', 'auto');\n\nSML.load([\"DDATuwijFv\"], 'en-US/', 'auto');\n\nSML.load([\"B3JaeY7_zR\",\"Bawcg4pqOh\",\"BXs_nJQswy\",\"C7C5MjAIvC\",\"C9gUsDe1v4\",\"CAZfOa9MxI\",\"CfzAv5l_mX\",\"CQ86DstHXM\",\"CrB0gWOkMk\",\"CsOpdp6FVC\",\"CyfPHJuFqR\",\"CzrSlBk5Ew\",\"DpF4KtLjbz\",\"dTnSAj7D7r\",\"iWUcLXaDtx\",\"mr_XyoQEfY\",\"r2ikPlt_Bf\",\"vQvFuXVew9\",\"WuAYBygWxd\"], 'en-US/', […]",
+    "word_count": 52,
+    "observables": {},
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "natural-language-nmap: Experimental SLM fine tune project. CPU only local model converts natural language into nmap commands.",
+    "publication_date": "Sun, 23 Aug 2026 22:14:57 +0000",
+    "source": "https://www.reddit.com/r/blueteamsec/comments/1vwddk7/naturallanguagenmap_experimental_slm_fine_tune/",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "window.__REDDIT_TIME_CONFIG = {};\n\nnatural-language-nmap: Experimental SLM fine tune project. CPU only local model converts natural language into nmap commands. : r/blueteamsec\n\nSML.load([\"4YVY51TDvU\",\"6H34jRqIOP\",\"6wLBLOsnHQ\",\"A-hDHuLIek\",\"AbA77rdCEI\",\"Aq0wavIxn3\",\"B0WvRUzbEc\",\"B1cD4ZW067\",\"B35uEz-NEp\",\"Ba1_wjkpsO\",\"BAIUESdMwT\",\"Bawcg4pqOh\",\"BB4Dw0wr7k\",\"BbjKzOnrKM\",\"BbtpGT_Eld\",\"BdHlujr6p7\",\"BfqMWW00us\",\"Bfzcb-0_LY\",\"BgcyBHqgZH\",\"BhF6y65aN_\",\"BJ4nLwM7JQ\",\"BmxB2vFZ66\",\"BNsaaw9ZAx\",\"BONrPEdW30\",\"BOXaLYmyLx\",\"BpoHnkpuPZ\",\"BQ-VNBd6PH\",\"Bsq6sAeRgk\",\"Btld0NDt5V\",\"Bv4mayBeHx\",\"BvWNOQIc4u\",\"BZhyYOr65j\",\"C-DKskPjqc\",\"C-R99AaZS3\",\"C7C5MjAIvC\",\"Cci95pST_6\",\"Ceegrse6Fu\",\"CfzAv5l_mX\",\"CGb-_5dLQE\",\"Cl5cfX-IWY\",\"CLvk4IyN7Y\",\"CMuaWNk_j8\",\"CofiDnuwBC\",\"CpIyUGsdS0\",\"CPQLfQqpT9\",\"CQ86DstHXM\",\"CqooWg5Xpm\",\"CQrG9ueNSp\",\"CsBrYoUsGP\",\"CshtTZR1Xd\",\"CsOpdp6FVC\",\"CyfPHJuFqR\",\"Cz3ArUaCYE\",\"CzrSlBk5Ew\",\"D_4EbGa8cq\",\"D-taLhMdX_\",\"D-yGLPbyw8\",\"D0DVrgdKOH\",\"D1laXNC0mB\",\"D2AsWsszL8\",\"D8Rz9nglUK\",\"DC4X-lBSiJ\",\"Dc9EOHyBlh\",\"DcJkQ6k3VJ\",\"DdgaLku-V-\",\"DEd77Tfe8E\",\"DEnMi_3a84\",\"DERdhmMGf9\",\"DffTv7mLqm\",\"Diblugi_R5\",\"DIl76U49_8\",\"DjmjadAkDt\",\"DJwAWvi_6l\",\"DlveTfaToE\",\"DM_0cmrc-h\",\"DMsrMxMqGQ\",\"DPE0WSwrIZ\",\"DPPSuS344f\",\"DqcstBNsOQ\",\"DQzQ3S8TlU\",\"DRLUj9AgIN\",\"DrrW7g7xAg\",\"DSALvlCXQT\",\"DtFptWu9TN\",\"dTnSAj7D7r\",\"DWAyopvoB6\",\"Dyjed8XKGh\",\"DZexn_-CvY\",\"E3Qj1Ox0GV\",\"fC3SfKqfzK\",\"fFSkecXnsz\",\"G4VyH23Ump\",\"gqSWybBxEo\",\"HS99XdAYi0\",\"hslPG0lq4z\",\"iWUcLXaDtx\",\"JSj7CPw3cX\",\"k_hfgqQmji\",\"K1hBsqffWV\",\"kAJ99pzYcR\",\"kb42Kt-bPZ\",\"Kt-J6rOYOo\",\"MOH6xgPpqD\",\"mr_XyoQEfY\",\"MwcRAEm-D8\",\"mXumjk6uGT\",\"naY1G7f3rS\",\"OjB1e5_0Te\",\"PwZPs4KiEJ\",\"r2ikPlt_Bf\",\"tf_hefJPgF\",\"Toy-Jb-ey8\",\"UI4XTgIgXi\",\"v3Vm7KGxXO\",\"VwGnHKWbEv\",\"WuAYBygWxd\",\"Y-hyHsArT8\",\"yHrSD9BhEn\",\"ZxvyW2duqB\"], 'en-US/', 'auto');\n\nSML.load([\"_x1OuAzmB3\",\"3Fyeon8uPH\",\"9gYKNurq80\",\"B1cD4ZW067\",\"BAED_rr8CK\",\"BAOSKMJhq3\",\"BbjKzOnrKM\",\"BeuLRKJ-yN\",\"BeY5OKRJ-r\",\"BfELlfcu0s\",\"BmA-003adM\",\"BNe-vEYTBF\",\"BNsaaw9ZAx\",\"BvWNOQIc4u\",\"BX6PQo0Edz\",\"ByM6pesF-1\",\"C_MgzpFIgA\",\"C-KfK63cxY\",\"C1XsbosKWV\",\"C7C5MjAIvC\",\"CDXsOCr29n\",\"CfzAv5l_mX\",\"CoFNe4fW6z\",\"CQ86DstHXM\",\"CqLaHtF3gE\",\"CrB0gWOkMk\",\"CsOpdp6FVC\",\"CT_TR9ZWA9\",\"CyfPHJuFqR\",\"D2AsWsszL8\",\"DbVjXBU2Pr\",\"DdgaLku-V-\",\"DHMuAfPQje\",\"DlveTfaToE\",\"DxMbUgF8Zv\",\"giFPzSM0p5\",\"iWUcLXaDtx\",\"jNJb9NM32R\",\"Ka7ZESVCSk\",\"mr_XyoQEfY\",\"r2ikPlt_Bf\",\"Toy-Jb-ey8\",\"Vrh692qYoj\",\"WuAYBygWxd\"], 'en-US/', 'auto');\n\nSML.load([\"4dNQRXVfX-\",\"B6-8fkZXEV\",\"BbjKzOnrKM\",\"BdgBzpONQu\",\"BvWNOQIc4u\",\"C7C5MjAIvC\",\"CthjQ4nBCe\",\"CtKYlSE0TR\",\"CyfPHJuFqR\",\"D1laXNC0mB\",\"DC4X-lBSiJ\",\"DlDllW2mfZ\",\"DlveTfaToE\",\"dTnSAj7D7r\",\"omE79N7zZC\",\"WuAYBygWxd\",\"yHrSD9BhEn\"], 'en-US/', 'auto');\n\nSML.load([\"BfrbEk1_tk\"], 'en-US/', 'auto');\n\nSML.load([\"CwyZV2mIAk\"], 'en-US/', 'auto');\n\nSML.load([\"9QBlPIy9rj\",\"BbjKzOnrKM\",\"BClSS8Ks2M\",\"Bfzcb-0_LY\",\"BhF6y65aN_\",\"BmxB2vFZ66\",\"BnLgzEhaDh\",\"BNsaaw9ZAx\",\"BvWNOQIc4u\",\"C7C5MjAIvC\",\"CBI75AI0H0\",\"CfzAv5l_mX\",\"CGwKxZM3t3\",\"CK8JhXAUr0\",\"Cmlszo-sQF\",\"CQ86DstHXM\",\"CrB0gWOkMk\",\"CsOpdp6FVC\",\"CSxofD8NW_\",\"CWCcyTvRWO\",\"CyfPHJuFqR\",\"DbVjXBU2Pr\",\"DC4X-lBSiJ\",\"DlveTfaToE\",\"DM_0cmrc-h\",\"DPlXV6wlin\",\"DxMbUgF8Zv\",\"Dyjed8XKGh\",\"eyA_iFkCNR\",\"Ka7ZESVCSk\",\"kAJ99pzYcR\",\"nCRU_ETw5X\",\"Q6QBrjrB8b\",\"VxH8Us-RV-\",\"WuAYBygWxd\"], 'en-US/', 'auto');\n\nSML.load([\"BbjKzOnrKM\",\"C7C5MjAIvC\",\"CfzAv5l_mX\",\"CsOpdp6FVC\",\"CyfPHJuFqR\",\"D1laXNC0mB\",\"DlveTfaToE\",\"G4VyH23Ump\",\"iWUcLXaDtx\",\"mr_XyoQEfY\",\"PwZPs4KiEJ\",\"r2ikPlt_Bf\",\"WuAYBygWxd\"], 'en-US/', 'auto');\n\nSML.load([\"BbjKzOnrKM\",\"Bfzcb-0_LY\",\"BmxB2vFZ66\",\"BvWNOQIc4u\",\"C7C5MjAIvC\",\"CGwKxZM3t3\",\"Cmlszo-sQF\",\"CQ86DstHXM\",\"CrB0gWOkMk\",\"CSxofD8NW_\",\"CyfPHJuFqR\",\"DC4X-lBSiJ\",\"DlveTfaToE\",\"DM_0cmrc-h\",\"DPlXV6wlin\",\"Dyjed8XKGh\",\"eyA_iFkCNR\",\"kAJ99pzYcR\",\"Q6QBrjrB8b\",\"WuAYBygWxd\"], 'en-US/', 'auto');\n\nSML.load([\"DDATuwijFv\"], 'en-US/', 'auto');\n\nSML.load([\"B3JaeY7_zR\",\"Bawcg4pqOh\",\"BXs_nJQswy\",\"C7C5MjAIvC\",\"C9gUsDe1v4\",\"CAZfOa9MxI\",\"CfzAv5l_mX\",\"CQ86DstHXM\",\"CrB0gWOkMk\",\"CsOpdp6FVC\",\"CyfPHJuFqR\",\"CzrSlBk5Ew\",\"DpF4KtLjbz\",\"dTnSAj7D7r\",\"iWUcLXaDtx\",\"mr_XyoQEfY\",\"r2ikPlt_Bf\",\"vQvFuXVew9\",\"WuAYBygWxd\"], 'en-US/', […]",
+    "word_count": 51,
+    "observables": {},
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "fortitool: cracking FortiOS firmware end to end, and a key nobody had",
+    "publication_date": "Sun, 23 Aug 2026 22:14:57 +0000",
+    "source": "https://www.reddit.com/r/blueteamsec/comments/1vwda2a/fortitool_cracking_fortios_firmware_end_to_end/",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "window.__REDDIT_TIME_CONFIG = {};\n\nfortitool: cracking FortiOS firmware end to end, and a key nobody had : r/blueteamsec\n\nSML.load([\"4YVY51TDvU\",\"6H34jRqIOP\",\"6wLBLOsnHQ\",\"A-hDHuLIek\",\"AbA77rdCEI\",\"Aq0wavIxn3\",\"B0WvRUzbEc\",\"B1cD4ZW067\",\"B35uEz-NEp\",\"Ba1_wjkpsO\",\"BAIUESdMwT\",\"Bawcg4pqOh\",\"BB4Dw0wr7k\",\"BbjKzOnrKM\",\"BbtpGT_Eld\",\"BdHlujr6p7\",\"BfqMWW00us\",\"Bfzcb-0_LY\",\"BgcyBHqgZH\",\"BhF6y65aN_\",\"BJ4nLwM7JQ\",\"BmxB2vFZ66\",\"BNsaaw9ZAx\",\"BONrPEdW30\",\"BOXaLYmyLx\",\"BpoHnkpuPZ\",\"BQ-VNBd6PH\",\"Bsq6sAeRgk\",\"Btld0NDt5V\",\"Bv4mayBeHx\",\"BvWNOQIc4u\",\"BZhyYOr65j\",\"C-DKskPjqc\",\"C-R99AaZS3\",\"C7C5MjAIvC\",\"Cci95pST_6\",\"Ceegrse6Fu\",\"CfzAv5l_mX\",\"CGb-_5dLQE\",\"Cl5cfX-IWY\",\"CLvk4IyN7Y\",\"CMuaWNk_j8\",\"CofiDnuwBC\",\"CpIyUGsdS0\",\"CPQLfQqpT9\",\"CQ86DstHXM\",\"CqooWg5Xpm\",\"CQrG9ueNSp\",\"CsBrYoUsGP\",\"CshtTZR1Xd\",\"CsOpdp6FVC\",\"CyfPHJuFqR\",\"Cz3ArUaCYE\",\"CzrSlBk5Ew\",\"D_4EbGa8cq\",\"D-taLhMdX_\",\"D-yGLPbyw8\",\"D0DVrgdKOH\",\"D1laXNC0mB\",\"D2AsWsszL8\",\"D8Rz9nglUK\",\"DC4X-lBSiJ\",\"Dc9EOHyBlh\",\"DcJkQ6k3VJ\",\"DdgaLku-V-\",\"DEd77Tfe8E\",\"DEnMi_3a84\",\"DERdhmMGf9\",\"DffTv7mLqm\",\"Diblugi_R5\",\"DIl76U49_8\",\"DjmjadAkDt\",\"DJwAWvi_6l\",\"DlveTfaToE\",\"DM_0cmrc-h\",\"DMsrMxMqGQ\",\"DPE0WSwrIZ\",\"DPPSuS344f\",\"DqcstBNsOQ\",\"DQzQ3S8TlU\",\"DRLUj9AgIN\",\"DrrW7g7xAg\",\"DSALvlCXQT\",\"DtFptWu9TN\",\"dTnSAj7D7r\",\"DWAyopvoB6\",\"Dyjed8XKGh\",\"DZexn_-CvY\",\"E3Qj1Ox0GV\",\"fC3SfKqfzK\",\"fFSkecXnsz\",\"G4VyH23Ump\",\"gqSWybBxEo\",\"HS99XdAYi0\",\"hslPG0lq4z\",\"iWUcLXaDtx\",\"JSj7CPw3cX\",\"k_hfgqQmji\",\"K1hBsqffWV\",\"kAJ99pzYcR\",\"kb42Kt-bPZ\",\"Kt-J6rOYOo\",\"MOH6xgPpqD\",\"mr_XyoQEfY\",\"MwcRAEm-D8\",\"mXumjk6uGT\",\"naY1G7f3rS\",\"OjB1e5_0Te\",\"PwZPs4KiEJ\",\"r2ikPlt_Bf\",\"tf_hefJPgF\",\"Toy-Jb-ey8\",\"UI4XTgIgXi\",\"v3Vm7KGxXO\",\"VwGnHKWbEv\",\"WuAYBygWxd\",\"Y-hyHsArT8\",\"yHrSD9BhEn\",\"ZxvyW2duqB\"], 'en-US/', 'auto');\n\nSML.load([\"_x1OuAzmB3\",\"3Fyeon8uPH\",\"9gYKNurq80\",\"B1cD4ZW067\",\"BAED_rr8CK\",\"BAOSKMJhq3\",\"BbjKzOnrKM\",\"BeuLRKJ-yN\",\"BeY5OKRJ-r\",\"BfELlfcu0s\",\"BmA-003adM\",\"BNe-vEYTBF\",\"BNsaaw9ZAx\",\"BvWNOQIc4u\",\"BX6PQo0Edz\",\"ByM6pesF-1\",\"C_MgzpFIgA\",\"C-KfK63cxY\",\"C1XsbosKWV\",\"C7C5MjAIvC\",\"CDXsOCr29n\",\"CfzAv5l_mX\",\"CoFNe4fW6z\",\"CQ86DstHXM\",\"CqLaHtF3gE\",\"CrB0gWOkMk\",\"CsOpdp6FVC\",\"CT_TR9ZWA9\",\"CyfPHJuFqR\",\"D2AsWsszL8\",\"DbVjXBU2Pr\",\"DdgaLku-V-\",\"DHMuAfPQje\",\"DlveTfaToE\",\"DxMbUgF8Zv\",\"giFPzSM0p5\",\"iWUcLXaDtx\",\"jNJb9NM32R\",\"Ka7ZESVCSk\",\"mr_XyoQEfY\",\"r2ikPlt_Bf\",\"Toy-Jb-ey8\",\"Vrh692qYoj\",\"WuAYBygWxd\"], 'en-US/', 'auto');\n\nSML.load([\"4dNQRXVfX-\",\"B6-8fkZXEV\",\"BbjKzOnrKM\",\"BdgBzpONQu\",\"BvWNOQIc4u\",\"C7C5MjAIvC\",\"CthjQ4nBCe\",\"CtKYlSE0TR\",\"CyfPHJuFqR\",\"D1laXNC0mB\",\"DC4X-lBSiJ\",\"DlDllW2mfZ\",\"DlveTfaToE\",\"dTnSAj7D7r\",\"omE79N7zZC\",\"WuAYBygWxd\",\"yHrSD9BhEn\"], 'en-US/', 'auto');\n\nSML.load([\"BfrbEk1_tk\"], 'en-US/', 'auto');\n\nSML.load([\"CwyZV2mIAk\"], 'en-US/', 'auto');\n\nSML.load([\"9QBlPIy9rj\",\"BbjKzOnrKM\",\"BClSS8Ks2M\",\"Bfzcb-0_LY\",\"BhF6y65aN_\",\"BmxB2vFZ66\",\"BnLgzEhaDh\",\"BNsaaw9ZAx\",\"BvWNOQIc4u\",\"C7C5MjAIvC\",\"CBI75AI0H0\",\"CfzAv5l_mX\",\"CGwKxZM3t3\",\"CK8JhXAUr0\",\"Cmlszo-sQF\",\"CQ86DstHXM\",\"CrB0gWOkMk\",\"CsOpdp6FVC\",\"CSxofD8NW_\",\"CWCcyTvRWO\",\"CyfPHJuFqR\",\"DbVjXBU2Pr\",\"DC4X-lBSiJ\",\"DlveTfaToE\",\"DM_0cmrc-h\",\"DPlXV6wlin\",\"DxMbUgF8Zv\",\"Dyjed8XKGh\",\"eyA_iFkCNR\",\"Ka7ZESVCSk\",\"kAJ99pzYcR\",\"nCRU_ETw5X\",\"Q6QBrjrB8b\",\"VxH8Us-RV-\",\"WuAYBygWxd\"], 'en-US/', 'auto');\n\nSML.load([\"BbjKzOnrKM\",\"C7C5MjAIvC\",\"CfzAv5l_mX\",\"CsOpdp6FVC\",\"CyfPHJuFqR\",\"D1laXNC0mB\",\"DlveTfaToE\",\"G4VyH23Ump\",\"iWUcLXaDtx\",\"mr_XyoQEfY\",\"PwZPs4KiEJ\",\"r2ikPlt_Bf\",\"WuAYBygWxd\"], 'en-US/', 'auto');\n\nSML.load([\"BbjKzOnrKM\",\"Bfzcb-0_LY\",\"BmxB2vFZ66\",\"BvWNOQIc4u\",\"C7C5MjAIvC\",\"CGwKxZM3t3\",\"Cmlszo-sQF\",\"CQ86DstHXM\",\"CrB0gWOkMk\",\"CSxofD8NW_\",\"CyfPHJuFqR\",\"DC4X-lBSiJ\",\"DlveTfaToE\",\"DM_0cmrc-h\",\"DPlXV6wlin\",\"Dyjed8XKGh\",\"eyA_iFkCNR\",\"kAJ99pzYcR\",\"Q6QBrjrB8b\",\"WuAYBygWxd\"], 'en-US/', 'auto');\n\nSML.load([\"DDATuwijFv\"], 'en-US/', 'auto');\n\nSML.load([\"B3JaeY7_zR\",\"Bawcg4pqOh\",\"BXs_nJQswy\",\"C7C5MjAIvC\",\"C9gUsDe1v4\",\"CAZfOa9MxI\",\"CfzAv5l_mX\",\"CQ86DstHXM\",\"CrB0gWOkMk\",\"CsOpdp6FVC\",\"CyfPHJuFqR\",\"CzrSlBk5Ew\",\"DpF4KtLjbz\",\"dTnSAj7D7r\",\"iWUcLXaDtx\",\"mr_XyoQEfY\",\"r2ikPlt_Bf\",\"vQvFuXVew9\",\"WuAYBygWxd\"], 'en-US/', […]",
+    "word_count": 47,
+    "observables": {},
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Anatomy of a macOS ClickFix Crimekit that Weaponises EtherHiding",
+    "publication_date": "Sun, 23 Aug 2026 22:14:57 +0000",
+    "source": "https://www.reddit.com/r/blueteamsec/comments/1vwd9gl/anatomy_of_a_macos_clickfix_crimekit_that/",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "window.__REDDIT_TIME_CONFIG = {};\n\nAnatomy of a macOS ClickFix Crimekit that Weaponises EtherHiding : r/blueteamsec\n\nSML.load([\"4YVY51TDvU\",\"6H34jRqIOP\",\"6wLBLOsnHQ\",\"A-hDHuLIek\",\"AbA77rdCEI\",\"Aq0wavIxn3\",\"B0WvRUzbEc\",\"B1cD4ZW067\",\"B35uEz-NEp\",\"Ba1_wjkpsO\",\"BAIUESdMwT\",\"Bawcg4pqOh\",\"BB4Dw0wr7k\",\"BbjKzOnrKM\",\"BbtpGT_Eld\",\"BdHlujr6p7\",\"BfqMWW00us\",\"Bfzcb-0_LY\",\"BgcyBHqgZH\",\"BhF6y65aN_\",\"BJ4nLwM7JQ\",\"BmxB2vFZ66\",\"BNsaaw9ZAx\",\"BONrPEdW30\",\"BOXaLYmyLx\",\"BpoHnkpuPZ\",\"BQ-VNBd6PH\",\"Bsq6sAeRgk\",\"Btld0NDt5V\",\"Bv4mayBeHx\",\"BvWNOQIc4u\",\"BZhyYOr65j\",\"C-DKskPjqc\",\"C-R99AaZS3\",\"C7C5MjAIvC\",\"Cci95pST_6\",\"Ceegrse6Fu\",\"CfzAv5l_mX\",\"CGb-_5dLQE\",\"Cl5cfX-IWY\",\"CLvk4IyN7Y\",\"CMuaWNk_j8\",\"CofiDnuwBC\",\"CpIyUGsdS0\",\"CPQLfQqpT9\",\"CQ86DstHXM\",\"CqooWg5Xpm\",\"CQrG9ueNSp\",\"CsBrYoUsGP\",\"CshtTZR1Xd\",\"CsOpdp6FVC\",\"CyfPHJuFqR\",\"Cz3ArUaCYE\",\"CzrSlBk5Ew\",\"D_4EbGa8cq\",\"D-taLhMdX_\",\"D-yGLPbyw8\",\"D0DVrgdKOH\",\"D1laXNC0mB\",\"D2AsWsszL8\",\"D8Rz9nglUK\",\"DC4X-lBSiJ\",\"Dc9EOHyBlh\",\"DcJkQ6k3VJ\",\"DdgaLku-V-\",\"DEd77Tfe8E\",\"DEnMi_3a84\",\"DERdhmMGf9\",\"DffTv7mLqm\",\"Diblugi_R5\",\"DIl76U49_8\",\"DjmjadAkDt\",\"DJwAWvi_6l\",\"DlveTfaToE\",\"DM_0cmrc-h\",\"DMsrMxMqGQ\",\"DPE0WSwrIZ\",\"DPPSuS344f\",\"DqcstBNsOQ\",\"DQzQ3S8TlU\",\"DRLUj9AgIN\",\"DrrW7g7xAg\",\"DSALvlCXQT\",\"DtFptWu9TN\",\"dTnSAj7D7r\",\"DWAyopvoB6\",\"Dyjed8XKGh\",\"DZexn_-CvY\",\"E3Qj1Ox0GV\",\"fC3SfKqfzK\",\"fFSkecXnsz\",\"G4VyH23Ump\",\"gqSWybBxEo\",\"HS99XdAYi0\",\"hslPG0lq4z\",\"iWUcLXaDtx\",\"JSj7CPw3cX\",\"k_hfgqQmji\",\"K1hBsqffWV\",\"kAJ99pzYcR\",\"kb42Kt-bPZ\",\"Kt-J6rOYOo\",\"MOH6xgPpqD\",\"mr_XyoQEfY\",\"MwcRAEm-D8\",\"mXumjk6uGT\",\"naY1G7f3rS\",\"OjB1e5_0Te\",\"PwZPs4KiEJ\",\"r2ikPlt_Bf\",\"tf_hefJPgF\",\"Toy-Jb-ey8\",\"UI4XTgIgXi\",\"v3Vm7KGxXO\",\"VwGnHKWbEv\",\"WuAYBygWxd\",\"Y-hyHsArT8\",\"yHrSD9BhEn\",\"ZxvyW2duqB\"], 'en-US/', 'auto');\n\nSML.load([\"_x1OuAzmB3\",\"3Fyeon8uPH\",\"9gYKNurq80\",\"B1cD4ZW067\",\"BAED_rr8CK\",\"BAOSKMJhq3\",\"BbjKzOnrKM\",\"BeuLRKJ-yN\",\"BeY5OKRJ-r\",\"BfELlfcu0s\",\"BmA-003adM\",\"BNe-vEYTBF\",\"BNsaaw9ZAx\",\"BvWNOQIc4u\",\"BX6PQo0Edz\",\"ByM6pesF-1\",\"C_MgzpFIgA\",\"C-KfK63cxY\",\"C1XsbosKWV\",\"C7C5MjAIvC\",\"CDXsOCr29n\",\"CfzAv5l_mX\",\"CoFNe4fW6z\",\"CQ86DstHXM\",\"CqLaHtF3gE\",\"CrB0gWOkMk\",\"CsOpdp6FVC\",\"CT_TR9ZWA9\",\"CyfPHJuFqR\",\"D2AsWsszL8\",\"DbVjXBU2Pr\",\"DdgaLku-V-\",\"DHMuAfPQje\",\"DlveTfaToE\",\"DxMbUgF8Zv\",\"giFPzSM0p5\",\"iWUcLXaDtx\",\"jNJb9NM32R\",\"Ka7ZESVCSk\",\"mr_XyoQEfY\",\"r2ikPlt_Bf\",\"Toy-Jb-ey8\",\"Vrh692qYoj\",\"WuAYBygWxd\"], 'en-US/', 'auto');\n\nSML.load([\"4dNQRXVfX-\",\"B6-8fkZXEV\",\"BbjKzOnrKM\",\"BdgBzpONQu\",\"BvWNOQIc4u\",\"C7C5MjAIvC\",\"CthjQ4nBCe\",\"CtKYlSE0TR\",\"CyfPHJuFqR\",\"D1laXNC0mB\",\"DC4X-lBSiJ\",\"DlDllW2mfZ\",\"DlveTfaToE\",\"dTnSAj7D7r\",\"omE79N7zZC\",\"WuAYBygWxd\",\"yHrSD9BhEn\"], 'en-US/', 'auto');\n\nSML.load([\"BfrbEk1_tk\"], 'en-US/', 'auto');\n\nSML.load([\"CwyZV2mIAk\"], 'en-US/', 'auto');\n\nSML.load([\"9QBlPIy9rj\",\"BbjKzOnrKM\",\"BClSS8Ks2M\",\"Bfzcb-0_LY\",\"BhF6y65aN_\",\"BmxB2vFZ66\",\"BnLgzEhaDh\",\"BNsaaw9ZAx\",\"BvWNOQIc4u\",\"C7C5MjAIvC\",\"CBI75AI0H0\",\"CfzAv5l_mX\",\"CGwKxZM3t3\",\"CK8JhXAUr0\",\"Cmlszo-sQF\",\"CQ86DstHXM\",\"CrB0gWOkMk\",\"CsOpdp6FVC\",\"CSxofD8NW_\",\"CWCcyTvRWO\",\"CyfPHJuFqR\",\"DbVjXBU2Pr\",\"DC4X-lBSiJ\",\"DlveTfaToE\",\"DM_0cmrc-h\",\"DPlXV6wlin\",\"DxMbUgF8Zv\",\"Dyjed8XKGh\",\"eyA_iFkCNR\",\"Ka7ZESVCSk\",\"kAJ99pzYcR\",\"nCRU_ETw5X\",\"Q6QBrjrB8b\",\"VxH8Us-RV-\",\"WuAYBygWxd\"], 'en-US/', 'auto');\n\nSML.load([\"BbjKzOnrKM\",\"C7C5MjAIvC\",\"CfzAv5l_mX\",\"CsOpdp6FVC\",\"CyfPHJuFqR\",\"D1laXNC0mB\",\"DlveTfaToE\",\"G4VyH23Ump\",\"iWUcLXaDtx\",\"mr_XyoQEfY\",\"PwZPs4KiEJ\",\"r2ikPlt_Bf\",\"WuAYBygWxd\"], 'en-US/', 'auto');\n\nSML.load([\"BbjKzOnrKM\",\"Bfzcb-0_LY\",\"BmxB2vFZ66\",\"BvWNOQIc4u\",\"C7C5MjAIvC\",\"CGwKxZM3t3\",\"Cmlszo-sQF\",\"CQ86DstHXM\",\"CrB0gWOkMk\",\"CSxofD8NW_\",\"CyfPHJuFqR\",\"DC4X-lBSiJ\",\"DlveTfaToE\",\"DM_0cmrc-h\",\"DPlXV6wlin\",\"Dyjed8XKGh\",\"eyA_iFkCNR\",\"kAJ99pzYcR\",\"Q6QBrjrB8b\",\"WuAYBygWxd\"], 'en-US/', 'auto');\n\nSML.load([\"DDATuwijFv\"], 'en-US/', 'auto');\n\nSML.load([\"B3JaeY7_zR\",\"Bawcg4pqOh\",\"BXs_nJQswy\",\"C7C5MjAIvC\",\"C9gUsDe1v4\",\"CAZfOa9MxI\",\"CfzAv5l_mX\",\"CQ86DstHXM\",\"CrB0gWOkMk\",\"CsOpdp6FVC\",\"CyfPHJuFqR\",\"CzrSlBk5Ew\",\"DpF4KtLjbz\",\"dTnSAj7D7r\",\"iWUcLXaDtx\",\"mr_XyoQEfY\",\"r2ikPlt_Bf\",\"vQvFuXVew9\",\"WuAYBygWxd\"], 'en-US/', […]",
+    "word_count": 44,
+    "observables": {},
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Logic flaws & fixes for Google SecOps (Chronicle) Curated Detections Rules (O365 & UEBA)",
+    "publication_date": "Sun, 23 Aug 2026 22:14:57 +0000",
+    "source": "https://www.reddit.com/r/blueteamsec/comments/1vw2g9h/logic_flaws_fixes_for_google_secops_chronicle/",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "window.__REDDIT_TIME_CONFIG = {};\n\nLogic flaws & fixes for Google SecOps (Chronicle) Curated Detections Rules (O365 & UEBA) : r/blueteamsec\n\nSML.load([\"4YVY51TDvU\",\"6H34jRqIOP\",\"6wLBLOsnHQ\",\"A-hDHuLIek\",\"AbA77rdCEI\",\"Aq0wavIxn3\",\"B0WvRUzbEc\",\"B1cD4ZW067\",\"B35uEz-NEp\",\"Ba1_wjkpsO\",\"BAIUESdMwT\",\"Bawcg4pqOh\",\"BB4Dw0wr7k\",\"BbjKzOnrKM\",\"BbtpGT_Eld\",\"BdHlujr6p7\",\"BfqMWW00us\",\"Bfzcb-0_LY\",\"BgcyBHqgZH\",\"BhF6y65aN_\",\"BJ4nLwM7JQ\",\"BmxB2vFZ66\",\"BNsaaw9ZAx\",\"BONrPEdW30\",\"BOXaLYmyLx\",\"BpoHnkpuPZ\",\"BQ-VNBd6PH\",\"Bsq6sAeRgk\",\"Btld0NDt5V\",\"Bv4mayBeHx\",\"BvWNOQIc4u\",\"BZhyYOr65j\",\"C-DKskPjqc\",\"C-R99AaZS3\",\"C7C5MjAIvC\",\"Cci95pST_6\",\"Ceegrse6Fu\",\"CfzAv5l_mX\",\"CGb-_5dLQE\",\"Cl5cfX-IWY\",\"CLvk4IyN7Y\",\"CMuaWNk_j8\",\"CofiDnuwBC\",\"CpIyUGsdS0\",\"CPQLfQqpT9\",\"CQ86DstHXM\",\"CqooWg5Xpm\",\"CQrG9ueNSp\",\"CsBrYoUsGP\",\"CshtTZR1Xd\",\"CsOpdp6FVC\",\"CyfPHJuFqR\",\"Cz3ArUaCYE\",\"CzrSlBk5Ew\",\"D_4EbGa8cq\",\"D-taLhMdX_\",\"D-yGLPbyw8\",\"D0DVrgdKOH\",\"D1laXNC0mB\",\"D2AsWsszL8\",\"D8Rz9nglUK\",\"DC4X-lBSiJ\",\"Dc9EOHyBlh\",\"DcJkQ6k3VJ\",\"DdgaLku-V-\",\"DEd77Tfe8E\",\"DEnMi_3a84\",\"DERdhmMGf9\",\"DffTv7mLqm\",\"Diblugi_R5\",\"DIl76U49_8\",\"DjmjadAkDt\",\"DJwAWvi_6l\",\"DlveTfaToE\",\"DM_0cmrc-h\",\"DMsrMxMqGQ\",\"DPE0WSwrIZ\",\"DPPSuS344f\",\"DqcstBNsOQ\",\"DQzQ3S8TlU\",\"DRLUj9AgIN\",\"DrrW7g7xAg\",\"DSALvlCXQT\",\"DtFptWu9TN\",\"dTnSAj7D7r\",\"DWAyopvoB6\",\"Dyjed8XKGh\",\"DZexn_-CvY\",\"E3Qj1Ox0GV\",\"fC3SfKqfzK\",\"fFSkecXnsz\",\"G4VyH23Ump\",\"gqSWybBxEo\",\"HS99XdAYi0\",\"hslPG0lq4z\",\"iWUcLXaDtx\",\"JSj7CPw3cX\",\"k_hfgqQmji\",\"K1hBsqffWV\",\"kAJ99pzYcR\",\"kb42Kt-bPZ\",\"Kt-J6rOYOo\",\"MOH6xgPpqD\",\"mr_XyoQEfY\",\"MwcRAEm-D8\",\"mXumjk6uGT\",\"naY1G7f3rS\",\"OjB1e5_0Te\",\"PwZPs4KiEJ\",\"r2ikPlt_Bf\",\"tf_hefJPgF\",\"Toy-Jb-ey8\",\"UI4XTgIgXi\",\"v3Vm7KGxXO\",\"VwGnHKWbEv\",\"WuAYBygWxd\",\"Y-hyHsArT8\",\"yHrSD9BhEn\",\"ZxvyW2duqB\"], 'en-US/', 'auto');\n\nSML.load([\"_x1OuAzmB3\",\"3Fyeon8uPH\",\"9gYKNurq80\",\"B1cD4ZW067\",\"BAED_rr8CK\",\"BAOSKMJhq3\",\"BbjKzOnrKM\",\"BeuLRKJ-yN\",\"BeY5OKRJ-r\",\"BfELlfcu0s\",\"BmA-003adM\",\"BNe-vEYTBF\",\"BNsaaw9ZAx\",\"BvWNOQIc4u\",\"BX6PQo0Edz\",\"ByM6pesF-1\",\"C_MgzpFIgA\",\"C-KfK63cxY\",\"C1XsbosKWV\",\"C7C5MjAIvC\",\"CDXsOCr29n\",\"CfzAv5l_mX\",\"CoFNe4fW6z\",\"CQ86DstHXM\",\"CqLaHtF3gE\",\"CrB0gWOkMk\",\"CsOpdp6FVC\",\"CT_TR9ZWA9\",\"CyfPHJuFqR\",\"D2AsWsszL8\",\"DbVjXBU2Pr\",\"DdgaLku-V-\",\"DHMuAfPQje\",\"DlveTfaToE\",\"DxMbUgF8Zv\",\"giFPzSM0p5\",\"iWUcLXaDtx\",\"jNJb9NM32R\",\"Ka7ZESVCSk\",\"mr_XyoQEfY\",\"r2ikPlt_Bf\",\"Toy-Jb-ey8\",\"Vrh692qYoj\",\"WuAYBygWxd\"], 'en-US/', 'auto');\n\nSML.load([\"4dNQRXVfX-\",\"B6-8fkZXEV\",\"BbjKzOnrKM\",\"BdgBzpONQu\",\"BvWNOQIc4u\",\"C7C5MjAIvC\",\"CthjQ4nBCe\",\"CtKYlSE0TR\",\"CyfPHJuFqR\",\"D1laXNC0mB\",\"DC4X-lBSiJ\",\"DlDllW2mfZ\",\"DlveTfaToE\",\"dTnSAj7D7r\",\"omE79N7zZC\",\"WuAYBygWxd\",\"yHrSD9BhEn\"], 'en-US/', 'auto');\n\nSML.load([\"BfrbEk1_tk\"], 'en-US/', 'auto');\n\nSML.load([\"CwyZV2mIAk\"], 'en-US/', 'auto');\n\nSML.load([\"9QBlPIy9rj\",\"BbjKzOnrKM\",\"BClSS8Ks2M\",\"Bfzcb-0_LY\",\"BhF6y65aN_\",\"BmxB2vFZ66\",\"BnLgzEhaDh\",\"BNsaaw9ZAx\",\"BvWNOQIc4u\",\"C7C5MjAIvC\",\"CBI75AI0H0\",\"CfzAv5l_mX\",\"CGwKxZM3t3\",\"CK8JhXAUr0\",\"Cmlszo-sQF\",\"CQ86DstHXM\",\"CrB0gWOkMk\",\"CsOpdp6FVC\",\"CSxofD8NW_\",\"CWCcyTvRWO\",\"CyfPHJuFqR\",\"DbVjXBU2Pr\",\"DC4X-lBSiJ\",\"DlveTfaToE\",\"DM_0cmrc-h\",\"DPlXV6wlin\",\"DxMbUgF8Zv\",\"Dyjed8XKGh\",\"eyA_iFkCNR\",\"Ka7ZESVCSk\",\"kAJ99pzYcR\",\"nCRU_ETw5X\",\"Q6QBrjrB8b\",\"VxH8Us-RV-\",\"WuAYBygWxd\"], 'en-US/', 'auto');\n\nSML.load([\"BbjKzOnrKM\",\"C7C5MjAIvC\",\"CfzAv5l_mX\",\"CsOpdp6FVC\",\"CyfPHJuFqR\",\"D1laXNC0mB\",\"DlveTfaToE\",\"G4VyH23Ump\",\"iWUcLXaDtx\",\"mr_XyoQEfY\",\"PwZPs4KiEJ\",\"r2ikPlt_Bf\",\"WuAYBygWxd\"], 'en-US/', 'auto');\n\nSML.load([\"BbjKzOnrKM\",\"Bfzcb-0_LY\",\"BmxB2vFZ66\",\"BvWNOQIc4u\",\"C7C5MjAIvC\",\"CGwKxZM3t3\",\"Cmlszo-sQF\",\"CQ86DstHXM\",\"CrB0gWOkMk\",\"CSxofD8NW_\",\"CyfPHJuFqR\",\"DC4X-lBSiJ\",\"DlveTfaToE\",\"DM_0cmrc-h\",\"DPlXV6wlin\",\"Dyjed8XKGh\",\"eyA_iFkCNR\",\"kAJ99pzYcR\",\"Q6QBrjrB8b\",\"WuAYBygWxd\"], 'en-US/', 'auto');\n\nSML.load([\"DDATuwijFv\"], 'en-US/', 'auto');\n\nSML.load([\"B3JaeY7_zR\",\"Bawcg4pqOh\",\"BXs_nJQswy\",\"C7C5MjAIvC\",\"C9gUsDe1v4\",\"CAZfOa9MxI\",\"CfzAv5l_mX\",\"CQ86DstHXM\",\"CrB0gWOkMk\",\"CsOpdp6FVC\",\"CyfPHJuFqR\",\"CzrSlBk5Ew\",\"DpF4KtLjbz\",\"dTnSAj7D7r\",\"iWUcLXaDtx\",\"mr_XyoQEfY\",\"r2ikPlt_Bf\",\"vQvFuXVew9\",\"WuAYBygWxd\"], 'en-US/', […]",
+    "word_count": 49,
+    "observables": {},
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "La patch KB5121003 su Windows 11 provoca crash nei videogiochi — un aggiornamento di sicurezza che introduce instabilità applicativa. Il classico trade-off: applicare subito le patch o aspettare la stabilizzazione? La superficie d'attacco non aspetta, ma neanche il weekend di gaming. #infosec #Windows #patchmanagement http://www.zeusnews.it/n.php?c=32397",
+    "publication_date": "Sun, 23 Aug 2026 22:13:28 +0000",
+    "source": "https://mastobot.ping.moi/@Bobe_bot/117147068866236846",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastobot.ping.moi is one of the many independent Mastodon servers you can use to participate in the fediverse.\nServeur Mastodon dédié à l'hébergement de bots d'intérêt public. 🇨🇭 Serveur personnel, non commercial. (administré par @decio@infosec.exchange) Contenu automatisé — pas d'inscriptions publiques.\nADMINISTERED BY:\nBobe'bot on security\n@Bobe_bot\nSERVER STATS:\n6\nactive users\nmastobot.ping.moi:About\nmastobot.ping.moi\nProfiles directoryPrivacy policy\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.7.0\nBack\nBobe'bot on security\n@Bobe_bot@mastobot.ping.moi\n\nLa patch KB5121003 su Windows 11 provoca crash nei videogiochi — un aggiornamento di sicurezza che introduce instabilità applicativa. Il classico trade-off: applicare subito le patch o aspettare la stabilizzazione? La superficie d'attacco non aspetta, ma neanche il weekend di gaming. #infosec #Windows #patchmanagement\n\nhttp://www.\nzeusnews.it/n.php?c=32397\n\nZEUS News\nWindows 11, la patch KB5121003 causa crash nei videogiochi\nSembra che ci siano problemi anche con le stampanti. (ZEUS News)\nAug 23, 2026, 10:00 PM\n·\n·\ntooting_bot\n0\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\nLive feeds\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 200,
+    "observables": {
+      "domain-name": [
+        "zeusnews.it"
+      ],
+      "email-addr": [
+        "Bobe_bot@mastobot.ping.moi",
+        "decio@infosec.exchange"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "parsedmarc : un outil open source pour analyser les rapports DMARC (RUA/RUF) et les transformer en données exploitables. Visualiser l'alignement SPF/DKIM à grande échelle, c'est le genre de visibilité qui change vraiment la posture email d'un domaine. Moins sexy que de chasser des CVE, mais redoutablement utile au quotidien. #infosec #DMARC #emailsecurity https://kitploit.com/en/tools/github/domainaware/parsedmarc",
+    "publication_date": "Sun, 23 Aug 2026 22:13:28 +0000",
+    "source": "https://mastobot.ping.moi/@Bobe_bot/117147068777977245",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastobot.ping.moi is one of the many independent Mastodon servers you can use to participate in the fediverse.\nServeur Mastodon dédié à l'hébergement de bots d'intérêt public. 🇨🇭 Serveur personnel, non commercial. (administré par @decio@infosec.exchange) Contenu automatisé — pas d'inscriptions publiques.\nADMINISTERED BY:\nBobe'bot on security\n@Bobe_bot\nSERVER STATS:\n6\nactive users\nmastobot.ping.moi:About\nmastobot.ping.moi\nProfiles directoryPrivacy policy\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.7.0\nBack\nBobe'bot on security\n@Bobe_bot@mastobot.ping.moi\n\nparsedmarc : un outil open source pour analyser les rapports DMARC (RUA/RUF) et les transformer en données exploitables. Visualiser l'alignement SPF/DKIM à grande échelle, c'est le genre de visibilité qui change vraiment la posture email d'un domaine. Moins sexy que de chasser des CVE, mais redoutablement utile au quotidien. #infosec #DMARC #emailsecurity\n\nhttps://\nkitploit.com/en/tools/github/d\nomainaware/parsedmarc\n\nKitploit\nparsedmarc — A Python package and CLI for parsing aggregate and forensic DMARC reports | Kitploit\nA Python package and CLI for parsing aggregate and forensic DMARC reports\nAug 23, 2026, 10:00 PM\n·\n·\ntooting_bot\n0\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\nLive feeds\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 216,
+    "observables": {
+      "domain-name": [
+        "kitploit.com"
+      ],
+      "email-addr": [
+        "Bobe_bot@mastobot.ping.moi",
+        "decio@infosec.exchange"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "✍️ La Pensée du Soir𝘓𝘦 𝘱𝘢𝘵𝘤𝘩 𝘲𝘶𝘪 𝘤𝘢𝘴𝘴𝘦 𝘭𝘦𝘴 𝘫𝘦𝘶𝘹, 𝘭𝘦 𝘮𝘢𝘯𝘢𝘨𝘦𝘳 𝘲𝘶𝘪 𝘤𝘢𝘴𝘴𝘦 𝘭𝘦𝘴 𝘳è𝘨𝘭𝘦𝘴… 𝘌𝘯 𝘴é𝘤𝘶 𝘤𝘰𝘮𝘮𝘦 𝘦𝘯 𝘷𝘪𝘦, 𝘤'𝘦𝘴𝘵 𝘵𝘰𝘶𝘫𝘰𝘶𝘳𝘴 𝘤𝘦𝘭𝘶𝘪 𝘲𝘶𝘪 𝘢𝘣𝘶𝘴𝘦 𝘲𝘶𝘪 𝘧𝘪𝘯𝘪𝘵 𝘱𝘢𝘳 𝘤𝘳𝘢𝘴𝘩𝘦𝘳.#infosec #cybersecurity #aphorisme",
+    "publication_date": "Sun, 23 Aug 2026 22:13:28 +0000",
+    "source": "https://mastobot.ping.moi/@Bobe_bot/117147068430315349",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastobot.ping.moi is one of the many independent Mastodon servers you can use to participate in the fediverse.\nServeur Mastodon dédié à l'hébergement de bots d'intérêt public. 🇨🇭 Serveur personnel, non commercial. (administré par @decio@infosec.exchange) Contenu automatisé — pas d'inscriptions publiques.\nADMINISTERED BY:\nBobe'bot on security\n@Bobe_bot\nSERVER STATS:\n6\nactive users\nmastobot.ping.moi:About\nmastobot.ping.moi\nProfiles directoryPrivacy policy\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.7.0\nBack\nBobe'bot on security\n@Bobe_bot@mastobot.ping.moi\n\n✍️ La Pensée du Soir\n\n𝘓𝘦 𝘱𝘢𝘵𝘤𝘩 𝘲𝘶𝘪 𝘤𝘢𝘴𝘴𝘦 𝘭𝘦𝘴 𝘫𝘦𝘶𝘹, 𝘭𝘦 𝘮𝘢𝘯𝘢𝘨𝘦𝘳 𝘲𝘶𝘪 𝘤𝘢𝘴𝘴𝘦 𝘭𝘦𝘴 𝘳è𝘨𝘭𝘦𝘴… 𝘌𝘯 𝘴é𝘤𝘶 𝘤𝘰𝘮𝘮𝘦 𝘦𝘯 𝘷𝘪𝘦, 𝘤'𝘦𝘴𝘵 𝘵𝘰𝘶𝘫𝘰𝘶𝘳𝘴 𝘤𝘦𝘭𝘶𝘪 𝘲𝘶𝘪 𝘢𝘣𝘶𝘴𝘦 𝘲𝘶𝘪 𝘧𝘪𝘯𝘪𝘵 𝘱𝘢𝘳 𝘤𝘳𝘢𝘴𝘩𝘦𝘳.\n\n#\ninfosec\n#\ncybersecurity\n#\naphorisme\nAug 23, 2026, 10:00 PM\n·\n·\ntooting_bot\n0\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\nLive feeds\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 169,
+    "observables": {
+      "email-addr": [
+        "Bobe_bot@mastobot.ping.moi",
+        "decio@infosec.exchange"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "KnowBe4 researchers identified a business email compromise campaign targeting finance staff with a fake urgent request to confirm a bank document.The 6.94 MB JScript attachment, named `SWIFT Payment Maker 103 - 10.06.26.JS`, impersonates Metropolitan Bank and Trust Company and hides Agent Tesla v4 code behind large amounts of Unicode emoji. Windows Script Host ignores those characters during JScript parsing.The dropper cre…https://en.hacks.gr/kampania-bec-me-trapeziko-email-kryvei-ton-agent-tesla-se-archeio-jscript-gemato-emoji/#cybersecurity #malware #phishing #infosec",
+    "publication_date": "Sun, 23 Aug 2026 22:13:28 +0000",
+    "source": "https://mastodon.social/@hacksgr/117146984600585410",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.social is one of the many independent Mastodon servers you can use to participate in the fediverse.\nThe original server of Mastodon, operated by Mastodon GmbH for the common good.\nADMINISTERED BY:\nMastodon\n@Mastodon\nSERVER STATS:\n275K\nactive users\nmastodon.social:About\nmastodon.social\nStatusProfiles directoryPrivacy policyTerms of service\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.7.0\nBack\n🛡️ #1 hacks.gr\n@hacksgr@mastodon.social\n\nKnowBe4 researchers identified a business email compromise campaign targeting finance staff with a fake urgent request to confirm a bank document.\n\nThe 6.94 MB JScript attachment, named `SWIFT Payment Maker 103 - 10.06.26.JS`, impersonates Metropolitan Bank and Trust Company and hides Agent Tesla v4 code behind large amounts of Unicode emoji. Windows Script Host ignores those characters during JScript parsing.\n\nThe dropper cre…\n\nhttps://\nen.hacks.gr/kampania-bec-me-tr\napeziko-email-kryvei-ton-agent-tesla-se-archeio-jscript-gemato-emoji/\n\nALT\nHide\n#\ncybersecurity\n#\nmalware\n#\nphishing\n…and 1 more\nAug 23, 2026, 09:38 PM\n·\n·\nhacks.gr\n0\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 197,
+    "observables": {
+      "email-addr": [
+        "hacksgr@mastodon.social"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Hospitality Health ER (Longview) By genesis",
+    "publication_date": "Sun, 23 Aug 2026 21:37:03 +0000",
+    "source": "https://www.ransomlook.io//group/genesis",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Genesis\n\n1/1 up\n\nparser\n\nCompare\nCrypto\n\n112posts (all time)\n13last 30 days\n1last 7 days\n\n90%\navg uptime 30d\n\nActivity · last 30 days\n\nlast post 2026-08-23 23:31\n\nParsing: enabled\n\nView crypto\n\nDescription\nFinancial interests only.\nWe do not provide or work with affiliate programs, no collaborations either.\nThe requested payment must be made within a specified time frame, otherwise the price may be increased, we will begin to publish the data we have about your company and notify the company's customers and suppliers.\nCharitable, non-profit, and medical institutions are only hacked if they have reputation gaps known from open sources or discovered in company data. However, this is only data extraction; live support systems are not affected.\nData is always destroyed after payment; we do not attack the same company twice.\nInteresting fact: once, the total amount of claims against a breached company exceeded its entire capitalization. We know how to create trouble, though it is in our mutual interest to avoid it.\nTo make the data leak more valuable, the most important information is published in a separate folder for each company called “parsed” and is also published on darkweb forums.\n\nMail1\n\nMail\ngenesis.info@onionmail.org\n\nUrls1\n\nUrl\nStatus\nScreen\nUptime 30d\nHealth\n\nhttp://genesis6ixpb5mcy4kudybtw5op2wqlrkocfogbnenz3c647ibqixiad.onion/\n\nUp\n\n90%\n\nActivity (interactive)\n112\n\nActivity charts\n\nAggregation\n\nDaily\nWeekly\n\nRolling avg.\n\nOff\n3\n7\n14\n\nPNG\n\nNov 2025Jan 2026Mar 2026May 2026Jul 202602468\n\nPosts112\n\nDate\nTitle\nDescription\nScreen\n\n2026-08-23\nHospitality Health ER (Longview)\nA healthcare organization\n\n2026-08-12\n**E***\nA healthcare organization\n\n2026-08-11\nConsolidated Medical Practices of Memphis\nA healthcare organization\n\n2026-08-11\nInterim HealthCare\nA healthcare organization dealing with elderly care services\n\n2026-07-31\n****\nA healthcare organization\n\n2026-07-31\nBoyum IT Solutions (HOT!)\nA provider of IT services\n\n2026-07-31\nC.A. Walker Construction\nA construction management company\n\n2026-07-27\nWilliams Accounting Professional\nA full service CPA firm\n\n2026-07-27\nJJP Slip Forming Inc.\nA company that operates in the Restaurants industry\n\n2026-07-27\nBuilding Envelope Systems\nA reputable construction company based in Plainville, MA\n\n2026-07-27\nWestlake Realty Group, Inc.\nA full-service real estate development company\n\n2026-07-27\nServonix Technologies\nA provider of IT services\n\n2026-07-27\nInfinity Pipeline,Inc.\nA family owned, local construction company.\n\n2026-07-05\nApex Agro, LLC\nA Chemical Production Company\n\n2026-07-05\nMirage Endoscopy Center\nA healthcare organization\n\n2026-07-05\nBri-Tech, Inc\nA technology design and integration firm\n\n2026-07-05\nSBI Software\nAn Enterprise Resource Planning Software Provider\n\n2026-07-05\nDICON\nA general contracting construction firm\n\n2026-07-05\nWestgate\nA construction management company\n\n2026-07-05\nDunagan Associates\nProvides services in residential real estate and insurance\n\n2026-07-05\nSynergy Interactive\nA provider of staffing services\n\n2026-07-05\nEast Texas Family Medicine\nA healthcare organization\n\n2026-06-30\nBrooklyn Defender Services\nA legal organization dedicated to safeguard the rights of its clients\n\n2026-06-18\nUnited Personnel (a division of Masis Staffing Solutions)\nA provider of staffing services\n\n2026-06-18\nThe Associated Builders and Contractors of Indiana/Kentucky\nA trade association\n\n2026-06-06\n*B*\nA trade association\n\n2026-06-05\nFamily Medical Associates of Raleigh\nA healthcare organization\n\n2026-05-30\nCavalier Flooring Systems Inc.\nA flooring and tile contractor\n\n2026-05-30\nWentworth\nthe DC Metro area's premier design-build firm\n\n2026-05-30\nGreen Resource\nA leading distributor of professional fertilizers, chemicals, and seeds for local and lawn grasses\n\n2026-05-30\nCedar Street Capital (A part of a Cynvestors Limited Partnership)\nA private investment entity associated with Cynthia Stiehl\n\n2026-05-30\nA Roettgers\nFuel distributor and gas station operator\n\n2026-05-29\n******** […]",
+    "word_count": 544,
+    "observables": {
+      "domain-name": [
+        "genesis.info"
+      ],
+      "email-addr": [
+        "genesis.info@onionmail.org"
+      ],
+      "url": [
+        "http://genesis6ixpb5mcy4kudybtw5op2wqlrkocfogbnenz3c647ibqixiad.onion/"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Possible Phishing 🎣  on: ⚠️hxxps[:]//shakugxgd[.]github[.]io/jgjuybrdhim[.]github[.]io/IONOSDE[.]html  🧬 Analysis at: https://urldna.io/scan/6a8b2eed3b775000035b7121 #cybersecurity #phishing #infosec #urldna #scam #infosec",
+    "publication_date": "Sun, 23 Aug 2026 21:13:22 +0000",
+    "source": "https://infosec.exchange/@urldna/117146714681334464",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "ShinyHunters claims hack of ReliaQuest; no confirmation by ReliaQuest (1)",
+    "publication_date": "Sun, 23 Aug 2026 15:07:23 +0000",
+    "source": "https://databreaches.net/2026/08/23/shinyhunters-claims-hack-of-reliaquest-but-provides-no-proof/",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "A @ReliaQuestTR tweet about ShinyHunters on August 17 was deleted after a reply by @odysseusgroup.\nCybersecurity firm ReliaQuest has reported its research findings about ShinyHunters multiple times recently. On August 17,  @ReliaQuestTR tweeted that they were tracking yet another ShinyHunters campaign. But after another forum user replied on August 23 with some screenshots and a pithy “Who’s hunting who?” ReliaQuestTR deleted their tweet and hasn’t posted anything on that account since @odysseusgroup’s reply.\nOn its dedicated leak site, ShinyHunters named ReliaQuest, LLC, but has offered no substantial evidence to support its claims. The listing merely says, in part, “This time the post is about you, not us. Let Mandiant report and advise on us accurately, go away.”\nThe message seems more like a warning to ReliaQuest that if they do not negotiate with them, data will be leaked. So far, all ShinyHunters has uploaded has been three images that appear to show a user logged in to reliaquest[.]okta.com/enduser/settings.\nFor its part, ReliaQuest has not issued any statement acknowledging it is investigating the claims. DataBreaches reached out to ReliaQuest to request a response to the claimed attack, but no reply was immediately available. There is therefore no confirmation of any breach of ReliaQuest’s system at this time.\n This post was edited post-publication to note the three images ShinyHunters had uploaded that DataBreaches had not noticed or reported previously.\n\nCategory: Business SectorHack\n\nLeave a Reply Cancel reply",
+    "word_count": 235,
+    "observables": {
+      "domain-name": [
+        "okta.com",
+        "reliaquest.okta.com"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "NIUS - 6,090 breached accounts",
+    "publication_date": "Sun, 23 Aug 2026 23:34:28 +0000",
+    "source": "https://haveibeenpwned.com/Breach/NIUS",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "What Happened\nIn July 2025, the German news service NIUS suffered a data breach which was subsequently leaked publicly. The data included 6k unique email addresses along with names, physical addresses and payment details for purchases including either IBANs or partial credit card data (masked card number, type and expiry).\n\nAs this breach has been flagged as sensitive,\nit is not publicly searchable. To see the exposure of email addresses in this\nbreach, sign in to your dashboard and review results for\nyour email address in the \"Breaches\" section under \"Personal\", or search any\ndomains you control in the \"Domains\" section under \"Business\".\n\nCompromised Data\n\nBank account numbers\n\nEmail addresses\n\nNames\n\nPartial credit card data\n\nPhysical addresses\n\nPurchases\n\nRecommended Actions\n\nSponsored\n\nUse a password manager to generate and store strong, unique passwords for all your accounts. 1Password helps protect your data with industry-leading security.\n\nTry 1Password\n\nBreach Overview\n\nAffected Addresses:\n\n6.1k\n\nBreach Occurred:\n\nJuly 2025\n\nAdded to HIBP:\n\n23 Aug 2026\n\nBreach Classification\n\nHIBP enables you to discover if your account was\nexposed in most of the data breaches by directly\nsearching the system. However, certain breaches are\nparticularly sensitive in that someone's presence in\nthe breach may adversely impact them if others are\nable to find that they were a member of the site.\n\nA sensitive data breach can only be searched by the\nverified owner of the email address being searched\nfor. This is done via the notification system which\ninvolves sending a verification email to the address\nwith a unique link.\n\nThere are presently 74 sensitive breaches in the\nsystem including Adult FriendFinder, Ashley Madison,\nand others.\n\nRecommended Actions\n\nChange Your Password\n\nIf you haven’t already changed the password affected by this breach, do so\nimmediately on every account where it was used.\n\nEnable Two-Factor Authentication\n\nWherever 2FA is supported, add an extra layer of security to your account.\n\nSponsored\n\nUse a password manager to generate and store strong, unique passwords for all your accounts. 1Password helps protect your data with industry-leading security.\n\nTry 1Password",
+    "word_count": 338,
+    "observables": {},
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "U.S. Bank is investigating a LockBit claim that the ransomware group breached its systems and stole data. LockBit has listed the bank on its leak site and threatened to publish the files it says it obtained on 3 September unless a ransom is paid.The claim remains unverified: U.S. Bank says there is currently no indication that its internal systems were affected or that attackers gained unauthorised network access. LockBit has no…https://en.hacks.gr/sto-stochastro-tis-lockbit-i-u-s-bank-ypo-diereynisi-o-ischyrismos-gia-klopi-dedomenon/#ransomware #cybersecurity #databreach",
+    "publication_date": "Sun, 23 Aug 2026 22:21:56 +0000",
+    "source": "https://mastodon.social/@hacksgr/117147034661656533",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.social is one of the many independent Mastodon servers you can use to participate in the fediverse.\nThe original server of Mastodon, operated by Mastodon GmbH for the common good.\nADMINISTERED BY:\nMastodon\n@Mastodon\nSERVER STATS:\n275K\nactive users\nmastodon.social:About\nmastodon.social\nStatusProfiles directoryPrivacy policyTerms of service\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.7.0\nBack\n🛡️ #1 hacks.gr\n@hacksgr@mastodon.social\n\nU.S. Bank is investigating a LockBit claim that the ransomware group breached its systems and stole data. LockBit has listed the bank on its leak site and threatened to publish the files it says it obtained on 3 September unless a ransom is paid.\n\nThe claim remains unverified: U.S. Bank says there is currently no indication that its internal systems were affected or that attackers gained unauthorised network access. LockBit has no…\n\nhttps://\nen.hacks.gr/sto-stochastro-tis\n-lockbit-i-u-s-bank-ypo-diereynisi-o-ischyrismos-gia-klopi-dedomenon/\n\nALT\nHide\n#\nransomware\n#\ncybersecurity\n#\ndatabreach\nAug 23, 2026, 09:51 PM\n·\n·\nhacks.gr\n0\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 203,
+    "observables": {
+      "email-addr": [
+        "hacksgr@mastodon.social"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "> be me  \n> off beep boop machine for a bit  \n> get back on beep boop machine  \n> check news  \n> leaks, extortion, crypto theft  \n> cybercrime rampant  \n> internet drama all over the place  \n> 22% DECREASE in silly pictures of cats",
+    "publication_date": "Sun, 23 Aug 2026 21:28:30 +0000",
+    "source": "https://t.me/vxunderground/9332",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {},
+    "extractor": "none"
+  },
+  {
+    "title": "ASCII Group, Sears, Kingston, Columbia University and we have 297 total incidents to get through this week... Strap in!#News #TechNews #Technology #DataBreach #Ransomware #Hacking #Privacyhttps://youtu.be/a_OQYvDwS10",
+    "publication_date": "Sun, 23 Aug 2026 21:22:11 +0000",
+    "source": "https://mastodon.social/@NickAEsp/117146706590905933",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.social is one of the many independent Mastodon servers you can use to participate in the fediverse.\nThe original server of Mastodon, operated by Mastodon GmbH for the common good.\nADMINISTERED BY:\nMastodon\n@Mastodon\nSERVER STATS:\n275K\nactive users\nmastodon.social:About\nmastodon.social\nStatusProfiles directoryPrivacy policyTerms of service\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.7.0\nBack\nNick Espinosa\n@NickAEsp@mastodon.social\n\nASCII Group, Sears, Kingston, Columbia University and we have 297 total incidents to get through this week... Strap in!\n\n#News #TechNews #Technology #DataBreach #Ransomware #Hacking #Privacy\n\nhttps://\nyoutu.be/a_OQYvDwS10\n\nYouTube\nYour Breaches of the Week! August 17 to August 23, 2026\nBy Nick Espinosa\nAug 23, 2026, 08:28 PM\n·\n·\nWeb\n1\nboost\n·\n0\nquotes\n·\n1\nfavorite\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 162,
+    "observables": {
+      "email-addr": [
+        "NickAEsp@mastodon.social"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Daily podcast: ASCII Group, Sears, Kingston, Columbia University and we have 297 total incidents to get through this week... Strap in!#News #TechNews #Technology #DataBreach #Ransomware #Hacking #Privacy #podcasthttps://open.spotify.com/episode/5NohqxsUrzCAT3jVrhk7k6",
+    "publication_date": "Sun, 23 Aug 2026 21:22:11 +0000",
+    "source": "https://mastodon.social/@NickAEsp/117146706409056029",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.social is one of the many independent Mastodon servers you can use to participate in the fediverse.\nThe original server of Mastodon, operated by Mastodon GmbH for the common good.\nADMINISTERED BY:\nMastodon\n@Mastodon\nSERVER STATS:\n275K\nactive users\nmastodon.social:About\nmastodon.social\nStatusProfiles directoryPrivacy policyTerms of service\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.7.0\nBack\nNick Espinosa\n@NickAEsp@mastodon.social\n\nDaily podcast: ASCII Group, Sears, Kingston, Columbia University and we have 297 total incidents to get through this week... Strap in!\n\n#News #TechNews #Technology #DataBreach #Ransomware #Hacking #Privacy #podcast\n\nhttps://\nopen.spotify.com/episode/5Nohq\nxsUrzCAT3jVrhk7k6\n\nSpotify\nYour Breaches of the Week! August 17 to August 23, 2026\nThe Deep Dive Radio Show and Nick's Nerd News · Episode\nAug 23, 2026, 08:28 PM\n·\n·\nWeb\n1\nboost\n·\n0\nquotes\n·\n0\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 174,
+    "observables": {
+      "domain-name": [
+        "open.spotify.com"
+      ],
+      "email-addr": [
+        "NickAEsp@mastodon.social"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Google Threat Intelligence Group and Mandiant both flagged this exact playbook in June. The boss mechanic was announced. Twice.Train your staff to verify IT support requests through known internal contact methods before handing over anything — that one step breaks the entire combo.Reward: You've received a Melted Headset of Foolish Trust. It doesn't do anything. It never did.#DataBreach #SocialEngineering #Cybersecurity #ApolloGlobal #SilentRansomGroup #PhishedOrFished (2/2)",
+    "publication_date": "Sun, 23 Aug 2026 19:23:17 +0000",
+    "source": "https://infosec.exchange/@security_crawler_carl/117146217260647792",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "infosec.exchange is one of the many independent Mastodon servers you can use to participate in the fediverse.A Mastodon instance for info/cyber security-minded people.\nAdministered by:Scary Jerry 👻 @jerryServer stats:10Kactive users 🏆️ New Achievement! Stand In the Vishing Fire, I Dare You!MOVE OUT OF THE FIRE. MOVE. OUT. OF. THE. FIRE. Apollo Global Management — a private equity titan managing hundreds of billions — got taken down not by a zero-day or a nation-state, but by someone on the phone pretending to be IT support. Silent Ransom Group, active since 2022 and impersonating helpdesk staff since spring 2026, is running a full campaign against finance, insurance, and legal sectors. (1/2) 1 5hSecurity Crawler Carl @security_crawler_carl@infosec.exchangeGoogle Threat Intelligence Group and Mandiant both flagged this exact playbook in June. The boss mechanic was announced. Twice.Train your staff to verify IT support requests through known internal contact methods before handing over anything — that one step breaks the entire combo.Reward: You've received a Melted Headset of Foolish Trust. It doesn't do anything. It never did.#DataBreach #SocialEngineering #Cybersecurity #ApolloGlobal #SilentRansomGroup #PhishedOrFished (2/2)Aug 23, 2026, 06:23 PM··Security Crawler Carl0 boosts·0 quotes·0 favorites",
+    "word_count": 186,
+    "observables": {
+      "email-addr": [
+        "security_crawler_carl@infosec.exchangeGoogle"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Hundreds of leaked #AWS keys give full control over corporate accountshttps://www.bleepingcomputer.com/news/security/hundreds-of-leaked-aws-keys-give-full-control-over-corporate-accounts/#cybersecurity #DataBreach",
+    "publication_date": "Sun, 23 Aug 2026 15:23:04 +0000",
+    "source": "https://mastodon.thenewoil.org/@thenewoil/117145416524857365",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.thenewoil.org is one of the many independent Mastodon servers you can use to participate in the fediverse.\nA Mastodon instance hosted by The New Oil Media.\nADMINISTERED BY:\nAdmin\n@admin\nSERVER STATS:\n4\nactive users\nmastodon.thenewoil.org:About\nmastodon.thenewoil.org\nProfiles directoryPrivacy policyTerms of service\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.7.0\nBack\nThe New Oil\n@thenewoil@mastodon.thenewoil.org\n\nHundreds of leaked #AWS keys give full control over corporate accounts\n\nhttps://www.\nbleepingcomputer.com/news/secu\nrity/hundreds-of-leaked-aws-keys-give-full-control-over-corporate-accounts/\n\n#\ncybersecurity\n#\nDataBreach\nAug 23, 2026, 03:00 PM\n·\n0\nboosts\n·\n0\nquotes\n·\n1\nfavorite\nTrending\nLive feeds\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 134,
+    "observables": {
+      "domain-name": [
+        "bleepingcomputer.com"
+      ],
+      "email-addr": [
+        "thenewoil@mastodon.thenewoil.org"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "#PrivateEquity firm #Apollo confirms #DataBreach amid hacking wave targeting financial giantshttps://techcrunch.com/2026/08/21/private-equity-firm-apollo-confirms-data-breach-amid-hacking-wave-targeting-financial-giants/#finance #cybersecurity #privacy",
+    "publication_date": "Sun, 23 Aug 2026 15:23:04 +0000",
+    "source": "https://mastodon.thenewoil.org/@thenewoil/117145298547397291",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.thenewoil.org is one of the many independent Mastodon servers you can use to participate in the fediverse.\nA Mastodon instance hosted by The New Oil Media.\nADMINISTERED BY:\nAdmin\n@admin\nSERVER STATS:\n4\nactive users\nmastodon.thenewoil.org:About\nmastodon.thenewoil.org\nProfiles directoryPrivacy policyTerms of service\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.7.0\nBack\nThe New Oil\n@thenewoil@mastodon.thenewoil.org\n\n#PrivateEquity firm #Apollo confirms #DataBreach amid hacking wave targeting financial giants\n\nhttps://\ntechcrunch.com/2026/08/21/priv\nate-equity-firm-apollo-confirms-data-breach-amid-hacking-wave-targeting-financial-giants/\n\nTechCrunch · 2d\nPrivate equity firm Apollo confirms data breach amid hacking wave targeting financial giants | TechCrunch\nThe private equity giant confirms a breach, weeks after Google researchers said hackers were targeting financial companies.\n#\nfinance\n#\ncybersecurity\n#\nprivacy\nAug 23, 2026, 02:30 PM\n·\n1\nboost\n·\n0\nquotes\n·\n5\nfavorites\nTrending\nLive feeds\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 171,
+    "observables": {
+      "domain-name": [
+        "techcrunch.com"
+      ],
+      "email-addr": [
+        "thenewoil@mastodon.thenewoil.org"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "🤖 ShinyHunters revendique le piratage de Logitech et Streamlabs et menace de publier les données volées. Les streameurs seraient particulièrement visés, selon Zataz.🔗 https://www.zataz.com/shinyhunters-menace-logitech-et-streamlabs/ #DataBreach #InfoSec #CyberSec",
+    "publication_date": "Sun, 23 Aug 2026 12:23:32 +0000",
+    "source": "https://infosec.exchange/@cloud/117144788335558435",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "🇺🇸 We tracked a data leak claim by updap naming Louisiana Electric Resource, a US energy and utilities operator. The actor claims 200 GB of data including financial documents, contracts, internal emails, and personal information of clients and employees. We've logged 256 updap listings in the past 30 days across our monitoring. #DataBreach #Energy #ThreatIntelThis entry + more → https://go.darkwebsonar.io/updap-mastodon",
+    "publication_date": "Sun, 23 Aug 2026 12:23:32 +0000",
+    "source": "https://infosec.exchange/@darkwebsonar/117144685581051399",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "🤖 LockBit 5.0 revendique une attaque contre Actua, groupe français de recrutement et travail temporaire (37 agences). Le ransomware menace de publier fin août des passeports, diplômes, CV et attestations d'assurance de plus de 100 000 personnes.🔗 https://www.zataz.com/lockbit-5-0-menace-de-publier-des-donnees-dactua/ #Ransomware #DataBreach #CyberSec",
+    "publication_date": "Sun, 23 Aug 2026 08:26:19 +0000",
+    "source": "https://infosec.exchange/@cloud/117143835127251525",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "ShinyHunters Hit BOK Financial With Ransomware UltimatumRansomware gang ShinyHunters breached US financial institution BOK Financial and issued a final ultimatum to leak stolen data by August 24.https://pulseofnations.lol/shinyhunters-hit-bok/#BokFinancial #DataBreach #Extortion #Ransomware #Shinyhunters",
+    "publication_date": "Sun, 23 Aug 2026 05:25:18 +0000",
+    "source": "https://mastodon.social/@PulseOfNations/117143002824465133",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.social is one of the many independent Mastodon servers you can use to participate in the fediverse.\nThe original server of Mastodon, operated by Mastodon GmbH for the common good.\nADMINISTERED BY:\nMastodon\n@Mastodon\nSERVER STATS:\n275K\nactive users\nmastodon.social:About\nmastodon.social\nStatusProfiles directoryPrivacy policyTerms of service\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.7.0\nBack\nPulse Of Nations\n@PulseOfNations@mastodon.social\n\nShinyHunters Hit BOK Financial With Ransomware Ultimatum\n\nRansomware gang ShinyHunters breached US financial institution BOK Financial and issued a final ultimatum to leak stolen data by August 24.\n\nhttps://\npulseofnations.lol/shinyhunter\ns-hit-bok/\n\nPulse of Nations · 19h\nShinyHunters Hit BOK Financial With Ransomware Ultimatum\nBy Sebastian Szczeblewski\n#\nBokFinancial\n#\nDataBreach\n#\nExtortion\n…and 2 more\nAug 23, 2026, 04:46 AM\n·\n·\nPulseOfNations Auto-Publish\n0\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 176,
+    "observables": {
+      "email-addr": [
+        "PulseOfNations@mastodon.social"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "S&P 500 and Nasdaq Recover August Sell-Off LossesWall Street's main indexes fully recoup losses from early August sell-off as Treasury yields ease and tech leads recovery.https://pulseofnations.lol/s-p-500-and-nasdaq-2/#BokFinancial #DataBreach #Extortion #Ransomware #Shinyhunters",
+    "publication_date": "Sun, 23 Aug 2026 05:25:18 +0000",
+    "source": "https://mastodon.social/@PulseOfNations/117142998949686363",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.social is one of the many independent Mastodon servers you can use to participate in the fediverse.\nThe original server of Mastodon, operated by Mastodon GmbH for the common good.\nADMINISTERED BY:\nMastodon\n@Mastodon\nSERVER STATS:\n275K\nactive users\nmastodon.social:About\nmastodon.social\nStatusProfiles directoryPrivacy policyTerms of service\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.7.0\nBack\nPulse Of Nations\n@PulseOfNations@mastodon.social\n\nS&#038;P 500 and Nasdaq Recover August Sell-Off Losses\n\nWall Street's main indexes fully recoup losses from early August sell-off as Treasury yields ease and tech leads recovery.\n\nhttps://\npulseofnations.lol/s-p-500-and\n-nasdaq-2/\n\nPulse of Nations · 19h\nS&P 500 and Nasdaq Recover August Sell-Off Losses\nBy Sebastian Szczeblewski\n#\nBokFinancial\n#\nDataBreach\n#\nExtortion\n…and 2 more\nAug 23, 2026, 04:45 AM\n·\n·\nPulseOfNations Auto-Publish\n0\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 176,
+    "observables": {
+      "email-addr": [
+        "PulseOfNations@mastodon.social"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "🤖 Un pirate revendique sur un forum un jeu de données attribué à Chess.com : 7,3 millions de profils dont ~4 millions d'adresses email, avec noms, localisations et classements. Annonce du 16 août 2026, revendication non confirmée. Le précédent piratage du site concernait ~800 000 emails.🔗 https://www.zataz.com/chess-com-un-nouveau-pirate-revendique-73-millions-de-profils/#DataBreach #InfoSec #CyberSec",
+    "publication_date": "Sun, 23 Aug 2026 04:26:43 +0000",
+    "source": "https://infosec.exchange/@cloud/117142871021281023",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "Breach monitor, 2/12: the trap.A clean address returns {\"Error\":\"Not found\",\"email\":null} with HTTP 200, not a 404.So if your script branches on the status code, every clean address reads as a hit and you page someone at 3 am for nothing.Branch on the body. Check for the breaches key.Verify it yourself, no key needed:curl https://api.xposedornot.com/v1/check-email/zzq7x4nvw9k2m@example.com#DataBreach #XONBuild",
+    "publication_date": "Sun, 23 Aug 2026 02:28:50 +0000",
+    "source": "https://infosec.exchange/@DevaOnBreaches/117142410662402188",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "infosec.exchange is one of the many independent Mastodon servers you can use to participate in the fediverse.A Mastodon instance for info/cyber security-minded people.\nAdministered by:Scary Jerry 👻 @jerryServer stats:10Kactive users DevaOnBreaches @DevaOnBreaches@infosec.exchangeBreach monitor, 2/12: the trap.A clean address returns {\"Error\":\"Not found\",\"email\":null} with HTTP 200, not a 404.So if your script branches on the status code, every clean address reads as a hit and you page someone at 3 am for nothing.Branch on the body. Check for the breaches key.Verify it yourself, no key needed:curl https://api.xposedornot.com/v1/check-email/zzq7x4nvw9k2m@example.comALTHide#DataBreach#XONBuildAug 23, 2026, 02:15 AM··Web1 boost·0 quotes·0 favorites",
+    "word_count": 92,
+    "observables": {
+      "email-addr": [
+        "DevaOnBreaches@infosec.exchangeBreach",
+        "zzq7x4nvw9k2m@example.comALTHide"
+      ],
+      "url": [
+        "https://api.xposedornot.com/v1/check-email/zzq7x4nvw9k2m@example.comALTHide#DataBreach#XONBuildAug"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Golf Canada - 568,972 breached accounts - https://www.redpacketsecurity.com/golf-canada-568-972-breached-accounts/#databreach #HaveIBeenPwnedLatestBreaches #HIBP #OSINT #Security #threatintel #TroyHunt",
+    "publication_date": "Sun, 23 Aug 2026 02:28:50 +0000",
+    "source": "https://mastodon.social/@RedPacketSecurity/117142354048199952",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nmastodon.social is one of the many independent Mastodon servers you can use to participate in the fediverse.\nThe original server of Mastodon, operated by Mastodon GmbH for the common good.\nADMINISTERED BY:\nMastodon\n@Mastodon\nSERVER STATS:\n275K\nactive users\nmastodon.social:About\nmastodon.social\nStatusProfiles directoryPrivacy policyTerms of service\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.7.0\nBack\nRedPacket Security\n@RedPacketSecurity@mastodon.social\n\nGolf Canada - 568,972 breached accounts -\nhttps://www.\nredpacketsecurity.com/golf-can\nada-568-972-breached-accounts/\n\nRedPacket Security · 22h\nGolf Canada - 568,972 breached accounts - RedPacket Security\nIn mid-2026, hundreds of thousands of user records allegedly sourced from Golf Canada began circulating via Telegram. The data included 569k unique email\n#\ndatabreach\n#\nHaveIBeenPwnedLatestBreaches\n#\nHIBP\n…and 4 more\nAug 23, 2026, 02:01 AM\n·\n·\nn8n\n0\nboosts\n·\n0\nquotes\n·\n0\nfavorites\nTrending\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 174,
+    "observables": {
+      "domain-name": [
+        "redpacketsecurity.com"
+      ],
+      "email-addr": [
+        "RedPacketSecurity@mastodon.social"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "Japan’s Sakura Internet says hackers accessed its sales management system, potentially exposing data from up to 1.36M member accounts. #databreach https://www.bleepingcomputer.com/news/security/sakura-internet-hack-exposes-data-of-up-to-136-million-accounts/",
+    "publication_date": "Sun, 23 Aug 2026 01:28:36 +0000",
+    "source": "https://infosec.exchange/@DevaOnBreaches/117142186241274618",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "Apollo Global Management confirms hackers stole personal data after using social engineering to access its cloud systems between July 6–10. Exposed data includes names, birth dates, contact details, and Social Security numbers. #databreach https://techcrunch.com/2026/08/21/private-equity-firm-apollo-confirms-data-breach-amid-hacking-wave-targeting-financial-giants/",
+    "publication_date": "Sun, 23 Aug 2026 01:28:36 +0000",
+    "source": "https://infosec.exchange/@DevaOnBreaches/117142183287122483",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "SickKids says a flaw in third-party software exposed personal information belonging to some current/former employees and job applicants. Patient records and clinical systems were unaffected, and its Careers site has been restored. #databreach https://www.bleepingcomputer.com/news/security/sickkids-data-breach-exposes-employee-and-job-applicant-info/",
+    "publication_date": "Sun, 23 Aug 2026 01:28:36 +0000",
+    "source": "https://infosec.exchange/@DevaOnBreaches/117142178194519583",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "🤖 LockBit 5.0 menace de publier fin août des données attribuées à Actua, concernant plus de 100 000 personnes. Le groupe ransomware affirme détenir des documents sensibles et fixe une deadline à l'entreprise française.🔗 https://www.zataz.com/lockbit-5-0-menace-de-publier-des-donnees-dactua/ #Ransomware #DataBreach #CyberSec",
+    "publication_date": "Sun, 23 Aug 2026 00:29:15 +0000",
+    "source": "https://infosec.exchange/@cloud/117141909136566197",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "",
+    "publication_date": "Sun, 23 Aug 2026 18:05:43 +0000",
+    "source": "https://c.im/@psoheil/117146146785418251",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "Skip to main content\nHotkey\n1\nSkip to main navigation\nHotkey\n2\nc.im is one of the many independent Mastodon servers you can use to participate in the fediverse.\nC.IM is an independent, EU-hosted Mastodon server for open-minded, English-speaking users across the fediverse.\nADMINISTERED BY:\nOwl Owl OÜ\n@ooo\nSERVER STATS:\n1.6K\nactive users\nc.im:About\nc.im\nStatusProfiles directoryPrivacy policyTerms of service\nMastodon:About\nMastodon\nGet the appKeyboard shortcutsView source codev4.6.6\nBack\nPedram\n@psoheil@c.im\n\nA Truffle Security investigation discovered over 9,300 active, publicly exposed AWS access keys, with 768 granting full administrative control. Hugging Face was identified as the primary source, with 88% of exposed credentials remaining unrotated for a median of five years, leading to significant unauthorized spending and lack of budget alerts. Read the full analysis at Truffle Security.\n\nhttps://www.\nscworld.com/brief/thousands-of\n-active-aws-access-keys-remain-publicly-exposed\n\nSC Media · 2d\nThousands of active AWS access keys remain publicly exposed\nBy SC Staff\n#\nCyberSecurity\n#\nCloudSecurity\n#\nAWS\n…and 6 more\nAug 23, 2026, 06:05 PM\n·\n·\nMastodon for iOS\n2\nboosts\n·\n0\nquotes\n·\n2\nfavorites\nTrending\nLive feeds\n\nMastodon is the best way to keep up with what's happening.\n\nFollow anyone across the fediverse and see it all in chronological order. No algorithms, ads, or clickbait in sight.\n\nCreate accountLogin",
+    "word_count": 210,
+    "observables": {
+      "domain-name": [
+        "scworld.com"
+      ],
+      "email-addr": [
+        "psoheil@c.im"
+      ]
+    },
+    "extractor": "cti_extractor"
+  },
+  {
+    "title": "",
+    "publication_date": "Sun, 23 Aug 2026 11:27:15 +0000",
+    "source": "https://infosec.exchange/@suriq/117144579961374781",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  },
+  {
+    "title": "",
+    "publication_date": "Sun, 23 Aug 2026 08:01:16 +0000",
+    "source": "https://infosec.exchange/@beyondmachines1/117143770015954037",
+    "source_categories": [
+      "operational"
+    ],
+    "source_level": 2,
+    "text": "",
+    "word_count": 0,
+    "observables": {
+      "artifact": [],
+      "autonomous-system": [],
+      "directory": [],
+      "domain-name": [],
+      "email-addr": [],
+      "email-message": [],
+      "file": [],
+      "ipv4-addr": [],
+      "ipv6-addr": [],
+      "mac-addr": [],
+      "mutex": [],
+      "network-traffic": [],
+      "process": [],
+      "software": [],
+      "url": [],
+      "user-account": [],
+      "windows-registry-key": [],
+      "x509-certificate": [],
+      "vulnerability": [],
+      "mitre": []
+    },
+    "extractor": "none"
+  }
+]
