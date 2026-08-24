@@ -1,1157 +1,1068 @@
-# Brief quotidien de veille cyber - 2026-08-24
+# Table des matières
+* [Analyse Stratégique](#analyse-strategique)
+* [Synthèses](#syntheses)
+  * [Synthèse des acteurs malveillants](#synthese-des-acteurs-malveillants)
+  * [Synthèse de l'actualité géopolitique](#synthese-geopolitique)
+  * [Synthèse réglementaire et juridique](#synthese-reglementaire)
+  * [Synthèse des violations de données](#synthese-des-violations-de-donnees)
+  * [Synthèse des vulnérabilités critiques](#synthese-des-vulnerabilites-critiques)
+* [Articles](#articles)
+  * [Google Cloud Compute et Cloud Ops Agent — Ce qui compte vraiment pour le DFIR](#google-cloud-compute-et-cloud-ops-agent-ce-qui-compte-vraiment-pour-le-dfir)
+  * [Sécurité Supply Chain : Ne pas tenir l'intégrité des packages pour acquise](#securite-supply-chain-ne-pas-tenir-lintegrite-des-packages-pour-acquise)
+  * [Fuite de données NIUS (nius[.]de) — ~6 000 enregistrements compromis](#fuite-de-donnees-nius-niusde-6-000-enregistrements-compromis)
+  * [Failles logiques et correctifs pour les règles de détection curées de Google SecOps (Chronicle) - O365 & UEBA](#failles-logiques-et-correctifs-pour-les-regles-de-detection-curees-de-google-secops-chronicle-o365-ueba)
+  * [La patch KB5121003 de Windows 11 provoque des crashes dans les jeux vidéo](#la-patch-kb5121003-de-windows-11-provoque-des-crashes-dans-les-jeux-video)
+  * [parsedmarc — Un outil open source pour analyser les rapports DMARC](#parsedmarc-un-outil-open-source-pour-analyser-les-rapports-dmarc)
+  * [Campagne BEC avec Agent Tesla v4 caché dans un fichier JScript rempli d'emoji](#campagne-bec-avec-agent-tesla-v4-cache-dans-un-fichier-jscript-rempli-demoji)
+  * [Page de phishing hébergée sur GitHub Pages ciblant IONOS](#page-de-phishing-hebergee-sur-github-pages-ciblant-ionos)
+  * [Récapitulatif hebdomadaire des violations de données - 17 au 23 août 2026](#recapitulatif-hebdomadaire-des-violations-de-donnees-17-au-23-aout-2026)
+  * [LockBit 5.0 menace de publier des données volées à l'entreprise française Actua](#lockbit-50-menace-de-publier-des-donnees-volees-a-lentreprise-francaise-actua)
+  * [Plus de 9 300 clés d'accès AWS actives publiquement exposées, Hugging Face identifié comme source principale](#plus-de-9-300-cles-dacces-aws-actives-publiquement-exposees-hugging-face-identifie-comme-source-principale)
 
-**Domaine :** cyber SOC/CERT
-**Date :** 2026-08-24
-**Entrée :** 129 articles scrapés (0 source_level 1, 25 level 2, 104 level 3)
-**Sortie :** 16 clusters produits (CVE éditeurs : 3, menaces : 6, fuites : 7). 102 articles filtrés (chrome_only : 1, no_corroboration : 99).
+---
 
-## Table des matières
-- [Analyse stratégique](#analyse-strategique)
-- [Géopolitique](#geopolitique) — *aucun signal*
-- [Réglementaire et légal](#reglementaire-et-legal) — *aucun signal*
-- [Vulnérabilités](#vulnerabilites) (3)
-- [Menaces SOC/CERT](#menaces-soc-cert) (13)
+<div id="analyse-strategique"></div>
 
-<a id="analyse-strategique"></a>
+# ANALYSE STRATÉGIQUE
 
-## Analyse stratégique
+L'activité cybercriminelle de la journée a été marquée par une forte concentration sur les vulnérabilités, représentant la majorité des 11 articles traités. Avec huit publications dédiées, la priorité opérationnelle immédiate doit être le suivi des correctifs et l'évaluation de l'exposition de notre périmètre aux exploits potentiels. Parallèlement, la récurrence de cinq incidents de fuite de données souligne une pression persistante sur la confidentialité des informations, nécessitant une vigilance accrue sur les compromissions d'identifiants. L'absence de signalement réglementaire et la faible activité géopolitique (un seul article) indiquent un contexte stable sur le plan normatif et macro-politique. La détection d'un seul acteur de menace spécifique suggère une exploitation opportuniste de ces failles plutôt qu'une campagne ciblée et sophistiquée. En résumé, les efforts de remédiation doivent s'aligner sur ce volume critique de vulnérabilités tout en intégrant la surveillance des fuites récentes pour prévenir d'éventuels mouvements latéraux.
 
-La surface de menace du jour se bifurque entre extorsion active et exposition vulnérabilitaire latente. D'un côté, onze victimes revendiquées, qilin en tête avec cinq cibles, modes opératoires dominés par chiffrement de fichiers (3) et exfiltration par service web (2). De l'autre, trois CVE publiées dont deux sans correctif éditeur, sur WordPress et GitLab, aucune exploitation active confirmée. Les défenseurs tiennent deux fronts simultanés : contenir des exfiltrations en cours et réduire l'exposition sur des flaws divulgués non patchés. L'ubiquité des produits touchés rend cette double posture applicable au-delà du périmètre français, absent du corpus.
+---
 
-Qilin industrialise l'extorsion multi-cibles plutôt que le coup unique. Cinq des onze victimes revendiquées lui reviennent, sur trois clusters, avec chiffrement (3) et exfiltration web (2). Les cibles couvrent ingénierie, développement et services techniques — Aurore Development, Black Cat Engineering, Tecnici Associati. La détection doit se concentrer sur le staging de données et les canaux d'exfiltration avant le chiffrement, indicateur trop tardif. Les IOC post-chiffrement ne suffisent plus face à des acteurs qui exfiltrent d'abord.
+<div id="syntheses"></div>
 
-Deux vulnérabilités critiques sans correctif dans des produits ubiquitaires créent une fenêtre de remédiation qui se referme. CVE-2026-16149 (CVSS 8.8, Security Hardener WordPress) et CVE-2026-10053 (CVSS 8.5, GitLab CE/EE, RCE) sont publiées, sans patch, sans exploitation active confirmée. La posture défensive doit assumer l'imminence : les CVE publiques suffisent à armer des acteurs opportunistes. À vérifier sous sept jours : si aucune exploitation de CVE-2026-10053 n'est signalée d'ici le 2026-08-31, alors la fenêtre de remédiation volontaire aura tenu ; sinon, le délai disclosure-exploitation se confirme sous sept jours pour un produit sans correctif.
+# SYNTHÈSES
 
-<a id="geopolitique"></a>
+<div id="synthese-des-acteurs-malveillants"></div>
 
-## Géopolitique
+## Synthèse des acteurs malveillants
 
-*Aucun signal étatique identifié dans le corpus du jour.*
+| Nom de l'acteur | Secteur(s) ciblé(s) | Mode opératoire | TTP MITRE ATT&CK | Source(s) |
+|---|---|---|---|---|
+| **ShinyHunters** | finance | Exploitation de comptes valides, exfiltration de données et extorsion via ransomware/chiffrement. | T1486, T1005, T1657, T1567, T1078 | [https[://]pulseofnations.lol/shinyhunters-hit-bok/](https[://]pulseofnations.lol/shinyhunters-hit-bok/)<br>[https[://]mastodon.social/@PulseOfNations/117143002824465133](https[://]mastodon.social/@PulseOfNations/117143002824465133)<br>[https://mastodon.social/@PulseOfNations/117143002824465133](https://mastodon.social/@PulseOfNations/117143002824465133) |
 
-<a id="reglementaire-et-legal"></a>
+---
 
-## Réglementaire et légal
+<div id="synthese-geopolitique"></div>
 
-*Aucune actualité réglementaire dans le corpus du jour.*
+## Synthèse géopolitique
 
-<a id="vulnerabilites"></a>
+| Pays/Région | Secteur | Thème | Description | Source(s) |
+|---|---|---|---|---|
+| **Amérique du Nord, États-Unis** | Finance, Assurance, Juridique | Campagne d'ingénierie sociale (vishing) menée par Silent Ransom Group contre les secteurs financier, assurantiel et juridique | Le groupe Silent Ransom Group, actif depuis 2022 et spécialisé dans l'usurpation d'identité du support informatique depuis le printemps 2026, mène une campagne d'ingénierie sociale ciblant les secteurs de la finance, de l'assurance et du juridique. Apollo Global Management, l'un des géants du private equity gérant des centaines de milliards de dollars, a été compromis non pas par un zero-day ou un acteur étatique, mais par un appel téléphonique d'un individu se faisant passer pour le support IT. Google Threat Intelligence Group et Mandiant ont tous deux documenté ce modus operandi dès juin 2026. La technique repose sur l'usurpation d'identité du helpdesk pour obtenir des accès ou des informations sensibles via le canal téléphonique, contournant ainsi les défenses techniques traditionnelles. Cette campagne illustre la persistance d'une menace qui exploite le facteur humain, considéré comme le maillon le plus faible de la chaîne de sécurité, au lieu de chercher à exploiter des vulnérabilités techniques. | [https://infosec.exchange/@security_crawler_carl/117146217260647792](https://infosec.exchange/@security_crawler_carl/117146217260647792) |
 
-## Vulnérabilités
+---
 
-| CVE | Score CVSS | EPSS | CISA KEV | Éditeur / Produit affecté | Versions affectées | Type de vulnérabilité | Impact | Mesures de contournement / Correctif | Source(s) |
+<div id="synthese-reglementaire"></div>
+
+## Synthèse réglementaire et juridique
+
+_Aucune actualité réglementaire._
+
+---
+
+<div id="synthese-des-violations-de-donnees"></div>
+
+## Synthèse des violations de données
+
+| Secteur | Victime | Données compromises | Volume estimé | Source(s) |
+|---|---|---|---|---|
+| **Finance / Private Equity** | Apollo Global Management | Noms, dates de naissance, coordonnées de contact, numéros de sécurité sociale (SSN) | Inconnu | [https[://]techcrunch.com/2026/08/21/private-equity-firm-apollo-confirms-data-breach-amid-hacking-wave-targeting-financial-giants/](https[://]techcrunch.com/2026/08/21/private-equity-firm-apollo-confirms-data-breach-amid-hacking-wave-targeting-financial-giants/)<br>[https[://]mastodon.thenewoil.org/@thenewoil/117145298547397291](https[://]mastodon.thenewoil.org/@thenewoil/117145298547397291)<br>[https[://]infosec.exchange/@DevaOnBreaches/117142183287122483](https[://]infosec.exchange/@DevaOnBreaches/117142183287122483)<br>[https://mastodon.thenewoil.org/@thenewoil/117145298547397291](https://mastodon.thenewoil.org/@thenewoil/117145298547397291)<br>[https://infosec.exchange/@DevaOnBreaches/117142183287122483](https://infosec.exchange/@DevaOnBreaches/117142183287122483) |
+| **Énergie / Services publics** | Louisiana Electric Resource | Documents financiers, contrats, emails internes, informations personnelles des clients et employés (200 Go) | 200 | [https[://]go.darkwebsonar.io/updap-mastodon](https[://]go.darkwebsonar.io/updap-mastodon)<br>[https[://]infosec.exchange/@darkwebsonar/117144685581051399](https[://]infosec.exchange/@darkwebsonar/117144685581051399)<br>[https://infosec.exchange/@darkwebsonar/117144685581051399](https://infosec.exchange/@darkwebsonar/117144685581051399) |
+| **Finance / Institutions bancaires** | BOK Financial | Données volées (nature exacte non précisée - menaces de publication par ShinyHunters d'ici le 24 août 2026) | Inconnu | [https[://]pulseofnations.lol/shinyhunters-hit-bok/](https[://]pulseofnations.lol/shinyhunters-hit-bok/)<br>[https[://]mastodon.social/@PulseOfNations/117143002824465133](https[://]mastodon.social/@PulseOfNations/117143002824465133)<br>[https://mastodon.social/@PulseOfNations/117143002824465133](https://mastodon.social/@PulseOfNations/117143002824465133) |
+| **Santé / Hôpital pédiatrique** | SickKids (Hospital for Sick Children) | Informations personnelles d'employés actuels/anciens et de candidats à un emploi (détails exacts non précisés) | Inconnu | [https[://]www.bleepingcomputer.com/news/security/sickkids-data-breach-exposes-employee-and-job-applicant-info/](https[://]www.bleepingcomputer.com/news/security/sickkids-data-breach-exposes-employee-and-job-applicant-info/)<br>[https[://]infosec.exchange/@DevaOnBreaches/117142178194519583](https[://]infosec.exchange/@DevaOnBreaches/117142178194519583)<br>[https://infosec.exchange/@DevaOnBreaches/117142178194519583](https://infosec.exchange/@DevaOnBreaches/117142178194519583) |
+| **Cybersécurité / Outils de monitoring** | XposedOrNot API (note technique) | N/A - Note technique sur l'utilisation correcte de l'API de monitoring XposedOrNot | Inconnu | [https[://]infosec.exchange/@DevaOnBreaches/117142410662402188](https[://]infosec.exchange/@DevaOnBreaches/117142410662402188)<br>[https://infosec.exchange/@DevaOnBreaches/117142410662402188](https://infosec.exchange/@DevaOnBreaches/117142410662402188) |
+
+---
+
+<div id="synthese-des-vulnerabilites-critiques"></div>
+
+## Synthèse des vulnérabilités critiques
+
+| CVE-ID | Score CVSS | EPSS | CISA KEV | Produit affecté | Type de vulnérabilité | Impact | Exploitation | Mesures de contournement | Source(s) |
 |---|---|---|---|---|---|---|---|---|---|
-| [CVE-2026-10053](https://www.cve.org/CVERecord?id=CVE-2026-10053) | 8.5 (HIGH, v3.1) | N/A | N/A | **GitLab** / Improper Limitation of a Pathname to a Restricted Directory  | 18.8 → 19.0.6 | Exécution de code à distance (CWE-94) | GitLab a corrigé une vulnérabilité de traversée de répertoire (CVE-2026-10053) dans le registre de paquets de GitLab CE/EE. | Aucun correctif publié à la date de ce rapport. | [cvefeed.io](https://cvefeed.io/vuln/detail/CVE-2026-10053)<br>[infosec.exchange](https://infosec.exchange/@suriq/117145643611931978) |
-| [CVE-2026-0551](https://www.cve.org/CVERecord?id=CVE-2026-0551)<br>[CVE-2026-5388](https://www.cve.org/CVERecord?id=CVE-2026-5388)<br>[CVE-2026-78050](https://www.cve.org/CVERecord?id=CVE-2026-78050)<br>[CVE-2026-7808](https://www.cve.org/CVERecord?id=CVE-2026-7808)<br>[CVE-2026-8445](https://www.cve.org/CVERecord?id=CVE-2026-8445) | 9.8 (CRITICAL, v3.1) | N/A | N/A | **justhtml** / before 1.12.0 Sanitizer Bypass via Markdown | < 1.12.0 | Injection de code indirecte (XSS) (CWE-79) | Le plugin WordPress PPWP – Password Protect Pages dans ses versions jusqu'à 1.9.18 inclus est vulnérable à une injection d'objet PHP via la désérialisation d'une entrée non fiable depuis le paramètre 'post_protection_rol… | Mise à jour 1 | [cvefeed.io](https://cvefeed.io/vuln/detail/CVE-2026-0551)<br>[cvefeed.io](https://cvefeed.io/vuln/detail/CVE-2026-5388)<br>[cvefeed.io](https://cvefeed.io/vuln/detail/CVE-2026-78050)<br>[cvefeed.io](https://cvefeed.io/vuln/detail/CVE-2026-7808)<br>[cvefeed.io](https://cvefeed.io/vuln/detail/CVE-2026-8445)<br>[infosec.exchange](https://infosec.exchange/@offseq/117141879828855162)<br>[mastodon.social](https://mastodon.social/@stemshop/117145681650942382)<br>[mastodon.social](https://mastodon.social/@thehackerwire/117145418496251422) |
-| [CVE-2026-16149](https://www.cve.org/CVERecord?id=CVE-2026-16149) | 8.8 (HIGH, v3.1) | N/A | N/A | **Security** / Hardener <= 2.4.4 - Authenticated (Subscriber+) | Non précisé par la source. | Élévation de privilèges (CWE-269) | Le plugin WordPress Security Hardener, dans ses versions jusqu'à 2.4.4 incluse, présente une vulnérabilité d'autorisation manquante. | Aucun correctif publié à la date de ce rapport. | [cvefeed.io](https://cvefeed.io/vuln/detail/CVE-2026-16149)<br>[infosec.exchange](https://infosec.exchange/@offseq/117144710268059473) |
+| **CVE-2026-8445** | 9.8 | N/A | FALSE | justhtml versions <= 1.11.0 (corrigé dans la version 1.12.0) | Contournement de sanitisation / Cross-Site Scripting (CWE-79) | Un attaquant peut injecter du code HTML/JavaScript arbitraire dans la sortie Markdown générée par to_markdown(), contournant les protections de sanitisation. Cela permet des attaques de type cross-site scripting (XSS) pouvant entraîner le vol de sessions, l'exfiltration de données ou l'exécution d'actions au nom de l'utilisateur. Le score CVSS 3.1 est de 9.8 (CRITICAL) avec un vecteur d'exploitabilité de 3.9 et un impact de 5.9. | Theoretical | Mettre à jour la bibliothèque justhtml vers la version 1.12.0 ou ultérieure. Examiner et sanitiser la sortie Markdown avant tout rendu. Implémenter un échappement HTML plus strict dans les parseurs personnalisés. Référence : GHSA-3rcm-vjrc-p45j. | [https://cvefeed.io/vuln/detail/CVE-2026-8445](https://cvefeed.io/vuln/detail/CVE-2026-8445)<br>[https://github.com/EmilStenstrom/justhtml/security/advisories/GHSA-3rcm-vjrc-p45j](https://github.com/EmilStenstrom/justhtml/security/advisories/GHSA-3rcm-vjrc-p45j)<br>[https://www.vulncheck.com/advisories/justhtml-before-sanitizer-bypass-via-markdown](https://www.vulncheck.com/advisories/justhtml-before-sanitizer-bypass-via-markdown) |
+| **CVE-2026-7808** | N/A | N/A | FALSE | justhtml versions antérieures à 1.16.0 | Problèmes de sécurité multiples liés à la sanitisation | Les problèmes de sanitisation multiples pourraient permettre à un attaquant de contourner les protections de sécurité de la bibliothèque, avec un impact potentiel variable selon le contexte d'utilisation. Une analyse approfondie des détails de la CVE est recommandée. | Theoretical | Mettre à jour la bibliothèque justhtml vers la version 1.16.0 ou ultérieure. Surveiller les avis de sécurité de l'éditeur pour des informations complémentaires. | [https://cvefeed.io/vuln/detail/CVE-2026-7808](https://cvefeed.io/vuln/detail/CVE-2026-7808) |
+| **CVE-2026-5388** | N/A | N/A | FALSE | justhtml versions antérieures à 1.15.0 | Problèmes de sécurité multiples | Les problèmes de sécurité multiples pourraient permettre à un attaquant d'exploiter la bibliothèque de manière non spécifiée. Une analyse approfondie des détails de la CVE est recommandée. | Theoretical | Mettre à jour la bibliothèque justhtml vers la version 1.15.0 ou ultérieure. Surveiller les avis de sécurité de l'éditeur pour des informations complémentaires. | [https://cvefeed.io/vuln/detail/CVE-2026-5388](https://cvefeed.io/vuln/detail/CVE-2026-5388) |
+| **CVE-2026-78155** | 9.9 | N/A | FALSE | StackGres operator (OnGres) versions <= 1.18.8 | Untrusted Search Path / Escalade de privilèges (CWE-426) | Un attaquant disposant d'un accès tenant de bas niveau peut élever ses privilèges au niveau administrateur, compromettant potentiellement l'ensemble du cluster StackGres et toutes les bases de données gérées. Le score CVSS 3.1 est de 9.9 (CRITICAL). | Theoretical | Appliquer le correctif de sécurité fourni par OnGres pour l'opérateur StackGres. Réviser et restreindre les privilèges de propriété de base de données. Surveiller les logs d'accès pour toute activité suspecte. Référence : hxxps://gitlab[.]com/ongresinc/stackgres/-/work_items/3177. | [https://cvefeed.io/vuln/detail/CVE-2026-78155](https://cvefeed.io/vuln/detail/CVE-2026-78155)<br>[https://gitlab.com/ongresinc/stackgres/-/work_items/3177](https://gitlab.com/ongresinc/stackgres/-/work_items/3177) |
+| **CVE-2026-10053** | 8.5 | N/A | FALSE | GitLab CE/EE versions 18.8 à < 19.0.6, 19.1 à < 19.1.4, 19.2 à < 19.2.2 | Path Traversal menant à Remote Code Execution (CWE-22) | Un utilisateur authentifié peut obtenir une exécution de code à distance sur le serveur GitLab via le package registry, compromettant potentiellement l'ensemble de l'instance et les données stockées. Le score CVSS 3.1 est de 8.5 (HIGH). | Theoretical | Mettre à jour GitLab vers les versions corrigées : 19.0.6, 19.1.4 ou 19.2.2 selon la branche. Restreindre l'accès au package registry. Références : hxxps://gitlab[.]com/gitlab-org/gitlab/-/work_items/601596 et hxxps://hackerone[.]com/reports/3754194. | [https://cvefeed.io/vuln/detail/CVE-2026-10053](https://cvefeed.io/vuln/detail/CVE-2026-10053)<br>[https://gitlab.com/gitlab-org/gitlab/-/work_items/601596](https://gitlab.com/gitlab-org/gitlab/-/work_items/601596)<br>[https://hackerone.com/reports/3754194](https://hackerone.com/reports/3754194) |
+| **CVE-2026-78050** | 9.9 | N/A | FALSE | Comfast CF-N1-S version 2.6.0.1 | Débordement de tampon basé sur la pile (CWE-119, CWE-121) | Un attaquant distant peut exploiter cette vulnérabilité pour exécuter du code arbitraire sur l'équipement via un débordement de tampon, compromettant totalement l'appareil. L'exploit est public, ce qui augmente le risque d'exploitation active. Le score CVSS 3.1 est de 9.9 (CRITICAL). | Active | Mettre à jour le firmware vers une version corrigée. Éviter d'utiliser la fonction ou le composant affecté. Restreindre l'accès réseau à l'interface de gestion. Référence : hxxps://github[.]com/AdminSafe/CVE/issues/9. | [https://cvefeed.io/vuln/detail/CVE-2026-78050](https://cvefeed.io/vuln/detail/CVE-2026-78050)<br>[https://github.com/AdminSafe/CVE/issues/9](https://github.com/AdminSafe/CVE/issues/9)<br>[https://vuldb.com/cve/CVE-2026-78050](https://vuldb.com/cve/CVE-2026-78050)<br>[https://vuldb.com/submit/881293](https://vuldb.com/submit/881293)<br>[https://vuldb.com/vuln/394291](https://vuldb.com/vuln/394291)<br>[https://vuldb.com/vuln/394291/cti](https://vuldb.com/vuln/394291/cti) |
+| **CVE-2026-16149** | 8.8 | N/A | FALSE | Security Hardener plugin pour WordPress versions <= 2.4.4 | Escalade de privilèges / Autorisation manquante (CWE-269) | Un attaquant authentifié avec un simple accès Subscriber peut créer des comptes administrateur ou réinitialiser les mots de passe d'administrateurs existants, compromettant totalement le site WordPress. Le score CVSS 3.1 est de 8.8 (HIGH) avec un vecteur d'exploitabilité de 2.8 et un impact de 5.9. | Theoretical | Mettre à jour le plugin Security Hardener vers la dernière version. Vérifier les paramètres du plugin après la mise à jour. Supprimer le plugin s'il n'est pas nécessaire. Référence : hxxps://plugins[.]trac[.]wordpress[.]org/changeset/3630896/security-hardener. | [https://cvefeed.io/vuln/detail/CVE-2026-16149](https://cvefeed.io/vuln/detail/CVE-2026-16149)<br>[https://plugins.trac.wordpress.org/browser/security-hardener/tags/2.4.4/security-hardener.php#L107](https://plugins.trac.wordpress.org/browser/security-hardener/tags/2.4.4/security-hardener.php#L107)<br>[https://plugins.trac.wordpress.org/browser/security-hardener/tags/2.4.4/security-hardener.php#L180](https://plugins.trac.wordpress.org/browser/security-hardener/tags/2.4.4/security-hardener.php#L180)<br>[https://plugins.trac.wordpress.org/browser/security-hardener/tags/2.4.4/security-hardener.php#L204](https://plugins.trac.wordpress.org/browser/security-hardener/tags/2.4.4/security-hardener.php#L204)<br>[https://plugins.trac.wordpress.org/browser/security-hardener/tags/2.4.4/security-hardener.php#L428](https://plugins.trac.wordpress.org/browser/security-hardener/tags/2.4.4/security-hardener.php#L428)<br>[https://plugins.trac.wordpress.org/browser/security-hardener/tags/2.4.4/security-hardener.php#L433](https://plugins.trac.wordpress.org/browser/security-hardener/tags/2.4.4/security-hardener.php#L433)<br>[https://plugins.trac.wordpress.org/browser/security-hardener/tags/2.4.4/security-hardener.php#L439](https://plugins.trac.wordpress.org/browser/security-hardener/tags/2.4.4/security-hardener.php#L439)<br>[https://plugins.trac.wordpress.org/changeset/3630896/security-hardener](https://plugins.trac.wordpress.org/changeset/3630896/security-hardener)<br>[https://www.wordfence.com/threat-intel/vulnerabilities/id/64f1a71f-e210-4191-bfb4-56f8568180ed?source=cve](https://www.wordfence.com/threat-intel/vulnerabilities/id/64f1a71f-e210-4191-bfb4-56f8568180ed?source=cve) |
+| **CVE-2026-0551** | 8.8 | N/A | FALSE | PPWP – Password Protect Pages plugin pour WordPress versions <= 1.9.18 | Injection d'objet PHP / Désérialisation de données non fiables (CWE-502) | Un attaquant authentifié (Contributor+) peut injecter un objet PHP via désérialisation. L'impact dépend de la présence d'une POP chain dans un autre plugin ou thème : suppression de fichiers arbitraires, exfiltration de données ou exécution de code à distance. Le score CVSS 3.1 est de 8.8 (HIGH) avec un vecteur d'exploitabilité de 2.8 et un impact de 5.9. | Theoretical | Mettre à jour le plugin PPWP vers une version supérieure à 1.9.18. Examiner les plugins et thèmes installés pour identifier d'éventuelles POP chains. Référence : hxxps://plugins[.]trac[.]wordpress[.]org/changeset/3567221/password-protect-page. | [https://cvefeed.io/vuln/detail/CVE-2026-0551](https://cvefeed.io/vuln/detail/CVE-2026-0551)<br>[https://plugins.trac.wordpress.org/browser/password-protect-page/trunk/includes/services/class-ppw-passwords.php#L699](https://plugins.trac.wordpress.org/browser/password-protect-page/trunk/includes/services/class-ppw-passwords.php#L699)<br>[https://plugins.trac.wordpress.org/changeset/3567221/password-protect-page](https://plugins.trac.wordpress.org/changeset/3567221/password-protect-page)<br>[https://www.wordfence.com/threat-intel/vulnerabilities/id/b8f53282-740e-4ac3-a2e1-7a97893e3355?source=cve](https://www.wordfence.com/threat-intel/vulnerabilities/id/b8f53282-740e-4ac3-a2e1-7a97893e3355?source=cve) |
 
-<a id="menaces-soc-cert"></a>
+---
 
-## Menaces SOC/CERT
+<div id="articles"></div>
 
-12 sujet(s) marquant(s) traité(s) en bloc complet, 1 regroupé(s) en fin de section.
+# SECTION "ARTICLES"
 
-<a id="qilin-5-victimes-revendiquees"></a>
+---
 
-### qilin — 5 victimes revendiquées
+<div id="google-cloud-compute-et-cloud-ops-agent-ce-qui-compte-vraiment-pour-le-dfir"></div>
 
-### Résumé technique
+## Google Cloud Compute et Cloud Ops Agent — Ce qui compte vraiment pour le DFIR
 
-Le groupe de rançongiciels qilin a revendiqué cinq nouvelles victimes sur son site de fuite (leak site) le 2026-08-23. Les victimes identifiées sont Aurore Development S.p.A., Black Cat Engineering & Construction WLL, Euroflora srl, Studio BOLDRIN PAOLO et Tecnici Associati STP, opérant dans les secteurs de l'architecture, de l'ingénierie civile, de la construction, de l'immobilier et des services aux entreprises. Aucun détail technique sur le mécanisme d'intrusion, le vecteur d'accès initial, les versions ou configurations concernées n'a été publié par les sources à ce stade. Aucun indicateur de compromission (IOC) n'est disponible. Le modèle opérationnel de qilin s'inscrit dans le schéma de double extorsion : chiffrement des données de la victime et exfiltration préalable pour exercer une pression via la publication sur le leak site. La source unique est ransomlook.io.
+### Résumé
 
-### Analyse de l'impact
+L'article détaille les pratiques de forensique numérique et de réponse à incident (DFIR) dans l'environnement Google Cloud, en se concentrant sur les services de type Compute. Il distingue trois catégories : IaaS (Compute Engine, Shielded VMs) offrant une visibilité forensique maximale au niveau OS, PaaS (App Engine, GKE, Cloud Run) avec des logs mais peu d'évidence au niveau hôte, et FaaS (Cloud Functions, Cloud Workflows) fonctionnant comme une boîte noire avec des logs mais quasiment aucune visibilité disque/mémoire. L'article utilise un cas pratique : une alerte de facturation détecte un pic d'usage Compute Engine inattendu sur un projet nommé fernbridge-prod, révélant des VMs nouvellement créées par un acteur non autorisé. La procédure de capture d'évidence cloud est décrite : snapshot du disque persistant, partage avec un projet DFIR, conversion en disque, attachement en lecture seule à une VM forensique. Les configurations VM spécifiques sont abordées : les GPUs (utiles pour le traitement forensique accéléré), les VMs préemptibles (dont la disparition soudaine peut créer des trous dans les logs), et les Shielded VMs (Secure Boot, vTPM, monitoring d'intégrité).
 
-Les cinq victimes revendiquées appartiennent à des secteurs sensibles en termes de propriété intellectuelle et de données de conception : architecture, ingénierie civile, immobilier et services aux entreprises. Pour ces organisations, la perte associée à un rançongiciel va au-delà de l'indisponibilité des systèmes : les plans, schémas techniques, dossiers de clients et données financières exfiltrés peuvent être publiés sur le leak site de qilin, exposant des informations confidentielles sur des projets d'infrastructure. Les cabinets d'ingénierie et d'architecture constituent des cibles privilégiées en raison de la valeur de leurs données de conception et de leur dépendance opérationnelle aux fichiers numériques. Le coût d'un incident inclut la rançon potentielle, l'arrêt des chantiers, la perte de confiance client et les obligations de notification RGPD.
+---
 
-**Priorité : moyenne.**
+### Analyse opérationnelle
 
-### Recommandations
+Les équipes SOC/DFIR doivent adapter leurs pratiques forensiques au modèle cloud. Pour Compute Engine, les snapshots remplacent l'imagerie disque traditionnelle et permettent une analyse forensique complète au niveau OS. Les VMs préemptibles peuvent créer de fausses lacunes dans les logs — il faut distinguer une réclamation Google d'une suppression malveillante. Les Shielded VMs génèrent des logs d'intégrité supplémentaires à intégrer dans le triage. La détection repose fortement sur Cloud Audit Logs (création de VMs) et les alertes de facturation. Les équipes doivent préparer un projet forensique séparé avec les permissions IAM appropriées pour recevoir et analyser les snapshots. La surface d'attaque inclut le provisioning non autorisé de VMs, potentiellement pour du cryptojacking ou comme point de pivot.
 
-**Stratégiques**
+---
 
-* Intégrer les prestataires d'ingénierie, d'architecture et de construction à la cartographie des risques de la chaîne d'approvisionnement, ces secteurs étant activement ciblés par qilin.
-* Exiger des fournisseurs critiques un plan de continuité d'activité testé incluant la restauration de sauvegardes hors ligne et la gestion d'une fuite de données.
-* Renforcer les exigences contractuelles de cybersécurité pour les partenaires du BTP et de l'ingénierie, incluant des audits de sauvegarde et des délais de notification d'incident.
+### Implications stratégiques
 
-**Opérationnelles**
+La migration cloud transforme les pratiques DFIR : les compétences traditionnelles doivent s'adapter aux API et modèles de partage cloud. L'absence de visibilité hôte sur PaaS/FaaS crée des angles morts forensiques que les organisations doivent compenser par une instrumentation applicative renforcée. Le coût d'investigation cloud (snapshots, VMs forensiques, stockage) doit être budgété. La gouvernance IAM devient critique : un compromis d'identité permettant la création de VMs ouvre la porte à des coûts non maîtrisés et à des exfiltrations. Les organisations multi-cloud doivent harmoniser leurs runbooks DFIR (AWS, Azure, GCP) tout en adaptant les spécificités de chaque fournisseur.
 
-* Vérifier immédiatement l'intégrité et l'isolabilité des sauvegardes, y compris les copies hors ligne (offline), face à un scénario de chiffrement massif.
-* Surveiller les journaux d'authentification pour détecter des connexions inhabituelles, notamment en dehors des heures ouvrées, sur les postes d'architectes et d'ingénieurs.
-* Déployer des règles de détection EDR (Endpoint Detection and Response) sur les comportements de chiffrement volumétrique et de suppression de copies d'ombre (Volume Shadow Copies).
-* Cartographier les partages de fichiers contenant des données de conception (CAO/DAO, plans, dossiers techniques) pour prioriser leur protection et leur journalisation d'accès.
-
-### Playbook de réponse à incident
-
-#### Phase 1 - Préparation
-
-* Recenser les actifs des secteurs architecture, ingénierie, construction, immobilier et services aux entreprises exposés à Internet, notamment les accès RDP et VPN.
-* Vérifier l'existence et la testabilité de sauvegardes hors ligne (règle 3-2-1) pour les serveurs de fichiers et bases de données métier.
-* Activer la journalisation Sysmon sur les postes Windows et auditd sur les serveurs Linux avec collecte centralisée vers le SIEM.
-* Maintenir à jour la liste de contacts d'astreinte incluant le RSSI, le DPO, le prestataire forensique et le numéro du CERT-FR.
-* Cartographier les accès externes VPN, RDP et SMB exposés et restreindre par allowlist IP et MFA obligatoire.
-
-#### Phase 2 - Détection et analyse
-
-* **Règles de détection contextualisées :**
-
-  * Règle [Sigma] :
-
-    ```yaml
-    title: Potential_Ransomware_Mass_File_Modification
-    status: experimental
-    description: Detects rapid successive file modification events indicative of ransomware encryption
-    logsource:
-        product: windows
-        category: file_event
-    detection:
-        selection:
-            EventID: 2
-        filter_legitimate:
-            Image|endswith:
-                - winzip.exe
-                - 7z.exe
-                - explorer.exe
-        condition: selection and not filter_legitimate
-    level: high
-    ```
-
-  * Règle [YARA] :
-
-    ```
-    rule Generic_Ransom_Note
-    {
-        meta:
-            description = "Generic ransom note detection"
-        strings:
-            $a = "your files" nocase
-            $b = "encrypted" nocase
-            $c = "bitcoin" nocase
-            $d = "recover your" nocase
-            $e = "how to decrypt" nocase
-        condition:
-            3 of ($a, $b, $c, $d, $e)
-    }
-    ```
-
-  * Règle [SIEM] :
-
-    ```
-    index=sysmon sourcetype=XmlWinEventLog:Microsoft-Windows-Sysmon/Operational EventCode=2
-    | bin _time span=1m
-    | stats count as file_events dc(TargetFilename) as unique_files values(Image) as processes by host, _time
-    | where unique_files > 50
-    | sort - unique_files
-    ```
-
-  * Règle [auditd] :
-
-    ```bash
-    -a always,exit -F arch=b64 -S unlink,unlinkat,rename,renameat -F dir=/home -k potential_ransomware
-    -a always,exit -F arch=b64 -S unlink,unlinkat,rename,renameat -F dir=/var/www -k potential_ransomware
-    -a always,exit -F arch=b64 -S unlink,unlinkat,rename,renameat -F dir=/srv -k potential_ransomware
-    ```
-
-* Corréler les alertes de modification massive de fichiers avec les sessions utilisateur et les processus parents pour identifier le point d'entrée initial.
-* Exécuter la règle YARA sur les fichiers récents des partages affectés pour détecter d'éventuelles notes de rançon déposées par qilin.
-* Examiner les journaux d'authentification VPN et RDP des 72 heures précédant l'alerte pour identifier les connexions suspectes.
-* Isoler les hôtes présentant plus de 50 modifications de fichiers par minute et capturer la mémoire vive avant toute extinction.
-* Documenter la chaîne d'attaque observée et la transmettre au CERT-FR pour corrélation avec les victimes revendiquées par qilin.
-
-#### Phase 3 - Confinement, éradication et récupération
-
-**Confinement :**
-
-* Isoler immédiatement les hôtes affectés du réseau en conservant l'alimentation électrique pour préserver la mémoire volatile.
-* Désactiver les comptes compromis et révoquer toutes les sessions VPN et RDP actives associées à ces comptes.
-* Capturer une image forensique complète des disques et de la mémoire avant toute action de nettoyage.
-* Bloquer les adresses IP source identifiées dans les journaux d'authentification au pare-feu périmétrique.
-* Notifier le RSSI et déclencher la cellule de crise si plus d'un hôte est affecté simultanément.
-
-**Éradication :**
-
-* Supprimer les tâches planifiées, les services et les clés de registre créés par l'attaquant pour maintenir la persistance.
-* Réinitialiser tous les mots de passe des comptes ayant accédé aux hôtes affectés pendant la fenêtre d'attaque.
-* Reconstruire les hôtes compromis à partir d'une image gold clean plutôt que de nettoyer en place.
-* Appliquer les derniers correctifs de sécurité sur les systèmes reconstruits avant réintégration réseau.
-* Vérifier l'absence de backdoors en analysant les binaires avec la règle YARA et un scan EDR complet.
-
-**Récupération :**
-
-* Restaurer les données depuis les sauvegardes hors ligne après validation de leur intégrité par hachage.
-* Réintégrer les hôtes reconstruits sur le réseau par lots, en commençant par les serveurs les moins critiques.
-* Maintenir une surveillance renforcée de 72 heures après remédiation avec alerte sur toute modification de fichier supérieure à 20 par minute.
-* Valider la cohérence des données restaurées avec les utilisateurs métier avant ouverture aux utilisateurs finaux.
-* Documenter la chronologie complète de la récupération pour alimenter le retour d'expérience.
-
-#### Phase 4 - Activités post-incident
-
-* Calculer le MTTD et le MTTR à partir des horodatages des journaux d'authentification et des alertes SIEM.
-* Évaluer l'obligation de notification RGPD à la CNIL sous 72 heures si des données personnelles ont été compromises.
-* Évaluer l'applicabilité de la directive NIS2 pour les entités essentielles des secteurs construction et ingénierie et notifier l'ANSSI si requis.
-* Partager les indicateurs de compromission collectés avec le CERT-FR via le canal de partage approprié.
-* Organiser un retour d'expérience avec l'ensemble des parties prenantes dans les 15 jours suivant la clôture de l'incident.
-
-#### Phase 5 - Threat Hunting (proactif)
-
-| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
-|---|---|---|---|
-| L'attaquant a obtenu l'accès initial via des comptes valides compromis, notamment par credential stuffing ou achat sur le marché clandestin. | T1078 | Journaux d'authentification VPN, RDP et Active Directory (Event ID 4624 et 4625). | SPL: index=auth (sourcetype=winsecurity EventCode=4624 OR EventCode=4625) LogonType=10 OR LogonType=3 \| bin _time span=1h \| stats count as attempts dc(src_ip) as distinct_ips by user _time \| where distinct_ips > 2 \| sort - distinct_ips |
-| Le rançongiciel a chiffré les fichiers en masse sur les partages réseau et les postes de travail des victimes revendiquées par qilin. | T1486 | Événements Sysmon de création et modification de fichiers (Event ID 2) et télémétrie EDR. | KQL: DeviceFileEvents \| where Timestamp > ago(72h) \| summarize FileCount = count(), DistinctPaths = dcount(FolderPath) by DeviceName, InitiatingProcessFileName, bin(Timestamp, 5m) \| where FileCount > 100 \| order by FileCount desc |
-| L'attaquant a supprimé les copies shadow et désactivé les services de récupération pour empêcher la restauration des données. | T1490 | Journaux de création de processus Sysmon (Event ID 1) et journaux de sécurité Windows (Event ID 4688). | EQL: process where event.type == "start" and (process.name : "vssadmin.exe" and process.command_line : "*delete shadows*") or (process.name : "wbadmin.exe" and process.command_line : "*delete catalog*") or (process.name : "bcdedit.exe" and process.command_line : "*recoveryenabled no*") |
-
-### Indicateurs de compromission (DEFANG obligatoire)
-
-*Aucun IOC technique publié par les sources pour ce cluster.*
-
-### TTP MITRE ATT&CK
-
-| ID TTP | Tactique | Technique | Description contextuelle |
-|---|---|---|---|
-| [T1486](https://attack.mitre.org/techniques/T1486/) | Impact | Data Encrypted for Impact | qilin chiffre les données des cinq victimes revendiquées pour provoquer l'indisponibilité opérationnelle et motiver le paiement de la rançon, conformément au modèle de double extorsion observé sur son leak site. |
-| [T1567](https://attack.mitre.org/techniques/T1567/) | Exfiltration | Exfiltration Over Web Service | Les données des victimes sont exfiltrées vers des services web avant d'être menacées de publication sur le leak site de qilin, mécanisme de pression caractéristique de la double extorsion. |
-
-### Sources
-
-* [ransomlook.io](https://www.ransomlook.io//group/qilin)
-
-<a id="frucastro-sl"></a>
-
-### FRUCASTRO SL
-
-### Résumé technique
-
-Le groupe de rançongiciel « emperador » a revendiqué l'exfiltration de 540,1 Mo de données auprès de FRUCASTRO SL, entreprise du secteur manufacturier. Les données comprennent des bases de données récentes et des documents importants. La publication sur le site de fuite du groupe est programmée pour le 6 septembre 2026 à 11:40:43 UTC. Aucun indicateur de compromission (IOC) n'a été publié par les sources à ce stade. Le vecteur d'accès initial n'est pas documenté : les sources ne précisent ni méthode d'intrusion, ni présence d'un chiffrement des systèmes. Il s'agit d'un schéma d'extorsion de données où l'acteur menace de divulguer les informations volées pour contraindre la victime au paiement. L'attribution se limite au nom du groupe revendiquant l'attaque (« emperador »), sans qualification par les sources au-delà de cette revendication.
-
-### Analyse de l'impact
-
-FRUCASTRO SL, entreprise manufacturière, subit une menace de divulgation publique de bases de données et documents internes. L'exposition de données opérationnelles — potentiellement de propriété intellectuelle, de processus de fabrication ou d'informations clients — peut entraîner un préjudice concurrentiel direct, des sanctions sous le RGPD si des données personnelles sont concernées, et une dégradation de la réputation. Le volume de 540,1 Mo suggère une exfiltration ciblée plutôt qu'un vidage massif. La fenêtre avant publication (23 août – 6 septembre 2026) laisse un délai court pour qualifier l'incident, contenir l'exfiltration et notifier les parties prenantes. Le secteur manufacturier est particulièrement sensible à la compromission de propriété intellectuelle.
-
-**Priorité : moyenne.**
+---
 
 ### Recommandations
 
-**Stratégiques**
+* Maintenir un projet GCP forensique dédié avec VM d'analyse préconfigurée
+* Automatiser la création de snapshots et leur partage inter-projet via scripts
+* Surveiller activement les alertes de facturation comme signal de détection précoce
+* Restreindre les permissions IAM de création de VMs au strict nécessaire
+* Documenter les différences forensiques entre IaaS, PaaS et FaaS pour guider les investigations
 
-* Activer le plan de réponse à incident et convoquer la cellule de crise pour décider de la posture de négociation et de la communication publique.
-* Mandater un prestataire d'investigation numérique pour confirmer l'ampleur de l'exfiltration et identifier le vecteur d'intrusion.
-* Évaluer les obligations de notification auprès de la CNIL si des données personnelles sont confirmées dans le périmètre exfiltré.
-* Préparer une communication à destination des clients et partenaires concernés par une éventuelle fuite de leurs données.
-
-**Opérationnelles**
-
-* Préserver les journaux d'accès, flux réseau et sauvegardes sans altérer les artefacts potentiels pour l'investigation.
-* Rechercher dans les SIEM et EDR des signes d'exfiltration : transferts volumineux vers des destinations externes, connexions vers des services de stockage cloud non autorisés.
-* Vérifier l'intégrité et la disponibilité des sauvegardes, et les isoler du réseau principal.
-* Surveiller le site de fuite « emperador » via RansomLook pour suivre l'évolution et d'éventuelles publications d'IOCs.
-* Auditer les accès aux bases de données et partages de fichiers pour identifier les comptes compromis ou les accès anormaux récents.
+---
 
 ### Playbook de réponse à incident
 
-#### Phase 1 - Préparation
+#### Phase 1 — Préparation
 
-* Recenser l'inventaire des actifs de FRUCASTRO SL, en priorisant les serveurs de bases de données et les partages de documents du secteur manufacturier.
-* Vérifier l'activation des journaux EDR, des journaux d'authentification Active Directory et des journaux d'audit des bases de données sur le périmètre concerné.
-* Confirmer l'existence et l'intégrité de sauvegardes hors ligne testées, couvrant les bases de données et les documents revendiqués par le groupe emperador.
-* Établir la chaîne de contact d'astreinte : CERT-FR, DPO, direction juridique et prestataire d'intervention le cas échéant.
-* Cartographier le périmètre des données potentiellement exfiltrées : bases de données et documents représentant environ 540,1 Mo.
+* Maintenir un projet GCP forensique dédié avec VM d'analyse préconfigurée (Linux/Windows)
+* Préparer des scripts d'automatisation pour snapshot/clone de disques persistants
+* Documenter les permissions IAM nécessaires pour accès inter-projet en lecture
+* Établir des runbooks spécifiques par type de compute (IaaS, PaaS, FaaS)
 
-#### Phase 2 - Détection et analyse
+#### Phase 2 — Détection et analyse
 
-* **Règles de détection contextualisées :**
+* Surveiller les alertes de facturation anormales (spikes d'usage Compute Engine)
+* Configurer Cloud Audit Logs pour détecter la création de VMs non autorisées
+* Mettre en place des alertes sur provisioning de VMs en dehors des heures ouvrées
+* Corréler les logs VPC Flow avec les nouvelles instances pour détecter des connexions C2
 
-  * Règle [Sigma] :
+#### Phase 3 — Confinement, éradication et récupération
 
-    ```yaml
-    title: Suspicious Archive Creation in Temp Directories
-    status: experimental
-    description: Detects compressed archives in temporary or public directories consistent with data staging before exfiltration
-    logsource:
-        product: windows
-        category: file_event
-    detection:
-        selection:
-            TargetFilename|contains:
-                - '\Temp\'
-                - '\AppData\Local\Temp\'
-                - 'C:\Users\Public\'
-            TargetFilename|endswith:
-                - '.zip'
-                - '.7z'
-                - '.rar'
-                - '.tar.gz'
-        condition: selection
-    level: high
-    tags:
-        - attack.exfiltration
-        - attack.t1074
-    ```
+* Snapshot immédiat du disque persistant de la VM suspecte
+* Isolation réseau de la VM (tags réseau, règles firewall) sans éteindre l'instance
+* Partager le snapshot avec le projet forensique dédié
+* Vérifier si des Shielded VMs sont impliquées (logs d'intégrité additionnels)
 
-  * Règle [SIEM] :
+#### Phase 4 — Activités post-incident
 
-    ```
-    index=* sourcetype IN (mysql:audit, postgresql:log, mssql:audit)
-    | stats count, sum(bytes) as total_bytes by user, src_ip, database_name
-    | where total_bytes > 104857600
-    | sort - total_bytes
-    ```
+* Convertir le snapshot en disque et l'attacher en lecture seule à une VM forensique
+* Analyser les artefacts OS-level (logs, processus, utilisateurs, cron jobs)
+* Documenter la chaîne d'événements depuis le provisioning jusqu'à la détection
+* Mettre à jour les politiques IAM pour restreindre la création de VMs
 
-  * Règle [Sigma] :
+#### Phase 5 — Threat Hunting (proactif)
 
-    ```yaml
-    title: Network Connection to File-Sharing or Cloud Storage Services
-    status: experimental
-    description: Detects outbound connections to cloud storage and file-sharing services commonly used for data exfiltration
-    logsource:
-        product: windows
-        category: network_connection
-    detection:
-        selection:
-            DestinationHostname|endswith:
-                - '.s3.amazonaws.com'
-                - '.blob.core.windows.net'
-                - 'storage.googleapis.com'
-                - 'mega.nz'
-                - 'file.io'
-                - 'transfer.sh'
-                - 'gofile.io'
-                - 'wetransfer.com'
-        filter:
-            Image|startswith:
-                - 'C:\Program Files\'
-                - 'C:\Program Files (x86)\'
-        condition: selection and not filter
-    level: high
-    tags:
-        - attack.exfiltration
-        - attack.t1567
-    ```
+* Rechercher des VMs préemptibles créées puis supprimées (trous dans les logs)
+* Auditer tous les projets pour des configurations similaires à l'incident
+* Chercher des patterns de création/destruction rapides de VMs (cryptojacking)
+* Vérifier les images personnalisées utilisées pour le provisioning suspect
 
-  * Règle [EDR] :
+---
 
-    ```
-    sequence by host.name, user.name with maxspan=1h
-      [file where event.action == 'read' and file.size > 10485760]
-      [file where event.action == 'read' and file.size > 10485760]
-      [file where event.action == 'read' and file.size > 10485760]
-    ```
+### Indicateurs de compromission
 
-* Corréler les alertes de création d'archives dans les répertoires temporaires avec les connexions réseau sortantes vers des services de stockage cloud.
-* Examiner les journaux d'audit des bases de données pour identifier tout volume anormal de requêtes ou d'exportations supérieur à 100 Mo par session.
-* Vérifier les authentifications récentes sur le périmètre FRUCASTRO SL à la recherche de comptes valides utilisés à des heures inhabituelles ou depuis des adresses inconnues.
-* Croiser les horodatages des accès massifs aux fichiers avec les fenêtres de connexion suspectes pour reconstituer la chronologie de l'exfiltration.
-* Documenter chaque artéfact identifié pour transmission au CERT-FR et appui aux notifications réglementaires.
+| Type | Valeur (DEFANG) | Fiabilité |
+|---|---|---|
+| DOMAIN | `access[.]in` | Low |
 
-#### Phase 3 - Confinement, éradication et récupération
-
-**Confinement :**
-
-* Isoler les serveurs de bases de données et les partages de documents concernés du réseau sans éteindre les machines afin de préserver les artéfacts en mémoire volatile.
-* Révoquer immédiatement les sessions actives et les jetons d'authentification associés aux comptes suspectés d'avoir servi à l'exfiltration.
-* Capturer une image mémoire et une image disque des systèmes compromis avant toute modification pour préservation des preuves.
-* Bloquer les domaines de services de partage de fichiers identifiés au niveau du proxy et du pare-feu de sortie.
-* Conserver les journaux d'audit des bases de données et les journaux réseau dans un dépôt forensique dédié.
-
-**Éradication :**
-
-* Réinitialiser tous les mots de passe des comptes ayant accédé aux bases de données et documents revendiqués par le groupe emperador.
-* Supprimer toute persistance identifiée : tâches planifiées, services malveillants, clés de registre Run, comptes créés récemment.
-* Appliquer les correctifs de sécurité manquants sur les serveurs de bases de données et les applications exposées.
-* Vérifier l'absence de backdoors ou de webshells sur les serveurs web et les serveurs de fichiers du périmètre FRUCASTRO SL.
-* Réviser les règles de pare-feu pour restreindre l'accès aux bases de données aux seules adresses internes légitimes.
-
-**Récupération :**
-
-* Restaurer les bases de données et documents depuis les sauvegardes hors ligne validées, en priorisant les systèmes critiques au manufacturing.
-* Vérifier l'intégrité des données restaurées par comparaison avec les sauvegardes et contrôle de hash.
-* Remettre en service les systèmes progressivement, en validant à chaque étape l'absence d'indicateurs de compromission.
-* Maintenir une surveillance renforcée de 72 heures après remédiation : alertes EDR, flux réseau sortant, authentifications anormales.
-* Confirmer auprès des équipes métier la continuité des opérations de fabrication et la disponibilité des données restaurées.
-
-#### Phase 4 - Activités post-incident
-
-* Calculer le MTTD et le MTTR à partir des premiers journaux d'accès suspect et de la date de remédiation effective.
-* Notifier la CNIL sous 72 heures si les bases de données ou documents exfiltrés contiennent des données personnelles au sens du RGPD.
-* Évaluer l'applicabilité de NIS2 : FRUCASTRO SL opérant dans le secteur manufacturier, déterminer si le seuil d'entité essentielle est atteint.
-* Transmettre au CERT-FR l'ensemble des artéfacts et indicateurs collectés, y compris les horodatages et volumes observés.
-* Organiser un retour d'expérience formel avec les équipes SOC, IR et métier pour documenter les leçons apprises et les axes d'amélioration.
-
-#### Phase 5 - Threat Hunting (proactif)
-
-| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
-|---|---|---|---|
-| Le groupe emperador a pu utiliser des comptes valides compromis pour accéder aux bases de données et documents de FRUCASTRO SL. | T1078 | Journaux d'authentification Active Directory et journaux de connexion des bases de données. | SPL: index=windows_logs sourcetype=WinEventLog:Security (EventCode=4624 OR EventCode=4625) \| stats count, values(src_ip) as src_ips, dc(src_ip) as distinct_ips by user \| where distinct_ips > 3 OR count > 50 \| sort - count |
-| Les 540,1 Mo de données revendiquées ont pu être regroupées et compressées dans un répertoire temporaire avant exfiltration. | T1074 | Journaux EDR et événements de création de fichiers Sysmon. | EQL: file where event.action == 'creation' and file.extension in ('zip', '7z', 'rar', 'tar.gz') and file.size > 10485760 |
-| Les données volées ont pu être transférées vers un service de stockage en ligne ou de partage de fichiers avant la publication programmée du 6 septembre 2026. | T1567 | Journaux de proxy sortant et journaux de pare-feu. | KQL: event.category:"network" AND network.protocol:"tls" AND (destination.domain:*amazonaws* OR destination.domain:*core.windows* OR destination.domain:*mega.nz* OR destination.domain:*gofile* OR destination.domain:*transfer.sh*) |
-
-### Indicateurs de compromission (DEFANG obligatoire)
-
-*Aucun IOC technique publié par les sources pour ce cluster.*
+---
 
 ### TTP MITRE ATT&CK
 
-| ID TTP | Tactique | Technique | Description contextuelle |
-|---|---|---|---|
-| [T1005](https://attack.mitre.org/techniques/T1005/) | Collection | Data from Local System | Les bases de données et documents de FRUCASTRO SL ont été collectés depuis les systèmes de la victime par le groupe emperador, comme en attestent les 540,1 Mo de données revendiquées. |
-| [T1074](https://attack.mitre.org/techniques/T1074/) | Collection | Data Staged | Les données exfiltrées ont été rassemblées et préparées en vue de leur publication programmée sur le site de fuite du groupe emperador. |
-| [T1567](https://attack.mitre.org/techniques/T1567/) | Exfiltration | Exfiltration Over Web Service | Les données volées ont été transférées vers une infrastructure externe contrôlée par le groupe emperador pour publication sur son site de fuite ; le canal exact d'exfiltration n'est pas documenté par les sources. |
+| ID TTP | Description |
+|---|---|
+| **T1087** | Account Discovery - découverte de comptes lors d'investigations forensiques cloud |
+| **T1057** | Process Discovery - analyse des processus lors d'investigations sur VM |
+
+---
 
 ### Sources
 
-* [ransomlook.io](https://www.ransomlook.io//group/emperador)
+* [https://www.cyberengage.org/post/google-cloud-compute-and-cloud-ops-agent-what-actually-matters-for-dfir](https://www.cyberengage.org/post/google-cloud-compute-and-cloud-ops-agent-what-actually-matters-for-dfir)
 
-<a id="reliaquest-llc"></a>
 
-### ReliaQuest, LLC
+---
 
-### Résumé technique
+<div id="securite-supply-chain-ne-pas-tenir-lintegrite-des-packages-pour-acquise"></div>
 
-Le groupe ShinyHunters a publié une annonce sur la plateforme RansomLook désignant ReliaQuest, LLC comme cible. Le message daté du 2026-08-23 ne contient aucune description technique du mode opératoire, aucun indicateur de compromission (IOC) et aucun détail sur l'ampleur de l'atteinte. Le texte se distingue par une provocation adressée à Mandiant, sommé de « rapporter et conseiller avec exactitude » avant de se retirer. Une clause de non-responsabilité standard est jointe, précisant l'absence d'endossement de toute entité commerciale. Aucune chronologie d'exploitation, aucun vecteur d'accès initial et aucun prérequis technique ne sont documentés par les sources à ce stade. L'attribution repose uniquement sur la revendication de l'acteur lui-même ; aucune attribution indépendante par un tiers n'est mentionnée.
+## Sécurité Supply Chain : Ne pas tenir l'intégrité des packages pour acquise
 
-### Analyse de l'impact
+### Résumé
 
-ReliaQuest, LLC est désignée comme cible par ShinyHunters dans une publication à caractère provocateur. L'absence d'IOC et de détail technique ne permet pas d'évaluer l'impact réel à ce stade. La provocation explicite envers Mandiant suggère une dimension de communication et de notoriété dans cette revendication. Pour une organisation cliente ou partenaire de ReliaQuest, le risque principal résiderait dans une éventuelle exposition de données confiées à ce prestataire. Aucune information publiée ne permet toutefois de confirmer une compromission effective.
+Un message de sensibilisation publié par CVEDatabase[.]com rappelle que les attaques sur la chaîne d'approvisionnement ciblent fréquemment la phase de distribution. Si un miroir de téléchargement est compromis, un attaquant peut substituer un package légitime par une version backdoorée. Le message recommande de toujours vérifier les checksums SHA-256 et les signatures GPG fournies par les développeurs officiels, et d'intégrer cette vérification dans les pipelines CI/CD comme couche de défense critique.
 
-**Priorité : moyenne.**
+---
+
+### Analyse opérationnelle
+
+Les équipes SOC et DevSecOps doivent traiter la vérification d'intégrité des packages comme un contrôle obligatoire et non optionnel. L'absence de vérification de checksum/signature dans un pipeline CI/CD constitue une surface d'attaque exploitable par des acteurs menaçant via des techniques de compromission supply chain (T1195). La détection nécessite de corréler les échecs de vérification de hash avec des alertes de sécurité. Les équipes doivent maintenir un inventaire des sources de téléchargement approuvées et alerter sur tout téléchargement depuis un miroir non répertorié. Les pipelines CI/CD doivent bloquer automatiquement tout package dont la signature ou le checksum ne correspond pas.
+
+---
+
+### Implications stratégiques
+
+Les attaques supply chain (SolarWinds, Codecov, npm) ont démontré que la chaîne d'approvisionnement logicielle est un vecteur stratégique privilégié. Les organisations doivent adopter une approche zero-trust vis-à-vis des dépendances externes. L'investissement dans des outils de SBOM (Software Bill of Materials) et de vérification automatisée d'intégrité devient un requirement réglementaire dans plusieurs juridictions. Le risque organisationnel inclut la compromission de l'ensemble de l'infrastructure via un seul package backdooré, avec des conséquences potentielles sur la continuité business et la conformité.
+
+---
 
 ### Recommandations
 
-**Stratégiques**
+* Intégrer la vérification SHA-256 et GPG comme étape bloquante dans tous les pipelines CI/CD
+* Maintenir un registre approuvé des miroirs et sources de téléchargement
+* Implémenter un SBOM pour cartographier toutes les dépendances et leurs origines
+* Surveiller les alertes des gestionnaires de packages (npm audit, safety, pip-audit)
+* Former les équipes de développement aux risques supply chain et aux bonnes pratiques de vérification
 
-* Évaluer la relation d'affaires avec ReliaQuest et le volume de données ou d'accès confiés à ce prestataire.
-* Anticiper un scénario de notification réglementaire au cas où des données confiées à ReliaQuest s'avéreraient compromises.
-* Maintenir ce signalement en veille et non en mode incident confirmé, dans l'attente d'éléments techniques corroborants.
-
-**Opérationnelles**
-
-* Surveiller les canaux de publication de ShinyHunters pour détecter toute diffusion de données ou d'indicateurs techniques.
-* Recenser les intégrations, comptes de service et flux de données liés à ReliaQuest dans le SI pour préparer une isolation rapide.
-* Activer une détection prioritaire sur les tentatives d'usurpation exploitant le nom de ReliaQuest ou de ses services.
-* Consigner cet événement dans le registre de veille pour corrélation avec de futures publications de l'acteur.
+---
 
 ### Playbook de réponse à incident
 
-#### Phase 1 - Préparation
+#### Phase 1 — Préparation
 
-* Recenser les actifs ReliaQuest exposés sur Internet et les services cloud associés.
-* Activer la journalisation des accès sur les dépôts de code, stockages cloud et annuaires d'identité.
-* Vérifier l'intégrité et la testabilité des sauvegardes hors ligne pour les systèmes critiques.
-* Confirmer la chaîne d'escalade CERT et les contacts juridiques pour notification de violation de données.
-* Cartographier les comptes à privilèges et les accès tiers pouvant être ciblés par exfiltration de données.
+* Maintenir un inventaire à jour de tous les packages et leurs sources officielles
+* Stocker de manière sécurisée les clés GPG des éditeurs de confiance
+* Intégrer la vérification SHA-256 et GPG dans les pipelines CI/CD comme étape obligatoire
+* Documenter les procédures de vérification d'intégrité pour chaque dépendance critique
 
-#### Phase 2 - Détection et analyse
+#### Phase 2 — Détection et analyse
 
-* **Règles de détection contextualisées :**
+* Mettre en place des alertes sur échec de vérification de checksum dans le pipeline CI/CD
+* Surveiller les changements de miroirs de téléchargement et de métadonnées de packages
+* Corréler les alertes de sécurité des gestionnaires de packages (npm audit, pip-audit, etc.)
+* Détecter les packages installés en dehors des canaux officiels
 
-  * Règle [Sigma] :
+#### Phase 3 — Confinement, éradication et récupération
 
-    ```yaml
-    title: Authentification Anormale Depuis Localisation Inedite
-    status: experimental
-    description: Detecte les authentifications reussies depuis une localisation geographique jamais observee auparavant
-    logsource:
-        product: okta
-        service: authentication
-    detection:
-        selection:
-            event_type: user.authentication.sso
-            outcome: SUCCESS
-        condition: selection
-        timeframe: 7d
-    falsepositives:
-        - Deplacements legitimes
-        - Changements de VPN
-    level: medium
-    ```
+* Isoler les systèmes ayant installé des packages depuis un miroir compromis
+* Bloquer les miroirs de téléchargement compromis au niveau réseau (proxy, firewall)
+* Supprimer et réinstaller les packages affectés depuis une source vérifiée
+* Suspendre les déploiements CI/CD jusqu'à validation de l'intégrité des dépendances
 
-  * Règle [SIEM] :
+#### Phase 4 — Activités post-incident
 
-    ```
-    index=* sourcetype=aws:cloudtrail eventSource=s3.amazonaws.com eventName=GetObject
-    | stats count as acces_count dc(bucketName) as buckets_distincts by userIdentity.arn _time
-    | where acces_count > 1000
-    | sort -acces_count
-    ```
+* Effectuer une analyse forensique des packages compromis pour identifier d'éventuelles backdoors
+* Rotations des credentials et tokens présents sur les systèmes affectés
+* Auditer l'ensemble des dépendances installées sur l'infrastructure
+* Renforcer les contrôles d'intégrité dans les pipelines CI/CD (signature obligatoire, politiques d'admission)
 
-  * Règle [Sigma] :
+#### Phase 5 — Threat Hunting (proactif)
 
-    ```yaml
-    title: Staging de Donnees dans Repertoires Temporaires
-    status: experimental
-    description: Detecte des operations de fichiers volumineuses dans des repertoires temporaires pouvant indiquer un staging de donnees avant exfiltration
-    logsource:
-        category: file_event
-        product: windows
-    detection:
-        selection:
-            TargetFilename|contains:
-                - '\Temp\'
-                - '\tmp\'
-                - '\AppData\Local\Temp\'
-        filter:
-            Image|startswith:
-                - 'C:\Windows\System32\'
-                - 'C:\Program Files\'
-        condition: selection and not filter
-    falsepositives:
-        - Installations logicielles legitimes
-        - Mises a jour systeme
-    level: medium
-    ```
+* Rechercher des packages installés sans vérification de checksum à travers tout le parc
+* Analyser l'historique des téléchargements pour identifier des patterns d'empoisonnement
+* Surveiller les registres de packages internes pour des modifications non autorisées
+* Chercher des indicateurs de compromission liés à des campagnes de supply chain connues
 
-  * Règle [SIEM] :
+---
 
-    ```
-    index=firewall action=allowed direction=outbound
-    | stats sum(bytes_out) as volume_total count as nb_connexions by src_ip dest_ip dest_port
-    | where volume_total > 104857600
-    | sort -volume_total
-    ```
+### Indicateurs de compromission
 
-* Noter l'absence d'IOC publiés dans le dossier ShinyHunters ; baser la détection sur des signaux comportementaux liés à l'exfiltration de données.
-* Corréler les authentifications réussies avec les localisations IP historiques pour identifier les accès depuis des points de sortie inédits.
-* Analyser les journaux CloudTrail pour détecter des téléchargements massifs depuis les buckets S3 dépassant un seuil de 1000 objets par session.
-* Surveiller les répertoires temporaires pour identifier un staging de données précédant une exfiltration.
-* Croiser les volumes de trafic sortant avec les heures ouvrées pour isoler les transferts anormaux de plus de 100 Mo.
+| Type | Valeur (DEFANG) | Fiabilité |
+|---|---|---|
+| DOMAIN | `cvedatabase[.]com` | Low |
 
-#### Phase 3 - Confinement, éradication et récupération
-
-**Confinement :**
-
-* Isoler les systèmes identifiés comme compromis sans éteindre les machines afin de préserver les artefacts forensiques.
-* Désactiver immédiatement les comptes suspectés d'être utilisés pour l'exfiltration.
-* Bloquer les adresses IP de destination des transferts de données anormaux au pare-feu périmétrique.
-* Suspendre les clés d'accès cloud associées aux comptes compromis.
-
-**Éradication :**
-
-* Révoquer toutes les sessions actives des comptes compromis via l'annuaire d'identité.
-* Pivoter tous les secrets et mots de passe des comptes à privilèges impactés.
-* Auditer et retirer les règles de transfert ou les tokens de persistance créés pendant la fenêtre d'attaque.
-
-**Récupération :**
-
-* Restaurer les systèmes affectés depuis des sauvegardes vérifiées comme saines.
-* Valider l'intégrité des données restaurées par comparaison avec les instantanés antérieurs.
-* Maintenir une surveillance renforcée de 72 heures après remédiation pour détecter toute tentative de réaccès.
-
-#### Phase 4 - Activités post-incident
-
-* Mesurer le MTTD et le MTTR à partir des horodatages des journaux et des actions de remédiation.
-* Évaluer l'obligation de notification RGPD à la CNIL sous 72 heures si des données personnelles sont concernées.
-* Évaluer l'applicabilité de NIS2 pour notification à l'ANSSI si l'entité relève d'un secteur essentiel.
-* Partager les indicateurs et le récit de l'incident avec le CERT-FR via le canal approprié.
-* Organiser une session de retour d'expérience avec les équipes SOC, CERT et juridiques.
-
-#### Phase 5 - Threat Hunting (proactif)
-
-* N/A
-
-### Indicateurs de compromission (DEFANG obligatoire)
-
-*Aucun IOC technique publié par les sources pour ce cluster.*
+---
 
 ### TTP MITRE ATT&CK
 
-*Aucune technique ATT&CK rattachée par les sources.*
+| ID TTP | Description |
+|---|---|
+| **T1195** | Supply Chain Compromise - compromission de la chaîne d'approvisionnement logicielle |
+| **T1195.002** | Compromise Software Supply Chain - compromission via miroir de téléchargement ou package modifié |
+| **T1027** | Obfuscated Files or Information - backdoor potentiellement masqué dans un package compromis |
+
+---
 
 ### Sources
 
-* [ransomlook.io](https://www.ransomlook.io//group/shinyhunters)
+* [https://techhub.social/@cvedatabase/117147186067751595](https://techhub.social/@cvedatabase/117147186067751595)
 
-<a id="hospitality-health-er-longview"></a>
 
-### Hospitality Health ER (Longview)
+---
 
-### Résumé technique
+<div id="fuite-de-donnees-nius-niusde-6-000-enregistrements-compromis"></div>
 
-Le groupe ransomware Genesis a publié une revendication d'attaque contre Hospitality Health ER (Longview), établissement de santé, sur sa page de fuite référencée par ransomlook.io. La revendication est datée du 2026-08-23. Aucun détail technique n'est publié par les sources à ce stade : ni vecteur d'entrée, ni outil de chiffrement, ni mécanisme d'exfiltration, ni chronologie d'exploitation. Aucun indicateur de compromission (IOC) n'est disponible. Le mode opératoire précis de Genesis — initial access, déplacement latéral, persistance, exfiltration — n'est pas documenté dans ce dossier. La seule source est la page de revendication sur ransomlook.io, qui ne fournit qu'une description générique de la victime (« A healthcare organization »). Aucune attribution à un acteur étatique n'est formulée. La volumétrie des données exfiltrées ou chiffrées n'est pas communiquée.
+## Fuite de données NIUS (nius[.]de) — ~6 000 enregistrements compromis
 
-### Analyse de l'impact
+### Résumé
 
-Hospitality Health ER (Longview) est un établissement de santé, ce qui soulève des enjeux spécifiques au-delà de la simple indisponibilité informatique. Une attaque ransomware sur un service d'urgences (ER) peut directement impacter la prise en charge des patients : ralentissement des admissions, indisponibilité des dossiers médicaux électroniques (EMR), report d'actes cliniques. Le secteur santé est soumis à des obligations réglementaires strictes de notification en cas de fuite de données de santé, considérées comme données personnelles sensibles. Le coût d'une telle attaque combine rançon éventuelle, coûts de remédiation, interruption d'activité clinique et impact réputationnel auprès des patients et de la communauté locale.
+BeeSINT rapporte une fuite de données vérifiée affectant NIUS (nius[.]de), un site d'actualité en ligne. Environ 6 000 enregistrements ont été compromis, incluant des numéros de comptes bancaires, des adresses email, des noms, et des données partielles de cartes de crédit, ainsi que deux autres catégories de données non précisées. L'incident date du 13 juillet 2025 et a été divulgué 406 jours après l'événement. L'infrastructure du site utilise Cloudflare. Aucune configuration SPF/DMARC n'était en place au moment de la divulgation.
 
-**Priorité : moyenne.**
+---
+
+### Analyse opérationnelle
+
+La fuite expose des données financières sensibles (numéros de comptes bancaires, données CB partielles) et des PII (noms, emails). L'absence de SPF/DMARC augmente le risque d'exploitation post-fuite via du phishing ciblé usurpant l'identité de niu[.]de. Le délai de divulgation de 406 jours suggère soit une détection tardive, soit une divulgation retardée. Les équipes SOC doivent surveiller l'utilisation des données exfiltrées (credentials, emails) dans des campagnes de phishing ou de credential stuffing. La présence de Cloudflare suggère que l'attaquant a pu exploiter une vulnérabilité applicative ou des credentials valides pour contourner la protection WAF.
+
+---
+
+### Implications stratégiques
+
+Cette fuite illustre les risques auxquels sont exposés les sites médias : stockage de données abonnés (incluant des données de paiement) avec des configurations de sécurité insuffisantes (absence de SPF/DMARC). Le délai de divulgation de plus d'un an pose la question de la détection et de la transparence. L'exposition de données bancaires et de cartes de crédit expose l'organisation à des risques juridiques (RGPD, DSP2) et de réputation. La tendance des attaques contre les plateformes médias se confirme, motivée par la valeur des données d'abonnés payants sur les marchés illicites.
+
+---
 
 ### Recommandations
 
-**Stratégiques**
+* Configurer immédiatement SPF, DMARC et DKIM sur le domaine nius[.]de
+* Mener un audit de sécurité complet des systèmes stockant les données de paiement
+* Implémenter une détection d'exfiltration de données (DLP) sur les bases de données clients
+* Notifier les autorités de protection des données et les individus affectés selon les obligations RGPD
+* Surveiller les marchés illicites pour détecter la revente ou l'exploitation des données exfiltrées
 
-* Valider que le plan de continuité d'activité (PCA) couvre explicitement les scénarios d'indisponibilité des systèmes cliniques critiques (EMR, PACS, systèmes d'admission) face à un ransomware.
-* Vérifier la conformité des exigences de notification réglementaire auprès des autorités sanitaires et de la CNIL en cas de fuite de données de santé, et s'assurer que les délais contractuels d'assurance cyber sont compatibles.
-* Imposer aux prestataires IT et éditeurs de logiciels médicaux des exigences de sécurité contractualisées (segmentation, sauvegardes isolées, tests de restauration) et un droit d'audit.
-
-**Opérationnelles**
-
-* Surveiller la page de fuite de Genesis sur ransomlook.io et les flux de threat intelligence pour détecter toute publication de données ou d'indicateurs liés à cet incident.
-* Vérifier immédiatement l'intégrité, l'isolation et la testabilité des sauvegardes des systèmes cliniques critiques de l'établissement.
-* Corréler les journaux EDR, SIEM et Active Directory des dernières 30 jours pour détecter toute activité anormale (exécution de PowerShell, création de comptes, accès massifs à partages) compatible avec une phase de reconnaissance post-compromission.
-* Renforcer la vigilance du personnel soignant et administratif face aux tentatives de phishing, en particulier les pièces jointes et liens suspects, vecteur d'entrée récurrent dans le secteur santé.
+---
 
 ### Playbook de réponse à incident
 
-#### Phase 1 - Préparation
+#### Phase 1 — Préparation
 
-* Inventorier les actifs critiques de l'établissement de santé : serveurs de dossiers patients, dispositifs médicaux connectés et postes administratifs.
-* Activer la collecte centralisée des journaux Windows Security, Sysmon et EDR sur tous les hôtes du périmètre santé.
-* Constituer et tester la chaîne d'astreinte : RSSI, DSI, juriste, CERT-FR et prestataire forensique.
-* Vérifier l'existence et la testabilité de sauvegardes hors ligne (air-gapped) pour les systèmes hébergeant les données patients.
-* Cartographier le périmètre réseau : VLAN métiers, accès VPN et interconnexions avec prestataires de santé.
+* Maintenir un inventaire des données PII stockées et de leur localisation
+* Préparer des templates de notification de violation (RGPD, autorités de protection des données)
+* Établir des procédures de rotation de credentials et de blocage d'accès
+* Disposer d'une équipe de réponse à violation prête à intervenir
 
-#### Phase 2 - Détection et analyse
+#### Phase 2 — Détection et analyse
 
-* **Règles de détection contextualisées :**
+* Surveiller les fuites de données sur les forums, marketplaces dark web et plateformes OSINT
+* Configurer des alertes sur des accès anormaux aux bases de données contenant des PII
+* Détecter des exfiltrations via Cloudflare ou autres CDN (anomalies de trafic)
+* Mettre en place des règles de détection pour des accès massifs à des données clients
 
-  * Règle [Sigma] :
+#### Phase 3 — Confinement, éradication et récupération
 
-    ```yaml
-    title: Modification massive de fichiers par processus suspect
-    status: experimental
-    description: Détecte un processus modifiant un volume anormal de fichiers en peu de temps, comportement typique d'un chiffrement rançongiciel.
-    logsource:
-      product: windows
-      category: file_event
-    detection:
-      selection:
-        EventID: 4663
-      timeframe: 1m
-      condition: selection | count(TargetFilename) by process > 100
-    falsepositives:
-      - Sauvegarde programmée
-      - Indexation de fichiers
-    level: high
-    ```
+* Bloquer les accès compromis et rotation immédiate de tous les credentials
+* Isoler les systèmes stockant les données PII affectées
+* Configurer SPF/DMARC pour prévenir l'usurpation d'identité par email
+* Notifier les autorités de protection des données dans les délais réglementaires (72h RGPD)
 
-  * Règle [SIEM] :
+#### Phase 4 — Activités post-incident
 
-    ```
-    index=windows source="WinEventLog:Security" EventCode=4624 LogonType IN (3,10)
-    | stats count by dest_ip, user, src_ip
-    | where count > 50
-    | eval suspicion="authentifications multiples depuis une source unique vers un hôte de santé"
-    | sort - count
-    ```
+* Mener une investigation forensique pour identifier le vecteur d'entrée et l'étendue de la fuite
+* Notifier les individus affectés (noms, emails, données bancaires, données CB partielles)
+* Mettre en place une surveillance de crédit pour les victimes
+* Auditer la configuration de sécurité (SPF/DMARC, Cloudflare, accès aux bases de données)
 
-  * Règle [Sysmon] :
+#### Phase 5 — Threat Hunting (proactif)
 
-    ```xml
-    title: Exécution d'outils de découverte post-compromission
-    status: experimental
-    description: Détecte l'exécution en chaîne d'outils de reconnaissance système via cmd ou PowerShell.
-    logsource:
-      product: windows
-      category: process_creation
-    detection:
-      selection_img:
-        Image|endswith:
-          - '\\whoami.exe'
-          - '\\nltest.exe'
-          - '\\net.exe'
-          - '\\systeminfo.exe'
-      selection_parent:
-        ParentImage|endswith:
-          - '\\powershell.exe'
-          - '\\cmd.exe'
-      condition: selection_img and selection_parent
-    falsepositives:
-      - Scripts d'administration légitimes
-    level: medium
-    ```
+* Rechercher des accès suspects aux bases de données dans les logs antérieurs à la détection
+* Surveiller le dark web et les plateformes OSINT pour des fuites de données supplémentaires
+* Vérifier si d'autres propriétés ou sous-domaines sont affectés
+* Chercher des indicateurs de persistance ou d'accès continu après la fuite initiale
 
-  * Règle [EDR] :
+---
 
-    ```
-    title: Tentative de désactivation de solutions de sécurité
-    status: experimental
-    description: Détecte les tentatives d'arrêt ou de modification de services antivirus, EDR ou de sauvegarde.
-    logsource:
-      product: windows
-      category: process_creation
-    detection:
-      selection_cmd:
-        CommandLine|contains:
-          - 'sc stop'
-          - 'sc config'
-          - 'Set-MpPreference -DisableRealtimeMonitoring'
-          - 'taskkill /F /im'
-      selection_target:
-        CommandLine|contains:
-          - 'Defender'
-          - 'Antivirus'
-          - 'backup'
-      condition: selection_cmd and selection_target
-    falsepositives:
-      - Maintenance planifiée du système de sécurité
-    level: critical
-    ```
+### Indicateurs de compromission
 
-* Corréler les alertes EDR avec les journaux d'authentification Windows pour identifier le compte initial compromis.
-* Vérifier la présence de notes de rançon ou de fichiers à extension modifiée sur les partages réseau de l'établissement.
-* Isoler l'hôte suspect et capturer une image mémoire volatile avant toute extinction.
-* Documenter la chaîne d'événements avec horodatage précis pour alimenter le rapport d'incident.
+| Type | Valeur (DEFANG) | Fiabilité |
+|---|---|---|
+| DOMAIN | `nius[.]de` | High |
+| DOMAIN | `beesint[.]com` | Low |
 
-#### Phase 3 - Confinement, éradication et récupération
-
-**Confinement :**
-
-* Isoler les hôtes confirmés compromis du réseau sans les éteindre, afin de préserver les artefacts forensiques.
-* Désactiver les comptes utilisateurs et de service suspectés d'être utilisés par l'attaquant.
-* Bloquer les adresses IP et domaines identifiés comme malveillants au pare-feu périmétrique.
-* Conserver une copie forensique des disques des machines compromises avant toute désinfection.
-
-**Éradication :**
-
-* Rechercher et supprimer toutes les persiances : tâches planifiées, services malveillants, clés de registre Run, subscriptions WMI.
-* Réinitialiser tous les mots de passe des comptes ayant accédé aux hôtes compromis, y compris les comptes de service.
-* Révoquer les tickets Kerberos et fermer les sessions RDP actives via klist et déconnexion.
-* Appliquer les correctifs de sécurité manquants sur les systèmes concernés avant remise en service.
-
-**Récupération :**
-
-* Restaurer les systèmes à partir des sauvegardes hors line validées, en priorité les serveurs de dossiers patients.
-* Vérifier l'intégrité des données restaurées et confirmer l'absence de notes de rançon résiduelles.
-* Remettre les systèmes en service de manière progressive avec surveillance renforcée de 72 heures.
-* Surveiller activement toute réapparition d'activité suspecte pendant la période de 72 heures post-remédiation.
-
-#### Phase 4 - Activités post-incident
-
-* Mesurer le MTTD et le MTTR à partir des horodatages des journaux et des alertes EDR.
-* Notifier la CNIL sous 72 heures si des données de santé personnelles ont été compromises, conformément au RGPD.
-* Évaluer l'applicabilité de NIS2 : l'établissement de santé relève des entités essentielles, notification à l'ANSSI requise.
-* Partager les IOC et indicateurs comportementaux observés avec le CERT-FR via la plateforme appropriée.
-* Rédiger un retour d'expérience formalisé couvrant la chronologie, les lacunes de détection et les axes d'amélioration.
-
-#### Phase 5 - Threat Hunting (proactif)
-
-| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
-|---|---|---|---|
-| L'attaquant a utilisé des comptes valides pour se déplacer latéralement vers les serveurs de dossiers médicaux. | T1078 | Journaux d'authentification Windows (EventID 4624, 4625) et journaux EDR. | index=windows source="WinEventLog:Security" (EventCode=4624 OR EventCode=4625) LogonType=3 \| stats count by user, src_ip, dest_host \| where count > 20 \| sort - count |
-| L'attaquant a chiffré ou détruit des données sur les partages réseau de l'établissement avant ou pendant la revendication. | T1486 | Événements de modification de fichiers Sysmon (EventID 2) et journaux des serveurs de fichiers. | index=sysmon EventID=2 \| stats count(TargetFilename) by process, Computer \| where count > 200 \| sort - count |
-| L'attaquant a désactivé les outils de sécurité et de sauvegarde avant l'exécution du rançongiciel. | T1562.001 | Journaux de création de processus Sysmon (EventID 1) et journaux de services Windows. | index=sysmon EventID=1 (CommandLine="*sc stop*" OR CommandLine="*Set-MpPreference*" OR CommandLine="*taskkill*") \| table _time, Computer, Image, CommandLine |
-
-### Indicateurs de compromission (DEFANG obligatoire)
-
-*Aucun IOC technique publié par les sources pour ce cluster.*
+---
 
 ### TTP MITRE ATT&CK
 
-*Aucune technique ATT&CK rattachée par les sources.*
+| ID TTP | Description |
+|---|---|
+| **T1078** | Valid Accounts - utilisation potentielle de comptes compromis pour accéder aux données |
+| **T1567** | Exfiltration Over Web Service - exfiltration des données via un service web |
+| **T1589** | Gather Victim Identity Information - collecte d'informations d'identité (noms, emails, données bancaires) |
+| **T1530** | Data from Cloud Storage Object - données potentiellement stockées derrière Cloudflare |
+
+---
 
 ### Sources
 
-* [ransomlook.io](https://www.ransomlook.io//group/genesis)
+* [https://mastodon.social/@BeeSINT/117147172974427621](https://mastodon.social/@BeeSINT/117147172974427621)
 
-<a id="leau-en-bouteille-chere-est-elle-vraiment-meilleure-pour-vous"></a>
 
-### L'eau en bouteille chère est-elle vraiment meilleure pour vous ?
+---
 
-### Résumé technique
+<div id="failles-logiques-et-correctifs-pour-les-regles-de-detection-curees-de-google-secops-chronicle-o365-ueba"></div>
 
-Le dossier soumis ne porte pas sur une menace informatique. Il s'agit d'un article du magazine Wired publié le 2026-08-23, intitulé « Is Expensive Bottled Water Actually Better for You? », qui examine si l'eau en bouteille de luxe offre une meilleure hydratation. L'article indique que l'eau de luxe peut contenir différents minéraux et avoir un goût nettement différent, mais qu'une source éloignée, un pH alcalin et un prix élevé ne signifient pas nécessairement une meilleure hydratation. Aucun mécanisme d'attaque, aucune vulnérabilité logicielle, aucune configuration concernée, aucun prérequis d'exploitation, aucune chronologie de divulgation, aucune attribution à un acteur de menace, et aucune volumétrie ne sont mentionnés dans ce dossier. Détail technique non publié par les sources à ce stade.
+## Failles logiques et correctifs pour les règles de détection curées de Google SecOps (Chronicle) - O365 & UEBA
 
-### Analyse de l'impact
+### Résumé
 
-Ce dossier n'a aucun impact identifié sur la sécurité des systèmes d'information d'une organisation. Aucun produit, aucune architecture, aucune population exposée ne sont concernés. Aucun effet de pivot, aucun coût d'attaque, et aucune perte organisationnelle concrète ne peuvent être déduits du contenu de l'article, qui traite de la qualité de l'eau en bouteille de luxe et non de cybersécurité. Détail non publié par les sources à ce stade.
+Un post publié sur r/blueteamsec discute des failles logiques identifiées dans les règles de détection curées de Google SecOps (Chronicle) pour Office 365 et UEBA, ainsi que des correctifs proposés pour ces règles.
 
-**Priorité : moyenne.**
+---
+
+### Analyse opérationnelle
+
+Les failles logiques dans les règles de détection curées de Google SecOps peuvent entraîner des faux positifs, des faux négatifs ou des détections manquées pour les menaces O365 et UEBA. Les équipes SOC utilisant Chronicle doivent auditer leurs règles importées, vérifier la logique YARA-L, et appliquer les correctifs suggérés pour maintenir une couverture de détection efficace. Une revue systématique des règles curées est nécessaire avant déploiement en production.
+
+---
+
+### Implications stratégiques
+
+La dépendance aux règles de détection pré-construites sans validation approfondie expose les organisations à des angles morts de détection. Cette problématique souligne l'importance d'une gouvernance rigoureuse des règles SIEM/XDR et de l'investissement continu dans le tuning des détections. Les équipes SOC doivent équilibrer rapidité de déploiement et qualité des règles.
+
+---
 
 ### Recommandations
 
-**Stratégiques**
+* Auditer toutes les règles de détection curées importées dans Google SecOps / Chronicle
+* Mettre en place un processus de validation des règles avant déploiement en production
+* Suivre les publications de la communauté blueteamsec pour les correctifs de règles
+* Établir des métriques de qualité des détections (taux de faux positifs, couverture TTP)
 
-* Exclure les flux d'actualité générale non liés à la cybersécurité du pipeline de veille threat intelligence pour éviter la dilution de l'analyse.
-* Mettre en place un filtre de classification automatique des articles entrants pour distinguer les dossiers techniques de menace des contenus hors-sujet.
-
-**Opérationnelles**
-
-* Vérifier la pertinence cyber de chaque article avant de l'intégrer au brief quotidien du CERT.
-* Archiver ce dossier hors du référentiel de menaces actives, sans IOC ni TTP à corréler.
-* Ne pas créer de règle de détection ni d'alerte SOC sur la base de ce dossier.
+---
 
 ### Playbook de réponse à incident
 
-#### Phase 1 - Préparation
+#### Phase 1 — Préparation
 
-* Constater que ce dossier ne contient aucun élément de cybersécurité : article de vulgarisation sur l'eau en bouteille, sans IOC, CVE, acteur ou technique d'attaque.
-* Ne mobiliser aucune ressource de préparation spécifique à ce dossier, car aucun actif informatique n'est concerné.
-* Maintenir en permanence l'inventaire des actifs critiques et la cartographie du périmètre SOC conformément à la doctrine NIST 800-61, indépendamment de ce dossier.
+* Inventorier l'ensemble des règles de détection curées Google SecOps (Chronicle) déployées dans l'environnement
+* Identifier les règles O365 et UEBA spécifiquement mentionnées dans le post
+* Mettre en place un processus formel de revue périodique des règles de détection importées
 
-#### Phase 2 - Détection et analyse
+#### Phase 2 — Détection et analyse
 
-* Constater qu'aucune règle de détection ne peut être rédigée à partir de ce dossier : aucun IOC, aucune technique MITRE ATT&CK, aucun indicateur de compromission n'y figure.
-* Ne pas créer de règles de corrélation sur la base de ce dossier, car aucune donnée technique n'est disponible pour étayer une logique de détection.
-* Transmettre ce dossier au pôle de veille pour exclusion future du flux de cybermenaces si ce type d'article remonte récurrentiellement dans la pipeline de collecte.
+* Comparer la logique des règles curées avec les comportements attendus et les TTPs couverts
+* Identifier les faux positifs et faux négatifs générés par les règles défectueuses
+* Mettre en place des alertes de qualité sur les détections produites par les règles suspectées
 
-#### Phase 3 - Confinement, éradication et récupération
+#### Phase 3 — Confinement, éradication et récupération
 
-**Confinement :**
+* Désactiver ou corriger immédiatement les règles produisant des faux négatifs critiques (menaces non détectées)
+* Ajuster le seuil de sévérité des règles défectueuses en attendant le correctif
+* Documenter les règles corrigées et leur nouvelle logique
 
-* Constater qu'aucun incident de cybersécurité n'est décrit dans ce dossier ; aucune mesure de confinement n'est applicable.
+#### Phase 4 — Activités post-incident
 
-**Éradication :**
+* Appliquer les correctifs publiés par la communauté pour les règles O365 et UEBA
+* Mettre en place un processus de validation systématique avant importation de nouvelles règles curées
+* Documenter les leçons apprises et partager avec l'équipe SOC
 
-* Vérifier qu'aucune persistance ni accès malveillant n'est documenté dans ce dossier ; aucune éradication n'est nécessaire.
+#### Phase 5 — Threat Hunting (proactif)
 
-**Récupération :**
+* Rechercher rétroactivement les IOCs et TTPs qui auraient pu être manqués à cause des failles logiques
+* Effectuer une chasse sur les comportements UEBA anormaux non détectés par les règles défectueuses
+* Corréler avec les alertes de sécurité O365 pour identifier les activités malveillantes potentiellement manquées
 
-* Confirmer qu'aucun service à remettre en ligne n'est identifié dans ce dossier ; aucune surveillance renforcée de 72 h n'est déclenchée.
-
-#### Phase 4 - Activités post-incident
-
-* Clôturer ce dossier comme hors périmètre de réponse à incident du CERT.
-* Ne déclencher aucune notification réglementaire RGPD/CNIL sous 72 h ni NIS2 car aucun incident n'est constaté.
-* Ne partager aucun IOC au CERT-FR car aucune donnée technique n'est présente dans ce dossier.
-* Documenter le faux positif dans la base de connaissance du SOC pour affiner le filtrage des flux de veille à l'avenir.
-
-#### Phase 5 - Threat Hunting (proactif)
-
-| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
-|---|---|---|---|
-| Vérifier si l'URL de l'article Wired figurant dans le dossier a été utilisée comme leurre dans des campagnes de phishing ciblant l'organisation. | T1566 | Journaux de la passerelle de messagerie et du proxy web. | SPL: index=email OR index=proxy "wired.com/story/is-expensive-bottled-water-actually-better-for-you" \| stats count by src_user, sender, dest |
-| Rechercher des domaines lookalike imitant wired.com ayant fait l'objet de requêtes DNS par les actifs internes. | T1583.001 | Journaux des résolveurs DNS internes et logs du proxy web. | KQL: dns_logs \| where query matches regex "(?i)(w[0-9]?red\|wiredd\|wir3d\|w-ired).*\.(com\|net\|org\|info)" \| summarize count by query, client_ip |
-
-### Indicateurs de compromission (DEFANG obligatoire)
-
-*Aucun IOC technique publié par les sources pour ce cluster.*
-
-### TTP MITRE ATT&CK
-
-*Aucune technique ATT&CK rattachée par les sources.*
+---
 
 ### Sources
 
-* [wired.com](https://www.wired.com/story/is-expensive-bottled-water-actually-better-for-you/)
+* [https://www.reddit.com/r/blueteamsec/comments/1vw2g9h/logic_flaws_fixes_for_google_secops_chronicle/](https://www.reddit.com/r/blueteamsec/comments/1vw2g9h/logic_flaws_fixes_for_google_secops_chronicle/)
 
-<a id="semp-srl"></a>
 
-### S.E.M.P. s.r.l.
+---
 
-### Résumé technique
+<div id="la-patch-kb5121003-de-windows-11-provoque-des-crashes-dans-les-jeux-video"></div>
 
-Le groupe de rançongiciel Qilin a revendiqué le 23 août 2026 la compromission de S.E.M.P. s.r.l., société italienne du secteur des services aux entreprises (Business Services), via une publication sur la plateforme RansomLook. Aucun détail technique sur le vecteur d'accès initial, les outils déployés, la chronologie de l'intrusion ou la durée de présence avant chiffrement n'a été diffusé. Aucun indicateur de compromission (IOC) n'a été publié par les sources. L'éventuelle exfiltration de données, pratique courante en double extorsion, n'est pas confirmée par le dossier. Le mécanisme d'attaque précis et les prérequis d'exploitation restent non documentés à ce stade.
+## La patch KB5121003 de Windows 11 provoque des crashes dans les jeux vidéo
 
-### Analyse de l'impact
+### Résumé
 
-S.E.M.P. s.r.l. opère dans les services aux entreprises, un secteur où la continuité opérationnelle et la confidentialité des données clients sont critiques. Un incident de rançongiciel peut paralyser la prestation de services, compromettre les données de clients et partenaires, et déclencher des obligations de notification réglementaire sous le RGPD. Le coût englobe les pertes d'exploitation, les frais de remédiation forensique, l'éventuelle rançon et l'atteinte réputationnelle. L'absence d'IOC publiés restreint la capacité de détection proactive des défenseurs face à d'éventuelles réutilisations d'infrastructure.
+La mise à jour de sécurité KB5121003 pour Windows 11 provoque des crashes dans les jeux vidéo et des problèmes avec les imprimantes. Cela crée un dilemme entre l'application immédiate des correctifs de sécurité et la stabilité du système.
 
-**Priorité : moyenne.**
+---
+
+### Analyse opérationnelle
+
+Les équipes IT doivent évaluer l'impact de la KB5121003 avant déploiement massif. Recommandation de tester en environnement de pré-production, en particulier pour les postes utilisant des applications graphiques ou des jeux. Maintenir un processus de rollback rapide via wusa /uninstall. Surveiller les canaux de télémétrie Windows (Event Viewer, WER) pour détecter les crashs post-patch. Le report du patch laisse une surface d'attaque ouverte, nécessitant des contrôles compensatoires.
+
+---
+
+### Implications stratégiques
+
+Ce type d'incident illustre le compromis permanent entre sécurité et stabilité opérationnelle. Les organisations doivent disposer d'une stratégie de patch management par paliers (ring deployment) pour minimiser l'impact sur la productivité tout en réduisant la surface d'attaque. La communication entre équipes sécurité et IT est essentielle pour gérer ces trade-offs.
+
+---
 
 ### Recommandations
 
-**Stratégiques**
+* Tester la KB5121003 en environnement de pré-production avant déploiement large
+* Mettre en place un déploiement par paliers (canary group → pilot group → production)
+* Préparer un script de rollback automatisé pour désinstallation rapide
+* Documenter les applications impactées et communiquer aux utilisateurs
 
-* Évaluer l'exposition de la chaîne d'approvisionnement si S.E.M.P. s.r.l. est un prestataire de l'organisation et activer les clauses de notification d'incident contractuelles.
-* Maintenir un plan de continuité d'activité (PCA) testé annuellement, incluant des sauvegardes immuables hors ligne et des procédures de bascule.
-* Renforcer les exigences de cybersécurité dans les contrats avec les prestataires de services aux entreprises, incluant audits de sécurité et délais de notification d'incident.
-
-**Opérationnelles**
-
-* Surveiller les flux réseau sortants et les communications vers les infrastructures connues associées au groupe Qilin via les flux de veille en menaces.
-* Vérifier l'absence d'artefacts de compromission dans les environnements si une relation d'affaires existe avec S.E.M.P. s.r.l.
-* Appliquer le principe du moindre privilège et segmenter le réseau pour limiter la propagation latérale en cas d'intrusion initiale.
-* Tester régulièrement les procédures de restauration depuis des sauvegardes immuables isolées du réseau de production.
+---
 
 ### Playbook de réponse à incident
 
-#### Phase 1 - Préparation
+#### Phase 1 — Préparation
 
-* Recenser l'ensemble des actifs de S.E.M.P. s.r.l. incluant postes de travail, serveurs de fichiers et contrôleurs de domaine Active Directory.
-* Activer la journalisation PowerShell (ScriptBlock Logging, Module Logging) et déployer Sysmon avec une configuration couvrant les EventID 1, 3, 7, 8, 10, 11, 13, 22.
-* Vérifier la chaîne d'astreinte du CERT et confirmer que le contact CERT-FR est joignable hors heures ouvrées.
-* Tester la restauration d'au moins une sauvegarde hors ligne sur un environnement isolé et mesurer le temps de récupération effectif.
-* Cartographier le périmètre d'exposition externe de S.E.M.P. s.r.l. en listant les accès VPN, sessions RDP exposées et services web publics.
+* Inventorier les postes Windows 11 concernés par le déploiement de la KB5121003
+* Identifier les applications critiques potentiellement impactées (jeux, applications graphiques, pilotes d'impression)
+* Préparer un plan de rollback et des images système de référence
 
-#### Phase 2 - Détection et analyse
+#### Phase 2 — Détection et analyse
 
-* **Règles de détection contextualisées :**
+* Surveiller les événements de crash applicatif post-déploiement (Event ID 1000 Application Error, 1001 Windows Error Reporting)
+* Détecter les pics de tickets helpdesk liés aux crashes de jeux ou problèmes d'impression
+* Mettre en place des alertes sur les redémarrages inattendus de postes patchés
 
-  * Règle [Sigma] :
+#### Phase 3 — Confinement, éradication et récupération
 
-    ```yaml
-    title: Suppression des clichés instantanés via vssadmin
-    status: experimental
-    description: Détecte la suppression des VSS, technique d'inhibition de récupération courante en phase pré-chiffrement ransomware.
-    logsource:
-      product: windows
-      category: process_creation
-    detection:
-      selection:
-        Image|endswith: '\\vssadmin.exe'
-        CommandLine|contains|all:
-          - 'delete'
-          - 'shadows'
-      condition: selection
-    level: high
-    ```
+* Suspendre le déploiement de la KB5121003 sur les postes non encore patchés
+* Désinstaller la KB5121003 sur les postes impactés via wusa /uninstall
+* Communiquer aux utilisateurs sur la situation et les workarounds temporaires
 
-  * Règle [SIEM] : `index=windows sourcetype=WinEventLog:Security EventCode=4663 ObjectType=File | stats count as file_ops, dc(TargetFilename) as unique_files by Image, host | where file_ops > 500 AND unique_files > 200 | sort -file_ops`
-  * Règle [Sigma] :
+#### Phase 4 — Activités post-incident
 
-    ```yaml
-    title: Altération de Windows Defender via PowerShell
-    status: experimental
-    description: Détecte la modification des paramètres de Windows Defender via PowerShell, étape fréquente avant déploiement d'un ransomware.
-    logsource:
-      product: windows
-      category: process_creation
-    detection:
-      selection:
-        Image|endswith: '\\powershell.exe'
-        CommandLine|contains:
-          - 'Set-MpPreference'
-          - 'DisableRealtimeMonitoring'
-          - 'Add-MpPreference'
-          - 'ExclusionPath'
-      condition: selection
-    level: high
-    ```
+* Documenter l'impact de la KB5121003 sur le parc
+* Établir un calendrier de redéploiement une fois un correctif Microsoft disponible
+* Mettre à jour la politique de patch management avec des critères de validation applicative
 
-  * Règle [Sigma] :
+#### Phase 5 — Threat Hunting (proactif)
 
-    ```yaml
-    title: Création de tâche planifiée distante via schtasks
-    status: experimental
-    description: Détecte la création de tâches planifiées avec ciblage distant, technique de propagation latérale utilisée par les opérateurs ransomware.
-    logsource:
-      product: windows
-      category: process_creation
-    detection:
-      selection:
-        Image|endswith: '\\schtasks.exe'
-        CommandLine|contains|all:
-          - '/create'
-          - '/s '
-      condition: selection
-    level: medium
-    ```
+* Vérifier qu'aucun acteur malveillant n'a exploité le délai de patching pour cibler des postes non mis à jour
+* Rechercher des activités suspectes sur les postes où la KB5121003 a été désinstallée (surface d'attaque réouverte)
+* Corréler les désinstallations de patchs avec des indicateurs de compromission
 
-* Corréler les alertes de suppression de VSS avec les événements de connexion réseau pour identifier le système source du déploiement ransomware.
-* Analyser les journaux d'authentification Windows (EventCode 4624 et 4625) pour détecter des connexions anormales sur les comptes à privilèges de S.E.M.P. s.r.l.
-* Examiner la chronologie des événements EDR pour reconstituer la chaîne d'exécution depuis l'accès initial jusqu'au chiffrement.
-* Considérer l'absence d'IOC publié comme une contrainte et baser la détection sur les comportements plutôt que sur des indicateurs statiques.
-
-#### Phase 3 - Confinement, éradication et récupération
-
-**Confinement :**
-
-* Isoler immédiatement les hôtes affectés du réseau en conservant leur alimentation pour préserver la mémoire volatile et les artefacts forensiques.
-* Désactiver les comptes utilisateurs compromis dans Active Directory sans supprimer les objets pour conserver les preuves d'audit.
-* Bloquer les communications sortantes des hôtes suspects au niveau du pare-feu périmétrique pour empêcher toute exfiltration complémentaire.
-* Segmenter le réseau de S.E.M.P. s.r.l. pour isoler les partages de fichiers et limiter la propagation latérale.
-
-**Éradication :**
-
-* Identifier et supprimer tous les mécanismes de persistance déployés : tâches planifiées, services malveillants, clés de registre Run, abonnements WMI.
-* Réinitialiser les mots de passe de tous les comptes à privilèges et comptes de service après purge des tickets Kerberos via klist purge.
-* Reconstruire les hôtes compromis à partir d'une image gold clean plutôt que de tenter un nettoyage en place.
-* Vérifier l'absence de backdoors sur les contrôleurs de domaine via une analyse des délégations et des comptes DCSync potentiels.
-
-**Récupération :**
-
-* Restaurer les systèmes à partir des sauvegardes hors ligne vérifiées en priorisant les serveurs métier de S.E.M.P. s.r.l.
-* Valider l'intégrité des données restaurées en comparant les sommes de contrôle avec les sauvegardes source.
-* Reconnecter les systèmes restaurés au réseau par étapes en commençant par un segment isolé pour validation fonctionnelle.
-* Maintenir une surveillance renforcée de 72 heures après remédiation avec alerting EDR en mode haute sensibilité sur les hôtes restaurés.
-
-#### Phase 4 - Activités post-incident
-
-* Calculer le MTTD et le MTTR à partir des horodatages des premiers événements EDR et de la déclaration de remédiation complète.
-* Notifier la CNIL sous 72 heures si des données personnelles sont confirmées exfiltrées, conformément à l'article 33 du RGPD.
-* Évaluer l'applicabilité de la directive NIS2 pour S.E.M.P. s.r.l. et notifier l'autorité compétente si l'entité relève d'un secteur essentiel.
-* Partager les IOC collectés durant l'investigation et le résumé de l'incident avec le CERT-FR via le canal de partage approprié.
-* Organiser un retour d'expérience formel avec les équipes SOC, IT et direction pour mettre à jour le PRA et les règles de détection.
-
-#### Phase 5 - Threat Hunting (proactif)
-
-| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
-|---|---|---|---|
-| L'attaquant a utilisé des comptes valides compromis pour obtenir un accès initial au réseau de S.E.M.P. s.r.l. via VPN ou RDP exposé. | T1078 | Journaux d'authentification Windows (EventCode 4624 et 4625), journaux VPN, télémétrie EDR | index=windows sourcetype=WinEventLog:Security (EventCode=4624 OR EventCode=4625) (LogonType=10 OR LogonType=3) \| stats count, values(src_ip), dc(dest_host) as hosts_accessed by user \| where count > 20 OR hosts_accessed > 5 \| sort -count |
-| L'attaquant a exfiltré des données métier de S.E.M.P. s.r.l. vers un service externe avant de déployer le chiffrement, dans un schéma de double extorsion. | T1567.002 | Journaux de proxy sortant, journaux de pare-feu, journaux de processus EDR | index=proxy \| stats sum(bytes_out) as total_exfil, dc(dest_domain) as unique_domains by src_ip, user \| where total_exfil > 104857600 \| sort -total_exfil |
-| L'attaquant a propagé le ransomware via les partages administratifs SMB et PsExec pour exécuter le chargeur sur plusieurs hôtes simultanément. | T1021.002 | Journaux Sysmon (EventID 1 et 3), journaux de partage administratif Windows (EventCode 5140 et 5145) | (index=sysmon EventID=1 (Image=*psexec* OR CommandLine=*ADMIN$*)) OR (index=windows sourcetype=WinEventLog:Security EventCode=5145 ShareName=*ADMIN*) \| stats count by src_ip, dest_host, Image, CommandLine \| sort -count |
-
-### Indicateurs de compromission (DEFANG obligatoire)
-
-*Aucun IOC technique publié par les sources pour ce cluster.*
-
-### TTP MITRE ATT&CK
-
-| ID TTP | Tactique | Technique | Description contextuelle |
-|---|---|---|---|
-| [T1486](https://attack.mitre.org/techniques/T1486/) | Impact | Data Encrypted for Impact | Chiffrement des données de la victime par le rançongiciel Qilin dans le cadre de la revendication publiée sur RansomLook ; aucune précision sur l'algorithme ou l'étendue du chiffrement n'est disponible. |
+---
 
 ### Sources
 
-* [ransomlook.io](https://www.ransomlook.io//group/qilin)
+* [https://mastobot.ping.moi/@Bobe_bot/117147068866236846](https://mastobot.ping.moi/@Bobe_bot/117147068866236846)
 
-<a id="clear-align"></a>
 
-### Clear Align
+---
 
-### Résumé technique
+<div id="parsedmarc-un-outil-open-source-pour-analyser-les-rapports-dmarc"></div>
 
-Le groupe de rançongiciel Qilin a revendiqué, le 2026-08-23, la compromission de Clear Align, entreprise du secteur manufacturier, via sa page de fuite référencée par RansomLook. Aucun indicateur de compromission (IOC), vecteur d'accès initial, mécanisme d'attaque, chronologie d'exploitation ou volume de données exfiltrées n'a été publié par les sources à ce stade. L'attribution repose uniquement sur la revendication publiée par Qilin sur sa plateforme de fuite. Le secteur manufacturier est identifié comme catégorie de victime. Aucune configuration, version ou prérequis d'exploitation spécifique n'est documenté dans ce dossier.
+## parsedmarc — Un outil open source pour analyser les rapports DMARC
 
-### Analyse de l'impact
+### Résumé
 
-Clear Align, acteur du secteur manufacturier, fait face à un incident de rançongiciel revendiqué par Qilin. L'impact opérationnel potentiel inclut l'arrêt de chaînes de production, la perte d'accès aux données industrielles et des perturbations de la chaîne d'approvisionnement. La publication des données volées sur le leak site de Qilin exposerait à un risque de divulgation d'informations sensibles (propriété intellectuelle, données clients). Aucune information sur l'étendue du chiffrement ou le volume des données exfiltrées n'est disponible à ce stade.
+parsedmarc est un package Python et un outil CLI pour parser les rapports DMARC agrégés (RUA) et forensiques (RUF), les transformant en données exploitables. L'outil permet de visualiser l'alignement SPF/DKIM à grande échelle et d'améliorer la posture de sécurité email d'un domaine.
 
-**Priorité : moyenne.**
+---
+
+### Analyse opérationnelle
+
+parsedmarc permet aux équipes SOC et IT d'automatiser l'analyse des rapports DMARC, d'identifier les sources d'usurpation d'identité email, et de visualiser l'alignement SPF/DKIM. Intégration possible avec ELK/Splunk/Grafana pour la visualisation. Permet de détecter les tentatives de spoofing et d'affiner progressivement les politiques DMARC (de none vers quarantine/reject). L'outil fournit une visibilité indispensable sur le flux email entrant et sortant.
+
+---
+
+### Implications stratégiques
+
+Le DMARC est devenu un standard de facto pour la sécurisation de l'email. Disposer d'outils d'analyse automatisés permet aux organisations de durcir leur posture email security, de réduire le risque de BEC et de phishing, et de répondre aux exigences réglementaires croissantes en matière d'authentification email. L'investissement dans ce type d'outillage est un levier de réduction de risque à fort ROI.
+
+---
 
 ### Recommandations
 
-**Stratégiques**
+* Déployer parsedmarc et configurer la collecte des rapports RUA/RUF
+* Intégrer les données parsedmarc dans le SIEM pour corrélation avec les alertes phishing
+* Établir une feuille de route de durcissement DMARC : monitoring → quarantine → reject
+* Surveiller les nouveaux services d'envoi email tiers pour mise à jour SPF/DKIM
 
-* Activer le plan de réponse à incident et notifier l'ANSSI conformément aux obligations réglementaires applicables (NIS2, RGPD).
-* Évaluer les obligations contractuelles de notification vis-à-vis des clients et partenaires potentiellement impactés par une fuite de données.
-* Considérer le recours à un prestataire spécialisé en négociation de rançon et en médiation avec le groupe Qilin.
-
-**Opérationnelles**
-
-* Isoler immédiatement les systèmes potentiellement compromis du réseau pour contenir la propagation du rançongiciel.
-* Collecter et préserver les artefacts forensiques (journaux, images mémoire, captures réseau) avant toute action de remédiation.
-* Vérifier l'intégrité et la disponibilité des sauvegardes, puis tester une procédure de restauration sur un environnement isolé.
-* Surveiller le leak site de Qilin pour identifier les données effectivement exfiltrées et publiées.
-* Déployer des règles de détection Endpoint Detection and Response (EDR) basées sur les comportements génériques de rançongiciel en attendant la publication d'IOCs spécifiques.
+---
 
 ### Playbook de réponse à incident
 
-#### Phase 1 - Préparation
+#### Phase 1 — Préparation
 
-* Recenser l'ensemble des actifs IT et OT du périmètre manufacturing de Clear Align, incluant serveurs de production, postes et automates.
-* Activer la collecte centralisée des journaux Sysmon, EDR et pare-feu sur tous les systèmes Windows critiques de l'usine.
-* Vérifier que les sauvegardes hors ligne (air-gapped) sont récentes, testées et restaurables sur un environnement isolé.
-* Mettre à jour la liste de contacts d'astreinte : RSSI, DSI, CERT-FR, prestataire IR et éditeur EDR.
-* Cartographier les flux réseau entre la zone IT et la zone OT pour identifier les points de passage à isoler en cas de chiffrement.
+* Vérifier que les enregistrements DMARC (RUA/RUF) sont configurés pour tous les domaines propriétaires
+* Déployer parsedmarc sur un serveur dédié avec accès aux boîtes de réception de rapports DMARC
+* Configurer l'intégration avec ELK/Splunk/Grafana pour la visualisation des données
 
-#### Phase 2 - Détection et analyse
+#### Phase 2 — Détection et analyse
 
-* **Règles de détection contextualisées :**
+* Collecter et parser automatiquement les rapports DMARC agrégés (RUA) et forensiques (RUF)
+* Identifier les sources d'envoi non autorisées (échec SPF/DKIM) et les tentatives d'usurpation
+* Mettre en place des alertes sur les pics d'échecs d'authentification email
 
-  * Règle [Sigma] :
+#### Phase 3 — Confinement, éradication et récupération
 
-    ```yaml
-    title: Suppression de copies shadow de volume
-    status: experimental
-    description: Détecte la suppression des copies shadow via vssadmin ou wmic, technique d'impact ransomware
-    logsource:
-        product: windows
-        category: process_creation
-    detection:
-        selection_vssadmin:
-            Image|endswith: '\vssadmin.exe'
-            CommandLine|contains: 'delete shadows'
-        selection_wmic:
-            Image|endswith: '\wmic.exe'
-            CommandLine|contains: 'shadowcopy delete'
-        condition: selection_vssadmin or selection_wmic
-    level: critical
-    tags:
-        - attack.impact
-        - attack.t1490
-    ```
+* Bloquer les sources d'envoi non autorisées identifiées via les rapports DMARC
+* Ajuster la politique DMARC de none vers quarantine puis reject de manière progressive
+* Notifier les fournisseurs de services email tiers dont les envois échouent l'alignement
 
-  * Règle [SIEM] :
+#### Phase 4 — Activités post-incident
 
-    ```
-    index=windows sourcetype=XmlWinEventLog:Microsoft-Windows-Sysmon/Operational EventCode=2
-    | bucket _time span=1m
-    | stats dc(TargetFilename) as fichiers_distincts, count as total_events by host, Image, _time
-    | where fichiers_distincts > 200
-    | sort - fichiers_distincts
-    | eval risque=case(fichiers_distincts > 1000, "critique", fichiers_distincts > 500, "eleve", 1=1, "moyen")
-    ```
+* Documenter les sources légitimes et illégitimes d'envoi email identifiées
+* Affiner les enregistrements SPF et DKIM pour couvrir toutes les sources légitimes
+* Mettre en place un processus de revue périodique des rapports DMARC
 
-  * Règle [EDR] :
+#### Phase 5 — Threat Hunting (proactif)
 
-    ```
-    DeviceProcessEvents
-    | where ProcessCommandLine has_any ("schtasks /create", "schtasks /run", "sc create", "sc start")
-    | where InitiatingProcessFileName in~ ("cmd.exe", "powershell.exe", "wmic.exe", "rundll32.exe")
-    | project Timestamp, DeviceName, ProcessCommandLine, InitiatingProcessFileName, AccountName
-    | top 100 by Timestamp
-    ```
+* Corréler les échecs DMARC avec les campagnes de phishing ou BEC identifiées
+* Rechercher des patterns d'usurpation ciblant des domaines similaires (typosquatting)
+* Identifier les adresses IP sources récurrentes dans les échecs DMARC pour blocage proactif
 
-  * Règle [auditd] :
-
-    ```bash
-    -w /etc/crontab -p wa -k persistance_ransomware
-    -w /etc/cron.d/ -p wa -k persistance_ransomware
-    -w /var/spool/cron/ -p wa -k persistance_ransomware
-    -w /etc/systemd/system/ -p wa -k persistance_ransomware
-    -w /usr/local/bin/ -p wa -k persistance_ransomware
-    ```
-
-* Corréler les alertes de suppression de shadow copies avec les événements Sysmon de création de processus pour identifier le processus initial.
-* Analyser les sessions d'authentification récentes sur les contrôleurs de domaine pour identifier les comptes compromis.
-* Examiner les journaux de pare-feu pour détecter des exfiltrations de données vers des destinations inhabituelles.
-* Vérifier les alertes EDR pour des activités de découverte réseau telles que nmap, net view ou nltest.
-* Croiser les horodatages des premières alertes avec la revendication publiée par Qilin sur RansomLook pour confirmer la chronologie.
-
-#### Phase 3 - Confinement, éradication et récupération
-
-**Confinement :**
-
-* Isoler immédiatement les hôtes affectés du réseau en conservant leur alimentation pour préserver la mémoire volatile.
-* Désactiver les comptes utilisateurs compromis identifiés lors de l'analyse sans supprimer les journaux d'authentification.
-* Bloquer les adresses IP et domaines C2 identifiés aux pare-feu périmétriques et aux proxies.
-* Prélever une image forensique des premiers hôtes compromis avant toute désinfection.
-* Segmenter dynamiquement le réseau OT pour empêcher la propagation du chiffrement vers les automates.
-
-**Éradication :**
-
-* Supprimer toutes les tâches planifiées et services malveillants créés par l'attaquant sur les hôtes affectés.
-* Réinitialiser tous les mots de passe des comptes ayant eu des sessions actives pendant la fenêtre d'attaque.
-* Purger les outils de découverte et d'exfiltration déposés sur les systèmes compromis.
-* Vérifier l'absence de persistance via clés de registre Run, WMI et tâches planifiées.
-* Appliquer les correctifs de sécurité manquants sur les vecteurs d'accès initial identifiés.
-
-**Récupération :**
-
-* Restaurer les systèmes affectés depuis les sauvegardes hors ligne validées, en priorisant les serveurs de production manufacturing.
-* Réintégrer les hôtes restaurés par lots avec validation fonctionnelle avant reconnexion au réseau de production.
-* Surveiller en mode renforcé pendant 72 heures tous les systèmes restaurés via EDR et SIEM pour détecter toute réinfection.
-* Vérifier l'intégrité des automates OT avant remise en service de la ligne de production.
-* Confirmer la restauration complète auprès des responsables d'atelier avant déclaration de fin d'incident.
-
-#### Phase 4 - Activités post-incident
-
-* Calculer le MTTD et le MTTR à partir des horodatages des premières alertes et de la remise en service des systèmes.
-* Évaluer l'obligation de notification à la CNIL sous 72 heures si des données personnelles ont été compromises lors de l'exfiltration.
-* Déterminer l'applicabilité de NIS2 et notifier l'autorité compétente si Clear Align relève d'un secteur essentiel.
-* Partager les IOC découverts avec le CERT-FR via la plateforme appropriée pour enrichir la base communautaire.
-* Organiser une session de retour d'expérience avec les équipes IT, OT et la direction dans les 15 jours suivant l'incident.
-
-#### Phase 5 - Threat Hunting (proactif)
-
-| Hypothèse | TTP associé | Source de données | Requête / Méthode de recherche |
-|---|---|---|---|
-| L'attaquant a utilisé des comptes valides compromis pour accéder au réseau manufacturing de Clear Align. | T1078 | Journaux d'authentification Windows Security Event ID 4624/4625, journaux VPN. | index=windows sourcetype=WinEventLog:Security (EventCode=4624 OR EventCode=4625) \| stats count, values(src_ip) as src_ips, earliest(_time) as first_login, latest(_time) as last_login by user, dest \| where count > 10 \| sort - count |
-| Le ransomware a chiffré des fichiers sur les systèmes manufacturing, détectable par des motifs de modification massive de fichiers. | T1486 | Sysmon Event ID 2 (création de fichiers), télémétrie EDR des opérations sur fichiers. | DeviceFileEvents \| where Timestamp > ago(7d) \| summarize FileCount = count(), DistinctFolders = dcount(FolderPath) by DeviceName, InitiatingProcessFileName, bin(Timestamp, 5m) \| where FileCount > 500 \| order by FileCount desc |
-| L'attaquant a supprimé les copies shadow ou désactivé les services de sauvegarde pour empêcher la récupération. | T1490 | Journaux de création de processus Sysmon, journaux Windows System et Application. | process where event.type == "start" and (process.name == "vssadmin.exe" and process.command_line like "%delete shadows%") or (process.name == "wbadmin.exe" and process.command_line like "%delete catalog%") or (process.name == "bcdedit.exe" and process.command_line like "%recoveryenabled no%") |
-
-### Indicateurs de compromission (DEFANG obligatoire)
-
-*Aucun IOC technique publié par les sources pour ce cluster.*
+---
 
 ### TTP MITRE ATT&CK
 
-| ID TTP | Tactique | Technique | Description contextuelle |
-|---|---|---|---|
-| [T1486](https://attack.mitre.org/techniques/T1486/) | Impact | Data Encrypted for Impact | Le rançongiciel Qilin a revendiqué la compromission de Clear Align, impliquant le chiffrement des données de la victime pour extorquer une rançon. Aucun détail sur l'algorithme ou l'étendue du chiffrement n'est publié. |
+| ID TTP | Description |
+|---|---|
+| **T1566** | Phishing - visibilité sur l'usurpation d'identité email via rapports DMARC |
+
+---
 
 ### Sources
 
-* [ransomlook.io](https://www.ransomlook.io//group/qilin)
+* [https://kitploit.com/en/tools/github/domainaware/parsedmarc](https://kitploit.com/en/tools/github/domainaware/parsedmarc)
 
-<a id="signaux-faibles"></a>
 
-### Signaux faibles et fuites diverses
+---
 
-1 sujet(s) sous le seuil de notabilité : ni exploitation active, ni exposition du périmètre français, ni indicateurs techniques publiés.
+<div id="campagne-bec-avec-agent-tesla-v4-cache-dans-un-fichier-jscript-rempli-demoji"></div>
 
-**el-group** — Victimes revendiquées : el-group. Sources : [ransomlook.io](https://www.ransomlook.io//group/inc%20ransom).
+## Campagne BEC avec Agent Tesla v4 caché dans un fichier JScript rempli d'emoji
 
-#### Phases 1-4 (condensées)
+### Résumé
 
-* Vérifier l'exposition du périmètre aux services concernés.
-* Surveiller la publication d'IOC techniques par les sources primaires.
-* Notifier si des données personnelles gérées par l'entité sont concernées (RGPD, 72 h).
-* Classer sans suite si aucun actif n'est exposé.
+Les chercheurs de KnowBe4 ont identifié une campagne de compromission d'email professionnel (BEC) ciblant le personnel financier avec une fausse demande urgente de confirmation d'un document bancaire. La pièce jointe JScript de 6,94 Mo, nommée 'SWIFT Payment Maker 103 - 10.06.26.JS', usurpe l'identité de Metropolitan Bank and Trust Company et cache le code d'Agent Tesla v4 derrière de grandes quantités d'emoji Unicode. Windows Script Host ignore ces caractères lors de l'analyse JScript.
+
+---
+
+### Analyse opérationnelle
+
+Détection : surveiller les emails avec pièces jointes .JS de grande taille (>5 Mo), bloquer les fichiers JScript via règles de transport email, activer AMSI pour JScript. L'obfuscation par emoji Unicode nécessite des règles de détection spécifiques au-delà des signatures classiques. Surveiller l'exécution de wscript.exe/cscript.exe avec des fichiers de grande taille. Agent Tesla v4 exfiltre via SMTP/FTP/HTTP — surveiller les connexions C2 sortantes inhabituelles depuis les postes finance. Le nom de fichier 'SWIFT Payment Maker 103 - 10.06.26.JS' est un indicateur de compromission à bloquer.
+
+---
+
+### Implications stratégiques
+
+Cette campagne illustre l'évolution des techniques d'obfuscation des menaces par email, ciblant spécifiquement les départements financiers. Les organisations du secteur bancaire et financier sont particulièrement exposées. L'usurpation d'identité SWIFT/bancaire souligne l'importance de la formation de sensibilisation et des contrôles techniques multi-couches pour les équipes finance. La technique d'obfuscation par emoji Unicode montre que les attaquants adaptent leurs méthodes pour contourner les sandbox et les gateways email traditionnels.
+
+---
+
+### Recommandations
+
+* Bloquer tous les fichiers .JS/.JScript au niveau de la passerelle email
+* Surveiller wscript.exe/cscript.exe avec des fichiers de grande taille (>5 Mo)
+* Former le personnel finance à la détection des emails BEC usurpant des institutions bancaires
+* Déployer des règles de détection spécifiques pour l'obfuscation par emoji Unicode dans les scripts
+* Surveiller les connexions C2 sortantes Agent Tesla (SMTP/FTP/HTTP non standard)
+
+---
+
+### Playbook de réponse à incident
+
+#### Phase 1 — Préparation
+
+* Former le personnel financier à la détection des emails BEC usurpant des institutions bancaires
+* Bloquer les fichiers .JS/.JScript au niveau des passerelles email (règles de transport)
+* Activer AMSI pour les scripts JScript et surveiller wscript.exe/cscript.exe
+* Maintenir une liste blanche stricte des scripts autorisés à s'exécuter sur les postes finance
+
+#### Phase 2 — Détection et analyse
+
+* Surveiller les emails avec pièces jointes .JS de grande taille (>5 Mo) - indicateur d'obfuscation par emoji
+* Détecter l'exécution de wscript.exe/cscript.exe avec des fichiers JScript de grande taille
+* Surveiller les connexions réseau sortantes inhabituelles depuis les postes du département finance (C2 Agent Tesla via SMTP/FTP/HTTP)
+* Analyser les emails usurpant Metropolitan Bank and Trust Company ou utilisant le nom de fichier 'SWIFT Payment Maker 103 - 10.06.26.JS'
+
+#### Phase 3 — Confinement, éradication et récupération
+
+* Isoler immédiatement les postes ayant exécuté le fichier JScript malveillant
+* Bloquer les adresses IP et domaines C2 d'Agent Tesla identifiés
+* Supprimer les emails de phishing de toutes les boîtes aux lettres via purge centralisée
+* Réinitialiser les identifiants stockés sur les postes compromis (navigateurs, clients mail, applications locales)
+
+#### Phase 4 — Activités post-incident
+
+* Effectuer une analyse forensique complète du poste compromis pour identifier l'étendue de l'exfiltration
+* Vérifier si des identifiants bancaires ou SWIFT ont été compromis
+* Notifier les institutions financières concernées en cas de fraude avérée
+* Mettre à jour les règles de détection avec les IOCs de cette campagne
+
+#### Phase 5 — Threat Hunting (proactif)
+
+* Rechercher rétroactivement d'autres emails avec des pièces jointes JScript de grande taille dans les 30-90 derniers jours
+* Chercher des processus wscript.exe/cscript.exe avec des arguments suspects ou des fichiers de grande taille
+* Corréler les connexions sortantes vers des serveurs SMTP/FTP inconnus avec l'activité de wscript.exe
+* Rechercher d'autres variantes d'Agent Tesla utilisant des techniques d'obfuscation similaires (emoji, Unicode)
+
+---
+
+### Indicateurs de compromission
+
+| Type | Valeur (DEFANG) | Fiabilité |
+|---|---|---|
+| URL | `hxxps://en[.]hacks[.]gr/kampania-bec-me-trapeziko-email-kryvei-ton-agent-tesla-se-archeio-jscript-gemato-emoji/` | Low |
+
+---
+
+### TTP MITRE ATT&CK
+
+| ID TTP | Description |
+|---|---|
+| **T1566.001** | Spearphishing Attachment - pièce jointe JScript envoyée par email |
+| **T1059.005** | Command and Scripting Interpreter: Visual Basic - exécution JScript via Windows Script Host |
+| **T1027** | Obfuscated Files or Information - code Agent Tesla caché derrière des emoji Unicode |
+| **T1005** | Data from Local System - Agent Tesla collecte les identifiants et données locales |
+| **T1041** | Exfiltration Over C2 Channel - Agent Tesla exfiltre via SMTP/FTP/HTTP |
+
+---
+
+### Sources
+
+* [https://en.hacks.gr/kampania-bec-me-trapeziko-email-kryvei-ton-agent-tesla-se-archeio-jscript-gemato-emoji/](https://en.hacks.gr/kampania-bec-me-trapeziko-email-kryvei-ton-agent-tesla-se-archeio-jscript-gemato-emoji/)
+
+
+---
+
+<div id="page-de-phishing-hebergee-sur-github-pages-ciblant-ionos"></div>
+
+## Page de phishing hébergée sur GitHub Pages ciblant IONOS
+
+### Résumé
+
+Une page de phishing imitant IONOS a été identifiée, hébergée sur GitHub Pages via un chemin d'URL imbriqué. L'URL hxxps://shakugxgd[.]github[.]io/jgjuybrdhim[.]github[.]io/IONOSDE[.]html a été signalée pour analyse par urldna.io.
+
+---
+
+### Analyse opérationnelle
+
+Bloquer l'URL hxxps://shakugxgd[.]github[.]io/jgjuybrdhim[.]github[.]io/IONOSDE[.]html au niveau des proxies web et des passerelles email. Surveiller les accès sortants vers github[.]io avec des chemins d'URL suspects. Les pages de phishing hébergées sur GitHub Pages bénéficient de la réputation du domaine github.io, contournant potentiellement certains filtres de réputation URL. Vérifier si des identifiants IONOS ont été compromis via cette page et procéder à des réinitialisations de mots de passe si nécessaire.
+
+---
+
+### Implications stratégiques
+
+L'abus de plateformes légitimes comme GitHub Pages pour l'hébergement de phishing est une tendance croissante. Les organisations doivent sensibiliser leurs utilisateurs aux URL même lorsqu'elles proviennent de domaines de confiance. Les fournisseurs de services doivent collaborer avec GitHub pour le retrait rapide de ce type de contenu. La confiance accordée aux domaines légitimes crée une surface d'attaque difficile à maîtriser par les contrôles traditionnels.
+
+---
+
+### Recommandations
+
+* Bloquer l'URL identifiée sur tous les points de contrôle réseau
+* Signaler la page à GitHub pour retrait rapide
+* Surveiller les accès vers github[.]io avec des chemins d'URL contenant des noms de marques
+* Renforcer la formation anti-phishing en incluant les scénarios de phishing sur domaines légitimes
+
+---
+
+### Playbook de réponse à incident
+
+#### Phase 1 — Préparation
+
+* Bloquer les domaines github[.]io avec des chemins d'URL suspects au niveau des proxies web
+* Former les utilisateurs à la détection de phishing même sur des domaines de réputation (github.io)
+* Mettre en place des règles de prévention de credential harvesting sur les passerelles web
+
+#### Phase 2 — Détection et analyse
+
+* Bloquer l'URL hxxps://shakugxgd[.]github[.]io/jgjuybrdhim[.]github[.]io/IONOSDE[.]html au niveau des proxies et firewalls
+* Surveiller les accès sortants vers github[.]io avec des chemins d'URL contenant des noms de marque (IONOS, etc.)
+* Détecter les soumissions de formulaires vers des pages GitHub Pages suspectes
+
+#### Phase 3 — Confinement, éradication et récupération
+
+* Bloquer l'URL au niveau de tous les points de contrôle (proxy, firewall, DNS, email gateway)
+* Signaler la page de phishing à GitHub pour retrait (abuse@github[.]com)
+* Vérifier si des identifiants IONOS ont été soumis via cette page et réinitialiser les comptes concernés
+
+#### Phase 4 — Activités post-incident
+
+* Documenter la page de phishing et ses indicateurs
+* Vérifier si d'autres pages similaires existent sur GitHub Pages (même pattern d'URL)
+* Mettre à jour les listes de blocage avec les IOCs identifiés
+* Notifier IONOS de l'usurpation de leur marque
+
+#### Phase 5 — Threat Hunting (proactif)
+
+* Rechercher d'autres pages de phishing hébergées sur github[.]io avec des patterns d'URL similaires (chemins imbriqués, noms de marques)
+* Corréler les accès vers github[.]io avec des soumissions de formulaires suspectes
+* Surveiller les nouveaux dépôts GitHub créés avec des noms aléatoires pouvant héberger du phishing
+
+---
+
+### Indicateurs de compromission
+
+| Type | Valeur (DEFANG) | Fiabilité |
+|---|---|---|
+| URL | `hxxps://shakugxgd[.]github[.]io/jgjuybrdhim[.]github[.]io/IONOSDE[.]html` | Medium |
+
+---
+
+### TTP MITRE ATT&CK
+
+| ID TTP | Description |
+|---|---|
+| **T1566.002** | Spearphishing Link - page de phishing diffusée via lien |
+| **T1583.006** | Acquire Infrastructure: Web Services - abus de GitHub Pages pour l'hébergement |
+| **T1189** | Drive-by Compromise - page de phishing pour vol d'identifiants |
+
+---
+
+### Sources
+
+* [https://infosec.exchange/@urldna/117146714681334464](https://infosec.exchange/@urldna/117146714681334464)
+
+
+---
+
+<div id="recapitulatif-hebdomadaire-des-violations-de-donnees-17-au-23-aout-2026"></div>
+
+## Récapitulatif hebdomadaire des violations de données - 17 au 23 août 2026
+
+### Résumé
+
+Nick Espinosa présente un récapitulatif hebdomadaire des violations de données couvrant 297 incidents au total, incluant ASCII Group, Sears, Kingston et Columbia University. La vidéo couvre la période du 17 au 23 août 2026.
+
+---
+
+### Analyse opérationnelle
+
+297 incidents en une semaine indiquent un volume élevé d'activité malveillante. Les équipes SOC doivent vérifier si leur organisation ou ses partenaires/tiers sont mentionnés dans ces incidents. Surveiller les exfiltrations de données et les activités ransomware. Vérifier la présence de données d'organisation sur les forums dark web. Les secteurs touchés (retail avec Sears, éducation avec Columbia University, technologie avec Kingston et ASCII Group) suggèrent une large surface d'attaque multi-sectorielle.
+
+---
+
+### Implications stratégiques
+
+Le volume de 297 incidents hebdomadaires souligne l'ampleur continue du risque de violation de données. Les organisations doivent maintenir une veille threat intelligence active, évaluer l'exposition de leurs tiers et fournisseurs (supply chain risk), et renforcer les programmes de cyber-résilience. Les secteurs retail et éducation restent des cibles privilégiées. La diversité des organisations touchées (MSP, retail, hardware, université) montre qu'aucun secteur n'est épargné.
+
+---
+
+### Recommandations
+
+* Vérifier si l'organisation ou ses tiers sont mentionnés dans les 297 incidents
+* Maintenir une veille dark web pour détecter des fuites de données organisationnelles
+* Évaluer l'exposition supply chain (fournisseurs, partenaires MSP comme ASCII Group)
+* Renforcer les contrôles de prévention ransomware (backups, segmentation réseau, EDR)
+* Partager les leçons apprises avec les équipes de direction et le conseil d'administration
+
+---
+
+### Playbook de réponse à incident
+
+#### Phase 1 — Préparation
+
+* Maintenir un inventaire à jour des tiers et partenaires (ASCII Group, Kingston, etc.) pour évaluation d'impact de violation en chaîne
+* Mettre en place une veille threat intelligence sur les violations de données publiées
+* Préparer des playbooks de réponse pour les scénarios de violation de données et ransomware
+
+#### Phase 2 — Détection et analyse
+
+* Vérifier si l'organisation ou ses partenaires/tiers sont mentionnés dans les 297 incidents de la semaine
+* Surveiller les forums dark web et les sites de leak pour des données appartenant à l'organisation
+* Détecter les activités anormales pouvant indiquer une intrusion en cours (exfiltration, chiffrement de masse)
+
+#### Phase 3 — Confinement, éradication et récupération
+
+* Si l'organisation est impactée ou liée à un tiers impacté, isoler les systèmes concernés
+* Bloquer les IOCs associés aux incidents identifiés
+* Notifier les équipes de réponse à incident et activer le plan de continuité d'activité si nécessaire
+
+#### Phase 4 — Activités post-incident
+
+* Analyser les leçons apprises des 297 incidents pour identifier les tendances et vecteurs d'attaque courants
+* Mettre à jour les contrôles de sécurité en fonction des TTPs observés dans les incidents
+* Communiquer aux parties prenantes sur l'exposition potentielle via les tiers
+
+#### Phase 5 — Threat Hunting (proactif)
+
+* Rechercher des TTPs similaires à ceux utilisés dans les incidents de la semaine (ASCII Group, Sears, Kingston, Columbia University)
+* Corréler les indicateurs de ces incidents avec le trafic réseau interne
+* Identifier les vecteurs d'attaque émergents et adapter les détections en conséquence
+
+---
+
+### TTP MITRE ATT&CK
+
+| ID TTP | Description |
+|---|---|
+| **T1486** | Data Encrypted for Impact - ransomware |
+| **T1567** | Exfiltration Over Web Service - exfiltration de données |
+
+---
+
+### Sources
+
+* [https://youtu.be/a_OQYvDwS10](https://youtu.be/a_OQYvDwS10)
+
+
+---
+
+<div id="lockbit-50-menace-de-publier-des-donnees-volees-a-lentreprise-francaise-actua"></div>
+
+## LockBit 5.0 menace de publier des données volées à l'entreprise française Actua
+
+### Résumé
+
+Le groupe ransomware LockBit 5.0 menace de publier des données attribuées à l'entreprise française Actua, concernant plus de 100 000 personnes. Le groupe affirme détenir des documents sensibles et a fixé une deadline à l'entreprise pour répondre à ses exigences. La publication est annoncée pour la fin du mois d'août 2026.
+
+---
+
+### Analyse opérationnelle
+
+Les équipes SOC doivent surveiller activement les indicateurs de compromission associés à LockBit 5.0 et les sites de fuite du groupe pour détecter toute publication de données. La surface d'attaque de l'organisation Actua doit être auditée pour identifier le vecteur d'intrusion initial (VPN, RDP, phishing, exploitation de vulnérabilités). Les équipes de réponse à incident doivent préparer un plan de containment incluant l'isolation des systèmes potentiellement compromis, la rotation des credentials, et la préservation des preuves forensiques. La détection d'activités d'exfiltration de données volumineuses doit être renforcée via la surveillance des flux réseau sortants et l'analyse des journaux de sécurité.
+
+---
+
+### Implications stratégiques
+
+Cet incident souligne la persistance et la résilience du groupe LockBit malgré les opérations de démantèlement menées par les autorités internationales. L'impact pour Actua est majeur : risque réglementaire RGPD avec notification obligatoire à la CNIL et information des personnes concernées, atteinte à la réputation, et potentielles poursuites civiles. Le secteur français doit anticiper une recrudescence des attaques ransomware ciblant les entreprises détenant des données personnelles massives. La capacité de LockBit 5.0 à maintenir ses opérations démontre l'adaptabilité des groupes criminels et la nécessité d'une posture de défense proactive.
+
+---
+
+### Recommandations
+
+* Vérifier l'intégrité des sauvegardes et leur isolation du réseau principal
+* Renforcer l'authentification multifacteur sur tous les accès distants (VPN, RDP, services cloud)
+* Mettre en place une surveillance des sites de fuite de LockBit pour détecter toute publication de données
+* Préparer un plan de notification RGPD et de communication de crise
+* Effectuer un audit de sécurité complet pour identifier le vecteur d'entrée initial
+
+---
+
+### Playbook de réponse à incident
+
+#### Phase 1 — Préparation
+
+* Maintenir des sauvegardes hors ligne et immuables, testées régulièrement
+* Établir et maintenir un plan de réponse aux incidents ransomware à jour
+* Former les équipes SOC/IT aux TTP spécifiques de LockBit 5.0
+* Maintenir un inventaire des actifs critiques et des données sensibles (cartographie RGPD)
+* Préparer des modèles de notification CNIL et de communication de crise
+
+#### Phase 2 — Détection et analyse
+
+* Surveiller les indicateurs de compromission associés à LockBit 5.0 (hashs, mutex, persistance)
+* Détecter les activités d'exfiltration de données volumineuses (spikes réseau, connexions C2)
+* Surveiller les sites de fuite de LockBit pour des annonces concernant l'organisation
+* Analyser les journaux d'authentification pour des accès anormaux ou hors heures ouvrées
+* Détecter l'utilisation d'outils d'exfiltration type rclone, MEGAsync ou outils personnalisés LockBit
+
+#### Phase 3 — Confinement, éradication et récupération
+
+* Isoler immédiatement les systèmes compromis du réseau
+* Désactiver et réinitialiser tous les comptes compromis ou suspects
+* Bloquer les adresses IP et domaines C2 connus de LockBit au niveau des pare-feu
+* Segmenter le réseau pour empêcher la propagation latérale
+* Préserver les preuves forensiques avant toute restauration
+
+#### Phase 4 — Activités post-incident
+
+* Restaurer les systèmes depuis des sauvegardes vérifiées et hors ligne
+* Mener une analyse forensique complète pour identifier le vecteur d'entrée initial
+* Notifier la CNIL dans les 72h conformément au RGPD pour la fuite de données personnelles
+* Informer les personnes affectées (>100 000 individus) selon les obligations légales
+* Réviser et renforcer les contrôles de sécurité suite aux leçons apprises
+
+#### Phase 5 — Threat Hunting (proactif)
+
+* Rechercher les TTP de LockBit 5.0 dans l'environnement (persistance, exfiltration, chiffrement)
+* Chasser les mécanismes de persistance (clés de registre, services, tâches planifiées)
+* Identifier les vecteurs d'entrée initiale (phishing, exploitation de VPN, RDP exposé)
+* Analyser les mouvements latéraux et l'escalade de privilèges
+* Surveiller les forums dark web pour toute fuite ou revente des données exfiltrées
+
+---
+
+### TTP MITRE ATT&CK
+
+| ID TTP | Description |
+|---|---|
+| **T1486** | Data Encrypted for Impact |
+| **T1567.002** | Exfiltration to Cloud Storage |
+| **T1657** | Financial Theft |
+| **T1485** | Data Destruction |
+
+---
+
+### Sources
+
+* [https://www.zataz.com/lockbit-5-0-menace-de-publier-des-donnees-dactua/](https://www.zataz.com/lockbit-5-0-menace-de-publier-des-donnees-dactua/)
+
+
+---
+
+<div id="plus-de-9-300-cles-dacces-aws-actives-publiquement-exposees-hugging-face-identifie-comme-source-principale"></div>
+
+## Plus de 9 300 clés d'accès AWS actives publiquement exposées, Hugging Face identifié comme source principale
+
+### Résumé
+
+Une investigation de Truffle Security a découvert plus de 9 300 clés d'accès AWS actives et publiquement exposées, dont 768 accordant un contrôle administratif complet. Hugging Face a été identifié comme la source principale d'exposition, avec 88% des credentials exposés restant non rotés pendant une médiane de cinq ans. Cette exposition a entraîné des dépenses non autorisées significatives et un manque d'alertes budgétaires chez les organisations affectées.
+
+---
+
+### Analyse opérationnelle
+
+Les équipes SOC et cloud doivent immédiatement auditer leurs dépôts de code et plateformes ML (notamment Hugging Face) pour détecter des clés d'accès AWS exposées. La rotation des credentials compromis doit être prioritaire, en particulier pour les 768 clés à privilèges administratifs. AWS CloudTrail doit être analysé pour détecter toute utilisation non autorisée des clés exposées, notamment des créations de ressources ou des élévations de privilèges. Les équipes doivent mettre en place des scans automatisés de secrets (TruffleHog, GitLeaks) dans les pipelines CI/CD et configurer des alertes budgétaires AWS pour détecter les dépenses anormales. La surface d'attaque cloud s'étend désormais aux plateformes de partage de modèles ML, nécessitant une surveillance dédiée.
+
+---
+
+### Implications stratégiques
+
+Cette découverte révèle un risque systémique majeur pour l'écosystème cloud et IA : les plateformes de partage de modèles ML comme Hugging Face deviennent un vecteur d'exposition de credentials critique. La médiane de cinq ans sans rotation démontre un échec fondamental de la gouvernance des secrets dans de nombreuses organisations. Les conséquences financières (dépenses non autorisées) et sécuritaires (accès administratif complet) sont potentiellement dévastatrices. Les organisations doivent intégrer la sécurité des secrets dans leur stratégie DevSecOps et ML Ops, et reconsidérer leurs politiques de gestion des clés d'accès cloud. Cette tendance souligne l'urgence d'une régulation des plateformes de partage de modèles ML en matière de détection de secrets exposés.
+
+---
+
+### Recommandations
+
+* Effectuer un audit immédiat de tous les dépôts publics (GitHub, Hugging Face, GitLab) pour des clés AWS exposées
+* Roter toutes les clés d'accès AWS identifiées comme exposées, en priorité celles à privilèges administratifs
+* Implémenter des scans automatisés de secrets dans les pipelines CI/CD avec blocage des commits contenant des credentials
+* Activer AWS Budgets, Cost Anomaly Detection et des alertes CloudWatch sur les dépenses anormales
+* Migrer vers des rôles IAM à court terme (STS) plutôt que des clés d'accès persistantes
+* Former les équipes data science et ML aux risques d'exposition de credentials sur les plateformes de partage
+
+---
+
+### Playbook de réponse à incident
+
+#### Phase 1 — Préparation
+
+* Mettre en place une politique de gestion des secrets avec coffre-fort (AWS Secrets Manager, HashiCorp Vault)
+* Former les développeurs et data scientists aux risques d'exposition de clés dans les dépôts publics
+* Implémenter des scans automatisés de secrets dans les pipelines CI/CD (TruffleHog, GitLeaks)
+* Définir une politique de moindre privilège pour toutes les clés d'accès AWS
+* Activer AWS Budgets et Cost Anomaly Detection pour détecter les dépenses anormales
+
+#### Phase 2 — Détection et analyse
+
+* Scanner les dépôts publics (GitHub, Hugging Face, GitLab) pour des clés AWS exposées
+* Surveiller les dépenses AWS anormales via AWS Cost Explorer et CloudWatch
+* Configurer des alertes sur l'utilisation de clés d'accès depuis des adresses IP inconnues via AWS CloudTrail
+* Détecter les créations de ressources non autorisées (instances EC2, buckets S3, lambdas)
+* Surveiller les appels API AWS sensibles (iam:CreateUser, iam:AttachUserPolicy, ec2:RunInstances)
+
+#### Phase 3 — Confinement, éradication et récupération
+
+* Roter immédiatement toutes les clés d'accès AWS exposées via IAM
+* Révoquer toutes les sessions actives associées aux clés compromises
+* Restreindre les politiques IAM au principe du moindre privilège
+* Activer MFA pour tous les comptes IAM et root
+* Bloquer les adresses IP suspectes dans les Security Groups et NACLs
+
+#### Phase 4 — Activités post-incident
+
+* Auditer toutes les actions effectuées avec les clés compromises via CloudTrail
+* Évaluer les dommages financiers et les ressources créées/modifiées sans autorisation
+* Supprimer les ressources non autorisées créées par les attaquants
+* Renforcer les contrôles de gouvernance cloud (AWS Config, AWS GuardDuty)
+* Documenter l'incident et mettre à jour les politiques de sécurité cloud
+
+#### Phase 5 — Threat Hunting (proactif)
+
+* Rechercher d'autres clés exposées dans tous les dépôts de code et plateformes ML
+* Analyser les logs CloudTrail historiques pour identifier des activités suspectes passées
+* Identifier les ressources AWS créées ou modifiées par les clés compromises
+* Cartographier la surface d'attaque cloud complète (buckets S3 publics, instances exposées)
+* Rechercher des backdoors laissées par les attaquants (utilisaux IAM cachés, rôles assumables)
+
+---
+
+### TTP MITRE ATT&CK
+
+| ID TTP | Description |
+|---|---|
+| **T1552.001** | Unsecured Credentials: Credentials In Files |
+| **T1078.004** | Valid Accounts: Cloud Accounts |
+| **T1552.007** | Unsecured Credentials: Container API Keys |
+
+---
+
+### Sources
+
+* [https://www.scworld.com/brief/thousands-of-active-aws-access-keys-remain-publicly-exposed](https://www.scworld.com/brief/thousands-of-active-aws-access-keys-remain-publicly-exposed)
