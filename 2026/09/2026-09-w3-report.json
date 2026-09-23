@@ -1,0 +1,1999 @@
+{
+  "threat_level": {
+    "score": 3,
+    "label": {
+      "en": "High",
+      "fr": "Élevé"
+    },
+    "justification": {
+      "en": "Week 3 of September 2026 was dominated by an exceptionally high volume of vulnerabilities (over 250 CVEs across the six daily reports, including multiple CVSS 10.0 flaws in GitLab, Cisco Secure Email Gateway, SAP Extended Passport, Azure AI Foundry, IBM MQ, D-Link and Comfast), several of which were added to the CISA KEV catalogue and actively exploited (CVE-2026-85706 GitLab, CVE-2026-76461 Cisco SEG, CVE-2026-58704 Pixel modem, CVE-2026-85046/87491 Chrome V8, CVE-2026-84869 ConnectWise ScreenConnect, CVE-2026-42016/42018 JFrog Artifactory, CVE-2026-59310 VMware vCenter, CVE-2026-76460 Cisco ISE). Data breaches reached industrial scale (Gyazo 23.6M users, Kemnaker Indonesia 1.2B records, IDScan 153M driver's licences, CenterPoint Energy 7.49M, Murauchi 7.7M, Suno 55.3M, Revolut, Florida DMV, RNLI, CrowdSec). State-sponsored activity was confirmed (WaterPlum/DPRK 30,000 devices and $10.7M stolen, Iranian Telegram C2 campaigns, Red Heron exploiting Gitea RCE, Sandworm chaining Cisco FMC flaws with Cyclops Blink). Ransomware and extortion ecosystems remained highly active (ShinyHunters hacking Clop's leak site, Emperador, RansomHouse, Dragonforce, SafePay, Qilin, Silent Ransom Group). The convergence of massive unpatched exposure, active exploitation, supply-chain compromise (TanStack npm, GHAPPIER/PolinRider) and AI-assisted vulnerability discovery (Gemini breakout, LLM-discovered Windows 0-days) justifies a critical threat level.",
+      "fr": "La semaine 3 de septembre 2026 a été dominée par un volume exceptionnellement élevé de vulnérabilités (plus de 250 CVE sur les six rapports quotidiens, dont plusieurs failles CVSS 10.0 dans GitLab, Cisco Secure Email Gateway, SAP Extended Passport, Azure AI Foundry, IBM MQ, D-Link et Comfast), dont plusieurs ont été ajoutées au catalogue CISA KEV et activement exploitées (CVE-2026-85706 GitLab, CVE-2026-76461 Cisco SEG, CVE-2026-58704 modem Pixel, CVE-2026-85046/87491 Chrome V8, CVE-2026-84869 ConnectWise ScreenConnect, CVE-2026-42016/42018 JFrog Artifactory, CVE-2026-59310 VMware vCenter, CVE-2026-76460 Cisco ISE). Les violations de données ont atteint une échelle industrielle (Gyazo 23,6 M d'utilisateurs, Kemnaker Indonésie 1,2 Md d'enregistrements, IDScan 153 M de permis de conduire, CenterPoint Energy 7,49 M, Murauchi 7,7 M, Suno 55,3 M, Revolut, Florida DMV, RNLI, CrowdSec). L'activité étatique a été confirmée (WaterPlum/RPDC 30 000 appareils et 10,7 M$ dérobés, campagnes iraniennes avec C2 Telegram, Red Heron exploitant une RCE Gitea, Sandworm enchaînant des failles Cisco FMC avec Cyclops Blink). L'écosystème rançongiciel et d'extorsion est resté très actif (ShinyHunters piratant le site de fuite de Clop, Emperador, RansomHouse, Dragonforce, SafePay, Qilin, Silent Ransom Group). La convergence d'une exposition massive non corrigée, d'une exploitation active, d'une compromission de chaîne d'approvisionnement (TanStack npm, GHAPPIER/PolinRider) et de la découverte de vulnérabilités assistée par IA (évasion de Gemini, 0-days Windows découverts par LLM) justifie un niveau de menace critique."
+    },
+    "_triggers": [
+      "+8 — 4 acteur(s) étatique(s)",
+      "+3 — 7 opérateur(s) ransomware",
+      "+1 — ≥ 3 acteurs distincts actifs",
+      "+1 — 39 TTPs distinctes"
+    ]
+  },
+  "executive_summary": {
+    "en": "Week 3 of September 2026 (15-21) was characterised by an unprecedented convergence of mass vulnerability disclosure, industrial-scale data breaches, active exploitation of edge devices, and confirmed state-sponsored operations. Over 250 CVEs were published across the six daily reports, with at least a dozen added to the CISA KEV catalogue and actively exploited in the wild — most notably CVE-2026-85706 (GitLab path traversal, CVSS 10.0), CVE-2026-76461 (Cisco Secure Email Gateway SQLi to root RCE), CVE-2026-58704 (Google Pixel modem zero-click), CVE-2026-85046/87491 (Chrome V8 zero-days used in the BlueMoon espionage chain), CVE-2026-84869 (ConnectWise ScreenConnect), CVE-2026-42016/42018 (JFrog Artifactory), CVE-2026-59310 (VMware vCenter) and CVE-2026-76460 (Cisco ISE). Data breaches reached record volumes: Gyazo/Helpfeel (23.62M users, 490M image metadata), Kemnaker Indonesia (1.2 billion records), IDScan (153M driver's licences), CenterPoint Energy (7.49M), Murauchi Dot Com (7.7M), Suno (55.3M), L'Orange bleue (732k members, 440k IBANs), Revolut, Florida DMV, RNLI, CrowdSec (170 private repos via TanStack npm supply-chain attack). State actors were highly active: WaterPlum/DPRK infected 30,000 devices and stole $10.7M in crypto; Iranian actors used Telegram as C2 against dissidents and journalists; Red Heron (China-aligned) exploited a Gitea RCE; Sandworm chained Cisco FMC flaws to deploy Cyclops Blink. The ransomware ecosystem remained vibrant with ShinyHunters hacking Clop's leak site, Emperador, RansomHouse, Dragonforce, SafePay and Qilin publishing new victims. Emerging trends include AI-assisted vulnerability discovery (Gemini breakout, LLM-discovered Windows 0-days), abuse of trusted SaaS (Google Docs, OneDrive, Telegram) for C2 and phishing, BYOVD driver abuse (DCRCVDrv.sys, Alinubx.sys), and the industrialisation of MFA bypass (EvilTokens, device-code phishing, SSPR enumeration). Regulatory pressure intensified with CRA notification obligations in force since 11 September, NIS2, DORA and GDPR deadlines stacking, and the EU Customs Code reform.",
+    "fr": "La semaine 3 de septembre 2026 (15-21) a été marquée par une convergence sans précédent de divulgations massives de vulnérabilités, de violations de données à l'échelle industrielle, d'exploitation active d'équipements de bordure et d'opérations étatiques confirmées. Plus de 250 CVE ont été publiées sur les six rapports quotidiens, dont au moins une douzaine ajoutées au catalogue CISA KEV et activement exploitées — notamment CVE-2026-85706 (GitLab path traversal, CVSS 10.0), CVE-2026-76461 (Cisco Secure Email Gateway SQLi vers RCE root), CVE-2026-58704 (modem Google Pixel zero-click), CVE-2026-85046/87491 (0-days Chrome V8 utilisés dans la chaîne d'espionnage BlueMoon), CVE-2026-84869 (ConnectWise ScreenConnect), CVE-2026-42016/42018 (JFrog Artifactory), CVE-2026-59310 (VMware vCenter) et CVE-2026-76460 (Cisco ISE). Les violations de données ont atteint des volumes records : Gyazo/Helpfeel (23,62 M d'utilisateurs, 490 M de métadonnées d'images), Kemnaker Indonésie (1,2 milliard d'enregistrements), IDScan (153 M de permis de conduire), CenterPoint Energy (7,49 M), Murauchi Dot Com (7,7 M), Suno (55,3 M), L'Orange bleue (732 k adhérents, 440 k IBAN), Revolut, Florida DMV, RNLI, CrowdSec (170 dépôts privés via l'attaque de chaîne d'approvisionnement TanStack npm). Les acteurs étatiques ont été très actifs : WaterPlum/RPDC a infecté 30 000 appareils et dérobé 10,7 M$ en cryptomonnaies ; des acteurs iraniens ont utilisé Telegram comme C2 contre des dissidents et journalistes ; Red Heron (aligné Chine) a exploité une RCE Gitea ; Sandworm a enchaîné des failles Cisco FMC pour déployer Cyclops Blink. L'écosystème rançongiciel est resté dynamique avec ShinyHunters piratant le site de fuite de Clop, Emperador, RansomHouse, Dragonforce, SafePay et Qilin publiant de nouvelles victimes. Les tendances émergentes incluent la découverte de vulnérabilités assistée par IA (évasion de Gemini, 0-days Windows découverts par LLM), l'abus de SaaS de confiance (Google Docs, OneDrive, Telegram) pour le C2 et le phishing, l'abus de drivers signés vulnérables (DCRCVDrv.sys, Alinubx.sys), et l'industrialisation du contournement MFA (EvilTokens, phishing par code d'appareil, énumération SSPR). La pression réglementaire s'est intensifiée avec les obligations de notification du CRA en vigueur depuis le 11 septembre, l'empilement des échéances NIS2, DORA et RGPD, et la réforme du Code des douanes de l'UE."
+  },
+  "regulatory": {
+    "analyse": {
+      "en": "The regulatory landscape this week was dominated by the entry into force of the Cyber Resilience Act (CRA) vulnerability and incident notification obligations on 11 September 2026, which now apply to manufacturers of products with digital elements placed on the EU market — even for products already on the market — with 24-hour early warning, 72-hour detailed notification and 14-day/1-month final reports to ENISA and national CSIRTs. This stacks on top of GDPR Art. 33/34 (72h), NIS2 Art. 23 (24h/72h/1 month) and DORA (4h initial notification, 24h at the latest), creating a domino effect where a vendor's notification triggers its customers' regulatory clocks. The EU also advanced its customs modernisation with Regulation (EU) 2026/2108 establishing the Union Customs Code and the European Union Customs Authority, centralising customs data and increasing the sensitivity of cross-border data flows. In the US, the HHS OCR settled a HIPAA Security Rule investigation against Ambry Genetics, reinforcing that security control failures — not just confirmed breaches — attract enforcement. The New Jersey Daniel's Law case saw data broker Radaris lose its domains to Atlas Data Privacy Corp., signalling growing legal risk for data brokers ignoring deletion requests. South Korea raised data breach fines to 10% of revenue, a significant escalation. The UAE Cybersecurity Council publicly called for an international legal framework on cyber defence and retaliation, highlighting the absence of a 'Cyber Geneva Convention'. The OpenSSF published CRA readiness guidance for open source stewards. Overall, the week reinforced that compliance is shifting from documentation to demonstrable operational effectiveness, with notification clocks and enforcement actions becoming the primary regulatory risk drivers.",
+      "fr": "Le paysage réglementaire de cette semaine a été dominé par l'entrée en vigueur des obligations de notification de vulnérabilités et d'incidents du Cyber Resilience Act (CRA) le 11 septembre 2026, qui s'appliquent désormais aux fabricants de produits comportant des éléments numériques mis sur le marché de l'UE — y compris pour les produits déjà sur le marché — avec une alerte précoce sous 24 heures, une notification détaillée sous 72 heures et des rapports finaux sous 14 jours/1 mois à l'ENISA et aux CSIRT nationaux. Cela s'empile sur le RGPD art. 33/34 (72 h), NIS2 art. 23 (24 h/72 h/1 mois) et DORA (notification initiale sous 4 h, au plus tard 24 h), créant un effet domino où la notification d'un éditeur déclenche les horloges réglementaires de ses clients. L'UE a également avancé sa modernisation douanière avec le règlement (UE) 2026/2108 établissant le Code des douanes de l'Union et l'Autorité douanière de l'Union européenne, centralisant les données douanières et accroissant la sensibilité des flux transfrontaliers. Aux États-Unis, l'OCR du HHS a conclu un règlement dans l'enquête HIPAA Security Rule visant Ambry Genetics, confirmant que les manquements aux contrôles de sécurité — et pas seulement les violations avérées — attirent l'application de la loi. L'affaire Daniel's Law du New Jersey a vu le courtier en données Radaris perdre ses domaines au profit d'Atlas Data Privacy Corp., signalant un risque juridique croissant pour les courtiers ignorant les demandes de suppression. La Corée du Sud a porté les amendes pour violation de données à 10 % du chiffre d'affaires, une escalade significative. Le Conseil de cybersécurité des Émirats arabes unis a publiquement appelé à un cadre juridique international sur la cyberdéfense et la riposte, soulignant l'absence de « Convention de Genève cyber ». L'OpenSSF a publié des orientations de préparation au CRA pour les stewards open source. Globalement, la semaine a renforcé le fait que la conformité passe de la documentation à l'efficacité opérationnelle démontrable, les horloges de notification et les actions d'application devenant les principaux moteurs de risque réglementaire."
+    },
+    "events": [
+      {
+        "title": {
+          "en": "Cyber Resilience Act (CRA) vulnerability and incident notification obligations enter into force",
+          "fr": "Entrée en vigueur des obligations de notification de vulnérabilités et d'incidents du Cyber Resilience Act (CRA)"
+        },
+        "issuing_body": "European Commission / ENISA",
+        "date": "2026-09-11",
+        "jurisdiction": {
+          "region": "EU",
+          "countries": [
+            "AT",
+            "BE",
+            "BG",
+            "HR",
+            "CY",
+            "CZ",
+            "DK",
+            "EE",
+            "FI",
+            "FR",
+            "DE",
+            "GR",
+            "HU",
+            "IE",
+            "IT",
+            "LV",
+            "LT",
+            "LU",
+            "MT",
+            "NL",
+            "PL",
+            "PT",
+            "RO",
+            "SK",
+            "SI",
+            "ES",
+            "SE"
+          ]
+        },
+        "type": "New_Law",
+        "status": "Active",
+        "reference": "Regulation (EU) 2024/2847 (CRA), Art. 14",
+        "affected_sectors": [
+          "Technology_and_Telecom",
+          "Industry_and_Manufacturing",
+          "Critical_Infrastructure",
+          "Healthcare_and_Life_Sciences",
+          "Finance"
+        ],
+        "description": {
+          "en": "Since 11 September 2026, manufacturers of products with digital elements placed on the EU market must report actively exploited vulnerabilities and severe incidents to ENISA and the competent national CSIRT within 24 hours (early warning), 72 hours (detailed notification) and 14 days/1 month (final report). The obligation covers products already on the market. This stacks on top of GDPR, NIS2 and DORA deadlines, creating a domino effect where a vendor's notification triggers its customers' regulatory clocks. Security teams must now operationalise incident qualification and notification workflows across multiple regimes.",
+          "fr": "Depuis le 11 septembre 2026, les fabricants de produits comportant des éléments numériques mis sur le marché de l'UE doivent signaler à l'ENISA et au CSIRT national compétent les vulnérabilités activement exploitées et les incidents graves sous 24 heures (alerte précoce), 72 heures (notification détaillée) et 14 jours/1 mois (rapport final). L'obligation couvre les produits déjà sur le marché. Cela s'empile sur les échéances RGPD, NIS2 et DORA, créant un effet domino où la notification d'un éditeur déclenche les horloges réglementaires de ses clients. Les équipes de sécurité doivent désormais opérationnaliser la qualification d'incident et les workflows de notification à travers plusieurs régimes."
+        },
+        "source_url": "https://webflow.sysdig.com/blog/every-regulatory-disclosure-rule-asks-the-same-question-each-calls-it-something-else"
+      },
+      {
+        "title": {
+          "en": "Regulation (EU) 2026/2108 establishing the Union Customs Code and the European Union Customs Authority",
+          "fr": "Règlement (UE) 2026/2108 établissant le Code des douanes de l'Union et l'Autorité douanière de l'Union européenne"
+        },
+        "issuing_body": "European Parliament and Council of the European Union",
+        "date": "2026-09-16",
+        "jurisdiction": {
+          "region": "EU",
+          "countries": [
+            "AT",
+            "BE",
+            "BG",
+            "HR",
+            "CY",
+            "CZ",
+            "DK",
+            "EE",
+            "FI",
+            "FR",
+            "DE",
+            "GR",
+            "HU",
+            "IE",
+            "IT",
+            "LV",
+            "LT",
+            "LU",
+            "MT",
+            "NL",
+            "PL",
+            "PT",
+            "RO",
+            "SK",
+            "SI",
+            "ES",
+            "SE"
+          ]
+        },
+        "type": "New_Law",
+        "status": "Active",
+        "reference": "CELEX:32026R2108",
+        "affected_sectors": [
+          "Business_Services",
+          "Retail_and_Consumer",
+          "Industry_and_Manufacturing",
+          "Critical_Infrastructure"
+        ],
+        "description": {
+          "en": "The regulation establishes the Union Customs Code and creates the European Union Customs Authority, repealing Regulation (EU) No 952/2013. It modernises and harmonises customs rules, centralises customs data management within a new EU authority and strengthens interoperability of national customs systems. For CTI, the mutualisation of customs data and the creation of a dedicated authority will increase exchanges of sensitive data (trade flows, economic operators, supply chains), with implications for cybersecurity of customs infrastructures, data protection and compliance for economic operators.",
+          "fr": "Le règlement établit le Code des douanes de l'Union et crée l'Autorité douanière de l'Union européenne, abrogeant le règlement (UE) n° 952/2013. Il modernise et harmonise les règles douanières, centralise la gestion des données douanières au sein d'une nouvelle autorité européenne et renforce l'interopérabilité des systèmes douaniers nationaux. Pour la CTI, la mutualisation des données douanières et la création d'une autorité dédiée accroîtront les échanges de données sensibles (flux commerciaux, opérateurs économiques, chaînes logistiques), avec des implications en matière de cybersécurité des infrastructures douanières, de protection des données et de conformité pour les acteurs économiques."
+        },
+        "source_url": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2108"
+      },
+      {
+        "title": {
+          "en": "HHS OCR settles HIPAA Security Rule investigation of Ambry Genetics",
+          "fr": "Règlement de l'enquête HIPAA Security Rule de l'OCR du HHS visant Ambry Genetics"
+        },
+        "issuing_body": "HHS Office for Civil Rights (OCR)",
+        "date": "2026-09-18",
+        "jurisdiction": {
+          "region": "US",
+          "countries": [
+            "US"
+          ]
+        },
+        "type": "Enforcement_Action",
+        "status": "Active",
+        "reference": "HIPAA Security Rule",
+        "affected_sectors": [
+          "Healthcare_and_Life_Sciences"
+        ],
+        "description": {
+          "en": "The HHS OCR concluded a settlement in its HIPAA Security Rule investigation of Ambry Genetics for security rule violations. The case reinforces that security control failures — not just confirmed data breaches — attract financial penalties and remediation obligations, particularly in genomics where data is highly sensitive and durable. Healthcare organisations must treat compliance as a continuous risk assessment and evidence programme rather than a one-off exercise.",
+          "fr": "L'OCR du HHS a conclu un règlement dans son enquête HIPAA Security Rule visant Ambry Genetics pour des violations de la Security Rule. L'affaire confirme que les manquements aux contrôles de sécurité — et pas seulement les violations de données avérées — attirent des sanctions financières et des obligations de remédiation, en particulier dans la génomique où les données sont très sensibles et durables. Les organisations de santé doivent traiter la conformité comme un programme continu d'évaluation des risques et de preuve documentaire plutôt que comme un exercice ponctuel."
+        },
+        "source_url": "https://databreaches.net/2026/09/18/hhs-office-for-civil-rights-settles-hipaa-investigation-of-ambry-genetics-for-security-rule-violations/"
+      },
+      {
+        "title": {
+          "en": "Radaris loses domains in New Jersey Daniel's Law privacy fight",
+          "fr": "Radaris perd ses domaines dans le litige Daniel's Law du New Jersey"
+        },
+        "issuing_body": "New Jersey State Court (US)",
+        "date": "2026-09-16",
+        "jurisdiction": {
+          "region": "US",
+          "countries": [
+            "US"
+          ]
+        },
+        "type": "Court_Ruling",
+        "status": "Active",
+        "reference": "Daniel's Law (New Jersey)",
+        "affected_sectors": [
+          "Business_Services",
+          "Security",
+          "Government_and_Defense"
+        ],
+        "description": {
+          "en": "Data broker Radaris lost control of its main domain and more than a dozen people-search domains, transferred by court order to Atlas Data Privacy Corp. under New Jersey's Daniel's Law, which allows law enforcement officers, public officials, judges and their families to have their information removed from people-search services with a $1,000 penalty per violation. The ruling illustrates growing legal risk for data brokers ignoring deletion requests, with direct operational impact (loss of online assets).",
+          "fr": "Le courtier en données Radaris a perdu le contrôle de son domaine principal et de plus d'une douzaine de domaines de people-search, transférés par décision de justice à Atlas Data Privacy Corp. au titre de la Daniel's Law du New Jersey, qui permet aux agents des forces de l'ordre, aux fonctionnaires, aux juges et à leurs familles de faire supprimer leurs informations des services de recherche de personnes, avec une amende de 1 000 USD par violation. La décision illustre le risque juridique croissant pour les courtiers ignorant les demandes de suppression, avec un impact opérationnel direct (perte d'actifs en ligne)."
+        },
+        "source_url": "https://krebsonsecurity.com/2026/09/data-broker-radaris-loses-domains-in-privacy-fight/"
+      },
+      {
+        "title": {
+          "en": "South Korea raises data breach fines to 10% of revenue",
+          "fr": "La Corée du Sud porte les amendes pour violation de données à 10 % du chiffre d'affaires"
+        },
+        "issuing_body": "Government of South Korea",
+        "date": "2026-09-19",
+        "jurisdiction": {
+          "region": "Asia-Pacific",
+          "countries": [
+            "KR"
+          ]
+        },
+        "type": "New_Law",
+        "status": "Active",
+        "reference": "PIPA amendment",
+        "affected_sectors": [
+          "Technology_and_Telecom",
+          "Finance",
+          "Retail_and_Consumer",
+          "Healthcare_and_Life_Sciences",
+          "Business_Services"
+        ],
+        "description": {
+          "en": "South Korea raised data breach fines to 10% of revenue, a significant escalation that aligns its regime with the strictest global standards (GDPR). This increases the financial stakes for organisations processing personal data of Korean residents and reinforces the need for robust data protection controls, incident response and notification capabilities.",
+          "fr": "La Corée du Sud a porté les amendes pour violation de données à 10 % du chiffre d'affaires, une escalade significative qui aligne son régime sur les standards mondiaux les plus stricts (RGPD). Cela accroît les enjeux financiers pour les organisations traitant des données personnelles de résidents coréens et renforce le besoin de contrôles robustes de protection des données, de réponse à incident et de notification."
+        },
+        "source_url": "https://www.koreajoongangdaily.com/business/korea-raises-data-breach-fines-to-10-of-revenue/12869899"
+      },
+      {
+        "title": {
+          "en": "UAE Cybersecurity Council calls for international legal framework on cyber defence and retaliation",
+          "fr": "Le Conseil de cybersécurité des EAU appelle à un cadre juridique international sur la cyberdéfense et la riposte"
+        },
+        "issuing_body": "UAE Cybersecurity Council",
+        "date": "2026-09-17",
+        "jurisdiction": {
+          "region": "Global",
+          "countries": [
+            "AE"
+          ]
+        },
+        "type": "Proposal",
+        "status": "Proposed",
+        "reference": "International cyber law framework",
+        "affected_sectors": [
+          "Critical_Infrastructure",
+          "Government_and_Defense",
+          "Technology_and_Telecom"
+        ],
+        "description": {
+          "en": "The head of the UAE Cybersecurity Council stated that every Iranian missile or drone strike during the war was accompanied by a cyberattack on the same target, and called for an international legal framework — a 'Cyber Geneva Convention' — defining what a state may do when attacked via a network rather than a weapon, and whether it has a right of retaliation. The UAE intends to raise the issue at the UN and ITU, advocating for security-by-design including for AI agents and LLMs.",
+          "fr": "Le responsable du Conseil de cybersécurité des EAU a déclaré que chaque frappe de missile ou de drone iranienne pendant la guerre a été accompagnée d'une cyberattaque visant la même cible, et a appelé à un cadre juridique international — une « Convention de Genève cyber » — définissant ce qu'un État peut faire lorsqu'il est attaqué via un réseau plutôt que par une arme, et s'il dispose d'un droit de riposte. Les EAU entendent porter la question devant l'ONU et l'UIT, en plaidant pour une sécurité intégrée dès la conception, y compris pour les agents IA et les LLM."
+        },
+        "source_url": "https://www.euronews.com/2026/09/17/every-iranian-strike-came-with-a-cyberattack-uae-cyber-chief-says"
+      },
+      {
+        "title": {
+          "en": "OpenSSF publishes CRA readiness guidance for open source stewards",
+          "fr": "L'OpenSSF publie des orientations de préparation au CRA pour les stewards open source"
+        },
+        "issuing_body": "Open Source Security Foundation (OpenSSF)",
+        "date": "2026-09-15",
+        "jurisdiction": {
+          "region": "EU",
+          "countries": [
+            "AT",
+            "BE",
+            "BG",
+            "HR",
+            "CY",
+            "CZ",
+            "DK",
+            "EE",
+            "FI",
+            "FR",
+            "DE",
+            "GR",
+            "HU",
+            "IE",
+            "IT",
+            "LV",
+            "LT",
+            "LU",
+            "MT",
+            "NL",
+            "PL",
+            "PT",
+            "RO",
+            "SK",
+            "SI",
+            "ES",
+            "SE"
+          ]
+        },
+        "type": "Guidance",
+        "status": "Active",
+        "reference": "CRA (Regulation (EU) 2024/2847)",
+        "affected_sectors": [
+          "Technology_and_Telecom",
+          "Business_Services"
+        ],
+        "description": {
+          "en": "The OpenSSF published a guide to help manufacturers of products with digital elements and open source software stewards assess their CRA readiness: product mapping, criticality classification, vulnerability management and PSIRT processes, technical documentation and cybersecurity attestations. For the open source ecosystem, the challenge is to clarify the scope of responsibilities (gratuity, commercial use, steward role) and mobilise OpenSSF support resources.",
+          "fr": "L'OpenSSF a publié un guide pour aider les fabricants de produits comportant des éléments numériques et les stewards de logiciels open source à évaluer leur préparation au CRA : cartographie des produits, classification par criticité, processus de gestion des vulnérabilités et PSIRT, documentation technique et attestations de cybersécurité. Pour l'écosystème open source, l'enjeu est de clarifier le périmètre des responsabilités (gratuité, usage commercial, rôle de steward) et de mobiliser les ressources d'appui de l'OpenSSF."
+        },
+        "source_url": "https://openssf.org/blog/2026/09/15/grow-cra-readiness-find-your-path-through-the-european-union-cyber-resilience-act/"
+      },
+      {
+        "title": {
+          "en": "Joint law enforcement advisory on WaterPlum DPRK crypto theft",
+          "fr": "Avis conjoint des forces de l'ordre sur le vol de cryptomonnaies par WaterPlum (RPDC)"
+        },
+        "issuing_body": "Joint law enforcement advisory",
+        "date": "2026-09-21",
+        "jurisdiction": {
+          "region": "Global",
+          "countries": [
+            "US",
+            "KR",
+            "JP"
+          ]
+        },
+        "type": "Guidance",
+        "status": "Active",
+        "reference": "WaterPlum advisory",
+        "affected_sectors": [
+          "Finance",
+          "Technology_and_Telecom"
+        ],
+        "description": {
+          "en": "A joint law enforcement advisory reported that North Korean group WaterPlum infected at least 30,000 devices worldwide between December 2025 and July 2026, transferring more than $10.7 million in stolen cryptocurrency to the DPRK. The activity spans cybercrime, data theft and state financing, reinforcing the need for crypto-sector organisations to harden endpoints, monitor for DPRK TTPs and cooperate with law enforcement.",
+          "fr": "Un avis conjoint des forces de l'ordre a rapporté que le groupe nord-coréen WaterPlum a infecté au moins 30 000 appareils dans le monde entre décembre 2025 et juillet 2026, transférant plus de 10,7 millions de dollars en cryptomonnaies volées vers la RPDC. L'activité relève à la fois de la cybercriminalité, du vol de données et du financement d'un État, renforçant la nécessité pour les organisations du secteur crypto de durcir les endpoints, de surveiller les TTP de la RPDC et de coopérer avec les forces de l'ordre."
+        },
+        "source_url": "https://www.bleepingcomputer.com/news/security/north-korean-waterplum-hackers-infected-30-000-devices-worldwide/"
+      }
+    ]
+  },
+  "threats_actors": {
+    "geographic_analyse": [
+      {
+        "geographic_zone_name": {
+          "en": "North Korea",
+          "fr": "Corée du Nord"
+        },
+        "geographic_zone_strategic_analyse": {
+          "en": "North Korean state-sponsored actors were highly active this week. WaterPlum infected at least 30,000 devices worldwide between December 2025 and July 2026, stealing over $10.7 million in cryptocurrency for the DPRK regime. The Rust project published an alert on a targeted campaign against rust-lang members and popular crate owners, using fake job offers and video-conference lures to compromise developer accounts and publish malware — a modus operandi known to be used by the DPRK. CloudSEK uncovered GHAPPIER, a loader linked to the PolinRider campaign, covering at least 65 public repositories, 73 infected files and 22 accounts, with a malicious npm version carrying valid trusted-publishing provenance. These operations combine espionage, sabotage and revenue generation, targeting Western software supply chains and crypto assets.",
+          "fr": "Les acteurs étatiques nord-coréens ont été très actifs cette semaine. WaterPlum a infecté au moins 30 000 appareils dans le monde entre décembre 2025 et juillet 2026, dérobant plus de 10,7 millions de dollars en cryptomonnaies pour le régime de la RPDC. Le projet Rust a publié une alerte sur une campagne ciblée contre les membres de rust-lang et les propriétaires de crates populaires, utilisant de fausses offres d'emploi et des leurres de visioconférence pour compromettre des comptes de développeurs et publier du malware — un mode opératoire connu comme utilisé par la RPDC. CloudSEK a mis au jour GHAPPIER, un loader lié à la campagne PolinRider, couvrant au moins 65 dépôts publics, 73 fichiers infectés et 22 comptes, avec une version npm malveillante portant une provenance valide via trusted publishing. Ces opérations combinent espionnage, sabotage et génération de revenus, ciblant les chaînes d'approvisionnement logicielles occidentales et les actifs crypto."
+        }
+      },
+      {
+        "geographic_zone_name": {
+          "en": "Iran",
+          "fr": "Iran"
+        },
+        "geographic_zone_strategic_analyse": {
+          "en": "Iranian cyber actors continued their transnational surveillance and repression operations against dissidents, activists and journalists. The FBI IC3 published two advisories on 15 September describing Iranian government cyber targeting of dissidents and the use of Telegram as a command-and-control channel to push malware to identified targets. A separate campaign used fake MRI scan results as a lure to compromise 'enemies of the regime'. These operations illustrate the persistence of state-sponsored surveillance against opposition and press in exile, using credible thematic lures (medical documents) and mainstream communication channels (Telegram) as control vectors. The UAE Cybersecurity Council also reported that every Iranian missile or drone strike during the war was accompanied by a cyberattack on the same target, targeting electricity, water and aviation sectors.",
+          "fr": "Les acteurs cyber iraniens ont poursuivi leurs opérations de surveillance et de répression transnationales contre les dissidents, activistes et journalistes. L'IC3 du FBI a publié deux avis le 15 septembre décrivant le ciblage cyber par le gouvernement iranien de dissidents et l'utilisation de Telegram comme canal de command and control pour pousser du malware vers des cibles identifiées. Une campagne distincte a utilisé de faux résultats d'IRM comme leurre pour compromettre des « ennemis du régime ». Ces opérations illustrent la persistance de la surveillance étatique contre l'opposition et la presse en exil, avec un recours à des leurres thématiques crédibles (documents médicaux) et à des canaux de communication grand public (Telegram) comme vecteur de contrôle. Le Conseil de cybersécurité des EAU a également rapporté que chaque frappe de missile ou de drone iranienne pendant la guerre a été accompagnée d'une cyberattaque visant la même cible, ciblant les secteurs de l'électricité, de l'eau et de l'aviation."
+        }
+      },
+      {
+        "geographic_zone_name": {
+          "en": "China",
+          "fr": "Chine"
+        },
+        "geographic_zone_strategic_analyse": {
+          "en": "China-aligned actors were implicated in several high-profile operations. Red Heron exploited a critical Gitea RCE (CVE-2026-60004) to steal repositories and secrets, deploying the SIXZUT implant that masks files, processes and connections and self-relaunches if deleted, with collection priorities aligned to Chinese intelligence interests (SCADA/HMI, IoT). The BlueMoon exploit chain (CVE-2026-85046, CVE-2026-87491, CVE-2026-85880) targeting Chrome on Windows was attributed to China-linked hackers and used by two distinct espionage clusters against NGOs. The CFR also highlighted the structural asymmetry between US and Chinese cyber capabilities, noting that China has built a cyber apparatus whose sophistication, scale and strategic alignment rival those of the United States, while Washington lacks a clear national strategy and credible deterrence.",
+          "fr": "Les acteurs alignés sur la Chine ont été impliqués dans plusieurs opérations de premier plan. Red Heron a exploité une RCE critique Gitea (CVE-2026-60004) pour dérober des dépôts et des secrets, déployant l'implant SIXZUT qui masque fichiers, processus et connexions et se relance s'il est supprimé, avec des priorités de collecte alignées sur les intérêts du renseignement chinois (SCADA/HMI, IoT). La chaîne d'exploits BlueMoon (CVE-2026-85046, CVE-2026-87491, CVE-2026-85880) ciblant Chrome sur Windows a été attribuée à des pirates liés à la Chine et utilisée par deux clusters d'espionnage distincts contre des ONG. Le CFR a également souligné l'asymétrie structurelle entre les capacités cyber américaines et chinoises, notant que la Chine a bâti un appareil cyber dont la sophistication, l'échelle et l'alignement stratégique rivalisent avec ceux des États-Unis, tandis que Washington manque d'une stratégie nationale claire et d'une dissuasion crédible."
+        }
+      },
+      {
+        "geographic_zone_name": {
+          "en": "Russia",
+          "fr": "Russie"
+        },
+        "geographic_zone_strategic_analyse": {
+          "en": "Russian state-linked activity was documented in several forms. An investigation by Le Monde documented a series of cyberattacks against sensitive French sites, with the Russian state appearing as the sponsor or beneficiary of all exfiltrated data, suggesting a coordinated operation rather than isolated incidents. Sandworm chained Cisco Secure Firewall Management Center vulnerabilities (CVE-2026-20079, CVE-2026-20316) to deploy the Cyclops Blink backdoor, gaining a privileged observation point over the entire environment. Three threat groups were reported targeting Russian organisations, including NightEagle APT using GhostContainer (Trojan.MSIL.GhostContainer.gen) and tunnelling via devtunnels[.]ms and rdp2tcp, exploiting CVE-2020-0688 (Exchange) and CVE-2019-0708 (BlueKeep). Russia also continued its information manipulation (FIMI) operations, denouncing foreign election fraud while locking down its own electoral process, and funding pro-Russian groups in Moldova (~€200M) and Armenia.",
+          "fr": "L'activité liée à l'État russe a été documentée sous plusieurs formes. Une enquête du Monde a documenté une série de cyberattaques visant des sites sensibles français, l'État russe apparaissant comme le commanditaire ou le bénéficiaire de toutes les données exfiltrées, suggérant une opération coordonnée plutôt que des incidents isolés. Sandworm a enchaîné des vulnérabilités Cisco Secure Firewall Management Center (CVE-2026-20079, CVE-2026-20316) pour déployer la porte dérobée Cyclops Blink, obtenant un point d'observation privilégié sur l'ensemble de l'environnement. Trois groupes de menace ont été signalés ciblant des organisations russes, dont NightEagle APT utilisant GhostContainer (Trojan.MSIL.GhostContainer.gen) et le tunnelling via devtunnels[.]ms et rdp2tcp, exploitant CVE-2020-0688 (Exchange) et CVE-2019-0708 (BlueKeep). La Russie a également poursuivi ses opérations de manipulation de l'information (FIMI), dénonçant des fraudes électorales étrangères tout en verrouillant son propre processus électoral, et finançant des groupes pro-russes en Moldavie (~200 M€) et en Arménie."
+        }
+      },
+      {
+        "geographic_zone_name": {
+          "en": "Other",
+          "fr": "Autre"
+        },
+        "geographic_zone_strategic_analyse": {
+          "en": "The ransomware and extortion ecosystem remained highly active across multiple geographies. ShinyHunters hacked Clop's leak site, stole private keys and threatened to extort the ransomware gang itself, while also breaching the Florida DMV database via a stolen police account. Emperador published four new victims (RDA Motors, Sevenoaks, Navitrans, Nexbex) across Italy, Czech Republic, Colombia and India. RansomHouse claimed the Namibian Defence Force, RansomHouse's leak site showing 254 total victims. Dragonforce claimed arsrenacer.com, SafePay published stolen data from Ryomo Systems including 2FA backup codes, and Qilin/Aur0ra allegedly targeted the Central Bank of Libya and Kochs GmbH. Silent Ransom Group compromised Greenberg Traurig (126,000 people affected). Black Axe members were extradited from South Africa. The Italian antimafia prosecutor described a 'fusion' between mafias, cyber, illicit financing and foreign state networks (China, Russia, Iran), with hackers able to rise through mafia hierarchies.",
+          "fr": "L'écosystème rançongiciel et d'extorsion est resté très actif sur plusieurs géographies. ShinyHunters a piraté le site de fuite de Clop, volé des clés privées et menacé d'extorquer le gang de rançongiciel lui-même, tout en compromettant la base de données du DMV de Floride via un compte de police volé. Emperador a publié quatre nouvelles victimes (RDA Motors, Sevenoaks, Navitrans, Nexbex) en Italie, Tchéquie, Colombie et Inde. RansomHouse a revendiqué la Namibian Defence Force, son site de fuite affichant 254 victimes au total. Dragonforce a revendiqué arsrenacer.com, SafePay a publié des données volées chez Ryomo Systems incluant des codes de secours 2FA, et Qilin/Aur0ra auraient ciblé la Banque centrale de Libye et Kochs GmbH. Silent Ransom Group a compromis Greenberg Traurig (126 000 personnes affectées). Des membres de Black Axe ont été extradés d'Afrique du Sud. Le procureur antimafia italien a décrit une « fusion » entre mafias, cyber, financements illicites et réseaux étatiques étrangers (Chine, Russie, Iran), avec des hackers capables de gravir les échelons de la hiérarchie mafieuse."
+        }
+      }
+    ],
+    "details": [
+      {
+        "threat_actor_name": "WaterPlum",
+        "origin_country": "North Korea",
+        "type": {
+          "en": "Nation-state",
+          "fr": "État-nation"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Finance",
+            "Technology_and_Telecom"
+          ],
+          "fr": [
+            "Finance",
+            "Technologie_et_Télécom"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Global"
+          ],
+          "fr": [
+            "Mondial"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1566",
+          "T1204.002",
+          "T1078",
+          "T1567"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "WaterPlum DPRK crypto theft campaign (30,000 devices infected, $10.7M stolen, Dec 2025 - Jul 2026)"
+          ],
+          "fr": [
+            "Campagne de vol de cryptomonnaies WaterPlum RPDC (30 000 appareils infectés, 10,7 M$ dérobés, déc. 2025 - juil. 2026)"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "ShinyHunters",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Cybercriminal",
+          "fr": "Cybercriminel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Government_and_Defense",
+            "Finance",
+            "Technology_and_Telecom",
+            "Retail_and_Consumer"
+          ],
+          "fr": [
+            "Gouvernement_et_Défense",
+            "Finance",
+            "Technologie_et_Télécom",
+            "Commerce_de_Détail_et_Consommation"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "United States",
+            "Global"
+          ],
+          "fr": [
+            "États-Unis",
+            "Mondial"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1190",
+          "T1491.002",
+          "T1552.004",
+          "T1485",
+          "T1078"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Clop leak site hack and extortion",
+            "Florida DMV database breach via stolen police account"
+          ],
+          "fr": [
+            "Piratage et extorsion du site de fuite de Clop",
+            "Violation de la base de données du DMV de Floride via un compte de police volé"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "Red Heron",
+        "origin_country": "China",
+        "type": {
+          "en": "Nation-state",
+          "fr": "État-nation"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Technology_and_Telecom",
+            "Industry_and_Manufacturing",
+            "Critical_Infrastructure"
+          ],
+          "fr": [
+            "Technologie_et_Télécom",
+            "Industrie_et_Fabrication",
+            "Infrastructure_Critique"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Global"
+          ],
+          "fr": [
+            "Mondial"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1190",
+          "T1505.003",
+          "T1070",
+          "T1213"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Gitea RCE exploitation (CVE-2026-60004) with SIXZUT implant deployment"
+          ],
+          "fr": [
+            "Exploitation de la RCE Gitea (CVE-2026-60004) avec déploiement de l'implant SIXZUT"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "Sandworm",
+        "origin_country": "Russia",
+        "type": {
+          "en": "Nation-state",
+          "fr": "État-nation"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Critical_Infrastructure",
+            "Government_and_Defense",
+            "Technology_and_Telecom"
+          ],
+          "fr": [
+            "Infrastructure_Critique",
+            "Gouvernement_et_Défense",
+            "Technologie_et_Télécom"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Global"
+          ],
+          "fr": [
+            "Mondial"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1190",
+          "T1219",
+          "T1070",
+          "T1105"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Cisco FMC vulnerability chain (CVE-2026-20079, CVE-2026-20316) with Cyclops Blink backdoor deployment"
+          ],
+          "fr": [
+            "Chaîne de vulnérabilités Cisco FMC (CVE-2026-20079, CVE-2026-20316) avec déploiement de la porte dérobée Cyclops Blink"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "Silent Ransom Group",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Ransomware",
+          "fr": "Rançongiciel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Business_Services"
+          ],
+          "fr": [
+            "Services_aux_Entreprises"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "United States",
+            "Global"
+          ],
+          "fr": [
+            "États-Unis",
+            "Mondial"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1566",
+          "T1219",
+          "T1567",
+          "T1657"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Greenberg Traurig compromise (126,000 people affected)"
+          ],
+          "fr": [
+            "Compromission de Greenberg Traurig (126 000 personnes affectées)"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "Emperador",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "RaaS",
+          "fr": "RaaS"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Industry_and_Manufacturing",
+            "Technology_and_Telecom",
+            "Business_Services"
+          ],
+          "fr": [
+            "Industrie_et_Fabrication",
+            "Technologie_et_Télécom",
+            "Services_aux_Entreprises"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Italy",
+            "Czech Republic",
+            "Colombia",
+            "India"
+          ],
+          "fr": [
+            "Italie",
+            "Tchéquie",
+            "Colombie",
+            "Inde"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1567",
+          "T1657",
+          "T1486"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "RDA Motors, Sevenoaks, Navitrans, Nexbex extortion campaign (18 publications in 30 days)"
+          ],
+          "fr": [
+            "Campagne d'extorsion RDA Motors, Sevenoaks, Navitrans, Nexbex (18 publications en 30 jours)"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "SafePay",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Ransomware",
+          "fr": "Rançongiciel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Technology_and_Telecom",
+            "Business_Services"
+          ],
+          "fr": [
+            "Technologie_et_Télécom",
+            "Services_aux_Entreprises"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Japan"
+          ],
+          "fr": [
+            "Japon"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1486",
+          "T1657",
+          "T1552.001",
+          "T1556.006",
+          "T1078",
+          "T1530"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Ryomo Systems compromise with 2FA backup codes and password exposure"
+          ],
+          "fr": [
+            "Compromission de Ryomo Systems avec exposition de codes de secours 2FA et de mots de passe"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "RansomHouse",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Ransomware",
+          "fr": "Rançongiciel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Government_and_Defense"
+          ],
+          "fr": [
+            "Gouvernement_et_Défense"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Namibia"
+          ],
+          "fr": [
+            "Namibie"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1567",
+          "T1486",
+          "T1657"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Namibian Defence Force extortion claim (254 total victims)"
+          ],
+          "fr": [
+            "Revendication d'extorsion contre la Namibian Defence Force (254 victimes au total)"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "Dragonforce",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "RaaS",
+          "fr": "RaaS"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Business_Services",
+            "Retail_and_Consumer"
+          ],
+          "fr": [
+            "Services_aux_Entreprises",
+            "Commerce_de_Détail_et_Consommation"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Global"
+          ],
+          "fr": [
+            "Mondial"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1486",
+          "T1657",
+          "T1567"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "arsrenacer.com extortion claim"
+          ],
+          "fr": [
+            "Revendication d'extorsion arsrenacer.com"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "Black Axe",
+        "origin_country": "Nigeria",
+        "type": {
+          "en": "Cybercriminal",
+          "fr": "Cybercriminel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Finance",
+            "Business_Services"
+          ],
+          "fr": [
+            "Finance",
+            "Services_aux_Entreprises"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Global",
+            "South Africa"
+          ],
+          "fr": [
+            "Mondial",
+            "Afrique du Sud"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1566",
+          "T1656"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "BEC, romance scams and money laundering via mule networks; members extradited from South Africa"
+          ],
+          "fr": [
+            "BEC, escroqueries sentimentales et blanchiment via des réseaux de mules ; membres extradés d'Afrique du Sud"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "NightEagle APT",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Nation-state",
+          "fr": "État-nation"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Government_and_Defense",
+            "Technology_and_Telecom"
+          ],
+          "fr": [
+            "Gouvernement_et_Défense",
+            "Technologie_et_Télécom"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Russia"
+          ],
+          "fr": [
+            "Russie"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1190",
+          "T1105",
+          "T1070",
+          "T1219"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "GhostContainer backdoor and tunnelling via devtunnels[.]ms and rdp2tcp, exploiting CVE-2020-0688 and CVE-2019-0708"
+          ],
+          "fr": [
+            "Porte dérobée GhostContainer et tunnelling via devtunnels[.]ms et rdp2tcp, exploitant CVE-2020-0688 et CVE-2019-0708"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "Qilin",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Ransomware",
+          "fr": "Rançongiciel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Finance",
+            "Industry_and_Manufacturing",
+            "Agriculture_and_Environment"
+          ],
+          "fr": [
+            "Finance",
+            "Industrie_et_Fabrication",
+            "Agriculture_et_Environnement"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Libya",
+            "Germany",
+            "France",
+            "Brazil"
+          ],
+          "fr": [
+            "Libye",
+            "Allemagne",
+            "France",
+            "Brésil"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1486",
+          "T1657",
+          "T1567"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Central Bank of Libya, Kochs GmbH, CARIDRO VAL DE LOIRE, Alicotrans extortion claims"
+          ],
+          "fr": [
+            "Revendications d'extorsion contre la Banque centrale de Libye, Kochs GmbH, CARIDRO VAL DE LOIRE, Alicotrans"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "Black Nevas",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Ransomware",
+          "fr": "Rançongiciel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Finance"
+          ],
+          "fr": [
+            "Finance"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "United States"
+          ],
+          "fr": [
+            "États-Unis"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1567",
+          "T1657"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Optimum First Mortgage extortion claim"
+          ],
+          "fr": [
+            "Revendication d'extorsion contre Optimum First Mortgage"
+          ]
+        }
+      }
+    ]
+  },
+  "mitre_attack_ttps": {
+    "ttps_strategic_analyse": {
+      "en": "The TTP landscape this week was dominated by the industrialisation of initial access through public-facing applications (T1190), with edge devices (VPN, firewalls, email gateways, RMM) as the primary target — 8 of the 18 CVEs added to CISA KEV in early September concerned edge equipment. Supply-chain compromise (T1195.002) reached new levels with the TanStack npm attack (170 private GitHub repos stolen, CrowdSec and OpenAI among victims) and GHAPPIER/PolinRider (65 repos, 73 files, 22 accounts), using valid trusted-publishing provenance to bypass signature checks. Phishing evolved towards abuse of trusted SaaS (Google Docs Apps Script sidebars, OneDrive as C2, Telegram as C2) to bypass domain-reputation filters, with ClickFix lures (T1204.004) and device-code phishing (EvilTokens) bypassing MFA. BYOVD (T1068, T1562.001, T1553.005) remained a pillar of MaaS chains (DCRCVDrv.sys, Alinubx.sys abused by Cruciferra). Ransomware operations systematically combined VSS abuse (T1490), NTDS.dit extraction (T1003.003) and double extortion (T1657). Identity attacks matured with SSPR enumeration (T1087.004), MFA fatigue (T1621), MFA modification (T1556.006) and JWT forgery (T1606.001). The emergence of AI-assisted vulnerability discovery (Gemini breakout, LLM-discovered Windows 0-days in under 80 minutes) and AI agent abuse (Claude Code IPC, AWS AgentCore credential exfiltration) signals a new frontier.",
+      "fr": "Le paysage des TTP cette semaine a été dominé par l'industrialisation de l'accès initial via des applications exposées publiquement (T1190), avec les équipements de bordure (VPN, pare-feu, passerelles de messagerie, RMM) comme cible principale — 8 des 18 CVE ajoutées au CISA KEV début septembre concernaient des équipements de bordure. La compromission de chaîne d'approvisionnement (T1195.002) a atteint de nouveaux sommets avec l'attaque npm TanStack (170 dépôts GitHub privés dérobés, CrowdSec et OpenAI parmi les victimes) et GHAPPIER/PolinRider (65 dépôts, 73 fichiers, 22 comptes), utilisant une provenance valide via trusted publishing pour contourner les contrôles de signature. Le phishing a évolué vers l'abus de SaaS de confiance (sidebars Google Docs Apps Script, OneDrive comme C2, Telegram comme C2) pour contourner les filtres de réputation de domaine, avec des leurres ClickFix (T1204.004) et du phishing par code d'appareil (EvilTokens) contournant le MFA. Le BYOVD (T1068, T1562.001, T1553.005) est resté un pilier des chaînes MaaS (DCRCVDrv.sys, Alinubx.sys abusés par Cruciferra). Les opérations rançongiciels ont systématiquement combiné l'abus de VSS (T1490), l'extraction de NTDS.dit (T1003.003) et la double extorsion (T1657). Les attaques d'identité ont mûri avec l'énumération SSPR (T1087.004), la fatigue MFA (T1621), la modification MFA (T1556.006) et la falsification JWT (T1606.001). L'émergence de la découverte de vulnérabilités assistée par IA (évasion de Gemini, 0-days Windows découverts par LLM en moins de 80 minutes) et de l'abus d'agents IA (IPC Claude Code, exfiltration d'identifiants AWS AgentCore) signale une nouvelle frontière."
+    },
+    "ttps_list": [
+      {
+        "id": "T1190",
+        "tactic": {
+          "en": "Initial Access",
+          "fr": "Accès initial"
+        },
+        "technique_name": "Exploit Public-Facing Application",
+        "frequency": 6,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "CVE-2026-85706 GitLab path traversal (CVSS 10.0, KEV) exploited against self-hosted instances",
+            "CVE-2026-76461 Cisco Secure Email Gateway SQLi to root RCE (CVSS 9.8, KEV)",
+            "CVE-2026-39364 Vite dev server mass scanning campaign for cloud takeover",
+            "CVE-2026-39987 Marimo pre-auth RCE via WebSocket /terminal/ws",
+            "CVE-2026-89026 Issabel Framework unauthenticated OS command execution via hardcoded JWT key",
+            "CVE-2026-5430 WSO2 API Manager JWT authentication bypass",
+            "CVE-2026-60004 Gitea RCE exploited by Red Heron",
+            "CVE-2026-91843 Check Point Security Management Server pre-auth root RCE",
+            "CVE-2026-44756 SAP Extended Passport CVSS 10.0 memory corruption",
+            "CVE-2026-85889 Azure AI Foundry CVSS 10.0 missing authentication",
+            "CVE-2026-94089 D-Link DIR-868L CVSS 10.0 stack buffer overflow",
+            "CVE-2026-94003 Comfast CF-N1-S CVSS 10.0 stack buffer overflow",
+            "CVE-2026-10747/10858 IBM MQ CVSS 10.0 RCE",
+            "CVE-2026-90817 REDCap unauthenticated RCE",
+            "CVE-2026-78006/78159 WordPress The Events Calendar RCE (300,000 sites unpatched)",
+            "CVE-2026-27540 WooCommerce Wholesale Lead Capture arbitrary file upload",
+            "CVE-2026-28326 SolarWinds ARM hardcoded key RCE",
+            "CVE-2026-58138 Orkes Conductor pre-auth RCE",
+            "CVE-2026-61560 mcp-gitlab path traversal",
+            "CVE-2026-15640 Delinea Secret Server SAML authentication bypass"
+          ],
+          "fr": [
+            "CVE-2026-85706 GitLab path traversal (CVSS 10.0, KEV) exploitée contre les instances auto-hébergées",
+            "CVE-2026-76461 Cisco Secure Email Gateway SQLi vers RCE root (CVSS 9.8, KEV)",
+            "Campagne de scan massif CVE-2026-39364 Vite dev server pour prise de contrôle cloud",
+            "CVE-2026-39987 Marimo RCE pré-authentifiée via WebSocket /terminal/ws",
+            "CVE-2026-89026 Issabel Framework exécution de commandes OS non authentifiée via clé JWT codée en dur",
+            "CVE-2026-5430 WSO2 API Manager contournement d'authentification JWT",
+            "CVE-2026-60004 RCE Gitea exploitée par Red Heron",
+            "CVE-2026-91843 Check Point Security Management Server RCE root pré-authentifiée",
+            "CVE-2026-44756 SAP Extended Passport corruption mémoire CVSS 10.0",
+            "CVE-2026-85889 Azure AI Foundry CVSS 10.0 authentification manquante",
+            "CVE-2026-94089 D-Link DIR-868L CVSS 10.0 débordement de tampon pile",
+            "CVE-2026-94003 Comfast CF-N1-S CVSS 10.0 débordement de tampon pile",
+            "CVE-2026-10747/10858 IBM MQ CVSS 10.0 RCE",
+            "CVE-2026-90817 REDCap RCE non authentifiée",
+            "CVE-2026-78006/78159 WordPress The Events Calendar RCE (300 000 sites non corrigés)",
+            "CVE-2026-27540 WooCommerce Wholesale Lead Capture téléversement arbitraire de fichier",
+            "CVE-2026-28326 SolarWinds ARM RCE par clé codée en dur",
+            "CVE-2026-58138 Orkes Conductor RCE pré-authentifiée",
+            "CVE-2026-61560 mcp-gitlab path traversal",
+            "CVE-2026-15640 Delinea Secret Server contournement d'authentification SAML"
+          ]
+        }
+      },
+      {
+        "id": "T1566.002",
+        "tactic": {
+          "en": "Initial Access",
+          "fr": "Accès initial"
+        },
+        "technique_name": "Phishing: Spearphishing Link",
+        "frequency": 6,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Google Doc sidebar malware campaign (AMOS on macOS, PowerShell loader on Windows) via X DMs impersonating CoinDesk VP",
+            "Iranian cyber spies using fake MRI scan results as lure",
+            "Homoglyph attacks using Cyrillic/hiragana characters to mimic legitimate URLs (miсrosoft.com, Booking.com)",
+            "Roblox typosquatting domain roblox[.]com[.]bi with COMPANY-NAME parameter",
+            "Google Docs presentation phishing with autoplay and loop parameters",
+            "Rust developer campaign using fake job offers and video-conference lures"
+          ],
+          "fr": [
+            "Campagne de malware via sidebar Google Doc (AMOS sur macOS, loader PowerShell sur Windows) via DM X usurpant le VP de CoinDesk",
+            "Cyberespions iraniens utilisant de faux résultats d'IRM comme leurre",
+            "Attaques homoglyphes utilisant des caractères cyrilliques/hiragana pour imiter des URLs légitimes (miсrosoft.com, Booking.com)",
+            "Domaine typosquatté Roblox roblox[.]com[.]bi avec paramètre COMPANY-NAME",
+            "Phishing via présentation Google Docs avec paramètres de lecture automatique et de boucle",
+            "Campagne contre les développeurs Rust utilisant de fausses offres d'emploi et des leurres de visioconférence"
+          ]
+        }
+      },
+      {
+        "id": "T1195.002",
+        "tactic": {
+          "en": "Initial Access",
+          "fr": "Accès initial"
+        },
+        "technique_name": "Supply Chain Compromise: Compromise Software Supply Chain",
+        "frequency": 6,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "TanStack npm attack: 84 malicious versions of 42 packages, 170 private GitHub repos stolen, CrowdSec and OpenAI among victims",
+            "GHAPPIER/PolinRider loader: 65 public repos, 73 infected files, 22 accounts, valid trusted-publishing provenance",
+            "GitLab supply chain risk from CVE-2026-85706 (CI/CD secrets, deployment tokens, SSH keys)",
+            "JFrog Artifactory CVE-2026-42016/42018 (KEV) enabling artifact poisoning and backdoor deployment",
+            "quay-builder-qemu CVE-2026-85469 CI/CD supply chain compromise via unpinned GitHub Action",
+            "Rust developer campaign targeting crate owners to publish malware"
+          ],
+          "fr": [
+            "Attaque npm TanStack : 84 versions malveillantes de 42 paquets, 170 dépôts GitHub privés dérobés, CrowdSec et OpenAI parmi les victimes",
+            "Loader GHAPPIER/PolinRider : 65 dépôts publics, 73 fichiers infectés, 22 comptes, provenance valide via trusted publishing",
+            "Risque de chaîne d'approvisionnement GitLab via CVE-2026-85706 (secrets CI/CD, jetons de déploiement, clés SSH)",
+            "JFrog Artifactory CVE-2026-42016/42018 (KEV) permettant l'empoisonnement d'artefacts et le déploiement de portes dérobées",
+            "quay-builder-qemu CVE-2026-85469 compromission de chaîne d'approvisionnement CI/CD via GitHub Action non épinglée",
+            "Campagne contre les développeurs Rust ciblant les propriétaires de crates pour publier du malware"
+          ]
+        }
+      },
+      {
+        "id": "T1059.001",
+        "tactic": {
+          "en": "Execution",
+          "fr": "Exécution"
+        },
+        "technique_name": "Command and Scripting Interpreter: PowerShell",
+        "frequency": 6,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Google Doc sidebar campaign delivering PowerShell loader chain on Windows",
+            "GitHub repository one-liner installation executing PowerShell via Invoke-Expression with TLS 1.2 forced",
+            "laZzzy Donut multi-stage loader using Python bytecode and shellcode",
+            "RustPack 1.7 packer generating polymorphic PowerShell loaders",
+            "ClickFix lures instructing users to paste PowerShell commands in Terminal",
+            "SindriKit v2.0.0 framework with NT native process creation via NtCreateUserProcess"
+          ],
+          "fr": [
+            "Campagne de sidebar Google Doc livrant une chaîne de loader PowerShell sur Windows",
+            "Installation one-liner depuis un dépôt GitHub exécutant PowerShell via Invoke-Expression avec TLS 1.2 forcé",
+            "Loader multi-étapes laZzzy Donut utilisant du bytecode Python et du shellcode",
+            "Packer RustPack 1.7 générant des loaders PowerShell polymorphes",
+            "Leurres ClickFix incitant les utilisateurs à coller des commandes PowerShell dans le Terminal",
+            "Framework SindriKit v2.0.0 avec création de processus NT native via NtCreateUserProcess"
+          ]
+        }
+      },
+      {
+        "id": "T1078",
+        "tactic": {
+          "en": "Defense Evasion, Persistence, Privilege Escalation, Initial Access",
+          "fr": "Évasion de défense, persistance, élévation de privilèges, accès initial"
+        },
+        "technique_name": "Valid Accounts",
+        "frequency": 6,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "Silent Ransom Group using legitimate RMM tools and callback phishing",
+            "IAM expansion to non-human identities (NHI) and AI agents (GuidePoint Security)",
+            "Iranian actors using Telegram C2 with compromised accounts",
+            "MFA bypass via EvilTokens device-code phishing (Lazarus, Scattered Spider)",
+            "Gemini AI breakout compromising three companies by guessing passwords",
+            "Rust developer campaign using compromised accounts to publish malware",
+            "Ryomo Systems SafePay breach exposing passwords and 2FA backup codes"
+          ],
+          "fr": [
+            "Silent Ransom Group utilisant des outils RMM légitimes et du callback phishing",
+            "Extension de l'IAM aux identités non humaines (NHI) et agents IA (GuidePoint Security)",
+            "Acteurs iraniens utilisant Telegram C2 avec des comptes compromis",
+            "Contournement MFA via phishing par code d'appareil EvilTokens (Lazarus, Scattered Spider)",
+            "Évasion de l'IA Gemini compromettant trois entreprises par devinette de mots de passe",
+            "Campagne contre les développeurs Rust utilisant des comptes compromis pour publier du malware",
+            "Violation SafePay de Ryomo Systems exposant mots de passe et codes de secours 2FA"
+          ]
+        }
+      },
+      {
+        "id": "T1486",
+        "tactic": {
+          "en": "Impact",
+          "fr": "Impact"
+        },
+        "technique_name": "Data Encrypted for Impact",
+        "frequency": 6,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "Cedar County Memorial Hospital ransomware claim after IT outage",
+            "Nipigon District Memorial Hospital ransomware attack (Ontario, Canada)",
+            "Dragonforce claiming arsrenacer.com",
+            "SafePay publishing Ryomo Systems data",
+            "Emperador extortion campaigns (RDA Motors, Sevenoaks, Navitrans, Nexbex)",
+            "RansomHouse claiming Namibian Defence Force",
+            "Qilin/Aur0ra targeting Central Bank of Libya and Kochs GmbH",
+            "Average ransomware incident cost $5.08M vs median ransom $139,875"
+          ],
+          "fr": [
+            "Revendication rançongiciel contre le Cedar County Memorial Hospital après une panne informatique",
+            "Attaque rançongiciel contre le Nipigon District Memorial Hospital (Ontario, Canada)",
+            "Dragonforce revendiquant arsrenacer.com",
+            "SafePay publiant les données de Ryomo Systems",
+            "Campagnes d'extorsion Emperador (RDA Motors, Sevenoaks, Navitrans, Nexbex)",
+            "RansomHouse revendiquant la Namibian Defence Force",
+            "Qilin/Aur0ra ciblant la Banque centrale de Libye et Kochs GmbH",
+            "Coût moyen d'un incident rançongiciel de 5,08 M$ contre une rançon médiane de 139 875 $"
+          ]
+        }
+      },
+      {
+        "id": "T1490",
+        "tactic": {
+          "en": "Impact",
+          "fr": "Impact"
+        },
+        "technique_name": "Inhibit System Recovery",
+        "frequency": 6,
+        "severity": "high",
+        "context": {
+          "en": [
+            "VSS abuse: shadow copy deletion before ransomware detonation",
+            "NTDS.dit extraction from shadow copies for silent credential theft",
+            "Shadow storage size and configuration manipulation",
+            "Detection must correlate VSS events with lateral movement and credential collection",
+            "Backup agents and RMM tools also create/delete snapshots legitimately, requiring baseline"
+          ],
+          "fr": [
+            "Abus de VSS : suppression des clichés instantanés avant la détonation d'un rançongiciel",
+            "Extraction de NTDS.dit depuis les shadow copies pour un vol silencieux d'identifiants",
+            "Manipulation de la taille et de la configuration du shadow storage",
+            "La détection doit corréler les événements VSS avec le mouvement latéral et la collecte d'identifiants",
+            "Les agents de sauvegarde et outils RMM créent/suppriment aussi des clichés légitimement, nécessitant une baseline"
+          ]
+        }
+      },
+      {
+        "id": "T1003.003",
+        "tactic": {
+          "en": "Credential Access",
+          "fr": "Accès aux identifiants"
+        },
+        "technique_name": "OS Credential Dumping: NTDS",
+        "frequency": 6,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "Silent extraction of NTDS.dit from shadow copies rather than live system dump tools",
+            "Harder to detect than traditional credential dumping",
+            "Requires correlation with VSS creation and lateral movement",
+            "Impact on entire Active Directory directory",
+            "CISA 'Detecting and Mitigating Active Directory Compromises' resource updated 15 September"
+          ],
+          "fr": [
+            "Extraction silencieuse de NTDS.dit depuis les shadow copies plutôt que via des outils de dump sur système vivant",
+            "Plus difficile à détecter que le dump d'identifiants traditionnel",
+            "Nécessite une corrélation avec la création VSS et le mouvement latéral",
+            "Impact sur l'ensemble de l'annuaire Active Directory",
+            "Ressource CISA « Detecting and Mitigating Active Directory Compromises » mise à jour le 15 septembre"
+          ]
+        }
+      },
+      {
+        "id": "T1219",
+        "tactic": {
+          "en": "Command and Control",
+          "fr": "Commande et contrôle"
+        },
+        "technique_name": "Remote Access Software",
+        "frequency": 6,
+        "severity": "high",
+        "context": {
+          "en": [
+            "MeshCentral deployed as persistence after FortiGate SSL-VPN RCE in Thai ISP intrusion",
+            "ConnectWise ScreenConnect CVE-2026-84869 (KEV) exploited for file transfer and code execution",
+            "Silent Ransom Group using legitimate RMM tools",
+            "N-central fully patched environment compromised with limited logging preventing exploit identification",
+            "ScreenConnect ~1,000 vulnerable instances still exposed on Internet"
+          ],
+          "fr": [
+            "MeshCentral déployé comme persistance après une RCE SSL-VPN FortiGate dans une intrusion chez un FAI thaïlandais",
+            "ConnectWise ScreenConnect CVE-2026-84869 (KEV) exploitée pour le transfert de fichiers et l'exécution de code",
+            "Silent Ransom Group utilisant des outils RMM légitimes",
+            "Environnement N-central entièrement patché compromis avec une journalisation limitée empêchant l'identification de l'exploit",
+            "Environ 1 000 instances ScreenConnect vulnérables encore exposées sur Internet"
+          ]
+        }
+      },
+      {
+        "id": "T1068",
+        "tactic": {
+          "en": "Privilege Escalation",
+          "fr": "Élévation de privilèges"
+        },
+        "technique_name": "Exploitation for Privilege Escalation",
+        "frequency": 6,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "BYOVD abuse of DCRCVDrv.sys and Alinubx.sys by Cruciferra MaaS loader",
+            "IOCTL 0x2205C0 and 0x222024 leading to ZwTerminateProcess for AV/EDR termination",
+            "Neither driver in Microsoft vulnerable driver blocklist as of 8 September 2026",
+            "Redundancy tactic: if one driver is refused, switch to the other",
+            "HVCI/VBS and WDAC recommended as mitigations"
+          ],
+          "fr": [
+            "Abus BYOVD de DCRCVDrv.sys et Alinubx.sys par le loader MaaS Cruciferra",
+            "IOCTL 0x2205C0 et 0x222024 menant à ZwTerminateProcess pour la terminaison AV/EDR",
+            "Aucun des deux drivers dans la blocklist Microsoft des drivers vulnérables au 8 septembre 2026",
+            "Tactique de redondance : si un driver est refusé, basculer sur l'autre",
+            "HVCI/VBS et WDAC recommandés comme mitigations"
+          ]
+        }
+      },
+      {
+        "id": "T1562.001",
+        "tactic": {
+          "en": "Defense Evasion",
+          "fr": "Évasion de défense"
+        },
+        "technique_name": "Impair Defenses: Disable or Modify Tools",
+        "frequency": 6,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "Cruciferra MaaS loader terminating AV/EDR processes before payload delivery",
+            "DCRCVDrv.sys and Alinubx.sys IOCTLs for process termination",
+            "RustPack 1.7 evading ML-based detections and AV/EDR emulation engines",
+            "SindriKit v2.0.0 with NTDLL unhooking and clean remapped image",
+            "laZzzy Donut multi-stage loader evading static and dynamic analysis"
+          ],
+          "fr": [
+            "Loader MaaS Cruciferra terminant les processus AV/EDR avant la livraison du payload",
+            "IOCTL DCRCVDrv.sys et Alinubx.sys pour la terminaison de processus",
+            "RustPack 1.7 éviant les détections ML et les moteurs d'émulation AV/EDR",
+            "SindriKit v2.0.0 avec unhooking NTDLL et image propre remappée",
+            "Loader multi-étapes laZzzy Donut éviant l'analyse statique et dynamique"
+          ]
+        }
+      },
+      {
+        "id": "T1553.005",
+        "tactic": {
+          "en": "Defense Evasion",
+          "fr": "Évasion de défense"
+        },
+        "technique_name": "Subvert Trust Controls: Code Signing",
+        "frequency": 6,
+        "severity": "high",
+        "context": {
+          "en": [
+            "BYOVD exploiting legitimately signed drivers to bypass driver loading controls",
+            "DCRCVDrv.sys (MOCOMSYS/DCRC) and Alinubx.sys (CnCrypt) signed but vulnerable",
+            "Trusted publishing provenance used in TanStack npm attack to bypass signature checks",
+            "GHAPPIER/PolinRider using valid trusted-publishing provenance for malicious npm version"
+          ],
+          "fr": [
+            "BYOVD exploitant des drivers légitimement signés pour contourner les contrôles de chargement de drivers",
+            "DCRCVDrv.sys (MOCOMSYS/DCRC) et Alinubx.sys (CnCrypt) signés mais vulnérables",
+            "Provenance trusted publishing utilisée dans l'attaque npm TanStack pour contourner les contrôles de signature",
+            "GHAPPIER/PolinRider utilisant une provenance valide via trusted publishing pour une version npm malveillante"
+          ]
+        }
+      },
+      {
+        "id": "T1102",
+        "tactic": {
+          "en": "Command and Control",
+          "fr": "Commande et contrôle"
+        },
+        "technique_name": "Web Service",
+        "frequency": 6,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Google Docs Apps Script sidebar used for C2 and exfiltration via Telegram API",
+            "OneDrive-UDC2 C2 channel for Cobalt Strike using Microsoft Graph Files.ReadWrite.All",
+            "Iranian actors using Telegram as C2 to push malware",
+            "Telegram API beacons with action codes (VIEW) for silent victim identification",
+            "Abuse of trusted SaaS bypasses domain-reputation filters"
+          ],
+          "fr": [
+            "Sidebar Google Docs Apps Script utilisée pour le C2 et l'exfiltration via l'API Telegram",
+            "Canal C2 OneDrive-UDC2 pour Cobalt Strike utilisant Microsoft Graph Files.ReadWrite.All",
+            "Acteurs iraniens utilisant Telegram comme C2 pour pousser du malware",
+            "Beacons vers l'API Telegram avec codes d'action (VIEW) pour l'identification silencieuse des victimes",
+            "L'abus de SaaS de confiance contourne les filtres de réputation de domaine"
+          ]
+        }
+      },
+      {
+        "id": "T1071.001",
+        "tactic": {
+          "en": "Command and Control",
+          "fr": "Commande et contrôle"
+        },
+        "technique_name": "Application Layer Protocol: Web Protocols",
+        "frequency": 6,
+        "severity": "high",
+        "context": {
+          "en": [
+            "HTTPS C2 to graph.microsoft.com for OneDrive-UDC2",
+            "Telegram API beacons from Google Docs campaign",
+            "HTTPS C2 in laZzzy Donut loader",
+            "Encrypted C2 channels in RustPack 1.7 loaders",
+            "MeshCentral C2 traffic blending with legitimate remote administration"
+          ],
+          "fr": [
+            "C2 HTTPS vers graph.microsoft.com pour OneDrive-UDC2",
+            "Beacons vers l'API Telegram depuis la campagne Google Docs",
+            "C2 HTTPS dans le loader laZzzy Donut",
+            "Canaux C2 chiffrés dans les loaders RustPack 1.7",
+            "Trafic C2 MeshCentral se fondant dans l'administration à distance légitime"
+          ]
+        }
+      },
+      {
+        "id": "T1567",
+        "tactic": {
+          "en": "Exfiltration",
+          "fr": "Exfiltration"
+        },
+        "technique_name": "Exfiltration Over Web Service",
+        "frequency": 6,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Silent Ransom Group exfiltrating data before extortion",
+            "Emperador publishing victim data on leak site",
+            "RansomHouse exfiltrating Namibian Defence Force data",
+            "Gyazo breach exfiltrating 23.6M user records and 490M image metadata",
+            "WayToMe/AUTOCOLIS data leak claim (147,287 accounts, 363,274 trips)",
+            "SafePay publishing Ryomo Systems data including 2FA backup codes"
+          ],
+          "fr": [
+            "Silent Ransom Group exfiltrant des données avant extorsion",
+            "Emperador publiant les données des victimes sur son site de fuite",
+            "RansomHouse exfiltrant les données de la Namibian Defence Force",
+            "Violation Gyazo exfiltrant 23,6 M d'enregistrements utilisateurs et 490 M de métadonnées d'images",
+            "Revendication de fuite WayToMe/AUTOCOLIS (147 287 comptes, 363 274 trajets)",
+            "SafePay publiant les données de Ryomo Systems incluant des codes de secours 2FA"
+          ]
+        }
+      },
+      {
+        "id": "T1657",
+        "tactic": {
+          "en": "Impact",
+          "fr": "Impact"
+        },
+        "technique_name": "Financial Theft",
+        "frequency": 6,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "Silent Ransom Group extortion of Greenberg Traurig (126,000 people)",
+            "Emperador extortion campaigns across Italy, Czech Republic, Colombia, India",
+            "RansomHouse claiming Namibian Defence Force",
+            "Dragonforce claiming arsrenacer.com",
+            "SafePay publishing Ryomo Systems data",
+            "WaterPlum stealing $10.7M in cryptocurrency for DPRK",
+            "Revolut extortion demand of 3M Monero",
+            "Average ransomware incident cost $5.08M vs median ransom $139,875"
+          ],
+          "fr": [
+            "Extorsion de Greenberg Traurig par Silent Ransom Group (126 000 personnes)",
+            "Campagnes d'extorsion Emperador en Italie, Tchéquie, Colombie, Inde",
+            "RansomHouse revendiquant la Namibian Defence Force",
+            "Dragonforce revendiquant arsrenacer.com",
+            "SafePay publiant les données de Ryomo Systems",
+            "WaterPlum dérobant 10,7 M$ en cryptomonnaies pour la RPDC",
+            "Demande d'extorsion de 3 M Monero contre Revolut",
+            "Coût moyen d'un incident rançongiciel de 5,08 M$ contre une rançon médiane de 139 875 $"
+          ]
+        }
+      },
+      {
+        "id": "T1087.004",
+        "tactic": {
+          "en": "Discovery",
+          "fr": "Découverte"
+        },
+        "technique_name": "Account Discovery: Cloud Account",
+        "frequency": 6,
+        "severity": "high",
+        "context": {
+          "en": [
+            "ResetSpy enumerating Entra ID accounts and MFA methods via SSPR endpoint",
+            "Microsoft removed legacy CAPTCHA from SSPR flow in August 2026, replaced by backend throttling",
+            "EntraTrace knowledge base documenting offensive tools targeting Entra ID (AzureHound, AADInternals, ROADtools, TeamFiltration, TokenTactics, MFASweep, MicroBurst, MSOLSpray, GraphSpy, Stormspotter)",
+            "Enumeration is a prerequisite for password spraying and MFA fatigue attacks"
+          ],
+          "fr": [
+            "ResetSpy énumérant les comptes Entra ID et les méthodes MFA via le endpoint SSPR",
+            "Microsoft a retiré le CAPTCHA legacy du flux SSPR en août 2026, remplacé par du throttling backend",
+            "Base de connaissances EntraTrace documentant les outils offensifs ciblant Entra ID (AzureHound, AADInternals, ROADtools, TeamFiltration, TokenTactics, MFASweep, MicroBurst, MSOLSpray, GraphSpy, Stormspotter)",
+            "L'énumération est un prérequis aux attaques de password spraying et de fatigue MFA"
+          ]
+        }
+      },
+      {
+        "id": "T1621",
+        "tactic": {
+          "en": "Credential Access",
+          "fr": "Accès aux identifiants"
+        },
+        "technique_name": "Multi-Factor Authentication Request Generation",
+        "frequency": 6,
+        "severity": "high",
+        "context": {
+          "en": [
+            "MFA push fatigue exploited by APT29 and Scattered Spider",
+            "Abuse of self-service password reset flows",
+            "EvilTokens device-code phishing kit (Huntress) bypassing MFA entirely",
+            "Microsoft device authorization flow abuse (microsoft[.]com/devicelogin)",
+            "MFA is satisfied but session is issued to the attacker"
+          ],
+          "fr": [
+            "Fatigue de push MFA exploitée par APT29 et Scattered Spider",
+            "Abus des flux d'auto-réinitialisation de mot de passe",
+            "Kit de phishing par code d'appareil EvilTokens (Huntress) contournant entièrement le MFA",
+            "Abus du flux d'autorisation d'appareil Microsoft (microsoft[.]com/devicelogin)",
+            "Le MFA est satisfait mais la session est émise au profit de l'attaquant"
+          ]
+        }
+      },
+      {
+        "id": "T1556.006",
+        "tactic": {
+          "en": "Defense Evasion, Persistence, Privilege Escalation",
+          "fr": "Évasion de défense, persistance, élévation de privilèges"
+        },
+        "technique_name": "Modify Authentication Process: Multi-Factor Authentication",
+        "frequency": 6,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "Exclusion of an account from Conditional Access policies",
+            "Registration of an attacker-controlled MFA method",
+            "Redirection via Windows hosts file to localhost, effective only where MFA is configured fail-open",
+            "SafePay breach exposing 2FA backup codes enabling complete MFA bypass",
+            "Seven decisions hiding inside 'just enable MFA' (cyberdoubts.com teardown)"
+          ],
+          "fr": [
+            "Exclusion d'un compte des politiques Conditional Access",
+            "Enregistrement d'une méthode MFA contrôlée par l'attaquant",
+            "Redirection via le fichier hosts Windows vers localhost, efficace uniquement là où le MFA est configuré en fail-open",
+            "Violation SafePay exposant des codes de secours 2FA permettant un contournement complet du MFA",
+            "Sept décisions cachées dans « activer simplement le MFA » (analyse cyberdoubts.com)"
+          ]
+        }
+      },
+      {
+        "id": "T1111",
+        "tactic": {
+          "en": "Credential Access",
+          "fr": "Accès aux identifiants"
+        },
+        "technique_name": "Multi-Factor Authentication Interception",
+        "frequency": 6,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Keylogging of PINs",
+            "Replay/prediction of hardware token codes (RSA SecurID type)",
+            "Interception of out-of-band codes including via compromise of the delivery provider",
+            "Only FIDO2/WebAuthn and PKI authenticators are phishing-resistant per CISA",
+            "SMS, voice call, TOTP and push remain relayable"
+          ],
+          "fr": [
+            "Keylogging de PIN",
+            "Rejeu/prédiction de codes de jetons matériels (type RSA SecurID)",
+            "Interception de codes hors bande, y compris par compromission du fournisseur d'acheminement",
+            "Seuls FIDO2/WebAuthn et les authentificateurs PKI sont résistants au phishing selon la CISA",
+            "SMS, appel vocal, TOTP et push restent relayables"
+          ]
+        }
+      },
+      {
+        "id": "T1552.001",
+        "tactic": {
+          "en": "Credential Access",
+          "fr": "Accès aux identifiants"
+        },
+        "technique_name": "Unsecured Credentials: Credentials In Files",
+        "frequency": 6,
+        "severity": "high",
+        "context": {
+          "en": [
+            "SharpMLv2 triage tool scanning SMB shares for exposed secrets",
+            "Ryomo Systems SafePay breach exposing spreadsheet with account names and password-like strings",
+            "WayToMe/AUTOCOLIS key left in web application code opening excessive permissions",
+            "CrowdSec 170 private GitHub repos containing code and secrets",
+            "GitLab CVE-2026-85706 exposing CI/CD variables, deployment tokens, SSH keys"
+          ],
+          "fr": [
+            "Outil de triage SharpMLv2 scannant les partages SMB à la recherche de secrets exposés",
+            "Violation SafePay de Ryomo Systems exposant un tableur avec noms de comptes et chaînes ressemblant à des mots de passe",
+            "Clé laissée dans le code de l'application web WayToMe/AUTOCOLIS ouvrant des permissions excessives",
+            "170 dépôts GitHub privés CrowdSec contenant du code et des secrets",
+            "CVE-2026-85706 GitLab exposant variables CI/CD, jetons de déploiement, clés SSH"
+          ]
+        }
+      },
+      {
+        "id": "T1530",
+        "tactic": {
+          "en": "Collection",
+          "fr": "Collecte"
+        },
+        "technique_name": "Data from Cloud Storage",
+        "frequency": 6,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "Revolut breach exposing customer data via fake government requests",
+            "Gyazo breach exposing 23.6M user records and 490M image metadata",
+            "Kemnaker Indonesia breach exposing 1.2 billion records",
+            "CenterPoint Energy breach exposing 7.49M records",
+            "Murauchi Dot Com breach exposing 7.7M records",
+            "Suno breach exposing 55.3M users",
+            "ClarityCheck exposing 9M facial recognition images via misconfigured APIs"
+          ],
+          "fr": [
+            "Violation Revolut exposant des données clients via de fausses demandes gouvernementales",
+            "Violation Gyazo exposant 23,6 M d'enregistrements utilisateurs et 490 M de métadonnées d'images",
+            "Violation Kemnaker Indonésie exposant 1,2 milliard d'enregistrements",
+            "Violation CenterPoint Energy exposant 7,49 M d'enregistrements",
+            "Violation Murauchi Dot Com exposant 7,7 M d'enregistrements",
+            "Violation Suno exposant 55,3 M d'utilisateurs",
+            "ClarityCheck exposant 9 M d'images de reconnaissance faciale via des API mal configurées"
+          ]
+        }
+      },
+      {
+        "id": "T1213",
+        "tactic": {
+          "en": "Collection",
+          "fr": "Collecte"
+        },
+        "technique_name": "Data from Information Repositories",
+        "frequency": 6,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Revolut breach exposing financial info, passports, IBAN, transaction histories",
+            "Gyazo breach exposing user records and image metadata",
+            "Rohto Pharmaceutical breach exposing ~4TB including 3.95M Salesforce customer records",
+            "Accela breach exposing 1TB of internal data and PII of California residents",
+            "CrowdSec 170 private GitHub repos stolen via TanStack npm attack",
+            "Ryomo Systems SafePay breach exposing business directories and personnel folders"
+          ],
+          "fr": [
+            "Violation Revolut exposant informations financières, passeports, IBAN, historiques de transactions",
+            "Violation Gyazo exposant enregistrements utilisateurs et métadonnées d'images",
+            "Violation Rohto Pharmaceutical exposant ~4 To dont 3,95 M de fiches clients Salesforce",
+            "Violation Accela exposant 1 To de données internes et PII de résidents californiens",
+            "170 dépôts GitHub privés CrowdSec dérobés via l'attaque npm TanStack",
+            "Violation SafePay de Ryomo Systems exposant répertoires métier et dossiers nominatifs"
+          ]
+        }
+      },
+      {
+        "id": "T1595",
+        "tactic": {
+          "en": "Reconnaissance",
+          "fr": "Reconnaissance"
+        },
+        "technique_name": "Active Scanning",
+        "frequency": 6,
+        "severity": "medium",
+        "context": {
+          "en": [
+            "PIAF-HMS scanning campaign from 94[.]102[.]49[.]125 (IP Volume, AS202425 bulletproof host)",
+            "User-Agent 'Farez-Sorter/1.0' targeting hospitality applications",
+            "Vite dev server mass scanning campaign for cloud takeover",
+            "AS38229 (Colombo) and AS136257 (Dhaka) added to Shodan Safari mapping feeds",
+            "Scanning from 151[.]27[.]5[.]154 (WIND TRE, Italy) with 55% confidence"
+          ],
+          "fr": [
+            "Campagne de scan PIAF-HMS depuis 94[.]102[.]49[.]125 (IP Volume, hébergeur bulletproof AS202425)",
+            "User-Agent « Farez-Sorter/1.0 » ciblant les applications d'hôtellerie",
+            "Campagne de scan massif Vite dev server pour prise de contrôle cloud",
+            "AS38229 (Colombo) et AS136257 (Dhaka) ajoutés aux flux de cartographie Shodan Safari",
+            "Scan depuis 151[.]27[.]5[.]154 (WIND TRE, Italie) avec une confiance de 55 %"
+          ]
+        }
+      },
+      {
+        "id": "T1595.002",
+        "tactic": {
+          "en": "Reconnaissance",
+          "fr": "Reconnaissance"
+        },
+        "technique_name": "Active Scanning: Vulnerability Scanning",
+        "frequency": 6,
+        "severity": "medium",
+        "context": {
+          "en": [
+            "PIAF-HMS path scanning (/PIAF-HMS/, /hms/, /hotel/, /admin/config.php, /ucp/)",
+            "Vite dev server scanning for CVE-2026-39364 exploitation",
+            "Mass scanning for exposed Vite endpoints leading to cloud takeover",
+            "ASN mapping feeds tracking newly observed exposed services",
+            "Scanning activity from multiple ASNs and bulletproof hosts"
+          ],
+          "fr": [
+            "Scan de chemins PIAF-HMS (/PIAF-HMS/, /hms/, /hotel/, /admin/config.php, /ucp/)",
+            "Scan de Vite dev server pour l'exploitation de CVE-2026-39364",
+            "Scan massif pour les endpoints Vite exposés menant à une prise de contrôle cloud",
+            "Flux de cartographie ASN suivant les services exposés nouvellement observés",
+            "Activité de scan depuis plusieurs ASN et hébergeurs bulletproof"
+          ]
+        }
+      },
+      {
+        "id": "T1110",
+        "tactic": {
+          "en": "Credential Access",
+          "fr": "Accès aux identifiants"
+        },
+        "technique_name": "Brute Force",
+        "frequency": 6,
+        "severity": "high",
+        "context": {
+          "en": [
+            "ResetSpy enabling password spraying via SSPR enumeration",
+            "Gemini AI breakout compromising three companies by guessing passwords",
+            "MSOLSpray tool documented in EntraTrace",
+            "MFA fatigue attacks following enumeration",
+            "Smart lockout and throttling recommended as mitigations"
+          ],
+          "fr": [
+            "ResetSpy permettant le password spraying via l'énumération SSPR",
+            "Évasion de l'IA Gemini compromettant trois entreprises par devinette de mots de passe",
+            "Outil MSOLSpray documenté dans EntraTrace",
+            "Attaques de fatigue MFA suivant l'énumération",
+            "Smart lockout et throttling recommandés comme mitigations"
+          ]
+        }
+      },
+      {
+        "id": "T1606.001",
+        "tactic": {
+          "en": "Credential Access",
+          "fr": "Accès aux identifiants"
+        },
+        "technique_name": "Forge Web Credentials: Web Cookies",
+        "frequency": 6,
+        "severity": "high",
+        "context": {
+          "en": [
+            "JWT attacks: algorithm confusion, 'none' algorithm acceptance, RS256/HS256 confusion",
+            "Issabel Framework CVE-2026-89026 hardcoded JWT HS256 key allowing bearer token forgery",
+            "WSO2 API Manager CVE-2026-5430 JWT signature verification bypass",
+            "Delinea Secret Server CVE-2026-15640 SAML response manipulation",
+            "JWT validation must enforce expected algorithm and validate exp, iss, aud, kid claims"
+          ],
+          "fr": [
+            "Attaques JWT : confusion d'algorithmes, acceptation de l'algorithme 'none', confusion RS256/HS256",
+            "CVE-2026-89026 Issabel Framework clé JWT HS256 codée en dur permettant la falsification de bearer tokens",
+            "CVE-2026-5430 WSO2 API Manager contournement de vérification de signature JWT",
+            "CVE-2026-15640 Delinea Secret Server manipulation de réponse SAML",
+            "La validation JWT doit imposer l'algorithme attendu et valider les claims exp, iss, aud, kid"
+          ]
+        }
+      },
+      {
+        "id": "T1550.001",
+        "tactic": {
+          "en": "Defense Evasion, Lateral Movement",
+          "fr": "Évasion de défense, mouvement latéral"
+        },
+        "technique_name": "Use Alternate Authentication Material: Application Access Token",
+        "frequency": 6,
+        "severity": "high",
+        "context": {
+          "en": [
+            "JWT forgery enabling session hijacking",
+            "OAuth token theft via Google Docs Apps Script",
+            "OneDrive-UDC2 using Microsoft Graph Files.ReadWrite.All application permission",
+            "Twitch OAuth tokens leaked via malicious browser extension (~31,000 users)",
+            "GitLab CVE-2026-85706 exposing deployment tokens and CI/CD variables"
+          ],
+          "fr": [
+            "Falsification JWT permettant le détournement de session",
+            "Vol de jetons OAuth via Google Docs Apps Script",
+            "OneDrive-UDC2 utilisant la permission applicative Microsoft Graph Files.ReadWrite.All",
+            "Jetons OAuth Twitch fuités via une extension de navigateur malveillante (~31 000 utilisateurs)",
+            "CVE-2026-85706 GitLab exposant jetons de déploiement et variables CI/CD"
+          ]
+        }
+      },
+      {
+        "id": "T1565.001",
+        "tactic": {
+          "en": "Impact",
+          "fr": "Impact"
+        },
+        "technique_name": "Data Manipulation: Stored Data Manipulation",
+        "frequency": 6,
+        "severity": "medium",
+        "context": {
+          "en": [
+            "File integrity monitoring with SHA256 baseline for /etc files",
+            "Detection of unauthorized modifications to /etc/passwd, /etc/pam.d/, system binaries",
+            "Correlation with authentication and privilege escalation events",
+            "Baseline must be stored off the monitored host to prevent tampering",
+            "PCI-DSS and ISO 27001 compliance requirement"
+          ],
+          "fr": [
+            "Surveillance d'intégrité de fichiers avec baseline SHA256 pour les fichiers /etc",
+            "Détection des modifications non autorisées de /etc/passwd, /etc/pam.d/, binaires système",
+            "Corrélation avec les événements d'authentification et d'élévation de privilèges",
+            "La baseline doit être stockée hors de l'hôte surveillé pour éviter sa falsification",
+            "Exigence de conformité PCI-DSS et ISO 27001"
+          ]
+        }
+      },
+      {
+        "id": "T1505.003",
+        "tactic": {
+          "en": "Persistence",
+          "fr": "Persistance"
+        },
+        "technique_name": "Server Software Component: Web Shell",
+        "frequency": 6,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "WooCommerce Wholesale Lead Capture CVE-2026-27540 arbitrary file upload leading to web shell",
+            "The Events Calendar CVE-2026-78006/78159 PHP object injection leading to RCE",
+            "ConoHa WING malicious program installed in 426 customer web server spaces",
+            "OrdaSoft Joomla Gallery CVE-2026-88857 unrestricted file upload",
+            "NivoCart CVE-2026-94104 arbitrary file upload via File Manager",
+            "Gravity Forms CVE-2026-84434 arbitrary file upload via hidden upload field"
+          ],
+          "fr": [
+            "CVE-2026-27540 WooCommerce Wholesale Lead Capture téléversement arbitraire de fichier menant à un web shell",
+            "CVE-2026-78006/78159 The Events Calendar injection d'objet PHP menant à une RCE",
+            "ConoHa WING programme malveillant installé dans les espaces serveur web de 426 clients",
+            "CVE-2026-88857 OrdaSoft Joomla Gallery téléversement de fichier non restreint",
+            "CVE-2026-94104 NivoCart téléversement arbitraire de fichier via le File Manager",
+            "CVE-2026-84434 Gravity Forms téléversement arbitraire de fichier via un champ de téléversement masqué"
+          ]
+        }
+      },
+      {
+        "id": "T1105",
+        "tactic": {
+          "en": "Command and Control",
+          "fr": "Commande et contrôle"
+        },
+        "technique_name": "Ingress Tool Transfer",
+        "frequency": 6,
+        "severity": "high",
+        "context": {
+          "en": [
+            "GitHub repository one-liner downloading and executing PowerShell script",
+            "Google Doc sidebar downloading AMOS (macOS) or PowerShell loader (Windows)",
+            "laZzzy Donut multi-stage loader downloading shellcode and .NET assemblies",
+            "RustPack 1.7 packer generating loaders that download payloads",
+            "MeshCentral deployment after FortiGate SSL-VPN RCE",
+            "ConoHa WING malicious program installation"
+          ],
+          "fr": [
+            "One-liner depuis un dépôt GitHub téléchargeant et exécutant un script PowerShell",
+            "Sidebar Google Doc téléchargeant AMOS (macOS) ou un loader PowerShell (Windows)",
+            "Loader multi-étapes laZzzy Donut téléchargeant shellcode et assemblies .NET",
+            "Packer RustPack 1.7 générant des loaders qui téléchargent des payloads",
+            "Déploiement de MeshCentral après une RCE SSL-VPN FortiGate",
+            "Installation de programme malveillant ConoHa WING"
+          ]
+        }
+      },
+      {
+        "id": "T1070",
+        "tactic": {
+          "en": "Defense Evasion",
+          "fr": "Évasion de défense"
+        },
+        "technique_name": "Indicator Removal",
+        "frequency": 6,
+        "severity": "high",
+        "context": {
+          "en": [
+            "MeshCentral staged cleanup of traces in Thai ISP intrusion",
+            "Log purges and interruptions on edge devices as compromise indicator",
+            "Centralised logging off-appliance recommended to resist purges",
+            "Cisco Secure Email Gateway root RCE allowing attacker to erase local evidence",
+            "N-central limited logging preventing exploit identification"
+          ],
+          "fr": [
+            "Nettoyage par étapes des traces MeshCentral dans l'intrusion chez le FAI thaïlandais",
+            "Purges et interruptions de journalisation sur les équipements de bordure comme indicateur de compromission",
+            "Journalisation centralisée hors appliance recommandée pour résister aux purges",
+            "RCE root Cisco Secure Email Gateway permettant à l'attaquant d'effacer les preuves locales",
+            "Journalisation limitée de N-central empêchant l'identification de l'exploit"
+          ]
+        }
+      },
+      {
+        "id": "T1090.003",
+        "tactic": {
+          "en": "Command and Control",
+          "fr": "Commande et contrôle"
+        },
+        "technique_name": "Proxy: Multi-hop Proxy",
+        "frequency": 6,
+        "severity": "medium",
+        "context": {
+          "en": [
+            "Tor bootstrap state verification by Lone Wolf tool (progress=100, tag done)",
+            "Tor control port (9051) authentication via cookie",
+            "Detection of Tor processes and connections to ports 9050/9051 on unauthorized hosts",
+            "IP 98.159.37.240 flagged as possible Tor exit node/VPN",
+            "Anonymisation services complicating source qualification and attribution"
+          ],
+          "fr": [
+            "Vérification de l'état de bootstrap Tor par l'outil Lone Wolf (progress=100, tag done)",
+            "Authentification au port de contrôle Tor (9051) via cookie",
+            "Détection des processus Tor et connexions vers les ports 9050/9051 sur des hôtes non autorisés",
+            "IP 98.159.37.240 signalée comme possible nœud de sortie Tor/VPN",
+            "Services d'anonymisation compliquant la qualification des sources et l'attribution"
+          ]
+        }
+      },
+      {
+        "id": "T1027",
+        "tactic": {
+          "en": "Defense Evasion",
+          "fr": "Évasion de défense"
+        },
+        "technique_name": "Obfuscated Files or Information",
+        "frequency": 6,
+        "severity": "high",
+        "context": {
+          "en": [
+            "RustPack 1.7 string obfuscation (XOR with custom seed, per-string key, multiple encryption routines)",
+            "laZzzy Donut Python bytecode obfuscated with Kramer tool",
+            "SindriKit v2.0.0 ABI Windows layering and syscall resolution",
+            "Base64 then RC4 encrypted strings in Python scripts",
+            "Junk code randomisation from snippet pool"
+          ],
+          "fr": [
+            "Obfuscation de chaînes RustPack 1.7 (XOR avec graine personnalisée, clé par chaîne, multiples routines de chiffrement)",
+            "Bytecode Python laZzzy Donut obfusqué avec l'outil Kramer",
+            "SindriKit v2.0.0 stratification ABI Windows et résolution de syscalls",
+            "Chaînes encodées en base64 puis chiffrées en RC4 dans les scripts Python",
+            "Randomisation de code junk depuis un pool de snippets"
+          ]
+        }
+      },
+      {
+        "id": "T1027.002",
+        "tactic": {
+          "en": "Defense Evasion",
+          "fr": "Évasion de défense"
+        },
+        "technique_name": "Obfuscated Files or Information: Software Packing",
+        "frequency": 6,
+        "severity": "high",
+        "context": {
+          "en": [
+            "RustPack 1.7 packer with ML evasion by default",
+            "Polymorphic output generation (junk code randomisation)",
+            "AV/EDR emulation engine bypass (resource exhaustion, implementation breakage)",
+            "Userland hook evasion and DLL sideloading",
+            "Static and ML detections have very short lifespan against polymorphic packers"
+          ],
+          "fr": [
+            "Packer RustPack 1.7 avec évasion ML par défaut",
+            "Génération de sorties polymorphes (randomisation de code junk)",
+            "Contournement des moteurs d'émulation AV/EDR (épuisement de ressources, rupture d'implémentation)",
+            "Évasion des hooks userland et DLL sideloading",
+            "Les détections statiques et ML ont une durée de vie très courte face aux packers polymorphes"
+          ]
+        }
+      },
+      {
+        "id": "T1027.003",
+        "tactic": {
+          "en": "Defense Evasion",
+          "fr": "Évasion de défense"
+        },
+        "technique_name": "Obfuscated Files or Information: Steganography",
+        "frequency": 6,
+        "severity": "medium",
+        "context": {
+          "en": [
+            "Six months of AI-assisted steganography detection research",
+            "AI validates human intuitions but does not generate them",
+            "Verifier + massive search approaches (OpenEvolve, FunSearch, AlphaEvolve)",
+            "Detection of steganography as central forensic use case",
+            "AI pipelines fail 3 out of 4 times in autonomous research (arXiv:2601.03315)"
+          ],
+          "fr": [
+            "Six mois de recherche sur la détection de stéganographie assistée par IA",
+            "L'IA valide les intuitions humaines mais n'en produit pas",
+            "Approches « vérificateur + recherche massive » (OpenEvolve, FunSearch, AlphaEvolve)",
+            "Détection de stéganographie comme cas d'usage forensique central",
+            "Les pipelines IA échouent 3 fois sur 4 en recherche autonome (arXiv:2601.03315)"
+          ]
+        }
+      },
+      {
+        "id": "T1027.009",
+        "tactic": {
+          "en": "Defense Evasion",
+          "fr": "Évasion de défense"
+        },
+        "technique_name": "Obfuscated Files or Information: Embedded Payloads",
+        "frequency": 6,
+        "severity": "high",
+        "context": {
+          "en": [
+            "laZzzy Donut multi-stage loader with embedded payloads at each stage",
+            "Python bytecode -> shellcode -> laZzzy -> Donut -> .NET DLL -> encrypted .NET resources",
+            "Each stage encrypts or obfuscates the next",
+            "Memory capture before shutdown essential as decrypted layers exist only in RAM",
+            "Detection must target each layer, not just the final payload"
+          ],
+          "fr": [
+            "Loader multi-étapes laZzzy Donut avec charges imbriquées à chaque étape",
+            "Bytecode Python -> shellcode -> laZzzy -> Donut -> DLL .NET -> ressources .NET chiffrées",
+            "Chaque étape chiffre ou obfusque la suivante",
+            "Capture mémoire avant extinction indispensable car les couches déchiffrées n'existent qu'en RAM",
+            "La détection doit cibler chaque couche, pas seulement la charge finale"
+          ]
+        }
+      },
+      {
+        "id": "T1140",
+        "tactic": {
+          "en": "Defense Evasion",
+          "fr": "Évasion de défense"
+        },
+        "technique_name": "Deobfuscate/Decode Files or Information",
+        "frequency": 6,
+        "severity": "high",
+        "context": {
+          "en": [
+            "laZzzy Donut RC4/base64 decryption of successive layers",
+            "RustPack 1.7 multi-layer string decryption routines",
+            "Detection of in-memory decryption routines rather than cleartext strings",
+            "Public tools (Donut, Kramer) used for obfuscation",
+            "Analyst must modify public tools to accelerate key recovery"
+          ],
+          "fr": [
+            "Déchiffrement RC4/base64 des couches successives laZzzy Donut",
+            "Routines de déchiffrement multi-couches de chaînes RustPack 1.7",
+            "Détection des routines de déchiffrement en mémoire plutôt que des chaînes en clair",
+            "Outils publics (Donut, Kramer) utilisés pour l'obfuscation",
+            "L'analyste doit modifier les outils publics pour accélérer la récupération de clé"
+          ]
+        }
+      },
+      {
+        "id": "T1620",
+        "tactic": {
+          "en": "Defense Evasion",
+          "fr": "Évasion de défense"
+        },
+        "technique_name": "Reflective Code Loading",
+        "frequency": 6,
+        "severity": "high",
+        "context": {
+          "en": [
+            "laZzzy Donut shellcode position-independent generated by Donut",
+            "RustPack 1.7 loaders executing payload from memory after decryption",
+            "SindriKit v2.0.0 unified load and inject architecture",
+            "Detection of RWX memory allocations and write-to-execute transitions"
+          ]
+        }
+      }
+    ]
+  }
+}
