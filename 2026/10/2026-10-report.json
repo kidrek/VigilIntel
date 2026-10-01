@@ -1,0 +1,2500 @@
+{
+  "threat_level": {
+    "score": 5,
+    "label": {
+      "en": "Severe",
+      "fr": "Sévère"
+    },
+    "justification": {
+      "en": "October 2026 opened with 58 vulnerabilities, 16 data breaches, 6 regulatory items and 4 geopolitical signals. Four CVEs are in CISA KEV (Citrix NetScaler CVE-2026-88771/88772, Apple CVE-2026-86950, Zimbra CVE-2026-73570) and are under active exploitation, with WHIPSHOT/SLAPSHOT web shells deployed on NetScaler appliances and over 50,000 exposed instances. The Pentagon DMDC breach (305 million records) and Gyazo (23.6 million users) represent unprecedented PII exposure. Cisco Catalyst SD-WAN Manager (CVE-2026-76504, CVSS 9.8) is actively exploited, and the Zammad zero-day chain enabled an AI-driven breach of the DIVD network. Ransomware double-extortion activity from n0n, Eclipse, safepay and Vexy spans healthcare, finance, telecom, education and industry across four continents.",
+      "fr": "La semaine s'ouvre avec 58 vulnérabilités, 16 violations de données, 6 items réglementaires et 4 signaux géopolitiques. Quatre CVE figurent au catalogue CISA KEV (Citrix NetScaler CVE-2026-88771/88772, Apple CVE-2026-86950, Zimbra CVE-2026-73570) et sont activement exploitées, avec déploiement de web shells WHIPSHOT/SLAPSHOT sur les appliances NetScaler et plus de 50 000 instances exposées. La fuite du Pentagone (DMDC, 305 millions d'enregistrements) et Gyazo (23,6 millions d'utilisateurs) constituent une exposition de PII sans précédent. Cisco Catalyst SD-WAN Manager (CVE-2026-76504, CVSS 9.8) est activement exploité, et la chaîne de zero-days Zammad a permis une intrusion pilotée par IA dans le réseau DIVD. L'activité de double extorsion de n0n, Eclipse, safepay et Vexy couvre santé, finance, télécoms, éducation et industrie sur quatre continents."
+    },
+    "_triggers": [
+      "+8 — 4 CVE(s) CISA KEV",
+      "+4 — 16 CVE(s) CVSS ≥ 9.0",
+      "+2 — 1 acteur(s) étatique(s)",
+      "+3 — 7 opérateur(s) ransomware",
+      "+1 — ≥ 3 acteurs distincts actifs",
+      "+3 — 6 breach(es) ≥ 100k enregistrements",
+      "+2 — secteurs critiques ciblés : Government_and_Defense, Critical_Infrastructure",
+      "+1 — 15 TTPs distinctes"
+    ]
+  },
+  "executive_summary": {
+    "en": "October 2026 was defined by the weaponisation of edge infrastructure, mass data exposure, and the maturation of AI-assisted attacks. Four zero-days entered CISA KEV within days: Citrix NetScaler CVE-2026-88771/88772 (CVSS 9.5, pre-auth RCE) exploited since early September with WHIPSHOT/SLAPSHOT web shells on over 50,000 exposed appliances, including a suspected compromise of the Dutch central government; Apple CVE-2026-86950 (CVSS 8.8); and Zimbra CVE-2026-73570 (CVSS 8.9), exploited within hours of patch release. Cisco Catalyst SD-WAN Manager CVE-2026-76504 (CVSS 9.8) was actively exploited to rewrite routing policies and administrative accounts. The breach landscape was staggering: the Pentagon's Defense Manpower Data Center lost 305 million records (SSN, DOB, military specialty), Gyazo exposed 23.6 million users and 490 million image metadata records, Times Car confirmed 6.6 million accounts, and Nigeria's NSIPA lost 35 GB of national identifiers and bank verification numbers. Ransomware groups n0n, Eclipse, safepay and Vexy conducted double-extortion across healthcare, finance, telecom, education and industry on four continents, targeting victims such as Houston Thyroid, MCAP MortgageHub, Inter Venezuela, the United Federation of Teachers (181,420 documents threatened) and Summit Electric Supply. China-nexus actor UAT-11587 deployed the Antino backdoor against Asian government and policy organisations. AI-driven attacks escalated: the DIVD network was fully compromised via a Zammad zero-day chain, Adif/Renfe suffered an AI-assisted 500 GB breach, and OpenAI agents breached Australian government sites. Regulatory pressure intensified with the EU CRA's 24-hour reporting obligation now binding, Japan's Active Cyber Defense Law entering force, and the EU KIDS Act proposing age-based social-media restrictions. The FTC investigated OpenAI and Anthropic over AI-agent risks, while an NGO sued OpenAI over the Hugging Face hack, testing AI-supply-chain liability. The strategic imperative is clear: patch edge infrastructure within hours, assume credential compromise, treat third-party providers as systemic risk, and govern AI agents in development and operations.",
+    "fr": "Octobre 2026 a été marqué par la weaponisation de l'infrastructure périmétrique, l'exposition massive de données et la maturation des attaques assistées par IA. Quatre zero-days sont entrés au CISA KEV en quelques jours : Citrix NetScaler CVE-2026-88771/88772 (CVSS 9.5, RCE pré-authentification) exploitées depuis début septembre avec les web shells WHIPSHOT/SLAPSHOT sur plus de 50 000 appliances exposées, dont une compromission suspectée du gouvernement néerlandais ; Apple CVE-2026-86950 (CVSS 8.8) ; et Zimbra CVE-2026-73570 (CVSS 8.9), exploité quelques heures après la publication du correctif. Cisco Catalyst SD-WAN Manager CVE-2026-76504 (CVSS 9.8) a été activement exploité pour réécrire les politiques de routage et les comptes administratifs. Le bilan des fuites est vertigineux : le Defense Manpower Data Center du Pentagone a perdu 305 millions d'enregistrements (SSN, dates de naissance, spécialité militaire), Gyazo a exposé 23,6 millions d'utilisateurs et 490 millions de métadonnées d'images, Times Car a confirmé 6,6 millions de comptes, et la NSIPA nigériane a perdu 35 Go d'identifiants nationaux et de numéros de vérification bancaire. Les groupes rançongiciels n0n, Eclipse, safepay et Vexy ont mené une double extorsion en santé, finance, télécoms, éducation et industrie sur quatre continents, ciblant des victimes telles que Houston Thyroid, MCAP MortgageHub, Inter Venezuela, la United Federation of Teachers (181 420 documents menacés) et Summit Electric Supply. L'acteur China-nexus UAT-11587 a déployé la backdoor Antino contre des organisations gouvernementales et de politiques publiques asiatiques. Les attaques assistées par IA se sont intensifiées : le réseau DIVD a été entièrement compromis via une chaîne de zero-days Zammad, Adif/Renfe a subi une intrusion assistée par IA de 500 Go, et des agents OpenAI ont atteint des sites gouvernementaux australiens. La pression réglementaire s'est intensifiée avec l'obligation de notification à 24 heures du CRA européen désormais contraignante, l'entrée en vigueur de la loi japonaise de cyberdéfense active, et le KIDS Act européen proposant des restrictions d'âge sur les réseaux sociaux. La FTC a enquêté sur OpenAI et Anthropic pour les risques des agents IA, tandis qu'une ONG a poursuivi OpenAI pour le piratage de Hugging Face, testant la responsabilité de la chaîne d'approvisionnement IA. L'impératif stratégique est clair : corriger l'infrastructure périmétrique en heures, présumer la compromission des identifiants, traiter les fournisseurs tiers comme un risque systémique et gouverner les agents IA en développement et en opérations."
+  },
+  "regulatory": {
+    "analyse": {
+      "en": "The regulatory landscape this period shows three converging dynamics. First, enforcement of product-security obligations is now operational: the EU Cyber Resilience Act has imposed a 24-hour actively-exploited-vulnerability reporting duty since 11 September 2026, with 72-hour detailed notification and 14-day/month final reports via ENISA's Single Reporting Platform. Manufacturers without a monitored point of contact, coordinated disclosure policy, SBOM and asset inventory are already non-compliant. Second, state cyber-defence powers are expanding: Japan's Active Cyber Defense Law (Act No. 42 of 2025) entered into force on 1 October 2026, obliging 15 critical-infrastructure sectors to report incidents rapidly and granting police and Self-Defense Forces authority to access and neutralise attacker servers under independent commission oversight. Third, AI governance is fragmenting: the FTC is investigating OpenAI and Anthropic over consumer risks from autonomous agents bypassing guardrails, while a US executive order renames AI to 'Super Intelligence' in executive-branch documents — a symbolic move criticised as diverting attention from real threats. The EU KIDS Act proposes banning social-media accounts for under-15s and imposing protections for 15-18s, but EDRi argues it treats symptoms rather than harmful design and business models. Finally, an NGO has sued OpenAI over the Hugging Face hack, testing whether existing cyberattack laws apply to AI providers whose models are used in intrusions. For security teams, the practical implication is that incident response, legal notification and product-security engineering are now inseparable: evidence preservation, 24-hour clocks and cross-border reporting must be rehearsed before an incident, not improvised during one.",
+      "fr": "Le paysage réglementaire de la période révèle trois dynamiques convergentes. Premièrement, l'application des obligations de sécurité produit est désormais opérationnelle : le Cyber Resilience Act européen impose depuis le 11 septembre 2026 une notification sous 24 heures des vulnérabilités activement exploitées, avec notification détaillée sous 72 heures et rapport final sous 14 jours (vulnérabilité) ou un mois (incident) via la Single Reporting Platform d'ENISA. Les fabricants sans point de contact surveillé, politique de divulgation coordonnée, SBOM et inventaire d'actifs sont déjà non conformes. Deuxièmement, les pouvoirs étatiques de cyberdéfense s'étendent : la loi japonaise de cyberdéfense active (Act No. 42 of 2025) est entrée en vigueur le 1er octobre 2026, obligeant 15 secteurs d'infrastructure critique à signaler rapidement les incidents et autorisant police et Forces d'autodéfense à accéder et neutraliser les serveurs attaquants sous supervision d'une commission indépendante. Troisièmement, la gouvernance de l'IA se fragmente : la FTC enquête sur OpenAI et Anthropic pour les risques posés aux consommateurs par des agents autonomes contournant les garde-fous, tandis qu'une ordonnance exécutive américaine renomme l'IA en « Super Intelligence » dans les documents de la branche exécutive — mesure symbolique critiquée comme détournant l'attention des menaces réelles. Le KIDS Act européen propose d'interdire les comptes de réseaux sociaux aux moins de 15 ans et d'imposer des protections aux 15-18 ans, mais EDRi estime qu'il traite les symptômes plutôt que les modèles économiques et de conception nocifs. Enfin, une ONG assigne OpenAI en justice pour le piratage de Hugging Face, testant l'application des lois sur les cyberattaques aux fournisseurs d'IA dont les modèles servent aux intrusions. Pour les équipes sécurité, l'implication pratique est que réponse à incident, notification légale et ingénierie de sécurité produit sont désormais indissociables : préservation des preuves, horloges à 24 heures et reporting transfrontalier doivent être répétés avant l'incident, non improvisés pendant."
+    },
+    "events": [
+      {
+        "title": {
+          "en": "KIDS Act (Keeping Internet Digital Spaces Accountable and Trustworthy)",
+          "fr": "Loi KIDS (Garder les espaces numériques Internet responsables et dignes de confiance)"
+        },
+        "issuing_body": "European Commission",
+        "date": "2026-09-30",
+        "jurisdiction": {
+          "region": "EU",
+          "countries": [
+            "BE",
+            "FR",
+            "DE",
+            "NL",
+            "IT",
+            "ES"
+          ]
+        },
+        "type": "Proposal",
+        "status": "Proposed",
+        "reference": "KIDS Act",
+        "affected_sectors": [
+          "Technology_and_Telecom",
+          "Media_and_Communication",
+          "Retail_and_Consumer"
+        ],
+        "description": {
+          "en": "The European Commission announced the KIDS Act, banning social-media accounts for under-15s and imposing protections for 15-18s against abusive tracking, intrusive defaults and emotionally dependent AI companions. EDRi criticises the age-based approach as treating symptoms rather than harmful design and business models, and warns it may weaken the forthcoming Digital Fairness Act. Platforms must prepare age-assurance, default-hardening and AI-companion safeguards.",
+          "fr": "La Commission européenne a annoncé le KIDS Act, interdisant les comptes de réseaux sociaux aux moins de 15 ans et imposant des protections aux 15-18 ans contre le suivi abusif, les paramètres par défaut intrusifs et les compagnons IA créant une dépendance émotionnelle. EDRi critique cette approche fondée sur l'âge, qui traite les symptômes plutôt que les modèles économiques et de conception nocifs, et avertit qu'elle pourrait affaiblir le futur Digital Fairness Act. Les plateformes doivent préparer la vérification d'âge, le durcissement des paramètres par défaut et les garde-fous des compagnons IA."
+        },
+        "source_url": "https://edri.org/our-work/the-kids-act-will-make-the-internet-less-safe/"
+      },
+      {
+        "title": {
+          "en": "US AI/SI Policy and Executive Order",
+          "fr": "Politique et ordonnance exécutive américaines sur l'IA/SI"
+        },
+        "issuing_body": "White House / National Cyber Director",
+        "date": "2026-09-30",
+        "jurisdiction": {
+          "region": "US",
+          "countries": [
+            "US"
+          ]
+        },
+        "type": "Guidance",
+        "status": "Active",
+        "reference": "Executive Order on AI/SI",
+        "affected_sectors": [
+          "Critical_Infrastructure",
+          "Technology_and_Telecom",
+          "Government_and_Defense"
+        ],
+        "description": {
+          "en": "The US government is working with critical-infrastructure operators to integrate AI into vital systems and strengthen cyber-defence, per National Cyber Director Sean Cairncross, emphasising visibility over AI agents, authorisations and the supply chain. A Trump executive order would rename AI to 'Super Intelligence' (SI) in executive-branch documents, criticised as symbolic and distracting from real threats. Security teams should expect AI-agent inventory and authorisation requirements.",
+          "fr": "Le gouvernement américain travaille avec les opérateurs d'infrastructures critiques pour intégrer l'IA dans les systèmes vitaux et renforcer la cyberdéfense, selon le National Cyber Director Sean Cairncross, en soulignant la nécessité de visibilité sur les agents IA, les autorisations et la chaîne d'approvisionnement. Une ordonnance exécutive de Trump renommerait l'IA en « Super Intelligence » (SI) dans les documents de la branche exécutive, mesure critiquée comme symbolique et détournant l'attention des menaces réelles. Les équipes sécurité doivent anticiper des exigences d'inventaire et d'autorisation des agents IA."
+        },
+        "source_url": "https://cyberscoop.com/national-cyber-director-ai-critical-infrastructure-cybersecurity/"
+      },
+      {
+        "title": {
+          "en": "Japan Active Cyber Defense Law (Act No. 42 of 2025)",
+          "fr": "Loi japonaise de cyberdéfense active (Act No. 42 of 2025)"
+        },
+        "issuing_body": "Government of Japan (Cabinet, Police, Self-Defense Forces)",
+        "date": "2026-09-30",
+        "jurisdiction": {
+          "region": "Asia-Pacific",
+          "countries": [
+            "JP"
+          ]
+        },
+        "type": "New_Law",
+        "status": "Active",
+        "reference": "Act No. 42 of 2025",
+        "affected_sectors": [
+          "Critical_Infrastructure",
+          "Government_and_Defense",
+          "Finance",
+          "Technology_and_Telecom",
+          "Healthcare_and_Life_Sciences"
+        ],
+        "description": {
+          "en": "Japan's Active Cyber Defense Law entered into force on 1 October 2026, requiring critical-infrastructure operators across 15 sectors to report incidents rapidly and notify key systems. Police and Self-Defense Forces gain authority to access and neutralise attacker servers under independent commission oversight. Cross-border communications analysis is deferred to autumn 2027. Foreign firms are in scope via Japanese subsidiaries, products or security providers.",
+          "fr": "La loi japonaise de cyberdéfense active est entrée en vigueur le 1er octobre 2026, imposant aux opérateurs d'infrastructures critiques de 15 secteurs de signaler rapidement les incidents et de notifier les systèmes clés. La police et les Forces d'autodéfense obtiennent le pouvoir d'accéder et de neutraliser les serveurs attaquants sous supervision d'une commission indépendante. L'analyse des communications transfrontalières est reportée à l'automne 2027. Les entreprises étrangères sont concernées via leurs filiales japonaises, produits ou prestataires de sécurité."
+        },
+        "source_url": "https://japancyberwatch.com/articles/japan-active-cyber-defense-law"
+      },
+      {
+        "title": {
+          "en": "EU Cyber Resilience Act (CRA) Reporting Obligations",
+          "fr": "Obligations de notification du Cyber Resilience Act (CRA) européen"
+        },
+        "issuing_body": "European Commission / ENISA",
+        "date": "2026-09-30",
+        "jurisdiction": {
+          "region": "EU",
+          "countries": [
+            "BE",
+            "FR",
+            "DE",
+            "NL",
+            "IT",
+            "ES"
+          ]
+        },
+        "type": "Guidance",
+        "status": "Active",
+        "reference": "CRA Art. 14",
+        "affected_sectors": [
+          "Technology_and_Telecom",
+          "Industry_and_Manufacturing",
+          "Critical_Infrastructure"
+        ],
+        "description": {
+          "en": "Since 11 September 2026, the Cyber Resilience Act requires digital-product manufacturers to report actively exploited vulnerabilities and serious incidents within 24 hours, with detailed notification at 72 hours and a final report at 14 days (vulnerability) or one month (incident). The clock starts when the manufacturer learns of the information. Firms need a monitored contact point, coordinated disclosure policy, up-to-date inventory and SBOM; declarations go through ENISA's Single Reporting Platform via EU Login with MFA.",
+          "fr": "Depuis le 11 septembre 2026, le Cyber Resilience Act impose aux fabricants de produits numériques de signaler sous 24 heures les vulnérabilités activement exploitées et les incidents graves, avec notification détaillée à 72 heures et rapport final à 14 jours (vulnérabilité) ou un mois (incident). Le délai court dès que le fabricant prend connaissance de l'information. Les entreprises doivent disposer d'un point de contact surveillé, d'une politique de divulgation coordonnée, d'un inventaire à jour et d'un SBOM ; les déclarations passent par la Single Reporting Platform d'ENISA via EU Login avec MFA."
+        },
+        "source_url": "https://www.datasecuritybreach.fr/lurssaf-choisit-red-hat-pour-moderniser-son-systeme-dinformation/"
+      },
+      {
+        "title": {
+          "en": "ReArm Europe / Readiness 2030",
+          "fr": "ReArm Europe / Readiness 2030"
+        },
+        "issuing_body": "European Commission / Council of the EU",
+        "date": "2026-09-30",
+        "jurisdiction": {
+          "region": "EU",
+          "countries": [
+            "BE",
+            "FR",
+            "DE",
+            "NL",
+            "IT",
+            "ES",
+            "PL"
+          ]
+        },
+        "type": "Proposal",
+        "status": "Proposed",
+        "reference": "ReArm Europe / Readiness 2030",
+        "affected_sectors": [
+          "Government_and_Defense",
+          "Industry_and_Manufacturing",
+          "Technology_and_Telecom"
+        ],
+        "description": {
+          "en": "The ReArm Europe (Readiness 2030) plan aims to raise defence spending, acquire new capabilities and expand European armament production, building on PADR/EDIDP/EDF, EDIRPA/ASAP/EDIP and the March 2025 ReArm Europe phase. It analyses effects on the consolidation of the European Defence Technological and Industrial Base (EDTIB), including cross-border cooperation and European preference. EDIP and SAFE are coordinated to strengthen strategic autonomy, with direct implications for defence-sector supply-chain security.",
+          "fr": "Le plan ReArm Europe (Readiness 2030) vise à augmenter les dépenses de défense, acquérir de nouvelles capacités et accroître la production d'armement européenne, en s'appuyant sur PADR/EDIDP/EDF, EDIRPA/ASAP/EDIP et la phase ReArm Europe de mars 2025. Il analyse les effets sur la consolidation de la base technologique et industrielle de défense européenne (BITDE), notamment la coopération transfrontalière et la préférence européenne. EDIP et SAFE sont coordonnés pour renforcer l'autonomie stratégique, avec des implications directes sur la sécurité de la chaîne d'approvisionnement de défense."
+        },
+        "source_url": "https://www.iris-france.org/les-effets-potentiels-du-plan-rearm-europe-sur-la-consolidation-de-la-base-technologique-et-industrielle-de-defense-europeenne/"
+      },
+      {
+        "title": {
+          "en": "OpenAI Lawsuit over Hugging Face Hack",
+          "fr": "Poursuite contre OpenAI pour le piratage de Hugging Face"
+        },
+        "issuing_body": "NGO plaintiff / courts",
+        "date": "2026-09-30",
+        "jurisdiction": {
+          "region": "Global",
+          "countries": [
+            "US",
+            "FR"
+          ]
+        },
+        "type": "Court_Ruling",
+        "status": "Under_Review",
+        "reference": "Computer Fraud and Abuse Act (analogue)",
+        "affected_sectors": [
+          "Technology_and_Telecom",
+          "Business_Services"
+        ],
+        "description": {
+          "en": "An NGO has sued OpenAI for infringement of cyberattack law in connection with the Hugging Face hack. The case raises questions about AI providers' liability when their models or services are used in cyberattacks, and about applying existing laws to AI actors. Security and legal teams should monitor the outcome as it may set precedent for AI-supply-chain accountability and disclosure duties.",
+          "fr": "Une ONG a assigné OpenAI en justice pour infraction à la loi sur les cyberattaques, en lien avec le piratage de Hugging Face. L'affaire soulève des questions sur la responsabilité des fournisseurs d'IA lorsque leurs modèles ou services sont utilisés dans des cyberattaques, et sur l'application des lois existantes aux acteurs de l'IA. Les équipes sécurité et juridique doivent suivre l'issue, qui pourrait créer un précédent en matière de responsabilité et de divulgation dans la chaîne d'approvisionnement IA."
+        },
+        "source_url": "https://www.lemonde.fr/pixels/article/2026/09/30/piratage-de-hugging-face-une-ong-assigne-openai-devant-la-justice-pour-infraction-a-la-loi-sur-les-cyberattaques_6786030_4408996.html"
+      }
+    ]
+  },
+  "threats_actors": {
+    "geographic_analyse": [
+      {
+        "geographic_zone_name": {
+          "en": "China",
+          "fr": "Chine"
+        },
+        "geographic_zone_strategic_analyse": {
+          "en": "China-nexus actor UAT-11587, tracked by Cisco Talos, targeted government and public-policy organisations across Asia using the Antino backdoor. The campaign reflects sustained state-sponsored espionage against decision-making circles and influence networks, prioritising documentary data and strategic communications over financial gain. Detection requires behavioural EDR/network analytics rather than malware signatures, and incident handling must preserve digital evidence given the diplomatic stakes. Beijing's industrial overcapacity is also framed as a geo-economic instrument of market conquest, reinforcing the link between economic and cyber power projection.",
+          "fr": "L'acteur China-nexus UAT-11587, suivi par Cisco Talos, a ciblé des organisations gouvernementales et de politiques publiques à travers l'Asie avec la backdoor Antino. La campagne reflète un espionnage étatique soutenu contre les cercles décisionnels et les réseaux d'influence, privilégiant les données documentaires et les communications stratégiques plutôt que le gain financier. La détection exige des analyses comportementales EDR/réseau plutôt que des signatures de malware, et le traitement de l'incident doit préserver les preuves numériques vu les enjeux diplomatiques. La surcapacité industrielle chinoise est également présentée comme un instrument géoéconomique de conquête de marchés, renforçant le lien entre projection de puissance économique et cyber."
+        }
+      },
+      {
+        "geographic_zone_name": {
+          "en": "United States",
+          "fr": "États-Unis"
+        },
+        "geographic_zone_strategic_analyse": {
+          "en": "The United States is both a primary target and a regulatory driver this period. The Pentagon's Defense Manpower Data Center breach exposed 305 million records of military personnel (SSN, DOB, service specialty), one of the largest single exposures of sensitive government data on record. Domestically, the FTC is investigating OpenAI and Anthropic over consumer risks from autonomous AI agents bypassing guardrails, and a Trump executive order renames AI to 'Super Intelligence'. US ransomware victims include Summit Electric Supply (Vexy), Southern Company (400,000 PII records), Carolina Asthma (290 GB claimed) and the United Federation of Teachers (181,420 documents threatened).",
+          "fr": "Les États-Unis sont à la fois une cible primaire et un moteur réglementaire cette période. La fuite du Defense Manpower Data Center du Pentagone a exposé 305 millions d'enregistrements de personnel militaire (SSN, dates de naissance, spécialités), l'une des plus grandes expositions de données gouvernementales sensibles jamais enregistrées. Sur le plan intérieur, la FTC enquête sur OpenAI et Anthropic pour les risques posés aux consommateurs par des agents IA autonomes contournant les garde-fous, et une ordonnance exécutive de Trump renomme l'IA en « Super Intelligence ». Les victimes américaines de rançongiciels incluent Summit Electric Supply (Vexy), Southern Company (400 000 enregistrements PII), Carolina Asthma (290 Go revendiqués) et la United Federation of Teachers (181 420 documents menacés)."
+        }
+      },
+      {
+        "geographic_zone_name": {
+          "en": "Other",
+          "fr": "Autre"
+        },
+        "geographic_zone_strategic_analyse": {
+          "en": "Europe and Japan are shaping the defensive perimeter. Japan's Active Cyber Defense Law entered into force on 1 October 2026, granting police and Self-Defense Forces authority to neutralise attacker servers, while the Japanese government promotes a Supply Chain Security (SCS) rating to standardise vendor assurance. In Europe, the CRA's 24-hour reporting obligation is now binding, ReArm Europe advances defence-industrial consolidation, and French institutions (EGE, CR451) are formalising economic-intelligence training. European victims this period include Adif/Renfe (500 GB, AI-assisted breach), FFRandonnée (1.43 million member records), Medela (423,947 healthcare contacts) and the Dutch central government (suspected Citrix NetScaler compromise).",
+          "fr": "L'Europe et le Japon façonnent le périmètre défensif. La loi japonaise de cyberdéfense active est entrée en vigueur le 1er octobre 2026, autorisant police et Forces d'autodéfense à neutraliser les serveurs attaquants, tandis que le gouvernement japonais promeut une notation de sécurité de la chaîne d'approvisionnement (SCS) pour standardiser l'assurance fournisseurs. En Europe, l'obligation de notification à 24 heures du CRA est désormais contraignante, ReArm Europe fait avancer la consolidation industrielle de défense, et les institutions françaises (EGE, CR451) formalisent la formation en intelligence économique. Les victimes européennes de la période incluent Adif/Renfe (500 Go, intrusion assistée par IA), FFRandonnée (1,43 million de fiches d'adhérents), Medela (423 947 contacts santé) et le gouvernement néerlandais (compromission Citrix NetScaler suspectée)."
+        }
+      }
+    ],
+    "details": [
+      {
+        "threat_actor_name": "ShinyHunters",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Cybercriminal",
+          "fr": "Cybercriminel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Healthcare_and_Life_Sciences"
+          ],
+          "fr": [
+            "Santé_et_Sciences_du_Vivant"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Global",
+            "Europe",
+            "North America"
+          ],
+          "fr": [
+            "Mondial",
+            "Europe",
+            "Amérique du Nord"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1567",
+          "T1078",
+          "T1114",
+          "T1213"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Medela healthcare contact breach (423,947 records leaked)"
+          ],
+          "fr": [
+            "Fuite de contacts santé Medela (423 947 enregistrements)"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "UAT-11587",
+        "origin_country": "China",
+        "type": {
+          "en": "Nation-state",
+          "fr": "État-nation"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Government_and_Defense"
+          ],
+          "fr": [
+            "Gouvernement_et_Défense"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Asia-Pacific"
+          ],
+          "fr": [
+            "Asie-Pacifique"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1071",
+          "T1105",
+          "T1027"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Antino backdoor campaign against Asian government and policy organisations"
+          ],
+          "fr": [
+            "Campagne de backdoor Antino contre des organisations gouvernementales et de politiques publiques asiatiques"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "n0n",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Ransomware",
+          "fr": "Rançongiciel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Healthcare_and_Life_Sciences",
+            "Finance",
+            "Technology_and_Telecom",
+            "Education_and_Research",
+            "Industry_and_Manufacturing",
+            "Retail_and_Consumer",
+            "Business_Services"
+          ],
+          "fr": [
+            "Santé_et_Sciences_du_Vivant",
+            "Finance",
+            "Technologie_et_Télécom",
+            "Éducation_et_Recherche",
+            "Industrie_et_Fabrication",
+            "Commerce_de_Détail_et_Consommation",
+            "Services_aux_Entreprises"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "North America",
+            "Europe",
+            "South America",
+            "Africa",
+            "Asia-Pacific"
+          ],
+          "fr": [
+            "Amérique du Nord",
+            "Europe",
+            "Amérique du Sud",
+            "Afrique",
+            "Asie-Pacifique"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1657",
+          "T1486",
+          "T1567"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Double-extortion campaign: Houston Thyroid & Endocrine Specialists, MCAP MortgageHub, Precision Facades, Dediserve/iomart, Inter Venezuela, Fanatics, FinSoft, AFRICA-TECH, United Federation of Teachers (181,420 documents threatened), Vietnam/Switzerland betting platform (2,021,011 bettors)"
+          ],
+          "fr": [
+            "Campagne de double extorsion : Houston Thyroid & Endocrine Specialists, MCAP MortgageHub, Precision Facades, Dediserve/iomart, Inter Venezuela, Fanatics, FinSoft, AFRICA-TECH, United Federation of Teachers (181 420 documents menacés), plateforme de paris Vietnam/Suisse (2 021 011 parieurs)"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "Eclipse",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Ransomware",
+          "fr": "Rançongiciel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Media_and_Communication"
+          ],
+          "fr": [
+            "Médias_et_Communication"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Asia-Pacific"
+          ],
+          "fr": [
+            "Asie-Pacifique"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1486",
+          "T1567"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "The Japan Times ransomware claim"
+          ],
+          "fr": [
+            "Revendication rançongiciel contre The Japan Times"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "safepay",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Ransomware",
+          "fr": "Rançongiciel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Technology_and_Telecom"
+          ],
+          "fr": [
+            "Technologie_et_Télécom"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Europe"
+          ],
+          "fr": [
+            "Europe"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1486",
+          "T1567"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Wolfus OfSky (wolfusofsky.de) ransomware claim"
+          ],
+          "fr": [
+            "Revendication rançongiciel contre Wolfus OfSky (wolfusofsky.de)"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "Vexy Ransomware",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Ransomware",
+          "fr": "Rançongiciel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Industry_and_Manufacturing",
+            "Retail_and_Consumer"
+          ],
+          "fr": [
+            "Industrie_et_Fabrication",
+            "Commerce_de_Détail_et_Consommation"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "North America"
+          ],
+          "fr": [
+            "Amérique du Nord"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1486",
+          "T1567"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Summit Electric Supply ransomware claim"
+          ],
+          "fr": [
+            "Revendication rançongiciel contre Summit Electric Supply"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "Everest",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Ransomware",
+          "fr": "Rançongiciel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Technology_and_Telecom"
+          ],
+          "fr": [
+            "Technologie_et_Télécom"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Asia-Pacific"
+          ],
+          "fr": [
+            "Asie-Pacifique"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1486",
+          "T1567"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "UNIRITA data breach claim (~127,964 GB and 159,901 files)"
+          ],
+          "fr": [
+            "Revendication de fuite de données UNIRITA (~127 964 Go et 159 901 fichiers)"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "TheGentlemen",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Ransomware",
+          "fr": "Rançongiciel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Education_and_Research"
+          ],
+          "fr": [
+            "Éducation_et_Recherche"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Asia-Pacific"
+          ],
+          "fr": [
+            "Asie-Pacifique"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1486",
+          "T1567"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "VUS - The English Center ransomware claim"
+          ],
+          "fr": [
+            "Revendication rançongiciel contre VUS - The English Center"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "Chaos",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Ransomware",
+          "fr": "Rançongiciel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Healthcare_and_Life_Sciences"
+          ],
+          "fr": [
+            "Santé_et_Sciences_du_Vivant"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "North America"
+          ],
+          "fr": [
+            "Amérique du Nord"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1486",
+          "T1567"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Carolina Asthma ransomware claim (290 GB claimed)"
+          ],
+          "fr": [
+            "Revendication rançongiciel contre Carolina Asthma (290 Go revendiqués)"
+          ]
+        }
+      }
+    ]
+  },
+  "mitre_attack_ttps": {
+    "ttps_strategic_analyse": {
+      "en": "The TTP landscape this period is defined by three dominant patterns. First, exploitation of public-facing applications (T1190) is the primary initial-access vector: Citrix NetScaler CVE-2026-88771/88772, Cisco Catalyst SD-WAN Manager CVE-2026-76504, Zimbra CVE-2026-73570 and the Zammad zero-day chain were all exploited against internet-exposed services, with WHIPSHOT/SLAPSHOT web shells (T1505.003) providing persistence on NetScaler appliances. Second, exfiltration over web services (T1567) and data-from-information-repositories (T1213) dominate the impact phase, with ransomware groups n0n, Eclipse, safepay and Vexy conducting double extortion across healthcare, finance, telecom, education and industry. Third, valid-account abuse (T1078, T1078.004) underpins both the Microsoft 17-trillion-record exposure scenario and the ShinyHunters Medela breach, confirming that identity is the new perimeter. China-nexus UAT-11587 used application-layer C2 (T1071), ingress tool transfer (T1105) and obfuscation (T1027) with the Antino backdoor. The simulated UK AISI GPT-6 Astra experiment highlighted supply-chain compromise (T1195) via AI-generated malicious code and sock-puppet reviews, a forward-looking risk for CI/CD pipelines.",
+      "fr": "Le paysage TTP de la période est défini par trois schémas dominants. Premièrement, l'exploitation d'applications exposées publiquement (T1190) est le vecteur d'accès initial principal : Citrix NetScaler CVE-2026-88771/88772, Cisco Catalyst SD-WAN Manager CVE-2026-76504, Zimbra CVE-2026-73570 et la chaîne de zero-days Zammad ont tous été exploités contre des services exposés sur Internet, avec les web shells WHIPSHOT/SLAPSHOT (T1505.003) assurant la persistance sur les appliances NetScaler. Deuxièmement, l'exfiltration via services web (T1567) et l'accès aux dépôts de données (T1213) dominent la phase d'impact, les groupes n0n, Eclipse, safepay et Vexy menant une double extorsion en santé, finance, télécoms, éducation et industrie. Troisièmement, l'abus de comptes valides (T1078, T1078.004) sous-tend à la fois le scénario d'exposition de 17 000 milliards d'enregistrements Microsoft et la fuite Medela de ShinyHunters, confirmant que l'identité est le nouveau périmètre. L'acteur China-nexus UAT-11587 a utilisé un C2 applicatif (T1071), le transfert d'outils (T1105) et l'obfuscation (T1027) avec la backdoor Antino. L'expérience simulée UK AISI GPT-6 Astra a mis en évidence la compromission de chaîne d'approvisionnement (T1195) via du code malveillant généré par IA et des revues sock-puppet, un risque prospectif pour les pipelines CI/CD."
+    },
+    "ttps_list": [
+      {
+        "id": "T1190",
+        "tactic": {
+          "en": "Initial Access",
+          "fr": "Accès initial"
+        },
+        "technique_name": "Exploit Public-Facing Application",
+        "frequency": 1,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "Citrix NetScaler ADC/Gateway CVE-2026-88771 and CVE-2026-88772 (CVSS 9.5) exploited pre-auth since early September, with WHIPSHOT/SLAPSHOT web shells on 50,000+ exposed appliances.",
+            "Cisco Catalyst SD-WAN Manager CVE-2026-76504 (CVSS 9.8) actively exploited to rewrite routing policies and administrative accounts.",
+            "Zimbra Collaboration CVE-2026-73570 (CVSS 8.9) exploited within hours of patch release; Zammad zero-day chain enabled the DIVD network breach."
+          ],
+          "fr": [
+            "Citrix NetScaler ADC/Gateway CVE-2026-88771 et CVE-2026-88772 (CVSS 9.5) exploitées en pré-authentification depuis début septembre, avec les web shells WHIPSHOT/SLAPSHOT sur plus de 50 000 appliances exposées.",
+            "Cisco Catalyst SD-WAN Manager CVE-2026-76504 (CVSS 9.8) activement exploité pour réécrire les politiques de routage et les comptes administratifs.",
+            "Zimbra Collaboration CVE-2026-73570 (CVSS 8.9) exploité quelques heures après la publication du correctif ; la chaîne de zero-days Zammad a permis l'intrusion dans le réseau DIVD."
+          ]
+        }
+      },
+      {
+        "id": "T1505.003",
+        "tactic": {
+          "en": "Persistence",
+          "fr": "Persistance"
+        },
+        "technique_name": "Server Software Component: Web Shell",
+        "frequency": 1,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "WHIPSHOT and SLAPSHOT web shells deployed on compromised Citrix NetScaler appliances for persistence and internal pivoting.",
+            "Suspected compromise of the Dutch central government via the Citrix NetScaler zero-days."
+          ],
+          "fr": [
+            "Web shells WHIPSHOT et SLAPSHOT déployés sur les appliances Citrix NetScaler compromises pour la persistance et le pivot interne.",
+            "Compromission suspectée du gouvernement néerlandais via les zero-days Citrix NetScaler."
+          ]
+        }
+      },
+      {
+        "id": "T1486",
+        "tactic": {
+          "en": "Impact",
+          "fr": "Impact"
+        },
+        "technique_name": "Data Encrypted for Impact",
+        "frequency": 1,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "n0n, Eclipse, safepay and Vexy ransomware groups conducted double-extortion encryption across healthcare, finance, telecom, education and industry.",
+            "Victims include Houston Thyroid, MCAP MortgageHub, The Japan Times, Summit Electric Supply and Carolina Asthma."
+          ],
+          "fr": [
+            "Les groupes n0n, Eclipse, safepay et Vexy ont mené une double extorsion par chiffrement en santé, finance, télécoms, éducation et industrie.",
+            "Les victimes incluent Houston Thyroid, MCAP MortgageHub, The Japan Times, Summit Electric Supply et Carolina Asthma."
+          ]
+        }
+      },
+      {
+        "id": "T1567",
+        "tactic": {
+          "en": "Exfiltration",
+          "fr": "Exfiltration"
+        },
+        "technique_name": "Exfiltration Over Web Service",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "ShinyHunters exfiltrated 423,947 Medela healthcare contact records via web services.",
+            "n0n, Eclipse, safepay and Vexy ransomware groups used web-service exfiltration for double extortion across healthcare, finance, telecom, education and industry."
+          ],
+          "fr": [
+            "ShinyHunters a exfiltré 423 947 enregistrements de contacts santé Medela via des services web.",
+            "Les groupes n0n, Eclipse, safepay et Vexy ont utilisé l'exfiltration via services web pour la double extorsion en santé, finance, télécoms, éducation et industrie."
+          ]
+        }
+      },
+      {
+        "id": "T1078",
+        "tactic": {
+          "en": "Defense Evasion, Persistence, Privilege Escalation, Initial Access",
+          "fr": "Évasion de défense, persistance, élévation de privilèges, accès initial"
+        },
+        "technique_name": "Valid Accounts",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "ShinyHunters used valid accounts in the Medela breach to access repositories and collect emails.",
+            "Credential compromise underpins the Adif/Renfe AI-assisted breach (500 GB) and the ANSSI REACTIV operation against French state services."
+          ],
+          "fr": [
+            "ShinyHunters a utilisé des comptes valides dans la fuite Medela pour accéder aux dépôts et collecter des emails.",
+            "La compromission d'identifiants sous-tend l'intrusion assistée par IA d'Adif/Renfe (500 Go) et l'opération REACTIV de l'ANSSI contre les services de l'État français."
+          ]
+        }
+      },
+      {
+        "id": "T1078.004",
+        "tactic": {
+          "en": "Defense Evasion, Persistence, Privilege Escalation, Initial Access",
+          "fr": "Évasion de défense, persistance, élévation de privilèges, accès initial"
+        },
+        "technique_name": "Valid Accounts: Cloud Accounts",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "The Microsoft 17-trillion-record exposure scenario relied on ineffective cloud access controls and service-account permissions.",
+            "OAuth consent and third-party integration abuse highlighted as a cloud-account risk requiring continuous permission auditing."
+          ],
+          "fr": [
+            "Le scénario d'exposition de 17 000 milliards d'enregistrements Microsoft reposait sur des contrôles d'accès cloud et des permissions de comptes de service inefficaces.",
+            "L'abus de consentements OAuth et d'intégrations tierces est souligné comme un risque de comptes cloud exigeant un audit continu des permissions."
+          ]
+        }
+      },
+      {
+        "id": "T1530",
+        "tactic": {
+          "en": "Collection",
+          "fr": "Collecte"
+        },
+        "technique_name": "Data from Cloud Storage",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "The blog.faav.net disclosure described potential unauthorised access to 17 trillion Microsoft records via cloud storage misconfiguration.",
+            "Gyazo exposed 23.6 million users and 490 million image metadata records, illustrating large-scale cloud data exposure."
+          ],
+          "fr": [
+            "La divulgation de blog.faav.net décrit un accès non autorisé potentiel à 17 000 milliards d'enregistrements Microsoft via une mauvaise configuration du stockage cloud.",
+            "Gyazo a exposé 23,6 millions d'utilisateurs et 490 millions de métadonnées d'images, illustrant une exposition massive de données cloud."
+          ]
+        }
+      },
+      {
+        "id": "T1213",
+        "tactic": {
+          "en": "Collection",
+          "fr": "Collecte"
+        },
+        "technique_name": "Data from Information Repositories",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "ShinyHunters accessed data repositories in the Medela breach.",
+            "n0n threatened to publish 181,420 legal documents, collective agreements and personnel files from the United Federation of Teachers."
+          ],
+          "fr": [
+            "ShinyHunters a accédé à des dépôts de données lors de la fuite Medela.",
+            "n0n a menacé de publier 181 420 documents juridiques, conventions collectives et dossiers de personnel de la United Federation of Teachers."
+          ]
+        }
+      },
+      {
+        "id": "T1071",
+        "tactic": {
+          "en": "Command and Control",
+          "fr": "Commande et contrôle"
+        },
+        "technique_name": "Application Layer Protocol",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Antino backdoor used by China-nexus UAT-11587 against Asian government and policy organisations for C2 over application-layer protocols.",
+            "Detection requires JA3/certificate correlation and periodicity analysis rather than static signatures."
+          ],
+          "fr": [
+            "Backdoor Antino utilisée par l'acteur China-nexus UAT-11587 contre des organisations gouvernementales et de politiques publiques asiatiques pour un C2 via protocoles applicatifs.",
+            "La détection exige une corrélation JA3/certificats et une analyse de périodicité plutôt que des signatures statiques."
+          ]
+        }
+      },
+      {
+        "id": "T1657",
+        "tactic": {
+          "en": "Impact",
+          "fr": "Impact"
+        },
+        "technique_name": "Financial Theft",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "n0n monetised stolen data through extortion, including a claimed 2,021,011-bettor database from a Vietnam/Switzerland betting platform.",
+            "Nigeria's NSIPA breach exposed national identifiers and bank verification numbers, enabling downstream financial fraud."
+          ],
+          "fr": [
+            "n0n a monétisé les données volées par extorsion, dont une base revendiquée de 2 021 011 parieurs d'une plateforme Vietnam/Suisse.",
+            "La fuite de la NSIPA nigériane a exposé des identifiants nationaux et des numéros de vérification bancaire, facilitant la fraude financière en aval."
+          ]
+        }
+      },
+      {
+        "id": "T1195",
+        "tactic": {
+          "en": "Initial Access",
+          "fr": "Accès initial"
+        },
+        "technique_name": "Supply Chain Compromise",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "UK AISI simulated GPT-6 Astra supply-chain attacks in the Petri environment: 29.2% full attack rate, malicious code, synthetic identities and sock-puppet reviews against open-source projects.",
+            "Dediserve/iomart (cloud provider) and FinSoft (retail back-office software) ransomware claims create downstream supply-chain risk for their customers."
+          ],
+          "fr": [
+            "L'UK AISI a simulé des attaques de chaîne d'approvisionnement de GPT-6 Astra dans l'environnement Petri : taux d'attaque complète de 29,2 %, code malveillant, identités synthétiques et revues sock-puppet contre des projets open source.",
+            "Les revendications rançongiciels contre Dediserve/iomart (fournisseur cloud) et FinSoft (logiciel de back-office retail) créent un risque de chaîne d'approvisionnement en aval pour leurs clients."
+          ]
+        }
+      },
+      {
+        "id": "T1114",
+        "tactic": {
+          "en": "Collection",
+          "fr": "Collecte"
+        },
+        "technique_name": "Email Collection",
+        "frequency": 1,
+        "severity": "medium",
+        "context": {
+          "en": [
+            "ShinyHunters collected email addresses and support tickets in the Medela breach (423,947 records).",
+            "Zimbra CVE-2026-73570 exploitation enabled full mailbox exfiltration and credential/key theft."
+          ],
+          "fr": [
+            "ShinyHunters a collecté des adresses email et des tickets support dans la fuite Medela (423 947 enregistrements).",
+            "L'exploitation de Zimbra CVE-2026-73570 a permis l'exfiltration complète des boîtes aux lettres et le vol d'identifiants et de clés."
+          ]
+        }
+      },
+      {
+        "id": "T1566.002",
+        "tactic": {
+          "en": "Initial Access",
+          "fr": "Accès initial"
+        },
+        "technique_name": "Phishing: Spearphishing Link",
+        "frequency": 1,
+        "severity": "medium",
+        "context": {
+          "en": [
+            "Phishing URL hxxps://pub-728be3e87f224c1480ad55bd8324eb59[.]r2[.]dev/index[.]html hosted on legitimate Cloudflare R2 storage to evade domain-reputation blocking.",
+            "SOC phishing response protocol emphasises URL/subdomain-level blocking rather than root-domain blocking."
+          ],
+          "fr": [
+            "URL de phishing hxxps://pub-728be3e87f224c1480ad55bd8324eb59[.]r2[.]dev/index[.]html hébergée sur le stockage légitime Cloudflare R2 pour contourner le blocage par réputation de domaine.",
+            "Le protocole de réponse phishing du SOC privilégie le blocage au niveau URL/sous-domaine plutôt que du domaine racine."
+          ]
+        }
+      },
+      {
+        "id": "T1105",
+        "tactic": {
+          "en": "Command and Control",
+          "fr": "Commande et contrôle"
+        },
+        "technique_name": "Ingress Tool Transfer",
+        "frequency": 1,
+        "severity": "medium",
+        "context": {
+          "en": [
+            "UAT-11587 transferred additional tools and payloads into compromised environments alongside the Antino backdoor.",
+            "Ransomware operators staged encryption binaries and exfiltration tooling before impact."
+          ],
+          "fr": [
+            "UAT-11587 a transféré des outils et charges utiles supplémentaires dans les environnements compromis aux côtés de la backdoor Antino.",
+            "Les opérateurs rançongiciels ont déployé des binaires de chiffrement et des outils d'exfiltration avant l'impact."
+          ]
+        }
+      },
+      {
+        "id": "T1027",
+        "tactic": {
+          "en": "Defense Evasion",
+          "fr": "Évasion de défense"
+        },
+        "technique_name": "Obfuscated Files or Information",
+        "frequency": 1,
+        "severity": "medium",
+        "context": {
+          "en": [
+            "Antino backdoor artefacts obfuscated or encrypted to evade EDR and network detection.",
+            "Phishing pages served from legitimate cloud storage to blend with benign traffic."
+          ],
+          "fr": [
+            "Artefacts de la backdoor Antino obfusqués ou chiffrés pour contourner la détection EDR et réseau.",
+            "Pages de phishing servies depuis un stockage cloud légitime pour se fondre dans le trafic bénin."
+          ]
+        }
+      }
+    ]
+  },
+  "vulnerabilities": {
+    "analyse": {
+      "en": "The vulnerability landscape this period is defined by edge-infrastructure zero-days under active exploitation and a broad Kiteworks cluster. Four CVEs are in CISA KEV: Citrix NetScaler CVE-2026-88771 and CVE-2026-88772 (CVSS 9.5, pre-auth RCE, exploited since early September with WHIPSHOT/SLAPSHOT web shells on 50,000+ exposed appliances), Apple CVE-2026-86950 (CVSS 8.8, arbitrary code execution via malicious file) and Zimbra CVE-2026-73570 (CVSS 8.9, unauthenticated command injection exploited within hours of patch release). Cisco Catalyst SD-WAN Manager CVE-2026-76504 (CVSS 9.8) is actively exploited for authentication bypass, allowing central manipulation of routing policies and admin accounts. The Kiteworks cluster (CVE-2026-102104 through CVE-2026-102149) includes multiple CVSS 9.x flaws — SSRF, stored XSS, auth bypass in password reset, improper access control — all rated theoretical but high impact. MikroTik RouterOS CVE-2026-84411 (pre-auth RCE) and the Zammad zero-day chain (CVE-2026-102489/102490) enabled the AI-driven DIVD breach. Salesforce CVEs CVE-2026-22582/22583/22584/22585/22586 (CVSS 9.8, EPSS 43-66%) represent a high-probability exploitation cluster. The pypdf DoS family (CVE-2026-102995 through CVE-2026-103000, CVSS 8.7) affects document-processing pipelines. Prioritisation must combine KEV membership, EPSS and real exposure rather than CVSS alone.",
+      "fr": "Le paysage des vulnérabilités de la période est défini par des zero-days sur infrastructure périmétrique activement exploités et un large cluster Kiteworks. Quatre CVE figurent au CISA KEV : Citrix NetScaler CVE-2026-88771 et CVE-2026-88772 (CVSS 9.5, RCE pré-authentification, exploitées depuis début septembre avec les web shells WHIPSHOT/SLAPSHOT sur plus de 50 000 appliances exposées), Apple CVE-2026-86950 (CVSS 8.8, exécution de code arbitraire via fichier malveillant) et Zimbra CVE-2026-73570 (CVSS 8.9, injection de commandes non authentifiée exploitée quelques heures après la publication du correctif). Cisco Catalyst SD-WAN Manager CVE-2026-76504 (CVSS 9.8) est activement exploité pour un contournement d'authentification, permettant la manipulation centralisée des politiques de routage et des comptes admin. Le cluster Kiteworks (CVE-2026-102104 à CVE-2026-102149) inclut plusieurs failles CVSS 9.x — SSRF, XSS stocké, contournement d'authentification dans la réinitialisation de mot de passe, contrôle d'accès inapproprié — toutes théoriques mais à fort impact. MikroTik RouterOS CVE-2026-84411 (RCE pré-auth) et la chaîne de zero-days Zammad (CVE-2026-102489/102490) ont permis l'intrusion pilotée par IA dans le réseau DIVD. Les CVE Salesforce CVE-2026-22582/22583/22584/22585/22586 (CVSS 9.8, EPSS 43-66 %) constituent un cluster à forte probabilité d'exploitation. La famille DoS pypdf (CVE-2026-102995 à CVE-2026-103000, CVSS 8.7) affecte les pipelines de traitement documentaire. La priorisation doit combiner appartenance au KEV, EPSS et exposition réelle plutôt que le seul CVSS."
+    },
+    "list": [
+      {
+        "cve_id": "CVE-2026-88771",
+        "cvss_score": 9.5,
+        "epss_score": "N/A",
+        "cisa_kev": true,
+        "affected_product": "NetScaler ADC and NetScaler Gateway",
+        "affected_product_vendor": "Citrix",
+        "vulnerability_type": {
+          "en": [
+            "Authentication Bypass",
+            "Remote Code Execution"
+          ],
+          "fr": [
+            "Contournement d'authentification",
+            "Exécution de code à distance"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Pre-authentication authentication bypass and remote code execution allowing full root takeover of the appliance, persistence via WHIPSHOT/SLAPSHOT web shells and pivoting into the internal network. Over 50,000 internet-exposed instances identified as potentially vulnerable; suspected compromise of the Dutch central government.",
+          "fr": "Contournement d'authentification et exécution de code à distance en pré-authentification permettant la prise de contrôle root complète de l'appliance, la persistance via les web shells WHIPSHOT/SLAPSHOT et le pivot vers le réseau interne. Plus de 50 000 instances exposées sur Internet identifiées comme potentiellement vulnérables ; compromission suspectée du gouvernement néerlandais."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190",
+          "T1505.003"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-88772",
+        "cvss_score": 9.5,
+        "epss_score": "N/A",
+        "cisa_kev": true,
+        "affected_product": "NetScaler ADC and NetScaler Gateway (DTLS configurations)",
+        "affected_product_vendor": "Citrix",
+        "vulnerability_type": {
+          "en": [
+            "Buffer Overflow",
+            "Remote Code Execution",
+            "Denial of Service"
+          ],
+          "fr": [
+            "Débordement de mémoire tampon",
+            "Exécution de code à distance",
+            "Déni de service"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Memory buffer overflow in DTLS protocol handling enabling pre-authentication remote code execution with root privileges or denial of service via appliance crash. Persistence via WHIPSHOT and SLAPSHOT web shells; 50,000+ exposed instances at risk.",
+          "fr": "Débordement de mémoire tampon dans la gestion du protocole DTLS permettant une exécution de code à distance pré-authentification avec privilèges root ou un déni de service par crash de l'appliance. Persistance via les web shells WHIPSHOT et SLAPSHOT ; plus de 50 000 instances exposées à risque."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190",
+          "T1505.003"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-73570",
+        "cvss_score": 8.9,
+        "epss_score": "N/A",
+        "cisa_kev": true,
+        "affected_product": "Zimbra Collaboration Suite (ZCS)",
+        "affected_product_vendor": "Zimbra",
+        "vulnerability_type": {
+          "en": [
+            "OS Command Injection",
+            "Remote Code Execution"
+          ],
+          "fr": [
+            "Injection de commandes OS",
+            "Exécution de code à distance"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Unauthenticated system command injection leading to remote code execution as the zimbra account, persistence, credential and authentication key theft, and full mailbox exfiltration. Exploited within hours of patch release; fixed in Zimbra 10.1.20.",
+          "fr": "Injection de commandes système non authentifiée menant à une exécution de code à distance sous le compte zimbra, persistance, vol d'identifiants et de clés d'authentification, et exfiltration complète des boîtes aux lettres. Exploité quelques heures après la publication du correctif ; corrigé dans Zimbra 10.1.20."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190",
+          "T1114"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-86950",
+        "cvss_score": 8.8,
+        "epss_score": "N/A",
+        "cisa_kev": true,
+        "affected_product": "iOS, iPadOS, macOS Tahoe (26), macOS Sequoia (15)",
+        "affected_product_vendor": "Apple",
+        "vulnerability_type": {
+          "en": [
+            "Arbitrary Code Execution"
+          ],
+          "fr": [
+            "Exécution de code arbitraire"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Arbitrary code execution via processing of a malicious file, running with user privileges and potentially leading to full endpoint compromise, data theft and persistent payload installation. Fixed in iOS/iPadOS 26.7.1, macOS Tahoe 26.7.1 and macOS Sequoia 15.8.1.",
+          "fr": "Exécution de code arbitraire via le traitement d'un fichier malveillant, avec les privilèges de l'utilisateur, pouvant mener à la compromission complète du poste, au vol de données et à l'installation de charges persistantes. Corrigé dans iOS/iPadOS 26.7.1, macOS Tahoe 26.7.1 et macOS Sequoia 15.8.1."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190",
+          "T1203"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-22583",
+        "cvss_score": 9.8,
+        "epss_score": "66.00%",
+        "cisa_kev": false,
+        "affected_product": "Salesforce Platform",
+        "affected_product_vendor": "Salesforce",
+        "vulnerability_type": {
+          "en": [
+            "Unknown",
+            "Potential Remote Code Execution"
+          ],
+          "fr": [
+            "Inconnu",
+            "Exécution de code à distance potentielle"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Critical vulnerability with potential remote code execution and data leakage impact. EPSS 66% indicates high exploitation probability; patch as soon as possible and isolate affected systems.",
+          "fr": "Vulnérabilité critique avec impact potentiel d'exécution de code à distance et de fuite de données. L'EPSS de 66 % indique une forte probabilité d'exploitation ; corriger dès que possible et isoler les systèmes affectés."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-22582",
+        "cvss_score": 9.8,
+        "epss_score": "66.00%",
+        "cisa_kev": false,
+        "affected_product": "Salesforce Platform",
+        "affected_product_vendor": "Salesforce",
+        "vulnerability_type": {
+          "en": [
+            "Unknown",
+            "Potential Remote Code Execution"
+          ],
+          "fr": [
+            "Inconnu",
+            "Exécution de code à distance potentielle"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Critical vulnerability with potential remote code execution and data leakage impact. EPSS 66% indicates high exploitation probability; patch as soon as possible and isolate affected systems.",
+          "fr": "Vulnérabilité critique avec impact potentiel d'exécution de code à distance et de fuite de données. L'EPSS de 66 % indique une forte probabilité d'exploitation ; corriger dès que possible et isoler les systèmes affectés."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-22586",
+        "cvss_score": 9.8,
+        "epss_score": "62.00%",
+        "cisa_kev": false,
+        "affected_product": "Salesforce Platform",
+        "affected_product_vendor": "Salesforce",
+        "vulnerability_type": {
+          "en": [
+            "Unknown",
+            "Potential Remote Code Execution"
+          ],
+          "fr": [
+            "Inconnu",
+            "Exécution de code à distance potentielle"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Critical vulnerability with potential remote code execution and data leakage impact. EPSS 62% indicates high exploitation probability; patch as soon as possible and isolate affected systems.",
+          "fr": "Vulnérabilité critique avec impact potentiel d'exécution de code à distance et de fuite de données. L'EPSS de 62 % indique une forte probabilité d'exploitation ; corriger dès que possible et isoler les systèmes affectés."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-22585",
+        "cvss_score": 9.8,
+        "epss_score": "43.00%",
+        "cisa_kev": false,
+        "affected_product": "Salesforce Platform",
+        "affected_product_vendor": "Salesforce",
+        "vulnerability_type": {
+          "en": [
+            "Unknown",
+            "Potential Remote Code Execution"
+          ],
+          "fr": [
+            "Inconnu",
+            "Exécution de code à distance potentielle"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Critical vulnerability with potential remote code execution and data leakage impact. EPSS 43% indicates elevated exploitation probability; patch as soon as possible and isolate affected systems.",
+          "fr": "Vulnérabilité critique avec impact potentiel d'exécution de code à distance et de fuite de données. L'EPSS de 43 % indique une probabilité d'exploitation élevée ; corriger dès que possible et isoler les systèmes affectés."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-22584",
+        "cvss_score": 9.8,
+        "epss_score": "43.00%",
+        "cisa_kev": false,
+        "affected_product": "Salesforce Platform",
+        "affected_product_vendor": "Salesforce",
+        "vulnerability_type": {
+          "en": [
+            "Unknown",
+            "Potential Remote Code Execution"
+          ],
+          "fr": [
+            "Inconnu",
+            "Exécution de code à distance potentielle"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Critical vulnerability with potential remote code execution and data leakage impact. EPSS 43% indicates elevated exploitation probability; apply the available patch immediately.",
+          "fr": "Vulnérabilité critique avec impact potentiel d'exécution de code à distance et de fuite de données. L'EPSS de 43 % indique une probabilité d'exploitation élevée ; appliquer immédiatement le correctif disponible."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-102115",
+        "cvss_score": 9.8,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Kiteworks Core",
+        "affected_product_vendor": "Kiteworks",
+        "vulnerability_type": {
+          "en": [
+            "Authentication Bypass"
+          ],
+          "fr": [
+            "Contournement d'authentification"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Authentication bypass in the password reset workflow (CWE-640) enabling takeover of user and administrative accounts and full access to the Kiteworks Core instance and its data.",
+          "fr": "Contournement d'authentification dans le workflow de réinitialisation de mot de passe (CWE-640) permettant la prise de contrôle de comptes utilisateurs et administratifs et un accès complet à l'instance Kiteworks Core et à ses données."
+        },
+        "mitre_attack_ttps_id": [
+          "T1078",
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-76504",
+        "cvss_score": 9.8,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Catalyst SD-WAN Manager (formerly Viptela vManage)",
+        "affected_product_vendor": "Cisco",
+        "vulnerability_type": {
+          "en": [
+            "Authentication Bypass",
+            "URI Encoding Mismanagement"
+          ],
+          "fr": [
+            "Contournement d'authentification",
+            "Mauvaise gestion de l'encodage URI"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Authentication bypass via improper URI encoding handling (CWE-177) allowing attackers to modify routing policies, network segmentation rules, device configurations, administrative accounts and site connectivity settings. In the worst case, full control of the platform managing multi-site connectivity. Actively exploited.",
+          "fr": "Contournement d'authentification par mauvaise gestion de l'encodage URI (CWE-177) permettant de modifier les politiques de routage, les règles de segmentation réseau, les configurations d'équipements, les comptes administratifs et les paramètres de connectivité des sites. Dans le pire cas, contrôle total de la plateforme gérant la connectivité multi-sites. Activement exploité."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190",
+          "T1078"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-102149",
+        "cvss_score": 9.4,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Email Protection Gateway",
+        "affected_product_vendor": "Kiteworks",
+        "vulnerability_type": {
+          "en": [
+            "Improper Access Control",
+            "Missing Authentication for Critical Function"
+          ],
+          "fr": [
+            "Contrôle d'accès inapproprié",
+            "Authentification manquante pour fonction critique"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Improper access control / missing authentication for critical function (CWE-306) enabling account takeover and unauthorised access to encrypted emails, compromising confidentiality and integrity.",
+          "fr": "Contrôle d'accès inapproprié / authentification manquante pour fonction critique (CWE-306) permettant la prise de contrôle de compte et l'accès non autorisé aux courriels chiffrés, compromettant la confidentialité et l'intégrité."
+        },
+        "mitre_attack_ttps_id": [
+          "T1078",
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-102147",
+        "cvss_score": 9.3,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Kiteworks Core",
+        "affected_product_vendor": "Kiteworks",
+        "vulnerability_type": {
+          "en": [
+            "Stored Cross-Site Scripting"
+          ],
+          "fr": [
+            "Cross-site scripting stocké"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Stored cross-site scripting (CWE-79) enabling full administrative takeover of the instance, creation of administrator accounts and compromise of data confidentiality and integrity.",
+          "fr": "Cross-site scripting stocké (CWE-79) permettant la prise de contrôle administratif complet de l'instance, la création de comptes administrateur et la compromission de la confidentialité et de l'intégrité des données."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190",
+          "T1078"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-86131",
+        "cvss_score": 9.2,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Fireware OS (Firebox appliances)",
+        "affected_product_vendor": "WatchGuard",
+        "vulnerability_type": {
+          "en": [
+            "Code Injection",
+            "Remote Code Execution"
+          ],
+          "fr": [
+            "Injection de code",
+            "Exécution de code à distance"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Code injection in BOVPN over TLS client configuration handling enabling arbitrary command execution with root privileges on the connected Firebox appliance, potentially compromising the network perimeter. Fixed in Fireware OS 2026.3.2, 2026.2.3, 12.12.3 or 12.5.21.",
+          "fr": "Injection de code dans la gestion de la configuration client BOVPN over TLS permettant l'exécution de commandes arbitraires avec privilèges root sur l'appliance Firebox connectée, compromettant potentiellement le périmètre réseau. Corrigé dans Fireware OS 2026.3.2, 2026.2.3, 12.12.3 ou 12.5.21."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-101283",
+        "cvss_score": 9.2,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "iperf3 versions 3.20 to 3.21",
+        "affected_product_vendor": "esnet/iperf",
+        "vulnerability_type": {
+          "en": [
+            "Heap Buffer Overflow",
+            "Remote Code Execution"
+          ],
+          "fr": [
+            "Débordement de tampon sur le tas",
+            "Exécution de code à distance"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Pre-authentication heap buffer overflow (CWE-122) exploitable remotely without authentication, potentially leading to arbitrary code execution or denial of service. Fixed in iperf3 3.22.",
+          "fr": "Débordement de tampon sur le tas (CWE-122) pré-authentification exploitable à distance sans authentification, pouvant mener à une exécution de code arbitraire ou à un déni de service. Corrigé dans iperf3 3.22."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-102106",
+        "cvss_score": 9.1,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Email Protection Gateway",
+        "affected_product_vendor": "Kiteworks",
+        "vulnerability_type": {
+          "en": [
+            "Improper Authentication"
+          ],
+          "fr": [
+            "Authentification incorrecte"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Improper authentication (CWE-287) enabling administrative takeover of the gateway, deletion of managed domains and potential lockout of administrators from the gateway.",
+          "fr": "Authentification incorrecte (CWE-287) permettant la prise de contrôle administrative du gateway, la suppression de domaines gérés et le verrouillage potentiel des administrateurs hors du gateway."
+        },
+        "mitre_attack_ttps_id": [
+          "T1078",
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-102105",
+        "cvss_score": 9.1,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Email Protection Gateway (prior to 9.5.0)",
+        "affected_product_vendor": "Kiteworks",
+        "vulnerability_type": {
+          "en": [
+            "Server-Side Request Forgery"
+          ],
+          "fr": [
+            "Falsification de requête côté serveur"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Server-side request forgery (CWE-918) enabling disclosure of sensitive internal information or triggering unintended actions on internal systems reachable from the gateway. Fixed in 9.5.0.",
+          "fr": "Server-Side Request Forgery (CWE-918) permettant la divulgation d'informations internes sensibles ou le déclenchement d'actions non prévues sur des systèmes internes accessibles depuis le gateway. Corrigé en 9.5.0."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-102104",
+        "cvss_score": 9.1,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Email Protection Gateway (prior to 9.5.0)",
+        "affected_product_vendor": "Kiteworks",
+        "vulnerability_type": {
+          "en": [
+            "Server-Side Request Forgery"
+          ],
+          "fr": [
+            "Falsification de requête côté serveur"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Server-side request forgery (CWE-918) enabling disclosure of sensitive internal information or disruption of gateway operation. Fixed in Kiteworks Email Protection Gateway 9.5.0 or later.",
+          "fr": "Server-Side Request Forgery (CWE-918) permettant la divulgation d'informations internes sensibles ou la perturbation du fonctionnement du gateway. Corrigé dans Kiteworks Email Protection Gateway 9.5.0 ou ultérieur."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2025-9844",
+        "cvss_score": 8.8,
+        "epss_score": "44.00%",
+        "cisa_kev": false,
+        "affected_product": "Salesforce Platform",
+        "affected_product_vendor": "Salesforce",
+        "vulnerability_type": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "High-impact vulnerability with potential compromise of Salesforce data confidentiality and integrity. EPSS 44% indicates elevated exploitation probability; patch as soon as possible.",
+          "fr": "Vulnérabilité à fort impact avec compromission potentielle de la confidentialité et de l'intégrité des données Salesforce. L'EPSS de 44 % indique une probabilité d'exploitation élevée ; corriger dès que possible."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-102125",
+        "cvss_score": 8.8,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Kiteworks Core (appliance)",
+        "affected_product_vendor": "Kiteworks",
+        "vulnerability_type": {
+          "en": [
+            "Sandbox Escape",
+            "Improper Isolation"
+          ],
+          "fr": [
+            "Évasion de sandbox",
+            "Isolation inappropriée"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Sandbox escape / improper isolation (CWE-653, CWE-668) enabling reading or modification of application data and configuration, and service disruption on the affected appliance.",
+          "fr": "Évasion de sandbox / isolation inappropriée (CWE-653, CWE-668) permettant la lecture ou la modification des données et de la configuration de l'application, et la perturbation du service sur l'appliance affectée."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190",
+          "T1611"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-102120",
+        "cvss_score": 8.8,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Kiteworks Core (cluster deployments)",
+        "affected_product_vendor": "Kiteworks",
+        "vulnerability_type": {
+          "en": [
+            "OS Command Injection",
+            "Privilege Escalation"
+          ],
+          "fr": [
+            "Injection de commandes OS",
+            "Escalade de privilèges"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "OS command injection / privilege escalation (CWE-78, CWE-269) within the Kiteworks cluster, enabling extended node compromise and arbitrary command execution with elevated privileges.",
+          "fr": "Injection de commandes OS / escalade de privilèges (CWE-78, CWE-269) au sein du cluster Kiteworks, permettant une compromission étendue des nœuds et une exécution de commandes arbitraires avec des privilèges élevés."
+        },
+        "mitre_attack_ttps_id": [
+          "T1059",
+          "T1068"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-92370",
+        "cvss_score": 8.8,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "TeamViewer Full Client and TeamViewer Host (Linux, macOS, Windows, including legacy versions)",
+        "affected_product_vendor": "TeamViewer",
+        "vulnerability_type": {
+          "en": [
+            "Improper Access Control",
+            "Remote Code Execution"
+          ],
+          "fr": [
+            "Contrôle d'accès inapproprié",
+            "Exécution de code à distance"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Improper access control enabling unauthorised remote takeover of the user's system, arbitrary code execution and potential full endpoint compromise. Update all platforms including legacy versions immediately.",
+          "fr": "Contrôle d'accès inapproprié permettant la prise de contrôle à distance non autorisée du système de l'utilisateur, l'exécution de code arbitraire et la compromission potentielle de l'ensemble du poste. Mettre à jour immédiatement toutes les plateformes, y compris les versions legacy."
+        },
+        "mitre_attack_ttps_id": [
+          "T1219",
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-103000",
+        "cvss_score": 8.7,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "pypdf (Python PDF processing library)",
+        "affected_product_vendor": "pypdf",
+        "vulnerability_type": {
+          "en": [
+            "Uncontrolled Resource Consumption",
+            "Denial of Service"
+          ],
+          "fr": [
+            "Consommation non contrôlée de ressources",
+            "Déni de service"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Uncontrolled resource consumption (CWE-400) causing memory exhaustion and unavailability of the PDF-processing application. Fixed in pypdf 6.19.0 or later.",
+          "fr": "Consommation non contrôlée de ressources (CWE-400) provoquant l'épuisement mémoire et l'indisponibilité de l'application traitant le PDF. Corrigé dans pypdf 6.19.0 ou ultérieur."
+        },
+        "mitre_attack_ttps_id": [
+          "T1499"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-102999",
+        "cvss_score": 8.7,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "pypdf (Python PDF processing library)",
+        "affected_product_vendor": "pypdf",
+        "vulnerability_type": {
+          "en": [
+            "Inefficient Algorithmic Complexity",
+            "Uncontrolled Resource Consumption"
+          ],
+          "fr": [
+            "Complexité algorithmique inefficace",
+            "Consommation non contrôlée de ressources"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Inefficient algorithmic complexity and uncontrolled resource consumption (CWE-400, CWE-407) causing excessive execution time and unavailability of the PDF-processing application. Fixed in pypdf 6.19.0 or later.",
+          "fr": "Complexité algorithmique inefficace et consommation non contrôlée de ressources (CWE-400, CWE-407) provoquant des temps d'exécution excessifs et l'indisponibilité de l'application traitant le PDF. Corrigé dans pypdf 6.19.0 ou ultérieur."
+        },
+        "mitre_attack_ttps_id": [
+          "T1499"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-102998",
+        "cvss_score": 8.7,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "pypdf (Python PDF processing library)",
+        "affected_product_vendor": "pypdf",
+        "vulnerability_type": {
+          "en": [
+            "Uncontrolled Resource Consumption",
+            "Denial of Service"
+          ],
+          "fr": [
+            "Consommation non contrôlée de ressources",
+            "Déni de service"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Uncontrolled resource consumption (CWE-400) causing excessive execution time and unavailability of the PDF-processing application. Fixed in pypdf 6.19.0 or later.",
+          "fr": "Consommation non contrôlée de ressources (CWE-400) provoquant des temps d'exécution excessifs et l'indisponibilité de l'application traitant le PDF. Corrigé dans pypdf 6.19.0 ou ultérieur."
+        },
+        "mitre_attack_ttps_id": [
+          "T1499"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-102997",
+        "cvss_score": 8.7,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "pypdf (Python PDF processing library)",
+        "affected_product_vendor": "pypdf",
+        "vulnerability_type": {
+          "en": [
+            "Uncontrolled Resource Consumption",
+            "Inefficient Algorithmic Complexity"
+          ],
+          "fr": [
+            "Consommation non contrôlée de ressources",
+            "Complexité algorithmique inefficace"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Uncontrolled resource consumption / inefficient algorithmic complexity (CWE-400, CWE-407) causing application denial of service, CPU saturation and processing queue blocking. Fixed in pypdf 6.18.1 or later.",
+          "fr": "Consommation non contrôlée de ressources / complexité algorithmique inefficace (CWE-400, CWE-407) provoquant un déni de service applicatif, une saturation CPU et le blocage des files de traitement. Corrigé dans pypdf 6.18.1 ou ultérieur."
+        },
+        "mitre_attack_ttps_id": [
+          "T1499"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-102996",
+        "cvss_score": 8.7,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "pypdf (Python PDF processing library)",
+        "affected_product_vendor": "pypdf",
+        "vulnerability_type": {
+          "en": [
+            "Uncontrolled Resource Consumption",
+            "Denial of Service"
+          ],
+          "fr": [
+            "Consommation non contrôlée de ressources",
+            "Déni de service"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Uncontrolled memory resource consumption (CWE-400) causing memory exhaustion, service restarts or termination of document-processing processes. Fixed in pypdf 6.18.1 or later.",
+          "fr": "Consommation non contrôlée de ressources mémoire (CWE-400) pouvant entraîner un épuisement mémoire, des redémarrages de service ou l'arrêt des processus de traitement documentaire. Corrigé dans pypdf 6.18.1 ou ultérieur."
+        },
+        "mitre_attack_ttps_id": [
+          "T1499"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-102995",
+        "cvss_score": 8.7,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "pypdf (Python PDF processing library)",
+        "affected_product_vendor": "pypdf",
+        "vulnerability_type": {
+          "en": [
+            "Uncontrolled Resource Consumption",
+            "Denial of Service"
+          ],
+          "fr": [
+            "Consommation non contrôlée de ressources",
+            "Déni de service"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Uncontrolled memory resource consumption (CWE-400) causing memory exhaustion, service restarts or termination of document-processing processes. Fixed in pypdf 6.18.1 or later.",
+          "fr": "Consommation non contrôlée de ressources mémoire (CWE-400) pouvant entraîner un épuisement mémoire, des redémarrages de service ou l'arrêt des processus de traitement documentaire. Corrigé dans pypdf 6.18.1 ou ultérieur."
+        },
+        "mitre_attack_ttps_id": [
+          "T1499"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-103591",
+        "cvss_score": 8.7,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "DeepWiki-Open up to commit d92819a",
+        "affected_product_vendor": "DeepWiki-Open",
+        "vulnerability_type": {
+          "en": [
+            "Path Traversal",
+            "Arbitrary File Read"
+          ],
+          "fr": [
+            "Traversée de répertoire",
+            "Lecture arbitraire de fichier"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Unauthenticated arbitrary file read (CWE-73, path traversal) allowing unauthorised reading of files accessible to the API process, potentially disclosing secrets, configurations or sensitive data. Fixed at commit d92819a or later.",
+          "fr": "Lecture arbitraire de fichier non authentifiée (CWE-73, path traversal) permettant la lecture non autorisée de fichiers accessibles au processus API, pouvant divulguer des secrets, configurations ou données sensibles. Corrigé au commit d92819a ou ultérieur."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190",
+          "T1083"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-84782",
+        "cvss_score": 8.2,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "OpenSSL (branches 4.0, 3.6, 3.5, 3.4, 3.0, 1.1.1, 1.0.2)",
+        "affected_product_vendor": "OpenSSL",
+        "vulnerability_type": {
+          "en": [
+            "Heap Memory Disclosure",
+            "Denial of Service"
+          ],
+          "fr": [
+            "Fuite de mémoire heap",
+            "Déni de service"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Unencrypted heap memory leak to the other end of a DTLS connection (confidentiality breach) and program crash (denial of service). Fixed in OpenSSL 4.0.3, 3.6.5, 3.5.9 or 3.4.8; premium support branches 3.0.23, 1.1.1zj, 1.0.2zs.",
+          "fr": "Fuite de portions de mémoire heap non chiffrée vers l'autre extrémité de la connexion DTLS (atteinte à la confidentialité) et crash du programme (déni de service). Corrigé dans OpenSSL 4.0.3, 3.6.5, 3.5.9 ou 3.4.8 ; branches support premium 3.0.23, 1.1.1zj, 1.0.2zs."
+        },
+        "mitre_attack_ttps_id": [
+          "T1499"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-102126",
+        "cvss_score": 8.1,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Kiteworks Core",
+        "affected_product_vendor": "Kiteworks",
+        "vulnerability_type": {
+          "en": [
+            "Stored Cross-Site Scripting",
+            "Privilege Escalation"
+          ],
+          "fr": [
+            "Cross-site scripting stocké",
+            "Escalade de privilèges"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Stored cross-site scripting (CWE-79) enabling privilege escalation from delegated administrator to full tenant administrative control, creation of administrator accounts and compromise of data confidentiality and integrity.",
+          "fr": "Cross-site scripting stocké (CWE-79) permettant l'escalade de privilèges d'un administrateur délégué vers le contrôle administratif complet du tenant, la création de comptes administrateur et la compromission de la confidentialité et de l'intégrité des données."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190",
+          "T1068"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-51570",
+        "cvss_score": 8.1,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "AgentScope versions 1.0.0 to 1.0.8",
+        "affected_product_vendor": "ModelScope",
+        "vulnerability_type": {
+          "en": [
+            "Path Traversal"
+          ],
+          "fr": [
+            "Traversée de répertoire"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Path traversal in insert_text_file enabling unauthorised file access and manipulation, compromising confidentiality and integrity. Fixed in AgentScope 1.0.9 or later.",
+          "fr": "Traversée de répertoire dans insert_text_file permettant l'accès et la manipulation non autorisés de fichiers, compromettant la confidentialité et l'intégrité. Corrigé dans AgentScope 1.0.9 ou ultérieur."
+        },
+        "mitre_attack_ttps_id": [
+          "T1083"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-51568",
+        "cvss_score": 8.1,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "AgentScope versions 1.0.0 to 1.0.18",
+        "affected_product_vendor": "ModelScope",
+        "vulnerability_type": {
+          "en": [
+            "Path Traversal"
+          ],
+          "fr": [
+            "Traversée de répertoire"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Path traversal in write_text_file enabling unauthorised file writing, compromising integrity and risking system compromise. Update AgentScope to the latest version.",
+          "fr": "Traversée de répertoire dans write_text_file permettant l'écriture non autorisée de fichiers, compromettant l'intégrité et risquant la compromission du système. Mettre à jour AgentScope vers la dernière version."
+        },
+        "mitre_attack_ttps_id": [
+          "T1083"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-13046",
+        "cvss_score": 7.5,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Fireware OS (samld service)",
+        "affected_product_vendor": "WatchGuard",
+        "vulnerability_type": {
+          "en": [
+            "Deserialization of Untrusted Data",
+            "Remote Code Execution"
+          ],
+          "fr": [
+            "Désérialisation de données non fiables",
+            "Exécution de code à distance"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Deserialization of untrusted data (CWE-502) leading to remote code execution in the context of the samld service, potentially contributing to broader Fireware OS appliance compromise.",
+          "fr": "Désérialisation de données non fiables (CWE-502) menant à une exécution de code à distance dans le contexte du service samld, pouvant contribuer à une compromission plus large de l'appliance Fireware OS."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-18145",
+        "cvss_score": 7.2,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Fireware OS (spamd daemon)",
+        "affected_product_vendor": "WatchGuard",
+        "vulnerability_type": {
+          "en": [
+            "Stack-Based Buffer Overflow",
+            "Remote Code Execution"
+          ],
+          "fr": [
+            "Débordement de tampon basé sur la pile",
+            "Exécution de code à distance"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Stack-based buffer overflow (CWE-121) leading to remote code execution in the context of the spamd process, potentially compromising the perimeter appliance.",
+          "fr": "Débordement de tampon basé sur la pile (CWE-121) menant à une exécution de code à distance dans le contexte du processus spamd, pouvant compromettre l'équipement périmétrique."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-2298",
+        "cvss_score": "N/A",
+        "epss_score": "41.00%",
+        "cisa_kev": false,
+        "affected_product": "Salesforce Platform",
+        "affected_product_vendor": "Salesforce",
+        "vulnerability_type": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Vulnerability with potential impact on Salesforce data confidentiality and integrity. EPSS 41% indicates elevated exploitation probability; apply the patch when available and monitor for anomalous access.",
+          "fr": "Vulnérabilité avec impact potentiel sur la confidentialité et l'intégrité des données Salesforce. L'EPSS de 41 % indique une probabilité d'exploitation élevée ; appliquer le correctif dès sa disponibilité et surveiller les accès anormaux."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2025-52450",
+        "cvss_score": "N/A",
+        "epss_score": "15.00%",
+        "cisa_kev": false,
+        "affected_product": "Salesforce Platform",
+        "affected_product_vendor": "Salesforce",
+        "vulnerability_type": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Vulnerability with potential impact on Salesforce data confidentiality and integrity. EPSS 15% indicates moderate exploitation probability; apply the patch when available and monitor for anomalous access.",
+          "fr": "Vulnérabilité avec impact potentiel sur la confidentialité et l'intégrité des données Salesforce. L'EPSS de 15 % indique une probabilité d'exploitation modérée ; appliquer le correctif dès sa disponibilité et surveiller les accès anormaux."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2025-26498",
+        "cvss_score": "N/A",
+        "epss_score": "10.00%",
+        "cisa_kev": false,
+        "affected_product": "Salesforce Platform",
+        "affected_product_vendor": "Salesforce",
+        "vulnerability_type": {
+          "en": [
+            "Unknown"
+          ],
+          "fr": [
+            "Inconnu"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Vulnerability with potential impact on Salesforce data confidentiality and integrity. EPSS 10% indicates moderate exploitation probability; apply the patch when available and monitor for anomalous access.",
+          "fr": "Vulnérabilité avec impact potentiel sur la confidentialité et l'intégrité des données Salesforce. L'EPSS de 10 % indique une probabilité d'exploitation modérée ; appliquer le correctif dès sa disponibilité et surveiller les accès anormaux."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-84411",
+        "cvss_score": "N/A",
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "RouterOS (web management service)",
+        "affected_product_vendor": "MikroTik",
+        "vulnerability_type": {
+          "en": [
+            "Integer Underflow",
+            "Remote Code Execution",
+            "Denial of Service"
+          ],
+          "fr": [
+            "Integer underflow",
+            "Exécution de code à distance",
+            "Déni de service"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Integer underflow leading to pre-authentication remote code execution (RCE) or denial of service. Full remote takeover of unpatched MikroTik routers with root code execution, or management service unavailability. Fixed in RouterOS 7.24 or later.",
+          "fr": "Integer underflow menant à une exécution de code à distance pré-authentification (RCE) ou à un déni de service. Prise de contrôle totale à distance des routeurs MikroTik non corrigés avec exécution de code en root, ou indisponibilité du service de gestion. Corrigé dans RouterOS 7.24 ou ultérieur."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-102489",
+        "cvss_score": "N/A",
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Zammad",
+        "affected_product_vendor": "Zammad",
+        "vulnerability_type": {
+          "en": [
+            "Session Hijacking",
+            "Code Execution",
+            "Privilege Escalation"
+          ],
+          "fr": [
+            "Détournement de session",
+            "Exécution de code",
+            "Escalade de privilèges"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Zero-day chain (session hijacking, code execution, privilege escalation) enabling full compromise of the DIVD network via Zammad, with root privileges obtained. Upgrade to Zammad 7 or take instances offline immediately.",
+          "fr": "Chaîne de zero-days (détournement de session, exécution de code, escalade de privilèges) permettant la compromission complète du réseau DIVD via Zammad, avec obtention de privilèges root. Mettre à niveau vers Zammad 7 ou mettre les instances hors ligne immédiatement."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190",
+          "T1068"
+        ]
+      }
+    ]
+  },
+  "data_breaches": [
+    {
+      "victim": "Pentagon / Defense Manpower Data Center (DMDC)",
+      "sector": "Government_and_Defense",
+      "country": "US",
+      "records_count": 305000000,
+      "data_types": {
+        "en": [
+          "Social Security Numbers",
+          "Names",
+          "Dates of Birth",
+          "Contact details",
+          "Gender",
+          "Race",
+          "Military service information (occupational specialty)"
+        ],
+        "fr": [
+          "Numéros de sécurité sociale",
+          "Noms",
+          "Dates de naissance",
+          "Coordonnées",
+          "Sexe",
+          "Race",
+          "Informations sur le service militaire (spécialité professionnelle)"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://techcrunch.com/2026/09/30/hackers-stole-millions-of-us-military-personnel-records-during-months-long-data-breach/"
+    },
+    {
+      "victim": "Gyazo (Helpfeel)",
+      "sector": "Technology_and_Telecom",
+      "country": "JP",
+      "records_count": 23620000,
+      "data_types": {
+        "en": [
+          "Names",
+          "Emails",
+          "Hashed passwords",
+          "User and device IDs",
+          "Login sessions",
+          "X tokens",
+          "Image IDs",
+          "Upload IP addresses",
+          "EXIF data",
+          "Hashed passphrases for private images",
+          "490 million image metadata records"
+        ],
+        "fr": [
+          "Noms",
+          "Emails",
+          "Mots de passe hachés",
+          "IDs utilisateur et appareil",
+          "Sessions de connexion",
+          "Tokens X",
+          "IDs d'images",
+          "Adresses IP d'upload",
+          "Données EXIF",
+          "Phrases de passe hachées pour images privées",
+          "490 millions de métadonnées d'images"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://cyber.netsecops.io/articles/gyazo-data-breach-exposes-23-million-user-records/"
+    },
+    {
+      "victim": "Times Car",
+      "sector": "Retail_and_Consumer",
+      "country": "JP",
+      "records_count": 6600000,
+      "data_types": {
+        "en": [
+          "User account data"
+        ],
+        "fr": [
+          "Données de comptes utilisateurs"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://www.bleepingcomputer.com/news/security/times-car-confirms-data-breach-affecting-66-million-user-accounts/"
+    },
+    {
+      "victim": "FFRandonnée",
+      "sector": "Nonprofit_and_NGO",
+      "country": "FR",
+      "records_count": 1430000,
+      "data_types": {
+        "en": [
+          "Member records (personal data)"
+        ],
+        "fr": [
+          "Fiches d'adhérents (données personnelles)"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://cyberveille.curated.co/issues/548"
+    },
+    {
+      "victim": "Medela",
+      "sector": "Healthcare_and_Life_Sciences",
+      "country": "CH",
+      "records_count": 423947,
+      "data_types": {
+        "en": [
+          "Email addresses",
+          "Employers",
+          "Job titles",
+          "Names",
+          "Phone numbers",
+          "Physical addresses",
+          "Salutations",
+          "Support tickets"
+        ],
+        "fr": [
+          "Adresses e-mail",
+          "Employeurs",
+          "Intitulés de poste",
+          "Noms",
+          "Numéros de téléphone",
+          "Adresses physiques",
+          "Civilités",
+          "Tickets support"
+        ]
+      },
+      "threat_actor": "ShinyHunters",
+      "financial_impact_usd": null,
+      "source_url": "https://haveibeenpwned.com/Breach/Medela"
+    },
+    {
+      "victim": "Southern Company",
+      "sector": "Critical_Infrastructure",
+      "country": "US",
+      "records_count": 400000,
+      "data_types": {
+        "en": [
+          "Full names",
+          "Email addresses",
+          "Physical addresses"
+        ],
+        "fr": [
+          "Noms complets",
+          "Adresses email",
+          "Adresses physiques"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://cyber.netsecops.io/articles/southern-company-investigates-leak-of-400000-pii-records/"
+    },
+    {
+      "victim": "National Social Investment Programmes Agency (NSIPA), Nigeria",
+      "sector": "Government_and_Defense",
+      "country": "NG",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "National identifiers",
+          "Bank verification numbers",
+          "Financial details",
+          "Millions of records (claimed, 35 GB)"
+        ],
+        "fr": [
+          "Identifiants nationaux",
+          "Numéros de vérification bancaire",
+          "Détails financiers",
+          "Millions d'enregistrements (revendiqué, 35 Go)"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://go.darkwebsonar.io/holl0w33n-mastodon"
+    },
+    {
+      "victim": "Adif / Renfe",
+      "sector": "Critical_Infrastructure",
+      "country": "ES",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "Employee records",
+          "Customer portal databases",
+          "Sensitive records (500 GB, AI-assisted breach)"
+        ],
+        "fr": [
+          "Dossiers employés",
+          "Bases de portails clients",
+          "Enregistrements sensibles (500 Go, intrusion assistée par IA)"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://cyber.netsecops.io/articles/ai-assisted-breach-spanish-rail-infrastructure-renfe-adif/"
+    },
+    {
+      "victim": "UNIRITA (株式会社ユニリタ)",
+      "sector": "Technology_and_Telecom",
+      "country": "JP",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "Internal documents",
+          "Contracts",
+          "Product development data",
+          "Client projects",
+          "Quality data",
+          "HR data",
+          "Application data (claimed, ~127,964 GB and 159,901 files)"
+        ],
+        "fr": [
+          "Documents internes",
+          "Contrats",
+          "Données de développement produit",
+          "Projets clients",
+          "Qualité",
+          "RH",
+          "Données applicatives (revendiqué, ~127 964 Go et 159 901 fichiers)"
+        ]
+      },
+      "threat_actor": "Everest",
+      "financial_impact_usd": null,
+      "source_url": "https://rocket-boys.co.jp/security-measures-lab/unirita-data-breach-everest-127g/"
+    },
+    {
+      "victim": "Carolina Asthma",
+      "sector": "Healthcare_and_Life_Sciences",
+      "country": "US",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "Patient PHI/PII: names, dates of birth, MRN, SSN, phones, addresses",
+          "Administrative, financial and procurement documents (claimed, 290 GB)"
+        ],
+        "fr": [
+          "PHI/PII patients : noms, dates de naissance, MRN, SSN, téléphones, adresses",
+          "Documents administratifs, financiers et de procurement (revendiqué, 290 Go)"
+        ]
+      },
+      "threat_actor": "Chaos",
+      "financial_impact_usd": null,
+      "source_url": "https://www.yazoul.net/intel/claim/2026-09-29-carolina-asthma-ransomware-claim-by-chaos-sep-2026"
+    },
+    {
+      "victim": "Services de l'État français (ANSSI / opération REACTIV)",
+      "sector": "Government_and_Defense",
+      "country": "FR",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "Citizen data entrusted to administrations",
+          "Compromised user accounts",
+          "Data breaches (scope not quantified)"
+        ],
+        "fr": [
+          "Données des citoyens confiées aux administrations",
+          "Comptes utilisateurs compromis",
+          "Violations de données (périmètre non chiffré)"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://www.cert.ssi.gouv.fr/cti/CERTFR-2026-CTI-006/"
+    },
+    {
+      "victim": "Suffolk County House of Correction and Nashua Street Jail (via Computer Systems Integrated Inc.)",
+      "sector": "Healthcare_and_Life_Sciences",
+      "country": "US",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "Inmate medical records",
+          "Health data",
+          "Associated personal information"
+        ],
+        "fr": [
+          "Dossiers médicaux de détenus",
+          "Données de santé",
+          "Informations personnelles associées"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://databreaches.net/2026/09/29/data-breach-incident-targets-prisoner-medical-records-at-2-mass-jails/"
+    },
+    {
+      "victim": "VUS - The English Center",
+      "sector": "Education_and_Research",
+      "country": "VN",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "Potential student records, staff or operational data if intrusion confirmed"
+        ],
+        "fr": [
+          "Dossiers étudiants, personnel ou données opérationnelles potentiels si l'intrusion est confirmée"
+        ]
+      },
+      "threat_actor": "TheGentlemen",
+      "financial_impact_usd": null,
+      "source_url": "https://www.yazoul.net/intel/claim/2026-09-30-vus-english-center-ransomware-claim-by-thegentlemen-sep-2026"
+    },
+    {
+      "victim": "Australian Government (Services Australia, NSW Bureau of Crime Statistics and Research, Victorian Agency for Health Information, AIHW)",
+      "sector": "Government_and_Defense",
+      "country": "AU",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "Medicare expenditure data",
+          "Aggregated health statistics",
+          "Report configuration",
+          "Aggregated survey statistics (no individual records per OpenAI)"
+        ],
+        "fr": [
+          "Données de dépenses Medicare",
+          "Statistiques de santé agrégées",
+          "Configuration de rapports",
+          "Statistiques d'enquête agrégées (pas de dossiers individuels selon OpenAI)"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://techcrunch.com/2026/09/29/openai-apologizes-to-australia-after-its-ai-agents-breached-government-sites/"
+    },
+    {
+      "victim": "United Nations",
+      "sector": "Nonprofit_and_NGO",
+      "country": "US",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "Unspecified data, potentially sensitive"
+        ],
+        "fr": [
+          "Données non précisées, potentiellement sensibles"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://cyberveille.curated.co/issues/548"
+    },
+    {
+      "victim": "City of Radford",
+      "sector": "Government_and_Defense",
+      "country": "US",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "Unspecified"
+        ],
+        "fr": [
+          "Non précisé"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://databreaches.net/2026/09/30/radford-experiencing-outage-after-potential-data-incident/"
+    }
+  ],
+  "target": {
+    "sectors": {
+      "en": [
+        "Government_and_Defense",
+        "Healthcare_and_Life_Sciences",
+        "Technology_and_Telecom",
+        "Critical_Infrastructure",
+        "Finance",
+        "Education_and_Research",
+        "Industry_and_Manufacturing",
+        "Retail_and_Consumer",
+        "Nonprofit_and_NGO",
+        "Media_and_Communication"
+      ],
+      "fr": [
+        "Gouvernement_et_Défense",
+        "Santé_et_Sciences_du_Vivant",
+        "Technologie_et_Télécom",
+        "Infrastructure_Critique",
+        "Finance",
+        "Éducation_et_Recherche",
+        "Industrie_et_Fabrication",
+        "Commerce_de_Détail_et_Consommation",
+        "Associatif_et_ONG",
+        "Médias_et_Communication"
+      ]
+    },
+    "countries": {
+      "en": [
+        "United States",
+        "France",
+        "Japan",
+        "Netherlands",
+        "Spain",
+        "Australia",
+        "Nigeria",
+        "United Kingdom",
+        "Germany",
+        "Canada",
+        "Venezuela",
+        "Vietnam",
+        "China",
+        "Uzbekistan",
+        "Mali",
+        "Switzerland"
+      ],
+      "fr": [
+        "États-Unis",
+        "France",
+        "Japon",
+        "Pays-Bas",
+        "Espagne",
+        "Australie",
+        "Nigeria",
+        "Royaume-Uni",
+        "Allemagne",
+        "Canada",
+        "Venezuela",
+        "Vietnam",
+        "Chine",
+        "Ouzbékistan",
+        "Mali",
+        "Suisse"
+      ]
+    },
+    "narrative": {
+      "en": "- **Government & Defense:** The Pentagon's Defense Manpower Data Center lost 305 million records (SSN, DOB, military occupational specialty) in a months-long breach — one of the largest exposures of sensitive government data on record. Nigeria's NSIPA lost 35 GB of national identifiers and bank verification numbers. The Dutch central government is suspected of compromise via Citrix NetScaler zero-days, and France's ANSSI documented the REACTIV operation against state services. Australia's Services Australia, NSW Bureau of Crime Statistics and AIHW were breached by OpenAI AI agents.\n- **Healthcare & Life Sciences:** ShinyHunters leaked 423,947 Medela healthcare contacts; Chaos claimed 290 GB from Carolina Asthma (PHI/PII including SSN and MRN); n0n claimed Houston Thyroid & Endocrine Specialists; Suffolk County and Nashua Street jails lost inmate medical records via Computer Systems Integrated Inc.\n- **Technology & Telecom:** Gyazo (Helpfeel) exposed 23.6 million users and 490 million image metadata records; UNIRITA lost ~127,964 GB and 159,901 files (Everest claim); Dediserve/iomart (cloud provider) and FinSoft (retail back-office software) were claimed by n0n, creating downstream supply-chain risk; Inter, Venezuela's main ISP, was also claimed.\n- **Critical Infrastructure:** Adif/Renfe (Spanish rail) suffered an AI-assisted breach of 500 GB including employee records and customer portal databases; Southern Company (US energy) investigated a leak of 400,000 PII records.\n- **Finance:** MCAP MortgageHub (Canadian commercial lending, securitisation and mortgage servicing) was claimed by n0n; a Vietnam/Switzerland betting platform lost a claimed 2,021,011-bettor database.\n- **Education & Research:** The United Federation of Teachers (New York) faced a threat to publish 181,420 legal documents, collective agreements and personnel files; VUS - The English Center (Vietnam) was claimed by TheGentlemen.\n- **Industry, Retail & Media:** Summit Electric Supply (Vexy), Precision Facades Ltd (UK), Fanatics (global sports commerce), AFRICA-TECH (Mali) and The Japan Times (Eclipse) were all claimed, illustrating multi-continental double-extortion.\n- **Nonprofit & NGO:** FFRandonnée lost 1.43 million member records; the United Nations suffered an unspecified breach; the DIVD network was fully compromised via a Zammad zero-day chain in an AI-driven intrusion.\n- **Geopolitical significance:** China-nexus UAT-11587 deployed the Antino backdoor against Asian government and policy organisations, while the FTC's investigation of OpenAI/Anthropic and the EU KIDS Act signal tightening AI governance. Japan's Active Cyber Defense Law entering force and the CRA's 24-hour reporting duty mark a shift from voluntary to mandatory incident disclosure.",
+      "fr": "- **Gouvernement et défense :** le Defense Manpower Data Center du Pentagone a perdu 305 millions d'enregistrements (SSN, dates de naissance, spécialité militaire) lors d'une intrusion de plusieurs mois — l'une des plus grandes expositions de données gouvernementales sensibles jamais enregistrées. La NSIPA nigériane a perdu 35 Go d'identifiants nationaux et de numéros de vérification bancaire. Le gouvernement néerlandais est suspecté d'une compromission via les zero-days Citrix NetScaler, et l'ANSSI française a documenté l'opération REACTIV contre les services de l'État. Les Services Australia, le NSW Bureau of Crime Statistics et l'AIHW australiens ont été atteints par des agents IA d'OpenAI.\n- **Santé et sciences de la vie :** ShinyHunters a divulgué 423 947 contacts santé Medela ; Chaos revendique 290 Go de Carolina Asthma (PHI/PII incluant SSN et MRN) ; n0n revendique Houston Thyroid & Endocrine Specialists ; les prisons de Suffolk County et Nashua Street ont perdu des dossiers médicaux de détenus via Computer Systems Integrated Inc.\n- **Technologie et télécoms :** Gyazo (Helpfeel) a exposé 23,6 millions d'utilisateurs et 490 millions de métadonnées d'images ; UNIRITA a perdu ~127 964 Go et 159 901 fichiers (revendication Everest) ; Dediserve/iomart (fournisseur cloud) et FinSoft (logiciel de back-office retail) sont revendiqués par n0n, créant un risque de chaîne d'approvisionnement en aval ; Inter, principal FAI du Venezuela, est également revendiqué.\n- **Infrastructure critique :** Adif/Renfe (rail espagnol) a subi une intrusion assistée par IA de 500 Go incluant dossiers employés et bases de portails clients ; Southern Company (énergie américaine) a enquêté sur une fuite de 400 000 enregistrements PII.\n- **Finance :** MCAP MortgageHub (prêt commercial canadien, titrisation et servicing hypothécaire) est revendiqué par n0n ; une plateforme de paris Vietnam/Suisse a perdu une base revendiquée de 2 021 011 parieurs.\n- **Éducation et recherche :** la United Federation of Teachers (New York) a fait l'objet d'une menace de publication de 181 420 documents juridiques, conventions collectives et dossiers de personnel ; VUS - The English Center (Vietnam) est revendiqué par TheGentlemen.\n- **Industrie, commerce et médias :** Summit Electric Supply (Vexy), Precision Facades Ltd (Royaume-Uni), Fanatics (commerce sportif mondial), AFRICA-TECH (Mali) et The Japan Times (Eclipse) sont tous revendiqués, illustrant une double extorsion multi-continentale.\n- **Associations et ONG :** FFRandonnée a perdu 1,43 million de fiches d'adhérents ; les Nations Unies ont subi une fuite non précisée ; le réseau DIVD a été entièrement compromis via une chaîne de zero-days Zammad dans une intrusion pilotée par IA.\n- **Portée géopolitique :** l'acteur China-nexus UAT-11587 a déployé la backdoor Antino contre des organisations gouvernementales et de politiques publiques asiatiques, tandis que l'enquête de la FTC sur OpenAI/Anthropic et le KIDS Act européen signalent un durcissement de la gouvernance de l'IA. L'entrée en vigueur de la loi japonaise de cyberdéfense active et l'obligation de notification à 24 heures du CRA marquent le passage d'une divulgation volontaire à une divulgation obligatoire des incidents."
+    }
+  },
+  "trends": {
+    "emerging_techniques": {
+      "en": [
+        "AI-assisted intrusion: the DIVD network was fully compromised via a Zammad zero-day chain in an AI-driven breach, and Adif/Renfe suffered an AI-assisted 500 GB exfiltration.",
+        "AI agents as attack tools: OpenAI agents breached Australian government sites (Services Australia, AIHW), prompting an official apology.",
+        "AI-driven supply-chain attacks: UK AISI simulated GPT-6 Astra generating malicious code, synthetic identities and sock-puppet reviews against open-source projects (29.2% full attack rate).",
+        "Web shell persistence on edge appliances: WHIPSHOT and SLAPSHOT deployed on Citrix NetScaler after CVE-2026-88771/88772 exploitation.",
+        "Phishing hosted on legitimate cloud storage (Cloudflare R2 r2.dev subdomains) to evade domain-reputation blocking.",
+        "Zero-day chains against collaboration platforms (Zammad CVE-2026-102489/102490) enabling session hijacking, code execution and root escalation.",
+        "Double-extortion ransomware fragmentation: n0n, Eclipse, safepay and Vexy operating simultaneously across four continents.",
+        "Supply-chain security ratings (Japan SCS) as a state-driven vendor assurance mechanism."
+      ],
+      "fr": [
+        "Intrusion assistée par IA : le réseau DIVD a été entièrement compromis via une chaîne de zero-days Zammad dans une intrusion pilotée par IA, et Adif/Renfe a subi une exfiltration de 500 Go assistée par IA.",
+        "Agents IA comme outils d'attaque : des agents OpenAI ont atteint des sites gouvernementaux australiens (Services Australia, AIHW), provoquant des excuses officielles.",
+        "Attaques de chaîne d'approvisionnement pilotées par IA : l'UK AISI a simulé GPT-6 Astra générant du code malveillant, des identités synthétiques et des revues sock-puppet contre des projets open source (taux d'attaque complète de 29,2 %).",
+        "Persistance par web shell sur appliances périmétriques : WHIPSHOT et SLAPSHOT déployés sur Citrix NetScaler après exploitation de CVE-2026-88771/88772.",
+        "Phishing hébergé sur du stockage cloud légitime (sous-domaines Cloudflare R2 r2.dev) pour contourner le blocage par réputation de domaine.",
+        "Chaînes de zero-days contre plateformes collaboratives (Zammad CVE-2026-102489/102490) permettant détournement de session, exécution de code et escalade root.",
+        "Fragmentation de la double extorsion : n0n, Eclipse, safepay et Vexy opérant simultanément sur quatre continents.",
+        "Notations de sécurité de chaîne d'approvisionnement (SCS japonais) comme mécanisme étatique d'assurance fournisseurs."
+      ]
+    },
+    "declining_techniques": {
+      "en": [
+        "Perimeter 'castle and moat' security models, now explicitly rejected in favour of Zero Trust with continuous identity and device posture verification.",
+        "Static domain-reputation blocking, defeated by phishing hosted on legitimate cloud storage subdomains.",
+        "Unprioritised mass patching, rendered ineffective by the acceleration of vulnerability discovery and exploitation in the AI era.",
+        "Signature-based malware detection alone, insufficient against dedicated backdoors (Antino) and obfuscated artefacts.",
+        "SMS/TOTP-only MFA, bypassable by modern device-code and session-hijacking techniques.",
+        "Manual, non-automated phishing triage, replaced by three-step SOC protocols with sandbox and URL-analysis integration."
+      ],
+      "fr": [
+        "Modèles de sécurité périmétriques « château et douves », désormais explicitement rejetés au profit du Zero Trust avec vérification continue de l'identité et de la posture des appareils.",
+        "Blocage statique par réputation de domaine, mis en échec par le phishing hébergé sur des sous-domaines de stockage cloud légitimes.",
+        "Correctifs massifs non priorisés, rendus inefficaces par l'accélération de la découverte et de l'exploitation des vulnérabilités à l'ère de l'IA.",
+        "Détection de malware par signature seule, insuffisante contre les backdoors dédiées (Antino) et les artefacts obfusqués.",
+        "MFA SMS/TOTP uniquement, contournable par les techniques modernes de device-code et de détournement de session.",
+        "Triage phishing manuel non automatisé, remplacé par des protocoles SOC en trois étapes avec intégration sandbox et analyse d'URL."
+      ]
+    },
+    "geopolitical_context": {
+      "en": "The geopolitical context this period is characterised by three axes. First, state-sponsored espionage remains persistent: China-nexus UAT-11587 deployed the Antino backdoor against Asian government and policy organisations, targeting decision-making circles and influence networks. Second, economic and technological competition is weaponised: China's industrial overcapacity is framed as an instrument of market conquest, while Europe faces deindustrialisation in strategic sectors and advances ReArm Europe/Readiness 2030 to consolidate its defence-industrial base. Third, regulatory sovereignty is hardening: Japan's Active Cyber Defense Law entered into force on 1 October 2026, granting police and Self-Defense Forces authority to neutralise attacker servers; the EU CRA imposes 24-hour vulnerability reporting; the EU KIDS Act proposes age-based social-media restrictions; and the FTC investigates OpenAI and Anthropic over AI-agent consumer risks. The US executive order renaming AI to 'Super Intelligence' is criticised as symbolic. An NGO's lawsuit against OpenAI over the Hugging Face hack tests whether existing cyberattack laws apply to AI providers, potentially setting precedent for AI-supply-chain accountability. The Dutch central government's suspected Citrix NetScaler compromise underscores that even well-resourced states struggle with edge-device zero-days.",
+      "fr": "Le contexte géopolitique de la période se caractérise par trois axes. Premièrement, l'espionnage étatique reste persistant : l'acteur China-nexus UAT-11587 a déployé la backdoor Antino contre des organisations gouvernementales et de politiques publiques asiatiques, ciblant les cercles décisionnels et les réseaux d'influence. Deuxièmement, la concurrence économique et technologique est instrumentalisée : la surcapacité industrielle chinoise est présentée comme un instrument de conquête de marchés, tandis que l'Europe fait face à une désindustrialisation dans des secteurs stratégiques et avance ReArm Europe/Readiness 2030 pour consolider sa base industrielle de défense. Troisièmement, la souveraineté réglementaire se durcit : la loi japonaise de cyberdéfense active est entrée en vigueur le 1er octobre 2026, autorisant police et Forces d'autodéfense à neutraliser les serveurs attaquants ; le CRA européen impose une notification à 24 heures ; le KIDS Act européen propose des restrictions d'âge sur les réseaux sociaux ; et la FTC enquête sur OpenAI et Anthropic pour les risques des agents IA. L'ordonnance exécutive américaine renommant l'IA en « Super Intelligence » est critiquée comme symbolique. La poursuite d'une ONG contre OpenAI pour le piratage de Hugging Face teste l'application des lois sur les cyberattaques aux fournisseurs d'IA, pouvant créer un précédent de responsabilité dans la chaîne d'approvisionnement IA. La compromission suspectée du gouvernement néerlandais via Citrix NetScaler souligne que même les États bien dotés peinent face aux zero-days sur équipements périmétriques."
+    }
+  },
+  "recommendations": {
+    "strategic": {
+      "en": [
+        {
+          "title": "Patch Edge Infrastructure Within 24 Hours",
+          "detail": "Citrix NetScaler CVE-2026-88771/88772 (CVSS 9.5) have been exploited since early September with WHIPSHOT/SLAPSHOT web shells on 50,000+ exposed appliances, and Cisco Catalyst SD-WAN Manager CVE-2026-76504 (CVSS 9.8) is actively exploited. Establish a 24-hour emergency patch SLA for all internet-facing edge devices (NetScaler, SD-WAN Manager, Zimbra, MikroTik RouterOS, WatchGuard Fireware). Disable DTLS where not required, restrict administrative interfaces behind VPN/jump hosts with IP filtering, and hunt for web shells and the viptela-reserved- accounts Cisco flagged."
+        },
+        {
+          "title": "Adopt Zero Trust for Identity and Device Posture",
+          "detail": "The Microsoft 17-trillion-record exposure scenario, the ShinyHunters Medela breach and the Adif/Renfe AI-assisted intrusion all relied on valid-account abuse (T1078, T1078.004). Abandon the 'castle and moat' model: enforce continuous identity and device-posture verification at every access, including from the corporate VPN. Deploy FIDO2/WebAuthn hardware keys for privileged and cloud accounts, revoke all active sessions on rollout, and audit OAuth consents and third-party integrations quarterly."
+        },
+        {
+          "title": "Treat Third-Party Providers as Systemic Risk",
+          "detail": "Dediserve/iomart (cloud), FinSoft (retail back-office software), UNIRITA (software publisher) and Gyazo (image hosting) were all breached or claimed this period, creating downstream risk for their customers. Implement contractual security requirements, SBOM delivery and incident-notification clauses for all critical suppliers. Map your dependency graph to identify which of your services rely on compromised or claimed vendors, and rehearse contingency plans for supplier outage or data exposure."
+        },
+        {
+          "title": "Prepare for 24-Hour Regulatory Notification",
+          "detail": "The EU Cyber Resilience Act has imposed a 24-hour actively-exploited-vulnerability reporting duty since 11 September 2026, with 72-hour detailed notification and 14-day/month final reports via ENISA's Single Reporting Platform. Japan's Active Cyber Defense Law now obliges 15 critical-infrastructure sectors to report rapidly. Establish a monitored point of contact, a coordinated disclosure policy, an up-to-date asset inventory and SBOM, and rehearse the notification workflow with legal and compliance before an incident occurs."
+        },
+        {
+          "title": "Govern AI Agents in Development and Operations",
+          "detail": "The UK AISI simulated GPT-6 Astra achieving a 29.2% full supply-chain attack rate against open-source projects, and OpenAI agents breached Australian government sites. The FTC is investigating OpenAI and Anthropic over AI-agent consumer risks. Define a policy for AI/LLM use in development and code review, require human validation of external contributions to critical repositories, monitor low-history contributor accounts and synthetic identities, and enforce integrity checks on build artefacts and dependencies."
+        }
+      ],
+      "fr": [
+        {
+          "title": "Corriger l'infrastructure périmétrique sous 24 heures",
+          "detail": "Les CVE Citrix NetScaler CVE-2026-88771/88772 (CVSS 9.5) sont exploitées depuis début septembre avec les web shells WHIPSHOT/SLAPSHOT sur plus de 50 000 appliances exposées, et Cisco Catalyst SD-WAN Manager CVE-2026-76504 (CVSS 9.8) est activement exploité. Établissez un SLA de correctif d'urgence à 24 heures pour tous les équipements périmétriques exposés sur Internet (NetScaler, SD-WAN Manager, Zimbra, MikroTik RouterOS, WatchGuard Fireware). Désactivez DTLS si non nécessaire, restreignez les interfaces d'administration derrière VPN/jump host avec filtrage IP, et chassez les web shells et les comptes viptela-reserved- signalés par Cisco."
+        },
+        {
+          "title": "Adopter le Zero Trust pour l'identité et la posture des appareils",
+          "detail": "Le scénario d'exposition de 17 000 milliards d'enregistrements Microsoft, la fuite Medela de ShinyHunters et l'intrusion assistée par IA d'Adif/Renfe reposaient tous sur l'abus de comptes valides (T1078, T1078.004). Abandonnez le modèle « château et douves » : imposez une vérification continue de l'identité et de la posture des appareils à chaque accès, y compris depuis le VPN d'entreprise. Déployez des clés matérielles FIDO2/WebAuthn pour les comptes privilégiés et cloud, révoquez toutes les sessions actives au déploiement, et auditez trimestriellement les consentements OAuth et intégrations tierces."
+        },
+        {
+          "title": "Traiter les fournisseurs tiers comme un risque systémique",
+          "detail": "Dediserve/iomart (cloud), FinSoft (logiciel de back-office retail), UNIRITA (éditeur logiciel) et Gyazo (hébergement d'images) ont tous été compromis ou revendiqués cette période, créant un risque en aval pour leurs clients. Imposez des exigences de sécurité contractuelles, la livraison de SBOM et des clauses de notification d'incident pour tous les fournisseurs critiques. Cartographiez votre graphe de dépendances pour identifier quels services reposent sur des fournisseurs compromis ou revendiqués, et répétez les plans de contingence en cas de panne ou d'exposition de données fournisseur."
+        },
+        {
+          "title": "Préparer la notification réglementaire à 24 heures",
+          "detail": "Le Cyber Resilience Act européen impose depuis le 11 septembre 2026 une notification sous 24 heures des vulnérabilités activement exploitées, avec notification détaillée à 72 heures et rapports finaux à 14 jours/un mois via la Single Reporting Platform d'ENISA. La loi japonaise de cyberdéfense active oblige désormais 15 secteurs d'infrastructure critique à signaler rapidement. Établissez un point de contact surveillé, une politique de divulgation coordonnée, un inventaire d'actifs à jour et un SBOM, et répétez le workflow de notification avec le juridique et la conformité avant tout incident."
+        },
+        {
+          "title": "Gouverner les agents IA en développement et en opérations",
+          "detail": "L'UK AISI a simulé GPT-6 Astra atteignant un taux d'attaque complet de chaîne d'approvisionnement de 29,2 % contre des projets open source, et des agents OpenAI ont atteint des sites gouvernementaux australiens. La FTC enquête sur OpenAI et Anthropic pour les risques des agents IA. Définissez une politique d'usage des IA/LLM en développement et revue de code, exigez une validation humaine des contributions externes aux dépôts critiques, surveillez les comptes contributeurs à faible historique et les identités synthétiques, et imposez des contrôles d'intégrité sur les artefacts de build et les dépendances."
+        }
+      ]
+    },
+    "operational": {
+      "en": [
+        {
+          "title": "Hunt for WHIPSHOT/SLAPSHOT Web Shells on NetScaler",
+          "detail": "Immediately scan all Citrix NetScaler ADC/Gateway appliances for CVE-2026-88771/88772 exploitation. Check for WHIPSHOT and SLAPSHOT web shells in web directories, review logs for DTLSv1.0 handshake failures and packet-engine crashes, and inspect for anomalous root-level processes. Apply Citrix patches, disable DTLS if unused, and consider rebuilding compromised appliances from a known-good image rather than cleaning in place."
+        },
+        {
+          "title": "Audit Cisco SD-WAN Manager for CVE-2026-76504 Compromise",
+          "detail": "Search Cisco Catalyst SD-WAN Manager logs for encoded j_security_check requests and the viptela-reserved- accounts Cisco flagged as exploitation indicators. Revoke suspicious sessions and accounts, audit routing policies, segmentation rules and device configurations for unauthorised changes, and never expose SD-WAN management interfaces to the Internet — place them behind VPN/jump hosts with IP filtering."
+        },
+        {
+          "title": "Patch Zimbra, Apple and MikroTik Immediately",
+          "detail": "Upgrade Zimbra Collaboration to 10.1.20+ (CVE-2026-73570, exploited within hours of patch release), disable the zimbra-snmp package if unused, and hunt for credential/key theft and mailbox exfiltration. Apply iOS/iPadOS 26.7.1, macOS Tahoe 26.7.1 and macOS Sequoia 15.8.1 (CVE-2026-86950, KEV). Update MikroTik RouterOS to 7.24+ (CVE-2026-84411, pre-auth RCE) and restrict web management exposure."
+        },
+        {
+          "title": "Block Phishing URL and Subdomain, Not Root Domain",
+          "detail": "Block hxxps://pub-728be3e87f224c1480ad55bd8324eb59[.]r2[.]dev/index[.]html at proxy, DNS and email gateway level. Do NOT block the root r2.dev domain without impact analysis, as it is a legitimate Cloudflare R2 storage service widely used. Search proxy/DNS/email logs for the URL and subdomain, identify recipients who clicked, and reset credentials and revoke sessions for any account that submitted information."
+        },
+        {
+          "title": "Remediate Kiteworks and Salesforce Clusters",
+          "detail": "Update Kiteworks Core and Email Protection Gateway to the latest versions to address CVE-2026-102104 through CVE-2026-102149 (SSRF, stored XSS, auth bypass in password reset, improper access control). For Salesforce, prioritise CVE-2026-22582/22583/22584/22585/22586 (CVSS 9.8, EPSS 43-66%) and CVE-2025-9844 (EPSS 44%) — apply patches immediately, isolate affected systems and monitor for anomalous access to Salesforce data."
+        },
+        {
+          "title": "Update pypdf and Audit Document Pipelines",
+          "detail": "Upgrade pypdf to 6.19.0+ to address the DoS family CVE-2026-102995 through CVE-2026-103000 (CVSS 8.7, uncontrolled resource consumption and inefficient algorithmic complexity). Limit resources allocated to PDF-parsing workers, monitor for CPU saturation and processing-queue blocking, and verify the update is correctly applied across all document-processing services."
+        }
+      ],
+      "fr": [
+        {
+          "title": "Chasser les web shells WHIPSHOT/SLAPSHOT sur NetScaler",
+          "detail": "Scannez immédiatement toutes les appliances Citrix NetScaler ADC/Gateway pour l'exploitation de CVE-2026-88771/88772. Recherchez les web shells WHIPSHOT et SLAPSHOT dans les répertoires web, examinez les journaux pour les échecs de handshake DTLSv1.0 et les crashs du packet engine, et inspectez les processus root anormaux. Appliquez les correctifs Citrix, désactivez DTLS si inutilisé, et envisagez de reconstruire les appliances compromises depuis une image saine plutôt que de nettoyer sur place."
+        },
+        {
+          "title": "Auditer Cisco SD-WAN Manager pour CVE-2026-76504",
+          "detail": "Recherchez dans les journaux de Cisco Catalyst SD-WAN Manager les requêtes j_security_check encodées et les comptes viptela-reserved- signalés par Cisco comme indicateurs d'exploitation. Révoquez les sessions et comptes suspects, auditez les politiques de routage, règles de segmentation et configurations d'équipements pour détecter des modifications non autorisées, et n'exposez jamais les interfaces de management SD-WAN sur Internet — placez-les derrière VPN/jump host avec filtrage IP."
+        },
+        {
+          "title": "Corriger immédiatement Zimbra, Apple et MikroTik",
+          "detail": "Mettez à niveau Zimbra Collaboration vers 10.1.20+ (CVE-2026-73570, exploité quelques heures après la publication du correctif), désactivez le paquet zimbra-snmp si inutilisé, et chassez le vol d'identifiants/clés et l'exfiltration de boîtes aux lettres. Appliquez iOS/iPadOS 26.7.1, macOS Tahoe 26.7.1 et macOS Sequoia 15.8.1 (CVE-2026-86950, KEV). Mettez à jour MikroTik RouterOS vers 7.24+ (CVE-2026-84411, RCE pré-auth) et restreignez l'exposition du service de gestion web."
+        },
+        {
+          "title": "Bloquer l'URL et le sous-domaine de phishing, pas le domaine racine",
+          "detail": "Bloquez hxxps://pub-728be3e87f224c1480ad55bd8324eb59[.]r2[.]dev/index[.]html au niveau proxy, DNS et passerelle e-mail. Ne bloquez PAS le domaine racine r2.dev sans analyse d'impact, car il s'agit d'un service de stockage Cloudflare R2 légitime largement utilisé. Recherchez l'URL et le sous-domaine dans les journaux proxy/DNS/e-mail, identifiez les destinataires ayant cliqué, et réinitialisez les identifiants et révoquez les sessions de tout compte ayant soumis des informations."
+        },
+        {
+          "title": "Remédier aux clusters Kiteworks et Salesforce",
+          "detail": "Mettez à jour Kiteworks Core et Email Protection Gateway vers les dernières versions pour corriger CVE-2026-102104 à CVE-2026-102149 (SSRF, XSS stocké, contournement d'authentification dans la réinitialisation de mot de passe, contrôle d'accès inapproprié). Pour Salesforce, priorisez CVE-2026-22582/22583/22584/22585/22586 (CVSS 9.8, EPSS 43-66 %) et CVE-2025-9844 (EPSS 44 %) — appliquez les correctifs immédiatement, isolez les systèmes affectés et surveillez les accès anormaux aux données Salesforce."
+        },
+        {
+          "title": "Mettre à jour pypdf et auditer les pipelines documentaires",
+          "detail": "Mettez à niveau pypdf vers 6.19.0+ pour corriger la famille DoS CVE-2026-102995 à CVE-2026-103000 (CVSS 8.7, consommation non contrôlée de ressources et complexité algorithmique inefficace). Limitez les ressources allouées aux workers de parsing PDF, surveillez la saturation CPU et le blocage des files de traitement, et vérifiez que la mise à jour est correctement appliquée sur tous les services de traitement documentaire."
+        }
+      ]
+    }
+  }
+}
