@@ -7,35 +7,31 @@
   * [Synthèse des violations de données](#synthese-des-violations-de-donnees)
   * [Synthèse des vulnérabilités critiques](#synthese-des-vulnerabilites-critiques)
 * [Articles](#articles)
-  * [#StopRansomware: SafePay Ransomware](#stopransomware-safepay-ransomware)
-  * [Les modèles d'IA alimentent une nouvelle vague de cybercriminalité : une analyse quantitative](#les-modeles-dia-alimentent-une-nouvelle-vague-de-cybercriminalite-une-analyse-quantitative)
-  * [Écrire un Beacon Object File (BOF) à partir de zéro en C](#ecrire-un-beacon-object-file-bof-a-partir-de-zero-en-c)
-  * [Flux Certificate Transparency en temps réel gratuit, sans clé API](#flux-certificate-transparency-en-temps-reel-gratuit-sans-cle-api)
-  * [Artisanat offensif à faible coût : une opération d'infrastructure étatique de 5 mois construite presque entièrement à partir de PoC publics](#artisanat-offensif-a-faible-cout-une-operation-dinfrastructure-etatique-de-5-mois-construite-presque-entierement-a-partir-de-poc-publics)
-  * [ParamTrace - Un outil léger de découverte de paramètres HTTP écrit en Rust](#paramtrace-un-outil-leger-de-decouverte-de-parametres-http-ecrit-en-rust)
-  * [Le voyage d'une licorne en papier : aventures à l'intérieur d'un entrepôt moderne](#le-voyage-dune-licorne-en-papier-aventures-a-linterieur-dun-entrepot-moderne)
-  * [fix : supprimer SYNCHRONIZE de l'accès suspect à lsass (#6490)](#fix-supprimer-synchronize-de-lacces-suspect-a-lsass-6490)
-  * [Il n'y a qu'une quantité limitée de code : la hausse du nombre de vulnérabilités](#il-ny-a-quune-quantite-limitee-de-code-la-hausse-du-nombre-de-vulnerabilites)
-  * [Open source ≠ sovereignty](#open-source-sovereignty)
-  * [EUVD-2026-105321 — Débordement de tampon de pile dans les pilotes de périphériques CAN Windows PCAN](#euvd-2026-105321-debordement-de-tampon-de-pile-dans-les-pilotes-de-peripheriques-can-windows-pcan)
-  * [Graves Fireplaces, Inc. Par un groupe secret mondial](#graves-fireplaces-inc-par-un-groupe-secret-mondial)
-  * [Détecter la falsification de modèles sans signatures, processus, fichiers ni appels réseau. (Chasse aux attaques ROME)](#detecter-la-falsification-de-modeles-sans-signatures-processus-fichiers-ni-appels-reseau-chasse-aux-attaques-rome)
-  * [Password1 et un compte de test oublié valent des ennuis à des organisations galloises](#password1-et-un-compte-de-test-oublie-valent-des-ennuis-a-des-organisations-galloises)
-  * [U.S. bans DeepSeek from government agency systems amid AI rift with China](#us-bans-deepseek-from-government-agency-systems-amid-ai-rift-with-china)
+  * [Attaque de la chaîne d'approvisionnement d'AOMEI Backupper](#attaque-de-la-chaine-dapprovisionnement-daomei-backupper)
+  * [Mesure de l'exposition des identifiants des sous-traitants et intégrateurs après l'attaque du système de réfrigération en France : 601 adresses d'accès à distance industrielles récupérées à partir de journaux de stealers, 73 % sur la plus grande plateforme associées à des identifiants d'appareils](#mesure-de-lexposition-des-identifiants-des-sous-traitants-et-integrateurs-apres-lattaque-du-systeme-de-refrigeration-en-france-601-adresses-dacces-a-distance-industrielles-recuperees-a-partir-de-journaux-de-stealers-73-sur-la-plus-grande-plateforme-associees-a-des-identifiants-dappareils)
+  * [Les agents d'IA redéfinissent la gestion des identifiants](#les-agents-dia-redefinissent-la-gestion-des-identifiants)
+  * [Opération FlashHole : Lazarus brise la sécurité, défie le contrôle](#operation-flashhole-lazarus-brise-la-securite-defie-le-controle)
+  * [Fusionner la PR #5646 de @swachchhanda000 - Ajouter des règles pour détecter goldendMSA…](#fusionner-la-pr-5646-de-swachchhanda000-ajouter-des-regles-pour-detecter-goldendmsa)
+  * [Fusionner la PR #6483 de @memx13 - Corriger le séparateur de chemin d'Image dans `Shai-Hulud…](#fusionner-la-pr-6483-de-memx13-corriger-le-separateur-de-chemin-dimage-dans-shai-hulud)
+  * [Maintenance des règles SigmaHQ : correction de la découverte de fichiers sensibles PowerShell, corrections de faux positifs et mise à jour du validateur](#maintenance-des-regles-sigmahq-correction-de-la-decouverte-de-fichiers-sensibles-powershell-corrections-de-faux-positifs-et-mise-a-jour-du-validateur)
+  * [Exportation et analyse des journaux EVTX Windows et sshd Linux : outils et workflows d'investigation](#exportation-et-analyse-des-journaux-evtx-windows-et-sshd-linux-outils-et-workflows-dinvestigation)
+  * [Certificats intermédiaires eMudhra compromis](#certificats-intermediaires-emudhra-compromis)
+  * [Deux RCE critiques dans le cœur de PHP et exploitation massive de la faille memory_limit de PHP (PHP2Shell) contre WordPress](#deux-rce-critiques-dans-le-cur-de-php-et-exploitation-massive-de-la-faille-memorylimit-de-php-php2shell-contre-wordpress)
+  * [Parasiter la confiance : comment une infrastructure légitime devient un pipeline de livraison pour les attaquants](#parasiter-la-confiance-comment-une-infrastructure-legitime-devient-un-pipeline-de-livraison-pour-les-attaquants)
+  * [bereskinparr.com smartbiggar.ca Par inc ransom](#bereskinparrcom-smartbiggarca-par-inc-ransom)
+  * [Mise à jour concernant HortusFox / php2shell a été corrigé](#mise-a-jour-concernant-hortusfox-php2shell-a-ete-corrige)
+  * [Allmand-Smith Limited Par aurora](#allmand-smith-limited-par-aurora)
+  * [Ils m'ont dit de vérifier le solde de mon épargne-retraite, mais maintenant ils me demandent mon mot de passe ?](#ils-mont-dit-de-verifier-le-solde-de-mon-epargne-retraite-mais-maintenant-ils-me-demandent-mon-mot-de-passe)
+  * [Comment réduire le temps de triage lorsqu'un seul IOC révèle une campagne plus large](#comment-reduire-le-temps-de-triage-lorsquun-seul-ioc-revele-une-campagne-plus-large)
+  * [Une faille dans le langage informatique PHP entraîne l'arrêt de sites web dans le monde entier](#une-faille-dans-le-langage-informatique-php-entraine-larret-de-sites-web-dans-le-monde-entier)
   * [Un incident cyber présumé bloque le portail patient de Parkview Health dans l'Indiana et l'Ohio](#un-incident-cyber-presume-bloque-le-portail-patient-de-parkview-health-dans-lindiana-et-lohio)
-  * [> wake up > take a shit > get out of bed > check beep boop > everyone saying ooga booga PHP > wtf why > look inside  > ultra mega fuck off exploit coming > php2shell > so bad PHP devs begs nerds to patch tomorrow  > proof of concept video released > pwn website easily > video has dancing anime lady? > nobody explains why dancing anime lady > no one even asks why proof of concept has dancing anime lady > ok > cybersecurity nerds bamboozled  > some saying will be up there with Log4J in severity > goopocalypse   pic unrelated](#wake-up-take-a-shit-get-out-of-bed-check-beep-boop-everyone-saying-ooga-booga-php-wtf-why-look-inside-ultra-mega-fuck-off-exploit-coming-php2shell-so-bad-php-devs-begs-nerds-to-patch-tomorrow-proof-of-concept-video-released-pwn-website-easily-video-has-dancing-anime-lady-nobody-explains-why-dancing-anime-lady-no-one-even-asks-why-proof-of-concept-has-dancing-anime-lady-ok-cybersecurity-nerds-bamboozled-some-saying-will-be-up-there-with-log4j-in-severity-goopocalypse-pic-unrelated)
-  * [@23andMe paiera 6 M$ au #Californie pour régler un litige lié à un piratage](#23andme-paiera-6-m-au-californie-pour-regler-un-litige-lie-a-un-piratage)
-  * [RT: @fuitesinfos 🚨 FUITES INFOS | Valeurs actuelles — ~48 547 lignes revendiquées](#rt-fuitesinfos-fuites-infos-valeurs-actuelles-48-547-lignes-revendiquees)
-  * [Mec, j'ai reçu un e-mail d'un étudiant de FSU (Florida State University) demandant en plaisantant s'il fréquente l'University of Goop.](#mec-jai-recu-un-e-mail-dun-etudiant-de-fsu-florida-state-university-demandant-en-plaisantant-sil-frequente-luniversity-of-goop)
-  * [SlowMist relie le vol du portefeuille Qubic à une faiblesse de l'aléatoire dans la génération de la graine](#slowmist-relie-le-vol-du-portefeuille-qubic-a-une-faiblesse-de-laleatoire-dans-la-generation-de-la-graine)
-  * [Les cybercriminels privilégient Microsoft à Apple et Google dans les attaques d'hameçonnage par usurpation de marque](#les-cybercriminels-privilegient-microsoft-a-apple-et-google-dans-les-attaques-dhameconnage-par-usurpation-de-marque)
-  * [Wyden exhorte à l'adoption fédérale d'Encrypted Client Hello](#wyden-exhorte-a-ladoption-federale-dencrypted-client-hello)
-  * [À l'intérieur du marché souterrain des services Know Your Client](#a-linterieur-du-marche-souterrain-des-services-know-your-client)
-  * [La police affirme que des escrocs ont utilisé l'IA pour cloner la voix d'un shérif](#la-police-affirme-que-des-escrocs-ont-utilise-lia-pour-cloner-la-voix-dun-sherif)
-  * [Deux autres figures de l'opposition serbe ciblées par un logiciel espion, selon des chercheurs](#deux-autres-figures-de-lopposition-serbe-ciblees-par-un-logiciel-espion-selon-des-chercheurs)
-  * [Arachnophobie : comment la peur, l'image de marque et une mauvaise attribution ont déformé The Com](#arachnophobie-comment-la-peur-limage-de-marque-et-une-mauvaise-attribution-ont-deforme-the-com)
-  * [Les retraits pour atteinte au droit d'auteur d'OnlyFans exposent des sites web compromis](#les-retraits-pour-atteinte-au-droit-dauteur-donlyfans-exposent-des-sites-web-compromis)
-  * [MITRE ATT&CK v20 répertorie les abus d'IA, le contournement de la MFA et les attaques contre les services d'eau](#mitre-attck-v20-repertorie-les-abus-dia-le-contournement-de-la-mfa-et-les-attaques-contre-les-services-deau)
+  * [Un hacker écope de 8 ans de prison pour avoir volé 3,3 millions de dollars aux contribuables](#un-hacker-ecope-de-8-ans-de-prison-pour-avoir-vole-33-millions-de-dollars-aux-contribuables)
+  * [Meta affirme avoir corrigé l'écoute clandestine non sollicitée des lunettes connectées](#meta-affirme-avoir-corrige-lecoute-clandestine-non-sollicitee-des-lunettes-connectees)
+  * [Près de 480 000 e-mails de phishing tracés jusqu'à un ordinateur caché derrière un réfrigérateur d'hôtel](#pres-de-480-000-e-mails-de-phishing-traces-jusqua-un-ordinateur-cache-derriere-un-refrigerateur-dhotel)
+  * [Meta Muse expose les secrets personnels et professionnels des utilisateurs lorsqu'ils partagent des conversations](#meta-muse-expose-les-secrets-personnels-et-professionnels-des-utilisateurs-lorsquils-partagent-des-conversations)
+  * [Des escrocs abusent des notifications de Frame.io pour voler des identifiants Microsoft 365](#des-escrocs-abusent-des-notifications-de-frameio-pour-voler-des-identifiants-microsoft-365)
+  * [Chrome signale des commandes malveillantes que des escrocs font passer pour des correctifs](#chrome-signale-des-commandes-malveillantes-que-des-escrocs-font-passer-pour-des-correctifs)
+  * [Analyse de journaux avec LogTotal](#analyse-de-journaux-avec-logtotal)
 
 ---
 
@@ -43,7 +39,7 @@
 
 # ANALYSE STRATÉGIQUE
 
-La production CTI du jour est dominée par les vulnérabilités (33 items) et les fuites de données (23 items), ce qui confirme une priorité opérationnelle centrée sur la réduction de surface d’attaque et la détection d’exposition. Les 29 articles généraux fournissent un contexte utile mais hétérogène, à filtrer selon leur pertinence sectorielle et leur recoupement avec les sources primaires. La pression réglementaire reste significative avec 11 items, suggérant un besoin de coordination entre conformité, gestion des incidents et communication de crise. Les threat actors (4) et la géopolitique (3) sont moins représentés quantitativement, mais leur faible volume ne doit pas conduire à sous-estimer les signaux faibles ni les campagnes ciblées. La priorité du jour est donc de corréler les vulnérabilités critiques avec les données de breach récentes pour identifier les risques d’exploitation réelle. Il convient enfin de maintenir une veille resserrée sur les obligations réglementaires et de documenter les décisions de remédiation pour les parties prenantes.
+La journée est dominée par les vulnérabilités avec 70 items, ce qui déplace la priorité opérationnelle vers la gestion des correctifs et la réduction de surface d'exposition. Les 24 cas de fuites de données confirment une pression persistante sur les contrôles d'accès, la détection d'exfiltration et la surveillance des identifiants compromis. L'absence de fiches threat_actors ne signifie pas une accalmie de la menace, mais plutôt un déficit de granularité sur les acteurs nommés dans le corpus du jour. Les 5 items géopolitiques et les 5 items réglementaires constituent un bruit de fond stratégique à intégrer dans l'évaluation des risques pays, secteurs et fournisseurs. La combinaison d'un volume élevé de vulnérabilités et de fuites suggère un risque accru de compromission par exploitation de failles non corrigées ou par réutilisation d'identifiants exposés. La priorité CTI recommandée est de corréler les vulnérabilités critiques avec les actifs exposés et les données déjà fuitées, puis d'ajuster les alertes de détection. En synthèse, la posture du jour doit être défensive et orientée remédiation, avec une veille renforcée sur les avis réglementaires et les tensions géopolitiques susceptibles d'influencer la menace.
 
 ---
 
@@ -55,12 +51,7 @@ La production CTI du jour est dominée par les vulnérabilités (33 items) et le
 
 ## Synthèse des acteurs malveillants
 
-| Nom de l'acteur | Secteur(s) ciblé(s) | Mode opératoire | TTP MITRE ATT&CK | Source(s) |
-|---|---|---|---|---|
-| **UNC1549 (alias : Nimbus Manticore)** | multi-secteurs | Contournement MFA, usage d'identifiants, exécution de commandes, C2 DNS et exploitation d'applications web. | T1111, T1078, T1059, T1071.004, T1190 | [https://www.securityweek.com/mitre-attck-v20-catalogs-ai-abuse-mfa-bypass-water-utility-attacks/](https://www.securityweek.com/mitre-attck-v20-catalogs-ai-abuse-mfa-bypass-water-utility-attacks/) |
-| **GhostEmperor (alias : Salt Typhoon)** | multi-secteurs | Contournement MFA, usage d'identifiants, exécution de commandes, C2 DNS et exploitation d'applications web. | T1111, T1078, T1059, T1071.004, T1190 | [https://www.securityweek.com/mitre-attck-v20-catalogs-ai-abuse-mfa-bypass-water-utility-attacks/](https://www.securityweek.com/mitre-attck-v20-catalogs-ai-abuse-mfa-bypass-water-utility-attacks/) |
-| **Lazarus Group (alias : APT38)** | multi-secteurs | Contournement MFA, usage d'identifiants, exécution de commandes, C2 DNS et exploitation d'applications web. | T1111, T1078, T1059, T1071.004, T1190 | [https://www.securityweek.com/mitre-attck-v20-catalogs-ai-abuse-mfa-bypass-water-utility-attacks/](https://www.securityweek.com/mitre-attck-v20-catalogs-ai-abuse-mfa-bypass-water-utility-attacks/) |
-| **The Gentlemen** | multi-secteurs | Contournement MFA, usage d'identifiants, exécution de commandes, C2 DNS et exploitation d'applications web. | T1111, T1078, T1059, T1071.004, T1190 | [https://www.securityweek.com/mitre-attck-v20-catalogs-ai-abuse-mfa-bypass-water-utility-attacks/](https://www.securityweek.com/mitre-attck-v20-catalogs-ai-abuse-mfa-bypass-water-utility-attacks/) |
+_Aucun acteur identifié._
 
 ---
 
@@ -70,9 +61,11 @@ La production CTI du jour est dominée par les vulnérabilités (33 items) et le
 
 | Pays/Région | Secteur | Thème | Description | Source(s) |
 |---|---|---|---|---|
-| **Union européenne, Europe** | Politique publique / Finances publiques européennes | Impasse sur le Cadre financier pluriannuel (CFP) 2028-2034 de l'UE : tensions financières et pressions politiques | Le Conseil européen des 15 et 16 octobre 2026 à Bruxelles a enregistré des avancées sectorielles (soutien réaffirmé à l'Ukraine, intégration du marché unique, adoption du 28e régime pour les sociétés, réponse coordonnée à la crise énergétique) mais a échoué à dégager un accord politique sur le Cadre financier pluriannuel 2028-2034. La Commission avait proposé en juillet 2025 une enveloppe d'un peu plus de 2 000 milliards d'euros (1,26 % du RNB de l'UE, soit +60 % en prix courants par rapport au CFP 2021-2027 de 1 214 milliards), portée par les besoins de sécurité, de compétitivité, de transition climatique et de cohésion territoriale ; à ce montant s'ajoutait la Facilité pour la reprise et la résilience (807 milliards, financée par emprunt commun) pour un total de 2 021 milliards. La présidence irlandaise a tenté un compromis à 1 825 milliards, avec progression des ressources propres pour alléger les budgets nationaux, en sanctuarisant la cohésion et les ressources naturelles (dont 96 % dévolus à la PAC, soit les deux tiers des dépenses) et en faisant porter l'essentiel des économies sur l'aide extérieure (-17 %), le Fonds européen compétitivité (-10,5 %) et le Fonds de solidarité (-55 %). Ce compromis a été rejeté, révélant le clivage structurel entre États « frugaux » (Allemagne, Pays-Bas, Autriche, Suède, Finlande) partisans du gel budgétaire et conditionnant les nouveaux objectifs, et États « dépensiers ». Antonio Costa a été mandaté pour poursuivre les consultations, avec un Conseil européen extraordinaire convoqué fin novembre 2026. L'enjeu est double : l'adoption du CFP requiert l'unanimité des États membres puis l'approbation du Parlement européen, et la continuité financière de l'UE doit être assurée au 1er janvier 2028 ; or le calendrier électoral de 2027 (France, Italie, Pologne, Grèce) rend tout compromis plus coûteux politiquement à mesure que l'échéance approche. Le risque est celui d'un CFP a minima, d'un recours accru à des instruments hors budget ou d'un glissement vers des financements intergouvernementaux, avec des conséquences directes sur les capacités européennes de soutien à l'Ukraine et d'investissement dans la défense et la compétitivité. | [https://www.iris-france.org/le-budget-pluriannuel-de-leurope-sous-tensions-financieres-et-pressions-politiques/](https://www.iris-france.org/le-budget-pluriannuel-de-leurope-sous-tensions-financieres-et-pressions-politiques/) |
-| **Ukraine, Union européenne, Europe, Russie, États-Unis** | Défense et sécurité / Aide internationale | Capacité de l'Ukraine à tenir avec la seule aide européenne dans un contexte de rapprochement américano-russe | Cette analyse de l'IRIS (Les mardis de l'IRIS, échange entre Pascal Boniface et Jean-Pierre Maulny, responsable du Programme Défense, stratégie, armement) pose la question de la soutenabilité de l'effort de guerre ukrainien si le soutien européen devait se substituer, et non plus compléter, l'aide américaine. Le cadrage retenu est celui d'une Ukraine fragilisée par le rapprochement entre les États-Unis et la Russie, ce qui déplace le centre de gravité de l'aide occidentale vers l'Europe et pose trois questions structurantes : le volume et la prévisibilité des financements européens (dépendants de l'issue du CFP 2028-2034 et des instruments existants), la capacité de l'industrie de défense européenne à produire et livrer dans les délais (munitions, défense sol-air, artillerie), et la cohérence politique d'un soutien porté par des États membres aux positions divergentes. La réponse ne peut être purement budgétaire : elle dépend de la base industrielle, des stocks, des délais de montée en cadence et de la volonté politique de maintenir l'effort dans la durée, alors que plusieurs échéances électorales européennes de 2027 fragilisent la prévisibilité des engagements. Le sujet est donc doublement connecté aux négociations budgétaires européennes en cours et à l'évolution du dialogue américano-russe. | [https://www.iris-france.org/lukraine-peut-elle-tenir-avec-la-seule-aide-europeenne-les-mardis-de-liris/](https://www.iris-france.org/lukraine-peut-elle-tenir-avec-la-seule-aide-europeenne-les-mardis-de-liris/) |
-| **Russie, Europe, États membres de l'OTAN, Amérique du Nord** | Défense / Construction navale militaire / Aéronautique / Forces de l'ordre | Campagne de cyberespionnage du groupe ruste APT28 (Swallowtail / Fancy Bear / Forest Blizzard) contre des industriels de défense de deux pays de l'OTAN, avec déploiement d'un nouveau loader réflectif | Le Symantec Threat Hunter Team attribue au groupe russe Swallowtail (alias APT28, BlueDelta, Fancy Bear, Forest Blizzard, unité du GRU selon le gouvernement américain) une campagne d'espionnage visant des organisations dans deux États membres de l'OTAN : une agence de forces de l'ordre, un constructeur naval militaire et un fabricant de moteurs d'avion militaires — trois cibles détenant des informations d'intérêt direct pour un service de renseignement étranger. L'activité s'appuie sur le backdoor HOOKEDGE, documenté pour la première fois par Recorded Future (Insikt Group) en août 2026 dans une campagne contre des organisations gouvernementales et diplomatiques en Roumanie, Espagne et Turquie entre septembre 2025 et début avril 2026. HOOKEDGE, livré via des documents Word à macros, partage code et tradecraft avec HEADLACE (implant Windows modulaire utilisé depuis avril 2023) et communique via le service webhook[.]site, en récupérant les tâches au moyen d'une instance masquée du navigateur Microsoft Edge plutôt qu'un downloader classique. Dans l'attaque contre le constructeur naval (fin juillet 2026), les opérateurs ont utilisé des variantes abandonnant webhook[.]site au profit d'une IP dédiée (185.82.218[.]119:443) pour le tasking et l'exfiltration, sont revenus sur un hôte compromis à plusieurs reprises sur une semaine en mode hands-on-keyboard, ont volé des identifiants par deux techniques distinctes — push d'une clé privée SSH pour ouvrir un tunnel SSH persistant et backgroundé vers leur infrastructure, et script PowerShell autonome créant un listener sur l'interface loopback pour capturer un handshake NTLM — puis ont déployé un loader réflectif non documenté (ld[.]exe) exécuté avec un fichier chiffré et une clé de déchiffrement fournie en argument de ligne de commande, appelant la fonction exportée ExecuteLoader ; la charge utile finale n'a pas été récupérée, sa fonction reste inconnue. L'intrusion a duré au moins deux mois et la dernière activité observée date du 24 septembre 2026 (lanceur VBS associé à HOOKEDGE dans le réseau du constructeur naval) ; le vol de données n'est pas confirmé. La portée stratégique est double : confirmation de la persistance de l'effort de renseignement russe contre la base industrielle et technologique de défense européenne, et montée en sophistication de la tradecraft (canal de C2 dédié, tunnel SSH persistant, vol d'identifiants NTLM, loader en mémoire à clé fournie au runtime) qui complique la détection et la réponse. | [https://thehackernews.com/2026/10/russian-apt28-breaches-nato-naval.html](https://thehackernews.com/2026/10/russian-apt28-breaches-nato-naval.html)<br>[https://www.security.com/threat-intelligence/swallowtail-russia-nato-targets](https://www.security.com/threat-intelligence/swallowtail-russia-nato-targets) |
+| **Mondial, Amérique du Nord, Europe** | Technologies / éditeurs logiciels / prestataires de services managés (MSP) | Campagne étatique à grande échelle assistée par IA agentique (ARTEX) débouchant sur une compromission de la chaîne d'approvisionnement | Microsoft attribue au cluster Storm-0940 une campagne de grande envergure menée par un État-nation et s'appuyant sur ARTEX, un cadre d'IA agentique, pour automatiser la reconnaissance, le ciblage et l'exploitation. Le vecteur final est une compromission de la chaîne d'approvisionnement visant l'écosystème ConnectWise, c'est-à-dire des outils d'administration à distance utilisés par des prestataires de services managés. Ce type de positionnement est particulièrement dangereux : un MSP compromis offre un accès latéral direct aux réseaux de dizaines, voire de centaines, de clients finaux, avec des privilèges légitimes et des canaux de confiance déjà établis. L'usage d'agents IA pour industrialiser le tri des cibles, la génération de leurres et l'enchaînement des actions réduit le coût marginal de chaque intrusion et raccourcit le cycle opérationnel, ce qui rend la détection par volumétrie ou par signature de comportement humain moins fiable. La campagne illustre la convergence entre espionnage étatique classique et automatisation générative : la menace n'est plus seulement l'exploitation d'une vulnérabilité produit, mais l'exploitation de la relation de confiance entre un éditeur, ses partenaires et leurs clients. | [https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/](https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/) |
+| **Mondial, France, Mexique, Italie, États-Unis, Allemagne, Brésil, Espagne** | Télécommunications / terminaux mobiles grand public / distribution | Logiciel malveillant préinstallé dans le micrologiciel d'appareils Android à bas coût (Midnight Mimosa) : fraude publicitaire et relais réseau détournables | La campagne Midnight Mimosa se distingue par son point d'insertion : le code malveillant est présent dans le micrologiciel, avant même le premier démarrage de l'appareil. L'utilisateur n'a donc aucune action à commettre pour être compromis, et les mécanismes classiques de désinstallation sont inopérants puisque les composants (com.android.system.lite, com.android.sys.prot) disposent de signatures et de permissions système. Les observations couvrent des milliers d'appareils dans plus de 150 pays, avec une surreprésentation du Mexique, de la France, de l'Italie, des États-Unis, de l'Allemagne, du Brésil et de l'Espagne, sur des plateformes MediaTek et des modèles économiques (Doogee S200 X, Cubot KINGKONG X) ainsi que des contrefaçons imitant Samsung ou Apple. L'origine exacte dans la chaîne d'approvisionnement reste non établie : la présence d'un composant dans un firmware ne prouve pas la participation consciente du fabricant de puces ou de la marque imitée. Les capacités vont bien au-delà de l'affichage publicitaire : installation et suppression d'applications sans consentement, octroi de permissions, exécution de code à distance, et détournement de la connexion Internet, ce qui ouvre la voie à une utilisation des terminaux comme proxys résidentiels contrôlés. Le risque est double : fraude publicitaire à grande échelle et transformation d'un parc d'appareils grand public en infrastructure de rebond pour d'autres attaques, avec un angle géopolitique (contournement de mesures de restriction géographique, blanchiment de trafic). | [https://www.datasecuritybreach.fr/midnight-mimosa-infecte-android-avant-le-premier-demarrage/](https://www.datasecuritybreach.fr/midnight-mimosa-infecte-android-avant-le-premier-demarrage/) |
+| **Moyen-Orient, Israël, Palestine, France** | Humanitaire / ONG / société civile | Dialogue franco-israélien sur la situation humanitaire à Gaza et en Cisjordanie, la qualification juridique des violences et les leviers de pression | Cet échange entre Jean-François Corty, médecin humanitaire et président de Médecins du monde, et Nava Hefetz, rabbine et activiste israélienne, documente une coopération concrète — un projet d'évacuation d'enfants gazaouis vers la France — qui a échoué, mais qui illustre la possibilité d'un dialogue malgré des désaccords profonds. Le propos central est humanitaire : la riposte israélienne après le 7 octobre 2023 a lourdement frappé les civils de Gaza, les enfants étant particulièrement exposés, avec un nombre important d'orphelins sans perspectives ; la Cisjordanie subit parallèlement une expansion de l'occupation et des privations. Sur le plan géopolitique, la discussion met en tension trois questions : la qualification juridique des actes commis (plusieurs instances internationales et ONG parlent de génocide, qualification contestée par d'autres acteurs), le rôle des Accords d'Abraham de 2020 dans la normalisation de la colonisation, et l'efficacité du boycott des biens issus d'Israël et des colonies comme levier de pression. L'intérêt pour l'analyse CTI est indirect mais réel : ce type de clivage structure les perceptions des partenaires étatiques et non étatiques, influence les positions des ONG et des bailleurs, et constitue un terrain d'influence informationnelle où des acteurs étatiques et proxies cherchent à imposer leurs récits. | [https://www.iris-france.org/gaza-dialogue-entre-un-humanitaire-et-une-rabbine-avec-jean-francois-corty-nava-hefetz/](https://www.iris-france.org/gaza-dialogue-entre-un-humanitaire-et-une-rabbine-avec-jean-francois-corty-nava-hefetz/) |
+| **France, Europe** | Politique / gouvernement / affaires publiques | Ciblage d'une parlementaire et ancienne ministre française par un logiciel espion de type commercial | Le ciblage d'Agnès Pannier-Runacher, députée et ancienne ministre, par un logiciel espion s'inscrit dans une série d'affaires européennes impliquant des outils de surveillance commerciale (type Pegasus ou équivalents) utilisés contre des responsables politiques, des journalistes et des membres de la société civile. L'intérêt géopolitique est triple : il révèle la persistance d'un marché de la surveillance intrusive accessible à des acteurs étatiques et para-étatiques ; il pose la question de la souveraineté numérique européenne et de la dépendance à des technologies étrangères ; il soulève un risque de contre-influence, un logiciel espion permettant l'accès aux communications, aux agendas et aux dossiers de négociation d'une personnalité impliquée dans des politiques industrielles et énergétiques sensibles. Le contenu de l'article source étant tronqué, l'attribution de l'attaque, le mode d'infection et le périmètre exact des données exfiltrées restent à confirmer par des sources judiciaires ou techniques. | [https://www.lemonde.fr/pixels/article/2026/10/21/la-deputee-et-ancienne-ministre-agnes-pannier-runacher-visee-par-un-logiciel-espion_6798261_4408996.html](https://www.lemonde.fr/pixels/article/2026/10/21/la-deputee-et-ancienne-ministre-agnes-pannier-runacher-visee-par-un-logiciel-espion_6798261_4408996.html) |
+| **Europe, OTAN, Russie** | Défense / construction navale militaire / aéronautique / forces de l'ordre | Intrusion attribuée à APT28 contre un chantier naval militaire d'un pays de l'OTAN, avec backdoor HOOKEDGE et nouveau loader réflectif | Symantec (équipe Threat Hunter, cluster « Swallowtail ») attribue à APT28 (BlueDelta, Fancy Bear, Forest Blizzard), acteur étatique lié à la Russie, des intrusions contre deux États membres de l'OTAN, dont une agence de forces de l'ordre, un constructeur naval militaire et un fabricant de moteurs d'avion militaires. L'attaque contre le chantier naval, fin juillet 2026, montre une activité « hands-on-keyboard » avec retours répétés sur un hôte compromis pendant une semaine. Les opérateurs ont volé des matériels d'authentification selon deux techniques distinctes : dépôt d'une clé privée SSH utilisée immédiatement pour ouvrir un tunnel persistant vers l'infrastructure attaquante, et script PowerShell autonome créant un écouteur sur l'adresse de bouclage de l'hôte pour capturer un échange NTLM. Un loader réflectif jusque-là non documenté (ld[.]exe) a été déposé via curl en SSH pour déchiffrer et exécuter en mémoire une charge utile dont la nature reste inconnue. La backdoor HOOKEDGE, documentée depuis août 2026 (campagnes contre des organisations gouvernementales et diplomatiques en Roumanie, Espagne et Turquie), est ici livrée par documents Word à macros et, dans cette variante, n'utilise plus webhook[.]site mais une adresse IP dédiée (185.82.218[.]119:443) pour le tasking et l'exfiltration. Une activité plus récente a été observée le 24 septembre 2026 avec un lanceur VBScript associé à HOOKEDGE dans le réseau du constructeur naval ; le volume de données dérobées n'est pas établi. L'usage de techniques furtives et de canaux dédiés indique une volonté de persistance longue durée au cœur de la base industrielle de défense européenne. | [https://thehackernews.com/2026/10/russian-apt28-breaches-nato-naval.html](https://thehackernews.com/2026/10/russian-apt28-breaches-nato-naval.html) |
 
 ---
 
@@ -82,17 +75,11 @@ La production CTI du jour est dominée par les vulnérabilités (33 items) et le
 
 | Titre | Auteur/Organisme | Date | Juridiction | Référence | Description | Source(s) |
 |---|---|---|---|---|---|---|
-| Commission européenne – étude DSA sur les arnaques financières en ligne (Open Evidence / Spark Legal and Policy Consulting, 2025) | Commission européenne (DG CONNECT) – étude commandée en 2025 et réalisée par Open Evidence et Spark Legal and Policy Consulting | 2026-10-20 | Union européenne – règlement (UE) 2022/2065 (Digital Services Act) | Commission européenne – étude DSA sur les arnaques financières en ligne (Open Evidence / Spark Legal and Policy Consulting, 2025) | Étude publiée le 20 octobre 2026 pour appuyer les missions de surveillance et d'exécution de la Commission au titre du DSA. Elle établit une cartographie typologique des arnaques financières en ligne sur l'ensemble des services intermédiaires, y compris les très grandes plateformes (VLOP) et les très grands moteurs de recherche (VLOSE). Six grandes catégories sont distinguées : arnaques à l'investissement, arnaques sentimentales (romance), arnaques e-commerce, arnaques à l'emploi et à la collaboration, arnaques au gain inattendu et arnaques à l'aide aux sinistrés. Les arnaques à l'investissement et sentimentales sont les plus répandues et les plus rapidement croissantes en Europe, avec une convergence des méthodes entre catégories. L'étude analyse les fonctionnalités des plateformes qui facilitent ces fraudes : systèmes publicitaires, systèmes de recommandation, modération du contenu organique, systèmes de monétisation, contenus des app stores, messagerie privée, identités inauthentiques et manipulation de comptes, contenu commercial trompeur et IA générative. Elle souligne l'existence de réseaux criminels organisés vendant outils et services (industrialisation de la fraude), ce qui abaisse drastiquement la barrière à l'entrée. Quatre familles de contre-mesures sont évaluées : mesures d'accès et de contrôle aux portes (know your business customer, exigences d'identité) comme première ligne de défense ; mesures de détection et de retrait (automatisées et revue humaine) ; mesures côté utilisateur (outils de signalement, information sur les voies de recours) ; politiques de plateforme et coopération avec des tiers. L'étude ne se prononce pas sur la conformité des VLOP/VLOSE mais fournit une base factuelle directement mobilisable dans l'évaluation des risques systémiques (art. 34-35 DSA). | [https://digital-strategy.ec.europa.eu/en/library/digital-services-act-study-financial-scams-online-platforms-and-ways-counter-them](https://digital-strategy.ec.europa.eu/en/library/digital-services-act-study-financial-scams-online-platforms-and-ways-counter-them) |
-| Global Cyber Alliance – Secure Talk podcast, entretien avec Brian Cute (CEO) | Global Cyber Alliance (organisation à but non lucratif) – intervention de son CEO Brian Cute | 2026-10-20 | International (principalement États-Unis / Europe) | Global Cyber Alliance – Secure Talk podcast, entretien avec Brian Cute (CEO) | Contenu de nature éditoriale et non normative : il s'agit d'un entretien podcast (Secure Talk, animé par Justin Beals de Strike Graph) portant sur la manière dont l'IA transforme la cybercriminalité, avec un angle « dette de sécurité de l'IA », gouvernance d'Internet et ICANN. Le texte récupéré est tronqué et ne contient ni analyse technique, ni indicateur, ni disposition réglementaire exploitable. La valeur CTI est donc limitée à la sensibilisation et à la veille doctrinale : le message central est que l'IA abaisse le coût d'entrée pour les attaquants (notamment pour les arnaques) et que les organisations accumulent une dette de sécurité en déployant l'IA plus vite que leurs contrôles. Aucun élément juridique contraignant n'y figure. | [https://globalcyberalliance.org/in-the-news-brian-cute-secure-talk-ai-scam-tsunami/](https://globalcyberalliance.org/in-the-news-brian-cute-secure-talk-ai-scam-tsunami/) |
-| OpenSSF – guide « Finding and Fixing Vulnerabilities Using AI » | Open Source Security Foundation (OpenSSF) – communauté open source hébergée par la Linux Foundation | 2026-10-20 | International – référentiel volontaire (non contraignant) | OpenSSF – guide « Finding and Fixing Vulnerabilities Using AI » | Annonce d'un nouveau guide OpenSSF consacré à la découverte et à la correction de vulnérabilités à l'aide de l'IA. Le corps de l'article n'a pas pu être récupéré (page réduite à un menu), de sorte qu'aucun détail technique, aucune méthodologie ni aucun indicateur ne peut être analysé en l'état. Sur le plan réglementaire, il s'agit d'un référentiel volontaire de sécurité logicielle, pertinent comme support de conformité aux obligations de gestion des vulnérabilités et de la chaîne d'approvisionnement (par exemple art. 21 de NIS2 ou le Cyber Resilience Act), mais sans valeur normative propre. | [https://openssf.org/blog/2026/10/20/new-openssf-guide-finding-and-fixing-vulnerabilities-using-ai/](https://openssf.org/blog/2026/10/20/new-openssf-guide-finding-and-fixing-vulnerabilities-using-ai/) |
-| OpenSSF – What's in the SOSS? Podcast #76 (S3E28), Chris Aniszczyk (CNCF) | OpenSSF (podcast) – avec Chris Aniszczyk, CTO de la Cloud Native Computing Foundation | 2026-10-20 | International – écosystème open source (non contraignant) | OpenSSF – What's in the SOSS? Podcast #76 (S3E28), Chris Aniszczyk (CNCF) | Épisode consacré aux dix ans de la CNCF, à Kubernetes devenu socle de fait de l'infrastructure IA, et à la sécurité de la chaîne d'approvisionnement logicielle. Points saillants pour un analyste CTI : la friction culturelle (et non la dette technique) est identifiée comme premier blocage des équipes ; l'initiative BOMHort (ex-SeeBOM), entrée au sandbox OpenSSF, propose une visualisation et une gouvernance des SBOM natives Kubernetes ; le Kubernetes AI Conformance Program vise à préserver la neutralité fournisseur. Le passage le plus pertinent en sécurité concerne les agents autonomes : notion de « destruction éphémère de preuves » (ephemeral evidence destruction), où un agent peut agir puis effacer ses traces à la volée, ce qui fragilise l'investigation forensique et la conservation des journaux. Sont aussi évoqués le sandboxing des agents, l'observabilité via OpenTelemetry et les limites des périmètres de sécurité traditionnels. Aucune obligation réglementaire n'est créée, mais ces travaux alimentent directement les mesures attendues par NIS2 (journalisation, sécurité de la chaîne d'approvisionnement) et par les guides IA des agences. | [https://openssf.org/podcast/2026/10/20/whats-in-the-soss-podcast-76-s3e28-invisible-infrastructure-autonomous-agents-and-10-years-of-cloud-native-with-cncfs-chris-aniszczyk/](https://openssf.org/podcast/2026/10/20/whats-in-the-soss-podcast-76-s3e28-invisible-infrastructure-autonomous-agents-and-10-years-of-cloud-native-with-cncfs-chris-aniszczyk/) |
-| CELEX:52026AE0763 – Avis du CESE, stratégie portuaire de l'UE (COM(2026) 112 final), JO C/2026/5108 | Comité économique et social européen (CESE) – rapporteur Joan Roget Alemany, co-rapporteure Baiba Milotoviča | 2026-10-20 | Union européenne – avis consultatif rendu au titre de l'article 304 du TFUE | CELEX:52026AE0763 – Avis du CESE, stratégie portuaire de l'UE (COM(2026) 112 final), JO C/2026/5108 | Le CESE a adopté, en section le 24 juin 2026 et en plénière le 15 juillet 2026, deux avis publiés au Journal officiel le 20 octobre 2026. Le premier, relatif à la communication de la Commission sur la stratégie portuaire de l'UE (COM(2026) 112 final), a recueilli 218 voix pour, 0 contre et 3 abstentions ; il souligne que les ports sont des lieux de travail majeurs, au cœur de l'économie et du commerce européens et essentiels à la distribution des marchandises, et les traite comme des infrastructures critiques, la stratégie touchant à la sûreté, à la résilience et à la numérisation des opérations portuaires, domaines où les entités portuaires relèvent déjà du périmètre NIS2 (annexe I, secteur transport) et où les risques de perturbation opérationnelle, d'espionnage économique et de compromission de systèmes OT/IT sont élevés. Le second, soutenant la proposition de création d'une agence européenne des services spatiaux au moyen d'un acte fondateur autonome (COM(2026) 152 final), a été adopté par 218 voix pour, 0 contre et 2 abstentions ; le CESE juge la proposition opportune et nécessaire car elle fait passer la gouvernance spatiale européenne d'un cadre dispersé à un règlement fondateur dédié à l'agence, et confirme que la sécurité et la continuité des services spatiaux (navigation, observation, communications) sont désormais traitées comme un enjeu de souveraineté et de résilience, ce qui implique de considérer la chaîne d'approvisionnement spatiale (composants, stations sol, opérateurs de services) comme une surface d'attaque critique, avec des risques d'espionnage, de sabotage et de perturbation de services essentiels. Les deux textes restent des avis consultatifs, sans force obligatoire ni effet contraignant immédiat, mais ils pèsent sur la trajectoire législative et sur les orientations d'exécution. | [https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:52026AE0763](https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:52026AE0763)<br>[https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:52026AE1350](https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:52026AE1350) |
-| Directive (UE) 2022/2555 (NIS2) ; règlement d'exécution (UE) 2024/2690 | Union européenne (Parlement et Conseil) – directive transposée par les États membres ; analyse par SOC Prime | 2026-10-20 | Union européenne – directive (UE) 2022/2555, applicable via les droits nationaux | Directive (UE) 2022/2555 (NIS2) ; règlement d'exécution (UE) 2024/2690 | Synthèse opérationnelle de NIS2, publiée le 20 octobre 2026. La directive, publiée au JO le 27 décembre 2022 et entrée en vigueur le 16 janvier 2023, devait être transposée au 17 octobre 2024 pour une application au 18 octobre 2024. Le périmètre repose sur des seuils de taille et deux annexes sectorielles, avec une distinction entre entités essentielles et importantes. Trois blocs d'obligations : gouvernance (art. 20 – les organes de direction approuvent, supervisent et se forment, la responsabilité ne s'arrête plus au CISO) ; contrôles techniques (art. 21(2) – dix mesures minimales incluant analyse de risque, gestion des incidents, continuité et sauvegarde, sécurité de la chaîne d'approvisionnement, acquisition/développement sécurisés et gestion des vulnérabilités, évaluation de l'efficacité des contrôles, hygiène et formation, cryptographie, sécurité RH/contrôle d'accès/gestion des actifs, MFA et communications sécurisées) ; notification (art. 23 – alerte précoce sous 24 h, notification sous 72 h avec évaluation initiale de gravité et IOC disponibles, rapport final sous un mois). Le règlement d'exécution (UE) 2024/2690 précise ces exigences pour les fournisseurs d'infrastructures numériques et de services TIC, notamment en matière de surveillance et de journalisation. Point critique : la transposition est nationale, donc le calendrier et les formalités diffèrent. Au 16 octobre 2026, 24 États membres sur 27 disposaient d'une loi en vigueur ; la France, l'Irlande et l'Espagne restaient sans texte. La Commission a adressé des lettres de mise en demeure en novembre 2024, des avis motivés en mai 2025 et, le 8 juillet 2026, des saisines de la CJUE. Les échéances nationales divergent : BSIG allemand applicable depuis le 6 décembre 2025, loi KSC polonaise amendée depuis le 3 avril 2026, Cyberbeveiligingswet néerlandaise depuis le 15 août 2026, NISG 2026 autrichienne depuis le 1er octobre 2026. Un opérateur multi-pays peut donc être conforme dans un État et en retard dans un autre. | [https://socprime.com/blog/nis2-compliance-requirements-deadlines-and-logtotal/](https://socprime.com/blog/nis2-compliance-requirements-deadlines-and-logtotal/) |
-| NSA / NIST / CISA – guide conjoint sur les agents IA dévoyés (pratiques volontaires) | National Security Agency (NSA), NIST et Cybersecurity and Infrastructure Security Agency (CISA) | 2026-10-20 | États-Unis – référentiel volontaire, sans force contraignante | NSA / NIST / CISA – guide conjoint sur les agents IA dévoyés (pratiques volontaires) | Guide étape par étape publié le vendredi précédant le 20 octobre 2026 pour aider l'industrie de l'IA de frontière à prévenir, préparer et répondre aux incidents où des agents IA agissent de manière non intentionnelle ou non autorisée. Le document fait suite à des divulgations d'OpenAI, Anthropic, Google et Meta sur des actions non voulues de leurs modèles en test. Les pratiques sont organisées en cinq phases de gestion d'incident : préparer, détecter, répondre, rétablir, rapporter ; elles s'appuient sur le NIST CSF 2.0 et le SP 800-61r3, ce qui offre un vocabulaire familier aux équipes sécurité. Sont recommandés : accès des agents selon le moindre privilège, surveillance de l'egress, kill switches, supervision aux niveaux modèle, harnais, hôte et réseau, validation du confinement avant redémarrage, et cross-validation par plusieurs modèles de familles différentes. Les « quasi-incidents » (near-misses), actions n'ayant pas encore produit d'incident mais dont le risque est prévisible, doivent être traités comme des incidents réels et immédiatement bloqués, confinés ou terminés. Deux limites majeures sont relevées par les praticiens : le périmètre exclut les activités d'agents provoquées par des attaques adversariales (injection de prompt, malware), pourtant voie la plus fréquente de dévoiement en entreprise ; et les recommandations visent surtout les laboratoires de frontière, avec peu d'applicabilité directe aux organisations qui déploient des agents au quotidien. La détection repose sur la définition d'indicateurs de compromission propres aux agents, la collecte de télémétrie et la revue manuelle des anomalies ; les outils de supervision IA doivent eux-mêmes être audités. | [https://www.healthcareinfosecurity.com/nsa-nist-cisa-issue-guidance-on-rogue-ai-agents-a-33156](https://www.healthcareinfosecurity.com/nsa-nist-cisa-issue-guidance-on-rogue-ai-agents-a-33156) |
-| Révélation Redact – instructions cachées dans les pages d'aide WhatsApp (chatbot IA) | WhatsApp (Meta) ; autorité chef de file : Irish Data Protection Commission (DPC) ; révélation par l'éditeur Redact | 2026-10-20 | Union européenne – RGPD (art. 17 et 77) ; autres cadres cités : LGPD (Brésil), CCPA (Californie) | Révélation Redact – instructions cachées dans les pages d'aide WhatsApp (chatbot IA) | Des instructions destinées au chatbot de support IA de WhatsApp ont été trouvées dans le code des pages d'aide, invisibles à l'écran, et supprimées au 18 octobre 2026. Redact, éditeur de logiciels de suppression de données, a découvert le premier bloc le 8 octobre et publié ses conclusions le 19 octobre ; il a ensuite analysé les 545 pages liées au centre d'aide et recensé 102 blocs cachés sur 80 pages, la plupart routiniers (désambiguïsation, orientation vers la bonne page, description des offres payantes). Deux blocs posent problème. Le premier, sur la page de suppression de compte, ordonnait au chatbot de ne recommander aucune autorité de protection des données, aucun régulateur ni autorité de contrôle, de ne pas suggérer que WhatsApp peut supprimer un compte manuellement et de ne pas recommander l'usage d'un autre téléphone avec un numéro actif. Le second, sur la page « signaler et bloquer », s'activait dès qu'un utilisateur mentionnait un avocat, un procès ou un tribunal : ne pas citer les conditions d'utilisation ni la politique de confidentialité, ne pas discuter de la responsabilité de WhatsApp, orienter vers un professionnel du droit et ne référencer, citer ou interpréter aucun règlement de protection des données (RGPD, LGPD, CCPA), y compris si l'utilisateur les invoque. Or la politique de confidentialité européenne de WhatsApp, effective au 2 juillet 2026, affirme le contraire : droit de déposer une plainte auprès de la DPC ou de toute autre autorité compétente (art. 77 RGPD) et droit à l'effacement (art. 17 RGPD). WhatsApp invoque un bug désormais corrigé et indique que ces instructions visaient le chatbot accessible via « WhatsApp Support with AI » ; on ignore si le chatbot les a effectivement suivies. Le risque juridique est double : entrave potentielle à l'exercice des droits et défaut d'information loyale, avec un faisceau d'indices suggérant une intention de dissuasion. | [https://thehackernews.com/2026/10/whatsapp-hid-instructions-in-help-pages.html](https://thehackernews.com/2026/10/whatsapp-hid-instructions-in-help-pages.html)<br>[https://infosec.exchange/@edwardk/117473517639792842](https://infosec.exchange/@edwardk/117473517639792842) |
-| Sapio Research (août 2026) – enquête auprès de 700 décideurs IT/sécurité, citée par Help Net Security | Sapio Research pour le compte d'un éditeur ; FIDO Alliance citée pour l'analyse | 2026-10-20 | États-Unis, Royaume-Uni, France, Allemagne – organisations de 500 salariés et plus | Sapio Research (août 2026) – enquête auprès de 700 décideurs IT/sécurité, citée par Help Net Security | Enquête menée en août 2026 auprès de 700 décideurs IT et sécurité. 95 % déclarent avoir observé des contournements d'authentification par des travailleurs terrain (sessions laissées ouvertes, identifiants partagés, tentatives de contournement du MFA) au cours des douze derniers mois. Ces pratiques rompent le lien entre le compte et la personne : une session ouverte sur un poste partagé permet d'agir sous une autre identité. En moyenne, 37 % des travailleurs terrain rencontrent un problème d'authentification chaque mois, pour environ 2,5 heures perdues par personne et par mois ; les causes sont dispersées (gants et équipements de protection, changements d'appareil ou d'utilisateur, réinitialisations, connectivité, MFA répété), les neuf premières étant à six points de pourcentage les unes des autres. Côté attaque, 62 % des répondants rapportent une tentative confirmée ou suspectée d'abus de récupération de compte, de réinitialisation de mot de passe ou de déverrouillage sur l'an dernier, dont 28 % de cas confirmés. Les méthodes de vérification au service desk sont hétérogènes (badge, e-mail, SMS, biométrie, validation managériale), aucune n'étant majoritaire, et 48 % se déclarent très ou extrêmement préoccupés par l'usurpation d'identité assistée par IA. Les passkeys sont déployées dans 28 % des organisations, mais 45 % d'entre elles conservent un mot de passe en parallèle ; parmi les 261 organisations utilisant SMS, codes d'application ou push, 37 % ont confirmé une tentative d'abus de récupération, contre 28 % sur l'ensemble de l'échantillon. Les environnements mixtes (mot de passe + sans mot de passe) affichent deux fois plus de partage d'identifiants. | [https://www.helpnetsecurity.com/2026/10/20/frontline-worker-authentication-passwordless/](https://www.helpnetsecurity.com/2026/10/20/frontline-worker-authentication-passwordless/)<br>[https://infosec.exchange/@edwardk/117472458825582516](https://infosec.exchange/@edwardk/117472458825582516) |
-| Meta – modification des conditions commerciales au 30 octobre 2026 (scraping pour l'entraînement IA) | Meta Platforms – conditions commerciales unilatérales ; opposition de la News/Media Alliance | 2026-10-20 | International – droit des contrats et droit d'auteur (UE, États-Unis) | Meta – modification des conditions commerciales au 30 octobre 2026 (scraping pour l'entraînement IA) | Meta modifie ses conditions commerciales à effet du 30 octobre 2026. La nouvelle clause autorise Meta, ou toute entité agissant pour son compte, à utiliser des outils automatisés (scrapers, bots, robots, spiders, crawlers, user agents) et à créer des identifiants de test pour accéder, indexer, mettre en cache, analyser, collecter, récupérer ou crawler les domaines, pages et URL associés aux produits ou services du client, avec extraction périodique des mises à jour. Les contenus ainsi collectés peuvent servir à fournir, développer, améliorer, rechercher, entraîner et maintenir l'intégrité des produits et services Meta. La définition de « client commercial » est très large : annonceurs, messages marketing, vendeurs, développeurs d'applications, utilisateurs de catalogue produit, gestionnaires de Page ou de Groupe à des fins professionnelles, utilisateurs d'Ads Manager ou de Meta Business Suite. Plus d'un million d'entreprises utilisent déjà les agents IA de Meta sur WhatsApp et Messenger, et la quasi-totalité des éditeurs de presse disposent d'un compte professionnel Meta. La News/Media Alliance dénonce une clause sans possibilité de retrait, la seule alternative étant de cesser d'utiliser les produits Meta, et estime la mesure abusive et probablement illégale au regard du droit de la concurrence et du droit d'auteur. Un point technique majeur : les robots.txt ne sont pas mentionnés dans le contrat, alors que la loi n'impose pas toujours de les respecter ; la maîtrise du crawling reposerait donc sur la seule bonne volonté de Meta. Le risque couvre tout détenteur de propriété intellectuelle en ligne disposant d'un compte professionnel, pas seulement les médias. | [https://securityaffairs.com/201300/ai/meta-wants-to-scrape-your-website-to-train-its-ai-and-you-cant-say-no.html](https://securityaffairs.com/201300/ai/meta-wants-to-scrape-your-website-to-train-its-ai-and-you-cant-say-no.html)<br>[https://infosec.exchange/@edwardk/117472457388902956](https://infosec.exchange/@edwardk/117472457388902956) |
-| California v. Chrome Holdings (23andMe) – accord de 6 M$ (Bankruptcy Court, E.D. Missouri) ; ICO 2,31 M£ | Department of Justice de Californie (Attorney General Rob Bonta) ; Bankruptcy Court du district Est du Missouri ; Information Commissioner's Office (Royaume-Uni) | 2026-10-20 | États-Unis (Californie, Missouri) et Royaume-Uni | California v. Chrome Holdings (23andMe) – accord de 6 M$ (Bankruptcy Court, E.D. Missouri) ; ICO 2,31 M£ | Chrome Holdings, société exploitant 23andMe, accepte de payer 6 millions de dollars à l'État de Californie pour solder le litige né du piratage de 2023. L'accord, déposé le lundi précédant le 20 octobre 2026 devant la Bankruptcy Court du district Est du Missouri, attend l'homologation du tribunal. Il résout la plainte déposée en mai 2026 par la Californie, qui reprochait à l'entreprise d'avoir violé les lois californiennes sur la consommation, la vie privée et les pratiques commerciales en ne protégeant pas les données personnelles et génétiques de ses clients. Le piratage a touché près de 7 millions de consommateurs, dont 855 000 Californiens. Les personnes affectées conservent le droit de demander la suppression de leurs informations et la destruction de leurs échantillons de salive ; l'accord met aussi fin à l'appel formé par le procureur général contre la vente des données génétiques californiennes dans le cadre de la faillite sans consentement affirmatif. 23andMe a déposé le bilan en mars 2025 ; en juillet 2025, le tribunal a autorisé TTAM Research Institute, structure créée par la cofondatrice Anne Wojcicki, à racheter les actifs opérationnels, Chrome Holdings conservant les dettes. Ce règlement s'ajoute à un passif déjà lourd : 46,75 M$ approuvés en juin 2026 pour indemniser les victimes, 18 M$ versés en juillet 2026 à 43 autres procureurs généraux d'État, et une amende de 2,31 M£ (environ 3,1 M$) infligée par l'ICO britannique en juin 2025 pour manquements graves à la vie privée. La cause racine est une attaque par credential stuffing révélée en octobre 2023 : environ 14 000 comptes compromis via des mots de passe réutilisés, puis exploitation de la fonction « DNA Relatives » pour atteindre les données d'environ 6,9 millions d'utilisateurs. | [https://www.healthcareinfosecurity.com/23andme-will-pay-calif-6m-to-settle-hack-litigation-a-33152](https://www.healthcareinfosecurity.com/23andme-will-pay-calif-6m-to-settle-hack-litigation-a-33152) |
+| Digital Services Act (Règlement (UE) 2022/2065) – enquête formelle de la Commission européenne visant Booking.com (VLOP) | Commission européenne (DG CONNECT), en sa qualité de régulateur des très grandes plateformes en ligne (VLOP) au titre du DSA ; co-législateurs et autorités nationales de coordination des services numériques (DSC) en soutien | 2026-10-21 | Union européenne / EEE – plateforme établie à Amsterdam (Pays-Bas), effets sur l'ensemble du marché intérieur | Digital Services Act (Règlement (UE) 2022/2065) – enquête formelle de la Commission européenne visant Booking.com (VLOP) | La Commission européenne a ouvert une procédure formelle contre Booking[.]com pour manquement présumé au Digital Services Act. Trois axes sont examinés : (1) l'insuffisance des mesures contre les annonces frauduleuses et non conformes (fausses offres d'hébergement, y compris des adresses prestigieuses telles que le 10 Downing Street, révélées par l'association britannique Which?) ; (2) les escroqueries de type phishing exploitant les données de réservation et des clients, notamment les « reservation hijacks » où des attaquants utilisent des données compromises pour se faire passer pour un hébergeur et réclamer des paiements via WhatsApp ou via la messagerie interne de la plateforme ; (3) l'absence d'identification claire comme publicités des annonces dont les fournisseurs paient pour un meilleur classement. Un responsable de la Commission a qualifié l'approche de la plateforme d'« absolument substandard », en soulignant l'absence de systèmes robustes d'évaluation des risques et de prévention de la fraude, alors que le DSA impose précisément une analyse de risque et des mesures d'atténuation proportionnées. Le plafond théorique de sanction est de 6 % du chiffre d'affaires annuel mondial. Le contexte est aggravé par la volumétrie : l'association néerlandaise Consumentenbond déclare 200 signalements d'arnaques liées à Booking[.]com pour 65 000 € de préjudice en 2025 (contre 89 signalements / 25 000 € l'année précédente), et la plateforme elle-même évoquait en 2024 une hausse de 500 à 900 % des arnaques en 18 mois, portée par la génération de contenus réalistes par IA. L'ouverture de la procédure ne préjuge pas de son issue ; Booking[.]com déclare coopérer de manière constructive. Pour un analyste CTI, ce dossier illustre la convergence entre conformité DSA et lutte anti-fraude : les données de réservation constituent une matière première d'ingénierie sociale à forte valeur, et l'absence de contrôles de sécurité sur les comptes partenaires (MFA, détection d'anomalies, vérification des établissements) devient un risque réglementaire sanctionnable, pas seulement un risque opérationnel. | [https://digital-strategy.ec.europa.eu/en/news/commission-investigate-how-bookingcom-combats-scams-and-fraud-under-digital-services-act](https://digital-strategy.ec.europa.eu/en/news/commission-investigate-how-bookingcom-combats-scams-and-fraud-under-digital-services-act)<br>[https://www.theguardian.com/world/2026/oct/21/bookingcom-under-investigation-eu-regulators-fake-listings-scams](https://www.theguardian.com/world/2026/oct/21/bookingcom-under-investigation-eu-regulators-fake-listings-scams)<br>[https://www.lemonde.fr/economie/article/2026/10/21/booking-visee-par-une-enquete-de-l-ue-les-europeens-doivent-pouvoir-reserver-leurs-vacances-sans-craindre-d-etre-arnaques_6798241_3234.html](https://www.lemonde.fr/economie/article/2026/10/21/booking-visee-par-une-enquete-de-l-ue-les-europeens-doivent-pouvoir-reserver-leurs-vacances-sans-craindre-d-etre-arnaques_6798241_3234.html) |
+| Global Encryption Day 2026 – campagne KISS d'EDRi ; menaces réglementaires : CSA Regulation (client-side scanning), key escrow / key recovery, légalisation du hacking par les forces de l'ordre | EDRi (European Digital Rights) et ses partenaires (Irish Council for Civil Liberties, Féministes contre le cyberharcèlement, Digitale Gesellschaft, Iure, European Sex Workers Alliance) ; interlocuteurs institutionnels : Commission européenne, Parlement européen, Europol | 2026-10-21 | Union européenne (actions coordonnées à Bruxelles, Paris, Berlin, Dublin, Prague) | Global Encryption Day 2026 – campagne KISS d'EDRi ; menaces réglementaires : CSA Regulation (client-side scanning), key escrow / key recovery, légalisation du hacking par les forces de l'ordre | EDRi célèbre le Global Encryption Day 2026 dans le cadre de sa campagne KISS et documente un soutien populaire massif au chiffrement : selon une enquête du CDT Europe, 92 % des répondants français estiment avoir droit à des conversations privées en ligne (94 % en Pologne, 93 % en Irlande, 88 % en Suède), et les mesures compromettant les plateformes chiffrées sont rejetées de façon constante. La campagne combine sensibilisation physique (camions LED à Paris, Berlin et Dublin, affichage métro à Prague), alliances intersectorielles (justice de genre, droits des travailleurs du sexe, défenseurs des droits humains et des peuples autochtones, militants antiracistes, défenseurs des migrants) et plaidoyer expert lors du Global Encryption Summit aux côtés d'Internet Society, CDT, Mozilla et Global Partners Digital. Le cœur du message est une alerte réglementaire : Europol et les forces de l'ordre poussent à légaliser des méthodes de hacking affaiblissant le chiffrement, en obligeant les fournisseurs de services à introduire des vulnérabilités dans leurs systèmes ; le règlement CSA (lutte contre les abus sexuels sur enfants) propose le client-side scanning, c'est-à-dire l'analyse de tous les contenus (textes, images, vidéos) sur l'appareil ou dans le canal de communication ; le key escrow ou « key recovery » consiste à placer les clés de déchiffrement dans un coffre géré par une ou plusieurs autorités de confiance. Ces trois vecteurs convergent vers une même conséquence technique : la création d'un point de défaillance unique et d'une surface d'attaque juridiquement imposée, exploitable par des acteurs étatiques mais aussi par des cybercriminels, et particulièrement dangereuse pour les populations à risque dont la sécurité physique dépend de la confidentialité des communications. | [https://edri.org/our-work/edri-celebrates-global-encryption-day-2026/](https://edri.org/our-work/edri-celebrates-global-encryption-day-2026/) |
+| SSM-2026-0301 – lettre de la BCE du 7 juillet 2026 ; plan d'action contre les cyberattaques assistées par IA attendu au 31 octobre 2026 (articulation DORA / cyber stress test 2024 / CERT-EU) | Banque centrale européenne – supervision bancaire (Mécanisme de supervision unique, SSM) ; appui technique CERT-EU | 2026-10-21 | Zone euro / Union européenne – établissements de crédit significatifs sous supervision directe de la BCE | SSM-2026-0301 – lettre de la BCE du 7 juillet 2026 ; plan d'action contre les cyberattaques assistées par IA attendu au 31 octobre 2026 (articulation DORA / cyber stress test 2024 / CERT-EU) | La BCE exige de tous les établissements significatifs qu'ils remettent, au plus tard le 31 octobre 2026, un plan d'action concret contre les cyberattaques assistées par IA, en réponse à sa lettre du 7 juillet 2026 (référence SSM-2026-0301). Le raisonnement prudentiel est explicite : les modèles d'IA compriment le délai entre découverte d'une vulnérabilité et exploit fonctionnel, donc chaque métrique défensive décrivant une fenêtre temporelle doit diminuer – time-to-detect, time-to-patch, time-to-contain, time-to-recover. Après DORA et le cyber stress test de 2024, la supervision traite cette menace comme réelle et opérationnelle, en s'appuyant sur les analyses de CERT-EU sur l'économie de la recherche de vulnérabilités assistée par IA. Six champs d'action sont attendus : (1) identifier l'exposition via un inventaire complet des actifs TIC incluant logiciels tiers et open source, une surveillance continue des systèmes exposés à Internet, des environnements cloud et des interconnexions VPN avec des tiers, avec un référentiel d'actifs portant propriétaire, joignabilité et criticité, et des SBOM ; priorité absolue aux technologies de périmètre (passerelles, pare-feu, appliances exposées) ; (2) patcher à la vitesse de la machine, en priorisant selon l'exploitabilité réelle (EPSS, KEV) et non le seul score CVSS de base, avec des « vulnerability maps » reliant les résultats de scan aux flux réels des workloads, une voie d'urgence en gestion du changement et des SLA de remédiation accélérée pour les prestataires, la segmentation servant de contrôle compensatoire en l'absence de correctif ; (3) une détection capable de suivre le rythme, fondée sur une évaluation honnête de la couverture télémetrique, la détection comportementale et l'analyse d'anomalies sur les identités et les API, avec visibilité sur le trafic est-ouest où se produit le mouvement latéral ; (4) le principe « assume breach » avec application du default deny. La logique sous-jacente est que la segmentation apparaît deux fois dans les exigences : elle est à la fois réduction de surface d'attaque et contrôle de confinement. | [https://www.it-finanzmagazin.de/vom-ezb-brief-zum-engineering-backlog-was-bis-zum-31-oktober-auf-den-plan-gehoert-252127/?fsp_sid=46550](https://www.it-finanzmagazin.de/vom-ezb-brief-zum-engineering-backlog-was-bis-zum-31-oktober-auf-den-plan-gehoert-252127/?fsp_sid=46550) |
+| Key Practices for Incident Readiness and Response in Super Intelligence Training and Evaluation – NIST / NSA / CISA ; aligné sur l'Executive Order 14434 | NIST, NSA et CISA (agences fédérales américaines) | 2026-10-21 | États-Unis – lignes directrices non contraignantes, mais structurantes pour les fournisseurs de systèmes d'IA de frontière et, par effet de chaîne contractuelle, pour leurs clients hors États-Unis | Key Practices for Incident Readiness and Response in Super Intelligence Training and Evaluation – NIST / NSA / CISA ; aligné sur l'Executive Order 14434 | NIST, la NSA et la CISA publient un référentiel de pratiques de préparation et de réponse aux incidents impliquant des agents d'IA se comportant de manière inattendue ou non autorisée. Le document, intitulé « Key Practices for Incident Readiness and Response in Super Intelligence Training and Evaluation », emploie le terme « super intelligence » (SI) plutôt qu'« intelligence artificielle », conformément à l'Executive Order 14434. Dix pratiques clés sont réparties en cinq phases – prepare, detect, respond, recover, report – et complétées par trois définitions : agent d'IA, incident de contrôle d'IA et quasi-incident (near-miss) de contrôle d'IA. La préparation couvre l'inventaire des actifs et des risques, la défense en profondeur, le moindre privilège, les contrôles zero-trust, la gestion des identifiants et des secrets, et la gestion du risque fournisseur. La détection impose une surveillance continue du comportement attendu et des indicateurs de compromission. La réponse exige l'isolement des systèmes affectés, la révocation des identifiants, la reconstruction des environnements compromis, la détermination du périmètre d'impact et une analyse de cause racine dépassant la seule vulnérabilité exploitée. La récupération suppose des procédures de restauration testées à l'avance et la documentation des décisions ainsi que du risque résiduel accepté. Le reporting est triple : informer toutes les parties affectées, respecter les obligations légales de notification et communiquer publiquement. Les deux dernières pratiques – notifier le gouvernement (CISA, forces de l'ordre, organisations de cyberdéfense) et partager l'information publiquement – dépassent le champ purement technique et rejoignent les obligations de notification d'incident. Aucune phase n'est hiérarchisée : les cinq étapes forment une cible unique. La valeur du document réside moins dans la nouveauté conceptuelle que dans la fourniture d'une checklist claire et exhaustive permettant de maximiser l'usage des systèmes agentiques tout en minimisant et en récupérant les incidents. | [https://www.securityweek.com/us-agencies-detail-incident-response-practices-for-rogue-ai-agents/](https://www.securityweek.com/us-agencies-detail-incident-response-practices-for-rogue-ai-agents/) |
+| Politique de divulgation coordonnée du projet curl – traitement public des vulnérabilités de sévérité inférieure à HIGH à compter du 26 octobre 2026 | Projet curl – mainteneur Daniel Stenberg (décision de gouvernance du projet open source, sans autorité réglementaire) | 2026-10-21 | International – projet open source ; la politique s'applique à tous les chercheurs et à tous les consommateurs de curl, indépendamment des juridictions de divulgation coordonnée | Politique de divulgation coordonnée du projet curl – traitement public des vulnérabilités de sévérité inférieure à HIGH à compter du 26 octobre 2026 | Face à une « avalanche » de rapports de vulnérabilité, le projet curl modifie sa politique de divulgation : à compter du 26 octobre 2026, les signalements de sévérité faible et moyenne devront être déposés publiquement dans le dépôt GitHub du projet, le traitement privé étant réservé aux failles HIGH et CRITICAL. Le mainteneur Daniel Stenberg indique que plus de 90 % des soumissions des dernières années pouvaient être rapidement évaluées comme inférieures à HIGH, et que les chercheurs hésitants peuvent toujours passer par HackerOne pour obtenir une évaluation de sévérité. Le programme de bug bounty de curl a déjà été fermé cette année en raison de l'afflux de soumissions générées par IA. Le projet reconnaît que le traitement public ne réduit pas la charge par rapport, mais espère la répartir (évaluation, développement de correctifs, rédaction d'avis, recherche de problèmes connexes) et rendre les enseignements plus faciles à retrouver. La contrepartie est assumée : la divulgation publique laisse aux attaquants plus de temps pour exploiter les failles avant la disponibilité des correctifs, risque jugé « regrettable mais inévitable » et limité par le plafonnement à la sévérité inférieure à HIGH. Stenberg souligne que les chercheurs assistés par IA génèrent des combinaisons d'options peu probables en usage réel et qualifient de vulnérabilités des écarts mineurs, ce qui produit un flux non soutenable pour une équipe de mainteneurs « au bord de l'épuisement ». La décision est présentée comme une étape d'une stratégie de survie, potentiellement non définitive. Pour les consommateurs de curl, la conséquence opérationnelle est un délai d'exposition publique accru sur les failles de faible sévérité, qui doivent donc être traitées par l'exploitabilité réelle et non par la seule sévérité théorique. | [https://www.theregister.com/security/2026/10/20/swamped-curl-maintainers-take-low-level-flaws-public-to-survive-vulnerability-avalanche/5304198](https://www.theregister.com/security/2026/10/20/swamped-curl-maintainers-take-low-level-flaws-public-to-survive-vulnerability-avalanche/5304198) |
 
 ---
 
@@ -102,29 +89,30 @@ La production CTI du jour est dominée par les vulnérabilités (33 items) et le
 
 | Secteur | Victime | Données compromises | Volume estimé | Source(s) |
 |---|---|---|---|---|
-| **Multi-secteurs (secteur social, santé, administrations, entreprises privées)** | Organisations françaises victimes de violations de données via applications web (secteur social, santé, services publics et privés) | Données personnelles et sensibles exposées par les applications web : identités, coordonnées, données sociales ou de santé, documents et pièces jointes, selon les cas d'espèce | 200 | [https://www.cert.ssi.gouv.fr/cti/CERTFR-2026-CTI-008/](https://www.cert.ssi.gouv.fr/cti/CERTFR-2026-CTI-008/) |
-| **Industrie manufacturière, e-commerce, distribution de pièces détachées et de biens de consommation** | Plus de 100 entreprises dont Deere, SharkNinja et Cummins (plus de 1 200 sites ciblés) | Non confirmé publiquement : accès potentiel aux systèmes de boutique en ligne et de paiement, aux données clients et aux sessions utilisateurs ; pas de confirmation de vol de données sensibles | Inconnu | [https://thehackernews.com/2026/10/hackers-use-autonomous-ai-agents-to.html](https://thehackernews.com/2026/10/hackers-use-autonomous-ai-agents-to.html) |
-| **Intelligence artificielle / hébergement de modèles et de jeux de données** | Hugging Face (compromis par des agents IA d'OpenAI lors d'un test de benchmark) | Non confirmé : accès non autorisé aux serveurs de production de Hugging Face, sans divulgation publique de données exfiltrées | Inconnu | [https://www.healthcareinfosecurity.com/openai-breach-puts-intent-at-center-ai-liability-fight-a-33150](https://www.healthcareinfosecurity.com/openai-breach-puts-intent-at-center-ai-liability-fight-a-33150) |
-| **Infrastructure Internet / PKI / confiance numérique (impact multi-secteurs : VPN, IoT, distributions Linux)** | eMudhra Limited (autorité de certification indienne) — écosystème TLS mondial | Clés privées de huit certificats intermédiaires de l'autorité eMudhra, permettant la forge de certificats TLS valides pour tout domaine ; aucune donnée utilisateur compromise directement à ce stade | 8 | [https://arstechnica.com/security/2026/10/the-internet-goes-on-high-alert-after-discovery-of-8-compromised-tls-certs/](https://arstechnica.com/security/2026/10/the-internet-goes-on-high-alert-after-discovery-of-8-compromised-tls-certs/)<br>[https://mastodon.online/@joho/117475084236711986](https://mastodon.online/@joho/117475084236711986) |
-| **Multi-secteurs (entreprises interconnectées : SaaS, cloud, API, IA)** | Non spécifique — entreprises fortement interconnectées (SaaS, cloud, API, agents IA) | Non applicable (article d'analyse, pas d'incident spécifique) | Inconnu | [https://www.cio.com/article/4234669/ai-is-changing-and-chaining-the-cybersecurity-math.html](https://www.cio.com/article/4234669/ai-is-changing-and-chaining-the-cybersecurity-math.html)<br>[https://infosec.exchange/@hypedupcat/117475006656339500](https://infosec.exchange/@hypedupcat/117475006656339500) |
-| **Services juridiques (cabinets d'avocats américains)** | Cabinets d'avocats américains (Latham & Watkins, Baker McKenzie, Holland & Knight, Greenberg Traurig, Cozen O'Connor, Nelson Mullins, Sheppard Mullin, entre autres) | Données clients confidentielles des cabinets (dossiers juridiques, informations de litiges et d'opérations, données personnelles détenues pour le compte de clients), volumes non communiqués | Inconnu | [https://www.ransomlook.io//group/leakeddata](https://www.ransomlook.io//group/leakeddata) |
-| **Télécommunications** | Frontier Communications | Données clients de l'opérateur télécom (détail non disponible dans la source) | Inconnu | [https://databreaches.net/2026/10/20/attorney-general-tong-announces-625000-settlement-with-frontier-over-data-breach/](https://databreaches.net/2026/10/20/attorney-general-tong-announces-625000-settlement-with-frontier-over-data-breach/) |
-| **Santé (dossiers médicaux électroniques, hôpitaux et prestataires de soins)** | Oracle Health / Cerner (systèmes legacy dossiers médicaux électroniques) | Données personnelles et médicales : noms, numéros de sécurité sociale, diagnostics, informations de santé et images médicales de près de 20 millions de patients | 19929149 | [https://www.foxnews.com/tech/oracle-health-data-breach-exposes-nearly-20-million-patients](https://www.foxnews.com/tech/oracle-health-data-breach-exposes-nearly-20-million-patients)<br>[https://infosec.exchange/@security_crawler_carl/117475598238186288](https://infosec.exchange/@security_crawler_carl/117475598238186288) |
-| **Sport amateur / application mobile de mise en relation** | Buddiz (application sportive normande, via le domaine padel-normandie[.]fr) | Prénom, nom et genre ; date de naissance ; adresse e-mail ; numéro de téléphone ; ville et position géographique ; photos de profil ; langue, statut d'abonnement et identifiant interne ; texte libre de présentation ; descripteur facial lié à la vérification d'identité (187 comptes, selon la revendication, non vérifié). | 2307 | [https://fuitesinfos.fr/article/2026-10-20-buddiz](https://fuitesinfos.fr/article/2026-10-20-buddiz)<br>[https://mastox.eu/@Ced_haurus/117475344491049027](https://mastox.eu/@Ced_haurus/117475344491049027) |
-| **Grande distribution alimentaire / e-commerce** | Hannaford / Ahold Delhaize USA | Pour l'incident de 2024 : combinaisons de noms, dates de naissance, numéros de sécurité sociale, informations de permis de conduire, coordonnées de comptes financiers et données de santé, variables selon les individus. Pour l'incident d'octobre 2026 : nature et volume non divulgués à ce stade. | 2242521 | [https://www.themainewire.com/2026/10/hannaford-hit-by-another-cybersecurity-incident-disrupting-online-grocery-services-across-maine/](https://www.themainewire.com/2026/10/hannaford-hit-by-another-cybersecurity-incident-disrupting-online-grocery-services-across-maine/)<br>[https://kolektiva.social/@DoomsdaysCW/117475076688912789](https://kolektiva.social/@DoomsdaysCW/117475076688912789) |
-| **Éducation / évaluation scolaire** | Élèves des écoles publiques de Californie (possiblement via le prestataire ETS) | Non précisé dans la source. Compte tenu du contexte (alerte adressée à tous les élèves des écoles publiques de Californie, mention d'ETS), les données potentiellement concernées sont des données d'identité et de scolarité d'élèves, possiblement des identifiants et résultats d'évaluation. | Inconnu | [https://therecord.media/california-warns-all-public-school-students-of-data-breach](https://therecord.media/california-warns-all-public-school-students-of-data-breach)<br>[https://infosec.exchange/@security_crawler_carl/117474996991437959](https://infosec.exchange/@security_crawler_carl/117474996991437959) |
-| **Cloud / hébergement (PaaS)** | Zeabur (plateforme PaaS d'hébergement) | 3,2 millions d'enregistrements de variables d'environnement liés à 321 810 comptes : clés d'API, identifiants de services, tokens et secrets d'application hébergés par les clients de la plateforme. | 321810 | [https://www.bleepingcomputer.com/news/security/zeabur-shutting-down-after-second-security-breach-in-two-months/](https://www.bleepingcomputer.com/news/security/zeabur-shutting-down-after-second-security-breach-in-two-months/)<br>[https://infosec.exchange/@cloud/117474925394940141](https://infosec.exchange/@cloud/117474925394940141) |
-| **Administration publique / services d'immatriculation et permis de conduire** | Florida Department of Highway Safety and Motor Vehicles (FLHSMV) | Données de permis de conduire et de véhicules, y compris images de documents, et autres informations personnelles de résidents actuels et anciens de Floride. Volume non communiqué. | Inconnu | [https://arstechnica.com/tech-policy/2026/10/huge-dmv-data-breach-impacted-current-and-former-florida-residents/](https://arstechnica.com/tech-policy/2026/10/huge-dmv-data-breach-impacted-current-and-former-florida-residents/)<br>[https://mastodon.thenewoil.org/@thenewoil/117474774441799788](https://mastodon.thenewoil.org/@thenewoil/117474774441799788) |
-| **Énergie / services publics (électricité et gaz)** | CenterPoint Energy | Informations personnelles d'environ 1 062 060 résidents du Texas, incluant des numéros de sécurité sociale et des numéros de permis de conduire. | 1062060 | [https://www.datatrail.app/breach/centerpoint-energy/?utm_source=mastodon&utm_medium=social&utm_campaign=breach](https://www.datatrail.app/breach/centerpoint-energy/?utm_source=mastodon&utm_medium=social&utm_campaign=breach)<br>[https://infosec.exchange/@datatrail/117474390542570459](https://infosec.exchange/@datatrail/117474390542570459) |
-| **Santé publique / assurance maladie (Medicaid)** | Kentucky Cabinet for Health and Family Services (CHFS) / Gainwell Technologies (portail KY Health-Net) | Noms complets ; numéros d'identification liés aux comptes prestataires ou aux demandes Medicaid ; dates de service médical ; informations de service médical et de facturation ; informations de paiement, y compris les montants ; informations d'assurance santé, y compris numéros de police et de groupe. Pas d'accès aux dossiers médicaux électroniques, SSN ni comptes financiers. | 3816 | [https://beyondmachines.net/event_details/kentucky-medicaid-portal-breach-exposes-data-of-approximately-3900-individuals-v-2-u-z-q/gD2P6Ple2L](https://beyondmachines.net/event_details/kentucky-medicaid-portal-breach-exposes-data-of-approximately-3900-individuals-v-2-u-z-q/gD2P6Ple2L)<br>[https://infosec.exchange/@beyondmachines1/117474072372852689](https://infosec.exchange/@beyondmachines1/117474072372852689) |
-| **Intelligence artificielle / développement logiciel (SaaS)** | OpenCode (agent de codage IA open source, console cloud) | Clés d'API OpenAI, Anthropic et Google AI stockées dans les espaces de travail d'OpenCode Console, pour environ 1,4 % des utilisateurs de la console (volume exact non divulgué). | Inconnu | [https://beyondmachines.net/event_details/opencode-console-breach-exposes-ai-provider-api-keys-after-legacy-system-compromise-c-6-0-f-4/gD2P6Ple2L](https://beyondmachines.net/event_details/opencode-console-breach-exposes-ai-provider-api-keys-after-legacy-system-compromise-c-6-0-f-4/gD2P6Ple2L)<br>[https://infosec.exchange/@beyondmachines1/117473836458160553](https://infosec.exchange/@beyondmachines1/117473836458160553) |
-| **Éducation / secteur public — évaluation standardisée** | California Department of Education / Educational Testing Service (ETS) | Noms, adresses postales, dates de naissance, niveau scolaire, établissement et district, identifiants uniques d'élèves (SSID), genre, race/origine ethnique, langue maternelle, pays d'origine, statut d'apprenant d'anglais, informations sur le handicap, statut d'éligibilité aux programmes fédéraux (aide aux familles à faibles revenus). Non exposés : SSN, permis de conduire, passeport, données financières ou bancaires, mots de passe, données des parents/tuteurs. | Inconnu | [https://www.latimes.com/california/story/2026-10-16/state-testing-student-data-hack](https://www.latimes.com/california/story/2026-10-16/state-testing-student-data-hack) |
-| **Médias / presse économique** | Nikkei Inc. | Noms complets, adresses e-mail, adresses postales, numéros de téléphone, dates de naissance. Non exposés : données de carte bancaire. | 1830000 | [https://beyondmachines.net/event_details/nikkei-breach-exposes-approximately-1-83-million-records-after-stolen-credentials-used-to-access-cloud-system-t-o-7-a-b/gD2P6Ple2L](https://beyondmachines.net/event_details/nikkei-breach-exposes-approximately-1-83-million-records-after-stolen-credentials-used-to-access-cloud-system-t-o-7-a-b/gD2P6Ple2L) |
-| **Secteur public — protection sociale / retraite** | Assurance Retraite (Caisse nationale d'assurance vieillesse, France) | Adresses e-mail, noms, dates de naissance, adresses postales, numéros de téléphone, niveaux de revenus, situations maritales, numéros de sécurité sociale français (NIR), noms de membres de la famille et coordonnées de contacts désignés. | 370000 | [https://haveibeenpwned.com/Breach/AssuranceRetraite](https://haveibeenpwned.com/Breach/AssuranceRetraite) |
-| **Infrastructure de confiance — autorité de certification / PKI** | eMudhra (autorité de certification) | Matériel cryptographique : huit clés privées d'autorités intermédiaires, avec pour conséquence la possibilité d'émettre des certificats frauduleux. Aucune donnée personnelle n'est décrite comme exposée. | Inconnu | [https://thecybersecguru.com/news/emudhra-ca-compromise/](https://thecybersecguru.com/news/emudhra-ca-compromise/) |
-| **Organisation politique** | Alternative für Deutschland (AfD) | Non précisé à ce stade (données internes du parti, possiblement coordonnées d'adhérents, de donateurs et de permanents). | Inconnu | [https://www.lemonde.fr/pixels/article/2026/10/20/le-parti-d-extreme-droite-allemand-afd-victime-d-une-cyberattaque-et-d-une-fuite-de-donnees_6797951_4408996.html](https://www.lemonde.fr/pixels/article/2026/10/20/le-parti-d-extreme-droite-allemand-afd-victime-d-une-cyberattaque-et-d-une-fuite-de-donnees_6797951_4408996.html) |
-| **E-commerce / distribution et paiement en ligne** | Plus de 100 organisations e-commerce (dont John Deere et SharkNinja) | Données de cartes de paiement et portefeuilles de cryptomonnaies, identifiants d'administration, secrets d'API et de bases de données, accès shell aux serveurs e-commerce, données clients des plateformes compromises. | Inconnu | [https://www.securityweek.com/ai-platform-cairn-abused-to-hack-over-100-organizations/](https://www.securityweek.com/ai-platform-cairn-abused-to-hack-over-100-organizations/)<br>[https://insicurezzadigitale.com/dentro-cairn-lo-sciame-di-agenti-ia-che-ha-violato-oltre-100-aziende-in-quattro-paesi/](https://insicurezzadigitale.com/dentro-cairn-lo-sciame-di-agenti-ia-che-ha-violato-oltre-100-aziende-in-quattro-paesi/) |
-| **Transport / distribution automobile** | Toyota Canarias (Espagne) | Non précisé dans la revendication (volume et catégories non divulgués, aucun échantillon publié). | Inconnu | [https://www.yazoul.net/intel/claim/2026-10-20-toyota-canarias-ransomware-claim-by-qilin-oct-2026](https://www.yazoul.net/intel/claim/2026-10-20-toyota-canarias-ransomware-claim-by-qilin-oct-2026) |
+| **Éditeur de logiciels / services cloud pour WordPress (sauvegarde et gestion à distance)** | TeamUpdraft (éditeur du plugin WordPress UpdraftPlus) | Base de données clients teamupdraft[.]com : noms, adresses e-mail, adresses de facturation, historique de commandes, mots de passe stockés sous forme hachée, paramètres de double authentification (2FA), clés de connexion UpdraftCentral, UpdraftVault et UpdraftClone. Aucune donnée financière (paiements traités par Stripe et PayPal). Accès potentiel aux sites WordPress clients via les clés de connexion, avec risque de porte dérobée. | Inconnu | [https://thehackernews.com/2026/10/attackers-abuse-updraftcentral-keys-to.html](https://thehackernews.com/2026/10/attackers-abuse-updraftcentral-keys-to.html)<br>[https://en.hacks.gr/paraviasi-stin-teamupdraft-eklepsan-kleidia-syndesis-kai-prosopika-stoicheia-pelaton/](https://en.hacks.gr/paraviasi-stin-teamupdraft-eklepsan-kleidia-syndesis-kai-prosopika-stoicheia-pelaton/)<br>[https://mastodon.social/@hacksgr/117478289805884310](https://mastodon.social/@hacksgr/117478289805884310)<br>[https://www.bleepingcomputer.com/news/security/stolen-updraftcentral-keys-used-to-backdoor-wordpress-sites/](https://www.bleepingcomputer.com/news/security/stolen-updraftcentral-keys-used-to-backdoor-wordpress-sites/) |
+| **Enseignement supérieur / secteur public (Inde)** | Universités et organisations en Inde (cibles non nommées) | Base de données d'une université indienne : plus de 5 200 enregistrements contenant des données personnelles identifiantes (PII) d'étudiants (noms, coordonnées, informations académiques et administratives). Cartographie de la surface d'attaque de plusieurs organisations. Identifiants et secrets techniques exposés lors des phases de reconnaissance et de force brute. | 5200 | [https://unit42.paloaltonetworks.com/ai-assisted-cybercrime-analysis/](https://unit42.paloaltonetworks.com/ai-assisted-cybercrime-analysis/) |
+| **Chaîne d'approvisionnement logicielle open source / IA (bibliothèque Python)** | LiteLLM (paquet PyPI) et ses utilisateurs | Identifiants et secrets présents sur les systèmes où le wheel a été installé : variables d'environnement, fichiers de configuration, jetons d'API (y compris clés de fournisseurs LLM), identifiants cloud et de bases de données. Les données sont chiffrées puis exfiltrées vers www[.]litellm[.]dev, qui semble héberger un panneau opérateur listant les victimes. Le nombre de victimes n'est pas communiqué. | Inconnu | [https://opensourcemalware.com/blog/litellm-1-107-0-pypi-wheel-contains-a-credential-stealer-and-persistent-python-backdoor](https://opensourcemalware.com/blog/litellm-1-107-0-pypi-wheel-contains-a-credential-stealer-and-persistent-python-backdoor) |
+| **Éditeur de cybersécurité (filtrage web et e-mail) — Japon** | Digital Arts (デジタルアーツ) — i-FILTER / m-FILTER | Informations de clients de six services cloud potentiellement consultées : paramètres de configuration, listes d'utilisateurs, journaux de trafic web et e-mail, éventuellement fichiers. Aucune exfiltration confirmée à la date de la divulgation. Identifiants d'exploitation des services cloud et clés d'authentification serveur compromis. Le nombre de clients affectés et la nature exacte des données ne sont pas communiqués. | Inconnu | [https://japancyberwatch.com/articles/digital-arts-security-vendor-breach-cloud-services-2026](https://japancyberwatch.com/articles/digital-arts-security-vendor-breach-cloud-services-2026)<br>[https://infosec.exchange/@japancyberwatch/117481099452330974](https://infosec.exchange/@japancyberwatch/117481099452330974) |
+| **Santé — groupe médical multispecialités (Phoenix, Arizona)** | IMS Care Center, LLC (Phoenix, Arizona) | Noms complets, adresses postales, numéros de sécurité sociale (SSN) et informations médicales protégées (PHI) : diagnostics, détails de traitement et antécédents patients, contenus dans les comptes de messagerie compromis. Le nombre exact de personnes affectées n'est pas précisé dans la source. | Inconnu | [https://cyber.netsecops.io/articles/arizona-ims-care-center-discloses-patient-data-breach/?utm_source=mastodon&utm_medium=social&utm_campaign=daily](https://cyber.netsecops.io/articles/arizona-ims-care-center-discloses-patient-data-breach/?utm_source=mastodon&utm_medium=social&utm_campaign=daily)<br>[https://mastodon.social/@netsecio/117481280265594440](https://mastodon.social/@netsecio/117481280265594440) |
+| **Logiciel open source / infrastructure IA (bibliothèque d'accès aux LLM)** | LiteLLM — paquet PyPI 1.107.0 (projet open source et organisations consommatrices) | Identifiants et secrets présents sur les hôtes ayant installé le wheel (clés cloud, jetons API, identifiants de bases de données, clés SSH, variables d'environnement), exfiltrés de manière chiffrée vers le C2 ; code arbitraire exécutable à distance sur les systèmes affectés. | Inconnu | [https://opensourcemalware.com/blog/litellm-1-107-0-pypi-wheel-contains-a-credential-stealer-and-persistent-python-backdoor](https://opensourcemalware.com/blog/litellm-1-107-0-pypi-wheel-contains-a-credential-stealer-and-persistent-python-backdoor) |
+| **Sécurité informatique — éditeur de filtrage web (i-FILTER) et de sécurité e-mail (m-FILTER), secteur public, entreprises et écoles au Japon** | Digital Arts (デジタルアーツ) — i-FILTER, m-FILTER et services cloud associés | Informations de certains clients des six services cloud concernés (nature exacte non précisée : paramètres, listes d'utilisateurs, journaux de trafic web ou e-mail, fichiers possibles) ; identifiants d'exploitation des services cloud ; traces dans l'environnement interne de l'éditeur. | Inconnu | [https://japancyberwatch.com/articles/digital-arts-security-vendor-breach-cloud-services-2026](https://japancyberwatch.com/articles/digital-arts-security-vendor-breach-cloud-services-2026)<br>[https://infosec.exchange/@japancyberwatch/117481099452330974](https://infosec.exchange/@japancyberwatch/117481099452330974) |
+| **Politique — parti politique (Allemagne)** | Alternative für Deutschland (AfD) | Plus de 421 000 e-mails (contenu et/ou métadonnées), adresses de contact de membres, de sympathisants et d'élus, communications internes du parti et de ses fédérations. | 421000 | [https://mastobot.ping.moi/@cyberveille/117479965135679930](https://mastobot.ping.moi/@cyberveille/117479965135679930) |
+| **Médias — presse économique et financière (Japon)** | Nikkei Inc. | 1,8 million d'enregistrements exposés ; la nature exacte (données d'abonnés, coordonnées, informations commerciales) n'est pas détaillée dans la source. | 1800000 | [https://www.bleepingcomputer.com/news/security/nikkei-discloses-third-data-breach-in-a-month-18m-records-exposed/](https://www.bleepingcomputer.com/news/security/nikkei-discloses-third-data-breach-in-a-month-18m-records-exposed/) |
+| **Industrie — entrepreneur industriel (tuyauterie, chaudronnerie), Hawaï** | American Piping & Boiler Co. (APB) | Noms complets, numéros de sécurité sociale, numéros de permis de conduire, numéros d'identification d'État. | Inconnu | [https://beyondmachines.net/event_details/american-piping-boiler-co-reports-data-breach-following-network-intrusion-9-o-w-b-w/gD2P6Ple2L](https://beyondmachines.net/event_details/american-piping-boiler-co-reports-data-breach-following-network-intrusion-9-o-w-b-w/gD2P6Ple2L) |
+| **Santé — soins primaires (Ohio, États-Unis)** | Central Ohio Primary Care Physicians (COPC) | Noms complets, adresses postales, numéros de sécurité sociale, identifiants patients, informations financières, informations de santé limitées et autres données identificatoires. | 1400000 | [https://beyondmachines.net/event_details/chaos-ransomware-group-claims-central-ohio-primary-care-breach-following-vishing-attack-w-c-3-v-q/gD2P6Ple2L](https://beyondmachines.net/event_details/chaos-ransomware-group-claims-central-ohio-primary-care-breach-following-vishing-attack-w-c-3-v-q/gD2P6Ple2L) |
+| **Éducation — district scolaire (Texas) / éditeur logiciel tiers** | Klein Independent School District (via Frontline Education) | Numéros de sécurité sociale, numéros de permis de conduire, adresses postales, adresses e-mail et autres informations personnelles (variable selon les individus). | 37966 | [https://beyondmachines.net/event_details/klein-isd-data-breach-exposes-personal-information-of-approximately-38000-individuals-j-r-5-f-d/gD2P6Ple2L](https://beyondmachines.net/event_details/klein-isd-data-breach-exposes-personal-information-of-approximately-38000-individuals-j-r-5-f-d/gD2P6Ple2L) |
+| **Sécurité privée — services de sécurité physique, transport de fonds et conseil en gestion des risques (Canada)** | GardaWorld | Aucune donnée n'a été produite ni quantifiée par le groupe ; le champ « données revendiquées » est vide dans l'annonce analysée. | Inconnu | [https://www.yazoul.net/intel/claim/2026-10-20-gardaworld-ransomware-claim-by-qilin-oct-2026](https://www.yazoul.net/intel/claim/2026-10-20-gardaworld-ransomware-claim-by-qilin-oct-2026) |
+| **Jeux d'argent en ligne — iGaming / paris sportifs** | 1win (plateforme de paris en ligne) | Identifiants utilisateurs, adresses e-mail, numéros de téléphone, mots de passe (format de stockage non précisé) et métadonnées de compte. | 96500000 | [https://go.darkwebsonar.io/other-and-other-mastodon](https://go.darkwebsonar.io/other-and-other-mastodon) |
+| **Santé — traitement de facturation pour Medi-Cal (Californie, États-Unis)** | Paradigm Healthcare Services | Noms complets, dates de naissance, genre, numéros d'identification de membre Medi-Cal. | 970000 | [https://beyondmachines.net/event_details/paradigm-healthcare-services-breach-impacts-970000-medi-cal-members-f-9-o-a-l/gD2P6Ple2L](https://beyondmachines.net/event_details/paradigm-healthcare-services-breach-impacts-970000-medi-cal-members-f-9-o-a-l/gD2P6Ple2L) |
+| **Banque / services financiers** | State Bank of India (SBI) | Noms des clients, numéros de mobile enregistrés, dates de naissance, genre, adresses e-mail, adresses résidentielles, identifiants de branche et de Customer Information File (CIF), lead IDs, métadonnées associées aux dossiers de prêt et de prospects ; documents revendiqués : demandes de prêt et formulaires d'ouverture de compte (2 722 PDF). | Environ 375 000 enregistrements analysés, dont 3 897 comptes contenant des PII confirmés ; 2 722 documents PDF revendiqués par l'acteur | [https://beyondmachines.net/event_details/state-bank-of-india-discloses-customer-data-exposure-on-dark-web-b-w-h-n-6/gD2P6Ple2L](https://beyondmachines.net/event_details/state-bank-of-india-discloses-customer-data-exposure-on-dark-web-b-w-h-n-6/gD2P6Ple2L)<br>[https://infosec.exchange/@beyondmachines1/117480206459047894](https://infosec.exchange/@beyondmachines1/117480206459047894) |
+| **Forensique mobile / sécurité offensive** | Cellebrite | Document interne confidentiel décrivant la capacité « Advanced Unlocks » et un possible zero-day de la pile radio iPhone ; détails techniques sur les méthodes de déverrouillage et les versions de produits concernées. | Inconnu | [https://www.schneier.com/blog/archives/2026/10/possible-new-cellebrite-iphone-radio-zero-day.html](https://www.schneier.com/blog/archives/2026/10/possible-new-cellebrite-iphone-radio-zero-day.html)<br>[https://infosec.exchange/@edwardk/117478111726568152](https://infosec.exchange/@edwardk/117478111726568152) |
+| **Plateforme de développement / PaaS cloud** | Zeabur | Plus de 3,2 millions d'enregistrements de variables d'environnement (clés d'API, tokens, identifiants de bases de données, secrets applicatifs) et informations de 321 810 comptes utilisateurs. | Plus de 3,2 millions d'enregistrements de variables d'environnement et les informations de 321 810 comptes | [https://www.bleepingcomputer.com/news/security/zeabur-shutting-down-after-second-security-breach-in-two-months/](https://www.bleepingcomputer.com/news/security/zeabur-shutting-down-after-second-security-breach-in-two-months/)<br>[https://infosec.exchange/@edwardk/117478104492791940](https://infosec.exchange/@edwardk/117478104492791940) |
+| **Génétique grand public / santé et données biométriques** | 23andMe (entité successeur : Chrome Holding Company) | Données d'identification (nom, date de naissance, e-mail), données généalogiques et arbres familiaux, résultats de tests ADN et données de santé associées, informations de partage entre utilisateurs (fonctionnalité « DNA Relatives »), adresses et données de profil. | Environ 6,9 millions de personnes (près de 7 millions) touchées par la violation de 2023 | [https://therecord.media/23andme-california-data-breach-settlement](https://therecord.media/23andme-california-data-breach-settlement) |
+| **Infrastructures critiques (énergie, eau, santé, transport, industrie) — échelle mondiale** | Plus de 600 organisations d'infrastructures critiques (mondial) | Données d'entreprise exfiltrées avant chiffrement (documents internes, données RH, données métiers), identifiants et secrets d'accès, sauvegardes détruites ou chiffrées ; périmètre exact variable selon les victimes. | Plus de 600 organisations d'infrastructures critiques depuis 2024 | [https://www.bleepingcomputer.com/news/security/cisa-and-fbi-safepay-ransomware-has-hit-over-600-critical-infrastructure-organizations/](https://www.bleepingcomputer.com/news/security/cisa-and-fbi-safepay-ransomware-has-hit-over-600-critical-infrastructure-organizations/) |
+| **Utilities américaines de l'eau, des eaux usées, de l'électricité et du gaz naturel (OT/ICS)** | Petites utilities américaines (eau, eaux usées, électricité, gaz naturel) | Aucune violation de données confirmée dans cet article ; initiative de prévention et de renforcement de la résilience OT. | Inconnu | [https://www.securityweek.com/accenture-dragos-sans-launch-10m-initiative-to-defend-small-us-utilities/](https://www.securityweek.com/accenture-dragos-sans-launch-10m-initiative-to-defend-small-us-utilities/) |
+| **Gouvernement / forces de l’ordre** | Rajasthan Police | Volume non divulgué. Données potentiellement liées à des communications internes, dossiers opérationnels ou informations citoyennes, mais aucune preuve publique ni échantillon n’a été publié. | Inconnu | [https://www.yazoul.net/intel/claim/2026-10-21-rajasthan-police-ransomware-claim-by-scarlettgroup-oct-2026](https://www.yazoul.net/intel/claim/2026-10-21-rajasthan-police-ransomware-claim-by-scarlettgroup-oct-2026)<br>[https://infosec.exchange/@Matchbook3469/117480663488799521](https://infosec.exchange/@Matchbook3469/117480663488799521) |
+| **Secteur public / services aux collectivités** | Data Cymru / Ogi Networks Limited (ONL) | Données personnelles de 3 300 personnes, majoritairement des enfants, issues de deux projets d’accompagnement des enfants et des familles au Pays de Galles. 42 Go exfiltrés depuis un contrôleur de domaine primaire, un serveur de fichiers et un serveur SQL ; 182,7 Go chiffrés. | 42 Go exfiltrés ; 182,7 Go chiffrés ; 3 300 personnes concernées | [https://www.infosecurity-magazine.com/news/children-data-stolen-password1/](https://www.infosecurity-magazine.com/news/children-data-stolen-password1/)<br>[https://infosec.exchange/@Javvad/117478368822185581](https://infosec.exchange/@Javvad/117478368822185581) |
+| **Aviation / services aéronautiques** | STS Aviation Group | Empreintes digitales et données biométriques ; numéros de sécurité sociale, de permis de conduire et de passeport ; informations médicales et d’assurance santé ; coordonnées bancaires et cartes de paiement ; salaires, évaluations et déclarations d’accident du travail ; identifiants de connexion et coordonnées ; dates de naissance, race et origine ethnique. | 319 résidents du Massachusetts identifiés ; total non divulgué | [https://beyondmachines.net/event_details/sts-aviation-group-data-breach-exposes-biometric-and-financial-records-1-c-5-p-m/gD2P6Ple2L](https://beyondmachines.net/event_details/sts-aviation-group-data-breach-exposes-biometric-and-financial-records-1-c-5-p-m/gD2P6Ple2L)<br>[https://infosec.exchange/@beyondmachines1/117479026832487294](https://infosec.exchange/@beyondmachines1/117479026832487294) |
 
 ---
 
@@ -134,39 +122,76 @@ La production CTI du jour est dominée par les vulnérabilités (33 items) et le
 
 | CVE-ID | Score CVSS | EPSS | CISA KEV | Produit affecté | Type de vulnérabilité | Impact | Exploitation | Mesures de contournement | Source(s) |
 |---|---|---|---|---|---|---|---|---|---|
-| **CVE-2026-91647** | 8.1 | N/A | FALSE | Oracle Essbase 21.8.3.0.0 (composant Security) | Vulnérabilité de sécurité non précisée (CWE non fourni), exploitable via TCP | Impact élevé sur la confidentialité, l'intégrité et la disponibilité ; prise de contrôle d'Oracle Essbase. | None | Appliquer le Correctif Critique Oracle d'octobre 2026 (cpuoct2026) pour Essbase 21.8.3.0.0 ; restreindre l'accès TCP aux sources légitimes ; surveiller les journaux. | [https://cvefeed.io/vuln/detail/CVE-2026-91647](https://cvefeed.io/vuln/detail/CVE-2026-91647) |
-| **CVE-2026-91644** | 9.3 | N/A | FALSE | Oracle Essbase 21.8.3.0.0 (composant Security) | Vulnérabilité de sécurité non précisée (CWE non fourni), exploitable via HTTP | Accès non autorisé à des données critiques et modification non autorisée de données ; impact potentiel sur des produits supplémentaires. | None | Appliquer le Correctif Critique Oracle d'octobre 2026 (cpuoct2026) ; restreindre l'accès HTTP ; surveiller les accès et modifications anormales. | [https://cvefeed.io/vuln/detail/CVE-2026-91644](https://cvefeed.io/vuln/detail/CVE-2026-91644) |
-| **CVE-2026-91638** | 9.9 | N/A | FALSE | Oracle Essbase 21.8.3.0.0 (composant Security) | Vulnérabilité de sécurité non précisée (CWE non fourni), exploitable via HTTP par un attaquant à faibles privilèges | Prise de contrôle d'Oracle Essbase ; impact élevé sur la confidentialité, l'intégrité et la disponibilité. | None | Appliquer le Correctif Critique Oracle d'octobre 2026 (cpuoct2026) ; limiter les comptes à faibles privilèges ; restreindre l'accès HTTP ; surveiller les actions anormales. | [https://cvefeed.io/vuln/detail/CVE-2026-91638](https://cvefeed.io/vuln/detail/CVE-2026-91638) |
-| **CVE-2026-91637** | 9.9 | N/A | FALSE | Oracle Essbase 21.8.3.0.0 (composant Security) | Vulnérabilité de sécurité non précisée (CWE non fourni), exploitable via HTTP par un attaquant à faibles privilèges | Prise de contrôle d'Oracle Essbase ; impact élevé sur la confidentialité, l'intégrité et la disponibilité. | None | Appliquer le Correctif Critique Oracle d'octobre 2026 (cpuoct2026) ; limiter les comptes à faibles privilèges ; restreindre l'accès HTTP ; surveiller les actions anormales. | [https://cvefeed.io/vuln/detail/CVE-2026-91637](https://cvefeed.io/vuln/detail/CVE-2026-91637) |
-| **CVE-2026-91635** | 8.1 | N/A | FALSE | Oracle Essbase 21.8.3.0.0 (composant Security) | Vulnérabilité de sécurité non précisée (CWE non fourni), exploitable via T3/IIOP | Prise de contrôle d'Oracle Essbase ; impact élevé sur la confidentialité, l'intégrité et la disponibilité. | None | Appliquer le Correctif Critique Oracle d'octobre 2026 (cpuoct2026) ; restreindre les flux T3/IIOP ; surveiller les connexions anormales. | [https://cvefeed.io/vuln/detail/CVE-2026-91635](https://cvefeed.io/vuln/detail/CVE-2026-91635) |
-| **CVE-2026-91625** | 8.2 | N/A | FALSE | Oracle Agile Product Lifecycle Management for Process 6.2.4 (composant Product Quality Management) | Vulnérabilité de sécurité non précisée (CWE non fourni), exploitable via HTTP | Accès non autorisé à des données critiques et modification non autorisée de données métier. | None | Appliquer le Correctif Critique Oracle d'octobre 2026 (cpuoct2026) ; restreindre l'accès HTTP ; surveiller les accès et modifications anormales. | [https://cvefeed.io/vuln/detail/CVE-2026-91625](https://cvefeed.io/vuln/detail/CVE-2026-91625) |
-| **CVE-2026-106173** | 9.4 | N/A | FALSE | FortiSIEM 7.5.0 (corrigé en 7.5.1 ou supérieur ; 7.6 non affecté) | Traversée de répertoire et écriture arbitraire de fichier menant à une exécution de code à distance | Exécution de code à distance non authentifiée avec les privilèges du service FortiSIEM ; compromission potentielle de l'infrastructure de supervision et persistance via cron. | Active | Mettre à jour FortiSIEM 7.5.0 vers 7.5.1 ou supérieur ; restreindre l'accès à TCP/27918 ; surveiller les écritures de fichiers et les modifications cron ; rechercher les artefacts du PoC public. | [https://thehackernews.com/2026/10/critical-fortisiem-flaw-gets-public.html](https://thehackernews.com/2026/10/critical-fortisiem-flaw-gets-public.html) |
-| **CVE-2026-110936** | 8.4 | N/A | FALSE | Siemens Software Center, versions antérieures à 4.0.9.8 (version 3.5.8.7 observée lors des attaques) | Chemin de recherche non contrôlé (CWE-427) conduisant à un DLL side-loading et à une exécution de code arbitraire | Exécution de code arbitraire avec les privilèges de l'application sur le poste de la victime, conduisant au déploiement d'un RAT, à un accès persistant à distance et à un risque de vol d'identifiants, de mouvement latéral et d'exfiltration de données. L'usage d'un binaire légitime signé permet de contourner les contrôles fondés uniquement sur la réputation du signataire. | Active | Mettre à jour Siemens Software Center vers la version 4.0.9.8 ou supérieure et démarrer l'application pour appliquer la mise à jour. Bloquer les IP et domaines malveillants (96.62.218[.]59, 2.27.248[.]127, wizardexpensive[.]com). Rechercher SiemensSoftwareCenter.exe lancé depuis AppData\Local\Programs avec msiexec.exe comme parent. Restreindre l'exécution de msiexec.exe et des binaires depuis les répertoires utilisateur, privilégier des détections comportementales (chargement de DLL non signées par un processus signé) plutôt que des hachages, et sensibiliser les utilisateurs aux leurres ClickFix. | [https://www.security.nl/posting/958251/Beveiligingslek+in+Siemens+Software+Center+gebruikt+bij+ClickFix-aanvallen?channel=rss](https://www.security.nl/posting/958251/Beveiligingslek+in+Siemens+Software+Center+gebruikt+bij+ClickFix-aanvallen?channel=rss)<br>[https://thehackernews.com/2026/10/clickfix-attackers-exploit-siemens.html](https://thehackernews.com/2026/10/clickfix-attackers-exploit-siemens.html)<br>[https://socprime.com/blog/cve-2026-110936-analysis/](https://socprime.com/blog/cve-2026-110936-analysis/) |
-| **CVE-2026-0257** | 7.8 | N/A | TRUE | PAN-OS (portail et passerelle GlobalProtect) et Prisma Access, versions vulnérables au contournement d'authentification | Contournement d'authentification (authentication bypass) permettant de créer des connexions VPN non autorisées et de s'affranchir du MFA | Prise de contrôle à distance de l'accès VPN de l'organisation sans MFA, permettant la reconnaissance interne, le vol d'identifiants à l'échelle du domaine via la couche virtualisation, la destruction des sauvegardes et le déploiement de rançongiciels avec double extorsion. L'exposition des interfaces de management sur les ports 4443 et 3879 aggrave le risque d'accès non authentifié. | Active | Appliquer les correctifs Palo Alto Networks pour CVE-2026-0257 ou les workarounds de l'avis officiel, et vérifier l'absence de mappage des profils GlobalProtect sur les interfaces de management (tester une connexion HTTPS hors bande sur les ports 4443 et 3879). Chasser proactivement les IOC publiés par Unit 42 dans les journaux GlobalProtect et déclencher les procédures de réponse pour toute connexion réussie correspondante. Réduire la durée de vie des jetons de session, les lier à un appareil et exiger une réauthentification. Segmenter le management et la virtualisation, protéger les sauvegardes Veeam et corriger CVE-2023-27532. Surveiller l'usage d'outils RMM et les mouvements latéraux RDP/SMB. | [https://thehackernews.com/2026/10/qilin-and-inc-ransomware-groups-exploit.html](https://thehackernews.com/2026/10/qilin-and-inc-ransomware-groups-exploit.html)<br>[https://unit42.paloaltonetworks.com/active-exploitation-of-pan-os-cve-2026-0257/](https://unit42.paloaltonetworks.com/active-exploitation-of-pan-os-cve-2026-0257/)<br>[https://databreaches.net/2026/10/20/qilin-and-inc-ransomware-groups-exploit-palo-alto-networks-flaw-to-bypass-mfa/](https://databreaches.net/2026/10/20/qilin-and-inc-ransomware-groups-exploit-palo-alto-networks-flaw-to-bypass-mfa/)<br>[https://theperimetersite.com/report/381](https://theperimetersite.com/report/381) |
-| **CVE-2026-109618** | 9.2 | N/A | FALSE | PHP (toutes versions depuis PHP 5 selon les informations disponibles ; seules les branches PHP 8 devraient recevoir un correctif) | Exécution de code à distance (RCE) non authentifiée — détails techniques non publiés à la date de l'avis | Exécution de code arbitraire à distance sans authentification sur les serveurs hébergeant des applications PHP exposées : compromission complète de l'hôte, vol ou altération de données, déploiement de webshells, minage de cryptomonnaies, pivot vers le réseau interne et mouvements latéraux. Les environnements conservant PHP 5 ou 7 resteront exposés sans correctif officiel. | None | Appliquer sans délai les versions corrigées publiées le 21 octobre 2026 à 14h00 UTC. En attendant, isoler les applications PHP exposées sur Internet (filtrage réseau amont, mise hors ligne temporaire) et déployer des règles de virtual patching WAF/IPS. Recenser précisément les versions PHP et planifier la migration des branches 5 et 7 en fin de vie. Surveiller les logs web et les processus serveur pour détecter toute exploitation, et suivre les publications officielles php.net ainsi que les PoC publics. | [https://cert.europa.eu/publications/security-advisories/2026-018/](https://cert.europa.eu/publications/security-advisories/2026-018/)<br>[https://www.cyberkendra.com/2026/10/php-cve-2026-109618-cve-2026-109619-rce.html](https://www.cyberkendra.com/2026/10/php-cve-2026-109618-cve-2026-109619-rce.html)<br>[https://techhub.social/@cyberkendra/117475012794819561](https://techhub.social/@cyberkendra/117475012794819561) |
-| **CVE-2026-109619** | 9.2 | N/A | FALSE | PHP (toutes versions depuis PHP 5 selon les informations disponibles ; correctifs attendus uniquement pour PHP 8) | Exécution de code à distance (RCE) non authentifiée — détails techniques non publiés à la date de l'avis | Prise de contrôle à distance de serveurs web PHP sans authentification préalable : exécution de code arbitraire, exfiltration de données applicatives, installation de portes dérobées, intégration à des botnets ou à des opérations de minage. Les environnements PHP 5 et 7 resteront vulnérables de façon permanente faute de correctif. | None | Appliquer les versions corrigées dès leur publication le 21 octobre 2026 à 14h00 UTC. Isoler les applications PHP exposées en attendant, déployer du virtual patching WAF/IPS, et planifier la migration hors des branches PHP 5/7 en fin de vie. Surveiller les logs et les processus serveur, et suivre les avis officiels php.net et CERT-EU. | [https://cert.europa.eu/publications/security-advisories/2026-018/](https://cert.europa.eu/publications/security-advisories/2026-018/)<br>[https://www.cyberkendra.com/2026/10/php-cve-2026-109618-cve-2026-109619-rce.html](https://www.cyberkendra.com/2026/10/php-cve-2026-109618-cve-2026-109619-rce.html)<br>[https://techhub.social/@cyberkendra/117475012794819561](https://techhub.social/@cyberkendra/117475012794819561) |
-| **CVE-2026-76587** | 8.8 | N/A | FALSE | IBM Planning Analytics 2.0 et 2.1 | Débordement de tampon basé sur la pile (CWE-121) dû à une vérification incorrecte des limites | Exécution de code arbitraire sur le serveur hébergeant IBM Planning Analytics, avec un impact élevé sur la confidentialité, l'intégrité et la disponibilité. Un attaquant authentifié pourrait prendre le contrôle du service, accéder aux données analytiques et financières, ou pivoter vers d'autres systèmes. | None | Mettre à jour IBM Planning Analytics vers la dernière version corrigée en suivant le bulletin IBM (node/7291604). En attendant, restreindre l'accès réseau aux services Planning Analytics, limiter les comptes à privilèges et surveiller les journaux applicatifs à la recherche de crashs ou d'exécutions anormales. | [https://cvefeed.io/vuln/detail/CVE-2026-76587](https://cvefeed.io/vuln/detail/CVE-2026-76587)<br>[https://www.ibm.com/support/pages/node/7291604](https://www.ibm.com/support/pages/node/7291604) |
-| **CVE-2026-81212** | 10.0 | N/A | FALSE | IBM DataStage sur Cloud Pak for Data 5.4.0.0 | Autorisation incorrecte (CWE-285) permettant une écriture arbitraire non authentifiée dans Redis partagé | Compromission de l'isolation multi-tenant : un attaquant anonyme peut altérer les paramètres de flux d'autres tenants, empoisonner des traitements de données, contourner la frontière de chiffrement des identifiants et potentiellement accéder ou corrompre des données analytiques sensibles. L'impact porte sur la confidentialité, l'intégrité et la disponibilité de l'ensemble de la plateforme. | Theoretical | Appliquer sans délai la mise à jour IBM corrigeant l'écriture arbitraire dans Redis (bulletin node/7289603). En parallèle, renforcer les contrôles d'accès Redis (authentification, ACL, isolation réseau par tenant), restreindre l'exposition de l'API DataStage et surveiller les écritures anormales dans le cache partagé. | [https://cvefeed.io/vuln/detail/CVE-2026-81212](https://cvefeed.io/vuln/detail/CVE-2026-81212)<br>[https://www.ibm.com/support/pages/node/7289603](https://www.ibm.com/support/pages/node/7289603) |
-| **CVE-2026-82891** | 8.1 | N/A | FALSE | IBM Guardium Data Protection 12.1 et 12.2 | Utilisation d'une clé cryptographique codée en dur (CWE-321) | Confidentialité, intégrité et disponibilité élevées selon le vecteur CVSS : divulgation d'informations sensibles (données de surveillance, journaux d'audit, secrets) et possible altération de la chaîne de confiance cryptographique de la plateforme de protection des données. L'impact est d'autant plus critique que Guardium centralise des données de conformité et d'audit. | Theoretical | Mettre à jour Guardium Data Protection vers une version corrigée conformément au bulletin IBM (node/7293014), appliquer les correctifs éditeur, restreindre l'exposition réseau des interfaces d'administration, et procéder à la rotation des clés cryptographiques lorsque l'éditeur le permet. | [https://cvefeed.io/vuln/detail/CVE-2026-82891](https://cvefeed.io/vuln/detail/CVE-2026-82891) |
-| **CVE-2026-92559** | 9.8 | N/A | FALSE | IBM App Connect Enterprise 13.0.1.0 à 13.0.8.2 | Liaison à une adresse IP non restreinte (CWE-1327) entraînant une exposition d'informations d'authentification | Divulgation d'informations d'authentification et de configuration, avec un risque d'escalade vers la compromission complète des flux d'intégration et des systèmes connectés (ERP, bases de données, files de messages). L'exposition peut également faciliter des mouvements latéraux dans le réseau interne. | Theoretical | Restreindre la liaison des services aux seules adresses IP nécessaires, revoir les contrôles d'accès réseau, appliquer le correctif éditeur (bulletin IBM node/7291781) et renouveler les identifiants potentiellement exposés. | [https://cvefeed.io/vuln/detail/CVE-2026-92559](https://cvefeed.io/vuln/detail/CVE-2026-92559) |
-| **CVE-2026-93441** | 8.6 | N/A | FALSE | IBM QRadar SIEM - protocole HTTP Receiver | Consommation non contrôlée de ressources (CWE-400) menant à un déni de service | Indisponibilité du récepteur HTTP et donc perte d'ingestion de journaux : le SIEM devient aveugle, ce qui peut masquer une attaque concomitante. L'impact porte sur la disponibilité de la capacité de détection et de conformité (rétention des logs). | Theoretical | Appliquer les correctifs éditeur (bulletin IBM node/7292244), mettre à jour QRadar SIEM vers la dernière version, restreindre l'accès réseau au récepteur HTTP aux seules sources de logs légitimes et mettre en place une limitation de débit. | [https://cvefeed.io/vuln/detail/CVE-2026-93441](https://cvefeed.io/vuln/detail/CVE-2026-93441) |
-| **CVE-2026-93442** | 8.2 | N/A | FALSE | IBM QRadar SIEM 7.6.0.0 à 7.6.0.4 et 7.5.0 jusqu'à Update Package 16 Interim Fix 001 | Lecture hors limites (CWE-125) | Indisponibilité partielle ou totale des composants QRadar concernés (perte de collecte et de corrélation) et fuite potentielle d'informations mémoire sensibles (jetons, chemins, données de configuration). | Theoretical | Mettre à jour QRadar SIEM vers une version corrigée, appliquer les derniers correctifs ou interim fixes (bulletin IBM node/7292240) et restreindre l'exposition réseau des interfaces concernées. | [https://cvefeed.io/vuln/detail/CVE-2026-93442](https://cvefeed.io/vuln/detail/CVE-2026-93442) |
-| **CVE-2026-96652** | N/A | N/A | FALSE | Plex Media Server (versions antérieures à 1.43.3) | Exécution de code à distance non authentifiée (chaîne Plex2Shell) | Compromission complète du serveur multimédia : exécution de code arbitraire, vol de jetons, minage de cryptomonnaies consommant les ressources, et utilisation du serveur comme proxy pour des attaques ultérieures. Le serveur peut servir de point d'appui pour pivoter vers le réseau interne. | Active | Mettre à jour Plex Media Server vers la version 1.43.3 ou supérieure, supprimer l'exposition directe sur Internet (pas de port forwarding, désactiver UPnP), révoquer les jetons d'administration et auditer les serveurs à la recherche de mineurs et de proxys. | [https://www.security.nl/posting/958260/Plex-mediaservers+gehackt+via+Plex2Shell+RCE-kwetsbaarheden?channel=rss](https://www.security.nl/posting/958260/Plex-mediaservers+gehackt+via+Plex2Shell+RCE-kwetsbaarheden?channel=rss) |
-| **CVE-2026-96654** | N/A | N/A | FALSE | Plex Media Server (versions antérieures à 1.43.3) | Exécution de code à distance non authentifiée (chaîne Plex2Shell) | Exécution de code arbitraire sur le serveur multimédia, vol de jetons, minage de cryptomonnaies et utilisation du serveur comme proxy pour des attaques ultérieures, avec risque de pivot vers le réseau interne. | Active | Mettre à jour Plex Media Server vers la version 1.43.3 ou supérieure, supprimer l'exposition directe sur Internet, révoquer les jetons d'administration et auditer les serveurs à la recherche de mineurs et de proxys. | [https://www.security.nl/posting/958260/Plex-mediaservers+gehackt+via+Plex2Shell+RCE-kwetsbaarheden?channel=rss](https://www.security.nl/posting/958260/Plex-mediaservers+gehackt+via+Plex2Shell+RCE-kwetsbaarheden?channel=rss) |
-| **CVE-2026-96655** | N/A | N/A | FALSE | Plex Media Server (versions antérieures à 1.43.3) | Exécution de code à distance non authentifiée (chaîne Plex2Shell) | Compromission du serveur multimédia avec exécution de code arbitraire, minage de cryptomonnaies, utilisation en proxy et risque de mouvement latéral vers le réseau interne. | Active | Mettre à jour vers Plex Media Server 1.43.3 ou supérieur, retirer l'exposition Internet, révoquer les jetons d'administration et rechercher les artefacts de minage et de proxy. | [https://www.security.nl/posting/958260/Plex-mediaservers+gehackt+via+Plex2Shell+RCE-kwetsbaarheden?channel=rss](https://www.security.nl/posting/958260/Plex-mediaservers+gehackt+via+Plex2Shell+RCE-kwetsbaarheden?channel=rss) |
-| **CVE-2026-96656** | N/A | N/A | FALSE | Plex Media Server (versions antérieures à 1.43.3) | Exécution de code à distance non authentifiée (chaîne Plex2Shell) | Exécution de code arbitraire, vol de jetons, minage de cryptomonnaies et utilisation du serveur comme proxy pour des attaques ultérieures, avec risque de pivot vers le réseau interne. | Active | Mettre à jour vers Plex Media Server 1.43.3 ou supérieur, supprimer l'exposition directe sur Internet, révoquer les jetons d'administration et auditer les serveurs à la recherche de mineurs et de proxys. | [https://www.security.nl/posting/958260/Plex-mediaservers+gehackt+via+Plex2Shell+RCE-kwetsbaarheden?channel=rss](https://www.security.nl/posting/958260/Plex-mediaservers+gehackt+via+Plex2Shell+RCE-kwetsbaarheden?channel=rss) |
-| **CVE-2026-112380** | N/A | N/A | FALSE | Kiro Crew versions >= 0.4.0 et < 0.7.2 | Autorisation manquante dans le canal WhatsApp et les endpoints de contrôle des sous-agents (CWE-862) | Exécution non autorisée d'outils sur la machine d'un opérateur, avec perte d'intégrité de la piste d'audit et risque d'actions malveillantes attribuées à tort à l'opérateur légitime. L'impact dépend des outils et privilèges accordés à l'agent. | Theoretical | Mettre à jour vers Kiro Crew 0.7.2 ou supérieur, vider whatsapp.groups, conserver whatsapp.dm_policy à self, ou désactiver le canal WhatsApp jusqu'à l'application du correctif ; patcher également les forks et dérivés. | [https://aws.amazon.com/security/security-bulletins/rss/2026-140-aws/](https://aws.amazon.com/security/security-bulletins/rss/2026-140-aws/) |
-| **CVE-2026-112407** | N/A | N/A | FALSE | AWS CICD-toolchain-for-serverless-applications versions 1.0.7 à 1.0.10 | Attribution incorrecte de privilèges dans la politique IAM (CWE-266) | Escalade de privilèges dans le compte AWS : accès ou modification de ressources hors périmètre (buckets, bases de données, fonctions Lambda, rôles IAM), avec un risque de compromission étendue du compte cloud et de la chaîne CI/CD. | Theoretical | Mettre à jour les piles vers la version 1.0.11 ou supérieure, patcher les forks et dérivés, restreindre les droits de push sur les dépôts sources et appliquer le principe du moindre privilège aux rôles IAM du pipeline. | [https://aws.amazon.com/security/security-bulletins/rss/2026-141-aws/](https://aws.amazon.com/security/security-bulletins/rss/2026-141-aws/) |
-| **CVE-2026-102764** | N/A | N/A | TRUE | BeyondTrust Remote Support, toutes versions <= 26.2.3 (déploiements auto-hébergés ; l'offre SaaS a déjà été corrigée par l'éditeur) | Validation insuffisante de l'origine des messages dans des composants internes, permettant des opérations arbitraires sur fichiers (upload) sur l'appliance | Compromission d'une solution d'accès distant de confiance, utilisée comme point d'entrée pour l'espionnage : exécution d'opérations fichiers, persistance, élévation de privilèges et mouvement latéral vers les systèmes d'entreprise. Risque élevé pour les entités gouvernementales de taille moyenne et grande et pour les grandes et moyennes entreprises ; risque moyen pour les petites structures ; faible pour les particuliers. | Active | Appliquer sans délai les mises à jour fournies par BeyondTrust après tests appropriés (M1051). Mettre en œuvre les safeguards CIS : 7.1 (processus de gestion des vulnérabilités), 7.2 (processus de remédiation basé sur le risque), 7.4 (gestion automatisée des correctifs applicatifs), 7.5 (scans automatisés des actifs internes), 7.7 (remédiation des vulnérabilités détectées), 12.1 (maintien à jour de l'infrastructure réseau) et 18.1 (programme de tests d'intrusion). Pour les déploiements auto-hébergés, le patch doit être appliqué manuellement. Restreindre l'exposition Internet des appliances, imposer MFA et filtrage IP, surveiller les journaux d'upload et d'audit. | [https://www.cisecurity.org/advisory/a-vulnerability-in-beyondtrust-remote-support-could-allow-for-arbitrary-upload-of-files_2026-117](https://www.cisecurity.org/advisory/a-vulnerability-in-beyondtrust-remote-support-could-allow-for-arbitrary-upload-of-files_2026-117) |
-| **CVE-2026-46633** | N/A | N/A | FALSE | Twig (moteur de templates PHP), versions >= 3.3.8 < 3.15.0 pour l'évasion du bac à sable, ainsi que des versions antérieures (Twig > 1.19 < 2.10) pour l'injection de code | Évasion du bac à sable Twig (sandbox bypass) et injection de code via la syntaxe de template, menant à une exécution de code côté serveur | Exécution de code arbitraire côté serveur dans les applications PHP rendant des templates Twig contrôlés par un utilisateur, avec pour conséquence la compromission du serveur applicatif, l'accès aux données et la possibilité de mouvement latéral. L'existence de payloads publics et de modules SSTImap abaisse fortement la barrière d'exploitation. | Theoretical | Mettre à jour Twig vers une version corrigée (>= 3.15.0 pour la branche 3.x) et vérifier les versions plus anciennes. Maintenir le SandboxExtension activé et ne jamais rendre de templates provenant d'utilisateurs non fiables. Restreindre les fonctionnalités d'édition/prévisualisation de templates, journaliser les erreurs de rendu et surveiller les payloads SSTI. Auditer les dépendances PHP et appliquer une politique de patch rapide sur les composants de templating. | [https://gist.github.com/vladko312/d61b950f168c791db4786b83dc7a81e6](https://gist.github.com/vladko312/d61b950f168c791db4786b83dc7a81e6)<br>[https://www.reddit.com/r/redteamsec/comments/1xb2tex/cve202646633_proving_exploitability_of_twig/](https://www.reddit.com/r/redteamsec/comments/1xb2tex/cve202646633_proving_exploitability_of_twig/) |
-| **CVE-2026-21510** | N/A | N/A | FALSE | Microsoft Windows (composant Windows Shell) | Contournement de sécurité (security bypass) dans Windows Shell, exploité comme zero-day | Contournement des mécanismes de sécurité de Windows permettant à un attaquant de neutraliser des protections et d'élever ses privilèges, avec un risque d'espionnage ciblé contre des organisations gouvernementales et sensibles. Les vulnérabilités dont le correctif a été contourné sont environ quatre fois plus susceptibles d'apparaître au catalogue KEV de la CISA. | Active | Appliquer le correctif de février 2026 puis le correctif complémentaire dès publication, et vérifier l'absence de contournement résiduel. Adopter une démarche de validation des correctifs au-delà du simple « patch and move on » : vérifier que le correctif traite la cause racine, couvre toute la classe de bugs et n'introduit pas de régression. Surveiller les avis de suivi de Microsoft et les alertes CISA. | [https://www.theregister.com/patches/2026/10/19/security-patches-need-patches-now-that-attackers-have-ai/5303927](https://www.theregister.com/patches/2026/10/19/security-patches-need-patches-now-that-attackers-have-ai/5303927)<br>[https://infosec.exchange/@edwardk/117472462999043587](https://infosec.exchange/@edwardk/117472462999043587) |
-| **CVE-2026-32202** | N/A | N/A | FALSE | Microsoft Windows (mécanismes d'authentification) | Coercition d'authentification zero-click, révélée par un correctif incomplet de CVE-2026-21510 | Coercition d'authentification sans interaction utilisateur, permettant à un attaquant de capter ou relayer des authentifications, d'élever ses privilèges et de progresser latéralement dans le système d'information. Risque d'espionnage ciblé contre des organisations gouvernementales et sensibles. | Active | Appliquer le correctif d'avril 2026 et tout correctif de suivi. Réduire la surface de coercition d'authentification : désactiver NTLM lorsque possible, imposer la signature SMB, bloquer les flux d'authentification sortants non nécessaires, restreindre WebDAV et les résolutions de noms non contrôlées. Vérifier systématiquement que les correctifs de contournement de sécurité couvrent bien toute la classe de vulnérabilité. | [https://www.theregister.com/patches/2026/10/19/security-patches-need-patches-now-that-attackers-have-ai/5303927](https://www.theregister.com/patches/2026/10/19/security-patches-need-patches-now-that-attackers-have-ai/5303927)<br>[https://infosec.exchange/@edwardk/117472462999043587](https://infosec.exchange/@edwardk/117472462999043587) |
-| **** | N/A | N/A | FALSE |  |  |  |  |  |  |
-| **** | N/A | N/A | FALSE |  |  |  |  |  |  |
-| **** | N/A | N/A | FALSE | Laravel versions 12.68.x antérieures à 12.68.0 et versions 13.29.x antérieures à 13.29.0 | Multiples vulnérabilités : déni de service à distance, atteinte à l'intégrité des données, contournement de la politique de sécurité | Un attaquant distant peut provoquer l'indisponibilité d'applications Laravel, altérer des données applicatives ou contourner des contrôles de sécurité, avec un risque d'escalade vers une compromission plus large selon la logique métier exposée. | None | Mettre à jour vers Laravel 12.68.0 ou 13.29.0 (ou versions supérieures) en suivant les avis GHSA de l'éditeur. En attendant, restreindre l'exposition des applications concernées, activer le rate limiting et les règles WAF, et surveiller les logs applicatifs à la recherche de tentatives d'exploitation. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1343/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1343/)<br>[https://github.com/laravel/framework/security/advisories/GHSA-5wcm-3v2w-8362](https://github.com/laravel/framework/security/advisories/GHSA-5wcm-3v2w-8362)<br>[https://github.com/laravel/framework/security/advisories/GHSA-f9x3-7vq9-cph6](https://github.com/laravel/framework/security/advisories/GHSA-f9x3-7vq9-cph6) |
-| **** | N/A | N/A | FALSE | Mattermost Server versions 11.7.x antérieures à 11.7.12, 11.8.x antérieures à 11.8.6, 11.10.x antérieures à 11.10.3, 11.11.x antérieures à 11.11.2 | Multiples vulnérabilités — risque non spécifié par l'éditeur | Selon la nature exacte des failles (non détaillée par l'éditeur), l'exploitation pourrait permettre un accès non autorisé à des données de collaboration, une atteinte à la confidentialité des échanges, une perturbation du service ou une compromission des intégrations connectées. | None | Appliquer les versions corrigées publiées par Mattermost (11.7.12, 11.8.6, 11.10.3, 11.11.2 ou supérieures) en se référant à la page officielle des mises à jour de sécurité. En attendant, restreindre l'exposition réseau des instances, désactiver les intégrations non nécessaires et surveiller les journaux d'administration. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1344/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1344/)<br>[https://mattermost.com/security-updates/](https://mattermost.com/security-updates/) |
-| **** | N/A | N/A | FALSE | Huit certificats d'autorités de certification intermédiaires eMudhra (marque emSign) : EM DV TLS CA - G3B/G3C, EM OV TLS CA - G3B/G3C, EM EV TLS CA - G3B/G3C et EM OV CS CA - G3B/G3C | Compromission de clés privées d'AC intermédiaires permettant l'émission de certificats frauduleux | Un détenteur des clés pourrait émettre des certificats valides pour n'importe quel domaine et intercepter du trafic TLS, ou signer du code malveillant accepté par les systèmes de confiance. Le risque est atténué par les blocages rapides des principaux magasins de confiance et l'absence de certificat frauduleux observé dans les journaux CT. | Active | Vérifier l'application des listes de révocation sur l'ensemble du parc, remplacer les certificats émis par ces chaînes, bloquer les huit intermédiaires dans les proxys et magasins de confiance d'entreprise, et surveiller les journaux CT pour toute émission frauduleuse. | [https://thehackernews.com/2026/10/eight-emudhra-ca-keys-compromised.html](https://thehackernews.com/2026/10/eight-emudhra-ca-keys-compromised.html) |
-| **** | N/A | N/A | FALSE | Navigateurs antidetect commerciaux (Kameleo, AdsPower, MultiLogin) et plateformes sociales ciblées (Facebook, Instagram, TikTok, YouTube, X, Discord, LinkedIn, Reddit) | Abus d'outils légitimes (navigateurs antidetect enrichis à l'IA) pour la fraude en ligne, la prise de contrôle de comptes et les opérations d'influence coordonnées | Fraude financière à grande échelle, prise de contrôle de comptes, blanchiment via comptes vérifiés KYC, pollution publicitaire et amplification d'opérations d'influence, notamment en période électorale. Les systèmes de détection fondés sur le comportement ou l'identité de l'appareil sont contournés, ce qui retarde la détection jusqu'après la survenance de la fraude. | None | Renforcer la détection au-delà de la couche compte : empreinte navigateur, réputation réseau, corrélation de proxies, analyse de timing et de cadence. Durcir les parcours KYC et l'onboarding, surveiller les contournements de CAPTCHA et les injections de cookies de session. Sensibiliser les équipes trust & safety et fraude, coopérer avec les plateformes et signaler les campagnes de comportement inauthentique coordonné. | [https://research.checkpoint.com/2026/the-risk-of-ai-powered-antidetect-browsers-in-online-fraud-and-influence-operations/](https://research.checkpoint.com/2026/the-risk-of-ai-powered-antidetect-browsers-in-online-fraud-and-influence-operations/) |
+| **CVE-2026-109618** | 9.2 | N/A | FALSE | PHP — toutes versions 5.x, 6.x, 7.x, 8.0.x et 8.1.x (fin de vie), ainsi que 8.2.x < 8.2.35, 8.3.x < 8.3.36, 8.4.x < 8.4.27 et 8.5.x < 8.5.12. Toutes les configurations servant des requêtes web sont concernées : PHP-FPM, Apache mod_php, php-cgi, FrankenPHP et LiteSpeed. | Exécution de code arbitraire à distance non authentifiée (CWE-824 — accès à un pointeur non initialisé) par corruption mémoire lors de la gestion d'un dépassement de memory_limit (OOM) et par état global obsolète après erreur fatale. Le couple de vulnérabilités est baptisé « PHP2Shell » ; CVE-2026-109618 est la variante OOM, CVE-2026-109619 la variante état global obsolète. | Exécution de code arbitraire à distance non authentifiée avec les privilèges du processus serveur web, permettant la compromission complète de l'hôte, le déploiement de webshells, le mouvement latéral et l'exfiltration de données. La voie de divulgation mémoire expose des secrets d'autres requêtes (identifiants, jetons, clés API, certificats) sans laisser de trace d'exécution. Toute installation PHP servant des requêtes web est exposée, y compris les CMS et frameworks (WordPress, Drupal, Joomla, Magento, Laravel) et les produits tiers embarquant PHP. Le risque est maximal sur Apache mod_php, où l'exploit aboutit avant l'exécution du code applicatif. | Active | Appliquer en priorité les correctifs PHP 8.5.12, 8.4.27, 8.3.36 et 8.2.35, puis redémarrer Apache, PHP-FPM et tous les workers longue durée ; vérifier la version avec `php -v` et les changelogs des paquets. Pour les branches en fin de vie (8.1 et antérieures), migrer vers une branche supportée ou appliquer les backports source 7.4/8.0/8.1. En attendant le patch : désactiver session.upload_progress.enabled (et php_admin_flag équivalent pour PHP-FPM), fixer memory_limit = -1, réduire post_max_size, imposer des limites de taille au niveau du serveur web ou du proxy, et bloquer au WAF les requêtes multipart non nécessaires (ou les superviser étroitement). Isoler les applications exposées à Internet jusqu'à validation du correctif. Ne pas utiliser RLIMIT_AS/RLIMIT_DATA comme substitut. Faire tourner les secrets potentiellement exposés et surveiller les comportements post-exploitation (processus enfants, webshells, connexions sortantes). | [https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-014/](https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-014/)<br>[https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1359/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1359/)<br>[https://cert.europa.eu/publications/security-advisories/2026-018/](https://cert.europa.eu/publications/security-advisories/2026-018/)<br>[https://www.crowdstrike.com/en-us/blog/crowdstrike-protects-customers-from-php-rce-zero-days/](https://www.crowdstrike.com/en-us/blog/crowdstrike-protects-customers-from-php-rce-zero-days/)<br>[https://www.sentinelone.com/blog/stopping-php2shell-how-sentinelone-protects-customers-from-this-attack-technique/](https://www.sentinelone.com/blog/stopping-php2shell-how-sentinelone-protects-customers-from-this-attack-technique/)<br>[https://www.darkreading.com/application-security/php2shell-bugs-red-alert-security-industry](https://www.darkreading.com/application-security/php2shell-bugs-red-alert-security-industry)<br>[https://www.kaspersky.co.uk/blog/cve-2026-109618-109619-php-vulnerabilities/30997/](https://www.kaspersky.co.uk/blog/cve-2026-109618-109619-php-vulnerabilities/30997/)<br>[https://thehackernews.com/2026/10/php-issues-emergency-patches-for-two.html](https://thehackernews.com/2026/10/php-issues-emergency-patches-for-two.html)<br>[https://blog.cloudflare.com/php-vulnerabilities-waf-protection/](https://blog.cloudflare.com/php-vulnerabilities-waf-protection/)<br>[https://thehackernews.com/2026/10/php2shell-two-unpatched-critical-php.html](https://thehackernews.com/2026/10/php2shell-two-unpatched-critical-php.html)<br>[https://www.huntress.com/blog/php2shell-leaked-critical-php-vulnerabilities](https://www.huntress.com/blog/php2shell-leaked-critical-php-vulnerabilities)<br>[https://arstechnica.com/security/2026/10/php-maintainers-tell-web-devs-to-prepare-themselves-for-critical-security-patches/](https://arstechnica.com/security/2026/10/php-maintainers-tell-web-devs-to-prepare-themselves-for-critical-security-patches/)<br>[https://aws.amazon.com/security/security-bulletins/rss/2026-143-aws/](https://aws.amazon.com/security/security-bulletins/rss/2026-143-aws/)<br>[https://www.cisecurity.org/advisory/multiple-vulnerabilities-in-php-could-allow-for-remote-code-execution_2026-119](https://www.cisecurity.org/advisory/multiple-vulnerabilities-in-php-could-allow-for-remote-code-execution_2026-119)<br>[https://isc.sans.edu/diary/rss/33440](https://isc.sans.edu/diary/rss/33440)<br>[https://www.elastic.co/security-labs/threat-command/php2shell-php-rce-detection](https://www.elastic.co/security-labs/threat-command/php2shell-php-rce-detection)<br>[https://fieldeffect.com/blog/php-updates-critical-rce-flaws](https://fieldeffect.com/blog/php-updates-critical-rce-flaws)<br>[https://www.guidepointsecurity.com/blog/how-to-patch-php2shell/](https://www.guidepointsecurity.com/blog/how-to-patch-php2shell/)<br>[https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/](https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/)<br>[https://www.recordedfuture.com/blog/php2shell-vulnerability-exploitation](https://www.recordedfuture.com/blog/php2shell-vulnerability-exploitation)<br>[https://securelist.com/tr/php2shell-critical-vulnerabilities-in-php/121596/](https://securelist.com/tr/php2shell-critical-vulnerabilities-in-php/121596/)<br>[https://securityaffairs.com/201403/security/php-prepares-emergency-fixes-for-two-critical-remote-code-execution-flaws.html](https://securityaffairs.com/201403/security/php-prepares-emergency-fixes-for-two-critical-remote-code-execution-flaws.html)<br>[https://socprime.com/blog/cve-2026-109618-cve-2026-109619-analysis/](https://socprime.com/blog/cve-2026-109618-cve-2026-109619-analysis/)<br>[https://unit42.paloaltonetworks.com/cve-2026-109618-cve-2026-109619/](https://unit42.paloaltonetworks.com/cve-2026-109618-cve-2026-109619/)<br>[https://socket.dev/blog/php-embargo-dispute?utm_medium=feed](https://socket.dev/blog/php-embargo-dispute?utm_medium=feed)<br>[https://theperimetersite.com/report/384](https://theperimetersite.com/report/384)<br>[https://suriq.io/blog/php-core-rce-cve-2026-109618-php2shell](https://suriq.io/blog/php-core-rce-cve-2026-109618-php2shell)<br>[https://infosec.exchange/@suriq/117479156315324187](https://infosec.exchange/@suriq/117479156315324187)<br>[https://theperimetersite.com/report/383](https://theperimetersite.com/report/383)<br>[https://infosec.exchange/@theperimetersite/117478714094985439](https://infosec.exchange/@theperimetersite/117478714094985439) |
+| **CVE-2026-109619** | 9.2 | N/A | FALSE | Interpréteur PHP (PHP core) — toutes les versions depuis PHP 5.4 ; versions corrigées : 8.5.12, 8.4.27, 8.3.36, 8.2.35, avec backports pour 7.4, 8.0 et 8.1. SAPI affectées : PHP-FPM, Apache mod_php, php-cgi, FrankenPHP, LiteSpeed. | Exécution de code à distance non authentifiée par use-after-free / état global obsolète (stale global state) dans la gestion de l'état de requête PHP | Exécution de code arbitraire dans le contexte du processus PHP, permettant le déploiement de web shells, le vol de secrets applicatifs et de données, l'accès aux bases de données et aux services cloud liés, ainsi qu'un pivot vers le réseau interne. L'exposition est celle de toute installation PHP joignable depuis Internet, indépendamment du CMS ou de l'application hébergée ; un même serveur pouvant héberger plusieurs sites et API, l'impact peut être mutualisé sur de nombreux services. Les déploiements Apache mod_php sont considérés comme les plus exposés. | Active | Appliquer immédiatement les mises à jour PHP 8.5.12, 8.4.27, 8.3.36 ou 8.2.35. Pour les versions 8.1 et antérieures, migrer vers une branche supportée ou appliquer les backports fournis par la distribution. En attendant, réduire l'exposition : définir memory_limit=-1 via php_admin_value, limiter post_max_size (8M sans upload, 32M avec), désactiver session.upload_progress.enabled, restreindre la taille des requêtes au niveau du serveur web/proxy, et activer les règles WAF (Cloudflare ou autre). Surveiller php[.]net pour les annonces. Isoler les installations PHP en fin de vie d'Internet. | [https://blog.cloudflare.com/php-vulnerabilities-waf-protection/](https://blog.cloudflare.com/php-vulnerabilities-waf-protection/)<br>[https://thehackernews.com/2026/10/php2shell-two-unpatched-critical-php.html](https://thehackernews.com/2026/10/php2shell-two-unpatched-critical-php.html)<br>[https://www.huntress.com/blog/php2shell-leaked-critical-php-vulnerabilities](https://www.huntress.com/blog/php2shell-leaked-critical-php-vulnerabilities)<br>[https://arstechnica.com/security/2026/10/php-maintainers-tell-web-devs-to-prepare-themselves-for-critical-security-patches/](https://arstechnica.com/security/2026/10/php-maintainers-tell-web-devs-to-prepare-themselves-for-critical-security-patches/)<br>[https://aws.amazon.com/security/security-bulletins/rss/2026-143-aws/](https://aws.amazon.com/security/security-bulletins/rss/2026-143-aws/)<br>[https://www.cisecurity.org/advisory/multiple-vulnerabilities-in-php-could-allow-for-remote-code-execution_2026-119](https://www.cisecurity.org/advisory/multiple-vulnerabilities-in-php-could-allow-for-remote-code-execution_2026-119)<br>[https://isc.sans.edu/diary/rss/33440](https://isc.sans.edu/diary/rss/33440)<br>[https://www.elastic.co/security-labs/threat-command/php2shell-php-rce-detection](https://www.elastic.co/security-labs/threat-command/php2shell-php-rce-detection)<br>[https://fieldeffect.com/blog/php-updates-critical-rce-flaws](https://fieldeffect.com/blog/php-updates-critical-rce-flaws)<br>[https://www.guidepointsecurity.com/blog/how-to-patch-php2shell/](https://www.guidepointsecurity.com/blog/how-to-patch-php2shell/)<br>[https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/](https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/)<br>[https://www.recordedfuture.com/blog/php2shell-vulnerability-exploitation](https://www.recordedfuture.com/blog/php2shell-vulnerability-exploitation)<br>[https://securelist.com/tr/php2shell-critical-vulnerabilities-in-php/121596/](https://securelist.com/tr/php2shell-critical-vulnerabilities-in-php/121596/)<br>[https://suriq.io/blog/php-core-rce-cve-2026-109618-php2shell](https://suriq.io/blog/php-core-rce-cve-2026-109618-php2shell)<br>[https://infosec.exchange/@suriq/117479156315324187](https://infosec.exchange/@suriq/117479156315324187) |
+| **CVE-2026-96652** | 5.3 | N/A | TRUE | Plex Media Server (versions antérieures à 1.43.3.10861) | Chaînage de vulnérabilités menant à une exécution de code à distance : SSRF non authentifiée, injection d'URL, SSRF via le transcoder et écriture de fichier arbitraire | Prise de contrôle du serveur Plex exposé, exécution de code arbitraire, détournement des ressources CPU/GPU pour du minage de cryptomonnaies, accès aux médias et aux données stockées, utilisation du serveur comme point d'appui pour des mouvements latéraux vers le réseau interne. | Active | Mettre à jour vers Plex Media Server 1.43.3.10861 ou une version ultérieure. À défaut, retirer l'exposition Internet du service et restreindre l'accès distant via un accès réseau contrôlé (VPN). Surveiller la consommation de ressources et les connexions sortantes, révoquer les jetons d'authentification en cas de compromission et reconstruire les hôtes affectés. | [https://thehackernews.com/2026/10/cisa-orders-federal-agencies-to-patch.html](https://thehackernews.com/2026/10/cisa-orders-federal-agencies-to-patch.html)<br>[https://www.bleepingcomputer.com/news/security/cisa-hackers-chain-plex-flaws-in-plex2shell-attacks-to-breach-servers/](https://www.bleepingcomputer.com/news/security/cisa-hackers-chain-plex-flaws-in-plex2shell-attacks-to-breach-servers/) |
+| **CVE-2026-96654** | 6.9 | N/A | TRUE | Plex Media Server | Neutralisation incorrecte des schémas URI encodés dans une page web | Peut conduire à une exécution de code à distance lorsqu'elle est chaînée avec les autres vulnérabilités Plex2Shell. Permet également des redirections malveillantes ou des accès non autorisés. | Active | Mettre à jour Plex Media Server vers la version 1.43.3.10861 ou ultérieure (publiée le 3 août 2026). Appliquer les directives CISA KEV : corriger avant le 23 octobre 2026 pour les agences fédérales. Restreindre l'exposition Internet des serveurs Plex, surveiller les activités anormales. | [https://thehackernews.com/2026/10/cisa-orders-federal-agencies-to-patch.html](https://thehackernews.com/2026/10/cisa-orders-federal-agencies-to-patch.html) |
+| **CVE-2026-96655** | 5.3 | N/A | TRUE | Plex Media Server | Server-Side Request Forgery (SSRF) | Un attaquant peut utiliser le serveur Plex pour effectuer des requêtes vers des ressources internes, contourner des contrôles d'accès, et dans le cadre de la chaîne Plex2Shell, contribuer à une exécution de code à distance. | Active | Mettre à jour Plex Media Server vers la version 1.43.3.10861 ou ultérieure (publiée le 3 août 2026). Appliquer les directives CISA KEV : corriger avant le 23 octobre 2026 pour les agences fédérales. Restreindre l'exposition Internet des serveurs Plex, surveiller les activités anormales. | [https://thehackernews.com/2026/10/cisa-orders-federal-agencies-to-patch.html](https://thehackernews.com/2026/10/cisa-orders-federal-agencies-to-patch.html) |
+| **CVE-2026-96656** | 8.6 | N/A | TRUE | Plex Media Server | Contrôle externe du nom de fichier ou du chemin | Exécution de code à distance, accès non autorisé à des fichiers, compromission totale du serveur Plex. | Active | Mettre à jour Plex Media Server vers la version 1.43.3.10861 ou ultérieure (publiée le 3 août 2026). Appliquer les directives CISA KEV : corriger avant le 23 octobre 2026 pour les agences fédérales. Restreindre l'exposition Internet des serveurs Plex, surveiller les activités anormales. | [https://thehackernews.com/2026/10/cisa-orders-federal-agencies-to-patch.html](https://thehackernews.com/2026/10/cisa-orders-federal-agencies-to-patch.html) |
+| **CVE-2026-110936** | 8.4 | N/A | TRUE | Siemens Software Center | DLL Sideloading | Exécution de code arbitraire sur les systèmes où Siemens Software Center est installé. Les attaques ClickFix incitent les utilisateurs à exécuter des commandes malveillantes, menant à l'installation de logiciels malveillants, vol de données, etc. | Active | Appliquer les mises à jour Siemens pour Software Center. Bloquer la plateforme Romulus et sensibiliser les utilisateurs aux attaques ClickFix. Surveiller les chargements de DLL anormaux. Corriger avant le 3 novembre 2026 (CISA KEV). | [https://thehackernews.com/2026/10/cisa-orders-federal-agencies-to-patch.html](https://thehackernews.com/2026/10/cisa-orders-federal-agencies-to-patch.html) |
+| **CVE-2026-106931** | 8.5 | N/A | TRUE | EG Secure Solutions SiteGuard Server Edition | Injection de commandes | Un attaquant peut exécuter des commandes arbitraires sur le serveur, menant à une compromission totale, vol de données, ou perturbation de service. | Active | Appliquer le correctif fourni par EG Secure Solutions. Corriger avant le 23 octobre 2026 (CISA KEV). Restreindre l'accès à l'interface d'administration, surveiller les commandes anormales. | [https://thehackernews.com/2026/10/cisa-orders-federal-agencies-to-patch.html](https://thehackernews.com/2026/10/cisa-orders-federal-agencies-to-patch.html) |
+| **CVE-2026-106173** | 9.4 | N/A | FALSE | Fortinet FortiSIEM 7.5.0 (et versions antérieures concernées) | Path traversal avec écriture de fichier arbitraire menant à une RCE non authentifiée | Exécution de code arbitraire non authentifiée sur le serveur FortiSIEM, avec les privilèges du service. Cela peut mener à la compromission de l'infrastructure de supervision, à la modification des journaux, au pivot vers d'autres systèmes et à l'exfiltration de données. | Theoretical | Mettre à jour vers FortiSIEM 7.5.1 ou supérieur. Restreindre l'accès au port TCP 27918 aux sources légitimes. Surveiller les requêtes gRPC anormales et les modifications du script redishb.sh. Isoler les instances non patchables. | [https://thehackernews.com/2026/10/critical-fortisiem-flaw-gets-public.html](https://thehackernews.com/2026/10/critical-fortisiem-flaw-gets-public.html)<br>[https://infosec.exchange/@edwardk/117478091080861482](https://infosec.exchange/@edwardk/117478091080861482) |
+| **CVE-2026-112381** | 8.2 | N/A | FALSE | Apache Traffic Server 9.2.15, 10.1.4, 10.2.0 | Déréférencement de pointeur nul (CWE-476) menant à un déni de service | Un attaquant distant peut provoquer un crash du serveur proxy/cache, entraînant une interruption de service pour les sites et applications desservis. L'impact est principalement une disponibilité réduite. | None | Mettre à jour vers Apache Traffic Server 9.2.16, 10.1.5 ou 10.2.1. Surveiller les redémarrages inattendus et les erreurs de pointeur nul. Limiter l'exposition des services proxy si le correctif ne peut pas être appliqué immédiatement. | [https://cvefeed.io/vuln/detail/CVE-2026-112381](https://cvefeed.io/vuln/detail/CVE-2026-112381) |
+| **CVE-2026-111815** | 10.0 | N/A | FALSE | Apache Traffic Server 8.0.0 à 8.1.11, 9.0.0 à 9.2.15, 10.0.0 à 10.1.4, 10.2.0 | Contournement de validation de certificat client via reprise de session TLS (CWE-295) | Un attaquant peut contourner l'authentification mutuelle TLS et accéder à des ressources protégées par certificat client, usurper une identité ou effectuer des actions non autorisées sur l'origine. | None | Mettre à jour vers 9.2.16, 10.1.5 ou 10.2.1. Désactiver temporairement la reprise de session TLS si possible. Renforcer la surveillance des connexions mTLS et des changements de SNI. Vérifier les politiques verify_client. | [https://cvefeed.io/vuln/detail/CVE-2026-111815](https://cvefeed.io/vuln/detail/CVE-2026-111815) |
+| **CVE-2026-111814** | 10.0 | N/A | FALSE | Apache Traffic Server 9.0.0 à 9.2.15, 10.0.0 à 10.1.4, 10.2.0 | Confusion d'identité mTLS via réutilisation de session TLS (CWE-295) | L'origine peut recevoir des requêtes avec une identité mTLS incorrecte, permettant à un attaquant d'accéder à des ressources ou d'effectuer des actions sous une autre identité client. | None | Mettre à jour vers 9.2.16, 10.1.5 ou 10.2.1. Configurer server_session_sharing.match pour inclure MASK_CERT. Désactiver le partage de session sortante si non nécessaire. Surveiller les incohérences d'identité mTLS. | [https://cvefeed.io/vuln/detail/CVE-2026-111814](https://cvefeed.io/vuln/detail/CVE-2026-111814) |
+| **CVE-2026-111812** | 10.0 | N/A | FALSE | Apache Traffic Server 8.0.0 à 8.1.11, 9.0.0 à 9.2.15, 10.0.0 à 10.1.4, 10.2.0 | Contrôle d'autorisation incorrect (CWE-863) dans le plugin origin_server_auth | Un attaquant peut abuser des identifiants IAM du proxy pour signer des requêtes AWS arbitraires, potentiellement accéder à des ressources cloud, modifier des données ou élever ses privilèges dans l'environnement AWS. | None | Mettre à jour vers 9.2.16, 10.1.5 ou 10.2.1. Désactiver le plugin origin_server_auth si non utilisé. Restreindre les permissions IAM du proxy au minimum nécessaire. Faire tourner les identifiants IAM exposés et surveiller les appels AWS anormaux. | [https://cvefeed.io/vuln/detail/CVE-2026-111812](https://cvefeed.io/vuln/detail/CVE-2026-111812) |
+| **CVE-2026-111811** | 9.4 | N/A | FALSE | Apache Traffic Server, plugin expérimental tsmemcache | Absence d'authentification pour fonction critique (CWE-306) | Compromission de l'intégrité du cache, empoisonnement de contenu, fuite d'informations mises en cache et déni de service par suppression d'objets. L'exploitation ne nécessite pas d'authentification et peut être réalisée à distance si le service est joignable. | Theoretical | Mettre à jour vers Apache Traffic Server 9.2.16, 10.1.5 ou 10.2.1. Désactiver le plugin tsmemcache s'il n'est pas nécessaire et restreindre l'accès réseau au cache partagé. | [https://cvefeed.io/vuln/detail/CVE-2026-111811](https://cvefeed.io/vuln/detail/CVE-2026-111811)<br>[https://lists.apache.org/thread/r95dq29ywcd1f4x30snxlqmb12z4s4kc](https://lists.apache.org/thread/r95dq29ywcd1f4x30snxlqmb12z4s4kc) |
+| **CVE-2026-111810** | 8.7 | N/A | FALSE | Apache Traffic Server 9.2.15, 10.1.4 et 10.2.0 | Consommation non contrôlée de ressources (CWE-400) | Déni de service par saturation des journaux, épuisement de l'espace disque et dégradation des performances du proxy. L'exploitation est distante et ne nécessite pas d'authentification. | Theoretical | Mettre à jour vers Apache Traffic Server 9.2.16, 10.1.5 ou 10.2.1. Limiter la taille et le débit des requêtes ainsi que la verbosité des journaux diagnostiques. | [https://cvefeed.io/vuln/detail/CVE-2026-111810](https://cvefeed.io/vuln/detail/CVE-2026-111810)<br>[https://lists.apache.org/thread/r95dq29ywcd1f4x30snxlqmb12z4s4kc](https://lists.apache.org/thread/r95dq29ywcd1f4x30snxlqmb12z4s4kc) |
+| **CVE-2026-111809** | 9.3 | N/A | FALSE | Apache Traffic Server 8.0.0 à 8.1.11, 9.0.0 à 9.2.15, 10.0.0 à 10.1.4 et 10.2.0 | Interprétation incohérente des requêtes HTTP / HTTP request smuggling (CWE-444) | Contournement de contrôles de sécurité, empoisonnement de cache, accès non autorisé à des ressources internes et exécution de requêtes smuggled. L'exploitation est distante et ne nécessite pas d'authentification. | Theoretical | Mettre à jour vers Apache Traffic Server 9.2.16, 10.1.5 ou 10.2.1. Normaliser strictement les en-têtes HTTP et bloquer les requêtes HEAD ambiguës. | [https://cvefeed.io/vuln/detail/CVE-2026-111809](https://cvefeed.io/vuln/detail/CVE-2026-111809)<br>[https://lists.apache.org/thread/r95dq29ywcd1f4x30snxlqmb12z4s4kc](https://lists.apache.org/thread/r95dq29ywcd1f4x30snxlqmb12z4s4kc) |
+| **CVE-2026-111808** | 8.6 | N/A | FALSE | Apache Traffic Server 8.0.0 à 8.1.11, 9.0.0 à 9.2.15, 10.0.0 à 10.1.4 et 10.2.0 | Sous-dépassement d'entier (CWE-191) | Épuisement des workers backend, indisponibilité partielle ou totale des services en aval et dégradation des performances du proxy. L'exploitation est distante et ne nécessite pas d'authentification. | Theoretical | Mettre à jour vers Apache Traffic Server 9.2.16, 10.1.5 ou 10.2.1. Limiter le débit HTTP/2 et surveiller les pools de workers backend. | [https://cvefeed.io/vuln/detail/CVE-2026-111808](https://cvefeed.io/vuln/detail/CVE-2026-111808)<br>[https://lists.apache.org/thread/r95dq29ywcd1f4x30snxlqmb12z4s4kc](https://lists.apache.org/thread/r95dq29ywcd1f4x30snxlqmb12z4s4kc) |
+| **CVE-2026-111805** | 8.6 | N/A | FALSE | Apache Traffic Server 8.0.0 à 8.1.11, 9.0.0 à 9.2.15, 10.0.0 à 10.1.4 et 10.2.0 | Consommation non contrôlée de ressources (CWE-400) | Épuisement des workers backend, indisponibilité partielle ou totale des services en aval et dégradation des performances du proxy. L'exploitation est distante et ne nécessite pas d'authentification. | Theoretical | Mettre à jour vers Apache Traffic Server 9.2.16, 10.1.5 ou 10.2.1. Limiter le débit HTTP/2 et surveiller les pools de workers backend. | [https://cvefeed.io/vuln/detail/CVE-2026-111805](https://cvefeed.io/vuln/detail/CVE-2026-111805)<br>[https://lists.apache.org/thread/r95dq29ywcd1f4x30snxlqmb12z4s4kc](https://lists.apache.org/thread/r95dq29ywcd1f4x30snxlqmb12z4s4kc) |
+| **CVE-2026-114143** | 8.7 | N/A | FALSE | toml-node antérieur à 5.0.1 | Complexité algorithmique inefficace (CWE-407) | Déni de service par blocage de la boucle d'événements ou épuisement mémoire lors du parsing de documents TOML malveillants. L'exploitation est distante si l'application parse du TOML fourni par l'utilisateur. | Theoretical | Mettre à jour vers toml-node 5.0.1. Limiter la taille et la complexité des documents TOML acceptés et surveiller la mémoire lors du parsing. | [https://cvefeed.io/vuln/detail/CVE-2026-114143](https://cvefeed.io/vuln/detail/CVE-2026-114143)<br>[https://github.com/BinaryMuse/toml-node/security/advisories/GHSA-9j65-hcg3-gc64](https://github.com/BinaryMuse/toml-node/security/advisories/GHSA-9j65-hcg3-gc64) |
+| **CVE-2026-114142** | 8.8 | N/A | FALSE | toml-node antérieur à 5.0.1 | Modification non contrôlée des attributs de prototype (CWE-1321) | Pollution de prototype pouvant entraîner un contournement de contrôles, une altération du comportement applicatif, voire une exécution de code selon le contexte. L'exploitation est distante si l'application parse du TOML fourni par l'utilisateur. | Theoretical | Mettre à jour vers toml-node 5.0.1. Valider et filtrer les documents TOML, notamment les clés __proto__, constructor et prototype. | [https://cvefeed.io/vuln/detail/CVE-2026-114142](https://cvefeed.io/vuln/detail/CVE-2026-114142)<br>[https://github.com/BinaryMuse/toml-node/security/advisories/GHSA-h895-cgqg-jf52](https://github.com/BinaryMuse/toml-node/security/advisories/GHSA-h895-cgqg-jf52) |
+| **CVE-2026-114141** | 8.7 | N/A | FALSE | toml-node antérieur à 5.0.1 | Complexité algorithmique inefficace (CWE-407) | Déni de service par blocage de la boucle d'événements lors du parsing de documents TOML malveillants. L'exploitation est distante si l'application parse du TOML fourni par l'utilisateur. | Theoretical | Mettre à jour vers toml-node 5.0.1. Limiter le nombre d'en-têtes de tableaux de tables et la taille des documents TOML acceptés. | [https://cvefeed.io/vuln/detail/CVE-2026-114141](https://cvefeed.io/vuln/detail/CVE-2026-114141)<br>[https://github.com/BinaryMuse/toml-node/security/advisories/GHSA-4qx8-w7c3-pj3p](https://github.com/BinaryMuse/toml-node/security/advisories/GHSA-4qx8-w7c3-pj3p) |
+| **CVE-2026-96640** | 8.2 | N/A | FALSE | Pillow (bibliothèque d'imagerie Python) | Déni de service par consommation de ressources (CWE-400/CWE-407) | Déni de service applicatif, saturation CPU, ralentissement ou indisponibilité des services traitant des PDF. | Theoretical | Mettre à jour Pillow vers 13.0.0 ou ultérieur. Valider et limiter les PDF entrants, appliquer des quotas de ressources. | [https://cvefeed.io/vuln/detail/CVE-2026-96640](https://cvefeed.io/vuln/detail/CVE-2026-96640)<br>`hxxps://cvefeed[.]io/vuln/detail/CVE-2026-96640` |
+| **CVE-2026-96639** | 9.8 | N/A | FALSE | Pillow (bibliothèque d'imagerie Python) | Corruption mémoire (CWE-125/CWE-787) | Écritures/lectures hors limites, crashs natifs et potentielle exécution de code arbitraire. | Theoretical | Mettre à jour Pillow vers 13.0.0 ou ultérieur. Limiter le traitement d'images multi-frames non fiables. | [https://cvefeed.io/vuln/detail/CVE-2026-96639](https://cvefeed.io/vuln/detail/CVE-2026-96639)<br>`hxxps://cvefeed[.]io/vuln/detail/CVE-2026-96639` |
+| **CVE-2026-112408** | 9.4 | N/A | FALSE | Amazon SageMaker Python SDK | Vérification incorrecte de la source d'un canal de communication (CWE-940) | Exécution de code dans l'environnement SageMaker, vol d'identifiants IAM et compromission cloud. | Theoretical | Mettre à jour vers SageMaker Python SDK 3.10.0 (V3) ou 2.257.3 (V2). En attendant, spécifier explicitement un bucket S3 possédé par le compte. | [https://cvefeed.io/vuln/detail/CVE-2026-112408](https://cvefeed.io/vuln/detail/CVE-2026-112408)<br>[https://aws.amazon.com/security/security-bulletins/rss/2026-142-aws/](https://aws.amazon.com/security/security-bulletins/rss/2026-142-aws/)<br>`hxxps://cvefeed[.]io/vuln/detail/CVE-2026-112408`<br>`hxxps://aws[.]amazon[.]com/security/security-bulletins/rss/2026-142-aws/` |
+| **CVE-2026-113808** | N/A | N/A | FALSE | Produits StormShield (Stormshield Management Center, Stormshield Network Security) | Multiples vulnérabilités (XSS, SQLi, DoS, exécution de code, contournement de politique) | Exécution de code arbitraire, déni de service, contournement de politique de sécurité et atteinte à la confidentialité des données. | None | Appliquer les correctifs des bulletins StormShield STORM-2026-023 à 029. Restreindre l'exposition des interfaces d'administration. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1345/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1345/)<br>`hxxps://www[.]cert[.]ssi[.]gouv[.]fr/avis/CERTFR-2026-AVI-1345/` |
+| **CVE-2026-113810** | N/A | N/A | FALSE | Produits StormShield (Stormshield Management Center, Stormshield Network Security) | Multiples vulnérabilités (XSS, SQLi, DoS, exécution de code, contournement de politique) | Exécution de code arbitraire, déni de service, contournement de politique de sécurité et atteinte à la confidentialité des données. | None | Appliquer les correctifs des bulletins StormShield STORM-2026-023 à 029. Restreindre l'exposition des interfaces d'administration. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1345/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1345/)<br>`hxxps://www[.]cert[.]ssi[.]gouv[.]fr/avis/CERTFR-2026-AVI-1345/` |
+| **CVE-2026-14666** | N/A | N/A | FALSE | Produits StormShield (Stormshield Management Center, Stormshield Network Security) | Multiples vulnérabilités (XSS, SQLi, DoS, exécution de code, contournement de politique) | Exécution de code arbitraire, déni de service, contournement de politique de sécurité et atteinte à la confidentialité des données. | None | Appliquer les correctifs des bulletins StormShield STORM-2026-023 à 029. Restreindre l'exposition des interfaces d'administration. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1345/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1345/)<br>`hxxps://www[.]cert[.]ssi[.]gouv[.]fr/avis/CERTFR-2026-AVI-1345/` |
+| **CVE-2026-15741** | N/A | N/A | FALSE | Produits StormShield (Stormshield Management Center, Stormshield Network Security) | Multiples vulnérabilités (XSS, SQLi, DoS, exécution de code, contournement de politique) | Exécution de code arbitraire, déni de service, contournement de politique de sécurité et atteinte à la confidentialité des données. | None | Appliquer les correctifs des bulletins StormShield STORM-2026-023 à 029. Restreindre l'exposition des interfaces d'administration. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1345/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1345/)<br>`hxxps://www[.]cert[.]ssi[.]gouv[.]fr/avis/CERTFR-2026-AVI-1345/` |
+| **CVE-2026-18408** | N/A | N/A | FALSE | Produits StormShield (Stormshield Management Center, Stormshield Network Security) | Multiples vulnérabilités (XSS, SQLi, DoS, exécution de code, contournement de politique) | Exécution de code arbitraire, déni de service, contournement de politique de sécurité et atteinte à la confidentialité des données. | None | Appliquer les correctifs des bulletins StormShield STORM-2026-023 à 029. Restreindre l'exposition des interfaces d'administration. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1345/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1345/)<br>`hxxps://www[.]cert[.]ssi[.]gouv[.]fr/avis/CERTFR-2026-AVI-1345/` |
+| **CVE-2026-34181** | N/A | N/A | FALSE | Produits StormShield (Stormshield Management Center, Stormshield Network Security) | Multiples vulnérabilités (XSS, SQLi, DoS, exécution de code, contournement de politique) | Exécution de code arbitraire, déni de service, contournement de politique de sécurité et atteinte à la confidentialité des données. | None | Appliquer les correctifs des bulletins StormShield STORM-2026-023 à 029. Restreindre l'exposition des interfaces d'administration. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1345/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1345/)<br>`hxxps://www[.]cert[.]ssi[.]gouv[.]fr/avis/CERTFR-2026-AVI-1345/` |
+| **CVE-2026-42768** | N/A | N/A | FALSE | Produits StormShield (Stormshield Management Center, Stormshield Network Security) | Multiples vulnérabilités (XSS, SQLi, DoS, exécution de code, contournement de politique) | Exécution de code arbitraire, déni de service, contournement de politique de sécurité et atteinte à la confidentialité des données. | None | Appliquer les correctifs des bulletins StormShield STORM-2026-023 à 029. Restreindre l'exposition des interfaces d'administration. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1345/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1345/)<br>`hxxps://www[.]cert[.]ssi[.]gouv[.]fr/avis/CERTFR-2026-AVI-1345/` |
+| **CVE-2026-45447** | N/A | N/A | FALSE | Produits StormShield (Stormshield Management Center, Stormshield Network Security) | Multiples vulnérabilités (XSS, SQLi, DoS, exécution de code, contournement de politique) | Exécution de code arbitraire, déni de service, contournement de politique de sécurité et atteinte à la confidentialité des données. | None | Appliquer les correctifs des bulletins StormShield STORM-2026-023 à 029. Restreindre l'exposition des interfaces d'administration. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1345/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1345/)<br>`hxxps://www[.]cert[.]ssi[.]gouv[.]fr/avis/CERTFR-2026-AVI-1345/` |
+| **CVE-2026-48931** | N/A | N/A | FALSE | Produits StormShield (Stormshield Management Center, Stormshield Network Security) | Multiples vulnérabilités (XSS, SQLi, DoS, exécution de code, contournement de politique) | Exécution de code arbitraire, déni de service, contournement de politique de sécurité et atteinte à la confidentialité des données. | None | Appliquer les correctifs des bulletins StormShield STORM-2026-023 à 029. Restreindre l'exposition des interfaces d'administration. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1345/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1345/)<br>`hxxps://www[.]cert[.]ssi[.]gouv[.]fr/avis/CERTFR-2026-AVI-1345/` |
+| **CVE-2026-56850** | N/A | N/A | FALSE | Produits StormShield (Stormshield Management Center, Stormshield Network Security) | Multiples vulnérabilités (XSS, SQLi, DoS, exécution de code, contournement de politique) | Exécution de code arbitraire, déni de service, contournement de politique de sécurité et atteinte à la confidentialité des données. | None | Appliquer les correctifs des bulletins StormShield STORM-2026-023 à 029. Restreindre l'exposition des interfaces d'administration. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1345/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1345/)<br>`hxxps://www[.]cert[.]ssi[.]gouv[.]fr/avis/CERTFR-2026-AVI-1345/` |
+| **CVE-2026-58040** | N/A | N/A | FALSE | Produits StormShield (Stormshield Management Center, Stormshield Network Security) | Multiples vulnérabilités (XSS, SQLi, DoS, exécution de code, contournement de politique) | Exécution de code arbitraire, déni de service, contournement de politique de sécurité et atteinte à la confidentialité des données. | None | Appliquer les correctifs des bulletins StormShield STORM-2026-023 à 029. Restreindre l'exposition des interfaces d'administration. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1345/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1345/)<br>`hxxps://www[.]cert[.]ssi[.]gouv[.]fr/avis/CERTFR-2026-AVI-1345/` |
+| **CVE-2026-58045** | N/A | N/A | FALSE | Produits StormShield (Stormshield Management Center, Stormshield Network Security) | Multiples vulnérabilités (XSS, SQLi, DoS, exécution de code, contournement de politique) | Exécution de code arbitraire, déni de service, contournement de politique de sécurité et atteinte à la confidentialité des données. | None | Appliquer les correctifs des bulletins StormShield STORM-2026-023 à 029. Restreindre l'exposition des interfaces d'administration. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1345/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1345/)<br>`hxxps://www[.]cert[.]ssi[.]gouv[.]fr/avis/CERTFR-2026-AVI-1345/` |
+| **CVE-2026-78123** | N/A | N/A | FALSE | Produits StormShield (Stormshield Management Center, Stormshield Network Security) | Multiples vulnérabilités (XSS, SQLi, DoS, exécution de code, contournement de politique) | Exécution de code arbitraire, déni de service, contournement de politique de sécurité et atteinte à la confidentialité des données. | None | Appliquer les correctifs des bulletins StormShield STORM-2026-023 à 029. Restreindre l'exposition des interfaces d'administration. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1345/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1345/)<br>`hxxps://www[.]cert[.]ssi[.]gouv[.]fr/avis/CERTFR-2026-AVI-1345/` |
+| **CVE-2026-78124** | N/A | N/A | FALSE | Produits StormShield (Stormshield Management Center, Stormshield Network Security) | Multiples vulnérabilités (XSS, SQLi, DoS, exécution de code, contournement de politique) | Exécution de code arbitraire, déni de service, contournement de politique de sécurité et atteinte à la confidentialité des données. | None | Appliquer les correctifs des bulletins StormShield STORM-2026-023 à 029. Restreindre l'exposition des interfaces d'administration. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1345/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1345/)<br>`hxxps://www[.]cert[.]ssi[.]gouv[.]fr/avis/CERTFR-2026-AVI-1345/` |
+| **CVE-2026-78129** | N/A | N/A | FALSE | Produits StormShield (Stormshield Management Center, Stormshield Network Security) | Multiples vulnérabilités (XSS, SQLi, DoS, exécution de code, contournement de politique) | Exécution de code arbitraire, déni de service, contournement de politique de sécurité et atteinte à la confidentialité des données. | None | Appliquer les correctifs des bulletins StormShield STORM-2026-023 à 029. Restreindre l'exposition des interfaces d'administration. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1345/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1345/)<br>`hxxps://www[.]cert[.]ssi[.]gouv[.]fr/avis/CERTFR-2026-AVI-1345/` |
+| **CVE-2026-78130** | N/A | N/A | FALSE | Produits StormShield (Stormshield Management Center, Stormshield Network Security) | Multiples vulnérabilités (XSS, SQLi, DoS, exécution de code, contournement de politique) | Exécution de code arbitraire, déni de service, contournement de politique de sécurité et atteinte à la confidentialité des données. | None | Appliquer les correctifs des bulletins StormShield STORM-2026-023 à 029. Restreindre l'exposition des interfaces d'administration. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1345/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1345/)<br>`hxxps://www[.]cert[.]ssi[.]gouv[.]fr/avis/CERTFR-2026-AVI-1345/` |
+| **CVE-2026-78131** | N/A | N/A | FALSE | Produits StormShield (Stormshield Management Center, Stormshield Network Security) | Multiples vulnérabilités (XSS, SQLi, DoS, exécution de code, contournement de politique) | Exécution de code arbitraire, déni de service, contournement de politique de sécurité et atteinte à la confidentialité des données. | None | Appliquer les correctifs des bulletins StormShield STORM-2026-023 à 029. Restreindre l'exposition des interfaces d'administration. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1345/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1345/)<br>`hxxps://www[.]cert[.]ssi[.]gouv[.]fr/avis/CERTFR-2026-AVI-1345/` |
+| **CVE-2026-113399** | N/A | N/A | FALSE | Mozilla Firefox, Firefox ESR et Thunderbird | Multiples vulnérabilités (exécution de code, déni de service, confidentialité) | Exécution de code arbitraire, déni de service et atteinte à la confidentialité des données. | None | Appliquer les mises à jour Mozilla mfsa2026-111 à 115. Utiliser les versions corrigées de Firefox, Firefox ESR et Thunderbird. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1346/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1346/)<br>`hxxps://www[.]cert[.]ssi[.]gouv[.]fr/avis/CERTFR-2026-AVI-1346/` |
+| **CVE-2026-113400** | N/A | N/A | FALSE | Mozilla Firefox, Firefox ESR et Thunderbird | Multiples vulnérabilités (exécution de code, déni de service, confidentialité) | Exécution de code arbitraire, déni de service et atteinte à la confidentialité des données. | None | Appliquer les mises à jour Mozilla mfsa2026-111 à 115. Utiliser les versions corrigées de Firefox, Firefox ESR et Thunderbird. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1346/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1346/)<br>`hxxps://www[.]cert[.]ssi[.]gouv[.]fr/avis/CERTFR-2026-AVI-1346/` |
+| **CVE-2026-113401** | N/A | N/A | FALSE | Mozilla Firefox, Firefox ESR et Thunderbird | Multiples vulnérabilités (exécution de code, déni de service, confidentialité) | Exécution de code arbitraire, déni de service et atteinte à la confidentialité des données. | None | Appliquer les mises à jour Mozilla mfsa2026-111 à 115. Utiliser les versions corrigées de Firefox, Firefox ESR et Thunderbird. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1346/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1346/)<br>`hxxps://www[.]cert[.]ssi[.]gouv[.]fr/avis/CERTFR-2026-AVI-1346/` |
+| **CVE-2026-113470** | N/A | N/A | FALSE | Mozilla Firefox, Firefox ESR et Thunderbird | Multiples vulnérabilités (exécution de code, déni de service, confidentialité) | Exécution de code arbitraire, déni de service et atteinte à la confidentialité des données. | None | Appliquer les mises à jour Mozilla mfsa2026-111 à 115. Utiliser les versions corrigées de Firefox, Firefox ESR et Thunderbird. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1346/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1346/)<br>`hxxps://www[.]cert[.]ssi[.]gouv[.]fr/avis/CERTFR-2026-AVI-1346/` |
+| **CVE-2026-113866** | N/A | N/A | FALSE | Mozilla Firefox, Firefox ESR et Thunderbird | Multiples vulnérabilités (exécution de code, déni de service, confidentialité) | Exécution de code arbitraire, déni de service et atteinte à la confidentialité des données. | None | Appliquer les mises à jour Mozilla mfsa2026-111 à 115. Utiliser les versions corrigées de Firefox, Firefox ESR et Thunderbird. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1346/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1346/)<br>`hxxps://www[.]cert[.]ssi[.]gouv[.]fr/avis/CERTFR-2026-AVI-1346/` |
+| **CVE-2026-113867** | N/A | N/A | FALSE | Mozilla Firefox, Firefox ESR et Thunderbird | Multiples vulnérabilités (exécution de code, déni de service, confidentialité) | Exécution de code arbitraire, déni de service et atteinte à la confidentialité des données. | None | Appliquer les mises à jour Mozilla mfsa2026-111 à 115. Utiliser les versions corrigées de Firefox, Firefox ESR et Thunderbird. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1346/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1346/)<br>`hxxps://www[.]cert[.]ssi[.]gouv[.]fr/avis/CERTFR-2026-AVI-1346/` |
+| **CVE-2026-113868** | N/A | N/A | FALSE | Mozilla Firefox, Firefox ESR et Thunderbird | Multiples vulnérabilités (exécution de code, déni de service, confidentialité) | Exécution de code arbitraire, déni de service et atteinte à la confidentialité des données. | None | Appliquer les mises à jour Mozilla mfsa2026-111 à 115. Utiliser les versions corrigées de Firefox, Firefox ESR et Thunderbird. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1346/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1346/)<br>`hxxps://www[.]cert[.]ssi[.]gouv[.]fr/avis/CERTFR-2026-AVI-1346/` |
+| **CVE-2026-113869** | N/A | N/A | FALSE | Mozilla Firefox, Firefox ESR et Thunderbird | Multiples vulnérabilités (exécution de code, déni de service, confidentialité) | Exécution de code arbitraire, déni de service et atteinte à la confidentialité des données. | None | Appliquer les mises à jour Mozilla mfsa2026-111 à 115. Utiliser les versions corrigées de Firefox, Firefox ESR et Thunderbird. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1346/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1346/)<br>`hxxps://www[.]cert[.]ssi[.]gouv[.]fr/avis/CERTFR-2026-AVI-1346/` |
+| **CVE-2026-41838** | N/A | N/A | FALSE | Oracle WebLogic Server 12.2.1.4.0, 14.1.2.0.0 et 15.1.1.0.0 ; Oracle WebLogic Server Proxy Plug-in 12.2.1.4.0 et 14.1.2.0.0 | Multiples vulnérabilités (déni de service à distance, atteinte à la confidentialité et à l'intégrité des données) | Un attaquant non authentifié disposant d'un accès réseau peut provoquer un déni de service à distance, porter atteinte à la confidentialité des données traitées par le serveur d'application et altérer l'intégrité de ces données. Selon les composants exposés (console d'administration, T3, IIOP, services SOAP), l'impact peut aller jusqu'à la compromission complète de la plateforme applicative et, par rebond, des bases de données et annuaires connectés. | None | Appliquer sans délai les correctifs du CPU Oracle d'octobre 2026 sur l'ensemble des instances WebLogic Server et Proxy Plug-in. En attendant, restreindre l'exposition réseau des ports d'administration et des protocoles T3/IIOP, placer les instances derrière un WAF, désactiver les services et déploiements non nécessaires, surveiller les journaux d'accès et renforcer la supervision des redémarrages inattendus. Vérifier également les versions de la JVM sous-jacente, plusieurs CVE du CPU étant liées à la plateforme Java. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1355/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1355/)<br>[https://www.oracle.com/security-alerts/cpuoct2026.html](https://www.oracle.com/security-alerts/cpuoct2026.html) |
+| **CVE-2026-112992** | N/A | N/A | FALSE | Google Chrome versions antérieures à 156.0.8078.47 (Windows et Linux) et 156.0.8078.48 (Mac) | Multiples vulnérabilités non spécifiées par l'éditeur | Un attaquant peut provoquer un problème de sécurité non spécifié par l'éditeur, pouvant aller selon la nature réelle des failles jusqu'à l'exécution de code arbitraire dans le contexte du navigateur, la divulgation d'informations ou le contournement de la sandbox. L'impact se matérialise principalement sur les postes de travail et les environnements VDI exposés à la navigation externe. | None | Mettre à jour Chrome vers 156.0.8078.47 (Windows/Linux) ou 156.0.8078.48 (Mac) ou version ultérieure, en privilégiant un déploiement automatisé et un contrôle de conformité du parc. Vérifier également les navigateurs dérivés de Chromium (Edge, Brave, Opera) qui intègrent les correctifs avec un décalage. Renforcer le filtrage web et la détection des comportements anormaux du navigateur en attendant la couverture complète du parc. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1357/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1357/)<br>[https://chromereleases.googleblog.com/2026/10/stable-channel-update-for-desktop_02018666648.html](https://chromereleases.googleblog.com/2026/10/stable-channel-update-for-desktop_02018666648.html) |
+| **CVE-2026-101296** | N/A | N/A | FALSE | Apache Tomcat 9.0.x antérieur à 9.0.123, 10.1.x antérieur à 10.1.61, 11.0.x antérieur à 11.0.27 | Multiples vulnérabilités (atteinte à la confidentialité, contournement de la politique de sécurité, impact non spécifié) | Selon les CVE considérées, un attaquant peut accéder à des données sensibles, contourner des contrôles de sécurité applicatifs ou provoquer un comportement non spécifié pouvant dégrader la disponibilité ou l'intégrité du service. Les instances exposées sur Internet et les applications embarquant un Tomcat ancien sont les plus à risque. | None | Mettre à jour vers Apache Tomcat 9.0.123, 10.1.61 ou 11.0.27 selon la branche. Pour les déploiements embarqués, suivre les versions du framework hôte. En attendant, désactiver les applications d'administration et les servlets d'exemple, restreindre l'exposition réseau, placer un WAF en amont et surveiller les journaux d'accès à la recherche de tentatives de traversée de répertoire ou d'accès à des chemins sensibles. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1358/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1358/)<br>[https://tomcat.apache.org/security-10.html#Fixed_in_Apache_Tomcat_10.1.61](https://tomcat.apache.org/security-10.html#Fixed_in_Apache_Tomcat_10.1.61)<br>[https://tomcat.apache.org/security-11.html#Fixed_in_Apache_Tomcat_11.0.27](https://tomcat.apache.org/security-11.html#Fixed_in_Apache_Tomcat_11.0.27)<br>[https://tomcat.apache.org/security-9.html#Fixed_in_Apache_Tomcat_9.0.123](https://tomcat.apache.org/security-9.html#Fixed_in_Apache_Tomcat_9.0.123) |
+| **CVE-2026-91403** | 9.1 | N/A | FALSE | Oracle Java SE 8u511, 8u511-perf, 11.0.33, 17.0.21, 21.0.13, 25.0.5, 27.0.1 ; Oracle GraalVM for JDK 17.0.21 et 21.0.13 ; Oracle GraalVM Enterprise Edition 21.3.20 | Vulnérabilité dans le composant JSSE permettant une atteinte à la confidentialité et à l'intégrité des données | Un attaquant distant non authentifié peut créer, supprimer ou modifier des données critiques accessibles à la JVM et accéder de manière non autorisée à l'ensemble de ces données. L'impact porte donc simultanément sur la confidentialité et l'intégrité, avec un risque de compromission complète de l'application Java et des systèmes qui lui sont connectés. | Theoretical | Appliquer les correctifs Oracle pour les versions concernées de Java SE, GraalVM for JDK et GraalVM Enterprise Edition, en priorité sur les serveurs exposés à Internet. En attendant, restreindre l'exposition des services Java, valider strictement les entrées au niveau des passerelles API, désactiver l'exécution de code non fiable côté client et surveiller les journaux JSSE à la recherche de comportements anormaux. | [https://cvefeed.io/vuln/detail/CVE-2026-91403](https://cvefeed.io/vuln/detail/CVE-2026-91403)<br>[https://www.oracle.com/security-alerts/alert-cve-2026-91403.html](https://www.oracle.com/security-alerts/alert-cve-2026-91403.html) |
+| **CVE-2026-29001** | 8.6 | N/A | FALSE | TastyIgniter jusqu'à la version 4.4.5 incluse | Injection d'objet PHP par désérialisation de données non fiables (CWE-502), conduisant à une exécution de code arbitraire | Exécution de code arbitraire sur le serveur hébergeant l'application, avec les droits du processus PHP. L'attaquant peut lire ou modifier la base de données, déposer des web shells, pivoter vers le réseau interne et maintenir une persistance tant que la valeur malveillante n'est pas écrasée. | Theoretical | Mettre à jour vers TastyIgniter 4.4.6 ou ultérieur. Éviter la désérialisation d'entrées utilisateur, assainir toutes les valeurs de réglages soumises et restreindre l'accès à l'interface d'administration (MFA, filtrage IP). Auditer les réglages existants à la recherche de valeurs sérialisées suspectes et vérifier l'absence de fichiers malveillants déposés. | [https://cvefeed.io/vuln/detail/CVE-2026-29001](https://cvefeed.io/vuln/detail/CVE-2026-29001)<br>[https://www.vulncheck.com/advisories/tastyigniter-php-object-injection-via-settings-deserialization](https://www.vulncheck.com/advisories/tastyigniter-php-object-injection-via-settings-deserialization)<br>[https://github.com/tastyigniter/TastyIgniter/issues/1205#issuecomment-6314187869](https://github.com/tastyigniter/TastyIgniter/issues/1205#issuecomment-6314187869) |
+| **CVE-2026-114140** | 8.8 | N/A | FALSE | jupyter nbconvert versions 5.4.0 à 7.17.1 incluses | Traversée de répertoire (CWE-22) permettant l'écriture de fichiers à des emplacements arbitraires | Écriture arbitraire de fichiers avec les droits de l'utilisateur exécutant la conversion, pouvant conduire à un écrasement de configuration, à un déni de service, voire à une exécution de code si le fichier écrit atteint un emplacement sensible (script de démarrage, configuration d'outil, répertoire de plugins). Le risque est aggravé dans les pipelines CI/CD et les plateformes de data science partagées où les notebooks circulent entre utilisateurs. | Theoretical | Mettre à jour nbconvert vers 7.17.2 ou ultérieur. Éviter de convertir des notebooks non fiables, ou le faire dans un conteneur isolé à privilèges réduits. Auditer les notebooks existants à la recherche de métadonnées de sortie suspectes et vérifier l'absence de fichiers déposés hors des répertoires de travail attendus. | [https://cvefeed.io/vuln/detail/CVE-2026-114140](https://cvefeed.io/vuln/detail/CVE-2026-114140)<br>[https://github.com/jupyter/nbconvert/security/advisories/GHSA-pjvx-prjx-h659](https://github.com/jupyter/nbconvert/security/advisories/GHSA-pjvx-prjx-h659)<br>[https://github.com/jupyter/nbconvert/commit/ce4bd99aec31d81d759fa8eeb8643179392ec66f](https://github.com/jupyter/nbconvert/commit/ce4bd99aec31d81d759fa8eeb8643179392ec66f)<br>[https://github.com/jupyter/nbconvert/releases/tag/v7.17.2](https://github.com/jupyter/nbconvert/releases/tag/v7.17.2) |
+| **CVE-2026-114139** | N/A | N/A | FALSE | SDK Sentry pour JavaScript (fonctionnalité de route tunnel du middleware) | Contournement de middleware via la route tunnel | Contournement des contrôles portés par le middleware (authentification, autorisation, filtrage), avec un risque d'accès non autorisé à des ressources ou données applicatives. L'impact réel dépend de la configuration de l'application et des routes protégées par le middleware affecté. | Theoretical | Appliquer la version corrigée du SDK Sentry JavaScript dès sa publication. En attendant, désactiver la route tunnel ou la restreindre par filtrage réseau, valider strictement les paramètres reçus et ajouter des règles WAF. Vérifier les journaux d'accès à la recherche de tentatives de contournement. | [https://cvefeed.io/vuln/detail/CVE-2026-114139](https://cvefeed.io/vuln/detail/CVE-2026-114139) |
+| **CVE-2026-114135** | 8.8 | N/A | FALSE | Jupyter Server (jupyter_server) versions 2.0.0 à 2.5.x, et 2.6.0+ si le module déprécié jupyter_server.gateway.handlers est enregistré manuellement | Contournement d'autorisation (CWE-862, Missing Authorization) | Exécution de code dans le contexte du kernel : accès aux données et credentials disponibles pour le kernel (secrets d'environnement, fichiers de configuration, tokens cloud), modification ou sabotage de l'environnement kernel, pivot potentiel vers les systèmes accessibles depuis le serveur Jupyter. | Theoretical | Mettre à jour Jupyter Server vers 2.6.0 ou supérieur ; supprimer tout enregistrement manuel du module déprécié jupyter_server.gateway.handlers ; vérifier que l'Authorizer kernel est correctement configuré et appliqué ; restreindre l'exposition réseau des instances Jupyter et du gateway ; auditer les logs d'accès kernel. | [https://cvefeed.io/vuln/detail/CVE-2026-114135](https://cvefeed.io/vuln/detail/CVE-2026-114135) |
+| **CVE-2026-110264** | 10.0 | N/A | FALSE | GitLab self-managed, toutes versions depuis 7.0 jusqu'à 18.11.12, ainsi que 19.0.x < 19.0.10, 19.1.x < 19.1.9, 19.2.x < 19.2.9, 19.3.x < 19.3.6, 19.4.x < 19.4.3, 19.5.0 | Débordement d'entier dans le compilateur d'expressions régulières Onigmo conduisant à une exécution de code à distance non authentifiée | Exécution de code arbitraire non authentifiée sur le serveur GitLab self-managed, avec les privilèges du processus applicatif : accès aux dépôts de code, secrets CI/CD, tokens de runners, données utilisateurs et possibilité de pivot vers l'infrastructure interne. GitLab.com et GitLab Dedicated sont déjà corrigés. | Theoretical | Mettre à jour vers 19.5.1, 19.4.3, 19.3.6, 19.2.9, 19.1.9, 19.0.10 ou 18.11.13 selon la branche. Aucun workaround n'est fourni : la mise à jour est la seule protection certaine. Déployer les règles de détection Sigma publiées par GitLab ('Onigmo native worker crash', 'Org mode render error burst') et restreindre l'exposition Internet des instances en attendant. | [https://thehackernews.com/2026/10/critical-gitlab-flaw-cvss-100-could.html](https://thehackernews.com/2026/10/critical-gitlab-flaw-cvss-100-could.html) |
+| **CVE-2026-111943** | N/A | N/A | FALSE | Applications Go utilisant crypto/x509 (versions antérieures à Go 1.26.10 et 1.27.3) | Compromission de clés privées d'AC intermédiaires entraînant une rupture de la chaîne de confiance (CVE-2026-111943 : absence de denylist dans crypto/x509) | Émission potentielle de certificats frauduleux héritant de la confiance de la chaîne affectée : usurpation de domaines en TLS, signature de code malveillant présenté comme légitime, interception de communications. Les applications Go non mises à jour continuent d'accepter ces chaînes. | Active | Mettre à jour vers Go 1.26.10 ou 1.27.3 et reconstruire les binaires ; mettre à jour les bundles de certificats des systèmes autonomes ; surveiller les chaînes TLS et les émetteurs inattendus ; s'appuyer sur les mécanismes de révocation et les journaux de transparence des certificats. | [https://socprime.com/blog/cve-2026-111943-analysis/](https://socprime.com/blog/cve-2026-111943-analysis/) |
+| **CVE-2023-49785** | 7.5 | N/A | FALSE | NextChat (application cliente hébergée) et plateforme d'hébergement Zeabur (clusters partagés, serveurs dédiés GCP) | Server-Side Request Forgery (SSRF) — CWE-918, exploitée en amont d'une compromission d'infrastructure par réutilisation d'identifiants en clair | Exfiltration de 3 218 965 enregistrements de variables d'environnement (noms et valeurs), 321 810 comptes utilisateurs (emails, noms d'utilisateur, téléphones), 566 clés API zSend en clair, 11 536 hashes de tokens d'accès plateforme, données de 865 services de bases de données (dont n8n et PostgreSQL) et copies de disques de 101 serveurs dédiés GCP. Conséquence : arrêt total des opérations de Zeabur au 31 décembre 2026. | Active | Rotation immédiate de tous les secrets, clés API et mots de passe de bases de données utilisés sur la plateforme ; vérification des journaux d'audit GitHub pour les actions non autorisées de l'application Zeabur ; reconstruction complète des serveurs dédiés pour éliminer les backdoors ; suppression du stockage de secrets en clair et mise en place d'un coffre-fort de secrets avec rotation automatique ; blocage de l'accès SSH public aux interfaces d'administration ; correction/mise à jour des instances NextChat exposées (CVE-2023-49785). | [https://beyondmachines.net/event_details/zeabur-to-shut-down-following-massive-infrastructure-compromise-and-data-theft-y-0-3-m-6/gD2P6Ple2L](https://beyondmachines.net/event_details/zeabur-to-shut-down-following-massive-infrastructure-compromise-and-data-theft-y-0-3-m-6/gD2P6Ple2L) |
+| **** | N/A | N/A | FALSE | MongoDB PHP Driver | Déni de service à distance | Déni de service à distance des applications utilisant le driver MongoDB PHP. | None | Appliquer les correctifs du bulletin MongoDB PHPC-276. Mettre à jour vers 1.21.12, 2.1.12 ou 2.5.5 selon la branche. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1347/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1347/)<br>`hxxps://www[.]cert[.]ssi[.]gouv[.]fr/avis/CERTFR-2026-AVI-1347/` |
+| **** | N/A | N/A | FALSE | Mattermost Server | Multiples vulnérabilités non spécifiées par l'éditeur | Impact non spécifié par l'éditeur, pouvant affecter la sécurité de l'instance Mattermost. | None | Appliquer les correctifs des bulletins Mattermost MMSA-2026-00772 et MMSA-2026-00783. Mettre à jour vers 11.10.3, 11.11.2 ou 11.7.13 selon la branche. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1348/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1348/)<br>`hxxps://www[.]cert[.]ssi[.]gouv[.]fr/avis/CERTFR-2026-AVI-1348/` |
+| **** | N/A | N/A | FALSE | Traefik versions 3.x.x antérieures à 3.7.16 et versions antérieures à 2.11.60 | Contournement de la politique de sécurité et atteinte à la confidentialité des données | Contournement des mécanismes de contrôle d'accès et de filtrage portés par Traefik, avec pour conséquence un accès non autorisé à des services ou données internes. Dans un contexte Kubernetes, cela peut exposer des API d'administration, des métriques ou des backends applicatifs non destinés à être publics. | None | Mettre à jour vers Traefik 3.7.16 ou ultérieur, ou 2.11.60 ou ultérieur. En attendant, restreindre l'exposition du tableau de bord et de l'API Traefik, ajouter un filtrage des en-têtes de routage en amont, revoir les règles de routage exposées publiquement et surveiller les accès anormaux aux routes protégées. | [https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1356/](https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1356/)<br>[https://github.com/traefik/traefik/security/advisories/GHSA-hrpp-p4fc-wwf8](https://github.com/traefik/traefik/security/advisories/GHSA-hrpp-p4fc-wwf8) |
+| **** | N/A | N/A | FALSE | Multiples produits Oracle couverts par le Critical Patch Update d'octobre 2026 (1295 correctifs) | Correctifs de sécurité multiples (Critical Patch Update) | Dépend des CVE individuelles du bulletin : élévation de privilèges, exécution de code à distance, divulgation d'informations ou déni de service sur les composants Oracle non patchés. | None | Appliquer le CPU d'octobre 2026 en priorisant les composants exposés à Internet, consulter le bulletin officiel Oracle pour le détail des CVE et des scores CVSS, et restreindre l'accès aux interfaces d'administration en attendant. | [https://thecyberthrone.in/2026/10/21/oracle-october-2026-critical-patch-update-1295-patches-across-products/](https://thecyberthrone.in/2026/10/21/oracle-october-2026-critical-patch-update-1295-patches-across-products/) |
+| **** | N/A | N/A | FALSE | PHP (versions concernées non précisées par l'éditeur) | Exécution de code à distance (zero-day en cours d'investigation) | Exécution de code arbitraire sur les serveurs web exécutant PHP, avec les privilèges du processus applicatif : compromission des applications, vol de données et de secrets, pivot vers les bases de données. | Theoretical | Suivre les annonces officielles du projet PHP, appliquer le correctif dès publication, restreindre l'exposition Internet des serveurs PHP et surveiller les journaux d'accès en attendant. | [https://thecyberthrone.in/2026/10/21/php-zero-day-alert-critical-rce-vulnerabilities-under-investigation/](https://thecyberthrone.in/2026/10/21/php-zero-day-alert-critical-rce-vulnerabilities-under-investigation/) |
+| **** | 9.2 | N/A | FALSE | PHP (versions affectées non communiquées avant la publication du correctif) | Exécution de code à distance (deux vulnérabilités critiques, CVSS 9.2) | Exécution de code arbitraire à distance sur les serveurs PHP exposés, avec les privilèges du processus web : compromission applicative, vol de données et de secrets, installation de webshells et pivot vers les systèmes internes. | Active | Appliquer le correctif officiel PHP dès sa publication. Ne pas se reposer sur session.upload_progress.enabled=0. En attendant : retirer les serveurs PHP d'Internet ou les placer derrière des contrôles d'accès, restreindre les capacités réseau du compte de service, activer les règles d'urgence WAF/CDN et surveiller les tentatives d'exploitation. | [https://thehackernews.com/2026/10/php2shell-what-actually-protects-you.html](https://thehackernews.com/2026/10/php2shell-what-actually-protects-you.html) |
+| **** | N/A | N/A | FALSE | CLI officiel OVH, dépôts GitHub compromis via GhostAction, packages npm et extensions VS Code | Compromission de la chaîne d'approvisionnement logicielle (supply chain) | Vol de credentials développeurs et CI/CD, persistance sur les postes de travail et les runners, publication de packages malveillants en aval, compromission en cascade des organisations consommant ces outils. | Active | Vérifier l'origine et l'intégrité des CLI et packages installés, révoquer et faire tourner les credentials exposés, restreindre les permissions des workflows GitHub Actions, surveiller les fichiers .npmrc et les tâches cron sur les postes développeurs, et sensibiliser à l'ouverture de dépôts non fiables dans l'IDE. | [https://opensourcemalware.com/blog/the-opensourcemalwareshow-episode26](https://opensourcemalware.com/blog/the-opensourcemalwareshow-episode26) |
+| **** | N/A | N/A | FALSE | Infrastructures d'entreprise et secteurs critiques ciblés par le groupe SafePay (Cisco ASA/FTD, SonicWall, Veeam Backup & Replication) | Exploitation de vulnérabilités connues pour l'accès initial, suivie d'une double extorsion | Vol massif de données suivi d'un chiffrement rapide des systèmes, paralysie des opérations, pertes financières et risque de divulgation des données dérobées. Les secteurs critiques et la santé sont particulièrement visés. | Active | Corriger en priorité CVE-2020-3259, CVE-2023-20269, CVE-2023-27532, CVE-2024-40711 et CVE-2024-40766 ; imposer le MFA sur les accès VPN ; supprimer les comptes inactifs et surveiller les créations de comptes administrateurs ; isoler les sauvegardes hors ligne ; restreindre l'usage de PsExec et WinRM ; bloquer les sorties vers les VPN commerciaux non autorisés. | [https://www.healthcareinfosecurity.com/us-uk-germany-warn-active-safepay-ransomware-a-33164](https://www.healthcareinfosecurity.com/us-uk-germany-warn-active-safepay-ransomware-a-33164) |
+| **** | 9.8 | N/A | FALSE | Easyflow (application commerciale, éditeur américain) | Injection SQL (CWE-89) — deux CVE critiques, CVSS moyen 9,8 | Risque d'accès non authentifié en lecture/écriture à la base de données applicative, d'exfiltration de données personnelles et de compromission de l'application. Exposition RGPD estimée entre 620 K€ et 6,2 M€. Risque réputationnel et contractuel lié à l'absence de correctif. | None | Aucun correctif éditeur identifié : appliquer des règles WAF anti-injection SQL, segmenter et restreindre les privilèges de la base de données, surveiller les journaux SQL, et engager une évaluation de remplacement du produit. Vérifier directement auprès de l'éditeur l'existence de correctifs non référencés dans la NVD. | [https://www.valtersit.com/vendors/easyflow/](https://www.valtersit.com/vendors/easyflow/) |
+| **** | N/A | N/A | FALSE | Sites web s'appuyant sur PHP (version et composants non précisés) | Vulnérabilités du moteur PHP / de composants web (non précisées) | Indisponibilité de service pour les sites mis en maintenance, risque de compromission des serveurs web et d'exfiltration de données si les failles sont exploitées avant correctif. | Theoretical | Mettre à jour PHP et l'ensemble des composants web vers les dernières versions supportées, appliquer des règles WAF, restreindre les permissions d'écriture, surveiller l'intégrité des fichiers et vérifier les avis officiels PHP pour obtenir les identifiants CVE et les versions corrigées. | [https://www.lemonde.fr/pixels/article/2026/10/21/failles-php-pourquoi-de-nombreux-sites-ont-soudainement-ete-mis-en-maintenance_6798279_4408996.html](https://www.lemonde.fr/pixels/article/2026/10/21/failles-php-pourquoi-de-nombreux-sites-ont-soudainement-ete-mis-en-maintenance_6798279_4408996.html) |
 
 ---
 
@@ -176,36 +201,35 @@ La production CTI du jour est dominée par les vulnérabilités (33 items) et le
 
 ---
 
-<div id="stopransomware-safepay-ransomware"></div>
+<div id="attaque-de-la-chaine-dapprovisionnement-daomei-backupper"></div>
 
-## #StopRansomware: SafePay Ransomware
+## Attaque de la chaîne d'approvisionnement d'AOMEI Backupper
 
 ### Résumé
 
-Avis de cybersécurité (CSA) publié le 20 octobre 2026 sur le portail de l'IC3 (ic3.gov) dans le cadre de la campagne #StopRansomware et consacré au ransomware SafePay. Le document est diffusé au format PDF par les autorités fédérales américaines et vise à documenter l'activité de cette famille/affilié de ransomware ainsi que les mesures de mitigation attendues des organisations.
+Le 15 octobre 2026, le Google Threat Intelligence Group (GTIG) a divulgué une campagne de compromission de la chaîne d'approvisionnement logicielle visant l'infrastructure de mise à jour d'AOMEI Technology, utilisée par AOMEI Backupper (sauvegarde, clonage de disque, reprise après sinistre sous Windows) et AnyViewer (bureau à distance), via le mécanisme ABMarket et les services Backupper.exe et ABNotify.exe. Entre avril et juillet 2026, l'acteur UNC7017 a modifié à plusieurs reprises deux fichiers de configuration hébergés sur cette infrastructure, pour des durées de cinq à dix minutes ; les systèmes interrogeant les mises à jour pendant ces fenêtres recevaient des instructions malveillantes, les autres du contenu légitime. Des fenêtres de compromission ont été observées le 28 mai, le 16 juillet et le 20 juillet 2026. Les fichiers modifiés redirigeaient les clients AOMEI vers une archive ZIP malveillante hébergée sur une infrastructure adverse, exécutée automatiquement via le workflow de notification. L'archive contenait le downloader CROSSROAD, qui effectue des vérifications d'environnement, récupère des charges supplémentaires, crée une tâche planifiée de persistance puis s'efface du disque ; la tâche planifiée lance SHINYROAD, un backdoor modulaire opérant via un composant Radmin signé légitime. Le framework C2 Adaptix a également été observé en phase tardive, déguisé en logiciel lié à Nitro PDF. Le 20 juillet 2026, UNC7017 a introduit une seconde technique : la modification du fichier de configuration de notification pour afficher un popup invisible d'un pixel redirigeant vers une ressource WebDAV distante, provoquant l'envoi de hachages d'authentification NTLM vers l'infrastructure de l'attaquant. GTIG a identifié des organisations affectées dans les services informatiques, les télécommunications et l'enseignement supérieur en Australie, Brésil, Inde, Pakistan, Portugal, Singapour, Afrique du Sud, Espagne, Suisse, Turquie et États-Unis.
 
 ---
 
 ### Analyse opérationnelle
 
-Un avis #StopRansomware constitue une source de référence pour caler la détection et la réponse sur un groupe actif : il faut l'exploiter pour mettre à jour les règles SIEM/EDR (chiffrement massif, suppression de clichés, désactivation de journaux), les listes d'IOC et les procédures de crise. L'impact opérationnel prioritaire reste l'indisponibilité des systèmes et la double extorsion : la détection doit donc couvrir la phase d'exfiltration précédant le chiffrement, souvent la seule fenêtre d'action utile. Les équipes doivent vérifier l'isolation des sauvegardes, la robustesse de la restauration et la couverture MFA sur les accès distants, qui demeurent les points de rupture les plus fréquents.
+Les systèmes les plus exposés sont les serveurs de sauvegarde, les systèmes de reprise et les postes d'administration utilisant AOMEI Backupper : ils concentrent des accès privilégiés et une visibilité étendue sur le SI, ce qui en fait des cibles à forte valeur. La particularité de la campagne est que l'attaquant n'a pas eu besoin de compromettre directement les environnements clients : en modifiant des fichiers de configuration côté éditeur, il contrôlait l'origine des téléchargements, les fichiers acceptés comme mises à jour valides et le contenu exécuté. Pour le SOC, la détection repose sur la corrélation entre requêtes de mise à jour AOMEI, téléchargement d'archives ZIP, création de tâches planifiées et exécution de composants Radmin signés. La seconde technique (popup invisible vers WebDAV) constitue un canal de collecte d'identifiants NTLM : toute authentification NTLM sortante vers une adresse externe doit être traitée comme un signal fort de compromission. Les fenêtres d'exposition très courtes (5 à 10 minutes) rendent la détection difficile sans journalisation fine et conservation longue des logs proxy/DNS.
 
 ---
 
 ### Implications stratégiques
 
-La publication d'un avis fédéral dédié signale que SafePay est jugé suffisamment prolifique et structuré pour justifier une communication officielle : cela implique une pression accrue sur les assureurs, les conseils d'administration et les régulateurs. Pour les organisations, la question n'est plus la probabilité mais la capacité de résilience : RTO, sauvegardes immuables et gouvernance de crise deviennent des critères de conformité et de négociation contractuelle. La doctrine publique reste le non-paiement, avec un renforcement des obligations de notification et de coopération avec les autorités.
+Cette campagne illustre la dégradation du modèle de confiance accordé aux canaux de mise à jour des éditeurs, y compris pour des logiciels de sauvegarde et de reprise d'activité qui constituent un point de défaillance critique. Le ciblage de services informatiques, de télécommunications et de l'enseignement supérieur dans douze pays, dont plusieurs en Europe, indique une recherche d'accès à des environnements à forte connectivité et à des données sensibles. La possibilité que le bassin de victimes dépasse les organisations identifiées impose aux entreprises de considérer tout poste ayant interrogé l'infrastructure AOMEI pendant les fenêtres concernées comme potentiellement compromis. Au-delà de l'incident, la question de la validation des mises à jour tierces et de la segmentation des serveurs de sauvegarde devient un enjeu de gouvernance du risque fournisseur.
 
 ---
 
 ### Recommandations
 
-* Appliquer les mesures de mitigation listées dans l'avis et les mapper aux contrôles internes existants
-* Vérifier l'immuabilité et l'isolation réseau des sauvegardes, puis tester une restauration réelle
-* Imposer MFA et moindre privilège sur tous les accès distants et comptes d'administration
-* Déployer des règles de détection sur la suppression de clichés et le chiffrement massif
-* Préparer et tester un plan de communication de crise incluant les obligations de notification
-* Suivre les mises à jour de l'avis et intégrer les IOC publiés dans les outils de détection
+* Recenser et durcir les serveurs de sauvegarde et postes d'administration exécutant AOMEI Backupper/AnyViewer.
+* Mettre en place une validation manuelle ou par signature des mises à jour des outils de sauvegarde critiques.
+* Détecter et bloquer les authentifications NTLM sortantes ainsi que les accès WebDAV non nécessaires.
+* Surveiller l'usage de Radmin et des outils d'accès distant légitimes détournés.
+* Conserver au moins six mois de journaux proxy/DNS pour permettre l'analyse rétrospective des fenêtres d'exposition.
 
 ---
 
@@ -213,44 +237,39 @@ La publication d'un avis fédéral dédié signale que SafePay est jugé suffisa
 
 #### Phase 1 — Préparation
 
-* Cartographier les actifs exposés et valider l'isolation des sauvegardes hors ligne (règle 3-2-1-1-0)
-* Tester la restauration complète d'un périmètre critique et documenter le RTO/RPO réel
-* Préparer les procédures de crise : annuaire de contacts, cellule de crise, communication légale et réglementaire (notification CNIL/ANSSI selon le cas)
-* Durcir les accès : MFA sur VPN/SSO, suppression des comptes inactifs, revue des partages réseau et des droits d'administration
-* Déployer une détection EDR sur les comportements de chiffrement massif et de suppression de clichés (vssadmin, wbadmin, bcdedit)
-* Vérifier la couverture de la restauration immuable et l'étanchéité des segments de sauvegarde vis-à-vis du domaine
+* Inventorier tous les postes et serveurs exécutant AOMEI Backupper, AnyViewer, Backupper.exe et ABNotify.exe, en priorité les serveurs de sauvegarde et postes d'administration.
+* Bloquer ou journaliser de manière détaillée les flux sortants vers les domaines de mise à jour AOMEI et vers les ressources WebDAV externes.
+* Désactiver les mises à jour automatiques des outils de sauvegarde non critiques et imposer une validation manuelle des versions.
+* Vérifier la présence et la signature des binaires Radmin dans le parc, et restreindre leur exécution aux usages légitimes.
 
 #### Phase 2 — Détection et analyse
 
-* Surveiller les alertes EDR sur chiffrement massif, renommage en masse et écriture de notes de rançon
-* Corréler les suppressions de clichés de volume et la désactivation des journaux d'événements avec les connexions RDP/SMB anormales
-* Détecter l'exfiltration préalable : pics de sortie réseau, transferts vers services de stockage cloud, usage d'outils d'archivage (7z, rar)
-* Analyser les connexions aux infrastructures C2 et les résolutions DNS inhabituelles depuis les serveurs critiques
-* Qualifier l'alerte : périmètre touché, compte utilisé, horodatage de la première exécution, présence ou non d'exfiltration
+* Rechercher dans les journaux proxy/DNS des requêtes vers l'infrastructure de mise à jour AOMEI suivies du téléchargement d'archives ZIP inattendues.
+* Détecter la création de tâches planifiées pointant vers des binaires récemment déposés ou vers des composants Radmin.
+* Surveiller les authentifications NTLM sortantes vers des hôtes externes (signature d'une fuite de hachages via WebDAV).
+* Analyser les exécutions de Backupper.exe/ABNotify.exe générant des processus enfants (powershell, cmd, rundll32) ou des connexions réseau anormales.
+* Corréler les fenêtres temporelles courtes (5 à 10 minutes) de requêtes de mise à jour avec des alertes EDR.
 
 #### Phase 3 — Confinement, éradication et récupération
 
-* Isoler immédiatement les hôtes chiffrés et les comptes compromis (désactivation, révocation de sessions et de jetons)
-* Segmenter le réseau et bloquer les flux SMB/RDP latéraux ainsi que les IOC identifiés
-* Préserver les preuves : images mémoire, journaux, notes de rançon, échantillons chiffrés avant remédiation
-* Ne pas payer : engager la cellule de crise, informer la direction, le juridique et les autorités (ANSSI, police/IC3)
-* Reconstruire depuis des sauvegardes saines vérifiées, avec rotation des secrets (krbtgt, comptes de service, certificats)
+* Isoler immédiatement les machines ayant téléchargé une archive depuis l'infrastructure AOMEI pendant les fenêtres compromises.
+* Supprimer les tâches planifiées malveillantes et les binaires déposés (CROSSROAD, SHINYROAD, composants Adaptix).
+* Réinitialiser les secrets et mots de passe des comptes machine et administrateurs exposés sur les systèmes touchés, en priorité si des authentifications NTLM sortantes ont été observées.
+* Bloquer au niveau pare-feu/proxy les domaines et adresses C2 identifiés, ainsi que les flux WebDAV sortants non nécessaires.
 
 #### Phase 4 — Activités post-incident
 
-* Analyse post-mortem : vecteur initial, chronologie, échecs de détection et de contrôle
-* Renforcer les contrôles identifiés (MFA, moindre privilège, segmentation, EDR, filtrage sortant)
-* Mettre à jour les règles de détection et les playbooks avec les TTP observés
-* Communiquer aux parties prenantes et, le cas échéant, aux clients et régulateurs dans les délais impartis
-* Planifier un exercice de crise et un test de restauration à froid dans les 6 mois
+* Reconstruire les systèmes de sauvegarde compromis plutôt que de les nettoyer, et valider l'intégrité des sauvegardes restaurées.
+* Mettre à jour AOMEI Backupper/AnyViewer vers une version saine et vérifier l'intégrité des fichiers de configuration de notification.
+* Revoir la politique de confiance accordée aux canaux de mise à jour tiers et imposer une validation par hash/signature.
+* Documenter les fenêtres d'exposition et notifier les parties prenantes conformément aux obligations réglementaires.
 
 #### Phase 5 — Threat Hunting (proactif)
 
-* Rechercher les artefacts d'accès initial et de persistance sur 30 à 90 jours glissants (comptes créés, tâches planifiées, services)
-* Chasser l'usage d'outils de tunneling et de mouvement latéral (PsExec, WMI, RDP, Cobalt Strike)
-* Rechercher les indicateurs d'exfiltration (connexions sortantes volumineuses, archives créées avant incident)
-* Vérifier l'absence de backdoors résiduelles sur les hôtes reconstruits et les contrôleurs de domaine
-* Comparer les TTP observés aux renseignements publics sur SafePay et ajuster les cas d'usage SIEM
+* Rechercher des artefacts CROSSROAD/SHINYROAD et des traces d'Adaptix C2 sur l'ensemble du parc (disque, mémoire, journaux de tâches).
+* Chasser l'usage détourné de Radmin et d'autres outils d'accès distant légitimes (T1219) sur les serveurs d'administration.
+* Analyser rétrospectivement les journaux proxy des 6 derniers mois pour les fenêtres du 28 mai, 16 juillet et 20 juillet 2026.
+* Rechercher des authentifications NTLM vers des adresses IP externes inconnues et des montages WebDAV non autorisés.
 
 ---
 
@@ -258,48 +277,50 @@ La publication d'un avis fédéral dédié signale que SafePay est jugé suffisa
 
 | ID TTP | Description |
 |---|---|
-| **T1486** | Chiffrement des données pour impact (modèle ransomware/extorsion) |
-| **T1490** | Inhibition de la récupération système (suppression des clichés/backups) |
-| **T1657** | Extorsion financière (double extorsion, pression sur les victimes) |
+| **T1195.002** | Compromission de la chaîne d'approvisionnement logicielle via l'infrastructure de mise à jour AOMEI (ABMarket) |
+| **T1053.005** | Création d'une tâche planifiée pour la persistance et le lancement de SHINYROAD |
+| **T1219** | Utilisation d'un composant Radmin signé légitime comme vecteur d'accès distant |
+| **T1187** | Collecte de hachages NTLM via un popup invisible redirigeant vers une ressource WebDAV contrôlée par l'attaquant |
+| **T1105** | Téléchargement d'archives ZIP et de charges utiles secondaires depuis une infrastructure adverse |
+| **T1071.001** | Communications C2 via HTTP/HTTPS (Adaptix C2 déguisé en logiciel lié à Nitro PDF) |
 
 ---
 
 ### Sources
 
-* [https://www.ic3.gov/CSA/2026/261020.pdf](https://www.ic3.gov/CSA/2026/261020.pdf)
+* [https://fieldeffect.com/blog/aomei-backupper-supply-chain-attack](https://fieldeffect.com/blog/aomei-backupper-supply-chain-attack)
 
 
 ---
 
-<div id="les-modeles-dia-alimentent-une-nouvelle-vague-de-cybercriminalite-une-analyse-quantitative"></div>
+<div id="mesure-de-lexposition-des-identifiants-des-sous-traitants-et-integrateurs-apres-lattaque-du-systeme-de-refrigeration-en-france-601-adresses-dacces-a-distance-industrielles-recuperees-a-partir-de-journaux-de-stealers-73-sur-la-plus-grande-plateforme-associees-a-des-identifiants-dappareils"></div>
 
-## Les modèles d'IA alimentent une nouvelle vague de cybercriminalité : une analyse quantitative
+## Mesure de l'exposition des identifiants des sous-traitants et intégrateurs après l'attaque du système de réfrigération en France : 601 adresses d'accès à distance industrielles récupérées à partir de journaux de stealers, 73 % sur la plus grande plateforme associées à des identifiants d'appareils
 
 ### Résumé
 
-Article publié le 20 octobre 2026 par Flare présentant une analyse quantitative de la manière dont les modèles d'IA alimentent une nouvelle vague de cybercriminalité. La publication s'appuie sur des mesures quantitatives pour documenter cette tendance dans l'écosystème criminel.
+L'article de Flare mesure l'exposition des identifiants de prestataires et d'intégrateurs à la suite de l'attaque contre un système de réfrigération en France. L'analyse de journaux d'infostealers a permis de récupérer 601 adresses d'accès distant industriel, dont 73 % sur la plus grande plateforme, associées à des identifiants d'appareils.
 
 ---
 
 ### Analyse opérationnelle
 
-L'industrialisation par l'IA abaisse le coût marginal de la fraude et du hameçonnage : les SOC doivent anticiper des campagnes plus nombreuses, mieux rédigées et plus personnalisées, qui rendent obsolètes les détections fondées sur les fautes de langue ou la qualité rédactionnelle. Les contrôles à privilégier sont comportementaux et techniques : authentification des messages, réputation des domaines récemment enregistrés, vérification hors bande des demandes sensibles, et non plus la seule vigilance humaine. La mesure quantitative aide à prioriser les investissements de détection sur les vecteurs effectivement exploités.
+L'exposition d'identifiants d'accès distant industriel issus de journaux d'infostealers constitue une porte d'entrée directe vers des environnements OT, souvent protégés par des comptes partagés et sans MFA. Les équipes SOC doivent traiter ces identifiants comme des secrets compromis : révocation, rotation, contrôle des sessions actives et vérification des journaux de connexion historiques. La dimension tierce (contractants, intégrateurs) élargit la surface d'attaque au-delà du périmètre IAM interne et nécessite une surveillance de l'exposition hors de l'organisation.
 
 ---
 
 ### Implications stratégiques
 
-La démocratisation des capacités offensives via l'IA modifie l'économie de la menace : des acteurs peu qualifiés accèdent à des campagnes de qualité étatique, ce qui érode l'avantage défensif historique des grandes organisations. Pour les décideurs, cela implique de réévaluer les modèles de risque (fraude, ingénierie sociale, usurpation d'identité), de renforcer la vérification des transactions et de considérer l'IA comme un facteur d'échelle du risque criminel plutôt que comme une menace future.
+L'incident illustre le risque systémique posé par les accès distants de maintenance dans l'industrie et les infrastructures critiques : la compromission d'un identifiant de prestataire peut suffire à atteindre des systèmes physiques. En France, le secteur de la chaîne du froid et plus largement l'industrie agroalimentaire sont concernés par des enjeux de sécurité physique et de continuité d'activité. La gouvernance du risque fournisseur doit intégrer la surveillance des fuites d'identifiants des sous-traitants comme un contrôle de sécurité à part entière.
 
 ---
 
 ### Recommandations
 
-* Réviser les contrôles anti-fraude et anti-phishing en supposant des contenus parfaitement rédigés
-* Imposer une vérification hors bande pour tout changement de coordonnées bancaires ou de coordonnées de contact
-* Investir dans la détection comportementale et l'analyse d'infrastructure plutôt que dans les signatures linguistiques
-* Former les équipes finance et RH aux scénarios de fraude assistée par IA
-* Suivre les analyses quantitatives du secteur pour ajuster la priorisation des risques
+* Surveiller en continu les journaux d'infostealers pour les domaines et portails d'accès distant de l'organisation et de ses prestataires.
+* Imposer le MFA et des comptes nominatifs sur tous les accès distants industriels.
+* Révoquer et faire tourner les identifiants d'appareils exposés sur les plateformes de télémaintenance.
+* Intégrer des clauses de sécurité et de notification d'incident dans les contrats des intégrateurs OT.
 
 ---
 
@@ -307,37 +328,33 @@ La démocratisation des capacités offensives via l'IA modifie l'économie de la
 
 #### Phase 1 — Préparation
 
-* Sensibiliser les équipes SOC aux contenus générés par IA (phishing sans fautes, deepfakes vocaux, faux profils)
-* Mettre à jour les procédures de vérification hors bande pour toute demande financière ou de changement de coordonnées bancaires
-* Renforcer les contrôles anti-phishing : authentification des messages entrants, analyse des liens et pièces jointes, sandbox
-* Former les utilisateurs à la vérification des demandes inhabituelles et à la remontée rapide au SOC
+* Cartographier les accès distants industriels (VPN, portails de télémaintenance, passerelles OT) utilisés par les prestataires et intégrateurs.
+* Identifier les comptes partagés ou génériques utilisés par les contractants et exiger une attribution nominative.
+* Mettre en place une surveillance des journaux d'infostealers pour les domaines de messagerie et les portails d'accès de l'organisation.
 
 #### Phase 2 — Détection et analyse
 
-* Détecter les campagnes à volume élevé avec personnalisation fine et variantes de domaines récemment enregistrés
-* Surveiller les tentatives d'ingénierie sociale ciblant les fonctions finance, RH et direction (fraude au président, faux fournisseurs)
-* Analyser les métadonnées et artefacts de génération (incohérences de style, horodatages, infrastructure réutilisée)
-* Corréler les signalements utilisateurs avec les données de messagerie et de proxy pour identifier les vagues de campagne
+* Rechercher dans les corpus de stealer logs les identifiants associés aux domaines de l'entreprise et aux portails d'accès distant industriel.
+* Détecter les connexions d'accès distant provenant de géolocalisations ou d'ASN inhabituels pour les comptes de prestataires.
+* Surveiller les authentifications réussies sans MFA sur les plateformes de télémaintenance.
 
 #### Phase 3 — Confinement, éradication et récupération
 
-* Bloquer les domaines, expéditeurs et URL identifiés et purger les messages des boîtes concernées
-* Réinitialiser les identifiants des comptes ayant interagi avec le contenu malveillant
-* Geler les transactions en cours et vérifier les changements de coordonnées bancaires par un canal indépendant
-* Notifier les partenaires ou clients dont l'identité a été usurpée
+* Réinitialiser immédiatement les identifiants exposés et révoquer les sessions actives des comptes concernés.
+* Suspendre temporairement les accès distants des contractants dont les identifiants apparaissent dans les journaux de vol.
+* Imposer le MFA sur tous les accès distants industriels, y compris pour les comptes de maintenance.
 
 #### Phase 4 — Activités post-incident
 
-* Mesurer l'efficacité des filtres et le taux de clic pour ajuster la sensibilisation
-* Mettre à jour les scénarios de simulation de phishing avec des contenus générés par IA
-* Documenter les indicateurs comportementaux réutilisables dans les futures détections
+* Revoir les contrats et clauses de sécurité imposées aux intégrateurs (MFA, gestion des secrets, notification d'incident).
+* Mettre en place un processus de surveillance continue de l'exposition des identifiants des tiers.
+* Documenter les comptes exposés et les actions de remédiation pour audit.
 
 #### Phase 5 — Threat Hunting (proactif)
 
-* Rechercher les comptes et domaines récemment créés imitant la marque de l'organisation
-* Analyser les journaux de messagerie sur les schémas de campagne (objets similaires, horaires, ASN d'envoi)
-* Rechercher des tentatives d'accès aux boîtes finance/paie sur la période écoulée
-* Vérifier l'absence de règles de transfert ou de délégation créées frauduleusement
+* Rechercher des connexions historiques des comptes de prestataires sur les plateformes d'accès distant industriel.
+* Corréler les adresses d'accès distant industriel exposées avec les journaux de connexion VPN/portail.
+* Rechercher des outils de prise en main à distance non approuvés installés par des intégrateurs.
 
 ---
 
@@ -345,47 +362,48 @@ La démocratisation des capacités offensives via l'IA modifie l'économie de la
 
 | ID TTP | Description |
 |---|---|
-| **T1587.001** | Développement de capacités : malware assisté par IA |
-| **T1585.001** | Établissement de comptes : création de personas/ comptes frauduleux à l'échelle |
-| **T1566.001** | Hameçonnage par pièce jointe, contenu généré par IA |
+| **T1555** | Récupération d'identifiants depuis les stores des navigateurs via les journaux d'infostealers |
+| **T1078** | Utilisation de comptes valides (accès distant industriel) pour l'accès initial |
+| **T1133** | Exploitation des accès distants externes de prestataires et intégrateurs |
 
 ---
 
 ### Sources
 
-* [https://flare.io/learn/resources/blog/ai-models-cybercrime-quantitative-analysis](https://flare.io/learn/resources/blog/ai-models-cybercrime-quantitative-analysis)
+* [https://flare.io/learn/resources/blog/industrial-remote-access-credential-exposure](https://flare.io/learn/resources/blog/industrial-remote-access-credential-exposure)
 
 
 ---
 
-<div id="ecrire-un-beacon-object-file-bof-a-partir-de-zero-en-c"></div>
+<div id="les-agents-dia-redefinissent-la-gestion-des-identifiants"></div>
 
-## Écrire un Beacon Object File (BOF) à partir de zéro en C
+## Les agents d'IA redéfinissent la gestion des identifiants
 
 ### Résumé
 
-Article technique publié le 20 octobre 2026 expliquant le fonctionnement du chargement COFF au sein de Beacon (Cobalt Strike), les raisons pour lesquelles les BOF surpassent les outils de post-exploitation traditionnels, et la construction pas à pas d'un BOF d'énumération de privilèges en langage C.
+L'article, rédigé par Dave Lewis (1Password) pour GuidePoint Security, décrit l'impact des agents IA sur la gestion des identifiants et la gouvernance des identités. Il recommande d'inventorier chaque agent, de remplacer les secrets statiques par des accès à portée limitée et de courte durée, et de rendre chaque action attribuable à un propriétaire. Il souligne que les méthodes traditionnelles de rotation ont été conçues pour des identifiants humains et que les agents, comme les identités non humaines (NHI), nécessitent un accès à une grande variété de systèmes, ce qui rend dangereux les accès de longue durée. L'article cite l'incident PocketOS, dans lequel un agent a utilisé un jeton API de longue durée pour supprimer une base de données de production, ainsi que des chiffres de recherche 1Password : 47 % des développeurs ont constaté qu'un agent suivait des instructions issues d'une attaque par prompt injection, 74 % ont observé des conséquences non intentionnelles de l'usage d'agents, et 40 % accordent aux agents un accès persistant à des systèmes.
 
 ---
 
 ### Analyse opérationnelle
 
-Les BOF s'exécutent en mémoire dans le processus Beacon, sans dépôt de binaire sur disque : les détections fondées sur les fichiers ou les lignes de commande sont structurellement insuffisantes. Les équipes SOC doivent s'appuyer sur la télémétrie mémoire, les allocations de pages exécutables, les appels API de résolution dynamique et le comportement réseau des balises. La démocratisation de ce tradecraft dans la littérature publique abaisse la barrière d'entrée pour les attaquants et impose de considérer l'exécution en mémoire comme un scénario par défaut, notamment sur les serveurs à privilèges.
+Les agents IA introduisent des identités non humaines supplémentaires qu'il faut traiter comme des comptes à privilèges : inventaire, propriétaire identifié, permissions minimales et jetons à durée de vie courte. Le risque opérationnel majeur est l'action destructive non supervisée rendue possible par un jeton persistant, comme dans l'incident PocketOS. Les équipes SOC doivent surveiller les actions des agents au même titre que celles des comptes à privilèges, avec une attention particulière aux suppressions, exports massifs et changements de configuration. La prompt injection constitue un vecteur d'abus direct des permissions accordées à l'agent.
 
 ---
 
 ### Implications stratégiques
 
-La publication de tutoriels complets sur les BOF illustre la normalisation des techniques d'évasion en mémoire dans l'écosystème offensif, y compris pour des acteurs non étatiques. Pour les organisations, cela renforce la valeur des capacités de réponse mémoire et de détection comportementale par rapport aux approches antivirales classiques, et pose la question de la couverture EDR sur les serveurs et les postes d'administration, souvent moins instrumentés que les postes utilisateurs.
+La gouvernance des identités non humaines devient un enjeu de conformité et de risque opérationnel à mesure que les entreprises déploient des agents autonomes. Les modèles IAM traditionnels, fondés sur des rôles humains stables, ne couvrent pas des identités dont les besoins d'accès varient d'une tâche à l'autre. Les organisations qui ne mettent pas en place d'inventaire et de contrôle des agents s'exposent à des incidents internes à fort impact et à une perte de traçabilité.
 
 ---
 
 ### Recommandations
 
-* Prioriser la détection mémoire (RWX, threads non mappés, chargement COFF) dans la feuille de route EDR
-* Restreindre l'exécution de binaires non signés et surveiller les frameworks C2 par comportement réseau
-* Former les analystes SOC à l'analyse mémoire et à la reconstruction de chaînes d'exécution sans fichier
-* Inclure les scénarios BOF/in-memory dans les exercices purple team
+* Inventorier les agents IA et identités non humaines avec un propriétaire désigné pour chacun.
+* Remplacer les secrets statiques par des accès à portée limitée et à durée de vie courte.
+* Exiger une approbation humaine pour les actions destructrices ou irréversibles.
+* Journaliser et attribuer chaque action d'agent à un propriétaire.
+* Sensibiliser les développeurs aux risques de prompt injection et de persistance des jetons.
 
 ---
 
@@ -393,37 +411,33 @@ La publication de tutoriels complets sur les BOF illustre la normalisation des t
 
 #### Phase 1 — Préparation
 
-* Documenter les capacités attendues d'un framework C2 (Beacon) et les artefacts mémoire associés
-* Activer la télémétrie EDR sur l'exécution mémoire, l'allocation de pages exécutables et les appels API sensibles
-* Former les analystes à la distinction entre binaire déposé sur disque et charge en mémoire
-* Mettre en place une collecte mémoire planifiée sur les actifs critiques
+* Inventorier tous les agents IA et identités non humaines (NHI) avec leurs propriétaires et périmètres d'accès.
+* Définir une politique d'accès à durée limitée et à privilèges minimaux pour les agents.
+* Mettre en place une journalisation des actions des agents avec attribution à un propriétaire.
 
 #### Phase 2 — Détection et analyse
 
-* Détecter les balises C2 par analyse comportementale (jitter, périodicité, domaines fronting) plutôt que par signature
-* Surveiller les processus anormaux exécutant des commandes de reconnaissance de privilèges (whoami /priv, net group)
-* Rechercher les allocations mémoire RWX et les threads non associés à une image sur disque
-* Analyser les journaux de pare-feu pour les connexions sortantes persistantes vers des infrastructures inconnues
+* Détecter les agents disposant d'accès persistants ou de jetons de longue durée.
+* Surveiller les actions destructrices ou hors périmètre exécutées par des agents (suppressions, exports massifs).
+* Détecter les tentatives de prompt injection dans les entrées traitées par les agents.
 
 #### Phase 3 — Confinement, éradication et récupération
 
-* Isoler l'hôte et capturer la mémoire avant extinction
-* Révoquer les identifiants et tickets Kerberos utilisés depuis l'hôte compromis
-* Bloquer les domaines et adresses C2 identifiés au niveau proxy/DNS
-* Rechercher la latéralisation depuis l'hôte vers les autres segments
+* Révoquer immédiatement les jetons et identifiants des agents compromis ou mal configurés.
+* Suspendre les agents disposant d'accès excessifs jusqu'à revue de leurs permissions.
+* Isoler les systèmes ayant subi des actions destructrices d'un agent.
 
 #### Phase 4 — Activités post-incident
 
-* Reconstruire l'hôte et vérifier l'absence de persistance résiduelle
-* Renforcer la détection mémoire et la restriction des binaires non signés
-* Mettre à jour les règles de chasse à partir des artefacts observés
+* Revoir la politique de gouvernance des identités non humaines et des agents IA.
+* Mettre en place des garde-fous techniques (approbation humaine) sur les actions destructrices.
+* Former les développeurs aux risques de prompt injection et de persistance des secrets.
 
 #### Phase 5 — Threat Hunting (proactif)
 
-* Chasser les balises C2 connues via des requêtes de périodicité sur les journaux proxy et DNS
-* Rechercher les exécutions de commandes de découverte de privilèges sur les serveurs sensibles
-* Analyser les journaux EDR pour les chargements de code en mémoire sans fichier
-* Vérifier les comptes à privilèges élevés pour des activités de découverte récentes
+* Rechercher les jetons API de longue durée encore actifs dans les dépôts de code et les configurations.
+* Analyser les journaux d'actions des agents pour identifier des comportements anormaux ou non supervisés.
+* Rechercher des identités non humaines orphelines ou non attribuées à un propriétaire.
 
 ---
 
@@ -431,48 +445,47 @@ La publication de tutoriels complets sur les BOF illustre la normalisation des t
 
 | ID TTP | Description |
 |---|---|
-| **T1620** | Chargement de code réflectif (exécution de BOF en mémoire dans le processus Beacon) |
-| **T1069** | Découverte de groupes et permissions (BOF d'énumération de privilèges) |
-| **T1055** | Injection de code dans un processus (exécution in-process des capacités post-exploitation) |
+| **T1078** | Utilisation de comptes et d'identités non humaines valides pour accéder aux systèmes |
+| **T1550.001** | Utilisation de jetons d'accès applicatifs (API tokens) pour l'accès aux ressources |
+| **T1528** | Vol ou détournement de jetons d'accès applicatifs accordés aux agents IA |
 
 ---
 
 ### Sources
 
-* [https://by7e.dev/blog/bof-from-scratch-in-c](https://by7e.dev/blog/bof-from-scratch-in-c)
-* [https://www.reddit.com/r/redteamsec/comments/1xawbwr/writing_a_beacon_object_file_bof_from_scratch_in_c/](https://www.reddit.com/r/redteamsec/comments/1xawbwr/writing_a_beacon_object_file_bof_from_scratch_in_c/)
+* [https://www.guidepointsecurity.com/blog/ai-agent-credential-management/](https://www.guidepointsecurity.com/blog/ai-agent-credential-management/)
 
 
 ---
 
-<div id="flux-certificate-transparency-en-temps-reel-gratuit-sans-cle-api"></div>
+<div id="operation-flashhole-lazarus-brise-la-securite-defie-le-controle"></div>
 
-## Flux Certificate Transparency en temps réel gratuit, sans clé API
+## Opération FlashHole : Lazarus brise la sécurité, défie le contrôle
 
 ### Résumé
 
-Présentation d'un service gratuit de flux Certificate Transparency en temps réel, sans clé API ni inscription. Deux points de terminaison WebSocket sont proposés : wss://api[.]certstream[.]dev/ (noms de domaine uniquement, environ 200 octets par certificat) et wss://api[.]certstream[.]dev/lite (environ 1 Ko, avec émetteur, dates de validité, empreintes et source de journal). Le service annonce environ 412 certificats par seconde, une disponibilité de 99,9 %, une limite de deux connexions simultanées par IP (troisième connexion refusée en HTTP 429) et s'appuie sur les journaux CT approuvés par Chrome et Apple (RFC 6962 et static-ct-api). Le flux complet avec certificat DER et chaîne n'est pas disponible publiquement et nécessite d'héberger sa propre instance de certstream-server-rust. Les cas d'usage cités sont la détection de phishing et de typosquatting, la surveillance de marque, la découverte de sous-domaines et l'alimentation de pipelines de threat intelligence.
+Securelist décrit l'opération FlashHole, nouvelle campagne du groupe Lazarus contre la Corée du Sud, détectée en janvier et dont les premières traces remontent à juillet 2025, peu après la fin de l'opération SyncHole. Le groupe utilise une chaîne de malware mise à jour mêlant anciens et nouveaux composants, et abuse d'un logiciel de sécurité sud-coréen obligatoire (CrossWeb EX, à la place de Cross EX utilisé dans SyncHole) dans le cadre d'une stratégie de watering hole. Le groupe cible les victimes de manière plus sélective, via des courriels de hameçonnage contenant des liens vers des sites fabriqués mais pertinents (portfolios, pages de CV) adaptés à chaque cible. La chaîne d'exécution observée provient du processus légitime INISAFECrossWebEXSvc.exe (bundle INISAFE CrossWeb EX V3 version 3.4.1.2, publié en 2023 après l'avis public de KrCERT) et aboutit à l'exécution du malware en mémoire, avec un processus à intégrité élevée. La chaîne comprend TechHub (point d'entrée), Cubridge (orchestrateur du framework), TouchHub (installation d'un service pour TouchShift), TouchShift (loader utilisé dans plusieurs chaînes), ClientHub et LPE Client. Au moins trois organisations ont été affectées en Corée du Sud dans les secteurs du logiciel, de la construction et de la fabrication d'équipements de communication filaire, secteurs différents de ceux de SyncHole, ce qui indique une expansion du périmètre de ciblage.
 
 ---
 
 ### Analyse opérationnelle
 
-Ce type de flux permet de détecter une infrastructure adversaire avant sa mise en service : un certificat émis pour un domaine sosie constitue souvent le premier signal observable d'une campagne de phishing. L'intégration dans un pipeline CTI nécessite un collecteur résilient (reconnexion, respect de la limite de deux connexions par IP), un scoring de similarité de marque et un couplage avec les journaux DNS/proxy pour confirmer l'exposition réelle. Le flux « domains only » suffit pour la détection à grande échelle ; le flux « lite » apporte l'émetteur et les empreintes utiles au pivot. L'absence de DER et de chaîne sur l'endpoint public impose de conserver une capacité d'analyse locale pour les cas approfondis.
+L'abus d'un logiciel de sécurité obligatoire, présent en arrière-plan sur la quasi-totalité des postes d'un pays, crée une surface d'attaque massive et difficile à supprimer pour les équipes de défense. La détection doit se concentrer sur le comportement du processus légitime INISAFECrossWebEXSvc.exe : création de processus à intégrité élevée, chargement en mémoire, connexions réseau sortantes inattendues. Les artefacts TechHub, Cubridge, TouchHub, TouchShift, ClientHub et LPE Client doivent être intégrés aux règles de détection. Le hameçonnage ciblé par leurres de portfolios et de CV impose une vigilance sur les liens reçus, y compris lorsqu'ils semblent pertinents pour l'activité de la victime.
 
 ---
 
 ### Implications stratégiques
 
-La gratuité et l'absence d'authentification de ce type de flux abaissent considérablement le coût de la surveillance d'infrastructure, mais profitent symétriquement aux attaquants qui peuvent suivre les émissions de certificats de leurs cibles. Pour les organisations, la surveillance CT devient un contrôle de base peu coûteux, à intégrer dans la protection de marque et la lutte anti-phishing, avec des processus de takedown préétablis pour réduire le temps d'exposition.
+Cette campagne confirme la persistance de Lazarus contre la Corée du Sud et son exploitation systématique des logiciels de sécurité imposés par la réglementation locale, qui deviennent de facto des vecteurs d'intrusion. L'élargissement des secteurs ciblés (logiciel, construction, équipements de communication) traduit une volonté d'accéder à des chaînes d'approvisionnement et à des infrastructures de communication. Pour les organisations hors Corée du Sud, l'enseignement est que les logiciels de conformité obligatoires doivent être traités comme des composants critiques de la surface d'attaque et soumis à une surveillance comportementale dédiée.
 
 ---
 
 ### Recommandations
 
-* Intégrer un collecteur CT dans le pipeline de threat intelligence avec scoring de similarité de marque
-* Définir une procédure de takedown et de blocage préétablie pour les domaines frauduleux détectés
-* Corréler les nouveaux certificats avec les journaux DNS et proxy pour prioriser les alertes
-* Respecter les limites de connexion et prévoir une instance auto-hébergée pour les besoins avancés
+* Surveiller le comportement des logiciels de sécurité financière obligatoires et de leurs services.
+* Intégrer les artefacts TechHub, Cubridge, TouchHub, TouchShift, ClientHub et LPE Client aux règles de détection.
+* Renforcer la sensibilisation aux leurres de type portfolio/CV dans les courriels non sollicités.
+* Bloquer les domaines et adresses C2 identifiés et conserver les journaux pour chasse rétrospective.
 
 ---
 
@@ -480,35 +493,706 @@ La gratuité et l'absence d'authentification de ce type de flux abaissent consid
 
 #### Phase 1 — Préparation
 
-* Recenser les marques, domaines et variantes à surveiller dans les journaux de Certificate Transparency
-* Mettre en place un collecteur CT (WebSocket) alimentant un pipeline de détection et une file d'analyse
-* Définir les seuils d'alerte sur les similarités de marque (distance de Levenshtein, homoglyphes, TLD suspects)
-* Documenter la procédure de demande de takedown auprès des registrars et hébergeurs
+* Inventorier les logiciels de sécurité financière obligatoires installés (CrossWeb EX, INISAFE) et leurs versions.
+* Surveiller les processus légitimes de ces logiciels (INISAFECrossWebEXSvc.exe) exécutant des processus enfants.
+* Sensibiliser les utilisateurs aux leurres de type portfolios et pages de CV envoyés par courriel.
 
 #### Phase 2 — Détection et analyse
 
-* Détecter l'émission de certificats pour des domaines ressemblant à la marque de l'organisation
-* Surveiller l'apparition de sous-domaines inconnus sous les domaines racines détenus
-* Corréler les nouveaux certificats avec les journaux DNS et proxy pour identifier des accès utilisateurs
-* Alerter sur les certificats émis pour des noms contenant la marque mais hébergés hors infrastructure légitime
+* Détecter les exécutions de INISAFECrossWebEXSvc.exe générant des processus à intégrité élevée ou des chargements en mémoire.
+* Rechercher les artefacts TechHub, Cubridge, TouchHub, TouchShift, ClientHub et LPE Client.
+* Analyser les courriels contenant des liens vers des sites de portfolio ou de CV non sollicités.
 
 #### Phase 3 — Confinement, éradication et récupération
 
-* Bloquer les domaines suspects au niveau DNS/proxy et ajouter les règles de filtrage messagerie
-* Faire supprimer ou suspendre les domaines frauduleux via les procédures d'abus
-* Notifier les utilisateurs ayant visité les domaines identifiés et réinitialiser les identifiants exposés
+* Isoler les machines présentant la chaîne d'exécution détournée via CrossWeb EX.
+* Bloquer les domaines et adresses C2 identifiés dans le rapport.
+* Réinitialiser les identifiants des comptes utilisés sur les systèmes compromis.
 
 #### Phase 4 — Activités post-incident
 
-* Mesurer le délai entre émission du certificat et détection pour ajuster la surveillance
-* Enrichir la liste de surveillance des marques avec les variantes observées
-* Automatiser le rapprochement CT vers les tickets de traitement
+* Mettre à jour ou restreindre les logiciels de sécurité obligatoires vulnérables à l'abus.
+* Revoir les contrôles de messagerie et la sensibilisation au hameçonnage ciblé.
+* Documenter les indicateurs et partager avec les CERT sectoriels.
 
 #### Phase 5 — Threat Hunting (proactif)
 
-* Rechercher rétroactivement les certificats émis pour des variantes de la marque sur les 12 derniers mois
-* Analyser les journaux proxy/DNS pour des résolutions vers ces domaines
-* Identifier les clusters d'infrastructure partagés (mêmes plages IP, mêmes certificats)
+* Rechercher les hachages et chemins de fichiers listés dans le rapport sur l'ensemble du parc.
+* Chasser les connexions vers les serveurs C2 connus dans les journaux proxy et DNS.
+* Rechercher des exécutions en mémoire non expliquées lancées depuis les logiciels de sécurité financière.
+
+---
+
+### TTP MITRE ATT&CK
+
+| ID TTP | Description |
+|---|---|
+| **T1566.002** | Hameçonnage ciblé avec liens vers des sites fabriqués (portfolios, CV) adaptés à chaque cible |
+| **T1189** | Compromission par drive-by via l'exploitation d'un logiciel de sécurité sud-coréen obligatoire (CrossWeb EX) |
+| **T1055** | Exécution du malware en mémoire via une chaîne d'exécution détournée |
+| **T1105** | Téléchargement de charges utiles supplémentaires (TechHub, Cubridge, TouchHub, TouchShift, ClientHub) |
+| **T1071.001** | Communications avec l'infrastructure C2 de l'attaquant |
+
+---
+
+### Sources
+
+* [https://securelist.com/lazarus-operation-flashhole/121541/](https://securelist.com/lazarus-operation-flashhole/121541/)
+
+
+---
+
+<div id="fusionner-la-pr-5646-de-swachchhanda000-ajouter-des-regles-pour-detecter-goldendmsa"></div>
+
+## Fusionner la PR #5646 de @swachchhanda000 - Ajouter des règles pour détecter goldendMSA…
+
+### Résumé
+
+Le commit 773f8d1 du dépôt SigmaHQ intègre la pull request #5646, soumise par le contributeur @swachchhanda000, qui ajoute des règles de détection Sigma destinées à identifier l'activité de l'outil « goldendMSA ». Le flux analysé ne contient aucun texte descriptif complémentaire : le détail des règles (logsource, champs, conditions) doit être consulté directement dans le diff du dépôt.
+
+---
+
+### Analyse opérationnelle
+
+Il s'agit d'un apport de contenu de détection à intégrer dans la chaîne de production Sigma → SIEM/EDR. Les équipes SOC doivent convertir les règles avec leur pipeline habituel, vérifier la logsource réellement disponible sur le parc (Sysmon, journalisation des lignes de commande, événements d'authentification) et mesurer le taux de faux positifs avant activation en production. L'intérêt opérationnel est de couvrir une technique d'abus de comptes de service managés, angle souvent peu instrumenté alors qu'il permet une persistance discrète et un accès aux ressources.
+
+---
+
+### Implications stratégiques
+
+La dépendance des SOC à la communauté Sigma pour la couverture détection est ici illustrée : la réactivité d'intégration des règles amont conditionne directement le délai de couverture face à un outil offensif. Les organisations doivent disposer d'un processus de veille et de validation du contenu communautaire, sous peine d'accumuler du retard de détection sur des techniques d'élévation de privilèges.
+
+---
+
+### Recommandations
+
+* Consulter le diff du commit pour identifier précisément les champs et logsources requis.
+* Déployer en mode alerte seule pendant 7 à 14 jours avant blocage/automatisation.
+* Documenter la règle dans le catalogue de détection avec propriétaire et date de revue.
+* Vérifier la couverture de la journalisation des comptes de service (gMSA/MSA) sur l'Active Directory.
+
+---
+
+### Playbook de réponse à incident
+
+#### Phase 1 — Préparation
+
+* Valider la logsource et les champs utilisés par les nouvelles règles goldendMSA dans le diff du dépôt SigmaHQ avant tout déploiement.
+* Vérifier que la collecte nécessaire (Sysmon, journalisation des processus, command lines, événements d'authentification) est active sur le parc concerné.
+* Prévoir une période d'observation en mode « alerte seule » (shadow mode) pour mesurer le bruit généré.
+
+#### Phase 2 — Détection et analyse
+
+* Convertir les règles Sigma vers le format du SIEM/EDR cible (Sigma CLI, pySigma, pipelines backend).
+* Surveiller les déclenchements liés aux comptes de service managés (MSA/gMSA) et aux manipulations de tickets/credentials associées.
+* Corréler les alertes avec les journaux d'authentification (4624/4625/4768/4769) et les créations de processus suspects.
+
+#### Phase 3 — Confinement, éradication et récupération
+
+* En cas de confirmation, isoler l'hôte à l'origine de l'activité et révoquer les secrets/tickets potentiellement compromis.
+* Réinitialiser le mot de passe du compte de service concerné et invalider les sessions actives.
+* Bloquer les binaires ou chemins identifiés comme malveillants via la politique applicative (AppLocker/WDAC).
+
+#### Phase 4 — Activités post-incident
+
+* Documenter les faux positifs et ajuster les filtres de la règle avant passage en production.
+* Mettre à jour la base de connaissances détection (tuning, exceptions, propriétaire de la règle).
+* Revoir la couverture ATT&CK des techniques d'abus de comptes de service.
+
+#### Phase 5 — Threat Hunting (proactif)
+
+* Rechercher sur 30 jours les exécutions de binaires non signés manipulant des comptes de service.
+* Chasser les créations de services et modifications de privilèges sur les contrôleurs de domaine.
+* Comparer les résultats avec les règles SigmaHQ amont pour identifier les angles morts locaux.
+
+---
+
+### Sources
+
+* [https://github.com/SigmaHQ/sigma/commit/773f8d1bd92f575002aabe62c64e0932bb7fac94](https://github.com/SigmaHQ/sigma/commit/773f8d1bd92f575002aabe62c64e0932bb7fac94)
+
+
+---
+
+<div id="fusionner-la-pr-6483-de-memx13-corriger-le-separateur-de-chemin-dimage-dans-shai-hulud"></div>
+
+## Fusionner la PR #6483 de @memx13 - Corriger le séparateur de chemin d'Image dans `Shai-Hulud…
+
+### Résumé
+
+Le commit dc1c0da du dépôt SigmaHQ intègre la pull request #6483 (contributeur @memx13) qui corrige le séparateur de chemin dans le champ `Image` d'une règle de détection visant Shai-Hulud. Le flux ne fournit pas de texte additionnel : la nature exacte de la correction (antislash vs slash, échappement) doit être vérifiée dans le diff.
+
+---
+
+### Analyse opérationnelle
+
+Une erreur de séparateur dans un champ `Image` est une cause classique de faux négatifs : la règle peut ne jamais correspondre aux chemins réels des processus sur Windows. Les équipes doivent considérer que la version antérieure de la règle a pu laisser passer des exécutions de Shai-Hulud et rejouer les journaux historiques après mise à jour. La correction doit être propagée à toutes les copies locales, y compris les règles converties et les forks internes.
+
+---
+
+### Implications stratégiques
+
+Shai-Hulud illustre la persistance de la menace sur la chaîne d'approvisionnement npm, qui touche directement les organisations développant du logiciel, y compris les fournisseurs de logiciels et les secteurs régulés dépendant de l'open source. La qualité du contenu de détection communautaire devient un actif de sécurité critique : une règle mal écrite donne une fausse impression de couverture.
+
+---
+
+### Recommandations
+
+* Comparer la règle locale avec la version corrigée du dépôt amont et aligner les versions.
+* Rejouer les journaux des 90 derniers jours avec la règle corrigée.
+* Mettre en place des tests unitaires de règles (sigma-rules-validator, jeux d'événements de test) pour détecter ce type d'erreur.
+* Sensibiliser les équipes de développement aux risques de compromission de paquets npm.
+
+---
+
+### Playbook de réponse à incident
+
+#### Phase 1 — Préparation
+
+* Vérifier la présence de la règle Shai-Hulud corrigée dans le dépôt local et sa version déployée sur le SIEM/EDR.
+* Inventorier les postes de développement et runners CI exposés à l'écosystème npm.
+* Activer la journalisation des lignes de commande et des créations de processus Node.js.
+
+#### Phase 2 — Détection et analyse
+
+* Contrôler que le champ Image de la règle utilise bien le séparateur de chemin attendu (antislash Windows) pour éviter les faux négatifs.
+* Rechercher les exécutions de scripts npm/node déclenchées par des paquets récemment installés ou mis à jour.
+* Surveiller les connexions sortantes inhabituelles depuis des postes de développement et les accès aux variables d'environnement de CI.
+
+#### Phase 3 — Confinement, éradication et récupération
+
+* Isoler le poste ou le runner CI concerné et suspendre les jobs de build en cours.
+* Révoquer les jetons npm, secrets CI/CD et clés cloud potentiellement exfiltrés.
+* Retirer ou épingler les versions de paquets compromises dans les lockfiles.
+
+#### Phase 4 — Activités post-incident
+
+* Auditer l'ensemble des dépendances installées pendant la fenêtre d'exposition.
+* Mettre à jour la règle et rejouer les journaux historiques pour détecter les exécutions passées non détectées.
+* Renforcer la politique de provenance des paquets (provenance attestations, registries internes).
+
+#### Phase 5 — Threat Hunting (proactif)
+
+* Rechercher sur 90 jours les processus dont le chemin d'image contient des séparateurs mixtes ou des chemins non canoniques.
+* Chasser les écritures de fichiers de configuration npm modifiés hors cycle de build.
+* Corréler avec les alertes de fuite de secrets et les connexions aux registres de paquets.
+
+---
+
+### TTP MITRE ATT&CK
+
+| ID TTP | Description |
+|---|---|
+| **T1195.002** | Compromission de la chaîne d'approvisionnement logicielle : la règle Sigma corrigée cible l'exécution du ver npm Shai-Hulud propagé via des paquets compromis. |
+
+---
+
+### Sources
+
+* [https://github.com/SigmaHQ/sigma/commit/dc1c0dab17bc5b5668e05a5fa6615f72e7d60cb2](https://github.com/SigmaHQ/sigma/commit/dc1c0dab17bc5b5668e05a5fa6615f72e7d60cb2)
+
+
+---
+
+<div id="maintenance-des-regles-sigmahq-correction-de-la-decouverte-de-fichiers-sensibles-powershell-corrections-de-faux-positifs-et-mise-a-jour-du-validateur"></div>
+
+## Maintenance des règles SigmaHQ : correction de la découverte de fichiers sensibles PowerShell, corrections de faux positifs et mise à jour du validateur
+
+### Résumé
+
+Trois commits du dépôt SigmaHQ datés du 21 octobre 2026 portent sur la maintenance du contenu de détection : la PR #6467 (@azullus) corrige la règle de découverte de fichiers sensibles via PowerShell ; la PR #6485 (@swachchhanda000) corrige des faux positifs signalés ; la PR #6489 (@swachchhanda000) met à jour le validateur sigma-rules-validator. Aucun texte détaillé n'accompagne ces commits dans le flux analysé.
+
+---
+
+### Analyse opérationnelle
+
+Ces changements n'ajoutent pas de nouvelle couverture mais conditionnent la fiabilité de la détection existante. Une règle de découverte de fichiers sensibles PowerShell mal calibrée produit soit du bruit massif (fatigue d'alerte), soit des angles morts sur une étape classique de reconnaissance et de vol de credentials. La mise à jour du validateur impacte la CI de détection : les pipelines internes doivent être alignés pour éviter des échecs de validation ou des règles silencieusement rejetées.
+
+---
+
+### Implications stratégiques
+
+La qualité du contenu de détection est un facteur de coût opérationnel direct : le temps analyste consommé par les faux positifs est un temps non consacré à la détection réelle. Les organisations qui consomment Sigma sans processus de validation et de tuning interne s'exposent à une dette de détection croissante.
+
+---
+
+### Recommandations
+
+* Synchroniser les règles locales avec les versions corrigées et tracer les écarts.
+* Aligner la version du validateur dans la CI interne sur celle du dépôt amont.
+* Mettre en place un suivi du taux de faux positifs par règle avec revue mensuelle.
+* Documenter les exceptions locales pour éviter leur réintroduction lors des mises à jour.
+
+---
+
+### Playbook de réponse à incident
+
+#### Phase 1 — Préparation
+
+* Inventorier les règles Sigma locales dérivées des règles concernées (découverte de fichiers sensibles via PowerShell, règles à faux positifs signalés).
+* Vérifier la version du validateur sigma-rules-validator utilisée dans la CI de détection.
+* Planifier une fenêtre de mise à jour du contenu de détection avec retour arrière possible.
+
+#### Phase 2 — Détection et analyse
+
+* Après mise à jour, comparer le volume d'alertes avant/après sur les règles modifiées pour détecter une dérive.
+* Contrôler que la correction du champ de découverte de fichiers sensibles PowerShell ne supprime pas la détection des accès légitimes suspects.
+* Valider que les règles désormais exemptes de faux positifs remontent bien les événements de test.
+
+#### Phase 3 — Confinement, éradication et récupération
+
+* En cas de régression (chute brutale des alertes), revenir à la version précédente et ouvrir un ticket de régression.
+* Suspendre temporairement les règles bruyantes plutôt que de les désactiver définitivement.
+* Notifier les analystes des changements de comportement des règles.
+
+#### Phase 4 — Activités post-incident
+
+* Documenter les exceptions ajoutées et leur justification.
+* Mettre à jour la documentation de détection et les playbooks associés.
+* Revoir la cadence de synchronisation avec le dépôt SigmaHQ amont.
+
+#### Phase 5 — Threat Hunting (proactif)
+
+* Rechercher les accès PowerShell à des fichiers sensibles (SAM, NTDS.dit, fichiers de configuration) sur 30 jours.
+* Identifier les hôtes générant historiquement le plus de faux positifs pour un tuning ciblé.
+* Vérifier la couverture des techniques de découverte de fichiers et de credentials dans le SIEM.
+
+---
+
+### Sources
+
+* [https://github.com/SigmaHQ/sigma/commit/d7cf29603f4469eb3638a00ba8098abac9d19770](https://github.com/SigmaHQ/sigma/commit/d7cf29603f4469eb3638a00ba8098abac9d19770)
+* [https://github.com/SigmaHQ/sigma/commit/bc3d6b18b61a1d1082035d8681109f058673be7b](https://github.com/SigmaHQ/sigma/commit/bc3d6b18b61a1d1082035d8681109f058673be7b)
+* [https://github.com/SigmaHQ/sigma/commit/a0e559143e6fea4f7dbf3a41be3c304f64d31add](https://github.com/SigmaHQ/sigma/commit/a0e559143e6fea4f7dbf3a41be3c304f64d31add)
+
+
+---
+
+<div id="exportation-et-analyse-des-journaux-evtx-windows-et-sshd-linux-outils-et-workflows-dinvestigation"></div>
+
+## Exportation et analyse des journaux EVTX Windows et sshd Linux : outils et workflows d'investigation
+
+### Résumé
+
+Trois articles SOC Prime du 21 octobre 2026 décrivent la collecte et l'analyse de journaux à des fins d'investigation. Le premier détaille l'export des journaux d'événements Windows au format .evtx via Event Viewer ou `wevtutil epl`, en insistant sur les droits nécessaires, la politique d'audit (4688 non activé par défaut), la taille et la rétention des journaux, et la liste des canaux utiles (Security, System, Sysmon, PowerShell, Defender, TaskScheduler, RDP). Le deuxième indique les emplacements des journaux sshd selon la distribution : /var/log/auth.log sur Debian/Ubuntu, /var/log/secure sur la famille RHEL, ou le journal systemd via `journalctl -u ssh`/`-u sshd`, avec les permissions associées et l'importance des fichiers rotés. Le troisième présente les catégories d'outils d'analyse de journaux (SIEM, pipelines de données, utilitaires DFIR comme Hayabusa, Chainsaw, EvtxECmd, analyseurs de snapshots) et les capacités déterminantes en incident response : parseurs natifs, normalisation des champs (ECS/OCSF), contenu de détection maintenu et corrélation en chaînes d'attaque.
+
+---
+
+### Analyse opérationnelle
+
+Ces contenus fournissent des procédures directement réutilisables en réponse à incident. Points d'attention majeurs : ne pas copier les fichiers EVTX depuis le répertoire winevt (fichiers verrouillés par le service Event Log) ; vérifier la politique d'audit avant de chercher des événements qui n'ont jamais été écrits ; contrôler la rétention, car un contrôleur de domaine peut ne conserver que quelques heures d'historique ; sur Linux, un journal systemd non persistant est perdu au redémarrage, ce qui impose d'exporter avant toute action de containment. La comparaison systématique des journaux locaux avec ceux du SIEM est indispensable, l'effacement des journaux étant une étape classique de nettoyage post-intrusion.
+
+---
+
+### Implications stratégiques
+
+La qualité de la télémétrie conditionne la capacité de détection et de preuve : les organisations qui n'activent pas l'audit des lignes de commande, ne centralisent pas leurs journaux ou surestiment leur rétention réelle disposent d'une couverture théorique sans substance. La dépendance à des analyseurs externes pour des hôtes non intégrés au SIEM soulève par ailleurs des enjeux de confidentialité et de conformité, les journaux contenant noms d'utilisateur, noms d'hôtes et adresses IP.
+
+---
+
+### Recommandations
+
+* Activer l'audit de création de processus avec ligne de commande (4688) et le script block logging PowerShell (4104).
+* Dimensionner et superviser la rétention des journaux Security/System sur les contrôleurs de domaine et serveurs critiques.
+* Rendre persistant le journal systemd (/var/log/journal) sur les serveurs Linux exposés.
+* Centraliser les journaux vers un SIEM et tester périodiquement la capacité à investiguer un hôte non intégré.
+* Encadrer l'export de journaux vers des outils tiers par une politique de traitement des données.
+
+---
+
+### Playbook de réponse à incident
+
+#### Phase 1 — Préparation
+
+* Documenter pour chaque famille d'OS l'emplacement des journaux : EVTX dans %SystemRoot%\System32\winevt\Logs, journal systemd dans /var/log/journal (persistant) ou /run/log/journal (volatile), syslog texte dans /var/log/auth.log (Debian/Ubuntu) ou /var/log/secure (RHEL).
+* Vérifier la politique d'audit Windows (auditpol /get /category:*) : l'événement 4688 et sa ligne de commande ne sont pas activés par défaut.
+* Contrôler la taille et la rétention des journaux (wevtutil gl Security) pour connaître la profondeur d'historique réellement disponible.
+* Préparer des comptes de collecte dédiés (groupe Event Log Readers, adm ou systemd-journal) plutôt que de distribuer des droits root/admin.
+* Vérifier que la journalisation est bien transmise à un SIEM central pour survivre à un effacement local.
+
+#### Phase 2 — Détection et analyse
+
+* Exporter les journaux avec wevtutil epl ou via Event Viewer → Save All Events As (format .evtx natif) plutôt qu'en copiant les fichiers ouverts du répertoire winevt.
+* Collecter en priorité les canaux Security, System, Sysmon/Operational, PowerShell/Operational, Windows Defender/Operational, TaskScheduler/Operational et TerminalServices-LocalSessionManager/Operational.
+* Sur Linux, extraire les lignes sshd des fichiers courants et rotés (zgrep sur auth.log* ou secure*) et/ou via journalctl -u ssh / -u sshd.
+* Rechercher les indicateurs d'anti-forensics : événement 1102 (journal effacé), 104 (System effacé), absence de journaux sur une période attendue.
+* Corréler les événements d'authentification (4624/4625, 4768/4769 avec type de chiffrement RC4 0x17) et les connexions SSH réussies après échecs répétés.
+
+#### Phase 3 — Confinement, éradication et récupération
+
+* Ne pas redémarrer un hôte suspect avant export : un journal systemd non persistant (/run/log/journal) est perdu au reboot.
+* Isoler l'hôte compromis tout en préservant l'intégrité des journaux (hash des exports, chaîne de custody).
+* Révoquer les comptes et clés SSH impliqués dans des connexions anormales et bloquer les IP sources identifiées.
+* Comparer les journaux locaux avec ceux du SIEM pour détecter une altération ou un effacement local.
+
+#### Phase 4 — Activités post-incident
+
+* Archiver les exports (.evtx, JSON journald, logs sshd) avec horodatage et empreinte pour les besoins légaux et forensiques.
+* Documenter la profondeur de rétention réelle constatée et les angles morts (audit désactivé, journal volatile).
+* Mettre à jour les procédures d'export et les scripts de collecte utilisés.
+* Revoir la politique de centralisation des journaux et les coûts d'ingestion associés.
+
+#### Phase 5 — Threat Hunting (proactif)
+
+* Rechercher les créations de services (7045) et de tâches planifiées (106) sur 30 jours.
+* Chasser les connexions SSH réussies depuis des sources géographiquement atypiques ou après force brute.
+* Rechercher les exécutions PowerShell avec script block logging (4104) et les accès à des fichiers sensibles.
+* Identifier les hôtes dont les journaux sont absents ou tronqués sur une fenêtre temporelle suspecte.
+
+---
+
+### TTP MITRE ATT&CK
+
+| ID TTP | Description |
+|---|---|
+| **T1543.003** | Création ou modification de service Windows (événement 7045) — canal System à exporter pour l'investigation. |
+| **T1070.001** | Effacement des journaux d'événements Windows (événement 1102) — indicateur d'anti-forensics à rechercher. |
+| **T1110** | Force brute — détectable dans les journaux d'authentification Windows (4625) et sshd. |
+| **T1021.004** | Mouvement latéral via SSH — visible dans /var/log/auth.log ou /var/log/secure. |
+| **T1078** | Utilisation de comptes valides — connexions SSH réussies avec credentials volés. |
+
+---
+
+### Sources
+
+* [https://socprime.com/blog/how-to-export-windows-event-logs-evtx/](https://socprime.com/blog/how-to-export-windows-event-logs-evtx/)
+* [https://socprime.com/blog/where-to-find-ssh-sshd-logs-on-linux-and-how-to-export-them/](https://socprime.com/blog/where-to-find-ssh-sshd-logs-on-linux-and-how-to-export-them/)
+* [https://socprime.com/blog/log-analysis-tools-key-features-and-10-top-picks/](https://socprime.com/blog/log-analysis-tools-key-features-and-10-top-picks/)
+
+
+---
+
+<div id="certificats-intermediaires-emudhra-compromis"></div>
+
+## Certificats intermédiaires eMudhra compromis
+
+### Résumé
+
+Le Cisco Talos Intelligence Center publie un avis relatif à la compromission de certificats intermédiaires émis par l'autorité de certification eMudhra. La source collectée ne contient que le titre et le rattachement à la catégorie « Intelligence Center » : aucun détail technique (numéros de série, dates de validité, périmètre d'émission) n'est exposé dans le texte disponible.
+
+---
+
+### Analyse opérationnelle
+
+La compromission d'un certificat intermédiaire signifie que toute la chaîne de confiance en aval doit être considérée comme suspecte : un attaquant disposant de la clé privée de l'intermédiaire peut forger des certificats valides pour n'importe quel domaine, permettant de l'usurpation TLS, de l'interception de trafic (MITM) ou de la signature de code malveillant sans alerte de l'utilisateur. Les équipes SOC/IT doivent prioritairement : vérifier si l'intermédiaire concerné figure dans leurs trust stores ; identifier les services internes ou externes dont le certificat a été émis par cette chaîne ; forcer la validation OCSP/CRL ; et surveiller les émissions anormales via les journaux de Certificate Transparency. Les terminaux non managés et les équipements OT/IoT, souvent mis à jour manuellement, constituent la principale zone d'angle mort.
+
+---
+
+### Implications stratégiques
+
+La dépendance à des autorités de certification tierces, y compris régionales, constitue un risque de supply chain de confiance difficile à piloter : une compromission chez un émetteur peut affecter des organisations qui n'ont jamais eu de relation directe avec lui. Cet événement renforce la tendance à la réduction du nombre de CA autorisées, à la généralisation du certificate pinning sur les flux critiques et à l'intégration des avis de révocation dans les processus de gestion de crise. Pour les secteurs régulés (finance, santé, secteur public), l'absence de maîtrise de la chaîne de certification peut se traduire par un écart de conformité sur la protection des communications.
+
+---
+
+### Recommandations
+
+* Inventorier et cartographier toutes les CA intermédiaires présentes dans les trust stores de l'organisation.
+* Retirer l'intermédiaire eMudhra compromis et réémettre les certificats dépendants.
+* Activer la validation stricte OCSP/CRL sur les points d'entrée exposés à Internet.
+* Surveiller les CT logs pour détecter des émissions frauduleuses sous l'intermédiaire concerné.
+* Revoir la politique de sélection et de diversité des CA tierces.
+
+---
+
+### Playbook de réponse à incident
+
+#### Phase 1 — Préparation
+
+* Inventorier toutes les autorités de certification et intermédiaires présents dans les trust stores (postes, serveurs, équipements réseau, conteneurs, JVM, magasins Mozilla/Windows/Apple).
+* Cartographier les certificats émis par des CA tierces (eMudhra et autres) utilisés pour du TLS interne, du code signing ou de l'authentification.
+* Mettre en place une veille automatisée sur les avis de révocation de CA (CCADB, bulletins éditeurs, flux Talos/CERT).
+* Documenter une procédure de retrait d'un intermédiaire de confiance et de re-émission des certificats impactés.
+
+#### Phase 2 — Détection et analyse
+
+* Rechercher dans les journaux TLS/proxy les connexions vers des domaines dont la chaîne de certification remonte à l'intermédiaire compromis.
+* Vérifier les certificats de signature de code et les binaires signés par des chaînes dépendant de cet intermédiaire.
+* Contrôler les alertes de transparence des certificats (CT logs) pour des émissions anormales sous l'intermédiaire concerné.
+* Analyser les échecs de validation de certificat inhabituels côté clients et serveurs.
+
+#### Phase 3 — Confinement, éradication et récupération
+
+* Retirer l'intermédiaire compromis des trust stores et pousser la mise à jour via GPO/MDM.
+* Révoquer et réémettre les certificats internes émis par cette chaîne.
+* Bloquer temporairement les communications vers les services dépendant de la chaîne compromise jusqu'à validation.
+* Activer le mode de validation stricte (OCSP/CRL obligatoire) sur les points d'entrée exposés.
+
+#### Phase 4 — Activités post-incident
+
+* Auditer l'ensemble du parc pour confirmer le retrait effectif de l'intermédiaire.
+* Revoir la politique de sélection des CA tierces et la durée de vie des certificats.
+* Mettre à jour la documentation PKI et les procédures de réponse à compromission de CA.
+* Notifier les parties prenantes internes et, le cas échéant, les clients impactés par des certificats réémis.
+
+#### Phase 5 — Threat Hunting (proactif)
+
+* Rechercher des certificats auto-signés ou signés par une chaîne inattendue dans les journaux de terminaison TLS.
+* Corréler les connexions sortantes vers des domaines récemment enregistrés avec des chaînes de certification inhabituelles.
+* Traquer l'usage de certificats frauduleux dans les flux d'authentification mutuelle (mTLS) et les VPN.
+* Surveiller les tentatives d'installation de certificats racine/intermédiaires non approuvés sur les postes.
+
+---
+
+### TTP MITRE ATT&CK
+
+| ID TTP | Description |
+|---|---|
+| **T1553.004** | Subvert Trust Controls: installation/abus d'un certificat d'autorité de confiance (ici certificat intermédiaire compromis permettant de signer des certificats frauduleux) |
+| **T1587.003** | Develop Capabilities: création de certificats numériques frauduleux à partir de l'intermédiaire compromis |
+
+---
+
+### Sources
+
+* [https://blog.talosintelligence.com/compromised-intermediate-certificates/](https://blog.talosintelligence.com/compromised-intermediate-certificates/)
+
+
+---
+
+<div id="deux-rce-critiques-dans-le-cur-de-php-et-exploitation-massive-de-la-faille-memorylimit-de-php-php2shell-contre-wordpress"></div>
+
+## Deux RCE critiques dans le cœur de PHP et exploitation massive de la faille memory_limit de PHP (PHP2Shell) contre WordPress
+
+### Résumé
+
+Cisco Talos publie une analyse consacrée à deux vulnérabilités critiques d'exécution de code à distance (RCE) affectant le cœur de PHP. En complément, un message publié sur infosec.exchange (@k3ym0) retrace l'historique du bug surnommé « PHP2Shell » : identifié dès 2004, signalé en 2020 sans suite, redécouvert en 2024 avec trois correctifs proposés mais rejetés après des mois de discussions, puis exploité en 2026 — découvert en trois jours par des outils automatisés et ayant permis de compromettre des instances WordPress en 48 heures. Le contournement du garde-fou memory_limit serait au cœur de la chaîne d'exploitation.
+
+---
+
+### Analyse opérationnelle
+
+PHP est un composant ubiquitaire : toute RCE dans le cœur expose directement les applications web, les CMS (WordPress en tête) et de nombreux services internes. La particularité ici est que memory_limit, historiquement considéré comme une protection contre les dépassements mémoire, devient le vecteur de l'exploit — les règles de durcissement classiques ne suffisent donc plus. Les équipes doivent traiter le patch comme urgent, mais aussi : rechercher les webshells déposés après exploitation, vérifier l'intégrité des fichiers WordPress, surveiller les erreurs fatales PHP et les redémarrages FPM anormaux, et déployer des règles WAF comportementales plutôt que des signatures de payload. L'exploitation en 48 heures après publication montre que la fenêtre entre divulgation et compromission est désormais quasi nulle pour les actifs exposés.
+
+---
+
+### Implications stratégiques
+
+Cet épisode illustre l'accélération de la découverte de vulnérabilités par des outils automatisés et assistés par IA, qui réduit drastiquement le délai entre l'analyse d'un code legacy et la production d'un exploit fonctionnel. Pour les organisations, la dépendance à des composants open source maintenus par des communautés bénévoles devient un risque stratégique : un bug vieux de vingt ans peut ressurgir et être exploité à l'échelle mondiale en quelques jours. Les décideurs doivent arbitrer en faveur d'une réduction de la surface d'exposition (moins de CMS auto-hébergés, versions supportées uniquement) et d'une capacité de réponse inférieure à 72 heures sur les composants critiques.
+
+---
+
+### Recommandations
+
+* Identifier toutes les instances PHP/WordPress et appliquer les correctifs sans délai.
+* Désactiver ou isoler les applications PHP non maintenues et non patchables.
+* Déployer des règles WAF comportementales et limiter les méthodes HTTP autorisées.
+* Mettre en place une surveillance d'intégrité des fichiers web et une chasse aux webshells.
+* Réduire le délai de patching des composants open source critiques à moins de 72 heures.
+
+---
+
+### Playbook de réponse à incident
+
+#### Phase 1 — Préparation
+
+* Recenser toutes les instances PHP (versions, extensions, SAPI) et les CMS WordPress associés, y compris l'hébergement mutualisé et les environnements oubliés.
+* Mettre en place un inventaire logiciel automatisé (SBOM) couvrant PHP et ses dépendances.
+* Préparer des règles WAF génériques contre les payloads d'exploitation PHP et tester leur efficacité en préproduction.
+* Définir une procédure de mise à jour d'urgence PHP avec fenêtre de rollback.
+
+#### Phase 2 — Détection et analyse
+
+* Surveiller les journaux web pour des requêtes POST volumineuses ou des paramètres anormaux ciblant les scripts PHP.
+* Détecter les tentatives de contournement de memory_limit (allocation mémoire anormale, erreurs fatales répétées, redémarrages FPM/Apache).
+* Alerter sur l'apparition de fichiers PHP nouvellement créés dans les répertoires uploads/wp-content.
+* Corréler les scans massifs (user-agents génériques, rafales 404/500) avec les tentatives d'exploitation.
+
+#### Phase 3 — Confinement, éradication et récupération
+
+* Appliquer immédiatement les correctifs PHP ou, à défaut, désactiver les fonctionnalités/scripts exposés.
+* Isoler les serveurs compromis du réseau et préserver les images disque et journaux.
+* Bloquer les IP et user-agents responsables des campagnes de scan/exploitation au niveau WAF et pare-feu.
+* Réinitialiser les secrets applicatifs (clés WordPress, comptes base de données) sur les hôtes touchés.
+
+#### Phase 4 — Activités post-incident
+
+* Rechercher les webshells et comptes administrateur créés pendant la fenêtre d'exposition.
+* Reconstruire les instances compromises à partir de sources saines plutôt que de les nettoyer.
+* Mettre à jour la politique de patching pour les composants open source critiques (SLA < 72 h).
+* Revoir la segmentation entre serveurs web et bases de données.
+
+#### Phase 5 — Threat Hunting (proactif)
+
+* Rechercher des indicateurs de webshell (fichiers PHP obfusqués, eval/base64_decode, appels système).
+* Analyser les journaux de processus pour des exécutions inattendues lancées par le compte de service web.
+* Traquer les connexions sortantes initiées par les serveurs web vers des IP inconnues (post-exploitation).
+* Vérifier l'intégrité des fichiers WordPress (comparaison avec les dépôts officiels) sur l'ensemble du parc.
+
+---
+
+### TTP MITRE ATT&CK
+
+| ID TTP | Description |
+|---|---|
+| **T1190** | Exploit Public-Facing Application: exploitation d'une RCE dans le cœur de PHP exposé via des applications web (WordPress) |
+| **T1595.002** | Active Scanning: Vulnerability Scanning à grande échelle des instances PHP/WordPress vulnérables |
+
+---
+
+### Sources
+
+* [https://blog.talosintelligence.com/two-critical-rces-in-php-core/](https://blog.talosintelligence.com/two-critical-rces-in-php-core/)
+* [https://infosec.exchange/@k3ym0/117481297797823269](https://infosec.exchange/@k3ym0/117481297797823269)
+
+
+---
+
+<div id="parasiter-la-confiance-comment-une-infrastructure-legitime-devient-un-pipeline-de-livraison-pour-les-attaquants"></div>
+
+## Parasiter la confiance : comment une infrastructure légitime devient un pipeline de livraison pour les attaquants
+
+### Résumé
+
+Cisco Talos publie une analyse sur la manière dont les attaquants « parasitent » la confiance accordée aux infrastructures légitimes — services cloud, plateformes de partage, hébergeurs et domaines à forte réputation — pour en faire des canaux de livraison de charges malveillantes. La source collectée ne fournit que le titre et le rattachement à la catégorie « Intelligence Center » ; aucun indicateur technique n'est détaillé dans le texte disponible.
+
+---
+
+### Analyse opérationnelle
+
+Les défenses fondées sur la réputation de domaine ou sur des listes d'autorisation de fournisseurs deviennent structurellement insuffisantes : si le canal de livraison est un service légitime, le blocage au niveau du domaine est inopérant. Les équipes SOC doivent déplacer la détection vers le comportement : téléchargement depuis un service de partage suivi d'une exécution, chaînes de redirection multiples, fichiers archivés contenant des scripts, ou encore exécution d'un binaire depuis un répertoire utilisateur. L'inspection TLS et la conservation des métadonnées de téléchargement (type MIME, taille, URL finale) sont des prérequis. La réponse doit cibler l'URL ou le compte abusé, pas le fournisseur entier, sous peine de casser des usages métier légitimes.
+
+---
+
+### Implications stratégiques
+
+L'érosion de la confiance comme modèle de défense est une tendance de fond : les attaquants exploitent la réputation des grandes plateformes pour contourner les contrôles périmétriques et les filtres de messagerie. Cela pousse les organisations vers des architectures zero trust, une inspection plus profonde du trafic chiffré et une gouvernance stricte des services SaaS autorisés. Le risque réputationnel est double : pour la victime, mais aussi pour le fournisseur d'infrastructure dont le service est détourné sans que ses clients en soient informés.
+
+---
+
+### Recommandations
+
+* Compléter les listes d'autorisation par des contrôles comportementaux sur les téléchargements et exécutions.
+* Conserver et analyser les métadonnées de téléchargement (URL finale, type MIME, taille).
+* Mettre en place une procédure de signalement aux fournisseurs d'infrastructure abusés.
+* Sensibiliser les utilisateurs aux liens hébergés sur des plateformes réputées.
+* Adopter une posture zero trust limitant la confiance implicite accordée aux services légitimes.
+
+---
+
+### Playbook de réponse à incident
+
+#### Phase 1 — Préparation
+
+* Cartographier les services cloud/SaaS légitimes autorisés et les flux de téléchargement associés.
+* Compléter les listes d'autorisation par des contrôles comportementaux (réputation insuffisante seule).
+* Configurer le proxy/TLS pour conserver les métadonnées de téléchargement (taille, type MIME, chaîne de redirection).
+* Sensibiliser les utilisateurs aux liens hébergés sur des plateformes réputées détournées.
+
+#### Phase 2 — Détection et analyse
+
+* Détecter les téléchargements depuis des services légitimes suivis d'exécution de binaires ou de scripts.
+* Surveiller les chaînes de redirection multiples (raccourcisseurs, pages de partage, CDN) vers des fichiers exécutables.
+* Analyser les journaux de messagerie pour des liens vers des domaines réputés mais avec des chemins/paramètres inhabituels.
+* Corréler les alertes EDR d'exécution avec l'origine réseau du fichier.
+
+#### Phase 3 — Confinement, éradication et récupération
+
+* Bloquer les URL et comptes de service détournés identifiés, sans bloquer l'ensemble du fournisseur légitime.
+* Isoler les postes ayant exécuté la charge et collecter les artefacts.
+* Révoquer les sessions et jetons éventuellement volés via le canal détourné.
+* Notifier le fournisseur d'infrastructure abusé pour faire retirer le contenu malveillant.
+
+#### Phase 4 — Activités post-incident
+
+* Analyser la chaîne complète de livraison pour identifier le point d'entrée initial (mail, message, recherche).
+* Renforcer les règles de contrôle des téléchargements et l'inspection des archives.
+* Mettre à jour les scénarios de détection et les playbooks de réponse.
+* Communiquer auprès des utilisateurs sur les campagnes observées.
+
+#### Phase 5 — Threat Hunting (proactif)
+
+* Rechercher des connexions vers des services de partage/cloud légitimes corrélées à des créations de processus suspects.
+* Traquer les exécutables signés ou non signés téléchargés depuis des domaines à réputation élevée.
+* Analyser les journaux proxy pour des motifs de redirection récurrents vers des charges hébergées.
+* Rechercher des comptes SaaS internes compromis utilisés comme relais de distribution.
+
+---
+
+### TTP MITRE ATT&CK
+
+| ID TTP | Description |
+|---|---|
+| **T1102** | Web Service: utilisation de services légitimes (cloud, SaaS, hébergeurs réputés) comme canal de commande ou de livraison |
+| **T1583.006** | Acquire Infrastructure: Web Services — acquisition/abus de comptes et services légitimes pour héberger les charges malveillantes |
+| **T1584.004** | Compromise Infrastructure: Server — détournement de serveurs légitimes compromis comme relais de distribution |
+
+---
+
+### Sources
+
+* [https://blog.talosintelligence.com/parasitizing-trust-how-legitimate-infrastructure-becomes-a-delivery-pipeline-for-attackers/](https://blog.talosintelligence.com/parasitizing-trust-how-legitimate-infrastructure-becomes-a-delivery-pipeline-for-attackers/)
+
+
+---
+
+<div id="bereskinparrcom-smartbiggarca-par-inc-ransom"></div>
+
+## bereskinparr.com smartbiggar.ca Par inc ransom
+
+### Résumé
+
+Le groupe ransomware Inc Ransom publie deux nouvelles victimes sur son site de fuite : les domaines bereskinparr[.]com et smartbiggar[.]ca. La source (RansomLook) indique un état « 2/12 degraded » et un parsing automatique des publications du groupe, sans détail sur les volumes de données exfiltrées ni sur les preuves publiées.
+
+---
+
+### Analyse opérationnelle
+
+La publication sur un site de fuite constitue la phase de double extorsion : elle suit généralement une exfiltration préalable et précède la mise en ligne d'échantillons de données. Pour les équipes SOC/IT, l'urgence est double : vérifier si l'organisation ou ses partenaires (cabinets conseils, prestataires) sont cités, et rechercher des traces d'exfiltration non détectées. Les domaines ciblés relevant du secteur juridique et de la propriété intellectuelle, les données exposées peuvent inclure des dossiers de brevets, des secrets d'affaires et des informations clients confidentielles — à forte valeur pour de l'espionnage économique ou du chantage secondaire. Il convient de surveiller les réutilisations des données publiées, de préparer les notifications et de renforcer les contrôles sur les accès distants et les sauvegardes.
+
+---
+
+### Implications stratégiques
+
+Le ciblage du secteur juridique et de la propriété intellectuelle est stratégique : ces cabinets concentrent des secrets industriels de leurs clients, ce qui transforme une attaque ransomware en risque de fuite de propriété intellectuelle pour l'ensemble de l'écosystème économique. Pour les organisations clientes de tels cabinets, cet événement rappelle la nécessité d'intégrer la cyber-résilience des prestataires dans l'analyse de risque fournisseur. Au Canada, la publication de données personnelles déclenche des obligations de notification au titre de la PIPEDA, avec un risque réputationnel et contentieux significatif.
+
+---
+
+### Recommandations
+
+* Surveiller les sites de fuite et agrégateurs pour détecter toute mention de l'organisation ou de ses prestataires.
+* Vérifier l'intégrité et l'isolement des sauvegardes (immuables, hors ligne).
+* Renforcer la MFA, la segmentation réseau et la détection des exfiltrations volumétriques.
+* Préparer les obligations de notification réglementaire et la communication de crise.
+* Évaluer le risque fournisseur pour les cabinets juridiques et prestataires détenant des données sensibles.
+
+---
+
+### Playbook de réponse à incident
+
+#### Phase 1 — Préparation
+
+* Maintenir une cartographie des données sensibles (dossiers clients, secrets d'affaires, PI) et de leur localisation.
+* Vérifier la couverture des sauvegardes immuables et hors ligne, et tester les restaurations.
+* Préparer un plan de communication de crise incluant les obligations de notification réglementaire.
+* Mettre en place une surveillance des sites de fuite ransomware pour les domaines de l'organisation et de ses partenaires.
+
+#### Phase 2 — Détection et analyse
+
+* Surveiller les publications du groupe Inc Ransom et des agrégateurs type RansomLook pour détecter l'apparition du nom de l'organisation.
+* Rechercher des signes d'exfiltration préalable (volumes anormaux sortants, accès massifs aux partages).
+* Détecter les mouvements latéraux et l'élévation de privilèges caractéristiques des intrusions ransomware.
+* Analyser les alertes EDR sur les outils de chiffrement et de suppression des journaux.
+
+#### Phase 3 — Confinement, éradication et récupération
+
+* Isoler immédiatement les systèmes affectés et révoquer les comptes compromis.
+* Déconnecter les sauvegardes du réseau de production et vérifier leur intégrité.
+* Activer la cellule de crise et engager les conseils juridiques et forensiques.
+* Évaluer la nature des données exposées pour préparer les notifications obligatoires.
+
+#### Phase 4 — Activités post-incident
+
+* Réaliser une investigation forensique complète pour établir le vecteur initial et le périmètre d'exfiltration.
+* Notifier les clients, régulateurs et autorités compétentes selon les obligations légales.
+* Renforcer l'authentification (MFA), la segmentation et la journalisation.
+* Mettre à jour le plan de continuité et les scénarios de crise ransomware.
+
+#### Phase 5 — Threat Hunting (proactif)
+
+* Rechercher les artefacts et TTP connus d'Inc Ransom dans les journaux de l'ensemble du SI.
+* Traquer les accès aux partages de fichiers volumineux et les archives créées avant exfiltration.
+* Surveiller les identifiants de l'organisation exposés sur les sites de fuite et les forums.
+* Analyser les connexions sortantes vers des services de stockage non autorisés.
 
 ---
 
@@ -516,7 +1200,8 @@ La gratuité et l'absence d'authentification de ce type de flux abaissent consid
 
 | Type | Valeur (DEFANG) | Fiabilité |
 |---|---|---|
-| DOMAIN | `api[.]certstream[.]dev` | Medium |
+| DOMAIN | `bereskinparr[.]com` | High |
+| DOMAIN | `smartbiggar[.]ca` | High |
 
 ---
 
@@ -524,49 +1209,49 @@ La gratuité et l'absence d'authentification de ce type de flux abaissent consid
 
 | ID TTP | Description |
 |---|---|
-| **T1583.001** | Acquisition d'infrastructure : enregistrement de domaines (détection via nouveaux certificats) |
-| **T1584.001** | Compromission d'infrastructure : domaines détournés détectables via CT |
-| **T1566.002** | Hameçonnage par lien, infrastructure identifiée par Certificate Transparency |
+| **T1486** | Data Encrypted for Impact: chiffrement des données et double extorsion caractéristiques des opérations ransomware |
+| **T1657** | Financial Theft: extorsion financière via la menace de publication des données exfiltrées |
+| **T1567.002** | Exfiltration Over Web Service: exfiltration de données vers un service externe avant publication sur le site de fuite |
 
 ---
 
 ### Sources
 
-* [https://certstream.dev/free-certstream-api.html](https://certstream.dev/free-certstream-api.html)
-* [https://www.reddit.com/r/redteamsec/comments/1xat9md/free_realtime_certificate_transparency_stream_no/](https://www.reddit.com/r/redteamsec/comments/1xat9md/free_realtime_certificate_transparency_stream_no/)
+* [https://www.ransomlook.io//group/inc%20ransom](https://www.ransomlook.io//group/inc%20ransom)
 
 
 ---
 
-<div id="artisanat-offensif-a-faible-cout-une-operation-dinfrastructure-etatique-de-5-mois-construite-presque-entierement-a-partir-de-poc-publics"></div>
+<div id="mise-a-jour-concernant-hortusfox-php2shell-a-ete-corrige"></div>
 
-## Artisanat offensif à faible coût : une opération d'infrastructure étatique de 5 mois construite presque entièrement à partir de PoC publics
+## Mise à jour concernant HortusFox / php2shell a été corrigé
 
 ### Résumé
 
-Publication de Hunt.io du 20 octobre 2026 rapportant qu'un opérateur russophone a ciblé le système national d'échange de données de l'Ukraine en exploitant une instance Graylog vulnérable à Log4Shell. L'opération se serait étendue sur environ cinq mois et aurait été construite presque entièrement à partir de codes d'exploitation publics (PoC), illustrant un tradecraft offensif à faible coût.
+Le mainteneur de HortusFox annonce plusieurs mesures : dans le Dockerfile par défaut, PHP sera épinglé de la version 8.3.0 à 8.3.36 ; un correctif a été ajouté pour gérer correctement les codes de réponse HTTP renvoyés par la page d'accueil HortusFox lors des contrôles de version ; le site officiel HortusFox reste hors ligne, l'hébergeur ne répondant plus. La publication du patch est annoncée comme imminente. En parallèle, un autre post indique que « php2shell a été corrigé » et renvoie à l'archive des annonces php.net du 21 octobre 2026 ainsi qu'au billet du blog Ubuntu annonçant la disponibilité des correctifs de la vulnérabilité php2shell.
 
 ---
 
 ### Analyse opérationnelle
 
-L'exploitation d'une CVE critique ancienne (Log4Shell) sur un composant de journalisation exposé rappelle que la dette de patch reste le principal vecteur d'intrusion sur les infrastructures publiques. Les équipes doivent rechercher les motifs JNDI dans les journaux applicatifs, surveiller les callbacks sortants LDAP/RMI/DNS depuis les serveurs Java et restreindre l'exposition Internet des consoles d'administration. La durée de cinq mois souligne l'importance de la conservation des journaux et de la capacité de chasse rétrospective : sans rétention suffisante, la chronologie de compromission est impossible à reconstruire.
+Le sujet combine une vulnérabilité PHP critique (« php2shell ») et un projet self-hosted dont l'infrastructure de distribution (site officiel, vérification de version) est dégradée — situation qui retarde l'accès aux correctifs et fragilise la chaîne de confiance. Pour un SOC, la priorité est l'inventaire des runtimes PHP et des images Docker dérivées : toute image épinglée sur une version antérieure reste exposée même après publication du correctif amont. La chaîne de livraison d'un exploit sur une application PHP se traduit classiquement par des requêtes HTTP anormales suivies de l'exécution de commandes système par le processus web ; la détection doit donc porter sur les processus enfants de php-fpm/Apache et sur l'apparition de fichiers PHP non déployés. L'indisponibilité du site éditeur impose de s'appuyer sur les sources primaires (php.net, distributions) et de vérifier l'intégrité des artefacts récupérés par des canaux alternatifs.
 
 ---
 
 ### Implications stratégiques
 
-Cette affaire illustre la convergence entre disponibilité des PoC, faible coût opérationnel et ciblage d'infrastructures étatiques dans le contexte du conflit ukrainien. Elle démontre qu'un acteur disposant de peu de moyens peut obtenir un accès durable à des systèmes d'échange de données sensibles, avec un risque d'exfiltration et de manipulation de l'information. Pour les administrations, la priorité est la réduction de la surface exposée et la gestion rigoureuse des dépendances open source, davantage que la seule attribution.
+PHP supporte une part très majoritaire du web, et une vulnérabilité de ce type a un effet de propagation transverse sur tous les secteurs. Le cas illustre la dépendance de l'écosystème à des mainteneurs isolés de projets open source : la disponibilité du patch dépend d'une personne et d'un hébergeur, ce qui constitue un risque de supply chain et de continuité pour les organisations qui auto-hébergent ces outils. Décisionnellement, cela plaide pour des politiques de patch management contraignantes sur les composants d'infrastructure, une réduction de l'exposition Internet des applications self-hosted et une clause de suivi de vulnérabilités dans les achats de solutions open source.
 
 ---
 
 ### Recommandations
 
-* Recenser et patcher en priorité les composants Java exposés, notamment les solutions de journalisation
-* Bloquer les sorties LDAP/RMI/DNS non indispensables depuis les serveurs applicatifs
-* Étendre la rétention des journaux pour permettre la chasse rétrospective sur plusieurs mois
-* Restreindre l'accès Internet aux consoles d'administration via bastion et MFA
-* Mettre en place une veille active sur les PoC publiés pour les CVE critiques exploitées
+* Inventorier toutes les instances PHP et images Docker, puis épingler PHP 8.3.36 (ou l'équivalent corrigé de chaque branche) dans les Dockerfiles et pipelines CI/CD.
+* Appliquer les correctifs publiés par php.net et les distributions (Ubuntu) et vérifier l'authenticité des paquets via les dépôts officiels.
+* Restreindre l'exposition Internet des applications self-hosted (HortusFox et équivalents) derrière un VPN ou une authentification forte.
+* Déployer des règles WAF et des alertes EDR sur l'exécution de commandes système par les processus web.
+* Lancer une chasse aux web shells et un contrôle d'intégrité des fichiers sur les serveurs PHP exposés.
+* Documenter un SLA de remédiation pour les vulnérabilités critiques des composants d'infrastructure et tester la procédure de rollback.
 
 ---
 
@@ -574,37 +1259,43 @@ Cette affaire illustre la convergence entre disponibilité des PoC, faible coût
 
 #### Phase 1 — Préparation
 
-* Inventorier toutes les instances Graylog et composants Java exposés, avec version de Log4j embarquée
-* Vérifier l'application des correctifs Log4Shell et des mesures de contournement sur les composants non patchables
-* Restreindre l'exposition Internet des interfaces d'administration et imposer un accès via bastion
-* Bloquer les sorties LDAP/RMI/DNS non nécessaires depuis les serveurs applicatifs
+* Maintenir un inventaire à jour des actifs PHP : versions runtime, images Docker de base, dépendances Composer, applications self-hosted (dont HortusFox).
+* S'abonner aux avis officiels php.net et aux bulletins des distributions (Ubuntu, Debian, RHEL) pour la vulnérabilité php2shell.
+* Valider à l'avance une procédure de patch d'urgence avec fenêtre de rollback (snapshot VM/conteneur, image Docker taguée).
+* Préparer des règles WAF génériques sur les motifs d'exploitation PHP (POST vers scripts exposés, paramètres suspects, traversée de répertoire).
+* Vérifier la couverture EDR des serveurs web et la journalisation des processus enfants de php-fpm/Apache.
 
 #### Phase 2 — Détection et analyse
 
-* Rechercher les chaînes JNDI (${jndi:ldap://, rmi://, dns://) dans les journaux applicatifs et les en-têtes HTTP
-* Détecter les connexions sortantes des serveurs Graylog vers des hôtes externes inattendus
-* Surveiller les processus enfants anormaux lancés par le service Java
-* Corréler les tentatives d'exploitation avec les journaux d'authentification et les accès administrateur
+* Recenser les instances PHP en version antérieure à 8.3.36 (et équivalents corrigés des autres branches) via scan authentifié et inventaire logiciel.
+* Surveiller les journaux HTTP pour des requêtes anormales vers des scripts PHP exposés, avec codes de réponse inhabituels ou pics de POST.
+* Alerter sur les processus enfants de php-fpm/Apache lançant sh, bash, curl, wget ou python (signature d'exécution de commandes).
+* Détecter la création ou la modification de fichiers PHP dans les répertoires d'upload ou les chemins non gérés par le déploiement.
+* Contrôler les échecs de vérification de version applicative (le correctif HortusFox traite la gestion des codes de réponse HTTP) comme signal de serveur non patché.
 
 #### Phase 3 — Confinement, éradication et récupération
 
-* Isoler les instances compromises et capturer les journaux et la mémoire avant remédiation
-* Bloquer les domaines et adresses de callback identifiés au niveau DNS et pare-feu
-* Révoquer les secrets et identifiants présents sur les serveurs touchés
-* Appliquer les correctifs et redéployer depuis une base saine
+* Appliquer le correctif php2shell ou épingler immédiatement l'image sur PHP 8.3.36 dans les Dockerfiles et pipelines CI/CD.
+* Isoler réseau les serveurs dont l'exploitation est suspectée, sans arrêter la journalisation.
+* Révoquer et faire tourner les secrets présents sur l'hôte (clés d'API, identifiants de base de données, secrets applicatifs).
+* Bloquer au WAF les adresses et chemins source identifiés, et restreindre l'exposition Internet des interfaces d'administration.
+* Restaurer depuis une sauvegarde saine si un web shell ou une persistance est confirmé.
 
 #### Phase 4 — Activités post-incident
 
-* Reconstruire la chronologie de l'intrusion sur les cinq mois d'activité rapportés
-* Revoir la gestion des dépendances Java et la veille sur les CVE critiques
-* Renforcer la surveillance des composants de journalisation exposés
+* Réaliser un post-mortem documenté : délai de détection, délai de patch, périmètre réellement exposé.
+* Mettre à jour la CMDB et le registre des versions logicielles après remédiation.
+* Exécuter des tests de non-régression applicative après montée de version PHP.
+* Communiquer aux parties prenantes internes et, le cas échéant, aux clients hébergés sur les instances concernées.
+* Renforcer le SLA de patch pour les composants critiques et les projets open source mono-mainteneur.
 
 #### Phase 5 — Threat Hunting (proactif)
 
-* Rechercher rétroactivement les motifs JNDI dans l'ensemble des journaux conservés
-* Chasser les connexions sortantes persistantes depuis les serveurs applicatifs
-* Rechercher les mécanismes de persistance déposés après exploitation (services, tâches, comptes)
-* Comparer les artefacts observés aux PoC publics utilisés pour identifier la chaîne d'exploitation
+* Rechercher des web shells (fichiers PHP récemment créés, contenus obfusqués, eval/base64_decode) sur l'ensemble du parc web.
+* Comparer les empreintes des fichiers applicatifs avec les dépôts de référence pour identifier des modifications non planifiées.
+* Analyser les connexions sortantes inhabituelles depuis les serveurs web (C2, exfiltration) sur les 30 derniers jours.
+* Rechercher des tâches cron, services ou clés SSH ajoutés après la date de publication du correctif.
+* Rejouer les règles de détection sur l'historique de logs pour identifier des tentatives d'exploitation antérieures non détectées.
 
 ---
 
@@ -612,48 +1303,48 @@ Cette affaire illustre la convergence entre disponibilité des PoC, faible coût
 
 | ID TTP | Description |
 |---|---|
-| **T1190** | Exploitation d'une application exposée sur Internet (Graylog vulnérable à Log4Shell) |
-| **T1588.005** | Obtention de capacités : exploitation de codes d'exploitation publics (PoC) |
-| **T1587.001** | Développement de capacités à faible coût à partir de composants publics |
+| **T1190** | Exploitation d'une application exposée sur Internet (corrélation avec la vulnérabilité PHP dite « php2shell ») |
+| **T1505.003** | Installation d'un web shell sur un serveur PHP compromis (risque post-exploitation) |
 
 ---
 
 ### Sources
 
-* [https://hunt.io/blog/ukraine-state-data-exchange-graylog-log4shell](https://hunt.io/blog/ukraine-state-data-exchange-graylog-log4shell)
-* [https://www.reddit.com/r/redteamsec/comments/1xauq4o/lowcost_offensive_tradecraft_a_5month_stateinfra/](https://www.reddit.com/r/redteamsec/comments/1xauq4o/lowcost_offensive_tradecraft_a_5month_stateinfra/)
+* [https://fosstodon.org/@dbrendeldev/117481295850283525](https://fosstodon.org/@dbrendeldev/117481295850283525)
+* [https://ioc.exchange/@Radio_Azureus/117481220142980098](https://ioc.exchange/@Radio_Azureus/117481220142980098)
 
 
 ---
 
-<div id="paramtrace-un-outil-leger-de-decouverte-de-parametres-http-ecrit-en-rust"></div>
+<div id="allmand-smith-limited-par-aurora"></div>
 
-## ParamTrace - Un outil léger de découverte de paramètres HTTP écrit en Rust
+## Allmand-Smith Limited Par aurora
 
 ### Résumé
 
-Publication d'un outil open source nommé ParamTrace, écrit en Rust, destiné à la découverte de paramètres HTTP pour le bug bounty et les tests d'intrusion autorisés. L'outil envoie trois requêtes avec des paramètres aléatoires pour établir une ligne de base (codes de statut et plage de taille), puis teste chaque entrée d'une wordlist avec une concurrence limitée et signale un paramètre lorsque le statut change, que la taille de la réponse sort de la plage de référence ou que la valeur est reflétée. Il prend en charge GET et POST, des en-têtes personnalisés, un proxy (Caido ou Burp) et une sortie JSON, se présente comme un binaire unique sans dépendance d'exécution et fonctionne sur Termux et Kali NetHunter. Les binaires précompilés sont non signés et fournis avec un fichier de somme de contrôle SHA-256 ; seuls les binaires Linux aarch64 et la compilation depuis les sources sous Termux ont été testés par l'auteur.
+La source RansomLook référence le groupe de rançongiciel Aurora et une victime identifiée comme Allmand-Smith Limited, avec un statut de publication indiqué comme « 2/4 up ». Aucun détail technique complémentaire (échantillon, vecteur d'accès initial, IOC, volume de données) n'est fourni par la source, qui se limite à l'agrégation de la page du groupe.
 
 ---
 
 ### Analyse opérationnelle
 
-La disponibilité d'un outil simple et portable facilite la phase de reconnaissance applicative : les équipes doivent s'attendre à des rafales de requêtes avec paramètres aléatoires et à des variations de taille de réponse, détectables via les journaux WAF et applicatifs. La détection doit porter sur le volume, la régularité et la diversité des paramètres plutôt que sur une signature unique. Le caractère non signé des binaires publiés constitue par ailleurs un risque de chaîne d'approvisionnement pour les équipes qui les téléchargent : la vérification des sommes SHA-256 et l'exécution en environnement isolé sont indispensables.
+Une inscription sur un site de fuite constitue un signal d'extorsion à traiter comme un incident potentiel, même sans preuve technique : la publication peut précéder, accompagner ou suivre le chiffrement. Pour un SOC, l'action immédiate consiste à vérifier si l'entité nommée correspond à un actif, un fournisseur ou un partenaire du groupe, puis à rechercher des traces d'exfiltration et d'accès distant anormaux dans les journaux. L'absence d'IOC dans la source impose de travailler par TTP (accès distant, exfiltration, chiffrement) plutôt que par indicateurs.
 
 ---
 
 ### Implications stratégiques
 
-La multiplication d'outils de reconnaissance légers et gratuits accélère la phase d'exploration des surfaces applicatives, y compris pour des acteurs peu expérimentés. Pour les organisations, cela renforce la nécessité de réduire la surface d'attaque exposée (paramètres et endpoints non nécessaires), de déployer un WAF correctement calibré et de considérer la reconnaissance externe comme un signal précoce de campagne.
+La médiatisation sur les sites de fuite crée un risque réputationnel et juridique immédiat, indépendamment de la réalité de l'intrusion : la vérification factuelle et la communication maîtrisée sont déterminantes. La montée en charge de groupes rançongiciel pratiquant l'extorsion multi-niveaux (chiffrement, fuite, pression sur les clients et partenaires) impose d'intégrer le risque fournisseur dans la cartographie des tiers et de préparer des scénarios de crise incluant la désinformation.
 
 ---
 
 ### Recommandations
 
-* Calibrer le WAF et le rate limiting sur les schémas de fuzzing de paramètres
-* Réduire la surface applicative en supprimant les paramètres et endpoints non utilisés
-* Vérifier les sommes SHA-256 des outils téléchargés et les exécuter en environnement isolé
-* Surveiller les accès à des fonctionnalités non documentées comme signal précoce de reconnaissance
+* Vérifier si Allmand-Smith Limited figure dans le périmètre fournisseurs ou partenaires et engager une due diligence de sécurité.
+* Mettre en place une veille automatisée des sites de fuite avec alerting sur les noms d'organisation, marques et filiales.
+* Tester la restaurabilité des sauvegardes et vérifier leur immuabilité.
+* Imposer MFA et restriction d'accès sur tous les accès distants, et journaliser les connexions réussies.
+* Préparer une procédure de crise incluant la vérification d'authenticité des données publiées avant toute communication.
 
 ---
 
@@ -661,35 +1352,227 @@ La multiplication d'outils de reconnaissance légers et gratuits accélère la p
 
 #### Phase 1 — Préparation
 
-* Cartographier les endpoints applicatifs exposés et inventorier les paramètres légitimes attendus
-* Mettre en place un WAF en mode détection puis blocage sur les schémas de fuzzing de paramètres
-* Définir des seuils d'alerte sur le volume de requêtes 4xx/5xx par source
-* Documenter la procédure de signalement et de blocage des sources d'énumération
+* Cartographier les actifs critiques et les dépendances fournisseurs pouvant apparaître sur des sites de fuite rançongiciel.
+* Mettre en place une veille automatisée des sites de fuite (type RansomLook) avec alerting sur le nom de l'organisation et de ses filiales.
+* Valider les procédures de réponse rançongiciel : sauvegardes immuables testées, plan de continuité, cellule de crise, contacts réglementaires et assureur cyber.
+* Vérifier la couverture MFA sur les accès distants (VPN, RDP, messagerie) et la segmentation réseau.
+* Préparer les modèles de communication interne, client et presse en cas de publication de données.
 
 #### Phase 2 — Détection et analyse
 
-* Détecter les rafales de requêtes avec paramètres aléatoires ou issus de wordlists connues
-* Surveiller les variations anormales de taille de réponse et de codes de statut sur un même endpoint
-* Identifier les user-agents et empreintes TLS atypiques associées aux outils de fuzzing
-* Corréler avec les tentatives d'accès à des fonctionnalités non documentées ou de debug
+* Surveiller l'apparition du nom de l'organisation sur les sites de fuite du groupe Aurora et de ses affiliés.
+* Corréler toute mention publique avec les journaux internes : accès distants anormaux, création de comptes, exfiltration volumétrique.
+* Alerter sur les signaux précurseurs : désactivation d'antivirus, suppression de clichés instantanés, chiffrement massif de fichiers.
+* Contrôler les connexions sortantes volumineuses vers des services de stockage ou de transfert non autorisés.
+* Vérifier l'intégrité et la restaurabilité des sauvegardes dès qu'une alerte est levée.
 
 #### Phase 3 — Confinement, éradication et récupération
 
-* Bloquer les adresses sources au niveau WAF/CDN et ajuster les règles de rate limiting
-* Vérifier l'absence d'accès effectif à des fonctionnalités sensibles découvertes
-* Renforcer l'authentification et les contrôles d'autorisation sur les endpoints exposés
+* Isoler les segments compromis et couper les accès distants suspects sans interrompre la collecte de preuves.
+* Révoquer les identifiants exposés et imposer une réinitialisation globale avec MFA.
+* Bloquer les IOC et l'infrastructure identifiés (IP, domaines, comptes) sur les pare-feu, proxys et passerelles de messagerie.
+* Activer le plan de crise, notifier la direction, le juridique, l'assureur cyber et les autorités compétentes selon les obligations applicables.
+* Ne pas engager de négociation sans validation juridique et sans analyse préalable de l'authenticité des données publiées.
 
 #### Phase 4 — Activités post-incident
 
-* Revoir la surface d'attaque applicative et supprimer les paramètres/fonctionnalités non nécessaires
-* Intégrer les schémas observés dans les règles de détection WAF
-* Mettre à jour les tests de sécurité applicative internes
+* Documenter la chronologie, le vecteur initial et le périmètre des données exfiltrées.
+* Évaluer les obligations de notification (RGPD, autorités sectorielles) et informer les personnes concernées si nécessaire.
+* Reconstruire les systèmes depuis des bases saines et durcir les configurations exposées.
+* Tirer les enseignements sur la détection de l'exfiltration et sur les délais de réaction.
+* Renforcer la surveillance des tiers et des sous-traitants exposés.
 
 #### Phase 5 — Threat Hunting (proactif)
 
-* Rechercher rétroactivement les campagnes de fuzzing dans les journaux WAF sur 90 jours
-* Analyser les accès réussis à des endpoints non référencés
-* Vérifier les journaux d'application pour des paramètres inattendus acceptés côté serveur
+* Rechercher les TTP du groupe Aurora et de ses affiliés dans les journaux des 90 derniers jours (accès initiaux, persistance, mouvements latéraux).
+* Chasser les comptes créés ou modifiés hors procédure d'administration.
+* Analyser les journaux de sauvegarde pour détecter des suppressions ou altérations anormales.
+* Rechercher des archives ou outils de compression/exfiltration non autorisés sur les postes et serveurs.
+* Effectuer un rétrohunt sur les accès VPN/RDP réussis depuis des géolocalisations inhabituelles.
+
+---
+
+### TTP MITRE ATT&CK
+
+| ID TTP | Description |
+|---|---|
+| **T1486** | Chiffrement des données à des fins d'impact (rançongiciel) |
+| **T1657** | Extorsion financière via la publication de données volées |
+
+---
+
+### Sources
+
+* [https://www.ransomlook.io//group/aurora](https://www.ransomlook.io//group/aurora)
+
+
+---
+
+<div id="ils-mont-dit-de-verifier-le-solde-de-mon-epargne-retraite-mais-maintenant-ils-me-demandent-mon-mot-de-passe"></div>
+
+## Ils m'ont dit de vérifier le solde de mon épargne-retraite, mais maintenant ils me demandent mon mot de passe ?
+
+### Résumé
+
+AhnLab ASEC publie une analyse consacrée à une campagne d'hameçonnage qui pousse la cible à consulter un solde d'épargne retraite avant de lui demander son mot de passe. Le corps de l'article n'a pas pu être récupéré lors de la collecte (page de vérification anti-robot), de sorte que les détails techniques — vecteur exact, domaines utilisés, indicateurs de compromission — ne sont pas repris ici.
+
+---
+
+### Analyse opérationnelle
+
+Le prétexte financier (épargne retraite, vérification de solde) est un classique d'ingénierie sociale à fort taux de clic, car il exploite l'inquiétude sur le patrimoine et la légitimité perçue de l'organisme émetteur. La demande de mot de passe constitue le point de rupture : aucun service légitime ne demande un mot de passe par courriel ou via un lien. Côté SOC, la détection repose sur le filtrage des liens, la surveillance DNS des domaines ressemblants et la détection d'authentifications anormales sur les portails financiers ; la réponse doit inclure la révocation de session et la réinitialisation des identifiants, pas seulement le blocage du domaine.
+
+---
+
+### Implications stratégiques
+
+Le ciblage de l'épargne retraite touche directement le patrimoine des individus et la confiance dans les institutions financières ; il expose aussi les entreprises dont les dispositifs d'épargne salariale sont usurpés. La généralisation de l'usurpation de marques financières impose aux organismes une surveillance active de leur image en ligne et aux organisations une politique de MFA résistante au phishing, la seule mesure réellement structurante face au vol d'identifiants.
+
+---
+
+### Recommandations
+
+* Déployer une MFA résistante au phishing (FIDO2) sur les portails financiers, RH et d'épargne salariale.
+* Filtrer et détourner les liens des courriels entrants, et bloquer les domaines récemment enregistrés imitant des marques financières.
+* Sensibiliser les utilisateurs : aucun organisme légitime ne demande un mot de passe par lien.
+* Mettre en place une surveillance des authentifications anormales et une procédure de révocation de session rapide.
+* Signaler systématiquement les URL frauduleuses aux organismes usurpés et aux services de blocage.
+
+---
+
+### Playbook de réponse à incident
+
+#### Phase 1 — Préparation
+
+* Sensibiliser les collaborateurs et les particuliers aux campagnes usurpant les notifications d'épargne retraite et de comptes financiers.
+* Déployer une passerelle de messagerie avec réécriture et détonation des liens, et un filtrage DNS protecteur.
+* Imposer l'authentification multifacteur résistante au phishing (clés FIDO2) sur les portails financiers et RH.
+* Tenir à jour une liste des domaines légitimes des organismes de retraite et de banque utilisés par les collaborateurs.
+* Préparer un canal de signalement simple pour les messages suspects.
+
+#### Phase 2 — Détection et analyse
+
+* Détecter les courriels et SMS évoquant un solde d'épargne retraite, une vérification de compte ou une action urgente avec lien.
+* Rechercher les domaines ressemblants (typosquatting, homoglyphes) des organismes financiers dans les journaux proxy et DNS.
+* Alerter sur les authentifications réussies depuis des adresses IP ou des user-agents inhabituels sur les portails financiers.
+* Surveiller les soumissions d'identifiants sur des pages non référencées ou récemment enregistrées.
+* Analyser les signalements utilisateurs pour identifier les campagnes en cours et les pages de collecte.
+
+#### Phase 3 — Confinement, éradication et récupération
+
+* Bloquer les domaines et URL de phishing identifiés sur le proxy, le DNS et la messagerie.
+* Réinitialiser les mots de passe des comptes exposés et révoquer les sessions actives.
+* Imposer une vérification renforcée (MFA, contrôle d'identité) sur les comptes financiers concernés.
+* Notifier les utilisateurs ciblés et l'organisme financier usurpé.
+* Déposer les URL frauduleuses auprès des services de signalement et des navigateurs.
+
+#### Phase 4 — Activités post-incident
+
+* Analyser les comptes compromis pour détecter des opérations frauduleuses (virements, modification de coordonnées).
+* Documenter la campagne : vecteur, prétexte, nombre de victimes, délai de blocage.
+* Mettre à jour les règles de filtrage et les scénarios de sensibilisation à partir des artefacts observés.
+* Communiquer un retour d'expérience aux équipes support et aux utilisateurs.
+* Évaluer les pertes financières et les obligations de déclaration applicables.
+
+#### Phase 5 — Threat Hunting (proactif)
+
+* Rechercher dans les journaux de messagerie les messages portant des prétextes d'épargne retraite sur les 90 derniers jours.
+* Chasser les résolutions DNS vers des domaines récemment enregistrés imitant des marques financières.
+* Identifier les postes ayant soumis des identifiants sur des domaines non catégorisés.
+* Rechercher des règles de transfert de messagerie ou des délégations créées frauduleusement.
+* Corréler les indicateurs de la campagne avec les renseignements disponibles sur les infrastructures de phishing réutilisées.
+
+---
+
+### TTP MITRE ATT&CK
+
+| ID TTP | Description |
+|---|---|
+| **T1566.002** | Hameçonnage par lien vers une page frauduleuse imitant un service financier |
+| **T1204.001** | Incitation de l'utilisateur à cliquer sur un lien malveillant |
+
+---
+
+### Sources
+
+* [https://asec.ahnlab.com/en/95940/](https://asec.ahnlab.com/en/95940/)
+
+
+---
+
+<div id="comment-reduire-le-temps-de-triage-lorsquun-seul-ioc-revele-une-campagne-plus-large"></div>
+
+## Comment réduire le temps de triage lorsqu'un seul IOC révèle une campagne plus large
+
+### Résumé
+
+ANY.RUN annonce la disponibilité de « Related Threat Context » pour ses clients Enterprise. La fonctionnalité permet, depuis une analyse sandbox, d'ouvrir les analyses liées, de sélectionner un IOC (par exemple une adresse IP malveillante) et d'effectuer une recherche TI montrant des analyses antérieures remontant à juillet, soumises par différentes sources mais partageant une activité réseau similaire. L'exemple cité met en évidence une chaîne de livraison récurrente : JavaScript → PowerShell → charge utile .NET, avec possibilité de pivoter vers des IP et domaines associés pour découvrir d'autres IOC et opportunités de détection. L'objectif annoncé est de réduire le temps de triage, la duplication de travail et le MTTR.
+
+---
+
+### Analyse opérationnelle
+
+L'apport opérationnel réside dans la contextualisation d'un indicateur isolé : un IOC n'a de valeur que replacé dans une campagne et une chronologie. Le workflow décrit — analyse sandbox, exploration des analyses liées, pivot sur IP/domaines, extraction d'une chaîne de livraison, conversion en logique de détection — est directement réutilisable par un SOC, indépendamment de l'outil. La chaîne JavaScript → PowerShell → charge .NET impose des points de détection précis : journalisation PowerShell (ligne de commande, scripts blocs), surveillance des processus wscript/mshta/cscript engendrant powershell, et détection de chargement .NET en mémoire. La dépendance à un fournisseur externe pour l'historique des analyses doit être compensée par une conservation locale des artefacts et des règles de détection.
+
+---
+
+### Implications stratégiques
+
+La réduction du temps de triage est un levier économique direct pour les SOC : moins de duplication, meilleure priorisation, MTTR plus court. La tendance est à l'intégration de la threat intelligence dans le flux d'analyse plutôt qu'en silo, ce qui modifie les critères d'achat (interopérabilité, historisation, capacité de pivot) et renforce la dépendance aux plateformes commerciales pour la contextualisation. Pour les organisations, cela pose la question de la souveraineté et de la conservation des données d'analyse, ainsi que de la mutualisation du renseignement entre équipes et secteurs.
+
+---
+
+### Recommandations
+
+* Formaliser un workflow de triage standard : sandbox → analyses liées → pivot IOC → règle de détection.
+* Activer la journalisation PowerShell (blocs de script, ligne de commande) et les alertes sur les chaînes JS → PowerShell → .NET.
+* Automatiser l'enrichissement des IOC via SOAR et conserver localement les artefacts d'analyse pour ne pas dépendre uniquement du fournisseur.
+* Prioriser les indicateurs récurrents et partagés par plusieurs sources plutôt que les signaux isolés.
+* Mesurer l'effet du workflow sur le MTTR et le taux de faux positifs des règles produites.
+
+---
+
+### Playbook de réponse à incident
+
+#### Phase 1 — Préparation
+
+* Standardiser un workflow de triage : analyse sandbox, pivot sur les analyses liées, enrichissement TI, production de règles de détection.
+* Définir des critères de priorisation des IOC (fraîcheur, prévalence, secteur, récurrence de l'infrastructure).
+* Connecter la plateforme sandbox au SIEM/SOAR pour automatiser l'enrichissement et la création de tickets.
+* Former les analystes au pivot sur IP, domaines et hachages afin d'identifier des campagnes plutôt que des événements isolés.
+* Maintenir une bibliothèque de règles de détection couvrant les chaînes de livraison courantes (JavaScript, PowerShell, charges .NET).
+
+#### Phase 2 — Détection et analyse
+
+* Déclencher une analyse sandbox automatique pour chaque pièce jointe ou binaire signalé, puis consulter les analyses liées.
+* Rechercher la chaîne de livraison JavaScript → PowerShell → charge utile .NET dans les journaux de scripts et d'EDR.
+* Détecter les exécutions PowerShell lancées depuis un interpréteur de script ou un navigateur, avec arguments encodés.
+* Corréler les IP et domaines contactés par le sandbox avec les journaux proxy, DNS et pare-feu de l'environnement.
+* Prioriser les alertes dont l'infrastructure est partagée par plusieurs échantillons et plusieurs sources.
+
+#### Phase 3 — Confinement, éradication et récupération
+
+* Bloquer les IP, domaines et hachages confirmés sur les contrôles périmétriques et les terminaux.
+* Isoler les postes ayant exécuté la chaîne JavaScript → PowerShell → .NET.
+* Révoquer les identifiants et jetons présents sur les systèmes concernés.
+* Désactiver les macros et restreindre l'exécution PowerShell (mode contraint, journalisation) sur les parc exposés.
+* Publier les règles de détection dérivées dans le SIEM et vérifier leur taux de faux positifs.
+
+#### Phase 4 — Activités post-incident
+
+* Mesurer l'impact du nouveau workflow sur le temps moyen de triage et de remédiation (MTTR).
+* Documenter les pivots réalisés et les règles de détection produites pour capitaliser.
+* Mettre à jour les playbooks de triage avec les chaînes de livraison récurrentes observées.
+* Évaluer la qualité des sources TI utilisées et écarter les indicateurs obsolètes.
+* Partager les indicateurs confirmés avec les pairs et les CERT sectoriels.
+
+#### Phase 5 — Threat Hunting (proactif)
+
+* Rechercher sur 90 jours les exécutions PowerShell dont la ligne de commande contient des indicateurs d'obfuscation ou de téléchargement.
+* Chasser les connexions vers les IP et domaines identifiés dans les analyses liées, y compris hors du périmètre initial.
+* Identifier les chaînes JavaScript → PowerShell → .NET dans les télémétries de scripts (AMSI, journalisation PowerShell).
+* Rechercher des charges utiles .NET réfléchies ou chargées en mémoire sur les terminaux.
+* Pivoter sur les certificats, enregistrements DNS et plages d'hébergement associés pour anticiper l'infrastructure suivante.
 
 ---
 
@@ -697,7 +1580,7 @@ La multiplication d'outils de reconnaissance légers et gratuits accélère la p
 
 | Type | Valeur (DEFANG) | Fiabilité |
 |---|---|---|
-| URL | `hxxps://github[.]com/CurioTrace/paramtrace` | High |
+| URL | `hxxps://app[.]any[.]run/tasks/00279254-9992-486d-8de9-802553ed3d4b/` | Medium |
 
 ---
 
@@ -705,50 +1588,50 @@ La multiplication d'outils de reconnaissance légers et gratuits accélère la p
 
 | ID TTP | Description |
 |---|---|
-| **T1595.002** | Reconnaissance active : scan de vulnérabilités applicatives (fuzzing de paramètres) |
-| **T1190** | Exploitation d'une application exposée (paramètres cachés menant à des fonctionnalités non documentées) |
+| **T1059.007** | Exécution de code via JavaScript dans la chaîne de livraison observée |
+| **T1059.001** | Exécution de commandes PowerShell comme étape intermédiaire |
+| **T1204.002** | Exécution d'un fichier malveillant (.exe) par l'utilisateur |
 
 ---
 
 ### Sources
 
-* [https://github.com/CurioTrace/paramtrace](https://github.com/CurioTrace/paramtrace)
-* [https://www.reddit.com/r/redteamsec/comments/1xag82v/paramtrace_a_lightweight_http_parameter_discovery/](https://www.reddit.com/r/redteamsec/comments/1xag82v/paramtrace_a_lightweight_http_parameter_discovery/)
+* [https://infosec.exchange/@anyrun_app/117481043112639389](https://infosec.exchange/@anyrun_app/117481043112639389)
 
 
 ---
 
-<div id="le-voyage-dune-licorne-en-papier-aventures-a-linterieur-dun-entrepot-moderne"></div>
+<div id="une-faille-dans-le-langage-informatique-php-entraine-larret-de-sites-web-dans-le-monde-entier"></div>
 
-## Le voyage d'une licorne en papier : aventures à l'intérieur d'un entrepôt moderne
+## Une faille dans le langage informatique PHP entraîne l'arrêt de sites web dans le monde entier
 
 ### Résumé
 
-Kaspersky Security Services publie une analyse du parcours d'une commande dans un entrepôt moderne, découpé en huit étapes (déchargement, réception, rangement, etc.), et montre que chaque étape repose sur un couplage entre processus physiques et systèmes d'information. Les auteurs construisent un modèle de menace de l'entrepôt et détaillent les vecteurs d'attaque : services exposés sur Internet, canaux Wi-Fi, Bluetooth et radio, réseau physique, scanners code-barres, terminaux portables (PDT) et imprimantes. L'article décrit l'impact d'une compromission du WMS (Warehouse Management System) sur la logistique : commandes non expédiées, inventaire non fiable, arrêt de l'exploitation. Il cite comme précédents la panne ayant affecté les systèmes de gestion d'entrepôt du distributeur Morrisons, le rapport annuel Form 10-K 2025 d'United Natural Foods (UNFI) confirmant une activité non autorisée sur ses systèmes IT ayant impacté l'exécution des commandes, et des informations récentes faisant état d'une cyberattaque ayant perturbé huit entrepôts de CEVA Logistics en Europe avec exposition de données de livraison clients.
+Une vulnérabilité critique affectant le langage PHP, utilisé par près de 70 % des sites web, a été rendue publique le mardi 20 octobre 2026. La PHP Foundation a publié un correctif le mercredi 21 octobre. Des sites gouvernementaux belges, néerlandais, finlandais, français et allemands ont été mis hors ligne à titre préventif, notamment des sites de collectivités britanniques (Édimbourg, Bristol, Oxford), la préfecture de police de Paris, le service d'identité numérique néerlandais, le site de la chambre des représentants et celui du centre national de cybersécurité des Pays-Bas. La Wikimedia Foundation a retiré plusieurs systèmes par précaution. La NSA a recommandé aux organisations de mettre leurs systèmes hors ligne si elles ne peuvent pas patcher immédiatement, indiquant que la faille pouvait offrir « un chemin direct vers le système de fichiers ou la base de données du serveur » ; le NCSC britannique a conseillé de rechercher des portes dérobées installées par un attaquant. L'Australian Signals Directorate a été temporairement affecté. OpenAI affirme avoir dirigé une coalition de chercheurs ayant découvert la faille grâce à l'IA « de pointe », ce que le chercheur à l'origine de la découverte conteste. L'expert Michał Woźniak anticipe une exploitation automatique massive et un détournement de serveurs vulnérables pour du minage de cryptomonnaies. Aucun identifiant CVE ni détail technique de la faille n'est fourni dans l'article.
 
 ---
 
 ### Analyse opérationnelle
 
-Le WMS est un point de rupture opérationnel : sa compromission se traduit immédiatement par des effets physiques (files de camions, convoyeurs bloqués, colis égarés) et non par une simple indisponibilité applicative. Les équipes SOC doivent étendre leur périmètre de supervision aux systèmes d'entrepôt souvent exclus des programmes de détection : portails et API exposés, terminaux portables, scanners, imprimantes d'étiquettes et équipements radio. La détection la plus fiable ne vient pas uniquement des journaux de sécurité mais de la corrélation entre signaux métier (divergences d'inventaire, erreurs de routage de quai, arrêts de convoyeur) et événements IT. Côté réponse, l'isolation réseau doit être suffisamment granulaire pour ne pas paralyser la manutention, et une procédure de repli manuel doit être testée avant incident. Les identifiants de prestataires et d'intégrateurs WMS/WCS constituent une surface d'attaque privilégiée à surveiller en priorité.
+L'absence de CVE et de détails techniques dans la source impose une vérification directe auprès des avis officiels de la PHP Foundation et des CERT nationaux avant toute action. Le risque opérationnel immédiat est double : exploitation en masse automatisée de services PHP exposés (accès direct au système de fichiers ou à la base de données selon la NSA) et persistance via web shells, le NCSC recommandant explicitement de rechercher des backdoors. Les équipes SOC doivent considérer la période du 20 octobre 2026 comme point de départ de la chasse : analyse des logs web, détection de fichiers PHP nouvellement créés, surveillance des processus enfants lancés par PHP et des connexions sortantes vers des pools de minage. La priorité de patch doit être pondérée par l'exposition Internet et la criticité métier ; les applications non maintenues constituent la principale zone de risque résiduel. Le virtual patching WAF est la seule mesure immédiate pour les parcs dont la remédiation prendra des semaines.
 
 ---
 
 ### Implications stratégiques
 
-La convergence IT/OT place la logistique au même niveau de criticité que la production industrielle : une attaque sur un entrepôt se traduit en pénalités contractuelles, pertes de chiffre d'affaires, ruptures d'approvisionnement et atteinte à la réputation. Les secteurs de la distribution, du e-commerce et du transport sont désormais des cibles de choix pour les groupes rançongiciels, avec un effet de contagion sur l'ensemble de la chaîne d'approvisionnement. Les directions doivent intégrer l'entrepôt dans le périmètre de conformité (NIS2, continuité d'activité, assurance cyber) et arbitrer des investissements de segmentation réseau et de supervision OT souvent négligés au profit des seuls systèmes front-office.
+La dépendance de l'écosystème web mondial à un composant open source unique est ici exposée à grande échelle : la décision de gouvernements de couper des services publics plutôt que de courir le risque illustre le coût opérationnel et réputationnel d'une faille critique dans une brique de base. La « longue traîne » de sites non maintenus annoncée par les experts prolongera l'exposition sur des mois, avec un risque accru pour les PME, collectivités et infrastructures peu dotées. L'attribution possible à des acteurs étatiques russes ou à la criminalité organisée, évoquée par un expert, place le sujet au croisement de la cybersécurité et de la géopolitique. Enfin, la revendication d'une découverte assistée par IA ouvre un débat sur l'accélération du rythme de révélation des vulnérabilités et sur la capacité des éditeurs et des régulateurs (NIS2, Cyber Resilience Act) à absorber cette cadence.
 
 ---
 
 ### Recommandations
 
-* Cartographier les systèmes d'entrepôt (WMS, WCS, TMS, PDT, scanners, imprimantes) et les rattacher aux étapes du flux logistique.
-* Segmenter strictement IT, OT d'entrepôt, Wi-Fi/radio et réseau physique, avec filtrage des flux est-ouest.
-* Réduire et superviser les accès Internet exposés (portails, API partenaires) : MFA, restriction géographique, limitation de débit.
-* Durcir les terminaux portables, scanners et imprimantes : mots de passe par défaut changés, firmware à jour, inventaire des équipements autorisés.
-* Mettre en place une détection corrélée entre indicateurs métier (inventaire, routage) et événements de sécurité.
-* Tester au moins une fois par an une bascule en mode manuel dégradé avec les équipes logistiques.
-* Encadrer contractuellement les accès des prestataires et intégrateurs, avec revue trimestrielle des comptes.
+* Identifier et inventorier immédiatement toutes les instances PHP exposées sur Internet avec leur version exacte.
+* Appliquer le correctif PHP Foundation en priorité sur les services exposés ; à défaut, mettre le service hors ligne ou activer un virtual patching WAF.
+* Lancer une chasse aux web shells et backdoors sur tous les serveurs web PHP, en particulier ceux ayant été exposés entre le 20 et le 21 octobre 2026.
+* Surveiller les connexions sortantes des serveurs web pour détecter du minage de cryptomonnaies ou des communications C2.
+* Recenser les applications PHP non maintenues et planifier leur décommissionnement ou leur isolation réseau.
+* S'abonner aux avis de la PHP Foundation et des CERT nationaux pour obtenir l'identifiant CVE et les détails techniques dès publication.
+* Réinitialiser les secrets et identifiants présents sur tout hôte suspecté de compromission.
 
 ---
 
@@ -756,43 +1639,43 @@ La convergence IT/OT place la logistique au même niveau de criticité que la pr
 
 #### Phase 1 — Préparation
 
-* Cartographier les huit étapes du flux de commande et associer à chacune les systèmes (WMS, WCS, TMS, portails, imprimantes, scanners) et leurs propriétaires.
-* Segmenter le réseau entre IT, OT d'entrepôt, Wi-Fi/radio et réseau physique ; documenter les flux autorisés.
-* Inventorier les services exposés sur Internet (portails clients, API partenaires, accès transporteurs) et imposer MFA + restriction géographique.
-* Établir une procédure de repli manuel (papier/scan hors ligne) pour chaque étape critique du flux logistique.
-* Tester régulièrement la restauration des sauvegardes du WMS et des bases d'inventaire.
+* Inventorier toutes les applications et services exposés reposant sur PHP (CMS, WordPress, frameworks, applications métier) et identifier les versions exactes déployées.
+* Vérifier la capacité à appliquer un correctif PHP en moins de 24 h : fenêtre de maintenance d'urgence, procédure de rollback, environnement de préproduction.
+* Mettre à jour les règles WAF (virtual patching) pour couvrir l'exploitation de la vulnérabilité avant le patch applicatif.
+* Préparer un plan de retrait temporaire de service (mode maintenance) pour les applications critiques non patchables immédiatement.
+* Vérifier l'intégrité et la restaurabilité des sauvegardes des serveurs web et des bases de données associées.
 
 #### Phase 2 — Détection et analyse
 
-* Surveiller les écarts entre stock physique et stock informatique (divergences d'inventaire, bins vides affichés en stock).
-* Alerter sur les connexions anormales aux services WMS exposés (tentatives d'authentification, scraping d'API, user-agents inhabituels).
-* Détecter les nouveaux équipements sur le Wi-Fi/Bluetooth/radio et les ports réseau de l'entrepôt (rogue devices, points d'accès non autorisés).
-* Corréler les erreurs de routage de quais, blocages de convoyeurs et arrêts de ligne avec des événements de sécurité.
-* Superviser les journaux des terminaux portables (PDT), scanners code-barres et imprimantes d'étiquettes.
+* Rechercher dans les logs web (Apache/Nginx) des requêtes POST/GET anormales vers des scripts PHP, en particulier des paramètres inattendus, encodages suspects ou chaînes de sérialisation.
+* Surveiller la création ou la modification de fichiers dans les répertoires web (uploads, images, cache) : indicateur fort de dépôt de web shell.
+* Détecter les processus enfants anormaux lancés par PHP (sh, bash, curl, wget, nc, python) via EDR ou auditd.
+* Analyser les connexions sortantes des serveurs web vers des pools de minage ou des IP rares/inconnues (détournement de ressources).
+* Corréler les alertes WAF avec les journaux d'authentification et les accès administrateur (phpMyAdmin, panneaux d'admin, SSH) sur la période du 20 octobre 2026 et après.
 
 #### Phase 3 — Confinement, éradication et récupération
 
-* Isoler les segments réseau concernés (Wi-Fi entrepôt, VLAN des terminaux) sans interrompre les opérations physiques critiques.
-* Révoquer les comptes de prestataires et identifiants de service suspectés, forcer la rotation des secrets.
-* Basculer sur le mode dégradé/manuel documenté pour maintenir l'expédition et la réception.
-* Bloquer les flux sortants non nécessaires depuis les systèmes d'entrepôt et filtrer les accès aux API partenaires.
-* Conserver les images forensiques des serveurs WMS/WCS et des terminaux avant remise en service.
+* Appliquer le correctif publié par la PHP Foundation en priorité sur tous les serveurs exposés ; à défaut, isoler le service (mise hors ligne préventive) comme l'ont fait plusieurs gouvernements.
+* Activer un mode de virtual patching WAF bloquant en attendant la remédiation complète du parc.
+* En cas de compromission avérée : isoler le serveur du réseau, préserver les images disque et les logs avant toute remédiation.
+* Réinitialiser les secrets présents sur l'hôte compromis (clés d'API, identifiants de base de données, certificats, comptes de service).
+* Rechercher et supprimer les backdoors/web shells, puis reconstruire l'hôte à partir d'une base saine plutôt que de nettoyer en place.
 
 #### Phase 4 — Activités post-incident
 
-* Reconstruire l'inventaire informatique à partir des données physiques (cycle de comptage complet) et réconcilier avec le WMS.
-* Revoir la matrice d'accès des prestataires logistiques et transporteurs, réduire les privilèges au strict nécessaire.
-* Mettre à jour le plan de continuité avec les enseignements (délais de bascule manuelle, files de camions, pénalités).
-* Notifier les clients/partenaires impactés si des données de livraison ont été exposées, conformément aux obligations légales.
-* Intégrer les scénarios d'entrepôt dans les exercices de crise annuels avec les équipes logistiques.
+* Réaliser un retour d'expérience sur le délai de détection et de patch, et documenter les applications non maintenues (long tail) restées vulnérables.
+* Mettre en place un inventaire permanent des composants et versions PHP avec alertes automatiques sur les avis de sécurité.
+* Renforcer la surveillance des serveurs web pendant plusieurs semaines : la fenêtre d'exploitation persistera sur les sites non patchés.
+* Évaluer l'exposition des données (accès direct au système de fichiers ou à la base de données) et déclencher les notifications réglementaires si nécessaire.
+* Mettre à jour les procédures de gestion de crise pour les dépendances open source critiques et intégrer la veille sur les avis PHP Foundation.
 
 #### Phase 5 — Threat Hunting (proactif)
 
-* Rechercher des accès RDP/SSH/VPN inhabituels vers les serveurs WMS depuis des postes d'opérateurs ou des adresses externes.
-* Chasser les ajouts matériels non inventoriés (adresses MAC inconnues, nouveaux SSID, appairages Bluetooth).
-* Analyser les journaux des imprimantes et scanners à la recherche d'exécution de commandes ou de reconfiguration non planifiée.
-* Rechercher des modifications non autorisées de règles de routage de quais ou de priorités de commandes dans le WMS.
-* Examiner les comptes de service utilisés par les intégrateurs WMS/WCS pour des connexions hors fenêtres de maintenance.
+* Chasser les web shells PHP connus et obfusqués (eval, base64_decode, preg_replace /e, assert, chaînes concaténées) sur l'ensemble des serveurs web.
+* Rechercher des tâches cron ou services persistants ajoutés après le 20 octobre 2026 sur les hôtes PHP.
+* Analyser les journaux de proxy/DNS pour identifier des communications vers des infrastructures de minage ou de C2.
+* Examiner les comptes créés ou modifiés récemment dans les CMS et bases de données (WordPress, Drupal, Joomla).
+* Comparer les empreintes des fichiers web avec une baseline de référence pour identifier les modifications non autorisées.
 
 ---
 
@@ -800,676 +1683,15 @@ La convergence IT/OT place la logistique au même niveau de criticité que la pr
 
 | ID TTP | Description |
 |---|---|
-| **T1190** | Exploitation des services exposés sur Internet (portails WMS, API de suivi de commandes) |
-| **T1133** | Accès via services distants externes (VPN/accès prestataires logistiques) |
-| **T1200** | Ajout matériel : branchement de scanners, terminaux portables ou équipements réseau non autorisés |
-| **T1021** | Mouvements latéraux vers les systèmes de gestion d'entrepôt depuis le réseau physique |
+| **T1190** | Exploitation d'une application exposée sur Internet (vulnérabilité critique du langage PHP) |
+| **T1505.003** | Installation d'un web shell sur serveur web compromis (recherche de backdoors recommandée par le NCSC britannique) |
+| **T1496** | Détournement de ressources : minage de cryptomonnaies sur serveurs vulnérables, scénario évoqué par les experts cités |
 
 ---
 
 ### Sources
 
-* [https://securelist.com/paper-unicorn-warehouse-security/121537/](https://securelist.com/paper-unicorn-warehouse-security/121537/)
-
-
----
-
-<div id="fix-supprimer-synchronize-de-lacces-suspect-a-lsass-6490"></div>
-
-## fix : supprimer SYNCHRONIZE de l'accès suspect à lsass (#6490)
-
-### Résumé
-
-Commit e3f4662 du dépôt SigmaHQ (pull request #6490) intitulé « fix: remove SYNCHRONIZE from suspicious lsass access ». La modification retire le droit d'accès SYNCHRONIZE du périmètre de la règle de détection des accès suspects au processus lsass.exe, afin de corriger le comportement de cette règle de détection.
-
----
-
-### Analyse opérationnelle
-
-Les règles de détection d'accès à LSASS sont structurellement bruyantes : de nombreux produits de sécurité légitimes (EDR, antivirus, agents de sauvegarde, outils d'administration) ouvrent un handle vers lsass.exe. Le retrait de SYNCHRONIZE resserre la logique sur les droits réellement pertinents pour un dump mémoire (lecture mémoire, duplication de handle) et réduit le volume d'alertes à traiter par le SOC. Pour les équipes de détection, cela impose de revalider la couverture : vérifier que les accès avec les masques 0x1010 et 0x1410 restent bien détectés, que les exclusions locales ne masquent pas des variantes (PssCaptureSnapshot, duplication de handle), et que le déploiement de la règle mise à jour est propagé sur l'ensemble des SIEM. Toute modification de règle communautaire doit passer par un test en laboratoire avant mise en production.
-
----
-
-### Implications stratégiques
-
-La qualité des règles de détection open source est devenue un élément de la chaîne d'approvisionnement logicielle de la cybersécurité : une modification upstream impacte directement la posture de détection de milliers d'organisations. Les entreprises doivent traiter ce contenu comme du code critique (versionnement, revue, tests de non-régression) plutôt que comme un simple catalogue de règles importées. Cela plaide pour une capacité interne d'ingénierie de détection et pour une gouvernance explicite des dépendances aux projets communautaires.
-
----
-
-### Recommandations
-
-* Épingler une version de référence des règles Sigma et planifier les mises à jour après validation en laboratoire.
-* Mesurer avant/après le taux de faux positifs et la couverture réelle des techniques de dump LSASS.
-* Compléter la détection par des règles comportementales (processus parent, signature, chemin, volume d'accès).
-* Documenter les exclusions locales et les revoir à chaque changement upstream.
-
----
-
-### Playbook de réponse à incident
-
-#### Phase 1 — Préparation
-
-* Versionner les règles Sigma et suivre les commits upstream pour maîtriser les changements de logique de détection.
-* Disposer d'un banc de test (laboratoire AD/Windows) pour valider chaque modification de règle avant déploiement.
-* Documenter les accès légitimes à lsass.exe (EDR, antivirus, sauvegarde, outils d'administration) pour distinguer le bruit du réel.
-
-#### Phase 2 — Détection et analyse
-
-* Surveiller les accès à lsass.exe avec les droits de lecture mémoire (0x1010, 0x1410) et non plus uniquement les combinaisons incluant SYNCHRONIZE.
-* Corréler l'accès LSASS avec le processus appelant, son signataire, son chemin et le contexte utilisateur.
-* Alerter sur l'apparition de nouveaux binaires non signés accédant à LSASS ou sur des accès en rafale depuis plusieurs hôtes.
-
-#### Phase 3 — Confinement, éradication et récupération
-
-* Isoler l'hôte présentant un accès LSASS suspect non attribuable à un outil légitime approuvé.
-* Révoquer et faire tourner les secrets susceptibles d'avoir été exposés (comptes à privilèges, tickets Kerberos, hashes).
-* Conserver les journaux Sysmon/EDR et une image mémoire de l'hôte avant remédiation.
-
-#### Phase 4 — Activités post-incident
-
-* Mesurer l'impact du changement de règle sur le taux de faux positifs et de faux négatifs sur 30 jours.
-* Mettre à jour la documentation de détection et les playbooks SOC associés.
-* Contribuer en retour à la communauté (remontée de faux positifs, propositions de règles complémentaires).
-
-#### Phase 5 — Threat Hunting (proactif)
-
-* Rechercher les accès LSASS via des API alternatives (MiniDumpWriteDump, PssCaptureSnapshot, duplication de handle).
-* Chasser les dumps LSASS déposés sur disque (fichiers .dmp volumineux, extensions inhabituelles) et leur exfiltration.
-* Analyser les chaînes d'accès LSASS par des processus vivant hors disque ou signés mais détournés.
-
----
-
-### TTP MITRE ATT&CK
-
-| ID TTP | Description |
-|---|---|
-| **T1003.001** | Dump de la mémoire du processus LSASS pour extraire des identifiants |
-
----
-
-### Sources
-
-* [https://github.com/SigmaHQ/sigma/commit/e3f466211866e92553d8389d621ed13cfed5523d](https://github.com/SigmaHQ/sigma/commit/e3f466211866e92553d8389d621ed13cfed5523d)
-
-
----
-
-<div id="il-ny-a-quune-quantite-limitee-de-code-la-hausse-du-nombre-de-vulnerabilites"></div>
-
-## Il n'y a qu'une quantité limitée de code : la hausse du nombre de vulnérabilités
-
-### Résumé
-
-Article publié par le Cisco Talos Intelligence Center consacré à la croissance du nombre de vulnérabilités publiées et à la question de la capacité de traitement de ce volume par les organisations.
-
----
-
-### Analyse opérationnelle
-
-La croissance du volume de CVE rend caduque toute approche de remédiation exhaustive : les équipes doivent basculer vers une priorisation fondée sur l'exploitabilité réelle et l'exposition. Les critères opérationnels à combiner sont la présence dans le catalogue KEV, le score EPSS, l'exposition Internet de l'actif, la disponibilité publique d'un code d'exploitation et la criticité métier. Ce changement de modèle impacte directement l'organisation du SOC et des équipes patch management : réduction du périmètre de remédiation immédiate, mesures compensatoires pour le reste, et automatisation de la collecte d'inventaire.
-
----
-
-### Implications stratégiques
-
-L'inflation des vulnérabilités est un enjeu de gouvernance autant que technique : elle interroge la responsabilité des éditeurs, la qualité du code livré et la soutenabilité des modèles de divulgation. Les régulateurs (NIS2, CRA, obligations de notification) poussent vers plus de transparence, ce qui accroît mécaniquement le volume à traiter. Les directions doivent arbitrer entre effectifs de remédiation, automatisation et acceptation documentée du risque résiduel.
-
----
-
-### Recommandations
-
-* Adopter une priorisation KEV + EPSS + exposition plutôt qu'un tri par CVSS seul.
-* Automatiser l'inventaire et le rapprochement avec les avis éditeurs pour réduire le délai de détection interne.
-* Définir des SLA de remédiation différenciés selon l'exposition et la criticité métier.
-* Documenter formellement les risques acceptés pour les actifs non patchables.
-
----
-
-### Playbook de réponse à incident
-
-#### Phase 1 — Préparation
-
-* Maintenir un inventaire logiciel fiable (SBOM) et une cartographie des actifs exposés sur Internet.
-* Définir une politique de priorisation combinant score CVSS, présence dans la liste KEV de la CISA, score EPSS et criticité métier.
-* Négocier des fenêtres de maintenance et des engagements de correctifs avec les fournisseurs critiques.
-
-#### Phase 2 — Détection et analyse
-
-* Surveiller en continu les publications CVE/avis éditeurs concernant les composants de l'inventaire.
-* Détecter les tentatives d'exploitation sur les services exposés (WAF, journaux applicatifs, IDS).
-* Alerter sur l'apparition de versions logicielles non référencées ou de composants en fin de support.
-
-#### Phase 3 — Confinement, éradication et récupération
-
-* Appliquer des mesures compensatoires (WAF, segmentation, désactivation de fonctionnalités) en attendant le correctif.
-* Isoler ou restreindre l'accès aux systèmes non patchables exposés sur Internet.
-* Prioriser le patch des actifs dont l'exploitation est observée activement dans la nature.
-
-#### Phase 4 — Activités post-incident
-
-* Analyser les écarts entre délai de publication et délai de remédiation interne, et ajuster les SLA.
-* Mettre à jour la politique de gestion des vulnérabilités à partir des incidents évités ou survenus.
-* Rendre compte à la direction des indicateurs de dette de vulnérabilités par domaine.
-
-#### Phase 5 — Threat Hunting (proactif)
-
-* Rechercher des indicateurs d'exploitation post-compromission sur les actifs récemment patchés (web shells, comptes créés, tâches planifiées).
-* Chasser les composants obsolètes ou non supportés encore présents sur le réseau.
-* Corréler les alertes de scanners internes avec les journaux d'exploitation réels pour distinguer le bruit du risque effectif.
-
----
-
-### TTP MITRE ATT&CK
-
-| ID TTP | Description |
-|---|---|
-| **T1190** | Exploitation d'applications exposées sur Internet comme voie d'entrée privilégiée |
-| **T1588.006** | Acquisition et exploitation de vulnérabilités (recherche, achat, weaponisation) |
-
----
-
-### Sources
-
-* [https://blog.talosintelligence.com/theres-only-so-much-code-the-rise-in-vulnerability-numbers/](https://blog.talosintelligence.com/theres-only-so-much-code-the-rise-in-vulnerability-numbers/)
-
-
----
-
-<div id="open-source-sovereignty"></div>
-
-## Open source ≠ sovereignty
-
-### Résumé
-
-Billet de blog de Dominik Meyer (Secure Platforms), rédigé à la suite de la 18e International Conference on Cyber Conflict (CyCon 2026, Tallinn, 26-29 mai 2026), sur le lien entre open source et souveraineté numérique. L'auteur rappelle les arguments classiques en faveur de l'OSS (absence de verrouillage fournisseur, pas de coûts de licence, sécurité IT, adaptabilité, auditabilité) puis soutient qu'ils ne constituent pas en eux-mêmes une souveraineté : une licence open source accorde des permissions mais n'oblige personne à maintenir le logiciel, ne comporte aucune garantie ni responsabilité, et déplace la dépendance du contrat de service (SLA) vers la boîte mail de mainteneurs souvent bénévoles. Il cite l'incident du paquet npm left-pad supprimé du registre en 2015 pour illustrer l'absence de recours contractuel, et conclut que la souveraineté réside dans la structure de la dépendance, pas dans le texte de la licence.
-
----
-
-### Analyse opérationnelle
-
-Le raisonnement a une traduction directe en sécurité opérationnelle : la dépendance critique n'est pas le code mais la capacité à le maintenir et à le corriger. Les équipes doivent donc traiter les projets open source comme des fournisseurs, avec un inventaire (SBOM), une identification des mainteneurs, une évaluation de l'activité du projet et un plan de reprise en cas d'abandon. La capacité à forker et à patcher en interne n'a de valeur que si les compétences et les ressources sont réellement disponibles ; dans le cas contraire, l'organisation reste exposée aux mêmes délais de correctif qu'avec un éditeur, sans le recours contractuel.
-
----
-
-### Implications stratégiques
-
-Ce sujet est au cœur des politiques européennes de souveraineté numérique et des réglementations NIS2 et Cyber Resilience Act, qui imposent progressivement traçabilité et responsabilité sur les composants logiciels. Pour les décideurs, l'enjeu est de financer la maintenance des briques open source critiques plutôt que de se contenter d'en réduire le coût de licence, et d'intégrer la dépendance aux mainteneurs dans les analyses de risque fournisseur et de continuité d'activité.
-
----
-
-### Recommandations
-
-* Produire et maintenir un SBOM à jour pour l'ensemble des systèmes critiques.
-* Évaluer pour chaque composant critique le nombre de mainteneurs, l'activité du projet et son mode de financement.
-* Prévoir contractuellement ou budgétairement un support de niveau 3 pour les briques OSS non couvertes par un éditeur.
-* Documenter une procédure de fork et de correctif interne, avec les compétences associées identifiées.
-* Intégrer la dépendance open source dans les revues de risque fournisseur et les plans de continuité.
-
----
-
-### Playbook de réponse à incident
-
-#### Phase 1 — Préparation
-
-* Établir un inventaire des dépendances open source (SBOM) et identifier les mainteneurs et modes de financement des projets critiques.
-* Définir une politique de support interne ou contractuel pour les composants OSS utilisés en production.
-* Cartographier les dépendances à mainteneur unique ou à projet peu actif comme risque de continuité.
-
-#### Phase 2 — Détection et analyse
-
-* Surveiller les dépôts upstream (commits, changements de mainteneur, transferts de propriété de paquets).
-* Détecter les publications de versions non planifiées ou les changements de signature sur les paquets consommés.
-* Alerter sur l'utilisation de versions non supportées ou de forks non maintenus en production.
-
-#### Phase 3 — Confinement, éradication et récupération
-
-* Geler les mises à jour automatiques d'un composant suspect et basculer sur une version épinglée validée.
-* Activer la capacité de fork interne ou de correctif temporaire pour les composants critiques non maintenus.
-* Révoquer les clés de signature et secrets de build potentiellement exposés.
-
-#### Phase 4 — Activités post-incident
-
-* Réévaluer la structure de dépendance et le plan de reprise pour chaque composant critique.
-* Formaliser un budget de maintenance interne ou de support commercial pour les projets à risque.
-* Mettre à jour la politique d'achat et de contribution open source.
-
-#### Phase 5 — Threat Hunting (proactif)
-
-* Rechercher des modifications suspectes dans les dépendances (scripts de build, hooks d'installation, code obfusqué).
-* Vérifier l'intégrité des artefacts consommés par rapport aux sources upstream officielles.
-* Contrôler les accès aux dépôts internes et aux registres de paquets.
-
----
-
-### TTP MITRE ATT&CK
-
-| ID TTP | Description |
-|---|---|
-| **T1195.002** | Compromission de la chaîne d'approvisionnement logicielle via des dépendances open source |
-
----
-
-### Sources
-
-* [https://secure-platform.eu/sovereignty/2026/06/10/oss-sovereignty.html](https://secure-platform.eu/sovereignty/2026/06/10/oss-sovereignty.html)
-
-
----
-
-<div id="euvd-2026-105321-debordement-de-tampon-de-pile-dans-les-pilotes-de-peripheriques-can-windows-pcan"></div>
-
-## EUVD-2026-105321 — Débordement de tampon de pile dans les pilotes de périphériques CAN Windows PCAN
-
-### Résumé
-
-ENISA publie dans l'EUVD la vulnérabilité EUVD-2026-105321 (CVE-2026-103672, GHSA-6q94-5hqp-c754), notée 6.9 selon le vecteur CVSS 4.0 AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:H. Le parseur des pilotes PCAN de PEAK-System indexe une table de longueurs à l'aide d'un champ DLC contrôlé par l'attaquant sans vérifier que DLC <= 0x0f, puis copie la charge utile située à l'offset record+0x1c vers une destination de taille fixe sur la pile, provoquant un débordement. Les produits affectés sont les pilotes PCAN Windows de HMS Networks (versions 0 à 5.1.2) et le PEAK-System Device Driver Setup (0 à 5.1.2.1151). L'avis CISA ICSA-26-293-01 est référencé, ainsi que les pages sécurité de HMS Networks et les téléchargements PEAK-System.
-
----
-
-### Analyse opérationnelle
-
-La vulnérabilité est locale (AV:L) et requiert un accès en écriture au flux CAN ou la capacité de faire traiter une trame forgée par le pilote : elle concerne donc principalement les bancs de test, stations d'ingénierie et véhicules instrumentés où un opérateur ou un processus local peut injecter des trames. L'impact est fort sur l'intégrité et la disponibilité (VI:H/VA:H) : corruption mémoire noyau, plantage du poste, voire exécution de code dans le contexte du noyau. La remédiation consiste à mettre à jour les pilotes au-delà des versions affectées ; en attendant, la réduction des privilèges locaux et le cloisonnement des machines connectées aux bus CAN limitent l'exposition. Les équipes doivent aussi vérifier la présence de ces pilotes sur des postes d'ingénierie oubliés de l'inventaire.
-
----
-
-### Implications stratégiques
-
-Les chaînes de développement et de validation automobile et industrielle sont des cibles de plus en plus scrutées : une compromission d'une station d'ingénierie connectée à un bus CAN peut avoir des conséquences sur la sûreté fonctionnelle et sur la propriété intellectuelle des constructeurs. La publication coordonnée via le CNA ICS montre la montée en maturité de la filière, mais la dispersion des pilotes sur des postes non gérés reste un angle mort. Les exigences du Cyber Resilience Act et des référentiels ISA/IEC 62443 renforcent l'obligation de suivi des composants et de correctifs sur ces environnements.
-
----
-
-### Recommandations
-
-* Mettre à jour les pilotes PCAN vers une version postérieure à 5.1.2 et le Device Driver Setup au-delà de 5.1.2.1151.
-* Recenser les postes d'ingénierie et bancs de test équipés de ces pilotes, y compris hors périmètre IT géré.
-* Restreindre les droits administrateur local et l'accès physique aux machines connectées aux bus CAN.
-* Cloisonner les bancs de test du réseau de production et filtrer les accès aux équipements CAN.
-* Intégrer les composants CAN dans la veille vulnérabilités et les campagnes de tests de robustesse.
-
----
-
-### Playbook de réponse à incident
-
-#### Phase 1 — Préparation
-
-* Inventorier les postes et bancs de test équipés de pilotes PCAN (PEAK-System) et identifier les versions installées.
-* Restreindre l'accès physique et logique aux machines connectées à des bus CAN (bancs, stations d'ingénierie, véhicules de test).
-* Suivre les avis CISA ICSA-26-293-01 et les publications de l'éditeur HMS Networks/PEAK-System.
-
-#### Phase 2 — Détection et analyse
-
-* Surveiller les crashs répétés ou BSOD des postes utilisant les pilotes PCAN, pouvant indiquer l'envoi de trames malformées.
-* Détecter l'exécution de code non signé ou l'élévation de privilèges sur les stations d'ingénierie connectées au bus CAN.
-* Journaliser les connexions d'outils d'analyse CAN non référencés sur les bancs de test.
-
-#### Phase 3 — Confinement, éradication et récupération
-
-* Mettre à jour les pilotes PCAN vers une version supérieure à 5.1.2 (et le PEAK-System Device Driver Setup au-delà de 5.1.2.1151).
-* À défaut de correctif immédiat, isoler les machines vulnérables des bus CAN non maîtrisés et limiter les comptes locaux à privilèges.
-* Cloisonner les bancs de test du réseau de production et retirer les droits administrateur local aux opérateurs.
-
-#### Phase 4 — Activités post-incident
-
-* Vérifier l'intégrité des stations d'ingénierie après exploitation suspectée (réinstallation, comparaison de configuration).
-* Mettre à jour la politique de gestion des pilotes sur les environnements OT/automobile.
-* Intégrer les composants CAN dans le périmètre de veille vulnérabilités et de test de robustesse.
-
-#### Phase 5 — Threat Hunting (proactif)
-
-* Rechercher des trames CAN forgées ou des enregistrements anormaux dans les journaux des outils d'analyse.
-* Chasser les pilotes non signés ou les versions obsolètes installées sur les postes d'ingénierie.
-* Analyser les traces d'exploitation locale (chargement de pilote, accès mémoire noyau) sur les machines exposées.
-
----
-
-### Indicateurs de compromission
-
-| Type | Valeur (DEFANG) | Fiabilité |
-|---|---|---|
-| URL | `hxxps://www[.]cisa[.]gov/news-events/ics-advisories/icsa-26-293-01` | High |
-| URL | `hxxps://www[.]hms-networks[.]com/cybersecurity` | High |
-| URL | `hxxps://www[.]peak-system[.]com/support/downloads/software/` | High |
-
----
-
-### TTP MITRE ATT&CK
-
-| ID TTP | Description |
-|---|---|
-| **T1068** | Exploitation d'une vulnérabilité de pilote pour élever les privilèges ou provoquer un déni de service sur l'hôte |
-
----
-
-### Sources
-
-* [https://euvd.enisa.europa.eu/vulnerability/EUVD-2026-105321](https://euvd.enisa.europa.eu/vulnerability/EUVD-2026-105321)
-* [https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01](https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01)
-
-
----
-
-<div id="graves-fireplaces-inc-par-un-groupe-secret-mondial"></div>
-
-## Graves Fireplaces, Inc. Par un groupe secret mondial
-
-### Résumé
-
-La victime « Graves Fireplaces, Inc. » est référencée sur la page du groupe de rançongiciel « Global Secret Group » suivie par RansomLook, avec une mention de statut (« 4/6 up »). L'entrée correspond à une revendication de victime publiée sur le site de fuite du groupe.
-
----
-
-### Analyse opérationnelle
-
-La publication d'une victime sur un site de fuite signale généralement une exfiltration préalable et une menace de divulgation, indépendamment du chiffrement effectif. Les équipes doivent vérifier si l'organisation ou ses filiales/fournisseurs sont concernées, contrôler les accès sortants et les journaux d'exfiltration, et préparer une évaluation de l'exposition des données clients et RH. La mention de statut suggère un suivi de l'avancement de la négociation ou de la publication.
-
----
-
-### Implications stratégiques
-
-La multiplication des groupes de rançongiciel de taille modeste mais actifs illustre la démocratisation de l'extorsion à double détente, y compris contre des PME industrielles. Le risque porte autant sur la continuité d'activité que sur la réputation et les obligations de notification. Les chaînes d'approvisionnement de ces entreprises constituent un vecteur de propagation vers des donneurs d'ordre plus grands.
-
----
-
-### Recommandations
-
-* Vérifier immédiatement si l'entité ou ses partenaires apparaissent sur le site de fuite et qualifier les données exposées.
-* Contrôler les sauvegardes hors ligne et tester la restauration sur un périmètre isolé.
-* Imposer MFA et segmentation sur les accès distants et les comptes de service.
-* Préparer un plan de communication de crise et anticiper les obligations de notification réglementaire.
-* Surveiller les flux RansomLook et les sites de fuite pour les entités du secteur et les fournisseurs critiques.
-
----
-
-### Playbook de réponse à incident
-
-#### Phase 1 — Préparation
-
-* Vérifier la couverture des sauvegardes hors ligne et tester les procédures de restauration.
-* Durcir l'authentification (MFA) sur les accès VPN, RDP et messageries d'entreprise.
-* Cartographier les données sensibles (clients, RH, propriété intellectuelle) et leur classification.
-
-#### Phase 2 — Détection et analyse
-
-* Surveiller les sites de fuite et les flux de renseignement pour détecter la mention de l'organisation.
-* Détecter les exfiltrations massives (volume sortant anormal, accès à des partages de fichiers inhabituels).
-* Alerter sur les tentatives d'authentification échouées répétées et les connexions RDP/VPN atypiques.
-
-#### Phase 3 — Confinement, éradication et récupération
-
-* Isoler les segments réseau compromis et révoquer les comptes à privilèges suspects.
-* Bloquer les indicateurs de C2 et les domaines associés au groupe sur les passerelles et proxies.
-* Activer la cellule de crise, notifier la direction, le juridique et les autorités compétentes (CNIL/CERT).
-
-#### Phase 4 — Activités post-incident
-
-* Analyser les vecteurs d'accès initial et les mouvements latéraux pour éradiquer la persistance.
-* Renforcer la segmentation, la journalisation centralisée et la supervision des comptes à privilèges.
-* Réaliser un retour d'expérience et mettre à jour le plan de continuité et de communication de crise.
-
-#### Phase 5 — Threat Hunting (proactif)
-
-* Rechercher les artefacts associés au groupe Global Secret Group (binaires, clés de registre, tâches planifiées).
-* Analyser les journaux d'accès aux partages pour identifier une collecte de données antérieure au chiffrement.
-* Traquer les comptes créés récemment et les élévations de privilèges non justifiées.
-
----
-
-### TTP MITRE ATT&CK
-
-| ID TTP | Description |
-|---|---|
-| **T1486** | Data Encrypted for Impact — chiffrement des données à des fins d'extorsion |
-| **T1657** | Financial Theft — monétisation via rançon et revente de données |
-| **T1567** | Exfiltration Over Web Service — publication des données volées sur un site de fuite |
-
----
-
-### Sources
-
-* [https://www.ransomlook.io//group/global%20secret%20group](https://www.ransomlook.io//group/global%20secret%20group)
-
-
----
-
-<div id="detecter-la-falsification-de-modeles-sans-signatures-processus-fichiers-ni-appels-reseau-chasse-aux-attaques-rome"></div>
-
-## Détecter la falsification de modèles sans signatures, processus, fichiers ni appels réseau. (Chasse aux attaques ROME)
-
-### Résumé
-
-Un post de r/blueteamsec décrit les attaques ROME (Rank-One Model Editing), issues des travaux de recherche « Locating and Editing Factual Associations in GPT » (Meng, Bau, Andonian, Belinkov). La chaîne d'attaque suppose une compromission de la supply chain Python/PyTorch pour injecter une bibliothèque qui réécrit chirurgicalement les poids du modèle (sans réentraînement) et modifie des sorties spécifiques sans créer de processus, de fichier ni d'appel réseau. La détection proposée repose sur le traçage des kernels CUDA et l'analyse des piles d'appels, avec un billet de la société Stealthium explorant la détection côté GPU via eBPF. Le post cite également les travaux PoisonGPT de Mithril Security.
-
----
-
-### Analyse opérationnelle
-
-Ces manipulations de modèles échappent aux outils de sécurité classiques positionnés au-dessus du driver : pas de binaire, pas d'IOC fichier ou réseau, pas de processus enfant. La détection exige une télémétrie bas niveau (kernels CUDA, eBPF, accès mémoire GPU) et un contrôle d'intégrité des poids par empreinte. Côté défense, la priorité est la maîtrise de la chaîne d'approvisionnement logicielle ML : épinglage des versions, vérification des paquets PyPI, isolation des environnements d'inférence et journalisation des accès aux GPU.
-
----
-
-### Implications stratégiques
-
-L'intégrité des modèles d'IA devient un enjeu de sécurité nationale et de confiance économique : une altération discrète des poids peut orienter des décisions métier, produire de la désinformation ciblée ou réécrire des faits historiques. Les organisations déployant des LLM doivent considérer la supply chain ML comme une surface d'attaque critique, avec des exigences de traçabilité et de certification alignées sur les réglementations émergentes sur l'IA.
-
----
-
-### Recommandations
-
-* Signer et vérifier par empreinte les modèles déployés, avec un registre de référence immuable.
-* Épingler et auditer les dépendances Python/PyTorch ; bloquer les paquets non approuvés.
-* Déployer une télémétrie GPU/eBPF et surveiller les accès mémoire anormaux aux tenseurs.
-* Restreindre les droits d'accès aux environnements d'entraînement et aux GPU de production.
-* Intégrer des tests de non-régression sémantique pour détecter les dérives de sortie des modèles.
-
----
-
-### Playbook de réponse à incident
-
-#### Phase 1 — Préparation
-
-* Inventorier les modèles IA, frameworks (PyTorch, CUDA) et dépendances Python utilisés en production.
-* Mettre en place un registre de modèles avec empreintes (hash) des poids de référence.
-* Restreindre les droits d'accès aux GPU et aux environnements d'entraînement/inférence.
-
-#### Phase 2 — Détection et analyse
-
-* Surveiller les installations de paquets PyPI et les dépendances non épinglées dans les environnements ML.
-* Tracer les kernels CUDA et les piles d'appels pour détecter des réécritures de poids anormales.
-* Déployer une télémétrie eBPF côté GPU pour repérer les accès mémoire non légitimes aux tenseurs.
-
-#### Phase 3 — Confinement, éradication et récupération
-
-* Isoler les nœuds GPU suspects et geler les pipelines d'entraînement concernés.
-* Restaurer les modèles depuis des artefacts signés et vérifiés par empreinte.
-* Révoquer les jetons d'accès aux registres de modèles et aux dépôts de paquets compromis.
-
-#### Phase 4 — Activités post-incident
-
-* Comparer les poids du modèle restauré avec la référence et documenter les écarts.
-* Renforcer la signature des modèles, le verrouillage des dépendances et la revue des paquets tiers.
-* Intégrer l'intégrité des modèles au plan de réponse à incident et aux audits fournisseurs.
-
-#### Phase 5 — Threat Hunting (proactif)
-
-* Rechercher des paquets PyPI suspects ou récemment publiés touchant PyTorch/CUDA.
-* Analyser les journaux d'accès GPU pour identifier des exécutions hors fenêtre d'entraînement.
-* Comparer les sorties du modèle sur des jeux de tests de référence pour détecter des dérives sémantiques.
-
----
-
-### TTP MITRE ATT&CK
-
-| ID TTP | Description |
-|---|---|
-| **T1195.002** | Compromise Software Supply Chain — injection d'une bibliothèque malveillante dans la chaîne Python/PyTorch |
-| **T1565.001** | Stored Data Manipulation — réécriture des poids du modèle pour altérer les sorties |
-| **T1055** | Process Injection — exécution de code dans le contexte du processus d'inférence sans artefact disque |
-
----
-
-### Sources
-
-* [https://www.reddit.com/r/blueteamsec/comments/1xb13k1/detecting_model_tampering_without_signatures/](https://www.reddit.com/r/blueteamsec/comments/1xb13k1/detecting_model_tampering_without_signatures/)
-
-
----
-
-<div id="password1-et-un-compte-de-test-oublie-valent-des-ennuis-a-des-organisations-galloises"></div>
-
-## Password1 et un compte de test oublié valent des ennuis à des organisations galloises
-
-### Résumé
-
-L'ICO britannique a adressé des réprimandes — et non des amendes — à Ogi Networks Limited (ONL) et à la Local Government Data Unit – Wales (Data Cymru). Selon le régulateur, un attaquant a exploité le 1er novembre 2024 un compte de test nommé « Test2 », créé en 2012 avec le mot de passe « Password1 », pour pénétrer le réseau de Data Cymru. Avant de déployer le rançongiciel, l'attaquant a exfiltré 42 Go de données depuis un contrôleur de domaine primaire, un serveur de fichiers et un serveur SQL, puis a chiffré 182,7 Go de données. Les trois systèmes impactés partageaient le même mot de passe de compte administrateur local, et ces comptes n'avaient fait l'objet d'aucune revue depuis plus de 12,5 ans.
-
----
-
-### Analyse opérationnelle
-
-L'incident est un cas d'école de défaut d'hygiène des identités : compte orphelin, mot de passe trivial, réutilisation de secrets administrateurs locaux permettant le vol de hachages et le déplacement latéral. Les mesures immédiates sont la chasse aux comptes de test et comptes inactifs, la rotation des secrets locaux administrateurs (LAPS ou équivalent), la segmentation des serveurs de fichiers/SQL et la journalisation des accès administratifs. La détection repose sur la surveillance des authentifications de comptes dormants et des connexions SMB anormales.
-
----
-
-### Implications stratégiques
-
-Au-delà de la sanction réglementaire, l'affaire illustre la vulnérabilité des chaînes de sous-traitance dans le secteur public : un fournisseur d'infrastructure peut exposer les données d'une entité publique, avec des conséquences pour des milliers de personnes, dont des mineurs. Elle rappelle que les exigences de l'article 32 du RGPD portent sur les mesures techniques et organisationnelles, et que l'absence de revue des comptes constitue en soi un manquement. La tendance est à la responsabilisation contractuelle des prestataires et à l'audit des accès hérités.
-
----
-
-### Recommandations
-
-* Supprimer ou désactiver tous les comptes de test et comptes inactifs, avec revue trimestrielle documentée.
-* Déployer une solution de gestion des mots de passe administrateurs locaux (LAPS) et éliminer la réutilisation de secrets.
-* Imposer des clauses de sécurité et de notification d'incident dans les contrats avec les hébergeurs et prestataires IT.
-* Tester régulièrement la restauration des sauvegardes et vérifier leur isolation du réseau de production.
-
----
-
-### Playbook de réponse à incident
-
-#### Phase 1 — Préparation
-
-* Inventorier et désactiver les comptes de test, de service et les comptes locaux administrateurs hérités.
-* Imposer une gestion des secrets (coffre-fort, rotation, mots de passe uniques par système) et supprimer les mots de passe par défaut.
-* Mettre en place une revue trimestrielle des comptes Active Directory et des accès administrateurs locaux.
-
-#### Phase 2 — Détection et analyse
-
-* Alerter sur les authentifications réussies de comptes inactifs ou de comptes de test.
-* Détecter l'usage de hachages locaux identiques sur plusieurs systèmes et les connexions SMB administratives anormales.
-* Surveiller les volumes d'exfiltration sortants et les accès massifs aux serveurs de fichiers et SQL.
-
-#### Phase 3 — Confinement, éradication et récupération
-
-* Désactiver immédiatement les comptes compromis et réinitialiser tous les secrets des comptes locaux administrateurs.
-* Isoler les serveurs chiffrés du réseau et préserver les preuves forensiques.
-* Couper les canaux d'exfiltration identifiés et bloquer les IOC réseau associés.
-
-#### Phase 4 — Activités post-incident
-
-* Notifier l'autorité de protection des données (RGPD, 72 h) et informer les personnes affectées.
-* Reconstruire les systèmes depuis des sauvegardes vérifiées hors ligne et valider l'absence de persistance.
-* Réaliser un audit de configuration et un test de restauration documenté.
-
-#### Phase 5 — Threat Hunting (proactif)
-
-* Rechercher les comptes locaux administrateurs partageant le même mot de passe sur tout le parc.
-* Analyser les journaux d'authentification pour détecter des connexions latérales inhabituelles.
-* Vérifier l'absence de persistance (tâches planifiées, services, comptes créés) sur les systèmes restaurés.
-
----
-
-### TTP MITRE ATT&CK
-
-| ID TTP | Description |
-|---|---|
-| **T1078** | Valid Accounts |
-| **T1110** | Brute Force |
-| **T1530** |  |
-| **T1110.001** |  |
-| **T1003.002** |  |
-| **T1021.002** |  |
-| **T1041** | Exfiltration Over C2 Channel |
-| **T1486** | Data Encrypted for Impact |
-
----
-
-### Sources
-
-* [https://databreaches.net/2026/10/20/welsh-firms-password1-and-test-2-fails-led-to-hackers-stealing-childrens-data/](https://databreaches.net/2026/10/20/welsh-firms-password1-and-test-2-fails-led-to-hackers-stealing-childrens-data/)
-* [https://www.theregister.com/cyber-crime/2026/10/20/password1-and-a-forgotten-test-account-land-welsh-outfits-in-hot-water/5304139](https://www.theregister.com/cyber-crime/2026/10/20/password1-and-a-forgotten-test-account-land-welsh-outfits-in-hot-water/5304139)
-
-
----
-
-<div id="us-bans-deepseek-from-government-agency-systems-amid-ai-rift-with-china"></div>
-
-## U.S. bans DeepSeek from government agency systems amid AI rift with China
-
-### Résumé
-
-Le titre de l'article rapporte que les États-Unis ont interdit l'usage de l'application d'IA DeepSeek sur les systèmes des agences gouvernementales, dans un contexte de tensions technologiques avec la Chine. Le corps de l'article n'était pas accessible lors de la collecte (page de blocage de sécurité renvoyée par le site source), de sorte que les modalités exactes de l'interdiction (périmètre, autorité émettrice, échéances) ne sont pas documentées ici.
-
----
-
-### Analyse opérationnelle
-
-L'enjeu opérationnel immédiat est le risque de fuite de données par « shadow AI » : envoi de documents internes, de code ou de données personnelles vers un service LLM tiers hébergé hors du périmètre de confiance. Les équipes SOC/IT doivent traiter ce type de décision comme un signal de durcissement : inventaire des outils d'IA utilisés, blocage des endpoints non approuvés au niveau proxy/CASB, contrôle des installations via EDR/MDM, et journalisation des prompts contenant des données sensibles. La surface d'attaque inclut aussi les extensions navigateur et les clients mobiles qui contournent le filtrage réseau.
-
----
-
-### Implications stratégiques
-
-Cette décision s'inscrit dans la fragmentation géopolitique de la chaîne d'approvisionnement IA entre Washington et Pékin. Pour les organisations européennes et les sous-traitants de l'État américain, elle annonce probablement des clauses contractuelles d'exclusion de fournisseurs d'IA étrangers, des exigences de localisation et des audits de résidence des données. Le risque organisationnel est double : conformité (interdiction d'usage) et réputation (usage non maîtrisé d'un outil sous embargo politique).
-
----
-
-### Recommandations
-
-* Établir un inventaire formel des services d'IA générative utilisés dans l'organisation
-* Bloquer au proxy les domaines d'IA non approuvés et journaliser les tentatives
-* Intégrer une clause de résidence des données et d'exclusion d'usage dans les contrats fournisseurs
-* Sensibiliser les collaborateurs au risque de fuite via prompts et pièces jointes
-
----
-
-### Playbook de réponse à incident
-
-#### Phase 1 — Préparation
-
-* Recenser les outils d'IA générative utilisés par les agents et sous-traitants (inventaire shadow AI)
-* Définir une politique d'usage des IA tierces avec classification des données autorisées
-* Configurer le filtrage sortant (proxy, CASB) vers les domaines d'IA non approuvés
-
-#### Phase 2 — Détection et analyse
-
-* Surveiller les requêtes DNS/HTTP vers les endpoints DeepSeek et services d'IA non autorisés
-* Détecter les installations d'applications d'IA sur postes et mobiles via EDR/MDM
-* Analyser les journaux proxy pour identifier des envois de données sensibles vers des LLM externes
-
-#### Phase 3 — Confinement, éradication et récupération
-
-* Bloquer les domaines et applications au niveau proxy, pare-feu et MDM
-* Révoquer les clés API et comptes tiers liés à des services d'IA non approuvés
-* Isoler les postes ayant transmis des données classifiées à un service externe
-
-#### Phase 4 — Activités post-incident
-
-* Mettre à jour la charte d'usage de l'IA et la clause de conformité fournisseurs
-* Former les agents aux risques de fuite de données via prompts
-* Auditer trimestriellement les flux sortants vers les services d'IA
-
-#### Phase 5 — Threat Hunting (proactif)
-
-* Rechercher des exfiltration de données via prompts dans les journaux proxy sur 90 jours
-* Corréler les accès aux services d'IA avec les données sensibles consultées
-* Identifier les comptes de service utilisés pour contourner les blocages
-
----
-
-### Sources
-
-* [https://databreaches.net/2026/10/20/u-s-bans-deepseek-from-government-agency-systems-amid-ai-rift-with-china/](https://databreaches.net/2026/10/20/u-s-bans-deepseek-from-government-agency-systems-amid-ai-rift-with-china/)
+* [https://www.theguardian.com/technology/2026/oct/21/flaw-in-php-computer-language-leads-to-shutdown-of-websites-around-world](https://www.theguardian.com/technology/2026/oct/21/flaw-in-php-computer-language-leads-to-shutdown-of-websites-around-world)
 
 
 ---
@@ -1480,28 +1702,31 @@ Cette décision s'inscrit dans la fragmentation géopolitique de la chaîne d'ap
 
 ### Résumé
 
-Le titre de l'article indique qu'un incident cyber présumé a rendu inaccessible le portail patient de Parkview Health, établissement de santé présent dans l'Indiana et l'Ohio. Le contenu détaillé de l'article n'était pas accessible lors de la collecte (page de blocage renvoyée par le site source) : la nature exacte de l'incident, le périmètre des systèmes touchés et l'éventuelle exfiltration de données ne sont donc pas documentés ici.
+Le système de santé Parkview Health, basé dans l'Indiana, a désactivé son réseau après la détection d'une activité suspecte, provoquant l'indisponibilité du portail patient MyChart, de la recherche de praticiens en ligne et des rappels de rendez-vous. La première notification publique de panne a été publiée le 18 octobre 2026 et le site affichait toujours des problèmes d'accès le 20 octobre. Les patients ont été redirigés vers des appels téléphoniques ou des consultations sans rendez-vous pour les besoins médicaux urgents. La nature exacte de l'activité suspecte, le calendrier de restauration et les conclusions définitives sur d'éventuelles atteintes aux données n'étaient pas résolus à la date de publication.
 
 ---
 
 ### Analyse opérationnelle
 
-L'indisponibilité d'un portail patient est un scénario à fort impact opérationnel : perte du canal de prise de rendez-vous et de résultats, surcharge des standards téléphoniques, risque de contournement des procédures par les équipes cliniques. Pour le SOC, la priorité est de qualifier rapidement s'il s'agit d'un déni de service, d'un chiffrement ransomware ou d'une mesure de confinement volontaire prise par l'établissement. Les sources de détection à activer : journaux du reverse proxy/WAF, EDR sur les serveurs applicatifs, authentifications IdP, accès VPN et comptes de service. La présence d'un portail exposé sur Internet en fait une cible privilégiée pour l'exploitation de vulnérabilités web et le vol d'identifiants.
+La coupure volontaire du réseau constitue une mesure de confinement classique face à une activité suspecte, mais elle désorganise immédiatement les flux cliniques : accès au dossier patient, prise de rendez-vous, résultats d'examens. Les équipes SOC doivent traiter ce type d'événement comme une compromission potentielle non confirmée et préserver les preuves avant toute restauration. Les priorités techniques sont la segmentation, la révocation des accès distants et des comptes à privilèges, la vérification de l'intégrité des sauvegardes et la recherche d'indicateurs de rançongiciel ou d'exfiltration. L'absence d'IOC publiés impose une chasse fondée sur les TTP et sur l'analyse des journaux VPN/RDP des semaines précédant l'incident. La communication vers les patients et les autorités sanitaires doit être préparée parallèlement à la remédiation technique.
 
 ---
 
 ### Implications stratégiques
 
-Le secteur de la santé reste une cible structurellement attractive : données à forte valeur, tolérance à l'arrêt très faible, moyens de sécurité limités. Un incident sur un portail patient expose l'établissement à des obligations de notification réglementaire (HIPAA aux États-Unis, RGPD en Europe), à un risque de contentieux et à une érosion de la confiance des patients. La répétition de ces incidents alimente par ailleurs la pression des assureurs cyber et des autorités de tutelle sur les exigences de continuité d'activité et de sauvegarde déconnectée.
+Le secteur de la santé reste une cible privilégiée en raison de la criticité vitale de ses services et de sa tolérance à la pression opérationnelle. Un incident qui aveugle un portail patient et coupe l'accès réseau d'un opérateur multi-États (Indiana et Ohio) illustre le risque de sécurité des patients, au-delà du seul risque de données. L'absence de confirmation sur la nature de l'incident et sur l'exposition des données maintient un risque réglementaire et réputationnel élevé, notamment au regard des obligations de notification HIPAA. La tendance de fond est la convergence entre rançongiciels, vol de données de santé et pression sur les établissements pour obtenir un paiement rapide.
 
 ---
 
 ### Recommandations
 
-* Vérifier la disponibilité et l'intégrité des sauvegardes déconnectées du portail et des dossiers patients
-* Mettre en place une supervision de disponibilité externe du portail avec alerting 24/7
-* Imposer le MFA sur tous les accès administrateurs et distants aux systèmes de santé
-* Préparer un canal de communication patient de secours et une procédure de notification réglementaire
+* Traiter l'événement comme une compromission potentielle et préserver les preuves avant toute restauration.
+* Segmenter le réseau et révoquer les accès distants et comptes à privilèges en priorité.
+* Vérifier l'intégrité des sauvegardes hors ligne et planifier une restauration par ordre de criticité clinique.
+* Rechercher des indicateurs de rançongiciel et d'exfiltration sur les systèmes administratifs et serveurs d'application.
+* Préparer la notification des patients et des autorités de régulation si une atteinte aux données est confirmée.
+* Durcir les accès distants (MFA, bastion, moindre privilège) et renforcer la surveillance post-incident.
+* Communiquer publiquement sur les canaux alternatifs d'accès aux soins pour limiter l'impact sur les patients.
 
 ---
 
@@ -1509,41 +1734,43 @@ Le secteur de la santé reste une cible structurellement attractive : données �
 
 #### Phase 1 — Préparation
 
-* Cartographier les dépendances du portail patient (IdP, API, base de données, hébergeur)
-* Valider les procédures de bascule en mode dégradé (accueil téléphonique, formulaires papier)
-* Tester la restauration des sauvegardes du portail et des systèmes de dossiers patients
+* Maintenir un plan de continuité d'activité dégradé pour l'accès aux dossiers patients (procédures papier, lignes téléphoniques dédiées, accueil physique).
+* Cartographier les dépendances du portail patient MyChart, de la recherche de praticiens et des rappels de rendez-vous vis-à-vis de l'Active Directory et des systèmes internes.
+* Tester régulièrement la restauration des sauvegardes des systèmes cliniques et du portail patient.
+* Préparer les trames de communication de crise patients, autorités sanitaires et médias.
+* Vérifier la couverture EDR des serveurs d'application et des postes administratifs, ainsi que la journalisation centralisée.
 
 #### Phase 2 — Détection et analyse
 
-* Surveiller la disponibilité du portail et les codes d'erreur HTTP en provenance des utilisateurs
-* Corréler les alertes EDR/SIEM sur les serveurs web et les comptes de service du portail
-* Analyser les journaux d'authentification pour détecter des accès anormaux avant l'indisponibilité
+* Surveiller les alertes EDR/AV sur les serveurs d'application et les contrôleurs de domaine (chiffrement massif, suppression de clichés instantanés, arrêt de services).
+* Détecter les tentatives d'authentification anormales (VPN, RDP, comptes de service) et les mouvements latéraux vers les systèmes d'information cliniques.
+* Analyser les journaux d'accès au portail patient pour identifier des pics d'erreurs ou des requêtes anormales précédant l'indisponibilité.
+* Corréler l'indisponibilité du 18 octobre 2026 avec les journaux réseau, DNS et proxy pour identifier l'origine de l'activité suspecte.
+* Vérifier les alertes de fuite de données et les communications d'acteurs de rançongiciel mentionnant Parkview Health.
 
 #### Phase 3 — Confinement, éradication et récupération
 
-* Isoler les serveurs du portail compromis et couper les accès distants (VPN, RDP)
-* Réinitialiser les identifiants des comptes à privilèges et invalider les sessions actives
-* Activer le mode opératoire dégradé et communiquer aux patients un canal alternatif
+* Maintenir l'isolation réseau des segments compromis et étendre la segmentation aux systèmes cliniques critiques non affectés.
+* Réinitialiser les identifiants à privilèges et révoquer les sessions actives, en particulier les accès VPN et comptes de service.
+* Préserver les preuves (images disque, journaux, artefacts mémoire) avant toute opération de restauration.
+* Restaurer en priorité les fonctions critiques (dossier patient, prescriptions, imagerie) depuis des sauvegardes vérifiées hors ligne.
+* Communiquer publiquement sur les canaux alternatifs d'accès aux soins et activer la cellule de crise avec les autorités sanitaires.
 
 #### Phase 4 — Activités post-incident
 
-* Déterminer si des données de santé ont été exfiltrées et déclencher les notifications réglementaires (HIPAA)
-* Reconstruire les systèmes depuis des images saines et durcir les accès exposés
-* Réaliser un retour d'expérience avec les équipes cliniques sur la continuité d'activité
+* Déterminer la nature exacte de l'activité suspecte, le vecteur d'entrée initial et l'étendue de l'exposition des données de santé.
+* Évaluer l'obligation de notification des patients et des autorités de régulation (HIPAA, autorités étatiques) dans les délais impartis.
+* Reconstruire les systèmes à partir de bases saines et durcir les accès distants (MFA, bastion, moindre privilège).
+* Réaliser un retour d'expérience sur la détection, la décision de coupure réseau et la continuité des soins.
+* Renforcer la surveillance post-incident pendant plusieurs mois en raison du risque de retour de l'attaquant.
 
 #### Phase 5 — Threat Hunting (proactif)
 
-* Rechercher des mouvements latéraux depuis le segment du portail vers les systèmes de dossiers patients
-* Chercher des indicateurs de ransomware (notes de rançon, extensions renommées, tâches planifiées)
-* Examiner les accès aux sauvegardes et les tentatives de suppression de clichés instantanés
-
----
-
-### TTP MITRE ATT&CK
-
-| ID TTP | Description |
-|---|---|
-| **T1486** | Chiffrement des données à des fins d'impact (hypothèse non confirmée par la source) |
+* Rechercher des indicateurs de rançongiciel ou de vol de données sur les serveurs et postes administratifs (binaires de chiffrement, outils d'exfiltration, archives anormales).
+* Analyser les journaux VPN et RDP pour identifier des accès inhabituels dans les semaines précédant le 18 octobre 2026.
+* Rechercher des comptes créés ou modifiés récemment, des tâches planifiées et des services persistants non légitimes.
+* Examiner les flux sortants volumineux vers des services de stockage cloud ou des infrastructures inconnues.
+* Vérifier l'absence de backdoors résiduelles sur les systèmes restaurés avant leur remise en production.
 
 ---
 
@@ -1554,34 +1781,34 @@ Le secteur de la santé reste une cible structurellement attractive : données �
 
 ---
 
-<div id="wake-up-take-a-shit-get-out-of-bed-check-beep-boop-everyone-saying-ooga-booga-php-wtf-why-look-inside-ultra-mega-fuck-off-exploit-coming-php2shell-so-bad-php-devs-begs-nerds-to-patch-tomorrow-proof-of-concept-video-released-pwn-website-easily-video-has-dancing-anime-lady-nobody-explains-why-dancing-anime-lady-no-one-even-asks-why-proof-of-concept-has-dancing-anime-lady-ok-cybersecurity-nerds-bamboozled-some-saying-will-be-up-there-with-log4j-in-severity-goopocalypse-pic-unrelated"></div>
+<div id="un-hacker-ecope-de-8-ans-de-prison-pour-avoir-vole-33-millions-de-dollars-aux-contribuables"></div>
 
-## > wake up > take a shit > get out of bed > check beep boop > everyone saying ooga booga PHP > wtf why > look inside  > ultra mega fuck off exploit coming > php2shell > so bad PHP devs begs nerds to patch tomorrow  > proof of concept video released > pwn website easily > video has dancing anime lady? > nobody explains why dancing anime lady > no one even asks why proof of concept has dancing anime lady > ok > cybersecurity nerds bamboozled  > some saying will be up there with Log4J in severity > goopocalypse   pic unrelated
+## Un hacker écope de 8 ans de prison pour avoir volé 3,3 millions de dollars aux contribuables
 
 ### Résumé
 
-Message publié sur un canal Telegram de recherche sécurité annonçant un exploit critique affectant PHP, surnommé « php2shell ». Selon le message : les mainteneurs de PHP appellent à patcher en urgence, une preuve de concept vidéo a été publiée montrant la compromission facile d'un site, et certains commentateurs estiment que la gravité pourrait être comparable à Log4j. Le message ne fournit ni identifiant de CVE, ni version affectée, ni détail technique ; il s'agit d'une source non officielle à faible niveau de fiabilité.
+Un ressortissant nigérian a été condamné à huit ans de prison pour son implication dans une série d'attaques de spearphishing visant des cabinets américains de préparation fiscale depuis 2019. Le stratagème a permis de détourner 3,3 millions de dollars au détriment de contribuables américains.
 
 ---
 
 ### Analyse opérationnelle
 
-Si l'annonce se confirme, il s'agit d'un scénario de compromission massive de sites web : PHP équipe une part très importante des applications exposées sur Internet, et une PoC publique réduit drastiquement le délai entre divulgation et exploitation. Les actions immédiates sont l'inventaire des runtimes PHP exposés et de leurs versions, la préparation de règles WAF virtuelles, la surveillance des processus enfants du serveur web (exécution de shell, téléchargement de charges utiles) et la capacité à redémarrer rapidement les services après correctif. La comparaison avec Log4j doit être traitée comme une hypothèse de travail, pas comme un fait établi.
+Le mode opératoire repose sur du spearphishing ciblé contre des professionnels manipulant des données fiscales et des remboursements, avec prise de contrôle de comptes ou de messageries pour rediriger des fonds. Pour un SOC, la détection doit porter sur les règles de messagerie (usurpation de domaines de cabinets, pièces jointes et liens suspects), les connexions inhabituelles aux portails de préparation fiscale (géolocalisation, ASN, horaires), les changements de coordonnées bancaires et les règles de transfert automatique créées en boîte mail. La réponse inclut la révocation de sessions, la réinitialisation des facteurs MFA et le gel des virements.
 
 ---
 
 ### Implications stratégiques
 
-Une vulnérabilité de cette nature crée un risque systémique pour les hébergeurs, les agences web et les PME qui n'ont ni veille ni capacité de patch rapide. Elle rappelle la dépendance de l'écosystème numérique à quelques composants open source maintenus par des équipes restreintes, et la nécessité d'exiger des garanties de maintenance logicielle dans les contrats d'hébergement et de développement. La publication de PoC « spectaculaires » accélère la course entre attaquants opportunistes et défenseurs.
+Le secteur de la préparation fiscale, et plus largement les services financiers, reste une cible à fort rendement pour la cybercriminalité ouest-africaine spécialisée dans la fraude au président (BEC). La sanction pénale illustre la coopération judiciaire internationale mais ne modifie pas la structuration en réseaux décentralisés. Les organisations doivent traiter la fraude par ingénierie sociale comme un risque financier majeur, couvert par des contrôles de double validation des paiements et une assurance cyber adaptée.
 
 ---
 
 ### Recommandations
 
-* Recenser immédiatement les versions de PHP exposées sur Internet et planifier le patch dès publication officielle
-* Préparer des règles WAF de contournement temporaire et un plan de redémarrage des services
-* Surveiller les processus enfants du serveur web et les écritures de fichiers dans les répertoires web
-* Ne pas se fier à une source unique : attendre la confirmation d'un avis officiel ou d'un identifiant CVE
+* Imposer le MFA résistant au phishing sur tous les portails fiscaux et financiers
+* Mettre en place une double validation humaine et un rappel bancaire pour tout changement de coordonnées de paiement
+* Déployer des règles de détection sur les règles de transfert automatique et les délégations de boîte mail
+* Former les équipes fiscales et comptables aux schémas de spearphishing saisonniers
 
 ---
 
@@ -1589,33 +1816,33 @@ Une vulnérabilité de cette nature crée un risque systémique pour les héberg
 
 #### Phase 1 — Préparation
 
-* Inventorier toutes les applications et runtimes PHP exposés sur Internet avec leurs versions
-* Établir un canal de veille sur les avis de sécurité PHP et les dépôts de PoC publics
-* Préparer des règles WAF génériques et un plan de bascule/rollback des runtimes PHP
+* Cartographier les comptes et portails de préparation fiscale exposés à Internet et imposer le MFA résistant au phishing
+* Mettre en place une procédure de double validation des changements de coordonnées bancaires et des virements sortants
+* Configurer la journalisation des règles de boîte mail, des délégations et des connexions aux portails fiscaux
 
 #### Phase 2 — Détection et analyse
 
-* Surveiller les journaux web pour des requêtes anormales vers les endpoints PHP (payloads, encodages, longueurs inhabituelles)
-* Détecter les processus enfants anormaux lancés par le serveur web (shell, curl, wget, base64)
-* Corréler les alertes EDR sur les conteneurs et serveurs web avec les pics de requêtes
+* Surveiller les courriels usurpant les domaines de cabinets fiscaux ou de l'administration (SPF/DKIM/DMARC en échec, domaines look-alike)
+* Alerter sur les connexions inhabituelles aux portails (nouvel ASN, géolocalisation, horaires atypiques, échecs MFA répétés)
+* Détecter la création de règles de transfert automatique, de délégations ou de modifications de coordonnées bancaires
 
 #### Phase 3 — Confinement, éradication et récupération
 
-* Appliquer le correctif PHP dès publication et redémarrer les services concernés
-* Activer des règles WAF virtuelles bloquant les motifs d'exploitation connus
-* Isoler les serveurs présentant des indicateurs d'exécution de code et préserver les journaux
+* Révoquer les sessions et jetons actifs, réinitialiser les identifiants et réenrôler le MFA des comptes touchés
+* Suspendre les règles de messagerie malveillantes et purger les messages de phishing des boîtes
+* Geler les paiements et demander le rappel des virements en coordination avec la banque
 
 #### Phase 4 — Activités post-incident
 
-* Rechercher des webshells et des comptes créés pendant la fenêtre d'exposition
-* Réviser les secrets et clés accessibles depuis les serveurs compromis
-* Mettre à jour la politique de patch avec un délai maximal pour les composants exposés
+* Reconstituer la chronologie complète à partir des journaux de messagerie, d'authentification et du portail fiscal
+* Renforcer la sensibilisation ciblée des équipes fiscales et comptables au spearphishing
+* Revoir les contrôles de séparation des tâches et l'assurance cyber couvrant la fraude par ingénierie sociale
 
 #### Phase 5 — Threat Hunting (proactif)
 
-* Rechercher des webshells PHP (fichiers récents, obfuscation, eval/base64_decode) sur les serveurs web
-* Analyser les accès sortants inhabituels depuis les serveurs web vers des IP inconnues
-* Examiner les journaux de build/déploiement pour des modifications non autorisées
+* Rechercher des indicateurs de compromission sur l'ensemble des comptes ayant reçu des messages similaires
+* Traquer les connexions sortantes vers des infrastructures de phishing connues et les transferts de fichiers anormaux
+* Analyser rétrospectivement les changements de coordonnées bancaires sur 12 mois
 
 ---
 
@@ -1623,45 +1850,47 @@ Une vulnérabilité de cette nature crée un risque systémique pour les héberg
 
 | ID TTP | Description |
 |---|---|
-| **T1190** | Exploitation d'une application exposée sur Internet (PHP) pour exécution de code |
+| **T1566.002** | Spearphishing par lien contre des cabinets de préparation fiscale |
+| **T1657** | Vol financier via détournement de remboursements et de fonds de contribuables |
+| **T1078** | Usage de comptes légitimes compromis pour accéder aux portails métier |
 
 ---
 
 ### Sources
 
-* [https://t.me/vxunderground/9549](https://t.me/vxunderground/9549)
+* [https://www.bleepingcomputer.com/news/security/hacker-gets-8-years-for-stealing-33-million-from-taxpayers/](https://www.bleepingcomputer.com/news/security/hacker-gets-8-years-for-stealing-33-million-from-taxpayers/)
 
 
 ---
 
-<div id="23andme-paiera-6-m-au-californie-pour-regler-un-litige-lie-a-un-piratage"></div>
+<div id="meta-affirme-avoir-corrige-lecoute-clandestine-non-sollicitee-des-lunettes-connectees"></div>
 
-## @23andMe paiera 6 M$ au #Californie pour régler un litige lié à un piratage
+## Meta affirme avoir corrigé l'écoute clandestine non sollicitée des lunettes connectées
 
 ### Résumé
 
-L'article rapporte que l'entreprise de tests génétiques 23andMe versera 6 millions de dollars à la Californie pour régler un litige lié au piratage subi en 2023, décrit comme une attaque par bourrage d'identifiants (credential stuffing) ayant conduit à une fuite de données. Ce règlement est présenté comme le dernier paiement juridique en date pour l'entreprise.
+Des propriétaires de lunettes Ray-Ban Meta ont signalé que leurs appareils enregistraient des conversations sans la phrase d'activation « Hey Meta », y compris avec l'option « Respond without Hey Meta » désactivée, après une mise à jour de firmware. Des enregistrements et transcriptions non sollicités ont été retrouvés dans les historiques. Meta affirme que le problème est résolu et renvoie vers la gestion des journaux vocaux dans les paramètres, sans préciser la cause, le nombre d'utilisateurs affectés ni le devenir des enregistrements captés.
 
 ---
 
 ### Analyse opérationnelle
 
-Le mode opératoire — bourrage d'identifiants sur un service grand public — reste l'une des voies d'accès les plus rentables pour les attaquants, car il ne nécessite aucune vulnérabilité logicielle. Les équipes de défense doivent considérer la réutilisation de mots de passe comme une hypothèse par défaut : MFA obligatoire, détection des identifiants compromis à l'authentification, limitation de débit, détection d'énumération de comptes et surveillance des accès massifs aux données. Pour les données génétiques, la sensibilité est irréversible : une fuite ne peut pas être « réinitialisée » comme un mot de passe.
+L'incident expose un risque de captation et de conservation de données audio et de transcriptions sans consentement, y compris de personnes tierces non utilisatrices. Pour les équipes IT/SOC, l'enjeu porte sur la gouvernance des objets portables connectés : inventaire des appareils, restriction des permissions micro/caméra via MDM, désactivation de la synchronisation automatique des journaux vocaux, et audit régulier des historiques. La détection est difficile car l'activité est légitime du point de vue réseau ; elle repose sur l'analyse des flux de l'application compagnon et sur les signalements utilisateurs.
 
 ---
 
 ### Implications stratégiques
 
-Ce règlement illustre la matérialisation du risque juridique et financier des fuites de données aux États-Unis, État par État, en complément des recours collectifs. Pour les organisations détenant des données de santé ou biométriques, la question n'est plus seulement technique mais assurantielle et contractuelle : provisionnement des amendes, gouvernance des données sensibles, et exigences des partenaires et investisseurs en matière de sécurité. La donnée génétique constitue une catégorie à part, dont la compromission expose à des risques de discrimination et d'usurpation durables.
+La confiance dans les assistants IA embarqués devient un enjeu de conformité (RGPD, consentement des tiers, secret des affaires en réunion) autant que de réputation. L'absence d'explication de cause racine par le fournisseur fragilise la posture de tiers et complique les évaluations de risque fournisseur. Les entreprises doivent anticiper une pression réglementaire accrue sur les dispositifs à captation ambiante et encadrer contractuellement la conservation des données par les éditeurs.
 
 ---
 
 ### Recommandations
 
-* Rendre le MFA obligatoire sur tous les comptes clients détenant des données sensibles
-* Bloquer à l'authentification les mots de passe présents dans les corpus de fuites connus
-* Mettre en place une détection d'énumération et de connexions distribuées sur les API d'authentification
-* Intégrer le risque de contentieux lié aux données de santé dans la revue annuelle des risques
+* Interdire ou encadrer l'usage de lunettes connectées en réunion et en zone à secret
+* Restreindre micro, caméra et synchronisation cloud via les profils MDM
+* Auditer trimestriellement les journaux vocaux des assistants embarqués
+* Exiger des fournisseurs une notification d'incident et une analyse de cause racine
 
 ---
 
@@ -1669,81 +1898,71 @@ Ce règlement illustre la matérialisation du risque juridique et financier des 
 
 #### Phase 1 — Préparation
 
-* Imposer le MFA sur les comptes clients et administrateurs des services de données sensibles
-* Intégrer une vérification des mots de passe compromis à l'authentification
-* Préparer un plan de notification clients et d'assistance (centre d'appels, FAQ, communication)
-* Cartographier les données génétiques et leur base légale de traitement
+* Recenser les objets portables connectés autorisés en entreprise et définir une politique d'usage en réunion et en zone sensible
+* Configurer les profils MDM/UEM pour restreindre micro, caméra et synchronisation cloud des journaux vocaux
+* Intégrer les risques d'enregistrement non consenti dans l'analyse d'impact relative à la vie privée (AIPD)
 
 #### Phase 2 — Détection et analyse
 
-* Détecter les pics d'échecs d'authentification et les tentatives distribuées sur de nombreux comptes
-* Surveiller les connexions depuis des plages d'IP proxies/VPN et les changements d'empreinte
-* Alerter sur les accès massifs aux enregistrements de comptes (énumération, export)
+* Auditer périodiquement les journaux vocaux et transcriptions des assistants embarqués à la recherche d'enregistrements non sollicités
+* Surveiller les flux sortants des applications compagnon vers les services cloud de l'assistant
+* Recueillir les signalements utilisateurs d'activations involontaires (voyant, notifications)
 
 #### Phase 3 — Confinement, éradication et récupération
 
-* Forcer la réinitialisation des mots de passe des comptes ciblés et invalider les sessions
-* Bloquer les plages d'IP et les empreintes d'appareils impliquées dans le bourrage d'identifiants
-* Restreindre temporairement les fonctionnalités de partage et d'export de données
+* Désactiver l'activation vocale, la détection de port et les permissions micro/caméra sur les appareils concernés
+* Supprimer l'historique vocal et les transcriptions non reconnues
+* Suspendre l'usage des appareils en zones où des conversations confidentielles ont lieu
 
 #### Phase 4 — Activités post-incident
 
-* Notifier les autorités et les personnes concernées selon les obligations légales applicables
-* Documenter les coûts juridiques et provisionner les risques de contentieux
-* Renforcer la détection de réutilisation d'identifiants et l'authentification adaptative
+* Documenter les enregistrements exposés et évaluer les obligations de notification si des données personnelles de tiers sont concernées
+* Exiger du fournisseur une explication de cause racine et un engagement de correction
+* Mettre à jour la politique d'usage des wearables et la sensibilisation des collaborateurs
 
 #### Phase 5 — Threat Hunting (proactif)
 
-* Rechercher des accès authentifiés légitimes à partir d'identifiants fuités sur les forums
-* Analyser les journaux d'accès aux données génétiques pour des consultations anormales
-* Rechercher la présence de jeux de données de l'entreprise sur les marchés cybercriminels
-
----
-
-### TTP MITRE ATT&CK
-
-| ID TTP | Description |
-|---|---|
-| **T1110.004** | Credential stuffing : réutilisation d'identifiants fuités pour accéder aux comptes clients |
+* Rechercher dans les journaux cloud du compte les artefacts vocaux créés hors des plages d'usage attendues
+* Corréler les versions de firmware déployées avec les périodes de signalement
+* Vérifier l'absence de code ou de fonctionnalité non documentée dans l'application compagnon
 
 ---
 
 ### Sources
 
-* [https://mastodon.clinicians-exchange.org/@rsstosecurity/117475288280110827](https://mastodon.clinicians-exchange.org/@rsstosecurity/117475288280110827)
+* [https://www.malwarebytes.com/blog/news/2026/10/meta-says-it-fixed-smart-glasses-unprompted-eavesdropping](https://www.malwarebytes.com/blog/news/2026/10/meta-says-it-fixed-smart-glasses-unprompted-eavesdropping)
 
 
 ---
 
-<div id="rt-fuitesinfos-fuites-infos-valeurs-actuelles-48-547-lignes-revendiquees"></div>
+<div id="pres-de-480-000-e-mails-de-phishing-traces-jusqua-un-ordinateur-cache-derriere-un-refrigerateur-dhotel"></div>
 
-## RT: @fuitesinfos 🚨 FUITES INFOS | Valeurs actuelles — ~48 547 lignes revendiquées
+## Près de 480 000 e-mails de phishing tracés jusqu'à un ordinateur caché derrière un réfrigérateur d'hôtel
 
 ### Résumé
 
-Le 20 octobre 2026, un fichier présenté comme la table des factures de la boutique en ligne de l'hebdomadaire Valeurs actuelles (édité par Valmonde et Cie) a été publié sur un forum cybercriminel, proposé au téléchargement contre des crédits du forum. La revendication porte sur environ 48 547 lignes et 45 000 abonnés, et la publication est accompagnée d'un slogan hostile à l'extrême droite. Les données annoncées comprennent : nom complet et civilité, adresse postale et e-mail, mot de passe sous forme hachée, identifiant client et type d'abonnement, références et montants des factures. La fuite est revendiquée mais non confirmée officiellement par l'éditeur.
+La police japonaise a arrêté un couple de ressortissants chinois soupçonné d'avoir dissimulé un ordinateur dans un hôtel de Kobe afin d'envoyer près de 480 000 courriels de phishing. Le couple est également accusé d'avoir utilisé des données de cartes bancaires volées pour effectuer des achats.
 
 ---
 
 ### Analyse opérationnelle
 
-Le risque immédiat pour les abonnés est le phishing ciblé usurpant le magazine : faux renouvellement d'abonnement, facture impayée, mise à jour de coordonnées bancaires. Les mots de passe étant hachés, le risque dépend de l'algorithme utilisé : un hachage faible ou non salé permet une récupération rapide et alimente le bourrage d'identifiants sur d'autres services. Côté éditeur, il faut qualifier la voie d'accès (export de base, compte administrateur compromis, prestataire e-commerce), vérifier les journaux d'accès à la table de facturation et surveiller la diffusion de variantes du fichier.
+L'affaire illustre une infrastructure d'envoi physiquement décentralisée : l'hébergement d'un serveur dans un lieu public (chambre d'hôtel) permet de bénéficier d'une IP résidentielle réputée, de contourner les blocages par géolocalisation et de limiter la traçabilité. Côté défense, la détection repose sur l'analyse des volumes SMTP sortants atypiques, des en-têtes et de l'authentification de messagerie, ainsi que sur la surveillance de la fraude carte côté commerçants et émetteurs. La réponse combine blocage d'IP/ASN, notification aux hébergeurs et coopération avec les autorités.
 
 ---
 
 ### Implications stratégiques
 
-La cible est un média d'opinion, et la publication s'accompagne d'un message politique : la dimension n'est pas seulement criminelle mais potentiellement militante, avec un objectif de déstabilisation et d'intimidation des abonnés. Pour les organisations médias, cela impose de traiter la sécurité des bases d'abonnés comme un enjeu éditorial et réputationnel, en plus de la conformité RGPD (notification sous 72 heures à la CNIL en cas de risque élevé). La fuite peut aussi alimenter des campagnes d'influence et de harcèlement ciblé.
+La professionnalisation des infrastructures criminelles, y compris l'usage détourné de l'hôtellerie et des réseaux résidentiels, complique la réputation d'IP et le filtrage périmétrique. Les établissements hôteliers deviennent une surface d'attaque physique et un vecteur de blanchiment d'infrastructure, ce qui appelle une vigilance sur les réseaux invités et les équipements laissés en chambre. La coopération internationale reste déterminante face à des acteurs opérant depuis l'étranger.
 
 ---
 
 ### Recommandations
 
-* Confirmer ou infirmer la fuite en comparant un échantillon avec les données internes
-* Notifier la CNIL sous 72 heures si le risque pour les personnes est avéré et informer les abonnés
-* Migrer vers un hachage de mots de passe robuste (Argon2id/bcrypt) et forcer la réinitialisation
-* Durcir les accès à la base clients (MFA administrateurs, journalisation des exports, moindre privilège)
-* Surveiller les campagnes de phishing usurpant la marque et publier une alerte sur le site officiel
+* Surveiller les volumes SMTP sortants depuis les réseaux résidentiels et hôteliers
+* Automatiser le traitement des plaintes Abuse et la mise à jour des listes de réputation
+* Renforcer les contrôles anti-fraude carte sur les transactions sans contact physique
+* Sensibiliser les hébergeurs et établissements hôteliers aux usages abusifs de leurs réseaux
 
 ---
 
@@ -1751,33 +1970,33 @@ La cible est un média d'opinion, et la publication s'accompagne d'un message po
 
 #### Phase 1 — Préparation
 
-* Cartographier les bases clients de la boutique en ligne et les données stockées (facturation, abonnements)
-* Vérifier la politique de hachage des mots de passe et la présence de sel/algorithmes robustes
-* Préparer un modèle de notification clients et un dispositif d'assistance anti-phishing
+* Cartographier les sources d'authentification SMTP et surveiller les plages IP résidentielles et hôtelières
+* Mettre en place une remontée automatique des plaintes Abuse et des signalements de réputation IP
+* Définir un canal de contact avec les hébergeurs et les forces de l'ordre pour les cas d'infrastructure criminelle
 
 #### Phase 2 — Détection et analyse
 
-* Surveiller les forums cybercriminels et les canaux de revente pour détecter la mise en vente de jeux de données de l'organisation
-* Détecter les accès anormaux aux tables de facturation et aux exports de bases
-* Surveiller les campagnes de phishing imitant la marque (renouvellement d'abonnement, facture impayée)
+* Détecter les volumes SMTP sortants anormaux depuis des réseaux d'hôtels ou résidentiels
+* Analyser les échecs SPF/DKIM/DMARC et les domaines expéditeurs récemment enregistrés
+* Surveiller les indicateurs de fraude carte (taux de chargeback, tests de cartes, pics d'achats en ligne)
 
 #### Phase 3 — Confinement, éradication et récupération
 
-* Réinitialiser les mots de passe des comptes concernés et invalider les sessions
-* Bloquer les domaines et expéditeurs usurpant la marque dans la passerelle de messagerie
-* Déposer des demandes de retrait du contenu auprès des plateformes et hébergeurs concernés
+* Bloquer les IP et ASN identifiés au niveau des passerelles de messagerie et du proxy
+* Notifier l'hébergeur et les autorités compétentes pour démantèlement de l'infrastructure
+* Renforcer les contrôles anti-fraude sur les transactions carte sans contact physique
 
 #### Phase 4 — Activités post-incident
 
-* Évaluer les obligations de notification (RGPD/CNIL) et le délai de 72 heures
-* Renforcer la segmentation des accès à la base clients et la journalisation des exports
-* Communiquer publiquement sur les précautions à prendre (phishing, réutilisation de mots de passe)
+* Analyser les campagnes reçues pour identifier les clients exposés et déclencher les notifications nécessaires
+* Mettre à jour les règles de filtrage et les listes de réputation
+* Documenter l'incident pour les obligations de reporting réglementaire
 
 #### Phase 5 — Threat Hunting (proactif)
 
-* Rechercher des traces d'exfiltration dans les journaux de la boutique (requêtes massives, exports, comptes administrateurs)
-* Corréler les données publiées avec les enregistrements internes pour confirmer le périmètre
-* Surveiller l'apparition de variantes du jeu de données et les acteurs le diffusant
+* Rechercher dans les journaux de messagerie les messages provenant des IP/ASN signalés
+* Corréler les tentatives d'authentification et les pages de phishing hébergées sur des infrastructures similaires
+* Traquer les motifs de domaine et de sujet utilisés dans la campagne
 
 ---
 
@@ -1785,45 +2004,47 @@ La cible est un média d'opinion, et la publication s'accompagne d'un message po
 
 | ID TTP | Description |
 |---|---|
-| **T1213** | Collecte de données depuis des dépôts d'information (boutique en ligne, table de facturation) |
+| **T1566** | Envoi massif de courriels de phishing (près de 480 000 messages) |
+| **T1583** | Mise en place d'une infrastructure d'envoi dissimulée dans un hôtel pour contourner la géolocalisation |
+| **T1657** | Utilisation de données de cartes bancaires volées pour des achats frauduleux |
 
 ---
 
 ### Sources
 
-* [https://mastox.eu/@Ced_haurus/117474778266479414](https://mastox.eu/@Ced_haurus/117474778266479414)
+* [https://hackread.com/phishing-emails-traced-computer-behind-hotel-fridge/](https://hackread.com/phishing-emails-traced-computer-behind-hotel-fridge/)
 
 
 ---
 
-<div id="mec-jai-recu-un-e-mail-dun-etudiant-de-fsu-florida-state-university-demandant-en-plaisantant-sil-frequente-luniversity-of-goop"></div>
+<div id="meta-muse-expose-les-secrets-personnels-et-professionnels-des-utilisateurs-lorsquils-partagent-des-conversations"></div>
 
-## Mec, j'ai reçu un e-mail d'un étudiant de FSU (Florida State University) demandant en plaisantant s'il fréquente l'University of Goop.
+## Meta Muse expose les secrets personnels et professionnels des utilisateurs lorsqu'ils partagent des conversations
 
 ### Résumé
 
-Un message publié sur un canal Telegram de recherche sécurité rapporte qu'un étudiant de Florida State University (FSU) a reçu un e-mail, vraisemblablement envoyé depuis un compte étudiant compromis, l'invitant à consulter la politique de conduite de l'université et à installer « Zoho Assist ». Zoho Assist est un outil légitime d'assistance à distance ; l'auteur du message souligne que l'attaquant espère qu'un étudiant l'installera pour lui donner un accès distant à son poste. Aucun indicateur technique (adresse d'expédition, domaine, binaire) n'est fourni.
+Des chercheurs de la société Claroc ont découvert que les liens de partage de conversations de Muse, l'agent IA généraliste de Meta, étaient énumérables : une seule requête en DNS passif a permis d'identifier 6 800 liens, le domaine cf.metaaiusercontent.com et le titre de la conversation étant intégrés au sous-domaine. Après ouverture de quelques centaines de liens, ils ont trouvé des informations clairement non destinées à être publiques : notes de préparation d'un entretien de recrutement confidentiel, revue de revenus interne d'une entreprise, dossier de prêt d'un dirigeant, alerte de fraude bancaire avec numéro de compte partiel, rapport de performance immobilière et calendrier de congés nominatif. Meta a suspendu la fonctionnalité de partage le temps de l'examen.
 
 ---
 
 ### Analyse opérationnelle
 
-Il s'agit d'une variante d'ingénierie sociale par abus d'outil RMM légitime : l'attaquant n'a pas besoin de malware, il obtient un accès interactif via un logiciel signé et souvent autorisé. La détection repose sur l'inventaire des outils d'assistance à distance autorisés, l'alerting EDR sur toute installation non approuvée, la surveillance des connexions sortantes vers les services RMM et l'analyse des e-mails internes suspects (compte expéditeur compromis, urgence, consigne d'installation). La compromission d'un compte étudiant comme point de départ montre la nécessité de protéger les comptes de messagerie par MFA et détection d'anomalies.
+Le défaut ne relève pas d'une intrusion mais d'une conception d'URL exposant des données via des liens non authentifiés et devinables, dont la résolution est enregistrée par les services de DNS passif. Pour un SOC, la détection passe par la surveillance des requêtes DNS vers cf[.]metaaiusercontent[.]com, l'analyse des créations de liens de partage depuis les navigateurs et la DLP sur les contenus sensibles collés dans des assistants IA. La réponse consiste à bloquer le domaine si l'usage n'est pas validé, à faire supprimer les liens existants et à traiter l'exposition comme une fuite de données.
 
 ---
 
 ### Implications stratégiques
 
-Le secteur de l'éducation est une cible de choix : population nombreuse et renouvelée, comptes peu supervisés, budgets de sécurité limités, tolérance élevée aux e-mails internes. L'abus d'outils RMM légitimes est une tendance de fond des attaquants (y compris les groupes de rançongiciels et les escrocs au faux support), car il contourne les contrôles applicatifs classiques. Pour les universités, l'enjeu est double : protection des données de recherche et des données personnelles des étudiants, et préservation de la réputation dans un contexte de recrudescence des fraudes ciblant les étudiants.
+L'adoption rapide d'assistants IA génératifs crée une surface de fuite de données hors du périmètre classique de l'entreprise (shadow AI). Les fonctionnalités de partage par lien, pensées pour la collaboration, deviennent des canaux d'exposition involontaire de secrets industriels et de données personnelles, avec des conséquences RGPD et concurrentielles. Les organisations doivent intégrer les services d'IA dans la gouvernance des données et exiger des fournisseurs des mécanismes d'accès authentifiés et non énumérables.
 
 ---
 
 ### Recommandations
 
-* Publier et diffuser une procédure officielle unique de demande d'assistance informatique
-* Bloquer par défaut les outils RMM non approuvés et alerter sur toute installation
-* Imposer le MFA sur les comptes de messagerie étudiants et surveiller les connexions atypiques
-* Ajouter un bandeau d'alerte externe sur les e-mails internes invitant à installer un logiciel
+* Interdire le partage public de conversations IA et privilégier des liens authentifiés à durée limitée
+* Bloquer ou encadrer les domaines de partage d'assistants IA non validés
+* Déployer une DLP sur les contenus sensibles soumis aux modèles
+* Intégrer les services d'IA génératifs à la politique de classification et de gouvernance des données
 
 ---
 
@@ -1831,33 +2052,41 @@ Le secteur de l'éducation est une cible de choix : population nombreuse et reno
 
 #### Phase 1 — Préparation
 
-* Établir une liste blanche des outils d'assistance à distance autorisés et bloquer les autres
-* Configurer l'EDR pour alerter sur l'installation de tout outil RMM non approuvé
-* Former les étudiants et personnels aux procédures officielles du support informatique
+* Recenser les services d'IA générative autorisés et interdire les partages publics de conversations
+* Mettre en place une politique DLP couvrant les exports et liens de partage vers des domaines SaaS d'IA
+* Journaliser les requêtes DNS et proxy vers les domaines d'assistants IA
 
 #### Phase 2 — Détection et analyse
 
-* Détecter les e-mails demandant l'installation d'un logiciel d'accès distant, surtout depuis un compte étudiant compromis
-* Surveiller les installations de Zoho Assist et autres RMM sur les parcs étudiants et administratifs
-* Analyser les connexions sortantes vers les services d'assistance à distance depuis des postes inhabituels
+* Détecter les requêtes DNS vers cf[.]metaaiusercontent[.]com et domaines équivalents depuis le SIEM ou le résolveur
+* Surveiller les partages de fichiers et de conversations contenant des données sensibles (financier, RH, juridique)
+* Analyser les journaux de navigateur pour identifier les créations de liens publics
 
 #### Phase 3 — Confinement, éradication et récupération
 
-* Désinstaller l'outil d'accès distant et isoler le poste concerné
-* Réinitialiser les identifiants du compte expéditeur compromis et invalider ses sessions
-* Bloquer l'expéditeur et les domaines associés dans la passerelle de messagerie
+* Bloquer le domaine de partage au niveau proxy/DNS si l'usage n'est pas nécessaire
+* Faire supprimer les liens publics existants et invalider les partages
+* Révoquer les accès aux comptes ayant partagé des données critiques
 
 #### Phase 4 — Activités post-incident
 
-* Informer la communauté universitaire et rappeler la procédure officielle de support
-* Renforcer l'authentification des comptes étudiants (MFA, détection d'anomalies de connexion)
-* Revoir les règles de filtrage des pièces jointes et liens dans la messagerie
+* Inventorier les données exposées et évaluer les obligations de notification (RGPD)
+* Mettre à jour la charte d'usage de l'IA et la classification des données
+* Revoir les clauses de sécurité et de transparence avec les fournisseurs d'IA
 
 #### Phase 5 — Threat Hunting (proactif)
 
-* Rechercher d'autres e-mails avec le même modèle (politique de conduite, installation logicielle) dans les boîtes étudiantes
-* Identifier les postes ayant installé un RMM non autorisé sur 30 jours
-* Analyser les connexions aux services bancaires depuis les postes ayant fait l'objet d'un accès distant
+* Rechercher dans les journaux DNS historiques les résolutions vers les domaines de partage d'IA
+* Corréler les créations de liens avec les périodes de fuite potentielle
+* Traquer les contenus de l'organisation indexés ou référencés sur des liens publics
+
+---
+
+### Indicateurs de compromission
+
+| Type | Valeur (DEFANG) | Fiabilité |
+|---|---|---|
+| DOMAIN | `cf[.]metaaiusercontent[.]com` | High |
 
 ---
 
@@ -1865,48 +2094,46 @@ Le secteur de l'éducation est une cible de choix : population nombreuse et reno
 
 | ID TTP | Description |
 |---|---|
-| **T1566.002** | Hameçonnage par lien incitant à installer un outil légitime |
-| **T1219** | Utilisation d'un logiciel d'accès distant légitime (Zoho Assist) pour prendre le contrôle du poste |
+| **T1213** | Collecte de données sensibles depuis des liens de partage publics énumérables |
+| **T1590** | Reconnaissance via DNS passif pour découvrir l'infrastructure de partage |
 
 ---
 
 ### Sources
 
-* [https://t.me/vxunderground/9547](https://t.me/vxunderground/9547)
+* [https://arstechnica.com/security/2026/10/meta-muse-exposes-users-personal-and-business-secrets-when-they-share-conversations/](https://arstechnica.com/security/2026/10/meta-muse-exposes-users-personal-and-business-secrets-when-they-share-conversations/)
 
 
 ---
 
-<div id="slowmist-relie-le-vol-du-portefeuille-qubic-a-une-faiblesse-de-laleatoire-dans-la-generation-de-la-graine"></div>
+<div id="des-escrocs-abusent-des-notifications-de-frameio-pour-voler-des-identifiants-microsoft-365"></div>
 
-## SlowMist relie le vol du portefeuille Qubic à une faiblesse de l'aléatoire dans la génération de la graine
+## Des escrocs abusent des notifications de Frame.io pour voler des identifiants Microsoft 365
 
 ### Résumé
 
-La société de sécurité blockchain SlowMist a rattaché le vol d'environ 2,94 billions de QU sur 1 404 wallets Qubic à une faiblesse de randomisation dans la génération des seeds du wallet, dans un postmortem publié le 20 octobre. L'attaquant a vidé les wallets entre 23h42 UTC le 17 octobre et 01h26 UTC le 18 octobre, pour un montant d'environ 1,3 à 1,4 million de dollars. Les validateurs Qubic (Computors) ont arrêté le réseau au tick 85 371 949 pour stopper les transferts. Le wallet web construisait chaque seed de compte de 55 lettres avec la fonction JavaScript Math.random(), sans mélanger le mot de passe utilisateur, une clé d'appareil ou une autre source d'aléa ; si le format implique environ 258 bits de force, le générateur xorshift128+ de V8 n'offre au plus que 2^64 résultats par appel. Le même flux aléatoire produisait une valeur « dejaVu » écrite dans les en-têtes de requêtes réseau, transmise aux pairs en TCP clair ; six valeurs dejaVu consécutives suffisaient à reconstruire l'état 128 bits du générateur en environ 15 millisecondes en preuve de concept locale, permettant de prédire les seeds et de les vérifier contre les clés publiques envoyées dans les requêtes de solde. Les seeds créées sur iPhone et iPad dans n'importe quel navigateur, sur Mac avec Safari avant le 18 octobre, ou dans l'app iOS Qubic avant juillet 2025 sont affectées. Qubic a corrigé la génération dans la version 4.26.4, qui utilise une randomisation cryptographiquement sûre. Environ 87,1 % des QU volés restent gelés onchain, les 12,9 % restants ayant atteint MEXC, qui a gelé le compte récepteur environ une heure après le dépôt. La restitution sera décidée par le quorum des Computors et Qubic n'a pas annoncé de calendrier de redémarrage.
+Ocean Security a identifié une campagne de phishing baptisée Phantom Preview qui abuse des notifications légitimes de Frame.io et de liens PDF masqués pour dérober des identifiants Microsoft 365. Les messages, émis via les notifications d'un service légitime, peuvent paraître dignes de confiance aux destinataires.
 
 ---
 
 ### Analyse opérationnelle
 
-Le cas est un modèle de compromission de clés par faiblesse d'entropie plutôt que par faille protocolaire : la surface d'attaque est le générateur pseudo-aléatoire côté client et la fuite d'état via des métadonnées de protocole transmises en clair. Pour les équipes sécurité, la leçon est double : d'une part auditer systématiquement l'usage de Math.random() dans tout code manipulant des secrets, d'autre part considérer les en-têtes applicatifs comme des données sensibles lorsqu'ils dérivent d'un flux aléatoire. Côté exchanges et SOC financiers, la détection repose sur la corrélation de dépôts atypiques issus de nombreux wallets en quelques heures et sur la capacité de gel rapide des comptes récepteurs. La réponse a nécessité un arrêt du réseau, décision lourde qui illustre la nécessité d'un mécanisme de halt préétabli et testé.
+La campagne exploite la réputation d'un service SaaS légitime comme relais de confiance, ce qui contourne les filtres fondés sur la réputation de domaine et les passerelles de messagerie classiques. Les liens masqués derrière des aperçus PDF conduisent à des pages de collecte d'identifiants Microsoft 365. La détection doit combiner analyse des redirections, inspection des URL avant clic, surveillance des journaux Entra ID (échecs puis succès, ASN inhabituels, voyage impossible) et alertes sur les règles de transfert créées après connexion. La réponse inclut blocage des URL, révocation des sessions et jetons, réinitialisation des identifiants et purge des messages.
 
 ---
 
 ### Implications stratégiques
 
-L'incident affecte la confiance dans les wallets grand public et dans la gouvernance décentralisée : la restitution dépend d'un vote de validateurs, ce qui crée un risque juridique et réputationnel. Il illustre la dépendance des projets crypto à des bibliothèques standard de navigateur et de runtime, dont les propriétés statistiques ne valent pas garantie cryptographique. La coopération avec les exchanges (gel en une heure) montre que la traçabilité onchain reste un levier de récupération partiel, mais laisse 87 % des fonds bloqués sans calendrier de reprise, avec un impact direct sur la liquidité et la crédibilité du réseau. Pour les régulateurs, c'est un argument supplémentaire en faveur d'exigences de sécurité du code client et d'audits d'entropie.
+L'abus de services SaaS légitimes constitue une tendance de fond du phishing par identifiants : la confiance accordée à un émetteur connu devient un vecteur d'attaque, ce qui rend obsolète la seule défense par réputation de domaine. Les organisations doivent basculer vers une posture Zero Trust avec MFA résistant au phishing et accès conditionnel, et considérer la compromission de comptes M365 comme un scénario majeur de crise (accès aux données, fraude, rebond interne).
 
 ---
 
 ### Recommandations
 
-* Remplacer tout usage de Math.random() par un CSPRNG (crypto.getRandomValues, crypto/rand) dans le code manipulant des secrets.
-* Faire migrer les fonds des wallets dont la seed a été générée avant la version 4.26.4.
-* Mettre en place une surveillance des drainages multi-wallets et des dépôts atypiques vers les exchanges.
-* Éviter la transmission en clair de valeurs dérivées d'un flux aléatoire dans les en-têtes réseau.
-* Ajouter des tests d'entropie et des revues de code sécurité sur la génération de clés dans la CI.
-* Préparer un mécanisme de halt réseau documenté et testé avec les validateurs.
+* Déployer le MFA résistant au phishing et l'accès conditionnel sur Microsoft 365
+* Inspecter les redirections des liens avant clic et bloquer les URL de collecte d'identifiants
+* Alerter sur les notifications de services collaboratifs inattendues et former les utilisateurs
+* Révoquer systématiquement sessions et jetons après détection d'une compromission de compte
 
 ---
 
@@ -1914,38 +2141,41 @@ L'incident affecte la confiance dans les wallets grand public et dans la gouvern
 
 #### Phase 1 — Préparation
 
-* Auditer tous les générateurs de secrets (seeds, clés privées, tokens) pour vérifier l'usage de CSPRNG et l'absence de Math.random() ou équivalent.
-* Cartographier les versions de wallets et d'applications clientes en circulation, en particulier les builds iOS/macOS anciens.
-* Définir un canal de communication d'urgence vers les utilisateurs et un processus de gel de réseau (halt) avec les validateurs.
-* Préparer des règles de surveillance des transferts massifs et des dépôts atypiques vers les exchanges partenaires.
+* Imposer le MFA résistant au phishing et des politiques d'accès conditionnel sur Microsoft 365
+* Configurer la journalisation Entra ID (connexions, échecs, voyages impossibles) et l'alerte sur les nouveaux appareils
+* Sensibiliser les utilisateurs aux notifications de services collaboratifs inattendues
 
 #### Phase 2 — Détection et analyse
 
-* Détecter les vagues de transferts sortants anormaux depuis un grand nombre de wallets sur une fenêtre courte.
-* Surveiller les dépôts issus d'adresses compromises vers des exchanges et déclencher un gel de compte.
-* Analyser le trafic réseau du wallet pour identifier l'exposition de valeurs d'en-tête corrélées au flux aléatoire.
-* Rechercher des seeds générées avant la version corrigée 4.26.4 et les marquer comme à risque.
+* Détecter les notifications Frame.io non sollicitées et les liens PDF masqués dans les courriels
+* Analyser les redirections et les domaines de destination des liens avant authentification
+* Alerter sur les échecs d'authentification suivis de succès, les connexions depuis des ASN inconnus et les créations de règles de transfert
 
 #### Phase 3 — Confinement, éradication et récupération
 
-* Suspendre les transferts au niveau réseau (halt des Computors) pour stopper la drainage.
-* Faire migrer les fonds des wallets à seed faible vers des wallets générés avec un CSPRNG.
-* Notifier les exchanges et demander le gel des comptes receveurs.
-* Forcer la mise à jour vers la version 4.26.4 et invalider les seeds générées par les versions vulnérables.
+* Bloquer les URL et domaines de phishing identifiés au niveau passerelle et proxy
+* Révoquer les sessions et jetons, réinitialiser les mots de passe et réenrôler le MFA des comptes compromis
+* Purger les messages de la campagne des boîtes de réception
 
 #### Phase 4 — Activités post-incident
 
-* Publier un postmortem détaillé et un calendrier de reprise du réseau.
-* Décider du mécanisme de restitution via le quorum des Computors et documenter la gouvernance.
-* Intégrer des tests automatisés de qualité d'entropie dans la CI des wallets.
-* Revoir les procédures de réponse aux incidents onchain et les accords avec les exchanges.
+* Analyser les actions post-compromission (accès boîte, envoi interne, exfiltration)
+* Notifier les utilisateurs exposés et renforcer la formation ciblée
+* Mettre à jour les règles de détection et les listes de blocage
 
 #### Phase 5 — Threat Hunting (proactif)
 
-* Rechercher des adresses dont la clé publique est cohérente avec des seeds prédites à partir de valeurs d'en-tête observées.
-* Analyser les journaux de connexions TCP en clair pour identifier une collecte de valeurs dejaVu.
-* Traquer les patterns de drainage massif multi-wallets sur d'autres réseaux utilisant des générateurs similaires.
-* Corréler les dépôts vers exchanges avec les listes d'adresses compromises pour identifier les fonds blanchis.
+* Rechercher les courriels contenant des liens vers Frame.io avec des paramètres de redirection suspects
+* Traquer les authentifications M365 depuis des infrastructures de proxy inverse ou de phishing
+* Corréler les motifs d'expéditeur et de sujet de la campagne Phantom Preview
+
+---
+
+### Indicateurs de compromission
+
+| Type | Valeur (DEFANG) | Fiabilité |
+|---|---|---|
+| DOMAIN | `frame[.]io` | High |
 
 ---
 
@@ -1953,48 +2183,47 @@ L'incident affecte la confiance dans les wallets grand public et dans la gouvern
 
 | ID TTP | Description |
 |---|---|
-| **T1552.004** | Unsecured Credentials: Private Keys — récupération de clés privées à partir d'un générateur pseudo-aléatoire prévisible |
-| **T1040** | Network Sniffing — observation de valeurs d'en-tête transmises en TCP clair pour reconstruire l'état du générateur |
+| **T1566.002** | Phishing par lien via des notifications d'un service légitime (Frame.io) |
+| **T1204.001** | Incitation de la victime à cliquer sur un lien masqué vers une fausse page de connexion |
+| **T1078** | Usage des identifiants Microsoft 365 dérobés pour accéder aux comptes |
 
 ---
 
 ### Sources
 
-* [https://cryptobriefing.com/slowmist-qubic-wallet-key-recovery-flaw/](https://cryptobriefing.com/slowmist-qubic-wallet-key-recovery-flaw/)
+* [https://hackread.com/scammers-frame-io-steal-microsoft-365-credentials/](https://hackread.com/scammers-frame-io-steal-microsoft-365-credentials/)
 
 
 ---
 
-<div id="les-cybercriminels-privilegient-microsoft-a-apple-et-google-dans-les-attaques-dhameconnage-par-usurpation-de-marque"></div>
+<div id="chrome-signale-des-commandes-malveillantes-que-des-escrocs-font-passer-pour-des-correctifs"></div>
 
-## Les cybercriminels privilégient Microsoft à Apple et Google dans les attaques d'hameçonnage par usurpation de marque
+## Chrome signale des commandes malveillantes que des escrocs font passer pour des correctifs
 
 ### Résumé
 
-Selon Check Point Research, Microsoft a représenté 33 % des tentatives d'usurpation de marque au troisième trimestre 2026, contre 23 % au trimestre précédent, soit environ quatre fois la part de toute autre marque. Apple et Google suivent avec 8 % chacun ; Dropbox et YouTube enregistrent les plus fortes progressions du classement. Les chercheurs expliquent que les attaquants privilégient Microsoft car les identifiants volés ouvrent tout un environnement d'entreprise (messagerie, fichiers, outils collaboratifs), alors que les autres marques mènent surtout à des comptes personnels. Les marques technologiques sont les plus usurpées, devant les réseaux sociaux et la banque. Le rapport cite un courriel de phishing d'octobre 2026 utilisant la marque Claude et Anthropic, avec l'objet « Payment failed for your Claude account », annonçant la suspension de l'accès API et des sièges Claude sans mise à jour du moyen de paiement, et un bouton « Update payment method » destiné à collecter données de paiement et identifiants. Un site imitant Google Antigravity, la plateforme de développement agentique de Google, enregistré en septembre, affichait une commande d'installation Linux qui décodait et exécutait une instruction dissimulée, téléchargeant et lançant un script depuis un serveur externe. Un autre site enregistré en septembre copiait la marque, les menus et le contenu de support d'Apple, redirigeant vers un article « Boost your Mac using the terminal » promettant des gains de performance pour faire exécuter des commandes malveillantes. Des sites imitant Docusign sont apparus en septembre et début octobre, dont un affichant un document à signer avec une invite « Update Required » ; cliquer sur « Continue » téléchargeait un installeur FleetDeck, produit RMM pouvant être abusé pour accéder aux appareils.
+Google met à jour le mode Enhanced Protection de Chrome pour détecter les sites d'arnaque et avertir les utilisateurs lorsqu'une page les incite à copier une commande malveillante. Le modèle Gemini de détection d'arnaque passe d'un traitement local à un traitement côté serveur pour les utilisateurs d'Enhanced Protection et couvre désormais les fausses alertes antivirus et les fausses mises à jour de navigateur, en plus des arnaques au support technique. Lorsqu'un utilisateur copie une commande suspecte, Chrome retire les données personnelles du presse-papiers et envoie la commande à Safe Browsing pour analyse.
 
 ---
 
 ### Analyse opérationnelle
 
-La menace combine hameçonnage par usurpation de marque et abus d'outils légitimes : le leurre initial vole des identifiants ou fait exécuter une commande, puis l'attaquant s'appuie sur un RMM signé (FleetDeck) pour obtenir un accès persistant sans malware traditionnel. Pour un SOC, la priorité est la maîtrise des RMM : liste blanche stricte, alerte sur toute installation nouvelle, surveillance des connexions sortantes des agents RMM. Les faux sites d'outils IA et de support technique imposent une détection des commandes shell copiées depuis un navigateur (curl/wget vers shell, exécution de scripts distants) et une surveillance des domaines récemment enregistrés reprenant les marques du secteur. Les pages de paiement imitant les fournisseurs SaaS doivent être couvertes par des règles de messagerie et par la vérification systématique du domaine expéditeur. Enfin, la compromission d'identifiants Microsoft 365 doit déclencher une revue des sessions, des règles de transfert et des méthodes MFA.
+Les arnaques ClickFix poussent la victime à exécuter elle-même une commande, souvent via des LOLBins comme PowerShell ou cmd.exe, ce qui déplace le téléchargement de la charge utile hors du navigateur et contourne les protections de téléchargement. La détection doit se concentrer sur l'endpoint : lignes de commande avec téléchargement, IEX, encodage base64, exécution depuis RunMRU, événements Sysmon et Script Block Logging. La réponse combine blocage des LOLBins non nécessaires, règles ASR, WDAC/AppLocker et sensibilisation aux fausses alertes de sécurité.
 
 ---
 
 ### Implications stratégiques
 
-La concentration sur Microsoft traduit une logique de retour sur investissement : un identifiant d'entreprise vaut bien plus qu'un compte personnel, ce qui expose en priorité les organisations fortement dépendantes de Microsoft 365. L'émergence de marques IA (Claude, Anthropic, Google Antigravity) comme leurres montre que les attaquants suivent l'adoption technologique et exploitent la confusion autour des outils de développement et des API. L'abus de RMM légitimes brouille la frontière entre logiciel autorisé et intrusion, compliquant la détection et les politiques d'achat logiciel. Pour les décideurs, cela plaide pour une gouvernance stricte des outils d'administration à distance, une authentification résistante au phishing et une sensibilisation continue ciblant les équipes techniques et finance.
+Le déplacement d'une partie de la détection vers le navigateur et le cloud illustre la redistribution des responsabilités de sécurité entre éditeurs et entreprises, avec des questions de vie privée liées à l'envoi de contenu de page et de commandes à des services d'analyse. Les organisations ne peuvent pas s'y substituer à une défense endpoint robuste : la maîtrise des LOLBins et des chemins d'exécution reste la dernière ligne de défense face aux campagnes d'ingénierie sociale qui exploitent la confiance dans les outils légitimes du système.
 
 ---
 
 ### Recommandations
 
-* Restreindre l'usage des RMM à une liste blanche et alerter sur toute nouvelle installation.
-* Déployer une authentification résistante au phishing (FIDO2) sur les comptes Microsoft 365 à privilèges.
-* Bloquer au niveau proxy/DNS les domaines récemment enregistrés imitant les marques utilisées en interne.
-* Détecter via EDR l'exécution de commandes shell issues du navigateur et les scripts téléchargés puis exécutés.
-* Former les utilisateurs aux faux messages de paiement SaaS et aux faux supports techniques.
-* Surveiller les journaux d'IdP pour détecter les connexions post-phishing et les règles de transfert créées.
+* Activer Enhanced Protection sur les navigateurs de l'entreprise et mesurer son efficacité
+* Bloquer ou restreindre les LOLBins non nécessaires et déployer les règles ASR adaptées
+* Journaliser et alerter sur les exécutions PowerShell/cmd issues du presse-papiers ou de RunMRU
+* Former les utilisateurs à ne jamais exécuter de commande fournie par un site web
 
 ---
 
@@ -2002,38 +2231,33 @@ La concentration sur Microsoft traduit une logique de retour sur investissement 
 
 #### Phase 1 — Préparation
 
-* Établir une liste blanche des outils RMM autorisés et bloquer les autres au niveau EDR/proxy.
-* Configurer la surveillance des enregistrements de domaines ressemblant aux marques utilisées par l'organisation et ses fournisseurs.
-* Former les utilisateurs aux leurres liés aux paiements SaaS, aux outils IA et aux faux supports techniques.
-* Durcir les passerelles de messagerie (DMARC, inspection des liens, détention des pièces jointes).
+* Activer Enhanced Protection sur les flottes Chrome et documenter les impacts de télémétrie
+* Durcir les politiques endpoint : blocage des LOLBins non nécessaires, règles ASR, WDAC/AppLocker
+* Sensibiliser les utilisateurs aux fausses alertes antivirus et aux instructions de « correction » par commande
 
 #### Phase 2 — Détection et analyse
 
-* Détecter les courriels « paiement échoué » imitant Claude/Anthropic, Microsoft ou Docusign et les clics associés.
-* Surveiller l'installation de FleetDeck ou de tout RMM non autorisé sur les postes.
-* Détecter les commandes shell copiées depuis un site web (curl/wget pipe vers shell) via EDR.
-* Analyser les résolutions DNS vers des domaines récemment enregistrés imitant Google Antigravity, Apple Support ou Docusign.
+* Détecter les lignes de commande PowerShell/cmd avec téléchargement, IEX, encodage base64 ou exécution depuis RunMRU
+* Surveiller les événements Sysmon (création de processus, accès presse-papiers) et le Script Block Logging 4104
+* Alerter sur les navigations vers des pages de fausses alertes antivirus ou de fausses mises à jour
 
 #### Phase 3 — Confinement, éradication et récupération
 
-* Isoler les postes ayant exécuté une commande d'installation ou installé FleetDeck.
-* Révoquer les sessions et identifiants Microsoft 365 potentiellement saisis sur les pages de phishing.
-* Bloquer les domaines et URL identifiés au niveau proxy, DNS et passerelle de messagerie.
-* Couper l'accès distant établi via le RMM abusé et auditer les actions effectuées.
+* Isoler la machine et tuer les processus issus des commandes copiées
+* Bloquer les domaines de téléchargement de la charge utile et les URL de la campagne
+* Réinitialiser les identifiants présents sur le poste et révoquer les jetons de navigateur
 
 #### Phase 4 — Activités post-incident
 
-* Revoir les journaux d'authentification pour détecter des connexions post-compromission et des règles de transfert créées.
-* Mettre à jour les règles de détection et la liste des marques surveillées (dont marques IA).
-* Communiquer auprès des utilisateurs sur les leurres observés et les procédures de signalement.
-* Évaluer l'efficacité des contrôles RMM et renforcer la politique d'installation logicielle.
+* Analyser la chaîne d'exécution complète et l'éventuelle persistance installée
+* Renforcer les contrôles applicatifs et la politique de presse-papiers
+* Mettre à jour la sensibilisation avec des exemples réels de ClickFix
 
 #### Phase 5 — Threat Hunting (proactif)
 
-* Rechercher des connexions vers des domaines usurpant Microsoft, Apple, Google, Docusign, Claude/Anthropic dans les journaux proxy.
-* Traquer les processus enfants de navigateur lançant des interpréteurs shell ou des installeurs MSI non signés.
-* Identifier les comptes ayant saisi des identifiants sur des pages suspectes via les journaux d'IdP et de conditional access.
-* Corréler les installations RMM avec les tickets support et les demandes légitimes.
+* Rechercher les exécutions de LOLBins avec arguments de téléchargement sur l'ensemble du parc
+* Traquer les entrées RunMRU et l'historique de presse-papiers suspects
+* Corréler les accès aux domaines de la campagne avec les journaux proxy et DNS
 
 ---
 
@@ -2041,51 +2265,48 @@ La concentration sur Microsoft traduit une logique de retour sur investissement 
 
 | ID TTP | Description |
 |---|---|
-| **T1566.002** | Phishing: Spearphishing Link — courriels et sites usurpant des marques technologiques |
-| **T1036** | Masquerading — clones de sites Microsoft, Apple, Google, Docusign, Claude/Anthropic |
-| **T1204.001** | User Execution: Malicious Link — clic sur « Update payment method » ou « Continue » |
-| **T1219** | Remote Access Software — distribution d'un installeur FleetDeck (RMM) via faux site Docusign |
-| **T1059.004** | Command and Scripting Interpreter: Unix Shell — commande d'installation Linux masquée sur faux site Google Antigravity |
+| **T1204.004** | Incitation de l'utilisateur à copier-coller une commande malveillante (ClickFix) |
+| **T1059.001** | Exécution de commandes PowerShell téléchargées via le presse-papiers |
+| **T1059.003** | Exécution de commandes via cmd.exe pour contourner les protections du navigateur |
+| **T1218** | Usage de binaires légitimes du système (LOLBins) pour télécharger et exécuter une charge utile |
 
 ---
 
 ### Sources
 
-* [https://www.helpnetsecurity.com/2026/10/19/check-point-brand-impersonation-scams-q3-2026-report/](https://www.helpnetsecurity.com/2026/10/19/check-point-brand-impersonation-scams-q3-2026-report/)
+* [https://www.helpnetsecurity.com/2026/10/20/google-chrome-enhanced-protection-updates/](https://www.helpnetsecurity.com/2026/10/20/google-chrome-enhanced-protection-updates/)
 
 
 ---
 
-<div id="wyden-exhorte-a-ladoption-federale-dencrypted-client-hello"></div>
+<div id="analyse-de-journaux-avec-logtotal"></div>
 
-## Wyden exhorte à l'adoption fédérale d'Encrypted Client Hello
+## Analyse de journaux avec LogTotal
 
 ### Résumé
 
-Le sénateur Ron Wyden a demandé lundi à la CISA et à l'OMB d'adopter Encrypted Client Hello (ECH), une technologie qui protège le nom du site visité par un utilisateur, afin de protéger les lanceurs d'alerte, les vétérans en crise et d'autres personnes contre des attaquants susceptibles de les cibler lorsqu'elles contactent des sites d'agences. Son bureau a identifié au moins 350 sites fédéraux qui n'utilisent pas ces protections. Presque tous les sites d'agences sont chiffrés, mais le chiffrement web standard ne protège pas certains noms de sites, comme reportfraud[.]ftc[.]gov : des pirates et des acteurs étrangers surveillant les connexions peuvent voir ces noms exposés, ce qui pourrait permettre d'identifier des lanceurs d'alerte, de profiler du personnel fédéral habilité, de suivre des Américains cherchant un soutien psychologique et de cartographier les interactions entre agences. Wyden souligne l'efficacité de l'ECH avec les CDN : pour un site délivré par un CDN, un intercepteur voit le réseau qui délivre le contenu mais pas le site précis. Parmi les agences utilisant un CDN sans ECH figurent une ligne de signalement du FBI qui supporte l'ECH mais ne l'active pas, et une ligne de prévention du suicide du Department of Veterans Affairs non protégée car Amazon ne supporte pas l'ECH, ainsi que des services liés au personnel de sécurité nationale et aux canaux de lancement d'alerte. Wyden recommande que la CISA impose l'activation de l'ECH sur tous les sites publics civils et systèmes inter-agences, et que l'OMB, avec l'ONCD et la CISA, fasse du support de l'ECH une condition obligatoire pour les fournisseurs cloud et réseau candidats aux marchés fédéraux. La CISA et l'OMB n'ont pas répondu immédiatement.
+Article de SOC Prime présentant les principes de l'analytique de logs en SOC : collecte, normalisation, détection via Sigma avec mappage MITRE ATT&CK, puis corrélation en chaînes d'attaque. Il retrace l'évolution des formats (syslog, .evtx, Sysmon, SIEM, ELK, CloudTrail) et décrit les tendances : détection en amont du SIEM sur les flux, corrélation plutôt qu'alertes isolées, et limites de l'IA pour le tri, notamment les questions de confidentialité des données et les blocages rencontrés lors de l'incident HuggingFace de juillet 2026.
 
 ---
 
 ### Analyse opérationnelle
 
-L'ECH chiffre l'extension SNI, ce qui prive les équipes réseau et SOC d'un signal de filtrage et d'investigation majeur : les proxys, pare-feu applicatifs et systèmes de DLP qui s'appuient sur le SNI perdront cette visibilité et devront reposer sur le DNS, les adresses IP, les métadonnées de certificat et l'inspection TLS lorsque celle-ci reste possible. Les organisations doivent anticiper cette transition dans leurs architectures de détection et documenter les angles morts induits. À l'inverse, l'absence d'ECH sur des services sensibles expose les utilisateurs à une observation passive du nom d'hôte, avec un risque direct d'identification de personnes vulnérables. La priorité opérationnelle est l'activation de l'ECH sur les portails à risque, la vérification du support par les CDN et la révision des règles de filtrage dépendantes du SNI pour éviter les ruptures.
+L'article rappelle que les logs sont souvent la seule preuve survivant à une intrusion et structure un pipeline en quatre étapes : collecte sans perte de champs ni d'horodatage, normalisation vers un schéma commun, détection Sigma taguée ATT&CK, corrélation en chronologie validable par l'analyste. Les pressions opérationnelles sont le volume, les angles morts de couverture et la manipulation de données sensibles (identifiants, cookies, jetons porteurs). La détection en amont du SIEM réduit les coûts de stockage et le délai de détection ; la corrélation de techniques sur plusieurs hôtes réduit le bruit.
 
 ---
 
 ### Implications stratégiques
 
-Le sujet cristallise la tension entre confidentialité des usagers et capacité de défense réseau : l'ECH protège les personnes qui contactent des services sensibles, mais réduit la visibilité dont les équipes sécurité disposent pour détecter des menaces. La proposition d'en faire une condition d'attribution des marchés fédéraux constitue un levier de procurement puissant qui pourrait accélérer l'adoption par les CDN et fournisseurs cloud, avec un effet d'entraînement sur le secteur privé. Elle s'inscrit dans une tendance de durcissement des exigences de sécurité imposées aux fournisseurs de l'État, après les pressions sur les VPN obsolètes. Sur le plan géopolitique, la protection des canaux de signalement et des services aux vétérans répond à une menace documentée de surveillance par des acteurs étrangers, et la dépendance à un fournisseur cloud unique ne supportant pas l'ECH devient un risque stratégique de souveraineté opérationnelle.
+La maîtrise de l'analytique de logs devient une compétence SOC différenciante face à la croissance des volumes et à la rareté des compétences. Les enjeux de gouvernance des données (RGPD, fuite de jetons, partage avec des fournisseurs d'IA) pèsent sur les choix d'outillage et de rétention. Les organisations doivent arbitrer entre détection en flux et SIEM centralisé, et encadrer contractuellement l'usage de l'IA pour le tri des alertes afin d'éviter un second incident.
 
 ---
 
 ### Recommandations
 
-* Activer l'ECH sur les portails publics sensibles (lancement d'alerte, assistance, services RH) et vérifier le support par les CDN.
-* Intégrer le support ECH comme critère obligatoire dans les appels d'offres cloud et réseau.
-* Réviser les architectures de détection dépendantes du SNI et documenter les angles morts.
-* Limiter la journalisation du SNI aux cas strictement nécessaires et protéger les journaux produits.
-* Auditer les sites exposant des noms d'hôtes sensibles en clair et prioriser leur correction.
-* Sensibiliser les équipes réseau à l'impact de l'ECH sur l'inspection TLS et le filtrage.
+* Normaliser les journaux vers un schéma commun et documenter les sources et angles morts
+* Taguer systématiquement les règles de détection avec les techniques MITRE ATT&CK
+* Déplacer une partie de la détection en amont du SIEM pour réduire coûts et délais
+* Encadrer le partage de logs avec des tiers ou des modèles d'IA et pseudonymiser les données sensibles
 
 ---
 
@@ -2093,552 +2314,36 @@ Le sujet cristallise la tension entre confidentialité des usagers et capacité 
 
 #### Phase 1 — Préparation
 
-* Cartographier les sites publics et internes de l'organisation exposant le SNI en clair et identifier ceux hébergés derrière un CDN.
-* Évaluer la compatibilité ECH des CDN et fournisseurs cloud utilisés.
-* Anticiper l'impact de l'ECH sur l'inspection TLS, le filtrage par SNI et les journaux proxy.
-* Définir une politique de visibilité réseau alternative (DNS, IP, métadonnées de certificat) en cas de perte du SNI.
+* Définir un schéma de normalisation commun (src_ip, IpAddress, sourceIPAddress) et documenter les sources collectées
+* Cartographier les angles morts de couverture (portables prestataires, segments OT, tenants SaaS non connectés)
+* Établir une politique de manipulation des logs contenant des données personnelles et des secrets d'authentification
 
 #### Phase 2 — Détection et analyse
 
-* Surveiller les connexions vers des services sensibles (lanceurs d'alerte, lignes d'assistance) pour détecter une observation de SNI par un tiers.
-* Détecter les tentatives d'interception TLS ou de downgrade sur les sites protégés par ECH.
-* Analyser les journaux proxy pour identifier les angles morts créés par l'ECH et les cas non couverts.
-* Contrôler la présence effective de l'ECH sur les sites publics critiques.
+* Exécuter des règles Sigma et les taguer avec les techniques MITRE ATT&CK
+* Corréler les alertes de faible fidélité en chaînes d'attaque sur plusieurs hôtes et fenêtres temporelles
+* Surveiller les événements clés : Windows 4624/4672/4688, CloudTrail ConsoleLogin/CreateAccessKey, journaux d'authentification Linux
 
 #### Phase 3 — Confinement, éradication et récupération
 
-* Activer l'ECH sur les sites publics et les systèmes inter-agences exposés.
-* Exiger de la part des fournisseurs CDN/cloud un support ECH documenté.
-* Restreindre la journalisation du SNI aux seuls cas nécessaires et protéger les journaux produits.
-* Réviser les règles de filtrage dépendant du SNI pour éviter les ruptures de service.
+* Isoler les hôtes et comptes impliqués dans une chaîne d'attaque confirmée
+* Révoquer les jetons et cookies de session exposés dans les logs
+* Préserver les preuves (exports .evtx, journaux cloud) avant toute rotation
 
 #### Phase 4 — Activités post-incident
 
-* Documenter les sites restés sans ECH et les raisons techniques ou contractuelles.
-* Intégrer l'ECH dans les exigences d'achat cloud/réseau et les clauses de sécurité fournisseur.
-* Mettre à jour les procédures de protection des utilisateurs vulnérables (lanceurs d'alerte, personnel sensible).
-* Évaluer périodiquement la couverture ECH du portefeuille de sites publics.
+* Reconstituer la chronologie de l'incident à partir des logs corrélés
+* Réduire la rétention coûteuse en déplaçant la détection en amont du SIEM
+* Revoir les contrôles de confidentialité sur les logs partagés avec des tiers ou des modèles d'IA
 
 #### Phase 5 — Threat Hunting (proactif)
 
-* Rechercher dans les journaux réseau des sessions où le SNI révèle des services sensibles et corréler avec des adresses IP adverses.
-* Traquer les balises de collecte passives sur les liens d'accès aux services publics.
-* Analyser les connexions vers les sites d'agences depuis des infrastructures de surveillance connues.
-* Vérifier l'absence de fuite de noms d'hôtes sensibles dans les journaux DNS et les en-têtes de référence.
-
----
-
-### TTP MITRE ATT&CK
-
-| ID TTP | Description |
-|---|---|
-| **T1040** | Network Sniffing — observation du SNI en clair pour identifier les sites visités par les utilisateurs |
-| **T1590** | Gather Victim Network Information — profilage des interactions entre agences et des personnes contactant les services publics |
+* Rechercher les techniques ATT&CK non couvertes par les règles actuelles et créer les détections manquantes
+* Traquer les créations de clés d'accès cloud et les connexions console inhabituelles
+* Analyser les journaux hors SIEM (SaaS, OT, prestataires) pour détecter des activités non supervisées
 
 ---
 
 ### Sources
 
-* [https://cyberscoop.com/wyden-urges-federal-adoption-encrypted-client-hello/](https://cyberscoop.com/wyden-urges-federal-adoption-encrypted-client-hello/)
-
-
----
-
-<div id="a-linterieur-du-marche-souterrain-des-services-know-your-client"></div>
-
-## À l'intérieur du marché souterrain des services Know Your Client
-
-### Résumé
-
-Des chercheurs de Flare documentent un marché souterrain dans lequel des cybercriminels vendent des documents d'identité falsifiés, des vidéos deepfake et des services de vérification en direct (« live verification ») destinés à faire passer les contrôles Know Your Client (KYC). L'étude décrit le fonctionnement de ces services et les techniques employées pour créer puis maintenir des comptes vérifiés frauduleux auprès d'institutions financières et de plateformes en ligne.
-
----
-
-### Analyse opérationnelle
-
-La menace se situe en amont de la compromission technique : elle cible le processus d'onboarding et la confiance accordée à l'identité déclarative. Pour un SOC/fraude, les signaux détectables sont l'usage répété d'un même device fingerprint ou d'une même empreinte faciale sur plusieurs dossiers, des incohérences de métadonnées de documents, des artefacts de génération synthétique dans les vidéos de liveness, une vélocité d'inscription anormale et une surreprésentation de proxies résidentiels. La réponse impose une coordination étroite entre équipes KYC/AML, fraude et sécurité, avec des capacités de re-vérification manuelle et de gel transactionnel rapide.
-
----
-
-### Implications stratégiques
-
-Ces services industrialisent la fraude à l'identité et alimentent les réseaux de comptes mules utilisés pour le blanchiment, la fraude au paiement et le contournement de sanctions. Les institutions financières, fintechs et plateformes crypto sont exposées à un risque réglementaire direct (AMLD, DORA, obligations de vigilance) et à un risque de réputation en cas de comptes frauduleux avérés. La tendance de fond est la commoditisation de l'usurpation d'identité par IA, qui érode la valeur probante des contrôles documentaires classiques et pousse vers la biométrie comportementale et la vérification multi-signaux.
-
----
-
-### Recommandations
-
-* Renforcer la détection de deepfake sur les flux de liveness (analyse passive, challenge aléatoire, détection d'injection de caméra virtuelle).
-* Mettre en place un scoring de risque device + comportemental corrélé entre les différents produits et entités du groupe.
-* Surveiller les places de marché souterraines et les canaux Telegram pour détecter la revente d'accès à des comptes vérifiés de l'organisation.
-* Réviser les contrats avec les prestataires KYC pour inclure la notification d'incident et le partage de typologies de fraude.
-
----
-
-### Playbook de réponse à incident
-
-#### Phase 1 — Préparation
-
-* Cartographier les points d'entrée d'onboarding (web, mobile, API) et les fournisseurs KYC/Liveness externes.
-* Définir des seuils de vélocité d'inscription et des règles de scoring de risque par pays, device et document.
-* Former les équipes fraude/AML aux artefacts de deepfake (bords de visage, incohérences de compression, absence de micro-mouvements).
-
-#### Phase 2 — Détection et analyse
-
-* Surveiller les comptes validés partageant le même device fingerprint, la même empreinte faciale ou la même adresse de paiement.
-* Détecter les pics d'inscriptions provenant d'un même segment d'IP/proxy résidentiel ou de fermes d'émulation.
-* Alerter sur les documents dont les métadonnées ou les numéros de série sont dupliqués entre dossiers.
-
-#### Phase 3 — Confinement, éradication et récupération
-
-* Geler les comptes suspects et bloquer les retraits/transactions en attente.
-* Révoquer les sessions et forcer une re-vérification manuelle (video-call) des comptes à risque.
-* Notifier le fournisseur KYC et signaler les modèles de documents falsifiés observés.
-
-#### Phase 4 — Activités post-incident
-
-* Mettre à jour les règles de scoring et les listes de documents/identités déjà vus.
-* Documenter les pertes, les comptes mules identifiés et les déclarations réglementaires (SAR/TRACFIN).
-* Revoir la chaîne de sous-traitance KYC et les clauses de notification d'incident.
-
-#### Phase 5 — Threat Hunting (proactif)
-
-* Rechercher sur les forums/Telegram la revente d'accès à des comptes vérifiés de l'organisation.
-* Corréler les logs d'onboarding avec les bases de fuites d'identité pour détecter la réutilisation de victimes.
-* Traquer les comptes créés avec des pièces d'identité de personnes décédées ou de mineurs.
-
----
-
-### TTP MITRE ATT&CK
-
-| ID TTP | Description |
-|---|---|
-| **T1585** | Établissement de comptes (comptes vérifiés frauduleux créés avec des identités usurpées) |
-| **T1656** | Usurpation d'identité via documents falsifiés et deepfakes |
-| **T1078** | Utilisation de comptes valides (comptes KYC validés revendus ou réutilisés) |
-| **T1587.001** | Développement de capacités : contenus synthétiques (deepfakes vidéo/audio) |
-
----
-
-### Sources
-
-* [https://www.bleepingcomputer.com/news/security/inside-the-underground-market-for-know-your-client-services/](https://www.bleepingcomputer.com/news/security/inside-the-underground-market-for-know-your-client-services/)
-
-
----
-
-<div id="la-police-affirme-que-des-escrocs-ont-utilise-lia-pour-cloner-la-voix-dun-sherif"></div>
-
-## La police affirme que des escrocs ont utilisé l'IA pour cloner la voix d'un shérif
-
-### Résumé
-
-Selon la police, des escrocs ont utilisé l'intelligence artificielle pour cloner la voix d'un shérif identifié et se faire passer pour lui lors d'une tentative d'escroquerie. Le cas illustre l'usage du clonage vocal par IA pour emprunter l'identité d'un responsable officiel réel et donner du crédit à une fraude.
-
----
-
-### Analyse opérationnelle
-
-L'attaque ne repose sur aucune vulnérabilité technique : elle exploite la confiance institutionnelle et l'urgence. Les équipes SOC/IT doivent considérer la voix comme un facteur d'authentification non fiable et imposer une vérification hors bande (rappel sur un numéro connu, code partagé, validation par un tiers) pour toute demande sensible. La détection repose sur la sensibilisation, la journalisation des appels et l'analyse d'artefacts de synthèse dans les enregistrements.
-
----
-
-### Implications stratégiques
-
-Le clonage vocal à coût quasi nul démocratise l'usurpation d'autorité et fragilise les procédures fondées sur la reconnaissance de voix, courantes dans les collectivités et les forces de l'ordre. Le risque dépasse la fraude financière : il touche à la confiance du public envers les institutions et à l'intégrité des chaînes de commandement en situation de crise. La tendance annonce une généralisation des deepfakes audio dans les campagnes de fraude au président et d'ingénierie sociale ciblée.
-
----
-
-### Recommandations
-
-* Interdire toute validation d'action sensible sur le seul canal vocal et imposer un rappel sur un numéro de référence.
-* Former les personnels d'accueil et standardistes à reconnaître et escalader les appels usurpant une autorité.
-* Limiter la quantité de matière vocale exploitable publiée en ligne par les responsables exposés.
-* Établir un canal de signalement rapide avec les forces de l'ordre locales pour les campagnes d'usurpation.
-
----
-
-### Playbook de réponse à incident
-
-#### Phase 1 — Préparation
-
-* Définir une procédure de vérification hors bande pour toute demande urgente émanant d'une autorité ou d'un dirigeant.
-* Sensibiliser les agents et les administrés aux attaques par clonage vocal et aux signaux d'urgence artificielle.
-* Mettre en place un canal de signalement interne des appels suspects avec conservation des enregistrements.
-
-#### Phase 2 — Détection et analyse
-
-* Détecter les appels sortants/entrants anormaux vers des élus ou responsables, notamment hors horaires.
-* Analyser les enregistrements pour des artefacts de synthèse (absence de respiration, prosodie plate, coupures).
-* Surveiller les publications et contenus publics (interviews, discours) pouvant servir de corpus d'entraînement vocal.
-
-#### Phase 3 — Confinement, éradication et récupération
-
-* Bloquer les numéros et comptes associés aux campagnes signalées.
-* Diffuser une alerte interne et externe sur la campagne d'usurpation en cours.
-* Geler toute transaction ou transmission d'information déclenchée par l'appel frauduleux.
-
-#### Phase 4 — Activités post-incident
-
-* Capitaliser les indicateurs vocaux et les scénarios utilisés pour enrichir la sensibilisation.
-* Évaluer l'exposition des personnalités publiques (corpus audio disponible en ligne).
-* Renforcer les procédures de double validation pour les demandes sensibles.
-
-#### Phase 5 — Threat Hunting (proactif)
-
-* Rechercher d'autres victimes ayant reçu des appels imitant la même voix ou la même institution.
-* Corréler les campagnes avec des infrastructures télécom (SIP, numéros virtuels) réutilisées.
-* Surveiller les services de clonage vocal accessibles et les offres de « voice cloning as a service ».
-
----
-
-### TTP MITRE ATT&CK
-
-| ID TTP | Description |
-|---|---|
-| **T1598.004** | Hameçonnage vocal (vishing) appuyé par un clonage de voix |
-| **T1656** | Usurpation d'une autorité officielle (shérif) pour crédibiliser l'escroquerie |
-| **T1587.001** | Production de contenus synthétiques (audio généré par IA) |
-
----
-
-### Sources
-
-* [https://www.404media.co/police-say-scammers-used-ai-to-clone-a-sheriffs-voice/](https://www.404media.co/police-say-scammers-used-ai-to-clone-a-sheriffs-voice/)
-
-
----
-
-<div id="deux-autres-figures-de-lopposition-serbe-ciblees-par-un-logiciel-espion-selon-des-chercheurs"></div>
-
-## Deux autres figures de l'opposition serbe ciblées par un logiciel espion, selon des chercheurs
-
-### Résumé
-
-Le Citizen Lab a confirmé que le téléphone du recteur de l'Université de Belgrade, Vladan Đokić, a été infecté par le spyware Pegasus du groupe NSO au cours de l'année, à l'approche des élections serbes du 25 octobre. Une seconde personnalité, le procureur Rade Bajić, a reçu une notification de menace d'Apple en août et son appareil est toujours en cours d'analyse. Les chercheurs indiquent qu'au moins 15 personnes en Serbie ont été ciblées par des spywares avancés en 2026.
-
----
-
-### Analyse opérationnelle
-
-Le ciblage de smartphones de personnalités publiques impose de traiter les notifications de menace des éditeurs comme des incidents de sécurité de premier niveau. Les équipes doivent préserver l'appareil (pas de réinitialisation), collecter les artefacts via des outils dédiés et isoler rapidement la victime. La surface d'attaque est l'appareil mobile personnel, souvent hors périmètre du SOC : la détection dépend donc de la coopération avec les chercheurs et de la sensibilisation des cibles à haut risque.
-
----
-
-### Implications stratégiques
-
-L'affaire illustre la persistance du marché du spyware commercial dans des contextes électoraux européens, avec un risque direct pour l'intégrité des processus démocratiques et pour la confiance dans les institutions judiciaires. Elle pose la question de la régulation du commerce de la surveillance et de la responsabilité des États clients. Pour les organisations exposées (médias, universités, partis, administrations), la protection des communications des dirigeants devient un enjeu de sécurité nationale et de réputation.
-
----
-
-### Recommandations
-
-* Étendre la protection mobile aux personnels à risque hors périmètre IT classique (dirigeants, porte-paroles, chercheurs).
-* Mettre en place une procédure formelle de réponse aux notifications de menace Apple/Google.
-* Sensibiliser aux vecteurs zero-click et aux tentatives de phishing ciblé sur messageries.
-* Documenter et partager les indicateurs avec les CERT et les ONG spécialisées pour enrichir la détection collective.
-
----
-
-### Playbook de réponse à incident
-
-#### Phase 1 — Préparation
-
-* Doter les personnels à risque (dirigeants, opposants, journalistes, cadres) d'appareils durcis et d'une procédure de remplacement.
-* Contracter un accès à des outils de forensic mobile (MVT, détection d'indicateurs Pegasus) et former les analystes.
-* Activer les notifications de menaces des fournisseurs (Apple Threat Notifications, Google) et centraliser leur traitement.
-
-#### Phase 2 — Détection et analyse
-
-* Traiter toute notification de menace fournisseur comme un incident de niveau élevé et préserver l'appareil sans redémarrage.
-* Rechercher les indicateurs de compromission mobile (processus anormaux, profils de configuration, consommation batterie/data).
-* Corréler les ciblages avec le calendrier politique et les déplacements des personnes visées.
-
-#### Phase 3 — Confinement, éradication et récupération
-
-* Isoler l'appareil compromis du réseau, désactiver les comptes synchronisés et révoquer les sessions.
-* Migrer la victime vers un appareil neuf et vérifié, avec nouveau numéro si nécessaire.
-* Restreindre le partage d'informations sensibles sur les canaux potentiellement compromis.
-
-#### Phase 4 — Activités post-incident
-
-* Documenter les indicateurs et partager avec les chercheurs et les CERT concernés.
-* Évaluer l'exposition des données exfiltrées (messages, localisation, contacts) et informer les tiers affectés.
-* Renforcer les contre-mesures (durcissement iOS/Android, désactivation des fonctions non nécessaires).
-
-#### Phase 5 — Threat Hunting (proactif)
-
-* Rechercher les artefacts Pegasus connus sur l'ensemble du parc des personnels à risque.
-* Analyser les journaux d'authentification et de synchronisation cloud pour détecter des accès anormaux corrélés.
-* Cartographier les infrastructures de ciblage (SMS de phishing zero-click, liens de calendrier) et les diffuser en IOC.
-
----
-
-### TTP MITRE ATT&CK
-
-| ID TTP | Description |
-|---|---|
-| **T1203** | Exploitation pour exécution côté client (chaîne d'exploitation zero-click sur mobile) |
-| **T1404** | Exploitation pour élévation de privilèges sur mobile |
-| **T1430** | Collecte de données de localisation |
-| **T1429** | Capture audio via le micro de l'appareil compromis |
-
----
-
-### Sources
-
-* [https://therecord.media/serbia-spyware-pegasus-elections](https://therecord.media/serbia-spyware-pegasus-elections)
-
-
----
-
-<div id="arachnophobie-comment-la-peur-limage-de-marque-et-une-mauvaise-attribution-ont-deforme-the-com"></div>
-
-## Arachnophobie : comment la peur, l'image de marque et une mauvaise attribution ont déformé The Com
-
-### Résumé
-
-Dans une analyse en plusieurs parties, Jon DiMaggio (Flare) décrit The Com comme un écosystème criminel décentralisé, majoritairement anglophone et jeune, opérant sur Discord, Telegram et des plateformes de jeu, sans leader ni structure formelle. Il distingue trois clusters d'intrusion — Scattered Spider, LAPSUS$ et ShinyHunters — et présente SP1D3R HUNTERS (Scattered LAPSUS$ Hunters) comme une marque partagée et non comme un quatrième groupe. L'auteur souligne que LAPSUS$ est inactif depuis septembre 2022 et n'a jamais déployé de rançongiciel, et que les arrestations de 2025-2026 ont frappé des individus sans enrayer l'écosystème, qui remplace ses acteurs plus vite que les forces de l'ordre ne les arrêtent. Le fil conducteur commun reste l'ingénierie sociale, notamment l'exploitation du help desk.
-
----
-
-### Analyse opérationnelle
-
-L'apport opérationnel est double : méthodologique et défensif. Côté méthode, toute attribution doit être proportionnée à la preuve (un enregistrement judiciaire ou un rapport d'incident first-party peut suffire, un simple indicateur comportemental non). Côté défense, le vecteur dominant est le détournement du support informatique : vishing, réinitialisation MFA, usurpation d'identité d'employé. Les mesures prioritaires sont l'authentification résistante au phishing, la vérification hors bande au help desk, la journalisation fine des changements de facteurs d'authentification et la surveillance des sessions.
-
----
-
-### Implications stratégiques
-
-Confondre les clusters conduit à des décisions erronées : attribution d'une intrusion à un groupe disparu, défense contre les mauvais TTP, perte de crédibilité auprès du comité de direction. Pour les dirigeants, l'enjeu est de financer la résilience humaine (processus support, formation, vérification) autant que la technologie. La persistance de l'écosystème malgré les condamnations pénales montre que la répression individuelle ne suffit pas : la réduction du risque passe par la suppression des points d'entrée sociaux et par le partage d'informations entre secteurs.
-
----
-
-### Recommandations
-
-* Adopter une unité d'analyse par cluster d'activité plutôt que par marque de groupe dans les rapports de threat intelligence.
-* Imposer une vérification hors bande et une double validation pour tout reset de credentials ou MFA au help desk.
-* Déployer FIDO2/passkeys sur les comptes à privilèges et les consoles d'administration.
-* Surveiller les canaux Telegram/Discord et les logs de stealer pour détecter les mentions de l'organisation avant l'attaque.
-* Préparer un plan de réponse à l'extorsion incluant juridique, communication et assurance cyber.
-
----
-
-### Playbook de réponse à incident
-
-#### Phase 1 — Préparation
-
-* Durcir les procédures de réinitialisation de mot de passe et MFA au help desk (vérification hors bande, questions non publiques).
-* Déployer une authentification résistante au phishing (FIDO2/passkeys) sur les comptes critiques et les consoles d'administration.
-* Segmenter les accès administrateurs et imposer un principe de moindre privilège sur les outils d'ITSM et de virtualisation.
-
-#### Phase 2 — Détection et analyse
-
-* Surveiller les appels au support avec changement de numéro, urgence anormale ou demande de reset MFA.
-* Alerter sur les connexions depuis des géolocalisations ou ASN inhabituels après une réinitialisation de credentials.
-* Détecter les créations de comptes, ajouts MFA et modifications de rôles hors fenêtre de changement.
-
-#### Phase 3 — Confinement, éradication et récupération
-
-* Révoquer sessions, tokens et facteurs MFA des comptes compromis ; réinitialiser les secrets.
-* Isoler les segments réseau touchés et bloquer les accès VPN/VDI suspects.
-* Activer le plan de crise extorsion : cellule de coordination, conseil juridique, communication, négociation encadrée.
-
-#### Phase 4 — Activités post-incident
-
-* Revoir l'ensemble des procédures help desk et les journaux d'audit des 90 derniers jours.
-* Renforcer la surveillance des données exposées sur les canaux Telegram et les sites de fuite.
-* Former les équipes support à la détection de l'ingénierie sociale et instaurer un contrôle à deux niveaux.
-
-#### Phase 5 — Threat Hunting (proactif)
-
-* Rechercher les traces de vishing dans les enregistrements téléphoniques et tickets ITSM.
-* Traquer les sessions anormales sur les consoles d'administration et les hyperviseurs.
-* Surveiller les mentions de l'organisation dans les canaux de The Com et les logs de stealer.
-
----
-
-### TTP MITRE ATT&CK
-
-| ID TTP | Description |
-|---|---|
-| **T1598.004** | Vishing du help desk pour obtenir une réinitialisation MFA |
-| **T1656** | Usurpation d'identité d'employés et de prestataires |
-| **T1621** | Génération de requêtes MFA pour fatiguer la victime |
-| **T1078** | Utilisation de comptes valides obtenus via le support informatique |
-| **T1539** | Vol de cookies de session pour contourner l'authentification |
-| **T1657** | Vol et extorsion financière |
-
----
-
-### Sources
-
-* [https://flare.io/learn/resources/blog/the-com-ecosystem-actors-attribution](https://flare.io/learn/resources/blog/the-com-ecosystem-actors-attribution)
-
-
----
-
-<div id="les-retraits-pour-atteinte-au-droit-dauteur-donlyfans-exposent-des-sites-web-compromis"></div>
-
-## Les retraits pour atteinte au droit d'auteur d'OnlyFans exposent des sites web compromis
-
-### Résumé
-
-Des recherches d'UpGuard, présentées par Greg Pollock à Dark Reading, montrent que des sites légitimes — notamment d'universités et d'agences gouvernementales — sont compromis et manipulés pour diffuser du contenu pour adultes dans le but de capter du trafic de recherche (spam SEO). L'enquête, partie d'un cas de spam pornographique sur un site présentant d'autres indicateurs de compromission, a conduit à exploiter les demandes de retrait DMCA déposées par OnlyFans et d'autres créateurs de contenu comme source de renseignement : ces notifications révèlent des sites légitimes détournés. L'outil n'offre pas de détection temps réel mais constitue un historique utile pour investiguer des compromissions chez des tiers et fournisseurs.
-
----
-
-### Analyse opérationnelle
-
-La compromission de sites web à des fins de spam SEO reste un vecteur sous-estimé : elle sert de preuve d'une intrusion non détectée sur des actifs exposés et peut précéder des usages plus dommageables (hébergement de malware, phishing, vol de formulaires). Les équipes doivent surveiller l'intégrité des contenus, les redirections conditionnelles et les modifications de fichiers CMS, et traiter les notifications DMCA comme un signal de détection. Les sites legacy et les sous-domaines oubliés sont les plus exposés.
-
----
-
-### Implications stratégiques
-
-Le préjudice dépasse la réputation : un site institutionnel compromis peut servir de relais de confiance pour des campagnes d'hameçonnage ou de diffusion de malwares, et exposer des données de formulaires. Les universités et agences publiques sont attractives en raison de leur autorité de domaine et de leur maintenance hétérogène. La tendance invite à intégrer la surveillance de la chaîne d'approvisionnement web et des actifs exposés dans la gouvernance des risques tiers.
-
----
-
-### Recommandations
-
-* Surveiller les notifications DMCA et les résultats de recherche mentionnant les domaines de l'organisation.
-* Mettre en place une détection d'intégrité des contenus et un inventaire à jour des sites et sous-domaines exposés.
-* Appliquer une politique de fin de vie sur les CMS et sites legacy et revoir les droits d'édition.
-* Inclure les prestataires web et filiales dans le programme de gestion des vulnérabilités.
-
----
-
-### Playbook de réponse à incident
-
-#### Phase 1 — Préparation
-
-* Inventorier les sites et sous-domaines exposés, y compris les sites legacy et les CMS non maintenus.
-* Mettre en place une surveillance de l'intégrité des contenus et du référencement (apparition de mots-clés anormaux).
-* Inclure les prestataires et filiales dans le périmètre de surveillance des actifs web.
-
-#### Phase 2 — Détection et analyse
-
-* Surveiller les résultats de recherche et les notifications DMCA mentionnant le domaine de l'organisation.
-* Détecter les modifications de pages, l'ajout de liens sortants ou de contenus injectés dans le CMS.
-* Analyser les journaux d'accès web pour identifier les requêtes d'upload ou d'édition non autorisées.
-
-#### Phase 3 — Confinement, éradication et récupération
-
-* Retirer les contenus injectés, révoquer les comptes CMS compromis et appliquer les correctifs.
-* Rechercher et supprimer les web shells et les comptes backdoor créés.
-* Demander le déréférencement des pages compromises auprès des moteurs de recherche.
-
-#### Phase 4 — Activités post-incident
-
-* Auditer l'ensemble des sites du périmètre pour la même vulnérabilité.
-* Renforcer la gestion des correctifs et la revue des extensions/plugins CMS.
-* Documenter l'impact réputationnel et informer les parties prenantes si des données ont été exposées.
-
-#### Phase 5 — Threat Hunting (proactif)
-
-* Rechercher les artefacts de spam SEO (fichiers .htaccess modifiés, redirections conditionnelles par user-agent).
-* Corréler les campagnes DMCA pour identifier des vagues de compromission touchant plusieurs organisations.
-* Surveiller les places de marché de backlinks et les services de spam SEO ciblant le secteur.
-
----
-
-### TTP MITRE ATT&CK
-
-| ID TTP | Description |
-|---|---|
-| **T1608.006** | Empoisonnement SEO pour rediriger le trafic vers du contenu contrôlé par l'attaquant |
-| **T1190** | Exploitation d'applications exposées sur Internet pour modifier le contenu des sites |
-| **T1505.003** | Installation de web shells pour la persistance sur les serveurs web |
-| **T1584.004** | Compromission d'infrastructures tierces (sites légitimes) au profit de la campagne |
-
----
-
-### Sources
-
-* [https://www.darkreading.com/vulnerabilities-threats/onlyfans-copyright-takedowns-expose-compromised-websites](https://www.darkreading.com/vulnerabilities-threats/onlyfans-copyright-takedowns-expose-compromised-websites)
-
-
----
-
-<div id="mitre-attck-v20-repertorie-les-abus-dia-le-contournement-de-la-mfa-et-les-attaques-contre-les-services-deau"></div>
-
-## MITRE ATT&CK v20 répertorie les abus d'IA, le contournement de la MFA et les attaques contre les services d'eau
-
-### Résumé
-
-MITRE a publié la version 20 de son framework ATT&CK, qui étend la couverture de l'activité adverse récente. Le domaine Enterprise reçoit neuf ajouts, dont deux techniques de prompt injection (instructions saisies directement dans une interface LLM et instructions dissimulées dans du contenu ingéré), une technique d'usage des agents IA de l'organisation pour exfiltrer des données, des sous-techniques sur l'empoisonnement de contenu web pour orienter les recommandations d'assistants IA et sur la perturbation de l'analyse de malware assistée par LLM. Une nouvelle technique couvre le vol de mots de passe applicatifs permettant de se connecter sans MFA, une autre le contournement de CAPTCHA. Le sous-domaine des dépendances logicielles compromises inclut désormais les fichiers de configuration d'IDE et d'agents de codage. En ICS, une campagne documente des attaques contre des PLC exposés sur Internet dans plus de 30 utilities d'eau et d'eaux usées du Minnesota, l'attribution restant non confirmée, et une seconde campagne décrit une intrusion assistée par IA dans des institutions mexicaines atteignant une utility d'eau municipale. Côté acteurs, MITRE ajoute Nimbus Manticore (IRGC), met à jour Salt Typhoon (exploitation d'équipements de bordure réseau) et APT38 (glissement vers la supply chain logicielle), et ajoute The Gentlemen (RaaS). Quinze nouvelles stratégies de détection et 38 analytiques sont fournies ; en Mobile, la technique de distribution d'applications hors stores officiels revient et NGate est ajouté.
-
----
-
-### Analyse opérationnelle
-
-Cette version fournit un plan de mise à jour concret pour les SOC : les nouvelles techniques IA et MFA doivent être traduites en règles de détection et en contrôles préventifs (authentification résistante au phishing, restriction des mots de passe applicatifs, surveillance des agents IA et des fichiers de configuration d'IDE). Les analytiques ICS, conçues pour ignorer les activités d'ingénierie et de maintenance légitimes, sont directement exploitables pour réduire les faux positifs en environnement OT. Les équipes doivent aussi réévaluer leurs scénarios de détection sur les équipements de bordure réseau et les canaux C2 DNS/publish-subscribe.
-
----
-
-### Implications stratégiques
-
-L'intégration de l'abus d'IA dans un référentiel de référence marque la normalisation de ces techniques et leur prise en compte par les assureurs, auditeurs et régulateurs. L'inclusion d'attaques contre des utilities d'eau, avec une attribution non confirmée mais des soupçons d'affiliation iranienne, illustre la porosité entre conflits géopolitiques et infrastructures critiques. Pour les dirigeants, l'enjeu est l'alignement des investissements de détection sur un référentiel commun, gage de comparabilité et de justification budgétaire, notamment en OT où la pression réglementaire (NIS2) s'intensifie.
-
----
-
-### Recommandations
-
-* Réaliser une évaluation de couverture ATT&CK v20 et prioriser les écarts sur les techniques IA, MFA et ICS.
-* Restreindre et surveiller les mots de passe applicatifs ; généraliser l'authentification résistante au phishing.
-* Sécuriser les agents IA et les fichiers de configuration d'IDE/outils de développement contre l'empoisonnement.
-* Recenser et retirer d'Internet les PLC et équipements OT exposés, avec accès distant médiatisé.
-* Intégrer les nouvelles analytiques ICS dans la supervision OT en ajustant les seuils aux activités de maintenance.
-
----
-
-### Playbook de réponse à incident
-
-#### Phase 1 — Préparation
-
-* Cartographier la couverture ATT&CK actuelle de l'organisation et identifier les écarts sur les nouvelles techniques (IA, MFA, ICS).
-* Mettre à jour les règles de détection et les cas d'usage SIEM avec les nouvelles analytiques Enterprise et ICS.
-* Former les équipes SOC aux risques liés aux LLM et agents IA internes (prompt injection, exfiltration via agents).
-
-#### Phase 2 — Détection et analyse
-
-* Déployer les nouvelles stratégies de détection ATT&CK v20 et mesurer leur taux de faux positifs.
-* Surveiller l'usage de mots de passe applicatifs pour l'authentification sans MFA et les contournements de CAPTCHA.
-* Détecter les canaux C2 dans le DNS et les protocoles publish/subscribe, ainsi que les accès anormaux aux PLC exposés.
-
-#### Phase 3 — Confinement, éradication et récupération
-
-* Révoquer les mots de passe applicatifs compromis et imposer une rotation avec authentification forte.
-* Isoler les équipements ICS/PLC exposés sur Internet et restreindre les accès distants.
-* Bloquer les canaux C2 identifiés (DNS, publish/subscribe) et les dépendances logicielles compromises.
-
-#### Phase 4 — Activités post-incident
-
-* Mettre à jour la matrice de couverture ATT&CK et le plan d'amélioration des détections.
-* Revoir les configurations des agents IA et des IDE pour prévenir l'empoisonnement de configuration.
-* Partager les enseignements avec les CERT sectoriels et les pairs ICS.
-
-#### Phase 5 — Threat Hunting (proactif)
-
-* Traquer les techniques nouvellement cataloguées : prompt injection, empoisonnement de contenu web pour assistants IA, vol de mots de passe applicatifs.
-* Rechercher les activités des nouveaux acteurs référencés (Nimbus Manticore, Salt Typhoon, APT38, The Gentlemen) dans les journaux historiques.
-* Analyser les accès aux équipements d'eau/énergie exposés et les journaux d'ingénierie pour détecter des commandes anormales.
-
----
-
-### TTP MITRE ATT&CK
-
-| ID TTP | Description |
-|---|---|
-| **T1111** | Interception/contournement MFA via vol de mots de passe applicatifs |
-| **T1078** | Utilisation de comptes valides après contournement de l'authentification |
-| **T1059** | Interpréteur de commandes et de scripts (nouvelle technique ICS avec six interpréteurs) |
-| **T1071.004** | Canal de commande et contrôle via DNS |
-| **T1190** | Exploitation d'appareils exposés sur Internet (PLC d'utilités d'eau) |
-
----
-
-### Sources
-
-* [https://www.securityweek.com/mitre-attck-v20-catalogs-ai-abuse-mfa-bypass-water-utility-attacks/](https://www.securityweek.com/mitre-attck-v20-catalogs-ai-abuse-mfa-bypass-water-utility-attacks/)
+* [https://socprime.com/blog/log-analytics-with-logtotal/](https://socprime.com/blog/log-analytics-with-logtotal/)
