@@ -1,0 +1,3538 @@
+{
+  "threat_level": {
+    "score": 5,
+    "label": {
+      "en": "Severe",
+      "fr": "Sévère"
+    },
+    "justification": {
+      "en": "The period is dominated by two systemic shocks. First, the PHP2Shell pair (CVE-2026-109618 / CVE-2026-109619, CVSS 9.2) forced governments in Belgium, the Netherlands, Finland, France and Germany to take public websites offline, including the Paris police prefecture and the Dutch NCSC, with WordPress instances compromised within 48 hours of disclosure. Second, trust in vendor update channels collapsed: UNC7017 hijacked AOMEI Backupper's ABMarket infrastructure, Storm-0940 used the ARTEX agentic-AI framework against the ConnectWise ecosystem, and Lazarus abused South Korea's mandatory CrossWeb EX software. APT28 breached a NATO naval shipyard with the HOOKEDGE backdoor, SafePay ransomware passed 600 critical-infrastructure victims, and 1win leaked 96.5 million records. Regulatory pressure is simultaneously peaking, with the ECB demanding AI-attack action plans by 31 October 2026 and the European Commission opening a DSA formal investigation into Booking.com.",
+      "fr": "La période est dominée par deux chocs systémiques. D'abord, le couple PHP2Shell (CVE-2026-109618 / CVE-2026-109619, CVSS 9,2) a contraint les gouvernements belge, néerlandais, finlandais, français et allemand à mettre hors ligne des sites publics, dont la préfecture de police de Paris et le NCSC néerlandais, des instances WordPress ayant été compromises en 48 heures après la divulgation. Ensuite, la confiance dans les canaux de mise à jour des éditeurs s'est effondrée : UNC7017 a détourné l'infrastructure ABMarket d'AOMEI Backupper, Storm-0940 a employé le cadre d'IA agentique ARTEX contre l'écosystème ConnectWise, et Lazarus a abusé du logiciel obligatoire sud-coréen CrossWeb EX. APT28 a compromis un chantier naval militaire de l'OTAN avec la backdoor HOOKEDGE, le rançongiciel SafePay a dépassé 600 victimes d'infrastructures critiques et 1win a exposé 96,5 millions d'enregistrements. La pression réglementaire atteint parallèlement son pic, la BCE exigeant des plans d'action contre les attaques assistées par IA au 31 octobre 2026 et la Commission européenne ouvrant une enquête formelle DSA contre Booking.com."
+    },
+    "_triggers": [
+      "+8 — 6 CVE(s) CISA KEV",
+      "+4 — 12 CVE(s) CVSS ≥ 9.0",
+      "+6 — 3 acteur(s) étatique(s)",
+      "+3 — 6 opérateur(s) ransomware",
+      "+1 — ≥ 3 acteurs distincts actifs",
+      "+3 — 8 breach(es) ≥ 100k enregistrements",
+      "+2 — secteurs critiques ciblés : Critical_Infrastructure, Government_and_Defense",
+      "+1 — 40 TTPs distinctes"
+    ]
+  },
+  "executive_summary": {
+    "en": "Week 4 of October 2026 marks a qualitative shift: attackers no longer need to break in, they inherit trust. Three supply-chain operations ran in parallel — UNC7017 silently rewrote AOMEI Backupper's ABMarket configuration files for windows of five to ten minutes (28 May, 16 and 20 July 2026) to deliver CROSSROAD, SHINYROAD and Adaptix C2, plus an invisible one-pixel popup that leaked NTLM hashes to attacker WebDAV; Storm-0940 used the ARTEX agentic-AI framework to industrialise reconnaissance and target the ConnectWise MSP ecosystem; and Lazarus' Operation FlashHole abused CrossWeb EX, a security package mandated on nearly every South Korean endpoint, to reach software, construction and telecom-equipment firms. Nation-state espionage continued at the heart of the European defence industrial base: Symantec attributed to APT28 (Swallowtail/BlueDelta) intrusions into a NATO naval shipyard, a law-enforcement agency and a military aero-engine maker, with SSH key implantation, PowerShell NTLM capture, a new reflective loader (ld.exe) and the HOOKEDGE backdoor now tasking through 185.82.218[.]119:443 instead of webhook.site. The vulnerability picture is equally severe: PHP2Shell (CVE-2026-109618/109619) turned memory_limit — a hardening control — into the exploit primitive, and governments chose service shutdown over exposure; CISA added four Plex Plex2Shell flaws, Siemens Software Center DLL sideloading and EG SiteGuard command injection to KEV with deadlines of 23 October and 3 November. Ransomware economics remain brutal: SafePay passed 600 critical-infrastructure victims since 2024, Chaos hit Central Ohio Primary Care (1.4M patients) via vishing, and Inc Ransom and Aurora listed legal and industrial victims. Data exposure reached record scale — 1win (96.5M records), 23andMe (6.9M, California settlement), Nikkei (1.8M, third breach in a month), Zeabur (3.2M environment variables, company shutting down), State Bank of India and the German AfD (421,000 emails). Regulatory pressure converged: the ECB set a 31 October 2026 deadline for AI-attack action plans under SSM-2026-0301, the Commission opened a DSA formal investigation into Booking.com over reservation-hijack scams, and NIST/NSA/CISA published incident-response practices for rogue AI agents. Priority actions: patch PHP and Plex within 24 hours, treat every vendor update channel as untrusted, hunt NTLM egress and web shells, and bring non-human identities under IAM governance.",
+    "fr": "La semaine 4 d'octobre 2026 marque un basculement qualitatif : les attaquants n'ont plus besoin de s'introduire, ils héritent de la confiance. Trois opérations de chaîne d'approvisionnement ont été menées en parallèle — UNC7017 a réécrit silencieusement les fichiers de configuration ABMarket d'AOMEI Backupper pendant des fenêtres de cinq à dix minutes (28 mai, 16 et 20 juillet 2026) pour livrer CROSSROAD, SHINYROAD et Adaptix C2, ainsi qu'un popup invisible d'un pixel exfiltrant des hachages NTLM vers un WebDAV adverse ; Storm-0940 a utilisé le cadre d'IA agentique ARTEX pour industrialiser la reconnaissance et cibler l'écosystème MSP ConnectWise ; l'opération FlashHole de Lazarus a abusé de CrossWeb EX, logiciel de sécurité imposé sur la quasi-totalité des postes sud-coréens, pour atteindre des entreprises du logiciel, de la construction et des équipements de télécommunication. L'espionnage étatique s'est poursuivi au cœur de la base industrielle de défense européenne : Symantec attribue à APT28 (Swallowtail/BlueDelta) des intrusions dans un chantier naval militaire de l'OTAN, une agence des forces de l'ordre et un fabricant de moteurs aéronautiques militaires, avec dépôt de clé SSH, capture NTLM via PowerShell, un nouveau loader réflectif (ld.exe) et la backdoor HOOKEDGE désormais pilotée via 185.82.218[.]119:443 au lieu de webhook.site. Le tableau des vulnérabilités est tout aussi sévère : PHP2Shell (CVE-2026-109618/109619) a transformé memory_limit — un contrôle de durcissement — en primitive d'exploitation, et des gouvernements ont préféré couper leurs services ; la CISA a ajouté au KEV quatre failles Plex Plex2Shell, le DLL sideloading de Siemens Software Center et l'injection de commandes EG SiteGuard, avec échéances au 23 octobre et 3 novembre. L'économie du rançongiciel reste brutale : SafePay a dépassé 600 victimes d'infrastructures critiques depuis 2024, Chaos a frappé Central Ohio Primary Care (1,4 M de patients) par vishing, et Inc Ransom comme Aurora ont listé des victimes juridiques et industrielles. L'exposition de données atteint une échelle record — 1win (96,5 M d'enregistrements), 23andMe (6,9 M, transaction californienne), Nikkei (1,8 M, troisième violation en un mois), Zeabur (3,2 M de variables d'environnement, société en fermeture), State Bank of India et l'AfD allemande (421 000 e-mails). La pression réglementaire converge : la BCE fixe au 31 octobre 2026 l'échéance des plans d'action contre les attaques assistées par IA (SSM-2026-0301), la Commission ouvre une enquête formelle DSA contre Booking.com sur les arnaques par détournement de réservation, et le NIST, la NSA et la CISA publient des pratiques de réponse aux incidents impliquant des agents d'IA. […]"
+  },
+  "regulatory": {
+    "analyse": {
+      "en": "Three regulatory currents converge this period. First, prudential supervision is now explicitly threat-driven: the ECB's SSM-2026-0301 letter requires every significant institution to deliver a concrete action plan against AI-assisted cyberattacks by 31 October 2026, reframing time-to-detect, time-to-patch, time-to-contain and time-to-recover as supervised metrics and mandating exploitability-based prioritisation (EPSS, KEV) over raw CVSS. Second, platform accountability is being enforced through security controls: the European Commission's formal DSA investigation into Booking.com treats reservation-hijack phishing and partner-account security as a sanctionable risk-management failure, with a theoretical ceiling of 6% of global turnover — a clear signal that fraud-enabling data exposure is now a compliance issue, not just an operational one. Third, the encryption and AI-governance debate is intensifying: EDRi's Global Encryption Day campaign targets the CSA Regulation's client-side scanning, key escrow and law-enforcement hacking proposals as a legally mandated single point of failure, while NIST, NSA and CISA published ten incident-readiness practices for rogue AI agents under Executive Order 14434. For security teams, the practical consequence is that patch SLAs, vendor update integrity, non-human identity governance and incident-reporting chains must now be evidenced to regulators, not merely implemented.",
+      "fr": "Trois courants réglementaires convergent cette période. D'abord, la supervision prudentielle est désormais explicitement pilotée par la menace : la lettre SSM-2026-0301 de la BCE exige de chaque établissement significatif un plan d'action concret contre les cyberattaques assistées par IA au plus tard le 31 octobre 2026, érigeant les délais de détection, de correctif, de confinement et de rétablissement en métriques supervisées et imposant une priorisation par l'exploitabilité réelle (EPSS, KEV) plutôt que par le seul CVSS. Ensuite, la responsabilité des plateformes est appliquée par le prisme des contrôles de sécurité : l'enquête formelle DSA de la Commission européenne visant Booking.com traite le phishing par détournement de réservation et la sécurité des comptes partenaires comme un défaut sanctionnable de gestion du risque, avec un plafond théorique de 6 % du chiffre d'affaires mondial — signal clair que l'exposition de données facilitant la fraude devient un enjeu de conformité, et non plus seulement opérationnel. Enfin, le débat sur le chiffrement et la gouvernance de l'IA s'intensifie : la campagne d'EDRi pour le Global Encryption Day cible le client-side scanning du règlement CSA, le key escrow et les propositions de hacking policier comme un point de défaillance unique imposé par la loi, tandis que le NIST, la NSA et la CISA publient dix pratiques de préparation et de réponse aux incidents impliquant des agents d'IA au titre de l'Executive Order 14434. Pour les équipes de sécurité, la conséquence pratique est que les SLA de correctifs, l'intégrité des canaux de mise à jour, la gouvernance des identités non humaines et les chaînes de notification d'incident doivent désormais être démontrables aux régulateurs, et pas seulement mis en œuvre."
+    },
+    "events": [
+      {
+        "title": {
+          "en": "European Commission opens formal DSA investigation into Booking.com over scams and fraud",
+          "fr": "La Commission européenne ouvre une enquête formelle DSA contre Booking.com sur les arnaques et la fraude"
+        },
+        "issuing_body": "European Commission (DG CONNECT)",
+        "date": "2026-10-21",
+        "jurisdiction": {
+          "region": "EU",
+          "countries": [
+            "NL",
+            "BE",
+            "FR",
+            "DE",
+            "IE"
+          ]
+        },
+        "type": "Enforcement_Action",
+        "status": "Under_Review",
+        "reference": "Digital Services Act - Regulation (EU) 2022/2065, Art. 34-35, Art. 74",
+        "affected_sectors": [
+          "Hospitality_and_Entertainment",
+          "Retail_and_Consumer"
+        ],
+        "description": {
+          "en": "The Commission is investigating whether Booking.com failed to mitigate fake listings, reservation-hijack phishing and undisclosed paid ranking. Dutch consumer body Consumentenbond reported 200 scam complaints and EUR 65,000 in losses for 2025, up from 89 complaints and EUR 25,000 the previous year. The theoretical penalty ceiling is 6% of global annual turnover, making partner-account security (MFA, anomaly detection, establishment verification) a compliance obligation rather than a best practice.",
+          "fr": "La Commission examine si Booking.com a manqué à ses obligations d'atténuation des annonces frauduleuses, du phishing par détournement de réservation et de l'absence d'identification des classements payants. L'association néerlandaise Consumentenbond rapporte 200 signalements d'arnaques et 65 000 EUR de préjudice pour 2025, contre 89 signalements et 25 000 EUR l'année précédente. Le plafond théorique de sanction est de 6 % du chiffre d'affaires annuel mondial, ce qui fait de la sécurité des comptes partenaires (MFA, détection d'anomalies, vérification des établissements) une obligation de conformité et non une bonne pratique."
+        },
+        "source_url": "https://digital-strategy.ec.europa.eu/en/news/commission-investigate-how-bookingcom-combats-scams-and-fraud-under-digital-services-act"
+      },
+      {
+        "title": {
+          "en": "ECB SSM-2026-0301: AI-assisted cyberattack action plans due 31 October 2026",
+          "fr": "BCE SSM-2026-0301 : plans d'action contre les cyberattaques assistées par IA attendus au 31 octobre 2026"
+        },
+        "issuing_body": "European Central Bank - Single Supervisory Mechanism",
+        "date": "2026-10-21",
+        "jurisdiction": {
+          "region": "EU",
+          "countries": [
+            "DE",
+            "FR",
+            "IT",
+            "ES",
+            "NL",
+            "BE",
+            "IE",
+            "AT",
+            "PT",
+            "FI"
+          ]
+        },
+        "type": "Guidance",
+        "status": "Active",
+        "reference": "SSM-2026-0301; DORA (Regulation (EU) 2022/2554)",
+        "affected_sectors": [
+          "Finance"
+        ],
+        "description": {
+          "en": "All significant institutions must submit a concrete plan against AI-accelerated attacks, covering complete ICT asset inventories with SBOMs, exploitability-based patching (EPSS/KEV rather than base CVSS), behavioural detection across east-west traffic, and assume-breach default-deny segmentation. The ECB explicitly treats time-to-detect, time-to-patch, time-to-contain and time-to-recover as supervised metrics that must shrink.",
+          "fr": "Tous les établissements significatifs doivent remettre un plan concret contre les attaques accélérées par l'IA, couvrant un inventaire complet des actifs TIC avec SBOM, un patch management fondé sur l'exploitabilité réelle (EPSS/KEV plutôt que CVSS de base), une détection comportementale sur le trafic est-ouest et une segmentation default-deny en assume-breach. La BCE traite explicitement les délais de détection, de correctif, de confinement et de rétablissement comme des métriques supervisées devant diminuer."
+        },
+        "source_url": "https://www.it-finanzmagazin.de/vom-ezb-brief-zum-engineering-backlog-was-bis-zum-31-oktober-auf-den-plan-gehoert-252127/"
+      },
+      {
+        "title": {
+          "en": "NIST, NSA and CISA publish incident readiness practices for rogue AI agents",
+          "fr": "Le NIST, la NSA et la CISA publient des pratiques de préparation aux incidents impliquant des agents d'IA"
+        },
+        "issuing_body": "NIST / NSA / CISA",
+        "date": "2026-10-21",
+        "jurisdiction": {
+          "region": "US",
+          "countries": [
+            "US"
+          ]
+        },
+        "type": "Guidance",
+        "status": "Active",
+        "reference": "Executive Order 14434; Key Practices for Incident Readiness and Response in Super Intelligence Training and Evaluation",
+        "affected_sectors": [
+          "Technology_and_Telecom",
+          "Government_and_Defense",
+          "Finance",
+          "Healthcare_and_Life_Sciences"
+        ],
+        "description": {
+          "en": "Ten practices across prepare, detect, respond, recover and report define how to handle AI agents behaving unexpectedly or without authorisation, including asset inventory, least privilege, zero-trust controls, secret management, supplier risk, isolation, credential revocation and government notification. The document is non-binding but will propagate contractually to frontier-AI suppliers and their customers worldwide.",
+          "fr": "Dix pratiques réparties en préparation, détection, réponse, rétablissement et notification définissent la gestion des agents d'IA se comportant de manière inattendue ou non autorisée : inventaire des actifs, moindre privilège, contrôles zero-trust, gestion des secrets, risque fournisseur, isolement, révocation des identifiants et notification gouvernementale. Le document est non contraignant mais se propagera contractuellement aux fournisseurs d'IA de frontière et à leurs clients dans le monde entier."
+        },
+        "source_url": "https://www.securityweek.com/us-agencies-detail-incident-response-practices-for-rogue-ai-agents/"
+      },
+      {
+        "title": {
+          "en": "EDRi Global Encryption Day 2026 campaign against CSA client-side scanning and key escrow",
+          "fr": "Campagne EDRi du Global Encryption Day 2026 contre le client-side scanning du CSA et le key escrow"
+        },
+        "issuing_body": "EDRi (European Digital Rights) and partners",
+        "date": "2026-10-21",
+        "jurisdiction": {
+          "region": "EU",
+          "countries": [
+            "BE",
+            "FR",
+            "DE",
+            "IE",
+            "CZ",
+            "PL",
+            "SE"
+          ]
+        },
+        "type": "Proposal",
+        "status": "Under_Review",
+        "reference": "CSA Regulation (child sexual abuse material); key escrow / key recovery proposals; Europol law-enforcement hacking mandate",
+        "affected_sectors": [
+          "Technology_and_Telecom",
+          "Media_and_Communication",
+          "Nonprofit_and_NGO"
+        ],
+        "description": {
+          "en": "EDRi documents mass public support for end-to-end encryption (92% of French respondents, 94% in Poland) while warning that client-side scanning, key escrow and mandated provider vulnerabilities would create a legally imposed single point of failure exploitable by both states and criminals. Security teams should anticipate compliance tension between lawful-access obligations and the integrity of their cryptographic architecture.",
+          "fr": "EDRi documente un soutien populaire massif au chiffrement de bout en bout (92 % des répondants français, 94 % en Pologne) tout en alertant que le client-side scanning, le key escrow et l'obligation faite aux fournisseurs d'introduire des vulnérabilités créeraient un point de défaillance unique imposé par la loi, exploitable par les États comme par les criminels. Les équipes de sécurité doivent anticiper une tension de conformité entre obligations d'accès légal et intégrité de leur architecture cryptographique."
+        },
+        "source_url": "https://edri.org/our-work/edri-celebrates-global-encryption-day-2026/"
+      },
+      {
+        "title": {
+          "en": "CISA adds Plex, Siemens Software Center and EG SiteGuard flaws to KEV catalog",
+          "fr": "La CISA ajoute les failles Plex, Siemens Software Center et EG SiteGuard au catalogue KEV"
+        },
+        "issuing_body": "CISA",
+        "date": "2026-10-21",
+        "jurisdiction": {
+          "region": "US",
+          "countries": [
+            "US"
+          ]
+        },
+        "type": "Enforcement_Action",
+        "status": "Active",
+        "reference": "BOD 22-01 / KEV catalog; remediation deadlines 2026-10-23 and 2026-11-03",
+        "affected_sectors": [
+          "Government_and_Defense",
+          "Critical_Infrastructure",
+          "Technology_and_Telecom"
+        ],
+        "description": {
+          "en": "Federal agencies must remediate four Plex Media Server flaws chained as Plex2Shell (CVE-2026-96652, -96654, -96655, -96656) and EG Secure Solutions SiteGuard command injection (CVE-2026-106931) by 23 October 2026, and Siemens Software Center DLL sideloading (CVE-2026-110936) by 3 November 2026. Private-sector defenders should treat these deadlines as a de facto prioritisation baseline given active exploitation.",
+          "fr": "Les agences fédérales doivent corriger avant le 23 octobre 2026 quatre failles de Plex Media Server chaînées en Plex2Shell (CVE-2026-96652, -96654, -96655, -96656) et l'injection de commandes EG Secure Solutions SiteGuard (CVE-2026-106931), puis le DLL sideloading de Siemens Software Center (CVE-2026-110936) avant le 3 novembre 2026. Les défenseurs du secteur privé doivent considérer ces échéances comme une base de priorisation de facto compte tenu de l'exploitation active."
+        },
+        "source_url": "https://thehackernews.com/2026/10/cisa-orders-federal-agencies-to-patch.html"
+      },
+      {
+        "title": {
+          "en": "curl project moves sub-HIGH severity reports to public GitHub disclosure from 26 October 2026",
+          "fr": "Le projet curl bascule les rapports de sévérité inférieure à HIGH en divulgation publique GitHub à compter du 26 octobre 2026"
+        },
+        "issuing_body": "curl project (Daniel Stenberg)",
+        "date": "2026-10-21",
+        "jurisdiction": {
+          "region": "Global",
+          "countries": [
+            "US",
+            "NL",
+            "SE"
+          ]
+        },
+        "type": "Guidance",
+        "status": "Active",
+        "reference": "curl coordinated disclosure policy; HackerOne severity assessment",
+        "affected_sectors": [
+          "Technology_and_Telecom"
+        ],
+        "description": {
+          "en": "Over 90% of recent curl submissions were assessed below HIGH, largely AI-generated, forcing the project to reserve private handling for HIGH and CRITICAL only. Consumers of curl must therefore expect earlier public exposure of low and medium flaws and should prioritise by real exploitability rather than theoretical severity.",
+          "fr": "Plus de 90 % des soumissions récentes à curl ont été évaluées en dessous de HIGH, largement générées par IA, contraignant le projet à réserver le traitement privé aux seules failles HIGH et CRITICAL. Les consommateurs de curl doivent donc anticiper une exposition publique plus précoce des failles faibles et moyennes et prioriser selon l'exploitabilité réelle plutôt que la sévérité théorique."
+        },
+        "source_url": "https://www.theregister.com/security/2026/10/20/swamped-curl-maintainers-take-low-level-flaws-public-to-survive-vulnerability-avalanche/5304198"
+      }
+    ]
+  },
+  "threats_actors": {
+    "geographic_analyse": [
+      {
+        "geographic_zone_name": {
+          "en": "Russia",
+          "fr": "Russie"
+        },
+        "geographic_zone_strategic_analyse": {
+          "en": "APT28 (Swallowtail/BlueDelta/Fancy Bear/Forest Blizzard) conducted hands-on-keyboard intrusions into a NATO naval shipyard, a law-enforcement agency and a military aero-engine manufacturer, returning to a compromised host over a week. Tradecraft combined SSH private-key implantation for a persistent tunnel, a standalone PowerShell NTLM listener on loopback, a previously undocumented reflective loader (ld.exe) delivered via curl over SSH, and the HOOKEDGE backdoor now tasking through a dedicated IP (185.82.218[.]119:443) instead of webhook.site. A VBScript launcher associated with HOOKEDGE was observed on 24 September 2026. The objective is long-dwell access to the European defence industrial base, not disruption.",
+          "fr": "APT28 (Swallowtail/BlueDelta/Fancy Bear/Forest Blizzard) a mené des intrusions hands-on-keyboard dans un chantier naval militaire de l'OTAN, une agence des forces de l'ordre et un fabricant de moteurs aéronautiques militaires, avec des retours répétés sur un hôte compromis pendant une semaine. Le mode opératoire combine dépôt d'une clé privée SSH pour un tunnel persistant, un écouteur NTLM PowerShell autonome sur le bouclage local, un loader réflectif jusque-là non documenté (ld.exe) déposé via curl en SSH, et la backdoor HOOKEDGE désormais pilotée via une IP dédiée (185.82.218[.]119:443) au lieu de webhook.site. Un lanceur VBScript associé à HOOKEDGE a été observé le 24 septembre 2026. L'objectif est un accès de longue durée à la base industrielle de défense européenne, non la perturbation."
+        }
+      },
+      {
+        "geographic_zone_name": {
+          "en": "North Korea",
+          "fr": "Corée du Nord"
+        },
+        "geographic_zone_strategic_analyse": {
+          "en": "Lazarus' Operation FlashHole, detected in January 2026 with traces back to July 2025, succeeded SyncHole and shifted from Cross EX to CrossWeb EX — a South Korean security package mandated on virtually every endpoint. The group moved to selective targeting via phishing links to fabricated but plausible portfolios and CV pages, then executed in memory from the legitimate INISAFECrossWebEXSvc.exe process at high integrity. At least three organisations in software, construction and wired-communication equipment were hit, a deliberate expansion beyond SyncHole's sector set toward supply chains and communications infrastructure.",
+          "fr": "L'opération FlashHole de Lazarus, détectée en janvier 2026 avec des traces remontant à juillet 2025, succède à SyncHole et abandonne Cross EX pour CrossWeb EX — logiciel de sécurité sud-coréen imposé sur la quasi-totalité des postes. Le groupe est passé à un ciblage sélectif via des liens de hameçonnage vers des portfolios et pages de CV fabriqués mais crédibles, puis à une exécution en mémoire depuis le processus légitime INISAFECrossWebEXSvc.exe en intégrité élevée. Au moins trois organisations du logiciel, de la construction et des équipements de communication filaire ont été touchées, une expansion délibérée au-delà des secteurs de SyncHole vers les chaînes d'approvisionnement et les infrastructures de communication."
+        }
+      },
+      {
+        "geographic_zone_name": {
+          "en": "China",
+          "fr": "Chine"
+        },
+        "geographic_zone_strategic_analyse": {
+          "en": "Japanese police arrested two Chinese nationals accused of concealing a computer behind a hotel refrigerator in Kobe to send nearly 480,000 phishing emails and to use stolen card data. The case illustrates a physically decentralised criminal infrastructure model that borrows residential and hospitality IP reputation to defeat geolocation blocking and reputation scoring, and it sits alongside the broader pattern of Chinese-language cybercriminal ecosystems monetising credential and card data.",
+          "fr": "La police japonaise a arrêté deux ressortissants chinois soupçonnés d'avoir dissimulé un ordinateur derrière un réfrigérateur d'hôtel à Kobe pour envoyer près de 480 000 courriels de phishing et utiliser des données de cartes volées. L'affaire illustre un modèle d'infrastructure criminelle physiquement décentralisé qui emprunte la réputation d'IP résidentielles et hôtelières pour contourner le blocage géographique et le scoring de réputation, et s'inscrit dans l'écosystème cybercriminel sinophone monétisant identifiants et données de cartes."
+        }
+      },
+      {
+        "geographic_zone_name": {
+          "en": "Iran",
+          "fr": "Iran"
+        },
+        "geographic_zone_strategic_analyse": {
+          "en": "No named Iranian actor appears in this period's corpus. The absence is a collection gap rather than an absence of activity: Iranian clusters historically exploit public-facing appliances and VPN gateways — precisely the perimeter technologies the ECB now flags as top patching priority — and the current wave of edge-device vulnerabilities (FortiSIEM, Apache Traffic Server, Stormshield, Traefik) offers ready material. Monitoring should continue through KEV additions and edge-device telemetry rather than actor-specific reporting.",
+          "fr": "Aucun acteur iranien nommé n'apparaît dans le corpus de cette période. Cette absence relève d'un déficit de collecte plutôt que d'une absence d'activité : les clusters iraniens exploitent historiquement les appliances exposées et les passerelles VPN — précisément les technologies de périmètre que la BCE place désormais en priorité de correctif — et la vague actuelle de failles d'équipements de bord (FortiSIEM, Apache Traffic Server, Stormshield, Traefik) fournit un matériau abondant. La surveillance doit se poursuivre via les ajouts au KEV et la télémétrie des équipements de périmètre plutôt que par des rapports nominatifs."
+        }
+      },
+      {
+        "geographic_zone_name": {
+          "en": "United States",
+          "fr": "États-Unis"
+        },
+        "geographic_zone_strategic_analyse": {
+          "en": "The United States is simultaneously the principal regulatory driver and a primary victim pool. CISA added six flaws to KEV with 23 October and 3 November deadlines, NIST/NSA/CISA issued AI-agent incident practices, and US healthcare absorbed the heaviest ransomware load: Central Ohio Primary Care (1.4M patients, Chaos via vishing), Paradigm Healthcare Services (970,000 Medi-Cal members), IMS Care Center and Parkview Health's network shutdown. A Nigerian national was sentenced to eight years for USD 3.3 million in tax-refund spearphishing against US tax preparers.",
+          "fr": "Les États-Unis sont à la fois le principal moteur réglementaire et un réservoir de victimes de premier plan. La CISA a ajouté six failles au KEV avec des échéances au 23 octobre et 3 novembre, le NIST, la NSA et la CISA ont publié des pratiques de réponse aux incidents d'agents d'IA, et la santé américaine a absorbé la charge rançongicielle la plus lourde : Central Ohio Primary Care (1,4 M de patients, Chaos par vishing), Paradigm Healthcare Services (970 000 membres Medi-Cal), IMS Care Center et l'arrêt du réseau de Parkview Health. Un ressortissant nigérian a été condamné à huit ans de prison pour 3,3 M USD de spearphishing fiscal contre des cabinets américains."
+        }
+      },
+      {
+        "geographic_zone_name": {
+          "en": "Other",
+          "fr": "Autre"
+        },
+        "geographic_zone_strategic_analyse": {
+          "en": "Unattributed clusters dominate the supply-chain layer. UNC7017 hijacked AOMEI's ABMarket update channel with five-to-ten-minute configuration windows, delivering CROSSROAD, SHINYROAD and Adaptix C2 to IT services, telecom and higher-education organisations across twelve countries including Australia, Brazil, India, Portugal, Singapore, Spain, Switzerland and Turkey. Storm-0940, attributed by Microsoft to a nation-state, used the ARTEX agentic-AI framework against the ConnectWise MSP ecosystem. Ransomware affiliates — SafePay (600+ critical-infrastructure victims), Inc Ransom, Aurora, Qilin, Chaos and ScarlettGroup — continue to list victims across legal, industrial, healthcare and public-sector targets.",
+          "fr": "Les clusters non attribués dominent la couche de la chaîne d'approvisionnement. UNC7017 a détourné le canal de mise à jour ABMarket d'AOMEI avec des fenêtres de configuration de cinq à dix minutes, livrant CROSSROAD, SHINYROAD et Adaptix C2 à des organisations des services informatiques, des télécommunications et de l'enseignement supérieur dans douze pays dont l'Australie, le Brésil, l'Inde, le Portugal, Singapour, l'Espagne, la Suisse et la Turquie. Storm-0940, attribué par Microsoft à un État-nation, a employé le cadre d'IA agentique ARTEX contre l'écosystème MSP ConnectWise. Les affiliés rançongiciels — SafePay (plus de 600 victimes d'infrastructures critiques), Inc Ransom, Aurora, Qilin, Chaos et ScarlettGroup — continuent de publier des victimes dans le juridique, l'industrie, la santé et le secteur public."
+        }
+      }
+    ],
+    "details": [
+      {
+        "threat_actor_name": "APT28 (Swallowtail / BlueDelta / Fancy Bear / Forest Blizzard)",
+        "origin_country": "RU",
+        "type": {
+          "en": "Nation-state",
+          "fr": "État-nation"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Government_and_Defense",
+            "Industry_and_Manufacturing"
+          ],
+          "fr": [
+            "Gouvernement_et_Défense",
+            "Industrie_et_Fabrication"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Europe",
+            "NATO member states",
+            "Romania",
+            "Spain",
+            "Turkey"
+          ],
+          "fr": [
+            "Europe",
+            "États membres de l'OTAN",
+            "Roumanie",
+            "Espagne",
+            "Turquie"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1133",
+          "T1021.004",
+          "T1059.001",
+          "T1187",
+          "T1105",
+          "T1055",
+          "T1071.001",
+          "T1204.002"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "HOOKEDGE backdoor campaign against NATO naval shipyard, law-enforcement agency and military aero-engine manufacturer (July-September 2026)",
+            "Reflective loader ld.exe delivered via curl over SSH",
+            "NTLM hash capture via PowerShell loopback listener"
+          ],
+          "fr": [
+            "Campagne de la backdoor HOOKEDGE contre un chantier naval de l'OTAN, une agence des forces de l'ordre et un fabricant de moteurs aéronautiques militaires (juillet-septembre 2026)",
+            "Loader réflectif ld.exe livré via curl en SSH",
+            "Capture de hachages NTLM via un écouteur PowerShell sur le bouclage local"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "Storm-0940",
+        "origin_country": "Unknown (state-sponsored)",
+        "type": {
+          "en": "Nation-state",
+          "fr": "État-nation"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Technology_and_Telecom",
+            "Business_Services"
+          ],
+          "fr": [
+            "Technologie_et_Télécom",
+            "Services_aux_Entreprises"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Global",
+            "North America",
+            "Europe"
+          ],
+          "fr": [
+            "Mondial",
+            "Amérique du Nord",
+            "Europe"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1195.002",
+          "T1583.006",
+          "T1078",
+          "T1105"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "ARTEX agentic-AI framework used to automate reconnaissance, targeting and exploitation",
+            "ConnectWise ecosystem supply-chain compromise affecting managed service providers"
+          ],
+          "fr": [
+            "Cadre d'IA agentique ARTEX utilisé pour automatiser la reconnaissance, le ciblage et l'exploitation",
+            "Compromission de la chaîne d'approvisionnement de l'écosystème ConnectWise affectant les prestataires de services managés"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "UNC7017",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Cybercriminal",
+          "fr": "Cybercriminel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Technology_and_Telecom",
+            "Education_and_Research",
+            "Business_Services"
+          ],
+          "fr": [
+            "Technologie_et_Télécom",
+            "Éducation_et_Recherche",
+            "Services_aux_Entreprises"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Australia",
+            "Brazil",
+            "India",
+            "Pakistan",
+            "Portugal",
+            "Singapore",
+            "South Africa",
+            "Spain",
+            "Switzerland",
+            "Turkey",
+            "United States"
+          ],
+          "fr": [
+            "Australie",
+            "Brésil",
+            "Inde",
+            "Pakistan",
+            "Portugal",
+            "Singapour",
+            "Afrique du Sud",
+            "Espagne",
+            "Suisse",
+            "Turquie",
+            "États-Unis"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1195.002",
+          "T1053.005",
+          "T1219",
+          "T1187",
+          "T1105",
+          "T1071.001"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "AOMEI Backupper / AnyViewer ABMarket update-channel hijacking (28 May, 16 and 20 July 2026)",
+            "CROSSROAD downloader and SHINYROAD modular backdoor via signed Radmin component",
+            "Adaptix C2 masquerading as Nitro PDF software",
+            "Invisible one-pixel popup redirecting to WebDAV for NTLM hash capture"
+          ],
+          "fr": [
+            "Détournement du canal de mise à jour ABMarket d'AOMEI Backupper / AnyViewer (28 mai, 16 et 20 juillet 2026)",
+            "Downloader CROSSROAD et backdoor modulaire SHINYROAD via un composant Radmin signé",
+            "Adaptix C2 déguisé en logiciel Nitro PDF",
+            "Popup invisible d'un pixel redirigeant vers WebDAV pour capturer les hachages NTLM"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "Lazarus Group",
+        "origin_country": "KP",
+        "type": {
+          "en": "Nation-state",
+          "fr": "État-nation"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Technology_and_Telecom",
+            "Industry_and_Manufacturing",
+            "Real_Estate_and_Construction"
+          ],
+          "fr": [
+            "Technologie_et_Télécom",
+            "Industrie_et_Fabrication",
+            "Immobilier_et_Construction"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "South Korea"
+          ],
+          "fr": [
+            "Corée du Sud"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1566.002",
+          "T1189",
+          "T1055",
+          "T1105",
+          "T1071.001"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Operation FlashHole (detected January 2026, traces from July 2025)",
+            "Abuse of mandatory CrossWeb EX security software via INISAFECrossWebEXSvc.exe",
+            "TechHub, Cubridge, TouchHub, TouchShift, ClientHub and LPE Client malware chain"
+          ],
+          "fr": [
+            "Opération FlashHole (détectée en janvier 2026, traces depuis juillet 2025)",
+            "Abus du logiciel de sécurité obligatoire CrossWeb EX via INISAFECrossWebEXSvc.exe",
+            "Chaîne de malware TechHub, Cubridge, TouchHub, TouchShift, ClientHub et LPE Client"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "SafePay",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Ransomware",
+          "fr": "Rançongiciel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Critical_Infrastructure",
+            "Healthcare_and_Life_Sciences",
+            "Industry_and_Manufacturing"
+          ],
+          "fr": [
+            "Infrastructure_Critique",
+            "Santé_et_Sciences_du_Vivant",
+            "Industrie_et_Fabrication"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "United States",
+            "United Kingdom",
+            "Germany",
+            "Global"
+          ],
+          "fr": [
+            "États-Unis",
+            "Royaume-Uni",
+            "Allemagne",
+            "Mondial"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1190",
+          "T1078",
+          "T1486",
+          "T1657",
+          "T1567.002"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Double-extortion campaign against 600+ critical infrastructure organisations since 2024",
+            "Exploitation of Cisco ASA/FTD, SonicWall, Veeam Backup and Replication flaws (CVE-2020-3259, CVE-2023-20269, CVE-2023-27532, CVE-2024-40711, CVE-2024-40766)"
+          ],
+          "fr": [
+            "Campagne de double extorsion contre plus de 600 organisations d'infrastructures critiques depuis 2024",
+            "Exploitation des failles Cisco ASA/FTD, SonicWall et Veeam Backup and Replication (CVE-2020-3259, CVE-2023-20269, CVE-2023-27532, CVE-2024-40711, CVE-2024-40766)"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "Inc Ransom",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Ransomware",
+          "fr": "Rançongiciel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Business_Services",
+            "Healthcare_and_Life_Sciences",
+            "Government_and_Defense"
+          ],
+          "fr": [
+            "Services_aux_Entreprises",
+            "Santé_et_Sciences_du_Vivant",
+            "Gouvernement_et_Défense"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Canada",
+            "United States",
+            "Europe"
+          ],
+          "fr": [
+            "Canada",
+            "États-Unis",
+            "Europe"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1486",
+          "T1657",
+          "T1567.002"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Leak-site publication of bereskinparr.com and smartbiggar.ca (legal and intellectual-property sector)"
+          ],
+          "fr": [
+            "Publication sur site de fuite de bereskinparr.com et smartbiggar.ca (secteur juridique et propriété intellectuelle)"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "Aurora",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Ransomware",
+          "fr": "Rançongiciel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Business_Services",
+            "Industry_and_Manufacturing"
+          ],
+          "fr": [
+            "Services_aux_Entreprises",
+            "Industrie_et_Fabrication"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "United Kingdom",
+            "Europe"
+          ],
+          "fr": [
+            "Royaume-Uni",
+            "Europe"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1486",
+          "T1657"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Leak-site listing of Allmand-Smith Limited"
+          ],
+          "fr": [
+            "Publication sur site de fuite d'Allmand-Smith Limited"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "Qilin",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "RaaS",
+          "fr": "RaaS"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Security",
+            "Business_Services"
+          ],
+          "fr": [
+            "Sécurité",
+            "Services_aux_Entreprises"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Canada",
+            "Europe",
+            "United States"
+          ],
+          "fr": [
+            "Canada",
+            "Europe",
+            "États-Unis"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1486",
+          "T1657",
+          "T1567.002"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Ransomware claim against GardaWorld (physical security, cash logistics, risk consulting)"
+          ],
+          "fr": [
+            "Revendication rançongicielle contre GardaWorld (sécurité physique, transport de fonds, conseil en risques)"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "Chaos",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Ransomware",
+          "fr": "Rançongiciel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Healthcare_and_Life_Sciences"
+          ],
+          "fr": [
+            "Santé_et_Sciences_du_Vivant"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "United States"
+          ],
+          "fr": [
+            "États-Unis"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1566",
+          "T1486",
+          "T1657"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Central Ohio Primary Care Physicians breach (1.4M individuals) following a vishing attack"
+          ],
+          "fr": [
+            "Violation de Central Ohio Primary Care Physicians (1,4 M de personnes) après une attaque par vishing"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "ScarlettGroup",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Ransomware",
+          "fr": "Rançongiciel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Government_and_Defense"
+          ],
+          "fr": [
+            "Gouvernement_et_Défense"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "India"
+          ],
+          "fr": [
+            "Inde"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1486",
+          "T1657"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Ransomware claim against Rajasthan Police with no published sample or proof"
+          ],
+          "fr": [
+            "Revendication rançongicielle contre la police du Rajasthan sans échantillon ni preuve publiés"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "Shai-Hulud operators",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Cybercriminal",
+          "fr": "Cybercriminel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Technology_and_Telecom",
+            "Finance",
+            "Business_Services"
+          ],
+          "fr": [
+            "Technologie_et_Télécom",
+            "Finance",
+            "Services_aux_Entreprises"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Global"
+          ],
+          "fr": [
+            "Mondial"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1195.002",
+          "T1078",
+          "T1550.001"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Self-propagating npm worm compromising developer and CI/CD credentials",
+            "SigmaHQ detection rule correction for Shai-Hulud image path matching"
+          ],
+          "fr": [
+            "Ver npm auto-propagateur compromettant les identifiants de développeurs et de CI/CD",
+            "Correction d'une règle de détection SigmaHQ sur le chemin d'image Shai-Hulud"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "Midnight Mimosa operators",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Cybercriminal",
+          "fr": "Cybercriminel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Technology_and_Telecom",
+            "Retail_and_Consumer"
+          ],
+          "fr": [
+            "Technologie_et_Télécom",
+            "Commerce_de_Détail_et_Consommation"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Mexico",
+            "France",
+            "Italy",
+            "United States",
+            "Germany",
+            "Brazil",
+            "Spain",
+            "Global (150+ countries)"
+          ],
+          "fr": [
+            "Mexique",
+            "France",
+            "Italie",
+            "États-Unis",
+            "Allemagne",
+            "Brésil",
+            "Espagne",
+            "Mondial (plus de 150 pays)"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1195.002",
+          "T1105",
+          "T1071.001"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Firmware-preinstalled Android malware (com.android.system.lite, com.android.sys.prot) on MediaTek low-cost devices and counterfeit handsets",
+            "Ad fraud plus residential proxy relay capability"
+          ],
+          "fr": [
+            "Malware Android préinstallé dans le firmware (com.android.system.lite, com.android.sys.prot) sur appareils MediaTek à bas coût et contrefaçons",
+            "Fraude publicitaire et capacité de relais proxy résidentiel"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "Phantom Preview operators",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Cybercriminal",
+          "fr": "Cybercriminel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Media_and_Communication",
+            "Business_Services",
+            "Technology_and_Telecom"
+          ],
+          "fr": [
+            "Médias_et_Communication",
+            "Services_aux_Entreprises",
+            "Technologie_et_Télécom"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Global",
+            "United States",
+            "Europe"
+          ],
+          "fr": [
+            "Mondial",
+            "États-Unis",
+            "Europe"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1566.002",
+          "T1204.001",
+          "T1078"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Phantom Preview campaign abusing legitimate Frame.io notifications and masked PDF links to harvest Microsoft 365 credentials"
+          ],
+          "fr": [
+            "Campagne Phantom Preview abusant des notifications légitimes Frame.io et de liens PDF masqués pour dérober des identifiants Microsoft 365"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "ClickFix operators",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Cybercriminal",
+          "fr": "Cybercriminel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Retail_and_Consumer",
+            "Finance",
+            "Technology_and_Telecom"
+          ],
+          "fr": [
+            "Commerce_de_Détail_et_Consommation",
+            "Finance",
+            "Technologie_et_Télécom"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Global"
+          ],
+          "fr": [
+            "Mondial"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1204.004",
+          "T1059.001",
+          "T1059.003",
+          "T1218"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Fake antivirus and fake browser-update pages instructing users to paste PowerShell or cmd commands",
+            "Siemens Software Center DLL sideloading chain (CVE-2026-110936) leveraging Romulus platform"
+          ],
+          "fr": [
+            "Fausses alertes antivirus et fausses mises à jour de navigateur incitant à coller des commandes PowerShell ou cmd",
+            "Chaîne de DLL sideloading Siemens Software Center (CVE-2026-110936) exploitant la plateforme Romulus"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "goldendMSA tool operators",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Unknown",
+          "fr": "Inconnu"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Government_and_Defense",
+            "Finance",
+            "Industry_and_Manufacturing"
+          ],
+          "fr": [
+            "Gouvernement_et_Défense",
+            "Finance",
+            "Industrie_et_Fabrication"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Global"
+          ],
+          "fr": [
+            "Mondial"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1078",
+          "T1543.003"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Abuse of managed service accounts (gMSA/MSA) for stealthy persistence and resource access",
+            "New SigmaHQ detection rules merged via PR #5646"
+          ],
+          "fr": [
+            "Abus des comptes de service managés (gMSA/MSA) pour une persistance discrète et l'accès aux ressources",
+            "Nouvelles règles de détection SigmaHQ intégrées via la PR #5646"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "Nigerian BEC / tax-refund fraud cluster",
+        "origin_country": "NG",
+        "type": {
+          "en": "Cybercriminal",
+          "fr": "Cybercriminel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Finance",
+            "Business_Services"
+          ],
+          "fr": [
+            "Finance",
+            "Services_aux_Entreprises"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "United States"
+          ],
+          "fr": [
+            "États-Unis"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1566.002",
+          "T1078",
+          "T1657"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Spearphishing of US tax-preparation firms since 2019, USD 3.3 million diverted; eight-year sentence handed down"
+          ],
+          "fr": [
+            "Spearphishing de cabinets américains de préparation fiscale depuis 2019, 3,3 M USD détournés ; condamnation à huit ans de prison"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "Hotel-fridge phishing infrastructure operators",
+        "origin_country": "CN",
+        "type": {
+          "en": "Cybercriminal",
+          "fr": "Cybercriminel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Finance",
+            "Retail_and_Consumer"
+          ],
+          "fr": [
+            "Finance",
+            "Commerce_de_Détail_et_Consommation"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Japan",
+            "Global"
+          ],
+          "fr": [
+            "Japon",
+            "Mondial"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1566",
+          "T1583",
+          "T1657"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Computer concealed in a Kobe hotel room used to send nearly 480,000 phishing emails",
+            "Stolen card data used for fraudulent purchases"
+          ],
+          "fr": [
+            "Ordinateur dissimulé dans une chambre d'hôtel à Kobe utilisé pour envoyer près de 480 000 courriels de phishing",
+            "Données de cartes volées utilisées pour des achats frauduleux"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "eMudhra intermediate CA compromise actor",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Unknown",
+          "fr": "Inconnu"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Finance",
+            "Government_and_Defense",
+            "Technology_and_Telecom"
+          ],
+          "fr": [
+            "Finance",
+            "Gouvernement_et_Défense",
+            "Technologie_et_Télécom"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "India",
+            "Global"
+          ],
+          "fr": [
+            "Inde",
+            "Mondial"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1553.004",
+          "T1587.003"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Compromise of eMudhra intermediate certificates enabling forged TLS and code-signing certificates"
+          ],
+          "fr": [
+            "Compromission de certificats intermédiaires eMudhra permettant de forger des certificats TLS et de signature de code"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "Meta Muse share-link enumerators",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Unknown",
+          "fr": "Inconnu"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Technology_and_Telecom",
+            "Business_Services",
+            "Finance"
+          ],
+          "fr": [
+            "Technologie_et_Télécom",
+            "Services_aux_Entreprises",
+            "Finance"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Global"
+          ],
+          "fr": [
+            "Mondial"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1213",
+          "T1590"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Enumeration of 6,800 Muse conversation share links via passive DNS on cf.metaaiusercontent.com",
+            "Exposure of interview notes, revenue reviews, loan files and bank fraud alerts"
+          ],
+          "fr": [
+            "Énumération de 6 800 liens de partage de conversations Muse via DNS passif sur cf.metaaiusercontent.com",
+            "Exposition de notes d'entretien, revues de revenus, dossiers de prêt et alertes de fraude bancaire"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "Zeabur / NextChat SSRF intrusion actor",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Cybercriminal",
+          "fr": "Cybercriminel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Technology_and_Telecom",
+            "Business_Services"
+          ],
+          "fr": [
+            "Technologie_et_Télécom",
+            "Services_aux_Entreprises"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Singapore",
+            "Global"
+          ],
+          "fr": [
+            "Singapour",
+            "Mondial"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1190",
+          "T1555",
+          "T1078"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Exploitation of NextChat SSRF (CVE-2023-49785) leading to Zeabur infrastructure compromise",
+            "Exfiltration of 3,218,965 environment-variable records, 321,810 accounts and 566 plaintext API keys; platform shutdown announced for 31 December 2026"
+          ],
+          "fr": [
+            "Exploitation de la SSRF NextChat (CVE-2023-49785) menant à la compromission de l'infrastructure Zeabur",
+            "Exfiltration de 3 218 965 enregistrements de variables d'environnement, 321 810 comptes et 566 clés API en clair ; arrêt de la plateforme annoncé au 31 décembre 2026"
+          ]
+        }
+      }
+    ]
+  },
+  "mitre_attack_ttps": {
+    "ttps_strategic_analyse": {
+      "en": "The dominant pattern this period is trust-channel abuse rather than novel exploitation. T1195.002 appears in three unrelated operations (AOMEI ABMarket, ConnectWise via Storm-0940, npm Shai-Hulud) and in the Midnight Mimosa firmware campaign, confirming that software distribution is now the primary intrusion surface. Credential-access tradecraft has shifted toward forced authentication: UNC7017's invisible one-pixel popup to WebDAV (T1187) and APT28's PowerShell loopback NTLM listener both harvest hashes without touching disk-resident credential stores, defeating EDR rules built around LSASS access. Living-off-the-land execution dominates post-exploitation — T1219 (signed Radmin), T1218 (LOLBins), T1059.001/T1059.003 (PowerShell and cmd via ClickFix) — while T1505.003 web shells remain the standard persistence after T1190 exploitation of PHP2Shell, FortiSIEM and GitLab. Detection must therefore pivot from file and hash indicators to behavioural chains: update-client spawning script interpreters, scheduled-task creation pointing at freshly dropped binaries, outbound NTLM, and web-server child processes launching shells.",
+      "fr": "Le schéma dominant de cette période est l'abus de canaux de confiance plutôt qu'une exploitation nouvelle. T1195.002 apparaît dans trois opérations distinctes (ABMarket d'AOMEI, ConnectWise via Storm-0940, ver npm Shai-Hulud) et dans la campagne firmware Midnight Mimosa, confirmant que la distribution logicielle est désormais la principale surface d'intrusion. Le tradecraft d'accès aux identifiants bascule vers l'authentification forcée : le popup invisible d'un pixel vers WebDAV d'UNC7017 (T1187) et l'écouteur NTLM PowerShell d'APT28 capturent tous deux des hachages sans toucher aux stores d'identifiants sur disque, contournant les règles EDR centrées sur l'accès à LSASS. L'exécution living-off-the-land domine la post-exploitation — T1219 (Radmin signé), T1218 (LOLBins), T1059.001/T1059.003 (PowerShell et cmd via ClickFix) — tandis que les web shells T1505.003 restent la persistance standard après exploitation T1190 de PHP2Shell, FortiSIEM et GitLab. La détection doit donc passer des indicateurs de fichiers et de hachages à des chaînes comportementales : client de mise à jour engendrant un interpréteur de scripts, création de tâche planifiée pointant vers un binaire fraîchement déposé, NTLM sortant, et processus enfants du serveur web lançant un shell."
+    },
+    "ttps_list": [
+      {
+        "id": "T1195.002",
+        "tactic": {
+          "en": "Initial Access",
+          "fr": "Accès initial"
+        },
+        "technique_name": "Compromise Software Supply Chain",
+        "frequency": 1,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "UNC7017 modified AOMEI ABMarket configuration files for 5-10 minute windows on 28 May, 16 and 20 July 2026 to deliver CROSSROAD and SHINYROAD.",
+            "Storm-0940 targeted the ConnectWise MSP ecosystem; Shai-Hulud propagated through npm; Midnight Mimosa shipped in Android firmware."
+          ],
+          "fr": [
+            "UNC7017 a modifié les fichiers de configuration ABMarket d'AOMEI pendant des fenêtres de 5 à 10 minutes les 28 mai, 16 et 20 juillet 2026 pour livrer CROSSROAD et SHINYROAD.",
+            "Storm-0940 a ciblé l'écosystème MSP ConnectWise ; Shai-Hulud s'est propagé via npm ; Midnight Mimosa était livré dans le firmware Android."
+          ]
+        }
+      },
+      {
+        "id": "T1187",
+        "tactic": {
+          "en": "Credential Access",
+          "fr": "Accès aux identifiants"
+        },
+        "technique_name": "Forced Authentication",
+        "frequency": 1,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "UNC7017 displayed an invisible one-pixel popup redirecting to attacker WebDAV, forcing outbound NTLM authentication.",
+            "APT28 used a standalone PowerShell listener on the loopback address to capture an NTLM exchange on a NATO naval shipyard host."
+          ],
+          "fr": [
+            "UNC7017 affichait un popup invisible d'un pixel redirigeant vers un WebDAV adverse, forçant une authentification NTLM sortante.",
+            "APT28 a utilisé un écouteur PowerShell autonome sur l'adresse de bouclage pour capturer un échange NTLM sur un hôte du chantier naval de l'OTAN."
+          ]
+        }
+      },
+      {
+        "id": "T1078",
+        "tactic": {
+          "en": "Defense Evasion",
+          "fr": "Évasion des défenses"
+        },
+        "technique_name": "Valid Accounts",
+        "frequency": 1,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "Contractor and integrator remote-access accounts used for initial access to OT; AI agent identities and long-lived API tokens abused (PocketOS database deletion); stolen Microsoft 365 credentials from Phantom Preview."
+          ],
+          "fr": [
+            "Comptes d'accès distant de prestataires et d'intégrateurs utilisés pour l'accès initial à l'OT ; identités d'agents IA et jetons API de longue durée abusés (suppression de la base PocketOS) ; identifiants Microsoft 365 volés via Phantom Preview."
+          ]
+        }
+      },
+      {
+        "id": "T1190",
+        "tactic": {
+          "en": "Initial Access",
+          "fr": "Accès initial"
+        },
+        "technique_name": "Exploit Public-Facing Application",
+        "frequency": 1,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "PHP2Shell (CVE-2026-109618/109619) exploited against WordPress within 48 hours; FortiSIEM path traversal (CVE-2026-106173); GitLab Onigmo RCE (CVE-2026-110264); SafePay exploited Cisco ASA, SonicWall and Veeam flaws."
+          ],
+          "fr": [
+            "PHP2Shell (CVE-2026-109618/109619) exploité contre WordPress en 48 heures ; path traversal FortiSIEM (CVE-2026-106173) ; RCE Onigmo GitLab (CVE-2026-110264) ; SafePay a exploité les failles Cisco ASA, SonicWall et Veeam."
+          ]
+        }
+      },
+      {
+        "id": "T1505.003",
+        "tactic": {
+          "en": "Persistence",
+          "fr": "Persistance"
+        },
+        "technique_name": "Web Shell",
+        "frequency": 1,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "The UK NCSC advised hunting for attacker-installed backdoors after PHP2Shell; web shells are the expected persistence on compromised PHP servers."
+          ],
+          "fr": [
+            "Le NCSC britannique a recommandé de rechercher les portes dérobées installées après PHP2Shell ; les web shells constituent la persistance attendue sur les serveurs PHP compromis."
+          ]
+        }
+      },
+      {
+        "id": "T1486",
+        "tactic": {
+          "en": "Impact",
+          "fr": "Impact"
+        },
+        "technique_name": "Data Encrypted for Impact",
+        "frequency": 1,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "SafePay hit 600+ critical-infrastructure organisations; Chaos claimed Central Ohio Primary Care; Inc Ransom and Aurora listed new victims; Data Cymru had 182.7 GB encrypted."
+          ],
+          "fr": [
+            "SafePay a frappé plus de 600 organisations d'infrastructures critiques ; Chaos a revendiqué Central Ohio Primary Care ; Inc Ransom et Aurora ont listé de nouvelles victimes ; Data Cymru a vu 182,7 Go chiffrés."
+          ]
+        }
+      },
+      {
+        "id": "T1553.004",
+        "tactic": {
+          "en": "Defense Evasion",
+          "fr": "Évasion des défenses"
+        },
+        "technique_name": "Install Root Certificate",
+        "frequency": 1,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "Compromised eMudhra intermediate certificates allow forging trusted TLS and code-signing certificates; Go crypto/x509 lacked a denylist (CVE-2026-111943)."
+          ],
+          "fr": [
+            "Les certificats intermédiaires eMudhra compromis permettent de forger des certificats TLS et de signature de code de confiance ; Go crypto/x509 n'avait pas de denylist (CVE-2026-111943)."
+          ]
+        }
+      },
+      {
+        "id": "T1053.005",
+        "tactic": {
+          "en": "Persistence",
+          "fr": "Persistance"
+        },
+        "technique_name": "Scheduled Task",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "CROSSROAD creates a scheduled task to launch the SHINYROAD backdoor, then deletes itself from disk."
+          ],
+          "fr": [
+            "CROSSROAD crée une tâche planifiée pour lancer la backdoor SHINYROAD, puis s'efface du disque."
+          ]
+        }
+      },
+      {
+        "id": "T1219",
+        "tactic": {
+          "en": "Command and Control",
+          "fr": "Commande et contrôle"
+        },
+        "technique_name": "Remote Access Software",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "SHINYROAD operates through a legitimately signed Radmin component, blending into approved remote-administration tooling."
+          ],
+          "fr": [
+            "SHINYROAD opère via un composant Radmin signé légitime, se fondant dans l'outillage d'administration à distance approuvé."
+          ]
+        }
+      },
+      {
+        "id": "T1105",
+        "tactic": {
+          "en": "Command and Control",
+          "fr": "Commande et contrôle"
+        },
+        "technique_name": "Ingress Tool Transfer",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Malicious ZIP archives pulled from adversary infrastructure; ld.exe fetched via curl over SSH by APT28; Lazarus staged TechHub, Cubridge, TouchHub and TouchShift."
+          ],
+          "fr": [
+            "Archives ZIP malveillantes récupérées depuis une infrastructure adverse ; ld.exe récupéré via curl en SSH par APT28 ; Lazarus a déployé TechHub, Cubridge, TouchHub et TouchShift."
+          ]
+        }
+      },
+      {
+        "id": "T1071.001",
+        "tactic": {
+          "en": "Command and Control",
+          "fr": "Commande et contrôle"
+        },
+        "technique_name": "Web Protocols",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Adaptix C2 disguised as Nitro PDF software communicating over HTTP/HTTPS; HOOKEDGE now tasks via 185.82.218[.]119:443 instead of webhook.site."
+          ],
+          "fr": [
+            "Adaptix C2 déguisé en logiciel Nitro PDF communiquant en HTTP/HTTPS ; HOOKEDGE est désormais piloté via 185.82.218[.]119:443 au lieu de webhook.site."
+          ]
+        }
+      },
+      {
+        "id": "T1555",
+        "tactic": {
+          "en": "Credential Access",
+          "fr": "Accès aux identifiants"
+        },
+        "technique_name": "Credentials from Password Stores",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Flare recovered 601 industrial remote-access addresses from infostealer logs after the French refrigeration-system attack, 73% tied to device credentials."
+          ],
+          "fr": [
+            "Flare a récupéré 601 adresses d'accès distant industriel dans des journaux d'infostealers après l'attaque du système de réfrigération en France, 73 % liées à des identifiants d'appareils."
+          ]
+        }
+      },
+      {
+        "id": "T1133",
+        "tactic": {
+          "en": "Initial Access",
+          "fr": "Accès initial"
+        },
+        "technique_name": "External Remote Services",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "APT28 established a persistent SSH tunnel using a dropped private key into the NATO naval shipyard network."
+          ],
+          "fr": [
+            "APT28 a établi un tunnel SSH persistant à l'aide d'une clé privée déposée dans le réseau du chantier naval de l'OTAN."
+          ]
+        }
+      },
+      {
+        "id": "T1550.001",
+        "tactic": {
+          "en": "Lateral Movement",
+          "fr": "Mouvement latéral"
+        },
+        "technique_name": "Application Access Token",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Long-lived API tokens granted to AI agents enabled destructive production actions; 11,536 platform access-token hashes leaked in the Zeabur breach."
+          ],
+          "fr": [
+            "Des jetons API de longue durée accordés à des agents IA ont permis des actions destructrices en production ; 11 536 hachages de jetons d'accès plateforme ont fuité dans la violation Zeabur."
+          ]
+        }
+      },
+      {
+        "id": "T1528",
+        "tactic": {
+          "en": "Credential Access",
+          "fr": "Accès aux identifiants"
+        },
+        "technique_name": "Steal Application Access Token",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "LiteLLM 1.107.0 on PyPI exfiltrated LLM provider API keys, cloud credentials and database secrets to www[.]litellm[.]dev."
+          ],
+          "fr": [
+            "LiteLLM 1.107.0 sur PyPI exfiltrait les clés API de fournisseurs LLM, les identifiants cloud et les secrets de bases de données vers www[.]litellm[.]dev."
+          ]
+        }
+      },
+      {
+        "id": "T1566.002",
+        "tactic": {
+          "en": "Initial Access",
+          "fr": "Accès initial"
+        },
+        "technique_name": "Spearphishing Link",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Lazarus sent links to fabricated portfolios and CV pages tailored per target; Phantom Preview abused Frame.io notifications; retirement-savings phishing lures requested passwords."
+          ],
+          "fr": [
+            "Lazarus envoyait des liens vers des portfolios et pages de CV fabriqués, adaptés à chaque cible ; Phantom Preview abusait des notifications Frame.io ; des leurres d'épargne retraite demandaient le mot de passe."
+          ]
+        }
+      },
+      {
+        "id": "T1189",
+        "tactic": {
+          "en": "Initial Access",
+          "fr": "Accès initial"
+        },
+        "technique_name": "Drive-by Compromise",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Lazarus abused the mandatory CrossWeb EX security software as a watering-hole execution path via INISAFECrossWebEXSvc.exe."
+          ],
+          "fr": [
+            "Lazarus a abusé du logiciel de sécurité obligatoire CrossWeb EX comme chemin d'exécution de watering hole via INISAFECrossWebEXSvc.exe."
+          ]
+        }
+      },
+      {
+        "id": "T1055",
+        "tactic": {
+          "en": "Defense Evasion",
+          "fr": "Évasion des défenses"
+        },
+        "technique_name": "Process Injection",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Lazarus executed malware in memory at high integrity from a legitimate signed process; APT28 used a reflective loader (ld.exe) to decrypt and run a payload in memory."
+          ],
+          "fr": [
+            "Lazarus exécutait le malware en mémoire en intégrité élevée depuis un processus signé légitime ; APT28 a utilisé un loader réflectif (ld.exe) pour déchiffrer et exécuter une charge en mémoire."
+          ]
+        }
+      },
+      {
+        "id": "T1657",
+        "tactic": {
+          "en": "Impact",
+          "fr": "Impact"
+        },
+        "technique_name": "Financial Theft",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Double-extortion demands across ransomware leak sites; USD 3.3 million diverted from US taxpayers via tax-preparer spearphishing; stolen card data used for fraudulent purchases."
+          ],
+          "fr": [
+            "Demandes de double extorsion sur les sites de fuite ; 3,3 M USD détournés des contribuables américains via le spearphishing de cabinets fiscaux ; données de cartes volées utilisées pour des achats frauduleux."
+          ]
+        }
+      },
+      {
+        "id": "T1567.002",
+        "tactic": {
+          "en": "Exfiltration",
+          "fr": "Exfiltration"
+        },
+        "technique_name": "Exfiltration to Cloud Storage",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Data Cymru exfiltrated 42 GB from a primary domain controller, file server and SQL server before encryption; ransomware affiliates stage data in external services before leak-site publication."
+          ],
+          "fr": [
+            "Data Cymru a exfiltré 42 Go depuis un contrôleur de domaine primaire, un serveur de fichiers et un serveur SQL avant chiffrement ; les affiliés rançongiciels stockent les données dans des services externes avant publication."
+          ]
+        }
+      },
+      {
+        "id": "T1070.001",
+        "tactic": {
+          "en": "Defense Evasion",
+          "fr": "Évasion des défenses"
+        },
+        "technique_name": "Clear Windows Event Logs",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Event 1102 and System log 104 must be hunted as anti-forensics indicators; local logs must be compared with SIEM copies to detect tampering."
+          ],
+          "fr": [
+            "Les événements 1102 et 104 du journal System doivent être chassés comme indicateurs d'anti-forensics ; les journaux locaux doivent être comparés aux copies SIEM pour détecter une altération."
+          ]
+        }
+      },
+      {
+        "id": "T1021.004",
+        "tactic": {
+          "en": "Lateral Movement",
+          "fr": "Mouvement latéral"
+        },
+        "technique_name": "SSH",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "APT28 dropped an SSH private key to open a persistent tunnel to attacker infrastructure from the naval shipyard network."
+          ],
+          "fr": [
+            "APT28 a déposé une clé privée SSH pour ouvrir un tunnel persistant vers l'infrastructure attaquante depuis le réseau du chantier naval."
+          ]
+        }
+      },
+      {
+        "id": "T1587.003",
+        "tactic": {
+          "en": "Resource Development",
+          "fr": "Développement de ressources"
+        },
+        "technique_name": "Digital Certificates",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Adversaries with the eMudhra intermediate private key can mint valid certificates for arbitrary domains, enabling MITM and signed malware."
+          ],
+          "fr": [
+            "Un adversaire disposant de la clé privée de l'intermédiaire eMudhra peut émettre des certificats valides pour n'importe quel domaine, permettant du MITM et des malwares signés."
+          ]
+        }
+      },
+      {
+        "id": "T1102",
+        "tactic": {
+          "en": "Command and Control",
+          "fr": "Commande et contrôle"
+        },
+        "technique_name": "Web Service",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Attackers parasitise legitimate cloud, SaaS and hosting infrastructure so domain-reputation blocking fails; Frame.io notifications were used as a phishing relay."
+          ],
+          "fr": [
+            "Les attaquants parasitent des infrastructures cloud, SaaS et d'hébergement légitimes, rendant inopérant le blocage par réputation de domaine ; les notifications Frame.io ont servi de relais de phishing."
+          ]
+        }
+      },
+      {
+        "id": "T1059.001",
+        "tactic": {
+          "en": "Execution",
+          "fr": "Exécution"
+        },
+        "technique_name": "PowerShell",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "APT28 used a standalone PowerShell script to create an NTLM listener; ClickFix pages instruct users to paste PowerShell commands; Script Block Logging 4104 is the key telemetry."
+          ],
+          "fr": [
+            "APT28 a utilisé un script PowerShell autonome pour créer un écouteur NTLM ; les pages ClickFix incitent à coller des commandes PowerShell ; le Script Block Logging 4104 est la télémétrie clé."
+          ]
+        }
+      },
+      {
+        "id": "T1204.002",
+        "tactic": {
+          "en": "Execution",
+          "fr": "Exécution"
+        },
+        "technique_name": "Malicious File",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "HOOKEDGE delivered via macro-enabled Word documents; .NET executables executed by users after JavaScript and PowerShell staging."
+          ],
+          "fr": [
+            "HOOKEDGE livré via des documents Word à macros ; exécutables .NET lancés par les utilisateurs après un amorçage JavaScript et PowerShell."
+          ]
+        }
+      },
+      {
+        "id": "T1204.001",
+        "tactic": {
+          "en": "Execution",
+          "fr": "Exécution"
+        },
+        "technique_name": "Malicious Link",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Phantom Preview masked credential-harvesting URLs behind PDF previews; retirement-savings lures pushed victims to fake portals."
+          ],
+          "fr": [
+            "Phantom Preview masquait des URL de collecte d'identifiants derrière des aperçus PDF ; les leurres d'épargne retraite poussaient les victimes vers de faux portails."
+          ]
+        }
+      },
+      {
+        "id": "T1204.004",
+        "tactic": {
+          "en": "Execution",
+          "fr": "Exécution"
+        },
+        "technique_name": "Malicious Copy and Paste",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "ClickFix campaigns trick users into pasting commands; Google updated Chrome Enhanced Protection to detect copied malicious commands and strip personal data before Safe Browsing analysis."
+          ],
+          "fr": [
+            "Les campagnes ClickFix amènent les utilisateurs à coller des commandes ; Google a mis à jour Chrome Enhanced Protection pour détecter les commandes copiées malveillantes et retirer les données personnelles avant analyse par Safe Browsing."
+          ]
+        }
+      },
+      {
+        "id": "T1218",
+        "tactic": {
+          "en": "Defense Evasion",
+          "fr": "Évasion des défenses"
+        },
+        "technique_name": "System Binary Proxy Execution",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "LOLBins such as rundll32 and signed Radmin components used to execute payloads while bypassing browser download protections."
+          ],
+          "fr": [
+            "Des LOLBins comme rundll32 et des composants Radmin signés servent à exécuter des charges en contournant les protections de téléchargement du navigateur."
+          ]
+        }
+      },
+      {
+        "id": "T1213",
+        "tactic": {
+          "en": "Collection",
+          "fr": "Collecte"
+        },
+        "technique_name": "Data from Information Repositories",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "6,800 enumerable Meta Muse share links exposed interview notes, internal revenue reviews, loan files and bank fraud alerts."
+          ],
+          "fr": [
+            "6 800 liens de partage Meta Muse énumérables exposaient des notes d'entretien, des revues de revenus internes, des dossiers de prêt et des alertes de fraude bancaire."
+          ]
+        }
+      },
+      {
+        "id": "T1566",
+        "tactic": {
+          "en": "Initial Access",
+          "fr": "Accès initial"
+        },
+        "technique_name": "Phishing",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Nearly 480,000 phishing emails sent from a computer hidden behind a hotel refrigerator in Kobe; Chaos used vishing against a US healthcare provider."
+          ],
+          "fr": [
+            "Près de 480 000 courriels de phishing envoyés depuis un ordinateur dissimulé derrière un réfrigérateur d'hôtel à Kobe ; Chaos a utilisé le vishing contre un prestataire de santé américain."
+          ]
+        }
+      },
+      {
+        "id": "T1595.002",
+        "tactic": {
+          "en": "Reconnaissance",
+          "fr": "Reconnaissance"
+        },
+        "technique_name": "Vulnerability Scanning",
+        "frequency": 1,
+        "severity": "medium",
+        "context": {
+          "en": [
+            "Mass automated scanning of PHP/WordPress instances followed disclosure, with exploits produced in three days by automated tooling."
+          ],
+          "fr": [
+            "Scan automatisé massif des instances PHP/WordPress après divulgation, avec des exploits produits en trois jours par des outils automatisés."
+          ]
+        }
+      },
+      {
+        "id": "T1496",
+        "tactic": {
+          "en": "Impact",
+          "fr": "Impact"
+        },
+        "technique_name": "Resource Hijacking",
+        "frequency": 1,
+        "severity": "medium",
+        "context": {
+          "en": [
+            "Experts anticipate mass hijacking of vulnerable PHP servers for cryptocurrency mining; Plex2Shell chains were used to divert CPU/GPU resources."
+          ],
+          "fr": [
+            "Les experts anticipent un détournement massif de serveurs PHP vulnérables pour du minage de cryptomonnaies ; les chaînes Plex2Shell servaient à détourner les ressources CPU/GPU."
+          ]
+        }
+      },
+      {
+        "id": "T1543.003",
+        "tactic": {
+          "en": "Persistence",
+          "fr": "Persistance"
+        },
+        "technique_name": "Windows Service",
+        "frequency": 1,
+        "severity": "medium",
+        "context": {
+          "en": [
+            "TouchHub installs a Windows service to launch TouchShift in the Lazarus chain; event 7045 is the primary detection channel."
+          ],
+          "fr": [
+            "TouchHub installe un service Windows pour lancer TouchShift dans la chaîne Lazarus ; l'événement 7045 est le canal de détection principal."
+          ]
+        }
+      },
+      {
+        "id": "T1110",
+        "tactic": {
+          "en": "Credential Access",
+          "fr": "Accès aux identifiants"
+        },
+        "technique_name": "Brute Force",
+        "frequency": 1,
+        "severity": "medium",
+        "context": {
+          "en": [
+            "Brute-force activity against an Indian university exposed credentials and technical secrets during reconnaissance; 4625 and sshd failures are the detection sources."
+          ],
+          "fr": [
+            "Une activité de force brute contre une université indienne a exposé des identifiants et des secrets techniques lors de la reconnaissance ; les événements 4625 et les échecs sshd sont les sources de détection."
+          ]
+        }
+      },
+      {
+        "id": "T1583.006",
+        "tactic": {
+          "en": "Resource Development",
+          "fr": "Développement de ressources"
+        },
+        "technique_name": "Web Services",
+        "frequency": 1,
+        "severity": "medium",
+        "context": {
+          "en": [
+            "Abuse of legitimate web services and accounts to host payloads and redirect chains, including WebDAV endpoints for NTLM capture."
+          ],
+          "fr": [
+            "Abus de services web et de comptes légitimes pour héberger des charges et des chaînes de redirection, y compris des points de terminaison WebDAV pour la capture NTLM."
+          ]
+        }
+      },
+      {
+        "id": "T1584.004",
+        "tactic": {
+          "en": "Resource Development",
+          "fr": "Développement de ressources"
+        },
+        "technique_name": "Compromise Infrastructure: Server",
+        "frequency": 1,
+        "severity": "medium",
+        "context": {
+          "en": [
+            "Legitimate servers and SaaS tenants are compromised and repurposed as delivery relays, as seen with the AOMEI update infrastructure and Zeabur."
+          ],
+          "fr": [
+            "Des serveurs et tenants SaaS légitimes sont compromis et réaffectés en relais de livraison, comme l'ont montré l'infrastructure de mise à jour AOMEI et Zeabur."
+          ]
+        }
+      },
+      {
+        "id": "T1059.007",
+        "tactic": {
+          "en": "Execution",
+          "fr": "Exécution"
+        },
+        "technique_name": "JavaScript",
+        "frequency": 1,
+        "severity": "medium",
+        "context": {
+          "en": [
+            "Recurring delivery chain JavaScript to PowerShell to .NET payload observed across sandbox-linked analyses."
+          ],
+          "fr": [
+            "Chaîne de livraison récurrente JavaScript vers PowerShell vers charge .NET observée dans les analyses liées en sandbox."
+          ]
+        }
+      },
+      {
+        "id": "T1059.003",
+        "tactic": {
+          "en": "Execution",
+          "fr": "Exécution"
+        },
+        "technique_name": "Windows Command Shell",
+        "frequency": 1,
+        "severity": "medium",
+        "context": {
+          "en": [
+            "cmd.exe used in ClickFix chains and as a child process of compromised web servers and update clients."
+          ],
+          "fr": [
+            "cmd.exe utilisé dans les chaînes ClickFix et comme processus enfant de serveurs web et de clients de mise à jour compromis."
+          ]
+        }
+      },
+      {
+        "id": "T1590",
+        "tactic": {
+          "en": "Reconnaissance",
+          "fr": "Reconnaissance"
+        },
+        "technique_name": "Gather Victim Network Information",
+        "frequency": 1,
+        "severity": "medium",
+        "context": {
+          "en": [
+            "A single passive DNS query revealed the cf.metaaiusercontent.com share domain and 6,800 conversation links embedded as subdomains."
+          ],
+          "fr": [
+            "Une seule requête en DNS passif a révélé le domaine de partage cf.metaaiusercontent.com et 6 800 liens de conversation intégrés en sous-domaines."
+          ]
+        }
+      }
+    ]
+  },
+  "vulnerabilities": {
+    "analyse": {
+      "en": "The vulnerability landscape is defined by PHP2Shell: CVE-2026-109618 (OOM variant, CWE-824) and CVE-2026-109619 (stale global state) both score 9.2 and affect every PHP branch from 5.4 onward, with fixes in 8.5.12, 8.4.27, 8.3.36 and 8.2.35 plus backports for 7.4, 8.0 and 8.1. The critical insight is that memory_limit — a standard hardening control — is the exploit primitive, so conventional mitigations fail; session.upload_progress.enabled must be disabled, memory_limit set to -1, post_max_size reduced and WAF rules applied until patching completes. CISA's KEV additions (four Plex Plex2Shell flaws, Siemens Software Center DLL sideloading, EG SiteGuard command injection) carry 23 October and 3 November deadlines. Apache Traffic Server discloses an exceptional cluster of ten flaws including three CVSS 10.0 issues (mTLS session-resumption identity confusion, client-certificate validation bypass, origin_server_auth IAM abuse), and GitLab self-managed carries a CVSS 10.0 unauthenticated RCE in the Onigmo regex compiler with no workaround. FortiSIEM (9.4), Pillow (9.8), Amazon SageMaker SDK (9.4) and Oracle Java SE JSSE (9.1) complete the critical tier. The long tail — toml-node prototype pollution, nbconvert path traversal, Jupyter Server missing authorization, TastyIgniter PHP object injection, Sentry JS SDK middleware bypass — matters because these components sit inside CI/CD and data-science pipelines where a single compromise yields broad credentials.",
+      "fr": "Le paysage des vulnérabilités est défini par PHP2Shell : CVE-2026-109618 (variante OOM, CWE-824) et CVE-2026-109619 (état global obsolète) obtiennent tous deux 9,2 et affectent toutes les branches PHP depuis la 5.4, avec des correctifs en 8.5.12, 8.4.27, 8.3.36 et 8.2.35 et des backports pour 7.4, 8.0 et 8.1. Le point critique est que memory_limit — un contrôle de durcissement standard — constitue la primitive d'exploitation, ce qui rend les atténuations classiques inopérantes ; il faut désactiver session.upload_progress.enabled, fixer memory_limit à -1, réduire post_max_size et appliquer des règles WAF jusqu'au patch complet. Les ajouts au KEV de la CISA (quatre failles Plex Plex2Shell, DLL sideloading Siemens Software Center, injection de commandes EG SiteGuard) portent des échéances au 23 octobre et 3 novembre. Apache Traffic Server publie un cluster exceptionnel de dix failles dont trois en CVSS 10.0 (confusion d'identité mTLS par reprise de session, contournement de validation de certificat client, abus des identifiants IAM via origin_server_auth), et GitLab self-managed porte une RCE non authentifiée de CVSS 10.0 dans le compilateur d'expressions régulières Onigmo sans workaround. FortiSIEM (9,4), Pillow (9,8), le SDK Amazon SageMaker (9,4) et Oracle Java SE JSSE (9,1) complètent le palier critique. La longue traîne — pollution de prototype toml-node, traversée de répertoire nbconvert, autorisation manquante Jupyter Server, injection d'objet PHP TastyIgniter, contournement de middleware Sentry JS SDK — compte parce que ces composants vivent dans les pipelines CI/CD et de data science où une seule compromission livre un large éventail d'identifiants."
+    },
+    "list": [
+      {
+        "cve_id": "CVE-2026-96656",
+        "cvss_score": 8.6,
+        "epss_score": "N/A",
+        "cisa_kev": true,
+        "affected_product": "Plex Media Server < 1.43.3.10861",
+        "affected_product_vendor": "Plex",
+        "vulnerability_type": {
+          "en": [
+            "External control of file name or path",
+            "Remote Code Execution"
+          ],
+          "fr": [
+            "Contrôle externe du nom de fichier ou du chemin",
+            "Exécution de code à distance"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Path control enables arbitrary file access and full server compromise when combined with the other Plex2Shell flaws. CISA KEV deadline 23 October 2026.",
+          "fr": "Le contrôle du chemin permet un accès arbitraire aux fichiers et une compromission totale du serveur lorsqu'il est combiné aux autres failles Plex2Shell. Échéance KEV de la CISA : 23 octobre 2026."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-106931",
+        "cvss_score": 8.5,
+        "epss_score": "N/A",
+        "cisa_kev": true,
+        "affected_product": "EG Secure Solutions SiteGuard Server Edition",
+        "affected_product_vendor": "EG Secure Solutions",
+        "vulnerability_type": {
+          "en": [
+            "Command Injection"
+          ],
+          "fr": [
+            "Injection de commandes"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Command injection allows arbitrary command execution on the SiteGuard server, leading to full compromise, data theft or service disruption. CISA KEV deadline 23 October 2026.",
+          "fr": "L'injection de commandes permet l'exécution de commandes arbitraires sur le serveur SiteGuard, menant à une compromission totale, un vol de données ou une perturbation de service. Échéance KEV de la CISA : 23 octobre 2026."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190",
+          "T1059.003"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-110936",
+        "cvss_score": 8.4,
+        "epss_score": "N/A",
+        "cisa_kev": true,
+        "affected_product": "Siemens Software Center",
+        "affected_product_vendor": "Siemens",
+        "vulnerability_type": {
+          "en": [
+            "DLL Sideloading",
+            "Arbitrary code execution"
+          ],
+          "fr": [
+            "DLL Sideloading",
+            "Exécution de code arbitraire"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "DLL sideloading in Siemens Software Center allows arbitrary code execution; ClickFix campaigns abuse the Romulus platform to lure users into executing malicious commands. CISA KEV deadline 3 November 2026.",
+          "fr": "Le DLL sideloading dans Siemens Software Center permet l'exécution de code arbitraire ; les campagnes ClickFix abusent de la plateforme Romulus pour amener les utilisateurs à exécuter des commandes malveillantes. Échéance KEV de la CISA : 3 novembre 2026."
+        },
+        "mitre_attack_ttps_id": [
+          "T1574.002",
+          "T1204.004"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-96654",
+        "cvss_score": 6.9,
+        "epss_score": "N/A",
+        "cisa_kev": true,
+        "affected_product": "Plex Media Server < 1.43.3.10861",
+        "affected_product_vendor": "Plex",
+        "vulnerability_type": {
+          "en": [
+            "Improper neutralization of encoded URI schemes",
+            "Remote Code Execution (chained)"
+          ],
+          "fr": [
+            "Neutralisation incorrecte des schémas URI encodés",
+            "Exécution de code à distance (chaînée)"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Improper neutralization of encoded URI schemes in a web page enables malicious redirects and, when chained in Plex2Shell, remote code execution. CISA KEV deadline 23 October 2026.",
+          "fr": "La neutralisation incorrecte des schémas URI encodés dans une page web permet des redirections malveillantes et, chaînée dans Plex2Shell, une exécution de code à distance. Échéance KEV de la CISA : 23 octobre 2026."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-96652",
+        "cvss_score": 5.3,
+        "epss_score": "N/A",
+        "cisa_kev": true,
+        "affected_product": "Plex Media Server < 1.43.3.10861",
+        "affected_product_vendor": "Plex",
+        "vulnerability_type": {
+          "en": [
+            "SSRF",
+            "URL injection",
+            "Arbitrary file write",
+            "Remote Code Execution chain (Plex2Shell)"
+          ],
+          "fr": [
+            "SSRF",
+            "Injection d'URL",
+            "Écriture de fichier arbitraire",
+            "Chaîne d'exécution de code à distance (Plex2Shell)"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Chained with CVE-2026-96654, -96655 and -96656 to achieve unauthenticated RCE on exposed Plex servers, enabling cryptomining resource hijacking, media and data access, and lateral movement. CISA KEV remediation deadline 23 October 2026.",
+          "fr": "Chaînée avec CVE-2026-96654, -96655 et -96656 pour obtenir une RCE non authentifiée sur les serveurs Plex exposés, permettant le détournement de ressources pour du minage, l'accès aux médias et données, et le mouvement latéral. Échéance de remédiation KEV de la CISA : 23 octobre 2026."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190",
+          "T1496"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-96655",
+        "cvss_score": 5.3,
+        "epss_score": "N/A",
+        "cisa_kev": true,
+        "affected_product": "Plex Media Server < 1.43.3.10861",
+        "affected_product_vendor": "Plex",
+        "vulnerability_type": {
+          "en": [
+            "Server-Side Request Forgery (SSRF)"
+          ],
+          "fr": [
+            "Falsification de requête côté serveur (SSRF)"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Unauthenticated SSRF lets an attacker use the Plex server to reach internal resources and bypass access controls, contributing to the Plex2Shell RCE chain. CISA KEV deadline 23 October 2026.",
+          "fr": "Une SSRF non authentifiée permet d'utiliser le serveur Plex pour atteindre des ressources internes et contourner les contrôles d'accès, contribuant à la chaîne RCE Plex2Shell. Échéance KEV de la CISA : 23 octobre 2026."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-111815",
+        "cvss_score": 10.0,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Apache Traffic Server 8.0.0-8.1.11, 9.0.0-9.2.15, 10.0.0-10.1.4, 10.2.0",
+        "affected_product_vendor": "Apache Software Foundation",
+        "vulnerability_type": {
+          "en": [
+            "Client certificate validation bypass (CWE-295)",
+            "TLS session resumption abuse"
+          ],
+          "fr": [
+            "Contournement de validation de certificat client (CWE-295)",
+            "Abus de reprise de session TLS"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "TLS session resumption allows bypassing mutual TLS client-certificate authentication, enabling identity spoofing and unauthorised origin access. Fixed in 9.2.16, 10.1.5 and 10.2.1; disable session resumption as a stopgap.",
+          "fr": "La reprise de session TLS permet de contourner l'authentification mutuelle par certificat client, autorisant l'usurpation d'identité et l'accès non autorisé à l'origine. Corrigé en 9.2.16, 10.1.5 et 10.2.1 ; désactiver la reprise de session en attendant."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190",
+          "T1553.004"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-111814",
+        "cvss_score": 10.0,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Apache Traffic Server 9.0.0-9.2.15, 10.0.0-10.1.4, 10.2.0",
+        "affected_product_vendor": "Apache Software Foundation",
+        "vulnerability_type": {
+          "en": [
+            "mTLS identity confusion (CWE-295)",
+            "TLS session reuse"
+          ],
+          "fr": [
+            "Confusion d'identité mTLS (CWE-295)",
+            "Réutilisation de session TLS"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Origins may receive requests carrying an incorrect mTLS identity, letting an attacker act under another client identity. Mitigate by setting server_session_sharing.match to include MASK_CERT and disabling outbound session sharing.",
+          "fr": "Les origines peuvent recevoir des requêtes portant une identité mTLS incorrecte, permettant à un attaquant d'agir sous une autre identité client. Atténuer en configurant server_session_sharing.match pour inclure MASK_CERT et en désactivant le partage de session sortante."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190",
+          "T1078"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-111812",
+        "cvss_score": 10.0,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Apache Traffic Server 8.0.0-8.1.11, 9.0.0-9.2.15, 10.0.0-10.1.4, 10.2.0 (origin_server_auth plugin)",
+        "affected_product_vendor": "Apache Software Foundation",
+        "vulnerability_type": {
+          "en": [
+            "Incorrect authorization (CWE-863)",
+            "Cloud IAM credential abuse"
+          ],
+          "fr": [
+            "Contrôle d'autorisation incorrect (CWE-863)",
+            "Abus d'identifiants IAM cloud"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "The origin_server_auth plugin lets an attacker use the proxy IAM credentials to sign arbitrary AWS requests, potentially accessing cloud resources, modifying data or escalating privileges. Disable the plugin if unused and rotate exposed IAM credentials.",
+          "fr": "Le plugin origin_server_auth permet à un attaquant d'utiliser les identifiants IAM du proxy pour signer des requêtes AWS arbitraires, avec un risque d'accès aux ressources cloud, de modification de données ou d'élévation de privilèges. Désactiver le plugin s'il est inutilisé et faire tourner les identifiants IAM exposés."
+        },
+        "mitre_attack_ttps_id": [
+          "T1078",
+          "T1550.001"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-110264",
+        "cvss_score": 10.0,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "GitLab self-managed 7.0 through 18.11.12, 19.0.x < 19.0.10, 19.1.x < 19.1.9, 19.2.x < 19.2.9, 19.3.x < 19.3.6, 19.4.x < 19.4.3, 19.5.0",
+        "affected_product_vendor": "GitLab",
+        "vulnerability_type": {
+          "en": [
+            "Integer overflow",
+            "Unauthenticated Remote Code Execution (Onigmo regex compiler)"
+          ],
+          "fr": [
+            "Débordement d'entier",
+            "Exécution de code à distance non authentifiée (compilateur regex Onigmo)"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Integer overflow in the Onigmo regular-expression compiler yields unauthenticated RCE with application privileges, exposing repositories, CI/CD secrets, runner tokens and user data. No workaround exists; upgrade to 19.5.1, 19.4.3, 19.3.6, 19.2.9, 19.1.9, 19.0.10 or 18.11.13 and deploy the published Sigma rules.",
+          "fr": "Un débordement d'entier dans le compilateur d'expressions régulières Onigmo produit une RCE non authentifiée avec les privilèges applicatifs, exposant les dépôts, les secrets CI/CD, les jetons de runners et les données utilisateurs. Aucun workaround n'existe ; mettre à jour vers 19.5.1, 19.4.3, 19.3.6, 19.2.9, 19.1.9, 19.0.10 ou 18.11.13 et déployer les règles Sigma publiées."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190",
+          "T1552"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-96639",
+        "cvss_score": 9.8,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Pillow (Python imaging library) < 13.0.0",
+        "affected_product_vendor": "Python Pillow project",
+        "vulnerability_type": {
+          "en": [
+            "Memory corruption (CWE-125/CWE-787)",
+            "Out-of-bounds read/write"
+          ],
+          "fr": [
+            "Corruption mémoire (CWE-125/CWE-787)",
+            "Lecture/écriture hors limites"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Out-of-bounds reads and writes when processing multi-frame images cause native crashes and potential arbitrary code execution in services that parse untrusted images. Upgrade to Pillow 13.0.0 and limit multi-frame processing.",
+          "fr": "Des lectures et écritures hors limites lors du traitement d'images multi-frames provoquent des crashs natifs et une potentielle exécution de code arbitraire dans les services qui analysent des images non fiables. Mettre à jour vers Pillow 13.0.0 et limiter le traitement multi-frames."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-106173",
+        "cvss_score": 9.4,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Fortinet FortiSIEM 7.5.0 and earlier",
+        "affected_product_vendor": "Fortinet",
+        "vulnerability_type": {
+          "en": [
+            "Path Traversal",
+            "Arbitrary File Write",
+            "Unauthenticated Remote Code Execution"
+          ],
+          "fr": [
+            "Path Traversal",
+            "Écriture de fichier arbitraire",
+            "Exécution de code à distance non authentifiée"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Unauthenticated path traversal with arbitrary file write on TCP 27918 leads to RCE with service privileges, enabling SIEM log tampering, pivot and data exfiltration. Public exploit code exists; restrict port 27918 and monitor gRPC requests and redishb.sh modifications.",
+          "fr": "Un path traversal non authentifié avec écriture de fichier arbitraire sur le port TCP 27918 mène à une RCE avec les privilèges du service, permettant la modification des journaux SIEM, un pivot et une exfiltration. Un exploit public existe ; restreindre le port 27918 et surveiller les requêtes gRPC et les modifications de redishb.sh."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190",
+          "T1070.001"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-112408",
+        "cvss_score": 9.4,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Amazon SageMaker Python SDK < 3.10.0 (V3) / < 2.257.3 (V2)",
+        "affected_product_vendor": "Amazon Web Services",
+        "vulnerability_type": {
+          "en": [
+            "Improper check of communication channel source (CWE-940)",
+            "Cloud credential theft"
+          ],
+          "fr": [
+            "Vérification incorrecte de la source du canal de communication (CWE-940)",
+            "Vol d'identifiants cloud"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Improper origin verification allows code execution inside the SageMaker environment and theft of IAM credentials, leading to cloud account compromise. Explicitly specify an S3 bucket owned by the account until upgraded.",
+          "fr": "Une vérification d'origine incorrecte permet une exécution de code dans l'environnement SageMaker et le vol d'identifiants IAM, menant à la compromission du compte cloud. Spécifier explicitement un bucket S3 détenu par le compte en attendant la mise à jour."
+        },
+        "mitre_attack_ttps_id": [
+          "T1078",
+          "T1552"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-111811",
+        "cvss_score": 9.4,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Apache Traffic Server tsmemcache experimental plugin",
+        "affected_product_vendor": "Apache Software Foundation",
+        "vulnerability_type": {
+          "en": [
+            "Missing authentication for critical function (CWE-306)",
+            "Cache poisoning"
+          ],
+          "fr": [
+            "Absence d'authentification pour fonction critique (CWE-306)",
+            "Empoisonnement de cache"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Unauthenticated remote access to the shared cache enables content poisoning, leakage of cached information and denial of service by object deletion. Disable tsmemcache if unused and restrict network access to the cache.",
+          "fr": "Un accès distant non authentifié au cache partagé permet l'empoisonnement de contenu, la fuite d'informations mises en cache et un déni de service par suppression d'objets. Désactiver tsmemcache s'il est inutilisé et restreindre l'accès réseau au cache."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-111809",
+        "cvss_score": 9.3,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Apache Traffic Server 8.0.0-8.1.11, 9.0.0-9.2.15, 10.0.0-10.1.4, 10.2.0",
+        "affected_product_vendor": "Apache Software Foundation",
+        "vulnerability_type": {
+          "en": [
+            "HTTP request smuggling (CWE-444)",
+            "Inconsistent request interpretation"
+          ],
+          "fr": [
+            "Contrebande de requêtes HTTP (CWE-444)",
+            "Interprétation incohérente des requêtes"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Inconsistent HTTP request interpretation enables security control bypass, cache poisoning and access to internal resources via smuggled requests. Normalise headers strictly and block ambiguous HEAD requests.",
+          "fr": "Une interprétation incohérente des requêtes HTTP permet de contourner des contrôles de sécurité, d'empoisonner le cache et d'accéder à des ressources internes via des requêtes smuggled. Normaliser strictement les en-têtes et bloquer les requêtes HEAD ambiguës."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-109618",
+        "cvss_score": 9.2,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "PHP 5.x, 6.x, 7.x, 8.0.x, 8.1.x, 8.2.x < 8.2.35, 8.3.x < 8.3.36, 8.4.x < 8.4.27, 8.5.x < 8.5.12 (PHP-FPM, mod_php, php-cgi, FrankenPHP, LiteSpeed)",
+        "affected_product_vendor": "PHP Group",
+        "vulnerability_type": {
+          "en": [
+            "Unauthenticated Remote Code Execution",
+            "Uninitialized pointer access (CWE-824)",
+            "Memory corruption via memory_limit OOM handling"
+          ],
+          "fr": [
+            "Exécution de code à distance non authentifiée",
+            "Accès à un pointeur non initialisé (CWE-824)",
+            "Corruption mémoire via la gestion de l'OOM memory_limit"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "PHP2Shell OOM variant: corrupts memory when handling a memory_limit overflow and leaks memory from other requests, allowing unauthenticated RCE with web-server privileges, webshell deployment and secret disclosure without execution traces. Apache mod_php deployments are most exposed because exploitation completes before application code runs.",
+          "fr": "Variante OOM de PHP2Shell : corrompt la mémoire lors de la gestion d'un dépassement de memory_limit et divulgue la mémoire d'autres requêtes, permettant une RCE non authentifiée avec les privilèges du serveur web, le déploiement de webshells et la divulgation de secrets sans trace d'exécution. Les déploiements Apache mod_php sont les plus exposés car l'exploitation aboutit avant l'exécution du code applicatif."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190",
+          "T1505.003"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-109619",
+        "cvss_score": 9.2,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "PHP core since 5.4; fixed in 8.5.12, 8.4.27, 8.3.36, 8.2.35 with backports for 7.4, 8.0, 8.1",
+        "affected_product_vendor": "PHP Group",
+        "vulnerability_type": {
+          "en": [
+            "Unauthenticated Remote Code Execution",
+            "Use-after-free / stale global state"
+          ],
+          "fr": [
+            "Exécution de code à distance non authentifiée",
+            "Use-after-free / état global obsolète"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Second PHP2Shell variant exploiting stale global request state to achieve unauthenticated code execution in the PHP process context, enabling web shells, database and cloud service access, and lateral movement. Any Internet-reachable PHP installation is exposed regardless of CMS.",
+          "fr": "Seconde variante PHP2Shell exploitant un état global de requête obsolète pour obtenir une exécution de code non authentifiée dans le contexte du processus PHP, permettant le dépôt de web shells, l'accès aux bases de données et services cloud, et le mouvement latéral. Toute installation PHP joignable depuis Internet est exposée quel que soit le CMS."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190",
+          "T1505.003"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-91403",
+        "cvss_score": 9.1,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Oracle Java SE 8u511, 11.0.33, 17.0.21, 21.0.13, 25.0.5, 27.0.1; GraalVM for JDK 17.0.21 and 21.0.13; GraalVM Enterprise 21.3.20",
+        "affected_product_vendor": "Oracle",
+        "vulnerability_type": {
+          "en": [
+            "JSSE component vulnerability",
+            "Confidentiality and integrity impact"
+          ],
+          "fr": [
+            "Vulnérabilité du composant JSSE",
+            "Atteinte à la confidentialité et à l'intégrité"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "An unauthenticated remote attacker can create, delete or modify critical data accessible to the JVM and access it without authorisation, affecting both confidentiality and integrity of Java applications and connected systems.",
+          "fr": "Un attaquant distant non authentifié peut créer, supprimer ou modifier des données critiques accessibles à la JVM et y accéder sans autorisation, affectant la confidentialité et l'intégrité des applications Java et des systèmes connectés."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-114142",
+        "cvss_score": 8.8,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "toml-node < 5.0.1",
+        "affected_product_vendor": "toml-node project",
+        "vulnerability_type": {
+          "en": [
+            "Prototype pollution (CWE-1321)"
+          ],
+          "fr": [
+            "Pollution de prototype (CWE-1321)"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Uncontrolled modification of object prototype attributes during TOML parsing can bypass controls, alter application behaviour and potentially achieve code execution. Filter __proto__, constructor and prototype keys and upgrade to 5.0.1.",
+          "fr": "La modification non contrôlée des attributs de prototype lors du parsing TOML peut contourner des contrôles, altérer le comportement applicatif et potentiellement aboutir à une exécution de code. Filtrer les clés __proto__, constructor et prototype et mettre à jour vers 5.0.1."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-114140",
+        "cvss_score": 8.8,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "jupyter nbconvert 5.4.0 through 7.17.1",
+        "affected_product_vendor": "Project Jupyter",
+        "vulnerability_type": {
+          "en": [
+            "Path traversal (CWE-22)",
+            "Arbitrary file write"
+          ],
+          "fr": [
+            "Traversée de répertoire (CWE-22)",
+            "Écriture de fichier arbitraire"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Directory traversal allows writing files to arbitrary locations with the converting user's privileges, potentially overwriting startup scripts or plugin configuration and achieving code execution. Critical in shared CI/CD and data-science platforms; upgrade to 7.17.2.",
+          "fr": "La traversée de répertoire permet d'écrire des fichiers à des emplacements arbitraires avec les droits de l'utilisateur effectuant la conversion, avec un risque d'écrasement de scripts de démarrage ou de configuration de plugins et d'exécution de code. Critique dans les plateformes CI/CD et de data science partagées ; mettre à jour vers 7.17.2."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190",
+          "T1059.006"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-114135",
+        "cvss_score": 8.8,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Jupyter Server 2.0.0-2.5.x and 2.6.0+ with manually registered jupyter_server.gateway.handlers",
+        "affected_product_vendor": "Project Jupyter",
+        "vulnerability_type": {
+          "en": [
+            "Missing authorization (CWE-862)",
+            "Kernel code execution"
+          ],
+          "fr": [
+            "Autorisation manquante (CWE-862)",
+            "Exécution de code dans le kernel"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Missing authorization allows code execution in the kernel context, exposing environment secrets, configuration files and cloud tokens, and enabling sabotage or pivot from the Jupyter server. Upgrade to 2.6.0 and remove manual registration of the deprecated gateway handlers.",
+          "fr": "Une autorisation manquante permet une exécution de code dans le contexte du kernel, exposant les secrets d'environnement, les fichiers de configuration et les jetons cloud, et permettant un sabotage ou un pivot depuis le serveur Jupyter. Mettre à jour vers 2.6.0 et supprimer l'enregistrement manuel des handlers gateway dépréciés."
+        },
+        "mitre_attack_ttps_id": [
+          "T1078",
+          "T1552"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-111810",
+        "cvss_score": 8.7,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Apache Traffic Server 9.2.15, 10.1.4, 10.2.0",
+        "affected_product_vendor": "Apache Software Foundation",
+        "vulnerability_type": {
+          "en": [
+            "Uncontrolled resource consumption (CWE-400)"
+          ],
+          "fr": [
+            "Consommation non contrôlée de ressources (CWE-400)"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Unauthenticated remote requests saturate diagnostic logs, exhausting disk space and degrading proxy performance. Limit request size and rate and reduce diagnostic log verbosity.",
+          "fr": "Des requêtes distantes non authentifiées saturent les journaux diagnostiques, épuisant l'espace disque et dégradant les performances du proxy. Limiter la taille et le débit des requêtes et réduire la verbosité des journaux diagnostiques."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-114143",
+        "cvss_score": 8.7,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "toml-node < 5.0.1",
+        "affected_product_vendor": "toml-node project",
+        "vulnerability_type": {
+          "en": [
+            "Inefficient algorithmic complexity (CWE-407)",
+            "Denial of service"
+          ],
+          "fr": [
+            "Complexité algorithmique inefficace (CWE-407)",
+            "Déni de service"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Malicious TOML documents block the event loop or exhaust memory during parsing, causing denial of service in Node.js services that parse user-supplied TOML. Limit document size and complexity and upgrade to 5.0.1.",
+          "fr": "Des documents TOML malveillants bloquent la boucle d'événements ou épuisent la mémoire lors du parsing, provoquant un déni de service dans les services Node.js qui analysent du TOML fourni par l'utilisateur. Limiter la taille et la complexité des documents et mettre à jour vers 5.0.1."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-114141",
+        "cvss_score": 8.7,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "toml-node < 5.0.1",
+        "affected_product_vendor": "toml-node project",
+        "vulnerability_type": {
+          "en": [
+            "Inefficient algorithmic complexity (CWE-407)"
+          ],
+          "fr": [
+            "Complexité algorithmique inefficace (CWE-407)"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Excessive array-of-tables headers block the event loop during TOML parsing, causing denial of service. Limit header counts and document size, and upgrade to 5.0.1.",
+          "fr": "Un nombre excessif d'en-têtes de tableaux de tables bloque la boucle d'événements lors du parsing TOML, provoquant un déni de service. Limiter le nombre d'en-têtes et la taille des documents, et mettre à jour vers 5.0.1."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-111808",
+        "cvss_score": 8.6,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Apache Traffic Server 8.0.0-8.1.11, 9.0.0-9.2.15, 10.0.0-10.1.4, 10.2.0",
+        "affected_product_vendor": "Apache Software Foundation",
+        "vulnerability_type": {
+          "en": [
+            "Integer underflow (CWE-191)",
+            "Backend worker exhaustion"
+          ],
+          "fr": [
+            "Sous-dépassement d'entier (CWE-191)",
+            "Épuisement des workers backend"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Integer underflow exhausts backend workers, causing partial or total unavailability of downstream services. Limit HTTP/2 throughput and monitor backend worker pools.",
+          "fr": "Un sous-dépassement d'entier épuise les workers backend, provoquant une indisponibilité partielle ou totale des services en aval. Limiter le débit HTTP/2 et surveiller les pools de workers backend."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-111805",
+        "cvss_score": 8.6,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Apache Traffic Server 8.0.0-8.1.11, 9.0.0-9.2.15, 10.0.0-10.1.4, 10.2.0",
+        "affected_product_vendor": "Apache Software Foundation",
+        "vulnerability_type": {
+          "en": [
+            "Uncontrolled resource consumption (CWE-400)"
+          ],
+          "fr": [
+            "Consommation non contrôlée de ressources (CWE-400)"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Unauthenticated remote requests exhaust backend workers, degrading or interrupting downstream services. Apply rate limiting and monitor worker pools.",
+          "fr": "Des requêtes distantes non authentifiées épuisent les workers backend, dégradant ou interrompant les services en aval. Appliquer une limitation de débit et surveiller les pools de workers."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-29001",
+        "cvss_score": 8.6,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "TastyIgniter <= 4.4.5",
+        "affected_product_vendor": "TastyIgniter",
+        "vulnerability_type": {
+          "en": [
+            "PHP object injection (CWE-502)",
+            "Deserialization of untrusted data"
+          ],
+          "fr": [
+            "Injection d'objet PHP (CWE-502)",
+            "Désérialisation de données non fiables"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Unsafe deserialization of settings values enables arbitrary code execution with PHP process privileges, database access, web shell deployment and persistence. Upgrade to 4.4.6, restrict admin interface access and audit existing serialized settings.",
+          "fr": "La désérialisation non sécurisée de valeurs de réglages permet une exécution de code arbitraire avec les droits du processus PHP, l'accès à la base de données, le dépôt de web shells et la persistance. Mettre à jour vers 4.4.6, restreindre l'accès à l'interface d'administration et auditer les réglages sérialisés existants."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190",
+          "T1505.003"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-112381",
+        "cvss_score": 8.2,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Apache Traffic Server 9.2.15, 10.1.4, 10.2.0",
+        "affected_product_vendor": "Apache Software Foundation",
+        "vulnerability_type": {
+          "en": [
+            "NULL pointer dereference (CWE-476)",
+            "Denial of service"
+          ],
+          "fr": [
+            "Déréférencement de pointeur nul (CWE-476)",
+            "Déni de service"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "A remote attacker can crash the proxy/cache server, interrupting service for hosted sites and applications. Upgrade to 9.2.16, 10.1.5 or 10.2.1 and monitor unexpected restarts.",
+          "fr": "Un attaquant distant peut provoquer un crash du serveur proxy/cache, interrompant le service des sites et applications hébergés. Mettre à jour vers 9.2.16, 10.1.5 ou 10.2.1 et surveiller les redémarrages inattendus."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-96640",
+        "cvss_score": 8.2,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Pillow (Python imaging library) < 13.0.0",
+        "affected_product_vendor": "Python Pillow project",
+        "vulnerability_type": {
+          "en": [
+            "Resource consumption (CWE-400/CWE-407)",
+            "Denial of service"
+          ],
+          "fr": [
+            "Consommation de ressources (CWE-400/CWE-407)",
+            "Déni de service"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Malicious PDFs cause CPU saturation and unavailability of services that process documents. Upgrade to Pillow 13.0.0 and apply resource quotas to inbound PDFs.",
+          "fr": "Des PDF malveillants provoquent une saturation CPU et l'indisponibilité des services traitant des documents. Mettre à jour vers Pillow 13.0.0 et appliquer des quotas de ressources aux PDF entrants."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2023-49785",
+        "cvss_score": 7.5,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "NextChat hosted application; Zeabur shared clusters and dedicated GCP servers",
+        "affected_product_vendor": "NextChat / Zeabur",
+        "vulnerability_type": {
+          "en": [
+            "Server-Side Request Forgery (CWE-918)",
+            "Credential reuse"
+          ],
+          "fr": [
+            "Falsification de requête côté serveur (CWE-918)",
+            "Réutilisation d'identifiants"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "SSRF in NextChat was exploited upstream of a Zeabur infrastructure compromise that exfiltrated 3,218,965 environment-variable records, 321,810 accounts, 566 plaintext API keys and 11,536 access-token hashes, forcing the platform to shut down on 31 December 2026.",
+          "fr": "La SSRF de NextChat a été exploitée en amont d'une compromission de l'infrastructure Zeabur ayant exfiltré 3 218 965 enregistrements de variables d'environnement, 321 810 comptes, 566 clés API en clair et 11 536 hachages de jetons d'accès, contraignant la plateforme à fermer au 31 décembre 2026."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190",
+          "T1555",
+          "T1078"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-111943",
+        "cvss_score": "N/A",
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Go applications using crypto/x509 < Go 1.26.10 and 1.27.3",
+        "affected_product_vendor": "Go project",
+        "vulnerability_type": {
+          "en": [
+            "Missing certificate denylist",
+            "Trust chain compromise"
+          ],
+          "fr": [
+            "Absence de denylist de certificats",
+            "Compromission de la chaîne de confiance"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Absence of a denylist in crypto/x509 means Go applications continue to trust chains built on compromised intermediate CA private keys, enabling forged TLS certificates, domain impersonation and signed malicious code. Rebuild binaries with Go 1.26.10 or 1.27.3.",
+          "fr": "L'absence de denylist dans crypto/x509 fait que les applications Go continuent de faire confiance aux chaînes bâties sur des clés privées d'AC intermédiaires compromises, permettant des certificats TLS forgés, l'usurpation de domaines et du code malveillant signé. Reconstruire les binaires avec Go 1.26.10 ou 1.27.3."
+        },
+        "mitre_attack_ttps_id": [
+          "T1553.004",
+          "T1587.003"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-114139",
+        "cvss_score": "N/A",
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Sentry JavaScript SDK (middleware tunnel route)",
+        "affected_product_vendor": "Sentry",
+        "vulnerability_type": {
+          "en": [
+            "Middleware bypass",
+            "Missing authorization"
+          ],
+          "fr": [
+            "Contournement de middleware",
+            "Autorisation manquante"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "The tunnel route allows bypassing middleware-enforced authentication, authorization and filtering, exposing protected application resources. Disable or network-restrict the tunnel route until the fixed SDK version is deployed.",
+          "fr": "La route tunnel permet de contourner l'authentification, l'autorisation et le filtrage appliqués par le middleware, exposant des ressources applicatives protégées. Désactiver ou restreindre par filtrage réseau la route tunnel jusqu'au déploiement de la version corrigée du SDK."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190",
+          "T1078"
+        ]
+      }
+    ]
+  },
+  "data_breaches": [
+    {
+      "victim": "1win (online betting platform)",
+      "sector": "Hospitality_and_Entertainment",
+      "country": "International",
+      "records_count": 96500000,
+      "data_types": {
+        "en": [
+          "User identifiers",
+          "Email addresses",
+          "Phone numbers",
+          "Passwords (storage format unspecified)",
+          "Account metadata"
+        ],
+        "fr": [
+          "Identifiants utilisateurs",
+          "Adresses e-mail",
+          "Numéros de téléphone",
+          "Mots de passe (format de stockage non précisé)",
+          "Métadonnées de compte"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://go.darkwebsonar.io/other-and-other-mastodon"
+    },
+    {
+      "victim": "23andMe (successor entity Chrome Holding Company)",
+      "sector": "Healthcare_and_Life_Sciences",
+      "country": "United States",
+      "records_count": 6900000,
+      "data_types": {
+        "en": [
+          "Names",
+          "Dates of birth",
+          "Email addresses",
+          "Genealogical and family tree data",
+          "DNA test results",
+          "Health-associated data",
+          "DNA Relatives sharing information",
+          "Profile and address data"
+        ],
+        "fr": [
+          "Noms",
+          "Dates de naissance",
+          "Adresses e-mail",
+          "Données généalogiques et arbres familiaux",
+          "Résultats de tests ADN",
+          "Données de santé associées",
+          "Informations de partage DNA Relatives",
+          "Données de profil et adresses"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://therecord.media/23andme-california-data-breach-settlement"
+    },
+    {
+      "victim": "Nikkei Inc.",
+      "sector": "Media_and_Communication",
+      "country": "Japan",
+      "records_count": 1800000,
+      "data_types": {
+        "en": [
+          "Records exposed (nature not detailed: subscriber data, contact details or commercial information)"
+        ],
+        "fr": [
+          "Enregistrements exposés (nature non détaillée : données d'abonnés, coordonnées ou informations commerciales)"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://www.bleepingcomputer.com/news/security/nikkei-discloses-third-data-breach-in-a-month-18m-records-exposed/"
+    },
+    {
+      "victim": "Central Ohio Primary Care Physicians (COPC)",
+      "sector": "Healthcare_and_Life_Sciences",
+      "country": "United States",
+      "records_count": 1400000,
+      "data_types": {
+        "en": [
+          "Full names",
+          "Postal addresses",
+          "Social Security numbers",
+          "Patient identifiers",
+          "Financial information",
+          "Limited health information"
+        ],
+        "fr": [
+          "Noms complets",
+          "Adresses postales",
+          "Numéros de sécurité sociale",
+          "Identifiants patients",
+          "Informations financières",
+          "Informations de santé limitées"
+        ]
+      },
+      "threat_actor": "Chaos",
+      "financial_impact_usd": null,
+      "source_url": "https://beyondmachines.net/event_details/chaos-ransomware-group-claims-central-ohio-primary-care-breach-following-vishing-attack-w-c-3-v-q/gD2P6Ple2L"
+    },
+    {
+      "victim": "Paradigm Healthcare Services (Medi-Cal billing)",
+      "sector": "Healthcare_and_Life_Sciences",
+      "country": "United States",
+      "records_count": 970000,
+      "data_types": {
+        "en": [
+          "Full names",
+          "Dates of birth",
+          "Gender",
+          "Medi-Cal member identification numbers"
+        ],
+        "fr": [
+          "Noms complets",
+          "Dates de naissance",
+          "Genre",
+          "Numéros d'identification de membre Medi-Cal"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://beyondmachines.net/event_details/paradigm-healthcare-services-breach-impacts-970000-medi-cal-members-f-9-o-a-l/gD2P6Ple2L"
+    },
+    {
+      "victim": "Alternative für Deutschland (AfD)",
+      "sector": "Government_and_Defense",
+      "country": "Germany",
+      "records_count": 421000,
+      "data_types": {
+        "en": [
+          "Email content and metadata",
+          "Member, supporter and elected-official contact addresses",
+          "Internal party communications"
+        ],
+        "fr": [
+          "Contenu et métadonnées d'e-mails",
+          "Adresses de contact de membres, sympathisants et élus",
+          "Communications internes du parti"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://mastobot.ping.moi/@cyberveille/117479965135679930"
+    },
+    {
+      "victim": "State Bank of India (SBI)",
+      "sector": "Finance",
+      "country": "India",
+      "records_count": 375000,
+      "data_types": {
+        "en": [
+          "Customer names",
+          "Registered mobile numbers",
+          "Dates of birth",
+          "Gender",
+          "Email and residential addresses",
+          "Branch and Customer Information File identifiers",
+          "Lead IDs",
+          "Loan and prospect records",
+          "2,722 PDF loan applications and account-opening forms"
+        ],
+        "fr": [
+          "Noms des clients",
+          "Numéros de mobile enregistrés",
+          "Dates de naissance",
+          "Genre",
+          "Adresses e-mail et résidentielles",
+          "Identifiants de branche et de Customer Information File",
+          "Lead IDs",
+          "Dossiers de prêt et de prospects",
+          "2 722 PDF de demandes de prêt et formulaires d'ouverture de compte"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://beyondmachines.net/event_details/state-bank-of-india-discloses-customer-data-exposure-on-dark-web-b-w-h-n-6/gD2P6Ple2L"
+    },
+    {
+      "victim": "Zeabur (PaaS cloud platform)",
+      "sector": "Technology_and_Telecom",
+      "country": "Singapore",
+      "records_count": 321810,
+      "data_types": {
+        "en": [
+          "3,218,965 environment-variable records (API keys, tokens, database credentials, application secrets)",
+          "321,810 user accounts (emails, usernames, phone numbers)",
+          "566 plaintext zSend API keys",
+          "11,536 platform access-token hashes",
+          "865 database service records",
+          "Disk copies from 101 dedicated GCP servers"
+        ],
+        "fr": [
+          "3 218 965 enregistrements de variables d'environnement (clés API, jetons, identifiants de bases de données, secrets applicatifs)",
+          "321 810 comptes utilisateurs (e-mails, noms d'utilisateur, téléphones)",
+          "566 clés API zSend en clair",
+          "11 536 hachages de jetons d'accès plateforme",
+          "865 enregistrements de services de bases de données",
+          "Copies de disques de 101 serveurs dédiés GCP"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://www.bleepingcomputer.com/news/security/zeabur-shutting-down-after-second-security-breach-in-two-months/"
+    },
+    {
+      "victim": "Klein Independent School District (via Frontline Education)",
+      "sector": "Education_and_Research",
+      "country": "United States",
+      "records_count": 37966,
+      "data_types": {
+        "en": [
+          "Social Security numbers",
+          "Driver licence numbers",
+          "Postal addresses",
+          "Email addresses",
+          "Other personal information"
+        ],
+        "fr": [
+          "Numéros de sécurité sociale",
+          "Numéros de permis de conduire",
+          "Adresses postales",
+          "Adresses e-mail",
+          "Autres informations personnelles"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://beyondmachines.net/event_details/klein-isd-data-breach-exposes-personal-information-of-approximately-38000-individuals-j-r-5-f-d/gD2P6Ple2L"
+    },
+    {
+      "victim": "Indian university (unnamed)",
+      "sector": "Education_and_Research",
+      "country": "India",
+      "records_count": 5200,
+      "data_types": {
+        "en": [
+          "Student PII (names, contact details, academic and administrative information)",
+          "Exposed technical credentials and secrets"
+        ],
+        "fr": [
+          "PII d'étudiants (noms, coordonnées, informations académiques et administratives)",
+          "Identifiants et secrets techniques exposés"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://unit42.paloaltonetworks.com/ai-assisted-cybercrime-analysis/"
+    },
+    {
+      "victim": "Data Cymru / Ogi Networks Limited",
+      "sector": "Government_and_Defense",
+      "country": "United Kingdom",
+      "records_count": 3300,
+      "data_types": {
+        "en": [
+          "Personal data of 3,300 individuals, mostly children, from two children-and-families support projects",
+          "42 GB exfiltrated from a primary domain controller, file server and SQL server",
+          "182.7 GB encrypted"
+        ],
+        "fr": [
+          "Données personnelles de 3 300 personnes, majoritairement des enfants, issues de deux projets d'accompagnement des enfants et des familles",
+          "42 Go exfiltrés depuis un contrôleur de domaine primaire, un serveur de fichiers et un serveur SQL",
+          "182,7 Go chiffrés"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://www.infosecurity-magazine.com/news/children-data-stolen-password1/"
+    },
+    {
+      "victim": "STS Aviation Group",
+      "sector": "Industry_and_Manufacturing",
+      "country": "United States",
+      "records_count": 319,
+      "data_types": {
+        "en": [
+          "Fingerprints and biometric data",
+          "Social Security, driver licence and passport numbers",
+          "Medical and health insurance information",
+          "Bank and payment card details",
+          "Salaries, evaluations and workers compensation claims",
+          "Login credentials and contact details",
+          "Dates of birth, race and ethnicity"
+        ],
+        "fr": [
+          "Empreintes digitales et données biométriques",
+          "Numéros de sécurité sociale, de permis de conduire et de passeport",
+          "Informations médicales et d'assurance santé",
+          "Coordonnées bancaires et cartes de paiement",
+          "Salaires, évaluations et déclarations d'accident du travail",
+          "Identifiants de connexion et coordonnées",
+          "Dates de naissance, race et origine ethnique"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://beyondmachines.net/event_details/sts-aviation-group-data-breach-exposes-biometric-and-financial-records-1-c-5-p-m/gD2P6Ple2L"
+    },
+    {
+      "victim": "TeamUpdraft (UpdraftPlus WordPress plugin vendor)",
+      "sector": "Technology_and_Telecom",
+      "country": "United Kingdom",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "Customer names",
+          "Email addresses",
+          "Billing addresses",
+          "Order history",
+          "Hashed passwords",
+          "2FA settings",
+          "UpdraftCentral, UpdraftVault and UpdraftClone connection keys"
+        ],
+        "fr": [
+          "Noms des clients",
+          "Adresses e-mail",
+          "Adresses de facturation",
+          "Historique de commandes",
+          "Mots de passe hachés",
+          "Paramètres 2FA",
+          "Clés de connexion UpdraftCentral, UpdraftVault et UpdraftClone"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://www.bleepingcomputer.com/news/security/stolen-updraftcentral-keys-used-to-backdoor-wordpress-sites/"
+    },
+    {
+      "victim": "Digital Arts (i-FILTER / m-FILTER)",
+      "sector": "Technology_and_Telecom",
+      "country": "Japan",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "Cloud service configuration settings",
+          "User lists",
+          "Web and email traffic logs",
+          "Possible files",
+          "Cloud service operating credentials and server authentication keys"
+        ],
+        "fr": [
+          "Paramètres de configuration des services cloud",
+          "Listes d'utilisateurs",
+          "Journaux de trafic web et e-mail",
+          "Fichiers possibles",
+          "Identifiants d'exploitation des services cloud et clés d'authentification serveur"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://japancyberwatch.com/articles/digital-arts-security-vendor-breach-cloud-services-2026"
+    },
+    {
+      "victim": "IMS Care Center, LLC (Phoenix, Arizona)",
+      "sector": "Healthcare_and_Life_Sciences",
+      "country": "United States",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "Full names",
+          "Postal addresses",
+          "Social Security numbers",
+          "Protected health information (diagnoses, treatment details, patient history)"
+        ],
+        "fr": [
+          "Noms complets",
+          "Adresses postales",
+          "Numéros de sécurité sociale",
+          "Informations médicales protégées (diagnostics, détails de traitement, antécédents patients)"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://cyber.netsecops.io/articles/arizona-ims-care-center-discloses-patient-data-breach/"
+    },
+    {
+      "victim": "LiteLLM (PyPI package 1.107.0)",
+      "sector": "Technology_and_Telecom",
+      "country": "United States",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "Environment variables",
+          "Configuration files",
+          "API tokens including LLM provider keys",
+          "Cloud and database credentials",
+          "SSH keys"
+        ],
+        "fr": [
+          "Variables d'environnement",
+          "Fichiers de configuration",
+          "Jetons API dont clés de fournisseurs LLM",
+          "Identifiants cloud et de bases de données",
+          "Clés SSH"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://opensourcemalware.com/blog/litellm-1-107-0-pypi-wheel-contains-a-credential-stealer-and-persistent-python-backdoor"
+    },
+    {
+      "victim": "American Piping & Boiler Co. (APB)",
+      "sector": "Industry_and_Manufacturing",
+      "country": "United States",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "Full names",
+          "Social Security numbers",
+          "Driver licence numbers",
+          "State identification numbers"
+        ],
+        "fr": [
+          "Noms complets",
+          "Numéros de sécurité sociale",
+          "Numéros de permis de conduire",
+          "Numéros d'identification d'État"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://beyondmachines.net/event_details/american-piping-boiler-co-reports-data-breach-following-network-intrusion-9-o-w-b-w/gD2P6Ple2L"
+    },
+    {
+      "victim": "GardaWorld",
+      "sector": "Security",
+      "country": "Canada",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "No data volume or sample published by the group at time of analysis"
+        ],
+        "fr": [
+          "Aucun volume ni échantillon de données publié par le groupe au moment de l'analyse"
+        ]
+      },
+      "threat_actor": "Qilin",
+      "financial_impact_usd": null,
+      "source_url": "https://www.yazoul.net/intel/claim/2026-10-20-gardaworld-ransomware-claim-by-qilin-oct-2026"
+    },
+    {
+      "victim": "Cellebrite",
+      "sector": "Technology_and_Telecom",
+      "country": "Israel",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "Internal confidential document describing Advanced Unlocks capability",
+          "Possible iPhone radio-stack zero-day details",
+          "Unlock methodology and affected product versions"
+        ],
+        "fr": [
+          "Document interne confidentiel décrivant la capacité Advanced Unlocks",
+          "Détails possibles d'un zero-day de la pile radio iPhone",
+          "Méthodes de déverrouillage et versions de produits concernées"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://www.schneier.com/blog/archives/2026/10/possible-new-cellebrite-iphone-radio-zero-day.html"
+    },
+    {
+      "victim": "600+ critical infrastructure organisations (SafePay victims)",
+      "sector": "Critical_Infrastructure",
+      "country": "Global",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "Internal documents",
+          "HR data",
+          "Business data exfiltrated before encryption",
+          "Access credentials and secrets",
+          "Backups destroyed or encrypted"
+        ],
+        "fr": [
+          "Documents internes",
+          "Données RH",
+          "Données métiers exfiltrées avant chiffrement",
+          "Identifiants et secrets d'accès",
+          "Sauvegardes détruites ou chiffrées"
+        ]
+      },
+      "threat_actor": "SafePay",
+      "financial_impact_usd": null,
+      "source_url": "https://www.bleepingcomputer.com/news/security/cisa-and-fbi-safepay-ransomware-has-hit-over-600-critical-infrastructure-organizations/"
+    },
+    {
+      "victim": "Rajasthan Police",
+      "sector": "Government_and_Defense",
+      "country": "India",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "Potentially internal communications, operational records or citizen information (no public proof or sample published)"
+        ],
+        "fr": [
+          "Potentiellement communications internes, dossiers opérationnels ou informations citoyennes (aucune preuve ni échantillon publié)"
+        ]
+      },
+      "threat_actor": "ScarlettGroup",
+      "financial_impact_usd": null,
+      "source_url": "https://www.yazoul.net/intel/claim/2026-10-21-rajasthan-police-ransomware-claim-by-scarlettgroup-oct-2026"
+    },
+    {
+      "victim": "Bereskin & Parr LLP and Smart & Biggar (bereskinparr.com, smartbiggar.ca)",
+      "sector": "Business_Services",
+      "country": "Canada",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "Legal and intellectual-property case files (claimed)",
+          "Client confidential information",
+          "Business secrets"
+        ],
+        "fr": [
+          "Dossiers juridiques et de propriété intellectuelle (revendiqués)",
+          "Informations confidentielles clients",
+          "Secrets d'affaires"
+        ]
+      },
+      "threat_actor": "Inc Ransom",
+      "financial_impact_usd": null,
+      "source_url": "https://www.ransomlook.io//group/inc%20ransom"
+    },
+    {
+      "victim": "Allmand-Smith Limited",
+      "sector": "Business_Services",
+      "country": "United Kingdom",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "No data volume or sample published by the group at time of analysis"
+        ],
+        "fr": [
+          "Aucun volume ni échantillon de données publié par le groupe au moment de l'analyse"
+        ]
+      },
+      "threat_actor": "Aurora",
+      "financial_impact_usd": null,
+      "source_url": "https://www.ransomlook.io//group/aurora"
+    }
+  ],
+  "target": {
+    "sectors": {
+      "en": [
+        "Critical_Infrastructure",
+        "Government_and_Defense",
+        "Technology_and_Telecom",
+        "Healthcare_and_Life_Sciences",
+        "Finance",
+        "Industry_and_Manufacturing",
+        "Education_and_Research",
+        "Business_Services",
+        "Retail_and_Consumer",
+        "Hospitality_and_Entertainment",
+        "Media_and_Communication",
+        "Security"
+      ],
+      "fr": [
+        "Infrastructure_Critique",
+        "Gouvernement_et_Défense",
+        "Technologie_et_Télécom",
+        "Santé_et_Sciences_du_Vivant",
+        "Finance",
+        "Industrie_et_Fabrication",
+        "Éducation_et_Recherche",
+        "Services_aux_Entreprises",
+        "Commerce_de_Détail_et_Consommation",
+        "Hôtellerie_et_Divertissement",
+        "Médias_et_Communication",
+        "Sécurité"
+      ]
+    },
+    "countries": {
+      "en": [
+        "United States",
+        "France",
+        "United Kingdom",
+        "Germany",
+        "Netherlands",
+        "Belgium",
+        "Finland",
+        "Japan",
+        "India",
+        "South Korea",
+        "Canada",
+        "Spain",
+        "Italy",
+        "Australia",
+        "Brazil",
+        "Singapore",
+        "Switzerland",
+        "Turkey",
+        "Pakistan",
+        "Portugal",
+        "South Africa",
+        "Mexico",
+        "Israel",
+        "Global"
+      ],
+      "fr": [
+        "États-Unis",
+        "France",
+        "Royaume-Uni",
+        "Allemagne",
+        "Pays-Bas",
+        "Belgique",
+        "Finlande",
+        "Japon",
+        "Inde",
+        "Corée du Sud",
+        "Canada",
+        "Espagne",
+        "Italie",
+        "Australie",
+        "Brésil",
+        "Singapour",
+        "Suisse",
+        "Turquie",
+        "Pakistan",
+        "Portugal",
+        "Afrique du Sud",
+        "Mexique",
+        "Israël",
+        "Mondial"
+      ]
+    },
+    "narrative": {
+      "en": "- **Critical Infrastructure & OT:** SafePay ransomware has hit more than 600 critical-infrastructure organisations since 2024 (CISA/FBI advisory), exploiting Cisco ASA/FTD, SonicWall and Veeam flaws (CVE-2020-3259, CVE-2023-20269, CVE-2023-27532, CVE-2024-40711, CVE-2024-40766). Flare recovered 601 industrial remote-access addresses from infostealer logs after the French refrigeration-system attack, 73% tied to device credentials on the largest remote-access platform. Accenture, Dragos and SANS launched a USD 10 million initiative for small US water, wastewater, electricity and gas utilities.\n- **Government & Defense:** APT28 (Swallowtail/BlueDelta) breached a NATO naval shipyard, a law-enforcement agency and a military aero-engine manufacturer, deploying HOOKEDGE via 185.82.218[.]119:443 and a new reflective loader (ld.exe). French MP and former minister Agnès Pannier-Runacher was targeted with commercial spyware. Belgian, Dutch, Finnish, French and German public sites went offline over PHP2Shell, including the Paris police prefecture, the Dutch digital identity service and the Dutch NCSC; the Australian Signals Directorate was temporarily affected.\n- **Technology & Telecom:** UNC7017 hijacked AOMEI Backupper's ABMarket update channel (windows on 28 May, 16 and 20 July 2026) with CROSSROAD, SHINYROAD and Adaptix C2, hitting IT services, telecom and higher-education organisations in twelve countries. TeamUpdraft lost UpdraftCentral connection keys used to backdoor WordPress sites; Zeabur is shutting down after 3.2 million environment-variable records and 321,810 accounts leaked; LiteLLM 1.107.0 on PyPI shipped a credential stealer; Digital Arts (i-FILTER/m-FILTER) disclosed a cloud-service breach in Japan; Cellebrite lost an internal document on Advanced Unlocks.\n- **Healthcare & Life Sciences:** Parkview Health (Indiana/Ohio) took its network down, blocking MyChart and appointment reminders; Central Ohio Primary Care (1.4M patients, Chaos via vishing); Paradigm Healthcare Services (970,000 Medi-Cal members); IMS Care Center (Phoenix, SSN and PHI); 23andMe's 6.9 million-record breach reached a California settlement.\n- **Finance:** The ECB set a 31 October 2026 deadline (SSM-2026-0301) for AI-attack action plans across significant institutions. State Bank of India customer data surfaced on the dark web (~375,000 records analysed, 2,722 PDF loan and account forms). A Nigerian national received eight years for USD 3.3 million in tax-refund spearphishing against US tax preparers.\n- **Industry & Manufacturing:** Lazarus' Operation FlashHole hit South Korean software, construction and wired-communication equipment firms through the mandatory CrossWeb EX security software. STS Aviation Group exposed fingerprints, SSNs and health data; American Piping & Boiler (Hawaii) reported a network intrusion; Siemens Software Center DLL sideloading (CVE-2026-110936) entered CISA KEV.\n- **Retail, Hospitality & Media:** Booking.com faces a DSA formal investigation over fake listings and reservation-hijack phishing (Consumentenbond: 200 reports and EUR 65,000 in losses for 2025). 1win leaked 96.5 million records; Nikkei disclosed its third breach in a month (1.8 million records); a computer hidden behind a hotel refrigerator in Kobe sent nearly 480,000 phishing emails.\n- **Education, Public Sector & NGO:** Klein ISD (37,966 individuals via Frontline Education), an Indian university (5,200 records), Data Cymru/Ogi Networks (3,300 people, mostly children, 42 GB exfiltrated and 182.7 GB encrypted), the German AfD (421,000 emails) and Rajasthan Police (ScarlettGroup claim).",
+      "fr": "- **Infrastructures critiques et OT :** le rançongiciel SafePay a frappé plus de 600 organisations d'infrastructures critiques depuis 2024 (avis CISA/FBI), en exploitant les failles Cisco ASA/FTD, SonicWall et Veeam (CVE-2020-3259, CVE-2023-20269, CVE-2023-27532, CVE-2024-40711, CVE-2024-40766). Flare a récupéré 601 adresses d'accès distant industriel dans des journaux d'infostealers après l'attaque du système de réfrigération en France, 73 % liées à des identifiants d'appareils sur la plus grande plateforme d'accès distant. Accenture, Dragos et SANS ont lancé une initiative de 10 M USD pour les petites utilities américaines de l'eau, des eaux usées, de l'électricité et du gaz.\n- **Gouvernement et Défense :** APT28 (Swallowtail/BlueDelta) a compromis un chantier naval militaire de l'OTAN, une agence des forces de l'ordre et un fabricant de moteurs aéronautiques militaires, en déployant HOOKEDGE via 185.82.218[.]119:443 et un nouveau loader réflectif (ld.exe). La députée et ancienne ministre française Agnès Pannier-Runacher a été visée par un logiciel espion commercial. Des sites publics belges, néerlandais, finlandais, français et allemands ont été mis hors ligne à cause de PHP2Shell, dont la préfecture de police de Paris, le service d'identité numérique néerlandais et le NCSC néerlandais ; l'Australian Signals Directorate a été temporairement affecté.\n- **Technologie et Télécoms :** UNC7017 a détourné le canal de mise à jour ABMarket d'AOMEI Backupper (fenêtres les 28 mai, 16 et 20 juillet 2026) avec CROSSROAD, SHINYROAD et Adaptix C2, touchant des organisations des services informatiques, des télécoms et de l'enseignement supérieur dans douze pays. TeamUpdraft a perdu des clés de connexion UpdraftCentral utilisées pour porter atteinte à des sites WordPress ; Zeabur ferme après la fuite de 3,2 millions d'enregistrements de variables d'environnement et de 321 810 comptes ; LiteLLM 1.107.0 sur PyPI contenait un voleur d'identifiants ; Digital Arts (i-FILTER/m-FILTER) a divulgué une violation de services cloud au Japon ; Cellebrite a perdu un document interne sur Advanced Unlocks.\n- **Santé et Sciences de la vie :** Parkview Health (Indiana/Ohio) a coupé son réseau, bloquant MyChart et les rappels de rendez-vous ; Central Ohio Primary Care (1,4 M de patients, Chaos par vishing) ; Paradigm Healthcare Services (970 000 membres Medi-Cal) ; IMS Care Center (Phoenix, SSN et PHI) ; la violation de 6,9 millions d'enregistrements de 23andMe a abouti à une transaction en Californie.\n- **Finance :** la BCE a fixé au 31 octobre 2026 (SSM-2026-0301) l'échéance des plans d'action contre les attaques assistées par IA pour les établissements significatifs. Les données clients de la State Bank of India ont refait surface sur le dark web (environ 375 000 enregistrements analysés, 2 722 PDF de prêts et de comptes). Un ressortissant nigérian a été condamné à huit ans pour 3,3 M USD de spearphishing fiscal contre des cabinets américains.\n- **Industrie et Fabrication :** l'opération FlashHole de Lazarus a frappé des entreprises sud-coréennes du logiciel, de la construction et des équipements de communication filaire via le logiciel de sécurité obligatoire CrossWeb EX. STS Aviation Group a exposé empreintes digitales, SSN et données de santé ; American Piping & Boiler (Hawaï) a signalé une intrusion réseau ; le DLL sideloading de Siemens Software Center (CVE-2026-110936) est entré au KEV de la CISA.\n- **Commerce, Hôtellerie et Médias :** Booking.com fait l'objet d'une enquête formelle DSA sur les annonces frauduleuses et le phishing par détournement de réservation (Consumentenbond : 200 signalements et 65 000 EUR de préjudice en 2025). 1win a exposé 96,5 millions d'enregistrements ; Nikkei a divulgué sa troisième violation en un mois (1,8 million d'enregistrements) ; un ordinateur dissimulé derrière un réfrigérateur d'hôtel à Kobe a envoyé près de 480 000 courriels de phishing.\n- **Éducation, secteur public et ONG :** Klein ISD (37 966 personnes via Frontline Education), une université indienne (5 200 enregistrements), Data Cymru/Ogi Networks (3 300 personnes, majoritairement des enfants, 42 Go exfiltrés et 182,7 Go chiffrés), l'AfD allemande (421 000 e-mails) et la police du Rajasthan (revendication ScarlettGroup)."
+    }
+  },
+  "trends": {
+    "emerging_techniques": {
+      "en": [
+        "Agentic-AI-driven reconnaissance, target triage and exploitation (ARTEX framework used by Storm-0940 against the ConnectWise MSP ecosystem)",
+        "Vendor update-channel hijacking with very short malicious windows (AOMEI ABMarket, 5-10 minutes on 28 May, 16 and 20 July 2026)",
+        "Abuse of legally mandated security software as an intrusion vector (Lazarus via CrossWeb EX / INISAFECrossWebEXSvc.exe)",
+        "NTLM hash capture through invisible one-pixel popups redirecting to attacker-controlled WebDAV",
+        "ClickFix clipboard-injected command execution, now countered by Chrome Enhanced Protection server-side scam detection",
+        "Firmware-level preinstalled Android malware on low-cost MediaTek devices and counterfeit handsets (Midnight Mimosa)",
+        "Enumeration of AI assistant share links through passive DNS (6,800 Meta Muse conversation links on cf.metaaiusercontent.com)",
+        "Non-human identity and AI agent credential abuse, including long-lived API tokens enabling destructive production actions (PocketOS)",
+        "Machine-speed exploitation of two-decade-old memory-safety bugs (PHP2Shell identified in 2004, exploited at scale in 2026)",
+        "Phishing relayed through legitimate SaaS notification channels (Frame.io Phantom Preview campaign)"
+      ],
+      "fr": [
+        "Reconnaissance, triage des cibles et exploitation pilotés par IA agentique (cadre ARTEX utilisé par Storm-0940 contre l'écosystème MSP ConnectWise)",
+        "Détournement de canaux de mise à jour éditeurs avec des fenêtres malveillantes très courtes (ABMarket d'AOMEI, 5 à 10 minutes les 28 mai, 16 et 20 juillet 2026)",
+        "Abus de logiciels de sécurité imposés par la loi comme vecteur d'intrusion (Lazarus via CrossWeb EX / INISAFECrossWebEXSvc.exe)",
+        "Capture de hachages NTLM via des popups invisibles d'un pixel redirigeant vers un WebDAV contrôlé par l'attaquant",
+        "Exécution de commandes injectées par presse-papiers de type ClickFix, désormais contrée par la détection côté serveur de Chrome Enhanced Protection",
+        "Malware Android préinstallé dans le firmware d'appareils MediaTek à bas coût et de contrefaçons (Midnight Mimosa)",
+        "Énumération de liens de partage d'assistants IA via DNS passif (6 800 liens de conversation Meta Muse sur cf.metaaiusercontent.com)",
+        "Abus d'identités non humaines et d'identifiants d'agents IA, dont des jetons API de longue durée permettant des actions destructrices en production (PocketOS)",
+        "Exploitation à la vitesse de la machine de bugs mémoire vieux de vingt ans (PHP2Shell identifié en 2004, exploité à l'échelle en 2026)",
+        "Phishing relayé par des canaux de notification SaaS légitimes (campagne Phantom Preview via Frame.io)"
+      ]
+    },
+    "declining_techniques": {
+      "en": [
+        "Static domain-reputation blocklists as a primary defence, defeated by abuse of legitimate SaaS and cloud infrastructure",
+        "SMS and TOTP-only MFA against device-code, AiTM and reservation-hijack phishing",
+        "Signature-based WAF rules against memory-corruption exploits such as PHP2Shell, where memory_limit itself is the primitive",
+        "Long-lived static API tokens and shared contractor accounts for OT remote maintenance",
+        "Implicit trust in vendor update channels and in software mandated by regulation",
+        "Patch prioritisation based on CVSS base score alone, superseded by EPSS/KEV exploitability ranking",
+        "Relying on LSASS-access detection alone for credential theft, bypassed by forced-authentication NTLM capture"
+      ],
+      "fr": [
+        "Les listes de blocage statiques par réputation de domaine comme défense principale, défaites par l'abus d'infrastructures SaaS et cloud légitimes",
+        "Le MFA SMS et TOTP seul face au device-code phishing, à l'AiTM et au phishing par détournement de réservation",
+        "Les règles WAF par signature contre les exploits de corruption mémoire comme PHP2Shell, où memory_limit est lui-même la primitive",
+        "Les jetons API statiques de longue durée et les comptes de prestataires partagés pour la maintenance à distance OT",
+        "La confiance implicite dans les canaux de mise à jour des éditeurs et dans les logiciels imposés par la réglementation",
+        "La priorisation des correctifs sur le seul score CVSS de base, remplacée par le classement d'exploitabilité EPSS/KEV",
+        "La détection du seul accès à LSASS pour le vol d'identifiants, contournée par la capture NTLM par authentification forcée"
+      ]
+    },
+    "geopolitical_context": {
+      "en": "The period crystallises a three-way convergence. Russian espionage is now aimed squarely at the European defence industrial base: APT28's hands-on-keyboard intrusion into a NATO naval shipyard, a law-enforcement agency and a military aero-engine maker, with a dedicated C2 IP replacing the previously used webhook.site, signals preparation for long-dwell access rather than collection for its own sake. North Korean operations have shifted from financial theft toward supply-chain positioning: Lazarus' FlashHole abuses a security package the South Korean state requires on every endpoint, turning a compliance mandate into an attack surface, and expands from SyncHole's sectors into software, construction and communications equipment. Unattributed but state-grade capability is visible in Storm-0940's ARTEX agentic-AI campaign against ConnectWise MSPs, which Microsoft attributes to a nation-state and which converts a single trusted vendor relationship into access to hundreds of downstream networks. Meanwhile the PHP2Shell episode produced an unusual public-policy response: Belgium, the Netherlands, Finland, France and Germany chose service shutdown over exposure, the NSA advised taking systems offline if patching was impossible, and the UK NCSC directed defenders to hunt for attacker-installed backdoors. The political economy of the vulnerability economy is also shifting — OpenAI claimed credit for an AI-assisted discovery that the original researcher disputes, and the curl project moved sub-HIGH reports to public disclosure because AI-generated submissions had exhausted its maintainers. Finally, the encryption debate re-entered the security agenda through EDRi's Global Encryption Day campaign against CSA client-side scanning, key escrow and law-enforcement hacking powers, framed as a legally mandated single point of failure.",
+      "fr": "La période cristallise une convergence à trois volets. L'espionnage russe vise désormais directement la base industrielle de défense européenne : l'intrusion hands-on-keyboard d'APT28 dans un chantier naval de l'OTAN, une agence des forces de l'ordre et un fabricant de moteurs aéronautiques militaires, avec une IP de C2 dédiée remplaçant le webhook.site précédemment utilisé, signale une préparation à un accès de longue durée plutôt qu'une collecte pour elle-même. Les opérations nord-coréennes ont glissé du vol financier vers le positionnement dans la chaîne d'approvisionnement : FlashHole de Lazarus abuse d'un logiciel de sécurité que l'État sud-coréen impose sur chaque poste, transformant une obligation de conformité en surface d'attaque, et s'étend des secteurs de SyncHole vers le logiciel, la construction et les équipements de communication. Une capacité non attribuée mais de niveau étatique est visible dans la campagne d'IA agentique ARTEX de Storm-0940 contre les MSP ConnectWise, que Microsoft attribue à un État-nation et qui convertit une seule relation fournisseur de confiance en accès à des centaines de réseaux en aval. Parallèlement, l'épisode PHP2Shell a produit une réponse de politique publique inhabituelle : la Belgique, les Pays-Bas, la Finlande, la France et l'Allemagne ont choisi l'arrêt de service plutôt que l'exposition, la NSA a conseillé de mettre les systèmes hors ligne en l'absence de correctif, et le NCSC britannique a demandé de rechercher les portes dérobées installées par les attaquants. L'économie politique de la vulnérabilité se déplace aussi — OpenAI a revendiqué une découverte assistée par IA que le chercheur à l'origine conteste, et le projet curl a basculé les rapports inférieurs à HIGH en divulgation publique parce que les soumissions générées par IA avaient épuisé ses mainteneurs. Enfin, le débat sur le chiffrement est revenu à l'agenda sécuritaire via la campagne d'EDRi pour le Global Encryption Day contre le client-side scanning du CSA, le key escrow et les pouvoirs de hacking policier, présentés comme un point de défaillance unique imposé par la loi."
+    }
+  },
+  "recommendations": {
+    "strategic": {
+      "en": [
+        {
+          "title": "Treat Vendor Update Channels as Untrusted",
+          "detail": "UNC7017 rewrote AOMEI Backupper's ABMarket configuration files for windows of only five to ten minutes to deliver CROSSROAD, SHINYROAD and Adaptix C2, and Storm-0940 used ARTEX to attack the ConnectWise MSP ecosystem. Require hash or signature validation of every update for backup, remote-administration and security agents before execution, stage updates in a pilot ring, and log the full update-client process tree. Assume any host that polled a vendor update endpoint during a known compromise window is compromised until proven otherwise."
+        },
+        {
+          "title": "Patch PHP and Edge Appliances Within 24 Hours",
+          "detail": "PHP2Shell (CVE-2026-109618/109619, CVSS 9.2) was exploited against WordPress within 48 hours of disclosure and forced five European governments to take public sites offline. Establish a 24-hour emergency patch path for PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35, plus Plex 1.43.3.10861, FortiSIEM 7.5.1, GitLab 19.5.1 and Apache Traffic Server 9.2.16/10.1.5/10.2.1. Where patching is impossible, remove the service from the Internet rather than relying on WAF signatures alone."
+        },
+        {
+          "title": "Govern Non-Human Identities and AI Agents",
+          "detail": "A long-lived API token let an AI agent delete a production database (PocketOS), 47% of developers observed an agent following prompt-injection instructions, and NIST/NSA/CISA published ten incident-readiness practices for rogue AI agents under Executive Order 14434. Inventory every agent and service account with a named owner, replace static secrets with short-lived scoped credentials issued by a secrets manager, and require human approval for destructive or irreversible actions."
+        },
+        {
+          "title": "Eliminate Outbound NTLM and WebDAV Egress",
+          "detail": "UNC7017's invisible one-pixel popup forced NTLM authentication to attacker WebDAV, and APT28 ran a PowerShell loopback listener to capture an NTLM exchange inside a NATO naval shipyard. Block outbound SMB, NTLM and WebDAV at the perimeter, disable the WebClient service on servers and administrative workstations, and alert on any 4624/4776 authentication originating from a host toward an external address. This single control breaks two unrelated intrusion chains observed this week."
+        },
+        {
+          "title": "Bring Contractor OT Access Under Zero Trust",
+          "detail": "Flare recovered 601 industrial remote-access addresses from infostealer logs after the French refrigeration-system attack, 73% tied to device credentials, and SafePay has hit 600+ critical-infrastructure organisations since 2024. Mandate named accounts with FIDO2 MFA for every integrator and maintenance access path, broker sessions through a privileged access management gateway with full recording, and continuously monitor stealer-log feeds for your domains and your contractors' remote-access portals."
+        },
+        {
+          "title": "Meet the 31 October ECB AI Deadline",
+          "detail": "SSM-2026-0301 requires significant institutions to submit a concrete plan against AI-assisted attacks by 31 October 2026, prioritising exploitability (EPSS/KEV) over base CVSS, complete ICT asset inventories with SBOMs, and east-west detection. Treat time-to-detect, time-to-patch, time-to-contain and time-to-recover as board-level metrics with measured baselines, and evidence segmentation as both attack-surface reduction and containment control."
+        }
+      ],
+      "fr": [
+        {
+          "title": "Traiter les canaux de mise à jour comme non fiables",
+          "detail": "UNC7017 a réécrit les fichiers de configuration ABMarket d'AOMEI Backupper pendant des fenêtres de seulement cinq à dix minutes pour livrer CROSSROAD, SHINYROAD et Adaptix C2, et Storm-0940 a utilisé ARTEX contre l'écosystème MSP ConnectWise. Exiger une validation par hash ou signature de chaque mise à jour des agents de sauvegarde, d'administration à distance et de sécurité avant exécution, déployer les mises à jour en anneau pilote et journaliser l'arbre de processus complet du client de mise à jour. Considérer tout hôte ayant interrogé un point de mise à jour éditeur pendant une fenêtre de compromission connue comme compromis jusqu'à preuve du contraire."
+        },
+        {
+          "title": "Corriger PHP et les équipements de bord sous 24 heures",
+          "detail": "PHP2Shell (CVE-2026-109618/109619, CVSS 9,2) a été exploité contre WordPress en 48 heures après divulgation et a contraint cinq gouvernements européens à mettre des sites publics hors ligne. Établir une procédure de correctif d'urgence à 24 heures pour PHP 8.5.12, 8.4.27, 8.3.36 et 8.2.35, ainsi que Plex 1.43.3.10861, FortiSIEM 7.5.1, GitLab 19.5.1 et Apache Traffic Server 9.2.16/10.1.5/10.2.1. Lorsque le patch est impossible, retirer le service d'Internet plutôt que de se reposer sur les seules signatures WAF."
+        },
+        {
+          "title": "Gouverner les identités non humaines et les agents IA",
+          "detail": "Un jeton API de longue durée a permis à un agent IA de supprimer une base de production (PocketOS), 47 % des développeurs ont observé un agent suivant des instructions issues d'une prompt injection, et le NIST, la NSA et la CISA ont publié dix pratiques de préparation aux incidents d'agents d'IA au titre de l'Executive Order 14434. Inventorier chaque agent et compte de service avec un propriétaire nommé, remplacer les secrets statiques par des identifiants à portée limitée et courte durée émis par un coffre-fort, et exiger une approbation humaine pour les actions destructrices ou irréversibles."
+        },
+        {
+          "title": "Éliminer les sorties NTLM et WebDAV",
+          "detail": "Le popup invisible d'un pixel d'UNC7017 forçait une authentification NTLM vers un WebDAV adverse, et APT28 a utilisé un écouteur PowerShell sur le bouclage local pour capturer un échange NTLM dans un chantier naval de l'OTAN. Bloquer SMB, NTLM et WebDAV sortants au périmètre, désactiver le service WebClient sur les serveurs et postes d'administration, et alerter sur toute authentification 4624/4776 émise par un hôte vers une adresse externe. Ce seul contrôle casse deux chaînes d'intrusion distinctes observées cette semaine."
+        },
+        {
+          "title": "Placer les accès OT des prestataires en zero trust",
+          "detail": "Flare a récupéré 601 adresses d'accès distant industriel dans des journaux d'infostealers après l'attaque du système de réfrigération en France, 73 % liées à des identifiants d'appareils, et SafePay a frappé plus de 600 organisations d'infrastructures critiques depuis 2024. Imposer des comptes nominatifs avec MFA FIDO2 pour chaque intégrateur et chemin de maintenance, brokeriser les sessions via une passerelle de gestion des accès à privilèges avec enregistrement complet, et surveiller en continu les flux de stealer logs pour vos domaines et les portails d'accès distant de vos prestataires."
+        },
+        {
+          "title": "Respecter l'échéance IA de la BCE au 31 octobre",
+          "detail": "SSM-2026-0301 exige des établissements significatifs un plan concret contre les attaques assistées par IA au 31 octobre 2026, priorisant l'exploitabilité (EPSS/KEV) sur le CVSS de base, un inventaire complet des actifs TIC avec SBOM et une détection est-ouest. Traiter les délais de détection, de correctif, de confinement et de rétablissement comme des métriques de niveau conseil avec des bases mesurées, et documenter la segmentation comme réduction de surface d'attaque et contrôle de confinement."
+        }
+      ]
+    },
+    "operational": {
+      "en": [
+        {
+          "title": "Hunt Web Shells on All PHP Servers",
+          "detail": "Search every Internet-facing PHP host for files created after 20 October 2026 in upload, cache and wp-content directories, and grep for eval, base64_decode, assert, preg_replace with the /e modifier and concatenated superglobals. Compare file hashes against official WordPress, Drupal, Joomla and Laravel distributions, and alert on php-fpm or Apache spawning sh, bash, curl, wget or python. The UK NCSC explicitly directed defenders to hunt attacker-installed backdoors after PHP2Shell."
+        },
+        {
+          "title": "Audit AOMEI and Radmin Artefacts Now",
+          "detail": "Query proxy and DNS logs for AOMEI update requests on 28 May, 16 July and 20 July 2026 followed by ZIP downloads, then pivot on scheduled-task creation pointing to freshly dropped binaries and on signed Radmin components executing outside approved admin hosts. Isolate any host that downloaded an archive during those windows, delete the CROSSROAD/SHINYROAD artefacts and Adaptix C2 implants, and rotate machine and administrator credentials where outbound NTLM was observed."
+        },
+        {
+          "title": "Rotate Every Secret Touched by LiteLLM 1.107.0",
+          "detail": "The LiteLLM 1.107.0 PyPI wheel exfiltrated environment variables, configuration files, LLM provider API keys, cloud credentials and database secrets to www[.]litellm[.]dev. Run pip show litellm and grep lockfiles and container images for version 1.107.0, then rotate all LLM API keys, cloud access keys, database passwords and SSH keys present on any host that installed the wheel. Block www[.]litellm[.]dev at DNS and proxy and review provider billing for anomalous usage."
+        },
+        {
+          "title": "Revoke UpdraftCentral Keys and Audit WordPress",
+          "detail": "Stolen UpdraftCentral connection keys from the TeamUpdraft breach allow attackers to backdoor managed WordPress sites remotely. Rotate all UpdraftCentral, UpdraftVault and UpdraftClone keys, force password resets and 2FA re-enrolment for teamupdraft.com accounts, and audit every managed site for new administrator users, modified plugin files and unexpected scheduled tasks. Check wp_options and wp_users for entries created outside known deployment windows."
+        },
+        {
+          "title": "Block ClickFix Execution Paths at the Endpoint",
+          "detail": "Chrome Enhanced Protection now warns on copied malicious commands, but endpoint controls remain the last line of defence. Enable PowerShell Script Block Logging (event 4104) and process creation with command line (4688), deploy ASR rules blocking Office and script child processes, restrict rundll32, mshta and wscript via WDAC or AppLocker, and alert on commands containing IEX, DownloadString, -enc or base64 blobs launched from RunMRU or the clipboard."
+        },
+        {
+          "title": "Purge eMudhra Intermediates from Trust Stores",
+          "detail": "Compromised eMudhra intermediate certificates allow forging valid TLS and code-signing certificates for any domain, and Go crypto/x509 lacked a denylist (CVE-2026-111943). Inventory intermediates across Windows, Mozilla, Java, container and network-device trust stores, remove the affected chain via GPO or MDM, enforce strict OCSP/CRL validation on Internet-facing endpoints, and monitor Certificate Transparency logs for unexpected issuance under the compromised intermediate."
+        }
+      ],
+      "fr": [
+        {
+          "title": "Chasser les web shells sur tous les serveurs PHP",
+          "detail": "Rechercher sur chaque hôte PHP exposé à Internet les fichiers créés après le 20 octobre 2026 dans les répertoires upload, cache et wp-content, et grep sur eval, base64_decode, assert, preg_replace avec le modificateur /e et les superglobales concaténées. Comparer les empreintes avec les distributions officielles WordPress, Drupal, Joomla et Laravel, et alerter lorsque php-fpm ou Apache engendre sh, bash, curl, wget ou python. Le NCSC britannique a explicitement demandé de rechercher les portes dérobées installées après PHP2Shell."
+        },
+        {
+          "title": "Auditer immédiatement les artefacts AOMEI et Radmin",
+          "detail": "Interroger les journaux proxy et DNS pour les requêtes de mise à jour AOMEI des 28 mai, 16 juillet et 20 juillet 2026 suivies de téléchargements ZIP, puis pivoter sur la création de tâches planifiées pointant vers des binaires fraîchement déposés et sur les composants Radmin signés exécutés hors des hôtes d'administration approuvés. Isoler tout hôte ayant téléchargé une archive pendant ces fenêtres, supprimer les artefacts CROSSROAD/SHINYROAD et les implants Adaptix C2, et faire tourner les identifiants machine et administrateur là où du NTLM sortant a été observé."
+        },
+        {
+          "title": "Faire tourner tous les secrets touchés par LiteLLM 1.107.0",
+          "detail": "Le wheel PyPI LiteLLM 1.107.0 exfiltrait variables d'environnement, fichiers de configuration, clés API de fournisseurs LLM, identifiants cloud et secrets de bases de données vers www[.]litellm[.]dev. Exécuter pip show litellm et grep les lockfiles et images de conteneurs pour la version 1.107.0, puis faire tourner toutes les clés API LLM, clés d'accès cloud, mots de passe de bases de données et clés SSH présents sur tout hôte ayant installé le wheel. Bloquer www[.]litellm[.]dev au DNS et au proxy et vérifier la facturation des fournisseurs pour des usages anormaux."
+        },
+        {
+          "title": "Révoquer les clés UpdraftCentral et auditer WordPress",
+          "detail": "Les clés de connexion UpdraftCentral volées lors de la violation TeamUpdraft permettent de porter atteinte à distance à des sites WordPress gérés. Faire tourner toutes les clés UpdraftCentral, UpdraftVault et UpdraftClone, forcer la réinitialisation des mots de passe et le réenrôlement 2FA des comptes teamupdraft.com, et auditer chaque site géré pour de nouveaux administrateurs, des fichiers de plugins modifiés et des tâches planifiées inattendues. Vérifier wp_options et wp_users pour des entrées créées hors des fenêtres de déploiement connues."
+        },
+        {
+          "title": "Bloquer les chemins d'exécution ClickFix sur le poste",
+          "detail": "Chrome Enhanced Protection avertit désormais sur les commandes malveillantes copiées, mais les contrôles endpoint restent la dernière ligne de défense. Activer PowerShell Script Block Logging (événement 4104) et la création de processus avec ligne de commande (4688), déployer les règles ASR bloquant les processus enfants d'Office et de scripts, restreindre rundll32, mshta et wscript via WDAC ou AppLocker, et alerter sur les commandes contenant IEX, DownloadString, -enc ou des blocs base64 lancées depuis RunMRU ou le presse-papiers."
+        },
+        {
+          "title": "Purger les intermédiaires eMudhra des trust stores",
+          "detail": "Les certificats intermédiaires eMudhra compromis permettent de forger des certificats TLS et de signature de code valides pour n'importe quel domaine, et Go crypto/x509 n'avait pas de denylist (CVE-2026-111943). Inventorier les intermédiaires dans les trust stores Windows, Mozilla, Java, conteneurs et équipements réseau, retirer la chaîne affectée via GPO ou MDM, imposer une validation OCSP/CRL stricte sur les points de terminaison exposés à Internet, et surveiller les journaux de transparence des certificats pour des émissions inattendues sous l'intermédiaire compromis."
+        }
+      ]
+    }
+  }
+}
