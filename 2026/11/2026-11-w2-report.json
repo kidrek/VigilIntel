@@ -1,0 +1,2578 @@
+{
+  "threat_level": {
+    "score": 5,
+    "label": {
+      "en": "Severe",
+      "fr": "Sévère"
+    },
+    "justification": {
+      "en": "The period combines active exploitation of CISA KEV entries (SonicWall CVE-2026-19868 and WordPress CVE-2026-119977), a CVSS 10.0 Tenda AC19 heap overflow, active OpenSSH CVE-2026-123158 exploitation, and a $6.3B Binance theft attributed to North Korea. Data breach volume is exceptional: a claimed 53M Ukrainian citizenship records, 31M RENIEC Peru identity records, 13M Perry Johnson medical records, and 405k Good Smile payment cards. Ransomware activity spans Dark Project's 80% affiliate RaaS model, BlackNevas ESXi/Proxmox attacks, and MedusaLock/Payload claims. AI agent abuse moved into operational reality via Claude Dispatch, coding-agent secret leakage, and agent-to-agent secret disclosure.",
+      "fr": "La période combine l'exploitation active d'entrées CISA KEV (SonicWall CVE-2026-19868 et WordPress CVE-2026-119977), un débordement de tas Tenda AC19 de score CVSS 10.0, l'exploitation active d'OpenSSH CVE-2026-123158 et un vol de 6,3 Md$ chez Binance attribué à la Corée du Nord. Le volume de violations est exceptionnel : 53 M d'enregistrements de citoyenneté ukrainienne revendiqués, 31 M d'identités RENIEC au Pérou, 13 M de dossiers médicaux Perry Johnson et 405 k cartes de paiement Good Smile. L'activité rançongiciel couvre le modèle RaaS à 80 % de Dark Project, les attaques BlackNevas sur ESXi/Proxmox et les revendications MedusaLock/Payload. L'abus d'agents IA devient opérationnel via Claude Dispatch, la fuite de secrets par agents de codage et la divulgation de secrets entre agents."
+    },
+    "_triggers": [
+      "+4 — 2 CVE(s) CISA KEV",
+      "+4 — 4 CVE(s) CVSS ≥ 9.0",
+      "+2 — 1 acteur(s) étatique(s)",
+      "+3 — 4 opérateur(s) ransomware",
+      "+1 — ≥ 3 acteurs distincts actifs",
+      "+3 — 5 breach(es) ≥ 100k enregistrements",
+      "+2 — secteurs critiques ciblés : Government_and_Defense, Critical_Infrastructure",
+      "+1 — 27 TTPs distinctes"
+    ]
+  },
+  "executive_summary": {
+    "en": "Week 2 of November 2026 opens with a critical risk posture: 26 valid CVEs, two CISA KEV entries (SonicWall CVE-2026-19868 and WordPress CVE-2026-119977), active exploitation of OpenSSH CVE-2026-123158, and a CVSS 10.0 Tenda AC19 heap overflow. The data landscape is equally severe: 26+ breaches include a claimed 53M Ukrainian citizenship records, 31M RENIEC Peru identity records, 13M Perry Johnson medical records, 405k Good Smile payment cards, and a $6.3B Binance theft attributed to North Korea. Ransomware activity spans Dark Project's 80% affiliate RaaS model, BlackNevas attacks on ESXi/Proxmox management planes, and MedusaLock/Payload claims against Colombian tax authority Dian and MSP Otto Stops. AI risk moved from theory to operational: Claude Dispatch abuse via malicious browser extensions enabled local code execution, coding agents leaked 1,379 secrets to GitHub, and agent-to-agent pressure caused 15% secret disclosure in tests. Phishing abused Cloudflare R2 and a Microsoft typosquat, while GNSS jamming in the Baltic and Japan's XCPE residential proxy botnet illustrate state and criminal infrastructure convergence. Regulatory pressure intensified via EU DSA TikTok findings, California AB 1709 litigation, UK Online Safety Act removals, and a UK amendment to regulate AI agent incidents. Priority actions: patch KEV by 20 November, enforce FIDO2 on VPN/admin, isolate hypervisors, govern AI agents and browser extensions, and rotate all secrets exposed through coding agents.",
+    "fr": "La deuxième semaine de novembre 2026 s'ouvre sur une posture de risque critique : 26 CVE valides, deux entrées CISA KEV (SonicWall CVE-2026-19868 et WordPress CVE-2026-119977), l'exploitation active d'OpenSSH CVE-2026-123158 et un débordement de tas Tenda AC19 de score CVSS 10.0. Le paysage des données est tout aussi grave : plus de 26 violations incluent 53 M d'enregistrements de citoyenneté ukrainienne revendiqués, 31 M d'identités RENIEC au Pérou, 13 M de dossiers médicaux Perry Johnson, 405 k cartes de paiement Good Smile et un vol de 6,3 Md$ chez Binance attribué à la Corée du Nord. L'activité rançongiciel couvre le modèle RaaS à 80 % de Dark Project, les attaques BlackNevas sur les plans de management ESXi/Proxmox et les revendications MedusaLock/Payload contre l'administration fiscale colombienne Dian et le MSP Otto Stops. Le risque lié à l'IA passe de la théorie à l'opérationnel : l'abus de Claude Dispatch via des extensions navigateur malveillantes permet l'exécution locale de code, les agents de codage ont fuité 1 379 secrets sur GitHub et la pression entre agents a provoqué 15 % de divulgation de secrets lors de tests. Le phishing abuse Cloudflare R2 et un typosquat Microsoft, tandis que le brouillage GNSS en Baltique et le botnet de proxys résidentiels XCPE au Japon illustrent la convergence des infrastructures étatiques et criminelles. La pression réglementaire s'intensifie avec les constatations DSA contre TikTok, le contentieux californien AB 1709, les retraits liés à l'Online Safety Act britannique et un amendement britannique pour encadrer les incidents d'agents IA. Actions prioritaires : corriger les KEV avant le 20 novembre, imposer FIDO2 sur VPN/admin, isoler les hyperviseurs, gouverner les agents IA et extensions navigateur, et faire tourner tous les secrets exposés via les agents de codage."
+  },
+  "regulatory": {
+    "analyse": {
+      "en": "Regulatory activity this period converges on platform design, AI agent accountability, and breach transparency. The European Commission's DSA preliminary findings against TikTok reframe recommendation algorithms as regulated products, with potential fines up to 6% of global turnover. California AB 1709 is now contested by Google, Meta, and TikTok on First Amendment grounds, creating uncertainty for age-verification and autoplay controls due in 2027. The UK Online Safety Act is producing precautionary over-removal on adult content platforms, while a new amendment to the Cyber Security and Resilience Bill would give ministers powers to investigate AI agent incidents, preserve evidence, and impose notification duties on energy, MSP, and cloud providers. NIST/IETF post-quantum FIDO2 firmware shows PQC moving into authentication hardware, but uncertified modules create supply-chain and interoperability risk. Breach notification latency remains a concern: Sussex County NJ detected an intrusion three weeks after initial access and notified roughly three months later.",
+      "fr": "L'activité réglementaire de la période converge vers la conception des plateformes, la responsabilité des agents IA et la transparence des violations. Les constatations préliminaires DSA de la Commission européenne contre TikTok requalifient les algorithmes de recommandation en produits régulés, avec des amendes potentielles jusqu'à 6 % du chiffre d'affaires mondial. La loi californienne AB 1709 est contestée par Google, Meta et TikTok sur le fondement du Premier Amendement, créant une incertitude pour la vérification d'âge et le lecture automatique prévues en 2027. L'Online Safety Act britannique produit une sur-suppression précautionneuse sur les plateformes de contenus adultes, tandis qu'un nouvel amendement au Cyber Security and Resilience Bill donnerait aux ministres des pouvoirs d'enquête sur les incidents d'agents IA, de préservation de preuves et d'obligation de notification pour les fournisseurs d'énergie, les MSP et le cloud. Le firmware FIDO2 post-quantique NIST/IETF montre l'arrivée de la PQC dans le matériel d'authentification, mais les modules non certifiés créent un risque de chaîne d'approvisionnement et d'interopérabilité. La latence de notification reste préoccupante : le comté de Sussex (NJ) a détecté une intrusion trois semaines après l'accès initial et notifié environ trois mois plus tard."
+    },
+    "events": [
+      {
+        "title": {
+          "en": "Post-quantum FIDO2 firmware rp2040_pqc_fido2 released",
+          "fr": "Publication du firmware FIDO2 post-quantique rp2040_pqc_fido2"
+        },
+        "issuing_body": "Open-source project / NIST-IETF ecosystem",
+        "date": "2026-11-08",
+        "jurisdiction": {
+          "region": "Global",
+          "countries": [
+            "US"
+          ]
+        },
+        "type": "Guidance",
+        "status": "Active",
+        "reference": "FIPS 204 / FIPS 203 / RFC 9964",
+        "affected_sectors": [
+          "Technology_and_Telecom",
+          "Security"
+        ],
+        "description": {
+          "en": "An open-source RP2040 firmware implements ML-DSA-87 signatures and ML-KEM-1024 encapsulation for FIDO2/CTAP2.1, with COSE AKP encoding per RFC 9964. It signals PQC readiness for authentication hardware but is not FIPS 140-3 or Common Criteria certified, and its stateless key wrapping moves credential secrets to the relying party. Enterprises should test WebAuthn interoperability and treat uncertified tokens as supply-chain risk.",
+          "fr": "Un firmware open source RP2040 implémente les signatures ML-DSA-87 et l'encapsulation ML-KEM-1024 pour FIDO2/CTAP2.1, avec encodage COSE AKP conforme au RFC 9964. Il signale la préparation PQC du matériel d'authentification, mais n'est ni certifié FIPS 140-3 ni Critères Communs, et son key wrapping sans état déplace les secrets vers la partie de confiance. Les entreprises doivent tester l'interopérabilité WebAuthn et traiter les jetons non certifiés comme un risque de chaîne d'approvisionnement."
+        },
+        "source_url": "https://github.com/player999/rp2040_pqc_fido2"
+      },
+      {
+        "title": {
+          "en": "Sussex County Prosecutor's Office data privacy incident notification",
+          "fr": "Notification d'incident de confidentialité du bureau du procureur du comté de Sussex"
+        },
+        "issuing_body": "Sussex County Prosecutor's Office (NJ)",
+        "date": "2026-11-08",
+        "jurisdiction": {
+          "region": "US",
+          "countries": [
+            "US"
+          ]
+        },
+        "type": "Guidance",
+        "status": "Active",
+        "reference": "NJ data privacy notification",
+        "affected_sectors": [
+          "Government_and_Defense"
+        ],
+        "description": {
+          "en": "The prosecutor's office disclosed unauthorized network access from 15 to 22 July 2026, detected only on 10 August, with notification roughly three months later. Exposed data includes names, Social Security numbers, and driver's license or state ID numbers, a high-value identity kit for fraud and KYC bypass. The initial vector and ransomware involvement remain undisclosed.",
+          "fr": "Le bureau du procureur a révélé un accès réseau non autorisé du 15 au 22 juillet 2026, détecté seulement le 10 août, avec une notification environ trois mois plus tard. Les données exposées incluent noms, numéros de sécurité sociale et numéros de permis ou de carte d'identité d'État, un kit d'identité à forte valeur pour la fraude et le contournement KYC. Le vecteur initial et l'implication d'un rançongiciel restent non divulgués."
+        },
+        "source_url": "https://databreaches.net/2026/11/07/county-of-sussex-new-jersey-notice-of-data-privacy-incident/"
+      },
+      {
+        "title": {
+          "en": "European Commission DSA preliminary findings against TikTok",
+          "fr": "Constatations préliminaires DSA de la Commission européenne contre TikTok"
+        },
+        "issuing_body": "European Commission",
+        "date": "2026-11-08",
+        "jurisdiction": {
+          "region": "EU",
+          "countries": [
+            "BE"
+          ]
+        },
+        "type": "Enforcement_Action",
+        "status": "Under_Review",
+        "reference": "DSA Art. 28, Art. 34-35",
+        "affected_sectors": [
+          "Media_and_Communication",
+          "Technology_and_Telecom",
+          "Retail_and_Consumer"
+        ],
+        "description": {
+          "en": "The Commission found that TikTok's recommendation system failed to prevent rabbit holes of sadness, self-harm, and body-image content. The preliminary finding can lead to corrective measures and fines up to 6% of global turnover. Security teams should expect demands for algorithm transparency, audit data, and age-verification controls that process sensitive personal data.",
+          "fr": "La Commission a conclu que le système de recommandation de TikTok n'a pas empêché des rabbit holes de contenus sur la tristesse, l'automutilation et l'image corporelle. La constatation préliminaire peut déboucher sur des mesures correctives et des amendes jusqu'à 6 % du chiffre d'affaires mondial. Les équipes sécurité doivent anticiper des exigences de transparence algorithmique, de données d'audit et de contrôles de vérification d'âge traitant des données personnelles sensibles."
+        },
+        "source_url": "https://therecord.media/eu-accuses-tiktok-of-rabbit-hole-DSA-violation"
+      },
+      {
+        "title": {
+          "en": "California AB 1709 challenged by Google, Meta, and TikTok",
+          "fr": "La loi californienne AB 1709 contestée par Google, Meta et TikTok"
+        },
+        "issuing_body": "US federal courts / State of California",
+        "date": "2026-11-08",
+        "jurisdiction": {
+          "region": "US",
+          "countries": [
+            "US"
+          ]
+        },
+        "type": "Court_Ruling",
+        "status": "Under_Review",
+        "reference": "AB 1709",
+        "affected_sectors": [
+          "Media_and_Communication",
+          "Technology_and_Telecom",
+          "Retail_and_Consumer"
+        ],
+        "description": {
+          "en": "Google, Meta, and TikTok filed federal challenges to AB 1709, which bans psychologically exploitative personalized feeds and autoplay for users under 16 and mandates age verification. The law applies in 2027 and lets the attorney general add regulated features by rule. Litigation creates compliance uncertainty around age-assurance data and content-design controls.",
+          "fr": "Google, Meta et TikTok ont déposé des recours fédéraux contre l'AB 1709, qui interdit les fils personnalisés et le lecture automatique psychologiquement exploitants pour les moins de 16 ans et impose une vérification d'âge. La loi s'applique en 2027 et permet au procureur général d'ajouter des fonctionnalités régulées par règlement. Le contentieux crée une incertitude de conformité sur les données d'assurance d'âge et les contrôles de conception des contenus."
+        },
+        "source_url": "https://www.malwarebytes.com/blog/news/2026/11/big-tech-sues-over-california-plan-to-limit-kids-scrolling"
+      },
+      {
+        "title": {
+          "en": "Ofcom Online Safety Act content removals on Clips4Sale",
+          "fr": "Retraits de contenus Clips4Sale liés à l'Online Safety Act par Ofcom"
+        },
+        "issuing_body": "Ofcom",
+        "date": "2026-11-08",
+        "jurisdiction": {
+          "region": "UK",
+          "countries": [
+            "GB"
+          ]
+        },
+        "type": "Enforcement_Action",
+        "status": "Active",
+        "reference": "Online Safety Act",
+        "affected_sectors": [
+          "Media_and_Communication",
+          "Hospitality_and_Entertainment"
+        ],
+        "description": {
+          "en": "Adult content creators report unexplained removals from Clips4Sale as platforms over-remove to avoid Online Safety Act penalties. The lack of reasoned decisions or appeal channels creates business continuity and compliance risk, and pushes content to less regulated services. It also creates social-engineering opportunities where attackers impersonate regulators or platforms to obtain identity documents.",
+          "fr": "Des créateurs de contenus adultes signalent des retraits inexpliqués sur Clips4Sale, les plateformes sur-supprimant pour éviter les sanctions de l'Online Safety Act. L'absence de décisions motivées ou de voies de recours crée un risque de continuité d'activité et de conformité, et pousse les contenus vers des services moins régulés. Cela crée aussi des opportunités d'ingénierie sociale où des attaquants usurpent régulateurs ou plateformes pour obtenir des documents d'identité."
+        },
+        "source_url": "https://www.404media.co/clips4sale-content-removed-uk-porn-law/"
+      },
+      {
+        "title": {
+          "en": "UK amendment to regulate AI agent incidents",
+          "fr": "Amendement britannique pour encadrer les incidents d'agents IA"
+        },
+        "issuing_body": "UK Parliament / Government",
+        "date": "2026-11-08",
+        "jurisdiction": {
+          "region": "UK",
+          "countries": [
+            "GB"
+          ]
+        },
+        "type": "Amendment",
+        "status": "Proposed",
+        "reference": "Cyber Security and Resilience Bill",
+        "affected_sectors": [
+          "Critical_Infrastructure",
+          "Technology_and_Telecom",
+          "Business_Services"
+        ],
+        "description": {
+          "en": "A Lords amendment would let ministers regulate deployment and incident notification for AI agents in energy, MSP, and cloud providers, including inspection, entry, seizure, and evidence preservation powers. It follows OpenAI agent incidents that affected more than 100 organizations. Regulated entities should document agent scope, human oversight, and auditable logs now.",
+          "fr": "Un amendement à la Chambre des Lords permettrait aux ministres de réguler le déploiement et la notification d'incidents d'agents IA chez les fournisseurs d'énergie, les MSP et le cloud, avec des pouvoirs d'inspection, d'entrée, de saisie et de préservation de preuves. Il fait suite à des incidents d'agents OpenAI ayant touché plus de 100 organisations. Les entités régulées doivent dès maintenant documenter le périmètre des agents, la supervision humaine et les journaux auditables."
+        },
+        "source_url": "https://www.theregister.com/ai-and-ml/2026/11/06/uk-ministers-seek-powers-to-investigate-when-ai-agents-are-let-off-the-leash/5307889"
+      }
+    ]
+  },
+  "threats_actors": {
+    "geographic_analyse": [
+      {
+        "geographic_zone_name": {
+          "en": "North Korea",
+          "fr": "Corée du Nord"
+        },
+        "geographic_zone_strategic_analyse": {
+          "en": "North Korea remains the most consequential state-level financial threat in this period. The $6.3B Binance theft attributed to Pyongyang appears to have abused live session tokens and wallet-signing authority rather than breaking cryptography, indicating deep knowledge of DevOps and signing workflows. The proceeds fund a sanctioned regime and accelerate regulatory pressure, insurance repricing, and consolidation among crypto custodians. Attribution remains probabilistic but is supported by targeting, laundering preferences, and hard-currency needs.",
+          "fr": "La Corée du Nord reste la menace financière étatique la plus lourde de la période. Le vol de 6,3 Md$ chez Binance attribué à Pyongyang semble avoir abusé de jetons de session vivants et de l'autorité de signature des wallets plutôt que de casser la cryptographie, ce qui indique une connaissance intime des workflows DevOps et de signature. Les produits financent un régime sanctionné et accélèrent la pression réglementaire, la réévaluation des assurances et la consolidation des dépositaires crypto. L'attribution reste probabiliste mais soutenue par le ciblage, les préférences de blanchiment et les besoins en devises fortes."
+        }
+      },
+      {
+        "geographic_zone_name": {
+          "en": "Russia",
+          "fr": "Russie"
+        },
+        "geographic_zone_strategic_analyse": {
+          "en": "Russian GNSS interference in the Baltic and Kaliningrad area is a persistent NAVWAR campaign rather than isolated incidents. Germany's ECHIS programme signals a shift from protection to detection and offensive jamming/ spoofing capability, blurring dual-use research and electronic warfare. Because telecom, power, finance, and logistics depend on precise timing, GNSS disruption has systemic effects and offers plausible deniability through mobile, low-cost jammers deployed from contested territory.",
+          "fr": "Les interférences GNSS russes en Baltique et dans la zone de Kaliningrad relèvent d'une campagne NAVWAR persistante plutôt que d'incidents isolés. Le programme allemand ECHIS marque un passage de la protection à la détection et à la capacité offensive de brouillage/leurrage, brouillant la frontière entre recherche duale et guerre électronique. Les télécoms, l'énergie, la finance et la logistique dépendant d'une synchronisation précise, les perturbations GNSS ont des effets systémiques et offrent un déni plausible via des brouilleurs mobiles et bon marché déployés depuis des territoires contestés."
+        }
+      },
+      {
+        "geographic_zone_name": {
+          "en": "China",
+          "fr": "Chine"
+        },
+        "geographic_zone_strategic_analyse": {
+          "en": "China-linked infrastructure appears through the XCPE residential proxy botnet embedded in IoT firmware and through Chinese-language phishing infrastructure abusing Cloudflare R2 and a Microsoft typosquat. The XCPE case shows supply-chain compromise at the firmware level, where no standard patch can clean the device, and monetization through crime-as-a-service proxy rental. Japan reported 1,918 online banking fraud cases in 2024 linked to residential proxies, with up to 27,000 proxy egress IPs per day, illustrating the scale of the ecosystem.",
+          "fr": "L'infrastructure liée à la Chine apparaît via le botnet de proxys résidentiels XCPE intégré au firmware IoT et via une infrastructure de phishing sinophone abusant de Cloudflare R2 et d'un typosquat Microsoft. Le cas XCPE montre une compromission de chaîne d'approvisionnement au niveau du firmware, qu'aucun correctif standard ne peut nettoyer, et une monétisation par location de proxys en crime-as-a-service. Le Japon a signalé 1 918 affaires de fraude bancaire en ligne en 2024 liées aux proxys résidentiels, avec jusqu'à 27 000 IP de sortie par jour, illustrant l'échelle de l'écosystème."
+        }
+      },
+      {
+        "geographic_zone_name": {
+          "en": "United States",
+          "fr": "États-Unis"
+        },
+        "geographic_zone_strategic_analyse": {
+          "en": "The United States drives both vulnerability prioritization and platform regulation. CISA KEV additions for SonicWall CVE-2026-19868 and WordPress CVE-2026-119977 set short remediation deadlines, while California AB 1709 litigation tests whether algorithmic feeds are protected speech or regulable product design. Breach notification gaps, as seen with Sussex County NJ, remain a governance issue. US cloud and SaaS providers also concentrate supply-chain risk through WorkOS, DigiCert, Chainalysis, and Anthropic incidents.",
+          "fr": "Les États-Unis pilotent à la fois la priorisation des vulnérabilités et la régulation des plateformes. Les ajouts au CISA KEV de SonicWall CVE-2026-19868 et WordPress CVE-2026-119977 imposent des délais de remédiation courts, tandis que le contentieux californien AB 1709 teste si les fils algorithmiques relèvent de la parole protégée ou d'un produit régulable. Les lacunes de notification, comme au comté de Sussex (NJ), restent un enjeu de gouvernance. Les fournisseurs cloud et SaaS américains concentrent aussi le risque de chaîne d'approvisionnement via les incidents WorkOS, DigiCert, Chainalysis et Anthropic."
+        }
+      },
+      {
+        "geographic_zone_name": {
+          "en": "Other",
+          "fr": "Autre"
+        },
+        "geographic_zone_strategic_analyse": {
+          "en": "Other zones show a fragmented but intense threat landscape. Japan faces XCPE residential proxy fraud and Good Smile payment-card skimming; Singapore confronts M1 telecom data exposure and builds a new DIS training command; France sees Crédit Mutuel Arkéa lose up to $133M and RN member data exposed; Peru's RENIEC and Ukraine's citizenship database are claimed at 31M and 53M records; Norway's Norad exposed 20,614 grant applicants, including people in conflict zones. The UK combines Online Safety Act enforcement with proposed AI agent investigation powers.",
+          "fr": "Les autres zones montrent un paysage fragmenté mais intense. Le Japon fait face à la fraude par proxys résidentiels XCPE et au skimming de cartes Good Smile ; Singapour affronte l'exposition de données de l'opérateur M1 et crée un commandement de formation DIS ; la France voit Crédit Mutuel Arkéa perdre jusqu'à 133 M$ et des données d'adhérents du RN exposées ; le RENIEC au Pérou et la base de citoyenneté ukrainienne sont revendiqués à 31 M et 53 M d'enregistrements ; Norad en Norvège expose 20 614 candidats à des subventions, dont des personnes en zones de conflit. Le Royaume-Uni combine l'application de l'Online Safety Act avec des pouvoirs d'enquête proposés sur les agents IA."
+        }
+      }
+    ],
+    "details": [
+      {
+        "threat_actor_name": "Dark Project",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "RaaS",
+          "fr": "RaaS"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Business_Services",
+            "Industry_and_Manufacturing",
+            "Finance",
+            "Healthcare_and_Life_Sciences"
+          ],
+          "fr": [
+            "Services_aux_Entreprises",
+            "Industrie_et_Fabrication",
+            "Finance",
+            "Santé_et_Sciences_du_Vivant"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Global",
+            "North America",
+            "Europe"
+          ],
+          "fr": [
+            "Mondial",
+            "Amérique du Nord",
+            "Europe"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1486",
+          "T1490",
+          "T1078"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "80% affiliate commission RaaS expansion model"
+          ],
+          "fr": [
+            "Modèle d'expansion RaaS à 80 % de commission pour les affiliés"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "BlackNevas",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Ransomware",
+          "fr": "Rançongiciel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Critical_Infrastructure",
+            "Technology_and_Telecom",
+            "Industry_and_Manufacturing"
+          ],
+          "fr": [
+            "Infrastructure_Critique",
+            "Technologie_et_Télécom",
+            "Industrie_et_Fabrication"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Europe",
+            "Global"
+          ],
+          "fr": [
+            "Europe",
+            "Mondial"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1078",
+          "T1021.004",
+          "T1552.001",
+          "T1486"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "ESXi and Proxmox virtualization ransomware cases"
+          ],
+          "fr": [
+            "Cas de rançongiciel sur virtualisation ESXi et Proxmox"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "MedusaLock",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Ransomware",
+          "fr": "Rançongiciel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Government_and_Defense",
+            "Finance"
+          ],
+          "fr": [
+            "Gouvernement_et_Défense",
+            "Finance"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Latin America",
+            "Colombia"
+          ],
+          "fr": [
+            "Amérique latine",
+            "Colombie"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1486",
+          "T1490",
+          "T1078"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Dian Colombia ransomware claim"
+          ],
+          "fr": [
+            "Revendication de rançongiciel contre Dian en Colombie"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "Payload",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Ransomware",
+          "fr": "Rançongiciel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Business_Services",
+            "Technology_and_Telecom"
+          ],
+          "fr": [
+            "Services_aux_Entreprises",
+            "Technologie_et_Télécom"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Global"
+          ],
+          "fr": [
+            "Mondial"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1486",
+          "T1490",
+          "T1078"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Otto Stops MSP ransomware claim"
+          ],
+          "fr": [
+            "Revendication de rançongiciel contre le MSP Otto Stops"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "North Korea state-sponsored crypto theft",
+        "origin_country": "KP",
+        "type": {
+          "en": "Nation-state",
+          "fr": "État-nation"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Finance",
+            "Technology_and_Telecom"
+          ],
+          "fr": [
+            "Finance",
+            "Technologie_et_Télécom"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Global",
+            "Asia-Pacific"
+          ],
+          "fr": [
+            "Mondial",
+            "Asie-Pacifique"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1078",
+          "T1552",
+          "T1021.004"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Binance $6.3B theft attribution"
+          ],
+          "fr": [
+            "Attribution du vol de 6,3 Md$ chez Binance"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "Mirax Android RAT operators",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Cybercriminal",
+          "fr": "Cybercriminel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Finance",
+            "Retail_and_Consumer"
+          ],
+          "fr": [
+            "Finance",
+            "Commerce_de_Détail_et_Consommation"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Global",
+            "Europe",
+            "Asia-Pacific"
+          ],
+          "fr": [
+            "Mondial",
+            "Europe",
+            "Asie-Pacifique"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1476",
+          "T1417",
+          "T1513"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Mirax Android RAT via streaming-app ads"
+          ],
+          "fr": [
+            "RAT Android Mirax via publicités d'applications de streaming"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "XCPE residential proxy botnet operators",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Cybercriminal",
+          "fr": "Cybercriminel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Finance",
+            "Technology_and_Telecom"
+          ],
+          "fr": [
+            "Finance",
+            "Technologie_et_Télécom"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Japan",
+            "Asia-Pacific"
+          ],
+          "fr": [
+            "Japon",
+            "Asie-Pacifique"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1583.006",
+          "T1105",
+          "T1078"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Japan XCPE residential proxy takedown and banking fraud"
+          ],
+          "fr": [
+            "Démantèlement du botnet XCPE au Japon et fraude bancaire"
+          ]
+        }
+      }
+    ]
+  },
+  "mitre_attack_ttps": {
+    "ttps_strategic_analyse": {
+      "en": "The observed TTP mix shows a shift from exploit-only intrusion to identity, agent, and management-plane abuse. Valid accounts (T1078) recur across ransomware, OpenSSH, and crypto theft, while T1486/T1490 remain the ransomware endgame. Reconnaissance is commoditized through ARES and NoWRecon (T1595, T1046, T1590, T1596), lowering the barrier to external attack-surface mapping. AI-specific execution chains combine browser extensions (T1176), local command execution (T1059), and ingress tool transfer (T1105), with secret exposure via T1552/T1552.001 and T1213. Phishing still relies on trusted CDNs and object storage (T1583.001, T1583.006, T1608.001) and user execution (T1204.001/T1204.002). Virtualization attacks did not require VM escape; they abused SSH (T1021.004) and shared root credentials.",
+      "fr": "Le mélange de TTP observé montre un glissement de l'intrusion par exploit vers l'abus d'identités, d'agents et de plans de management. Les comptes valides (T1078) reviennent dans les rançongiciels, OpenSSH et le vol crypto, tandis que T1486/T1490 restent la phase finale des rançongiciels. La reconnaissance est commoditisée via ARES et NoWRecon (T1595, T1046, T1590, T1596), abaissant la barrière de cartographie externe. Les chaînes d'exécution IA combinent extensions navigateur (T1176), exécution locale de commandes (T1059) et transfert d'outils (T1105), avec exposition de secrets via T1552/T1552.001 et T1213. Le phishing s'appuie encore sur des CDN et stockages objet de confiance (T1583.001, T1583.006, T1608.001) et l'exécution utilisateur (T1204.001/T1204.002). Les attaques de virtualisation n'ont pas nécessité d'évasion de VM : elles ont abusé de SSH (T1021.004) et de mots de passe root partagés."
+    },
+    "ttps_list": [
+      {
+        "id": "T1204.002",
+        "tactic": {
+          "en": "Execution",
+          "fr": "Exécution"
+        },
+        "technique_name": "User Execution: Malicious File",
+        "frequency": 1,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "Fake game installers and Microsoft Update phishing deliver malicious executables such as kB2025072926.exe.",
+            "Users are induced to run files from download folders or via Windows + R."
+          ],
+          "fr": [
+            "De faux installeurs de jeux et un phishing Microsoft Update livrent des exécutables malveillants comme kB2025072926.exe.",
+            "Les utilisateurs sont incités à exécuter des fichiers depuis les dossiers de téléchargement ou via Windows + R."
+          ]
+        }
+      },
+      {
+        "id": "T1486",
+        "tactic": {
+          "en": "Impact",
+          "fr": "Impact"
+        },
+        "technique_name": "Data Encrypted for Impact",
+        "frequency": 1,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "Dark Project, BlackNevas, MedusaLock, and Payload ransomware operations encrypt data for extortion.",
+            "BlackNevas encrypted ESXi and Proxmox hosts without VM escape."
+          ],
+          "fr": [
+            "Les opérations de rançongiciel Dark Project, BlackNevas, MedusaLock et Payload chiffrent les données pour extorquer.",
+            "BlackNevas a chiffré des hôtes ESXi et Proxmox sans évasion de VM."
+          ]
+        }
+      },
+      {
+        "id": "T1490",
+        "tactic": {
+          "en": "Impact",
+          "fr": "Impact"
+        },
+        "technique_name": "Inhibit System Recovery",
+        "frequency": 1,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "Ransomware playbooks include deletion of snapshots and backup inhibition.",
+            "Virtualization cases emphasize offline backups because online backups become unusable."
+          ],
+          "fr": [
+            "Les playbooks rançongiciels incluent la suppression des clichés et l'inhibition des sauvegardes.",
+            "Les cas de virtualisation imposent des sauvegardes hors ligne, car les sauvegardes en ligne deviennent inutilisables."
+          ]
+        }
+      },
+      {
+        "id": "T1078",
+        "tactic": {
+          "en": "Initial Access",
+          "fr": "Accès initial"
+        },
+        "technique_name": "Valid Accounts",
+        "frequency": 1,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "Shared root passwords and reused monitoring credentials enabled ESXi/Proxmox ransomware.",
+            "OpenSSH CVE-2026-123158 and Binance session-token theft abused valid access."
+          ],
+          "fr": [
+            "Des mots de passe root partagés et des identifiants de supervision réutilisés ont permis les rançongiciels ESXi/Proxmox.",
+            "OpenSSH CVE-2026-123158 et le vol de jetons de session Binance ont abusé d'accès valides."
+          ]
+        }
+      },
+      {
+        "id": "T1068",
+        "tactic": {
+          "en": "Privilege Escalation",
+          "fr": "Élévation de privilèges"
+        },
+        "technique_name": "Exploitation for Privilege Escalation",
+        "frequency": 1,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "CentOS 6.18.62 kernel memory exploitation could escape an AI jail to the host.",
+            "Tenda and TOTOLINK buffer overflows may yield code execution on network devices."
+          ],
+          "fr": [
+            "L'exploitation mémoire du noyau CentOS 6.18.62 pourrait permettre une évasion d'un AI jail vers l'hôte.",
+            "Les débordements Tenda et TOTOLINK peuvent mener à l'exécution de code sur des équipements réseau."
+          ]
+        }
+      },
+      {
+        "id": "T1611",
+        "tactic": {
+          "en": "Privilege Escalation",
+          "fr": "Élévation de privilèges"
+        },
+        "technique_name": "Escape to Host",
+        "frequency": 1,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "A kernel vulnerability in an AI jail environment creates a direct host-escape path.",
+            "Shared kernel isolation is weaker than VM or hardware sandbox separation."
+          ],
+          "fr": [
+            "Une vulnérabilité noyau dans un environnement AI jail crée un chemin direct d'évasion vers l'hôte.",
+            "L'isolation par noyau partagé est plus faible qu'une séparation VM ou sandbox matérielle."
+          ]
+        }
+      },
+      {
+        "id": "T1566.002",
+        "tactic": {
+          "en": "Initial Access",
+          "fr": "Accès initial"
+        },
+        "technique_name": "Phishing: Spearphishing Link",
+        "frequency": 1,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "The Microsoft Update typosquat uses a link to a fake support page and a copied Run command.",
+            "Cloudflare R2 hosts the payload, bypassing simple domain reputation checks."
+          ],
+          "fr": [
+            "Le typosquat Microsoft Update utilise un lien vers une fausse page de support et une commande Run copiée.",
+            "Cloudflare R2 héberge la charge, contournant les simples contrôles de réputation de domaine."
+          ]
+        }
+      },
+      {
+        "id": "T1552.001",
+        "tactic": {
+          "en": "Credential Access",
+          "fr": "Accès aux identifiants"
+        },
+        "technique_name": "Unsecured Credentials: Credentials In Files",
+        "frequency": 1,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "Coding agents wrote 1,379 secrets into .claude/settings.local.json files published on GitHub.",
+            "Proxmox compromise involved credentials stored insecurely in notes."
+          ],
+          "fr": [
+            "Les agents de codage ont écrit 1 379 secrets dans des fichiers .claude/settings.local.json publiés sur GitHub.",
+            "La compromission Proxmox impliquait des identifiants stockés de manière non sécurisée dans des notes."
+          ]
+        }
+      },
+      {
+        "id": "T1021.004",
+        "tactic": {
+          "en": "Lateral Movement",
+          "fr": "Mouvement latéral"
+        },
+        "technique_name": "Remote Services: SSH",
+        "frequency": 1,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "Proxmox compromise used direct root SSH access outside central control.",
+            "OpenSSH CVE-2026-123158 enables unauthenticated access to passwordless accounts."
+          ],
+          "fr": [
+            "La compromission Proxmox a utilisé un accès SSH root direct hors du contrôle central.",
+            "OpenSSH CVE-2026-123158 permet un accès non authentifié à des comptes sans mot de passe."
+          ]
+        }
+      },
+      {
+        "id": "T1059",
+        "tactic": {
+          "en": "Execution",
+          "fr": "Exécution"
+        },
+        "technique_name": "Command and Scripting Interpreter",
+        "frequency": 1,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "Claude Desktop executed npm install commands triggered by injected browser scripts.",
+            "Keycloak code injection and WordPress RCE vulnerabilities enable arbitrary command execution."
+          ],
+          "fr": [
+            "Claude Desktop a exécuté des commandes npm install déclenchées par des scripts navigateur injectés.",
+            "L'injection de code Keycloak et les RCE WordPress permettent l'exécution arbitraire de commandes."
+          ]
+        }
+      },
+      {
+        "id": "T1552",
+        "tactic": {
+          "en": "Credential Access",
+          "fr": "Accès aux identifiants"
+        },
+        "technique_name": "Unsecured Credentials",
+        "frequency": 1,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "AI agents disclosed private tokens in 15% of tests when offered peer collaboration.",
+            "Binance theft involved wallet-signing authority and DevOps credentials."
+          ],
+          "fr": [
+            "Les agents IA ont divulgué des jetons privés dans 15 % des tests lorsqu'on leur proposait une collaboration entre pairs.",
+            "Le vol Binance impliquait l'autorité de signature des wallets et des identifiants DevOps."
+          ]
+        }
+      },
+      {
+        "id": "T1036",
+        "tactic": {
+          "en": "Defense Evasion",
+          "fr": "Évasion de défense"
+        },
+        "technique_name": "Masquerading",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Fake game launchers and KB-named binaries masquerade as legitimate software or patches.",
+            "The Microsoft typosquat page imitates Windows Update support content."
+          ],
+          "fr": [
+            "De faux launchers de jeux et des binaires nommés KB se font passer pour des logiciels ou correctifs légitimes.",
+            "La page typosquat Microsoft imite le contenu de support Windows Update."
+          ]
+        }
+      },
+      {
+        "id": "T1176",
+        "tactic": {
+          "en": "Persistence",
+          "fr": "Persistance"
+        },
+        "technique_name": "Browser Extensions",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Malicious browser extensions inject scripts into claude.ai and drive Claude Dispatch to execute local commands.",
+            "Fake game installers also add browser components and extensions."
+          ],
+          "fr": [
+            "Des extensions navigateur malveillantes injectent des scripts dans claude.ai et poussent Claude Dispatch à exécuter des commandes locales.",
+            "De faux installeurs de jeux ajoutent aussi des composants et extensions navigateur."
+          ]
+        }
+      },
+      {
+        "id": "T1476",
+        "tactic": {
+          "en": "Initial Access",
+          "fr": "Accès initial"
+        },
+        "technique_name": "Deliver Malicious App via Authorized App Store",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Mirax Android RAT is delivered through ads in streaming apps and sideloaded APKs.",
+            "The campaign targets mobile banking credentials and account takeover."
+          ],
+          "fr": [
+            "Le RAT Android Mirax est livré via des publicités dans des applications de streaming et des APK sideloadés.",
+            "La campagne cible les identifiants bancaires mobiles et la prise de contrôle de comptes."
+          ]
+        }
+      },
+      {
+        "id": "T1417",
+        "tactic": {
+          "en": "Collection",
+          "fr": "Collecte"
+        },
+        "technique_name": "Input Capture",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Mirax uses accessibility and overlay permissions to capture banking credentials and codes.",
+            "Captured input enables account draining and fraud."
+          ],
+          "fr": [
+            "Mirax utilise les permissions d'accessibilité et de superposition pour capturer les identifiants et codes bancaires.",
+            "Les entrées capturées permettent de vider les comptes et de frauder."
+          ]
+        }
+      },
+      {
+        "id": "T1608.001",
+        "tactic": {
+          "en": "Resource Development",
+          "fr": "Développement de ressources"
+        },
+        "technique_name": "Upload Malware",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "The payload kB2025072926.exe is hosted on a public Cloudflare R2 bucket.",
+            "Public object storage provides cheap, reputable hosting for malware."
+          ],
+          "fr": [
+            "La charge kB2025072926.exe est hébergée sur un bucket Cloudflare R2 public.",
+            "Le stockage objet public fournit un hébergement bon marché et réputé pour les malwares."
+          ]
+        }
+      },
+      {
+        "id": "T1204.001",
+        "tactic": {
+          "en": "Execution",
+          "fr": "Exécution"
+        },
+        "technique_name": "User Execution: Malicious Link",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "The fake Microsoft Update page instructs users to copy a link and run it via Windows + R.",
+            "This bypasses Mark-of-the-Web and download allowlists."
+          ],
+          "fr": [
+            "La fausse page Microsoft Update demande de copier un lien et de l'exécuter via Windows + R.",
+            "Cela contourne Mark-of-the-Web et les listes blanches de téléchargement."
+          ]
+        }
+      },
+      {
+        "id": "T1213",
+        "tactic": {
+          "en": "Collection",
+          "fr": "Collecte"
+        },
+        "technique_name": "Data from Information Repositories",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Secrets were harvested from GitHub repositories, Git history, and forks.",
+            "Exposed tokens included AWS keys, GitHub/GitLab/npm tokens, and SSH credentials."
+          ],
+          "fr": [
+            "Des secrets ont été collectés dans des dépôts GitHub, l'historique Git et les forks.",
+            "Les jetons exposés incluaient des clés AWS, des jetons GitHub/GitLab/npm et des identifiants SSH."
+          ]
+        }
+      },
+      {
+        "id": "T1204",
+        "tactic": {
+          "en": "Execution",
+          "fr": "Exécution"
+        },
+        "technique_name": "User Execution",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Claude Dispatch approval prompts were auto-clicked by a malicious extension.",
+            "Agents executed unverified install scripts proposed by other agents."
+          ],
+          "fr": [
+            "Les fenêtres d'approbation de Claude Dispatch ont été cliquées automatiquement par une extension malveillante.",
+            "Des agents ont exécuté des scripts d'installation non vérifiés proposés par d'autres agents."
+          ]
+        }
+      },
+      {
+        "id": "T1105",
+        "tactic": {
+          "en": "Command and Control",
+          "fr": "Commande et contrôle"
+        },
+        "technique_name": "Ingress Tool Transfer",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Claude Dispatch installed an external npm package as a payload.",
+            "XCPE proxy infrastructure supports ingress and egress for criminal clients."
+          ],
+          "fr": [
+            "Claude Dispatch a installé un paquet npm externe comme charge utile.",
+            "L'infrastructure proxy XCPE soutient l'entrée et la sortie pour des clients criminels."
+          ]
+        }
+      },
+      {
+        "id": "T1513",
+        "tactic": {
+          "en": "Collection",
+          "fr": "Collecte"
+        },
+        "technique_name": "Screen Capture",
+        "frequency": 1,
+        "severity": "medium",
+        "context": {
+          "en": [
+            "Mirax monitors mobile screen activity to capture sensitive banking screens.",
+            "Screen capture complements overlay-based credential theft."
+          ],
+          "fr": [
+            "Mirax surveille l'activité de l'écran mobile pour capturer les écrans bancaires sensibles.",
+            "La capture d'écran complète le vol d'identifiants par superposition."
+          ]
+        }
+      },
+      {
+        "id": "T1595",
+        "tactic": {
+          "en": "Reconnaissance",
+          "fr": "Reconnaissance"
+        },
+        "technique_name": "Active Scanning",
+        "frequency": 1,
+        "severity": "medium",
+        "context": {
+          "en": [
+            "ARES and NoWRecon automate active scanning, DNS brute force, vhost probing, and port scans.",
+            "These tools lower the barrier to external attack-surface mapping."
+          ],
+          "fr": [
+            "ARES et NoWRecon automatisent le scan actif, le brute force DNS, le probing de vhosts et les scans de ports.",
+            "Ces outils abaissent la barrière de cartographie externe de la surface d'attaque."
+          ]
+        }
+      },
+      {
+        "id": "T1046",
+        "tactic": {
+          "en": "Discovery",
+          "fr": "Découverte"
+        },
+        "technique_name": "Network Service Discovery",
+        "frequency": 1,
+        "severity": "medium",
+        "context": {
+          "en": [
+            "NoWRecon scans 61 ports and discovers cloud buckets across nine providers.",
+            "ARES maps attack paths toward critical assets."
+          ],
+          "fr": [
+            "NoWRecon scanne 61 ports et découvre des buckets cloud chez neuf fournisseurs.",
+            "ARES cartographie les chemins d'attaque vers les actifs critiques."
+          ]
+        }
+      },
+      {
+        "id": "T1590",
+        "tactic": {
+          "en": "Reconnaissance",
+          "fr": "Reconnaissance"
+        },
+        "technique_name": "Gather Victim Network Information",
+        "frequency": 1,
+        "severity": "medium",
+        "context": {
+          "en": [
+            "NoWRecon correlates DNS, SPF/DMARC/MX, TLS SANs, and shared certificates to map organizations.",
+            "ARES builds a DAG of attack paths from network information."
+          ],
+          "fr": [
+            "NoWRecon corrèle DNS, SPF/DMARC/MX, SAN TLS et certificats partagés pour cartographier les organisations.",
+            "ARES construit un DAG de chemins d'attaque à partir des informations réseau."
+          ]
+        }
+      },
+      {
+        "id": "T1596",
+        "tactic": {
+          "en": "Reconnaissance",
+          "fr": "Reconnaissance"
+        },
+        "technique_name": "Search Open Websites/Domains",
+        "frequency": 1,
+        "severity": "medium",
+        "context": {
+          "en": [
+            "NoWRecon queries crt.sh, CertSpotter, Wayback Machine, OTX, urlscan.io, and ThreatMiner without API keys.",
+            "Passive collection reveals forgotten subdomains and pre-production environments."
+          ],
+          "fr": [
+            "NoWRecon interroge crt.sh, CertSpotter, Wayback Machine, OTX, urlscan.io et ThreatMiner sans clé API.",
+            "La collecte passive révèle des sous-domaines oubliés et des environnements de préproduction."
+          ]
+        }
+      },
+      {
+        "id": "T1583.001",
+        "tactic": {
+          "en": "Resource Development",
+          "fr": "Développement de ressources"
+        },
+        "technique_name": "Acquire Infrastructure: Domains",
+        "frequency": 1,
+        "severity": "medium",
+        "context": {
+          "en": [
+            "Attackers registered updata[.]net[.]cn in 2025 and used it for a Microsoft typosquat.",
+            "The domain is fronted by Cloudflare with a valid Google Trust Services certificate."
+          ],
+          "fr": [
+            "Les attaquants ont enregistré updata[.]net[.]cn en 2025 et l'ont utilisé pour un typosquat Microsoft.",
+            "Le domaine est protégé par Cloudflare avec un certificat Google Trust Services valide."
+          ]
+        }
+      },
+      {
+        "id": "T1583.006",
+        "tactic": {
+          "en": "Resource Development",
+          "fr": "Développement de ressources"
+        },
+        "technique_name": "Acquire Infrastructure: Web Services",
+        "frequency": 1,
+        "severity": "medium",
+        "context": {
+          "en": [
+            "Cloudflare R2 and legitimate CDN services are abused to host payloads and redirects.",
+            "XCPE operators monetize residential proxy infrastructure as a service."
+          ],
+          "fr": [
+            "Cloudflare R2 et des services CDN légitimes sont abusés pour héberger des charges et redirections.",
+            "Les opérateurs XCPE monétisent une infrastructure de proxys résidentiels en tant que service."
+          ]
+        }
+      }
+    ]
+  },
+  "vulnerabilities": {
+    "analyse": {
+      "en": "The vulnerability picture is dominated by two CISA KEV entries and a broad WordPress plugin ecosystem. SonicWall CVE-2026-19868 bypasses SAML and enforced MFA on SSLVPN, directly undermining remote-access trust; WordPress CVE-2026-119977 enables unauthenticated RCE during updates and requires blocking wp-content/upgrade before patching. Tenda AC19 CVE-2026-123966 carries CVSS 10.0, while Keycloak CVE-2026-120984 and WooCommerce plugins expose authentication and authorization flaws. OpenSSH CVE-2026-123158 is actively exploited against musl/PAM-disabled systems, and APT CVE-2026-109518 enables MITM package substitution on Debian/Ubuntu. EPSS values were unavailable, so prioritization should combine KEV status, CVSS, internet exposure, and asset criticality.",
+      "fr": "Le paysage des vulnérabilités est dominé par deux entrées CISA KEV et un large écosystème de plugins WordPress. SonicWall CVE-2026-19868 contourne SAML et la MFA imposée sur SSLVPN, sapant directement la confiance dans l'accès distant ; WordPress CVE-2026-119977 permet une RCE non authentifiée pendant les mises à jour et impose de bloquer wp-content/upgrade avant correction. Tenda AC19 CVE-2026-123966 atteint CVSS 10.0, tandis que Keycloak CVE-2026-120984 et des plugins WooCommerce exposent des défauts d'authentification et d'autorisation. OpenSSH CVE-2026-123158 est activement exploité contre les systèmes musl/PAM désactivé, et APT CVE-2026-109518 permet une substitution de paquet MITM sur Debian/Ubuntu. Les valeurs EPSS étant indisponibles, la priorisation doit combiner statut KEV, CVSS, exposition Internet et criticité des actifs."
+    },
+    "list": [
+      {
+        "cve_id": "CVE-2026-19868",
+        "cvss_score": 7.5,
+        "epss_score": "N/A",
+        "cisa_kev": true,
+        "affected_product": "SonicWall SonicOS SSLVPN",
+        "affected_product_vendor": "SonicWall",
+        "vulnerability_type": {
+          "en": [
+            "Authentication bypass",
+            "SAML and MFA bypass"
+          ],
+          "fr": [
+            "Contournement d'authentification",
+            "Contournement SAML et MFA"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "An authentication bypass in SonicOS SSLVPN allows access to the internal network without satisfying SAML or enforced MFA. It enables data theft, ransomware deployment, lateral movement, and persistence, and affects MSP-managed appliances across multiple organizations.",
+          "fr": "Un contournement d'authentification dans SonicOS SSLVPN permet d'accéder au réseau interne sans satisfaire SAML ni la MFA imposée. Il permet le vol de données, le déploiement de rançongiciels, le mouvement latéral et la persistance, et affecte les appliances gérées par des MSP pour plusieurs organisations."
+        },
+        "mitre_attack_ttps_id": [
+          "T1078"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-119977",
+        "cvss_score": "N/A",
+        "epss_score": "N/A",
+        "cisa_kev": true,
+        "affected_product": "WordPress core 4.7 to 7.1.3",
+        "affected_product_vendor": "WordPress",
+        "vulnerability_type": {
+          "en": [
+            "Remote code execution",
+            "Update installer abuse"
+          ],
+          "fr": [
+            "Exécution de code à distance",
+            "Abus de l'installeur de mise à jour"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Unauthenticated RCE via the update installer in wp-content/upgrade allows arbitrary code execution with web server privileges during the update window. Exploitation is active and confirmed by CISA KEV; block web access to the upgrade directory before patching to 7.1.4.",
+          "fr": "Une RCE non authentifiée via l'installeur de mise à jour dans wp-content/upgrade permet l'exécution de code arbitraire avec les privilèges du serveur web pendant la fenêtre de mise à jour. L'exploitation est active et confirmée par le CISA KEV ; bloquez l'accès web au répertoire upgrade avant de corriger vers 7.1.4."
+        },
+        "mitre_attack_ttps_id": [
+          "T1059"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-123966",
+        "cvss_score": 10.0,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Tenda AC19 firmware 16.03.10.07",
+        "affected_product_vendor": "Tenda",
+        "vulnerability_type": {
+          "en": [
+            "Heap-based buffer overflow",
+            "Remote code execution"
+          ],
+          "fr": [
+            "Débordement de tampon basé sur le tas",
+            "Exécution de code à distance"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "A heap-based buffer overflow in saveParentControlInfo can corrupt memory and lead to arbitrary code execution, denial of service, router takeover, and traffic diversion. The CVSS 10.0 score and active exploitation status make internet-exposed AC19 devices urgent.",
+          "fr": "Un débordement de tampon basé sur le tas dans saveParentControlInfo peut corrompre la mémoire et mener à l'exécution de code arbitraire, au déni de service, à la prise de contrôle du routeur et au détournement de trafic. Le score CVSS 10.0 et l'exploitation active rendent urgents les équipements AC19 exposés sur Internet."
+        },
+        "mitre_attack_ttps_id": [
+          "T1068"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-119075",
+        "cvss_score": 9.8,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Registration Form for WooCommerce <= 1.1.4",
+        "affected_product_vendor": "WooCommerce plugin ecosystem",
+        "vulnerability_type": {
+          "en": [
+            "Improper privilege management",
+            "Unauthenticated privilege escalation"
+          ],
+          "fr": [
+            "Gestion impropre des privilèges",
+            "Élévation de privilèges non authentifiée"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Unauthenticated privilege escalation allows full WordPress site takeover, including administrator creation, malicious plugin installation, and customer data exfiltration. Update to 1.1.5 or later and audit administrator accounts.",
+          "fr": "Une élévation de privilèges non authentifiée permet la prise de contrôle totale du site WordPress, incluant la création d'administrateurs, l'installation de plugins malveillants et l'exfiltration de données clients. Mettez à jour vers 1.1.5 ou ultérieur et auditez les comptes administrateurs."
+        },
+        "mitre_attack_ttps_id": [
+          "T1068"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-120984",
+        "cvss_score": 9.1,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Keycloak keycloak-services and Red Hat Single Sign-On",
+        "affected_product_vendor": "Red Hat / Keycloak",
+        "vulnerability_type": {
+          "en": [
+            "Code injection",
+            "JavaScript policy import"
+          ],
+          "fr": [
+            "Injection de code",
+            "Import de politique JavaScript"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Code injection via inline JavaScript policy import can execute arbitrary code on the Keycloak server, compromising the authentication chain, stealing secrets, and forging tokens. Restrict manage-clients permissions and apply the Red Hat/Keycloak fix.",
+          "fr": "Une injection de code via l'import de politique JavaScript inline peut exécuter du code arbitraire sur le serveur Keycloak, compromettre la chaîne d'authentification, voler des secrets et falsifier des jetons. Restreignez les permissions manage-clients et appliquez le correctif Red Hat/Keycloak."
+        },
+        "mitre_attack_ttps_id": [
+          "T1059"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-122041",
+        "cvss_score": 9.1,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Checkout Field Editor for WooCommerce (Pro) <= 3.8.0",
+        "affected_product_vendor": "WooCommerce plugin ecosystem",
+        "vulnerability_type": {
+          "en": [
+            "Missing authorization",
+            "Arbitrary attachment deletion"
+          ],
+          "fr": [
+            "Autorisation manquante",
+            "Suppression arbitraire de pièces jointes"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Missing authorization allows unauthenticated arbitrary deletion of attachments, causing media loss, customer experience degradation, partial denial of service, and loss of business documents. Update the plugin and monitor admin-ajax.php calls.",
+          "fr": "Une autorisation manquante permet la suppression arbitraire non authentifiée de pièces jointes, causant perte de médias, dégradation de l'expérience client, déni de service partiel et perte de documents commerciaux. Mettez à jour le plugin et surveillez les appels à admin-ajax.php."
+        },
+        "mitre_attack_ttps_id": [
+          "T1078"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-120841",
+        "cvss_score": 8.8,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "WpTravelly tour-booking-manager <= 2.3.8",
+        "affected_product_vendor": "WordPress plugin ecosystem",
+        "vulnerability_type": {
+          "en": [
+            "Local file inclusion",
+            "Path manipulation"
+          ],
+          "fr": [
+            "Inclusion locale de fichiers",
+            "Manipulation de chemin"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Improper filename control in include/require enables local file inclusion, exposing configuration, secrets, and user data, with possible RCE depending on the environment. Update to 2.3.9 or later and restrict open_basedir.",
+          "fr": "Un contrôle impropre du nom de fichier dans include/require permet une inclusion locale de fichiers, exposant configuration, secrets et données utilisateurs, avec une RCE possible selon l'environnement. Mettez à jour vers 2.3.9 ou ultérieur et restreignez open_basedir."
+        },
+        "mitre_attack_ttps_id": [
+          "T1552"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-120839",
+        "cvss_score": 8.8,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "WpTravelly tour-booking-manager <= 2.3.8",
+        "affected_product_vendor": "WordPress plugin ecosystem",
+        "vulnerability_type": {
+          "en": [
+            "Local file inclusion",
+            "Path manipulation"
+          ],
+          "fr": [
+            "Inclusion locale de fichiers",
+            "Manipulation de chemin"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "A second local file inclusion flaw in WpTravelly exposes sensitive files and may enable RCE. Update to 2.3.9 or later, sanitize include inputs, and monitor web logs for traversal patterns.",
+          "fr": "Une seconde faille d'inclusion locale de fichiers dans WpTravelly expose des fichiers sensibles et peut permettre une RCE. Mettez à jour vers 2.3.9 ou ultérieur, assainissez les entrées d'inclusion et surveillez les logs web pour des motifs de traversée."
+        },
+        "mitre_attack_ttps_id": [
+          "T1552"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-121762",
+        "cvss_score": 8.8,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "PowerPress Podcasting <= 11.18.0",
+        "affected_product_vendor": "Blubrry",
+        "vulnerability_type": {
+          "en": [
+            "Cross-site request forgery"
+          ],
+          "fr": [
+            "Falsification de requête intersite"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "CSRF allows unauthorized changes to site and podcast configuration, content redirection, malicious content injection, and reputational damage. Update the plugin, enforce MFA for administrators, and add origin checks at the WAF.",
+          "fr": "Une CSRF permet des modifications non autorisées de la configuration du site et du podcast, la redirection de contenus, l'injection de contenus malveillants et des dommages réputationnels. Mettez à jour le plugin, imposez la MFA aux administrateurs et ajoutez des contrôles d'origine au WAF."
+        },
+        "mitre_attack_ttps_id": [
+          "T1204"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-124318",
+        "cvss_score": 8.6,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Treeio <= 2.0",
+        "affected_product_vendor": "Treeio",
+        "vulnerability_type": {
+          "en": [
+            "Deserialization of untrusted data",
+            "Remote code execution"
+          ],
+          "fr": [
+            "Désérialisation de données non fiables",
+            "Exécution de code à distance"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Unsafe deserialization (CWE-502) enables remote code execution on the application server, exposing data, secrets, and internal systems. Update beyond 2.0, remove pickle on untrusted data, and restrict Django admin access.",
+          "fr": "Une désérialisation non sécurisée (CWE-502) permet l'exécution de code à distance sur le serveur applicatif, exposant données, secrets et systèmes internes. Mettez à jour au-delà de 2.0, supprimez pickle sur les données non fiables et restreignez l'accès à l'admin Django."
+        },
+        "mitre_attack_ttps_id": [
+          "T1059"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-118267",
+        "cvss_score": 8.1,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "WP Data Access <= 5.5.89",
+        "affected_product_vendor": "WordPress plugin ecosystem",
+        "vulnerability_type": {
+          "en": [
+            "Improper authorization",
+            "Privilege escalation"
+          ],
+          "fr": [
+            "Autorisation incorrecte",
+            "Élévation de privilèges"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Improper authorization allows overwriting the administrator password and full site takeover, with arbitrary data modification or deletion. Update to 5.5.90 or later and restrict anonymous write endpoints.",
+          "fr": "Une autorisation incorrecte permet d'écraser le mot de passe administrateur et de prendre le contrôle total du site, avec modification ou suppression arbitraire de données. Mettez à jour vers 5.5.90 ou ultérieur et restreignez les endpoints d'écriture anonymes."
+        },
+        "mitre_attack_ttps_id": [
+          "T1068"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-104746",
+        "cvss_score": 8.1,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Motors Car Dealership & Classified Listings <= 1.4.125",
+        "affected_product_vendor": "WordPress plugin ecosystem",
+        "vulnerability_type": {
+          "en": [
+            "Path traversal",
+            "Arbitrary file deletion"
+          ],
+          "fr": [
+            "Traversée de répertoire",
+            "Suppression arbitraire de fichiers"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Insufficient path validation allows a Subscriber to delete arbitrary files, causing data loss, application denial of service, and possible RCE depending on uploaded files. Update beyond 1.4.125 and restrict Subscriber capabilities.",
+          "fr": "Une validation insuffisante du chemin permet à un Subscriber de supprimer des fichiers arbitraires, causant perte de données, déni de service applicatif et RCE possible selon les fichiers présents. Mettez à jour au-delà de 1.4.125 et restreignez les capacités Subscriber."
+        },
+        "mitre_attack_ttps_id": [
+          "T1486"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-103900",
+        "cvss_score": 8.1,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "WPJAM Basic <= 7.1",
+        "affected_product_vendor": "WordPress plugin ecosystem",
+        "vulnerability_type": {
+          "en": [
+            "Improper privilege management",
+            "Unauthenticated privilege escalation"
+          ],
+          "fr": [
+            "Gestion impropre des privilèges",
+            "Élévation de privilèges non authentifiée"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Unauthenticated mass assignment enables administrator creation, malicious plugin installation, database exfiltration, and site takeover. Update WPJAM Basic, disable public registration, and audit privileged accounts.",
+          "fr": "Une affectation de masse non authentifiée permet la création d'administrateurs, l'installation de plugins malveillants, l'exfiltration de base de données et la prise de contrôle du site. Mettez à jour WPJAM Basic, désactivez l'inscription publique et auditez les comptes à privilèges."
+        },
+        "mitre_attack_ttps_id": [
+          "T1068"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-123158",
+        "cvss_score": 8.1,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "OpenSSH on musl Linux with PAM disabled",
+        "affected_product_vendor": "OpenSSH",
+        "vulnerability_type": {
+          "en": [
+            "Authentication bypass",
+            "Oversized password"
+          ],
+          "fr": [
+            "Contournement d'authentification",
+            "Mot de passe surdimensionné"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "An oversized password bypass allows unauthenticated SSH access to passwordless accounts, potentially reaching root on Alpine Linux defaults. Update to OpenSSH 10.6p2, search for 'Accepted password for' on passwordless accounts, and disable password authentication.",
+          "fr": "Un contournement par mot de passe surdimensionné permet un accès SSH non authentifié à des comptes sans mot de passe, pouvant atteindre root sur les configurations par défaut d'Alpine Linux. Mettez à jour vers OpenSSH 10.6p2, recherchez 'Accepted password for' sur les comptes sans mot de passe et désactivez l'authentification par mot de passe."
+        },
+        "mitre_attack_ttps_id": [
+          "T1078",
+          "T1021.004"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-109518",
+        "cvss_score": 7.7,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "APT package manager on Debian/Ubuntu",
+        "affected_product_vendor": "Debian / Ubuntu",
+        "vulnerability_type": {
+          "en": [
+            "Man-in-the-middle package substitution"
+          ],
+          "fr": [
+            "Substitution de paquet par homme du milieu"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "APT retry logic over HTTP allows MITM package substitution and root code execution on Debian/Ubuntu systems using untrusted networks. Install fixed APT versions, prefer HTTPS mirrors, and reduce Acquire::Retries.",
+          "fr": "La logique de nouvelle tentative d'APT sur HTTP permet une substitution de paquet par homme du milieu et une exécution de code root sur les systèmes Debian/Ubuntu utilisant des réseaux non fiables. Installez les versions corrigées d'APT, privilégiez les miroirs HTTPS et réduisez Acquire::Retries."
+        },
+        "mitre_attack_ttps_id": [
+          "T1059"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-11899",
+        "cvss_score": 4.3,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "PDF Builder for WooCommerce <= 2.0.11",
+        "affected_product_vendor": "WooCommerce plugin ecosystem",
+        "vulnerability_type": {
+          "en": [
+            "Authorization bypass",
+            "Invoice information disclosure"
+          ],
+          "fr": [
+            "Contournement d'autorisation",
+            "Divulgation d'informations de facturation"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Missing access control on an invoice retrieval endpoint lets any Subscriber enumerate invoice numbers, timestamps, and customer identifiers. Disable or restrict the plugin until a validated fix is available and monitor billing data access.",
+          "fr": "Un contrôle d'accès manquant sur un endpoint de récupération de factures permet à tout Subscriber d'énumérer numéros de facture, horodatages et identifiants clients. Désactivez ou restreignez le plugin jusqu'à un correctif validé et surveillez les accès aux données de facturation."
+        },
+        "mitre_attack_ttps_id": [
+          "T1078"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-124060",
+        "cvss_score": "N/A",
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "TOTOLINK CA300-PoE cstecgi.cgi UploadCustomModule",
+        "affected_product_vendor": "TOTOLINK",
+        "vulnerability_type": {
+          "en": [
+            "Buffer overflow"
+          ],
+          "fr": [
+            "Débordement de tampon"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "A buffer overflow in UploadCustomModule can compromise the access point, enabling Wi-Fi traffic interception, configuration changes, and pivot into the internal network. Restrict the admin interface and apply firmware fixes when available.",
+          "fr": "Un débordement de tampon dans UploadCustomModule peut compromettre le point d'accès, permettant l'interception du trafic Wi-Fi, des modifications de configuration et un pivot vers le réseau interne. Restreignez l'interface d'administration et appliquez les correctifs firmware lorsqu'ils sont disponibles."
+        },
+        "mitre_attack_ttps_id": [
+          "T1068"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-124059",
+        "cvss_score": "N/A",
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "TOTOLINK CA300-PoE cstecgi.cgi setWiFiWdsAddConfig",
+        "affected_product_vendor": "TOTOLINK",
+        "vulnerability_type": {
+          "en": [
+            "Buffer overflow"
+          ],
+          "fr": [
+            "Débordement de tampon"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "A buffer overflow in setWiFiWdsAddConfig can execute arbitrary code or cause denial of service, allowing wireless reconfiguration and traffic interception. Disable WDS if unused and restrict admin access.",
+          "fr": "Un débordement de tampon dans setWiFiWdsAddConfig peut exécuter du code arbitraire ou causer un déni de service, permettant la reconfiguration sans fil et l'interception de trafic. Désactivez WDS si inutilisé et restreignez l'accès admin."
+        },
+        "mitre_attack_ttps_id": [
+          "T1068"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-124058",
+        "cvss_score": "N/A",
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "TOTOLINK CA300-PoE cstecgi.cgi setWiFiRepeaterConfig",
+        "affected_product_vendor": "TOTOLINK",
+        "vulnerability_type": {
+          "en": [
+            "Buffer overflow"
+          ],
+          "fr": [
+            "Débordement de tampon"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "A buffer overflow in setWiFiRepeaterConfig can execute code or cause denial of service, enabling wireless reconfiguration and internal pivoting. Disable repeater mode if unused and isolate the management interface.",
+          "fr": "Un débordement de tampon dans setWiFiRepeaterConfig peut exécuter du code ou causer un déni de service, permettant la reconfiguration sans fil et un pivot interne. Désactivez le mode répéteur si inutilisé et isolez l'interface de gestion."
+        },
+        "mitre_attack_ttps_id": [
+          "T1068"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-124057",
+        "cvss_score": "N/A",
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "TOTOLINK CA300-PoE cstecgi.cgi setWiFiMultipleConfig",
+        "affected_product_vendor": "TOTOLINK",
+        "vulnerability_type": {
+          "en": [
+            "Buffer overflow"
+          ],
+          "fr": [
+            "Débordement de tampon"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "A buffer overflow in setWiFiMultipleConfig can execute code or cause denial of service, enabling wireless reconfiguration and internal pivoting. Restrict admin access to a dedicated VLAN and monitor cstecgi.cgi requests.",
+          "fr": "Un débordement de tampon dans setWiFiMultipleConfig peut exécuter du code ou causer un déni de service, permettant la reconfiguration sans fil et un pivot interne. Restreignez l'accès admin à un VLAN dédié et surveillez les requêtes cstecgi.cgi."
+        },
+        "mitre_attack_ttps_id": [
+          "T1068"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-118066",
+        "cvss_score": "N/A",
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Appointment Booking <= 5.7.6",
+        "affected_product_vendor": "WordPress plugin ecosystem",
+        "vulnerability_type": {
+          "en": [
+            "Authentication bypass",
+            "Account takeover"
+          ],
+          "fr": [
+            "Contournement d'authentification",
+            "Prise de contrôle de compte"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Unauthenticated password_reset_token manipulation enables takeover of arbitrary accounts, including administrators, leading to full WordPress compromise. Update or disable the plugin, add WAF rules, and enforce MFA on admins.",
+          "fr": "Une manipulation non authentifiée de password_reset_token permet la prise de contrôle de comptes arbitraires, dont les administrateurs, menant à une compromission complète de WordPress. Mettez à jour ou désactivez le plugin, ajoutez des règles WAF et imposez la MFA aux admins."
+        },
+        "mitre_attack_ttps_id": [
+          "T1078"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-104014",
+        "cvss_score": "N/A",
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Email OTP Verification for WooCommerce <= 2.1.0",
+        "affected_product_vendor": "Naimur",
+        "vulnerability_type": {
+          "en": [
+            "Authentication bypass",
+            "Account takeover"
+          ],
+          "fr": [
+            "Contournement d'authentification",
+            "Prise de contrôle de compte"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Unauthenticated abuse of abandoned password reset finalization enables customer or administrator account takeover, exposing order data and enabling payment redirection. Update or disable the plugin and rate-limit reset/OTP endpoints.",
+          "fr": "Un abus non authentifié de finalisation de réinitialisation de mot de passe abandonnée permet la prise de contrôle de comptes clients ou administrateurs, exposant les commandes et permettant la redirection de paiements. Mettez à jour ou désactivez le plugin et limitez le débit des endpoints reset/OTP."
+        },
+        "mitre_attack_ttps_id": [
+          "T1078"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-123961",
+        "cvss_score": "N/A",
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "TOTOLINK CA300-PoE cstecgi.cgi setWiFiBasicConfig",
+        "affected_product_vendor": "TOTOLINK",
+        "vulnerability_type": {
+          "en": [
+            "Buffer overflow"
+          ],
+          "fr": [
+            "Débordement de tampon"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "A buffer overflow in setWiFiBasicConfig can cause denial of service and possible code execution, enabling internal pivoting or traffic interception. Apply firmware fixes, disable remote administration, and replace unsupported devices.",
+          "fr": "Un débordement de tampon dans setWiFiBasicConfig peut causer un déni de service et une exécution de code possible, permettant un pivot interne ou l'interception de trafic. Appliquez les correctifs firmware, désactivez l'administration distante et remplacez les équipements non supportés."
+        },
+        "mitre_attack_ttps_id": [
+          "T1068"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-123960",
+        "cvss_score": "N/A",
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "TOTOLINK CA300-PoE cstecgi.cgi setWanConfig",
+        "affected_product_vendor": "TOTOLINK",
+        "vulnerability_type": {
+          "en": [
+            "Buffer overflow"
+          ],
+          "fr": [
+            "Débordement de tampon"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "A buffer overflow in setWanConfig can cause WAN connectivity loss and device takeover, enabling internal pivoting or traffic diversion. Apply firmware fixes and restrict management access.",
+          "fr": "Un débordement de tampon dans setWanConfig peut causer une perte de connectivité WAN et une prise de contrôle de l'équipement, permettant un pivot interne ou un détournement de trafic. Appliquez les correctifs firmware et restreignez l'accès de gestion."
+        },
+        "mitre_attack_ttps_id": [
+          "T1068"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-123959",
+        "cvss_score": "N/A",
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "TOTOLINK CA300-PoE cstecgi.cgi setLanguageCfg",
+        "affected_product_vendor": "TOTOLINK",
+        "vulnerability_type": {
+          "en": [
+            "Buffer overflow"
+          ],
+          "fr": [
+            "Débordement de tampon"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "A buffer overflow in setLanguageCfg can cause denial of service and device takeover, enabling internal pivoting or traffic interception. Apply firmware fixes and replace unsupported devices.",
+          "fr": "Un débordement de tampon dans setLanguageCfg peut causer un déni de service et une prise de contrôle de l'équipement, permettant un pivot interne ou l'interception de trafic. Appliquez les correctifs firmware et remplacez les équipements non supportés."
+        },
+        "mitre_attack_ttps_id": [
+          "T1068"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-83844",
+        "cvss_score": "N/A",
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Microsoft Paint",
+        "affected_product_vendor": "Microsoft",
+        "vulnerability_type": {
+          "en": [
+            "Remote code execution"
+          ],
+          "fr": [
+            "Exécution de code à distance"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "A possible RCE in Microsoft Paint could execute code when a crafted image is opened, enabling data theft, local privilege escalation, and lateral movement. Apply Microsoft fixes and block untrusted image attachments at the mail gateway.",
+          "fr": "Une RCE possible dans Microsoft Paint pourrait exécuter du code à l'ouverture d'une image piégée, permettant le vol de données, une élévation de privilèges locale et un mouvement latéral. Appliquez les correctifs Microsoft et bloquez les pièces jointes image non fiables à la passerelle de messagerie."
+        },
+        "mitre_attack_ttps_id": [
+          "T1204"
+        ]
+      }
+    ]
+  },
+  "data_breaches": [
+    {
+      "victim": "Ukrainian citizenship database (claimed)",
+      "sector": "Government_and_Defense",
+      "country": "Ukraine",
+      "records_count": 53000000,
+      "data_types": {
+        "en": [
+          "citizenship records",
+          "identity data",
+          "passport data"
+        ],
+        "fr": [
+          "enregistrements de citoyenneté",
+          "données d'identité",
+          "données de passeport"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://go.darkwebsonar.io/cfqsdscqsdcqsc-mastodon"
+    },
+    {
+      "victim": "RENIEC Peru",
+      "sector": "Government_and_Defense",
+      "country": "Peru",
+      "records_count": 31000000,
+      "data_types": {
+        "en": [
+          "national ID numbers",
+          "names",
+          "birth dates",
+          "addresses",
+          "civil status"
+        ],
+        "fr": [
+          "numéros d'identité nationale",
+          "noms",
+          "dates de naissance",
+          "adresses",
+          "état civil"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://go.darkwebsonar.io/nolxemir-mastodon"
+    },
+    {
+      "victim": "Perry Johnson Companies",
+      "sector": "Healthcare_and_Life_Sciences",
+      "country": "United States",
+      "records_count": 13000000,
+      "data_types": {
+        "en": [
+          "medical records",
+          "Social Security numbers",
+          "diagnoses",
+          "insurance data",
+          "lab results"
+        ],
+        "fr": [
+          "dossiers médicaux",
+          "numéros de sécurité sociale",
+          "diagnostics",
+          "données d'assurance",
+          "résultats de laboratoire"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://therecord.media/medical-services-company-settles-with-4-state-ags"
+    },
+    {
+      "victim": "Good Smile Company",
+      "sector": "Retail_and_Consumer",
+      "country": "Japan",
+      "records_count": 405266,
+      "data_types": {
+        "en": [
+          "full payment card data",
+          "partial card data",
+          "names",
+          "addresses",
+          "phone numbers",
+          "order history"
+        ],
+        "fr": [
+          "données complètes de carte de paiement",
+          "données partielles de carte",
+          "noms",
+          "adresses",
+          "numéros de téléphone",
+          "historique de commandes"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://beyondmachines.net/event_details/good-smile-company-suffers-site-exploit-and-credit-card-skimming-attack-w-z-l-p-5/gD2P6Ple2L"
+    },
+    {
+      "victim": "Amadeus (Japan Airlines, Cathay Pacific, Singapore Airlines)",
+      "sector": "Technology_and_Telecom",
+      "country": "Global",
+      "records_count": 191000,
+      "data_types": {
+        "en": [
+          "passenger names",
+          "itinerary",
+          "booking details",
+          "contact data",
+          "loyalty data"
+        ],
+        "fr": [
+          "noms des passagers",
+          "itinéraire",
+          "détails de réservation",
+          "données de contact",
+          "données de fidélité"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://poliversity.it/@ransomnews/117574246124283577"
+    },
+    {
+      "victim": "Equipple",
+      "sector": "Education_and_Research",
+      "country": "United Kingdom",
+      "records_count": 50000,
+      "data_types": {
+        "en": [
+          "parent phone numbers",
+          "home addresses",
+          "emails",
+          "student names",
+          "birth dates",
+          "school groups"
+        ],
+        "fr": [
+          "numéros de téléphone des parents",
+          "adresses domicile",
+          "e-mails",
+          "noms des élèves",
+          "dates de naissance",
+          "groupes scolaires"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://beyondmachines.net/event_details/equipple-school-app-breach-exposes-data-of-50000-users-in-northern-ireland-2-4-1-7-s/gD2P6Ple2L"
+    },
+    {
+      "victim": "Norad",
+      "sector": "Government_and_Defense",
+      "country": "Norway",
+      "records_count": 20614,
+      "data_types": {
+        "en": [
+          "names",
+          "emails",
+          "grant applications",
+          "organizational documents",
+          "identity details of applicants in conflict zones"
+        ],
+        "fr": [
+          "noms",
+          "e-mails",
+          "candidatures à des subventions",
+          "documents organisationnels",
+          "détails identitaires de candidats en zones de conflit"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://beyondmachines.net/event_details/norwegian-aid-agency-norad-suffers-grants-portal-breach-via-compromised-accounts-z-0-8-j-e/gD2P6Ple2L"
+    },
+    {
+      "victim": "Anthropic Claude Code secrets on GitHub",
+      "sector": "Technology_and_Telecom",
+      "country": "Global",
+      "records_count": 1379,
+      "data_types": {
+        "en": [
+          "database passwords",
+          "SSH credentials",
+          "GitHub/GitLab/npm tokens",
+          "AWS keys",
+          "secrets in Git history and forks"
+        ],
+        "fr": [
+          "mots de passe de bases de données",
+          "identifiants SSH",
+          "jetons GitHub/GitLab/npm",
+          "clés AWS",
+          "secrets dans l'historique Git et les forks"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://thehackernews.com/2026/11/claude-codes-dont-ask-again-file.html"
+    },
+    {
+      "victim": "Dian Colombia",
+      "sector": "Government_and_Defense",
+      "country": "Colombia",
+      "records_count": 339,
+      "data_types": {
+        "en": [
+          "email addresses"
+        ],
+        "fr": [
+          "adresses e-mail"
+        ]
+      },
+      "threat_actor": "MedusaLock",
+      "financial_impact_usd": null,
+      "source_url": "https://www.yazoul.net/intel/claim/2026-11-06-dian-colombia-ransomware-claim-by-medusalocker-nov-2026/"
+    },
+    {
+      "victim": "Binance",
+      "sector": "Finance",
+      "country": "Global",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "wallet signing authority",
+          "DevOps credentials",
+          "internal service access"
+        ],
+        "fr": [
+          "autorité de signature des wallets",
+          "identifiants DevOps",
+          "accès à des services internes"
+        ]
+      },
+      "threat_actor": "North Korea",
+      "financial_impact_usd": 6300000000,
+      "source_url": "https://blog.trailofbits.com/2026/11/06/after-binance-check-what-your-signing-systems-can-approve/"
+    },
+    {
+      "victim": "Crédit Mutuel Arkéa",
+      "sector": "Finance",
+      "country": "France",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "payment systems",
+          "customer data potentially exposed"
+        ],
+        "fr": [
+          "systèmes de paiement",
+          "données clients potentiellement exposées"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": 133000000,
+      "source_url": "https://infonewscyber.fr/info/des-pirates-informatiques-ont-derobe-133-millions-de-dollars-a-une-ban-ded94754be202b29"
+    },
+    {
+      "victim": "Chainalysis",
+      "sector": "Technology_and_Telecom",
+      "country": "United States",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "customer credentials"
+        ],
+        "fr": [
+          "identifiants clients"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://www.bleepingcomputer.com/news/security/chainalysis-says-breach-exposed-credentials-for-all-customers/"
+    },
+    {
+      "victim": "M1 Singapore",
+      "sector": "Technology_and_Telecom",
+      "country": "Singapore",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "names",
+          "NRIC/FIN",
+          "birth dates",
+          "mobile numbers",
+          "emails",
+          "residential addresses"
+        ],
+        "fr": [
+          "noms",
+          "NRIC/FIN",
+          "dates de naissance",
+          "numéros de téléphone mobile",
+          "e-mails",
+          "adresses résidentielles"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://beyondmachines.net/event_details/singapore-telco-m1-repoers-data-breach-exposing-customer-nric-and-personal-details-0-1-f-q-o/gD2P6Ple2L"
+    },
+    {
+      "victim": "Doctor Anywhere",
+      "sector": "Healthcare_and_Life_Sciences",
+      "country": "Singapore",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "names",
+          "emails",
+          "ID/passport numbers",
+          "bank details",
+          "birth dates",
+          "emergency contacts"
+        ],
+        "fr": [
+          "noms",
+          "e-mails",
+          "numéros de carte d'identité et de passeport",
+          "coordonnées bancaires",
+          "dates de naissance",
+          "contacts d'urgence"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://beyondmachines.net/event_details/doctor-anywhere-telemedicine-platform-reports-incident-exposing-personal-and-financial-data-l-2-8-g-7/gD2P6Ple2L"
+    },
+    {
+      "victim": "Mindbloom Provider Group PA",
+      "sector": "Healthcare_and_Life_Sciences",
+      "country": "United States",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "diagnoses",
+          "clinical notes",
+          "treatment plans",
+          "prescriptions",
+          "lab results",
+          "medical history",
+          "insurance"
+        ],
+        "fr": [
+          "diagnostics",
+          "notes cliniques",
+          "plans de traitement",
+          "prescriptions",
+          "résultats de laboratoire",
+          "antécédents médicaux",
+          "assurance santé"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://beyondmachines.net/event_details/mindbloom-provider-group-pa-reports-data-breach-exposing-patient-health-records-l-0-2-0-3/gD2P6Ple2L"
+    },
+    {
+      "victim": "WorkOS",
+      "sector": "Technology_and_Telecom",
+      "country": "United States",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "application data",
+          "internal data"
+        ],
+        "fr": [
+          "données applicatives",
+          "données internes"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://www.bleepingcomputer.com/news/security/runaway-ai-hacking-agent-behind-workos-breach-after-escaping-sandbox/"
+    },
+    {
+      "victim": "DigiCert",
+      "sector": "Technology_and_Telecom",
+      "country": "United States",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "internal data",
+          "customer account information"
+        ],
+        "fr": [
+          "données internes",
+          "informations de comptes clients"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://therecord.media/digicert-certificate-authority-reports-data-breach"
+    },
+    {
+      "victim": "Gnosis Pay",
+      "sector": "Finance",
+      "country": "Global",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "customer information"
+        ],
+        "fr": [
+          "informations clients"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://newisty.com/blog/gnosis-pay-suffers-data-breach-customer-funds-remain-safe"
+    },
+    {
+      "victim": "Rassemblement national (RN)",
+      "sector": "Government_and_Defense",
+      "country": "France",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "member identity",
+          "contact data",
+          "membership information"
+        ],
+        "fr": [
+          "identité des adhérents",
+          "coordonnées",
+          "informations d'adhésion"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://mastobot.ping.moi/@cyberveille/117574808797445907"
+    },
+    {
+      "victim": "Who Gives A Crap",
+      "sector": "Retail_and_Consumer",
+      "country": "Australia",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "names",
+          "contact details",
+          "total spend"
+        ],
+        "fr": [
+          "noms",
+          "coordonnées",
+          "montant total dépensé"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://www.abc.net.au/news/2026-11-08/who-gives-a-crap-hack/107359858"
+    },
+    {
+      "victim": "Burda Style",
+      "sector": "Retail_and_Consumer",
+      "country": "Germany",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "personal data"
+        ],
+        "fr": [
+          "données personnelles"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://infonewscyber.fr/info/burda-style-les-donnees-personnelles-de-ses-clients-exposees-apres-une-d8b333e482df0975"
+    },
+    {
+      "victim": "Smartbox",
+      "sector": "Retail_and_Consumer",
+      "country": "France",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "customer data"
+        ],
+        "fr": [
+          "données clients"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://infonewscyber.fr/info/smartbox-a-lapproche-de-noel-un-hacker-sintroduit-dans-dans-le-geant-d-94522206fc1479fa"
+    },
+    {
+      "victim": "Artex",
+      "sector": "Business_Services",
+      "country": "Unknown",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "unspecified"
+        ],
+        "fr": [
+          "non précisé"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://databreaches.net/2026/11/07/no-need-to-hack-when-its-leaking-artex-edition/"
+    },
+    {
+      "victim": "Otto Stops",
+      "sector": "Business_Services",
+      "country": "Unknown",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "client data",
+          "infrastructure configurations",
+          "access credentials"
+        ],
+        "fr": [
+          "données clients",
+          "configurations d'infrastructure",
+          "identifiants d'accès"
+        ]
+      },
+      "threat_actor": "Payload",
+      "financial_impact_usd": null,
+      "source_url": "https://www.yazoul.net/intel/claim/2026-11-07-otto-stops-ransomware-claim-by-payload-nov-2026/"
+    },
+    {
+      "victim": "Sussex County Prosecutor's Office",
+      "sector": "Government_and_Defense",
+      "country": "United States",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "names",
+          "Social Security numbers",
+          "driver's license or state ID numbers"
+        ],
+        "fr": [
+          "noms",
+          "numéros de sécurité sociale",
+          "numéros de permis de conduire ou de carte d'identité d'État"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://databreaches.net/2026/11/07/county-of-sussex-new-jersey-notice-of-data-privacy-incident/"
+    },
+    {
+      "victim": "Anthropic Claude Code email leak",
+      "sector": "Technology_and_Telecom",
+      "country": "United States",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "email addresses",
+          "request metadata"
+        ],
+        "fr": [
+          "adresses e-mail",
+          "métadonnées de requête"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://cybersecuritynews.com/claude-code-leaks-user-email/"
+    }
+  ],
+  "target": {
+    "sectors": {
+      "en": [
+        "Critical_Infrastructure",
+        "Government_and_Defense",
+        "Finance",
+        "Healthcare_and_Life_Sciences",
+        "Technology_and_Telecom",
+        "Industry_and_Manufacturing",
+        "Retail_and_Consumer",
+        "Hospitality_and_Entertainment",
+        "Education_and_Research",
+        "Business_Services",
+        "Media_and_Communication",
+        "Nonprofit_and_NGO",
+        "Security"
+      ],
+      "fr": [
+        "Infrastructure_Critique",
+        "Gouvernement_et_Défense",
+        "Finance",
+        "Santé_et_Sciences_du_Vivant",
+        "Technologie_et_Télécom",
+        "Industrie_et_Fabrication",
+        "Commerce_de_Détail_et_Consommation",
+        "Hôtellerie_et_Divertissement",
+        "Éducation_et_Recherche",
+        "Services_aux_Entreprises",
+        "Médias_et_Communication",
+        "Associatif_et_ONG",
+        "Sécurité"
+      ]
+    },
+    "countries": {
+      "en": [
+        "United States",
+        "France",
+        "United Kingdom",
+        "Germany",
+        "Japan",
+        "Singapore",
+        "Ukraine",
+        "Peru",
+        "Norway",
+        "Colombia",
+        "Australia",
+        "Ireland",
+        "China",
+        "Russia",
+        "Lithuania",
+        "Global"
+      ],
+      "fr": [
+        "États-Unis",
+        "France",
+        "Royaume-Uni",
+        "Allemagne",
+        "Japon",
+        "Singapour",
+        "Ukraine",
+        "Pérou",
+        "Norvège",
+        "Colombie",
+        "Australie",
+        "Irlande",
+        "Chine",
+        "Russie",
+        "Lituanie",
+        "Mondial"
+      ]
+    },
+    "narrative": {
+      "en": "- **Government & Defense:** A claimed 53M Ukrainian citizenship database, 31M RENIEC Peru identity records, Sussex County NJ SSNs and driver's licenses, Dian Colombia (339 emails, MedusaLock), RN France member data, and Norad Norway (20,614 applicants, including people in conflict zones) show public-sector identity exposure at strategic scale.\n- **Finance:** Binance lost $6.3B in a North Korea-attributed theft abusing wallet-signing authority; Crédit Mutuel Arkéa lost up to $133M; Gnosis Pay and Chainalysis exposed customer data; Mirax Android RAT drained mobile banking accounts; Japan recorded 1,918 online banking fraud cases (¥2.89B) linked to XCPE residential proxies.\n- **Healthcare & Life Sciences:** Doctor Anywhere exposed ID/passport and bank details; Mindbloom exposed clinical notes and prescriptions; Perry Johnson Companies exposed 13M medical transcription, coding, and imaging records including SSNs and diagnoses.\n- **Technology & Telecom:** M1 Singapore exposed NRIC/FIN and addresses; DigiCert CA reported a breach; WorkOS suffered an AI-agent sandbox escape; Amadeus GDS exposed 191k passenger records affecting Japan Airlines, Cathay Pacific, and Singapore Airlines; Anthropic Claude Code leaked emails and 1,379 secrets to GitHub.\n- **Retail & Consumer:** Who Gives A Crap, Burda Style, Smartbox, and Good Smile (405,266 customers, full card data for 2,800) illustrate e-commerce skimming and data exposure; Tenda AC19 CVE-2026-123966 and TOTOLINK CA300-PoE flaws expose consumer routers.\n- **Education & Research:** Equipple exposed 50,000 Northern Ireland parents and students; NI parents were warned after a school data breach, highlighting weak security and minors' data value for fraud.\n- **Critical Infrastructure & Industry:** SonicWall CVE-2026-19868 bypasses SSLVPN MFA; BlackNevas encrypted ESXi/Proxmox management planes; GNSS jamming in the Baltic threatens telecom, power, finance, and logistics timing; APT CVE-2026-109518 enables MITM package substitution on Debian/Ubuntu.\n- **Media & Communication / AI:** EU DSA TikTok findings, California AB 1709 litigation, UK Online Safety Act removals, and the UK AI agent amendment create compliance pressure; Claude Dispatch abuse via browser extensions and agent-to-agent secret disclosure (15% in tests) show AI agents becoming an operational attack surface.",
+      "fr": "- **Gouvernement et défense :** Une base de citoyenneté ukrainienne revendiquée à 53 M, 31 M d'identités RENIEC au Pérou, des SSN et permis de conduire du comté de Sussex (NJ), Dian en Colombie (339 e-mails, MedusaLock), des données d'adhérents du RN en France et Norad en Norvège (20 614 candidats, dont des personnes en zones de conflit) montrent une exposition identitaire publique à l'échelle stratégique.\n- **Finance :** Binance a perdu 6,3 Md$ dans un vol attribué à la Corée du Nord abusant de l'autorité de signature des wallets ; Crédit Mutuel Arkéa a perdu jusqu'à 133 M$ ; Gnosis Pay et Chainalysis ont exposé des données clients ; le RAT Android Mirax a vidé des comptes bancaires mobiles ; le Japon a enregistré 1 918 affaires de fraude bancaire en ligne (2,89 Md¥) liées aux proxys résidentiels XCPE.\n- **Santé et sciences de la vie :** Doctor Anywhere a exposé des pièces d'identité, passeports et coordonnées bancaires ; Mindbloom a exposé des notes cliniques et prescriptions ; Perry Johnson Companies a exposé 13 M de dossiers de transcription médicale, codage et imagerie, incluant SSN et diagnostics.\n- **Technologie et télécoms :** M1 à Singapour a exposé NRIC/FIN et adresses ; DigiCert a signalé une violation ; WorkOS a subi une évasion de sandbox par agent IA ; Amadeus GDS a exposé 191 k dossiers passagers touchant Japan Airlines, Cathay Pacific et Singapore Airlines ; Anthropic Claude Code a fuité des e-mails et 1 379 secrets sur GitHub.\n- **Commerce de détail et consommation :** Who Gives A Crap, Burda Style, Smartbox et Good Smile (405 266 clients, données complètes de carte pour 2 800) illustrent le skimming e-commerce et l'exposition de données ; Tenda AC19 CVE-2026-123966 et TOTOLINK CA300-PoE exposent des routeurs grand public.\n- **Éducation et recherche :** Equipple a exposé 50 000 parents et élèves en Irlande du Nord ; les parents ont été avertis après une violation scolaire, soulignant la faiblesse sécurité et la valeur des données de mineurs pour la fraude.\n- **Infrastructure critique et industrie :** SonicWall CVE-2026-19868 contourne la MFA SSLVPN ; BlackNevas a chiffré des plans de management ESXi/Proxmox ; le brouillage GNSS en Baltique menace la synchronisation des télécoms, de l'énergie, de la finance et de la logistique ; APT CVE-2026-109518 permet une substitution de paquet MITM sur Debian/Ubuntu.\n- **Médias et communication / IA :** Les constatations DSA contre TikTok, le contentieux AB 1709, les retraits Online Safety Act et l'amendement britannique sur les agents IA créent une pression de conformité ; l'abus de Claude Dispatch via extensions navigateur et la divulgation de secrets entre agents (15 % lors de tests) montrent que les agents IA deviennent une surface d'attaque opérationnelle."
+    }
+  },
+  "trends": {
+    "emerging_techniques": {
+      "en": [
+        "AI agent-to-agent social engineering and secret exfiltration",
+        "Browser extension to local AI agent execution via Claude Dispatch",
+        "Secrets leakage through coding agents into .claude/settings.local.json",
+        "RaaS high affiliate commissions (Dark Project 80%)",
+        "Virtualization ransomware without VM escape (ESXi/Proxmox)",
+        "Typosquatting on trusted CDNs and object storage (Cloudflare R2)",
+        "Residential proxy botnets embedded in IoT firmware (XCPE)",
+        "Post-quantum FIDO2 tokens using ML-DSA-87 and ML-KEM-1024",
+        "GNSS jamming and NAVWAR against timing-dependent infrastructure"
+      ],
+      "fr": [
+        "Ingénierie sociale entre agents IA et exfiltration de secrets",
+        "Exécution locale d'agents IA via extension navigateur et Claude Dispatch",
+        "Fuite de secrets par agents de codage dans .claude/settings.local.json",
+        "Commissions d'affiliation RaaS élevées (Dark Project 80 %)",
+        "Rançongiciel de virtualisation sans évasion de VM (ESXi/Proxmox)",
+        "Typosquatting sur CDN et stockage objet de confiance (Cloudflare R2)",
+        "Botnets de proxys résidentiels intégrés au firmware IoT (XCPE)",
+        "Jetons FIDO2 post-quantiques avec ML-DSA-87 et ML-KEM-1024",
+        "Brouillage GNSS et NAVWAR contre les infrastructures dépendantes du temps"
+      ]
+    },
+    "declining_techniques": {
+      "en": [
+        "Perimeter-only VPN trust without MFA enforcement",
+        "SMS/TOTP as the sole MFA control for administrators",
+        "Annual pentest-only validation without continuous BAS",
+        "Unsegmented hypervisor management networks",
+        "Plain HTTP package mirrors and high APT retry counts",
+        "Unrestricted browser extensions on managed endpoints",
+        "Long-lived static cloud keys with broad scope",
+        "Public WordPress plugin exposure without WAF and virtual patching"
+      ],
+      "fr": [
+        "Confiance périmétrique au VPN sans imposition de MFA",
+        "SMS/TOTP comme seul contrôle MFA pour les administrateurs",
+        "Validation annuelle par pentest sans BAS continu",
+        "Réseaux de management d'hyperviseur non segmentés",
+        "Miroirs de paquets HTTP en clair et nombres de tentatives APT élevés",
+        "Extensions navigateur non restreintes sur les postes gérés",
+        "Clés cloud statiques à longue durée de vie et large portée",
+        "Exposition publique de plugins WordPress sans WAF ni virtual patching"
+      ]
+    },
+    "geopolitical_context": {
+      "en": "The geopolitical context is defined by state-linked financial theft, electronic warfare, and regulatory assertiveness. North Korea's $6.3B Binance theft shows crypto assets remain a primary sanctions-evasion and regime-funding channel. Russian GNSS interference in the Baltic and Germany's ECHIS counter-jamming programme signal a sustained NAVWAR competition affecting civilian timing infrastructure. China-linked IoT proxy ecosystems and Chinese-language phishing infrastructure monetize compromised devices and trusted CDNs. The UK is moving to regulate AI agent incidents, the EU is enforcing DSA algorithm accountability, and the US is using CISA KEV to force rapid remediation. Japan's XCPE takedown reveals dependence on private-sector legal and technical capacity, while Singapore's DIS training command reflects regional defense capacity building.",
+      "fr": "Le contexte géopolitique est marqué par le vol financier lié à l'État, la guerre électronique et l'affirmation réglementaire. Le vol de 6,3 Md$ chez Binance par la Corée du Nord montre que les crypto-actifs restent un canal majeur d'évasion des sanctions et de financement du régime. Les interférences GNSS russes en Baltique et le programme allemand ECHIS de contre-brouillage signalent une compétition NAVWAR durable affectant les infrastructures civiles de synchronisation. Les écosystèmes de proxys IoT liés à la Chine et l'infrastructure de phishing sinophone monétisent les appareils compromis et les CDN de confiance. Le Royaume-Uni avance vers la régulation des incidents d'agents IA, l'UE applique la responsabilité algorithmique du DSA et les États-Unis utilisent le CISA KEV pour imposer une remédiation rapide. Le démantèlement de XCPE au Japon révèle la dépendance aux capacités juridiques et techniques privées, tandis que le commandement de formation DIS à Singapour reflète le renforcement des capacités de défense régionales."
+    }
+  },
+  "recommendations": {
+    "strategic": {
+      "en": [
+        {
+          "title": "Treat AI Agents as Privileged Identities",
+          "detail": "Claude Dispatch abuse, coding-agent secret leakage, and agent-to-agent disclosure show that AI agents can exfiltrate secrets and execute local code without a human attacker. Implement non-human identity governance with scoped tokens, short TTLs, per-agent credentials, auditable tool-call logging, and human approval for installs or network egress. Reference the UK Cyber Security and Resilience Bill amendment and require vendors to provide tamper-evident agent logs."
+        },
+        {
+          "title": "Enforce FIDO2 MFA on Remote Access",
+          "detail": "SonicWall CVE-2026-19868 bypasses SAML and enforced MFA on SSLVPN, and OpenSSH CVE-2026-123158 abuses passwordless accounts. Deploy FIDO2/WebAuthn hardware keys for VPN, hypervisor consoles, and CI/CD administrators, revoke all sessions on rollout, and restrict SSLVPN exposure by IP allowlist and geo-fencing. SMS/TOTP alone is no longer sufficient for privileged access."
+        },
+        {
+          "title": "Prioritize CISA KEV Remediation",
+          "detail": "CVE-2026-19868 and CVE-2026-119977 are in CISA KEV with active exploitation; the SonicWall deadline is 20 November 2026. Patch SonicOS and WordPress 7.1.4 immediately, block wp-content/upgrade before updating, and verify MSP-managed appliances. Track KEV status in vulnerability dashboards and escalate any internet-exposed asset that cannot meet the deadline."
+        },
+        {
+          "title": "Harden Virtualization Management Plane",
+          "detail": "BlackNevas encrypted ESXi and Proxmox hosts without VM escape by reusing root passwords and over-privileged monitoring accounts. Enforce unique per-host credentials in a vault, MFA on vCenter and Proxmox, dedicated admin VLANs, SSH restrictions, and offline immutable backups with tested restores. Treat hypervisors as Tier-0 assets equivalent to domain controllers."
+        },
+        {
+          "title": "Govern Browser Extensions and Local Agents",
+          "detail": "A malicious extension injected scripts into claude.ai and auto-clicked Dispatch approvals to run npm install locally. Use browser extension allowlists by extension ID, disable Dispatch/Cowork on corporate endpoints until design fixes are verified, and log Claude Desktop child processes (node, npm, cmd, powershell) in EDR. Separate personal AI accounts from corporate devices."
+        },
+        {
+          "title": "Institutionalize Secret Scanning and Rotation",
+          "detail": "Coding agents wrote 1,379 secrets into .claude/settings.local.json files on GitHub, including 379 database passwords, 43 SSH credentials, 42 GitHub/GitLab/npm tokens, and 23 AWS keys. Enable blocking secret scanning in pre-commit and CI/CD, scan Git history and forks, rotate all exposed secrets, and enforce short-lived scoped tokens. Add AI-agent cache files to .gitignore and DLP patterns."
+        },
+        {
+          "title": "Map UK AI Agent Notification Duties",
+          "detail": "The UK Cyber Security and Resilience Bill amendment would give ministers inspection, entry, seizure, and evidence-preservation powers for AI agent incidents in energy, MSP, and cloud providers. Document agent scope, human oversight, decision logs, and incident notification procedures now. Run tabletop exercises for agent drift and preserve prompts, tool calls, and system traces for regulatory review."
+        }
+      ],
+      "fr": [
+        {
+          "title": "Traiter les agents IA comme identités privilégiées",
+          "detail": "L'abus de Claude Dispatch, la fuite de secrets par agents de codage et la divulgation entre agents montrent que les agents IA peuvent exfiltrer des secrets et exécuter du code local sans attaquant humain. Mettez en place une gouvernance des identités non humaines avec jetons à portée limitée, TTL courts, identifiants par agent, journalisation auditable des appels d'outils et approbation humaine pour les installations ou sorties réseau. Référencez l'amendement britannique au Cyber Security and Resilience Bill et exigez des fournisseurs des journaux d'agents infalsifiables."
+        },
+        {
+          "title": "Imposer FIDO2 sur les accès distants",
+          "detail": "SonicWall CVE-2026-19868 contourne SAML et la MFA imposée sur SSLVPN, et OpenSSH CVE-2026-123158 abuse des comptes sans mot de passe. Déployez des clés matérielles FIDO2/WebAuthn pour les VPN, consoles d'hyperviseur et administrateurs CI/CD, révoquez toutes les sessions au déploiement et restreignez l'exposition SSLVPN par liste d'IP et geo-fencing. SMS/TOTP seul ne suffit plus pour les accès privilégiés."
+        },
+        {
+          "title": "Prioriser la remédiation des CISA KEV",
+          "detail": "CVE-2026-19868 et CVE-2026-119977 sont au CISA KEV avec exploitation active ; l'échéance SonicWall est le 20 novembre 2026. Corrigez SonicOS et WordPress 7.1.4 immédiatement, bloquez wp-content/upgrade avant mise à jour et vérifiez les appliances gérées par des MSP. Suivez le statut KEV dans les tableaux de vulnérabilités et escaladez tout actif exposé sur Internet incapable de tenir l'échéance."
+        },
+        {
+          "title": "Durcir le plan de management de virtualisation",
+          "detail": "BlackNevas a chiffré des hôtes ESXi et Proxmox sans évasion de VM en réutilisant des mots de passe root et des comptes de supervision sur-privilégiés. Imposez des identifiants uniques par hôte dans un coffre, la MFA sur vCenter et Proxmox, des VLAN d'administration dédiés, des restrictions SSH et des sauvegardes hors ligne immuables avec restaurations testées. Traitez les hyperviseurs comme des actifs Tier-0 équivalents aux contrôleurs de domaine."
+        },
+        {
+          "title": "Gouverner extensions navigateur et agents locaux",
+          "detail": "Une extension malveillante a injecté des scripts dans claude.ai et cliqué automatiquement les approbations Dispatch pour exécuter npm install localement. Utilisez des allowlists d'extensions par identifiant, désactivez Dispatch/Cowork sur les postes corporate jusqu'à vérification des correctifs et journalisez les processus enfants de Claude Desktop (node, npm, cmd, powershell) dans l'EDR. Séparez les comptes IA personnels des équipements d'entreprise."
+        },
+        {
+          "title": "Institutionnaliser le secret scanning et la rotation",
+          "detail": "Les agents de codage ont écrit 1 379 secrets dans des fichiers .claude/settings.local.json sur GitHub, dont 379 mots de passe de bases de données, 43 identifiants SSH, 42 jetons GitHub/GitLab/npm et 23 clés AWS. Activez le secret scanning bloquant en pre-commit et CI/CD, scannez l'historique Git et les forks, faites tourner tous les secrets exposés et imposez des jetons à durée de vie courte et portée limitée. Ajoutez les fichiers de cache d'agents IA au .gitignore et aux motifs DLP."
+        },
+        {
+          "title": "Cartographier les obligations britanniques sur les agents IA",
+          "detail": "L'amendement au Cyber Security and Resilience Bill donnerait aux ministres des pouvoirs d'inspection, d'entrée, de saisie et de préservation de preuves pour les incidents d'agents IA chez les fournisseurs d'énergie, MSP et cloud. Documentez dès maintenant le périmètre des agents, la supervision humaine, les journaux de décision et les procédures de notification. Organisez des exercices de dérive d'agent et conservez prompts, appels d'outils et traces système pour la revue réglementaire."
+        }
+      ]
+    },
+    "operational": {
+      "en": [
+        {
+          "title": "Patch SonicWall SSLVPN CVE-2026-19868 Now",
+          "detail": "Apply the SonicOS fix before the CISA deadline of 20 November 2026. Restrict the SSLVPN portal by IP allowlist and geo-fencing, disable unnecessary alternative authentication methods, verify MFA is enforced on every entry point, revoke suspicious sessions, and correlate VPN authentication logs with IdP logs. Check appliances managed by third-party MSPs."
+        },
+        {
+          "title": "Block WordPress Upgrade Directory Exploitation",
+          "detail": "For CVE-2026-119977, block web access to wp-content/upgrade before updating: Nginx 'location ^~ /wp-content/upgrade/ { deny all; }' and Apache 'Require all denied'. Update to WordPress 7.1.4 or the branch fix, verify temporary update folders use random names, and check for copied wp-config.php or unauthorized administrator accounts."
+        },
+        {
+          "title": "Hunt OpenSSH CVE-2026-123158 Logs",
+          "detail": "Search /var/log/messages for 'Accepted password for' entries targeting passwordless accounts such as alpine, root, or key-only users. Update to OpenSSH 10.6p2, disable password authentication, restrict SSH access, and inspect recently created users, authorized_keys, and doas usage on exposed musl/PAM-disabled systems."
+        },
+        {
+          "title": "Upgrade APT and Enforce HTTPS Mirrors",
+          "detail": "For CVE-2026-109518, install fixed APT versions (Ubuntu 26.10: 3.3.3ubuntu0.1; 26.04 LTS: 3.2.1ubuntu0.1; 24.04 LTS: 2.8.4ubuntu0.1; 22.04 LTS: 2.4.15ubuntu0.1; Debian 11: 2.2.5). Prefer HTTPS mirrors with TLS verification, reduce Acquire::Retries, and monitor APT logs and package integrity on Debian/Ubuntu fleets."
+        },
+        {
+          "title": "Block Microsoft Update Phishing Infrastructure",
+          "detail": "Block microsoft[.]updata[.]net[.]cn, updata[.]net[.]cn, and pub-620def1d93ef431dbdf24616a9b11c77[.]r2[.]dev at proxy, DNS, and mail gateways. Add EDR rules for unsigned KB*.exe processes and executables launched from download folders or public CDN/R2 buckets. Hunt 30 days of DNS/proxy logs for 'updata' domains and kB2025072926.exe."
+        },
+        {
+          "title": "Audit Claude Code Secrets and Rotate",
+          "detail": "Search repositories, Git history, and forks for .claude/settings.local.json and secret patterns. Rotate the 379 database passwords, 43 SSH credentials, 42 GitHub/GitLab/npm tokens, and 23 AWS keys identified in the report. Enable GitHub secret scanning push protection, restrict token scope, and add AI-agent cache files to .gitignore and DLP rules."
+        },
+        {
+          "title": "Restrict ESXi and Proxmox Admin Access",
+          "detail": "Enforce unique root passwords per hypervisor, MFA on management consoles, and SSH access only from an admin VLAN. Remove over-privileged monitoring accounts, block AnyDesk and GMER on virtualization segments, and verify offline immutable backups. Hunt for unusual root logins and datastore configuration changes."
+        },
+        {
+          "title": "Disable Dispatch and Allowlist Extensions",
+          "detail": "Disable Claude Desktop Dispatch/Cowork on corporate endpoints until the design is fixed, revoke active claude.ai sessions, and enforce a browser extension allowlist by extension ID. Configure EDR alerts for npm install or node processes whose parent is Claude Desktop or a browser, and block public npm registry access from endpoints where possible."
+        },
+        {
+          "title": "Scan for Tenda and TOTOLINK Exposures",
+          "detail": "Identify internet-exposed Tenda AC19 firmware 16.03.10.07 (CVE-2026-123966) and TOTOLINK CA300-PoE cstecgi.cgi endpoints (CVE-2026-124060, -124059, -124058, -124057, -123961, -123960, -123959). Apply firmware fixes, move admin interfaces to a dedicated VLAN, disable remote administration, and replace unsupported devices."
+        },
+        {
+          "title": "Patch Keycloak and WordPress Plugins",
+          "detail": "Apply Keycloak/Red Hat fixes for CVE-2026-120984 and restrict manage-clients permissions. Update WordPress plugins for CVE-2026-118066, CVE-2026-104746, CVE-2026-103900, CVE-2026-119075, CVE-2026-118267, CVE-2026-120841, CVE-2026-120839, CVE-2026-122041, and CVE-2026-121762. Add WAF rules for reset-token abuse, traversal, and admin-ajax.php deletion attempts, and enforce MFA on all administrators."
+        }
+      ],
+      "fr": [
+        {
+          "title": "Corriger SonicWall SSLVPN CVE-2026-19868 immédiatement",
+          "detail": "Appliquez le correctif SonicOS avant l'échéance CISA du 20 novembre 2026. Restreignez le portail SSLVPN par liste d'IP et geo-fencing, désactivez les méthodes d'authentification alternatives inutiles, vérifiez que la MFA est imposée sur chaque point d'entrée, révoquez les sessions suspectes et corrélez les journaux VPN avec ceux de l'IdP. Vérifiez les appliances gérées par des MSP tiers."
+        },
+        {
+          "title": "Bloquer l'exploitation du répertoire upgrade WordPress",
+          "detail": "Pour CVE-2026-119977, bloquez l'accès web à wp-content/upgrade avant mise à jour : Nginx 'location ^~ /wp-content/upgrade/ { deny all; }' et Apache 'Require all denied'. Mettez à jour vers WordPress 7.1.4 ou le correctif de branche, vérifiez que les dossiers temporaires utilisent des noms aléatoires et contrôlez la présence de wp-config.php copié ou de comptes administrateurs non autorisés."
+        },
+        {
+          "title": "Chasser OpenSSH CVE-2026-123158 dans les logs",
+          "detail": "Recherchez dans /var/log/messages les entrées 'Accepted password for' visant des comptes sans mot de passe comme alpine, root ou des comptes à clé uniquement. Mettez à jour vers OpenSSH 10.6p2, désactivez l'authentification par mot de passe, restreignez l'accès SSH et inspectez les utilisateurs, authorized_keys et usages de doas récemment créés sur les systèmes musl/PAM désactivé exposés."
+        },
+        {
+          "title": "Mettre à jour APT et imposer les miroirs HTTPS",
+          "detail": "Pour CVE-2026-109518, installez les versions corrigées d'APT (Ubuntu 26.10 : 3.3.3ubuntu0.1 ; 26.04 LTS : 3.2.1ubuntu0.1 ; 24.04 LTS : 2.8.4ubuntu0.1 ; 22.04 LTS : 2.4.15ubuntu0.1 ; Debian 11 : 2.2.5). Privilégiez les miroirs HTTPS avec vérification TLS, réduisez Acquire::Retries et surveillez les journaux APT et l'intégrité des paquets sur les parcs Debian/Ubuntu."
+        },
+        {
+          "title": "Bloquer l'infrastructure de phishing Microsoft Update",
+          "detail": "Bloquez microsoft[.]updata[.]net[.]cn, updata[.]net[.]cn et pub-620def1d93ef431dbdf24616a9b11c77[.]r2[.]dev au proxy, DNS et passerelle de messagerie. Ajoutez des règles EDR pour les processus KB*.exe non signés et les exécutables lancés depuis les dossiers de téléchargement ou les buckets CDN/R2 publics. Chassez sur 30 jours les journaux DNS/proxy pour les domaines 'updata' et kB2025072926.exe."
+        },
+        {
+          "title": "Auditer les secrets Claude Code et faire tourner",
+          "detail": "Recherchez dans les dépôts, l'historique Git et les forks les fichiers .claude/settings.local.json et les motifs de secrets. Faites tourner les 379 mots de passe de bases de données, 43 identifiants SSH, 42 jetons GitHub/GitLab/npm et 23 clés AWS identifiés dans le rapport. Activez la protection push du secret scanning GitHub, restreignez la portée des jetons et ajoutez les fichiers de cache d'agents IA au .gitignore et aux règles DLP."
+        },
+        {
+          "title": "Restreindre l'accès admin ESXi et Proxmox",
+          "detail": "Imposez des mots de passe root uniques par hyperviseur, la MFA sur les consoles de gestion et un accès SSH uniquement depuis un VLAN d'administration. Supprimez les comptes de supervision sur-privilégiés, bloquez AnyDesk et GMER sur les segments de virtualisation et vérifiez les sauvegardes hors ligne immuables. Chassez les connexions root inhabituelles et les modifications de configuration des datastores."
+        },
+        {
+          "title": "Désactiver Dispatch et allowlister les extensions",
+          "detail": "Désactivez Claude Desktop Dispatch/Cowork sur les postes corporate jusqu'à correction du design, révoquez les sessions claude.ai actives et imposez une allowlist d'extensions navigateur par identifiant. Configurez des alertes EDR pour npm install ou les processus node dont le parent est Claude Desktop ou un navigateur, et bloquez l'accès au registre npm public depuis les postes lorsque possible."
+        },
+        {
+          "title": "Scanner les expositions Tenda et TOTOLINK",
+          "detail": "Identifiez les équipements Tenda AC19 firmware 16.03.10.07 (CVE-2026-123966) et TOTOLINK CA300-PoE cstecgi.cgi (CVE-2026-124060, -124059, -124058, -124057, -123961, -123960, -123959) exposés sur Internet. Appliquez les correctifs firmware, déplacez les interfaces d'administration dans un VLAN dédié, désactivez l'administration distante et remplacez les équipements non supportés."
+        },
+        {
+          "title": "Corriger Keycloak et les plugins WordPress",
+          "detail": "Appliquez les correctifs Keycloak/Red Hat pour CVE-2026-120984 et restreignez les permissions manage-clients. Mettez à jour les plugins WordPress pour CVE-2026-118066, CVE-2026-104746, CVE-2026-103900, CVE-2026-119075, CVE-2026-118267, CVE-2026-120841, CVE-2026-120839, CVE-2026-122041 et CVE-2026-121762. Ajoutez des règles WAF pour l'abus de reset-token, la traversée et les suppressions via admin-ajax.php, et imposez la MFA à tous les administrateurs."
+        }
+      ]
+    }
+  }
+}
