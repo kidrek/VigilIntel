@@ -6,29 +6,29 @@
       "fr": "Sévère"
     },
     "justification": {
-      "en": "November 2026 opened with concurrent high-impact vectors: active exploitation of edge and web infrastructure (Ivanti ICS CVE-2026-111357/CVE-2026-104935/CVE-2026-118527, PHP2Shell CVE-2026-109618/CVE-2026-109619, WordPress CVE-2026-119977, Brotli CVE-2026-111497, OpenSSH CVE-2026-123158), large-scale data breaches (Arara 77M, MUJI 27.26M, Uzbekistan 27M, Bic Camera 14.9M, Perry Johnson 13.3M), OT sabotage of refrigeration systems across Europe including the French blood establishment EFS, and identity-centric intrusions that bypass MFA. Ransomware/RaaS remains fragmented and prolific (Qilin, Play, RansomHouse, Payoutsking, Chaos, Whitearmor, Falcon, Bavacai), while supply-chain compromises (cpxGuard autoupdate, NIKKE launcher, Cursor/Claude Code extensions, fake GitHub security tools) expand blast radius. Score 84/100: high, not critical, because no single systemic outage was observed, but multiple concurrent vectors require immediate remediation.",
-      "fr": "Novembre 2026 s’ouvre sur des vecteurs à fort impact concurrents : exploitation active d’infrastructures de bordure et web (Ivanti ICS CVE-2026-111357/CVE-2026-104935/CVE-2026-118527, PHP2Shell CVE-2026-109618/CVE-2026-109619, WordPress CVE-2026-119977, Brotli CVE-2026-111497, OpenSSH CVE-2026-123158), fuites massives (Arara 77 M, MUJI 27,26 M, Ouzbékistan 27 M, Bic Camera 14,9 M, Perry Johnson 13,3 M), sabotage OT de systèmes de réfrigération en Europe dont l’Établissement français du sang, et intrusions centrées identité contournant la MFA. Le rançongiciel/RaaS reste fragmenté et prolifique (Qilin, Play, RansomHouse, Payoutsking, Chaos, Whitearmor, Falcon, Bavacai), tandis que les compromissions de chaîne d’approvisionnement (autoupdate cpxGuard, launcher NIKKE, extensions Cursor/Claude Code, faux outils de sécurité GitHub) élargissent le rayon d’impact. Score 84/100 : élevé, non critique, car aucune panne systémique unique n’a été observée, mais de multiples vecteurs exigent une remédiation immédiate."
+      "en": "November 2026 consolidates to a Severe posture. Two weekly reports show industrialized abuse of trusted identity, update and management planes alongside active exploitation of edge and web CVEs. Ivanti ICS, PHP2Shell, WordPress, Brotli, SonicWall, OpenSSH and Tenda flaws were exploited or targeted, with CISA KEV deadlines forcing rapid remediation. Supply-chain compromise through cpxGuard, NIKKE, Cursor/Claude Code extensions, fake GitHub tools and XCPE firmware shows update channels are primary attack surfaces. Identity and AI-agent abuse moved into operations: MSP Entra ID application abuse, WorkOS/Chainalysis ARTEX intrusions, Claude Dispatch browser-extension abuse, 1,379 secrets leaked by coding agents and 15% agent-to-agent secret disclosure bypass user MFA and traditional DLP. OT sabotage of European refrigeration and EFS blood storage marked physical and safety impact. Ransomware/RaaS remained fragmented and prolific, with ESXi/Proxmox attacks and double extortion. Breach volume was exceptional, including Arara 77M, claimed Ukrainian citizenship 53M, RENIEC Peru 31M, MUJI 27.26M, Uzbekistan 27M, Bic Camera 14.9M, Perry Johnson 13.3M, Binance $6.3B and Crédit Mutuel Arkéa $133M. Regulatory pressure rose via DSA TikTok findings, CRA/NIS2/DORA, the UK AI-agent amendment, California AB 1709 and US KEV enforcement.",
+      "fr": "Novembre 2026 se consolide en posture Sévère. Les deux rapports hebdomadaires montrent une industrialisation de l’abus des plans de confiance identité, mise à jour et management, parallèlement à l’exploitation active de CVE de bordure et web. Les failles Ivanti ICS, PHP2Shell, WordPress, Brotli, SonicWall, OpenSSH et Tenda ont été exploitées ou ciblées, avec des échéances CISA KEV imposant une remédiation rapide. La compromission de chaîne d’approvisionnement via cpxGuard, NIKKE, extensions Cursor/Claude Code, faux outils GitHub et firmware XCPE montre que les canaux de mise à jour sont des surfaces d’attaque primaires. L’abus d’identités et d’agents IA est passé à l’opérationnel : abus d’applications Entra ID chez les MSP, intrusions ARTEX chez WorkOS/Chainalysis, abus de Claude Dispatch via extension navigateur, 1 379 secrets fuités par agents de codage et 15 % de divulgation entre agents contournent la MFA et la DLP classique. Le sabotage OT de la réfrigération européenne et du stockage sanguin de l’EFS marque un impact physique et sanitaire. Le rançongiciel/RaaS reste fragmenté et prolifique, avec attaques ESXi/Proxmox et double extorsion. Le volume de violations est exceptionnel : Arara 77 M, citoyenneté ukrainienne revendiquée 53 M, RENIEC Pérou 31 M, MUJI 27,26 M, Ouzbékistan 27 M, Bic Camera 14,9 M, Perry Johnson 13,3 M, Binance 6,3 Md$ et Crédit Mutuel Arkéa 133 M$. La pression réglementaire monte via les constatations DSA TikTok, CRA/NIS2/DORA, l’amendement britannique sur les agents IA, la loi californienne AB 1709 et l’application du KEV américain."
     },
     "_triggers": [
       "+8 — 13 CVE(s) CISA KEV",
-      "+4 — 31 CVE(s) CVSS ≥ 9.0",
+      "+4 — 28 CVE(s) CVSS ≥ 9.0",
       "+8 — 6 acteur(s) étatique(s)",
-      "+3 — 10 opérateur(s) ransomware",
+      "+3 — 9 opérateur(s) ransomware",
       "+1 — ≥ 3 acteurs distincts actifs",
-      "+3 — 20 breach(es) ≥ 100k enregistrements",
+      "+3 — 24 breach(es) ≥ 100k enregistrements",
       "+2 — secteurs critiques ciblés : Critical_Infrastructure, Government_and_Defense",
       "+2 — TTP destructive (T1485 Wiper / T0814 ICS Control)",
       "+1 — 40 TTPs distinctes"
     ]
   },
   "executive_summary": {
-    "en": "November 2026 presents a severe, multi-vector threat landscape in which exploitation of edge and web infrastructure remains the dominant operational pressure. Ivanti Connect Secure chains, PHP2Shell, WordPress core, Brotli, OpenSSH on musl/Alpine, SonicWall and Zyxel flaws are actively exploited or targeted, while supply-chain compromise through trusted update and distribution channels—cpxGuard autoupdate, the NIKKE launcher, Cursor/Claude Code extensions, fake GitHub security tools and X.CPE firmware—has become a structural attack surface. Identity is the new perimeter: abuse of MSP Entra ID applications, the ARTEX agentic intrusion framework at WorkOS and Chainalysis, and session-token theft bypass user MFA and complicate attribution. The month marks a shift from data theft to physical and safety impact, with OT sabotage of refrigeration controllers in European supermarkets and the French blood establishment EFS, prompting a joint ENISA–Commission–Europol advisory. Ransomware and RaaS remain fragmented and prolific (Qilin, Play, RansomHouse, Payoutsking, Chaos, Whitearmor, Falcon, Bavacai), with major breaches at Arara (77M), MUJI (27.26M), Uzbekistan (27M), Bic Camera (14.9M) and Perry Johnson (13.3M). Nation-state activity is intense: North Korea's TraderTraitor (linked to the $6.3B Binance theft) and Kimsuky, China-aligned Storm-0940 and Flax Typhoon, and Russia's Star Blizzard and APT28 target crypto, cloud identities, defence and critical infrastructure. AI is both an accelerator—agentic frameworks, AI voice fraud—and a new attack surface through prompt adware, fake AI applications and shadow AI. Regulatory pressure is rising around CRA reporting, NIS2/DORA, the EU Digital Omnibus, DSA, the Data Act and US CISA reauthorization. Immediate priorities are to patch KEV and internet-facing CVEs within 72 hours, remove OT exposure, govern non-human identities and AI agents, enforce phishing-resistant MFA, validate third-party software and AI tooling, and maintain immutable backups.",
-    "fr": "Novembre 2026 présente un paysage de menace sévère et multi-vecteurs où l'exploitation des infrastructures de bordure et web reste la pression opérationnelle dominante. Les chaînes Ivanti Connect Secure, PHP2Shell, WordPress core, Brotli, OpenSSH sur musl/Alpine, SonicWall et Zyxel sont activement exploitées ou ciblées, tandis que la compromission de la chaîne d'approvisionnement via des canaux de mise à jour et de distribution de confiance — autoupdate cpxGuard, launcher NIKKE, extensions Cursor/Claude Code, faux outils de sécurité GitHub et firmware X.CPE — est devenue une surface d'attaque structurelle. L'identité est le nouveau périmètre : l'abus d'applications Entra ID chez les MSP, le framework d'intrusion agentique ARTEX chez WorkOS et Chainalysis, et le vol de jetons de session contournent la MFA utilisateur et compliquent l'attribution. Le mois marque un basculement du vol de données vers l'impact physique et sanitaire, avec le sabotage OT de contrôleurs de réfrigération dans des supermarchés européens et à l'Établissement français du sang (EFS), suscitant un avis conjoint ENISA–Commission–Europol. Les rançongiciels et le RaaS restent fragmentés et prolifiques (Qilin, Play, RansomHouse, Payoutsking, Chaos, Whitearmor, Falcon, Bavacai), avec des fuites majeures chez Arara (77 M), MUJI (27,26 M), l'Ouzbékistan (27 M), Bic Camera (14,9 M) et Perry Johnson (13,3 M). L'activité étatique est intense : TraderTraitor nord-coréen (lié au vol de 6,3 Md$ chez Binance) et Kimsuky, Storm-0940 et Flax Typhoon alignés sur la Chine, et Star Blizzard et APT28 russes ciblent la crypto, les identités cloud, la défense et les infrastructures critiques. L'IA est à la fois un accélérateur — frameworks agentiques, fraude vocale par IA — et une nouvelle surface d'attaque via le prompt adware, les fausses applications d'IA et le shadow AI. La pression réglementaire monte autour de la notification CRA, de NIS2/DORA, du Digital Omnibus de l'UE, du DSA, du Data Act et de la réautorisation du CISA américain. Les priorités immédiates sont de corriger les CVE KEV et exposées sur Internet sous 72 heures, de supprimer l'exposition OT, de gouverner les identités non humaines et les agents IA, d'imposer la MFA résistante au phishing, de valider les logiciels tiers et les outils d'IA, et de maintenir des sauvegardes immuables."
+    "en": "November 2026 was a severe, multi-vector month in which internet-facing exploitation, identity abuse and supply-chain compromise converged. Edge and web flaws dominated—Ivanti Connect Secure chains, PHP2Shell, WordPress CVE-2026-119977, Brotli, OpenSSH CVE-2026-123158, SonicWall CVE-2026-19868, Zyxel and Tenda/TOTOLINK—with active exploitation or CISA KEV deadlines. Trusted update and distribution channels (cpxGuard, NIKKE launcher, Cursor/Claude Code extensions, fake GitHub tools, X.CPE firmware, XCPE proxy botnet) remained primary intrusion paths. Identity was decisive: MSP Entra ID application abuse, WorkOS and Chainalysis ARTEX agentic intrusions, session-token theft and the $6.3B Binance theft attributed to North Korea’s TraderTraitor abused application identities, DevOps credentials and wallet-signing authority. OT sabotage moved to physical/safety impact, with European supermarket refrigeration and the French blood establishment EFS prompting an ENISA/Commission/Europol advisory. Ransomware/RaaS stayed fragmented and prolific—Qilin, Play, RansomHouse, Payoutsking, Chaos, Whitearmor, Falcon, Bavacai, Dark Project’s 80% affiliate model and BlackNevas ESXi/Proxmox attacks—while breaches exposed tens of millions of records, including Arara (77M), MUJI (27.26M), Uzbekistan (27M), Bic Camera (14.9M), Perry Johnson (13.3M), a claimed 53M Ukrainian citizenship database and 31M RENIEC Peru records. AI became operational risk: agentic frameworks automated intrusion, malicious browser extensions drove Claude Dispatch to local code execution, coding agents leaked 1,379 secrets to GitHub, and agent-to-agent pressure produced secret disclosure. Geopolitically, North Korean crypto theft, Russian GNSS jamming and hybrid OT activity, China-aligned cloud-identity targeting and US midterm-driven policy uncertainty reinforced state-criminal convergence. Regulatory pressure rose via CRA reporting, NIS2/DORA, DSA action against TikTok, California AB 1709 litigation, UK Online Safety Act enforcement and a UK amendment on AI agent incidents. Priorities: patch KEV and exposed edge systems, remove OT internet exposure, govern non-human identities and AI agents, enforce phishing-resistant MFA/FIDO2, validate third-party update channels and rotate exposed secrets.",
+    "fr": "Novembre 2026 a été un mois sévère et multi-vecteurs, où l’exploitation d’infrastructures exposées à Internet, l’abus d’identités et la compromission de la chaîne d’approvisionnement ont convergé. Les failles de bordure et web ont dominé — chaînes Ivanti Connect Secure, PHP2Shell, WordPress CVE-2026-119977, Brotli, OpenSSH CVE-2026-123158, SonicWall CVE-2026-19868, Zyxel et Tenda/TOTOLINK — avec exploitation active ou échéances CISA KEV. Les canaux de mise à jour et de distribution de confiance (cpxGuard, launcher NIKKE, extensions Cursor/Claude Code, faux outils GitHub, firmware X.CPE, botnet proxy XCPE) sont restés des voies d’intrusion primaires. L’identité a été décisive : abus d’applications Entra ID chez les MSP, intrusions agentiques ARTEX chez WorkOS et Chainalysis, vol de jetons de session et vol de 6,3 Md$ chez Binance attribué à TraderTraitor nord-coréen ont abusé d’identités applicatives, d’identifiants DevOps et de l’autorité de signature des wallets. Le sabotage OT a évolué vers un impact physique et sanitaire, avec la réfrigération de supermarchés européens et l’Établissement français du sang (EFS), suscitant un avis ENISA/Commission/Europol. Rançongiciel/RaaS est resté fragmenté et prolifique — Qilin, Play, RansomHouse, Payoutsking, Chaos, Whitearmor, Falcon, Bavacai, le modèle à 80 % d’affiliation de Dark Project et les attaques BlackNevas sur ESXi/Proxmox — tandis que des violations exposaient des dizaines de millions d’enregistrements, dont Arara (77 M), MUJI (27,26 M), Ouzbékistan (27 M), Bic Camera (14,9 M), Perry Johnson (13,3 M), une base revendiquée de 53 M de citoyenneté ukrainienne et 31 M d’identités RENIEC au Pérou. L’IA est devenue un risque opérationnel : des frameworks agentiques ont automatisé l’intrusion, des extensions navigateur malveillantes ont poussé Claude Dispatch à exécuter du code local, des agents de codage ont fuité 1 379 secrets sur GitHub et la pression entre agents a produit une divulgation de secrets. Géopolitiquement, le vol crypto nord-coréen, le brouillage GNSS russe et l’activité OT hybride, le ciblage d’identités cloud aligné sur la Chine et l’incertitude politique liée aux midterms américaines ont renforcé la convergence État-criminalité. La pression réglementaire a augmenté via le reporting CRA, NIS2/DORA, l’action DSA contre TikTok, le contentieux californien AB 1709, l’application de l’Online Safety Act britannique et un amendement britannique sur les incidents d’agents IA. Priorités : corriger les KEV et systèmes de bordure exposés, supprimer l’exposition Internet de l’OT, gouverner les identités non humaines et agents IA, imposer la MFA résistante au phishing/FIDO2, valider les canaux de mise à jour tiers et faire tourner les secrets exposés."
   },
   "regulatory": {
     "analyse": {
-      "en": "The period shows regulatory convergence around supply-chain security, AI governance and incident reporting. The EU Council position on the Digital Omnibus would create an Article 88bis legitimate-interest basis for AI training and a sensitive-data retention exception, weakening GDPR safeguards; trilogue remains open. The ENISA/Commission/Europol joint advisory on refrigeration attacks elevates OT incidents to EU crisis coordination and reminds operators of CRA reporting obligations applicable since 11 September 2026. The EU age-assurance study and the DSA ad-repository call for evidence shape platform transparency and child-protection controls. In the US, the midterms shift cybersecurity oversight while CISA 2015 reauthorization and DHS funding expire on 11 December 2026. DOJ indictments on AI voice fraud ($129M) and university cryptojacking show enforcement. OpenSSF/Sigstore/CRA readiness and SBOM accuracy become compliance requirements. Security teams should map third-party software, AI training data, OT reporting and cloud contract clauses to these developments.",
-      "fr": "La période montre une convergence réglementaire autour de la sécurité de la chaîne d’approvisionnement, de la gouvernance de l’IA et de la notification d’incidents. La position du Conseil de l’UE sur le Digital Omnibus créerait une base d’intérêt légitime à l’article 88bis pour l’entraînement de l’IA et une exception de conservation de données sensibles, affaiblissant les garanties du RGPD ; le trilogue reste ouvert. L’avis conjoint ENISA/Commission/Europol sur les attaques contre la réfrigération élève les incidents OT à une coordination de crise européenne et rappelle les obligations de notification du CRA applicables depuis le 11 septembre 2026. L’étude européenne sur la vérification de l’âge et l’appel à contributions sur les référentiels publicitaires du DSA encadrent la transparence des plateformes et la protection des mineurs. Aux États-Unis, les midterms modifient la supervision cyber tandis que la réautorisation du CISA 2015 et le financement du DHS expirent le 11 décembre 2026. Les inculpations du DOJ sur la fraude vocale par IA (129 M$) et le cryptojacking universitaire montrent l’application de la loi. La préparation OpenSSF/Sigstore/CRA et l’exactitude des SBOM deviennent des exigences de conformité. Les équipes sécurité doivent cartographier les logiciels tiers, les données d’entraînement IA, le reporting OT et les clauses cloud au regard de ces évolutions."
+      "en": "November regulatory activity converges on platform design, AI-agent accountability, supply-chain evidence and breach transparency. The EU Digital Omnibus Council position would weaken GDPR safeguards for AI training and sensitive-data retention; trilogue remains open. ENISA, the Commission and Europol elevated OT refrigeration attacks to EU crisis coordination and reminded operators of CRA reporting since 11 September 2026. The DSA TikTok preliminary findings reframe recommendation algorithms as regulated products, with fines up to 6% of global turnover. California AB 1709 is contested by Google, Meta and TikTok, creating uncertainty for age verification and autoplay controls due in 2027. The UK Cyber Security and Resilience Bill amendment would give ministers inspection, entry, seizure and evidence-preservation powers for AI-agent incidents in energy, MSP and cloud providers. US CISA 2015 reauthorization and DHS funding expire on 11 December 2026, while DOJ indictments on AI voice fraud and university cryptojacking show enforcement. Security teams should map third-party software, AI training data, OT incidents, cloud contracts and agent logs to these obligations.",
+      "fr": "L’activité réglementaire de novembre converge vers la conception des plateformes, la responsabilité des agents IA, les preuves de chaîne d’approvisionnement et la transparence des violations. La position du Conseil de l’UE sur le Digital Omnibus affaiblirait les garanties du RGPD pour l’entraînement IA et la conservation de données sensibles ; le trilogue reste ouvert. ENISA, la Commission et Europol ont élevé les attaques OT contre la réfrigération à une coordination de crise européenne et rappelé les obligations de notification du CRA depuis le 11 septembre 2026. Les constatations préliminaires DSA contre TikTok requalifient les algorithmes de recommandation en produits régulés, avec des amendes jusqu’à 6 % du chiffre d’affaires mondial. La loi californienne AB 1709 est contestée par Google, Meta et TikTok, créant une incertitude pour la vérification d’âge et le lecture automatique prévues en 2027. L’amendement au Cyber Security and Resilience Bill britannique donnerait aux ministres des pouvoirs d’inspection, d’entrée, de saisie et de préservation de preuves pour les incidents d’agents IA chez les fournisseurs d’énergie, MSP et cloud. La réautorisation du CISA 2015 et le financement du DHS expirent le 11 décembre 2026, tandis que les inculpations du DOJ sur la fraude vocale par IA et le cryptojacking universitaire montrent l’application de la loi. Les équipes sécurité doivent cartographier les logiciels tiers, les données d’entraînement IA, les incidents OT, les contrats cloud et les journaux d’agents au regard de ces obligations."
     },
     "events": [
       {
@@ -123,34 +123,6 @@
           "fr": "La Commission a publié une étude indépendante concluant que la vérification de l’âge peut être proportionnée si elle préserve la vie privée, est interopérable et s’appuie sur le blueprint européen. Elle recommande d’accélérer le déploiement et de garantir des voies d’enrôlement de secours. Les plateformes doivent se préparer aux exigences de vérification de l’âge et aux contrôles de minimisation."
         },
         "source_url": "https://digital-strategy.ec.europa.eu/en/library/independent-study-impact-age-assurance-fundamental-rights-and-costs-businesses"
-      },
-      {
-        "title": {
-          "en": "DSA call for evidence on advertising repositories",
-          "fr": "Appel à contributions du DSA sur les référentiels publicitaires"
-        },
-        "issuing_body": "European Commission (DG Connect)",
-        "date": "2026-11-04",
-        "jurisdiction": {
-          "region": "EU",
-          "countries": [
-            "BE",
-            "FR",
-            "DE"
-          ]
-        },
-        "type": "Guidance",
-        "status": "Under_Review",
-        "reference": "DSA Art. 39",
-        "affected_sectors": [
-          "Media_and_Communication",
-          "Technology_and_Telecom"
-        ],
-        "description": {
-          "en": "The Commission opened a call for evidence to prepare technical guidelines on ad libraries for VLOPs and VLOSEs. The guidelines will cover searchability, targeting and reach indicators, and accessibility. CTI teams should expect more structured but heterogeneous ad-transparency data for influence and malvertising analysis.",
-          "fr": "La Commission a ouvert un appel à contributions pour préparer des lignes directrices techniques sur les référentiels publicitaires des VLOP et VLOSE. Elles porteront sur la recherche facilitée, les indicateurs de ciblage et de portée, et l’accessibilité. Les équipes CTI doivent anticiper des données de transparence publicitaire plus structurées mais hétérogènes pour l’analyse des influences et du malvertising."
-        },
-        "source_url": "https://digital-strategy.ec.europa.eu/en/consultations/call-evidence-advertising-repositories"
       },
       {
         "title": {
@@ -363,16 +335,17 @@
         },
         "type": "Enforcement_Action",
         "status": "Under_Review",
-        "reference": "DSA Art. 34 and Art. 35",
+        "reference": "DSA Art. 28, Art. 34 and Art. 35",
         "affected_sectors": [
           "Media_and_Communication",
-          "Technology_and_Telecom"
+          "Technology_and_Telecom",
+          "Retail_and_Consumer"
         ],
         "description": {
           "en": "The Commission preliminarily found that TikTok’s For You feed breaches the DSA by creating harmful rabbit holes and failing to mitigate risks adequately. TikTok can respond; a non-compliance decision could lead to fines up to 6% of global turnover. Platforms should review recommender-system risk assessments and mitigation evidence.",
           "fr": "La Commission a préliminairement conclu que le fil Pour Toi de TikTok enfreint le DSA en créant des rabbit holes nuisibles et en n’atténuant pas suffisamment les risques. TikTok peut répondre ; une décision de non-conformité pourrait entraîner des amendes jusqu’à 6 % du chiffre d’affaires mondial. Les plateformes doivent revoir les évaluations de risque des systèmes de recommandation et les preuves d’atténuation."
         },
-        "source_url": "https://digital-strategy.ec.europa.eu/en/news/commission-preliminarily-finds-tiktoks-you-feed-breach-digital-services-act-harmful-rabbit-holes"
+        "source_url": "https://therecord.media/eu-accuses-tiktok-of-rabbit-hole-DSA-violation"
       },
       {
         "title": {
@@ -428,6 +401,86 @@
           "fr": "Le FBI a saisi virtualine.net, un service d’hébergement bulletproof russophone utilisé par des opérateurs de rançongiciel, d’infostealer et de sextorsion. TRM Labs a identifié des paiements liés à une place de marché de drogues russe, à la sextorsion, à un mixer et à des rançongiciels. La saisie perturbe la découverte mais ne prouve pas le démantèlement de l’infrastructure de l’opérateur."
         },
         "source_url": "https://www.securityweek.com/bulletproof-host-virtualine-loses-its-domain-to-fbi-seizure/"
+      },
+      {
+        "title": {
+          "en": "Post-quantum FIDO2 firmware rp2040_pqc_fido2 released",
+          "fr": "Publication du firmware FIDO2 post-quantique rp2040_pqc_fido2"
+        },
+        "issuing_body": "Open-source project / NIST-IETF ecosystem",
+        "date": "2026-11-08",
+        "jurisdiction": {
+          "region": "Global",
+          "countries": [
+            "US"
+          ]
+        },
+        "type": "Guidance",
+        "status": "Active",
+        "reference": "FIPS 204 / FIPS 203 / RFC 9964",
+        "affected_sectors": [
+          "Technology_and_Telecom",
+          "Security"
+        ],
+        "description": {
+          "en": "An open-source RP2040 firmware implements ML-DSA-87 signatures and ML-KEM-1024 encapsulation for FIDO2/CTAP2.1, with COSE AKP encoding per RFC 9964. It signals PQC readiness for authentication hardware but is not FIPS 140-3 or Common Criteria certified, and its stateless key wrapping moves credential secrets to the relying party. Enterprises should test WebAuthn interoperability and treat uncertified tokens as supply-chain risk.",
+          "fr": "Un firmware open source RP2040 implémente les signatures ML-DSA-87 et l’encapsulation ML-KEM-1024 pour FIDO2/CTAP2.1, avec encodage COSE AKP conforme au RFC 9964. Il signale la préparation PQC du matériel d’authentification, mais n’est ni certifié FIPS 140-3 ni Critères Communs, et son key wrapping sans état déplace les secrets vers la partie de confiance. Les entreprises doivent tester l’interopérabilité WebAuthn et traiter les jetons non certifiés comme un risque de chaîne d’approvisionnement."
+        },
+        "source_url": "https://github.com/player999/rp2040_pqc_fido2"
+      },
+      {
+        "title": {
+          "en": "California AB 1709 challenged by Google, Meta, and TikTok",
+          "fr": "La loi californienne AB 1709 contestée par Google, Meta et TikTok"
+        },
+        "issuing_body": "US federal courts / State of California",
+        "date": "2026-11-08",
+        "jurisdiction": {
+          "region": "US",
+          "countries": [
+            "US"
+          ]
+        },
+        "type": "Court_Ruling",
+        "status": "Under_Review",
+        "reference": "AB 1709",
+        "affected_sectors": [
+          "Media_and_Communication",
+          "Technology_and_Telecom",
+          "Retail_and_Consumer"
+        ],
+        "description": {
+          "en": "Google, Meta, and TikTok filed federal challenges to AB 1709, which bans psychologically exploitative personalized feeds and autoplay for users under 16 and mandates age verification. The law applies in 2027 and lets the attorney general add regulated features by rule. Litigation creates compliance uncertainty around age-assurance data and content-design controls.",
+          "fr": "Google, Meta et TikTok ont déposé des recours fédéraux contre l’AB 1709, qui interdit les fils personnalisés et le lecture automatique psychologiquement exploitants pour les moins de 16 ans et impose une vérification d’âge. La loi s’applique en 2027 et permet au procureur général d’ajouter des fonctionnalités régulées par règlement. Le contentieux crée une incertitude de conformité sur les données d’assurance d’âge et les contrôles de conception des contenus."
+        },
+        "source_url": "https://www.malwarebytes.com/blog/news/2026/11/big-tech-sues-over-california-plan-to-limit-kids-scrolling"
+      },
+      {
+        "title": {
+          "en": "UK amendment to regulate AI agent incidents",
+          "fr": "Amendement britannique pour encadrer les incidents d’agents IA"
+        },
+        "issuing_body": "UK Parliament / Government",
+        "date": "2026-11-08",
+        "jurisdiction": {
+          "region": "UK",
+          "countries": [
+            "GB"
+          ]
+        },
+        "type": "Amendment",
+        "status": "Proposed",
+        "reference": "Cyber Security and Resilience Bill",
+        "affected_sectors": [
+          "Critical_Infrastructure",
+          "Technology_and_Telecom",
+          "Business_Services"
+        ],
+        "description": {
+          "en": "A Lords amendment would let ministers regulate deployment and incident notification for AI agents in energy, MSP, and cloud providers, including inspection, entry, seizure, and evidence preservation powers. It follows OpenAI agent incidents that affected more than 100 organizations. Regulated entities should document agent scope, human oversight, and auditable logs now.",
+          "fr": "Un amendement à la Chambre des Lords permettrait aux ministres de réguler le déploiement et la notification d’incidents d’agents IA chez les fournisseurs d’énergie, les MSP et le cloud, avec des pouvoirs d’inspection, d’entrée, de saisie et de préservation de preuves. Il fait suite à des incidents d’agents OpenAI ayant touché plus de 100 organisations. Les entités régulées doivent dès maintenant documenter le périmètre des agents, la supervision humaine et les journaux auditables."
+        },
+        "source_url": "https://www.theregister.com/ai-and-ml/2026/11/06/uk-ministers-seek-powers-to-investigate-when-ai-agents-are-let-off-the-leash/5307889"
       }
     ]
   },
@@ -445,22 +498,22 @@
       },
       {
         "geographic_zone_name": {
-          "en": "China",
-          "fr": "Chine"
-        },
-        "geographic_zone_strategic_analyse": {
-          "en": "China-aligned actors Storm-0940 and Flax Typhoon target cloud identities, MSP environments and critical infrastructure. Storm-0940 uses the ARTEX agentic framework to automate reconnaissance, exploitation and ConnectWise cloud application abuse. Flax Typhoon’s YAM store disruption shows law-enforcement pressure, but pre-positioning in strategic networks remains a concern.",
-          "fr": "Les acteurs alignés sur la Chine Storm-0940 et Flax Typhoon ciblent les identités cloud, les environnements MSP et les infrastructures critiques. Storm-0940 utilise le framework agentique ARTEX pour automatiser la reconnaissance, l’exploitation et l’abus d’applications cloud ConnectWise. La perturbation du YAM store de Flax Typhoon montre la pression des forces de l’ordre, mais le pré-positionnement dans les réseaux stratégiques reste préoccupant."
-        }
-      },
-      {
-        "geographic_zone_name": {
           "en": "Russia",
           "fr": "Russie"
         },
         "geographic_zone_strategic_analyse": {
-          "en": "Russia-aligned activity spans espionage and hybrid warfare. Star Blizzard uses phishing, compromised websites and the RedFlick technique to deploy CosmicPulse against organizations supporting Ukraine. Swallowtail/APT28 targets NATO defence industrial and police entities with Hookedge delivered via Word macros. OT sabotage of refrigeration systems in Europe fits a broader hybrid campaign against critical infrastructure.",
-          "fr": "L’activité alignée sur la Russie couvre l’espionnage et la guerre hybride. Star Blizzard utilise le phishing, des sites compromis et la technique RedFlick pour déployer CosmicPulse contre les organisations soutenant l’Ukraine. Swallowtail/APT28 cible des entités industrielles de défense et de police de l’OTAN avec Hookedge livré via des macros Word. Le sabotage OT de systèmes de réfrigération en Europe s’inscrit dans une campagne hybride plus large contre les infrastructures critiques."
+          "en": "Russia-aligned activity spans espionage, hybrid warfare and electronic warfare. Star Blizzard uses phishing, compromised websites and RedFlick to deploy CosmicPulse against organizations supporting Ukraine. Swallowtail/APT28 targets NATO defence industrial and police entities with Hookedge via Word macros. OT sabotage of refrigeration systems in Europe fits a broader hybrid campaign against critical infrastructure. Russian GNSS interference in the Baltic and Kaliningrad is a persistent NAVWAR campaign affecting timing-dependent telecom, power, finance and logistics.",
+          "fr": "L’activité alignée sur la Russie couvre l’espionnage, la guerre hybride et la guerre électronique. Star Blizzard utilise le phishing, des sites compromis et RedFlick pour déployer CosmicPulse contre les organisations soutenant l’Ukraine. Swallowtail/APT28 cible des entités industrielles de défense et de police de l’OTAN avec Hookedge livré via des macros Word. Le sabotage OT de systèmes de réfrigération en Europe s’inscrit dans une campagne hybride plus large contre les infrastructures critiques. Les interférences GNSS russes en Baltique et à Kaliningrad constituent une campagne NAVWAR persistante affectant les télécoms, l’énergie, la finance et la logistique dépendant de la synchronisation."
+        }
+      },
+      {
+        "geographic_zone_name": {
+          "en": "China",
+          "fr": "Chine"
+        },
+        "geographic_zone_strategic_analyse": {
+          "en": "China-aligned actors Storm-0940 and Flax Typhoon target cloud identities, MSP environments and critical infrastructure. Storm-0940 uses the ARTEX agentic framework to automate reconnaissance, exploitation and ConnectWise cloud application abuse. Flax Typhoon’s YAM store disruption shows law-enforcement pressure, but pre-positioning in strategic networks remains a concern. The XCPE residential proxy botnet embedded in IoT firmware and Chinese-language phishing infrastructure abusing Cloudflare R2 and a Microsoft typosquat show supply-chain and crime-as-a-service convergence.",
+          "fr": "Les acteurs alignés sur la Chine Storm-0940 et Flax Typhoon ciblent les identités cloud, les environnements MSP et les infrastructures critiques. Storm-0940 utilise le framework agentique ARTEX pour automatiser la reconnaissance, l’exploitation et l’abus d’applications cloud ConnectWise. La perturbation du YAM store de Flax Typhoon montre la pression des forces de l’ordre, mais le pré-positionnement dans les réseaux stratégiques reste préoccupant. Le botnet de proxys résidentiels XCPE intégré au firmware IoT et l’infrastructure de phishing sinophone abusant de Cloudflare R2 et d’un typosquat Microsoft montrent une convergence chaîne d’approvisionnement et crime-as-a-service."
         }
       },
       {
@@ -469,8 +522,8 @@
           "fr": "Iran"
         },
         "geographic_zone_strategic_analyse": {
-          "en": "Iran-related risk is mainly contextual this week: the US midterms and the economic consequences of the Iran war influenced political outcomes and cyber policy oversight. No major Iran-attributed cyber campaign was detailed, but the geopolitical tension increases the likelihood of retaliatory activity against US and allied interests.",
-          "fr": "Le risque lié à l’Iran est surtout contextuel cette semaine : les midterms américaines et les conséquences économiques de la guerre en Iran ont influencé les résultats politiques et la supervision cyber. Aucune campagne cyber majeure attribuée à l’Iran n’a été détaillée, mais la tension géopolitique accroît la probabilité d’activités de représailles contre les intérêts américains et alliés."
+          "en": "Iran-related risk is mainly contextual this period: the US midterms and the economic consequences of the Iran war influenced political outcomes and cyber policy oversight. No major Iran-attributed cyber campaign was detailed, but geopolitical tension increases the likelihood of retaliatory activity against US and allied interests.",
+          "fr": "Le risque lié à l’Iran est surtout contextuel cette période : les midterms américaines et les conséquences économiques de la guerre en Iran ont influencé les résultats politiques et la supervision cyber. Aucune campagne cyber majeure attribuée à l’Iran n’a été détaillée, mais la tension géopolitique accroît la probabilité d’activités de représailles contre les intérêts américains et alliés."
         }
       },
       {
@@ -479,8 +532,8 @@
           "fr": "États-Unis"
         },
         "geographic_zone_strategic_analyse": {
-          "en": "The US remains both a major target and a policy driver. DHS, FBI/DOJ, hospitals, universities and financial institutions suffered breaches or targeting. The midterms shift congressional oversight, while CISA 2015 reauthorization and DHS funding expire on 11 December 2026. DOJ indictments on AI voice fraud and cryptojacking show enforcement, but CISA staffing cuts reduce public threat-sharing capacity.",
-          "fr": "Les États-Unis restent à la fois une cible majeure et un moteur politique. Le DHS, le FBI/DOJ, des hôpitaux, des universités et des institutions financières ont subi des fuites ou des ciblages. Les midterms modifient la supervision parlementaire, tandis que la réautorisation du CISA 2015 et le financement du DHS expirent le 11 décembre 2026. Les inculpations du DOJ sur la fraude vocale par IA et le cryptojacking montrent l’application de la loi, mais les réductions d’effectifs de la CISA diminuent la capacité publique de partage de menace."
+          "en": "The US remains both a major target and a policy driver. DHS, FBI/DOJ, hospitals, universities and financial institutions suffered breaches or targeting. The midterms shift congressional oversight, while CISA 2015 reauthorization and DHS funding expire on 11 December 2026. DOJ indictments on AI voice fraud and cryptojacking show enforcement, but CISA staffing cuts reduce public threat-sharing capacity. US cloud and SaaS providers also concentrate supply-chain risk through WorkOS, DigiCert, Chainalysis and Anthropic incidents.",
+          "fr": "Les États-Unis restent à la fois une cible majeure et un moteur politique. Le DHS, le FBI/DOJ, des hôpitaux, des universités et des institutions financières ont subi des fuites ou des ciblages. Les midterms modifient la supervision parlementaire, tandis que la réautorisation du CISA 2015 et le financement du DHS expirent le 11 décembre 2026. Les inculpations du DOJ sur la fraude vocale par IA et le cryptojacking montrent l’application de la loi, mais les réductions d’effectifs de la CISA diminuent la capacité publique de partage de menace. Les fournisseurs cloud et SaaS américains concentrent aussi le risque de chaîne d’approvisionnement via les incidents WorkOS, DigiCert, Chainalysis et Anthropic."
         }
       },
       {
@@ -489,8 +542,8 @@
           "fr": "Autre"
         },
         "geographic_zone_strategic_analyse": {
-          "en": "Other significant zones include Israel and the Middle East (Candiru/AdFection spyware, Israeli election instability, Iran war effects), Europe (EU regulatory assertiveness, OT sabotage, ransomware against healthcare and retail), Latin America (Mercado Bitcoin $46M, DIAN Colombia, Chilean health insurer), and Asia-Pacific (Japanese retail and telecom breaches, Korean finance, Australian health). RaaS and cybercriminal groups operate globally with no strict geographic targeting.",
-          "fr": "Les autres zones significatives incluent Israël et le Moyen-Orient (spyware Candiru/AdFection, instabilité électorale israélienne, effets de la guerre en Iran), l’Europe (affirmation réglementaire de l’UE, sabotage OT, rançongiciels contre la santé et le retail), l’Amérique latine (Mercado Bitcoin 46 M$, DIAN Colombie, assureur santé chilien) et l’Asie-Pacifique (fuites au Japon dans le retail et les télécoms, finance coréenne, santé australienne). Les groupes RaaS et cybercriminels opèrent mondialement sans ciblage géographique strict."
+          "en": "Other significant zones include Israel and the Middle East (Candiru/AdFection spyware, Israeli election instability, Iran war effects), Europe (EU regulatory assertiveness, OT sabotage, ransomware against healthcare and retail), Latin America (Mercado Bitcoin $46M, DIAN Colombia, Chilean health insurer), and Asia-Pacific (Japanese retail and telecom breaches, Korean finance, Australian health, Singapore M1 and XCPE proxy fraud). RaaS and cybercriminal groups operate globally with no strict geographic targeting.",
+          "fr": "Les autres zones significatives incluent Israël et le Moyen-Orient (spyware Candiru/AdFection, instabilité électorale israélienne, effets de la guerre en Iran), l’Europe (affirmation réglementaire de l’UE, sabotage OT, rançongiciels contre la santé et le retail), l’Amérique latine (Mercado Bitcoin 46 M$, DIAN Colombie, assureur santé chilien) et l’Asie-Pacifique (fuites au Japon dans le retail et les télécoms, finance coréenne, santé australienne, M1 à Singapour et fraude par proxys XCPE). Les groupes RaaS et cybercriminels opèrent mondialement sans ciblage géographique strict."
         }
       }
     ],
@@ -714,6 +767,50 @@
         }
       },
       {
+        "threat_actor_name": "Swallowtail (APT28)",
+        "origin_country": "Russia",
+        "type": {
+          "en": "Nation-state",
+          "fr": "État-nation"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Government_and_Defense",
+            "Industry_and_Manufacturing"
+          ],
+          "fr": [
+            "Gouvernement_et_Défense",
+            "Industrie_et_Fabrication"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Europe",
+            "NATO countries"
+          ],
+          "fr": [
+            "Europe",
+            "Pays de l’OTAN"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1566.001",
+          "T1204.002",
+          "T1059.001",
+          "T1105"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Hookedge backdoor via Word macro documents",
+            "Targeting naval shipbuilder, military engine maker and police agency"
+          ],
+          "fr": [
+            "Backdoor Hookedge via documents Word à macros",
+            "Ciblage d’un constructeur naval, d’un motoriste militaire et d’une agence de police"
+          ]
+        }
+      },
+      {
         "threat_actor_name": "Flax Typhoon",
         "origin_country": "China",
         "type": {
@@ -757,50 +854,6 @@
           "fr": [
             "Perturbation du YAM store",
             "Saisie d’infrastructure Flax Typhoon"
-          ]
-        }
-      },
-      {
-        "threat_actor_name": "Swallowtail (APT28)",
-        "origin_country": "Russia",
-        "type": {
-          "en": "Nation-state",
-          "fr": "État-nation"
-        },
-        "targeted_sectors": {
-          "en": [
-            "Government_and_Defense",
-            "Industry_and_Manufacturing"
-          ],
-          "fr": [
-            "Gouvernement_et_Défense",
-            "Industrie_et_Fabrication"
-          ]
-        },
-        "targeted_regions": {
-          "en": [
-            "Europe",
-            "NATO countries"
-          ],
-          "fr": [
-            "Europe",
-            "Pays de l’OTAN"
-          ]
-        },
-        "mitre_attack_ttps_id": [
-          "T1566.001",
-          "T1204.002",
-          "T1059.001",
-          "T1105"
-        ],
-        "campaign_or_operation": {
-          "en": [
-            "Hookedge backdoor via Word macro documents",
-            "Targeting naval shipbuilder, military engine maker and police agency"
-          ],
-          "fr": [
-            "Backdoor Hookedge via documents Word à macros",
-            "Ciblage d’un constructeur naval, d’un motoriste militaire et d’une agence de police"
           ]
         }
       },
@@ -946,48 +999,7 @@
         }
       },
       {
-        "threat_actor_name": "Payoutsking",
-        "origin_country": "Unknown",
-        "type": {
-          "en": "Ransomware",
-          "fr": "Rançongiciel"
-        },
-        "targeted_sectors": {
-          "en": [
-            "Finance",
-            "Business_Services"
-          ],
-          "fr": [
-            "Finance",
-            "Services_aux_Entreprises"
-          ]
-        },
-        "targeted_regions": {
-          "en": [
-            "United States",
-            "Global"
-          ],
-          "fr": [
-            "États-Unis",
-            "Mondial"
-          ]
-        },
-        "mitre_attack_ttps_id": [
-          "T1486",
-          "T1657",
-          "T1567"
-        ],
-        "campaign_or_operation": {
-          "en": [
-            "iLending & J.C. Flowers & Co."
-          ],
-          "fr": [
-            "iLending & J.C. Flowers & Co."
-          ]
-        }
-      },
-      {
-        "threat_actor_name": "Chaos",
+        "threat_actor_name": "Dark Project",
         "origin_country": "Unknown",
         "type": {
           "en": "RaaS",
@@ -995,12 +1007,144 @@
         },
         "targeted_sectors": {
           "en": [
+            "Business_Services",
             "Industry_and_Manufacturing",
-            "Retail_and_Consumer"
+            "Finance",
+            "Healthcare_and_Life_Sciences"
           ],
           "fr": [
+            "Services_aux_Entreprises",
             "Industrie_et_Fabrication",
-            "Commerce_de_Détail_et_Consommation"
+            "Finance",
+            "Santé_et_Sciences_du_Vivant"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Global",
+            "North America",
+            "Europe"
+          ],
+          "fr": [
+            "Mondial",
+            "Amérique du Nord",
+            "Europe"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1486",
+          "T1490",
+          "T1078"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "80% affiliate commission RaaS expansion model"
+          ],
+          "fr": [
+            "Modèle d’expansion RaaS à 80 % de commission pour les affiliés"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "BlackNevas",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Ransomware",
+          "fr": "Rançongiciel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Critical_Infrastructure",
+            "Technology_and_Telecom",
+            "Industry_and_Manufacturing"
+          ],
+          "fr": [
+            "Infrastructure_Critique",
+            "Technologie_et_Télécom",
+            "Industrie_et_Fabrication"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Europe",
+            "Global"
+          ],
+          "fr": [
+            "Europe",
+            "Mondial"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1078",
+          "T1021.004",
+          "T1552.001",
+          "T1486"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "ESXi and Proxmox virtualization ransomware cases"
+          ],
+          "fr": [
+            "Cas de rançongiciel sur virtualisation ESXi et Proxmox"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "MedusaLock",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Ransomware",
+          "fr": "Rançongiciel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Government_and_Defense",
+            "Finance"
+          ],
+          "fr": [
+            "Gouvernement_et_Défense",
+            "Finance"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Latin America",
+            "Colombia"
+          ],
+          "fr": [
+            "Amérique latine",
+            "Colombie"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1486",
+          "T1490",
+          "T1078"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Dian Colombia ransomware claim"
+          ],
+          "fr": [
+            "Revendication de rançongiciel contre Dian en Colombie"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "Payload",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Ransomware",
+          "fr": "Rançongiciel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Business_Services",
+            "Technology_and_Telecom"
+          ],
+          "fr": [
+            "Services_aux_Entreprises",
+            "Technologie_et_Télécom"
           ]
         },
         "targeted_regions": {
@@ -1013,93 +1157,15 @@
         },
         "mitre_attack_ttps_id": [
           "T1486",
-          "T1657"
+          "T1490",
+          "T1078"
         ],
         "campaign_or_operation": {
           "en": [
-            "darrequipment.com"
+            "Otto Stops MSP ransomware claim"
           ],
           "fr": [
-            "darrequipment.com"
-          ]
-        }
-      },
-      {
-        "threat_actor_name": "Whitearmor",
-        "origin_country": "Unknown",
-        "type": {
-          "en": "Ransomware",
-          "fr": "Rançongiciel"
-        },
-        "targeted_sectors": {
-          "en": [
-            "Healthcare_and_Life_Sciences",
-            "Industry_and_Manufacturing"
-          ],
-          "fr": [
-            "Santé_et_Sciences_du_Vivant",
-            "Industrie_et_Fabrication"
-          ]
-        },
-        "targeted_regions": {
-          "en": [
-            "Global",
-            "Europe"
-          ],
-          "fr": [
-            "Mondial",
-            "Europe"
-          ]
-        },
-        "mitre_attack_ttps_id": [
-          "T1486",
-          "T1657"
-        ],
-        "campaign_or_operation": {
-          "en": [
-            "Project Trojan Horse",
-            "Unilever claim"
-          ],
-          "fr": [
-            "Project Trojan Horse",
-            "Revendication Unilever"
-          ]
-        }
-      },
-      {
-        "threat_actor_name": "Falcon",
-        "origin_country": "Unknown",
-        "type": {
-          "en": "Ransomware",
-          "fr": "Rançongiciel"
-        },
-        "targeted_sectors": {
-          "en": [
-            "Business_Services"
-          ],
-          "fr": [
-            "Services_aux_Entreprises"
-          ]
-        },
-        "targeted_regions": {
-          "en": [
-            "United States"
-          ],
-          "fr": [
-            "États-Unis"
-          ]
-        },
-        "mitre_attack_ttps_id": [
-          "T1486",
-          "T1657",
-          "T1567"
-        ],
-        "campaign_or_operation": {
-          "en": [
-            "Buchanan Ingersoll & Rooney PC"
-          ],
-          "fr": [
-            "Buchanan Ingersoll & Rooney PC"
+            "Revendication de rançongiciel contre le MSP Otto Stops"
           ]
         }
       },
@@ -1154,48 +1220,44 @@
         }
       },
       {
-        "threat_actor_name": "Caramel Tsunami (Candiru)",
-        "origin_country": "Israel",
+        "threat_actor_name": "Whitearmor",
+        "origin_country": "Unknown",
         "type": {
-          "en": "Cybercriminal",
-          "fr": "Cybercriminel"
+          "en": "Ransomware",
+          "fr": "Rançongiciel"
         },
         "targeted_sectors": {
           "en": [
-            "Media_and_Communication",
-            "Nonprofit_and_NGO",
-            "Government_and_Defense"
+            "Healthcare_and_Life_Sciences",
+            "Industry_and_Manufacturing"
           ],
           "fr": [
-            "Médias_et_Communication",
-            "Associatif_et_ONG",
-            "Gouvernement_et_Défense"
+            "Santé_et_Sciences_du_Vivant",
+            "Industrie_et_Fabrication"
           ]
         },
         "targeted_regions": {
           "en": [
-            "Middle East",
-            "Global"
+            "Global",
+            "Europe"
           ],
           "fr": [
-            "Moyen-Orient",
-            "Mondial"
+            "Mondial",
+            "Europe"
           ]
         },
         "mitre_attack_ttps_id": [
-          "T1189",
-          "T1583.008",
-          "T1027",
-          "T1437"
+          "T1486",
+          "T1657"
         ],
         "campaign_or_operation": {
           "en": [
-            "AdFection zero-click spyware via targeted ads",
-            "Al Jazeera targeting"
+            "Project Trojan Horse",
+            "Unilever claim"
           ],
           "fr": [
-            "Spyware zero-click AdFection via publicités ciblées",
-            "Ciblage d’Al Jazeera"
+            "Project Trojan Horse",
+            "Revendication Unilever"
           ]
         }
       },
@@ -1295,88 +1357,54 @@
         }
       },
       {
-        "threat_actor_name": "Booba Project",
-        "origin_country": "Unknown",
+        "threat_actor_name": "Caramel Tsunami (Candiru)",
+        "origin_country": "Israel",
         "type": {
-          "en": "Ransomware",
-          "fr": "Rançongiciel"
+          "en": "Cybercriminal",
+          "fr": "Cybercriminel"
         },
         "targeted_sectors": {
           "en": [
-            "Business_Services",
-            "Healthcare_and_Life_Sciences"
+            "Media_and_Communication",
+            "Nonprofit_and_NGO",
+            "Government_and_Defense"
           ],
           "fr": [
-            "Services_aux_Entreprises",
-            "Santé_et_Sciences_du_Vivant"
+            "Médias_et_Communication",
+            "Associatif_et_ONG",
+            "Gouvernement_et_Défense"
           ]
         },
         "targeted_regions": {
           "en": [
+            "Middle East",
             "Global"
           ],
           "fr": [
+            "Moyen-Orient",
             "Mondial"
           ]
         },
         "mitre_attack_ttps_id": [
-          "T1133",
-          "T1078",
-          "T1486",
-          "T1657"
+          "T1189",
+          "T1583.008",
+          "T1027",
+          "T1437"
         ],
         "campaign_or_operation": {
           "en": [
-            "Vetstoria claim"
+            "AdFection zero-click spyware via targeted ads",
+            "Al Jazeera targeting"
           ],
           "fr": [
-            "Revendication Vetstoria"
+            "Spyware zero-click AdFection via publicités ciblées",
+            "Ciblage d’Al Jazeera"
           ]
         }
       },
       {
-        "threat_actor_name": "DragonForce",
+        "threat_actor_name": "Mirax Android RAT operators",
         "origin_country": "Unknown",
-        "type": {
-          "en": "Ransomware",
-          "fr": "Rançongiciel"
-        },
-        "targeted_sectors": {
-          "en": [
-            "Business_Services",
-            "Finance"
-          ],
-          "fr": [
-            "Services_aux_Entreprises",
-            "Finance"
-          ]
-        },
-        "targeted_regions": {
-          "en": [
-            "Global"
-          ],
-          "fr": [
-            "Mondial"
-          ]
-        },
-        "mitre_attack_ttps_id": [
-          "T1133",
-          "T1078",
-          "T1486",
-          "T1657"
-        ],
-        "campaign_or_operation": {
-          "en": [
-            "Weekly ransomware leak-site activity"
-          ],
-          "fr": [
-            "Activité hebdomadaire de site de fuite rançongiciel"
-          ]
-        }
-      },
-      {
-        "threat_actor_name": "FIN7",
-        "origin_country": "Russia",
         "type": {
           "en": "Cybercriminal",
           "fr": "Cybercriminel"
@@ -1384,37 +1412,77 @@
         "targeted_sectors": {
           "en": [
             "Finance",
-            "Retail_and_Consumer",
-            "Hospitality_and_Entertainment"
+            "Retail_and_Consumer"
           ],
           "fr": [
             "Finance",
-            "Commerce_de_Détail_et_Consommation",
-            "Hôtellerie_et_Divertissement"
+            "Commerce_de_Détail_et_Consommation"
           ]
         },
         "targeted_regions": {
           "en": [
             "Global",
-            "United States",
-            "Europe"
+            "Europe",
+            "Asia-Pacific"
           ],
           "fr": [
             "Mondial",
-            "États-Unis",
-            "Europe"
+            "Europe",
+            "Asie-Pacifique"
           ]
         },
         "mitre_attack_ttps_id": [
-          "T1078",
-          "T1566"
+          "T1476",
+          "T1417",
+          "T1513"
         ],
         "campaign_or_operation": {
           "en": [
-            "Sigma rule updates for FIN7 detection"
+            "Mirax Android RAT via streaming-app ads"
           ],
           "fr": [
-            "Mises à jour de règles Sigma pour la détection FIN7"
+            "RAT Android Mirax via publicités d’applications de streaming"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "XCPE residential proxy botnet operators",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Cybercriminal",
+          "fr": "Cybercriminel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Finance",
+            "Technology_and_Telecom"
+          ],
+          "fr": [
+            "Finance",
+            "Technologie_et_Télécom"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Japan",
+            "Asia-Pacific"
+          ],
+          "fr": [
+            "Japon",
+            "Asie-Pacifique"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1583.006",
+          "T1105",
+          "T1078"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Japan XCPE residential proxy takedown and banking fraud"
+          ],
+          "fr": [
+            "Démantèlement du botnet XCPE au Japon et fraude bancaire"
           ]
         }
       }
@@ -1422,8 +1490,8 @@
   },
   "mitre_attack_ttps": {
     "ttps_strategic_analyse": {
-      "en": "The period’s TTP profile is dominated by supply-chain compromise, valid-account abuse and impact operations. Attackers increasingly avoid malware-first intrusion: they abuse trusted update channels, signed binaries, application identities, session tokens and legitimate remote-management tools. Edge and web exploitation remains the primary initial access vector, while ransomware operators focus on exfiltration, backup destruction and double extortion. OT attacks use legitimate administrative functions to modify physical setpoints, making CVE-only detection insufficient. Detection must shift to behavioral analytics across identity, endpoint, cloud and OT telemetry.",
-      "fr": "Le profil TTP de la période est dominé par la compromission de chaîne d’approvisionnement, l’abus de comptes valides et les opérations à impact. Les attaquants évitent de plus en plus l’intrusion par malware : ils abusent des canaux de mise à jour de confiance, des binaires signés, des identités applicatives, des jetons de session et des outils légitimes de gestion à distance. L’exploitation de bordure et web reste le principal vecteur d’accès initial, tandis que les opérateurs rançongiciel privilégient l’exfiltration, la destruction des sauvegardes et la double extorsion. Les attaques OT utilisent des fonctions administratives légitimes pour modifier des consignes physiques, rendant la détection par CVE seule insuffisante. La détection doit évoluer vers l’analyse comportementale sur l’identité, l’endpoint, le cloud et l’OT."
+      "en": "The monthly TTP profile is dominated by supply-chain compromise, valid-account abuse, AI-agent execution chains and impact operations. Attackers increasingly avoid malware-first intrusion: they abuse trusted update channels, signed binaries, application identities, session tokens, browser extensions and legitimate remote-management tools. Edge and web exploitation remains the primary initial access vector, while ransomware operators focus on exfiltration, backup destruction and double extortion. OT attacks use legitimate administrative functions to modify physical setpoints, making CVE-only detection insufficient. Detection must shift to behavioral analytics across identity, endpoint, cloud, browser and OT telemetry.",
+      "fr": "Le profil TTP mensuel est dominé par la compromission de chaîne d’approvisionnement, l’abus de comptes valides, les chaînes d’exécution d’agents IA et les opérations à impact. Les attaquants évitent de plus en plus l’intrusion par malware : ils abusent des canaux de mise à jour de confiance, des binaires signés, des identités applicatives, des jetons de session, des extensions navigateur et des outils légitimes de gestion à distance. L’exploitation de bordure et web reste le principal vecteur d’accès initial, tandis que les opérateurs rançongiciel privilégient l’exfiltration, la destruction des sauvegardes et la double extorsion. Les attaques OT utilisent des fonctions administratives légitimes pour modifier des consignes physiques, rendant la détection par CVE seule insuffisante. La détection doit évoluer vers l’analyse comportementale sur l’identité, l’endpoint, le cloud, le navigateur et l’OT."
     },
     "ttps_list": [
       {
@@ -1451,14 +1519,14 @@
           "fr": "Évasion des défenses"
         },
         "technique_name": "Valid Accounts",
-        "frequency": 1,
+        "frequency": 2,
         "severity": "critical",
         "context": {
           "en": [
-            "MSP Entra ID application abuse, WorkOS and Chainalysis ARTEX intrusions, Binance DevOps account compromise, Qilin and Play ransomware access."
+            "MSP Entra ID application abuse, WorkOS and Chainalysis ARTEX intrusions, Binance DevOps account compromise, Qilin and Play ransomware access, shared root passwords on ESXi/Proxmox."
           ],
           "fr": [
-            "Abus d’applications Entra ID chez les MSP, intrusions ARTEX chez WorkOS et Chainalysis, compromission de compte DevOps Binance, accès rançongiciels Qilin et Play."
+            "Abus d’applications Entra ID chez les MSP, intrusions ARTEX chez WorkOS et Chainalysis, compromission de compte DevOps Binance, accès rançongiciels Qilin et Play, mots de passe root partagés sur ESXi/Proxmox."
           ]
         }
       },
@@ -1469,14 +1537,14 @@
           "fr": "Impact"
         },
         "technique_name": "Data Encrypted for Impact",
-        "frequency": 1,
+        "frequency": 2,
         "severity": "critical",
         "context": {
           "en": [
-            "Qilin, Play, RansomHouse, Payoutsking, Chaos, Whitearmor, Falcon and Bavacai extortion; UNM hospital and Lehigh Valley Health Network incidents."
+            "Qilin, Play, RansomHouse, Payoutsking, Chaos, Whitearmor, Falcon, Bavacai, Dark Project, BlackNevas, MedusaLock and Payload extortion; UNM hospital and Lehigh Valley Health Network incidents."
           ],
           "fr": [
-            "Extorsions Qilin, Play, RansomHouse, Payoutsking, Chaos, Whitearmor, Falcon et Bavacai ; incidents de l’hôpital UNM et de Lehigh Valley Health Network."
+            "Extorsions Qilin, Play, RansomHouse, Payoutsking, Chaos, Whitearmor, Falcon, Bavacai, Dark Project, BlackNevas, MedusaLock et Payload ; incidents de l’hôpital UNM et de Lehigh Valley Health Network."
           ]
         }
       },
@@ -1491,10 +1559,10 @@
         "severity": "critical",
         "context": {
           "en": [
-            "Binance $6.3B TraderTraitor theft, Mercado Bitcoin $46M drain, Crédit Mutuel Arkéa €100M fraud, Polymarket $3.9M reimbursement and ransomware extortion."
+            "Binance $6.3B TraderTraitor theft, Mercado Bitcoin $46M drain, Crédit Mutuel Arkéa €100M/$133M fraud, Polymarket $3.9M reimbursement and ransomware extortion."
           ],
           "fr": [
-            "Vol TraderTraitor de 6,3 Md$ chez Binance, drainage de 46 M$ chez Mercado Bitcoin, fraude de 100 M€ au Crédit Mutuel Arkéa, remboursement Polymarket de 3,9 M$ et extorsion rançongiciel."
+            "Vol TraderTraitor de 6,3 Md$ chez Binance, drainage de 46 M$ chez Mercado Bitcoin, fraude de 100 M€/133 M$ au Crédit Mutuel Arkéa, remboursement Polymarket de 3,9 M$ et extorsion rançongiciel."
           ]
         }
       },
@@ -1559,14 +1627,14 @@
           "fr": "Accès initial"
         },
         "technique_name": "Phishing: Spearphishing Link",
-        "frequency": 1,
+        "frequency": 2,
         "severity": "high",
         "context": {
           "en": [
-            "Fake OpenAI/SpaceX events, Google Calendar phishing, holiday-rental phishing, Star Blizzard campaigns and TraderTraitor developer targeting."
+            "Fake OpenAI/SpaceX events, Google Calendar phishing, holiday-rental phishing, Star Blizzard campaigns, TraderTraitor developer targeting and Microsoft Update typosquat."
           ],
           "fr": [
-            "Faux événements OpenAI/SpaceX, phishing Google Calendar, phishing de location de vacances, campagnes Star Blizzard et ciblage de développeurs TraderTraitor."
+            "Faux événements OpenAI/SpaceX, phishing Google Calendar, phishing de location de vacances, campagnes Star Blizzard, ciblage de développeurs TraderTraitor et typosquat Microsoft Update."
           ]
         }
       },
@@ -1577,14 +1645,14 @@
           "fr": "Exécution"
         },
         "technique_name": "User Execution: Malicious File",
-        "frequency": 1,
+        "frequency": 2,
         "severity": "high",
         "context": {
           "en": [
-            "OneNote attachments, fake ChatGPT/Claude apps, fake GitHub security tools, NIKKE launcher and malicious Visual Studio projects."
+            "OneNote attachments, fake ChatGPT/Claude apps, fake GitHub security tools, NIKKE launcher, malicious Visual Studio projects and fake game installers."
           ],
           "fr": [
-            "Pièces jointes OneNote, fausses applis ChatGPT/Claude, faux outils de sécurité GitHub, launcher NIKKE et projets Visual Studio malveillants."
+            "Pièces jointes OneNote, fausses applis ChatGPT/Claude, faux outils de sécurité GitHub, launcher NIKKE, projets Visual Studio malveillants et faux installeurs de jeux."
           ]
         }
       },
@@ -1595,14 +1663,14 @@
           "fr": "Évasion des défenses"
         },
         "technique_name": "Masquerading",
-        "frequency": 1,
+        "frequency": 2,
         "severity": "high",
         "context": {
           "en": [
-            "Fake Claude Code extensions, fake ChatGPT/Claude desktop apps, fake security tools, fake Adobe Acrobat pages and Kimsuky fake installers."
+            "Fake Claude Code extensions, fake ChatGPT/Claude desktop apps, fake security tools, fake Adobe Acrobat pages, Kimsuky fake installers and KB-named binaries."
           ],
           "fr": [
-            "Fausses extensions Claude Code, fausses applis de bureau ChatGPT/Claude, faux outils de sécurité, fausses pages Adobe Acrobat et faux installateurs Kimsuky."
+            "Fausses extensions Claude Code, fausses applis de bureau ChatGPT/Claude, faux outils de sécurité, fausses pages Adobe Acrobat, faux installateurs Kimsuky et binaires nommés KB."
           ]
         }
       },
@@ -1613,14 +1681,14 @@
           "fr": "Commande et contrôle"
         },
         "technique_name": "Ingress Tool Transfer",
-        "frequency": 1,
+        "frequency": 2,
         "severity": "high",
         "context": {
           "en": [
-            "Kimsuky GitHub staging, NeedyMantis loaders, Star Blizzard CosmicPulse and fake security tool payloads."
+            "Kimsuky GitHub staging, NeedyMantis loaders, Star Blizzard CosmicPulse, fake security tool payloads, Claude Dispatch npm package and XCPE proxy infrastructure."
           ],
           "fr": [
-            "Staging GitHub Kimsuky, loaders NeedyMantis, CosmicPulse de Star Blizzard et charges des faux outils de sécurité."
+            "Staging GitHub Kimsuky, loaders NeedyMantis, CosmicPulse de Star Blizzard, charges des faux outils de sécurité, paquet npm de Claude Dispatch et infrastructure proxy XCPE."
           ]
         }
       },
@@ -1631,14 +1699,14 @@
           "fr": "Accès aux identifiants"
         },
         "technique_name": "Unsecured Credentials: Credentials In Files",
-        "frequency": 1,
-        "severity": "high",
+        "frequency": 2,
+        "severity": "critical",
         "context": {
           "en": [
-            "Source maps exposing secrets, Applebee’s database password, fake security tools and MSP credential files."
+            "Source maps exposing secrets, Applebee’s database password, fake security tools, MSP credential files, .claude/settings.local.json secrets and Proxmox notes."
           ],
           "fr": [
-            "Source maps exposant des secrets, mot de passe de base Applebee’s, faux outils de sécurité et fichiers d’identifiants MSP."
+            "Source maps exposant des secrets, mot de passe de base Applebee’s, faux outils de sécurité, fichiers d’identifiants MSP, secrets dans .claude/settings.local.json et notes Proxmox."
           ]
         }
       },
@@ -1739,14 +1807,14 @@
           "fr": "Impact"
         },
         "technique_name": "Inhibit System Recovery",
-        "frequency": 1,
+        "frequency": 2,
         "severity": "high",
         "context": {
           "en": [
-            "Play, Qilin and other ransomware operators deleting shadow copies and backups."
+            "Play, Qilin, Dark Project, BlackNevas, MedusaLock and Payload operators deleting shadow copies and backups."
           ],
           "fr": [
-            "Play, Qilin et autres opérateurs rançongiciel supprimant les clichés et sauvegardes."
+            "Play, Qilin, Dark Project, BlackNevas, MedusaLock et Payload supprimant les clichés et sauvegardes."
           ]
         }
       },
@@ -1757,14 +1825,14 @@
           "fr": "Collecte"
         },
         "technique_name": "Data from Information Repositories",
-        "frequency": 1,
+        "frequency": 2,
         "severity": "high",
         "context": {
           "en": [
-            "WorkOS CRM/Slack, Chainalysis and law firm document repositories."
+            "WorkOS CRM/Slack, Chainalysis, law firm document repositories and GitHub repositories, Git history and forks."
           ],
           "fr": [
-            "CRM/Slack WorkOS, Chainalysis et référentiels documentaires de cabinets d’avocats."
+            "CRM/Slack WorkOS, Chainalysis, référentiels documentaires de cabinets d’avocats et dépôts GitHub, historique Git et forks."
           ]
         }
       },
@@ -1801,24 +1869,6 @@
           ],
           "fr": [
             "Infostealer VOLTA et vol d’identifiants par le launcher NIKKE."
-          ]
-        }
-      },
-      {
-        "id": "T1114",
-        "tactic": {
-          "en": "Collection",
-          "fr": "Collecte"
-        },
-        "technique_name": "Email Collection",
-        "frequency": 1,
-        "severity": "high",
-        "context": {
-          "en": [
-            "MSP mailbox access and WorkOS support conversations."
-          ],
-          "fr": [
-            "Accès aux boîtes mail MSP et conversations support WorkOS."
           ]
         }
       },
@@ -1873,24 +1923,6 @@
           ],
           "fr": [
             "Malvertising AdFection et activité watering hole contre les utilisateurs mobiles."
-          ]
-        }
-      },
-      {
-        "id": "T1583.008",
-        "tactic": {
-          "en": "Resource Development",
-          "fr": "Développement de ressources"
-        },
-        "technique_name": "Acquire Infrastructure: Malvertising",
-        "frequency": 1,
-        "severity": "high",
-        "context": {
-          "en": [
-            "AdFection targeted ads used as zero-click spyware delivery."
-          ],
-          "fr": [
-            "Publicités ciblées AdFection utilisées comme vecteur de spyware zero-click."
           ]
         }
       },
@@ -2003,146 +2035,182 @@
         }
       },
       {
-        "id": "T1140",
+        "id": "T1068",
         "tactic": {
-          "en": "Defense Evasion",
-          "fr": "Évasion des défenses"
+          "en": "Privilege Escalation",
+          "fr": "Élévation de privilèges"
         },
-        "technique_name": "Deobfuscate/Decode Files or Information",
+        "technique_name": "Exploitation for Privilege Escalation",
         "frequency": 1,
-        "severity": "medium",
+        "severity": "critical",
         "context": {
           "en": [
-            "Fashion UPX unpacking and HTML smuggling with WebAssembly decoding."
+            "CentOS 6.18.62 kernel memory exploitation could escape an AI jail to the host; Tenda and TOTOLINK buffer overflows may yield code execution on network devices."
           ],
           "fr": [
-            "Dépaquetage UPX de fashion et HTML smuggling avec décodage WebAssembly."
+            "L’exploitation mémoire du noyau CentOS 6.18.62 pourrait permettre une évasion d’un AI jail vers l’hôte ; les débordements Tenda et TOTOLINK peuvent mener à l’exécution de code sur des équipements réseau."
           ]
         }
       },
       {
-        "id": "T1491",
+        "id": "T1611",
         "tactic": {
-          "en": "Impact",
-          "fr": "Impact"
+          "en": "Privilege Escalation",
+          "fr": "Élévation de privilèges"
         },
-        "technique_name": "Defacement",
+        "technique_name": "Escape to Host",
         "frequency": 1,
-        "severity": "medium",
+        "severity": "critical",
         "context": {
           "en": [
-            "Syrian Electronic Army defacements and Ukraine/Russia false emergency alerts."
+            "A kernel vulnerability in an AI jail environment creates a direct host-escape path; shared kernel isolation is weaker than VM or hardware sandbox separation."
           ],
           "fr": [
-            "Défigurations de la Syrian Electronic Army et fausses alertes d’urgence Ukraine/Russie."
+            "Une vulnérabilité noyau dans un environnement AI jail crée un chemin direct d’évasion vers l’hôte ; l’isolation par noyau partagé est plus faible qu’une séparation VM ou sandbox matérielle."
           ]
         }
       },
       {
-        "id": "T1437",
+        "id": "T1021.004",
         "tactic": {
-          "en": "Command and Control",
-          "fr": "Commande et contrôle"
+          "en": "Lateral Movement",
+          "fr": "Mouvement latéral"
         },
-        "technique_name": "Application Layer Protocol",
+        "technique_name": "Remote Services: SSH",
         "frequency": 1,
-        "severity": "medium",
+        "severity": "critical",
         "context": {
           "en": [
-            "AdFection mobile command-and-control communications."
+            "Proxmox compromise used direct root SSH access outside central control; OpenSSH CVE-2026-123158 enables unauthenticated access to passwordless accounts."
           ],
           "fr": [
-            "Communications de commande et contrôle mobiles AdFection."
+            "La compromission Proxmox a utilisé un accès SSH root direct hors du contrôle central ; OpenSSH CVE-2026-123158 permet un accès non authentifié à des comptes sans mot de passe."
           ]
         }
       },
       {
-        "id": "T1498",
-        "tactic": {
-          "en": "Impact",
-          "fr": "Impact"
-        },
-        "technique_name": "Network Denial of Service",
-        "frequency": 1,
-        "severity": "medium",
-        "context": {
-          "en": [
-            "Suspected cyberattack disrupting Kyiv Independent website availability."
-          ],
-          "fr": [
-            "Cyberattaque suspectée perturbant la disponibilité du site Kyiv Independent."
-          ]
-        }
-      },
-      {
-        "id": "T1499",
-        "tactic": {
-          "en": "Impact",
-          "fr": "Impact"
-        },
-        "technique_name": "Endpoint Denial of Service",
-        "frequency": 1,
-        "severity": "medium",
-        "context": {
-          "en": [
-            "GhostMap Android crash-loop denial of service."
-          ],
-          "fr": [
-            "Déni de service par boucle de crash Android GhostMap."
-          ]
-        }
-      },
-      {
-        "id": "T1218",
-        "tactic": {
-          "en": "Defense Evasion",
-          "fr": "Évasion des défenses"
-        },
-        "technique_name": "System Binary Proxy Execution",
-        "frequency": 1,
-        "severity": "medium",
-        "context": {
-          "en": [
-            "Sigma rule correction for xwizard.exe COM execution."
-          ],
-          "fr": [
-            "Correction de règle Sigma pour l’exécution COM via xwizard.exe."
-          ]
-        }
-      },
-      {
-        "id": "T1559.001",
+        "id": "T1059",
         "tactic": {
           "en": "Execution",
           "fr": "Exécution"
         },
-        "technique_name": "Inter-Process Communication: Component Object Model",
+        "technique_name": "Command and Scripting Interpreter",
         "frequency": 1,
-        "severity": "medium",
+        "severity": "critical",
         "context": {
           "en": [
-            "xwizard.exe COM object execution detection."
+            "Claude Desktop executed npm install commands triggered by injected browser scripts; Keycloak code injection and WordPress RCE vulnerabilities enable arbitrary command execution."
           ],
           "fr": [
-            "Détection d’exécution d’objet COM via xwizard.exe."
+            "Claude Desktop a exécuté des commandes npm install déclenchées par des scripts navigateur injectés ; l’injection de code Keycloak et les RCE WordPress permettent l’exécution arbitraire de commandes."
           ]
         }
       },
       {
-        "id": "T1071.004",
+        "id": "T1552",
         "tactic": {
-          "en": "Command and Control",
-          "fr": "Commande et contrôle"
+          "en": "Credential Access",
+          "fr": "Accès aux identifiants"
         },
-        "technique_name": "Application Layer Protocol: DNS",
+        "technique_name": "Unsecured Credentials",
         "frequency": 1,
-        "severity": "medium",
+        "severity": "critical",
         "context": {
           "en": [
-            "Sigma wildcard DNS query detection for C2 and tunneling."
+            "AI agents disclosed private tokens in 15% of tests when offered peer collaboration; Binance theft involved wallet-signing authority and DevOps credentials."
           ],
           "fr": [
-            "Détection Sigma des requêtes DNS wildcard pour C2 et tunneling."
+            "Les agents IA ont divulgué des jetons privés dans 15 % des tests lorsqu’on leur proposait une collaboration entre pairs ; le vol Binance impliquait l’autorité de signature des wallets et des identifiants DevOps."
+          ]
+        }
+      },
+      {
+        "id": "T1176",
+        "tactic": {
+          "en": "Persistence",
+          "fr": "Persistance"
+        },
+        "technique_name": "Browser Extensions",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Malicious browser extensions inject scripts into claude.ai and drive Claude Dispatch to execute local commands; fake game installers also add browser components and extensions."
+          ],
+          "fr": [
+            "Des extensions navigateur malveillantes injectent des scripts dans claude.ai et poussent Claude Dispatch à exécuter des commandes locales ; de faux installeurs de jeux ajoutent aussi des composants et extensions navigateur."
+          ]
+        }
+      },
+      {
+        "id": "T1476",
+        "tactic": {
+          "en": "Initial Access",
+          "fr": "Accès initial"
+        },
+        "technique_name": "Deliver Malicious App via Authorized App Store",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Mirax Android RAT is delivered through ads in streaming apps and sideloaded APKs; the campaign targets mobile banking credentials and account takeover."
+          ],
+          "fr": [
+            "Le RAT Android Mirax est livré via des publicités dans des applications de streaming et des APK sideloadés ; la campagne cible les identifiants bancaires mobiles et la prise de contrôle de comptes."
+          ]
+        }
+      },
+      {
+        "id": "T1417",
+        "tactic": {
+          "en": "Collection",
+          "fr": "Collecte"
+        },
+        "technique_name": "Input Capture",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Mirax uses accessibility and overlay permissions to capture banking credentials and codes; captured input enables account draining and fraud."
+          ],
+          "fr": [
+            "Mirax utilise les permissions d’accessibilité et de superposition pour capturer les identifiants et codes bancaires ; les entrées capturées permettent de vider les comptes et de frauder."
+          ]
+        }
+      },
+      {
+        "id": "T1608.001",
+        "tactic": {
+          "en": "Resource Development",
+          "fr": "Développement de ressources"
+        },
+        "technique_name": "Upload Malware",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "The payload kB2025072926.exe is hosted on a public Cloudflare R2 bucket; public object storage provides cheap, reputable hosting for malware."
+          ],
+          "fr": [
+            "La charge kB2025072926.exe est hébergée sur un bucket Cloudflare R2 public ; le stockage objet public fournit un hébergement bon marché et réputé pour les malwares."
+          ]
+        }
+      },
+      {
+        "id": "T1204.001",
+        "tactic": {
+          "en": "Execution",
+          "fr": "Exécution"
+        },
+        "technique_name": "User Execution: Malicious Link",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "The fake Microsoft Update page instructs users to copy a link and run it via Windows + R; this bypasses Mark-of-the-Web and download allowlists."
+          ],
+          "fr": [
+            "La fausse page Microsoft Update demande de copier un lien et de l’exécuter via Windows + R ; cela contourne Mark-of-the-Web et les listes blanches de téléchargement."
           ]
         }
       }
@@ -2150,8 +2218,8 @@
   },
   "vulnerabilities": {
     "analyse": {
-      "en": "Vulnerability pressure is exceptionally high, with 110 items on 5 November and 92 on 6 November. Prioritization must combine CISA KEV, CVSS, EPSS and real exposure. Internet-facing edge and web products dominate: Ivanti ICS, PHP2Shell, WordPress core, Brotli, OpenSSH on musl/Alpine, SonicWall, Zyxel, Synology, Node-RED, Langflow, WAVLINK and Chrome. Several flaws are actively exploited or have public PoCs, and some are embedded in OT/ICS products (Siemens SIMATIC IoT2050, Node-RED). Patch management must cover transitive dependencies (Brotli in Node.js, .NET, Envoy, Splunk, VMware, Mitel) and container base images. KEV deadlines and vendor advisories should drive 72-hour remediation for exposed assets.",
-      "fr": "La pression des vulnérabilités est exceptionnellement élevée, avec 110 éléments le 5 novembre et 92 le 6 novembre. La priorisation doit combiner CISA KEV, CVSS, EPSS et exposition réelle. Les produits de bordure et web exposés dominent : Ivanti ICS, PHP2Shell, WordPress core, Brotli, OpenSSH sur musl/Alpine, SonicWall, Zyxel, Synology, Node-RED, Langflow, WAVLINK et Chrome. Plusieurs failles sont activement exploitées ou disposent de PoC publics, et certaines sont embarquées dans des produits OT/ICS (Siemens SIMATIC IoT2050, Node-RED). La gestion des correctifs doit couvrir les dépendances transitives (Brotli dans Node.js, .NET, Envoy, Splunk, VMware, Mitel) et les images de base des conteneurs. Les échéances KEV et les avis éditeurs doivent imposer une remédiation sous 72 heures pour les actifs exposés."
+      "en": "Vulnerability pressure is exceptionally high across both weeks. Prioritization must combine CISA KEV, CVSS, EPSS and real exposure. Internet-facing edge and web products dominate: Ivanti ICS, PHP2Shell, WordPress core, Brotli, OpenSSH on musl/Alpine, SonicWall, Zyxel, Synology, Node-RED, Langflow, WAVLINK, Tenda and Chrome. Several flaws are actively exploited or have public PoCs, and some are embedded in OT/ICS products (Siemens SIMATIC IoT2050, Node-RED). Patch management must cover transitive dependencies (Brotli in Node.js, .NET, Envoy, Splunk, VMware, Mitel) and container base images. KEV deadlines and vendor advisories should drive 72-hour remediation for exposed assets. WordPress plugin ecosystem flaws and Keycloak code injection require WAF virtual patching and administrator MFA.",
+      "fr": "La pression des vulnérabilités est exceptionnellement élevée sur les deux semaines. La priorisation doit combiner CISA KEV, CVSS, EPSS et exposition réelle. Les produits de bordure et web exposés dominent : Ivanti ICS, PHP2Shell, WordPress core, Brotli, OpenSSH sur musl/Alpine, SonicWall, Zyxel, Synology, Node-RED, Langflow, WAVLINK, Tenda et Chrome. Plusieurs failles sont activement exploitées ou disposent de PoC publics, et certaines sont embarquées dans des produits OT/ICS (Siemens SIMATIC IoT2050, Node-RED). La gestion des correctifs doit couvrir les dépendances transitives (Brotli dans Node.js, .NET, Envoy, Splunk, VMware, Mitel) et les images de base des conteneurs. Les échéances KEV et les avis éditeurs doivent imposer une remédiation sous 72 heures pour les actifs exposés. Les failles de l’écosystème de plugins WordPress et l’injection de code Keycloak exigent du virtual patching WAF et la MFA administrateur."
     },
     "list": [
       {
@@ -2391,27 +2459,26 @@
       },
       {
         "cve_id": "CVE-2026-19868",
-        "cvss_score": 7.1,
+        "cvss_score": 7.5,
         "epss_score": "N/A",
         "cisa_kev": true,
-        "affected_product": "SonicWall SonicOS SSL-VPN with SAML",
+        "affected_product": "SonicWall SonicOS SSLVPN",
         "affected_product_vendor": "SonicWall",
         "vulnerability_type": {
           "en": [
             "Authentication bypass",
-            "MFA bypass"
+            "SAML and MFA bypass"
           ],
           "fr": [
             "Contournement d’authentification",
-            "Contournement MFA"
+            "Contournement SAML et MFA"
           ]
         },
         "vulnerability_description": {
-          "en": "SSL-VPN SAML authentication bypass when alternative auth methods are enabled. Patch SNWLID-2026-0014, disable SSL-VPN if needed and revoke sessions.",
-          "fr": "Contournement d’authentification SAML SSL-VPN lorsque des méthodes alternatives sont activées. Corriger SNWLID-2026-0014, désactiver SSL-VPN si nécessaire et révoquer les sessions."
+          "en": "An authentication bypass in SonicOS SSLVPN allows access to the internal network without satisfying SAML or enforced MFA. It enables data theft, ransomware deployment, lateral movement, and persistence, and affects MSP-managed appliances across multiple organizations.",
+          "fr": "Un contournement d’authentification dans SonicOS SSLVPN permet d’accéder au réseau interne sans satisfaire SAML ni la MFA imposée. Il permet le vol de données, le déploiement de rançongiciels, le mouvement latéral et la persistance, et affecte les appliances gérées par des MSP pour plusieurs organisations."
         },
         "mitre_attack_ttps_id": [
-          "T1190",
           "T1078"
         ]
       },
@@ -2597,6 +2664,31 @@
         ]
       },
       {
+        "cve_id": "CVE-2026-123966",
+        "cvss_score": 10.0,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Tenda AC19 firmware 16.03.10.07",
+        "affected_product_vendor": "Tenda",
+        "vulnerability_type": {
+          "en": [
+            "Heap-based buffer overflow",
+            "Remote code execution"
+          ],
+          "fr": [
+            "Débordement de tampon basé sur le tas",
+            "Exécution de code à distance"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "A heap-based buffer overflow in saveParentControlInfo can corrupt memory and lead to arbitrary code execution, denial of service, router takeover, and traffic diversion. The CVSS 10.0 score and active exploitation status make internet-exposed AC19 devices urgent.",
+          "fr": "Un débordement de tampon basé sur le tas dans saveParentControlInfo peut corrompre la mémoire et mener à l’exécution de code arbitraire, au déni de service, à la prise de contrôle du routeur et au détournement de trafic. Le score CVSS 10.0 et l’exploitation active rendent urgents les équipements AC19 exposés sur Internet."
+        },
+        "mitre_attack_ttps_id": [
+          "T1068"
+        ]
+      },
+      {
         "cve_id": "CVE-2026-105697",
         "cvss_score": 9.9,
         "epss_score": "N/A",
@@ -2646,57 +2738,6 @@
         ]
       },
       {
-        "cve_id": "CVE-2026-120307",
-        "cvss_score": 9.9,
-        "epss_score": "N/A",
-        "cisa_kev": false,
-        "affected_product": "Beta9 worker",
-        "affected_product_vendor": "Beta9",
-        "vulnerability_type": {
-          "en": [
-            "Path traversal",
-            "Container escape"
-          ],
-          "fr": [
-            "Traversée de chemin",
-            "Évasion de conteneur"
-          ]
-        },
-        "vulnerability_description": {
-          "en": "Worker path traversal and symlink following enables Kubernetes cluster compromise. Patch worker 0.1.756+ and restrict service account permissions.",
-          "fr": "La traversée de chemin et le suivi de lien symbolique du worker permettent la compromission du cluster Kubernetes. Corriger worker 0.1.756+ et restreindre les permissions du compte de service."
-        },
-        "mitre_attack_ttps_id": [
-          "T1611",
-          "T1190"
-        ]
-      },
-      {
-        "cve_id": "CVE-2026-120306",
-        "cvss_score": 9.9,
-        "epss_score": "N/A",
-        "cisa_kev": false,
-        "affected_product": "Beta9 build worker (Buildah)",
-        "affected_product_vendor": "Beta9",
-        "vulnerability_type": {
-          "en": [
-            "Sandbox escape",
-            "Privilege escalation"
-          ],
-          "fr": [
-            "Évasion de sandbox",
-            "Élévation de privilèges"
-          ]
-        },
-        "vulnerability_description": {
-          "en": "Buildah isolation flaw allows sandbox escape and cluster compromise. Patch worker 0.1.756+, avoid privileged builds and restrict capabilities.",
-          "fr": "Faille d’isolation Buildah permettant une évasion de sandbox et la compromission du cluster. Corriger worker 0.1.756+, éviter les builds privilégiés et restreindre les capabilities."
-        },
-        "mitre_attack_ttps_id": [
-          "T1611"
-        ]
-      },
-      {
         "cve_id": "CVE-2026-120240",
         "cvss_score": 9.9,
         "epss_score": "N/A",
@@ -2714,102 +2755,6 @@
         "vulnerability_description": {
           "en": "WireGuard CLI handler command injection. Restrict admin to LAN, disable WAN administration and replace if no patch.",
           "fr": "Injection de commandes dans le handler CLI WireGuard. Restreindre l’administration au LAN, désactiver l’administration WAN et remplacer si aucun correctif."
-        },
-        "mitre_attack_ttps_id": [
-          "T1190",
-          "T1059"
-        ]
-      },
-      {
-        "cve_id": "CVE-2026-120239",
-        "cvss_score": 9.9,
-        "epss_score": "N/A",
-        "cisa_kev": false,
-        "affected_product": "WAVLINK WN553X1-B firmware V260403_2.0.0",
-        "affected_product_vendor": "WAVLINK",
-        "vulnerability_type": {
-          "en": [
-            "OS command injection"
-          ],
-          "fr": [
-            "Injection de commandes OS"
-          ]
-        },
-        "vulnerability_description": {
-          "en": "WireGuard CLI handler command injection. Restrict admin to LAN, disable WAN administration and replace if no patch.",
-          "fr": "Injection de commandes dans le handler CLI WireGuard. Restreindre l’administration au LAN, désactiver l’administration WAN et remplacer si aucun correctif."
-        },
-        "mitre_attack_ttps_id": [
-          "T1190",
-          "T1059"
-        ]
-      },
-      {
-        "cve_id": "CVE-2026-120238",
-        "cvss_score": 9.9,
-        "epss_score": "N/A",
-        "cisa_kev": false,
-        "affected_product": "WAVLINK WN553X1-B firmware V260403_2.0.0",
-        "affected_product_vendor": "WAVLINK",
-        "vulnerability_type": {
-          "en": [
-            "OS command injection"
-          ],
-          "fr": [
-            "Injection de commandes OS"
-          ]
-        },
-        "vulnerability_description": {
-          "en": "ovpn_file handler command injection. Restrict admin to LAN, disable WAN administration and replace if no patch.",
-          "fr": "Injection de commandes dans le handler ovpn_file. Restreindre l’administration au LAN, désactiver l’administration WAN et remplacer si aucun correctif."
-        },
-        "mitre_attack_ttps_id": [
-          "T1190",
-          "T1059"
-        ]
-      },
-      {
-        "cve_id": "CVE-2026-120231",
-        "cvss_score": 9.9,
-        "epss_score": "N/A",
-        "cisa_kev": false,
-        "affected_product": "WAVLINK WN553X1-B firmware V260403_2.0.0",
-        "affected_product_vendor": "WAVLINK",
-        "vulnerability_type": {
-          "en": [
-            "OS command injection"
-          ],
-          "fr": [
-            "Injection de commandes OS"
-          ]
-        },
-        "vulnerability_description": {
-          "en": "OpenVPN CLI handler command injection. Patch or replace, restrict admin access and monitor shell metacharacters in exposed parameters.",
-          "fr": "Injection de commandes dans le handler CLI OpenVPN. Corriger ou remplacer, restreindre l’accès d’administration et surveiller les métacaractères shell dans les paramètres exposés."
-        },
-        "mitre_attack_ttps_id": [
-          "T1190",
-          "T1059"
-        ]
-      },
-      {
-        "cve_id": "CVE-2026-120230",
-        "cvss_score": 9.9,
-        "epss_score": "N/A",
-        "cisa_kev": false,
-        "affected_product": "WAVLINK WN701AE firmware 260105",
-        "affected_product_vendor": "WAVLINK",
-        "vulnerability_type": {
-          "en": [
-            "OS command injection"
-          ],
-          "fr": [
-            "Injection de commandes OS"
-          ]
-        },
-        "vulnerability_description": {
-          "en": "del_vlan_group command injection. Patch, restrict web admin access and monitor HTTP logs for shell metacharacters.",
-          "fr": "Injection de commandes dans del_vlan_group. Corriger, restreindre l’accès web d’administration et surveiller les journaux HTTP pour les métacaractères shell."
         },
         "mitre_attack_ttps_id": [
           "T1190",
@@ -3097,6 +3042,31 @@
         ]
       },
       {
+        "cve_id": "CVE-2026-119075",
+        "cvss_score": 9.8,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Registration Form for WooCommerce <= 1.1.4",
+        "affected_product_vendor": "WooCommerce plugin ecosystem",
+        "vulnerability_type": {
+          "en": [
+            "Improper privilege management",
+            "Unauthenticated privilege escalation"
+          ],
+          "fr": [
+            "Gestion impropre des privilèges",
+            "Élévation de privilèges non authentifiée"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Unauthenticated privilege escalation allows full WordPress site takeover, including administrator creation, malicious plugin installation, and customer data exfiltration. Update to 1.1.5 or later and audit administrator accounts.",
+          "fr": "Une élévation de privilèges non authentifiée permet la prise de contrôle totale du site WordPress, incluant la création d’administrateurs, l’installation de plugins malveillants et l’exfiltration de données clients. Mettez à jour vers 1.1.5 ou ultérieur et auditez les comptes administrateurs."
+        },
+        "mitre_attack_ttps_id": [
+          "T1068"
+        ]
+      },
+      {
         "cve_id": "CVE-2026-103882",
         "cvss_score": 9.1,
         "epss_score": "N/A",
@@ -3123,29 +3093,53 @@
         ]
       },
       {
-        "cve_id": "CVE-2026-89270",
+        "cve_id": "CVE-2026-120984",
         "cvss_score": 9.1,
         "epss_score": "N/A",
         "cisa_kev": false,
-        "affected_product": "WordPress Popup Builder up to 4.4.5",
-        "affected_product_vendor": "Sygnoos",
+        "affected_product": "Keycloak keycloak-services and Red Hat Single Sign-On",
+        "affected_product_vendor": "Red Hat / Keycloak",
         "vulnerability_type": {
           "en": [
-            "Missing authorization",
-            "Content deletion"
+            "Code injection",
+            "JavaScript policy import"
           ],
           "fr": [
-            "Autorisation manquante",
-            "Suppression de contenu"
+            "Injection de code",
+            "Import de politique JavaScript"
           ]
         },
         "vulnerability_description": {
-          "en": "Unauthenticated trashing of all popups. Patch above 4.4.5, block sg_popup_preview_id and restrict admin endpoints.",
-          "fr": "Mise à la corbeille non authentifiée de toutes les popups. Corriger au-delà de 4.4.5, bloquer sg_popup_preview_id et restreindre les endpoints d’administration."
+          "en": "Code injection via inline JavaScript policy import can execute arbitrary code on the Keycloak server, compromising the authentication chain, stealing secrets, and forging tokens. Restrict manage-clients permissions and apply the Red Hat/Keycloak fix.",
+          "fr": "Une injection de code via l’import de politique JavaScript inline peut exécuter du code arbitraire sur le serveur Keycloak, compromettre la chaîne d’authentification, voler des secrets et falsifier des jetons. Restreignez les permissions manage-clients et appliquez le correctif Red Hat/Keycloak."
         },
         "mitre_attack_ttps_id": [
-          "T1190",
-          "T1485"
+          "T1059"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-122041",
+        "cvss_score": 9.1,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Checkout Field Editor for WooCommerce (Pro) <= 3.8.0",
+        "affected_product_vendor": "WooCommerce plugin ecosystem",
+        "vulnerability_type": {
+          "en": [
+            "Missing authorization",
+            "Arbitrary attachment deletion"
+          ],
+          "fr": [
+            "Autorisation manquante",
+            "Suppression arbitraire de pièces jointes"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Missing authorization allows unauthenticated arbitrary deletion of attachments, causing media loss, customer experience degradation, partial denial of service, and loss of business documents. Update the plugin and monitor admin-ajax.php calls.",
+          "fr": "Une autorisation manquante permet la suppression arbitraire non authentifiée de pièces jointes, causant perte de médias, dégradation de l’expérience client, déni de service partiel et perte de documents commerciaux. Mettez à jour le plugin et surveillez les appels à admin-ajax.php."
+        },
+        "mitre_attack_ttps_id": [
+          "T1078"
         ]
       },
       {
@@ -3153,25 +3147,98 @@
         "cvss_score": 8.1,
         "epss_score": "N/A",
         "cisa_kev": false,
-        "affected_product": "OpenSSH before 10.6p2 on musl libc without PAM (Alpine, tiny-cloud, OpenWrt, Buildroot, Yocto)",
+        "affected_product": "OpenSSH on musl Linux with PAM disabled",
         "affected_product_vendor": "OpenSSH",
         "vulnerability_type": {
           "en": [
             "Authentication bypass",
-            "Password authentication bypass"
+            "Oversized password"
           ],
           "fr": [
             "Contournement d’authentification",
-            "Contournement d’authentification par mot de passe"
+            "Mot de passe surdimensionné"
           ]
         },
         "vulnerability_description": {
-          "en": "sshole flaw allows long-password authentication bypass on musl systems without PAM. Patch OpenSSH 10.6p2, disable PasswordAuthentication and check logs for Accepted password on star accounts.",
-          "fr": "La faille sshole permet un contournement d’authentification par mot de passe long sur les systèmes musl sans PAM. Corriger OpenSSH 10.6p2, désactiver PasswordAuthentication et vérifier les journaux pour les connexions Accepted password sur comptes à astérisque."
+          "en": "An oversized password bypass allows unauthenticated SSH access to passwordless accounts, potentially reaching root on Alpine Linux defaults. Update to OpenSSH 10.6p2, search for 'Accepted password for' on passwordless accounts, and disable password authentication.",
+          "fr": "Un contournement par mot de passe surdimensionné permet un accès SSH non authentifié à des comptes sans mot de passe, pouvant atteindre root sur les configurations par défaut d’Alpine Linux. Mettez à jour vers OpenSSH 10.6p2, recherchez 'Accepted password for' sur les comptes sans mot de passe et désactivez l’authentification par mot de passe."
         },
         "mitre_attack_ttps_id": [
-          "T1190",
-          "T1078"
+          "T1078",
+          "T1021.004"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-109518",
+        "cvss_score": 7.7,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "APT package manager on Debian/Ubuntu",
+        "affected_product_vendor": "Debian / Ubuntu",
+        "vulnerability_type": {
+          "en": [
+            "Man-in-the-middle package substitution"
+          ],
+          "fr": [
+            "Substitution de paquet par homme du milieu"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "APT retry logic over HTTP allows MITM package substitution and root code execution on Debian/Ubuntu systems using untrusted networks. Install fixed APT versions, prefer HTTPS mirrors, and reduce Acquire::Retries.",
+          "fr": "La logique de nouvelle tentative d’APT sur HTTP permet une substitution de paquet par homme du milieu et une exécution de code root sur les systèmes Debian/Ubuntu utilisant des réseaux non fiables. Installez les versions corrigées d’APT, privilégiez les miroirs HTTPS et réduisez Acquire::Retries."
+        },
+        "mitre_attack_ttps_id": [
+          "T1059"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-124318",
+        "cvss_score": 8.6,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Treeio <= 2.0",
+        "affected_product_vendor": "Treeio",
+        "vulnerability_type": {
+          "en": [
+            "Deserialization of untrusted data",
+            "Remote code execution"
+          ],
+          "fr": [
+            "Désérialisation de données non fiables",
+            "Exécution de code à distance"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Unsafe deserialization (CWE-502) enables remote code execution on the application server, exposing data, secrets, and internal systems. Update beyond 2.0, remove pickle on untrusted data, and restrict Django admin access.",
+          "fr": "Une désérialisation non sécurisée (CWE-502) permet l’exécution de code à distance sur le serveur applicatif, exposant données, secrets et systèmes internes. Mettez à jour au-delà de 2.0, supprimez pickle sur les données non fiables et restreignez l’accès à l’admin Django."
+        },
+        "mitre_attack_ttps_id": [
+          "T1059"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-118267",
+        "cvss_score": 8.1,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "WP Data Access <= 5.5.89",
+        "affected_product_vendor": "WordPress plugin ecosystem",
+        "vulnerability_type": {
+          "en": [
+            "Improper authorization",
+            "Privilege escalation"
+          ],
+          "fr": [
+            "Autorisation incorrecte",
+            "Élévation de privilèges"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Improper authorization allows overwriting the administrator password and full site takeover, with arbitrary data modification or deletion. Update to 5.5.90 or later and restrict anonymous write endpoints.",
+          "fr": "Une autorisation incorrecte permet d’écraser le mot de passe administrateur et de prendre le contrôle total du site, avec modification ou suppression arbitraire de données. Mettez à jour vers 5.5.90 ou ultérieur et restreignez les endpoints d’écriture anonymes."
+        },
+        "mitre_attack_ttps_id": [
+          "T1068"
         ]
       }
     ]
@@ -3195,6 +3262,52 @@
       "threat_actor": null,
       "financial_impact_usd": null,
       "source_url": "https://theperimetersite.com/report/448"
+    },
+    {
+      "victim": "Ukrainian citizenship database (claimed)",
+      "sector": "Government_and_Defense",
+      "country": "Ukraine",
+      "records_count": 53000000,
+      "data_types": {
+        "en": [
+          "citizenship records",
+          "identity data",
+          "passport data"
+        ],
+        "fr": [
+          "enregistrements de citoyenneté",
+          "données d’identité",
+          "données de passeport"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://go.darkwebsonar.io/cfqsdscqsdcqsc-mastodon"
+    },
+    {
+      "victim": "RENIEC Peru",
+      "sector": "Government_and_Defense",
+      "country": "Peru",
+      "records_count": 31000000,
+      "data_types": {
+        "en": [
+          "national ID numbers",
+          "names",
+          "birth dates",
+          "addresses",
+          "civil status"
+        ],
+        "fr": [
+          "numéros d’identité nationale",
+          "noms",
+          "dates de naissance",
+          "adresses",
+          "état civil"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://go.darkwebsonar.io/nolxemir-mastodon"
     },
     {
       "victim": "MUJI (Ryohin Keikaku)",
@@ -3522,6 +3635,33 @@
       "source_url": "https://haveibeenpwned.com/Breach/Harvard"
     },
     {
+      "victim": "Good Smile Company",
+      "sector": "Retail_and_Consumer",
+      "country": "Japan",
+      "records_count": 405266,
+      "data_types": {
+        "en": [
+          "full payment card data",
+          "partial card data",
+          "names",
+          "addresses",
+          "phone numbers",
+          "order history"
+        ],
+        "fr": [
+          "données complètes de carte de paiement",
+          "données partielles de carte",
+          "noms",
+          "adresses",
+          "numéros de téléphone",
+          "historique de commandes"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://beyondmachines.net/event_details/good-smile-company-suffers-site-exploit-and-credit-card-skimming-attack-w-z-l-p-5/gD2P6Ple2L"
+    },
+    {
       "victim": "Blueberry Pediatrics",
       "sector": "Healthcare_and_Life_Sciences",
       "country": "United States",
@@ -3649,6 +3789,31 @@
       "source_url": "https://cyber.netsecops.io/articles/fashion-retailer-revolve-discloses-data-breach-affecting-197000-customers/"
     },
     {
+      "victim": "Amadeus (Japan Airlines, Cathay Pacific, Singapore Airlines)",
+      "sector": "Technology_and_Telecom",
+      "country": "Global",
+      "records_count": 191000,
+      "data_types": {
+        "en": [
+          "passenger names",
+          "itinerary",
+          "booking details",
+          "contact data",
+          "loyalty data"
+        ],
+        "fr": [
+          "noms des passagers",
+          "itinéraire",
+          "détails de réservation",
+          "données de contact",
+          "données de fidélité"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://poliversity.it/@ransomnews/117574246124283577"
+    },
+    {
       "victim": "Suntory Holdings",
       "sector": "Industry_and_Manufacturing",
       "country": "Japan",
@@ -3695,6 +3860,33 @@
       "threat_actor": null,
       "financial_impact_usd": null,
       "source_url": "https://beyondmachines.net/event_details/hca-healthcare-discloses-data-breach-affecting-patients-and-medical-residents-8-d-4-7-s/gD2P6Ple2L"
+    },
+    {
+      "victim": "Equipple",
+      "sector": "Education_and_Research",
+      "country": "United Kingdom",
+      "records_count": 50000,
+      "data_types": {
+        "en": [
+          "parent phone numbers",
+          "home addresses",
+          "emails",
+          "student names",
+          "birth dates",
+          "school groups"
+        ],
+        "fr": [
+          "numéros de téléphone des parents",
+          "adresses domicile",
+          "e-mails",
+          "noms des élèves",
+          "dates de naissance",
+          "groupes scolaires"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://beyondmachines.net/event_details/equipple-school-app-breach-exposes-data-of-50000-users-in-northern-ireland-2-4-1-7-s/gD2P6Ple2L"
     },
     {
       "victim": "US Department of Homeland Security",
@@ -3748,22 +3940,28 @@
     },
     {
       "victim": "Norad",
-      "sector": "Nonprofit_and_NGO",
+      "sector": "Government_and_Defense",
       "country": "Norway",
-      "records_count": 20000,
+      "records_count": 20614,
       "data_types": {
         "en": [
-          "User information",
-          "Grant applications"
+          "names",
+          "emails",
+          "grant applications",
+          "organizational documents",
+          "identity details of applicants in conflict zones"
         ],
         "fr": [
-          "Informations utilisateurs",
-          "Dossiers de candidature"
+          "noms",
+          "e-mails",
+          "candidatures à des subventions",
+          "documents organisationnels",
+          "détails identitaires de candidats en zones de conflit"
         ]
       },
       "threat_actor": null,
       "financial_impact_usd": null,
-      "source_url": "https://www.helpnetsecurity.com/2026/11/05/norad-grants-portal-breach/"
+      "source_url": "https://beyondmachines.net/event_details/norwegian-aid-agency-norad-suffers-grants-portal-breach-via-compromised-accounts-z-0-8-j-e/gD2P6Ple2L"
     },
     {
       "victim": "Royal Cornwall Hospitals Trust",
@@ -3812,6 +4010,31 @@
       "source_url": "https://infonewscyber.fr/info/afib-pres-de-3-800-professionnels-de-la-banque-et-de-lassurance-concer-b0eb160ac5661072"
     },
     {
+      "victim": "Anthropic Claude Code secrets on GitHub",
+      "sector": "Technology_and_Telecom",
+      "country": "Global",
+      "records_count": 1379,
+      "data_types": {
+        "en": [
+          "database passwords",
+          "SSH credentials",
+          "GitHub/GitLab/npm tokens",
+          "AWS keys",
+          "secrets in Git history and forks"
+        ],
+        "fr": [
+          "mots de passe de bases de données",
+          "identifiants SSH",
+          "jetons GitHub/GitLab/npm",
+          "clés AWS",
+          "secrets dans l’historique Git et les forks"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://thehackernews.com/2026/11/claude-codes-dont-ask-again-file.html"
+    },
+    {
       "victim": "Polymarket",
       "sector": "Finance",
       "country": "Global",
@@ -3831,6 +4054,23 @@
       "threat_actor": null,
       "financial_impact_usd": 3900000,
       "source_url": "https://www.securityweek.com/polymarket-returns-3-9-million-to-traders-as-debugbear-cites-dns-hijack/"
+    },
+    {
+      "victim": "Dian Colombia",
+      "sector": "Government_and_Defense",
+      "country": "Colombia",
+      "records_count": 339,
+      "data_types": {
+        "en": [
+          "email addresses"
+        ],
+        "fr": [
+          "adresses e-mail"
+        ]
+      },
+      "threat_actor": "MedusaLock",
+      "financial_impact_usd": null,
+      "source_url": "https://www.yazoul.net/intel/claim/2026-11-06-dian-colombia-ransomware-claim-by-medusalocker-nov-2026/"
     },
     {
       "victim": "Hanyang Securities",
@@ -3864,147 +4104,25 @@
       "source_url": "https://beyondmachines.net/event_details/hanyang-securities-discloses-data-breach-after-unauthorized-access-to-groupware-1-r-n-z-5/gD2P6Ple2L"
     },
     {
-      "victim": "Chainalysis",
-      "sector": "Security",
-      "country": "United States",
+      "victim": "Binance",
+      "sector": "Finance",
+      "country": "Global",
       "records_count": null,
       "data_types": {
         "en": [
-          "Names",
-          "Usernames",
-          "Password hashes",
-          "Session tokens"
+          "wallet signing authority",
+          "DevOps credentials",
+          "internal service access"
         ],
         "fr": [
-          "Noms",
-          "Noms d’utilisateur",
-          "Hachages de mots de passe",
-          "Jetons de session"
+          "autorité de signature des wallets",
+          "identifiants DevOps",
+          "accès à des services internes"
         ]
       },
-      "threat_actor": "ARTEX",
-      "financial_impact_usd": null,
-      "source_url": "https://www.chainalysis.com/blog/security-incident-october-30/"
-    },
-    {
-      "victim": "WorkOS",
-      "sector": "Technology_and_Telecom",
-      "country": "United States",
-      "records_count": null,
-      "data_types": {
-        "en": [
-          "CRM contacts",
-          "Call transcripts",
-          "Slack excerpts",
-          "Support conversations"
-        ],
-        "fr": [
-          "Contacts CRM",
-          "Transcriptions d’appels",
-          "Extraits Slack",
-          "Conversations support"
-        ]
-      },
-      "threat_actor": "ARTEX",
-      "financial_impact_usd": null,
-      "source_url": "https://workos.com/security/bulletins/october-30th-2026-data-security-incident"
-    },
-    {
-      "victim": "DigiCert",
-      "sector": "Technology_and_Telecom",
-      "country": "United States",
-      "records_count": null,
-      "data_types": {
-        "en": [
-          "Customer contact data",
-          "Identity documents"
-        ],
-        "fr": [
-          "Données de contact clients",
-          "Documents d’identité"
-        ]
-      },
-      "threat_actor": null,
-      "financial_impact_usd": null,
-      "source_url": "https://www.bleepingcomputer.com/news/security/digicert-data-breach-exposes-customer-information-identity-documents/"
-    },
-    {
-      "victim": "DreamHost",
-      "sector": "Technology_and_Telecom",
-      "country": "United States",
-      "records_count": null,
-      "data_types": {
-        "en": [
-          "FTP logins",
-          "Webmail sessions"
-        ],
-        "fr": [
-          "Identifiants FTP",
-          "Sessions webmail"
-        ]
-      },
-      "threat_actor": null,
-      "financial_impact_usd": null,
-      "source_url": "https://www.bleepingcomputer.com/news/security/dreamhost-confirms-data-breach-exposed-ftp-logins-and-webmail-sessions/"
-    },
-    {
-      "victim": "Delcampe",
-      "sector": "Retail_and_Consumer",
-      "country": "Belgium",
-      "records_count": null,
-      "data_types": {
-        "en": [
-          "Addresses",
-          "Purchase history"
-        ],
-        "fr": [
-          "Adresses",
-          "Historique d’achat"
-        ]
-      },
-      "threat_actor": null,
-      "financial_impact_usd": null,
-      "source_url": "https://infonewscyber.fr/info/delcampe-les-adresses-et-les-achats-de-collectionneurs-derobes-lors-du-1859c78bda670426"
-    },
-    {
-      "victim": "Établissement français du sang (EFS)",
-      "sector": "Healthcare_and_Life_Sciences",
-      "country": "France",
-      "records_count": null,
-      "data_types": {
-        "en": [
-          "Donor and recipient health data",
-          "Operational data"
-        ],
-        "fr": [
-          "Données de santé donneurs et receveurs",
-          "Données opérationnelles"
-        ]
-      },
-      "threat_actor": null,
-      "financial_impact_usd": null,
-      "source_url": "https://www.lemonde.fr/pixels/article/2026/11/04/des-frigos-de-l-etablissement-francais-du-sang-a-leur-tour-victimes-d-une-cyberattaque_6806228_4408996.html"
-    },
-    {
-      "victim": "Laboratoire Novabio",
-      "sector": "Healthcare_and_Life_Sciences",
-      "country": "France",
-      "records_count": null,
-      "data_types": {
-        "en": [
-          "Patient health data",
-          "Identity data",
-          "Contact details"
-        ],
-        "fr": [
-          "Données de santé patients",
-          "Données d’identité",
-          "Coordonnées"
-        ]
-      },
-      "threat_actor": null,
-      "financial_impact_usd": null,
-      "source_url": "https://infonewscyber.fr/info/le-laboratoire-novabio-victime-de-deux-cyberattaques-des-donnees-de-sa-df43be2bde7d7f39"
+      "threat_actor": "TraderTraitor",
+      "financial_impact_usd": 6300000000,
+      "source_url": "https://blog.trailofbits.com/2026/11/06/after-binance-check-what-your-signing-systems-can-approve/"
     },
     {
       "victim": "Crédit Mutuel Arkéa",
@@ -4013,101 +4131,80 @@
       "records_count": null,
       "data_types": {
         "en": [
-          "Banking data",
-          "Fraudulent transfer data"
+          "payment systems",
+          "customer data potentially exposed"
         ],
         "fr": [
-          "Données bancaires",
-          "Données de virements frauduleux"
+          "systèmes de paiement",
+          "données clients potentiellement exposées"
         ]
       },
       "threat_actor": null,
-      "financial_impact_usd": 100000000,
-      "source_url": "https://therecord.media/french-bank-confirms-cyber-heist"
+      "financial_impact_usd": 133000000,
+      "source_url": "https://infonewscyber.fr/info/des-pirates-informatiques-ont-derobe-133-millions-de-dollars-a-une-ban-ded94754be202b29"
     },
     {
-      "victim": "Binance",
-      "sector": "Finance",
-      "country": "Global",
-      "records_count": null,
-      "data_types": {
-        "en": [
-          "Employee credentials",
-          "API keys",
-          "Signing keys",
-          "Crypto assets"
-        ],
-        "fr": [
-          "Identifiants employés",
-          "Clés API",
-          "Clés de signature",
-          "Actifs crypto"
-        ]
-      },
-      "threat_actor": "TraderTraitor",
-      "financial_impact_usd": 6300000000,
-      "source_url": "https://www.bleepingcomputer.com/news/security/binance-links-63-billion-crypto-theft-to-compromised-devops-laptop/"
-    },
-    {
-      "victim": "Trezor hardware wallet via CryptoBilis",
-      "sector": "Finance",
-      "country": "Indonesia",
-      "records_count": null,
-      "data_types": {
-        "en": [
-          "Recovery seed phrases"
-        ],
-        "fr": [
-          "Phrases de récupération"
-        ]
-      },
-      "threat_actor": null,
-      "financial_impact_usd": null,
-      "source_url": "https://thehackernews.com/2026/10/trezor-warns-of-suspected-hardware.html"
-    },
-    {
-      "victim": "Apple spyware notification recipients",
-      "sector": "Government_and_Defense",
-      "country": "Global",
-      "records_count": null,
-      "data_types": {
-        "en": [
-          "Mobile device data",
-          "Communications",
-          "Location data"
-        ],
-        "fr": [
-          "Données d’appareil mobile",
-          "Communications",
-          "Données de localisation"
-        ]
-      },
-      "threat_actor": null,
-      "financial_impact_usd": null,
-      "source_url": "https://cyberscoop.com/apple-spyware-notifications-pall-mall-process/"
-    },
-    {
-      "victim": "OpenAI ChatGPT users",
+      "victim": "Chainalysis",
       "sector": "Technology_and_Telecom",
-      "country": "Global",
+      "country": "United States",
       "records_count": null,
       "data_types": {
         "en": [
-          "Conversations",
-          "Cookies",
-          "Session data",
-          "Secrets pasted in prompts"
+          "customer credentials"
         ],
         "fr": [
-          "Conversations",
-          "Cookies",
-          "Données de session",
-          "Secrets collés dans les prompts"
+          "identifiants clients"
+        ]
+      },
+      "threat_actor": "ARTEX",
+      "financial_impact_usd": null,
+      "source_url": "https://www.bleepingcomputer.com/news/security/chainalysis-says-breach-exposed-credentials-for-all-customers/"
+    },
+    {
+      "victim": "WorkOS",
+      "sector": "Technology_and_Telecom",
+      "country": "United States",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "application data",
+          "internal data"
+        ],
+        "fr": [
+          "données applicatives",
+          "données internes"
+        ]
+      },
+      "threat_actor": "ARTEX",
+      "financial_impact_usd": null,
+      "source_url": "https://www.bleepingcomputer.com/news/security/runaway-ai-hacking-agent-behind-workos-breach-after-escaping-sandbox/"
+    },
+    {
+      "victim": "M1 Singapore",
+      "sector": "Technology_and_Telecom",
+      "country": "Singapore",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "names",
+          "NRIC/FIN",
+          "birth dates",
+          "mobile numbers",
+          "emails",
+          "residential addresses"
+        ],
+        "fr": [
+          "noms",
+          "NRIC/FIN",
+          "dates de naissance",
+          "numéros de téléphone mobile",
+          "e-mails",
+          "adresses résidentielles"
         ]
       },
       "threat_actor": null,
       "financial_impact_usd": null,
-      "source_url": "https://thehackernews.com/2026/11/researchers-bypass-chatgpt-lockdown.html"
+      "source_url": "https://beyondmachines.net/event_details/singapore-telco-m1-repoers-data-breach-exposing-customer-nric-and-personal-details-0-1-f-q-o/gD2P6Ple2L"
     }
   ],
   "target": {
@@ -4166,6 +4263,8 @@
         "Indonesia",
         "Norway",
         "Uzbekistan",
+        "Peru",
+        "Singapore",
         "Global"
       ],
       "fr": [
@@ -4188,12 +4287,14 @@
         "Indonésie",
         "Norvège",
         "Ouzbékistan",
+        "Pérou",
+        "Singapour",
         "Mondial"
       ]
     },
     "narrative": {
-      "en": "- **Critical Infrastructure & OT:** European supermarket refrigeration systems (Delhaize, Coop, ICA, Spar, Intermarché/Netto, Coopérative U) were sabotaged via exposed Danfoss AK-SM/AK-SC, Copeland XWEB and Dixell XWEB controllers; the French blood establishment EFS was also targeted. ENISA, the Commission and Europol issued a joint advisory. Beget, a major Russian hosting provider, suffered cloud data destruction.\n- **Government & Defense:** DHS (41,000 employees), FBI/DOJ recruitment portals, Uzbekistan government services (27M claimed), Israeli voter database (6.45M claimed) and Dedale’s Telegram sale of military databases illustrate targeting of identity and defense data. A Pentagon contractor connected a personal Claude Code agent to a secure system, exposing CUI and credentials.\n- **Healthcare & Life Sciences:** Marathon Health (5.68M), Perry Johnson (13.3M), HCA Healthcare (55k), Blueberry Pediatrics (340k), Royal Cornwall Hospitals Trust (7,715 staff), EFS and Novabio were affected. UNM Hospital diverted patients and Lehigh Valley Health Network settled an HHS OCR ransomware investigation.\n- **Finance:** Binance lost $6.3B to TraderTraitor; Crédit Mutuel Arkéa confirmed a €100M fraud; Mercado Bitcoin lost $46M across 10+ blockchains; SMBC Consumer Finance (320k), LPL Financial, Hanyang Securities and Polymarket ($3.9M reimbursement) were hit. Name.com DNS hijack drained $138k from DeFi users.\n- **Technology & Telecom:** Chainalysis exposed credentials and tokens for all users; WorkOS suffered an ARTEX agentic intrusion; DigiCert exposed identity documents; DreamHost exposed FTP and webmail sessions; Sony Network Communications (2.58M), Arara (77M), Bic Camera (14.9M), MUJI (27.26M) and Iris Plaza (7.7M) suffered large data exposures. NIKKE launcher, Cursor/Claude Code extensions and fake GitHub security tools compromised developer endpoints.\n- **Retail & Consumer:** Bureau Vallée (4.8M claimed), Revolve (197k), Coupang, Delcampe and Illicado faced data or fraud incidents. Apple Cash $750 scam and holiday-rental phishing targeted consumers with AI-generated urgency and live chat.\n- **Education & Research:** Harvard (850k), Michigan State University (1.03M claimed), Killingly Public Schools, 16 Icelandic schools, UK school files (320k) and university supercomputer cryptojacking show sustained targeting of research and student data.\n- **Business Services & Legal:** Law firms including Buchanan Ingersoll & Rooney, Smith Gambrell & Russell, Kirkland & Ellis and Latham & Watkins were claimed by ransomware groups. AFIB (3,800 finance professionals) and CTS Strasbourg (230k accounts) were also affected. Qilin, Play, RansomHouse, Payoutsking, Chaos, Whitearmor, Falcon and Bavacai continue double extortion.",
-      "fr": "- **Infrastructures critiques et OT :** les systèmes de réfrigération de supermarchés européens (Delhaize, Coop, ICA, Spar, Intermarché/Netto, Coopérative U) ont été sabotés via des contrôleurs Danfoss AK-SM/AK-SC, Copeland XWEB et Dixell XWEB exposés ; l’Établissement français du sang a aussi été ciblé. ENISA, la Commission et Europol ont publié un avis conjoint. Beget, hébergeur russe majeur, a subi une destruction de données cloud.\n- **Gouvernement et défense :** le DHS (41 000 employés), les portails de recrutement FBI/DOJ, les services gouvernementaux ouzbeks (27 M revendiqués), la base électorale israélienne (6,45 M revendiqués) et la vente Telegram de bases militaires par Dedale illustrent le ciblage des données d’identité et de défense. Un contractant du Pentagone a connecté un agent Claude Code personnel à un système sécurisé, exposant des CUI et des identifiants.\n- **Santé et sciences de la vie :** Marathon Health (5,68 M), Perry Johnson (13,3 M), HCA Healthcare (55 k), Blueberry Pediatrics (340 k), Royal Cornwall Hospitals Trust (7 715 personnels), l’EFS et Novabio ont été affectés. L’hôpital UNM a dérouté des patients et Lehigh Valley Health Network a réglé une enquête de l’OCR du HHS.\n- **Finance :** Binance a perdu 6,3 Md$ au profit de TraderTraitor ; le Crédit Mutuel Arkéa a confirmé une fraude de 100 M€ ; Mercado Bitcoin a perdu 46 M$ sur plus de 10 blockchains ; SMBC Consumer Finance (320 k), LPL Financial, Hanyang Securities et Polymarket (remboursement de 3,9 M$) ont été touchés. Le détournement DNS de Name.com a drainé 138 k$ chez des utilisateurs DeFi.\n- **Technologie et télécoms :** Chainalysis a exposé identifiants et jetons de tous ses utilisateurs ; WorkOS a subi une intrusion agentique ARTEX ; DigiCert a exposé des documents d’identité ; DreamHost a exposé des identifiants FTP et sessions webmail ; Sony Network Communications (2,58 M), Arara (77 M), Bic Camera (14,9 M), MUJI (27,26 M) et Iris Plaza (7,7 M) ont subi de grandes expositions. Le launcher NIKKE, les extensions Cursor/Claude Code et les faux outils de sécurité GitHub ont compromis des postes de développeurs.\n- **Retail et consommation :** Bureau Vallée (4,8 M revendiqués), Revolve (197 k), Coupang, Delcampe et Illicado ont subi des incidents de données ou de fraude. L’arnaque Apple Cash de 750 $ et le phishing de location de vacances ont ciblé les consommateurs avec urgence générée par IA et chat en direct.\n- **Éducation et recherche :** Harvard (850 k), Michigan State University (1,03 M revendiqués), Killingly Public Schools, 16 écoles islandaises, 320 k fichiers scolaires britanniques et le cryptojacking de supercalculateurs universitaires montrent un ciblage soutenu des données de recherche et d’étudiants.\n- **Services aux entreprises et juridique :** des cabinets dont Buchanan Ingersoll & Rooney, Smith Gambrell & Russell, Kirkland & Ellis et Latham & Watkins ont été revendiqués par des groupes rançongiciel. AFIB (3 800 professionnels de la finance) et CTS Strasbourg (230 k comptes) ont aussi été affectés. Qilin, Play, RansomHouse, Payoutsking, Chaos, Whitearmor, Falcon et Bavacai poursuivent la double extorsion."
+      "en": "- **Government & Defense:** Claimed 53M Ukrainian citizenship records, 31M RENIEC Peru identities, 41k DHS employees, Sussex County NJ SSNs, Dian Colombia (MedusaLock), RN France members and Norad Norway (20,614 applicants in conflict zones) show strategic identity exposure.\n- **Finance:** Binance lost $6.3B to TraderTraitor; Crédit Mutuel Arkéa lost up to $133M; Polymarket reimbursed $3.9M; SMBC Consumer Finance (320k), Hanyang Securities, Gnosis Pay and Chainalysis were hit; Mirax Android RAT and XCPE proxies drove mobile banking fraud.\n- **Healthcare & Life Sciences:** Perry Johnson (13.3M), Marathon Health (5.68M), Blueberry Pediatrics (340k), HCA (55k), Doctor Anywhere, Mindbloom, EFS and Novabio were affected; UNM Hospital diverted patients and Lehigh Valley settled with HHS OCR.\n- **Technology & Telecom:** Arara (77M), Sony (2.58M), Amadeus (191k affecting Japan Airlines, Cathay Pacific, Singapore Airlines), M1 Singapore, DigiCert, DreamHost, WorkOS and Chainalysis suffered exposure; Claude Code leaked 1,379 secrets and user emails.\n- **Retail & Consumer:** MUJI (27.26M), Bic Camera (14.9M), Iris Plaza (7.7M), Bureau Vallée (4.8M), Good Smile (405k, full card data for 2,800), Revolve (197k), Smartbox and Burda Style were hit by skimming and e-commerce breaches.\n- **Critical Infrastructure & OT:** European supermarket refrigeration (Delhaize, Coop, ICA, Spar, Intermarché/Netto, Coopérative U) and EFS blood storage were sabotaged via exposed Danfoss, Copeland and Dixell controllers; BlackNevas encrypted ESXi/Proxmox; GNSS jamming in the Baltic threatened timing-dependent telecom, power and finance.\n- **Education & Research:** Harvard (850k), Michigan State University (1.03M claimed), Equipple (50k Northern Ireland parents/students), 16 Icelandic schools and university supercomputer cryptojacking show sustained targeting of research and minors' data.\n- **Media, AI & Regulatory:** EU DSA TikTok findings, California AB 1709 litigation, UK Online Safety Act removals and the UK AI-agent amendment create compliance pressure; Claude Dispatch abuse and agent-to-agent secret disclosure make AI agents an operational attack surface.",
+      "fr": "- **Gouvernement et défense :** Une base de citoyenneté ukrainienne revendiquée à 53 M, 31 M d’identités RENIEC au Pérou, 41 k employés du DHS, des SSN du comté de Sussex (NJ), Dian en Colombie (MedusaLock), des adhérents du RN en France et Norad en Norvège (20 614 candidats en zones de conflit) montrent une exposition identitaire stratégique.\n- **Finance :** Binance a perdu 6,3 Md$ au profit de TraderTraitor ; Crédit Mutuel Arkéa a perdu jusqu’à 133 M$ ; Polymarket a remboursé 3,9 M$ ; SMBC Consumer Finance (320 k), Hanyang Securities, Gnosis Pay et Chainalysis ont été touchés ; le RAT Android Mirax et les proxys XCPE ont alimenté la fraude bancaire mobile.\n- **Santé et sciences de la vie :** Perry Johnson (13,3 M), Marathon Health (5,68 M), Blueberry Pediatrics (340 k), HCA (55 k), Doctor Anywhere, Mindbloom, l’EFS et Novabio ont été affectés ; l’hôpital UNM a dérouté des patients et Lehigh Valley a réglé avec l’OCR du HHS.\n- **Technologie et télécoms :** Arara (77 M), Sony (2,58 M), Amadeus (191 k touchant Japan Airlines, Cathay Pacific, Singapore Airlines), M1 à Singapour, DigiCert, DreamHost, WorkOS et Chainalysis ont subi des expositions ; Claude Code a fuité 1 379 secrets et des e-mails utilisateurs.\n- **Commerce de détail et consommation :** MUJI (27,26 M), Bic Camera (14,9 M), Iris Plaza (7,7 M), Bureau Vallée (4,8 M), Good Smile (405 k, données complètes de carte pour 2 800), Revolve (197 k), Smartbox et Burda Style ont été touchés par skimming et violations e-commerce.\n- **Infrastructure critique et OT :** La réfrigération de supermarchés européens (Delhaize, Coop, ICA, Spar, Intermarché/Netto, Coopérative U) et le stockage sanguin de l’EFS ont été sabotés via des contrôleurs Danfoss, Copeland et Dixell exposés ; BlackNevas a chiffré ESXi/Proxmox ; le brouillage GNSS en Baltique a menacé les télécoms, l’énergie et la finance dépendant de la synchronisation.\n- **Éducation et recherche :** Harvard (850 k), Michigan State University (1,03 M revendiqués), Equipple (50 k parents/élèves en Irlande du Nord), 16 écoles islandaises et le cryptojacking de supercalculateurs universitaires montrent un ciblage soutenu de la recherche et des données de mineurs.\n- **Médias, IA et réglementation :** Les constatations DSA contre TikTok, le contentieux AB 1709, les retraits Online Safety Act et l’amendement britannique sur les agents IA créent une pression de conformité ; l’abus de Claude Dispatch et la divulgation de secrets entre agents font des agents IA une surface d’attaque opérationnelle."
     }
   },
   "trends": {
@@ -4206,7 +4307,15 @@
         "Software supply-chain compromise through IDE extensions, game launchers, security tool update channels and fake GitHub repos",
         "HTML smuggling with WebAssembly obfuscation and ClickFix copy-paste execution",
         "Prompt adware and malicious AI coding bundles manipulating agent behavior",
-        "RaaS fragmentation and leak-site brand imitation after arrests"
+        "AI agent-to-agent social engineering and secret exfiltration",
+        "Browser extension to local AI agent execution via Claude Dispatch",
+        "Secrets leakage through coding agents into .claude/settings.local.json",
+        "RaaS high affiliate commissions (Dark Project 80%)",
+        "Virtualization ransomware without VM escape (ESXi/Proxmox)",
+        "Typosquatting on trusted CDNs and object storage (Cloudflare R2)",
+        "Residential proxy botnets embedded in IoT firmware (XCPE)",
+        "Post-quantum FIDO2 tokens using ML-DSA-87 and ML-KEM-1024",
+        "GNSS jamming and NAVWAR against timing-dependent infrastructure"
       ],
       "fr": [
         "Frameworks d’intrusion agentique (ARTEX, Storm-0940) automatisant reconnaissance, exploitation et abus d’identités cloud",
@@ -4216,7 +4325,15 @@
         "Compromission de chaîne d’approvisionnement via extensions IDE, launchers de jeux, canaux de mise à jour d’outils de sécurité et faux dépôts GitHub",
         "HTML smuggling avec obfuscation WebAssembly et exécution par copier-coller ClickFix",
         "Prompt adware et bundles IA de codage malveillants manipulant le comportement des agents",
-        "Fragmentation RaaS et imitation de marque de sites de fuite après arrestations"
+        "Ingénierie sociale entre agents IA et exfiltration de secrets",
+        "Exécution locale d’agents IA via extension navigateur et Claude Dispatch",
+        "Fuite de secrets par agents de codage dans .claude/settings.local.json",
+        "Commissions d’affiliation RaaS élevées (Dark Project 80 %)",
+        "Rançongiciel de virtualisation sans évasion de VM (ESXi/Proxmox)",
+        "Typosquatting sur CDN et stockage objet de confiance (Cloudflare R2)",
+        "Botnets de proxys résidentiels intégrés au firmware IoT (XCPE)",
+        "Jetons FIDO2 post-quantiques avec ML-DSA-87 et ML-KEM-1024",
+        "Brouillage GNSS et NAVWAR contre les infrastructures dépendantes du temps"
       ]
     },
     "declining_techniques": {
@@ -4226,7 +4343,12 @@
         "Signature-only detection for LOLRMM/LOLBin and signed-binary abuse",
         "Standalone internet-exposed VPN/RDP and SSH password authentication",
         "Trust in code-signing alone for third-party installers",
-        "Perimeter-only email filtering against HTML smuggling and calendar phishing"
+        "Perimeter-only email filtering against HTML smuggling and calendar phishing",
+        "Unsegmented hypervisor management networks",
+        "Plain HTTP package mirrors and high APT retry counts",
+        "Unrestricted browser extensions on managed endpoints",
+        "Long-lived static cloud keys with broad scope",
+        "Public WordPress plugin exposure without WAF and virtual patching"
       ],
       "fr": [
         "MFA SMS/TOTP comme contrôle suffisant contre le détournement de session",
@@ -4234,152 +4356,173 @@
         "Détection uniquement par signature pour LOLRMM/LOLBin et l’abus de binaires signés",
         "VPN/RDP exposés sur Internet et authentification SSH par mot de passe en autonomie",
         "Confiance dans la seule signature de code pour les installeurs tiers",
-        "Filtrage périmétrique de la messagerie seul contre le HTML smuggling et le phishing calendrier"
+        "Filtrage périmétrique de la messagerie seul contre le HTML smuggling et le phishing calendrier",
+        "Réseaux de management d’hyperviseur non segmentés",
+        "Miroirs de paquets HTTP en clair et nombres de tentatives APT élevés",
+        "Extensions navigateur non restreintes sur les postes gérés",
+        "Clés cloud statiques à longue durée de vie et large portée",
+        "Exposition publique de plugins WordPress sans WAF ni virtual patching"
       ]
     },
     "geopolitical_context": {
-      "en": "The Russia-Ukraine war drives OT sabotage, alert-app psyops, Star Blizzard/APT28 espionage and Europe’s hybrid-war resilience. China-aligned actors (Storm-0940, Flax Typhoon, ARTEX ecosystem) target cloud identities and critical infrastructure. North Korea (TraderTraitor, Kimsuky) funds the regime via crypto theft and IT-worker fraud. The Middle East remains volatile: Israeli election instability, Candiru/AdFection spyware and the economic effects of the Iran war. US midterms shift cyber oversight and CISA funding. EU regulatory assertiveness (Digital Omnibus, CRA, DSA, Data Act) and defence industrial policy (AGILE) shape security investment. Food and energy chokepoints (Ormuz, El Niño) add economic stress.",
-      "fr": "La guerre Russie-Ukraine alimente le sabotage OT, les psyops sur les applications d’alerte, l’espionnage Star Blizzard/APT28 et la résilience européenne face à la guerre hybride. Les acteurs alignés sur la Chine (Storm-0940, Flax Typhoon, écosystème ARTEX) ciblent les identités cloud et les infrastructures critiques. La Corée du Nord (TraderTraitor, Kimsuky) finance le régime par le vol de crypto et la fraude aux travailleurs IT. Le Moyen-Orient reste volatil : instabilité électorale israélienne, spyware Candiru/AdFection et effets économiques de la guerre en Iran. Les midterms américaines modifient la supervision cyber et le financement de la CISA. L’affirmation réglementaire européenne (Digital Omnibus, CRA, DSA, Data Act) et la politique industrielle de défense (AGILE) orientent les investissements de sécurité. Les goulets d’étranglement alimentaires et énergétiques (Ormuz, El Niño) ajoutent une pression économique."
+      "en": "The Russia-Ukraine war drives OT sabotage, alert-app psyops, Star Blizzard/APT28 espionage and Europe’s hybrid-war resilience. China-aligned actors (Storm-0940, Flax Typhoon, ARTEX ecosystem) target cloud identities and critical infrastructure, while XCPE and Chinese-language phishing monetize compromised IoT and trusted CDNs. North Korea (TraderTraitor, Kimsuky) funds the regime via crypto theft and IT-worker fraud. The Middle East remains volatile: Israeli election instability, Candiru/AdFection spyware and the economic effects of the Iran war. US midterms shift cyber oversight and CISA funding. EU regulatory assertiveness (Digital Omnibus, CRA, DSA, Data Act) and defence industrial policy (AGILE) shape security investment. Russian GNSS interference in the Baltic and Germany’s ECHIS counter-jamming programme signal a sustained NAVWAR competition affecting civilian timing infrastructure. Food and energy chokepoints (Ormuz, El Niño) add economic stress.",
+      "fr": "La guerre Russie-Ukraine alimente le sabotage OT, les psyops sur les applications d’alerte, l’espionnage Star Blizzard/APT28 et la résilience européenne face à la guerre hybride. Les acteurs alignés sur la Chine (Storm-0940, Flax Typhoon, écosystème ARTEX) ciblent les identités cloud et les infrastructures critiques, tandis que XCPE et le phishing sinophone monétisent les IoT compromis et les CDN de confiance. La Corée du Nord (TraderTraitor, Kimsuky) finance le régime par le vol de crypto et la fraude aux travailleurs IT. Le Moyen-Orient reste volatil : instabilité électorale israélienne, spyware Candiru/AdFection et effets économiques de la guerre en Iran. Les midterms américaines modifient la supervision cyber et le financement de la CISA. L’affirmation réglementaire européenne (Digital Omnibus, CRA, DSA, Data Act) et la politique industrielle de défense (AGILE) orientent les investissements de sécurité. Les interférences GNSS russes en Baltique et le programme allemand ECHIS de contre-brouillage signalent une compétition NAVWAR durable affectant les infrastructures civiles de synchronisation. Les goulets d’étranglement alimentaires et énergétiques (Ormuz, El Niño) ajoutent une pression économique."
     }
   },
   "recommendations": {
     "strategic": {
       "en": [
         {
-          "title": "Prioritize KEV and Exploited Edge CVEs",
-          "detail": "Ivanti ICS CVE-2026-111357/CVE-2026-104935/CVE-2026-118527, PHP2Shell CVE-2026-109618/CVE-2026-109619, WordPress CVE-2026-119977, Brotli CVE-2026-111497, OpenSSH CVE-2026-123158, SonicWall CVE-2026-19868 and Zyxel CVE-2026-7273 are actively exploited or targeted. Use CISA KEV, EPSS and real Internet exposure to drive a 72-hour remediation SLA for edge and web assets. Validate patch application and hunt for prior exploitation."
+          "title": "Prioritize KEV and Edge Exploitation",
+          "detail": "Ivanti ICS CVE-2026-111357/CVE-2026-104935/CVE-2026-118527, PHP2Shell CVE-2026-109618/CVE-2026-109619, WordPress CVE-2026-119977, Brotli CVE-2026-111497, SonicWall CVE-2026-19868, OpenSSH CVE-2026-123158 and Tenda CVE-2026-123966 are actively exploited or targeted. Use CISA KEV, EPSS and real Internet exposure to drive a 72-hour remediation SLA for edge and web assets. Validate patch application and hunt for prior exploitation."
         },
         {
-          "title": "Enforce Phishing-Resistant MFA Everywhere",
-          "detail": "Google Calendar phishing, fake OpenAI/SpaceX events and session-token theft bypass SMS/TOTP and even push MFA. Deploy FIDO2/WebAuthn hardware keys for privileged, developer and executive accounts, enable conditional access and token protection, and revoke all sessions on rollout. Vercel DBSC and device-bound sessions should be evaluated for SaaS platforms."
+          "title": "Enforce FIDO2 on Privileged Access",
+          "detail": "SonicWall CVE-2026-19868 bypasses SAML and enforced MFA on SSLVPN, and OpenSSH CVE-2026-123158 abuses passwordless accounts. Deploy FIDO2/WebAuthn hardware keys for VPN, hypervisor consoles, CI/CD administrators and executives, enable conditional access and token protection, and revoke all sessions on rollout. SMS/TOTP alone is no longer sufficient for privileged access."
         },
         {
-          "title": "Govern Non-Human Identities and AI Agents",
-          "detail": "MSP Entra ID application abuse, WorkOS and Chainalysis ARTEX intrusions, and 99% non-expiring repository tokens show that application identities are the weakest link. Inventory service principals, OAuth apps, PATs, agents and bots; enforce expiry, least privilege, owner assignment and behavioral monitoring. Treat AI coding agents as privileged identities."
+          "title": "Govern AI Agents as Identities",
+          "detail": "Claude Dispatch abuse, coding-agent secret leakage and agent-to-agent disclosure show that AI agents can exfiltrate secrets and execute local code without a human attacker. Implement non-human identity governance with scoped tokens, short TTLs, per-agent credentials, auditable tool-call logging and human approval for installs or network egress. Reference the UK Cyber Security and Resilience Bill amendment and require vendors to provide tamper-evident agent logs."
         },
         {
-          "title": "Treat OT Refrigeration as Critical Infrastructure",
+          "title": "Harden Virtualization and Hypervisor Plane",
+          "detail": "BlackNevas encrypted ESXi and Proxmox hosts without VM escape by reusing root passwords and over-privileged monitoring accounts. Enforce unique per-host credentials in a vault, MFA on vCenter and Proxmox, dedicated admin VLANs, SSH restrictions and offline immutable backups with tested restores. Treat hypervisors as Tier-0 assets equivalent to domain controllers."
+        },
+        {
+          "title": "Secure Software Update Channels",
+          "detail": "cpxGuard autoupdate, NIKKE launcher, Cursor/Claude Code extensions, fake GitHub security tools and XCPE firmware show trusted update channels are primary attack surfaces. Require SBOMs, Sigstore/SLSA provenance, code-signing verification, allowlists and egress filtering. Audit third-party update mechanisms and vendor security clauses."
+        },
+        {
+          "title": "Treat OT Refrigeration as Critical",
           "detail": "European supermarket refrigeration and EFS blood storage attacks used exposed Danfoss AK-SM/AK-SC, Copeland XWEB and Dixell XWEB controllers. Remove Internet exposure, mediate all remote maintenance through a bastion with MFA, segment OT from IT, monitor setpoints and test manual fallback. Apply ENISA/CERT-FR guidance immediately."
         },
         {
-          "title": "Harden Software Supply Chain and Update Channels",
-          "detail": "cpxGuard autoupdate, NIKKE launcher, Cursor/Claude Code extensions, fake GitHub security tools and X.CPE firmware show trusted update channels are primary attack surfaces. Require SBOMs, Sigstore/SLSA provenance, code-signing verification, allowlists and egress filtering. Audit third-party update mechanisms and vendor security clauses."
+          "title": "Reduce Ransomware Blast Radius",
+          "detail": "Qilin, Play, RansomHouse, Dark Project, BlackNevas, MedusaLock, Payload, Bavacai and Whitearmor continue double extortion against healthcare, finance, legal and retail. Implement 3-2-1-1 backups with offline/immutable copies, tested restores, EDR, network segmentation and MFA on all VPN/RDP. Prepare a crisis playbook that includes legal, insurer and law-enforcement contacts."
         },
         {
-          "title": "Reduce Ransomware Blast Radius with Immutable Backups",
-          "detail": "Qilin, Play, RansomHouse, Payoutsking, Chaos, Whitearmor, Falcon and Bavacai continue double extortion against healthcare, finance, legal and retail. Implement 3-2-1-1 backups with offline/immutable copies, tested restores, EDR, network segmentation and MFA on all VPN/RDP. Prepare a crisis playbook that includes legal, insurer and law-enforcement contacts."
-        },
-        {
-          "title": "Control Shadow AI and Prompt Data Leakage",
-          "detail": "DNSFilter observed five AI providers per organization and SentinelOne Prompt Security misconfigurations left private windows and default rules ineffective. Deploy CASB/DLP, allowlist approved AI tools, block paste/upload of secrets, review OAuth consents and monitor prompt traffic. Treat prompt adware and fake AI apps as supply-chain risks."
-        },
-        {
-          "title": "Prepare Regulatory and Breach Notification Readiness",
-          "detail": "EU Digital Omnibus, CRA reporting since 11 September 2026, NIS2/DORA, HIPAA and US state laws impose evidence, timelines and governance. Maintain a breach dossier, 72-hour notification workflow, DPO/legal escalation and tabletop exercises. Map third-party software, AI training data, OT incidents and cloud contracts to these obligations."
+          "title": "Prepare Breach and AI Notification",
+          "detail": "EU Digital Omnibus, CRA reporting since 11 September 2026, NIS2/DORA, HIPAA, UK AI-agent amendment and US state laws impose evidence, timelines and governance. Maintain a breach dossier, 72-hour notification workflow, DPO/legal escalation and tabletop exercises. Map third-party software, AI training data, OT incidents, cloud contracts and agent logs to these obligations."
         }
       ],
       "fr": [
         {
           "title": "Prioriser les CVE KEV et exposées",
-          "detail": "Ivanti ICS CVE-2026-111357/CVE-2026-104935/CVE-2026-118527, PHP2Shell CVE-2026-109618/CVE-2026-109619, WordPress CVE-2026-119977, Brotli CVE-2026-111497, OpenSSH CVE-2026-123158, SonicWall CVE-2026-19868 et Zyxel CVE-2026-7273 sont activement exploitées ou ciblées. Utiliser CISA KEV, EPSS et l’exposition Internet réelle pour imposer une remédiation sous 72 heures sur les actifs de bordure et web. Vérifier l’application des correctifs et chasser une exploitation antérieure."
+          "detail": "Ivanti ICS CVE-2026-111357/CVE-2026-104935/CVE-2026-118527, PHP2Shell CVE-2026-109618/CVE-2026-109619, WordPress CVE-2026-119977, Brotli CVE-2026-111497, SonicWall CVE-2026-19868, OpenSSH CVE-2026-123158 et Tenda CVE-2026-123966 sont activement exploitées ou ciblées. Utiliser CISA KEV, EPSS et l’exposition Internet réelle pour imposer une remédiation sous 72 heures sur les actifs de bordure et web. Vérifier l’application des correctifs et chasser une exploitation antérieure."
         },
         {
-          "title": "Imposer la MFA résistante au phishing",
-          "detail": "Le phishing Google Calendar, les faux événements OpenAI/SpaceX et le vol de jetons de session contournent SMS/TOTP et même la MFA push. Déployer des clés FIDO2/WebAuthn pour les comptes à privilèges, développeurs et dirigeants, activer l’accès conditionnel et la protection des jetons, et révoquer toutes les sessions au déploiement. Évaluer Vercel DBSC et les sessions liées à l’appareil pour les SaaS."
+          "title": "Imposer FIDO2 sur les accès privilégiés",
+          "detail": "SonicWall CVE-2026-19868 contourne SAML et la MFA imposée sur SSLVPN, et OpenSSH CVE-2026-123158 abuse des comptes sans mot de passe. Déployer des clés FIDO2/WebAuthn pour les VPN, consoles d’hyperviseur, administrateurs CI/CD et dirigeants, activer l’accès conditionnel et la protection des jetons, et révoquer toutes les sessions au déploiement. SMS/TOTP seul ne suffit plus pour les accès privilégiés."
         },
         {
-          "title": "Gouverner les identités non humaines et agents IA",
-          "detail": "L’abus d’applications Entra ID chez les MSP, les intrusions ARTEX chez WorkOS et Chainalysis et 99 % de jetons de dépôt sans expiration montrent que les identités applicatives sont le maillon faible. Inventorier les service principals, applications OAuth, PAT, agents et bots ; imposer expiration, moindre privilège, propriétaire et supervision comportementale. Traiter les agents IA de codage comme des identités privilégiées."
+          "title": "Gouverner les agents IA comme identités",
+          "detail": "L’abus de Claude Dispatch, la fuite de secrets par agents de codage et la divulgation entre agents montrent que les agents IA peuvent exfiltrer des secrets et exécuter du code local sans attaquant humain. Mettre en place une gouvernance des identités non humaines avec jetons à portée limitée, TTL courts, identifiants par agent, journalisation auditable des appels d’outils et approbation humaine pour les installations ou sorties réseau. Référencer l’amendement britannique au Cyber Security and Resilience Bill et exiger des fournisseurs des journaux d’agents infalsifiables."
+        },
+        {
+          "title": "Durcir le plan de virtualisation",
+          "detail": "BlackNevas a chiffré des hôtes ESXi et Proxmox sans évasion de VM en réutilisant des mots de passe root et des comptes de supervision sur-privilégiés. Imposer des identifiants uniques par hôte dans un coffre, la MFA sur vCenter et Proxmox, des VLAN d’administration dédiés, des restrictions SSH et des sauvegardes hors ligne immuables avec restaurations testées. Traiter les hyperviseurs comme des actifs Tier-0 équivalents aux contrôleurs de domaine."
+        },
+        {
+          "title": "Sécuriser les canaux de mise à jour",
+          "detail": "L’autoupdate cpxGuard, le launcher NIKKE, les extensions Cursor/Claude Code, les faux outils GitHub et le firmware XCPE montrent que les canaux de mise à jour de confiance sont des surfaces d’attaque primaires. Exiger des SBOM, la provenance Sigstore/SLSA, la vérification de signature de code, des allowlists et le filtrage de sortie. Auditer les mécanismes de mise à jour tiers et les clauses de sécurité des fournisseurs."
         },
         {
           "title": "Traiter la réfrigération OT comme critique",
-          "detail": "Les attaques contre des supermarchés européens et le stockage sanguin de l’EFS ont utilisé des contrôleurs Danfoss AK-SM/AK-SC, Copeland XWEB et Dixell XWEB exposés. Supprimer l’exposition Internet, faire transiter toute la maintenance à distance par un bastion avec MFA, segmenter l’OT de l’IT, surveiller les consignes et tester le mode manuel. Appliquer immédiatement les recommandations ENISA/CERT-FR."
+          "detail": "Les attaques contre la réfrigération de supermarchés européens et le stockage sanguin de l’EFS ont utilisé des contrôleurs Danfoss AK-SM/AK-SC, Copeland XWEB et Dixell XWEB exposés. Supprimer l’exposition Internet, faire passer toute maintenance à distance par un bastion avec MFA, segmenter l’OT de l’IT, surveiller les consignes et tester le mode manuel. Appliquer immédiatement les recommandations ENISA/CERT-FR."
         },
         {
-          "title": "Renforcer la chaîne d’approvisionnement logicielle",
-          "detail": "L’autoupdate cpxGuard, le launcher NIKKE, les extensions Cursor/Claude Code, les faux outils de sécurité GitHub et le firmware X.CPE montrent que les canaux de mise à jour de confiance sont des surfaces d’attaque principales. Exiger des SBOM, la provenance Sigstore/SLSA, la vérification de signature, des listes d’autorisation et le filtrage de sortie. Auditer les mécanismes de mise à jour tiers et les clauses de sécurité des fournisseurs."
+          "title": "Réduire le rayon d’impact ransomware",
+          "detail": "Qilin, Play, RansomHouse, Dark Project, BlackNevas, MedusaLock, Payload, Bavacai et Whitearmor poursuivent la double extorsion contre la santé, la finance, le juridique et le retail. Mettre en œuvre des sauvegardes 3-2-1-1 avec copies hors ligne/immuables, restaurations testées, EDR, segmentation réseau et MFA sur tous les VPN/RDP. Préparer un playbook de crise incluant les contacts juridiques, assureur et forces de l’ordre."
         },
         {
-          "title": "Réduire l’impact ransomware avec des sauvegardes immuables",
-          "detail": "Qilin, Play, RansomHouse, Payoutsking, Chaos, Whitearmor, Falcon et Bavacai poursuivent la double extorsion contre la santé, la finance, le juridique et le retail. Mettre en œuvre des sauvegardes 3-2-1-1 avec copies hors ligne/immuables, restaurations testées, EDR, segmentation réseau et MFA sur tous les VPN/RDP. Préparer un playbook de crise incluant les contacts juridiques, assureur et forces de l’ordre."
-        },
-        {
-          "title": "Maîtriser le Shadow AI et les fuites par prompts",
-          "detail": "DNSFilter a observé cinq fournisseurs d’IA par organisation et des erreurs de configuration SentinelOne Prompt Security ont rendu inefficaces les fenêtres privées et les règles par défaut. Déployer CASB/DLP, autoriser uniquement les outils IA approuvés, bloquer le collage/téléversement de secrets, examiner les consentements OAuth et surveiller le trafic de prompts. Traiter les adwares de prompts et fausses applis IA comme des risques de chaîne d’approvisionnement."
-        },
-        {
-          "title": "Préparer la conformité et la notification des violations",
-          "detail": "L’EU Digital Omnibus, les obligations de notification du CRA depuis le 11 septembre 2026, NIS2/DORA, HIPAA et les lois des États américains imposent des preuves, des délais et une gouvernance. Tenir un dossier de violation, un flux de notification sous 72 heures, une escalade DPO/juridique et des exercices sur table. Cartographier les logiciels tiers, les données d’entraînement IA, les incidents OT et les contrats cloud au regard de ces obligations."
+          "title": "Préparer notification et gouvernance IA",
+          "detail": "Le Digital Omnibus, les notifications CRA depuis le 11 septembre 2026, NIS2/DORA, HIPAA, l’amendement britannique sur les agents IA et les lois d’État américaines imposent preuves, délais et gouvernance. Tenir un dossier de violation, un flux de notification sous 72 heures, une escalade DPO/juridique et des exercices sur table. Cartographier les logiciels tiers, données d’entraînement IA, incidents OT, contrats cloud et journaux d’agents au regard de ces obligations."
         }
       ]
     },
     "operational": {
       "en": [
         {
-          "title": "Patch Ivanti ICS and Rotate Secrets",
-          "detail": "Upgrade Ivanti Connect Secure to 25.1.1.3 or 22.8R2.6 to close CVE-2026-111357/CVE-2026-104935/CVE-2026-118527. After patching, rotate all local accounts, VPN secrets, BitLocker keys and service credentials, then hunt for webshells and unexpected admin accounts. Restrict management interfaces to dedicated admin VLANs and enable integrity monitoring."
+          "title": "Patch SonicWall CVE-2026-19868 Now",
+          "detail": "Apply the SonicOS fix before the CISA deadline of 20 November 2026. Restrict the SSLVPN portal by IP allowlist and geo-fencing, disable unnecessary alternative authentication methods, verify MFA is enforced on every entry point, revoke suspicious sessions, and correlate VPN authentication logs with IdP logs. Check appliances managed by third-party MSPs."
         },
         {
-          "title": "Remove OT Refrigeration Internet Exposure",
-          "detail": "Identify Danfoss AK-SM/AK-SC, Copeland XWEB and Dixell XWEB controllers with public IPs using Shodan/Censys queries and firewall reviews. Block inbound Internet access, enforce MFA on remote maintenance, change default credentials and alert on setpoint changes outside business hours. Validate manual defrost and alarm escalation procedures."
+          "title": "Block WordPress Upgrade Directory Exploitation",
+          "detail": "For CVE-2026-119977, block web access to wp-content/upgrade before updating: Nginx 'location ^~ /wp-content/upgrade/ { deny all; }' and Apache 'Require all denied'. Update to WordPress 7.1.4 or the branch fix, verify temporary update folders use random names, and check for copied wp-config.php or unauthorized administrator accounts."
         },
         {
-          "title": "Audit Entra ID and OAuth Application Consent",
-          "detail": "Query Entra ID sign-in logs and audit logs for new service principals, high-privilege app roles, consent grants and refresh-token replay. Revoke unused applications, rotate client secrets, restrict multi-tenant delegation and require owner attestation. Focus on MSP tenant relationships and ConnectWise/WorkOS integrations."
+          "title": "Hunt OpenSSH CVE-2026-123158 Logs",
+          "detail": "Search /var/log/messages for 'Accepted password for' entries targeting passwordless accounts such as alpine, root, or key-only users. Update to OpenSSH 10.6p2, disable password authentication, restrict SSH access, and inspect recently created users, authorized_keys, and doas usage on exposed musl/PAM-disabled systems."
         },
         {
-          "title": "Hunt for Session Token Theft and Replay",
-          "detail": "Search for anomalous Google Calendar, Microsoft 365 and SaaS session activity from new ASNs or impossible travel. Enforce token binding where available, revoke sessions for risky users and deploy DBSC-compatible browsers. Correlate with phishing emails referencing fake OpenAI/SpaceX events and holiday rentals."
+          "title": "Rotate Claude Code Exposed Secrets",
+          "detail": "Search repositories, Git history, and forks for .claude/settings.local.json and secret patterns. Rotate the 379 database passwords, 43 SSH credentials, 42 GitHub/GitLab/npm tokens, and 23 AWS keys identified in the report. Enable GitHub secret scanning push protection, restrict token scope, and add AI-agent cache files to .gitignore and DLP rules."
         },
         {
-          "title": "Scan for PHP2Shell and WordPress RCE",
-          "detail": "Inventory PHP 8.5.12/8.4.27/8.3.36/8.2.35 and WordPress 7.1.4 exposure, including embedded appliances. Block access to wp-content/upgrade, deploy WAF rules for PHP2Shell and CVE-2026-119977, and search web roots for recently modified PHP files. Isolate exposed instances until patched."
+          "title": "Disable Claude Dispatch and Allowlist Extensions",
+          "detail": "Disable Claude Desktop Dispatch/Cowork on corporate endpoints until the design is fixed, revoke active claude.ai sessions, and enforce a browser extension allowlist by extension ID. Configure EDR alerts for npm install or node processes whose parent is Claude Desktop or a browser, and block public npm registry access from endpoints where possible."
         },
         {
-          "title": "Verify Brotli and OpenSSH Transitive Dependencies",
-          "detail": "Use SBOM and dependency scanners to find Brotli <1.2.1 in Node.js, .NET, Envoy, Splunk, VMware and Mitel products, and OpenSSH <10.6p2 on Alpine/OpenWrt/Buildroot/Yocto. Patch or disable Brotli decompression, set PasswordAuthentication no and review SSH logs for Accepted password on star accounts."
+          "title": "Restrict ESXi and Proxmox Admin Access",
+          "detail": "Enforce unique root passwords per hypervisor, MFA on management consoles, and SSH access only from an admin VLAN. Remove over-privileged monitoring accounts, block AnyDesk and GMER on virtualization segments, and verify offline immutable backups. Hunt for unusual root logins and datastore configuration changes."
         },
         {
-          "title": "Block ClickFix and HTML Smuggling Execution",
-          "detail": "Detect mshta, rundll32, wscript and PowerShell spawned from browser downloads, and block clipboard-to-Run dialog patterns. Enforce SmartScreen/AppLocker, disable Office macros from Internet, and alert on WebAssembly blobs in HTML attachments. Add Sigma rules for xwizard.exe COM execution and wildcard DNS C2."
+          "title": "Upgrade APT and Enforce HTTPS Mirrors",
+          "detail": "For CVE-2026-109518, install fixed APT versions (Ubuntu 26.10: 3.3.3ubuntu0.1; 26.04 LTS: 3.2.1ubuntu0.1; 24.04 LTS: 2.8.4ubuntu0.1; 22.04 LTS: 2.4.15ubuntu0.1; Debian 11: 2.2.5). Prefer HTTPS mirrors with TLS verification, reduce Acquire::Retries, and monitor APT logs and package integrity on Debian/Ubuntu fleets."
         },
         {
-          "title": "Validate Backup Immutability and Restore Speed",
-          "detail": "Test restoration of critical healthcare, finance and OT systems from offline/immutable backups within RTO. Confirm backup credentials are not domain-wide, MFA-protected and segmented. Simulate Qilin/Play-style shadow-copy deletion and verify detection and recovery playbooks."
+          "title": "Block Microsoft Update Phishing Infrastructure",
+          "detail": "Block microsoft[.]updata[.]net[.]cn, updata[.]net[.]cn, and pub-620def1d93ef431dbdf24616a9b11c77[.]r2[.]dev at proxy, DNS, and mail gateways. Add EDR rules for unsigned KB*.exe processes and executables launched from download folders or public CDN/R2 buckets. Hunt 30 days of DNS/proxy logs for 'updata' domains and kB2025072926.exe."
+        },
+        {
+          "title": "Scan Tenda and TOTOLINK Exposures",
+          "detail": "Identify internet-exposed Tenda AC19 firmware 16.03.10.07 (CVE-2026-123966) and TOTOLINK CA300-PoE cstecgi.cgi endpoints (CVE-2026-124060, -124059, -124058, -124057, -123961, -123960, -123959). Apply firmware fixes, move admin interfaces to a dedicated VLAN, disable remote administration, and replace unsupported devices."
+        },
+        {
+          "title": "Patch Keycloak and WordPress Plugins",
+          "detail": "Apply Keycloak/Red Hat fixes for CVE-2026-120984 and restrict manage-clients permissions. Update WordPress plugins for CVE-2026-118066, CVE-2026-104746, CVE-2026-103900, CVE-2026-119075, CVE-2026-118267, CVE-2026-120841, CVE-2026-120839, CVE-2026-122041, and CVE-2026-121762. Add WAF rules for reset-token abuse, traversal, and admin-ajax.php deletion attempts, and enforce MFA on all administrators."
         }
       ],
       "fr": [
         {
-          "title": "Corriger Ivanti ICS et faire tourner les secrets",
-          "detail": "Mettre à niveau Ivanti Connect Secure vers 25.1.1.3 ou 22.8R2.6 pour fermer CVE-2026-111357/CVE-2026-104935/CVE-2026-118527. Après correctif, faire tourner tous les comptes locaux, secrets VPN, clés BitLocker et identifiants de service, puis chasser les webshells et comptes admin inattendus. Restreindre les interfaces d’administration à des VLAN dédiés et activer la surveillance d’intégrité."
+          "title": "Corriger SonicWall CVE-2026-19868 immédiatement",
+          "detail": "Appliquez le correctif SonicOS avant l’échéance CISA du 20 novembre 2026. Restreignez le portail SSLVPN par liste d’IP et geo-fencing, désactivez les méthodes d’authentification alternatives inutiles, vérifiez que la MFA est imposée sur chaque point d’entrée, révoquez les sessions suspectes et corrélez les journaux VPN avec ceux de l’IdP. Vérifiez les appliances gérées par des MSP tiers."
         },
         {
-          "title": "Supprimer l’exposition Internet des réfrigérateurs OT",
-          "detail": "Identifier les contrôleurs Danfoss AK-SM/AK-SC, Copeland XWEB et Dixell XWEB avec IP publique via Shodan/Censys et revue firewall. Bloquer l’accès Internet entrant, imposer la MFA sur la maintenance à distance, changer les identifiants par défaut et alerter sur les changements de consigne hors heures ouvrées. Valider les procédures manuelles de dégivrage et d’escalade des alarmes."
+          "title": "Bloquer l’exploitation du répertoire upgrade WordPress",
+          "detail": "Pour CVE-2026-119977, bloquez l’accès web à wp-content/upgrade avant mise à jour : Nginx 'location ^~ /wp-content/upgrade/ { deny all; }' et Apache 'Require all denied'. Mettez à jour vers WordPress 7.1.4 ou le correctif de branche, vérifiez que les dossiers temporaires utilisent des noms aléatoires et contrôlez la présence de wp-config.php copié ou de comptes administrateurs non autorisés."
         },
         {
-          "title": "Auditer les consentements Entra ID et OAuth",
-          "detail": "Interroger les journaux de connexion et d’audit Entra ID pour les nouveaux service principals, rôles applicatifs à privilèges, consentements et rejeu de refresh tokens. Révoquer les applications inutilisées, faire tourner les secrets clients, restreindre la délégation multi-tenant et exiger l’attestation du propriétaire. Cibler les relations MSP et les intégrations ConnectWise/WorkOS."
+          "title": "Chasser OpenSSH CVE-2026-123158 dans les logs",
+          "detail": "Recherchez dans /var/log/messages les entrées 'Accepted password for' visant des comptes sans mot de passe comme alpine, root ou des comptes à clé uniquement. Mettez à jour vers OpenSSH 10.6p2, désactivez l’authentification par mot de passe, restreignez l’accès SSH et inspectez les utilisateurs, authorized_keys et usages de doas récemment créés sur les systèmes musl/PAM désactivé exposés."
         },
         {
-          "title": "Chasser le vol et le rejeu de jetons de session",
-          "detail": "Rechercher les activités de session Google Calendar, Microsoft 365 et SaaS anormales depuis de nouveaux ASN ou voyages impossibles. Imposer le liage de jetons lorsque disponible, révoquer les sessions à risque et déployer des navigateurs compatibles DBSC. Corréler avec les e-mails de phishing évoquant de faux événements OpenAI/SpaceX et locations de vacances."
+          "title": "Faire tourner les secrets Claude Code exposés",
+          "detail": "Recherchez dans les dépôts, l’historique Git et les forks les fichiers .claude/settings.local.json et les motifs de secrets. Faites tourner les 379 mots de passe de bases de données, 43 identifiants SSH, 42 jetons GitHub/GitLab/npm et 23 clés AWS identifiés dans le rapport. Activez la protection push du secret scanning GitHub, restreignez la portée des jetons et ajoutez les fichiers de cache d’agents IA au .gitignore et aux règles DLP."
         },
         {
-          "title": "Scanner PHP2Shell et les RCE WordPress",
-          "detail": "Inventorier l’exposition PHP 8.5.12/8.4.27/8.3.36/8.2.35 et WordPress 7.1.4, y compris les appliances embarquées. Bloquer l’accès à wp-content/upgrade, déployer des règles WAF pour PHP2Shell et CVE-2026-119977, et rechercher les fichiers PHP récemment modifiés dans les racines web. Isoler les instances exposées jusqu’au correctif."
+          "title": "Désactiver Dispatch et allowlister les extensions",
+          "detail": "Désactivez Claude Desktop Dispatch/Cowork sur les postes corporate jusqu’à correction du design, révoquez les sessions claude.ai actives et imposez une allowlist d’extensions navigateur par identifiant. Configurez des alertes EDR pour npm install ou les processus node dont le parent est Claude Desktop ou un navigateur, et bloquez l’accès au registre npm public depuis les postes lorsque possible."
         },
         {
-          "title": "Vérifier les dépendances Brotli et OpenSSH",
-          "detail": "Utiliser les SBOM et scanners de dépendances pour trouver Brotli <1.2.1 dans Node.js, .NET, Envoy, Splunk, VMware et Mitel, et OpenSSH <10.6p2 sur Alpine/OpenWrt/Buildroot/Yocto. Corriger ou désactiver la décompression Brotli, mettre PasswordAuthentication no et examiner les journaux SSH pour Accepted password sur comptes à astérisque."
+          "title": "Restreindre l’accès admin ESXi et Proxmox",
+          "detail": "Imposez des mots de passe root uniques par hyperviseur, la MFA sur les consoles de gestion et un accès SSH uniquement depuis un VLAN d’administration. Supprimez les comptes de supervision sur-privilégiés, bloquez AnyDesk et GMER sur les segments de virtualisation et vérifiez les sauvegardes hors ligne immuables. Chassez les connexions root inhabituelles et les modifications de configuration des datastores."
         },
         {
-          "title": "Bloquer ClickFix et HTML smuggling",
-          "detail": "Détecter mshta, rundll32, wscript et PowerShell lancés depuis des téléchargements navigateur, et bloquer les motifs copier-coller vers la boîte Exécuter. Imposer SmartScreen/AppLocker, désactiver les macros Office depuis Internet et alerter sur les blobs WebAssembly dans les pièces jointes HTML. Ajouter des règles Sigma pour xwizard.exe COM et DNS wildcard C2."
+          "title": "Mettre à jour APT et imposer HTTPS",
+          "detail": "Pour CVE-2026-109518, installez les versions corrigées d’APT (Ubuntu 26.10 : 3.3.3ubuntu0.1 ; 26.04 LTS : 3.2.1ubuntu0.1 ; 24.04 LTS : 2.8.4ubuntu0.1 ; 22.04 LTS : 2.4.15ubuntu0.1 ; Debian 11 : 2.2.5). Privilégiez les miroirs HTTPS avec vérification TLS, réduisez Acquire::Retries et surveillez les journaux APT et l’intégrité des paquets sur les parcs Debian/Ubuntu."
         },
         {
-          "title": "Valider l’immuabilité et la vitesse de restauration",
-          "detail": "Tester la restauration des systèmes critiques santé, finance et OT depuis des sauvegardes hors ligne/immuables dans le RTO. Confirmer que les identifiants de sauvegarde ne sont pas à portée de domaine, sont protégés par MFA et segmentés. Simuler une suppression de clichés type Qilin/Play et vérifier la détection et les playbooks de reprise."
+          "title": "Bloquer l’infrastructure phishing Microsoft Update",
+          "detail": "Bloquez microsoft[.]updata[.]net[.]cn, updata[.]net[.]cn et pub-620def1d93ef431dbdf24616a9b11c77[.]r2[.]dev au proxy, DNS et passerelle de messagerie. Ajoutez des règles EDR pour les processus KB*.exe non signés et les exécutables lancés depuis les dossiers de téléchargement ou les buckets CDN/R2 publics. Chassez sur 30 jours les journaux DNS/proxy pour les domaines 'updata' et kB2025072926.exe."
+        },
+        {
+          "title": "Scanner les expositions Tenda et TOTOLINK",
+          "detail": "Identifiez les équipements Tenda AC19 firmware 16.03.10.07 (CVE-2026-123966) et TOTOLINK CA300-PoE cstecgi.cgi (CVE-2026-124060, -124059, -124058, -124057, -123961, -123960, -123959) exposés sur Internet. Appliquez les correctifs firmware, déplacez les interfaces d’administration dans un VLAN dédié, désactivez l’administration distante et remplacez les équipements non supportés."
+        },
+        {
+          "title": "Corriger Keycloak et les plugins WordPress",
+          "detail": "Appliquez les correctifs Keycloak/Red Hat pour CVE-2026-120984 et restreignez les permissions manage-clients. Mettez à jour les plugins WordPress pour CVE-2026-118066, CVE-2026-104746, CVE-2026-103900, CVE-2026-119075, CVE-2026-118267, CVE-2026-120841, CVE-2026-120839, CVE-2026-122041 et CVE-2026-121762. Ajoutez des règles WAF pour l’abus de reset-token, la traversée et les suppressions via admin-ajax.php, et imposez la MFA à tous les administrateurs."
         }
       ]
     }
