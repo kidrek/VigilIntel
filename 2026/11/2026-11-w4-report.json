@@ -1,0 +1,2411 @@
+{
+  "threat_level": {
+    "score": 5,
+    "label": {
+      "en": "Severe",
+      "fr": "Sévère"
+    },
+    "justification": {
+      "en": "Active exploitation of CISA KEV vulnerabilities (Apache Roller, Cisco Expressway, SAP NetWeaver, VMware vCenter) with a 23 November remediation deadline; multiple federal breaches (FBI NCIC, USDA) and large data leaks (Careers360 22M, SBC Medical 1.6M); ransomware activity by PixelLeaks, INC Ransom, and LockBit; AI-driven zero-day exploitation (Cairn) and AI supply chain leaks. Immediate patching, credential rotation, and containment are required.",
+      "fr": "Exploitation active de vulnérabilités du catalogue CISA KEV (Apache Roller, Cisco Expressway, SAP NetWeaver, VMware vCenter) avec une échéance de remédiation au 23 novembre ; multiples compromissions fédérales (FBI NCIC, USDA) et fuites massives (Careers360 22M, SBC Medical 1,6M) ; activité rançongicielle de PixelLeaks, INC Ransom et LockBit ; exploitation de zero-day par IA (Cairn) et fuites dans la chaîne d'approvisionnement IA. Le patchage immédiat, la rotation des identifiants et le confinement sont nécessaires."
+    },
+    "_triggers": [
+      "+8 — 4 CVE(s) CISA KEV",
+      "+4 — 15 CVE(s) CVSS ≥ 9.0",
+      "+3 — 3 opérateur(s) ransomware",
+      "+1 — ≥ 3 acteurs distincts actifs",
+      "+3 — 4 breach(es) ≥ 100k enregistrements",
+      "+2 — secteurs critiques ciblés : Government_and_Defense, Critical_Infrastructure",
+      "+1 — 17 TTPs distinctes"
+    ]
+  },
+  "executive_summary": {
+    "en": "Week 4 of November 2026 is defined by a convergence of active exploitation, large-scale data exposure, and the industrialization of AI-assisted attacks. CISA's Known Exploited Vulnerabilities catalog added four critical flaws—Apache Roller (CVE-2026-129448), Cisco Expressway (CVE-2026-76466), SAP NetWeaver (CVE-2025-42884), and VMware vCenter (CVE-2026-123890)—with a remediation deadline of 23 November, while BeyondTrust Remote Support (CVE-2026-102764) was exploited in chain. PHP released 18 security fixes, including critical RCEs (CVE-2026-129289), and multiple ERPNext missing-authorization flaws expose financial and operational data. The breach landscape is dominated by the FBI's National Crime Information Center (NCIC) and USDA payment systems, both reportedly compromised, raising national-security concerns. Large leaks include Careers360 (22 million records), SBC Medical Group (1.64 million patients), Too Lost (724,323 users), and Transport for London (265,000 Oyster users). Rackspace Spot exposed Kubernetes secrets, Microsoft Entra Connect Health leaked tenant metadata, and Bell Canada lost enterprise customer data. Ransomware groups remain active: PixelLeaks claimed four new victims across India, Iran, and Israel; INC Ransom targeted a French municipality; LockBit was linked to a recovery-fraud scheme where RansomwareHelp's CTO was indicted for wire fraud. The most significant technical shift is the use of autonomous AI frameworks: Cairn was used to discover and exploit a zero-day in a medical imaging application, and a separate AI supply-chain study by HD Moore showed secrets leaking through inference providers, including MiniMax (China). Regulatory activity includes the FCC's Cyber Trust Mark NPRM, Dutch AP's warning on AI glasses, and antitrust review of CrowdStrike's potential Zscaler acquisition. Geopolitically, Austria's foreign ministry breach (attributed to Russia in prior incidents) and US-Iran tensions heighten espionage risk. Defenders must prioritize KEV patching, credential rotation, DLP for AI prompts, and third-party risk management.",
+    "fr": "La quatrième semaine de novembre 2026 est marquée par une convergence d'exploitations actives, d'expositions massives de données et d'industrialisation des attaques assistées par IA. Le catalogue CISA KEV a ajouté quatre failles critiques — Apache Roller (CVE-2026-129448), Cisco Expressway (CVE-2026-76466), SAP NetWeaver (CVE-2025-42884) et VMware vCenter (CVE-2026-123890) — avec une échéance de remédiation au 23 novembre, tandis que BeyondTrust Remote Support (CVE-2026-102764) a été exploitée en chaîne. PHP a publié 18 correctifs, dont des RCE critiques (CVE-2026-129289), et plusieurs vulnérabilités d'autorisation manquante dans ERPNext exposent des données financières et opérationnelles. Le paysage des fuites est dominé par le National Crime Information Center (NCIC) du FBI et les systèmes de paiement de l'USDA, tous deux compromis selon les rapports, soulevant des préoccupations de sécurité nationale. Les fuites majeures incluent Careers360 (22 millions d'enregistrements), SBC Medical Group (1,64 million de patients), Too Lost (724 323 utilisateurs) et Transport for London (265 000 usagers Oyster). Rackspace Spot a exposé des secrets Kubernetes, Microsoft Entra Connect Health a fuité des métadonnées de locataires, et Bell Canada a perdu des données clients entreprises. Les groupes rançongiciels restent actifs : PixelLeaks a revendiqué quatre nouvelles victimes en Inde, en Iran et en Israël ; INC Ransom a ciblé une commune française ; LockBit a été lié à un stratagème de fraude à la récupération où le CTO de RansomwareHelp a été inculpé pour fraude électronique. Le changement technique le plus significatif est l'utilisation de frameworks IA autonomes : Cairn a découvert et exploité un zero-day dans une application d'imagerie médicale, et une étude distincte de HD Moore sur la chaîne d'approvisionnement IA a montré des fuites de secrets via des fournisseurs d'inférence, dont MiniMax (Chine). L'activité réglementaire comprend le NPRM du Cyber Trust Mark de la FCC, l'avertissement de l'AP néerlandaise sur les lunettes IA et l'examen antitrust de l'acquisition potentielle de Zscaler par CrowdStrike. Géopolitiquement, la compromission du ministère autrichien des Affaires étrangères (attribuée à la Russie lors d'incidents antérieurs) et les tensions américano-iraniennes accroissent le risque d'espionnage. Les défenseurs doivent prioriser le patchage KEV, la rotation des identifiants, la DLP pour les prompts IA et la gestion des risques tiers."
+  },
+  "regulatory": {
+    "analyse": {
+      "en": "This period shows regulators moving from principle to operational enforcement. The FCC's Cyber Trust Mark NPRM creates a verifiable IoT security label with post-market surveillance, directly impacting botnet-prone consumer devices. The Dutch AP's warning on AI glasses sets a precedent that factual unreliability of embedded AI can justify restriction, beyond privacy. The FBI NCIC breach investigation signals heightened scrutiny of federal data integrity and CJIS compliance. The CrowdStrike-Zscaler merger review will test antitrust limits in the security market, with implications for vendor concentration and telemetry sharing. Security teams should map these developments to third-party risk, AI governance, and incident notification obligations.",
+      "fr": "Cette période montre les régulateurs passant des principes à l'application opérationnelle. Le NPRM du Cyber Trust Mark de la FCC crée un label de sécurité IoT vérifiable avec surveillance post-commercialisation, impactant directement les objets connectés sujets aux botnets. L'avertissement de l'AP néerlandaise sur les lunettes IA établit un précédent : l'absence de fiabilité factuelle d'une IA embarquée peut justifier une restriction, au-delà de la vie privée. L'enquête sur la compromission du NCIC du FBI signale un examen accru de l'intégrité des données fédérales et de la conformité CJIS. L'examen de l'acquisition CrowdStrike-Zscaler testera les limites antitrust sur le marché de la sécurité, avec des implications sur la concentration des fournisseurs et le partage de télémétrie. Les équipes de sécurité doivent intégrer ces évolutions dans la gestion des risques tiers, la gouvernance de l'IA et les obligations de notification d'incident."
+    },
+    "events": [
+      {
+        "title": {
+          "en": "FCC U.S. Cyber Trust Mark NPRM",
+          "fr": "Projet de règles du U.S. Cyber Trust Mark de la FCC"
+        },
+        "issuing_body": "Federal Communications Commission (FCC)",
+        "date": "2026-11-23",
+        "jurisdiction": {
+          "region": "US",
+          "countries": [
+            "US"
+          ]
+        },
+        "type": "Proposal",
+        "status": "Proposed",
+        "reference": "FCC-FR-2026-11-23-CYBER-TRUST-MARK-NPRM",
+        "affected_sectors": [
+          "Technology_and_Telecom",
+          "Retail_and_Consumer"
+        ],
+        "description": {
+          "en": "The FCC published a Notice of Proposed Rulemaking detailing the operational framework for the U.S. Cyber Trust Mark, an IoT cybersecurity labeling program. It covers label design, product registry, certification renewal, post-market surveillance, and complaint procedures, with a public comment period until 23 December 2026. Security teams should assess IoT procurement criteria and prepare for label-based vendor requirements.",
+          "fr": "La FCC a publié un avis de projet de règles détaillant le cadre opérationnel du U.S. Cyber Trust Mark, un programme d'étiquetage de cybersécurité des objets connectés. Il couvre la conception du label, le registre produit, le renouvellement de certification, la surveillance post-commercialisation et les procédures de plainte, avec une consultation publique jusqu'au 23 décembre 2026. Les équipes de sécurité doivent évaluer les critères d'achat IoT et se préparer aux exigences fournisseurs basées sur le label."
+        },
+        "source_url": "https://www.cybersecuritydive.com/news/fcc-cyber-trust-mark-internet-of-things-regulation-proposal/875328/"
+      },
+      {
+        "title": {
+          "en": "Dutch AP Warns Against AI Glasses",
+          "fr": "L'AP néerlandaise déconseille les lunettes connectées à l'IA"
+        },
+        "issuing_body": "Autoriteit Persoonsgegevens (AP)",
+        "date": "2026-11-21",
+        "jurisdiction": {
+          "region": "EU",
+          "countries": [
+            "NL"
+          ]
+        },
+        "type": "Guidance",
+        "status": "Active",
+        "reference": "AP-NL-2026-AI-GLASSES-SAFETY-WARNING",
+        "affected_sectors": [
+          "Technology_and_Telecom",
+          "Retail_and_Consumer",
+          "Healthcare_and_Life_Sciences"
+        ],
+        "description": {
+          "en": "The Dutch data protection authority advised against purchasing AI-enabled glasses after tests revealed safety-critical failures, including false emergency response claims and inappropriate advice. The warning extends beyond privacy to product safety and AI Act compliance, creating a precedent for restricting unreliable embedded AI.",
+          "fr": "L'autorité néerlandaise de protection des données a déconseillé l'achat de lunettes dopées à l'IA après que des tests ont révélé des défaillances critiques de sécurité, notamment de fausses affirmations sur l'appel des secours et des conseils inappropriés. L'avertissement dépasse la vie privée pour toucher à la sécurité des produits et à la conformité au règlement IA, créant un précédent pour restreindre les IA embarquées non fiables."
+        },
+        "source_url": "https://www.theregister.com/security/2026/11/20/dutch-data-watchdog-highlights-safety-issues-with-ai-glasses/5311345"
+      },
+      {
+        "title": {
+          "en": "FBI Investigates NCIC Database Breach",
+          "fr": "Le FBI enquête sur une compromission de la base NCIC"
+        },
+        "issuing_body": "Federal Bureau of Investigation (FBI)",
+        "date": "2026-11-21",
+        "jurisdiction": {
+          "region": "US",
+          "countries": [
+            "US"
+          ]
+        },
+        "type": "Enforcement_Action",
+        "status": "Active",
+        "reference": "AP-2026-11-21-FBI-NCIC-BREACH",
+        "affected_sectors": [
+          "Government_and_Defense",
+          "Critical_Infrastructure"
+        ],
+        "description": {
+          "en": "The FBI is investigating an apparent compromise of the National Crime Information Center (NCIC), a real-time law enforcement database containing warrants, criminal records, and sensitive officer data. The incident raises risks of data integrity manipulation, lateral movement from local law enforcement terminals, and national-security exposure. CJIS compliance and access logging are under scrutiny.",
+          "fr": "Le FBI enquête sur une compromission apparente du National Crime Information Center (NCIC), une base de données judiciaire en temps réel contenant des mandats, des antécédents criminels et des données sensibles sur les officiers. L'incident soulève des risques de manipulation de l'intégrité des données, de mouvement latéral depuis les terminaux des polices locales et d'exposition à la sécurité nationale. La conformité CJIS et la journalisation des accès sont examinées."
+        },
+        "source_url": "https://apnews.com/article/fbi-database-ncic-hack-d066cff87a64a564db0a00172c124972"
+      },
+      {
+        "title": {
+          "en": "CrowdStrike-Zscaler Acquisition Under Antitrust Review",
+          "fr": "Examen antitrust de l'acquisition de Zscaler par CrowdStrike"
+        },
+        "issuing_body": "FTC/DOJ (US), European Commission, CMA (UK)",
+        "date": "2026-11-21",
+        "jurisdiction": {
+          "region": "Global",
+          "countries": [
+            "US",
+            "GB"
+          ]
+        },
+        "type": "Proposal",
+        "status": "Under_Review",
+        "reference": "SILICONANGLE-2026-11-20-CROWDSTRIKE-ZSCALER",
+        "affected_sectors": [
+          "Technology_and_Telecom",
+          "Security"
+        ],
+        "description": {
+          "en": "CrowdStrike is reportedly in advanced talks to acquire Zscaler, a deal that would consolidate EDR/XDR and ZTNA/SSE markets. The transaction will trigger antitrust reviews in the US, EU, and UK, with implications for vendor concentration, telemetry sharing, and pricing. Security teams should assess single-vendor risk and contract flexibility.",
+          "fr": "CrowdStrike serait en discussions avancées pour acquérir Zscaler, une opération qui consoliderait les marchés EDR/XDR et ZTNA/SSE. La transaction déclenchera des examens antitrust aux États-Unis, dans l'UE et au Royaume-Uni, avec des implications sur la concentration des fournisseurs, le partage de télémétrie et les prix. Les équipes de sécurité doivent évaluer le risque de dépendance à un fournisseur unique et la flexibilité contractuelle."
+        },
+        "source_url": "https://siliconangle.com/2026/11/20/crowdstrike-reportedly-in-talks-to-acquire-cybersecurity-provider-zscaler/"
+      }
+    ]
+  },
+  "threats_actors": {
+    "geographic_analyse": [
+      {
+        "geographic_zone_name": {
+          "en": "Russia",
+          "fr": "Russie"
+        },
+        "geographic_zone_strategic_analyse": {
+          "en": "Russia remains a persistent espionage threat. Austria's foreign ministry breach, though unattributed, echoes Vienna's public accusation of Moscow for the 2019-2020 compromise. Russian ransomware affiliates (LockBit) continue double extortion. Expect continued targeting of European diplomatic and critical infrastructure networks.",
+          "fr": "La Russie reste une menace persistante d'espionnage. La compromission du ministère autrichien des Affaires étrangères, bien que non attribuée, fait écho à l'accusation publique de Vienne contre Moscou pour la compromission de 2019-2020. Les affiliés rançongiciels russes (LockBit) poursuivent la double extorsion. Attendez-vous à un ciblage continu des réseaux diplomatiques et d'infrastructure critique européens."
+        }
+      },
+      {
+        "geographic_zone_name": {
+          "en": "China",
+          "fr": "Chine"
+        },
+        "geographic_zone_strategic_analyse": {
+          "en": "China's AI supply chain poses data sovereignty risks. MiniMax, a Chinese model provider, was implicated in prompt leakage through OpenRouter resellers, exposing secrets to potential state access. Chinese IoT devices (GL.iNet) and D-Link routers remain botnet vectors. Scrutiny of Chinese-linked vendors in US programs (FCC Cyber Trust Mark) is increasing.",
+          "fr": "La chaîne d'approvisionnement IA chinoise pose des risques de souveraineté des données. MiniMax, fournisseur de modèles chinois, a été impliqué dans une fuite de prompts via des revendeurs OpenRouter, exposant des secrets à un accès étatique potentiel. Les objets connectés chinois (GL.iNet) et les routeurs D-Link restent des vecteurs de botnets. La surveillance des fournisseurs liés à la Chine dans les programmes américains (FCC Cyber Trust Mark) s'intensifie."
+        }
+      },
+      {
+        "geographic_zone_name": {
+          "en": "Iran",
+          "fr": "Iran"
+        },
+        "geographic_zone_strategic_analyse": {
+          "en": "US-Iran tensions create a volatile cyber environment. The US government cited the ongoing war with Iran as context for heightened alert, though no specific Iranian campaign was confirmed this week. PixelLeaks claimed an Iranian compressor manufacturer as a victim, indicating cybercriminal opportunism in the region.",
+          "fr": "Les tensions américano-iraniennes créent un environnement cyber volatil. Le gouvernement américain a cité la guerre en cours avec l'Iran comme contexte d'alerte accrue, bien qu'aucune campagne iranienne spécifique n'ait été confirmée cette semaine. PixelLeaks a revendiqué un fabricant iranien de compresseurs comme victime, indiquant un opportunisme cybercriminel dans la région."
+        }
+      },
+      {
+        "geographic_zone_name": {
+          "en": "North Korea",
+          "fr": "Corée du Nord"
+        },
+        "geographic_zone_strategic_analyse": {
+          "en": "No direct North Korean activity was reported this week, but Lazarus-style supply chain and cryptocurrency theft remain a baseline threat. The AI supply chain leak and credential exposure could be leveraged by DPRK actors for financial theft.",
+          "fr": "Aucune activité nord-coréenne directe n'a été signalée cette semaine, mais les attaques de type Lazarus contre la chaîne d'approvisionnement et le vol de cryptomonnaies restent une menace de fond. La fuite dans la chaîne d'approvisionnement IA et l'exposition d'identifiants pourraient être exploitées par des acteurs nord-coréens à des fins de vol financier."
+        }
+      },
+      {
+        "geographic_zone_name": {
+          "en": "United States",
+          "fr": "États-Unis"
+        },
+        "geographic_zone_strategic_analyse": {
+          "en": "Domestic incidents dominate: FBI NCIC and USDA breaches, NSA internal network disruptions, FAA outage, West Virginia legislature incident, and Container Store cyberattack. The US launched a Threat Disruption Center to combat scams. Attribution caution is advised amid outage-vs-attack confusion.",
+          "fr": "Les incidents domestiques dominent : compromissions du FBI NCIC et de l'USDA, perturbations du réseau interne de la NSA, panne de la FAA, incident de la législature de Virginie-Occidentale et cyberattaque contre Container Store. Les États-Unis ont lancé un Threat Disruption Center pour lutter contre les arnaques. La prudence est de mise dans l'attribution face à la confusion entre panne et attaque."
+        }
+      },
+      {
+        "geographic_zone_name": {
+          "en": "Other",
+          "fr": "Autre"
+        },
+        "geographic_zone_strategic_analyse": {
+          "en": "Global cybercriminal ecosystem: PixelLeaks, ShinyHunters, INC Ransom, LockBit, and RansomwareHelp operate across borders. AI agentic frameworks (Cairn) lower the barrier for zero-day exploitation. Ransomware recovery fraud is an emerging criminal service.",
+          "fr": "Écosystème cybercriminel mondial : PixelLeaks, ShinyHunters, INC Ransom, LockBit et RansomwareHelp opèrent au-delà des frontières. Les frameworks IA agentiques (Cairn) abaissent la barrière pour l'exploitation de zero-day. La fraude à la récupération de rançongiciel est un service criminel émergent."
+        }
+      }
+    ],
+    "details": [
+      {
+        "threat_actor_name": "PixelLeaks",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Ransomware",
+          "fr": "Rançongiciel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Finance",
+            "Industry_and_Manufacturing",
+            "Retail_and_Consumer",
+            "Hospitality_and_Entertainment"
+          ],
+          "fr": [
+            "Finance",
+            "Industrie_et_Fabrication",
+            "Commerce_de_Détail_et_Consommation",
+            "Hôtellerie_et_Divertissement"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "India",
+            "Iran",
+            "Israel",
+            "Global"
+          ],
+          "fr": [
+            "Inde",
+            "Iran",
+            "Israël",
+            "Mondial"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1486",
+          "T1657",
+          "T1078",
+          "T1567",
+          "T1598"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "MT5 algo trading farm ransomware claim (Nov 2026)",
+            "Four new victims in India, Iran, and Israel (Nov 2026)"
+          ],
+          "fr": [
+            "Revendication de rançongiciel contre une ferme de trading algorithmique MT5 (nov. 2026)",
+            "Quatre nouvelles victimes en Inde, en Iran et en Israël (nov. 2026)"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "ShinyHunters",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Cybercriminal",
+          "fr": "Cybercriminel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Government_and_Defense",
+            "Technology_and_Telecom",
+            "Finance"
+          ],
+          "fr": [
+            "Gouvernement_et_Défense",
+            "Technologie_et_Télécom",
+            "Finance"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "United States",
+            "Global"
+          ],
+          "fr": [
+            "États-Unis",
+            "Mondial"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1567",
+          "T1657"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Claimed 2-3 TB of FBI data (2026)",
+            "Data extortion campaigns against US government"
+          ],
+          "fr": [
+            "Revendication de 2 à 3 To de données du FBI (2026)",
+            "Campagnes d'extorsion de données contre le gouvernement américain"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "INC Ransom",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Ransomware",
+          "fr": "Rançongiciel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Government_and_Defense"
+          ],
+          "fr": [
+            "Gouvernement_et_Défense"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "France",
+            "Global"
+          ],
+          "fr": [
+            "France",
+            "Mondial"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1486",
+          "T1657"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Chambourcy commune ransomware claim (Nov 2026)"
+          ],
+          "fr": [
+            "Revendication de rançongiciel contre la commune de Chambourcy (nov. 2026)"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "LockBit",
+        "origin_country": "Russia",
+        "type": {
+          "en": "Ransomware",
+          "fr": "Rançongiciel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Finance",
+            "Business_Services"
+          ],
+          "fr": [
+            "Finance",
+            "Services_aux_Entreprises"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "Global"
+          ],
+          "fr": [
+            "Mondial"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1486",
+          "T1657"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Accounting firm victim (2024) linked to RansomwareHelp fraud",
+            "Double extortion operations"
+          ],
+          "fr": [
+            "Cabinet comptable victime (2024) lié à la fraude RansomwareHelp",
+            "Opérations de double extorsion"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "Cairn AI operators",
+        "origin_country": "Unknown",
+        "type": {
+          "en": "Unknown",
+          "fr": "Inconnu"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Healthcare_and_Life_Sciences",
+            "Education_and_Research"
+          ],
+          "fr": [
+            "Santé_et_Sciences_du_Vivant",
+            "Éducation_et_Recherche"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "East Asia",
+            "Global"
+          ],
+          "fr": [
+            "Asie de l'Est",
+            "Mondial"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1595",
+          "T1587.004",
+          "T1190",
+          "T1078"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Autonomous zero-day exploitation of medical imaging application (Nov 2026)"
+          ],
+          "fr": [
+            "Exploitation autonome d'un zero-day dans une application d'imagerie médicale (nov. 2026)"
+          ]
+        }
+      },
+      {
+        "threat_actor_name": "RansomwareHelp (CTO indicted)",
+        "origin_country": "United States/Colombia",
+        "type": {
+          "en": "Cybercriminal",
+          "fr": "Cybercriminel"
+        },
+        "targeted_sectors": {
+          "en": [
+            "Finance",
+            "Business_Services"
+          ],
+          "fr": [
+            "Finance",
+            "Services_aux_Entreprises"
+          ]
+        },
+        "targeted_regions": {
+          "en": [
+            "United States",
+            "Global"
+          ],
+          "fr": [
+            "États-Unis",
+            "Mondial"
+          ]
+        },
+        "mitre_attack_ttps_id": [
+          "T1486",
+          "T1657"
+        ],
+        "campaign_or_operation": {
+          "en": [
+            "Wire fraud via ransomware recovery services (Nov 2026)"
+          ],
+          "fr": [
+            "Fraude électronique via des services de récupération de rançongiciel (nov. 2026)"
+          ]
+        }
+      }
+    ]
+  },
+  "mitre_attack_ttps": {
+    "ttps_strategic_analyse": {
+      "en": "The TTP landscape shows a shift toward exploitation of public-facing applications (T1190) as the primary initial access vector, with CISA KEV deadlines forcing rapid patching. AI-driven active scanning (T1595) and exploit development (T1587.004) are lowering the cost of zero-day discovery. Phishing via legitimate hosting services (T1566.002) and user execution (T1204.001) remain effective. Ransomware operations combine encryption (T1486) with data exfiltration over web services (T1567) and financial theft (T1657). Supply chain compromise (T1195.001) and unsecured credentials (T1552) in AI pipelines introduce new exposure. Valid accounts (T1078) are used for lateral movement and persistence.",
+      "fr": "Le paysage des TTP montre une évolution vers l'exploitation d'applications exposées sur Internet (T1190) comme vecteur d'accès initial principal, les échéances CISA KEV imposant un patchage rapide. Le scan actif piloté par IA (T1595) et le développement d'exploits (T1587.004) abaissent le coût de la découverte de zero-day. L'hameçonnage via des services d'hébergement légitimes (T1566.002) et l'exécution par l'utilisateur (T1204.001) restent efficaces. Les opérations rançongicielles combinent chiffrement (T1486), exfiltration via des services web (T1567) et vol financier (T1657). La compromission de la chaîne d'approvisionnement (T1195.001) et les identifiants non sécurisés (T1552) dans les pipelines IA introduisent une nouvelle exposition. Les comptes valides (T1078) sont utilisés pour le mouvement latéral et la persistance."
+    },
+    "ttps_list": [
+      {
+        "id": "T1486",
+        "tactic": {
+          "en": "Impact",
+          "fr": "Impact"
+        },
+        "technique_name": "Data Encrypted for Impact",
+        "frequency": 1,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "PixelLeaks ransomware claims against MT5 algo trading farm and four new victims in India, Iran, and Israel.",
+            "INC Ransom claimed the French commune of Chambourcy.",
+            "Container Store restored systems after a weekend cyberattack, likely ransomware.",
+            "LockBit linked to accounting firm victim in RansomwareHelp fraud case."
+          ],
+          "fr": [
+            "Revendications de PixelLeaks contre une ferme de trading algorithmique MT5 et quatre nouvelles victimes en Inde, en Iran et en Israël.",
+            "INC Ransom a revendiqué la commune française de Chambourcy.",
+            "Container Store a restauré ses systèmes après une cyberattaque de week-end, probablement un rançongiciel.",
+            "LockBit lié à un cabinet comptable victime dans l'affaire de fraude RansomwareHelp."
+          ]
+        }
+      },
+      {
+        "id": "T1657",
+        "tactic": {
+          "en": "Impact",
+          "fr": "Impact"
+        },
+        "technique_name": "Financial Theft",
+        "frequency": 1,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "PixelLeaks extortion via data publication.",
+            "RansomwareHelp CTO indicted for wire fraud after charging $13,260 for a $6,000 decryption key.",
+            "US Threat Disruption Center launched to combat scams and freeze funds."
+          ],
+          "fr": [
+            "Extorsion de PixelLeaks via publication de données.",
+            "Le CTO de RansomwareHelp inculpé pour fraude électronique après avoir facturé 13 260 $ pour une clé de déchiffrement à 6 000 $.",
+            "Lancement du Threat Disruption Center américain pour lutter contre les arnaques et geler les fonds."
+          ]
+        }
+      },
+      {
+        "id": "T1190",
+        "tactic": {
+          "en": "Initial Access",
+          "fr": "Accès initial"
+        },
+        "technique_name": "Exploit Public-Facing Application",
+        "frequency": 1,
+        "severity": "critical",
+        "context": {
+          "en": [
+            "PHP RCE (CVE-2026-129289) in PHP-FPM.",
+            "VMware vCenter (CVE-2026-123890), Cisco Expressway (CVE-2026-76466), Apache Roller (CVE-2026-129448), SAP NetWeaver (CVE-2025-42884) actively exploited.",
+            "BeyondTrust Remote Support (CVE-2026-102764) exploited in chain.",
+            "Microsoft Entra Connect Health API flaw exploited for tenant metadata.",
+            "Algonquin Dam attempted cyberattack via exposed service.",
+            "Cairn AI zero-day in medical imaging application."
+          ],
+          "fr": [
+            "RCE PHP (CVE-2026-129289) dans PHP-FPM.",
+            "VMware vCenter (CVE-2026-123890), Cisco Expressway (CVE-2026-76466), Apache Roller (CVE-2026-129448), SAP NetWeaver (CVE-2025-42884) activement exploités.",
+            "BeyondTrust Remote Support (CVE-2026-102764) exploitée en chaîne.",
+            "Faille de l'API Microsoft Entra Connect Health exploitée pour les métadonnées de locataires.",
+            "Tentative de cyberattaque contre le barrage d'Algonquin via un service exposé.",
+            "Zero-day Cairn dans une application d'imagerie médicale."
+          ]
+        }
+      },
+      {
+        "id": "T1078",
+        "tactic": {
+          "en": "Defense Evasion, Persistence, Privilege Escalation, Initial Access",
+          "fr": "Évasion de défense, Persistance, Élévation de privilèges, Accès initial"
+        },
+        "technique_name": "Valid Accounts",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "PixelLeaks abused credentials in MT5 trading farm.",
+            "FBI NCIC and USDA breaches likely involved valid account access.",
+            "West Virginia Legislature incident may have used compromised accounts.",
+            "AI supply chain leak exposed credentials reused by attackers."
+          ],
+          "fr": [
+            "PixelLeaks a abusé d'identifiants dans la ferme de trading MT5.",
+            "Les compromissions du FBI NCIC et de l'USDA ont probablement impliqué des comptes valides.",
+            "L'incident de la législature de Virginie-Occidentale a peut-être utilisé des comptes compromis.",
+            "La fuite de la chaîne d'approvisionnement IA a exposé des identifiants réutilisés par les attaquants."
+          ]
+        }
+      },
+      {
+        "id": "T1567",
+        "tactic": {
+          "en": "Exfiltration",
+          "fr": "Exfiltration"
+        },
+        "technique_name": "Exfiltration Over Web Service",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "PixelLeaks published stolen data on leak site.",
+            "FBI NCIC and USDA data exfiltration suspected.",
+            "Container Store data exfiltration not disclosed.",
+            "AI supply chain prompts siphoned via inference providers."
+          ],
+          "fr": [
+            "PixelLeaks a publié des données volées sur son site de fuite.",
+            "Exfiltration suspectée des données du FBI NCIC et de l'USDA.",
+            "Exfiltration de données de Container Store non divulguée.",
+            "Prompts de la chaîne d'approvisionnement IA siphonnés via des fournisseurs d'inférence."
+          ]
+        }
+      },
+      {
+        "id": "T1566",
+        "tactic": {
+          "en": "Initial Access",
+          "fr": "Accès initial"
+        },
+        "technique_name": "Phishing",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "FBI and USDA breaches may have started with phishing.",
+            "West Virginia Legislature incident likely involved phishing.",
+            "General phishing campaigns against government and finance."
+          ],
+          "fr": [
+            "Les compromissions du FBI et de l'USDA ont peut-être commencé par de l'hameçonnage.",
+            "L'incident de la législature de Virginie-Occidentale a probablement impliqué de l'hameçonnage.",
+            "Campagnes d'hameçonnage générales contre le gouvernement et la finance."
+          ]
+        }
+      },
+      {
+        "id": "T1566.002",
+        "tactic": {
+          "en": "Initial Access",
+          "fr": "Accès initial"
+        },
+        "technique_name": "Spearphishing Link",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "URLDNA flagged mmordr[.]weebly[.]com and urlz[.]li/e59a85d8 as phishing.",
+            "0nllnec0mm0nbiank[.]weebly[.]com used Weebly hosting for credential theft."
+          ],
+          "fr": [
+            "URLDNA a signalé mmordr[.]weebly[.]com et urlz[.]li/e59a85d8 comme hameçonnage.",
+            "0nllnec0mm0nbiank[.]weebly[.]com a utilisé l'hébergement Weebly pour le vol d'identifiants."
+          ]
+        }
+      },
+      {
+        "id": "T1204.001",
+        "tactic": {
+          "en": "Execution",
+          "fr": "Exécution"
+        },
+        "technique_name": "User Execution: Malicious Link",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Phishing URLs require user click to trigger credential harvesting.",
+            "Weebly-hosted pages and URL shorteners bypass domain reputation filters."
+          ],
+          "fr": [
+            "Les URL d'hameçonnage nécessitent un clic de l'utilisateur pour déclencher la collecte d'identifiants.",
+            "Les pages hébergées sur Weebly et les raccourcisseurs d'URL contournent les filtres de réputation de domaine."
+          ]
+        }
+      },
+      {
+        "id": "T1195.001",
+        "tactic": {
+          "en": "Initial Access",
+          "fr": "Accès initial"
+        },
+        "technique_name": "Supply Chain Compromise: Software Dependencies",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "cvedatabase post highlighted transitive dependency risks and hidden CVEs.",
+            "AI supply chain leak exposed secrets through inference providers and resellers."
+          ],
+          "fr": [
+            "Le post cvedatabase a souligné les risques des dépendances transitives et les CVE cachées.",
+            "La fuite de la chaîne d'approvisionnement IA a exposé des secrets via des fournisseurs d'inférence et des revendeurs."
+          ]
+        }
+      },
+      {
+        "id": "T1595",
+        "tactic": {
+          "en": "Reconnaissance",
+          "fr": "Reconnaissance"
+        },
+        "technique_name": "Active Scanning",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Cairn AI framework performed automated fuzzing and zero-day discovery against a medical imaging application.",
+            "AI-driven scanning reduces time from exposure to exploitation."
+          ],
+          "fr": [
+            "Le framework IA Cairn a effectué du fuzzing automatisé et découvert un zero-day dans une application d'imagerie médicale.",
+            "Le scan piloté par IA réduit le délai entre exposition et exploitation."
+          ]
+        }
+      },
+      {
+        "id": "T1587.004",
+        "tactic": {
+          "en": "Resource Development",
+          "fr": "Développement de ressources"
+        },
+        "technique_name": "Develop Capabilities: Exploits",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Cairn AI used to develop a zero-day exploit for a medical imaging application, achieving root access.",
+            "Autonomous exploit development lowers the barrier for advanced attacks."
+          ],
+          "fr": [
+            "Cairn IA utilisé pour développer un exploit zero-day contre une application d'imagerie médicale, obtenant un accès root.",
+            "Le développement autonome d'exploits abaisse la barrière pour les attaques avancées."
+          ]
+        }
+      },
+      {
+        "id": "T1552",
+        "tactic": {
+          "en": "Credential Access",
+          "fr": "Accès aux identifiants"
+        },
+        "technique_name": "Unsecured Credentials",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "HD Moore study leaked AWS keys, SSH passwords, Git tokens, and private repo URLs through AI prompts.",
+            "Rackspace Spot exposed Kubernetes ServiceAccount tokens and kubeconfigs."
+          ],
+          "fr": [
+            "L'étude HD Moore a fuité des clés AWS, mots de passe SSH, jetons Git et URL de dépôts privés via des prompts IA.",
+            "Rackspace Spot a exposé des jetons ServiceAccount Kubernetes et des kubeconfigs."
+          ]
+        }
+      },
+      {
+        "id": "T1530",
+        "tactic": {
+          "en": "Collection",
+          "fr": "Collecte"
+        },
+        "technique_name": "Data from Cloud Storage",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "AI inference providers and resellers accessed and stored prompts containing secrets.",
+            "OpenRouter removed ZDR label from MiniMax endpoints after prompt leakage."
+          ],
+          "fr": [
+            "Les fournisseurs d'inférence IA et revendeurs ont accédé et stocké des prompts contenant des secrets.",
+            "OpenRouter a retiré le label ZDR des endpoints MiniMax après la fuite de prompts."
+          ]
+        }
+      },
+      {
+        "id": "T1489",
+        "tactic": {
+          "en": "Impact",
+          "fr": "Impact"
+        },
+        "technique_name": "Service Stop",
+        "frequency": 1,
+        "severity": "high",
+        "context": {
+          "en": [
+            "Container Store website and systems offline over a weekend.",
+            "West Virginia Legislature systems disrupted for over 24 hours.",
+            "NSA internal network disruptions with Code Orange status."
+          ],
+          "fr": [
+            "Site web et systèmes de Container Store hors ligne pendant un week-end.",
+            "Systèmes de la législature de Virginie-Occidentale perturbés pendant plus de 24 heures.",
+            "Perturbations du réseau interne de la NSA avec statut Code Orange."
+          ]
+        }
+      },
+      {
+        "id": "T1598",
+        "tactic": {
+          "en": "Reconnaissance",
+          "fr": "Reconnaissance"
+        },
+        "technique_name": "Phishing for Information",
+        "frequency": 1,
+        "severity": "medium",
+        "context": {
+          "en": [
+            "PixelLeaks used phishing to gather information.",
+            "Austria foreign ministry data exposed for spear-phishing diplomats."
+          ],
+          "fr": [
+            "PixelLeaks a utilisé l'hameçonnage pour collecter des informations.",
+            "Données du ministère autrichien des Affaires étrangères exposées pour du spear-phishing contre des diplomates."
+          ]
+        }
+      },
+      {
+        "id": "T1213",
+        "tactic": {
+          "en": "Collection",
+          "fr": "Collecte"
+        },
+        "technique_name": "Data from Information Repositories",
+        "frequency": 1,
+        "severity": "medium",
+        "context": {
+          "en": [
+            "India Agniveers data (4,000 recruits) sold on dark web by a 14-year-old.",
+            "HR and recruitment databases targeted for military personnel data."
+          ],
+          "fr": [
+            "Données de 4 000 Agniveers indiens vendues sur le dark web par un adolescent de 14 ans.",
+            "Bases RH et de recrutement ciblées pour les données de personnel militaire."
+          ]
+        }
+      },
+      {
+        "id": "T1526",
+        "tactic": {
+          "en": "Discovery",
+          "fr": "Découverte"
+        },
+        "technique_name": "Cloud Service Discovery",
+        "frequency": 1,
+        "severity": "medium",
+        "context": {
+          "en": [
+            "Microsoft Entra Connect Health API exposed tenant metadata: admin emails, sync status, license info.",
+            "Attackers can use this for reconnaissance and targeted phishing."
+          ],
+          "fr": [
+            "L'API Microsoft Entra Connect Health a exposé des métadonnées de locataires : e-mails d'administrateurs, état de synchronisation, informations de licence.",
+            "Les attaquants peuvent les utiliser pour la reconnaissance et l'hameçonnage ciblé."
+          ]
+        }
+      }
+    ]
+  },
+  "vulnerabilities": {
+    "analyse": {
+      "en": "The vulnerability landscape is dominated by actively exploited flaws in enterprise infrastructure. CISA KEV additions—Apache Roller (CVE-2026-129448), Cisco Expressway (CVE-2026-76466), SAP NetWeaver (CVE-2025-42884), and VMware vCenter (CVE-2026-123890)—carry a 23 November remediation deadline. BeyondTrust Remote Support (CVE-2026-102764) was exploited in chain with vCenter. PHP released 18 fixes including critical RCEs (CVE-2026-129289). ERPNext suffers multiple missing-authorization flaws (CVE-2026-134433, -134429, -134436, etc.) exposing financial and operational data. GPGME (CVE-2026-129975) and MONAI Label (CVE-2026-133968) present critical risks in email and medical imaging. Prioritize Internet-facing assets, apply vendor patches, and hunt for exploitation artifacts.",
+      "fr": "Le paysage des vulnérabilités est dominé par des failles activement exploitées dans l'infrastructure d'entreprise. Les ajouts au CISA KEV — Apache Roller (CVE-2026-129448), Cisco Expressway (CVE-2026-76466), SAP NetWeaver (CVE-2025-42884) et VMware vCenter (CVE-2026-123890) — ont une échéance de remédiation au 23 novembre. BeyondTrust Remote Support (CVE-2026-102764) a été exploitée en chaîne avec vCenter. PHP a publié 18 correctifs dont des RCE critiques (CVE-2026-129289). ERPNext souffre de multiples failles d'autorisation manquante (CVE-2026-134433, -134429, -134436, etc.) exposant des données financières et opérationnelles. GPGME (CVE-2026-129975) et MONAI Label (CVE-2026-133968) présentent des risques critiques dans la messagerie et l'imagerie médicale. Priorisez les actifs exposés sur Internet, appliquez les correctifs éditeurs et chassez les artefacts d'exploitation."
+    },
+    "list": [
+      {
+        "cve_id": "CVE-2026-129448",
+        "cvss_score": 9.8,
+        "epss_score": "N/A",
+        "cisa_kev": true,
+        "affected_product": "Apache Roller (versions prior to November 2026 patch)",
+        "affected_product_vendor": "Apache Software Foundation",
+        "vulnerability_type": {
+          "en": [
+            "Deserialization of Untrusted Data (CWE-502)"
+          ],
+          "fr": [
+            "Désérialisation de données non fiables (CWE-502)"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Remote code execution via unsafe deserialization in Apache Roller, allowing full server compromise. Actively exploited; CISA KEV deadline 23 November 2026.",
+          "fr": "Exécution de code à distance via désérialisation non sécurisée dans Apache Roller, permettant une compromission complète du serveur. Exploitée activement ; échéance CISA KEV 23 novembre 2026."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-76466",
+        "cvss_score": 9.8,
+        "epss_score": "N/A",
+        "cisa_kev": true,
+        "affected_product": "Cisco Expressway Series (versions prior to October 2026 patch)",
+        "affected_product_vendor": "Cisco",
+        "vulnerability_type": {
+          "en": [
+            "Use of Hard-coded Credentials (CWE-798)"
+          ],
+          "fr": [
+            "Utilisation d'identifiants codés en dur (CWE-798)"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Hard-coded credentials allow root command execution on Cisco Expressway. Actively exploited; KEV deadline 23 November 2026.",
+          "fr": "Des identifiants codés en dur permettent l'exécution de commandes en root sur Cisco Expressway. Exploitée activement ; échéance KEV 23 novembre 2026."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190",
+          "T1078"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-123890",
+        "cvss_score": 9.8,
+        "epss_score": "N/A",
+        "cisa_kev": true,
+        "affected_product": "Broadcom VMware vCenter (versions prior to November 2026 patch)",
+        "affected_product_vendor": "Broadcom",
+        "vulnerability_type": {
+          "en": [
+            "Authentication Bypass Using an Alternate Path or Channel (CWE-288)"
+          ],
+          "fr": [
+            "Contournement d'authentification via un chemin ou un canal alternatif (CWE-288)"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Authentication bypass in VMware vCenter allows takeover of virtualization infrastructure. Actively exploited; KEV deadline 23 November 2026.",
+          "fr": "Contournement d'authentification dans VMware vCenter permettant la prise de contrôle de l'infrastructure de virtualisation. Exploitée activement ; échéance KEV 23 novembre 2026."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190",
+          "T1078"
+        ]
+      },
+      {
+        "cve_id": "CVE-2025-42884",
+        "cvss_score": 6.5,
+        "epss_score": "N/A",
+        "cisa_kev": true,
+        "affected_product": "SAP NetWeaver Enterprise Portal (versions prior to November 2025 patch)",
+        "affected_product_vendor": "SAP",
+        "vulnerability_type": {
+          "en": [
+            "Improper Neutralization of Special Elements in Query Logic (CWE-943) - JNDI Injection"
+          ],
+          "fr": [
+            "Neutralisation incorrecte d'éléments spéciaux dans la logique de requête (CWE-943) - Injection JNDI"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "JNDI injection in SAP NetWeaver Enterprise Portal enables information disclosure and potential pivot. Actively exploited; KEV deadline 23 November 2026.",
+          "fr": "Injection JNDI dans SAP NetWeaver Enterprise Portal permettant la divulgation d'informations et un pivot potentiel. Exploitée activement ; échéance KEV 23 novembre 2026."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-133993",
+        "cvss_score": 10.0,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "D-Link DIR-600L firmware 2.17b02",
+        "affected_product_vendor": "D-Link",
+        "vulnerability_type": {
+          "en": [
+            "Stack-based Buffer Overflow (CWE-121)"
+          ],
+          "fr": [
+            "Débordement de tampon basé sur la pile (CWE-121)"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Stack buffer overflow in D-Link DIR-600L GENA handler allows arbitrary code execution or DoS on the router.",
+          "fr": "Débordement de tampon de pile dans le gestionnaire GENA du D-Link DIR-600L permettant l'exécution de code arbitraire ou un déni de service sur le routeur."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-20127",
+        "cvss_score": 10.0,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Cisco Catalyst SD-WAN",
+        "affected_product_vendor": "Cisco",
+        "vulnerability_type": {
+          "en": [
+            "Critical Remote Code Execution (unspecified)"
+          ],
+          "fr": [
+            "Exécution de code à distance critique (non précisée)"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Critical remote code execution in Cisco Catalyst SD-WAN, exposed to Internet-facing management interfaces.",
+          "fr": "Exécution de code à distance critique dans Cisco Catalyst SD-WAN, exposée aux interfaces de gestion accessibles depuis Internet."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-20182",
+        "cvss_score": 10.0,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Cisco Catalyst SD-WAN",
+        "affected_product_vendor": "Cisco",
+        "vulnerability_type": {
+          "en": [
+            "Critical Remote Code Execution (unspecified)"
+          ],
+          "fr": [
+            "Exécution de code à distance critique (non précisée)"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Second critical RCE in Cisco Catalyst SD-WAN, enabling unauthenticated compromise.",
+          "fr": "Deuxième RCE critique dans Cisco Catalyst SD-WAN, permettant une compromission non authentifiée."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-26216",
+        "cvss_score": 10.0,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Crawl4AI",
+        "affected_product_vendor": "Crawl4AI",
+        "vulnerability_type": {
+          "en": [
+            "Remote Code Execution via Docker API"
+          ],
+          "fr": [
+            "Exécution de code à distance via l'API Docker"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "RCE in Crawl4AI through exposed Docker API, allowing host compromise.",
+          "fr": "RCE dans Crawl4AI via l'API Docker exposée, permettant la compromission de l'hôte."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-21858",
+        "cvss_score": 10.0,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "n8n",
+        "affected_product_vendor": "n8n",
+        "vulnerability_type": {
+          "en": [
+            "Host File Access"
+          ],
+          "fr": [
+            "Accès aux fichiers de l'hôte"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "n8n allows access to host files, leading to credential theft and lateral movement.",
+          "fr": "n8n permet l'accès aux fichiers de l'hôte, entraînant le vol d'identifiants et le mouvement latéral."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-125294",
+        "cvss_score": 9.8,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "WordPress Nexter Blocks Pro <= 5.0.10",
+        "affected_product_vendor": "Nexter",
+        "vulnerability_type": {
+          "en": [
+            "Improper Privilege Management (CWE-269) via Unicode Collation Confusion"
+          ],
+          "fr": [
+            "Gestion incorrecte des privilèges (CWE-269) via confusion de collation Unicode"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Unauthenticated attacker can create admin account on WordPress sites using Nexter Blocks Pro, leading to full site takeover.",
+          "fr": "Un attaquant non authentifié peut créer un compte administrateur sur les sites WordPress utilisant Nexter Blocks Pro, menant à la prise de contrôle complète du site."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190",
+          "T1078"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-133968",
+        "cvss_score": 9.8,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "MONAI Label <= 0.8.5",
+        "affected_product_vendor": "MONAI",
+        "vulnerability_type": {
+          "en": [
+            "Path Traversal (CWE-22)"
+          ],
+          "fr": [
+            "Traversée de chemin (CWE-22)"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Path traversal in MONAI Label allows arbitrary file write and RCE on medical imaging servers.",
+          "fr": "Traversée de chemin dans MONAI Label permettant l'écriture arbitraire de fichiers et une RCE sur les serveurs d'imagerie médicale."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-1340",
+        "cvss_score": 9.8,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Ivanti Endpoint Manager Mobile",
+        "affected_product_vendor": "Ivanti",
+        "vulnerability_type": {
+          "en": [
+            "Code Injection (RCE)"
+          ],
+          "fr": [
+            "Injection de code (RCE)"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Unauthenticated RCE in Ivanti EPMM via code injection.",
+          "fr": "RCE non authentifiée dans Ivanti EPMM via injection de code."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-102764",
+        "cvss_score": 9.3,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "BeyondTrust Remote Support (versions prior to patch)",
+        "affected_product_vendor": "BeyondTrust",
+        "vulnerability_type": {
+          "en": [
+            "Critical Remote Code Execution (unspecified)"
+          ],
+          "fr": [
+            "Exécution de code à distance critique (non précisée)"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Critical flaw in BeyondTrust Remote Support exploited in chain with vCenter auth bypass for remote access and persistence.",
+          "fr": "Faille critique dans BeyondTrust Remote Support exploitée en chaîne avec le contournement d'authentification vCenter pour l'accès distant et la persistance."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-32169",
+        "cvss_score": 9.3,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Azure Cloud Shell",
+        "affected_product_vendor": "Microsoft",
+        "vulnerability_type": {
+          "en": [
+            "Server-Side Request Forgery (SSRF)"
+          ],
+          "fr": [
+            "Falsification de requête côté serveur (SSRF)"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "SSRF in Azure Cloud Shell allows access to internal metadata and services.",
+          "fr": "SSRF dans Azure Cloud Shell permettant l'accès aux métadonnées et services internes."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2025-53521",
+        "cvss_score": 9.3,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "BIG-IP APM",
+        "affected_product_vendor": "F5",
+        "vulnerability_type": {
+          "en": [
+            "Remote Code Execution"
+          ],
+          "fr": [
+            "Exécution de code à distance"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "RCE in BIG-IP APM enabling compromise of access policy manager.",
+          "fr": "RCE dans BIG-IP APM permettant la compromission du gestionnaire de politiques d'accès."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-129289",
+        "cvss_score": 9.2,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "PHP-FPM (PHP < 8.5.13, < 8.4.28, < 8.3.37, < 8.2.36)",
+        "affected_product_vendor": "PHP Group",
+        "vulnerability_type": {
+          "en": [
+            "HTTP Request Smuggling (CWE-444) leading to RCE"
+          ],
+          "fr": [
+            "Contrebande de requêtes HTTP (CWE-444) menant à une RCE"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Request smuggling in PHP-FPM leads to remote code execution, exposing web application secrets and enabling web shells.",
+          "fr": "La contrebande de requêtes dans PHP-FPM mène à une exécution de code à distance, exposant les secrets des applications web et permettant le dépôt de web shells."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-134452",
+        "cvss_score": 8.8,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Dockhand < 1.0.57",
+        "affected_product_vendor": "Finsys",
+        "vulnerability_type": {
+          "en": [
+            "PATH Environment Variable Poisoning (CWE-426)"
+          ],
+          "fr": [
+            "Empoisonnement de la variable d'environnement PATH (CWE-426)"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "RCE via PATH poisoning in Dockhand, compromising Docker infrastructure.",
+          "fr": "RCE via empoisonnement de PATH dans Dockhand, compromettant l'infrastructure Docker."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-5281",
+        "cvss_score": 8.8,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Dawn/Chrome",
+        "affected_product_vendor": "Google",
+        "vulnerability_type": {
+          "en": [
+            "Use-After-Free"
+          ],
+          "fr": [
+            "Utilisation après libération (Use-After-Free)"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Use-after-free in Dawn/Chrome allows sandbox escape and code execution.",
+          "fr": "Utilisation après libération dans Dawn/Chrome permettant une évasion de sandbox et l'exécution de code."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-134461",
+        "cvss_score": 8.7,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Web-Token jwt-framework < 3.4.10, jwt-library < 4.0.7/4.1.7",
+        "affected_product_vendor": "Web-Token",
+        "vulnerability_type": {
+          "en": [
+            "Uncontrolled Resource Consumption (CWE-770)"
+          ],
+          "fr": [
+            "Consommation non contrôlée de ressources (CWE-770)"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "DoS via CPU exhaustion in JWE unwrapKey, affecting authentication services.",
+          "fr": "Déni de service par épuisement CPU dans JWE unwrapKey, affectant les services d'authentification."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-134456",
+        "cvss_score": 8.7,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Hysteria 2.5.0 < 2.9.2",
+        "affected_product_vendor": "Hysteria",
+        "vulnerability_type": {
+          "en": [
+            "Uncontrolled Resource Consumption (CWE-770)"
+          ],
+          "fr": [
+            "Consommation non contrôlée de ressources (CWE-770)"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "DoS in Hysteria proxy service via unbounded allocation.",
+          "fr": "Déni de service dans le service proxy Hysteria via une allocation non limitée."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-134451",
+        "cvss_score": 8.6,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Dockhand < 1.0.57",
+        "affected_product_vendor": "Finsys",
+        "vulnerability_type": {
+          "en": [
+            "Privilege Escalation (CWE-269)"
+          ],
+          "fr": [
+            "Escalade de privilèges (CWE-269)"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Privilege escalation in Dockhand allows administrative takeover.",
+          "fr": "Escalade de privilèges dans Dockhand permettant une prise de contrôle administrative."
+        },
+        "mitre_attack_ttps_id": [
+          "T1078"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-134448",
+        "cvss_score": 8.6,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Dockhand 1.0.7 < 1.0.57",
+        "affected_product_vendor": "Finsys",
+        "vulnerability_type": {
+          "en": [
+            "Directory Traversal (CWE-22)"
+          ],
+          "fr": [
+            "Traversée de répertoire (CWE-22)"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Directory traversal in Dockhand allows arbitrary file read/write and secret theft.",
+          "fr": "Traversée de répertoire dans Dockhand permettant la lecture/écriture arbitraire de fichiers et le vol de secrets."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-134433",
+        "cvss_score": 8.5,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Frappe ERPNext < 15.124.2, < 16.53.0",
+        "affected_product_vendor": "Frappe",
+        "vulnerability_type": {
+          "en": [
+            "Missing Authorization (CWE-862)"
+          ],
+          "fr": [
+            "Autorisation manquante (CWE-862)"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Missing authorization in ERPNext exposes commercial and financial data (margins, purchase prices).",
+          "fr": "Autorisation manquante dans ERPNext exposant des données commerciales et financières (marges, prix d'achat)."
+        },
+        "mitre_attack_ttps_id": [
+          "T1078"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-134429",
+        "cvss_score": 8.5,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Frappe ERPNext < 15.121.4, < 16.36.0",
+        "affected_product_vendor": "Frappe",
+        "vulnerability_type": {
+          "en": [
+            "Missing Authorization (CWE-862)"
+          ],
+          "fr": [
+            "Autorisation manquante (CWE-862)"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Missing authorization in ERPNext CRM/Support exposes internal and customer communications.",
+          "fr": "Autorisation manquante dans ERPNext CRM/Support exposant les communications internes et clients."
+        },
+        "mitre_attack_ttps_id": [
+          "T1078"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-134436",
+        "cvss_score": 8.3,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Frappe ERPNext 15.8.0 < 15.121.4, 16.x < 16.36.0",
+        "affected_product_vendor": "Frappe",
+        "vulnerability_type": {
+          "en": [
+            "Missing Authorization (CWE-862)"
+          ],
+          "fr": [
+            "Autorisation manquante (CWE-862)"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Missing authorization in ERPNext exposes confidential business data and transaction information.",
+          "fr": "Autorisation manquante dans ERPNext exposant des données métier confidentielles et des informations de transaction."
+        },
+        "mitre_attack_ttps_id": [
+          "T1078"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-134435",
+        "cvss_score": 8.3,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Frappe ERPNext < 15.124.2, < 16.50.0",
+        "affected_product_vendor": "Frappe",
+        "vulnerability_type": {
+          "en": [
+            "Missing Authorization (CWE-862)"
+          ],
+          "fr": [
+            "Autorisation manquante (CWE-862)"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Missing authorization in ERPNext Accounts allows manipulation of financial reconciliation data.",
+          "fr": "Autorisation manquante dans ERPNext Accounts permettant la manipulation des données de rapprochement financier."
+        },
+        "mitre_attack_ttps_id": [
+          "T1078"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-134434",
+        "cvss_score": 8.3,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Frappe ERPNext 16.0.0 < 16.36.0",
+        "affected_product_vendor": "Frappe",
+        "vulnerability_type": {
+          "en": [
+            "Missing Authorization (CWE-862)"
+          ],
+          "fr": [
+            "Autorisation manquante (CWE-862)"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Missing authorization in ERPNext Manufacturing allows unauthorized stock reservation cancellation, disrupting supply chain.",
+          "fr": "Autorisation manquante dans ERPNext Manufacturing permettant l'annulation non autorisée de réservations de stock, perturbant la chaîne d'approvisionnement."
+        },
+        "mitre_attack_ttps_id": [
+          "T1078"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-134428",
+        "cvss_score": 8.3,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Frappe ERPNext 13.0.0 < 15.121.4, < 16.36.0",
+        "affected_product_vendor": "Frappe",
+        "vulnerability_type": {
+          "en": [
+            "Missing Authorization (CWE-862)"
+          ],
+          "fr": [
+            "Autorisation manquante (CWE-862)"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Missing authorization in ERPNext Stock module exposes strategic cost and margin data.",
+          "fr": "Autorisation manquante dans le module Stock d'ERPNext exposant des données stratégiques de coûts et de marges."
+        },
+        "mitre_attack_ttps_id": [
+          "T1078"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-134418",
+        "cvss_score": 8.3,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Frappe ERPNext 4.0.0 < 15.122.0, < 16.50.0",
+        "affected_product_vendor": "Frappe",
+        "vulnerability_type": {
+          "en": [
+            "Missing Authorization (CWE-862)"
+          ],
+          "fr": [
+            "Autorisation manquante (CWE-862)"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Missing authorization in ERPNext Accounts taxes endpoint exposes tax and financial data.",
+          "fr": "Autorisation manquante dans l'endpoint des taxes d'ERPNext Accounts exposant des données fiscales et financières."
+        },
+        "mitre_attack_ttps_id": [
+          "T1078"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-134417",
+        "cvss_score": 8.3,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Frappe ERPNext 13.0.0 < 15.121.4, < 16.36.0",
+        "affected_product_vendor": "Frappe",
+        "vulnerability_type": {
+          "en": [
+            "Missing Authorization / File Access (CWE-552)"
+          ],
+          "fr": [
+            "Autorisation manquante / Accès aux fichiers (CWE-552)"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Missing authorization in ERPNext bank statement import exposes IBAN and transaction data.",
+          "fr": "Autorisation manquante dans l'import de relevés bancaires d'ERPNext exposant les IBAN et données de transaction."
+        },
+        "mitre_attack_ttps_id": [
+          "T1078"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-134411",
+        "cvss_score": 8.3,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Frappe ERPNext 11.1.7 < 15.121.4, < 16.36.0",
+        "affected_product_vendor": "Frappe",
+        "vulnerability_type": {
+          "en": [
+            "Missing Authorization / File Access (CWE-552)"
+          ],
+          "fr": [
+            "Autorisation manquante / Accès aux fichiers (CWE-552)"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Missing authorization in ERPNext e-invoice endpoint exposes invoices and commercial data.",
+          "fr": "Autorisation manquante dans l'endpoint e-invoice d'ERPNext exposant les factures et données commerciales."
+        },
+        "mitre_attack_ttps_id": [
+          "T1078"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-134404",
+        "cvss_score": 8.3,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Frappe ERPNext 6.3.0 < 15.124.0, < 16.52.0",
+        "affected_product_vendor": "Frappe",
+        "vulnerability_type": {
+          "en": [
+            "Missing Authorization (CWE-862)"
+          ],
+          "fr": [
+            "Autorisation manquante (CWE-862)"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Missing authorization in ERPNext customer/supplier portals exposes strategic commercial information.",
+          "fr": "Autorisation manquante dans les portails clients/fournisseurs d'ERPNext exposant des informations commerciales stratégiques."
+        },
+        "mitre_attack_ttps_id": [
+          "T1078"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-134399",
+        "cvss_score": 8.3,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "Frappe ERPNext 8.11.1 < 15.124.0, < 16.52.0",
+        "affected_product_vendor": "Frappe",
+        "vulnerability_type": {
+          "en": [
+            "Missing Authorization (CWE-863)"
+          ],
+          "fr": [
+            "Autorisation manquante (CWE-863)"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Missing authorization in ERPNext print/portal views exposes customer documents and PII.",
+          "fr": "Autorisation manquante dans les vues impression/portail d'ERPNext exposant les documents clients et données personnelles."
+        },
+        "mitre_attack_ttps_id": [
+          "T1078"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-84448",
+        "cvss_score": 4.0,
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "libheif < 1.23.2",
+        "affected_product_vendor": "libheif",
+        "vulnerability_type": {
+          "en": [
+            "Heap Out-of-Bounds Read (CWE-125)"
+          ],
+          "fr": [
+            "Lecture hors limites du tas (CWE-125)"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Heap OOB read in libheif region functions can leak heap memory or crash the host process.",
+          "fr": "Lecture hors limites du tas dans les fonctions de région de libheif pouvant fuiter la mémoire du tas ou faire planter le processus hôte."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      },
+      {
+        "cve_id": "CVE-2026-129975",
+        "cvss_score": "N/A",
+        "epss_score": "N/A",
+        "cisa_kev": false,
+        "affected_product": "GPGME < 2.3.1",
+        "affected_product_vendor": "GnuPG",
+        "vulnerability_type": {
+          "en": [
+            "Double Free (CWE-415)"
+          ],
+          "fr": [
+            "Double libération (CWE-415)"
+          ]
+        },
+        "vulnerability_description": {
+          "en": "Double free in GPGME read_status/read_colon_line can lead to memory corruption, crash, and potential code execution in email clients and S/MIME applications.",
+          "fr": "Double libération dans GPGME read_status/read_colon_line pouvant entraîner une corruption mémoire, un crash et une exécution de code potentielle dans les clients mail et applications S/MIME."
+        },
+        "mitre_attack_ttps_id": [
+          "T1190"
+        ]
+      }
+    ]
+  },
+  "data_breaches": [
+    {
+      "victim": "Careers360",
+      "sector": "Education_and_Research",
+      "country": "India",
+      "records_count": 22000000,
+      "data_types": {
+        "en": [
+          "Email addresses",
+          "Names",
+          "Phone numbers",
+          "Gender",
+          "Academic records",
+          "Caste categories"
+        ],
+        "fr": [
+          "Adresses e-mail",
+          "Noms",
+          "Numéros de téléphone",
+          "Genre",
+          "Parcours académiques",
+          "Catégories de caste"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://cyber.netsecops.io/articles/data-breaches-at-too-lost-careers360-expose-4-3-million-records/"
+    },
+    {
+      "victim": "SBC Medical Group",
+      "sector": "Healthcare_and_Life_Sciences",
+      "country": "Japan",
+      "records_count": 1643000,
+      "data_types": {
+        "en": [
+          "Full names",
+          "Addresses",
+          "Phone numbers",
+          "Email addresses",
+          "Unencrypted passwords",
+          "Dates of birth",
+          "Gender",
+          "Patient card numbers",
+          "Treatment descriptions",
+          "Bank account details",
+          "Tax withholding statements"
+        ],
+        "fr": [
+          "Noms complets",
+          "Adresses",
+          "Numéros de téléphone",
+          "Adresses e-mail",
+          "Mots de passe non chiffrés",
+          "Dates de naissance",
+          "Genre",
+          "Numéros de carte patient",
+          "Descriptions de traitements",
+          "Coordonnées bancaires",
+          "Attestations de retenue à la source"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://beyondmachines.net/event_details/sbc-medical-group-reports-data-breach-affecting-over-two-million-people-7-b-u-5-a/gD2P6Ple2L"
+    },
+    {
+      "victim": "Too Lost",
+      "sector": "Media_and_Communication",
+      "country": "United States",
+      "records_count": 724323,
+      "data_types": {
+        "en": [
+          "Email addresses",
+          "Names",
+          "Dates of birth",
+          "IP addresses",
+          "Driver's licenses",
+          "Government IDs"
+        ],
+        "fr": [
+          "Adresses e-mail",
+          "Noms",
+          "Dates de naissance",
+          "Adresses IP",
+          "Permis de conduire",
+          "Pièces d'identité gouvernementales"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://cyber.netsecops.io/articles/data-breaches-at-too-lost-careers360-expose-4-3-million-records/"
+    },
+    {
+      "victim": "Transport for London (TfL)",
+      "sector": "Critical_Infrastructure",
+      "country": "United Kingdom",
+      "records_count": 265000,
+      "data_types": {
+        "en": [
+          "Identity data",
+          "Contact details",
+          "Account information",
+          "Mobility data"
+        ],
+        "fr": [
+          "Données d'identité",
+          "Coordonnées",
+          "Informations de compte",
+          "Données de mobilité"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://www.bleepingcomputer.com/news/security/transport-for-london-breach-exposes-265-000-oyster-card-users-data/"
+    },
+    {
+      "victim": "India Agniveers",
+      "sector": "Government_and_Defense",
+      "country": "India",
+      "records_count": 4000,
+      "data_types": {
+        "en": [
+          "Private data of military recruits",
+          "Identity",
+          "Contact",
+          "Enrollment documents"
+        ],
+        "fr": [
+          "Données privées de recrues militaires",
+          "Identité",
+          "Coordonnées",
+          "Documents d'enrôlement"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://databreaches.net/2026/11/21/india-14-year-old-hacker-held-for-trying-to-sell-private-data-of-4000-agniveers-on-dark-web/"
+    },
+    {
+      "victim": "FBI National Crime Information Center (NCIC)",
+      "sector": "Government_and_Defense",
+      "country": "United States",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "Warrants",
+          "Criminal records",
+          "Law enforcement sensitive data",
+          "Officer personal data",
+          "Missing persons records"
+        ],
+        "fr": [
+          "Mandats",
+          "Antécédents criminels",
+          "Données sensibles pour les forces de l'ordre",
+          "Données personnelles d'officiers",
+          "Dossiers de personnes disparues"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://apnews.com/article/fbi-database-ncic-hack-d066cff87a64a564db0a00172c124972"
+    },
+    {
+      "victim": "US Department of Agriculture (USDA)",
+      "sector": "Government_and_Defense",
+      "country": "United States",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "Payment system data",
+          "Farmer identifiers",
+          "Research data"
+        ],
+        "fr": [
+          "Données du système de paiement",
+          "Identifiants d'agriculteurs",
+          "Données de recherche"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://www.theguardian.com/us-news/2026/nov/21/usda-fbi-outages-cyber-attack"
+    },
+    {
+      "victim": "Rackspace Spot",
+      "sector": "Technology_and_Telecom",
+      "country": "United States",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "Kubernetes ServiceAccount tokens",
+          "kubeconfig files",
+          "Image registry credentials",
+          "API keys",
+          "Cloud credentials"
+        ],
+        "fr": [
+          "Jetons ServiceAccount Kubernetes",
+          "Fichiers kubeconfig",
+          "Identifiants de registre d'images",
+          "Clés d'API",
+          "Identifiants cloud"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://www.bleepingcomputer.com/news/security/rackspace-spot-breach-let-hackers-access-customer-kubernetes-secrets/"
+    },
+    {
+      "victim": "Microsoft Entra Connect Health",
+      "sector": "Technology_and_Telecom",
+      "country": "United States",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "Administrator email addresses",
+          "Tenant configuration",
+          "Directory sync status",
+          "License information",
+          "Hybrid identity configuration"
+        ],
+        "fr": [
+          "Adresses e-mail d'administrateurs",
+          "Configuration de locataire",
+          "État de synchronisation d'annuaire",
+          "Informations de licence",
+          "Configuration d'identité hybride"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://www.bleepingcomputer.com/news/security/microsoft-entra-connect-health-flaw-exploited-to-steal-tenant-data/"
+    },
+    {
+      "victim": "Bell Canada",
+      "sector": "Technology_and_Telecom",
+      "country": "Canada",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "Enterprise customer order data",
+          "Circuit provisioning details",
+          "Configuration data",
+          "Contact information"
+        ],
+        "fr": [
+          "Données de commande de clients entreprises",
+          "Détails de provisionnement de circuits",
+          "Données de configuration",
+          "Coordonnées"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://www.bleepingcomputer.com/news/security/bell-canada-says-agentic-hacker-stole-enterprise-customer-data/"
+    },
+    {
+      "victim": "Ochsner Health",
+      "sector": "Healthcare_and_Life_Sciences",
+      "country": "United States",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "Protected Health Information (PHI)"
+        ],
+        "fr": [
+          "Informations de santé protégées (PHI)"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://cyber.netsecops.io/articles/ochsner-health-confirms-data-breach-via-microsoft-system/"
+    },
+    {
+      "victim": "Nexway",
+      "sector": "Retail_and_Consumer",
+      "country": "France",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "Names",
+          "Email addresses",
+          "Software activation codes"
+        ],
+        "fr": [
+          "Noms",
+          "Adresses e-mail",
+          "Codes d'activation de logiciels"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://forenshield.com/blog/nexway-fuite-donnees-clients"
+    },
+    {
+      "victim": "Clevermate",
+      "sector": "Education_and_Research",
+      "country": "France",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "Personal data",
+          "IBAN",
+          "Student card information"
+        ],
+        "fr": [
+          "Données personnelles",
+          "IBAN",
+          "Informations de carte étudiante"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://infonewscyber.fr/info/clevermate-vise-par-des-hackers-des-donnees-personnelles-des-iban-et-c-ab7557eea7f3d1d5"
+    },
+    {
+      "victim": "Commune de Chambourcy",
+      "sector": "Government_and_Defense",
+      "country": "France",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "Citizen records",
+          "Administrative correspondence",
+          "Internal operational documents"
+        ],
+        "fr": [
+          "Dossiers d'administrés",
+          "Correspondance administrative",
+          "Documents internes d'exploitation"
+        ]
+      },
+      "threat_actor": "INC Ransom",
+      "financial_impact_usd": null,
+      "source_url": "https://www.yazoul.net/intel/claim/2026-11-20-chambourcy-ransomware-claim-by-inc-ransom-nov-2026/"
+    },
+    {
+      "victim": "YMCA Singapore",
+      "sector": "Nonprofit_and_NGO",
+      "country": "Singapore",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "Participant personal data",
+          "Contact information",
+          "Program participation details"
+        ],
+        "fr": [
+          "Données personnelles des participants",
+          "Coordonnées",
+          "Détails de participation au programme"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://databreaches.net/2026/11/21/sg-ymcas-youth-for-causes-portal-associated-database-hit-by-cybersecurity-breach/"
+    },
+    {
+      "victim": "MT5 algo trading farm (OneFunded)",
+      "sector": "Finance",
+      "country": "Unknown",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "Client data",
+          "Operational material",
+          "Business records"
+        ],
+        "fr": [
+          "Données clients",
+          "Matériel opérationnel",
+          "Enregistrements d'entreprise"
+        ]
+      },
+      "threat_actor": "PixelLeaks",
+      "financial_impact_usd": null,
+      "source_url": "https://www.yazoul.net/intel/claim/2026-11-21-mt5-algo-trading-farm-ransomware-claim-by-pixelleaks-nov-2026/"
+    },
+    {
+      "victim": "GL.iNet",
+      "sector": "Technology_and_Telecom",
+      "country": "China",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "Customer account data",
+          "Email addresses",
+          "Credentials"
+        ],
+        "fr": [
+          "Données de compte client",
+          "Adresses e-mail",
+          "Identifiants"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://social.tchncs.de/@bastian_S/117656297360089043"
+    },
+    {
+      "victim": "The Container Store",
+      "sector": "Retail_and_Consumer",
+      "country": "United States",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "Unknown (under investigation)"
+        ],
+        "fr": [
+          "Inconnu (en cours d'enquête)"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://therecord.media/container-store-restores-systems-cyberattack"
+    },
+    {
+      "victim": "West Virginia Legislature",
+      "sector": "Government_and_Defense",
+      "country": "United States",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "Unknown (systems disrupted)"
+        ],
+        "fr": [
+          "Inconnu (systèmes perturbés)"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://therecord.media/west-virginia-legislature-cyberattack"
+    },
+    {
+      "victim": "PixelLeaks victims (4 organizations)",
+      "sector": "Industry_and_Manufacturing",
+      "country": "India/Iran/Israel",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "Client data",
+          "Operational material",
+          "Business records"
+        ],
+        "fr": [
+          "Données clients",
+          "Matériel opérationnel",
+          "Enregistrements d'entreprise"
+        ]
+      },
+      "threat_actor": "PixelLeaks",
+      "financial_impact_usd": null,
+      "source_url": "https://infosec.exchange/@CTI_FYI/117656708868757554"
+    },
+    {
+      "victim": "Algonquin Dam",
+      "sector": "Critical_Infrastructure",
+      "country": "United States",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "Attempted intrusion, no data confirmed"
+        ],
+        "fr": [
+          "Tentative d'intrusion, aucune donnée confirmée"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://databreaches.net/2026/11/21/officials-probe-attempted-cyberattack-on-algonquin-dam/"
+    },
+    {
+      "victim": "NSA",
+      "sector": "Government_and_Defense",
+      "country": "United States",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "Internal network disruption, no data confirmed"
+        ],
+        "fr": [
+          "Perturbation du réseau interne, aucune donnée confirmée"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://therecord.media/nsa-resumes-normal-operations-following-internal-disruptions"
+    },
+    {
+      "victim": "AI supply chain leak (HD Moore study)",
+      "sector": "Technology_and_Telecom",
+      "country": "Global",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "AWS keys",
+          "SSH passwords",
+          "Git tokens",
+          "Private repository URLs",
+          "Prompts"
+        ],
+        "fr": [
+          "Clés AWS",
+          "Mots de passe SSH",
+          "Jetons Git",
+          "URL de dépôts privés",
+          "Prompts"
+        ]
+      },
+      "threat_actor": null,
+      "financial_impact_usd": null,
+      "source_url": "https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/"
+    },
+    {
+      "victim": "Cairn zero-day medical imaging server",
+      "sector": "Healthcare_and_Life_Sciences",
+      "country": "Unknown",
+      "records_count": null,
+      "data_types": {
+        "en": [
+          "Medical imaging data",
+          "Server access",
+          "Credentials"
+        ],
+        "fr": [
+          "Données d'imagerie médicale",
+          "Accès au serveur",
+          "Identifiants"
+        ]
+      },
+      "threat_actor": "Cairn AI operators",
+      "financial_impact_usd": null,
+      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-use-autonomous-ai-tool-cairn-to-find-zero-day-take-over-server/"
+    }
+  ],
+  "target": {
+    "sectors": {
+      "en": [
+        "Critical_Infrastructure",
+        "Government_and_Defense",
+        "Finance",
+        "Healthcare_and_Life_Sciences",
+        "Technology_and_Telecom",
+        "Industry_and_Manufacturing",
+        "Retail_and_Consumer",
+        "Education_and_Research",
+        "Media_and_Communication",
+        "Nonprofit_and_NGO",
+        "Business_Services",
+        "Agriculture_and_Environment"
+      ],
+      "fr": [
+        "Infrastructure_Critique",
+        "Gouvernement_et_Défense",
+        "Finance",
+        "Santé_et_Sciences_du_Vivant",
+        "Technologie_et_Télécom",
+        "Industrie_et_Fabrication",
+        "Commerce_de_Détail_et_Consommation",
+        "Éducation_et_Recherche",
+        "Médias_et_Communication",
+        "Associatif_et_ONG",
+        "Services_aux_Entreprises",
+        "Agriculture_et_Environnement"
+      ]
+    },
+    "countries": {
+      "en": [
+        "United States",
+        "United Kingdom",
+        "France",
+        "India",
+        "Iran",
+        "Israel",
+        "Austria",
+        "Netherlands",
+        "Canada",
+        "Singapore",
+        "Japan",
+        "China",
+        "Global"
+      ],
+      "fr": [
+        "États-Unis",
+        "Royaume-Uni",
+        "France",
+        "Inde",
+        "Iran",
+        "Israël",
+        "Autriche",
+        "Pays-Bas",
+        "Canada",
+        "Singapour",
+        "Japon",
+        "Chine",
+        "Mondial"
+      ]
+    },
+    "narrative": {
+      "en": "- **Government & Defense:** FBI's National Crime Information Center (NCIC) and USDA payment systems were reportedly breached, raising national-security concerns. West Virginia Legislature suffered a multi-day incident. Austria's foreign ministry exposed diplomatic staff data, echoing prior Russia accusations. India arrested a 14-year-old for selling data of 4,000 Agniveers.\n- **Healthcare & Life Sciences:** SBC Medical Group (Japan) exposed 1.64 million patients' data including unencrypted passwords and bank details. Ochsner Health confirmed a breach via a Microsoft system. A medical imaging server was compromised via the Cairn AI zero-day, risking patient data and hospital pivot.\n- **Finance:** PixelLeaks claimed an MT5 algo trading farm (OneFunded) and threatened to publish client data. RansomwareHelp's CTO was indicted for wire fraud after charging victims $13,260 for a $6,000 decryption key. ERPNext missing-authorization flaws (CVE-2026-134433, -134429) expose financial and margin data.\n- **Technology & Telecom:** Rackspace Spot leaked Kubernetes secrets (ServiceAccount tokens, kubeconfigs). Microsoft Entra Connect Health exposed tenant metadata (admin emails, sync status). Bell Canada lost enterprise customer order data. The AI supply chain leak (HD Moore) exposed AWS keys and SSH passwords through inference providers including MiniMax (China).\n- **Retail & Consumer:** Transport for London exposed 265,000 Oyster users. The Container Store restored systems after a weekend cyberattack. Nexway leaked customer names, emails, and software activation codes. GL.iNet suffered a customer data breach.\n- **Education & Research:** Careers360 exposed 22 million records including caste categories. Too Lost (music distribution) leaked 724,323 users' government IDs. Clevermate (France) exposed IBANs and student card data. MONAI Label (CVE-2026-133968) threatens medical research servers.\n- **Critical Infrastructure:** Algonquin Dam faced an attempted cyberattack, highlighting OT/water sector risk. TfL (transport) breach. CISA KEV deadlines for VMware vCenter, Cisco Expressway, and SAP NetWeaver affect critical infrastructure operators.\n- **Industry & Manufacturing:** PixelLeaks targeted an Indian clothing manufacturer and an Iranian compressor manufacturer using the Sepidar ERP. INC Ransom claimed the French commune of Chambourcy. ERPNext flaws (CVE-2026-134434) can disrupt manufacturing stock reservations.",
+      "fr": "- **Gouvernement et Défense :** Le National Crime Information Center (NCIC) du FBI et les systèmes de paiement de l'USDA auraient été compromis, soulevant des préoccupations de sécurité nationale. La législature de Virginie-Occidentale a subi un incident de plusieurs jours. Le ministère autrichien des Affaires étrangères a exposé des données de personnel diplomatique, faisant écho à des accusations antérieures contre la Russie. L'Inde a arrêté un adolescent de 14 ans pour la vente de données de 4 000 Agniveers.\n- **Santé et Sciences de la Vie :** SBC Medical Group (Japon) a exposé les données de 1,64 million de patients, y compris des mots de passe non chiffrés et des coordonnées bancaires. Ochsner Health a confirmé une compromission via un système Microsoft. Un serveur d'imagerie médicale a été compromis via le zero-day Cairn, risquant l'exposition de données patients et un pivot vers l'hôpital.\n- **Finance :** PixelLeaks a revendiqué une ferme de trading algorithmique MT5 (OneFunded) et menacé de publier des données clients. Le CTO de RansomwareHelp a été inculpé pour fraude électronique après avoir facturé 13 260 $ pour une clé de déchiffrement à 6 000 $. Les failles d'autorisation manquante d'ERPNext (CVE-2026-134433, -134429) exposent des données financières et de marges.\n- **Technologie et Télécoms :** Rackspace Spot a fuité des secrets Kubernetes (jetons ServiceAccount, kubeconfigs). Microsoft Entra Connect Health a exposé des métadonnées de locataires (e-mails d'administrateurs, état de synchronisation). Bell Canada a perdu des données de commande de clients entreprises. La fuite de la chaîne d'approvisionnement IA (HD Moore) a exposé des clés AWS et mots de passe SSH via des fournisseurs d'inférence dont MiniMax (Chine).\n- **Commerce de Détail et Consommation :** Transport for London a exposé 265 000 usagers Oyster. The Container Store a restauré ses systèmes après une cyberattaque de week-end. Nexway a fuité des noms, e-mails et codes d'activation de logiciels. GL.iNet a subi une fuite de données clients.\n- **Éducation et Recherche :** Careers360 a exposé 22 millions d'enregistrements, y compris des catégories de caste. Too Lost (distribution musicale) a fuité les pièces d'identité gouvernementales de 724 323 utilisateurs. Clevermate (France) a exposé des IBAN et des données de cartes étudiantes. MONAI Label (CVE-2026-133968) menace les serveurs de recherche médicale.\n- **Infrastructure Critique :** Le barrage d'Algonquin a fait l'objet d'une tentative de cyberattaque, soulignant le risque OT/eau. Fuite de TfL (transport). Les échéances CISA KEV pour VMware vCenter, Cisco Expressway et SAP NetWeaver affectent les opérateurs d'infrastructure critique.\n- **Industrie et Fabrication :** PixelLeaks a ciblé un fabricant indien de vêtements et un fabricant iranien de compresseurs utilisant l'ERP Sepidar. INC Ransom a revendiqué la commune française de Chambourcy. Les failles ERPNext (CVE-2026-134434) peuvent perturber les réservations de stock en fabrication."
+    }
+  },
+  "trends": {
+    "emerging_techniques": {
+      "en": [
+        "AI-driven autonomous zero-day discovery and exploitation (Cairn framework)",
+        "AI supply chain prompt leakage and secret exposure via inference providers",
+        "Abuse of legitimate hosting services (Weebly) and URL shorteners for phishing",
+        "Ransomware recovery fraud and intermediary payment schemes",
+        "Targeting of regional ERP systems (Sepidar) and missing-authorization flaws in ERPNext",
+        "Cloud tenant metadata reconnaissance via identity APIs (Entra Connect Health)",
+        "Double extortion with data publication on leak sites (PixelLeaks)",
+        "Exploitation of CISA KEV vulnerabilities within days of disclosure"
+      ],
+      "fr": [
+        "Découverte et exploitation autonomes de zero-day par IA (framework Cairn)",
+        "Fuite de prompts et exposition de secrets via les fournisseurs d'inférence de la chaîne IA",
+        "Abus de services d'hébergement légitimes (Weebly) et de raccourcisseurs d'URL pour l'hameçonnage",
+        "Fraude à la récupération de rançongiciel et schémas de paiement par intermédiaires",
+        "Ciblage d'ERP régionaux (Sepidar) et failles d'autorisation manquante dans ERPNext",
+        "Reconnaissance des métadonnées de locataires cloud via les API d'identité (Entra Connect Health)",
+        "Double extorsion avec publication de données sur des sites de fuite (PixelLeaks)",
+        "Exploitation des vulnérabilités CISA KEV dans les jours suivant la divulgation"
+      ]
+    },
+    "declining_techniques": {
+      "en": [
+        "Reliance on domain-reputation-only phishing filters",
+        "SMS/TOTP MFA as primary protection",
+        "Manual vulnerability discovery without AI assistance",
+        "Traditional perimeter-only defenses",
+        "Unverified third-party incident response and recovery services"
+      ],
+      "fr": [
+        "Dépendance aux filtres d'hameçonnage basés uniquement sur la réputation de domaine",
+        "MFA SMS/TOTP comme protection principale",
+        "Découverte manuelle de vulnérabilités sans assistance IA",
+        "Défenses traditionnelles uniquement périmétriques",
+        "Services tiers de réponse à incident et de récupération non vérifiés"
+      ]
+    },
+    "geopolitical_context": {
+      "en": "The week is marked by US-Iran tensions, with US officials citing the ongoing war as context for heightened cyber alert. Austria's foreign ministry breach, though unattributed, revives accusations against Moscow. China's AI supply chain (MiniMax) raises data sovereignty concerns. The US launched a Threat Disruption Center to combat scams, while federal incidents (FBI, USDA, NSA, FAA) erode confidence in government cybersecurity. Ransomware groups operate opportunistically across India, Iran, and Israel, showing no single geopolitical allegiance.",
+      "fr": "La semaine est marquée par les tensions américano-iraniennes, les responsables américains citant la guerre en cours comme contexte d'alerte cyber accrue. La compromission du ministère autrichien des Affaires étrangères, bien que non attribuée, ravive les accusations contre Moscou. La chaîne d'approvisionnement IA chinoise (MiniMax) soulève des préoccupations de souveraineté des données. Les États-Unis ont lancé un Threat Disruption Center pour lutter contre les arnaques, tandis que les incidents fédéraux (FBI, USDA, NSA, FAA) érodent la confiance dans la cybersécurité gouvernementale. Les groupes rançongiciels opèrent de manière opportuniste en Inde, en Iran et en Israël, sans allégeance géopolitique unique."
+    }
+  },
+  "recommendations": {
+    "strategic": {
+      "en": [
+        {
+          "title": "Prioritize CISA KEV Remediation by 23 November",
+          "detail": "Four actively exploited vulnerabilities—Apache Roller (CVE-2026-129448), Cisco Expressway (CVE-2026-76466), SAP NetWeaver (CVE-2025-42884), and VMware vCenter (CVE-2026-123890)—have a CISA KEV deadline of 23 November 2026. BeyondTrust Remote Support (CVE-2026-102764) was exploited in chain. Patch Internet-facing instances immediately, restrict management interfaces, and verify no compromise before closing tickets."
+        },
+        {
+          "title": "Enforce Phishing-Resistant MFA on Critical Accounts",
+          "detail": "PixelLeaks, ShinyHunters, and the FBI/USDA breaches all involved credential abuse (T1078). SMS/TOTP MFA is bypassed by modern phishing kits hosted on Weebly (mmordr[.]weebly[.]com, 0nllnec0mm0nbiank[.]weebly[.]com). Deploy FIDO2/WebAuthn hardware keys for administrators, cloud tenants, and remote access. Revoke all active sessions on rollout."
+        },
+        {
+          "title": "Implement DLP for AI Prompts and Secrets",
+          "detail": "The HD Moore study showed AWS keys, SSH passwords, and Git tokens leaking through AI inference providers, including MiniMax (China) via OpenRouter resellers. Deploy DLP to block secrets in prompts, centralize secret management with automatic rotation, and restrict usage to approved providers with verified Zero Data Retention. Treat any secret pasted into an AI tool as compromised."
+        },
+        {
+          "title": "Audit Third-Party Recovery and IR Providers",
+          "detail": "RansomwareHelp's CTO was indicted for wire fraud after charging victims $13,260 for a $6,000 decryption key. Ransomware recovery fraud funds criminal groups and exposes victims to sanctions risk. Contractually prohibit ransom payments without legal/compliance approval, require transparency on payment methods, and verify providers against OFAC/EU sanctions lists."
+        },
+        {
+          "title": "Harden ERP and Exposed Business Applications",
+          "detail": "ERPNext missing-authorization flaws (CVE-2026-134433, -134429, -134436, -134435, -134434) expose financial, commercial, and operational data. PixelLeaks targeted a Sepidar ERP in Iran. Restrict ERP Internet exposure, enforce least privilege on portal accounts, and apply vendor patches (15.124.2, 16.53.0). Monitor for anomalous exports and stock reservation changes."
+        },
+        {
+          "title": "Prepare for AI-Agentic Zero-Day Exploitation",
+          "detail": "The Cairn framework autonomously discovered and exploited a zero-day in a medical imaging application, achieving root access. Traditional signature-based detection is insufficient. Deploy behavioral detection for automated scanning (T1595), segment medical imaging/PACS networks, enforce egress filtering, and include AI-agentic scenarios in red team exercises."
+        }
+      ],
+      "fr": [
+        {
+          "title": "Prioriser la remédiation CISA KEV avant le 23 novembre",
+          "detail": "Quatre vulnérabilités activement exploitées — Apache Roller (CVE-2026-129448), Cisco Expressway (CVE-2026-76466), SAP NetWeaver (CVE-2025-42884) et VMware vCenter (CVE-2026-123890) — ont une échéance CISA KEV au 23 novembre 2026. BeyondTrust Remote Support (CVE-2026-102764) a été exploitée en chaîne. Patchez immédiatement les instances exposées sur Internet, restreignez les interfaces de gestion et vérifiez l'absence de compromission avant de clôturer les tickets."
+        },
+        {
+          "title": "Imposer une MFA résistante au phishing sur les comptes critiques",
+          "detail": "PixelLeaks, ShinyHunters et les compromissions FBI/USDA ont tous impliqué un abus d'identifiants (T1078). La MFA SMS/TOTP est contournée par les kits d'hameçonnage modernes hébergés sur Weebly (mmordr[.]weebly[.]com, 0nllnec0mm0nbiank[.]weebly[.]com). Déployez des clés matérielles FIDO2/WebAuthn pour les administrateurs, les locataires cloud et l'accès distant. Révoquez toutes les sessions actives lors du déploiement."
+        },
+        {
+          "title": "Mettre en place une DLP pour les prompts et secrets IA",
+          "detail": "L'étude HD Moore a montré des clés AWS, mots de passe SSH et jetons Git fuitant via des fournisseurs d'inférence IA, dont MiniMax (Chine) via des revendeurs OpenRouter. Déployez une DLP pour bloquer les secrets dans les prompts, centralisez la gestion des secrets avec rotation automatique et limitez l'usage aux fournisseurs approuvés avec Zero Data Retention vérifié. Considérez tout secret collé dans un outil IA comme compromis."
+        },
+        {
+          "title": "Auditer les prestataires de récupération et de réponse à incident",
+          "detail": "Le CTO de RansomwareHelp a été inculpé pour fraude électronique après avoir facturé 13 260 $ pour une clé de déchiffrement à 6 000 $. La fraude à la récupération de rançongiciel finance les groupes criminels et expose les victimes à des risques de sanctions. Interdisez contractuellement tout paiement de rançon sans validation juridique/conformité, exigez la transparence sur les méthodes de paiement et vérifiez les prestataires contre les listes de sanctions OFAC/UE."
+        },
+        {
+          "title": "Durcir les ERP et applications métier exposées",
+          "detail": "Les failles d'autorisation manquante d'ERPNext (CVE-2026-134433, -134429, -134436, -134435, -134434) exposent des données financières, commerciales et opérationnelles. PixelLeaks a ciblé un ERP Sepidar en Iran. Restreignez l'exposition Internet des ERP, appliquez le moindre privilège sur les comptes portail et appliquez les correctifs éditeurs (15.124.2, 16.53.0). Surveillez les exports anormaux et les modifications de réservation de stock."
+        },
+        {
+          "title": "Se préparer à l'exploitation de zero-day par IA agentique",
+          "detail": "Le framework Cairn a découvert et exploité de manière autonome un zero-day dans une application d'imagerie médicale, obtenant un accès root. La détection par signature est insuffisante. Déployez une détection comportementale des scans automatisés (T1595), segmentez les réseaux d'imagerie médicale/PACS, appliquez un filtrage sortant et intégrez des scénarios IA agentiques dans les exercices red team."
+        }
+      ]
+    },
+    "operational": {
+      "en": [
+        {
+          "title": "Patch PHP to 8.5.13/8.4.28/8.3.37/8.2.36",
+          "detail": "PHP released 18 security fixes including critical RCEs (CVE-2026-129289, request smuggling in PHP-FPM). Update all Internet-facing PHP instances, rebuild container images, and enable WAF blocking on PHP-FPM/CGI endpoints. Hunt for web shells and anomalous child processes."
+        },
+        {
+          "title": "Rotate Kubernetes and Cloud Secrets from Rackspace Spot",
+          "detail": "Rackspace Spot exposed ServiceAccount tokens, kubeconfig files, image registry credentials, and cloud API keys. Immediately rotate all secrets associated with Rackspace Spot clusters, audit cloud trails for unauthorized access, and enforce short-lived tokens with OIDC federation."
+        },
+        {
+          "title": "Block Phishing URLs on Weebly and URL Shorteners",
+          "detail": "URLDNA flagged mmordr[.]weebly[.]com, urlz[.]li/e59a85d8, and 0nllnec0mm0nbiank[.]weebly[.]com. Block these domains at proxy/DNS/email gateway, enable URL rewriting and sandbox detonation, and search logs for access in the last 30 days. Reset credentials for any user who submitted data."
+        },
+        {
+          "title": "Hunt for NCIC/USDA Breach Indicators",
+          "detail": "The FBI NCIC and USDA payment systems were reportedly breached. Search for anomalous database queries, mass exports, and unusual access to law enforcement or payment data. Verify integrity of warrants and payment records. Rotate credentials for all accounts with access to these systems and enforce CJIS-compliant logging."
+        },
+        {
+          "title": "Apply Microsoft Entra Connect Health Fix and Audit Logs",
+          "detail": "The Entra Connect Health API flaw exposed tenant metadata (admin emails, sync status) from 23 July to 19 November. Verify the server-side patch, renew expired agent certificates, and audit Entra ID sign-in logs for administrative reconnaissance or phishing follow-up. Restrict agent egress to Microsoft endpoints."
+        },
+        {
+          "title": "Validate Ghostscript and MONAI Label Exposure",
+          "detail": "Ghostscript bug 709684 is pending CVE assignment; MONAI Label (CVE-2026-133968) allows path traversal RCE. Inventory embedded Ghostscript in ImageMagick, print servers, and document converters. For MONAI Label, apply source patch, enable authentication, and restrict network access. Run conversions in isolated containers with -dSAFER."
+        }
+      ],
+      "fr": [
+        {
+          "title": "Patcher PHP vers 8.5.13/8.4.28/8.3.37/8.2.36",
+          "detail": "PHP a publié 18 correctifs de sécurité dont des RCE critiques (CVE-2026-129289, contrebande de requêtes dans PHP-FPM). Mettez à jour toutes les instances PHP exposées sur Internet, reconstruisez les images de conteneurs et activez le blocage WAF sur les endpoints PHP-FPM/CGI. Chassez les web shells et les processus enfants anormaux."
+        },
+        {
+          "title": "Rotation des secrets Kubernetes et cloud de Rackspace Spot",
+          "detail": "Rackspace Spot a exposé des jetons ServiceAccount, des fichiers kubeconfig, des identifiants de registre d'images et des clés d'API cloud. Effectuez immédiatement la rotation de tous les secrets associés aux clusters Rackspace Spot, auditez les journaux cloud pour tout accès non autorisé et imposez des jetons à durée de vie courte avec fédération OIDC."
+        },
+        {
+          "title": "Bloquer les URL d'hameçonnage sur Weebly et les raccourcisseurs",
+          "detail": "URLDNA a signalé mmordr[.]weebly[.]com, urlz[.]li/e59a85d8 et 0nllnec0mm0nbiank[.]weebly[.]com. Bloquez ces domaines au niveau proxy/DNS/passerelle de messagerie, activez la réécriture d'URL et la détonation en sandbox, et recherchez les accès dans les journaux des 30 derniers jours. Réinitialisez les identifiants de tout utilisateur ayant soumis des données."
+        },
+        {
+          "title": "Chasser les indicateurs de compromission NCIC/USDA",
+          "detail": "Le NCIC du FBI et les systèmes de paiement de l'USDA auraient été compromis. Recherchez les requêtes anormales sur les bases de données, les exports massifs et les accès inhabituels aux données judiciaires ou de paiement. Vérifiez l'intégrité des mandats et des enregistrements de paiement. Effectuez la rotation des identifiants de tous les comptes ayant accès à ces systèmes et imposez une journalisation conforme CJIS."
+        },
+        {
+          "title": "Appliquer le correctif Microsoft Entra Connect Health et auditer les journaux",
+          "detail": "La faille de l'API Entra Connect Health a exposé des métadonnées de locataires (e-mails d'administrateurs, état de synchronisation) du 23 juillet au 19 novembre. Vérifiez le correctif côté serveur, renouvelez les certificats d'agent expirés et auditez les journaux de connexion Entra ID pour détecter une reconnaissance administrative ou un hameçonnage ultérieur. Restreignez la sortie réseau des agents aux endpoints Microsoft."
+        },
+        {
+          "title": "Valider l'exposition à Ghostscript et MONAI Label",
+          "detail": "Le bug Ghostscript 709684 est en attente d'attribution CVE ; MONAI Label (CVE-2026-133968) permet une RCE par traversée de chemin. Inventoriez Ghostscript embarqué dans ImageMagick, les serveurs d'impression et les convertisseurs de documents. Pour MONAI Label, appliquez le correctif source, activez l'authentification et restreignez l'accès réseau. Exécutez les conversions dans des conteneurs isolés avec -dSAFER."
+        }
+      ]
+    }
+  }
+}
